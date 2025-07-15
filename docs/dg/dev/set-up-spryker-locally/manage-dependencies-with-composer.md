@@ -12,8 +12,6 @@ redirect_from:
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
-  - title: Redis configuration
-    link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 Spryker Cloud Commerce OS (SCCOS) uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.

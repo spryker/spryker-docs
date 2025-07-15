@@ -119,7 +119,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Configure export to Redis
+### 4) Configure export to the key-value store (Redis or Valkey)
 
 Make changes to the `PublisherDependencyProvider`:
 

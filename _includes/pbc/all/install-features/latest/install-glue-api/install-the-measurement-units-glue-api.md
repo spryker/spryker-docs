@@ -84,7 +84,7 @@ console event:trigger -r product_concrete
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following Redis keys exist and there is data in them:
+Make sure that the following key-value store keys exist and there is data in them:
 
 - `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
 - `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`

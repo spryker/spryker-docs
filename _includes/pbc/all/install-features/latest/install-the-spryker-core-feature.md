@@ -87,7 +87,7 @@ Add the configuration:
 
 | CONFIGURATION                                                    | SPECIFICATION                               | NAMESPACE                         |
 |------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME | Redis session lifetime.                     | Spryker\Shared\SecuritySystemUser |
+| SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME | Key-value storage (Redis or Valkey) session lifetime.                     | Spryker\Shared\SecuritySystemUser |
 | SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS            | Default credentials for Yves accessing Zed. | Spryker\Shared\SecuritySystemUser |
 
 {% info_block errorBox "Security measures" %}
@@ -147,30 +147,30 @@ $vaultFacade->store("secret_category", "secret_id", $secret);
 assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));
 ```
 
-#### Configure Redis
+#### Configure key-value storage (Redis or Valkey)
 
 Add the configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS	 | Defines the Redis lock timeout in milliseconds. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire Redis lock in microseconds. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for Redis lock in milliseconds. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS	 | Defines the key-value storage (Redis or Valkey) lock timeout in milliseconds. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire key-value storage (Redis or Valkey) lock in microseconds. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for key-value storage (Redis or Valkey) lock in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionFileConstants::ZED_SESSION_FILE_PATH	 | Defines the filesystem path for storing Zed sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_DATABASE	 | Defines the database for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_DATA_SOURCE_NAMES	 | Defines the list of DSNs for connecting to Redis a as Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS	 | Defines the list of client options for connecting to Redis as a Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
-| StorageRedisConstants::STORAGE_REDIS_PROTOCOL	 | Defines the protocol for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PASSWORD	 | Defines the password for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_HOST	 | Defines the host for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PORT	 | Defines the port for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_DATABASE	 | Defines the database for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION	 | Enables and disables data persistence for a Redis connection. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_DATA_SOURCE_NAMES	 | Specifies an array of DSN strings for a multi-instance cluster and replication Redis setup. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS	 | Specifies an array of client options for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password for connecting to key-value storage (Redis or Valkey) as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host for connecting to key-value storage (Redis or Valkey) as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol for connecting to key-value storage (Redis or Valkey) as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_DATABASE	 | Defines the database for connecting to key-value storage (Redis or Valkey) as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_DATA_SOURCE_NAMES	 | Defines the list of DSNs for connecting to key-value storage (Redis or Valkey) a as Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS	 | Defines the list of client options for connecting to key-value storage (Redis or Valkey) as a Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
+| StorageRedisConstants::STORAGE_REDIS_PROTOCOL	 | Defines the protocol for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PASSWORD	 | Defines the password for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_HOST	 | Defines the host for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PORT	 | Defines the port for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_DATABASE	 | Defines the database for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION	 | Enables and disables data persistence for a key-value storage (Redis or Valkey) connection. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_DATA_SOURCE_NAMES	 | Specifies an array of DSN strings for a multi-instance cluster and replication key-value storage (Redis or Valkey) setup. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS	 | Specifies an array of client options for connecting to key-value storage (Redis or Valkey). | Spryker\Shared\StorageRedis |
 
 #### Configure general storage
 
@@ -180,7 +180,7 @@ Make sure to replace all the values in the following examples with real values.
 
 {% endinfo_block %}
 
-In case of a multi-instance Redis setup, add the following configuration:
+In case of a multi-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -198,7 +198,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-In case of a single-instance Redis setup, add the following configuration:
+In case of a single-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -225,7 +225,7 @@ Make sure to replace all the values in the following examples with real values.
 
 {% endinfo_block %}
 
-If Redis is used as session storage, add the following configuration:
+If key-value storage (Redis or Valkey) is used as session storage, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -251,7 +251,7 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 
 {% endinfo_block %}
 
-In case of a multi-instance Redis setup, add the following configuration:
+In case of a multi-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -273,11 +273,11 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS] = [
 
 {% info_block warningBox "" %}
 
-This configuration is used exclusively. In other words, you can't use any other Redis configuration.
+This configuration is used exclusively. In other words, you can't use any other key-value storage (Redis or Valkey) configuration.
 
 {% endinfo_block %}
 
-In case of a single-instance Redis setup, add the following configuration:
+In case of a single-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 **config/Share/config_default.php**
 
@@ -528,11 +528,11 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 |------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |------------------------------------------------------------------------------------------------------------------------------------|
 | ZedSecurityApplicationPlugin | Extends the Zed global container with required services for security functionality. |  | Spryker\Zed\Security\Communication\Plugin\Application                    |
 | SessionHandlerFileProviderPlugin | Provides a file-based session handler implementation for Zed sessions. |  | Spryker\Zed\SessionFile\Communication\Plugin\Session                     |
-| SessionHandlerRedisLockingProviderPlugin | Provides a Redis-based session handler implementation with session locking for Zed sessions. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
-| SessionHandlerRedisProviderPlugin	 | Provides a Redis-based session handler implementation for Zed sessions. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
-| StorageRedisPlugin | Provides a Redis-based storage implementation. |  | Spryker\Client\StorageRedis\Plugin                                       |
+| SessionHandlerRedisLockingProviderPlugin | Provides a key-value storage (Redis or Valkey)-based session handler implementation with session locking for Zed sessions. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| SessionHandlerRedisProviderPlugin	 | Provides a key-value storage (Redis or Valkey)-based session handler implementation for Zed sessions. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| StorageRedisPlugin | Provides a key-value storage (Redis or Valkey)-based storage implementation. |  | Spryker\Client\StorageRedis\Plugin                                       |
 | ZedSystemUserSecurityPlugin | Sets security firewalls, such as rules and handlers, for system users; provides Yves access to Zed. |  | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
-| ZedSessionRedisLockReleaserPlugin | Removes a session lock from Redis by session ID for Zed sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| ZedSessionRedisLockReleaserPlugin | Removes a session lock from key-value storage (Redis or Valkey) by session ID for Zed sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer settings. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
 | AuditLogTagFilterBufferedStreamHandlerPlugin               | Provides the Monolog handler.                                                                                                                                                  |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
 | PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
@@ -849,7 +849,7 @@ Make sure the following applies:
 
 | COMMAND | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console |
+| StorageRedisExportRdbConsole | Exports a key-value storage (Redis or Valkey) database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console |
 | StorageRedisImportRdbConsole	 | Imports an rdb file.	 |  | Spryker\Zed\StorageRedis\Communication\Console |
 
 **Pyz\Zed\Console\ConsoleDependencyProvider**
@@ -1042,13 +1042,13 @@ Add the following configuration:
 | CONFIGURATION                                               | SPECIFICATION                                                                                                  | NAMESPACE                   |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------|
 | SessionFileConstants::YVES_SESSION_FILE_PATH                | Defines the filesystem path for storing Yves sessions.                                                         | Spryker\Shared\SessionFile  |
-| SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme protocol for Redis connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD          | Defines the password used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_HOST              | Defines the host used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_PORT              | Defines the port used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_DATABASE          | Defines the database used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES | Defines the list of DSNs used while connecting to Redis as Yves session storage in replication mode.           | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS    | Defines the list of client options used while connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme protocol for key-value storage (Redis or Valkey) connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD          | Defines the password used while connecting to key-value storage (Redis or Valkey) as Yves session storage.                                   | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_HOST              | Defines the host used while connecting to key-value storage (Redis or Valkey) as Yves session storage.                                       | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_PORT              | Defines the port used while connecting to key-value storage (Redis or Valkey) as Yves session storage.                                       | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_DATABASE          | Defines the database used while connecting to key-value storage (Redis or Valkey) as Yves session storage.                                   | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES | Defines the list of DSNs used while connecting to key-value storage (Redis or Valkey) as Yves session storage in replication mode.           | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS    | Defines the list of client options used while connecting to key-value storage (Redis or Valkey) as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
 | LogConstants::LOG_FILE_PATH_YVES                            | Absolute path to the log file to be used by the stream handler.                                      | Spryker\Shared\Log          |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES              | Provides plugin class names that contain the configuration for audit logging for the Yves application.                    | Spryker\Shared\Log          |
 
@@ -1075,17 +1075,17 @@ You can configure the session handler using one of the following options:
 - `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`
 - `SessionRedisConfig::SESSION_HANDLER_REDIS`
 
-The most flexible option is `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, which allows enabling or disabling Redis locking based on your configuration.
+The most flexible option is `SessionRedisConfig::SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`, which allows enabling or disabling key-value storage (Redis or Valkey) locking based on your configuration.
 
 
 
 {% endinfo_block %}
 
-2. In case of a multi-instance Redis setup, add the following configuration:
+2. In case of a multi-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 {% info_block warningBox "" %}
 
-This configuration is used exclusively. In other words, you can't use any other Redis configuration.
+This configuration is used exclusively. In other words, you can't use any other key-value storage (Redis or Valkey) configuration.
 
 {% endinfo_block %}
 
@@ -1108,11 +1108,11 @@ $config[SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS] = [
 ```
 
 
-3. In case of a single-instance Redis setup, add the following configuration:
+3. In case of a single-instance key-value storage (Redis or Valkey) setup, add the following configuration:
 
 {% info_block warningBox "" %}
 
-Make sure you don't use the same Redis database for Yves and Zed sessions.
+Make sure you don't use the same key-value storage (Redis or Valkey) database for Yves and Zed sessions.
 
 {% endinfo_block %}
 
@@ -1347,10 +1347,10 @@ Install the plugins and modules:
 
 | PLUGIN                                                 | SPECIFICATION                                                                                                                                        | PREREQUISITES | NAMESPACE                                                     |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
-| SessionHandlerRedisProviderPlugin                      | Provides a Redis-based session handler implementation for Yves sessions.                                                                             |               | Spryker\Yves\SessionRedis\Plugin\Session                      |
-| SessionHandlerConfigurableRedisLockingProviderPlugin() | Provides a configurable, Redis-based session handler for Yves sessions, offering fine-grained control over session locking.                          |               | Spryker\Yves\SessionFile\Plugin\Session                       |
+| SessionHandlerRedisProviderPlugin                      | Provides a key-value storage (Redis or Valkey)-based session handler implementation for Yves sessions.                                                                             |               | Spryker\Yves\SessionRedis\Plugin\Session                      |
+| SessionHandlerConfigurableRedisLockingProviderPlugin() | Provides a configurable, key-value storage (Redis or Valkey)-based session handler for Yves sessions, offering fine-grained control over session locking.                          |               | Spryker\Yves\SessionFile\Plugin\Session                       |
 | SessionHandlerFileProviderPlugin                       | Provides a file-based session handler implementation for Yves sessions.                                                                              |               | Spryker\Yves\SessionFile\Plugin\Session                       |
-| YvesSessionRedisLockReleaserPlugin                     | Removes a session lock from Redis by session ID for Yves sessions. It's used for removing previously created locks by running `session:lock:remove`. |               | Spryker\Zed\SessionRedis\Communication\Plugin\Session         |
+| YvesSessionRedisLockReleaserPlugin                     | Removes a session lock from key-value storage (Redis or Valkey) by session ID for Yves sessions. It's used for removing previously created locks by running `session:lock:remove`. |               | Spryker\Zed\SessionRedis\Communication\Plugin\Session         |
 | SecurityBlockerCustomerEventDispatcherPlugin           | Adds subscribers for request and authentication failure events to control the customers' failed login attempts.                                      |               | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher   |
 | SecurityBlockerAgentEventDispatcherPlugin              | Adds subscribers for request and authentication failure events to control the agents' failed login attempts.                                         |               | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher   |
 | AuditLogTagFilterBufferedStreamHandlerPlugin           | Provides the Monolog handler.                                                                                                                        |               | Spryker\Yves\Log\Plugin\Log                                   |
@@ -1360,8 +1360,8 @@ Install the plugins and modules:
 | AuditLogRequestProcessorPlugin                         | Adds request related data to the log data.                                                                                                           |               | Spryker\Yves\Log\Plugin\Log                                   |
 | ResponseProcessorPlugin                                | Removes response data from the log data.                                                                                                             |               | Spryker\Yves\Log\Plugin\Processor                             |
 | AuditLogMetaDataProcessorPlugin                        | Adds the `audit_log` log type to the log data.                                                                                                       |               | Spryker\Yves\Log\Plugin\Log                                   |
-| UrlSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request URI matches any of the URL patterns from the module configuration.                                      |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
-| BotSessionRedisLockingExclusionConditionPlugin         | Skips Redis session locking when the request's User-Agent header contains any of the patterns returned by the module configuration.                   |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
+| UrlSessionRedisLockingExclusionConditionPlugin         | Skips key-value storage (Redis or Valkey) session locking when the request URI matches any of the URL patterns from the module configuration.                                      |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
+| BotSessionRedisLockingExclusionConditionPlugin         | Skips key-value storage (Redis or Valkey) session locking when the request's User-Agent header contains any of the patterns returned by the module configuration.                   |               | Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion |
 
 **src/Pyz/Yves/Session/SessionDependencyProvider.php**
 
@@ -1543,8 +1543,8 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 
 {% info_block warningBox "Validation" %}
 
-Make sure that the Redis session locking is skipped for the URLs and user agents specified in the configuration.
-- For example, if the URL `/error-page` is accessed, the Redis session locking should be skipped.
-- If the user agent `Googlebot` is used, the Redis session locking should be skipped.
+Make sure that the key-value storage (Redis or Valkey) session locking is skipped for the URLs and user agents specified in the configuration.
+- For example, if the URL `/error-page` is accessed, the key-value storage (Redis or Valkey) session locking should be skipped.
+- If the user agent `Googlebot` is used, the key-value storage (Redis or Valkey) session locking should be skipped.
 
 {% endinfo_block %}

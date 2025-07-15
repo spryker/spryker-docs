@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: May 16, 2025
+last_updated: Jun 20, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -303,7 +303,7 @@ To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.
 
 Yves performs a high number of `get()` calls to Redis. If Redis is installed on the same machine, the expected time per `get()` is below 0.1 ms. However, if you run Spryker in a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior is enabled by default.
 
-If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html#use-and-configure-redis-cache).
+If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store#use-and-configure-key-value-storage-cache).
 
 ## ClassResolver optimizations
 
@@ -534,6 +534,10 @@ Performance optimizations in the OMS availability check and order item reservati
 - [spryker/propel:^3.43.0](https://github.com/spryker/propel/releases/tag/3.43.0)
 - [spryker/sales:^11.63.0](https://github.com/spryker/sales/releases/tag/11.63.0)
 
+Performance optimizations in publish and synchronization (merchant-related):
+- [spryker/merchant-product-offer-storage:^2.6.0](https://github.com/spryker/merchant-product-offer-storage/releases/tag/2.6.0)
+- [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
+- [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
 
 ## Performance profiling
 

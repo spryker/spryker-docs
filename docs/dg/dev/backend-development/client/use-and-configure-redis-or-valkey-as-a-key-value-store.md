@@ -18,7 +18,7 @@ related:
 
 This document describes how key-value storage (Redis or Valkey) is used within Spryker. The current functionality can be extended according to your needs.
 
-Spryker supports both Redis and Valkey as key-value storage solutions. For detailed information about the differences, compatibility, and migration considerations, see [Key-value store architecture (Redis and Valkey)](/docs/dg/dev/architecture/redis-valkey-key-value-storage.html).
+Spryker supports both Redis and Valkey as key-value storage solutions. For detailed information about the differences, compatibility, and migration considerations, see [Key-value store architecture (Redis and Valkey)](/docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html).
 
 ## About key-value storage
 

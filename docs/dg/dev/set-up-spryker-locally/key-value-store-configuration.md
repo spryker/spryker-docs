@@ -1,12 +1,13 @@
 ---
-title: Redis configuration
-description: In Spryker, Redis is used as the key-value storage and the session data storage.
+title: Key-value store configuration
+description: In Spryker, key-value storage (Redis or Valkey) is used as the key-value storage and the session data storage.
 last_updated: Jun 19, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/redis-configruation
 originalArticleId: ea89b3d3-30a2-41b6-8af7-cbd890ff5d18
 redirect_from:
 - /docs/scos/dev/set-up-spryker-locally/redis-configuration.html
+- /docs/dg/dev/set-up-spryker-locally/redis-configuration
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
@@ -14,10 +15,12 @@ related:
     link: docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
 ---
 
-In Spryker, Redis is used in two scenarios:
+In Spryker, key-value storage (Redis or Valkey) is used in two scenarios:
 
 - Key-value storage. Modules: `Spryker.Storage`, `Spryker.Collector`, and `Spryker.Heartbeat`.
 - Session data storage. Module: `Spryker.Session`.
+
+Both Redis and Valkey are fully supported and compatible. Configuration parameters maintain Redis naming for backward compatibility.
 
 Each scenario uses a separate set of configuration values.
 
@@ -35,7 +38,7 @@ $config[StorageConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-## Advanced configuration for Redis key-value storage
+## Advanced configuration for key-value store (Redis or Valkey)
 
 To be able to use Redis replication, you need to define connection parameters using `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` value as key. Under this key, an array of DSN strings, which identify specific Redis nodes, should be set. In addition to configuration parameters, a set of configuration options has to be specified to enable Redis replication facilities. These options need to be stored under the `StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS` key.
 
@@ -55,7 +58,7 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
 
 {% info_block infoBox %}
 
-For this configuration, one of the Redis servers should be identified as master using the parameter `alias`.
+For this configuration, one of the key-value store (Redis or Valkey) servers should be identified as master using the parameter `alias`.
 
 {% endinfo_block %}
 
@@ -74,7 +77,7 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, for example, no other storage configuration will be used for the Redis client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the Redis client will fall back to the regular configuration described above.
+The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, for example, no other storage configuration will be used for the key-value store (Redis or Valkey) client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the key-value store (Redis or Valkey) client will fall back to the regular configuration described above.
 
 ## Advanced configuration for Redis session storage
 

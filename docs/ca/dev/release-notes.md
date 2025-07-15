@@ -58,7 +58,7 @@ Optimized the deployment of RabbitMQ by moving it to another existing step. This
 
 ### Platform upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Upgraded MariaDB, Redis, Jenkins, and their dependencies.
+Upgraded MariaDB, key-value storage (Redis or Valkey), Jenkins, and their dependencies.
 
 Benefits:
 
@@ -92,7 +92,7 @@ Optimized deployment pipeline images to speed up the build of Jenkins.
 Introduced a multi-database setup for multi-store environments. Now you can create databases per store in the same AWS environment.
 
 Benefits of a multi-store setup:
-- Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis).
+- Each store has a dedicated index for Elasticsearch and its own virtual key-value storage (Redis or Valkey).
 - Shared virtual separated database per store.
 - A cluster can share the same or use different database setups.
 - One region can have multiple stores.
@@ -121,7 +121,7 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 **Improved image for CD pipelines**: extended the image used for CD pipelines with extra development tools and capabilities to run tests and benchmarks within a CD pipeline.
 
-**Configuration of Redis replicas**: for a faster response on reading operations, enabled the number of Redis replicas to be defined in the Deploy file.
+**Configuration of key-value storage (Redis or Valkey) replicas**: for a faster response on reading operations, enabled the number of key-value storage (Redis or Valkey) replicas to be defined in the Deploy file.
 
 ## April 2021
 

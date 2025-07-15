@@ -95,9 +95,9 @@ vendor/bin/console scheduler:suspend
 
 ## Clean the data in the key-value storage engine
 
-With the Redis key-value storage, data is stored as keys that contain the store name. The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
+With the key-value store (Redis or Valkey), data is stored as keys that contain the store name. The key name follows this format: `kv:{resource-type}:{store}:{locale}:{key}`.
 
-1. Delete the following data in Redis:
+1. Delete the following data in key-value store (Redis or Valkey):
 
 - Stock information:
   - `kv:availability:xxx:*`

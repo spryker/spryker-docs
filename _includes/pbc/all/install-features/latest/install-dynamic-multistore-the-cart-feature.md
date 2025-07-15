@@ -1,8 +1,6 @@
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Cart](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html) feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -11,7 +9,7 @@ Install the required features:
 | Spryker Core | 202507.0 |
 | Cart | 202507.0 |
 
-### Set up behavior
+## Set up behavior
 
 Register the following plugins:
 

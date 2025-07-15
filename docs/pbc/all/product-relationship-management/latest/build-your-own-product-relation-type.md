@@ -80,7 +80,7 @@ It accepts the following arguments:
 | `title` | Title that is displayed in the carousel component. |
 | `templatePath` | Path to the template for rendering the carousel component.<br>For example, `@ProductRelation/partial/product_relation_carousel.twig`. |
 
-Each type has a data provider. This data provider reads data from Redis and sends it to the template.
+Each type has a data provider. This data provider reads data from the key-value store, Redis or Valkey, and sends it to the template.
 
 {% info_block warningBox %}
 

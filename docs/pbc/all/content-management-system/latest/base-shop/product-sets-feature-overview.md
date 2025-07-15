@@ -31,7 +31,11 @@ A Back Office user can add product sets to any page by [creating a product set c
 
 For more details about product sets, watch the video:
 
-{% wistia 9co7uw35a9 720 480 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/product-sets-feature-overview.md/Product+Sets-9co7uw35a9.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Current constraints
 

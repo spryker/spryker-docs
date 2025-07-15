@@ -125,7 +125,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Configure export to Redis
+### 3) Configure export to the key-value store (Redis or Valkey)
 
 Follow the procedure below to to publish tables on change (create, edit, delete) to the `spy_product_abstract_group_storage` table and synchronize the data to Storage.
 

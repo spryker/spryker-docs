@@ -28,7 +28,7 @@
     TRUNCATE TABLE spy_cms_block_storage
     ```
 
-    2. Remove all keys from Redis:
+    2. Remove all keys from key-value storage (Redis or Valkey):
 
     ```shell
     redis-cli --scan --pattern kv:cms_block:'*' | xargs redis-cli unlink
@@ -50,7 +50,7 @@
 
 4. Populate storage with the new version:
 
-    1. Get all the data about CMS blocks from database and publish it into Redis:
+    1. Get all the data about CMS blocks from database and publish it into key-value storage (Redis or Valkey):
 
     ```shell
     console event:trigger -r cms_block

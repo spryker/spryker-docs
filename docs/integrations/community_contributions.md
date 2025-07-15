@@ -1,19 +1,15 @@
 ---
 title: Community Contributions
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+last_updated: July 9, 2025
 layout: custom_new
-article_status: published
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
-
-
-Spryker thrives because of its powerful technology **and** the people who build on it. Discover how community-driven innovation can accelerate your next project.
+<div class="community-hero">
+  <p class="header-title">Connect, Create, Contribute.</p>
+  <p>Spryker thrives because of its powerful technology <strong>and</strong> the people who build on it. Discover how community driven innovation can accelerate your next project.</p>
+  <p>Explore developer driven tools and extensions that boost your Spryker project. Brought to you by the community, for the community.</p>
+  <a class="hero-cta" href="#">Browse Community Tools</a>
+</div>
 
 
 ## What Are Community Contributions

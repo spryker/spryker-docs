@@ -23,8 +23,8 @@
     /* Borders & Spacing */
     --custom-border-radius-small: 4px;
     --custom-border-radius-medium: 10px;
-    --custom-custom-border-radius-large: 12px;
-    --custom-custom-border-radius-xl: 21px;
+    --custom-border-radius-large: 12px;
+    --custom-border-radius-xl: 21px;
     --custom-gap-distance: 20px;
   }
   
@@ -385,11 +385,12 @@
   
   /* Flex Icon Container */
   .fl_cont {
-    background: var(--custom-contact-background);
+    background: #e7f7ff;
     display: flex;
     margin-bottom: 1%;
     padding: 1%;
     width: auto;
+    color: #093145;
   }
   
   .fl_cont .fl_icon {
@@ -452,3 +453,37 @@
   .cont_us button:hover {
     background: var(--custom-primary-hover-color);
   }
+
+  .community-hero {
+    background: #011427;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: var(--custom-border-radius-large);
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    color: #fff;
+  }
+  
+  .community-hero .header-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    margin-top:0;
+    font-weight:bold;
+  }
+  
+  .community-hero p {
+    color: #fff;
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    background: linear-gradient(291deg, rgba(236, 0, 140, 1) 0%, rgba(0, 174, 240, 1) 100%);
+    color: #1b203a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

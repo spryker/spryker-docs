@@ -19,7 +19,7 @@ Spryker's Glue API is a dedicated application layer within the Spryker Cloud Com
 
 </div>
 
-## Core API Types: REST vs Backend (BAPI)
+## Spryker GLUE API Types: REST vs Backend (BAPI)
 
 Spryker's Glue API framework offers two primary types of API applications, each tailored for different use cases:
 
@@ -157,5 +157,5 @@ Beyond the standard SAPI and BAPI, Spryker allows you to create entirely new, is
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Create something else</div>
+  <div class="fl_text"><strong>Further Reading:</strong> Use Default GLUE Parameters</div>
 </a>

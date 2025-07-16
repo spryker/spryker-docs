@@ -244,7 +244,7 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 
 | PLUGIN                                       | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                                                     |
 |----------------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| DownloadCompanyFilesPermissionPlugin         | Enables downloading of files.                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| DownloadCompanyFilesPermissionPlugin         | Enables downloading of files.                                    |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
@@ -261,7 +261,6 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 namespace Pyz\Zed\Permission;
 
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\DownloadFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
@@ -276,7 +275,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     {
         return [
             new ViewFilesPermissionPlugin(),
-            new DownloadFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
             new ViewCompanyFilesPermissionPlugin(),
@@ -294,7 +292,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Client\Permission;
 
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\DownloadFilesPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\DownloadcompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
@@ -309,7 +307,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     {
         return [
             new ViewFilesPermissionPlugin(),
-            new DownloadFilesPermissionPlugin(),
+            new DownloadCompanyFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
             new ViewCompanyFilesPermissionPlugin(),

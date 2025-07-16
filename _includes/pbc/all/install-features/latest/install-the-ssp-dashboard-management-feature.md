@@ -188,33 +188,17 @@ console data:import cms-slot-block
 
 | PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                      |
 |--------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
 | CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SelfServicePortal\Plugin\CmsBlockStorage |
 | SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
 | SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication   |
 
-**src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
-
-```php
-use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
-
-class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
-{
-    protected function getPermissionPlugins(): array
-    {
-        return [
-            new ViewDashboardPermissionPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
 ```php
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {

@@ -199,8 +199,8 @@ Ensure the following transfer objects have been generated:
 | Locale                              | transfer | created | src/Generated/Shared/Transfer/LocaleTransfer                              |
 | ServiceConditions                   | transfer | created | src/Generated/Shared/Transfer/ServiceConditionsTransfer                   |
 | SspServiceConditions                | transfer | created | src/Generated/Shared/Transfer/SspServiceConditionsTransfer                |
-| ServicesSearchConditionGroup        | transfer | created | src/Generated/Shared/Transfer/ServicesSearchConditionGroupTransfer        |
-| SspServicesSearchConditionGroup     | transfer | created | src/Generated/Shared/Transfer/SspServicesSearchConditionGroupTransfer     |
+| ServicesSearchCondition        | transfer | created | src/Generated/Shared/Transfer/ServicesSearchConditionTransfer        |
+| SspServicesSearchCondition     | transfer | created | src/Generated/Shared/Transfer/SspServicesSearchConditionTransfer     |
 | ServiceCriteria                     | transfer | created | src/Generated/Shared/Transfer/ServiceCriteriaTransfer                     |
 | SspServiceCriteria                  | transfer | created | src/Generated/Shared/Transfer/SspServiceCriteriaTransfer                  |
 | OrderItemFilter                     | transfer | created | src/Generated/Shared/Transfer/OrderItemFilterTransfer                     |

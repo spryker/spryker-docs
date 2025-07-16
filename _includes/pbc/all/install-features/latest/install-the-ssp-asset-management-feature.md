@@ -40,7 +40,7 @@ Add the following configuration to `config/Shared/config_default.php`:
 |-------------------------------------------|-----------------------------------------------------|-----------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE   | Flysystem configuration for file management.        | Spryker\Shared\FileSystem               |
 | SelfServicePortalConstants::BASE_URL_YVES | Yves URL used in image URLs.                        | SprykerFeature\Shared\SelfServicePortal |
-| SelfServicePortalConfig::getStorageName() | Defines the Storage name for asset Flysystem files. | SprykerFeature\Zed\SelfServicePortal    |
+| SelfServicePortalConstants::ASSET_STORAGE_NAME | Defines the Storage name for asset Flysystem files. | SprykerFeature\Zed\SelfServicePortal    |
 
 **config/Shared/config_default.php**
 
@@ -58,25 +58,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 
 $config[SelfServicePortalConstants::BASE_URL_YVES] = 'https://your-yves-url';
-```
-
-**src/Pyz/Zed/SelfServicePortal/SelfServicePortalConfig.php**
-
-```php
-namespace Pyz\Zed\SelfServicePortal;
-
-use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
-
-class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
-{
-    /**
-     * @return string|null
-     */
-    public function getAssetStorageName(): ?string
-    {
-        return 'ssp-asset-image';
-    }
-}
+$config[SelfServicePortalConstants::ASSET_STORAGE_NAME] = 'ssp-asset-image';
 ```
 
 ## Set up database schema

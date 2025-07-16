@@ -2,6 +2,7 @@
 title: Creating a New Module
 description: Learn how to create a new module in Spryker to encapsulate functionality, improve scalability, and align with modular architecture standards.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

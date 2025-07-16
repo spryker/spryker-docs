@@ -2,8 +2,8 @@
 title: Spryker GLUE API for Data Exchange
 description: Comprehensive guide to Spryker GLUE API, detailing its capabilities for seamless data exchange, integration, and customization using REST, GraphQL, and OData protocols.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
-nav_pr: 3.4
 ---
 
 GLUE API is Spryker's built-in API interface that supports a wide range of data exchange operations out of the box. You can easily extend it to support custom logic or additional entities as needed. It enables third-party systems and applications to communicate synchronously using REST API, GraphQL, or OData protocols.

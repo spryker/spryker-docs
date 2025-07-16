@@ -2,6 +2,7 @@
 title: Endpoint Security
 description: Learn about endpoint security features and best practices for securing integration endpoints in Spryker, including authentication, IP whitelisting, HTTPS enforcement, and monitoring.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

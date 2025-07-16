@@ -1,16 +1,9 @@
 ---
 title: Integrate with Spryker
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+last_updated: July 9, 2025
+template: default
 layout: custom_new
-nav_pr: 1 
-article_status: published
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
 
 <div class="content_box">Integrating third party services into a Spryker based project is a crucial part of extending and customizing your commerce solution to meet unique business needs. Whether you're connecting payment providers, logistics systems, marketing tools, or customer support platforms, Spryker offers a flexible and scalable architecture designed to support smooth integrations. In this article, we'll explore the various methods available for integrating external systems with Spryker, from using APIs and middleware to leveraging Spryker's modular architecture.</div>

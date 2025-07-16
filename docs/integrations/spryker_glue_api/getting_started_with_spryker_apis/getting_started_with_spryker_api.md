@@ -1,16 +1,9 @@
 ---
 title: Getting Started with Spryker APIs
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+last_updated: July 9, 2025
+template: default
 layout: custom_new
-article_status: published
-nav_pr: 1
-tags: 
-  - ECO Module
-  - ACP
-  - API
-  - Custom Build
-  - Community Contribution
 ---
 
 <div class="content_box">

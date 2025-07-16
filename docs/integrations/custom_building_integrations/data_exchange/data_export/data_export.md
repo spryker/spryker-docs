@@ -2,6 +2,7 @@
 title: Spryker Data Export
 description: Learn how to configure and extend Spryker's data export functionality for reporting, analytics, and system integration.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

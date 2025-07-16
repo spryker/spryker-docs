@@ -2,6 +2,7 @@
 title: Spryker API Authentication and Authorization
 description: Learn how to authenticate and authorize requests in the Spryker Backend API using OAuth 2.0.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

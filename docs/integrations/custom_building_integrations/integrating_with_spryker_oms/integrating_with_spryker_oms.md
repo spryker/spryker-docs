@@ -2,6 +2,7 @@
 title: Integrating with Spryker OMS
 description: Learn how to integrate Spryker OMS with third-party systems using event-driven and API-driven approaches to manage order lifecycles effectively.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

@@ -2,6 +2,7 @@
 title: Custom Build Integrations with Spryker
 description: Learn how to create custom integrations with Spryker to connect third-party systems, services, or tools seamlessly, leveraging modular architecture and API capabilities for tailored business solutions.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

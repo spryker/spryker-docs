@@ -2,6 +2,7 @@
 title: Using Jenkins for Third Party Integrations
 description: Learn how to use Jenkins for automating data exchange tasks in Spryker, including importing, exporting, and triggering scheduled operations with third-party systems.
 last_updated: July 9, 2025
+template: default
 layout: custom_new
 ---
 

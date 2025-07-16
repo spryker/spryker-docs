@@ -1,8 +1,21 @@
 <div class="alt-nav dropdown">
-    <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="alt-nav__opener-text">For older versions, see the <a href="https://docs-archive.spryker.com/" class="alt-nav__link">docs archive</a></span>
+    <div class="alt-nav__opener nav-link" id="versionDropdownMenuLink">
+        <div class="alt-nav__opener-text">
+            For older versions, see the 
+            <a href="#" onclick="redirectToArchive()" class="alt-nav__link" target="_blank" rel="noopener">
+                docs archive <i class="icon-external-link"></i>
+            </a>
+        </div>
         <i class="alt-nav__opener-icon icon-arrow-down"></i>
-    </span>
+    </div>
     <span class="alt-nav__opener-label">Versions</span>
 </div>
 <div class="alt-nav__overlay"></div>
+
+<script>
+    function redirectToArchive() {
+        const path = window.location.pathname;
+        const archiveUrl = 'https://docs-archive.spryker.com' + path;
+        window.open(archiveUrl, '_blank');
+    }
+</script>

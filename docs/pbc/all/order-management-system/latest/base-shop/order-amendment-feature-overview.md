@@ -69,6 +69,26 @@ During the order amendment process, the prices for cart items are displayed acco
 
 Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) can't be amended.
 
+## Stock
+
+Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can use the strategies described in the following sections.
+
+### Preserve original stock and availability
+
+- Items are editable even if they're now out of stock, deactivated, or unavailable
+- Quantity can be reduced or left unchanged without stock validation.
+- Quantity can be increased only if additional stock is available in the catalog.
+  - *Example:* Original Order Stock = 2, Current Catalog Stock = 10 → Max Quantity = 12.
+
+This strategy allows for flexible order amendments while maintaining inventory accuracy.
+
+### Use Default Cart Behavior
+
+- If an item is deactivated, unavailable, or out of stock, it is removed from the cart.
+- A notification is displayed to inform the user about the removal.
+
+> Projects can implement a custom approach to support more flexible post-purchase edits.
+
 
 ## Gift cards and vouchers
 

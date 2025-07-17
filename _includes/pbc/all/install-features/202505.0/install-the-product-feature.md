@@ -353,7 +353,7 @@ Make sure that you can manage "multiselect" product attributes at `https://zed.d
 
 {% endinfo_block %}
 
-### 5) Set up the product concrete table filter
+### 5) Search for Concrete product SKU in the list of Abstract Products
 
 {% info_block warningBox "Performance impact" %}
 Concrete SKU filters can have a performance impact on the Product table in the Back Office. The impact is not major, but we recommend doing some performance testing after enabling this feature to see how it affects the table loading times in your case.

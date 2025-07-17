@@ -3014,10 +3014,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
                       - title: Category Management
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
-                      - title: Install Concrete SKU product filter feature
-                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.html
-                        include_versions:
-                        - "latest"       
                                        
                       - title: Install the Category Management + Catalog feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html

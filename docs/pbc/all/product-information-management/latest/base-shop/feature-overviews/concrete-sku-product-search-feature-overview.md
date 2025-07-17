@@ -13,6 +13,6 @@ For example, an abstract product with the `ABCD` SKU has two concrete products w
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES                                                                                                                                                                                                                                  |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Install the Concrete SKU product search feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-product-feature#search-for-concrete-product-sku-in-the-list-of-abstract-products) |
+| INSTALLATION GUIDES                                                                                                                                                                                                                                |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Install the Concrete SKU product search feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature#search-for-concrete-product-sku-in-the-list-of-abstract-products) |

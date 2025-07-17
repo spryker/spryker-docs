@@ -2950,7 +2950,7 @@ entries:
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
                       - title: Concrete SKU product filter feature overview
-                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/concrete-sku-product-search-feature-overview.html
                         include_versions:
                         - "latest"
 

@@ -4034,9 +4034,8 @@ entries:
             url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html                                  
                       
           - title: Install
+            url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
             nested:
-              - title: Install Self-Service Portal
-                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
               - title: Install the SSP Asset Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
               - title: Install the SSP Dashboard Management feature

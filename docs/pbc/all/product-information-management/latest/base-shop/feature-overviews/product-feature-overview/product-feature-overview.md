@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/product-feature-overview/product-feature-overview.html  
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-feature-overview/product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
+  - /docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -99,6 +100,13 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 - [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
 - [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
 - [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
+
+## Concrete product filter
+
+The Concrete SKU product filter lets a Back Office user filter abstract products by SKUs of concrete products.
+
+For example, an abstract product with the `ABCD` SKU has two concrete products with the `ABCD-1` and `ABCD-2` SKUs. Without this feature, you can find this abstract product only by the `ABCD` SKU. With this feature, you can find this product by the `ABCD`, `ABCD-1`, and `ABCD-2` SKUs.
+
 
 
 ## Related Business User documents

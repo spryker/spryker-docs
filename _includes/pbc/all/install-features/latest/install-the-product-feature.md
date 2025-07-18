@@ -353,10 +353,12 @@ Make sure that you can manage "multiselect" product attributes at `https://zed.d
 
 {% endinfo_block %}
 
-### 5) Search for Concrete product SKU in the list of Abstract Products
+### 5) Search for concrete product SKU in the list of abstract products
 
 {% info_block warningBox "Performance impact" %}
-Search by concrete SKUs can have a performance impact on the Product table in the Back Office. The impact is not major, but we recommend doing some performance testing after enabling this feature to see how it affects the table loading times in your case.
+
+We recommend testing how this feature affects table loading times.
+
 {% endinfo_block %}
 
 Extend the `isConcreteSkuSearchInProductTableEnabled` method in the `ProductManagementConfig` class at the project level and return `true`:

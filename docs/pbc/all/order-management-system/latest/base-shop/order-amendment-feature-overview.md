@@ -82,8 +82,8 @@ If an item is deactivated, unavailable, or out of stock, it is removed from the 
 ### Preserve original stock and availability
 
 - Items are editable even if they're now out of stock, deactivated, or unavailable
-- Quantity can be reduced or left unchanged without stock validation
-- Quantity can be increased only if sufficient stock is available
+- Quantity can be reduced or left unchanged according to the original stock and availability
+- Quantity can be increased only if current stock is sufficient
 
 For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
 

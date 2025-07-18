@@ -136,7 +136,8 @@ entries:
             url: /docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html
           - title: Checklist for a new store implementation
             url: /docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html
-
+      - title: Configurable Data Exporter
+        url: /docs/ca/dev/configurable-data-exporter.html
       - title: Troubleshooting
         url: /docs/ca/dev/troubleshooting/troubleshooting.html
         nested:

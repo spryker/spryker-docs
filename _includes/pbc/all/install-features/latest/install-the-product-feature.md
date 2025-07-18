@@ -353,6 +353,36 @@ Make sure that you can manage "multiselect" product attributes at `https://zed.d
 
 {% endinfo_block %}
 
+### 5) Search for concrete product SKU in the list of abstract products
+
+{% info_block warningBox "Performance impact" %}
+
+We recommend testing how this feature affects table loading times.
+
+{% endinfo_block %}
+
+Extend the `isConcreteSkuSearchInProductTableEnabled` method in the `ProductManagementConfig` class at the project level and return `true`:
+
+**src/Pyz/Zed/ProductManagement/ProductManagementConfig.php**
+
+```php
+<?php
+namespace Pyz\Zed\ProductManagement;
+
+use Spryker\Zed\ProductManagement\ProductManagementConfig as SprykerProductManagementConfig;
+
+class ProductManagementConfig extends SprykerProductManagementConfig
+{
+    /**
+     * @return bool
+     */
+    public function isConcreteSkuSearchInProductTableEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
 ## Install feature frontend
 
 Follow the steps below to install the Product feature frontend.

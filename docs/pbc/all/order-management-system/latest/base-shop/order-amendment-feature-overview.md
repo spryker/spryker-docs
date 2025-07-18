@@ -73,21 +73,22 @@ Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{sit
 
 Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can use the strategies described in the following sections.
 
+
+### Validate amended order against current stock
+
+If an item is deactivated, unavailable, or out of stock, it is removed from the cart. A notification is displayed to inform the user about the removal.
+
+
 ### Preserve original stock and availability
 
 - Items are editable even if they're now out of stock, deactivated, or unavailable
-- Quantity can be reduced or left unchanged without stock validation.
-- Quantity can be increased only if additional stock is available in the catalog.
-  - *Example:* Original Order Stock = 2, Current Catalog Stock = 10 → Max Quantity = 12.
+- Quantity can be reduced or left unchanged without stock validation
+- Quantity can be increased only if sufficient stock is available
 
-This strategy allows for flexible order amendments while maintaining inventory accuracy.
+For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
 
-### Use Default Cart Behavior
 
-- If an item is deactivated, unavailable, or out of stock, it is removed from the cart.
-- A notification is displayed to inform the user about the removal.
-
-> Projects can implement a custom approach to support more flexible post-purchase edits.
+You can implement custom strategies on the project level.
 
 
 ## Gift cards and vouchers

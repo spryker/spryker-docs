@@ -15,4 +15,4 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-feature.md -->
+{% include pbc/all/install-features/latest/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-spryker-core-back-office-feature.md -->

@@ -28,7 +28,7 @@ This section explains how different attributes of your environment are used.
 ### Optional: Environment name
 
 The environment name is derived from the combination of the project name and environment type. The environment name is referenced in AWS services endpoints:
-- Redis
+- Key-value store (Redis or Valkey)
 - DB
 - Elasticsearch
 - Deploy files

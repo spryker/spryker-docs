@@ -17,7 +17,7 @@ This guide describes all the required steps in order to integrate a mailing prov
 
 {% info_block warningBox %}
 
-If you are migrating your project from Swift Mailer to Symfony Mailer, please check the section [Migration from SwiftMailer to Symfony Mailer](#migration-from-swiftmailer-to-symfony-mailer)
+If you are migrating your project from Swift Mailer to Symfony Mailer, check the section [Migration from SwiftMailer to Symfony Mailer](#migration-from-swiftmailer-to-symfony-mailer)
 
 {% endinfo_block %}
 
@@ -117,15 +117,18 @@ If your application was using SwiftMailer before and you have the following valu
 1. SPRYKER_SMTP_PORT = 587
 2. SPRYKER_SMTP_ENCRYPTION='tls'
 
-please follow the next steps:
+Follow the next steps:
 
 1. Force the port for SMTP to 465 and release this change with the migration release:
+
 ```php
 $config[SymfonyMailerConstants::SMTP_PORT] = '465';
-```   
+```
+
 2. Create a support ticket to change **SPRYKER_SMTP_PORT** to 465
 
 3. Revert configuration to the previous state in order to use a port from the env variable:
+
 ```php
 $config[SymfonyMailerConstants::SMTP_PORT] = getenv('SPRYKER_SMTP_PORT') ?: null;
 ```

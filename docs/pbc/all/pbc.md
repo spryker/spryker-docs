@@ -15,6 +15,12 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html  
   - /docs/scos/dev/feature-walkthroughs/202212.0/feature-walkthroughs.html  
   - /docs/pbc/all/pbc-landing.html
+  - /docs/pbc/all/usercentrics/configure-usercentrics.html
+  - /docs/pbc/all/usercentrics/disconnect-usercentrics.html
+  - /docs/pbc/all/usercentrics/integrate-usercentrics.html
+  - /docs/pbc/all/usercentrics/usercentrics.html
+  - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/usercentrics.md
+  - /docs/pbc/all/miscellaneous/202404.0/third-party-integrations/operational-tools-monitoring-legal/usercentrics.md
 ---
 
 Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.
@@ -25,6 +31,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 
 | NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
+| [Business Intelligence](/docs/pbc/all/business-intelligence/{{site.version}}/business-intelligence.html) | Analyze data to understand how your shop performs and areas for improvement. | Make informed decisions. |
 | [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) | The Spryker Cloud Commerce OS integrates with several shipping carriers and methods and lets you define their availability, price, and tax set. During the checkout process, customers have the option to select their preferred shipment method and relevant carrier. | Ensures quick and cost-effective delivery. |
 | [Cart and Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/cart-and-checkout.html) | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |
 | [Content Management System (CMS)](/docs/pbc/all/content-management-system/{{site.version}}/content-management-system.html) | The CMS features let you customize your store, enrich it with information, stories, or other content, and make it easily findable in search engines. Several SEO features enable you to add customized meta information to all your content and create search engine-friendly URLs. | Provides compelling content and stories where your customers need it. |
@@ -74,7 +81,6 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 | [Vertex](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/vertex/vertex.html) | Tax compliance. |
 | [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) | Search engine. |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html) | Payment service provider. |
-| [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html) | Consent management platform. |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | Platform for user-generated content. |
 | [Stripe](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/stripe.html) |  Financial infrastructure platform. |
 

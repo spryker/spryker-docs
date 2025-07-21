@@ -154,8 +154,7 @@ For more information on how to implement a Widget, see the [How to Implement a W
 | TAG | DESCRIPTION | ADDITIONAL COMMENTS |
 | --- | --- | --- |
 | `{% raw %}{%{% endraw %} widget ... {% raw %}%}{% endraw %}...{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Required a twig tag to render a widget. | A widget is rendered only when it can be found in the local or global widget registry. |
-| `WIDGET_EXPRESSION` | Can be a string that represents the widget name or an instance of a widget.
- | This argument is required. |
+| `WIDGET_EXPRESSION` | Can be a string that represents the widget name or an instance of a widget. | This argument is required. |
 | `args WIDGET_ARGUMENTS` | Array of arguments that the widget is initialized with (by `constructor() of new widgets` or by `initialize()` method of old widget plugins). This parameter is only available when `WIDGET_EXPRESSION` was not an instance of a widget.| This parameter is optional, depending if the widget object to be initialized requires any arguments or not. |
 | `use TWIG_TEMPLATE_PATH` | Render the widget with a different template then defined by the widget. `TWIG_TEMPLATE_PATH` is a string that represents a valid path for a twig template that can be loaded. | This parameter is optional. |
 | `with TWIG_PARAMETERS` | Pass an associative array of variables for the scope of the rendered widget twig blocks.  | This parameter is optional. |

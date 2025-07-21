@@ -29,7 +29,7 @@ To start the feature integration:
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-eco/oauth-azure:"^1.0.0" --update-with-dependencies

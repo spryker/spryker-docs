@@ -119,7 +119,11 @@ $bootstrap
     ->run();
 ```
 
+<!-- vale off -->
+
 **public/Backoffice/index.php**
+
+<!-- vale on -->
 
 ```php
 <?php
@@ -148,7 +152,11 @@ $bootstrap
 
 2. Add the following error pages:
 
+<!-- vale off -->
+
 <details><summary>public/Backoffice/errorpage/4xx.html</summary>
+
+<!-- vale on -->
 
 ```html
 <!DOCTYPE html>
@@ -190,9 +198,14 @@ $bootstrap
     </body>
 </html>
 ```
+
 </details>
 
+<!-- vale off -->
+
 <details><summary>public/Backoffice/errorpage/5xx.html</summary>
+
+<!-- vale on -->
 
 ```html
 <!DOCTYPE html>
@@ -234,79 +247,88 @@ $bootstrap
     </body>
 </html>
 ```
+
 </details>
 
-3. Configure a maintenance page:
+3. To configure a maintenance page, add the page:
 
 {% info_block warningBox %}
 
-The maintenance page is not yet compatible with Spryker Cloud.
+The maintenance page is not compatible with Spryker Cloud.
 
 {% endinfo_block %}
 
-    1. Add the maintenance page:
+<!-- vale off -->
 
-    **public/Backoffice/maintenance/index.html**
+**public/Backoffice/maintenance/index.html**
 
-    ```html
-        <!DOCTYPE html>
-        <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-            <head>
-                <title>Spryker Zed - Maintenance</title>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
-                <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
-            </head>
-            <style>
-                body {
-                    font-family: 'PT Mono', sans-serif;
-                }
-                #so-doc {
-                    margin: 0 auto;
-                    width: 960px;
-                }
-            </style>
-            <body>
-                <div id="so-doc">
-                    <div>
-                        <pre>
-                        PAGE UNDER CONSTRUCTION!
+<!-- vale on -->
 
-                        Come back in a few minutes...
-                        </pre>
-                    </div>
+```html
+    <!DOCTYPE html>
+    <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <title>Spryker Zed - Maintenance</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="description" content="" />
+            <meta name="keywords" content="" />
+            <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+        </head>
+        <style>
+            body {
+                font-family: 'PT Mono', sans-serif;
+            }
+            #so-doc {
+                margin: 0 auto;
+                width: 960px;
+            }
+        </style>
+        <body>
+            <div id="so-doc">
+                <div>
+                    <pre>
+                    PAGE UNDER CONSTRUCTION!
+
+                    Come back in a few minutes...
+                    </pre>
                 </div>
-            </body>
-        </html>
-    ```
+            </div>
+        </body>
+    </html>
+```
 
-    2. Configure the page you've added in step 1 to be displayed when the error `503` occurs:
+2. Configure the page you've added in step 3 to be displayed when the error `503` occurs:
 
-    **public/Backoffice/maintenance/maintenance.php**
+<!-- vale off -->
 
-    ```php
-    <?php
+**public/Backoffice/maintenance/maintenance.php**
 
-    /**
-     * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
-     * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
-     */
+<!-- vale on -->
 
-    if (file_exists(__DIR__ . '/maintenance.marker')) {
-        http_response_code(503);
-        echo file_get_contents(__DIR__ . '/index.html');
-        exit(1);
-    }
-    ```
+
+```php
+<?php
+
+/**
+ * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+if (file_exists(__DIR__ . '/maintenance.marker')) {
+    http_response_code(503);
+    echo file_get_contents(__DIR__ . '/index.html');
+    exit(1);
+}
+```
+
 
 ## 4) Separate application plugin stacks
 
 1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
 
-  -  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
-  - `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
-  - `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
+- `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
 
 2. Add the following methods:
 
@@ -377,6 +399,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
   }
 }
 ```
+
 </details>
 
 ## 5) Separate event dispatcher plugin stacks
@@ -513,7 +536,7 @@ sections:
         router-cache-warmup-backend-gateway:
             command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
         ...
-```        
+```
 
 ## 8) Configure the application
 
@@ -570,6 +593,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ...
 ```
+
 </details>
 
 2. To open new entry points for external API systems, add the following paths to `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php`:
@@ -584,10 +608,10 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 3. Adjust the server configuration of the application according to the added endpoints.
 
 4. To configure your cloud environment to be compatible with separate endpoint bootstraps, [contact us](https://spryker.com/en/support/) and provide the following information:
-    * Updated deploy file
-    * List of the new endpoints
+    - Updated deploy file
+    - List of the new endpoints
 
-Make sure to do this at least 5 working days prior to the planned change.    
+Make sure to do this at least 5 working days prior to the planned change.
 
 
 ## 9) Update the Docker SDK
@@ -650,6 +674,7 @@ groups:
             entry-point: BackendApi      
 ...
 ```
+
 </details>
 
 1. Update the hosts file by running the `docker/sdk boot {deploy_file}` or `docker/sdk install` command and following the instructions in the output.

@@ -11,11 +11,13 @@ This document describes how to replace the deprecated `CodeItNow` module with `B
 To migrate from `CodeItNow` to `BarcodeLaminas`, follow these steps:
 
 1. Remove the deprecated `CodeItNow` module:
+
 ```bash
 composer remove spryker/code-it-now
 ```
 
 2. Install the replacement `BarcodeLaminas` module:
+
 ```bash
 composer require spryker/barcode-laminas
 ```
@@ -50,6 +52,6 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-To verify that `BarcodeLaminas` has been installed and works correctly, in the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** and check that barcode images are generated successfully.   
+To verify that `BarcodeLaminas` has been installed and works correctly, in the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** and check that barcode images are generated successfully.
 
 {% endinfo_block %}

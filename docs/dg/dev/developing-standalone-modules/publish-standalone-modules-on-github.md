@@ -10,8 +10,8 @@ To publish a module on GitHub, take the following steps.
 
 ## Prerequisites
 
-* [Create a GitHub Account](https://github.com/signup).
-* Create a GitHub repository for your module. For instructions, see [Create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories#create-a-repository).
+- [Create a GitHub Account](https://github.com/signup).
+- Create a GitHub repository for your module. For instructions, see [Create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories#create-a-repository).
 
 
 ## Set up Git

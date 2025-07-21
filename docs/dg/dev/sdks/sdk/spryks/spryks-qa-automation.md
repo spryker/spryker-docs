@@ -19,6 +19,7 @@ You can enable the QA automation at the project initialization step as an additi
 ```bash
 spryker-sdk sdk:init:project
 ```
+
 2. Pick the necessary steps from the list. If none is picked, the default list is used. You can check the default list in the [settings.yaml](https://github.com/spryker-sdk/sdk/blob/d6cac0ec997ea3ef067f8af07b8b375f96632a4f/src/Extension/Resources/config/setting/settings.yaml) file, in `settings.qa_tasks.values`.
 
 After the project's initialization, its QA automation tasks are saved to the `.ssdk/setting` file.
@@ -34,7 +35,7 @@ qa_tasks:
 
 ## Use QA automation
 
-To execute all of the QA automation tasks, run the following command:
+Execute all of the QA automation tasks:
 
 ```bash
 spryker-sdk sdk:qa:run

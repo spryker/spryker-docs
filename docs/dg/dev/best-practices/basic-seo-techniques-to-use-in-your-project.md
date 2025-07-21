@@ -18,6 +18,7 @@ To increase search result ranking in the Spryker system, we use some basic SEO a
 The simplest and basic way to optimize SEO of page content is the proper usage of headings on the pages and microdata usage.
 
 ## Using headings
+
 Headings allow for easy navigation through page content and help users and search engines read and understand the text. However, for the headings to be helpful for users and search engines, the headings must be structured well, and contain the key phrases.
 
 {% info_block warningBox "H1 headings" %}
@@ -36,21 +37,22 @@ Check out the headings structure on a catalog page in the Spryker Demo Shop:
 To keep the initial Spryker design, we use the service CSS classes title with modifiers h1-h6. At the same time, headings in CMS blocks are div elements, as these blocks can be injected anywhere and potentially could break the common heading structure.
 
 ## Using microdata
+
 After introducing the headings structure, the next step towards increasing the search result ranking is using the microdata. There are different approaches to using microdata on a page, and one of them is the usage of the [Schema.org](https://schema.org/) vocabulary, which we also implemented for the Spryker system. [Schema.org](https://schema.org/) (often called Schema) is a semantic vocabulary of tags or microdata that you can add to your HTML to improve the way search engines read and represent your page on search engine results pages (SERPs). Microdata is one of three code languages designed to provide search-engine spider programs with information about the website content. The failure to use microdata leads to the reduction of search ranks of the shop pages. Because the content is not typed for search engines in this case, and they can not build structured pages to index them well.
 
 Integrating microdata into code offers a number of potential advantages. First, microdata can give search engine crawlers more context for the type of information on a website and the way the site should be indexed and ranked. Another benefit of microdata is the creation of *rich snippets*, which display more information on the SERPs than traditional listings.
 
 Considering that Spryker is an e-commerce platform, the most important types of information are:
 
-* Product: any offered product or service
-* Offer: an offer to transfer some rights to an item or to provide a service
-* Review: a review of an item
-* AggregateRating: the average rating based on multiple ratings or reviews
-* PropertyValue: a property-value pair represents a feature of a product or place
+- Product: any offered product or service
+- Offer: an offer to transfer some rights to an item or to provide a service
+- Review: a review of an item
+- AggregateRating: the average rating based on multiple ratings or reviews
+- PropertyValue: a property-value pair represents a feature of a product or place
 
 Here is an example of the [Schema.org](https://schema.org/) microdata implementation for a page:
 
-```
+```html
 <div itemscope itemtype="https://schema.org/Product">
   <span itemprop="name">Product name</span>  
 </div>
@@ -87,4 +89,5 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
  </details>
 
 ## Applying the basic SEO techniques in your project
+
 For details about applying the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html).

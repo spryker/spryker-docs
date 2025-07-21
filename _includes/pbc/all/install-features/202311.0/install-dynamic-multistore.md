@@ -216,7 +216,7 @@ Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 3. Adjust configuration 
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |
@@ -1296,7 +1296,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |

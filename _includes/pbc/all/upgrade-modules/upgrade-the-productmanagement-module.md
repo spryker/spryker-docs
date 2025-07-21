@@ -51,6 +51,7 @@ They use a new form option `locale`. If you have overwritten or changed those cl
 There is also a new dependency in `PriceFormTypePlugin`:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+
 ```php
 namespace Pyz\Zed\ProductManagement;
 
@@ -175,10 +176,10 @@ The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\Produc
 ### Importer updates
 
 Project's importer was updated to take advantage of the new `ProductAttribute` module:
-* `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
-* `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
-* `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`: the `$productManagementFacade` property was removed and replaced with `$productAttributeFacade`.
-* `src/Pyz/Zed/Importer/ImporterDependencyProvider.php`: the `FACADE_PRODUCT_MANAGEMENT` constant was removed and replaced with the `FACADE_PRODUCT_ATTRIBUTE`; the  `addProductManagementFacade()` method was removed and replaced with `addProductAttributeFacade()`.
+- `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
+- `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
+- `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`: the `$productManagementFacade` property was removed and replaced with `$productAttributeFacade`.
+- `src/Pyz/Zed/Importer/ImporterDependencyProvider.php`: the `FACADE_PRODUCT_MANAGEMENT` constant was removed and replaced with the `FACADE_PRODUCT_ATTRIBUTE`; the  `addProductManagementFacade()` method was removed and replaced with `addProductAttributeFacade()`.
 
 {% info_block errorBox %}
 

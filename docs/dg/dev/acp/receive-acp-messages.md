@@ -10,6 +10,7 @@ redirect_from:
 Your Spryker project can receive ACP messages using the following commands:
 
 Receive messages from all channels:
+
 ```bash
 console message-broker:consume
 ```

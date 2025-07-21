@@ -11,10 +11,10 @@ redirect_from:
 ---
 
 Updating your Spryker shop is always an effort. New features, fixes, and updates are coming every day, and modules become more and more outdated. This raises many questions, the most common of which are:
-* Do I actually need to update my project?
-* If yes—how to do it wisely, to spend less time and stay up-to-date?
-* How often should I update?
-* What does the update process look like and how to plan and organize it?
+- Do I actually need to update my project?
+- If yes—how to do it wisely, to spend less time and stay up-to-date?
+- How often should I update?
+- What does the update process look like and how to plan and organize it?
 
 This article gives answers to these questions and provides recommendations that will help you make the Spryker update process smoother, easier, and update efforts predictable.
 
@@ -25,11 +25,11 @@ This article gives answers to these questions and provides recommendations that 
 The smallest building block of Spryker is a *module*. Usually, a module does not represent a complete functionality. A complete functionality, or a *feature*, is represented by an aggregation of a set of modules. A feature is a virtual entity, which binds together a number of modules to satisfy certain functionalities. Check out the [Spryker feature repository](https://github.com/spryker-feature/) for detailed information about each feature.
 
 The set of features makes up a *product*. Spryker offers the following products:
-* [B2B Demo Shop](/docs/about/all/b2b-suite.html)
-* [B2C Demo Shop](/docs/about/all/b2c-suite.html)
-* [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
-* [B2C Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
-* [Master Suite](/docs/about/all/master-suite.html)
+- [B2B Demo Shop](/docs/about/all/b2b-suite.html)
+- [B2C Demo Shop](/docs/about/all/b2c-suite.html)
+- [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
+- [B2C Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
+- [Master Suite](/docs/about/all/master-suite.html)
 
 Schematically, the Spryker product structure looks like this:
 
@@ -38,11 +38,11 @@ Schematically, the Spryker product structure looks like this:
 ## Why and when to update your Spryker shop
 
 The most typical reasons to update modules or features are the following:
-* There are important security or bug fixes that have been introduced recently.
-* You want a new specific feature or module in your project, which requires a newer version of your modules.
-* Your project has been started shortly before a new [product release](/docs/about/all/releases/product-and-code-releases.html#product-releases).
-* You experience some issues with the shop that you would like to report or consult about.
-* If you plan to extend your shop in future with new features from the ones that exist in Spryker or are coming out soon, your project should be always up to date. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
+- There are important security or bug fixes that have been introduced recently.
+- You want a new specific feature or module in your project, which requires a newer version of your modules.
+- Your project has been started shortly before a new [product release](/docs/about/all/releases/product-and-code-releases.html#product-releases).
+- You experience some issues with the shop that you would like to report or consult about.
+- If you plan to extend your shop in future with new features from the ones that exist in Spryker or are coming out soon, your project should be always up to date. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
 
 {% info_block warningBox "Warning" %}
 
@@ -56,7 +56,13 @@ The most *reasonable strategy* of staying up to date is sticking to the Spryker 
 
 Check out the how to migrate and update Spryker projects video for more details on the topic.
 
-{% wistia kitd5w26zq 960 720 %}
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/updating-spryker/updating-spryker.md/How+to+Migrate+and+Upgrade+Spryker+Projects-kitd5w26zq.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Next steps

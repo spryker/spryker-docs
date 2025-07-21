@@ -28,14 +28,14 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Automatic execution of the [Publish & Synchronize process](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to regenerate the published data and re-write the data of the database tables in the `Storage` and `Search` modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
+Automatic execution of the [Publish & Synchronize process](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in the key-value store (Redis or Valkey) and Elasticsearch to display updated information in your shop front end. Or you might want to regenerate the published data and re-write the data of the database tables in the `Storage` and `Search` modules with the subsequent update of key-value store (Redis or Valkey) and Elasticsearch records. This can be done manually by running console commands.
 
 ## Data re-synchronization
 
 
-In some cases, you might want to re-export data into Redis and Elasticsearch. For example, if Redis has been flushed and the data in Redis and/or Elasticsearch is lost.
+In some cases, you might want to re-export data into key-value store (Redis or Valkey) and Elasticsearch. For example, if Redis has been flushed and the data in the key-value store (Redis or Valkey) and/or Elasticsearch is lost.
 
-To re-export data, run the following command:
+Reexport data:
 
 ```bash
 vendor/bin/console sync:data
@@ -44,7 +44,7 @@ vendor/bin/console sync:data
 This command does the following:
 1. Reads the aggregated data from the database tables of `Storage` and `Search` modules.
 2. Sends the data to the RabbitMQ queues.
-3. Copies the data from the RabbitMQ queues to Redis and Elasticsearch.
+3. Copies the data from the RabbitMQ queues to the key-value store (Redis or Valkey) and Elasticsearch.
 
 You can specify particular `Storage` and `Search` tables by specifying entity names as follows:
 
@@ -59,12 +59,14 @@ vendor/bin/console sync:data cms_block
 ```
 
 To trigger data re-sync for a resource, there must be a corresponding sync plugin created for this resource. To learn how to create it, see [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html)
+
 ## Published data re-generation
 
 
-You can regenerate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in Redis and Elasticsearch.
+You can regenerate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in the key-value store (Redis or Valkey) and Elasticsearch.
 
-To regenerate published data, run the following command:
+Regenerate published data:
+
 ```bash
 vendor/bin/console publish:trigger-events
 ```
@@ -77,7 +79,7 @@ vendor/bin/console publish:trigger-events
 
 This command does the following:
 1. Reads data from the `Storage` and `Search` tables and re-writes them
-2. Updates Redis and Elasticsearch records.
+2. Updates key-value store (Redis or Valkey) and Elasticsearch records.
 
 You can specify particular `Storage` and `Search` tables by indicating resource names as follows:
 

@@ -174,6 +174,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -234,6 +235,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
      }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -261,7 +263,7 @@ You can define stores to Yves hosts mapping. This allows generating correct URLs
 
 {% endinfo_block %}
 
-1. Add the following configuration to your project:
+1. Add the following configuration:
 
 | CONFIGURATION                                                 | SPECIFICATION                                                                                                                                            | NAMESPACE                               |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
@@ -408,6 +410,7 @@ availability_notification_subscription.mail.unsubscribe,"Möchten Sie ändern, w
 availability_notification.email_address,"Email address",en_US
 availability_notification.email_address,"E-Mail-Addresse",de_DE
 ```
+
 </details>
 
 Import data:

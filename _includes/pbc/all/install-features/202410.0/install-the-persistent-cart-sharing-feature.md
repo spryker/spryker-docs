@@ -11,6 +11,7 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Resource Sharing | {{page.version}} |
 |   |   |
+
 ### 1) Install the required modules
 
 Install the required modules using Composer:
@@ -278,7 +279,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

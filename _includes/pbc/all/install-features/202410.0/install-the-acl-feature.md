@@ -19,14 +19,14 @@ composer require spryker-feature/acl:"{{page.version}}" --update-with-dependenci
 
 Make sure the following modules have been installed:
 
-| MODULE                         | EXPECTED DIRECTORY                    |
-|--------------------------------|---------------------------------------|
-| Acl                            | vendor/spryker/acl                    |
-| AclDataImport                  | vendor/spryker/acl-data-import        |
-| AclEntity                      | vendor/spryker/acl-entity             |
-| AclEntityDataImport            | vendor/spryker/acl-entity-data-import |
-| AclEntityExtension  (optional) | vendor/spryker/acl-entity-extension   |
-| AclExtension  (optional)       | vendor/spryker/acl-extension          |
+| MODULE            | REQUIRED             | EXPECTED DIRECTORY                    |
+|-------------------|-------------|---------------------------------------|
+| Acl                |   v         | vendor/spryker/acl                    |
+| AclDataImport      |   v         | vendor/spryker/acl-data-import        |
+| AclEntity          |     v       | vendor/spryker/acl-entity             |
+| AclEntityDataImport     |    v   | vendor/spryker/acl-entity-data-import |
+| AclEntityExtension  |            | vendor/spryker/acl-entity-extension   |
+| AclExtension         |    v       | vendor/spryker/acl-extension          |
 
 {% endinfo_block %}
 
@@ -233,9 +233,9 @@ console data:import:data:import:acl-group-role
 {% info_block warningBox "Verification" %}
 
 Make sure the configured data has been added to the following database tables:
-* `spy_acl_group`
-* `spy_acl_role`
-* `spy_acl_groups_has_roles`
+- `spy_acl_group`
+- `spy_acl_role`
+- `spy_acl_groups_has_roles`
 
 {% endinfo_block %}
 
@@ -248,14 +248,14 @@ console acl:entity:synchronize
 {% info_block warningBox "Verification" %}
 
 Make sure the synchronized data has been added to the following database tables:
-* `spy_acl_entity_rule`
-* `spy_acl_entity_segment`
-* `spy_acl_entity_segment_merchant`
-* `spy_acl_entity_segment_merchant_user`
-* `spy_acl_group`
-* `spy_acl_groups_has_roles`
-* `spy_acl_role`
-* `spy_acl_rule`
+- `spy_acl_entity_rule`
+- `spy_acl_entity_segment`
+- `spy_acl_entity_segment_merchant`
+- `spy_acl_entity_segment_merchant_user`
+- `spy_acl_group`
+- `spy_acl_groups_has_roles`
+- `spy_acl_role`
+- `spy_acl_rule`
 
 With a multi-merchant environment, make sure the ACL entities are synchronized for each merchant.
 If the ACL entities have already been synchronized, the synchronization process doesn't create duplicate entries.
@@ -448,12 +448,12 @@ console setup:init-db
 
 Make sure the following works correctly:
 
-* The request to access the Merchant Portal doesn't succeed for users without permissions.
-* A marketplace user can see only the allowed Merchant Portal menu links.
-* `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-* You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
-* When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
-* `RolesTransfer` contains the needed `AclEntityRules`.
-* Users without permissions to access an entity or endpoint can't access them.
+- The request to access the Merchant Portal doesn't succeed for users without permissions.
+- A marketplace user can see only the allowed Merchant Portal menu links.
+- `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
+- You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+- When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
+- `RolesTransfer` contains the needed `AclEntityRules`.
+- Users without permissions to access an entity or endpoint can't access them.
 
 {% endinfo_block %}

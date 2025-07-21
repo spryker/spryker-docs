@@ -652,7 +652,7 @@ actions:
   - data_entity: return-reason
 ```
 
-Run the following command to import data:
+Import data:
 
 ```bash
 console data:import

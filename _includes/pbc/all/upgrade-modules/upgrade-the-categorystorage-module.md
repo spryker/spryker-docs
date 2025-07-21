@@ -7,7 +7,7 @@ This document describes how to update the `CategoryStorage` module.
 
 Version `2.*` of the `CategoryStorage` module changes the storage data structure to maintain the relation of categories to stores.
 
-_Estimated migration time: 1 hour._ 
+*Estimated migration time: 1 hour.*
 
 To upgrade the module from version `1.*` to `2.*`:
 
@@ -21,7 +21,7 @@ composer require spryker/category-storage:"^2.0.0" --update-with-dependencies
 
 3. Update the database schema and the generated data transfer classes:
 
-```bash    
+```bash
 console propel:install
 console transfer:generate
 ```
@@ -104,7 +104,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 }
-```    
+```
+
 </details>
 
 7. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugins:
@@ -115,7 +116,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 <details><summary>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -138,13 +139,14 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 ```
+
 </details>
 
 9. Refill storage:
 
     1. Truncate the `spy_category_node_storage` and `spy_category_tree_storage` database tables:
 
-    ```sql    
+    ```sql
     TRUNCATE TABLE APPROVED;
     TRUNCATE TABLE spy_category_tree_storage;
     ```

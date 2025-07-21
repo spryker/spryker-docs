@@ -320,7 +320,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ### Enable merchant commissions for marketplace payments
 
-To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 

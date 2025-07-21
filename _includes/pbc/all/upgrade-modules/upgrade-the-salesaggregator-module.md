@@ -5,12 +5,12 @@
 `SalesAggregator` version 4 is last version to be released for this module. Apart from future bug fixes, it will no longer be developed and Core will no longer use it to get order totals anymore.
 There are two steps to the two migration process.
 
-* The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`.
-* The second is to migrate your code to support the `old Aggregators`.
+- The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`.
+- The second is to migrate your code to support the `old Aggregators`.
 
 To learn how to migrate to the new structure, see [Upgrade the Calculation module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
-### Enable the `SalesAggregator` in your project
+### Enable `SalesAggregator`
 
 The `SalesAggregator` module has been deprecated but all calculators are still provided. If you want to keep them you can do so with a few changes to the code.
 All `SalesAggregator` plugins were moved to the `SalesAggregator` module's, final core plugins list.
@@ -76,14 +76,14 @@ Inject the `salesAggregator` Facade into your `\Pyz\Zed\Sales\SalesDependencyPro
 ?>
 ```
 
-#### Injecting the aggregator facade:
+#### Injecting the aggregator facade
 
 A similar approach to injecting the Aggregator facade can be used in other modules where replacement is necessary.
 
 The sales `hydrator \Spryker\Zed\Sales\Business\Model\Order\OrderHydrator` no longer uses the Aggregator facade.
 
-* To use it, provide `salesAggregatorFacade` to this class and add a method call in `createOrderTransfer` to `$this->salesAggregatorFacade->getOrderTotalByOrderTransfer($orderTransfer)`;
-* To get old calculated objects, the Order table list also was using the SalesAggregator and therefore you need to include it in the OrdersTable by adding it as follows:
+- To use it, provide `salesAggregatorFacade` to this class and add a method call in `createOrderTransfer` to `$this->salesAggregatorFacade->getOrderTotalByOrderTransfer($orderTransfer)`;
+- To get old calculated objects, the Order table list also was using the SalesAggregator and therefore you need to include it in the OrdersTable by adding it as follows:
 
 ```php
 <?php

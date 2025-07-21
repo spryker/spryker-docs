@@ -17,7 +17,7 @@ For more information about the ForeignPayment OMS configuration, see [Project gu
 
 In addition to the base shop implementation, the Stripe App in Marketplaces requires the following OMS configuration:
 
-* The `MerchantCommission/Calculate` command triggers the calculation of the commission for the merchant. By default, this command is initiated when an order is moved to the `payment captured` state. This command calculates the commission based on your projects settings. For more details on configuration, see  [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202404.0/marketplace/marketplace-merchant-commission-feature-overview.html).
+* The `MerchantCommission/Calculate` command triggers the calculation of the commission for the merchant. By default, this command is initiated when an order is moved to the `payment captured` state. This command calculates the commission based on your projects settings. For more details on configuration, see  [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 * The `SalesPaymentMerchant/Payout` command initiates the payout to merchant action. By default, this command is initiated after the OMS is in the `delivered` state and the commission was calculated.
 

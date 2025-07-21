@@ -33,7 +33,7 @@ This endpoint allows authenticating as a company user.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Authenticate as a company user
 
@@ -45,7 +45,7 @@ To authenticate as a company user, send the request:
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
 
 ### Request
 
@@ -67,7 +67,7 @@ Request sample: authenticate as a company user
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html#retrieve-available-company-users).  |
+| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html#retrieve-available-company-users).  |
 
 ### Response
 
@@ -99,7 +99,7 @@ Request sample: authenticate as a company user
 | tokenType | String | Token type. The default value is `Bearer`. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the company user. |
 | expiresIn | Integer | Time in seconds in which the token expires. The default value is `28800`. |
-| refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
 
 ## Possible errors
 
@@ -109,13 +109,13 @@ Request sample: authenticate as a company user
 | 002 | Authentication token is missing. |
 | 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html)
-* [Retrieve companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html)
-* [Retrieve business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html)
-* [Retrieve company company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html)
-* [Retrieve business unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)
+* [Retrieve company users](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html)
+* [Retrieve companies](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html)
+* [Retrieve business units](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html)
+* [Retrieve company company roles](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html)
+* [Retrieve business unit addresses](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

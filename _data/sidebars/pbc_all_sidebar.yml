@@ -1541,7 +1541,7 @@ entries:
                   - title: Import merchant commissions
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/back-office-import-merchant-commissions.html
                     include_versions:
-                      - "202410.0"
+                    - "202410.0"
 
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html

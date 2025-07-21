@@ -1815,7 +1815,6 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                   nested:
                     - title: Configure
-
                       url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                 - title: Proclane
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html

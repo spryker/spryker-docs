@@ -1,6 +1,6 @@
 ---
 title: Decoupled Glue API
-description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.
+description: Learn about the process of handling API requests through GlueStorefront and GlueBack Office layers.
 last_updated: Jul 11, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 
-The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API (SAPI)* and *Glue Backend API (BAPI)* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API (SAPI)* and *Glue Backend API (BAPI)* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Back Office functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ## Existing Glue Applications
 

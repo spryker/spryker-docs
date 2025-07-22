@@ -13,7 +13,7 @@ The URL module handles dynamic URLs for entities that appear on the frontend (Yv
 
 The URLs are stored in one database table and each is unique. Spryker OS avoids multiple URLs heading to a single entity, as it leads to a poor SEO support. Only one URL should be active for a single entity, other URLs should be set as URL redirects.
 
-In the Spryker Demo Shop, URLs are exported to the key-value storage (Redis) with collectors. Every stored key contains the URL that can be matched with a router and every stored value contains a reference `key` and a `type`.
+In the Spryker Demo Shop, URLs are exported to the key-value store, such as Redis or Valkey, with collectors. Every stored key contains the URL that can be matched with a router and every stored value contains a reference `key` and a `type`.
 
 The `reference_key` contains the key of the entity that was also stored in the key-value storage. The data read from the reference key is exactly the data that will be provided to the controller to handle the request at the end. The `type` is required to determine which controller handles the request (along with the data from the reference key).
 

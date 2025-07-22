@@ -2,7 +2,7 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-ProductTaxSetsRestApi version 2 introduces performance improvements that allow getting tax set data from the Redis storage instead of multiple Zed calls.
+ProductTaxSetsRestApi version 2 introduces performance improvements that allow getting tax set data from the key-value storage (Redis or Valkey) instead of multiple Zed calls.
 
 These improvements do not change the request and response format.
 

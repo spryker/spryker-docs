@@ -130,9 +130,9 @@ Database queries are the slowest parts of each application. They have different 
 
 Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
 
-### Wildcards in Redis
+### Wildcards in the key-value store
 
-Avoid using wildcards (*) in Redis, as they can significantly impact performance.
+Avoid using wildcards (*) in the key-value store, as they can significantly impact performance.
 
 ### RPC calls
 
@@ -220,7 +220,7 @@ As the Spryker boilerplate comes with most of the features enabled, make sure yo
 
 Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it's necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
 
-- Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
+- Exporting necessary data, only product-related ones, from Zed to the key-value store (Redis or Valkey) at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
 {% info_block infoBox "" %}

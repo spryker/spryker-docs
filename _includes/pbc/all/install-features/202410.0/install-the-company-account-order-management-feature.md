@@ -170,7 +170,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Navigate to Backoffice UI → Maintenance → Sync permissions.
+Navigate to Back Office UI → Maintenance → Sync permissions.
 Make sure that you see rows with plugin names at `spy_permission` table.
 
 {% endinfo_block %}

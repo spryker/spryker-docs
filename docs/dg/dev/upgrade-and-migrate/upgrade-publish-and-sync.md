@@ -26,9 +26,9 @@ redirect_from:
 
 In this version, Indexes were added to Storage and Search tables, this will increase the performance of Listeners and workers.
 
-#### Store and Redis keys
+#### Store and key-value store keys
 
-Currently, Spryker supports multi-store and this should be adopted for the rest of the module. Some of the Storage and Search modules are not store aware, so for this reason the store column might be removed and this will impact the Redis key. Structure didn't change. For those modules which do not belong to any store, we need to add a new property to `schema.xml` files
+Currently, Spryker supports multi-store and this should be adopted for the rest of the module. Some of the Storage and Search modules are not store aware, so for this reason the store column might be removed and this will impact the key-value store (Redis or Valkey) key. Structure didn't change. For those modules which do not belong to any store, we need to add a new property to `schema.xml` files
 
 ```xml
 <behavior name="synchronization">

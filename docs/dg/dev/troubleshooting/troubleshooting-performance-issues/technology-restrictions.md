@@ -18,7 +18,7 @@ A possible cause is technology restriction.
 
 Before using some technology, you need to understand all its advantages and disadvantages.
 
-A good example is Redis. It is fast, but if used incorrectly, it can lead to performance degradation. If we search against `*` or `Wildkey` in Redis with a large DB, we get the following results:
+A good example is key-value storage (Redis or Valkey). It is fast, but if used incorrectly, it can lead to performance degradation. If we search against `*` or `Wildkey` in the key-value store (Redis or Valkey) with a large DB, we get the following results:
 
 NewRelic—DB:
 
@@ -28,7 +28,7 @@ NewRelic—Breakdown:
 
 ![new-relic-breakdown](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions/new-relic-breakdown.png)
 
-As you can see, the *Redis keys* take most of the time. Therefore, they need optimization. You can optimize them by updating your functionality to use exact [keys](https://redis.io/commands/keys/) instead of `*`.
+As you can see, the *key-value store keys* take most of the time. Therefore, they need optimization. You can optimize them by updating your functionality to use exact [keys](https://redis.io/commands/keys/) instead of `*`.
 
 In the code, this would look similar to this line:
 

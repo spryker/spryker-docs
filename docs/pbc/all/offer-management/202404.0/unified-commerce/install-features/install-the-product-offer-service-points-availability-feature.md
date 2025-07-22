@@ -7,4 +7,4 @@ redirect_from:
 - /docs/pbc/all/service-points/202311.0/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-offer-service-points-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-service-points-availability-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-offer-service-points-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-offer-service-points-availability-feature.md -->

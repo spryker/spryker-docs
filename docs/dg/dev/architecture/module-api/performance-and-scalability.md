@@ -40,7 +40,7 @@ The backend is only required for more complex business logic such as cart calcul
 
 ### Yves
 
-Yves is the slimline frontend application that gets its data from fast **Key-Value storage** like Redis, and a **Search storage** like Elasticsearch.
+Yves is the slimline frontend application that gets its data from fast **Key-Value storage** like key-value stores (Redis or Valkey), and a **Search storage** like Elasticsearch.
 
 Yves is built on top of Symfony components and uses Twig as its templating engine. It has no connection to the database in Zed.
 

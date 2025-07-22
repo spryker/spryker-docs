@@ -276,8 +276,8 @@ should be
 
 We changed the way dynamic search configuration was cached and then used. This feature caused the following non-backward compatible changes:
 
-- The `Spryker\Shared\Search\SearchConstants::SEARCH_CONFIG_CACHE_KEY` config was removed, but previously it was required to be filled with a key that was used to save the search config cache into Redis.
-- Removed `SearchFacade::saveSearchConfigCache()` method which stored the given search cache configuration into Redis.
+- The `Spryker\Shared\Search\SearchConstants::SEARCH_CONFIG_CACHE_KEY` config was removed, but previously it was required to be filled with a key that was used to save the search config cache into key-value storage (Redis or Valkey).
+- Removed `SearchFacade::saveSearchConfigCache()` method which stored the given search cache configuration into key-value storage (Redis or Valkey).
 - In the new version, instead of the removed code mentioned above, you'll need to provide a list of `Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface` in `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()` instead.
 
 We moved the possible facet type option constants from `Spryker\Client\Search\Plugin\Config\FacetConfigBuilder` to `\Spryker\Shared\Search\SearchConstants`:

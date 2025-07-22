@@ -42,8 +42,12 @@ This reference page describes version 1 of the Deploy file format. This is the n
  <dt>Store</dt>
  <dd>A store related context a request is processed in.</dd>
 
- <dt>Application</dt>
- <dd>A Spryker application, like Backoffice(Zed), Backend-Gateway, Yves, GlueStorefront(Glue), GlueBackend or MerchantPortal.</dd>
+<!-- vale off -->
+
+<dt>Application</dt>
+<dd>A Spryker application, like Backoffice(Zed), Backend-Gateway, Yves, GlueStorefront(Glue), GlueBackend or MerchantPortal.</dd>
+
+<!-- vale on -->
 
  <dt>Service</dt>
  <dd>An external storage or utility service. Represents service type and configuration. The configuration can be defined on different levels: project-wide, region-wide, store-specific or endpoint-specific with limitations based on the service type.</dd>
@@ -866,7 +870,7 @@ The following services are supported:
 * key_value_store
 * kibana
 * mail_catcher
-* redis-gui
+* Key-value store (Redis or Valkey)-gui
 * scheduler
 * search
 * session

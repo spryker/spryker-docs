@@ -201,7 +201,7 @@ class ProductBundleConfig extends SprykerProductBundleConfig
 
 #### Configure OMS
 
-1. Create the OMS subprocess file:
+1. Create the OMS subprocess file using the example below:
 
 <details>
     <summary>config/Zed/oms/DummySubprocess/DummyOrderAmendment01.xml</summary>

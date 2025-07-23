@@ -146,7 +146,7 @@ The latest discount condition enhancements introduce more precise control over c
 
 ## Back Office UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-These updates make it easier to work with large data sets in the Backoffice, especially across key areas like orders, products, and marketplace operations:
+These updates make it easier to work with large data sets in the Back Office, especially across key areas like orders, products, and marketplace operations:
 
 - Advanced Table Filters with Multi-Select: Quickly narrow down results in views like Orders, Products, Product Offers, Merchants, and Discounts using flexible, multi-select filters.
 - Search by Product Variant SKU: Find specific products faster by searching for Concrete Product SKUs directly in the Abstract Products list.
@@ -167,7 +167,7 @@ These updates make it easier to work with large data sets in the Backoffice, esp
 
 ## Spryker Monitoring Integration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Spryker Monitoring Integration integrates Spryker’s monitoring data into your APM platform based on the Spryker’s implementation of the OpenTelemetry framework. It enables you to unite Spryker’s insights with your monitoring ecosystem, ensuring full visibility across eCommerce workflows, faster issue detection, and alignment with your monitoring best practices.
+Spryker Monitoring Integration integrates Spryker's monitoring data into your APM platform based on the Spryker's implementation of the OpenTelemetry framework. It enables you to unite Spryker's insights with your monitoring ecosystem, ensuring full visibility across eCommerce workflows, faster issue detection, and alignment with your monitoring best practices.
 
 
 ### Business benefits
@@ -223,7 +223,7 @@ The Algolia ACP Application is expanded and transformed into a connector to a co
 
 Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App. This release features direct, out-of-the-box integration of the Vertex Validator API into checkout. With the Vertex ACP App and the enablement of the Vertex Validator you can validate business tax IDs for syntax, validity, and location, reducing operational costs from incorrect invoices and guaranteeing the accurate application of VAT.
  
-### Business benefits 
+### Business benefits
 
 - Automated tax ID validation during checkout or any part of the process thanks to the headless integration.
 - Improved tax compliance through ID verification and accurate VAT application via company location data.
@@ -249,7 +249,7 @@ As part of our commitment to strengthening the security of our e-commerce platfo
 ![MFA-email-code](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/MFA-email-code.png)
 
 
-### Business benefits 
+### Business benefits
 
 - Activate an additional authentication layer in Storefront, Backoffice, Merchant Portal and API endpoints requiring your users to authenticate through receiving a one-time code on their registered email address.
 - Implement your own authenticity validators like TOTP or Short Message and plug them into the user journey.
@@ -306,7 +306,7 @@ Improved SEO visibility
 
 
 
-## Accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span> 
+## Accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 
 Accessibility ensures inclusive experiences for all users in Back Office and B2B Storefront, enhancing usability and helping customers with compliance with the 2025 EU Accessibility Act, while reducing risks and supporting broader market reach:
@@ -319,7 +319,7 @@ Accessibility ensures inclusive experiences for all users in Back Office and B2B
 ![accessibility-improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/B2B-SF-Accessibility.png)
 
 
-### Business benefits 
+### Business benefits
 
 - Help Meeting Regulatory Requirements: by reducing legal risks in light of the 2025 EU Accessibility Act.
 - Inclusive User Experience: Improves usability for all users, including those with disabilities.

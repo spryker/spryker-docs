@@ -36,16 +36,16 @@ The following alerts are configured by default for all environments.
 
 </div>
 
-### ElastiCache/Redis
+### ElastiCache/key-value store (Redis or Valkey)
 
 <div class="width-100">
 
 |NAME OF METRIC   | DESCRIPTION  |
 |---|---|
-| ElastiCache Status  | Checks the status of 'ElastiCache for Redis'.  |
-| Redis is not used by any service  | Checks whether ElastiCache is used.  |
-| Redis available Memory  | Checks if Redis free memory on the host is running low.  |
-| Redis High CPU  | Checks if the Redis service is high on CPU usage.  |
+| ElastiCache Status  | Checks the status of 'ElastiCache for key-value store (Redis or Valkey)'.  |
+| (Redis or Valkey) is not used by any service  | Checks whether ElastiCache is used.  |
+| (Redis or Valkey) available Memory  | Checks if Redis free memory on the host is running low.  |
+| (Redis or Valkey) High CPU  | Checks if the key-value store (Redis or Valkey) service is high on CPU usage.  |
 
 </div>
 
@@ -67,8 +67,8 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-| RDS Status  | Checks the status of the RDS.  |   
-| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |   
+| RDS Status  | Checks the status of the RDS.  |
+| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |
 | RDS available storage  | Checks available storage of RDS.  |
 | RDS High CPU   | Checks if the RDS service is high on CPU usage.  |
 

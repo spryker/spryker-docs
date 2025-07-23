@@ -138,6 +138,7 @@ task :check_ca do
     /docs\/pbc\/.+/,
     /docs\/about\/.+/,
     /docs\/dg\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/acp\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
@@ -151,6 +152,7 @@ task :check_about do
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/dg\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
@@ -165,6 +167,7 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/dg\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
@@ -184,6 +187,7 @@ task :check_dg do
     /docs\/about\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/

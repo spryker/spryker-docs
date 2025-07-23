@@ -2,7 +2,8 @@
   {
     "Partner": "Algolia",
     "Description": "Powerful Search API delivers content to users in milliseconds! With Algolia Search, developers can rely on a simple and robust API to build the experiences at the core of their companies’ applications. Algolia Search democratizes the power of API building blocks with management UIs necessary to optimize user experiences and drive business results. From digital storefronts to virtual reality productivity tools, Algolia Search powers search and discovery experiences anywhere.",
-    "Logo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Algolia_logo_full_blue.svg",
+    "shortDescription": "Algolia provides fast and reliable search solutions.",
+    "Logo": "/images/integrations/cat_logos/algolia_logo.png",
     "Author": "Spryker",
     "category": "Search",
     "method": ["ACP"],
@@ -25,7 +26,7 @@
   {
     "Partner": "Bazaarvoice",
     "Description": "At Bazaarvoice, we create smarter shopping experiences. Through our extensive global network, product-passionate community and enterprise technology, we connect thousands of brands and retailers with billions of consumers. We enable brands to collect and share valuable user-generated content at unprecedented scale, resulting in loyal customers, increased sales, and improved products.",
-    "Logo": "https://content.partnerpage.io/eyJidWNrZXQiOiJwYXJ0bmVycGFnZS5wcm9kIiwia2V5IjoibWVkaWEvY29udGFjdF9pbWFnZXMvNDQ2NGI1MjYtZTM0Yi00Yjk3LWJiZmYtNzBlNGI5YWY3NmNhL0dyb3VwX2M4b3dhOFQucG5nIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoxMjAwLCJoZWlnaHQiOjYyNywiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjB9fX19",
+    "Logo": "/images/integrations/cat_logos/bv_logo.png",
     "Author": "Spryker",
     "category": "User Generated Content (UGC)",
     "method": ["ACP"],
@@ -37,7 +38,7 @@
   {
     "Partner": "Payone",
     "Description": "With around 365,000 customers and more than 2.5 billion transactions per year, PAYONE is one of the leading payment service providers in Europe. Over 1,200 employees deliver the latest payment services from a single source for all company sizes and industries. PAYONE develops the most innovative payment solutions and services based on current customer and merchant needs",
-    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/PAYONE_Logo_Blue_sRGB.svg/1280px-PAYONE_Logo_Blue_sRGB.svg.png",
+    "Logo": "/images/integrations/cat_logos/payone_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["ACP", "Eco"],
@@ -48,7 +49,7 @@
   {
     "Partner": "Stripe",
     "Description": "Stripe is a technology company that builds payments infrastructure for the internet. Our global platform unifies isolated systems required to accept payments, send payouts, and manage funds. With Stripe, moving money around the world is as simple, borderless, and programmatic as the rest of the internet. Whether you’re creating a software subscription service, an on-demand marketplace, or an ecommerce store, Stripe’s integrated payments and revenue management platform helps you build and scale your business.",
-    "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1024px-Stripe_Logo%2C_revised_2016.svg.png",
+    "Logo": "/images/integrations/cat_logos/stripe_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["ACP"],
@@ -60,7 +61,7 @@
   {
     "Partner": "Adyen",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/adyen_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -72,7 +73,7 @@
   {
     "Partner": "Unzer",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/unzer_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -106,7 +107,7 @@
   {
     "Partner": "billie",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/billie_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -117,7 +118,7 @@
   {
     "Partner": "billpay",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/billpay_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -139,7 +140,7 @@
   {
     "Partner": "computop",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/computop_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -150,7 +151,7 @@
   {
     "Partner": "crefopay",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/crefopay_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -172,7 +173,7 @@
   {
     "Partner": "klarna",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/klarna_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -183,7 +184,7 @@
   {
     "Partner": "payolution",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/payolution_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -194,7 +195,7 @@
   {
     "Partner": "powerpay",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/powerpay_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -205,7 +206,7 @@
   {
     "Partner": "ratenkauf by easycredit",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/ratenkauf_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -217,7 +218,7 @@
     "Partner": "ratepay",
     "Description": "",
     "featured": false,
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/ratepay_logo.png",
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
@@ -229,7 +230,7 @@
     "Partner": "Novalnet B2B",
     "Description": "",
     "featured": false,
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Novalnet",
     "category": "Payment",
     "method": ["Community"],
@@ -240,7 +241,7 @@
   {
     "Partner": "Novalnet B2C",
     "Description": "",
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Novalnet",
     "category": "Payment",
     "method": ["Community"],
@@ -251,7 +252,7 @@
   {
     "Partner": "Vertex",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/vertex_logo.png",
     "Author": "Spryker",
     "category": "Tax",
     "method": ["ACP"],
@@ -262,7 +263,7 @@
   {
     "Partner": "Avalara",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/avalara_logo.png",
     "Author": "Spryker",
     "category": "Tax",
     "method": ["Eco"],
@@ -273,7 +274,7 @@
   {
     "Partner": "Econda",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/econda_logo.png",
     "Author": "Spryker",
     "category": "Business Intelligence",
     "method": ["Eco"],
@@ -284,7 +285,7 @@
   {
     "Partner": "Minubo",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/minubo_logo.png",
     "Author": "Spryker",
     "category": "Business Intelligence",
     "method": ["Eco"],
@@ -295,7 +296,7 @@
   {
     "Partner": "Episerver",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/epi_logo.png",
     "Author": "Spryker",
     "category": "Marketing Automation",
     "method": ["Eco"],
@@ -306,7 +307,7 @@
   {
     "Partner": "FACT-Finder",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/fact-finder_logo.png",
     "Author": "Spryker",
     "category": "Personalization",
     "method": ["Eco"],
@@ -317,7 +318,7 @@
   {
     "Partner": "Seven Senders",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/sevensenders_logo.png",
     "Author": "Spryker",
     "category": "Delivery",
     "method": ["Eco"],
@@ -328,7 +329,7 @@
   {
     "Partner": "collectai",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/collectai_logo.png",
     "Author": "Spryker",
     "category": "Order Management System",
     "method": ["Eco"],
@@ -350,7 +351,7 @@
   {
     "Partner": "data-virtuality",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/datavirtuality_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -372,7 +373,7 @@
   {
     "Partner": "mindcurv",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/mindcurv_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -383,7 +384,7 @@
   {
     "Partner": "plusserver",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/plusserver_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -394,7 +395,7 @@
   {
     "Partner": "proclane",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/proclane_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -416,7 +417,7 @@
   {
     "Partner": "tideways",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/tideways_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -427,7 +428,7 @@
   {
     "Partner": "vshn",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/vshn_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
     "method": ["Eco"],
@@ -449,7 +450,7 @@
   {
     "Partner": "styla",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/styla_logo.png",
     "Author": "Spryker",
     "category": "Content Management System",
     "method": ["Eco"],
@@ -460,7 +461,7 @@
   {
     "Partner": "mindlab",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/mindlab_logo.png",
     "Author": "Spryker",
     "category": "Analytics",
     "method": ["Eco"],
@@ -471,7 +472,7 @@
   {
     "Partner": "paazl",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/paazl_logo.png",
     "Author": "Spryker",
     "category": "Carrier Management",
     "method": ["Eco"],
@@ -482,7 +483,7 @@
   {
     "Partner": "xentral",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/xentral_logo.png",
     "Author": "Spryker",
     "category": "Product Information Management",
     "method": ["Eco"],
@@ -493,7 +494,7 @@
   {
     "Partner": "zenloop",
     "Description": "",
-    "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
+    "Logo": "/images/integrations/cat_logos/zenloop_logo.png",
     "Author": "Spryker",
     "category": "Customer Retention",
     "method": ["Eco"],
@@ -505,7 +506,7 @@
     "Partner": "ConfigCat",
     "Description": "",
     "featured": false,
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Turbine Kreuzberg",
     "category": "Misc",
     "method": ["Community"],
@@ -517,7 +518,7 @@
     "Partner": "Sentry.io",
     "Description": "",
     "featured": false,
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Turbine Kreuzberg",
     "category": "Misc",
     "method": ["Community"],
@@ -528,7 +529,7 @@
   {
     "Partner": "Contentful",
     "Description": "",
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Fond Of",
     "category": "Content Management System",
     "method": ["Community"],
@@ -539,7 +540,7 @@
   {
     "Partner": "Google Tag Manager",
     "Description": "",
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Fond Of",
     "category": "Tag Management",
     "method": ["Community"],
@@ -550,7 +551,7 @@
   {
     "Partner": "Sentry.io",
     "Description": "",
-    "Logo": "https://thumbs.dreamstime.com/b/social-communication-network-global-connection-community-internet-technology-vector-illustration-75882539.jpg",
+    "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Valantic",
     "category": "Monitoring",
     "method": ["Community"],

@@ -1,229 +1,12 @@
 ---
-title: Integrations Catalogue
-description: Catalogue of our integration vendors.
+title: Third Party Integrations
+description: Explore our comprehensive catalogue of third-party integrations, showcasing diverse methods and solutions tailored to your needs.
 last_updated: July 9, 2025
 template: default
+layout: custom_new
 ---
 
 {% raw %}
-  <style>
-    /* --- Main Page Layout --- */
-    .page-layout {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        align-items: flex-start;
-    }
-
-    .filters-sidebar {
-        width: 280px;
-        flex-shrink: 0;
-        position: sticky;
-        top: 2rem;
-        height: calc(100vh - 4rem);
-        overflow-y: auto;
-    }
-
-    .content-area {
-        flex-grow: 1;
-    }
-
-    /* Hide Mobile Toggle on Desktop */
-    .mobile-filter-toggle {
-        display: none;
-    }
-
-    /* --- Search Input Styles --- */
-    .search-container {
-        margin-bottom: 1.5rem;
-    }
-    .search-container input[type="search"] {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #d1d5db;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-    }
-
-    /* --- Accordion Filter Styles --- */
-    .filters-container {
-        border: 1px solid #e5e7eb;
-        border-radius: 0.75rem;
-        overflow: hidden;
-    }
-
-    .filter-group .accordion-header {
-        width: 100%;
-        background-color: #f9fafb;
-        border: none;
-        border-top: 1px solid #e5e7eb;
-        padding: 1rem;
-        text-align: left;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #374151;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .filter-group:first-child .accordion-header {
-      border-top: none;
-    }
-
-    .filter-group .accordion-header::after {
-        content: '+';
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: #9ca3af;
-    }
-
-    .filter-group .accordion-header.active::after {
-        content: '−';
-    }
-
-    .filter-group .accordion-panel {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        background-color: white;
-        padding: 0 1rem;
-    }
-
-    .accordion-panel-content {
-        padding: 1rem 0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .accordion-panel label {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.875rem;
-        color: #4b5563;
-        cursor: pointer;
-    }
-
-    .accordion-panel input[type="checkbox"] {
-        width: 1rem;
-        height: 1rem;
-        border-radius: 0.25rem;
-        border: 1px solid #d1d5db;
-        cursor: pointer;
-    }
-
-    /* --- Card & Modal Styles --- */
-    .cards {
-       display: grid;
-       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-       gap: 1.5rem;
-    }
-
-    #featuredContainer ~ .cards {
-      margin-top:2%;
-    }
-
-    .card {
-       background-color: white;
-       border-radius: 0.75rem;
-       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-       overflow: hidden;
-       padding: 1.5rem;
-       width: 100%;
-       display: flex;
-       flex-direction: column;
-    }
-
-    .card .logo {
-       width: 100%;
-       height: 150px;
-       object-fit: contain;
-       border-radius: 0.5rem;
-       margin-bottom: 1rem;
-    }
-
-    .card h3 {
-       font-size: 1.25rem;
-       font-weight: 600;
-       color: #111827;
-       text-transform: capitalize;
-       margin-bottom: 0.5rem;
-    }
-
-    .tags { margin-bottom: 1rem; }
-
-    .tag {
-       display: inline-block;
-       padding: 0.25rem 0.75rem;
-       border-radius: 9999px;
-       font-size: 0.75rem;
-       font-weight: 500;
-       margin-right: 0.5rem;
-       margin-bottom: 0.5rem;
-       background-color: #e5e7eb;
-       color: #374151;
-    }
-
-    .tag.eco, .tag.acp, .tag.community { background-color: #d1fae5; color: #065f46; }
-    .tag.comm { background-color: #e6f4fe; color: #0090ff; text-transform:uppercase; }
-
-    .author-info {
-       margin-top: auto;
-       padding-top: 1rem;
-       border-top: 1px solid #f3f4f6;
-    }
-
-    .author_name { font-size: 0.875rem; color: #6b7280; }
-
-    .modal { z-index:100; display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; }
-    .modal-content { background: white; padding: 2rem; border-radius: 12px; max-width: 500px; width: 90%; position: relative; }
-    .modal-content h2 { text-transform: capitalize; }
-    .close { position: absolute; top: 1rem; right: 1rem; cursor: pointer; font-size: 1.5rem; }
-    .doc-links a { display: block; margin-top: 0.5rem; color: #007bff; }
-    #modalNotice { background: #ffd688; border-radius: 10px; color: black; padding: 1rem; border: #ffae2c solid 1px;font-weight:bold; margin-bottom: 1rem;}
-
-    /* --- MOBILE STYLES --- */
-    @media (max-width: 992px) {
-        .page-layout {
-            flex-direction: column;
-        }
-
-        .filters-sidebar {
-            position: static;
-            width: 100%;
-            height: auto;
-            overflow-y: visible;
-            margin-bottom: 2rem;
-        }
-
-        .mobile-filter-toggle {
-            display: block;
-            width: 100%;
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            margin-bottom: 1rem;
-        }
-
-        .mobile-filter-panel {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-
-        .mobile-filter-toggle.active + .mobile-filter-panel {
-            max-height: 1000px;
-        }
-    }
-
-  </style>
 
 <div class="page-layout">
   <aside class="filters-sidebar">
@@ -386,8 +169,15 @@ template: default
                 }).join('');
 
                 card.innerHTML = `
-                  <img src="${partner.Logo}" class="logo" alt="${partner.Partner} Logo" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eee/ccc?text=Logo'"/>
-                  <h3>${partner.Partner}</h3>
+                  <div class="ven-data">
+                    <div class="ven-col image">
+                    <img src="${partner.Logo}" class="logo" alt="${partner.Partner} Logo" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eee/ccc?text=Logo'"/>
+                    </div>
+                    <div class="ven-col data">
+                        <h3>${partner.Partner}</h3>
+                        <div class="ven-short-desc">${partner.shortDescription}</div>
+                        </div>
+                  </div>
                   <div class="tags">
                     ${partner.category ? `<span class="tag">${partner.category}</span>` : ''}
                     ${methodTags}

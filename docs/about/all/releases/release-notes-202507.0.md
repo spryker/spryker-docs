@@ -52,7 +52,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 - Preserve original order reference: Maintain consistent tracking and reporting by keeping the original order reference.
 
 
-![Order Amendment]https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/Order_Amendment_Release_Notes.png
+![Order Amendment](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/Order_Amendment_Release_Notes.png)
 
 
 ### Business benefits
@@ -62,7 +62,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 
 
 
-### Docs 
+### Docs
 
 - [Order Amendment feature overview](/docs/pbc/all/order-management-system/latest/base-shop/order-amendment-feature-overview)
 - [Install the Order Amendment feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature)
@@ -77,7 +77,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 
 The Product Import feature in the Merchant Portal enables you to bulk upload products using a universal CSV format, streamlining workflows, reducing manual effort, and accelerating time-to-market.
 
-![merchant-portal-import]https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/merchant-portal-import.png
+![merchant-portal-import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/merchant-portal-import.png)
 
 
 
@@ -103,11 +103,11 @@ The Marketplace Discounts enhancements introduce advanced targeting capabilities
 - Merchant-specific discounts: Apply discounts exclusively to products from a specific merchant using merchant references in discount conditions.
 - Product offer-specific discounts: Target discounts at the product offer level for more granular promotions.
 
-![marketplace-discounts]https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/marketplace-discounts.png
+![marketplace-discounts](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/marketplace-discounts.png)
 
 
 
-### Business benefits 
+### Business benefits
 
 - Strategic promotions: Gain full control to drive growth in specific segments, support underperforming merchants, or push high-priority inventory.
 - Merchant performance and retention: Equip your merchants with tools to run tailored promotions under your governance, helping them increase sales and stay competitive.
@@ -129,17 +129,17 @@ The latest discount condition enhancements introduce more precise control over c
 - Customer reference: Target a discount at a specific customer by assigning their unique customer reference. Useful for compensation vouchers, exclusive rewards, or customer-specific promotional scenarios.
 
 
-![customer-discount][https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/customer-discount.png]
+![customer-discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/customer-discount.png)
 
 
-### Business benefits 
+### Business benefits
 
 - Precision in customer targeting and control: Define exactly who can use a promotion and how often, enabling tailored experiences for first-time buyers, high-value customers, or compensation scenarios.
 - Increased promotion efficiency and ROI: Align discount usage with customer behavior and strategic goals, ensuring that promotions reach the right audience with the right frequency.
 
 
 
-### Docs 
+### Docs
 
 [Install the Customer Account Management + Promotions & Discounts feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature)
 
@@ -150,10 +150,10 @@ These updates make it easier to work with large data sets in the Backoffice, esp
 
 - Advanced Table Filters with Multi-Select: Quickly narrow down results in views like Orders, Products, Product Offers, Merchants, and Discounts using flexible, multi-select filters.
 - Search by Product Variant SKU: Find specific products faster by searching for Concrete Product SKUs directly in the Abstract Products list.
-- Measurement Unit Management: Backoffice users can now manage measurement units directly, including the ability to add and maintain translations for each unit. 
+- Measurement Unit Management: Backoffice users can now manage measurement units directly, including the ability to add and maintain translations for each unit.
 
 
-![BO-filter-orders]https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/BO-filter-orders.png
+![BO-filter-orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/BO-filter-orders.png)
 
 
 ### Business benefits
@@ -170,14 +170,14 @@ These updates make it easier to work with large data sets in the Backoffice, esp
 Spryker Monitoring Integration integrates Spryker’s monitoring data into your APM platform based on the Spryker’s implementation of the OpenTelemetry framework. It enables you to unite Spryker’s insights with your monitoring ecosystem, ensuring full visibility across eCommerce workflows, faster issue detection, and alignment with your monitoring best practices.
 
 
-### Business benefits 
+### Business benefits
 
 - Personalized application monitoring: Integrate Spryker into your monitoring platform for a tailored, customized monitoring experience.
 - Comprehensive tracing and health check metrics: Forward traces and health check metrics from both your application and Spryker services to enable precise performance analysis and faster anomaly detection
 - Consolidated monitoring: Consolidate all performance data in a singe monitoring platform, ensuring full visibility across your entire eCommerce workflow
 
 
-### Docs 
+### Docs
 
 [Spryker Monitoring Integration](https://docs.spryker.com/docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html)
 
@@ -189,7 +189,7 @@ Spryker Monitoring Integration integrates Spryker’s monitoring data into your 
 Configurable Data Exporter provides structured access to your operational data, built for flexibility, performance, and security. Export curated datasets on a scheduled basis to your own cloud storage without affecting production systems. Secure RDS-to-S3 transfers enable integration into your analytics stack, data lake, or ETL pipeline — whether for BI, ML, or advanced audits — all without added operational risk.
 
 
-### Business benefits 
+### Business benefits
 
 - Plug into any destination: Easily connect to your BI tools or data pipelines, from Snowflake to Looker or custom analytics platforms.
 - Scheduled and scalable: Automate your exports based on business cadence, ensuring consistency and performance as your data needs grow.
@@ -202,12 +202,12 @@ Configurable Data Exporter provides structured access to your operational data, 
 
 The Algolia ACP Application is expanded and transformed into a connector to a comprehensive global search solution. Now, in addition to search in the product catalog, the Algolia ACP App supports search through content within CMS pages and PDF documents. This upgrade significantly enriches the search experience, delivering more relevant and complete results for every query.
 
-### Business benefits 
+### Business benefits
 
 - Improved user experience: Provides richer, more complete search results.
 - Increased content discoverability: Makes all stored information easily searchable.
 
-### Docs 
+### Docs
 
 [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia)
 [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
@@ -231,7 +231,7 @@ Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App
 - Global validation in over 65 countries.
 - Easy activation with out-of-the-box integration.
 
-### Docs 
+### Docs
 
 [Integrate Vertex Validator](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator)
 

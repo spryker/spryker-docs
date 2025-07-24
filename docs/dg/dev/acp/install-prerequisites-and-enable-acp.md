@@ -431,7 +431,7 @@ class KernelAppDependencyProvider extends SprykerKernelAppDependencyProvider
     {
         return [
             new OAuthRequestExpanderPlugin(),
-            new MerchantAppRequestExpanderPlugin(), // Optional: Only for marketplace demoshop setups
+            new MerchantAppRequestExpanderPlugin(), // Optional: Only for marketplace projects with Merchant Portal
         ];
     }
 }

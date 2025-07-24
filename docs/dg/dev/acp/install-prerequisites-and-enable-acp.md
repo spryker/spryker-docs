@@ -410,7 +410,7 @@ class OauthClientConfig extends SprykerOauthClientConfig
 | PLUGIN | REQUIRED | DESCRIPTION |
 | - | - | - |
 | OAuthRequestExpanderPlugin | Yes | Expands the request with an OAuth token. |
-| MerchantAppRequestExpanderPlugin | No | Optional: Expands the request with the merchant app data. Only relevant for marketplace demoshop setups. |
+| MerchantAppRequestExpanderPlugin | No | Optional: Expands the request with the merchant app data. Only relevant for marketplace projects with Merchant Portal. |
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>

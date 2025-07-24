@@ -19,7 +19,7 @@ console message-broker:consume [channel-name...] [options]
 
 ## Arguments and options
 
-### Channel name (optional)
+### Optional: Channel name
 - **Description**: Specifies one or more channels from which to consume messages. Multiple channels can be specified as separate arguments.
 - **Usage**: `console message-broker:consume {channel-name}` or `console message-broker:consume {channel1} {channel2} {channel3}`
 - **Example**: `console message-broker:consume app-events` or `console message-broker:consume app-events notifications orders`

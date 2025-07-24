@@ -150,19 +150,19 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-e
 
 3. In `MessageBrokerDependencyProvider.php`, enable the following module plugins:
 
-| PLUGIN | DESCRIPTION |
-| - | - |
-| AppConfigMessageHandlerPlugin | Handles application configuration messages for ACP apps. |
-| HttpChannelMessageSenderPlugin | Sends messages through HTTP channel transport. |
-| HttpChannelMessageReceiverPlugin | Receives messages through HTTP channel transport. |
-| CorrelationIdMessageAttributeProviderPlugin | Adds correlation ID to message attributes for tracking. |
-| TimestampMessageAttributeProviderPlugin | Adds timestamp to message attributes. |
-| AccessTokenMessageAttributeProviderPlugin | Adds OAuth access token to message attributes. |
-| TransactionIdMessageAttributeProviderPlugin | Adds transaction ID to message attributes. |
-| SessionTrackingIdMessageAttributeProviderPlugin | Adds session tracking ID to message attributes. |
-| TenantActorMessageAttributeProviderPlugin | Adds tenant actor information to message attributes. |
-| ValidationMiddlewarePlugin | Validates messages before processing. |
-| ActiveAppFilterMessageChannelPlugin | Filters message channels based on active apps. |
+| PLUGIN | REQUIRED | DESCRIPTION |
+| - | - | - |
+| AppConfigMessageHandlerPlugin | Yes | Handles application configuration messages for ACP apps. |
+| HttpChannelMessageSenderPlugin | Yes | Sends messages through HTTP channel transport. |
+| HttpChannelMessageReceiverPlugin | Yes | Receives messages through HTTP channel transport. |
+| CorrelationIdMessageAttributeProviderPlugin | Yes | Adds correlation ID to message attributes for tracking. |
+| TimestampMessageAttributeProviderPlugin | Yes | Adds timestamp to message attributes. |
+| AccessTokenMessageAttributeProviderPlugin | Yes | Adds OAuth access token to message attributes. |
+| TransactionIdMessageAttributeProviderPlugin | Yes | Adds transaction ID to message attributes. |
+| SessionTrackingIdMessageAttributeProviderPlugin | Yes | Adds session tracking ID to message attributes. |
+| TenantActorMessageAttributeProviderPlugin | Yes | Adds tenant actor information to message attributes. |
+| ValidationMiddlewarePlugin | Yes | Validates messages before processing. |
+| ActiveAppFilterMessageChannelPlugin | Yes | Filters message channels based on active apps. |
 
 {% info_block infoBox "Disable deprecated plugins" %}
 
@@ -261,10 +261,10 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 4. In `MessageBrokerAwsDependencyProvider.php`, enable the following module plugins:
 
-| PLUGIN | DESCRIPTION |
-| - | - |
-| ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin | Expands HTTP channel requests with consumer ID information. |
-| AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin | Expands HTTP channel receiver requests with OAuth access token. |
+| PLUGIN | REQUIRED | DESCRIPTION |
+| - | - | - |
+| ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin | Yes | Expands HTTP channel requests with consumer ID information. |
+| AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin | Yes | Expands HTTP channel receiver requests with OAuth access token. |
 
 <details>
   <summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
@@ -334,11 +334,11 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 6. In `OauthClientDependencyProvider.php`, enable the following module plugins:
 
-| PLUGIN | DESCRIPTION |
-| - | - |
-| Auth0OauthAccessTokenProviderPlugin |  Adds the Auth0 OAuth access token provider. |
-| CacheKeySeedAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a cache key seed. |
-| TenantIdentifierAccessTokenRequestExpanderPlugin |  Expands the OAuth request with a tenant identifier. |
+| PLUGIN | REQUIRED | DESCRIPTION |
+| - | - | - |
+| Auth0OauthAccessTokenProviderPlugin | Yes | Adds the Auth0 OAuth access token provider. |
+| CacheKeySeedAccessTokenRequestExpanderPlugin | Yes | Expands the OAuth request with a cache key seed. |
+| TenantIdentifierAccessTokenRequestExpanderPlugin | Yes | Expands the OAuth request with a tenant identifier. |
 
 <details>
   <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
@@ -407,10 +407,10 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 8. In `KernelAppDependencyProvider.php`, enable the following module plugins:
 
-| PLUGIN | DESCRIPTION |
-| - | - |
-| OAuthRequestExpanderPlugin | Expands the request with an OAuth token. |
-| MerchantAppRequestExpanderPlugin | (Optional) Expands the request with the merchant app data. Only relevant for marketplace demoshop setups. |
+| PLUGIN | REQUIRED | DESCRIPTION |
+| - | - | - |
+| OAuthRequestExpanderPlugin | Yes | Expands the request with an OAuth token. |
+| MerchantAppRequestExpanderPlugin | No | Optional: Expands the request with the merchant app data. Only relevant for marketplace demoshop setups. |
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>

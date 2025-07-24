@@ -162,6 +162,6 @@ $jobs[] = [
 
 ```php
 // Longer intervals to reduce resource usage
-'schedule' => '*/5 * * * *', // Every 10 minutes
+'schedule' => '*/10 * * * *', // Every 10 minutes
 'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=45 --sleep=10',
 ```

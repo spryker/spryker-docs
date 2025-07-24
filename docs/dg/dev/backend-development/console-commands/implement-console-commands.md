@@ -19,15 +19,15 @@ related:
 
 This document describes how you can implement a new console command. However, before implementing your commands, we recommend doing the following:
 
-* [Get the list of available console commands](/docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html).
-* [Learn what available commands do](/docs/dg/dev/backend-development/console-commands/console-commands.html).
+- [Get the list of available console commands](/docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html).
+- [Learn what available commands do](/docs/dg/dev/backend-development/console-commands/console-commands.html).
 
 ## Add a new console command
 
 To add a new console command, create a new class in `[Namespace]/Zed/(module)/Communication/Console/`, which extends `Spryker/Zed/Console/Business/Model/Console`. Two methods need implementation:
 
-* `configure()`—this method is used to set the name or description.
-* `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
+- `configure()`—this method is used to set the name or description.
+- `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
 
 Symfony's console tool is quite powerful. Read the [official documentation](https://symfony.com/doc/current/components/console.html) before you implement your first console command.
 
@@ -102,9 +102,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ## Event listener
 
 Symfony console triggers three events in a console command lifecycle:
-* `ConsoleEvents::COMMAND` is triggered before the command is executed.
-* `ConsoleEvents::TERMINATE` is triggered after the command is executed.
-* `ConsoleEvents::EXCEPTION` is triggered when an uncaught exception appears.
+- `ConsoleEvents::COMMAND` is triggered before the command is executed.
+- `ConsoleEvents::TERMINATE` is triggered after the command is executed.
+- `ConsoleEvents::EXCEPTION` is triggered when an uncaught exception appears.
 
 To add an event listener you need to create a class that implements `EventSubscriberInterface`. This can then be added in your `ConsoleDependencyProvider::getEventSubscriber()`.
 

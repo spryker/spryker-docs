@@ -15,8 +15,8 @@ related:
 With database replication enabled, there is a time gap between adding data to the primary database (DB) and transferring data to the replica. So, the application may fail to read the data from the replica.
 
 This issue can occur in the following cases:
-* A record is created via Yves request in the primary database, and Zed requests the data from the replica.
-* A data insert was just done, and, during requests to Zed, the application must read the  replica.
+- A record is created via Yves request in the primary database, and Zed requests the data from the replica.
+- A data insert was just done, and, during requests to Zed, the application must read the  replica.
 
 ## Caching mechanism
 
@@ -27,8 +27,8 @@ The approach works as follows:
 2. The record's type is stored in Storage. For example `User` string for a User model.
 3. Storage keeps the record type alive for 3 seconds. The time is configurable and depends on how quickly the data is usually transferred from the primary to the replica DB.
 4. When reading data, application checks the Storage for a needed record type and does the following:
-    * If the record type is present in Storage, it reads the primary DB.
-    * If the record type is not present in the Storage, it reads the replica.
+    - If the record type is present in Storage, it reads the primary DB.
+    - If the record type is not present in the Storage, it reads the replica.
 
 ## Integrate Storage caching for primary-replica database setups
 
@@ -40,26 +40,26 @@ Solution implementation affects all `find*()` methods and `postSave()` hooks of 
 
 We created and updated 3 major modules:
 
-* `PropelReplicationCache`:
+- `PropelReplicationCache`:
 
-  * Stores key in Redis after Propel inserted a data to the primary DB.
+  - Stores key in the key-value store (Redis or Valkey) after Propel inserted a data to the primary DB.
 
-  * Checks key in Redis when Propel is about to read data from DB.
+  - Checks key in the key-value store (Redis or Valkey) when Propel is about to read data from DB.
 
-  * Contains plugins to extend PropelOrm module.
+  - Contains plugins to extend PropelOrm module.
 
 Plugins can contain any functionality to extend Propel object and query instances.
 
-* `PropelOrm`:
+- `PropelOrm`:
 
-    * Lets extend Propel query objects to adjust save method generation with additional functionality.
+  - Lets extend Propel query objects to adjust save method generation with additional functionality.
 
-    * Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
+  - Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
 
-* `PropelOrmExtension`
+- `PropelOrmExtension`
 
-    * Lets extend the `PropelOrm` module with plugins to expand its functionality.
+  - Lets extend the `PropelOrm` module with plugins to expand its functionality.
 
-    * Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
+  - Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
 
-    * Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.
+  - Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.

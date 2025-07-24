@@ -68,7 +68,7 @@ class ConsoleDependencyProvider
 
 ## Usage
 
-Run the following command to check for security issues in the `composer.lock` file:
+Check for security issues in the `composer.lock` file:
 
 ```bash
 vendor/bin/console security:check

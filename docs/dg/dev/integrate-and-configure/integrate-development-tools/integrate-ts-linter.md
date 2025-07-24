@@ -25,22 +25,32 @@ Follow the steps below to integrate [TS linter](/docs/dg/dev/sdks/sdk/developmen
 
 To install the dependencies:
 1. Install Tslint:
+
 ```bash
 npm install tslint@5.20.x --save-dev
 ```
+
 2. Install config for Tslint:
+
 ```bash
 npm install @spryker/frontend-config.tslint --save-dev
 ```
 
 3. Install the CLI parser:
+
 ```bash
 npm install commander@4.0.x --save-dev
 ```
+
 ## 2. Update the scripts
+
 To update the scripts:
-Add the TS lint script to `/frontend/libs/tslint.js`:
-```
+Add the TS lint script:
+
+<details>
+  <summary>/frontend/libs/tslint.js<summary>
+
+```js
 const path = require('path');
 const { Linter, Configuration } = require('tslint');
 const { globalSettings } = require('../settings');
@@ -110,18 +120,24 @@ const exitProcess = errorCount => {
 
 runTSLint();
 ```
-Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/tslint.js) for the file example.
+
+</details>
+
+For a file example, see [tslint.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/tslint.js).
 
 2. Adjust the `/package.json` scripts:
-```
+
+```json
 "scripts": {
     ....
     "yves:tslint": "node ./frontend/libs/tslint",
     "yves:tslint:fix": "node ./frontend/libs/tslint --fix"
 }
 ```
+
 3. Add the lint rules `file /tslint.json`:
-```
+
+```josn
 {
     "extends": "./node_modules/@spryker/frontend-config.tslint/tslint.json",
     "linterOptions": {

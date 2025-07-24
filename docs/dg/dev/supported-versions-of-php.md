@@ -18,14 +18,14 @@ More and more libraries deliver releases, including bug fixes and security updat
 
 Before switching PHP versions in production environments, ensure to check this new major version's new features and test it for incompatibilities. For more information, see the following documents:
 
-* [New Features PHP8.2](https://www.php.net/manual/en/migration82.new-features.php)
-* [New Features PHP8.3](https://www.php.net/manual/en/migration83.new-features.php)
-* [Backward Incompatible Changes PHP8.2](https://www.php.net/manual/en/migration82.incompatible.php)
-* [Backward Incompatible Changes PHP8.3](https://www.php.net/manual/en/migration83.incompatible.php)
-* [Deprecated Features PHP8.2](https://www.php.net/manual/en/migration82.deprecated.php)
-* [Deprecated Features PHP8.3](https://www.php.net/manual/en/migration83.deprecated.php)
-* [Other Changes PHP8.2](https://www.php.net/manual/en/migration82.other-changes.php)
-* [Other Changes PHP8.3](https://www.php.net/manual/en/migration83.other-changes.php)
+- [New Features PHP8.2](https://www.php.net/manual/en/migration82.new-features.php)
+- [New Features PHP8.3](https://www.php.net/manual/en/migration83.new-features.php)
+- [Backward Incompatible Changes PHP8.2](https://www.php.net/manual/en/migration82.incompatible.php)
+- [Backward Incompatible Changes PHP8.3](https://www.php.net/manual/en/migration83.incompatible.php)
+- [Deprecated Features PHP8.2](https://www.php.net/manual/en/migration82.deprecated.php)
+- [Deprecated Features PHP8.3](https://www.php.net/manual/en/migration83.deprecated.php)
+- [Other Changes PHP8.2](https://www.php.net/manual/en/migration82.other-changes.php)
+- [Other Changes PHP8.3](https://www.php.net/manual/en/migration83.other-changes.php)
 
 {% info_block infoBox "Info" %}
 

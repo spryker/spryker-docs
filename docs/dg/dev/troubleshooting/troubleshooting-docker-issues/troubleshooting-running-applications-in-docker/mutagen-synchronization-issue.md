@@ -15,10 +15,10 @@ There is a synchronization issue.
 
 ## Solution
 
-* Restart your OS.
-* Run the commands:
+- Restart your OS.
+- Run the commands:
 
-```
+```bash
 docker/sdk trouble
 mutagen sync list
 mutagen sync terminate <all sessions in the list>

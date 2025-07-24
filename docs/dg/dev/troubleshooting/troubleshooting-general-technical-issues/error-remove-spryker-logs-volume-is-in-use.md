@@ -16,7 +16,7 @@ You get the error `ERROR: remove spryker_logs: volume is in use - [{container_ha
 
 1. Run the command:
 
-```
+```bash
 docker rm -f {container_hash}
 ```
 

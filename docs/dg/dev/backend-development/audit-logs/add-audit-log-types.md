@@ -14,7 +14,7 @@ In this guide, `Checkout` log type for the `Yves` application is added as an exa
 
 ## Prerequisites
 
-[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202410.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 ## Add a checkout log type for Yves

@@ -2,7 +2,7 @@
 title: Install prerequisites and enable ACP
 description: Learn about the technical prerequisites required for the App Composition Platform registration.
 template: concept-topic-template
-last_updated: Nov 1, 2024
+last_updated: Jul 24, 2025
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
     - /docs/acp/user/app-composition-platform-installation.html
@@ -53,6 +53,7 @@ When a new version of app is released, you don't need to update it. However, you
 ```php
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
 use Spryker\Shared\Kernel\KernelConstants;
+use Spryker\Shared\KernelApp\KernelAppConstants;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\MessageBrokerAws\MessageBrokerAwsConstants;
 use Spryker\Shared\OauthAuth0\OauthAuth0Constants;
@@ -82,12 +83,12 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     // Here we will define the correspondence of messages to channels for ACP
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     'app-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     // Here we will define the receiver transport map accordingly to APP
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // Here we will define the sender transport map accordingly to APP
 ];
 
@@ -149,6 +150,20 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-e
 
 3. In `MessageBrokerDependencyProvider.php`, enable the following module plugins:
 
+| PLUGIN | DESCRIPTION |
+| - | - |
+| AppConfigMessageHandlerPlugin | Handles application configuration messages for ACP apps. |
+| HttpChannelMessageSenderPlugin | Sends messages through HTTP channel transport. |
+| HttpChannelMessageReceiverPlugin | Receives messages through HTTP channel transport. |
+| CorrelationIdMessageAttributeProviderPlugin | Adds correlation ID to message attributes for tracking. |
+| TimestampMessageAttributeProviderPlugin | Adds timestamp to message attributes. |
+| AccessTokenMessageAttributeProviderPlugin | Adds OAuth access token to message attributes. |
+| TransactionIdMessageAttributeProviderPlugin | Adds transaction ID to message attributes. |
+| SessionTrackingIdMessageAttributeProviderPlugin | Adds session tracking ID to message attributes. |
+| TenantActorMessageAttributeProviderPlugin | Adds tenant actor information to message attributes. |
+| ValidationMiddlewarePlugin | Validates messages before processing. |
+| ActiveAppFilterMessageChannelPlugin | Filters message channels based on active apps. |
+
 {% info_block infoBox "Disable deprecated plugins" %}
 
 Make sure that no deprecated plugins are enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
@@ -159,13 +174,6 @@ Make sure that no deprecated plugins are enabled. Ideally, the content of each o
   <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information,  view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
@@ -253,17 +261,15 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 4. In `MessageBrokerAwsDependencyProvider.php`, enable the following module plugins:
 
+| PLUGIN | DESCRIPTION |
+| - | - |
+| ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin | Expands HTTP channel requests with consumer ID information. |
+| AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin | Expands HTTP channel receiver requests with OAuth access token. |
+
 <details>
   <summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
 
 ```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information,  view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\MessageBrokerAws;
 
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBrokerAws\Expander\ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin;
@@ -289,7 +295,8 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 
 5. In `MessageBrokerConfig.php`, configure the default worker channels for the system events channel to be enabled:
 
-**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
+<details>
+  <summary>src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php</summary>
 
 ```php
 namespace Pyz\Zed\MessageBroker;
@@ -323,6 +330,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
+</details>
+
 6. In `OauthClientDependencyProvider.php`, enable the following module plugins:
 
 | PLUGIN | DESCRIPTION |
@@ -335,13 +344,6 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
   <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
 
 ```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information,  view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\OauthClient;
 
 use Spryker\Zed\MessageBroker\Communication\Plugin\OauthClient\TenantIdentifierAccessTokenRequestExpanderPlugin;
@@ -382,13 +384,6 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
   <summary>src/Pyz/Zed/OauthClient/OauthClientConfig.php</summary>
 
 ```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information,  view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\OauthClient;
 
 use Spryker\Zed\OauthClient\OauthClientConfig as SprykerOauthClientConfig;
@@ -414,20 +409,13 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 | PLUGIN | DESCRIPTION |
 | - | - |
-| `OAuthRequestExpanderPlugin` | Expands the request with an OAuth token. |
-| `MerchantAppRequestExpanderPlugin` | Expands the request with the merchant app data. |
+| OAuthRequestExpanderPlugin | Expands the request with an OAuth token. |
+| MerchantAppRequestExpanderPlugin | (Optional) Expands the request with the merchant app data. Only relevant for marketplace demoshop setups. |
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
 
 ```php
-<?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information,  view the LICENSE file that was distributed with this source code.
- */
-
 namespace Pyz\Zed\KernelApp;
 
 use Spryker\Zed\KernelApp\KernelAppDependencyProvider as SprykerKernelAppDependencyProvider;
@@ -443,13 +431,64 @@ class KernelAppDependencyProvider extends SprykerKernelAppDependencyProvider
     {
         return [
             new OAuthRequestExpanderPlugin(),
-            new MerchantAppRequestExpanderPlugin(),
+            new MerchantAppRequestExpanderPlugin(), // Optional: Only for marketplace demoshop setups
         ];
     }
 }
 ```
 
 </details>
+
+9. In `ConsoleDependencyProvider.php`, register the message broker worker console command:
+
+<details>
+  <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+
+```php
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\MessageBroker\Communication\Plugin\Console\MessageBrokerWorkerConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // ... other console commands
+            new MessageBrokerWorkerConsole(),
+        ];
+    }
+}
+```
+
+</details>
+
+10. Configure the cron job for automatic message consuming by adding the following to your deployment configuration:
+
+<details>
+  <summary>config/Zed/cronjobs/jenkins.php</summary>
+
+```php
+/* Message broker */
+if (\Spryker\Shared\Config\Config::get(\Spryker\Shared\MessageBroker\MessageBrokerConstants::IS_ENABLED)) {
+    $jobs[] = [
+        'name' => 'message-broker-consume-channels',
+        'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
+        'schedule' => '* * * * *',
+        'enable' => true,
+    ];
+}
+```
+
+</details>
+
+If you want to execute it manually or customize the message consuming process, see [Receive ACP messages](/docs/dg/dev/acp/receive-acp-messages.html).
 
 
 ## Install prerequisites for projects with version earlier than 202211.0

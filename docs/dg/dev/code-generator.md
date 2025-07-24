@@ -17,6 +17,8 @@ redirect_from:
 related:
   - title: Cronjob scheduling
     link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
+  - title: Data import
+    link: docs/dg/dev/data-import/202410.0/data-import.html
   - title: Development virtual machine, docker containers & console
     link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Twig and TwigExtension

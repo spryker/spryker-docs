@@ -176,6 +176,7 @@ class ApiConfig extends SprykerApiConfig
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -215,6 +216,7 @@ Ensure the following transfers have been created:
 {% endinfo_block %}
 
 ### 4) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN   | SPECIFICATION          | PREREQUISITES | NAMESPACE      |

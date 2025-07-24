@@ -18,7 +18,7 @@ This implies that it's better to focus on the tests at the bottom first and have
 
 Unit tests typically reside in the Business layer. However, some of them may also reside in the Communication layer. To achieve a high coverage (around 80%) of unit tests, it's a good practice for developers to write unit tests for every change they make. Additionally, in many cases, code can be tested with integration tests, which test how several parts of a system work together. For more information on integration tests, see the [Integration tests](#integration-tests).
 
-These tests are cost-effective, robust, and fast. You can mock any dependencies in these tests. You can also easily manipulate the system during the _Arrange_ phase of your tests.
+These tests are cost-effective, robust, and fast. You can mock any dependencies in these tests. You can also easily manipulate the system during the *Arrange* phase of your tests.
 
 ## Integration tests
 
@@ -26,7 +26,7 @@ There is a mixture of unit and integration tests in the Business and the Communi
 
 Integration tests can be slow, but they can also provide good code coverage and reduce the number of tests required.
 
-Like unit tests, you can mock any dependencies in the integration tests and easily manipulate the system during the _Arrange_ phase of your tests.
+Like unit tests, you can mock any dependencies in the integration tests and easily manipulate the system during the *Arrange* phase of your tests.
 
 ## Acceptance tests (UI tests, E2E tests)
 

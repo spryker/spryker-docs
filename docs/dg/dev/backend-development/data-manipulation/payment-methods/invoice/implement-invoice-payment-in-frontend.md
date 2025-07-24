@@ -24,8 +24,8 @@ related:
 ## Create a form
 
 In Yves, the starting point is to build a form.
-* Add a new module in Yves.
-* Add the `Form` folder, where you will place the implementation for building the form.
+- Add a new module in Yves.
+- Add the `Form` folder, where you will place the implementation for building the form.
 
 ### 1. Add the data provider
 
@@ -264,6 +264,7 @@ Add the Twig template that's rendered when the invoice payment method is selecte
     {% raw %}{{{% endraw %} form_errors(form.paymentmethods_invoice) {% raw %}}}{% endraw %}
 </div>
 ```
+
 </details>
 
 {% info_block errorBox %}

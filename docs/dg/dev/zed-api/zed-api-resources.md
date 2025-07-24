@@ -41,11 +41,11 @@ The main `Api` module contains a dispatcher that delegates to those API module v
 
 The following table is a quick overview for the different CRUD operations the API can perform out of the box:
 
-| HTTP METHOD | MEANING	 | URI | APIRESOURCEPLUGIN METHOD |
+| HTTP METHOD | MEANING  | URI | APIRESOURCEPLUGIN METHOD |
 | --- | --- | --- | --- |
 | GET | index/paginate read | /<br/>/{slug/id} | find($apiRequestTransfer)<br/>get($id, $apiFilterTransfer) |
-| POST | create	 | / | add($apiDataTransfer) |
-| PATCH	 | update | /{slug/id} | update($id, $apiDataTransfer) |
+| POST | create  | / | add($apiDataTransfer) |
+| PATCH  | update | /{slug/id} | update($id, $apiDataTransfer) |
 | DELETE | delete | /{slug/id} | remove($id) |
 
 We do not use PUT as replacing on a REST level can lead to more dangers.
@@ -61,8 +61,8 @@ Each resource can be mapped to the following facade methods:
 | MEANING | FACADE METHOD SIGNATURE | FACADE RETURN TYPE |
 | --- | --- | --- |
 | index/paginate | findFoos($apiRequestTransfer) | ApiCollectionTransfer |
-| read	 | getFoo($id, $apiFilterTransfer) | ApiItemTransfer |
-| create | 	addFoo($apiDataTransfer) | ApiItemTransfer |
+| read  | getFoo($id, $apiFilterTransfer) | ApiItemTransfer |
+| create |  addFoo($apiDataTransfer) | ApiItemTransfer |
 | update | updateFoo($id, $apiDataTransfer) | ApiItemTransfer |
 | delete | removeFoo($id) | ApiItemTransfer |
 

@@ -20,12 +20,12 @@ Jarvis is not actively supported. For upgrading your projects, use [Spryker Code
 
 [Spryker Jarvis](https://github.com/spryker/jarvis) is the command-line tool that lets you analyze your Spryker-based project and eventually migrate it to the most up-to-date version of Spryker. The tool helps you quickly get answers to the following questions:
 
-* How outdated is your project compared to the latest Spryker product release?
-* What features does your project already use, and what are the other features it could use?
-* What should you do to update your project to the latest Spryker product release?
-* How did the new Spryker module version affect your project?
-* How far are your modules behind the latest Spryker minor and major module versions?
-* What features are compatible with your current project version?
+- How outdated is your project compared to the latest Spryker product release?
+- What features does your project already use, and what are the other features it could use?
+- What should you do to update your project to the latest Spryker product release?
+- How did the new Spryker module version affect your project?
+- How far are your modules behind the latest Spryker minor and major module versions?
+- What features are compatible with your current project version?
 
 Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question "How outdated is the project?" and helps to estimate efforts to update the project.
 
@@ -33,8 +33,8 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 
 ## Prerequisites
 
-* [Install Spryker project locally](/docs/dg/dev/development-getting-started-guide.html#install-spryker)
-* [Install Node.js](https://nodejs.org/en/download/package-manager)
+- [Install Spryker project locally](/docs/dg/dev/development-getting-started-guide.html#install-spryker)
+- [Install Node.js](https://nodejs.org/en/download/package-manager)
 
 ## Install Spryker Jarvis
 
@@ -48,9 +48,11 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 To migrate your project to the latest version of Spryker using the Spryker Jarvis tool, follow these steps:
 
 1. Inside the Spryker Jarvis folder, run the command
-```
+
+```bash
 node jarvis.js <path to your spryker project folder>
 ```
+
 2. Follow the terminal script about your project name.
 3. In your browser, open `http://localhost:7777` and enjoy the migration analysis.
 
@@ -58,9 +60,9 @@ node jarvis.js <path to your spryker project folder>
 
 Depending on your project's specifics and your goals, you can use various migration views available in Jarvis and take necessary actions. There are three views:
 
-* *Basic* view—for migrating to a newer product release.
-* *No-features* view—for upgrading your project modules to their current major and minor versions.
-* *Missing-features* view—for upgrading your project with the compatible Spryker features.
+- *Basic* view—for migrating to a newer product release.
+- *No-features* view—for upgrading your project modules to their current major and minor versions.
+- *Missing-features* view—for upgrading your project with the compatible Spryker features.
 
 <a name="basic"></a>
 
@@ -70,8 +72,8 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 
 This view is especially useful when:
 
-* You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/about/all/b2b-suite.html) or the [B2C Demo Shop](/docs/about/all/b2c-suite.html).
+- You have a Spryker-based product and finished the main development part of it.
+- Your project uses feature repositories, or the project is based on the Spyker[B2B Demo Shop](/docs/about/all/b2b-suite.html) or the [B2C Demo Shop](/docs/about/all/b2c-suite.html).
 
 Use this view if you want to stay up-to-date with Spryker and get new features of every Spryker product release.
 
@@ -137,12 +139,16 @@ In most cases, you need to add missing dependencies to your project to be able t
 
 For now, you can not do the following things with Jarvis:
 
-* In the no-features view, the starting point for module updates is not provided. So as of now, the tool does not tell you which module to update first.
-* For the basic view, if you use the old Legacy Demoshop, there is no migration path. To migrate such projects, an individual approach is needed. The same is true if you use an old technology of Spryker, like collectors that have been replaced with Publish&Synchronization.
+- In the no-features view, the starting point for module updates is not provided. So as of now, the tool does not tell you which module to update first.
+- For the basic view, if you use the old Legacy Demoshop, there is no migration path. To migrate such projects, an individual approach is needed. The same is true if you use an old technology of Spryker, like collectors that have been replaced with Publish&Synchronization.
 
 
 ## Reference
 
 To see Spryker Jarvis in action, check out this video:
 
-{% wistia jtkjogkxht 720 480 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.md/How+to+Use+Spryker+Jarvis-jtkjogkxht.mp4" type="video/mp4">
+  </video>
+</figure>

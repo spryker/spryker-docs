@@ -37,6 +37,7 @@ Replace x86 based Sass with an ARM based one:
 ```
 
 4. In `frontend/configs/development.js`, add the implementation of `options` for `saas-loader`:
+
 ```js
 loader: 'sass-loader',
 options: {
@@ -51,14 +52,18 @@ docker/sdk cli
 ```
 
 6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
+    - npm:
+
     ```bash
     npm install
     ```
-    * yarn:
+
+    - yarn:
+
     ```bash
     yarn install
     ```
+
 7. Rebuild Yves:
 
 ```bash
@@ -110,7 +115,7 @@ services:
   scheduler:
     csrf-protection-enabled: true
 ...
-```    
+```
 
 2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
 

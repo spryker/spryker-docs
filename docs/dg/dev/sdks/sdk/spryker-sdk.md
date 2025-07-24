@@ -15,9 +15,11 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 
 - Make sure an auth file is available for the [Composer](https://getcomposer.org/doc/articles/authentication-for-private-packages.md).
 - If you're using a MacOS computer, install **Coreutils**.
+
   ```shell
   brew install coreutils
   ```
+
 - Installed [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 
 
@@ -25,9 +27,11 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 
 1. Download the latest release of [installer.sh](https://github.com/spryker-sdk/sdk/releases).
 2. Run the installer:
+
   ```shell
   installer.sh {INSTALLATION_FOLDER}
   ```
+
 3. Follow the installer's instructions.
 4. Set the `spryker-sdk` alias.
 5. Export the `SPRYKER_SDK_PATH` env variable.
@@ -36,6 +40,7 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 ## Install using the installation command
 
 Install the SDF into the current folder:
+
 ```shell
 PATH_TO_SDK=$(pwd) \
 && curl -fL github.com/spryker-sdk/sdk/releases/latest/download/installer.sh -O \

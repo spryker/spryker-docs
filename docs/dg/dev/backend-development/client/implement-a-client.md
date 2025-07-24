@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html
-  - title: Use and configure Redis as a key-value storage
+  - title: Use and configure key-value storage (Redis or Valkey)
     link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 
@@ -44,7 +44,7 @@ When you implement a client, the client does not know about Yves. Therefore, don
 
 The client class uses a factory to create the other objects. These objects require a connecting client, which they get injected into the factory. For this purpose, the factory contains these prepared methods:
 
-* `createSessionClient()`
-* `createZedRequestClient()`
-* `createStorageClient()`
-* `createSearchClient()`
+- `createSessionClient()`
+- `createZedRequestClient()`
+- `createStorageClient()`
+- `createSearchClient()`

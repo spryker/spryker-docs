@@ -37,7 +37,8 @@ You must have the following `deploy.yml` files in your project (it may vary, dep
 `PROJECT_NAME` represents the name of your project.
 
 Bootstrap your `deploy.yml`:
-```
+
+```bash
 docker/sdk boot DEPLOY_FILE.yml && docker/sdk up
 ```
 
@@ -56,8 +57,8 @@ Creating a database dump can cause a significant load on your database. If you a
 By ingesting the data in your staging or production database, you can go even one step further and bring your local environment even closer to its staging or production form.
 You can easily create a dump of your staging or production database by connecting to the RDS instance while having your VPN connected to the respective environment.
 For this, you need two things:
-* Your RDS instance URL.
-* Your DB credentials.
+- Your RDS instance URL.
+- Your DB credentials.
 
 To obtain all these things, follow these steps:
 1. Log in to the AWS console and search for "Task Definitions".
@@ -68,7 +69,8 @@ To obtain all these things, follow these steps:
 - `SPRYKER_DB_ROOT_USERNAME`
 - `SPRYKER_DB_PASSWORD`
 
-With this information, you can connect to the database from any SQL client and create a database dump which you can then import locally. After you have imported the data, don't forget to publish events so that all the data gets imported to Redis and Elastic Search as well. You can use the following command to achieve that.
-```
+With this information, you can connect to the database from any SQL client and create a database dump which you can then import locally. After you have imported the data, don't forget to publish events so that all the data gets imported to the key-value store (Redis or Valkey) and Elastic Search as well. You can use the following command to achieve that.
+
+```bash
 command publish:trigger-events
 ```

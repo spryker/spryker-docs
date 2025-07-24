@@ -25,8 +25,8 @@ related:
 
 In Yves, the starting point is to build a form.
 
-* Add a new module in Yves.
-* Add the `Form` folder to place the implementation for building the form.
+- Add a new module in Yves.
+- Add the `Form` folder to place the implementation for building the form.
 
 1. In the `Form/DataProvider` folder, add the data provider:
 

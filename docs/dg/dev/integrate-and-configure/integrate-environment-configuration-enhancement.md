@@ -12,10 +12,10 @@ redirect_from:
 
 Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that. This limited the number of possible names you could use to the four hardcoded ones:
 
-* `production`
-* `staging`
-* `development`
-* `devtest`
+- `production`
+- `staging`
+- `development`
+- `devtest`
 
 To be able to use any environment name and manage application behavior more efficiently, the environment name settings are replaced with explicit configuration.
 
@@ -68,7 +68,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 Delete the  `Spryker\* Zed || Yves *\Application\Communication\Plugin\
-Provider\AssertUrlConfigurationServiceProvider ` dependency:
+Provider\AssertUrlConfigurationServiceProvider` dependency:
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
@@ -137,7 +137,7 @@ public function isDevelopmentConsoleCommandsEnabled(): bool
 ...
 ```
 
-3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands() ` by replacing  `Environment::isDevelopment() || Environment::isTesting() ` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled() `:
+3. Adjust  `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()` by replacing  `Environment::isDevelopment() || Environment::isTesting()` with  `$this->getConfig()->isDevelopmentConsoleCommandsEnabled()`:
 
 ```php
 ...

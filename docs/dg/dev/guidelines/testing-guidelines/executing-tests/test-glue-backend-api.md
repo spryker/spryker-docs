@@ -13,14 +13,19 @@ This document describes how to set up and run Glue Backend API end-to-end (E2E) 
 
 1. Install or update Spryker Testify to version 3.52.0 or higher:
 - Check the current installed version:
+
   ```bash
   composer info spryker/testify
   ```
+
 - Install Spryker Testify:
+
   ```bash
   composer require --dev spryker/testify:"^3.52.0"
   ```
+
 - Update Spryker Testify:
+
   ```bash
   composer update spryker/testify:"^3.52.0"
   ```

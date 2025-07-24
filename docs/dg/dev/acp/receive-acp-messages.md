@@ -20,6 +20,7 @@ console message-broker:consume [channel-name...] [options]
 ## Arguments and options
 
 ### Optional: Channel name
+
 - **Description**: Specifies one or more channels from which to consume messages. Multiple channels can be specified as separate arguments.
 - **Usage**: `console message-broker:consume {channel-name}` or `console message-broker:consume {channel1} {channel2} {channel3}`
 - **Example**: `console message-broker:consume app-events` or `console message-broker:consume app-events notifications orders`
@@ -28,6 +29,7 @@ console message-broker:consume [channel-name...] [options]
 ### Available options
 
 #### `--time-limit=SECONDS`
+
 - **Description**: Sets the maximum time (in seconds) the worker should run before stopping
 - **Usage**: `--time-limit=15`
 - **Purpose**: Prevents workers from running indefinitely and ensures regular restarts
@@ -40,6 +42,7 @@ Without the `--time-limit` option, the command runs continuously and doesn't sto
 {% endinfo_block %}
 
 #### `--sleep=SECONDS`
+
 - **Description**: Sets the sleep time (in seconds) between message processing cycles when no messages are available
 - **Usage**: `--sleep=5`
 - **Purpose**: Reduces CPU usage by pausing between polling attempts
@@ -125,6 +128,7 @@ This approach ensures reliable message processing while preventing resource exha
 If you know that some messages are more important than others, you should divide your jobs to handle critical messages more frequently while processing less important messages at longer intervals.
 
 **High-priority messages (every minute):**
+
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-critical-channels',
@@ -135,6 +139,7 @@ $jobs[] = [
 ```
 
 **Low-priority messages (every 5 minutes):**
+
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-standard-channels',
@@ -147,12 +152,14 @@ $jobs[] = [
 #### Environment-specific optimizations
 
 **For high-traffic environments:**
+
 ```php
 // Shorter sleep time for faster message processing
 'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=30 --sleep=1',
 ```
 
 **For low-traffic environments:**
+
 ```php
 // Longer intervals to reduce resource usage
 'schedule' => '*/5 * * * *', // Every 10 minutes

@@ -15,6 +15,7 @@ This document describes how to deploy an application to [ECS cluster](https://do
 
 
 ## Prerequisites
+
 We use the *spryker-staging* environment as an example. Adjust the name according to your project name.
 
 In this document, an *application version* is a Git commit hash string which is set as a Docker Image tag for all [Elastic Container Registry (ECR) repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) for the environment.
@@ -23,11 +24,11 @@ Example of Git commit hash: `290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
 Example of the ECR images with the application version in tags:
 
-* `spryker-staging-b2c-yves:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-staging-b2c-zed:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-staging-b2c-glue:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-staging-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-staging-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-staging-b2c-yves:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-staging-b2c-zed:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-staging-b2c-glue:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-staging-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-staging-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
 
 
@@ -56,8 +57,8 @@ To deploy a specific application version, copy the version of the respective Git
 {% info_block infoBox "Deploying *latest*" %}
 
 Enter *latest* if you want to deploy the last built application version. You can check this version in the */spryker-staging/lastbuildversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters). We recommend deploying *latest* in the staging environment to:
-* Keep the application up to date with the latest changes.
-* Avoid updating */spryker-staging/desired_version* during each deployment.
+- Keep the application up to date with the latest changes.
+- Avoid updating */spryker-staging/desired_version* during each deployment.
 
 {% endinfo_block %}
 
@@ -113,16 +114,17 @@ If the deployment is successful, the */spryker-staging/lastdeployedversion* para
 
 
 ## Check the deployed application version
+
 To check the deployed application version in the ECS cluster, do following:
 
 1. In the AWS Management Console, go to **Services** > **[Elastic Container Service](https://eu-central-1.console.aws.amazon.com/ecs/home?region=eu-central-1)**.
 2. Select *spryker-staging*.
 3. Select one of the following services:
-    * *spryker-staging-storeapp*
-    * *spryker-staging-backoffice*
-    * *spryker-staging-frontend*
-    * *spryker-staging-zed*
-    * *spryker-staging-yves*
+    - *spryker-staging-storeapp*
+    - *spryker-staging-backoffice*
+    - *spryker-staging-frontend*
+    - *spryker-staging-zed*
+    - *spryker-staging-yves*
 
 ![cluster](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/cluster-spryker-stage.png)
 
@@ -137,6 +139,7 @@ To check the deployed application version in the ECS cluster, do following:
 ![check image task](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/check-image-task-stage.png)
 
 ## Roll back an application
+
 To roll back an application:
 
 1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#check-the-version-to-deploy) for more details.
@@ -147,4 +150,5 @@ To roll back an application:
 
 
 ## Next step
+
 [Configuring debugging](/docs/ca/dev/configure-debugging.html)

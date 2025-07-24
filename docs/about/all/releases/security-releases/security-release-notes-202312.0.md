@@ -5,6 +5,7 @@ last_updated: Dec 18, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+- /docs/about/all/releases/security-release-notes-202312.0.html
 
 ---
 
@@ -15,25 +16,25 @@ If you need any additional support with this content, [contact our support](http
 ## Insecure password reset workflow
 
 The password reset functionality missed security-related controls that could lead to manipulation by attackers. The security flaws related to fixing this issue included the following:
-* Reusable password reset tokens: Upon successful completion of a password reset, the same link containing a token could be reused to reset the password again.<br>
-Affected applications: BackOffice, Merchant Portal.
-* Extended expiration time for password reset tokens:  The password reset token expiration time was too long.<br>
-Affected applications: Storefront, Back Office, Merchant Portal.
-* No rate limiting the password reset attempts: It was possible to make an infinite number of attempts to reset any account using any email address.<br>
-Affected applications: Storefront, Back Office, Merchant Portal.
-* Non-invalidation of old password reset tokens: When a new password reset was requested, old password reset tokens were not invalidated and could be reused.<br>
+- Reusable password reset tokens: Upon successful completion of a password reset, the same link containing a token could be reused to reset the password again.<br>
 Affected applications: Back Office, Merchant Portal.
-* Insufficient length of password reset tokens: The password reset token, consisting of 8 characters, was too short to ensure robust security.<br>
+- Extended expiration time for password reset tokens:  The password reset token expiration time was too long.<br>
+Affected applications: Storefront, Back Office, Merchant Portal.
+- No rate limiting the password reset attempts: It was possible to make an infinite number of attempts to reset any account using any email address.<br>
+Affected applications: Storefront, Back Office, Merchant Portal.
+- Non-invalidation of old password reset tokens: When a new password reset was requested, old password reset tokens were not invalidated and could be reused.<br>
+Affected applications: Back Office, Merchant Portal.
+- Insufficient length of password reset tokens: The password reset token, consisting of 8 characters, was too short to ensure robust security.<br>
 Affected applications: Back Office, Merchant Portal.
 
 
 ### Affected modules
 
-* `spryker/customer`: 1.0.0 - 7.52.0
-* `spryker/security-gui`: 1.0.0 - 1.4.0
-* `spryker/security-merchant-portal-gui`: 1.0.0 - 2.1.0
-* `spryker/user-password-reset`: 1.0.0 - 1.4.0
-* `spryker-shop/customer-page`: 1.0.0 - 2.48.0
+- `spryker/customer`: 1.0.0 - 7.52.0
+- `spryker/security-gui`: 1.0.0 - 1.4.0
+- `spryker/security-merchant-portal-gui`: 1.0.0 - 2.1.0
+- `spryker/user-password-reset`: 1.0.0 - 1.4.0
+- `spryker-shop/customer-page`: 1.0.0 - 2.48.0
 
 ### Introduced changes
 
@@ -49,14 +50,14 @@ PHP 8.0 does not receive security fixes anymore. For this reason, the support of
 
 1. Update `spryker/customer`.
 
-* If your version of `spryker/customer` is earlier than or equal to 7.52.0, update to version 7.53.0:
+- If your version of `spryker/customer` is earlier than or equal to 7.52.0, update to version 7.53.0:
 
 ```bash
 composer require spryker/customer:"~7.53.0"
 composer show spryker/customer # Verify the version
 ```
 
-* If your platform is based on PHP 8.0, you can use version 7.51.6 of the `spryker/customer` module:
+- If your platform is based on PHP 8.0, you can use version 7.51.6 of the `spryker/customer` module:
 
 ```bash
 composer require spryker/customer:"~7.51.6"
@@ -65,14 +66,14 @@ composer show spryker/customer # Verify the version
 
 2. Update `spryker/security-gui`.
 
-* If your version of `spryker/security-gui` is earlier than or equal to 1.4.0, update to version 1.5.0:
+- If your version of `spryker/security-gui` is earlier than or equal to 1.4.0, update to version 1.5.0:
 
 ```bash
 composer require spryker/security-gui:"~1.5.0"
 composer show spryker/security-gui # Verify the version
 ```
 
-* If your platform is based on PHP 8.0, you can use version 1.3.1 of the `security-gui` module:
+- If your platform is based on PHP 8.0, you can use version 1.3.1 of the `security-gui` module:
 
 ```bash
 composer require spryker/security-gui:"~1.3.1"
@@ -95,14 +96,14 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 3. Update `spryker/security-merchant-portal-gui`.
 
-* If your version of `spryker/security-merchant-portal-gui` is earlier than or equal to 2.1.0, update to version 2.2.0:
+- If your version of `spryker/security-merchant-portal-gui` is earlier than or equal to 2.1.0, update to version 2.2.0:
 
 ```bash
 composer require spryker/security-merchant-portal-gui:"~2.2.0"
 composer show spryker/security-merchant-portal-gui # Verify the version
 ```
 
-* If your platform is based on PHP 8.0, you can use version 2.1.1 of the `security-merchant-portal-gui` module:
+- If your platform is based on PHP 8.0, you can use version 2.1.1 of the `security-merchant-portal-gui` module:
 
 ```bash
 composer require spryker/security-merchant-portal-gui:"~2.1.1"
@@ -146,14 +147,14 @@ Other modules that belong to the merchant context might require an update as wel
 
 4. Update `spryker/user-password-reset`.
 
-* If your version of `spryker/user-password-reset` is earlier than or equal to 1.4.0, update to version 1.5.0:
+- If your version of `spryker/user-password-reset` is earlier than or equal to 1.4.0, update to version 1.5.0:
 
 ```bash
 composer require spryker/user-password-reset:"~1.5.0"
 composer show spryker/user-password-reset # Verify the version
 ```
 
-* If your platform is based on PHP 8.0, you can use version 1.4.1 of the `user-password-reset` module:
+- If your platform is based on PHP 8.0, you can use version 1.4.1 of the `user-password-reset` module:
 
 ```bash
 composer require spryker/user-password-reset:"~1.4.1"
@@ -162,14 +163,14 @@ composer show spryker/user-password-reset # Verify the version
 
 5. Update `spryker-shop/customer-page`.
 
-* If your version of `spryker-shop/customer-page` is earlier than or equal to 2.48.0, update to version 2.49.0:
+- If your version of `spryker-shop/customer-page` is earlier than or equal to 2.48.0, update to version 2.49.0:
 
 ```bash
 composer require spryker-shop/customer-page:"~2.49.0"
 composer show spryker-shop/customer-page # Verify the version
 ```
 
-* If your platform is based on PHP 8.0 you can use version 2.46.2 of the `customer-page` module:
+- If your platform is based on PHP 8.0 you can use version 2.46.2 of the `customer-page` module:
 
 ```bash
 composer require spryker-shop/customer-page:"~2.46.2"
@@ -196,7 +197,7 @@ The company role permissions configuration page allowed administrators to config
 
 ### Affected modules
 
-* `spryker-shop/company-page`: 1.0.0 - 2.23.0
+- `spryker-shop/company-page`: 1.0.0 - 2.23.0
 
 ### Introduced changes
 
@@ -334,7 +335,7 @@ It was possible to inject malicious code in the URL parameters of the drawing gr
 
 ### Affected modules
 
-* `spryker/error-handler`: 1.0.0 - 2.8.0
+- `spryker/error-handler`: 1.0.0 - 2.8.0
 
 ### Introduced changes
 
@@ -354,7 +355,7 @@ In certain cases the same token was assigned to different users.
 
 ### Affected modules
 
-* `spryker/oauth-code-flow`: <0.1.1
+- `spryker/oauth-code-flow`: <0.1.1
 
 ### Introduced changes
 
@@ -374,7 +375,7 @@ Glue Backend API has no expiration validation for access tokens. There was no li
 
 ### Affected modules
 
-* `spryker/oauth-backend-api`: 0.1.0 - 1.4.0
+- `spryker/oauth-backend-api`: 0.1.0 - 1.4.0
 
 ### Introduced changes
 
@@ -386,7 +387,7 @@ To implement the fix for this vulnerability, do the following:
 
 1. Update `spryker/oauth-backend-api`.
 
-* If your version of `spryker/oauth-backend-api` is earlier than or equal to 1.4.0, update to version 1.5.0:
+- If your version of `spryker/oauth-backend-api` is earlier than or equal to 1.4.0, update to version 1.5.0:
 
 ```bash
 composer require spryker/oauth-backend-api:"~1.5.0"
@@ -429,7 +430,7 @@ Babel third-party dependency was vulnerable to arbitrary code execution when com
 
 ### Affected modules
 
-* `spryker-shop/date-time-configurator-page-example`: 0.1.0 - 0.4.0
+- `spryker-shop/date-time-configurator-page-example`: 0.1.0 - 0.4.0
 
 ### Introduced changes
 
@@ -466,7 +467,7 @@ Outdated npm dependencies introduced security vulnerabilities that could potenti
 
 ### Affected modules
 
-* `spryker/chart`: 1.0.0 - 1.4.0
+- `spryker/chart`: 1.0.0 - 1.4.0
 
 ### Introduced changes
 
@@ -516,7 +517,7 @@ Browserify-sign upper bound check issue in `dsaVerify` leads to a signature forg
 
 ### Affected modules
 
-* `spryker/chart`: 1.0.0 - 1.5.0
+- `spryker/chart`: 1.0.0 - 1.5.0
 
 ### Introduced changes
 

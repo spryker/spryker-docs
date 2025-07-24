@@ -3,6 +3,8 @@ title: Security release notes 202403.0
 description: Security release notes for 202403.0
 last_updated: Mar 26, 2024
 template: concept-topic-template
+redirect_from:
+  - /docs/about/all/releases/security-release-notes-202403.0.html
 ---
 
 The following information pertains to security-related issues that have been recently resolved.
@@ -128,13 +130,13 @@ console router:cache:warm-up:merchant-portal
 console cache:empty-all
 ```
 
-## SameSite attribute added to Storefront and Backoffice cookies
+## SameSite attribute added to Storefront and Back Office cookies
 
 SameSite prevents the browser from sending the cookie along with cross-site requests. This mitigates the risk of cross-origin information leakage. It also provides protection against cross-site request forgery attacks.
 
 ### Introduced changes
 
-The SameSite attribute was added to the cookies of the Storefront and Backoffice applications.
+The SameSite attribute was added to the cookies of the Storefront and Back Office applications.
 
 ### Fix the vulnerability
 

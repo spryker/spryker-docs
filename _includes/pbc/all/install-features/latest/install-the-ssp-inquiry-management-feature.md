@@ -45,11 +45,11 @@ Update your `config/Shared/config_default.php`:
 | SelfServicePortalConstants::BASE_URL_YVES                                 | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SelfServicePortal |
 | SelfServicePortalConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                   | Configurable total file upload limit.                                                   | SprykerFeature\Shared\SelfServicePortal |
 | SelfServicePortalConstants::DEFAULT_FILE_MAX_SIZE                         | Configurable single file upload size.                                                   | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getInquiryInitialStateMap()                   | Returns the inquiry state machine process to the initial state mapping.                 | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getInquiryStateMachineProcessInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getInquiryCancelStateMachineEventName()       | Returns the inquiry event name of the inquiry cancellation.                             | SprykerFeature\Shared\SelfServicePortal |
+| SspInquiryManagementConfig::getInquiryInitialStateMachineMap()                   | Returns the inquiry state machine process to the initial state mapping.                 | SprykerFeature\Shared\SelfServicePortal |
+| SspInquiryManagementConfig::getSspInquiryStateMachineProcessInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SelfServicePortal |
+| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()       | Returns the inquiry event name of the inquiry cancellation.                             | SprykerFeature\Shared\SelfServicePortal |
 | SspInquiryManagementConfig::getSspInquiryAvailableStatuses()              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getInquiryStorageName()                       | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConstants::INQUIRY_STORAGE_NAME                       | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SelfServicePortal |
 | SalesConfig::getSalesDetailExternalBlocksUrls()                           | Defines the list of URLs for rendering blocks in the order details page.                | Spryker\Zed\Sales                       |
 | SspInquiryManagementConfig::getInquiryStatusClassMap()                    | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SelfServicePortal    |
 | SspInquiryManagementConfig::getInquiryPendingStatus()                     | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SelfServicePortal    |
@@ -74,6 +74,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 $config[SelfServicePortalConstants::BASE_URL_YVES] = 'https://your-yves-url';
 $config[SelfServicePortalConstants::DEFAULT_TOTAL_FILE_MAX_SIZE] = getenv('SPRYKER_DEFAULT_TOTAL_FILE_MAX_SIZE') ?: '100M';
 $config[SelfServicePortalConstants::DEFAULT_FILE_MAX_SIZE] = getenv('SPRYKER_DEFAULT_FILE_MAX_SIZE') ?: '20M';
+$config[SelfServicePortalConstants::INQUIRY_STORAGE_NAME] = 'ssp-inquiry';
 ```
 
 <details>
@@ -88,14 +89,14 @@ use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig as SprykerSe
 
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {
-    public function getInquiryInitialStateMap(): array
+    public function getInquiryInitialStateMachineMap(): array
     {
         return [
             'SspInquiryDefaultStateMachine' => 'created',
         ];
     }
 
-    public function getInquiryStateMachineProcessInquiryTypeMap(): array
+    public function getSspInquiryStateMachineProcessInquiryTypeMap(): array
     {
         return [
             'general' => 'SspInquiryDefaultStateMachine',
@@ -107,7 +108,7 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
     /**
      * @return string
      */
-    public function getInquiryCancelStateMachineEventName(): string
+    public function getSspInquiryCancelStateMachineEventName(): string
     {
         return 'cancel';
     }
@@ -124,14 +125,6 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
             'rejected',
             'canceled',
         ];
-    }
-
-    /**
-     * @return string
-     */
-    public function getInquiryStorageName(): string
-    {
-        return 'ssp-inquiry';
     }
 }
 

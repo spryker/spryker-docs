@@ -142,6 +142,6 @@ We've also added a new `is_dynamic` field to `spy_product_label` database table 
 
 To start database migration run the following commands:
 
-* `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
-* `vendor/bin/console` propel:migrate
-* `vendor/bin/console propel:model:build`
+- `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
+- `vendor/bin/console` propel:migrate
+- `vendor/bin/console propel:model:build`

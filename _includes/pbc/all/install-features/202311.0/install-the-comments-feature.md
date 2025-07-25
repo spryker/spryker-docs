@@ -29,7 +29,7 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -348,7 +348,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

@@ -261,6 +261,7 @@ $companyUserTransfer = $this->companyUserFacade->findCompanyUserById($idCompanyU
 dd($companyUserTransfer->getCompanyBusinessUnit()->getMerchantRelationships());
 
 ```
+
 4. Make sure the `CompanyBusinessUnit.merchantRelationships` property was updated with the merchant relationship data.
 
 {% endinfo_block %}
@@ -533,7 +534,7 @@ Verify the following widgets have been registered by adding the respective code 
 | WIDGET                             | TEST                                                                                                                                                           | VERIFICATION |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
 | MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | The `Merchant Relations` menu item is displayed under the `My Company` section. |
-| MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Go to **Merchant Relation Requests** > **View**. Make sure that, under the **My Company** section, the links to the merchant relations detail pages are displayed.
+| MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Go to **Merchant Relation Requests** > **View**. Make sure that, under the **My Company** section, the links to the merchant relations detail pages are displayed. |
 
 {% endinfo_block %}
 

@@ -21,6 +21,7 @@ To start feature integration, integrate the required features and Glue APIs:
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following module has been installed:
@@ -40,6 +41,7 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
@@ -68,6 +70,7 @@ Reload abstract and product data to storage.
 console event:trigger -r product_abstract
 console event:trigger -r product_concrete
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that there is data in Redis with keys:
@@ -112,7 +115,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
+- `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
 <summary>Example</summary>
@@ -193,9 +196,10 @@ Make sure that the following endpoints are available:
     }
 }
 ```
+
 </details>
 
-* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
+- `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
 <summary>Example</summary>
@@ -217,6 +221,7 @@ Make sure that the following endpoints are available:
     }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -459,6 +464,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
     ]
 }
 ```
+
 </details>
 
 
@@ -606,6 +612,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

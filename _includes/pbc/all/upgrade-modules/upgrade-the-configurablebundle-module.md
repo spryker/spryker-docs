@@ -6,17 +6,17 @@
 
 The following details have been changed:
 
-* Added `spryker/product-image` module to dependencies.
-* Added `spryker/event` module dependency for forward-compatibility reasons.
-* Added `spy_configurable_bundle_template.is_active` table field.
-* Added `spy_configurable_bundle_template_slot.name` table field.
-* Added `spy_product_image_set.fk_resource_configurable_bundle_template` table field.
-* Defined index on `spy_configurable_bundle_template.name` field.
-* Defined index on `spy_configurable_bundle_template_slot.name` field.
-* Added Zed translations for CRUD related error messages.
-* Defined events for template delete and slot delete.
-* Introduced `ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin`.
-* Introduced `CartConfigurableBundlePreReloadPlugin`.
+- Added `spryker/product-image` module to dependencies.
+- Added `spryker/event` module dependency for forward-compatibility reasons.
+- Added `spy_configurable_bundle_template.is_active` table field.
+- Added `spy_configurable_bundle_template_slot.name` table field.
+- Added `spy_product_image_set.fk_resource_configurable_bundle_template` table field.
+- Defined index on `spy_configurable_bundle_template.name` field.
+- Defined index on `spy_configurable_bundle_template_slot.name` field.
+- Added Zed translations for CRUD related error messages.
+- Defined events for template delete and slot delete.
+- Introduced `ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin`.
+- Introduced `CartConfigurableBundlePreReloadPlugin`.
 
 *Estimated migration time: 2-3 hours*
 

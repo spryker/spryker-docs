@@ -16,7 +16,7 @@ composer require "spryker/product-configuration-gui":"^1.0.0" --update-with-depe
 
 3. Add the new plugin to `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()`.
 
-```php 
+```php
 <?php
 
 namespace Pyz\Zed\ProductManagement;

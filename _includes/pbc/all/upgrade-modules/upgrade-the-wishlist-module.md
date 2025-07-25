@@ -31,7 +31,9 @@ First you need to drop old tables:
 DROP TABLE spy_wishlist_item;
 DROP TABLE spy_wishlist;
 ```
+
 Then you need to create new schema tables:
+
 ```sql
 CREATE TABLE spy_wishlist
 (

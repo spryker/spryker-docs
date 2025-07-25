@@ -182,9 +182,9 @@ Make that following endpoint is available:
 
 Make sure that `CustomerAccessFormatRequestPlugin` is set up correctly:
 
-* Go to the **Customer Access** tab in *Spryker Back Office* and hide the `price` content.
-* Make a request to: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract-sku{% raw %}}}{% endraw %}/abstract-product-prices`
-* Make sure that the response is a 403 error.
+- Go to the **Customer Access** tab in *Spryker Back Office* and hide the `price` content.
+- Make a request to: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract-sku{% raw %}}}{% endraw %}/abstract-product-prices`
+- Make sure that the response is a 403 error.
 
 **Sample response**
 

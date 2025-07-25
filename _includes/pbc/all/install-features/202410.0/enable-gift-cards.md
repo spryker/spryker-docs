@@ -2,13 +2,13 @@
 
 The Gift Cards feature is shipped with the following modules:
 
-* **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
+- **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
 
-* **GiftCardBalance**: implements gift card Balance value-checking strategy<.
+- **GiftCardBalance**: implements gift card Balance value-checking strategy<.
 
-* **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
+- **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
 
-* **Nopayment**: implements payment methods if the price to pay is fully covered by a gift card.
+- **Nopayment**: implements payment methods if the price to pay is fully covered by a gift card.
 
 To enable the gift cards in your project, do the following:
 

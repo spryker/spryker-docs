@@ -10,7 +10,7 @@ To enable the feature, make sure you have the store relation type plugin. See be
 
 {% endinfo_block %}
 
-_Estimated migration time: 30 minutes._
+*Estimated migration time: 30 minutes.*
 
 To upgrade to the new version of the module, do the following:
 
@@ -40,6 +40,6 @@ New transfers must be generated:
 `$ console transfer:generate`
 
 3. If project overrides were introduced,  observe the following changes:
-* `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsVersionForm`.
-* `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
-* `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`
+- `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsVersionForm`.
+- `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated,  use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
+- `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`

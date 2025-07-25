@@ -71,7 +71,7 @@ product-quantity.warning.quantity.interval.failed,The ordered quantity was adjus
 product-quantity.warning.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
 
-Run the following command to import glossary changes:
+Import glossary changes:
 
 ```bash
 console data:import:glossary
@@ -227,7 +227,7 @@ quick-order.input-quantity.message.error,Die bestellte Anzahl wurde auf die näc
 quick-order.input-quantity.message.error,The ordered quantity was adjusted to the next possible quantity for the article.,en_US
 ```
 
-Run the following command to import glossary changes:
+Import glossary changes:
 
 ```bash
 console data:import:glossary

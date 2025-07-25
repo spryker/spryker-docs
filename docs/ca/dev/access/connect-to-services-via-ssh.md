@@ -47,7 +47,7 @@ In the following instructions we use the Jenkins service as an example. Adjust t
     1. In the AWS Management Console, go to **Services** > **EC2** > **Instances**.
     2. Select **{environment_name}-bastion**.
         This opens a pane at the bottom of the page.
-    3. Copy the value of the **Public IPv4 address** field.
+    3. Copy the value of the **Private IPv4 address** field.
     4. Connect to the copied IP address via SSH.
 3. In the AWS Management Console, find the endpoint to connect to a service endpoint:
     1. Go to **Services** > **Route53** > **Hosted Zones**.

@@ -230,7 +230,7 @@ You can switch the language in the **Back Office > User Control > User section >
 
 {% endinfo_block %}
 
-### 4) Configure export to Redis and Elasticsearch
+### 4) Configure export to the key-value store (Redis or Valkey) and Elasticsearch
 
 1. Set up event listeners. By doing this step, you enable tables to be published upon a change—create, edit, or delete.
 
@@ -506,16 +506,16 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all the CMS entity changes performed manually in the Back Office are exported or removed from Redis and Elasticsearch accordingly.
+Make sure that all the CMS entity changes performed manually in the Back Office are exported or removed from the key-value store (Redis or Valkey) and Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
-| Redis | CmsBlock | cms\_block:de:de\_de:blck-1 |
-| Redis | CmsBlockCategory | cms\_block\_category:5 |
-| Redis | CmsBlockProduct | cms\_block\_product:93 |
-| Redis | CmsPage | cms\_page:de:de\_de:1 |
-| Redis | CmsSlot | cms_slot:slt-1 |
-| Redis | CmsSlotBlock | cms\_slot\_block:@productdetailpage/views/pdp/pdp.twig:slt-5 |
+| Key-value store (Redis or Valkey) | CmsBlock | cms\_block:de:de\_de:blck-1 |
+| Key-value store (Redis or Valkey) | CmsBlockCategory | cms\_block\_category:5 |
+| Key-value store (Redis or Valkey) | CmsBlockProduct | cms\_block\_product:93 |
+| Key-value store (Redis or Valkey) | CmsPage | cms\_page:de:de\_de:1 |
+| Key-value store (Redis or Valkey) | CmsSlot | cms_slot:slt-1 |
+| Key-value store (Redis or Valkey) | CmsSlotBlock | cms\_slot\_block:@productdetailpage/views/pdp/pdp.twig:slt-5 |
 | Elasticsearch | CmsPage | cms\_page:de:de\_de:6 |
 
 {% endinfo_block %}
@@ -1385,7 +1385,7 @@ Set up Search and Storage clients:
 | PaginatedCmsPageResultFormatterPlugin | Adds pagination information to search results. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
 | RawCmsPageSearchResultFormatterPlugin | Raw search result formatter. | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
 | SortedCmsPageSearchResultFormatterPlugin | Allows sorting results.  | None | Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\ResultFormatter |
-| UrlStorageCmsPageMapperPlugin | Allows getting a page resource from Redis. | None | Spryker\Client\CmsStorage\Plugin |
+| UrlStorageCmsPageMapperPlugin | Allows getting a page resource from the key-value store (Redis or Valkey). | None | Spryker\Client\CmsStorage\Plugin |
 
 **Pyz\Client\CmsPageSearch\CmsPageSearchDependencyProvider**
 

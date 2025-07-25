@@ -21,7 +21,7 @@ This document helps you prepare for a traditionally very busy season of the year
 
 - Follow [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 - Prepare stand-by/hot-spare compute nodes. Buy it in advance.
-- Prepare sizing of Redis/ElasticSeach/Database services.
+- Prepare sizing of Key-value store (Redis or Valkey)/ElasticSeach/Database services.
 - Make sure you have clear procedures for adding a new compute node to your cluster and removing one from it. It is good to have it fully automated allowing you to easily change your cluster configuration.
 - Make sure content delivery services are in place to deliver images or other static binary data.
 - Make sure [correct caching headers are set for static content](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching).

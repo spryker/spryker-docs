@@ -63,7 +63,7 @@ console transfer:generate
 console event:trigger -r product_packaging_unit
 ```
 
-6. Run the following - or create a bash file for it - to clean up the Redis storage from the entries with the old data:
+6. Run the following - or create a bash file for it - to clean up the key-value storage (Redis or Valkey) from the entries with the old data:
 
 ```bash
 for k in $(redis-cli -p 10009 --scan --pattern "*:product_abstract_packaging:*"); do

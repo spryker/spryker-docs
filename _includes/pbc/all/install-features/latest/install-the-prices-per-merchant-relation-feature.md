@@ -32,7 +32,7 @@ spryker/price-product-merchant-relationship-storage:"^1.0.0" spryker/price-produ
 
 | MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
-| PriceProductStorage | PriceProductMerchantRelationshipStorageDimensionPlugin | Reads prices for merchant relations from Redis to show them in catalog. | getPriceDimensionPlugins |
+| PriceProductStorage | PriceProductMerchantRelationshipStorageDimensionPlugin | Reads prices for merchant relations from the key-value store (Redis or Valkey) to show them in catalog. | getPriceDimensionPlugins |
 
 **src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
 

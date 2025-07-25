@@ -136,9 +136,9 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis and Elasticsearch
+### 4) Configure export to key-value storage and Elasticsearch
 
-To configure export to Redis and Elasticsearch, take the following steps:
+To configure export to key-value storage and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins
 
@@ -316,7 +316,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN                                            | SPECIFICATION                                                                                                    | PREREQUISITES | NAMESPACE                                              |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with Redis storage and marks messages as failed in case of error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant product offers to sync with key-value storage and marks messages as failed in case of error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -476,10 +476,10 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-- `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
-- `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
+- `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to key-value storage.
+- `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to key-value storage.
 
-Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
+Make sure that when the following entities get updated through the ORM, the corresponding key-value storage keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER                | EXAMPLE EXPECTED DATA FRAGMENT                                                                           |
 |---------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -1621,6 +1621,42 @@ In the Back Office, make sure that, in Marketplace, the **Offers** menu item is 
 
 {% endinfo_block %}
 
+### 8) Set up the Back Office products filter by merchants
+
+Overwrite `ProductOfferGuiConfig::PRODUCT_OFFER_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add `id-merchant` to the array:
+
+**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiConfig.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Suite.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\ProductOfferGui;
+
+use Spryker\Zed\ProductOfferGui\ProductOfferGuiConfig as SprykerProductOfferGuiConfig;
+
+class ProductOfferGuiConfig extends SprykerProductOfferGuiConfig
+{
+    /**
+     * @var list<string>
+     */
+    protected const PRODUCT_OFFER_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES = [
+        'id-merchant',
+    ];
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the filter by merchants is available on the `/product-offer-gui/list` page.
+
+{% endinfo_block %}
 
 ## Install feature frontend
 
@@ -1811,7 +1847,7 @@ class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDe
 | FEATURE                                              | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                                            |
 |------------------------------------------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/dg/dev/integrate-and-configure/integrate-combined-product-offer-import.html)                                                                                     |
-| Marketplace Product Offer Prices                     |                                  | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                          |
+| Marketplace Product Offer Prices                     |                                  | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)                                                                          |
 | Marketplace Merchant Portal Product Offer Management |                                  | [Install the Marketplace Product Offer Management feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                                                  |
 | Marketplace Product Offer API                        |                                  | [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)                                                                         |
 | Marketplace Product + Marketplace Product Offer      |                                  | [Install the Marketplace Product + Marketplace Product Offer feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-marketplace-product-offer-feature.html) |

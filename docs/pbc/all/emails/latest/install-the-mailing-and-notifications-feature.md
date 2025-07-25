@@ -104,3 +104,55 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 ```
 
 To verify that everything is set up correctly and send an email, see [How to create and register MailTypeBuilderPlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-type-builder-plugin.html).
+
+
+## Migrate from SwiftMailer to Symfony Mailer
+
+If your application is using SwiftMailer, the following variables have the values:
+1. SPRYKER_SMTP_PORT = 587
+2. SPRYKER_SMTP_ENCRYPTION='tls'
+
+To migrate to Symfony Mailer, follow the steps:
+
+1. Force the port for SMTP to 465 and release this change with the migration release:
+
+```php
+$config[SymfonyMailerConstants::SMTP_PORT] = '465';
+```
+
+2. Create a support ticket to change `SPRYKER_SMTP_PORT` to 465.
+
+3. Revert configuration to the previous state to use a port from the env variable:
+
+```php
+$config[SymfonyMailerConstants::SMTP_PORT] = getenv('SPRYKER_SMTP_PORT') ?: null;
+```
+
+4. Redeploy the application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

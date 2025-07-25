@@ -155,11 +155,11 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-e
 | AppConfigMessageHandlerPlugin | Yes | Handles application configuration messages for ACP apps. |
 | HttpChannelMessageSenderPlugin | Yes | Sends messages through HTTP channel transport. |
 | HttpChannelMessageReceiverPlugin | Yes | Receives messages through HTTP channel transport. |
-| CorrelationIdMessageAttributeProviderPlugin | Yes | Adds correlation ID to message attributes for tracking. |
-| TimestampMessageAttributeProviderPlugin | Yes | Adds timestamp to message attributes. |
-| AccessTokenMessageAttributeProviderPlugin | Yes | Adds OAuth access token to message attributes. |
-| TransactionIdMessageAttributeProviderPlugin | Yes | Adds transaction ID to message attributes. |
-| SessionTrackingIdMessageAttributeProviderPlugin | Yes | Adds session tracking ID to message attributes. |
+| CorrelationIdMessageAttributeProviderPlugin | Yes | Adds a correlation ID to message attributes for tracking. |
+| TimestampMessageAttributeProviderPlugin | Yes | Adds a timestamp to message attributes. |
+| AccessTokenMessageAttributeProviderPlugin | Yes | Adds an OAuth access token to message attributes. |
+| TransactionIdMessageAttributeProviderPlugin | Yes | Adds a transaction ID to message attributes. |
+| SessionTrackingIdMessageAttributeProviderPlugin | Yes | Adds a session tracking ID to message attributes. |
 | TenantActorMessageAttributeProviderPlugin | Yes | Adds tenant actor information to message attributes. |
 | ValidationMiddlewarePlugin | Yes | Validates messages before processing. |
 | ActiveAppFilterMessageChannelPlugin | Yes | Filters message channels based on active apps. |
@@ -264,7 +264,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 | PLUGIN | REQUIRED | DESCRIPTION |
 | - | - | - |
 | ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin | Yes | Expands HTTP channel requests with consumer ID information. |
-| AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin | Yes | Expands HTTP channel receiver requests with OAuth access token. |
+| AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin | Yes | Expands HTTP channel receiver requests with an OAuth access token. |
 
 <details>
   <summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
@@ -409,8 +409,8 @@ class OauthClientConfig extends SprykerOauthClientConfig
 
 | PLUGIN | REQUIRED | DESCRIPTION |
 | - | - | - |
-| OAuthRequestExpanderPlugin | Yes | Expands the request with an OAuth token. |
-| MerchantAppRequestExpanderPlugin | No | Optional: Expands the request with the merchant app data. Only relevant for marketplace projects with Merchant Portal. |
+| OAuthRequestExpanderPlugin | Yes | Expands requests with an OAuth token. |
+| MerchantAppRequestExpanderPlugin | No | Expands requests with merchant app data. Only relevant for marketplace projects with Merchant Portal. |
 
 <details>
   <summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>

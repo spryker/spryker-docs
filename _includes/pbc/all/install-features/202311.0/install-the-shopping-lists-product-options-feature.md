@@ -220,7 +220,7 @@ Make sure that items with product options attached to them  have the drop-down m
 
 ### 3) Set up widgets
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```yaml
 console frontend:yves:build

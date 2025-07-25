@@ -5,10 +5,10 @@
 The following feature integration guide expects the basic feature to be in place.
 
 The current feature integration guide only adds the following functionalities:
-* Payment Back Office UI
-* Payment method per store
-* Payment data import
-* Payment app express checkout flow
+- Payment Back Office UI
+- Payment method per store
+- Payment data import
+- Payment app express checkout flow
 
 {% endinfo_block %}
 
@@ -133,6 +133,7 @@ class PaymentAppWidgetConfig extends SprykerPaymentAppWidgetConfig
     ];
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 
@@ -531,9 +532,9 @@ class PaymentGuiDependencyProvider extends SprykerPaymentGuiDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* You can see the list of payment methods in the **Back Office > Administration >  Payment Management > Payment Methods** section.
-* You can see information about the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > View** section.
-* You can edit the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > Edit** section.
+- You can see the list of payment methods in the **Back Office > Administration >  Payment Management > Payment Methods** section.
+- You can see information about the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > View** section.
+- You can edit the payment method in the **Back Office > Administration >  Payment Management > Payment Methods > Edit** section.
 
 {% endinfo_block %}
 
@@ -601,10 +602,10 @@ class PaymentAppDependencyProvider extends SprykerPaymentAppDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* The express checkout button is displayed on the Cart page.
-* Clicking the express checkout button opens the express checkout page.
-* You can place an order using the express checkout.
-* On the summary page, a default shipment method applied to the order is displayed.
+- The express checkout button is displayed on the Cart page.
+- Clicking the express checkout button opens the express checkout page.
+- You can place an order using the express checkout.
+- On the summary page, a default shipment method applied to the order is displayed.
 
 {% endinfo_block %}
 
@@ -682,8 +683,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ## 6) Replace deprecated funtionality
 
 Use the `PaymentDataImport` module instead of the following:
-* `SalesPaymentMethodTypeInstallerPlugin` plugin
-* `PaymentConfig::getSalesPaymentMethodTypes()` config method
+- `SalesPaymentMethodTypeInstallerPlugin` plugin
+- `PaymentConfig::getSalesPaymentMethodTypes()` config method
 
 ## 7) Set up widgets
 
@@ -722,6 +723,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```bash
 console frontend:yves:build
 ```
+
 {% info_block warningBox "Verification" %}
 
 Verify that the following widgets have been registered by adding the respective code snippets to a Twig template:

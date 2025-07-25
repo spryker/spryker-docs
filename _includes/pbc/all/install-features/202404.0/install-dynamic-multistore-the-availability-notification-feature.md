@@ -19,7 +19,7 @@ Install the required features:
 
 ### Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION  | SPECIFICATION | NAMESPACE | COMMENTS |
 | --- | --- | --- | --- |

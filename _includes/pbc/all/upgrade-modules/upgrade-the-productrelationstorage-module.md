@@ -22,7 +22,7 @@ composer require spryker/product-relation-storage:"^2.0.0" --update-with-depende
     TRUNCATE TABLE spy_product_abstract_relation_storage
     ```
 
-    2. Remove all keys from Redis:
+    2. Remove all keys from key-value storage (Redis or Valkey):
 
     ```bash
     redis-cli --scan --pattern kv:product_abstract_relation:'*' | xargs redis-cli unlink
@@ -126,7 +126,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 6. Populate storage with the new version:
 
     1. Assign product relations to the stores to publish it to the storage.
-    2. Get all the data about product relations from the database and publish it into Redis:
+    2. Get all the data about product relations from the database and publish it into key-value storage (Redis or Valkey):
 
     ```bash
     console event:trigger -r product_abstract_relation

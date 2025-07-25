@@ -18,6 +18,7 @@ composer require spryker/merchant-product-offers-rest-api: "^2.0.0" --update-wit
 ```
 
 2. Update the generated classes:
+
 ```bash
 console transfer:generate
 ```

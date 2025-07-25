@@ -43,6 +43,7 @@ Make sure the following modules have been installed:
 | AclConfig::getInstallerRules()                                 | The default ACL rules that are added to a respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
 
 **config/Shared/config_default.php**
+
 ```php
 
 use Spryker\Shared\Acl\AclConstants;
@@ -143,16 +144,16 @@ class AclMerchantAgentConfig extends SprykerAclMerchantAgentConfig
 
 2. Execute the registered installer plugins:
 
-```
+```bash
 console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-* Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
-* Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
-* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+- Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
+- Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
 
 {% endinfo_block %}
 
@@ -166,6 +167,7 @@ console setup:init-db
 | AclConfig::getInstallerUsers()  | Default ACL groups for users.                                              | Pyz\Zed\Acl  |
 
 **src/Pyz/Zed/User/UserConfig.php**
+
 ```php
 <?php
 
@@ -196,6 +198,7 @@ class UserConfig extends SprykerUserConfig
 ```
 
 **src/Pyz/Zed/Acl/AclConfig.php**
+
 ```php
 <?php
 
@@ -328,6 +331,7 @@ If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, 
 
 {% endinfo_block %}
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
+
 ```php
 <?php
 
@@ -572,9 +576,9 @@ class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalG
 7. Log in with the login details of the user you've added the agent merchant role to.
     Make sure this opens `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users` and there is a **Merchant Users** table.
 
-* Make sure you can see and assist the users regardless of their status.
-* Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
-* Make sure you can assist the users that have the **Assist User** button next to them.
+- Make sure you can see and assist the users regardless of their status.
+- Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
+- Make sure you can assist the users that have the **Assist User** button next to them.
 
 {% endinfo_block %}
 
@@ -622,7 +626,27 @@ Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Use
 
 ## Install feature frontend
 
-For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
+1. For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
+
+2. Update glossary keys:
+
+```csv
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE 
+```
+
+3. In `tsconfig.mp.json`, add agent related paths to `compilerOptions.paths`:
+
+```json
+"compilerOptions": {
+        "paths": {
+            "@mp/agent-dashboard-merchant-portal-gui": [
+                "vendor/spryker/spryker/Bundles/AgentDashboardMerchantPortalGui/mp.public-api.ts"
+            ],
+            "@mp/agent-security-merchant-portal-gui": [
+                "vendor/spryker/spryker/Bundles/AgentSecurityMerchantPortalGui/mp.public-api.ts"
+            ],...
+```
 
 Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
 

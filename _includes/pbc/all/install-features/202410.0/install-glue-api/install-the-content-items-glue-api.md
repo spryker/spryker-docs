@@ -103,7 +103,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints return the result with the all necessary data. For example:
-- https://glue.mysprykershop.com/content-banners/{content_key}-
-- https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract
+- `https://glue.mysprykershop.com/content-banners/{content_key}`  
+- `https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract`
+
 
 {% endinfo_block %}

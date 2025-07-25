@@ -33,20 +33,20 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 
 4. The following deprecated methods have been removed:
 
-* `CmsBlockGuiCommunicationFactory::createCmsBlockForm()`
-* `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryForm()`
-* `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryPlaceholderTranslationFormType()`
-* `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryPlaceholderFormType()`
-* `CmsBlockForm::getName()`
-* `CmsBlockGlossaryForm::getName()`
-* `CmsBlockGlossaryPlaceholderForm::getName()`
+- `CmsBlockGuiCommunicationFactory::createCmsBlockForm()`
+- `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryForm()`
+- `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryPlaceholderTranslationFormType()`
+- `CmsBlockGuiCommunicationFactory::createCmsBlockGlossaryPlaceholderFormType()`
+- `CmsBlockForm::getName()`
+- `CmsBlockGlossaryForm::getName()`
+- `CmsBlockGlossaryPlaceholderForm::getName()`
 
 5. Additionally these internal classes have changed. Take a look if you have customized any of them:
 
-* `CmsBlockForm`
-* `CmsBlockTable`
-* `ViewBlockController`
-* `ViewBlock/index.twig`
+- `CmsBlockForm`
+- `CmsBlockTable`
+- `ViewBlockController`
+- `ViewBlock/index.twig`
 
 You can find more details for these changes on the [CMS Block GUI module release page](https://github.com/spryker/cms-block-gui/releases).
 

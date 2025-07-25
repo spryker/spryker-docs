@@ -81,7 +81,7 @@ To verify that `BuildValidationCacheConsole` is activated, make sure that the fo
 
 ### Generate Validation Cache
 
-Run the following command to generate the validation cache:
+Generate the validation cache:
 
 ```bash
 console glue:rest:build-request-validation-cache
@@ -152,11 +152,13 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         password:
           - NotBlank
     ```
+
     c. Collect the validation cache:
 
     ```bash
     console glue:rest:build-request-validation-cache
     ```
+
 3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 `POST http://example.org/access-tokens`
 

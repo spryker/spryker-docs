@@ -14,11 +14,9 @@ Install the required features:
 
 ### Set up configuration
 
-Add the following configuration to your project:
+Provide a prefix used during customer reference generation. If no prefix is provided, it will use the current store name, which can lead to issues in Dynamic Store setup.
 
-| CONFIGURATION | SPECIFICATION | NAMESPACE | COMMENTS |
-| --- |----| --- |
-| CustomerConfig::getCustomerSequenceNumberPrefix()| Provides a prefix used during customer reference generation. If no prefix provided it will use current store name that can lead to issues in Dynamic Store setup | Pyz\Zed\Customer | See in `src/Pyz/Zed/Customer/CustomerConfig.php` that follows. |
+Add the following configuration in `Pyz\Zed\Customer\CustomerConfig::getCustomerSequenceNumberPrefix()`.
 
 
 **src/Pyz/Zed/Customer/CustomerConfig.php**

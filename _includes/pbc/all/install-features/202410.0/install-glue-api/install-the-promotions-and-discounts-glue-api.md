@@ -94,7 +94,8 @@ Make sure that `SpyDiscountPromotion` is extended with UUID behavior using the f
 
 ### Generate UUIDs for existing discount promotion records that do not have them
 
-Run the following command:
+Generate UUIDs:
+
 ```bash
 console uuid:generate DiscountPromotion spy_discount_promotion
 ```
@@ -252,6 +253,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
@@ -330,6 +332,7 @@ Make sure that the following endpoint is available:
     }
 }
 ```
+
 {% endinfo_block %}
 
 
@@ -337,7 +340,7 @@ Make sure that the following endpoint is available:
 
 To verify that `ProductLabelsResourceRoutePlugin` is set up correctly, make sure that the following endpoint is available:
 
-* `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
+- `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 **Example response**
 
@@ -461,8 +464,8 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
 
 To verify the `CartVouchersResourceRoutePlugin` and `GuestCartVouchersResourceRoutePlugin` plugin integration, make sure that the following endpoints are available:
 
-* `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
-* `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
+- `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
+- `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
 
 {% endinfo_block %}
 
@@ -470,7 +473,7 @@ To verify the `CartVouchersResourceRoutePlugin` and `GuestCartVouchersResourceRo
 
 To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `VoucherByQuoteResourceRelationshipPlugin` make sure that the vouchers and cart-rules relationships are available when requesting a cart:
 
-* `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+- `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details>
 <summary>Example response</summary>
@@ -566,6 +569,7 @@ To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `Vouch
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -574,7 +578,7 @@ To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `Vouch
 
 Make sure that the cart-rules and vouchers relationships are also available for guest carts. The relationships are provided by `CartRuleByQuoteResourceRelationshipPlugin` and `VoucherByQuoteResourceRelationshipPlugin` plugins. To do so, send a request to the following endpoint:
 
-* `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+- `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details>
 <summary>Example response</summary>
@@ -670,6 +674,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -680,12 +685,12 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* [Create a discount for the product](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
-* Create a cart.
+- [Create a discount for the product](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). The discount application type should be promotional product.
+- Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
 
-* `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
+- `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
 
 **Example of Request**
 
@@ -703,7 +708,7 @@ Add items to the cart to satisfy the conditions of the discount rule:
 
 Make sure that the following relations are available:
 
-* `promotional-items with abstract-products`
+- `promotional-items with abstract-products`
 
 <details>
 <summary>Example of Response</summary>
@@ -840,6 +845,7 @@ Make sure that the following relations are available:
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -850,13 +856,13 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* [Create a discount])(/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
-* Create a cart with items that satisfy the conditions of the discount rule.
-* Get a concrete promotional product SKU.
+- [Create a discount])(/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html). Discount application type should be promotional product.
+- Create a cart with items that satisfy the conditions of the discount rule.
+- Get a concrete promotional product SKU.
 
 Add the selected promotional product to the cart and check the cart in the response has the cart rule applied to match the promotional product price:
 
-* `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
+- `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
 
 **Example of Request to Add Selected Promotional Product Into The Cart**
 
@@ -979,6 +985,7 @@ Add the selected promotional product to the cart and check the cart in the respo
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

@@ -34,6 +34,7 @@ console propel:install
     ```bash
     composer install spryker/price-product-data-import
     ```
+
     3. Enable the module by adding
 `\Spryker\Zed\PriceProductDataImport\Communication\Plugin\PriceProductDataImportPlugin` to `\Pyz\Zed\DataImport\DataImportDependencyProvider::getDataImporterPlugins()`
 

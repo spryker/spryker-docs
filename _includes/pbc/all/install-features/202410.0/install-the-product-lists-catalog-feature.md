@@ -16,7 +16,7 @@ Install the required features:
 
 Install the required modules using Composer:
 
-```
+```bash
 composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
 ```
 

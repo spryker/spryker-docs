@@ -30,7 +30,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Shared/QuoteApproval/QuoteApprovalConfig.php**
 

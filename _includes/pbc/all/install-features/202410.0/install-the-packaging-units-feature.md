@@ -545,7 +545,7 @@ Set up the following behaviors.
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                               | SPECIFICATION                                                                                                                                                           | PREREQUISITES                                                                                                                                                                                                   | NAMESPACE                                                                  |
+| PLUGIN       | SPECIFICATION | PREREQUISITES| NAMESPACE     |
 |----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | AmountAvailabilityCartPreCheckPlugin                                 | Validates if the given amount is available according to stock configuration during the cart change.                                                                     | Expects the `amount` field to be set in `ItemTransfers` with packaging units.                                                                                                                                   | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
 | AmountGroupKeyItemExpanderPlugin                                     | Expands a group key with the amount and its sales unit to granulate the item grouping in the cart for packaging unit items.                                             | Expects the `amount` and `amountSalesUnit` fields to be set in `ItemTransfers` with packaging units.                                                                                                            | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Cart                 |
@@ -571,7 +571,7 @@ Enable the following behaviors by registering the plugins:
 | AmountLeadProductOrderItemExpanderPlugin                             | Expands order items with additional packaging unit amount lead product.                                                                                                 |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
 | AmountSalesUnitOrderItemExpanderPlugin                               | Expands order items with additional packaging unit sales unit.                                                                                                          |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
 | ProductPackagingUnitPickingListCollectionExpanderPlugin              | Expands `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem` transfer objects with `amountSalesUnit` property.                                         |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\PickingList          |
-| ProductPackagingUnitPickingListItemsBackendApiAttributesMapperPlugin | Maps amount sales unit from `PickingListItemTransfer.orderItem.amountSalesUnit` to `ApiPickingListItemsAttributesTransfer.orderItem.amountSalesUnit` transfer property. | Expects the `uuid` and `orderItem.amountSalesUnit.productMeasurementUnit` fields to be set in `PickingListItemTransfer`. Expects the `uuid` field to be set in `ApiPickingListItemsAttributesTransfer` as well. | Spryker\Glue\ProductPackagingUnitsBackendApi\Plugin\PickingListsBackendApi |                                                                         |
+| ProductPackagingUnitPickingListItemsBackendApiAttributesMapperPlugin | Maps amount sales unit from `PickingListItemTransfer.orderItem.amountSalesUnit` to `ApiPickingListItemsAttributesTransfer.orderItem.amountSalesUnit` transfer property. | Expects the `uuid` and `orderItem.amountSalesUnit.productMeasurementUnit` fields to be set in `PickingListItemTransfer`. Expects the `uuid` field to be set in `ApiPickingListItemsAttributesTransfer` as well. | Spryker\Glue\ProductPackagingUnitsBackendApi\Plugin\PickingListsBackendApi |
 
 <details>
 <summary>src/Pyz/Client/Cart/CartDependencyProvider.php</summary>
@@ -661,6 +661,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
@@ -802,6 +803,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Stock/StockDependencyProvider.php**
@@ -931,33 +933,33 @@ class PickingListsBackendApiDependencyProvider extends SprykerPickingListsBacken
 
 Add an item with packaging units to cart and check if the following statements are true:
 
-* A packaging unit can be found for an item.
-* The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
-* The amount restriction works as expected.
-* Availability is validated respectfully according to your lead product's and packaging unit is configuration.
-* Item grouping in the cart works as expected.
-* Variable amount changes affect unit prices in the `ItemTransfer` properties.
-* The quantity and amount are merged correctly when the group key matches.
+- A packaging unit can be found for an item.
+- The `amount`, `amountSalesUnit`, `amountLeadProduct` and `ProductPackagingUnit` fields in the `ItemTransfer` properties get fully populated.
+- The amount restriction works as expected.
+- Availability is validated respectfully according to your lead product's and packaging unit is configuration.
+- Item grouping in the cart works as expected.
+- Variable amount changes affect unit prices in the `ItemTransfer` properties.
+- The quantity and amount are merged correctly when the group key matches.
 
 Go through the checkout workflow, make an order and check if the following statements are true:
-* Check if the stock is modified respectfully according to your lead product's and packaging unit is configuration.
-* Check if the following fields in the `spy_sales_order_item` table are saved:
-  * `amount`
-  * `amount_sku`
-  * `amount_measurement_unit_name`
-  * `amount_measurement_unit_code`
-  * `amount_measurement_unit_precision`
-  * `amount_measurement_unit_conversion`
-  * `amount_base_measurement_unit_name`
+- Check if the stock is modified respectfully according to your lead product's and packaging unit is configuration.
+- Check if the following fields in the `spy_sales_order_item` table are saved:
+  - `amount`
+  - `amount_sku`
+  - `amount_measurement_unit_name`
+  - `amount_measurement_unit_code`
+  - `amount_measurement_unit_precision`
+  - `amount_measurement_unit_conversion`
+  - `amount_base_measurement_unit_name`
 
 Go to the Zed UI Sales overview, check the order, and verify the following:
 - The correct sales unit is displayed.
 - The correct amount is displayed per sales order item.
 
 Make sure the following:
-* Abstract products that have packaging units available don't have `add_to_cart_sku` field in the Elasticsearch document.
-* Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
-* The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
+- Abstract products that have packaging units available don't have `add_to_cart_sku` field in the Elasticsearch document.
+- Every order item from `SalesFacade::getOrderItems()` results contains packaging units data: `ItemTransfer.amountLeadProduct` and `ItemTransfer.amountSalesUnit` are set for the order items that have packaging units.
+- The results of picking lists from `PickingListFacade::getPickingListCollection()` contain packaging units data: `PickingListCollectionTransfer.pickingList.pickingListItem.orderItem.amountSalesUnit` are set for the order items that have packaging units.
 
 {% endinfo_block %}
 
@@ -1089,6 +1091,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```bash
 console frontend:yves:build
 ```
+
 {% info_block warningBox "Verification" %}
 
 Check if Check if the `amount` field meets the following criteria:

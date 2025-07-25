@@ -1,10 +1,10 @@
 {% info_block errorBox %}
 
 This feature installation guide expects the basic feature to be in place. This guide adds the following functionalities:
-* Translation
-* Security
-* OAuth 2.0/Open ID Connect Support for Zed login
-* Audit logging
+- Translation
+- Security
+- OAuth 2.0/Open ID Connect Support for Zed login
+- Audit logging
 
 {% endinfo_block %}
 
@@ -94,7 +94,7 @@ Ensure the following transfers have been created:
 
 ## 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                          | NAMESPACE                 |
 |---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
@@ -142,9 +142,9 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 {% info_block warningBox "Verification" %}
 
 After finishing the installation, make sure the following applies:
-* Entries without a translation for a language with a configured fallback are translated into the fallback language.
-* The translation cache is stored under the configured directory.
-* Translations are found based on the configured path pattern.
+- Entries without a translation for a language with a configured fallback are translated into the fallback language.
+- The translation cache is stored under the configured directory.
+- Translations are found based on the configured path pattern.
 
 {% endinfo_block %}
 
@@ -152,8 +152,8 @@ After finishing the installation, make sure the following applies:
 
 The following authentication strategies are available by default:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it's created automatically based on the data from an external service.
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: Accepts only existing users for authentication.
+- `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it's created automatically based on the data from an external service.
+- `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: Accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**
@@ -313,6 +313,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 </summary>
 
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
+
 ```php
 <?php
 
@@ -394,6 +395,7 @@ Ensure that `https://mysprykershop.com/security-oauth-user/login` redirects you 
 {% endinfo_block %}
 
 **src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php**
+
 ```php
 <?php
 
@@ -417,6 +419,7 @@ class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDepend
 ```
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
 ```php
 <?php
 
@@ -447,9 +450,9 @@ console twig:cache:warmer
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* The Back Office login page and other pages that require authentication are accessible.
-* On the Back Office login page, clicking the **Forgot password?** button opens the password reset form.
-* You receive a password reset email after submitting the password reset form.
+- The Back Office login page and other pages that require authentication are accessible.
+- On the Back Office login page, clicking the **Forgot password?** button opens the password reset form.
+- You receive a password reset email after submitting the password reset form.
 
 {% endinfo_block %}
 
@@ -476,12 +479,13 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 Ensure that the command has done the following:
-* Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
-* Generated translation cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
+- Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
+- Generated translation cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
 
 {% endinfo_block %}
 
 **src/Pyz/Zed/Messenger/MessengerDependencyProvider.php**
+
 ```php
 <?php
 
@@ -508,6 +512,7 @@ class MessengerDependencyProvider extends SprykerMessengerDependencyProvider
 ```
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
+
 ```php
 <?php
 
@@ -537,6 +542,7 @@ Ensure that the `trans` and `transChoice` Twig filters work and use translations
 {% endinfo_block %}
 
 **src/Pyz/Zed/Locale/LocaleDependencyProvider.php**
+
 ```php
 <?php
 
@@ -610,6 +616,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -690,6 +697,7 @@ user UUID from a current request.
 | GenerateTranslationCacheConsole | Generates the translation cache for Zed. |             | Spryker\Zed\Translator\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 
@@ -729,8 +737,8 @@ console translator:generate-cache
 {% info_block warningBox "Verification" %}
 
 Ensure that the command has done the following:
-* Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
-* Generated translator cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
+- Cleaned the previous translation cache in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
+- Generated translator cache files like `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php` and `catalogue.{YOUR_LOCALE}.{RANDOM_STRING}.php.meta` in the translation folder, which is `data/{YOUR_STORE}/cache/Zed/translation` by default.
 
 {% endinfo_block %}
 
@@ -743,6 +751,7 @@ In this case, installers set up required database data and Back Office configura
 Installer plugins should be added to `src/Pyz/Zed/Installer/InstallerDependencyProvider.php`.
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
+
 ```php
 <?php
 

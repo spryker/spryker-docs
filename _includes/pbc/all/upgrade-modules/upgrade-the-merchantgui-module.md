@@ -6,8 +6,8 @@ The main update of the `MerchantGui` v3.0.0 is the ability to edit stores, URLs 
 
 Other changes are:
 
-* Removed MerchantCriteriaFilter transfer.
-* Renamed `MerchantGuiDependencyProvider::getMerchantProfileFormExpanderPlugins()`.
+- Removed MerchantCriteriaFilter transfer.
+- Renamed `MerchantGuiDependencyProvider::getMerchantProfileFormExpanderPlugins()`.
 
 {% info_block infoBox "Info" %}
 
@@ -109,11 +109,11 @@ The main update of the `MerchantGui` v2.0.0 is the ability to expand Table, Form
 
 Other changes are:
 
-* Added the new Merchant fields.
-* Added the unique email and unique merchant reference fields and constraints to Merchant create and edit forms.
-* Added status as a new column to Merchant table.
-* Added Merchant table expander plugins.
-* Added an ability to change Merchant status in the Merchant edit page based on the Merchant available statuses.
+- Added the new Merchant fields.
+- Added the unique email and unique merchant reference fields and constraints to Merchant create and edit forms.
+- Added status as a new column to Merchant table.
+- Added Merchant table expander plugins.
+- Added an ability to change Merchant status in the Merchant edit page based on the Merchant available statuses.
 
 {% info_block infoBox "Info" %}
 
@@ -210,9 +210,9 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 }
 ```
 
-* `MerchantFormTabExpanderPluginInterface` plugins are responsible for expanding the tabs in the form.
-* `MerchantTableConfigExpanderPluginInterface` plugins are responsible for expanding the config data for the table.
-* `MerchantTableHeaderExpanderPluginInterface` plugins are responsible for expanding the header for the table.
-* `MerchantTableActionExpanderPluginInterface` plugins are responsible for expanding the action column for the table.
-* `MerchantTableDataExpanderPluginInterface` plugins are responsible for expanding the data for the table.
-* `MerchantFormExpanderPluginInterface` plugins are responsible for expanding the form.
+- `MerchantFormTabExpanderPluginInterface` plugins are responsible for expanding the tabs in the form.
+- `MerchantTableConfigExpanderPluginInterface` plugins are responsible for expanding the config data for the table.
+- `MerchantTableHeaderExpanderPluginInterface` plugins are responsible for expanding the header for the table.
+- `MerchantTableActionExpanderPluginInterface` plugins are responsible for expanding the action column for the table.
+- `MerchantTableDataExpanderPluginInterface` plugins are responsible for expanding the data for the table.
+- `MerchantFormExpanderPluginInterface` plugins are responsible for expanding the form.

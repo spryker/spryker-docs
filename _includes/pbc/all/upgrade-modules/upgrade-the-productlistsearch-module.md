@@ -4,7 +4,7 @@
 
 The main goal of `ProductListSearch` 2.x.x is to add support of Concrete Products search introduced in `ProductPageSearch` 3.x.x.
 
-_Estimated migration time: ~1h_
+*Estimated migration time: ~1h*
 
 To complete the migration, follow the steps below:
 

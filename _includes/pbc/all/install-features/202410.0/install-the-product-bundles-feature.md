@@ -92,7 +92,7 @@ console transfer:generate
 
 Ensure that the following changes have been applied in transfer objects:
 
- TRANSFER | TYPE | EVENT | PATH |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ProductBundleStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductBundleStorageTransfer |
 | ProductForProductBundleStorageTransfer| class| created |src/Generated/Shared/Transfer/ProductForProductBundleStorageTransfer|

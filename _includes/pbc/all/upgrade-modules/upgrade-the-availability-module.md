@@ -97,8 +97,8 @@ To upgrade, run the database migrations:
 
 Then:
 
-* Run `vendor/bin/console propel:model:build` - this will update models.
-* Run  `vendor/bin/console transfer:generate` - this will create new transfer objects.
+- Run `vendor/bin/console propel:model:build` - this will update models.
+- Run  `vendor/bin/console transfer:generate` - this will create new transfer objects.
 
 We have changed the public API for methods in: `\Spryker\Zed\Availability\Business\AvailabilityFacade::findProductAbstractAvailability` received a third argument for `idStore`.
 

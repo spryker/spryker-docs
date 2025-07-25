@@ -751,7 +751,7 @@ Don't forget to replace sample node keys with ones relevant for your project.
 
 {% endinfo_block %}
 
-Run the following command to import data:
+Import data:
 
 ```bash
 console data:import navigation-node
@@ -1255,7 +1255,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1274,7 +1274,7 @@ Make sure the following widgets were registered:
 
 ### 4) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |

@@ -170,10 +170,10 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 When creating and editing product offers in the Merchant Portal, make sure the following applies:
 
-* **SERVICE POINT** and **SERVICES** fields are displayed.
-* For **SERVICE POINT**, you can search by service points.
-* After selecting a service point, you can select services in the **SERVICES** drop-down menu.
-* After adding services, you can save the product offer.
+- **SERVICE POINT** and **SERVICES** fields are displayed.
+- For **SERVICE POINT**, you can search by service points.
+- After selecting a service point, you can select services in the **SERVICES** drop-down menu.
+- After adding services, you can save the product offer.
 
 <!-- For instructions on creating and editing product offers, see [Create and edit product offers]() |    add after merging-->
 

@@ -81,7 +81,7 @@ Make sure that the following changes in transfer objects have been applied:
 
 ### 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Zed/PriceProductScheduleGui/PriceProductScheduleGuiConfig.php**
 

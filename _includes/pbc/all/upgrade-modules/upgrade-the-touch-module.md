@@ -13,6 +13,7 @@ This command will update `spy_touch_storage`, and `spy_touch_search` classes to 
 
   1. If you have a single Store, `spy_store` contains 1 row which represents your active store. Use its `spy_store.id_store` value to update touch records.
   In our current example the store ID is considered: 1.
+
   ```sql
       UPDATE spy_touch_storage SET fk_store = 1;
       UPDATE spy_touch_search SET fk_store = 1;
@@ -38,18 +39,18 @@ This command will update `spy_touch_storage`, and `spy_touch_search` classes to 
 
 6. The following deprecated methods were removed,  check your code if you have custom calls or dependencies:
 
-   * `TouchFacadeInterface::bulkTouchActive()`
-   * `TouchFacadeInterface::bulkTouchInactive()`
-   * `TouchFacadeInterface::bulkTouchDeleted()`
-   * `TouchQueryContainerInterface::queryTouchEntries()`
-   * `TouchInterface::bulkUpdateTouchRecords()`
+   - `TouchFacadeInterface::bulkTouchActive()`
+   - `TouchFacadeInterface::bulkTouchInactive()`
+   - `TouchFacadeInterface::bulkTouchDeleted()`
+   - `TouchQueryContainerInterface::queryTouchEntries()`
+   - `TouchInterface::bulkUpdateTouchRecords()`
 
 You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).
 
 7. The following methods have internal changes,  check if you have customized them:
 
-   * `TouchQueryContainer::queryTouchDeleteStorageAndSearch()`
-   * `TouchRecord::removeTouchEntriesMarkedAsDeleted()`
+   - `TouchQueryContainer::queryTouchDeleteStorageAndSearch()`
+   - `TouchRecord::removeTouchEntriesMarkedAsDeleted()`
 
   You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).
 8. Note: Module requires PHP 7.1 from now on.

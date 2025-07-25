@@ -52,7 +52,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-1. Add the following configuration to your project:
+1. Add the following configuration:
 
 | CONFIGURATION                                                | SPECIFICATION                                                                                                                                                                         | NAMESPACE            |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
@@ -1793,7 +1793,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 1. Disable shipment points to be selected for product bundles during checkout:
 

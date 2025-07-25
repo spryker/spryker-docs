@@ -147,7 +147,7 @@ Ensure the following transfers have been created:
 
 ## 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 {% info_block warningBox "Note" %}
 

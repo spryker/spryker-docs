@@ -142,7 +142,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 {% endinfo_block %}
 
-##  2) Set up behavior
+## 2) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -202,7 +202,7 @@ class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDepend
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

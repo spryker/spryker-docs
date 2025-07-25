@@ -133,6 +133,7 @@ Make sure that the following modules have been installed:
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
@@ -179,9 +180,9 @@ Make sure that propel entities have been generated successfully by checking thei
 | src/Orm/Zed/ProductList/Persistence/Base/SpyProductListProductConcrete.php | Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListProductConcrete |
 | src/Orm/Zed/ProductList/Persistence/Base/SpyProductListProductConcreteQuery.php | Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListProductConcreteQuery |
 | src/Orm/Zed/ProductList/Persistence/Base/SpyProductListCategory.php | Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListCategory |
-| src/Orm/Zed/ProductList/Persistence/Base/SpyProductListCategoryQuery.php | Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListCategoryQuery |    
+| src/Orm/Zed/ProductList/Persistence/Base/SpyProductListCategoryQuery.php | Spryker\Zed\ProductList\Persistence\Propel\AbstractSpyProductListCategoryQuery |
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorage | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorage |
-| src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorageQuery | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorageQuery |    
+| src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductAbstractProductListStorageQuery | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductAbstractProductListStorageQuery |
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorage | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorage |
 | src/Orm/Zed/ProductListStorage/Persistence/Base/SpyProductConcreteProductListStorageQuery | Spryker\Zed\ProductListStorage\Persistence\Propel\AbstractSpyProductConcreteProductListStorageQuery |
 
@@ -199,7 +200,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 ### 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Zed/ProductListGui/ProductListGuiConfig.php**
 
@@ -421,6 +422,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
@@ -548,7 +550,7 @@ console data:import product-list
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_product_list `table in the database.
+Make sure that the configured data has been added to the `spy_product_list`table in the database.
 
 {% endinfo_block %}
 
@@ -663,6 +665,7 @@ pl-007,161_29533300
 pl-007,177_24867659
 pl-007,177_25913296
 ```
+
 </details>
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -794,6 +797,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

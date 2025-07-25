@@ -5,13 +5,13 @@
 In version 5, tax calculation logic changed, tax amount for options, expenses and items are now calculated in the Tax module.
 The plugins: `ExpenseTaxCalculatorPlugin`, `ItemTaxCalculatorPlugin` and `TaxTotalsCalculatorPlugin` were removed, and replaced with:
 
-* `TaxAmountCalculatorPlugin`—to calculate item, item product option and expense taxes.
-* `TaxAmountAfterCancellationCalculatorPlugin`—to calculate tax amount after cancellation/refund happened.
+- `TaxAmountCalculatorPlugin`—to calculate item, item product option and expense taxes.
+- `TaxAmountAfterCancellationCalculatorPlugin`—to calculate tax amount after cancellation/refund happened.
 
 Corresponding plugin business classes, `ExpenseTaxCalculator`, `ItemTaxCalculator`, `TaxCalculation` were also removed and replaced with:
 
-* Business classes `TaxAmountCalculator`
-* `TaxAmountAfterCancellationCalculator`
+- Business classes `TaxAmountCalculator`
+- `TaxAmountAfterCancellationCalculator`
 
 
 ## Upgrading from version 2.* to version 3.*
@@ -40,16 +40,16 @@ ALTER TABLE "spy_tax_set"
 Now you should be able edit the tax rates in Zed, under the tax section.
 To use the new tax rate calculation logic, you need to register the tax calculator plugins in `CalculationDependencyProvider::getCalculatorStack()`:
 
-* `ItemTaxCalculatorPlugin`— used after the item sum gross amounts are calculated.
-* `ShipmentTaxRateCalculatorPlugin`— used after expense gross sum amount is calculated.
-* `ProductOptionTaxRateCalculatorPlugin`— used after item sum gross amounts are calculated.
-* `ProductItemTaxRateCalculatorPlugin`— used after item sum gross amounts are calculated.
-* `ExpenseTaxCalculatorPlugin`— used after expense gross sum amount is calculated.
+- `ItemTaxCalculatorPlugin`— used after the item sum gross amounts are calculated.
+- `ShipmentTaxRateCalculatorPlugin`— used after expense gross sum amount is calculated.
+- `ProductOptionTaxRateCalculatorPlugin`— used after item sum gross amounts are calculated.
+- `ProductItemTaxRateCalculatorPlugin`— used after item sum gross amounts are calculated.
+- `ExpenseTaxCalculatorPlugin`— used after expense gross sum amount is calculated.
 
 If you have discounts:
 
-* `ItemsWithProductOptionsAndDiscountsGrossPriceCalculatorPlugin()`— after `SumGrossCalculatedDiscountAmountCalculatorPlugin`.
-* `ItemsWithProductOptionsAndDiscountsTaxCalculatorPlugin()`— after `ItemsWithProductOptionsAndDiscountsGrossPriceCalculatorPlugin`.
-* `DiscountTotalsWithProductOptionsCalculatorPlugin`— after `DiscountTotalsCalculatorPlugin`.
-* `ExpenseTaxWithDiscountsCalculatorPlugin`— after `DiscountTotalsWithProductOptionsCalculatorPlugin`.
-* `TaxTotalAmountWithProductOptionsAndDiscountsCalculatorPlugin`— after `TaxTotalsCalculatorPlugin`.
+- `ItemsWithProductOptionsAndDiscountsGrossPriceCalculatorPlugin()`— after `SumGrossCalculatedDiscountAmountCalculatorPlugin`.
+- `ItemsWithProductOptionsAndDiscountsTaxCalculatorPlugin()`— after `ItemsWithProductOptionsAndDiscountsGrossPriceCalculatorPlugin`.
+- `DiscountTotalsWithProductOptionsCalculatorPlugin`— after `DiscountTotalsCalculatorPlugin`.
+- `ExpenseTaxWithDiscountsCalculatorPlugin`— after `DiscountTotalsWithProductOptionsCalculatorPlugin`.
+- `TaxTotalAmountWithProductOptionsAndDiscountsCalculatorPlugin`— after `TaxTotalsCalculatorPlugin`.

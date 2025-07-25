@@ -199,7 +199,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
 
 ### 3) Set up the configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Zed/ProductListGui/ProductListGuiConfig.php**
 

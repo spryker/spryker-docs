@@ -244,16 +244,23 @@ Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App
 
 ## Multi-Factor Authentication <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-As part of our commitment to strengthening the security of our e-commerce platform, we are introducing Multi-Factor Authentication (MFA) into Spryker Commerce OS (Spryker Software). MFA adds an additional layer of protection by requiring users to verify their identity through multiple methods, such as a password and a one-time code sent to their email.
+Multi-Factor Authentication (MFA) adds an additional layer of protection by requiring users to verify their identity through multiple methods, such as a password and a one-time code sent to their email. 
 
 ![MFA-email-code](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/MFA-email-code.png)
+
+Key functionality:
+
+- An additional authentication layer for Storefront, Back Office, Merchant Portal, and API endpoints
+- Support for custom authenticity validators, such as TOTP or Short Message
+- Ensure that user emails are fully validated and confirmed before the user signs up or when the email is changed in the user profile.
+
 
 
 ### Business benefits
 
-- Activate an additional authentication layer in Storefront, Backoffice, Merchant Portal and API endpoints requiring your users to authenticate through receiving a one-time code on their registered email address.
-- Implement your own authenticity validators like TOTP or Short Message and plug them into the user journey.
-- Ensure that user emails are fully validated and confirmed before the user signs up or when the email is changed in the user profile.
+
+This improves the overall security of your project, as well as the security of each customer.
+
 
 ### Docs
 
@@ -268,11 +275,11 @@ As part of our commitment to strengthening the security of our e-commerce platfo
 
 ## SEO Sitemap <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-The Sitemap feature in Spryker automatically generates XML sitemaps to improve SEO by helping search engines efficiently index your storefront content. It supports products, categories, product sets, CMS pages, and merchant pages by default, with the flexibility to include additional entities through project-level configuration.
+The Sitemap feature generates XML sitemaps that improve SEO by helping search engines efficiently index your Storefront content. Generated sitemaps include products, categories, product sets, CMS pages, and merchant pages by default. You can configure other entities to be included on the project level.
 
 ### Business benefits 
 
-Improved SEO visibility
+Improved SEO
 
 ### Docs
 
@@ -288,16 +295,18 @@ Improved SEO visibility
 
 ## [Early Access] Add to cart from images (AI-powered) <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
+This feature enables customers to add products to cart by uploading images on the Quick Order page. 
 
-- Upload PDF, image, a photo of handwritten notes, or any other text data to have any products mentioned added directly to cart from the Quick Order page. 
-- Multiple items can be added to the cart if they are specified in whatever is uploaded. 
-- The feature uses OpenAI to power the image reading to identify specific products.
-- Customers will need their own OpenAI account in order to use this feature.
+Upload a PDF, image, photo of handwritten notes, or any other text mentioning products to add to cart. Based on the uploaded image, OpenAI detects matching products in your catalog and adds them to cart.
+
+A single image can contain multiple products, and they both will be added to cart. 
+
+Customers need own OpenAI accounts to use this feature.
 
 ### Business benefits 
 
-- Give customers a frictionless experience to add products to their cart.
-- Eliminate any hurdles in taking documents and notes that require purchasing to actually translate into sales.
+- Enable more buying routes
+- Reduce friction in transactions for power users
 
 
 
@@ -309,11 +318,12 @@ Improved SEO visibility
 ## Accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 
-Accessibility ensures inclusive experiences for all users in Back Office and B2B Storefront, enhancing usability and helping customers with compliance with the 2025 EU Accessibility Act, while reducing risks and supporting broader market reach:
+Accessibility ensures inclusive experiences for all users in Back Office and B2B Storefront, enhancing usability and helping customers in compliance with the 2025 EU Accessibility Act:
 
-- Keyboard Usage: Users with mobility impairments can navigate seamlessly without a mouse.
-- Distinguishable Colors: Users can easily read and interact with content, even if they have visual impairments or color blindness.
-- The image below illustrates a 100% Lighthouse score in Google Chrome for B2B Strorefront:
+- Keyboard usage: Users with mobility impairments can navigate seamlessly without a mouse.
+- Distinguishable colors: Users can easily read and interact with content, even if they have visual impairments or color blindness.
+
+B2B Strorefront has a 100% Lighthouse score in Google Chrome:
 
 
 ![accessibility-improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/B2B-SF-Accessibility.png)
@@ -321,15 +331,50 @@ Accessibility ensures inclusive experiences for all users in Back Office and B2B
 
 ### Business benefits
 
-- Help Meeting Regulatory Requirements: by reducing legal risks in light of the 2025 EU Accessibility Act.
-- Inclusive User Experience: Improves usability for all users, including those with disabilities.
-- Broader Market Reach: Enables access for a wider audience, enhancing engagement and trust.
+- Meeting regulatory requirements: reduced legal risks related to 2025 EU Accessibility Act
+- Inclusive user experience: Improves usability for all users, including those with disabilities
+- Broader market reach: Enables access for a wider audience, enhancing engagement and trust
 
 
 ### Docs
 
 - [Install Back Office accessibility improvements](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-accessibility-improvements)
 - [Integrate accessibility improvements](/docs/dg/dev/integrate-and-configure/integrate-accessibility-improvements)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

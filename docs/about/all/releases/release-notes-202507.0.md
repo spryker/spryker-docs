@@ -11,7 +11,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 
 
-## Self-Service Portal
+## Self-Service Portal <span class="inline-img">![new-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/new-product-label.png)</span>
 
 Self-Service Portal is a comprehensive digital solution that empowers customers to manage their own experience. It unifies traditional commerce and after-sales interactions within a single, intuitive self-service platform.
 

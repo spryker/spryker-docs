@@ -63,7 +63,7 @@ Update Merchant Portal navigation to include the Data Import page by adding the 
 </file-import-merchant-portal-gui>
 ```
 
-Build navigation cache by executing the following command:
+Build navigation cache:
 
 ```bash
 vendor/bin/console navigation:build-cache
@@ -116,7 +116,7 @@ Add the following plugins to the dependency providers:
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds merchant file relation to the merchant file import DB entity.                 |
 
 
-Run the following command to synchronize ACL entity rules:
+Synchronize ACL entity rules:
 
 ```bash
 vendor/bin/console acl-entity:synchronize

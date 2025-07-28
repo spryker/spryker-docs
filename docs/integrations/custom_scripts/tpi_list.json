@@ -26,6 +26,7 @@
   {
     "Partner": "Bazaarvoice",
     "Description": "At Bazaarvoice, we create smarter shopping experiences. Through our extensive global network, product-passionate community and enterprise technology, we connect thousands of brands and retailers with billions of consumers. We enable brands to collect and share valuable user-generated content at unprecedented scale, resulting in loyal customers, increased sales, and improved products.",
+    "shortDescription": "Enable smarter shopping with user-generated content",
     "Logo": "/images/integrations/cat_logos/bv_logo.png",
     "Author": "Spryker",
     "category": "User Generated Content (UGC)",
@@ -38,6 +39,7 @@
   {
     "Partner": "Payone",
     "Description": "With around 365,000 customers and more than 2.5 billion transactions per year, PAYONE is one of the leading payment service providers in Europe. Over 1,200 employees deliver the latest payment services from a single source for all company sizes and industries. PAYONE develops the most innovative payment solutions and services based on current customer and merchant needs",
+    "shortDescription": "Leading European payment service provider for all businesses.",
     "Logo": "/images/integrations/cat_logos/payone_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -49,6 +51,7 @@
   {
     "Partner": "Stripe",
     "Description": "Stripe is a technology company that builds payments infrastructure for the internet. Our global platform unifies isolated systems required to accept payments, send payouts, and manage funds. With Stripe, moving money around the world is as simple, borderless, and programmatic as the rest of the internet. Whether you’re creating a software subscription service, an on-demand marketplace, or an ecommerce store, Stripe’s integrated payments and revenue management platform helps you build and scale your business.",
+    "shortDescription": "Builds payments infrastructure for the internet.",
     "Logo": "/images/integrations/cat_logos/stripe_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -60,7 +63,8 @@
   },
   {
     "Partner": "Adyen",
-    "Description": "",
+    "Description": "With Adyen you can easily accept payments across online, mobile, and in-store. With one single global solution for gateway, risk, and acquiring, Adyen’s platform manages the entire payment flow. All payment methods, all channels, all geographies – one solution: Fast and speedy onboarding, increased conversion/auth rates, innovation as standard. Adyen serves customers including Zalando, Swarovski, fliXbus and eBay.",
+    "shortDescription": "Easily accept payments across online, mobile, and in-store",
     "Logo": "/images/integrations/cat_logos/adyen_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -72,7 +76,8 @@
   },
   {
     "Partner": "Unzer",
-    "Description": "",
+    "Description": "Unzer is a fast growing, innovative and modular platform for international payment transactions. Companies of all sizes and from all sectors rely on the data-driven, secure and perfectly tailored solutions to help them drive growth – whether online, mobile or at the point of sale. The modules, which are easy to integrate, cover the entire spectrum of payment management: from processing of various payment types, through automated analytics of customer behaviour and requirements, all the way up to integrative risk management.",
+    "shortDescription": "Modular platform for international payment transactions",
     "Logo": "/images/integrations/cat_logos/unzer_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -84,7 +89,8 @@
   },
   {
     "Partner": "afterpay",
-    "Description": "",
+    "Description": "AfterPay allows you to keep control of your customer relations and to expand it. Your customers have enormous flexibility when it comes to payment, while you are in control of your purchase processes. AfterPay provides you with information on user behaviour during the payment process for an optimized personalized experience.",
+    "shortDescription": "Keep control of your customer relations and to expand it",
     "Logo": "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=",
     "Author": "Spryker",
     "category": "Payment",
@@ -106,7 +112,8 @@
   },
   {
     "Partner": "billie",
-    "Description": "",
+    "Description": "For companies in B2B, payment transactions are still costly and inflexible. Billie offers an urgently needed update: With the simply integrated “pay on invoice” plug-in for B2B online shops. Completely digital and secure thanks to industry-leading scoring algorithm. The same applies to Billie Full-Service Factoring: pre-financing, dunning, default protection.",
+    "shortDescription": "Integrated “pay on invoice” plug-in for B2B online shops",
     "Logo": "/images/integrations/cat_logos/billie_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -139,7 +146,8 @@
   },
   {
     "Partner": "computop",
-    "Description": "",
+    "Description": "Computop offers local and innovative omnichannel solutions for payment processing and fraud prevention around the world. For e-commerce, at POS and on mobile devices, retailers and service providers can choose from over 350 payment methods. Computop, a global player with locations in GER, CN, UK, USA, processes transactions for more than 16,000 retailers annually, with a combined value of $ 34 bln.",
+    "shortDescription": "omnichannel solutions for payment processing and fraud prevention",
     "Logo": "/images/integrations/cat_logos/computop_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -150,7 +158,8 @@
   },
   {
     "Partner": "crefopay",
-    "Description": "",
+    "Description": "CrefoPay is a joint product of specialised companies of the Creditreform Group. Its core is the payment and risk management platform of the CrefoPayment GmbH & Co. KG based in Berlin. The company supports retailers as a technical service provider with its high performing processing platform at acceptance and processing of payments with common payment solutions – in eCommerce and directly at the point of service (POS).",
+    "shortDescription":"Payment and risk management platform",
     "Logo": "/images/integrations/cat_logos/crefopay_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -205,7 +214,8 @@
   },
   {
     "Partner": "ratenkauf by easycredit",
-    "Description": "",
+    "Description": "TeamBank offers 'ratenkauf by easyCredit' the first installment purchase solution to combine a simple and uniformly designed installment purchase function for e-commerce and the point of sale (PoS). Customers can use 'ratenkauf by easyCredit' in just a few steps: choose their purchases, calculate their preferred installments, enter their personal data, and pay. No paperwork, immediate approval, and complete flexibility throughout.",
+    "shortDescription": "Installment purchase solution",
     "Logo": "/images/integrations/cat_logos/ratenkauf_logo.png",
     "Author": "Spryker",
     "category": "Payment",
@@ -216,7 +226,8 @@
   },
   {
     "Partner": "ratepay",
-    "Description": "",
+    "Description": "Ratepay was founded in 2009, a Fintech company from day one, we arose from the heart of the payment scene to become Europe's number 1 white label payment provider. Ratepay was once a wholly owned subsidiary of the Otto Group. Since 2017, we have been part of Advent International and Bain Capital as an independent payment brand within the Nets A/S network.",
+    "shortDescription":"A white label payment provider",
     "featured": false,
     "Logo": "/images/integrations/cat_logos/ratepay_logo.png",
     "Author": "Spryker",
@@ -228,7 +239,8 @@
   },
   {
     "Partner": "Novalnet B2B",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "featured": false,
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Novalnet",
@@ -240,7 +252,8 @@
   },
   {
     "Partner": "Novalnet B2C",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Novalnet",
     "category": "Payment",
@@ -251,7 +264,8 @@
   },
   {
     "Partner": "Vertex",
-    "Description": "",
+    "Description": "Vertex Inc., is a leading global provider of indirect tax software and solutions. The company’s mission is to deliver the most trusted tax technology enabling global businesses to transact, comply, and grow with confidence. Vertex provides solutions that can be tailored to specific industries for major lines of indirect tax, including sales and consumer use, value added, and payroll. Headquartered in North America, and with offices in South America and Europe, Vertex employs over 1,200 professionals and serves companies across the globe.",
+    "shortDescription": "Indirect tax software and solutions",
     "Logo": "/images/integrations/cat_logos/vertex_logo.png",
     "Author": "Spryker",
     "category": "Tax",
@@ -262,7 +276,8 @@
   },
   {
     "Partner": "Avalara",
-    "Description": "",
+    "Description": "At Avalara, we’re building cloud-based tax compliance solutions to handle every transaction in the world. That’s why we’re growing fast. We provide a leading suite of cloud-based solutions designed to improve accuracy and efﬁciency by automating tax compliance. We deliver tax compliance in real-time to more than 30,000 customers with more than 1,200 signed partner integrations designed to link to business applications used for accounting, ERP, e-commerce, POS, recurring billing, and CRM systems. Headquartered in Seattle, Avalara has offices across the U.S. and around the world.",
+    "shortDescription":"Cloud-based tax compliance solutions to handle every transaction in the world",
     "Logo": "/images/integrations/cat_logos/avalara_logo.png",
     "Author": "Spryker",
     "category": "Tax",
@@ -273,7 +288,8 @@
   },
   {
     "Partner": "Econda",
-    "Description": "",
+    "Description": "econda collects billions of E-commerce data from thousands of online shops for more than 1000 customers throughout the world, on a daily basis. We store the data, enrich it and provide instant reports – we compile user profiles and product recommendations based on artificial intelligence and return this to the online shops in real time. Of course all in line with data protection guidelines. Everything made in Germany.",
+    "shortDescription": "Store the data, enrich it and provide instant reports",
     "Logo": "/images/integrations/cat_logos/econda_logo.png",
     "Author": "Spryker",
     "category": "Business Intelligence",
@@ -284,7 +300,8 @@
   },
   {
     "Partner": "Minubo",
-    "Description": "",
+    "Description": "Nobody needs more data, but everyone needs better insights. We are convinced that successful retail must be data-driven. Therefore, minubo enables every employee in a company to make data-driven decisions in order to unlock their full potential and thus increase results in a sustainable way. Act faster, more targeted, data-driven – with minubo Commerce Intelligence. BI for Retail.",
+    "shortDescription": "Enables every employee in a company to make data-driven decisions",
     "Logo": "/images/integrations/cat_logos/minubo_logo.png",
     "Author": "Spryker",
     "category": "Business Intelligence",
@@ -306,7 +323,8 @@
   },
   {
     "Partner": "FACT-Finder",
-    "Description": "",
+    "Description": "Being used by over 1,600 shops, FACT-Finder is Europe’s most-sold eCommerce software for on-site search, navigation, merchandising, personalisation and recommendations. It is used by retail chains like Lidl and Foot Locker, as well as B2B companies like Berner and Kaiser+Kraft.",
+    "shortDescription": "On-site search, navigation, merchandising, personalisation and recommendations",
     "Logo": "/images/integrations/cat_logos/fact-finder_logo.png",
     "Author": "Spryker",
     "category": "Personalization",
@@ -317,7 +335,8 @@
   },
   {
     "Partner": "Seven Senders",
-    "Description": "",
+    "Description": "Seven Senders is the leading delivery platform to ship parcels. The company connects shippers with its carrier network of over 100 carriers in Europe, enabling them to use excellent local shipping as a competitive advantage. With additional delivery services such as Claims Center, Insurance, Return Portal and Labels, Seven Senders makes international shipping a simple matter. Automated shipping notifications, tracking and monitoring solutions ensure a transparent shipping process.",
+    "shortDescription": "Delivery platform to ship parcel connecting shippers with carriers.",
     "Logo": "/images/integrations/cat_logos/sevensenders_logo.png",
     "Author": "Spryker",
     "category": "Delivery",
@@ -328,7 +347,8 @@
   },
   {
     "Partner": "collectai",
-    "Description": "",
+    "Description": "collectAI is a Hamburg-based Intelligent Payment Solution Provider offering a software platform for Interactive Invoices and Smart Payment Reminders. The technology has proven to balance collection goals and costs by combining digital communication channels and payment methods with Artificial Intelligence. collectAI is part of the Otto Group, Germany’s largest e-commerce retailer.",
+    "shortDescription": "Payment Solution Provider for Interactive Invoices and Smart Payment Reminders",
     "Logo": "/images/integrations/cat_logos/collectai_logo.png",
     "Author": "Spryker",
     "category": "Order Management System",
@@ -372,7 +392,8 @@
   },
   {
     "Partner": "mindcurv",
-    "Description": "",
+    "Description": "Mindcurv helps you rethink your digital business, experiences, and technology. They do this by designing sustainable and accountable solutions for humans living in a digital world. Mindcurv has orchestrated the perfect mix of future-ready technology, agile processes, and talented people. They offer a holistic view for their full scope of services for Digital Solutions, Cloud Infrastructures, and Managed Services.",
+    "shortDescription": "Designing sustainable and accountable solutions for humans living in a digital world",
     "Logo": "/images/integrations/cat_logos/mindcurv_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
@@ -383,7 +404,8 @@
   },
   {
     "Partner": "plusserver",
-    "Description": "",
+    "Description": "PlusServer GmbH is the leading managed cloud provider in the DACH region. As a cloud optimizer, we offer flexible, reliable and efficient hybrid cloud solutions for medium-sized and large companies from a single source. We advise in the choice of architecture and orchestrate all relevant infrastructures to an optimal hybrid cloud environment. We are technology-independent and include dedicated infrastructures, public and private cloud solutions as well as offers from Hyperscalers.",
+    "shortDescription":"We offer flexible, reliable and efficient hybrid cloud solutions for medium-sized and large companies",
     "Logo": "/images/integrations/cat_logos/plusserver_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
@@ -394,7 +416,8 @@
   },
   {
     "Partner": "proclane",
-    "Description": "",
+    "Description": "PROCLANE Integration specializes in the connection of SAP and other ERP systems to eCommerce solutions. In the integration platform IntegrationMan about 80% of all integration processes, which are needed for real-time processes in B2B, are available as standard. In addition to connecting web shops, IntegrationMan can also be used to integrate PIM, CRM or payment systems.",
+    "shortDescription": "Connection of SAP and other ERP systems to eCommerce solutions",
     "Logo": "/images/integrations/cat_logos/proclane_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
@@ -427,7 +450,8 @@
   },
   {
     "Partner": "vshn",
-    "Description": "",
+    "Description": "VSHN AG is Switzerland's leading DevOps, Docker, Kubernetes, Openshift and 24/7 cloud operations partner. We help software developers run their applications agile and on any infrastructure while relieving the burden on IT operations. We provide managed services as PaaS solution on any infrastructure: public, dedicated, private and on-premises.",
+    "shortDescription": "We help software developers run their applications agile and on any infrastructure",
     "Logo": "/images/integrations/cat_logos/vshn_logo.png",
     "Author": "Spryker",
     "category": "Operation Tools",
@@ -471,7 +495,8 @@
   },
   {
     "Partner": "paazl",
-    "Description": "",
+    "Description": "Paazl is the global platform for carrier management and delivery experience that brings more satisfied and engaged customers to your webshop. Our single integration helps your business grow across borders. Paazl gives you the flexibility to connect with local and international delivery methods. We offer seamless integration for your webshop, warehouse, track & trace, and customer service, so you can create the ultimate delivery experience for your customers.",
+    "shortDescription": "Global platform for carrier management and delivery experience for more satisfied and engaged customers",
     "Logo": "/images/integrations/cat_logos/paazl_logo.png",
     "Author": "Spryker",
     "category": "Carrier Management",
@@ -482,7 +507,8 @@
   },
   {
     "Partner": "xentral",
-    "Description": "",
+    "Description": "Xentral thinks ERP in a new and free way. Free in the sense of multiple extensions, in the sense of unlimited scalability and free in the sense of endless decision on how to employ the system. xentral is made for companies that want to achieve fast results and don’t believe in long implementation times.",
+    "shortDescription": "ERP made for companies that want to achieve fast results and don’t believe in long implementation times",
     "Logo": "/images/integrations/cat_logos/xentral_logo.png",
     "Author": "Spryker",
     "category": "Product Information Management",
@@ -504,7 +530,8 @@
   },
   {
     "Partner": "ConfigCat",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "featured": false,
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Turbine Kreuzberg",
@@ -516,7 +543,8 @@
   },
   {
     "Partner": "Sentry.io",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "featured": false,
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Turbine Kreuzberg",
@@ -528,7 +556,8 @@
   },
   {
     "Partner": "Contentful",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Fond Of",
     "category": "Content Management System",
@@ -539,7 +568,8 @@
   },
   {
     "Partner": "Google Tag Manager",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Fond Of",
     "category": "Tag Management",
@@ -550,7 +580,8 @@
   },
   {
     "Partner": "Sentry.io",
-    "Description": "",
+    "Description": "Built by the community.",
+    "shortDescription": "Built by the community.",
     "Logo": "/images/integrations/cat_logos/cq_logo.png",
     "Author": "Valantic",
     "category": "Monitoring",

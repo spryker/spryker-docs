@@ -792,7 +792,6 @@ margin-top:2%;
  font-weight: 600;
  color: #111827;
  text-transform: capitalize;
- margin-bottom: 0.5rem;
  margin-top:0;
 }
 
@@ -863,4 +862,11 @@ margin-top:2%;
   .mobile-filter-toggle.active + .mobile-filter-panel {
       max-height: 1000px;
   }
+}
+
+
+hr {
+  margin: 4% auto 5%;
+  width: 100%;
+  border: 1px solid #f5f5f5;
 }

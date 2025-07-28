@@ -39,6 +39,7 @@ Spryker's Glue API framework offers two primary types of API applications, each 
   </div>
 </div>
 
+---
 
 ## Spryker's GLUE API Capabilities
 
@@ -50,15 +51,18 @@ The Glue API empowers developers with a rich set of features:
 - Efficient Data Handling: Utilize built-in support for pagination, sorting, filtering, sparse fields (requesting only specific data fields), and configurable inclusion of related data to optimize API calls.
 - Robust Security: Secure your API endpoints using OAuth 2.0 and define granular access controls
 
+---
 
 ## Using Spryker's GLUE API
 
 Interacting with Spryker's Glue API as a client application involves understanding its specific structure for requests and responses. Here's are some core pieces of information that you need to know to help you to get started.
 
 
+
 ### Endpoints & HTTPS Methods
 
 API interactions happen by sending HTTPS requests (GET, POST, PATCH, DELETE, etc.) to specific URLs. In Spryker, resource types are often derived from the request URL (for example `/carts` for cart resources, `/products/{sku}` for a specific product).  The API documentation for each Spryker resource will detail the available endpoints and supported HTTPS methods which you an find within the API reference section of our documentation.
+
 
 ### Headers
 
@@ -68,6 +72,7 @@ Key headers you'll commonly use with Spryker Glue API include:
 - **Accept:** To specify the desired response format, also typically application/vnd.api+json.
 - **Versioning:** Spryker's Glue API can handle versioning through request headers. If no version is specified, the newest version of the resource is usually returned. If a specific version is requested and exists, that version is returned; otherwise, a 404 error may occur.
 
+
 ### Request Parameters (especially with JSON:API)
 
 Spryker's Glue API leverages standardized parameters for efficient data interaction :
@@ -76,6 +81,7 @@ Spryker's Glue API leverages standardized parameters for efficient data interact
 - **Filtering:** Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`. These are accessible via `$glueRequestTransfer->getFilters()`.
 - **Sparse Fields:** To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`. This is retrieved using `$glueRequestTransfer->getQueryFields()`.
 - **Including Related Resources:** Fetch related data in a single request using the include parameter (for example `?include=concrete-product-image-sets`).  The behavior of this included section can be configured in Spryker.  
+
 
 ### Understanding Spryker Glue API Responses
 
@@ -94,6 +100,7 @@ Client applications typically send user credentials (username, password) to an a
 This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources.
 If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
 
+---
 
 ## Querying GLUE API Data
 
@@ -112,11 +119,12 @@ The Glue API supports standardized ways to query and manipulate data, especially
   <div class="fl_text"><strong>Further Reading:</strong> Querying Data with GLUE Parameters</div>
 </a>
 
-
+---
 
 ## Building and Customizing Your APIs
 
 The Glue API is not just for consumption; it's a powerful platform for development and customization.
+
 
 ### The Developers Journey: What's Involved in Using Glue API
 

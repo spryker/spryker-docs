@@ -10,4 +10,4 @@ template: feature-integration-guide-template
 
 ## Next steps
 
-[Install merchant products data import](/).
+[Install merchant products data import](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature).

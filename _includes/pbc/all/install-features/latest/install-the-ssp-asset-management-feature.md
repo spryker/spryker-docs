@@ -89,6 +89,36 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
     }
 ```
 
+## Configure navigation
+
+Add the `Assets` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+   <ssp>
+      <label>Customer Portal</label>
+      <title>Customer Portal</title>
+      <icon>fa-id-badge</icon>
+      <pages>
+         <self-service-portal-asset>
+            <label>Assets</label>
+            <title>Assets</title>
+            <bundle>self-service-portal</bundle>
+            <controller>list-asset</controller>
+            <action>index</action>
+         </self-service-portal-asset>
+      </pages>
+   </ssp>
+</config>
+```
+
+{% info_block warningBox "Verification" %}
+Make sure that, in the Back Office, the **Customer portal** > **Assets** section is available.
+{% endinfo_block %}
+
 ## Set up database schema
 
 Apply schema updates:

@@ -1,7 +1,7 @@
 ---
 title: Architectural convention
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
-last_updated: Apr 10, 2024
+last_updated: Jul 28, 2025
 template: concept-topic-template
 redirect_from:
 - /docs/dg/dev/architecture/architectural-convention-reference.html
@@ -1532,6 +1532,7 @@ The schema file defines the module's tables and columns. Schema files are organi
   - The field can be `null` by default.
   - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
 - Table foreign key definitions needs to include the `phpName` attribute.
+- Each field **must** have a description of the fields value; This helps understand the data model and the internal usage of a fields value. F.e. name="price" description="The base unit of a currency f.e. for the currency EUR it is cent.". 
 
 </details>
 
@@ -1548,9 +1549,9 @@ The schema file defines the module's tables and columns. Schema files are organi
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ConfigurableBundle\Persistence" package="src.Orm.Zed.ConfigurableBundle.Persistence">
     <table name="spy_configurable_bundle_template">
         <column name="id_configurable_bundle_template" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="uuid" required="false" type="VARCHAR" size="255"/>
-        <column name="name" required="true" type="VARCHAR" size="255"/>
-        <column name="is_active" required="true" default="false" type="BOOLEAN"/>
+        <column name="uuid" required="false" type="VARCHAR" size="255" description="The UUID of the product bundle template for external reference."/>
+        <column name="name" required="true" type="VARCHAR" size="255" descrption="The display name of the product bundle template."/>
+        <column name="is_active" required="true" default="false" type="BOOLEAN" description="A boolean flag indicating if the product bundle template can be used or not./>
 
         <unique name="spy_configurable_bundle_template-uuid">
             <unique-column name="uuid"/>
@@ -1765,7 +1766,7 @@ src
 
 `Transfer Objects` are pure data transfer objects (DTO) with getters and setters. They can be used in all [applications](#applications) and all [layers](#layers). Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
 
-For every defined table in [Peristence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
+For every defined table in [Persistence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
 
 #### Conventions
 
@@ -1778,7 +1779,19 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 
 <details><summary>For *module development* and *core module development*</summary>
 
+### General
 - A module can only use the `Transfer Objects` and their properties that are declared in the same module. Transfer definitions accessed through composer dependencies are considered as a violation.
+
+### Transfer schemas
+- **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+
+### RestAPI Transfer schemas
+- **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+- **SHOULD** use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.
+- **SHOULD** use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.
+- **SHOULD** use the `restResponseParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the response and if it is required or not.
+
+Further reading [Document Glue API resources](/docs/dg/dev/glue-api/latest/glue-api-tutorials/document-glue-api-resources.html)
 
 </details>
 

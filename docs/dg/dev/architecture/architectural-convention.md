@@ -1787,7 +1787,7 @@ For every defined table in [Persistence Schema](#persistence-schema), a matching
 
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
-### RestAPI Transfer schemas
+### Storefront API Transfer Schemas
 
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 - **SHOULD** use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.

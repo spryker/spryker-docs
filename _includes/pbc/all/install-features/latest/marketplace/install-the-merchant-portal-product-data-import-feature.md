@@ -86,7 +86,7 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
 {% info_block warningBox "Verification" %}
 
 Open Merchant Portal, login with merchant user, open the **Data Import** section.
-Check that you can see "Combined Product" import type in the list of available import types and can download the CSV template under the form.
+Check that you can see "Product" import type in the list of available import types and can download the CSV template under the form.
 
 {% endinfo_block %}
 

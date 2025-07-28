@@ -1532,7 +1532,7 @@ The schema file defines the module's tables and columns. Schema files are organi
   - The field can be `null` by default.
   - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
 - Table foreign key definitions needs to include the `phpName` attribute.
-- Each field **must** have a description of the fields value; This helps understand the data model and the internal usage of a fields value. F.e. name="price" description="The base unit of a currency f.e. for the currency EUR it is cent.". 
+- Each field **must** have a description of the fields value; This helps understand the data model and the internal usage of a fields value. F.e. name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
 </details>
 
@@ -1780,12 +1780,15 @@ For every defined table in [Persistence Schema](#persistence-schema), a matching
 <details><summary>For *module development* and *core module development*</summary>
 
 ### General
+
 - A module can only use the `Transfer Objects` and their properties that are declared in the same module. Transfer definitions accessed through composer dependencies are considered as a violation.
 
 ### Transfer schemas
+
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
 ### RestAPI Transfer schemas
+
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 - **SHOULD** use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.
 - **SHOULD** use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.

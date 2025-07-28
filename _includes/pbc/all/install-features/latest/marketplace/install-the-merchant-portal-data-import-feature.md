@@ -117,6 +117,7 @@ Add the following plugins to the dependency providers:
 
 
 Run the following command to synchronize ACL entity rules:
+
 ```bash
 vendor/bin/console acl-entity:synchronize
 ```

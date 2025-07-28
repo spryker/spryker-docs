@@ -21,7 +21,7 @@ This document describes how to install the Self-Service Portal (SSP) Dashboard M
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -91,14 +91,12 @@ ssp_dashboard.general.no_data,There is no data yet,en_US
 ssp_dashboard.general.no_data,Es gibt noch keine Daten,de_DE
 ssp_dashboard.general.news,News & Events,en_US
 ssp_dashboard.general.news,Nachrichten & Veranstaltungen,de_DE
-ssp_dashboard.general.news,News & Events,en_US
-ssp_dashboard.general.news,Nachrichten & Veranstaltungen,de_DE
 dashboard.access.denied,Access denied.,en_US
 dashboard.access.denied,Zugriff verweigert.,de_DE
 customer.account.files,Files,en_US
 customer.account.files,Dateien,de_DE
-customer.account.no_files,No Files,en_US
-customer.account.no_files,Keine Dateien,de_DE
+customer.account.no_files,There is no data yet,en_US
+customer.account.no_files,Es existieren noch keine Daten,de_DE
 ```
 
 </details>

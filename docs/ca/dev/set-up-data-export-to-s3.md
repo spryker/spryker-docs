@@ -14,9 +14,9 @@ Access to the S3 bucket is secured and audited via AWS IAM policies. Every file 
 ## Request an export setup
 
 Open a support ticket and include the following information:
-* List of tables you want exported, comma-separated
-* Desired frequency: every 6h, 12h, 1d, 2d, 1 week, or 1 month.
-* Desired Start date and time, ISO 8601 format recommended
+- List of tables you want exported, comma-separated
+- Desired frequency: every 6h, 12h, 1d, 2d, 1 week, or 1 month.
+- Desired Start date and time, ISO 8601 format recommended
 
 Our team will validate and set up the export for you.
 

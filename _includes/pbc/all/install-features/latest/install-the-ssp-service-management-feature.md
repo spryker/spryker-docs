@@ -22,7 +22,7 @@ This document describes how to install the Self-Service Portal (SSP) SSP Inquiry
 Install the required packages using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -37,13 +37,14 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                                       | SPECIFICATION                                                                  | NAMESPACE                           |
-|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES                  | Shipment types supported by the Click&Collect feature.                         | Pyz\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()                              | Reference of a merchant used for creating product offers from the Back Office. | Pyz\Zed\SelfServicePortal           |
-| DataImportConfig::getFullImportTypes()                                              | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                  |
-| Pyz\Yves\ServicePointWidget\ServicePointWidgetConfig::getDeliveryShipmentTypeKeys() | Defines a list of shipment type keys that are considered as delivery types.    | Pyz\Yves\ServicePointWidget         |
-| \Pyz\Yves\ShipmentTypeWidget\ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()   | Defines a list of shipment type keys that are considered as delivery types.    | Pyz\Yves\ShipmentTypeWidget         |
+| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                                   |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | SprykerShop\Yves\ClickAndCollectPageExample |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                | SprykerShop\Yves\ClickAndCollectPageExample |
+| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office. | SprykerFeature\Zed\SelfServicePortal        |
+| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                          |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ServicePointWidget         |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ShipmentTypeWidget         |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 
@@ -69,7 +70,13 @@ class ClickAndCollectPageExampleConfig extends SprykerClickAndCollectPageExample
     protected const CLICK_AND_COLLECT_SHIPMENT_TYPES = [
         self::SHIPMENT_TYPE_ON_SITE_SERVICE,
         self::SHIPMENT_TYPE_DELIVERY,
-        self::SHIPMENT_TYPE_PICKUP,
+    ];
+    
+    /**
+     * @var list<string>
+     */
+    protected const DEFAULT_PICKABLE_SERVICE_TYPES = [
+        self::SHIPMENT_TYPE_IN_CENTER_SERVICE,
     ];
 }
 ```
@@ -204,16 +211,16 @@ console propel:install
 
 Make sure the following changes occurred in the database:
 
-| DATABASE ENTITY                                   | TYPE   | EVENT   |
-|---------------------------------------------------|--------|---------|
-| spy_product_shipment_type                         | table  | created |
-| spy_sales_product_abstract_type                   | table  | created |
-| spy_sales_order_item_product_abstract_type        | table  | created |
-| spy_product_abstract_type                         | table  | created |
-| spy_product_abstract_to_product_abstract_type     | table  | created |
-| spy_product.is_service_date_time_enabled          | column | added   |
-| spy_sales_order_item_metadata.scheduled_at        | column | added   |
-| spy_sales_order_item.is_service_date_time_enabled | column | added   |
+| DATABASE ENTITY                            | TYPE   | EVENT   |
+|--------------------------------------------|--------|---------|
+| spy_product_shipment_type                  | table  | created |
+| spy_sales_product_class                    | table  | created |
+| spy_sales_order_item_product_class         | table  | created |
+| spy_product_class                          | table  | created |
+| spy_product_to_product_class               | table  | created |
+| spy_sales_order_item_metadata.scheduled_at | column | added   |
+| spy_service_point_address.longitude        | column | added   |
+| spy_service_point_address.latitude         | column | added   |
 
 {% endinfo_block %}
 
@@ -263,8 +270,8 @@ Ensure the following transfer objects have been generated:
 | Locale                              | transfer | created | src/Generated/Shared/Transfer/LocaleTransfer                              |
 | ServiceConditions                   | transfer | created | src/Generated/Shared/Transfer/ServiceConditionsTransfer                   |
 | SspServiceConditions                | transfer | created | src/Generated/Shared/Transfer/SspServiceConditionsTransfer                |
-| ServicesSearchCondition        | transfer | created | src/Generated/Shared/Transfer/ServicesSearchConditionTransfer        |
-| SspServicesSearchCondition     | transfer | created | src/Generated/Shared/Transfer/SspServicesSearchConditionTransfer     |
+| ServicesSearchCondition             | transfer | created | src/Generated/Shared/Transfer/ServicesSearchConditionTransfer             |
+| SspServicesSearchCondition          | transfer | created | src/Generated/Shared/Transfer/SspServicesSearchConditionTransfer          |
 | ServiceCriteria                     | transfer | created | src/Generated/Shared/Transfer/ServiceCriteriaTransfer                     |
 | SspServiceCriteria                  | transfer | created | src/Generated/Shared/Transfer/SspServiceCriteriaTransfer                  |
 | OrderItemFilter                     | transfer | created | src/Generated/Shared/Transfer/OrderItemFilterTransfer                     |
@@ -332,22 +339,21 @@ Add the `Services` and `Offers` sections to `navigation.xml`:
 ```xml
 <?xml version="1.0"?>
 <config>
-    <sales>
-        <self-service-portal-services>
-            <label>Services</label>
-            <title>Services</title>
+   <ssp>
+      <label>Customer Portal</label>
+      <title>Customer Portal</title>
+      <icon>fa-id-badge</icon>
+      <pages>
+         <self-service-portal-services>
+            <label>Booked Services</label>
+            <title>Booked Services</title>
             <bundle>self-service-portal</bundle>
             <controller>list-service</controller>
             <action>index</action>
-        </self-service-portal-services>
-    </sales>
-    <product-offer-gui>
-        <label>Offers</label>
-        <title>Offers</title>
-        <bundle>product-offer-gui</bundle>
-        <controller>list</controller>
-        <action>index</action>
-    </product-offer-gui>
+            <icon>fa-paperclip</icon>
+         </self-service-portal-services>
+      </pages>
+   </ssp>
 </config>
 ```
 

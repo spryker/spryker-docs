@@ -165,7 +165,7 @@ class MerchantFileConfig extends SprykerMerchantFileConfig
     /**
      * @return array<string, list<string>>
      */
-    public function getSupportedContentTypeMapping(): array
+    public function getFileTypeToContentTypeMapping(): array
     {
         return [
             'data-import' => [

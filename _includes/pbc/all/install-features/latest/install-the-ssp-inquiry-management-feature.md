@@ -22,7 +22,7 @@ This document describes how to install the Self-Service Portal (SSP) Inquiry Man
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -45,14 +45,14 @@ Update your `config/Shared/config_default.php`:
 | SelfServicePortalConstants::BASE_URL_YVES                                 | Yves URL used in mailing templates.                                                     | SprykerFeature\Shared\SelfServicePortal |
 | SelfServicePortalConstants::DEFAULT_TOTAL_FILE_MAX_SIZE                   | Configurable total file upload limit.                                                   | SprykerFeature\Shared\SelfServicePortal |
 | SelfServicePortalConstants::DEFAULT_FILE_MAX_SIZE                         | Configurable single file upload size.                                                   | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getInquiryInitialStateMachineMap()                   | Returns the inquiry state machine process to the initial state mapping.                 | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getSspInquiryStateMachineProcessInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getSspInquiryCancelStateMachineEventName()       | Returns the inquiry event name of the inquiry cancellation.                             | SprykerFeature\Shared\SelfServicePortal |
-| SspInquiryManagementConfig::getSspInquiryAvailableStatuses()              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SelfServicePortal |
-| SelfServicePortalConstants::INQUIRY_STORAGE_NAME                       | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConfig::getInquiryInitialStateMachineMap()               | Returns the inquiry state machine process to the initial state mapping.                 | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConfig::getSspInquiryStateMachineProcessInquiryTypeMap() | Returns the inquiry type to state machine process mapping.                              | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConfig::getSspInquiryCancelStateMachineEventName()       | Returns the inquiry event name of the inquiry cancellation.                             | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConfig::getSspInquiryAvailableStatuses()              | Returns the list of inquiry statuses.                                                   | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConstants::INQUIRY_STORAGE_NAME                          | Defines the Storage name for inquiry Flysystem files.                                   | SprykerFeature\Shared\SelfServicePortal |
 | SalesConfig::getSalesDetailExternalBlocksUrls()                           | Defines the list of URLs for rendering blocks in the order details page.                | Spryker\Zed\Sales                       |
-| SspInquiryManagementConfig::getInquiryStatusClassMap()                    | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SelfServicePortal    |
-| SspInquiryManagementConfig::getInquiryPendingStatus()                     | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SelfServicePortal    |
+| SelfServicePortalConfig::getInquiryStatusClassMap()                       | Returns the inquiry status to СSS class name mapping used for status indicator styling. | SprykerFeature\Zed\SelfServicePortal    |
+| SelfServicePortalConfig::getInquiryPendingStatus()                        | Identifies the status that will be considered `Pending`.                                | SprykerFeature\Zed\SelfServicePortal    |
 
 **config/Shared/config_default.php**
 
@@ -365,7 +365,7 @@ self_service_portal.inquiry.create.select_type,Typ auswählen,de_DE
 self_service_portal.inquiry.status.pending,Pending,en_US
 self_service_portal.inquiry.status.pending,Ausstehend,de_DE
 self_service_portal.inquiry.status.in_review,In Review,en_US
-self_service_portal.inquiry.status.in_review,In Bearbeitung,de_DE
+self_service_portal.inquiry.status.in_review,In Überprüfung,de_DE
 self_service_portal.inquiry.status.approved,Approved,en_US
 self_service_portal.inquiry.status.approved,Genehmigt,de_DE
 self_service_portal.inquiry.status.rejected,Rejected,en_US
@@ -408,8 +408,8 @@ customer.self_service_portal.inquiry.list,Inquiries,en_US
 customer.self_service_portal.inquiry.list,Anfragen,de_DE
 self_service_portal.inquiry.file.file_not_found,File not found,en_US
 self_service_portal.inquiry.file.file_not_found,Datei wurde nicht gefunden,de_DE
-self_service_portal.inquiry.file.mime_type.error,Invalid file type.,en_US
-self_service_portal.inquiry.file.mime_type.error,Ungültiger Dateityp.,de_DE
+self_service_portal.inquiry.file.mime_type.error,Invalid file format.,en_US
+self_service_portal.inquiry.file.mime_type.error,Ungültiges Dateiformat.,de_DE
 self_service_portal.inquiry.validation.company_user.not_set,Company user is missing.,en_US
 self_service_portal.inquiry.validation.company_user.not_set,Firmenbenutzer fehlt.,de_DE
 self_service_portal.inquiry.validation.type.not_set,Inquiry type is missing.,en_US
@@ -498,8 +498,8 @@ self_service_portal.inquiry.file.unavailable,File is not available,en_US
 self_service_portal.inquiry.file.unavailable,Datei ist nicht verfügbar,de_DE
 customer.self_service_portal.inquiry.details.files,Files,en_US
 customer.self_service_portal.inquiry.details.files,Dateien,de_DE
-self_service_portal.inquiry.order.create_ssp_inquiry,Claim,en_US
-self_service_portal.inquiry.order.create_ssp_inquiry,Anspruch stellen,de_DE
+self_service_portal.inquiry.order.create_ssp_inquiry,Inquiry,en_US
+self_service_portal.inquiry.order.create_ssp_inquiry,Anfrage,de_DE
 self_service_portal.inquiry.order_reference.label,Order Reference,en_US
 self_service_portal.inquiry.order_reference.label,Bestellnummer,de_DE
 customer.self_service_portal.inquiry.details.order_reference,Order Reference,en_US
@@ -600,7 +600,7 @@ Make sure the following applies:
 | ViewCompanySspInquiryPermissionPlugin      | Allows access to inquiries in the same company.                                |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP files feature.                                |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
 | SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication                     |
-| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
+| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport             |
 | SspInquiryManagementFilePreDeletePlugin    | Ensures files are deleted when an inquiry is removed.                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager            |
 | SspInquiryApprovedMailTypeBuilderPlugin    | Sends an email on inquiry approval.                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
@@ -610,6 +610,7 @@ Make sure the following applies:
 | SspInquiryStateMachineHandlerPlugin        | State Machine handler for inquiry processing.                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\StateMachine           |
 | ApproveSspInquiryCommandPlugin             | State Machine command that handles inquiry approval.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspInquiryManagement   |
 | RejectSspInquiryCommandPlugin              | State Machine command that handles inquiry rejection.                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspInquiryManagement   |
+| SspInquiryDashboardDataExpanderPlugin      | Provides inquiry data for the dashboard.                                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 

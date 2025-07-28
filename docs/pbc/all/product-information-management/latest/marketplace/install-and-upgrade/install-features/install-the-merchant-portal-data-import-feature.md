@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the the Market
 template: feature-integration-guide-template
 ---
 
-{% include _includes/pbc/all/install-features/latest/marketplace/install-the-merchant-portal-data-import-feature.md %}
+{% include pbc/all/install-features/latest/marketplace/install-the-merchant-portal-data-import-feature.md %}
 
 
 ## Next steps

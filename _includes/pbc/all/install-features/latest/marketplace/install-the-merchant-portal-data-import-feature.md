@@ -33,7 +33,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### Generate required objects and DB changes
+### Generate required transfer objects and DB changes
 
 ```bash
 vendor/bin/console transfer:generate
@@ -77,7 +77,7 @@ Make sure that the navigation menu of the Merchant Portal has the **Data Import*
 
 ### Update project configuration
 
-Update your `config/Shared/config_default.php` file to include the following configuration for the file system, that will be used to store merchant files:
+Update your `config/Shared/config_default.php` file to include the following configuration for the file system that will be used to store merchant files:
 
 ```php
 $config[MerchantFileConstants::FILE_SYSTEM_NAME] = 'merchant-files';
@@ -90,10 +90,11 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'path' => '/',
         'version' => 'latest',
         'region' => getenv('AWS_REGION'),
+    ],
 ];
 ```
 
-for local development you can use the following configuration (`config/Shared/config_default-docker.dev.php`):
+For local development, you can use the following configuration (`config/Shared/config_default-docker.dev.php`):
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
@@ -152,7 +153,7 @@ It will be executed every minute to check if there is a new file uploaded for da
 
 #### Configure Behavior
 
-Now you need to decide what types of files you want to use allow for uploading and importing inside Merchant Portal.
+Now you need to decide what types of files you want to allow for uploading and importing inside the Merchant Portal.
 
 ```php
 
@@ -178,7 +179,7 @@ class MerchantFileConfig extends SprykerMerchantFileConfig
 }
 ```
 
-and what types of the imports you want to enable for merchants with the example or template file that can be downloaded by merchants:
+Then, decide what types of imports you want to enable for merchants with the example or template file that merchants can download:
 
 ```php
 namespace Pyz\Zed\FileImportMerchantPortalGui;
@@ -213,7 +214,7 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
 
 ### Install feature frontend
 
-Update `paths` in the `tsconfig.mp.json`.
+Update `paths` in the `tsconfig.mp.json` file:
 
 ```json
 {
@@ -238,7 +239,7 @@ npm run mp:build
 
 {% info_block warningBox "Verification" %}
 
-Open Merchant Portal, login with merchant user, open the **Data Import** section, make sure that UI is not broken.
+Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that the UI is not broken.
 
 {% endinfo_block %}
 

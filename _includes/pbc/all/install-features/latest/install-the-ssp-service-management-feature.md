@@ -34,15 +34,16 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                                                                               |
-|--------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | SprykerShop\Yves\ClickAndCollectPageExample                                             |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                | SprykerShop\Yves\ClickAndCollectPageExample                                             |
-| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office. | SprykerFeature\Zed\SelfServicePortal                                                    |
-| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                                                                      |
-| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ServicePointWidget                                                     |
-| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ShipmentTypeWidget                                                     |
-| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key.                                               | SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants::GOOGLE_MAPS_API_KEY |
+| CONFIGURATION                                                      | SPECIFICATION                                                                            | NAMESPACE                                   |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                                   | SprykerShop\Yves\ClickAndCollectPageExample |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                          | SprykerShop\Yves\ClickAndCollectPageExample |
+| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office.           | SprykerFeature\Zed\SelfServicePortal        |
+| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.                        | Pyz\Zed\DataImport                          |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.              | SprykerShop\Yves\ServicePointWidget         |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.              | SprykerShop\Yves\ShipmentTypeWidget         |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key.                                                         | SprykerFeature\Shared\SelfServicePortal     |
+| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING    | Defines the mapping of payment method names to their respective state machine processes. | SprykerFeature\Shared\SelfServicePortal     |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 
@@ -196,6 +197,13 @@ class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
     }
 }
 ```
+
+**config/Shared/config_default.php**
+
+```php
+$config[SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING];
+```
+
 
 {% info_block warningBox %}
 ### ⚠️ **WARNING: Your Google Maps API production key must be protected!**
@@ -406,20 +414,20 @@ Make sure the following menu items are available in the Back Office navigation:
   <summary>Glossary</summary>
 
 ```csv
-self_service_portal.service.product.no_shipment_types_available,Keine Versandarten für dieses Produkt verfügbar.,de_DE
 self_service_portal.service.product.no_shipment_types_available,No shipping types available for this product.,en_US
-self_service_portal.service.product.shipment_types,Versandarten,de_DE
+self_service_portal.service.product.no_shipment_types_available,Keine Versandarten für dieses Produkt verfügbar.,de_DE
 self_service_portal.service.product.shipment_types,Shipment Types,en_US
-self_service_portal.service.product.select_service_point,Wählen Sie einen Servicepunkt,de_DE
+self_service_portal.service.product.shipment_types,Versandarten,de_DE
 self_service_portal.service.product.select_service_point,Select a service point,en_US
-self_service_portal.service.product.service_point_required,Ein Servicepunkt ist für dieses Produkt erforderlich,de_DE
+self_service_portal.service.product.select_service_point,Wählen Sie einen Servicepunkt,de_DE
 self_service_portal.service.product.service_point_required,A service point is required for this product,en_US
+self_service_portal.service.product.service_point_required,Ein Servicepunkt ist für dieses Produkt erforderlich,de_DE
 self_service_portal.service.cart_item.service_point.name,Service point,en_US
 self_service_portal.service.cart_item.service_point.name,Servicepunkt,de_DE
 self_service_portal.service.product.service_date_time,Choose date and time,en_US
 self_service_portal.service.product.service_date_time,Wählen Sie Datum und Uhrzeit,de_DE
 self_service_portal.service.checkout.item_count,Number of Items,en_US
-self_service_portal.service.checkout.item_count,Anzahl der Teile,de_DE
+self_service_portal.service.checkout.item_count,Anzahl der Artikel,de_DE
 ssp-service-management.info.service-without-shipment-type.removed,Service item %sku% without shipment type has been removed,en_US
 ssp-service-management.info.service-without-shipment-type.removed,Serviceartikel %sku% ohne Versandart wurde entfernt,de_DE
 self_service_portal.service.cart_item.scheduled_at,Date and time,en_US
@@ -433,17 +441,15 @@ self_service_portal.service.cancellation.success,Die Dienstleistung wurde erfolg
 self_service_portal.service.cancellation.error,Failed to cancel the service.,en_US
 self_service_portal.service.cancellation.error,Die Stornierung der Dienstleistung ist fehlgeschlagen.,de_DE
 self_service_portal.service.validation.no_order_items_provided,No order items provided.,en_US
-self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen vorhanden.,de_DE
+self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen angegeben.,de_DE
 self_service_portal.service.validation.status_change_failed,The status change failed.,en_US
 self_service_portal.service.validation.status_change_failed,Die Statusänderung ist fehlgeschlagen.,de_DE
-self_service_portal.service.validation.no_order_items_provided,No order items provided.,en_US
-self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen angegeben.,de_DE
 self_service_portal.service.validation.order_not_found,Order with ID %id% not found.,en_US
 self_service_portal.service.validation.order_not_found,Bestellung mit ID %id% nicht gefunden.,de_DE
 self_service_portal.service.validation.no_payment_methods_found,No payment methods found for this order.,en_US
 self_service_portal.service.validation.no_payment_methods_found,Keine Zahlungsmethoden für diese Bestellung gefunden.,de_DE
 self_service_portal.service.list.search_placeholder,Search,en_US
-self_service_portal.service.list.search_placeholder,Search,de_DE
+self_service_portal.service.list.search_placeholder,Suchen,de_DE
 self_service_portal.service.list.search_button,Search,en_US
 self_service_portal.service.list.search_button,Suchen,de_DE
 self_service_portal.service.list.title,Services,en_US
@@ -469,7 +475,7 @@ self_service_portal.service.list.reset_button,Zurücksetzen,de_DE
 self_service_portal.service.list.my_services,My Services,en_US
 self_service_portal.service.list.my_services,Meine Dienstleistungen,de_DE
 self_service_portal.service.list.business_unit_services,Business Unit Services,en_US
-self_service_portal.service.list.business_unit_services,Geschäftsbereich Dienstleistungen,de_DE
+self_service_portal.service.list.business_unit_services,Dienstleistungen der Geschäftseinheit,de_DE
 self_service_portal.service.list.company_services,Company Services,en_US
 self_service_portal.service.list.company_services,Unternehmensdienstleistungen,de_DE
 self_service_portal.service.update_scheduled_time,Change scheduled time,en_US
@@ -487,7 +493,7 @@ self_service_portal.service.update_scheduled_time.title,Geplante Servicezeit akt
 self_service_portal.service.update_scheduled_time.success,Order item rescheduled successfully.,en_US
 self_service_portal.service.update_scheduled_time.success,Bestellposition erfolgreich neu geplant.,de_DE
 self_service_portal.service.update_scheduled_time.order_item_details,Order Item Details,en_US
-self_service_portal.service.update_scheduled_time.order_item_details,Bestellpositionsdetails,de_DE
+self_service_portal.service.update_scheduled_time.order_item_details,Details zur Bestellposition,de_DE
 self_service_portal.service.update_scheduled_time.button.save,Save,en_US
 self_service_portal.service.update_scheduled_time.button.save,Speichern,de_DE
 self_service_portal.service.update_scheduled_time.button.cancel,Cancel,en_US
@@ -495,41 +501,13 @@ self_service_portal.service.update_scheduled_time.button.cancel,Abbrechen,de_DE
 self_service_portal.service.update_scheduled_time.error.order_item_not_found,Order item with uuid %uuid% not found.,en_US
 self_service_portal.service.update_scheduled_time.error.order_item_not_found,Bestellposition mit UUID %uuid% nicht gefunden.,de_DE
 self_service_portal.service.list.field.business_unit,Business Unit,en_US
-self_service_portal.service.list.field.business_unit,Geschäftsbereich,de_DE
+self_service_portal.service.list.field.business_unit,Geschäftseinheit,de_DE
 self_service_portal.service.list.button.view,View,en_US
 self_service_portal.service.list.button.view,Ansehen,de_DE
-self_service_portal.service.product.no_shipment_types_available,Keine Versandarten für dieses Produkt verfügbar.,de_DE
-self_service_portal.service.product.no_shipment_types_available,No shipping types available for this product.,en_US
-self_service_portal.service.product.shipment_types,Versandarten,de_DE
-self_service_portal.service.product.shipment_types,Shipment Types,en_US
-self_service_portal.service.product.select_service_point,Wählen Sie einen Servicepunkt,de_DE
-self_service_portal.service.product.select_service_point,Select a service point,en_US
-self_service_portal.service.product.service_point_required,Ein Servicepunkt ist für dieses Produkt erforderlich,de_DE
-self_service_portal.service.product.service_point_required,A service point is required for this product,en_US
-self_service_portal.service.cart_item.service_point.name,Service point,en_US
-self_service_portal.service.cart_item.service_point.name,Servicepunkt,de_DE
-self_service_portal.service.product.service_date_time,Choose date and time,en_US
-self_service_portal.service.product.service_date_time,Wählen Sie Datum und Uhrzeit,de_DE
-self_service_portal.service.checkout.item_count,Number of Items,en_US
-self_service_portal.service.checkout.item_count,Anzahl der Teile,de_DE
-self_service_portal.service.cart_item.scheduled_at,Date and time,en_US
-self_service_portal.service.cart_item.scheduled_at,Datum und Uhrzeit,de_DE
-self_service_portal.service.cancellation.error.no_items,No order items provided.,en_US
-self_service_portal.service.cancellation.error.no_items,Keine Auftragspositionen vorhanden.,de_DE
-self_service_portal.service.cancel_service,Cancel Service,en_US
-self_service_portal.service.cancel_service,Dienstleistung stornieren,de_DE
-self_service_portal.service.cancellation.success,Service has been successfully cancelled.,en_US
-self_service_portal.service.cancellation.success,Die Dienstleistung wurde erfolgreich storniert.,de_DE
-self_service_portal.service.cancellation.error,Failed to cancel the service.,en_US
-self_service_portal.service.cancellation.error,Die Stornierung der Dienstleistung ist fehlgeschlagen.,de_DE
-self_service_portal.service.validation.no_order_items_provided,No order items provided.,en_US
-self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen vorhanden.,de_DE
-self_service_portal.service.validation.status_change_failed,The status change failed.,en_US
-self_service_portal.service.validation.status_change_failed,Die Statusänderung ist fehlgeschlagen.,de_DE
 customer.account.ssp_services,Services,en_US
 customer.account.ssp_services,Dienstleistungen,de_DE
 customer.account.no_ssp_services,There are no services at the moment,en_US
-customer.account.no_ssp_services,Es gibt derzeit keine Dienstleistungen,de_DE
+customer.account.no_ssp_services,Es sind keine Dienstleistungen vorhanden,de_DE
 customer.ssp_service.order.reference,Order Reference,en_US
 customer.ssp_service.order.reference,Bestellreferenz,de_DE
 customer.ssp_service.customer,Customer,en_US
@@ -537,9 +515,9 @@ customer.ssp_service.customer,Kunde,de_DE
 customer.ssp_service.company,Company,en_US
 customer.ssp_service.company,Unternehmen,de_DE
 customer.ssp_service.service,Service,en_US
-customer.ssp_service.service,Service,de_DE
+customer.ssp_service.service,Dienstleistung,de_DE
 customer.ssp_service.created_at,Date created,en_US
-customer.ssp_service.created_at,Erstellt am,de_DE
+customer.ssp_service.created_at,Erstellungsdatum,de_DE
 customer.ssp_service.status,Status,en_US
 customer.ssp_service.status,Status,de_DE
 customer.ssp_service.scheduled_at,Time and Date,en_US
@@ -549,9 +527,9 @@ customer.ssp_service.actions,Aktionen,de_DE
 customer.ssp_service.view_ssp_service,View,en_US
 customer.ssp_service.view_ssp_service,Anzeigen,de_DE
 product.filter.product-abstract-types,Product Abstract Types,en_US
-product.filter.product-abstract-types,Produktabstraktsarten,de_DE
+product.filter.product-abstract-types,Produktabstrakttypen,de_DE
 customer.address.single_address_per_shipment_type,Set same address for all products,en_US
-customer.address.single_address_per_shipment_type,Setze gleiche Adresse für alle Produkte,de_DE
+customer.address.single_address_per_shipment_type,Gleiche Adresse für alle Produkte festlegen,de_DE
 ```
 
 </details>
@@ -1384,6 +1362,141 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     }
 }
 ```
+Enable the project override to allow the checkout form to handle single addresses per shipment type: 
+
+**src/Pyz/Yves/CustomerPage/Form/CheckoutAddressCollectionForm.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\CustomerPage\Form;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use SprykerShop\Yves\CustomerPage\Dependency\Service\CustomerPageToShipmentServiceInterface;
+use SprykerShop\Yves\CustomerPage\Form\CheckoutAddressCollectionForm as SprykerCheckoutAddressCollectionForm;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
+use Symfony\Component\Form\FormInterface;
+
+/**
+ * @method \Pyz\Yves\CustomerPage\CustomerPageConfig getConfig()
+ * @method \SprykerShop\Yves\CustomerPage\CustomerPageFactory getFactory()
+ */
+class CheckoutAddressCollectionForm extends SprykerCheckoutAddressCollectionForm
+{
+    /**
+     * @param \Symfony\Component\Form\FormBuilderInterface $builder
+     *
+     * @return $this
+     */
+    protected function addSameAsShippingCheckboxField(FormBuilderInterface $builder)
+    {
+        $builder->add(
+            static::FIELD_BILLING_SAME_AS_SHIPPING,
+            CheckboxType::class,
+            [
+                'required' => false,
+                'constraints' => [],
+                'validation_groups' => function (FormInterface $form) {
+                    $shippingAddressForm = $form->getParent()
+                        ? $form->getParent()->get(static::FIELD_SHIPPING_ADDRESS)
+                        : null;
+
+                    if (!$shippingAddressForm) {
+                        return false;
+                    }
+
+                    if (!$this->isDeliverToMultipleAddressesEnabled($shippingAddressForm)) {
+                        return false;
+                    }
+
+                    return [static::GROUP_BILLING_SAME_AS_SHIPPING];
+                },
+            ],
+        );
+
+        return $this;
+    }
+
+    /**
+     * @param \Symfony\Component\Form\FormEvent $event
+     * @param \SprykerShop\Yves\CustomerPage\Dependency\Service\CustomerPageToShipmentServiceInterface $shipmentService
+     *
+     * @return void
+     */
+    protected function hydrateShippingAddressSubFormDataFromItemLevelShippingAddresses(
+        FormEvent $event,
+        CustomerPageToShipmentServiceInterface $shipmentService,
+    ): void {
+        $quoteTransfer = $event->getData();
+
+        if (!($quoteTransfer instanceof QuoteTransfer)) {
+            return;
+        }
+
+        $quoteTransfer = $this->executeCheckoutAddressStepPreGroupItemsByShipmentPlugins($quoteTransfer);
+
+        $shipmentGroupCollection = $this->mergeShipmentGroupsByShipmentHash(
+            $shipmentService->groupItemsByShipment($quoteTransfer->getItems()),
+            $shipmentService->groupItemsByShipment($quoteTransfer->getBundleItems()),
+        );
+
+        $shippingAddressForm = $event->getForm()->get(static::FIELD_SHIPPING_ADDRESS);
+
+        if ($quoteTransfer->getItems()->count() || $quoteTransfer->getBundleItems()->count()) {
+            $this->setDeliverToMultipleAddressesEnabled($shippingAddressForm);
+        }
+
+        if ($this->isDeliverToMultipleAddressesEnabled($shippingAddressForm) || $shipmentGroupCollection->count() < 1) {
+            return;
+        }
+
+        $shipmentGroupTransfer = $shipmentGroupCollection->getIterator()->current();
+
+        if (!$shipmentGroupTransfer->getShipment() || !$shipmentGroupTransfer->getShipment()->getShippingAddress()) {
+            return;
+        }
+
+        $shippingAddressForm->setData(clone $shipmentGroupTransfer->getShipment()->getShippingAddress());
+    }
+}
+```
+
+**src/Pyz/Yves/CustomerPage/Form/DataProvider/CheckoutAddressFormDataProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\CustomerPage\Form\DataProvider;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use SprykerShop\Yves\CustomerPage\Form\DataProvider\CheckoutAddressFormDataProvider as SprykerCheckoutAddressFormDataProvider;
+
+class CheckoutAddressFormDataProvider extends SprykerCheckoutAddressFormDataProvider
+{
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    protected function canDeliverToMultipleShippingAddresses(QuoteTransfer $quoteTransfer): bool
+    {
+        $items = $this->productBundleClient->getGroupedBundleItems(
+            $quoteTransfer->getItems(),
+            $quoteTransfer->getBundleItems(),
+        );
+
+        return count($items) >= 1
+            && $this->shipmentClient->isMultiShipmentSelectionEnabled()
+            && !$this->hasQuoteGiftCardItems($quoteTransfer);
+    }
+}
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -1516,16 +1629,19 @@ console frontend:zed:build
    - The cart items display the selected service points
    - Items are grouped by shipment type
    - Selected service points are displayed
-
-7. Place the order.
+7. Go to the address page and make sure the following applies:
+   - The cart items display the selected service points
+   - Items are grouped by shipment type
+   - Selected service points are displayed
+8. Place the order.
    Make sure the order is places successfully and the order summary includes service-specific details.
 
-8. Go to **Customer Account** > **Services**. Make sure the following applies:
+9. Go to **Customer Account** > **Services**. Make sure the following applies:
 
    - The service associated with the order you've placed is displayed in the list with all the relevant service details
    - You can change service date and time
 
-9. Next to the service, click **View**. Make sure the following applies on the service details page:
+10. Next to the service, click **View**. Make sure the following applies on the service details page:
 
    - Service point and shipment type are displayed
    - Buttons to reschedule and cancel the service are displayed
@@ -1549,7 +1665,7 @@ console frontend:zed:build
    Make sure that this product is displayed on the Storefront.
 5. On the Storefront, go to the catalog page.
    Make sure you can filter products by product class: scheduled or service.
-   {% endinfo_block %}
+{% endinfo_block %}
 
 
 

@@ -375,48 +375,54 @@ Make sure the following changes have been applied in the database:
 
 Make sure the following changes have been triggered in transfer objects:
 
-| TRANSFER                                                      | TYPE   | EVENT   | PATH                                                                                       |
-|---------------------------------------------------------------|--------|---------|--------------------------------------------------------------------------------------------|
-| QuicksightUser                                                | class  | created | src/Generated/Shared/Transfer/QuicksightUserTransfer                                       |
-| QuicksightUserCriteria                                        | class  | created | src/Generated/Shared/Transfer/QuicksightUserCriteriaTransfer                               |
-| QuicksightUserConditions                                      | class  | created | src/Generated/Shared/Transfer/QuicksightUserConditionsTransfer                             |
-| QuicksightUserCollection                                      | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionTransfer                             |
-| QuicksightUserCollectionResponse                              | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionResponseTransfer                     |
-| QuicksightDeleteUserResponse                                  | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserResponseTransfer                         |
-| QuicksightDeleteUserRequest                                   | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserRequestTransfer                          |
-| QuicksightListUsersRequest                                    | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersRequestTransfer                           |
-| QuicksightListUsersResponse                                   | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersResponseTransfer                          |
-| QuicksightGenerateEmbedUrlRequest                             | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlRequestTransfer                    |
-| QuicksightExperienceConfiguration                             | class  | created | src/Generated/Shared/Transfer/QuicksightExperienceConfigurationTransfer                    |
-| QuicksightConsole                                             | class  | created | src/Generated/Shared/Transfer/QuicksightConsoleTransfer                                    |
-| QuicksightGenerateEmbedUrlResponse                            | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlResponseTransfer                   |
-| QuicksightEmbedUrl                                            | class  | created | src/Generated/Shared/Transfer/QuicksightEmbedUrlTransfer                                   |
-| QuicksightAssetBundleImportJob                                | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobTransfer                       |
-| QuicksightAssetBundleImportJobCollection                      | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCollectionTransfer             |
-| QuicksightAssetBundleImportJobCriteria                        | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCriteriaTransfer               |
-| QuicksightAssetBundleImportJobConditions                      | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobConditionsTransfer             |
-| QuicksightStartAssetBundleImportJobRequest                    | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobRequestTransfer           |
-| QuicksightAssetBundleImportSource                             | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportSourceTransfer                    |
-| QuicksightOverrideParameters                                  | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersTransfer                         |
-| QuicksightOverrideParametersDataSource                        | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceTransfer               |
-| QuicksightOverrideParametersDataSourceCredentials             | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialsTransfer    |
-| QuicksightOverrideParametersDataSourceCredentialPair          | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
-| QuicksightOverrideParametersDataSourceParameters              | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
-| QuicksightOverrideParametersDataSourceMariaDbParameters       | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
-| QuicksightOverrideParametersDataSourceVpcConnectionProperties | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
-| QuicksightOverridePermissions                                 | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsTransfer                        |
-| QuicksightOverridePermissionsAnalysis                         | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsAnalysisTransfer                |
-| QuicksightOverridePermissionsDashboard                        | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDashboardTransfer               |
-| QuicksightOverridePermissionsDataSet                          | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSetTransfer                 |
-| QuicksightOverridePermissionsDataSource                       | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSourceTransfer              |
-| QuicksightPermissions                                         | class  | created | src/Generated/Shared/Transfer/QuicksightPermissionsTransfer                                |
-| QuicksightStartAssetBundleImportJobResponse                   | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobResponseTransfer          |
-| QuicksightDescribeAssetBundleImportJobRequest                 | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobRequestTransfer        |
-| QuicksightDescribeAssetBundleImportJobResponse                | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobResponseTransfer       |
-| EnableQuicksightAnalyticsRequest                              | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsRequestTransfer                     |
-| EnableQuicksightAnalyticsResponse                             | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsResponseTransfer                    |
-| ResetQuicksightAnalyticsRequest                               | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsRequestTransfer                      |
-| ResetQuicksightAnalyticsResponse                              | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsResponseTransfer                     |
+| TRANSFER                                                      | TYPE  | EVENT   | PATH                                                                                       |
+|---------------------------------------------------------------|-------|---------|--------------------------------------------------------------------------------------------|
+| QuicksightUser                                                | class | created | src/Generated/Shared/Transfer/QuicksightUserTransfer                                       |
+| QuicksightUserCriteria                                        | class | created | src/Generated/Shared/Transfer/QuicksightUserCriteriaTransfer                               |
+| QuicksightUserConditions                                      | class | created | src/Generated/Shared/Transfer/QuicksightUserConditionsTransfer                             |
+| QuicksightUserCollection                                      | class | created | src/Generated/Shared/Transfer/QuicksightUserCollectionTransfer                             |
+| QuicksightUserCollectionResponse                              | class | created | src/Generated/Shared/Transfer/QuicksightUserCollectionResponseTransfer                     |
+| QuicksightDeleteUserResponse                                  | class | created | src/Generated/Shared/Transfer/QuicksightDeleteUserResponseTransfer                         |
+| QuicksightDeleteUserRequest                                   | class | created | src/Generated/Shared/Transfer/QuicksightDeleteUserRequestTransfer                          |
+| QuicksightListUsersRequest                                    | class | created | src/Generated/Shared/Transfer/QuicksightListUsersRequestTransfer                           |
+| QuicksightListUsersResponse                                   | class | created | src/Generated/Shared/Transfer/QuicksightListUsersResponseTransfer                          |
+| QuicksightGenerateEmbedUrlRequest                             | class | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlRequestTransfer                    |
+| QuicksightExperienceConfiguration                             | class | created | src/Generated/Shared/Transfer/QuicksightExperienceConfigurationTransfer                    |
+| QuicksightConsole                                             | class | created | src/Generated/Shared/Transfer/QuicksightConsoleTransfer                                    |
+| FeatureConfigurations                                         | class | created | src/Generated/Shared/Transfer/FeatureConfigurationsTransfer                                |
+| AmazonQInQuickSight                                           | class | created | src/Generated/Shared/Transfer/AmazonQInQuickSightTransfer                                  |
+| DataQnA                                                       | class | created | src/Generated/Shared/Transfer/DataQnATransfer                                              |
+| DataStories                                                   | class | created | src/Generated/Shared/Transfer/DataStoriesTransfer                                          |
+| ExecutiveSummary                                              | class | created | src/Generated/Shared/Transfer/ExecutiveSummaryTransfer                                     |
+| GenerativeAuthoring                                           | class | created | src/Generated/Shared/Transfer/GenerativeAuthoringTransfer                                  |
+| QuicksightGenerateEmbedUrlResponse                            | class | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlResponseTransfer                   |
+| QuicksightEmbedUrl                                            | class | created | src/Generated/Shared/Transfer/QuicksightEmbedUrlTransfer                                   |
+| QuicksightAssetBundleImportJob                                | class | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobTransfer                       |
+| QuicksightAssetBundleImportJobCollection                      | class | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCollectionTransfer             |
+| QuicksightAssetBundleImportJobCriteria                        | class | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCriteriaTransfer               |
+| QuicksightAssetBundleImportJobConditions                      | class | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobConditionsTransfer             |
+| QuicksightStartAssetBundleImportJobRequest                    | class | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobRequestTransfer           |
+| QuicksightAssetBundleImportSource                             | class | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportSourceTransfer                    |
+| QuicksightOverrideParameters                                  | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersTransfer                         |
+| QuicksightOverrideParametersDataSource                        | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceTransfer               |
+| QuicksightOverrideParametersDataSourceCredentials             | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialsTransfer    |
+| QuicksightOverrideParametersDataSourceCredentialPair          | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceParameters              | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceMariaDbParameters       | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceVpcConnectionProperties | class | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverridePermissions                                 | class | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsTransfer                        |
+| QuicksightOverridePermissionsAnalysis                         | class | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsAnalysisTransfer                |
+| QuicksightOverridePermissionsDashboard                        | class | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDashboardTransfer               |
+| QuicksightOverridePermissionsDataSet                          | class | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSetTransfer                 |
+| QuicksightOverridePermissionsDataSource                       | class | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSourceTransfer              |
+| QuicksightPermissions                                         | class | created | src/Generated/Shared/Transfer/QuicksightPermissionsTransfer                                |
+| QuicksightStartAssetBundleImportJobResponse                   | class | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobResponseTransfer          |
+| QuicksightDescribeAssetBundleImportJobRequest                 | class | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobRequestTransfer        |
+| QuicksightDescribeAssetBundleImportJobResponse                | class | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobResponseTransfer       |
+| EnableQuicksightAnalyticsRequest                              | class | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsRequestTransfer                     |
+| EnableQuicksightAnalyticsResponse                             | class | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsResponseTransfer                    |
+| ResetQuicksightAnalyticsRequest                               | class | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsRequestTransfer                      |
+| ResetQuicksightAnalyticsResponse                              | class | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsResponseTransfer                     |
 
 {% endinfo_block %}
 
@@ -509,9 +515,9 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 2. Enable behaviors by registering the console commands:
 
-| PLUGIN                          | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                             |
-|---------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| QuicksightUserSyncCreateConsole | In the `spy_quicksight_user` DB table, persists the users registered in QuickSight by persisted user emails.      |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
+| PLUGIN                        | SPECIFICATION                                                                                                                                                    | PREREQUISITES | NAMESPACE                                             |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
+| QuicksightUserSyncSaveConsole | Creates new and updates existing Quicksight users in persistence for users registered on the Quicksight side that can be matched with existing Backoffice users. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -522,7 +528,7 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
-use SprykerEco\Zed\AmazonQuicksight\Communication\Console\QuicksightUserSyncCreateConsole;
+use SprykerEco\Zed\AmazonQuicksight\Communication\Console\QuicksightUserSyncSaveConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
@@ -534,7 +540,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         return [
-            new QuicksightUserSyncCreateConsole(),
+            new QuicksightUserSyncSaveConsole(),
         ];
     }
 }
@@ -610,3 +616,9 @@ Install the required features:
 npm install
 console frontend:zed:build
 ```
+q
+{% info_block warningBox "AWS SDK version" %}
+
+In order to use AI features the minimum required version of the `aws/aws-sdk-php` is `3.342.0`.
+
+{% endinfo_block %}

@@ -221,12 +221,12 @@ Unrestricted keys can be stolen and abused, leading to **unauthorized usage and 
 
    * **Set Application Restrictions**:
 
-      * For web: choose **HTTP referrers** (e.g., `https://yourdomain.com/*`)
+      * For web: choose **HTTP referrers** (for example, `https://yourdomain.com/*`)
       * For server: choose **IP addresses**
       * For mobile apps: use **Android/iOS** options
    * **Set API Restrictions**:
 
-      * Enable only required APIs (e.g., Maps JavaScript API, Places API)
+      * Enable only required APIs (for example, Maps JavaScript API, Places API)
 4. **Click Save**
 
 ---

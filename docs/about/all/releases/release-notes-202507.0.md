@@ -18,21 +18,21 @@ Self-Service Portal is a comprehensive digital solution that empowers customers 
 ![Self-Service Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/SSP.png)
 
 
-### Key features
+### Key capabilities
 
-- Self-service dashboard: A centralized hub for managing all asset-related data and interactions, offering permission-based access, enhanced visibility, and great operational efficiency.
-- Asset management: Enables customers to organize, track, and access assets, such as physical or digital products.
-- Services: Consolidates offline and online services into a unified ordering and management process.
-- General inquiries: Streamlines how customers submit general questions or requests related to products and services.
-- Claims: Simplifies the submission and resolution of warranty claims, refund requests, and order-related issues, improving service quality and reducing operational costs.
-- Asset inquiries: Supports detailed inquiries about specific assets, such as technical specs or irregular behavior.
-- File management: Offers secure, centralized file storage and sharing to enhance collaboration and ensure vital documents for the assets are always accessible.
+- Self-service dashboard: A centralized hub for managing all asset-related data and interactions, offering permission-based access, enhanced visibility, and great operational efficiency
+- Asset management: Enables customers to organize, track, and access assets, such as physical or digital products
+- Services: Consolidates offline and online services into a unified ordering and management process
+- General inquiries: Streamlines how customers submit general questions or requests related to products and services
+- Claims: Simplifies the submission and resolution of warranty claims, refund requests, and order-related issues, improving service quality and reducing operational costs
+- Asset inquiries: Supports detailed inquiries about specific assets, such as technical specs or irregular behavior
+- File management: Offers secure, centralized file storage and sharing to enhance collaboration and ensure vital documents for the assets are always accessible
 
 ### Business benefits
 
-- Customer empowerment and convenience: Reduce support overhead by enabling customers to independently manage inquiries, assets, and services through an intuitive self-service interface.
-- Operational efficiency: Centralize permission-based access to assets and files to streamline data management, improve accuracy, and reduce manual processes.
-- Enhance customer satisfaction and loyalty: Increase satisfaction and retention by delivering faster resolutions and full transparency across all after-sales and service interactions.
+- Customer empowerment and convenience: Reduce support overhead by enabling customers to independently manage inquiries, assets, and services through an intuitive self-service interface
+- Operational efficiency: Centralize permission-based access to assets and files to streamline data management, improve accuracy, and reduce manual processes
+- Enhance customer satisfaction and loyalty: Increase satisfaction and retention by delivering faster resolutions and full transparency across all after-sales and service interactions
 
 
 
@@ -48,7 +48,7 @@ Self-Service Portal is a comprehensive digital solution that empowers customers 
 The Order Amendment feature enhances the shopping experience by enabling customers to add, update, and remove items from existing orders after placement. This brings flexibility and control to the post-purchase process:
 - Flexible price recalculation: Choose between retaining original prices, applying current catalog prices, or defining a custom strategy to suit your business logic.
 - Flexible stock recalculation: Allow order edits even if items are deactivated or out of stock by preserving original order stock. Quantity can be adjusted down or increased, up to the combined amount of reserved order stock and current catalog availability.
-- Seamless multi-cart experience: Customers can switch between editing an order and shopping in their active cart without losing progress. (Requires [multi-cart](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/multiple-carts-feature-overview)
+- Seamless multi-cart experience: Customers can switch between editing an order and shopping in their active cart without losing progress. This functionality requires [multi-cart](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/multiple-carts-feature-overview).
 - Preserve original order reference: Maintain consistent tracking and reporting by keeping the original order reference.
 
 
@@ -148,9 +148,9 @@ The latest discount condition enhancements introduce more precise control over c
 
 These updates make it easier to work with large data sets in the Back Office, especially across key areas like orders, products, and marketplace operations:
 
-- Advanced Table Filters with Multi-Select: Quickly narrow down results in views like Orders, Products, Product Offers, Merchants, and Discounts using flexible, multi-select filters.
-- Search by Product Variant SKU: Find specific products faster by searching for Concrete Product SKUs directly in the Abstract Products list.
-- Measurement Unit Management: Backoffice users can now manage measurement units directly, including the ability to add and maintain translations for each unit.
+- Advanced table filters with multi-select: Quickly narrow down results in views, such as Orders, Products, Product Offers, Merchants, and Discounts, using flexible, multi-select filters.
+- Search by product variant SKU: Find specific products faster by searching for concrete product SKUs in the Abstract Products list.
+- Measurement unit management: Back Office users can now manage measurement units, including the ability to add and maintain translations for each unit.
 
 
 ![BO-filter-orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/BO-filter-orders.png)
@@ -158,8 +158,8 @@ These updates make it easier to work with large data sets in the Back Office, es
 
 ### Business benefits
 
-- Operational Speed and Efficiency: Save time on routine tasks with faster filtering and improved search capabilities—allowing teams to process orders, manage catalogs and discounts, and support merchants more effectively.
-- Scalability in Daily Workflows: Handle high volumes of data with ease. The improved navigation and filtering ensure the Backoffice stays responsive and usable as your orders, product, and merchant base grows.
+- Operational speed and efficiency: Save time on routine tasks with faster filtering and improved search capabilities—allowing teams to process orders, manage catalogs and discounts, and support merchants more effectively.
+- Scalability in daily workflows: Handle high volumes of data with ease. The improved navigation and filtering ensure the Backoffice stays responsive and usable as your orders, product, and merchant base grows.
 
 
 
@@ -202,7 +202,7 @@ Configurable Data Exporter provides structured access to your operational data, 
 [Set up data export to S3](/docs/ca/dev/set-up-data-export-to-s3.html)
 
 
-## Algolia as a global search<span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Algolia as a global search <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 The Algolia ACP app is expanded to support search through content within CMS pages and PDF documents, on top of existing product catalog search. This upgrade significantly enriches the search experience, delivering more relevant and complete results.
 
@@ -251,7 +251,7 @@ Multi-Factor Authentication (MFA) adds an additional layer of protection by requ
 
 ![MFA-email-code](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/MFA-email-code.png)
 
-Key functionality:
+### Key capabilities
 
 - An additional authentication layer for Storefront, Back Office, Merchant Portal, and API endpoints
 - Supports for custom authenticity validators, such as TOTP or Short Message
@@ -352,7 +352,8 @@ B2B Strorefront has a 100% Lighthouse score in Google Chrome:
 
 This release delivers major performance improvements to checkout, order placement, and large cart processing—ensuring a smooth and responsive experience during peak traffic and high order volumes:
 
-Key functionality:
+### Key capabilities
+
 - Smarter order reference generation: Introduces a new random string algorithm for Sales Order References, enabling high-speed, database lock-free order placement. This approach supports faster checkouts and seamless scaling during peak demand.
 - Optimized support for large orders (50–100 items): key features, such as Cart, Checkout, Inventory, OMS, Discounts, Shipments, Product, and Merchant, have been fine-tuned to efficiently handle large orders. Internal benchmarks show up to 40% faster performance across Storefront, Glue API, and background OMS operations.
 - Improved cart page performance: The dynamic cart page now renders up to twice as fast, delivering a more responsive and seamless customer experience.
@@ -414,7 +415,7 @@ Spryker is introducing seamless and efficient data compression in Valkey key-val
 
 ## Cloud self-service: Storage and access management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Cloud Self Service is a new automated system for handling common customer support requests. This feature leverages internal tooling to process requests for IAM user creation, VPN/SSH access, and S3 bucket creation automatically, streamlining the support process and empowering customers with faster resolutions.
+Cloud Self Service is a new automated system for handling common customer support requests. This feature leverages internal tooling to process requests for IAM user creation, VPN and SSH access, and S3 bucket creation automatically, streamlining the support process and empowering customers with faster resolutions.
 
 ### Business benefits 
 

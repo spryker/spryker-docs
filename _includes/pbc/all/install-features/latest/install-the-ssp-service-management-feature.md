@@ -1,10 +1,5 @@
 {% info_block warningBox %}
 
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific
-legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a
-General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory
-features.
-
 Currently, the order amendment feature does not support service products.
 
 {% endinfo_block %}
@@ -39,14 +34,15 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                                   |
-|--------------------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | SprykerShop\Yves\ClickAndCollectPageExample |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                | SprykerShop\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office. | SprykerFeature\Zed\SelfServicePortal        |
-| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                          |
-| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ServicePointWidget         |
-| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ShipmentTypeWidget         |
+| CONFIGURATION                                                      | SPECIFICATION                                                                  | NAMESPACE                                                                               |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                         | SprykerShop\Yves\ClickAndCollectPageExample                                             |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                | SprykerShop\Yves\ClickAndCollectPageExample                                             |
+| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office. | SprykerFeature\Zed\SelfServicePortal                                                    |
+| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.              | Pyz\Zed\DataImport                                                                      |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ServicePointWidget                                                     |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.    | SprykerShop\Yves\ShipmentTypeWidget                                                     |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key.                                               | SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants::GOOGLE_MAPS_API_KEY |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 
@@ -200,6 +196,40 @@ class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
     }
 }
 ```
+
+{% info_block warningBox %}
+### ⚠️ **WARNING: Your Google Maps API production key must be protected!**
+
+Unrestricted keys can be stolen and abused, leading to **unauthorized usage and unexpected charges**.
+
+---
+
+### ✅ **How to Protect Your API Key (Google Maps)**
+
+1. **Go to** [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
+2. **Select your project** and open **APIs & Services → Credentials**
+3. **Click your API key**, then:
+
+   * **Set Application Restrictions**:
+
+      * For web: choose **HTTP referrers** (e.g., `https://yourdomain.com/*`)
+      * For server: choose **IP addresses**
+      * For mobile apps: use **Android/iOS** options
+   * **Set API Restrictions**:
+
+      * Enable only required APIs (e.g., Maps JavaScript API, Places API)
+4. **Click Save**
+
+---
+
+🔒 **Never leave your API key unrestricted in production!**
+
+**config/Shared/config_default.php**
+
+```php
+$config[SelfServicePortalConstants::GOOGLE_MAPS_API_KEY] = getenv('SPRYKER_GOOGLE_MAPS_API_KEY') ?: '';
+```
+
 
 ## Set up database schema
 
@@ -406,7 +436,6 @@ self_service_portal.service.validation.no_order_items_provided,No order items pr
 self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen vorhanden.,de_DE
 self_service_portal.service.validation.status_change_failed,The status change failed.,en_US
 self_service_portal.service.validation.status_change_failed,Die Statusänderung ist fehlgeschlagen.,de_DE
-
 self_service_portal.service.validation.no_order_items_provided,No order items provided.,en_US
 self_service_portal.service.validation.no_order_items_provided,Keine Auftragspositionen angegeben.,de_DE
 self_service_portal.service.validation.order_not_found,Order with ID %id% not found.,en_US
@@ -1359,11 +1388,11 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Catalog** > **Products**.
-2. Create an abstract product with a **service** product class.
+2. Create an abstract product with a **service** and **scheduled** product class.
 3. For the abstract product you've created, create a concrete product with the following settings:
 
-- Enable **Service Date and Time**
-- Add **Delivery** and **On-Site Service** shipment types
+- Add **Delivery** and **In-Center Service** shipment types
+- Add **Service** and **Scheduled** product classes
 
 4. Go to **Merchandising** > **Offers**.
 5. Generate one or more product offers for the service product you've created. Make sure the following applies on the
@@ -1476,7 +1505,7 @@ console frontend:zed:build
 
    - A service point selector is displayed
    - A date and time selector is displayed
-   - Delivery and service-on-site shipment types are available
+   - Delivery and In-Center-Service shipment types are available
 
 3. Select a service point.
 4. Select a service date and time.
@@ -1519,7 +1548,7 @@ console frontend:zed:build
 4. In the Back Office, add a new service product.
    Make sure that this product is displayed on the Storefront.
 5. On the Storefront, go to the catalog page.
-   Make sure you can filter products by product type: physical product or service.
+   Make sure you can filter products by product class: scheduled or service.
    {% endinfo_block %}
 
 

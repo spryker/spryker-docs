@@ -1653,6 +1653,7 @@ console frontend:zed:build
    - You can change service date and time
 
 10. Next to the service, click **View**. Make sure the following applies on the service details page:
+
    - Service point and shipment type are displayed
    - Buttons to reschedule and cancel the service are displayed
    - When changing the scheduled time, the updated information is saved and immediately reflected in the order view page.

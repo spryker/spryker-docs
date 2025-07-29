@@ -127,46 +127,39 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                        | SPECIFICATION                                                                                      | PREREQUISITES | NAMESPACE                                                               |
-|---------------------------------------------------------------|----------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
-| ResetItemsSessionCartReorderQuoteProviderStrategyPlugin       | Gets the quote from the session and sets the quote items to an empty array.                        |               | Spryker\Client\Quote\Plugin\CartReorder                                 |
-| RemoveUnavailableItemsCartReorderPreAddToCartPlugin           | Removes unavailable items from a cart change request before adding to cart.                        |               | Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CartReorder  |
-| CartNoteCartPreReorderPlugin                                  | Maps an order note from an original order to a reorder quote.                                      |               | Spryker\Zed\CartNote\Communication\Plugin\CartReorder                   |
-| CartNoteCartReorderItemHydratorPlugin                         | Maps items order notes from order items to reorder items.                                          |               | Spryker\Zed\CartNote\Communication\Plugin\CartReorder                   |
-| CopyOrderCurrencyCartPreReorderPlugin                         | Copies currency from an original order to a quote.                                                 |               | Spryker\Zed\Currency\Communication\Plugin\CartReorder                   |
-| MerchantProductCartReorderItemHydratorPlugin                  | Maps merchant references from order items to reorder items.                                        |               | Spryker\Zed\MerchantProduct\Communication\Plugin\CartReorder            |
-| MerchantProductOfferCartReorderItemHydratorPlugin             | Maps merchant and product offer references from order items to reorder items.                      |               | Spryker\Zed\MerchantProductOffer\Communication\Plugin\CartReorder       |
-| OrderCustomReferenceCartPreReorderPlugin                      | Maps order an custom reference from an original order to a reorder quote.                          |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\CartReorder       |
-| ReplacePersistentCartReorderQuoteProviderStrategyPlugin       | Provides a quote for `CartReorderRequest` for the `replace` reorder strategy.                      |               | Spryker\Zed\PersistentCart\Communication\Plugin\CartReorder             |
-| NewPersistentCartReorderQuoteProviderStrategyPlugin           | Provides a quote for `CartReorderRequest` for the `new` reorder strategy.                          |               | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder.                 |
-| UpdateQuoteCartPostReorderPlugin                              | Updates a quote in persistence.                                                                    |               | Spryker\Zed\PersistentCart\Communication\Plugin\CartReorder             |
-| CopyOrderPriceModeCartPreReorderPlugin                        | Copies a price mode from an original order to a  quote.                                            |               | Spryker\Zed\Price\Communication\Plugin\CartReorder                      |
-| ReplaceBundledItemsCartPreReorderPlugin                       | Replaces bundled product items with bundle product items.                                          |               | Spryker\Zed\ProductBundle\Communication\Plugin\CartReorder              |
-| RemoveInactiveItemsCartReorderPreAddToCartPlugin              | Removes deactivated items before adding reorder items to cart.                                     |               | Spryker\Zed\ProductCartConnector\Communication\Plugin\CartReorder       |
-| ProductListRestrictedItemsCartPreReorderPlugin                | Filters out restricted items from cart reorder request.                                            |               | Spryker\Zed\ProductList\Communication\Plugin\CartReorder                |
-| MergeProductMeasurementUnitItemsCartPreReorderPlugin          | Merges quantity of reorder items with `quantitySalesUnit` defined.                                 |               | Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\CartReorder     |
-| ProductMeasurementUnitCartReorderItemHydratorPlugin           | Maps quantity sales unit data from order items to reorder items.                                   |               | Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\CartReorder     |
-| ProductOfferCartReorderItemHydratorPlugin                     | Maps product offer reference from order items to reorder items.                                    |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
-| ProductOptionCartReorderItemHydratorPlugin                    | Maps product options from order items to reorder items.                                            |               | Spryker\Zed\ProductOption\Communication\Plugin\CartReorder              |
-| MergeProductPackagingUnitItemsCartPreReorderPlugin            | Merges quantity and amount of reorder items with `amountSalesUnit` defined.                        |               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\CartReorder       |
-| ProductPackagingUnitCartReorderItemHydratorPlugin             | Maps amount and sales unit data from order items to reorder items.                                 |               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\CartReorder       |
-| MergeProductQuantityRestrictionItemsCartPreReorderPlugin      | Merges quantity of reorder items with product quantity restrictions.                               |               | Spryker\Zed\ProductQuantity\Communication\Plugin\CartReorder            |
-| MergeConfigurableBundleItemsCartPreReorderPlugin              | Merges quantity of reorder items with `salesOrderConfiguredBundle` defined.                        |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
-| ConfigurableBundleCartReorderItemHydratorPlugin               | Maps configured bundle data from order items to reorder items.                                     |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
-| ConfiguredBundleCartPostReorderPlugin                         | Displays a message if order items have a configured bundle property.                               |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
-| ConfigurableBundleNoteCartReorderItemHydratorPlugin           | Maps configurable bundle notes from order items to reorder items.                                  |               | Spryker\Zed\ConfigurableBundleNote\Communication\Plugin\CartReorder     |
-| ProductConfigurationCartReorderItemHydratorPlugin             | Maps product configuration from order items to reorder items.                                      |               | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\CartReorder  |
-| CopyOrderCommentThreadCartPreReorderPlugin                    | Copies comment thread from an order to a quote if it's provided.                                   |               | Spryker\Zed\Comment\Communication\Plugin\CartReorder                    |
-| AmendmentOrderReferenceCartPreReorderPlugin                   | Sets a quote amendment order reference taken from `CartReorderRequestTransfer`.                    |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder        |
-| AmendmentQuoteNameCartPreReorderPlugin                        | Updates a quote name with a custom amendment quote name.                                           |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder        |
-| OrderAmendmentCartReorderValidatorPlugin                      | Validates if a quote amendment order reference matches `CartReorderTransfer.order.orderReference`. |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder        |
-| OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin    | Expands a quote process flow with the quote process flow name.                                     |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder        |
-| OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin   | Hydrates `items.originalSalesOrderItemGroupKey` with the original sales order item group key.      |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder        |
-| IsAmendableOrderCartReorderValidatorRulePlugin                | Validates if all order items are in order item state that has the `amendable` flag.                |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder     |
-| StartOrderAmendmentCartReorderPostCreatePlugin                | Triggers the OMS event to start the order amendment process.                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder     |
-| RemoveInactiveProductOffersCartReorderPreAddToCartPlugin      | Filters out inactive and non-approved product offer items from `CartChangeTransfer`.               |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
-| RemoveInactiveProductOptionItemsCartReorderPreAddToCartPlugin | Filters out items with inactive product options from `CartChangeTransfer`.                         |               | Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartReorder |
-| CartReorderResourceRoutePlugin                                | Configures available actions for the `cart-reorder` resource.                                      |               | Spryker\Glue\CartReorderRestApi\Plugin\GlueApplication                  |
+| PLUGIN                                                        | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                               |
+|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
+| ResetItemsSessionCartReorderQuoteProviderStrategyPlugin       | Gets the quote from the session and sets the quote items to an empty array.                   |               | Spryker\Client\Quote\Plugin\CartReorder                                 |
+| RemoveUnavailableItemsCartReorderPreAddToCartPlugin           | Removes unavailable items from a cart change request before adding to cart.                   |               | Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CartReorder  |
+| CartNoteCartPreReorderPlugin                                  | Maps an order note from an original order to a reorder quote.                                 |               | Spryker\Zed\CartNote\Communication\Plugin\CartReorder                   |
+| CartNoteCartReorderItemHydratorPlugin                         | Maps items order notes from order items to reorder items.                                     |               | Spryker\Zed\CartNote\Communication\Plugin\CartReorder                   |
+| CopyOrderCurrencyCartPreReorderPlugin                         | Copies currency from an original order to a quote.                                            |               | Spryker\Zed\Currency\Communication\Plugin\CartReorder                   |
+| MerchantProductCartReorderItemHydratorPlugin                  | Maps merchant references from order items to reorder items.                                   |               | Spryker\Zed\MerchantProduct\Communication\Plugin\CartReorder            |
+| MerchantProductOfferCartReorderItemHydratorPlugin             | Maps merchant and product offer references from order items to reorder items.                 |               | Spryker\Zed\MerchantProductOffer\Communication\Plugin\CartReorder       |
+| OrderCustomReferenceCartPreReorderPlugin                      | Maps order an custom reference from an original order to a reorder quote.                     |               | Spryker\Zed\OrderCustomReference\Communication\Plugin\CartReorder       |
+| ReplacePersistentCartReorderQuoteProviderStrategyPlugin       | Provides a quote for `CartReorderRequest` for the `replace` reorder strategy.                 |               | Spryker\Zed\PersistentCart\Communication\Plugin\CartReorder             |
+| NewPersistentCartReorderQuoteProviderStrategyPlugin           | Provides a quote for `CartReorderRequest` for the `new` reorder strategy.                     |               | Spryker\Zed\MultiCart\Communication\Plugin\CartReorder.                 |
+| UpdateQuoteCartPostReorderPlugin                              | Updates a quote in persistence.                                                               |               | Spryker\Zed\PersistentCart\Communication\Plugin\CartReorder             |
+| CopyOrderPriceModeCartPreReorderPlugin                        | Copies a price mode from an original order to a  quote.                                       |               | Spryker\Zed\Price\Communication\Plugin\CartReorder                      |
+| ReplaceBundledItemsCartPreReorderPlugin                       | Replaces bundled product items with bundle product items.                                     |               | Spryker\Zed\ProductBundle\Communication\Plugin\CartReorder              |
+| RemoveInactiveItemsCartReorderPreAddToCartPlugin              | Removes deactivated items before adding reorder items to cart.                                |               | Spryker\Zed\ProductCartConnector\Communication\Plugin\CartReorder       |
+| ProductListRestrictedItemsCartPreReorderPlugin                | Filters out restricted items from cart reorder request.                                       |               | Spryker\Zed\ProductList\Communication\Plugin\CartReorder                |
+| MergeProductMeasurementUnitItemsCartPreReorderPlugin          | Merges quantity of reorder items with `quantitySalesUnit` defined.                            |               | Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\CartReorder     |
+| ProductMeasurementUnitCartReorderItemHydratorPlugin           | Maps quantity sales unit data from order items to reorder items.                              |               | Spryker\Zed\ProductMeasurementUnit\Communication\Plugin\CartReorder     |
+| ProductOfferCartReorderItemHydratorPlugin                     | Maps product offer reference from order items to reorder items.                               |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
+| ProductOptionCartReorderItemHydratorPlugin                    | Maps product options from order items to reorder items.                                       |               | Spryker\Zed\ProductOption\Communication\Plugin\CartReorder              |
+| MergeProductPackagingUnitItemsCartPreReorderPlugin            | Merges quantity and amount of reorder items with `amountSalesUnit` defined.                   |               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\CartReorder       |
+| ProductPackagingUnitCartReorderItemHydratorPlugin             | Maps amount and sales unit data from order items to reorder items.                            |               | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\CartReorder       |
+| MergeProductQuantityRestrictionItemsCartPreReorderPlugin      | Merges quantity of reorder items with product quantity restrictions.                          |               | Spryker\Zed\ProductQuantity\Communication\Plugin\CartReorder            |
+| MergeConfigurableBundleItemsCartPreReorderPlugin              | Merges quantity of reorder items with `salesOrderConfiguredBundle` defined.                   |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
+| ConfigurableBundleCartReorderItemHydratorPlugin               | Maps configured bundle data from order items to reorder items.                                |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
+| ConfiguredBundleCartPostReorderPlugin                         | Displays a message if order items have a configured bundle property.                          |               | Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder    |
+| ConfigurableBundleNoteCartReorderItemHydratorPlugin           | Maps configurable bundle notes from order items to reorder items.                             |               | Spryker\Zed\ConfigurableBundleNote\Communication\Plugin\CartReorder     |
+| ProductConfigurationCartReorderItemHydratorPlugin             | Maps product configuration from order items to reorder items.                                 |               | Spryker\Zed\SalesProductConfiguration\Communication\Plugin\CartReorder  |
+| CopyOrderCommentThreadCartPreReorderPlugin                    | Copies comment thread from an order to a quote if it's provided.                              |               | Spryker\Zed\Comment\Communication\Plugin\CartReorder                    |
+| RemoveInactiveProductOffersCartReorderPreAddToCartPlugin      | Filters out inactive and non-approved product offer items from `CartChangeTransfer`.          |               | Spryker\Zed\ProductOffer\Communication\Plugin\CartReorder               |
+| RemoveInactiveProductOptionItemsCartReorderPreAddToCartPlugin | Filters out items with inactive product options from `CartChangeTransfer`.                    |               | Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartReorder |
+| CartReorderResourceRoutePlugin                                | Configures available actions for the `cart-reorder` resource.                                 |               | Spryker\Glue\CartReorderRestApi\Plugin\GlueApplication                  |
 | CurrentStoreCartReorderValidatorPlugin                        | Validates that the current store matches the store of the order and quote.                    |               | Spryker\Zed\Store\Communication\Plugin\CartReorder                      |
 
 **src/Pyz/Client/CartReorder/CartReorderDependencyProvider.php**
@@ -231,13 +224,6 @@ use Spryker\Zed\ProductQuantity\Communication\Plugin\CartReorder\MergeProductQua
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\ConfigurableBundleCartReorderItemHydratorPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\ConfiguredBundleCartPostReorderPlugin;
 use Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\CartReorder\MergeConfigurableBundleItemsCartPreReorderPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentOrderReferenceCartPreReorderPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\AmendmentQuoteNameCartPreReorderPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentCartReorderValidatorPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin;
-use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin;
-use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\IsAmendableOrderCartReorderValidatorRulePlugin;
-use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\StartOrderAmendmentCartReorderPostCreatePlugin;
 use Spryker\Zed\SalesProductConfiguration\Communication\Plugin\CartReorder\ProductConfigurationCartReorderItemHydratorPlugin;
 use Spryker\Zed\Store\Communication\Plugin\CartReorder\CurrentStoreCartReorderValidatorPlugin;
 
@@ -265,18 +251,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
     }
 
     /**
-     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderValidatorPluginInterface>
-     */
-    protected function getCartReorderValidatorPluginsForOrderAmendment(): array
-    {
-        return [
-            new CurrentStoreCartReorderValidatorPlugin(),
-            new OrderAmendmentCartReorderValidatorPlugin(),
-            new IsAmendableOrderCartReorderValidatorRulePlugin(),
-        ];
-    }
-
-    /**
      * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartPreReorderPluginInterface>
      */
     protected function getCartPreReorderPlugins(): array
@@ -285,9 +259,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new CopyOrderCurrencyCartPreReorderPlugin(),
             new CopyOrderPriceModeCartPreReorderPlugin(),
             new ProductListRestrictedItemsCartPreReorderPlugin(),
-            new OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin(),
-            new AmendmentOrderReferenceCartPreReorderPlugin(),
-            new AmendmentQuoteNameCartPreReorderPlugin(),
             new ReplaceBundledItemsCartPreReorderPlugin(),
             new MergeProductMeasurementUnitItemsCartPreReorderPlugin(),
             new MergeProductPackagingUnitItemsCartPreReorderPlugin(),
@@ -315,7 +286,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new ProductOptionCartReorderItemHydratorPlugin(),
             new ConfigurableBundleCartReorderItemHydratorPlugin(),
             new ConfigurableBundleNoteCartReorderItemHydratorPlugin(),
-            new OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin(),
         ];
     }
 
@@ -327,7 +297,6 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
         return [
             new UpdateQuoteCartPostReorderPlugin(),
             new ConfiguredBundleCartPostReorderPlugin(),
-            new StartOrderAmendmentCartReorderPostCreatePlugin(),
         ];
     }
 

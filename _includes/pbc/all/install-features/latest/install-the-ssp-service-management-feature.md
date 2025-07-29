@@ -24,7 +24,7 @@ This document describes how to install the Self-Service Portal (SSP) SSP Inquiry
 Install the required packages using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

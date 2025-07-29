@@ -19,7 +19,7 @@ This document describes how to install the Self-Service Portal (SSP) Asset Manag
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

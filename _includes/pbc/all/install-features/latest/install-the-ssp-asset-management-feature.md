@@ -184,8 +184,8 @@ general.confirm.button,Confirm,en_US
 general.confirm.button,Bestätigen,de_DE
 permission.name.ViewCompanySspAssetPermissionPlugin,View company assets,en_US
 permission.name.ViewCompanySspAssetPermissionPlugin,Firmen-SSP-Assets anzeigen,de_DE
-permission.name.ViewBusinessUnitSspAssetPermissionPlugin,View business unit inquiries,en_US
-permission.name.ViewBusinessUnitSspAssetPermissionPlugin,Geschäftseinheit-SSP-Assets anzeigen,de_DE
+permission.name.ViewBusinessUnitSspAssetPermissionPlugin,View business unit assets,en_US
+permission.name.ViewBusinessUnitSspAssetPermissionPlugin,Geschäftseinheit-assets anzeigen,de_DE
 permission.name.CreateSspAssetPermissionPlugin,Create ssp assets,en_US
 permission.name.CreateSspAssetPermissionPlugin,SSP-Assets erstellen,de_DE
 permission.name.UpdateSspAssetPermissionPlugin,Update ssp assets,en_US

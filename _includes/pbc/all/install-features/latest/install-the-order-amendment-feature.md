@@ -1865,7 +1865,7 @@ Order amendment can be enabled in asynchronous mode to improve performance so th
 
 ### 1) Install the required modules
 
-Some of the Async Order Amendment functionality is provided by an Example module so you can install it to see how the asynchronous order amendment works in practice and replace it with your own implementation if needed.
+Some of the Async Order Amendment functionality is provided by an example module so you can install it to see how the asynchronous order amendment works in practice and replace it with your own implementation if needed.
 
 Install the OrderAmendmentExample module using Composer:
 
@@ -1884,6 +1884,8 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
+1. Add the following configuration:
 
 ```php
 <?php
@@ -1916,11 +1918,11 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 }
 ```
 
-Remove the quote fields that are not relevant for your project.
+2. Remove the quote fields that are not relevant for your project.
 
 {% info_block warningBox "Verification" %}
 
-Make sure the specified fields are saved to the `spy_sales_order_amendment_quote` DB table by the `SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin` plugin.
+Make sure `SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin` saves the specified fields to `spy_sales_order_amendment_quote`.
 
 {% endinfo_block %}
 
@@ -2048,9 +2050,7 @@ Make sure the specified fields are saved to the `spy_sales_order_amendment_quote
 
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
-2. Select **DummyPayment01 [preview-version]** and check the following:
-
-- The `order amendment draft pending` state exists.
+2. Select **DummyPayment01 [preview-version]** and make sure the `order amendment draft pending` state exists.
 
 {% endinfo_block %}
 

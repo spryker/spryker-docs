@@ -616,7 +616,7 @@ Install the required features:
 npm install
 console frontend:zed:build
 ```
-q
+
 {% info_block warningBox "AWS SDK version" %}
 
 In order to use AI features the minimum required version of the `aws/aws-sdk-php` is `3.342.0`.

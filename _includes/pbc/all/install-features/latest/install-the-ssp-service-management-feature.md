@@ -206,6 +206,7 @@ $config[SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = $conf
 
 
 {% info_block warningBox %}
+
 ### ⚠️ **WARNING: Your Google Maps API production key must be protected!**
 
 Unrestricted keys can be stolen and abused, leading to **unauthorized usage and unexpected charges**.
@@ -231,6 +232,8 @@ Unrestricted keys can be stolen and abused, leading to **unauthorized usage and 
 ---
 
 🔒 **Never leave your API key unrestricted in production!**
+
+{% endinfo_block %}
 
 **config/Shared/config_default.php**
 

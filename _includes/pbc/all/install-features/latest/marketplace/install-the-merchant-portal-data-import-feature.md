@@ -25,9 +25,10 @@ composer require spryker/file-import-merchant-portal-gui:"^0.1.0" --update-with-
 
 Make sure that the following modules have been installed:
 
-| MODULE                           | EXPECTED DIRECTORY                                  |
-|----------------------------------|-----------------------------------------------------|
-| MerchantFile                     | vendor/spryker/merchant-file                        |
+| MODULE                      | EXPECTED DIRECTORY                              |
+|-----------------------------|-------------------------------------------------|
+| MerchantFile                | vendor/spryker/merchant-file                    |
+| FileImportMerchantPortalGui | vendor/spryker/file-import-merchant-portal-gui  |
 
 
 {% endinfo_block %}

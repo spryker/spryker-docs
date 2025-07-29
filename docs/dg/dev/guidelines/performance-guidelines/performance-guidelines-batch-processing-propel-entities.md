@@ -1,7 +1,7 @@
 ---
 title: "Performance guidelines: Batch processing of Propel entities"
 description: Learn how to optimize Propel ORM performance using ActiveRecordBatchProcessorTrait and CascadeActiveRecordBatchProcessorTrait for efficient batch processing, reduced database load, and support for complex entity relationships. Includes usage examples and best practices.
-last_updated: Jun 20, 2025
+last_updated: Jul 29, 2025
 template: concept-topic-template
 related:
   - title: General performance guidelines

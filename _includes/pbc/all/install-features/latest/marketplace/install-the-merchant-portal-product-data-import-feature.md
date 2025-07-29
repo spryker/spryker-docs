@@ -33,10 +33,19 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### Generate required objects and DB changes
+### Generate required transfer objects and DB changes
 
 ```bash
 vendor/bin/console transfer:generate
+vendor/bin/console propel:install
+```
+
+### Add translations
+
+Generate a new translation cache:
+
+```bash
+vendor/bin/console translator:generate-cache
 ```
 
 ### Update project configuration

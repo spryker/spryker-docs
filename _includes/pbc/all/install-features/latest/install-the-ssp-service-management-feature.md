@@ -382,21 +382,21 @@ Add the `Services` and `Offers` sections to `navigation.xml`:
 ```xml
 <?xml version="1.0"?>
 <config>
-   <ssp>
-      <label>Customer Portal</label>
-      <title>Customer Portal</title>
-      <icon>fa-id-badge</icon>
-      <pages>
-         <self-service-portal-services>
-            <label>Booked Services</label>
-            <title>Booked Services</title>
-            <bundle>self-service-portal</bundle>
-            <controller>list-service</controller>
-            <action>index</action>
-            <icon>fa-paperclip</icon>
-         </self-service-portal-services>
-      </pages>
-   </ssp>
+    <ssp>
+        <label>Customer Portal</label>
+        <title>Customer Portal</title>
+        <icon>fa-id-badge</icon>
+        <pages>
+            <self-service-portal-services>
+                <label>Booked Services</label>
+                <title>Booked Services</title>
+                <bundle>self-service-portal</bundle>
+                <controller>list-service</controller>
+                <action>index</action>
+                <icon>fa-paperclip</icon>
+            </self-service-portal-services>
+        </pages>
+    </ssp>
 </config>
 ```
 
@@ -715,12 +715,14 @@ console data:import shipment
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php
+<?php
 
 declare(strict_types = 1);
 
 namespace Pyz\Client\Catalog;
 
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+use Spryker\Client\SearchHttp\Plugin\SearchHttp\SearchHttpConfig;
 use SprykerFeature\Client\SelfServicePortal\Plugin\Catalog\ProductClassFacetConfigTransferBuilderPlugin;
 
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
@@ -734,7 +736,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new ProductClassFacetConfigTransferBuilderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>>
      */
@@ -744,7 +746,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new ProductClassFacetConfigTransferBuilderPlugin(),
             ],
-      ];
+        ];
     }
 }
 ```
@@ -752,8 +754,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 **src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
-
-declare(strict_types = 1);
+<?php
 
 namespace Pyz\Client\ProductStorage;
 
@@ -780,6 +781,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```php
+<?php
 
 declare(strict_types = 1);
 
@@ -866,7 +868,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
      *
      * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
      */
-    protected function getPreReloadPlugins(Container $container): array 
+    protected function getPreReloadPlugins(Container $container): array
     {
         return [
             new SspServiceShipmentTypePreReloadItemsPlugin(),
@@ -913,6 +915,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
+use Spryker\Zed\Kernel\Container;
 
 /**
  * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
@@ -935,7 +938,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         return [
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_SHIPMENT_TYPE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_CLASS),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_TO_PRODUCT_CLASS),         
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_TO_PRODUCT_CLASS),
         ];
     }
 
@@ -953,6 +956,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 namespace Pyz\Zed\Product;
 
+use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Product\ProductDependencyProvider as SprykerProductDependencyProvider;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Product\ShipmentTypeProductConcreteExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Product\ShipmentTypeProductConcretePostCreatePlugin;
@@ -975,19 +979,20 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ProductClassProductConcretePostCreatePlugin(),
         ];
     }
-    
+
      /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\Product\Dependency\Plugin\ProductConcretePluginUpdateInterface>
-     */
+      * @param \Spryker\Zed\Kernel\Container $container
+      *
+      * @return array<\Spryker\Zed\Product\Dependency\Plugin\ProductConcretePluginUpdateInterface>
+      */
     protected function getProductConcreteAfterUpdatePlugins(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
     {
         return [
             new ShipmentTypeProductConcretePostUpdatePlugin(),
             new ProductClassProductConcreteAfterUpdatePlugin(),
+        ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
      */
@@ -1001,12 +1006,12 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-<details>
+</details>
 
 
 
 <details>
-  <summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>  
+  <summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1019,7 +1024,7 @@ use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassProductConcreteTransferMapperPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteFormExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductFormTransferMapperExpanderPlugin;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassItemExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassFormExpanderPlugin;
 
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
@@ -1062,7 +1067,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 
 <details>
-  <summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>  
+  <summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1087,20 +1092,20 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
         return $dataExpanderPlugins;
     }
-    
+
      /**
-     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
-     */
+      * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
+      */
     protected function getDataLoaderPlugins(): array
     {
         return [
             new ProductClassProductPageDataLoaderPlugin(),
         ];
     }
-    
+
      /**
-     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
-     */
+      * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
+      */
     protected function getProductAbstractMapExpanderPlugins(): array
     {
         return [
@@ -1145,6 +1150,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 namespace Pyz\Zed\Quote;
 
+use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Quote\ServicePointQuoteExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Quote\SspShipmentTypeQuoteExpanderPlugin;
 
@@ -1190,27 +1196,28 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ScheduleTimeOrderItemExpanderPreSavePlugin(),
         ];
     }
-    
+
      /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
-     */
+      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
+      */
     protected function getOrderItemExpanderPlugins(): array
     {
         return [
             new SspServiceCancellableOrderItemExpanderPlugin(),
+            new ProductClassOrderExpanderPlugin(),
         ];
     }
-    
+
      /**
-     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
-     */
+      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
+      */
     protected function getOrderItemsPostSavePlugins(): array
     {
         return [
-            new ProductClassOrderItemsPostSavePlugin()
+            new ProductClassOrderItemsPostSavePlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
      */
@@ -1220,10 +1227,10 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new ProductClassOrderExpanderPlugin(),
         ];
     }
-    
+
         /**
-     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\SalesOrderItemCollectionPreDeletePluginInterface>
-     */
+         * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\SalesOrderItemCollectionPreDeletePluginInterface>
+         */
     protected function getSalesOrderItemCollectionPreDeletePlugins(): array
     {
         return [
@@ -1333,7 +1340,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
     protected function getTwigPlugins(): array
     {
         return [
-            new FileSizeFormatterTwigPlugin()
+            new FileSizeFormatterTwigPlugin(),
             new ProductServiceClassNameTwigPlugin(),
         ];
     }
@@ -1580,20 +1587,20 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             ServicePointNameForItemWidget::class,
             ListCartItemsByShipmentTypeWidget::class,
             SspAddressFormItemsByShipmentTypeWidget::class,
-            SingleAddressPerShipmentTypeWidget::class
-            SspProductOfferPriceWidget::class
-            SspServiceCancelWidget::class
-            SspServiceDetectorWidget::class
-            SspServicePointGeoCodeWidget::class
-            SspServicePointNameForItemWidget::class
-            SspServicePointSearchWidget::class
-            SspShipmentTypeServicePointSelectorWidget::class
+            SingleAddressPerShipmentTypeWidget::class,
+            SspProductOfferPriceWidget::class,
+            SspServiceCancelWidget::class,
+            SspServiceDetectorWidget::class,
+            SspServicePointGeoCodeWidget::class,
+            SspServicePointNameForItemWidget::class,
+            SspServicePointSearchWidget::class,
+            SspShipmentTypeServicePointSelectorWidget::class,
         ];
     }
-    
+
         /**
-     * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
-     */
+         * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
+         */
     protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
     {
         return [

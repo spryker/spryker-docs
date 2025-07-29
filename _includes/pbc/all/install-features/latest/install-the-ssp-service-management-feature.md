@@ -219,14 +219,14 @@ Unrestricted keys can be stolen and abused, leading to **unauthorized usage and 
 2. **Select your project** and open **APIs & Services → Credentials**
 3. **Click your API key**, then:
 
-   * **Set Application Restrictions**:
+   - **Set Application Restrictions**:
 
-      * For web: choose **HTTP referrers** (for example, `https://yourdomain.com/*`)
-      * For server: choose **IP addresses**
-      * For mobile apps: use **Android/iOS** options
-   * **Set API Restrictions**:
+      - For web: choose **HTTP referrers** (for example, `https://yourdomain.com/*`)
+      - For server: choose **IP addresses**
+      - For mobile apps: use **Android/iOS** options
+   - **Set API Restrictions**:
 
-      * Enable only required APIs (for example, Maps JavaScript API, Places API)
+      - Enable only required APIs (for example, Maps JavaScript API, Places API)
 4. **Click Save**
 
 ---
@@ -1372,7 +1372,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
     }
 }
 ```
-Enable the project override to allow the checkout form to handle single addresses per shipment type: 
+Enable the project override to allow the checkout form to handle single addresses per shipment type:
 
 **src/Pyz/Yves/CustomerPage/Form/CheckoutAddressCollectionForm.php**
 

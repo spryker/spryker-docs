@@ -2058,7 +2058,8 @@ Make sure `SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin` saves the specifie
 
 1. Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+
+<details><summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 sales_order_amendment_oms.mail.order_amendment_applied.subject,Your order has been successfully updated,en_US
@@ -2097,6 +2098,9 @@ oms.state.order-amendment-draft-applied,Editing in Progress,en_US
 oms.state.order-amendment-draft-applied,Bestelländerung in Bearbeitung,de_DE
 ```
 
+</details>
+
+
 2. Import data:
 
 ```bash
@@ -2115,12 +2119,12 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                                                                        | PREREQUISITES | NAMESPACE                                                        |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin         | Maps the original order from `QuoteTransfer.originalOrder` to `SaveOrderTransfer`.                                                                   |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout    |
-| StartOrderAmendmentDraftCheckoutPostSavePlugin          | Triggers OMS event to start the order amendment draft.                                                                                               |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout |
-| NotifyOrderAmendmentAppliedMailTypeBuilderPlugin        | Builds the `MailTransfer` with data for `notify order amendment applied` mail.                                                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
-| NotifyOrderAmendmentFailedMailTypeBuilderPlugin         | Builds the `MailTransfer` with data for `notify order amendment failed` mail.                                                                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
-| ApplyOrderAmendmentDraftCommandByOrderPlugin            | Places an order with found sales order amendment quote with quote process flow set to `order-amendment`.                                             |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms       |
-| NotifyOrderAmendmentAppliedCommandPlugin                | Sends a mail notification that the order amendment has been applied successfully if the sales order amendment quote is found.                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin         | Maps an original order from `QuoteTransfer.originalOrder` to `SaveOrderTransfer`.                                                                   |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout    |
+| StartOrderAmendmentDraftCheckoutPostSavePlugin          | Triggers the OMS event to start the order amendment draft.                                                                                               |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout |
+| NotifyOrderAmendmentAppliedMailTypeBuilderPlugin        | Builds `MailTransfer` with data for `notify order amendment applied` email.                                                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| NotifyOrderAmendmentFailedMailTypeBuilderPlugin         | Builds `MailTransfer` with data for `notify order amendment failed` email.                                                                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| ApplyOrderAmendmentDraftCommandByOrderPlugin            | Places an order with found sales order amendment quote and quote process flow set to `order-amendment`.                                             |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms       |
+| NotifyOrderAmendmentAppliedCommandPlugin                | When an sales order amendment quote is found, sends an email notification about successfully applying order amendment.                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
 | NotifyOrderAmendmentFailedCommandPlugin                 | Sends a mail notification that the order amendment has failed if the sales order amendment quote is found.                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
 | IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin | Returns `true` if the sales order amendment quote is not found, otherwise returns `false`.                                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
 | ShipmentGroupsSalesOrderAmendmentQuoteExpanderPlugin    | Expands each `SalesOrderAmendmentQuoteTransfer` in `SalesOrderAmendmentQuoteCollectionTransfer.salesOrderAmendmentQuotes` with shipment groups data. |               | Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment    |

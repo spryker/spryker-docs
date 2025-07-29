@@ -27,7 +27,6 @@ Make sure that the following modules have been installed:
 
 | MODULE                           | EXPECTED DIRECTORY                                  |
 |----------------------------------|-----------------------------------------------------|
-| MerchantProfileMerchantPortalGui | vendor/spryker/merchant-profile-merchant-portal-gui |
 | MerchantFile                     | vendor/spryker/merchant-file                        |
 
 

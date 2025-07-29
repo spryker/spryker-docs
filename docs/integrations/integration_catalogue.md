@@ -175,7 +175,7 @@ layout: custom_new
                     </div>
                     <div class="ven-col data">
                         <h3>${partner.Partner}</h3>
-                        <div class="ven-short-desc">${partner.shortDescription}</div>
+                        <p class="ven-short-desc">${partner.shortDescription}</p>
                         </div>
                   </div>
                   <div class="tags">

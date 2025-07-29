@@ -787,6 +787,10 @@ margin-top:2%;
  aspect-ratio: 1 / 1;
 }
 
+.card .ven-short-desc {
+  font-size: 14px;
+}
+
 .card h3 {
  font-size: 1.25rem;
  font-weight: 600;

@@ -384,19 +384,19 @@ Make sure glossary keys have been added to `spy_glossary_key` and `spy_glossary_
 
 | PLUGIN                                    | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                        |
 |-------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ViewCompanySspAssetPermissionPlugin       | Enables viewing of company assets.                                                |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| ViewBusinessUnitSspAssetPermissionPlugin  | Provides access to assets in the same business unit.                              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| CreateSspAssetPermissionPlugin            | Enables creation of assets.                                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| UpdateSspAssetPermissionPlugin            | Enables updating of assets.                                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| UnassignSspAssetPermissionPlugin          | Enables unassignment of assets.                                                   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| SelfServicePortalPageRouteProviderPlugin  | Provides Yves routes for the SSP asset management feature.                        |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
-| SspAssetDashboardDataExpanderPlugin       | Adds the assets table to the SSP dashboard.                                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
-| FileSizeFormatterTwigPlugin               | Adds a Twig filter to format file sizes in a human-readable format.               |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin    |
-| SspAssetPreAddToCartPlugin                | Maps asset reference from request parameters to ItemTransfer.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                            |
-| SspAssetItemExpanderPlugin                | Adds SSP asset information to cart items when an SSP asset reference is provided. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                   |
-| SspAssetOrderExpanderPlugin               | Expands order items with SSP assets.                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
-| SspAssetOrderItemsPostSavePlugin          | Creates a relation between a sales order item and an SSP asset in persistence.    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
-| SspAssetOrderItemExpanderPlugin           | Expands order items with SSP assets.                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| ViewCompanySspAssetPermissionPlugin       | Grants permission to view assets of the entire company.                           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| ViewBusinessUnitSspAssetPermissionPlugin  | Grants permission to view assets within the user's business unit.                 |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| CreateSspAssetPermissionPlugin            | Grants permission to create assets.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| UpdateSspAssetPermissionPlugin            | Grants permission to update assets.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| UnassignSspAssetPermissionPlugin          | Grants permission to unassign assets from business units.                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| SelfServicePortalPageRouteProviderPlugin         | Provides routes for the SSP asset management pages on the Storefront.             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
+| SspAssetDashboardDataExpanderPlugin       | Expands the dashboard data with asset information to display in the assets widget.|               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
+| FileSizeFormatterTwigPlugin               | Adds a Twig filter to format file sizes into a human-readable format.             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin    |
+| SspAssetPreAddToCartPlugin                | When a product is added to the cart, maps the asset reference from the request to the item transfer object. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                            |
+| SspAssetItemExpanderPlugin                | Expands cart items with asset data.                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                   |
+| SspAssetOrderExpanderPlugin               | Expands an order with asset data for all its items.                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| SspAssetOrderItemsPostSavePlugin          | After an order is placed, saves the relation between order items and assets.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| SspAssetOrderItemExpanderPlugin           | Expands individual order items with asset data.                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -609,12 +609,12 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ### Set up widgets
 
-| PLUGIN                     | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                    |
-|----------------------------|---------------------------------------------------------------------------|---------------|----------------------------------------------|
-| SspAssetListWidget         | Provides a table display for assets.                                      |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetMenuItemWidget     | Provides a menu item widget for the customer account side menu.           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetInfoForItemWidget  | The widget that displays related asset for a cart item.                   |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspItemAssetSelectorWidget | Provides the autocomplete form field for asset selection on the PDP page. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| PLUGIN                     | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
+|----------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| SspAssetListWidget         | Renders a list of assets on the **My Assets** page in the Customer Account.             |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetMenuItemWidget     | Renders the **My Assets** menu item in the Customer Account side menu.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetInfoForItemWidget  | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspItemAssetSelectorWidget | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

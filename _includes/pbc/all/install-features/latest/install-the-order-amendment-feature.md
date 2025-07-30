@@ -2121,12 +2121,12 @@ Enable the following behaviors by registering the plugins:
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
 | QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin         | Maps an original order from `QuoteTransfer.originalOrder` to `SaveOrderTransfer`.                                                                   |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout    |
 | StartOrderAmendmentDraftCheckoutPostSavePlugin          | Triggers the OMS event to start the order amendment draft.                                                                                               |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout |
-| NotifyOrderAmendmentAppliedMailTypeBuilderPlugin        | Builds `MailTransfer` with data for `notify order amendment applied` email.                                                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
-| NotifyOrderAmendmentFailedMailTypeBuilderPlugin         | Builds `MailTransfer` with data for `notify order amendment failed` email.                                                                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
-| ApplyOrderAmendmentDraftCommandByOrderPlugin            | Places an order with found sales order amendment quote and quote process flow set to `order-amendment`.                                             |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms       |
-| NotifyOrderAmendmentAppliedCommandPlugin                | When an sales order amendment quote is found, sends an email notification about successfully applying order amendment.                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
-| NotifyOrderAmendmentFailedCommandPlugin                 | Sends a mail notification that the order amendment has failed if the sales order amendment quote is found.                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
-| IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin | Returns `true` if the sales order amendment quote is not found, otherwise returns `false`.                                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| NotifyOrderAmendmentAppliedMailTypeBuilderPlugin        | Builds `MailTransfer` with data for the `notify order amendment applied` email.                                                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| NotifyOrderAmendmentFailedMailTypeBuilderPlugin         | Builds `MailTransfer` with data for the `notify order amendment failed` email.                                                                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| ApplyOrderAmendmentDraftCommandByOrderPlugin            | Places an order with a found sales order amendment quote and quote process flow set to `order-amendment`.                                             |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms       |
+| NotifyOrderAmendmentAppliedCommandPlugin                | When a sales order amendment quote is found, sends an email notification about successfully applying order amendment.                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| NotifyOrderAmendmentFailedCommandPlugin                 | If a sales order amendment quote is found, sends an email notification about failing order amendment.                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin | Returns `true` if the sales order amendment quote is not found; otherwise returns `false`.                                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
 | ShipmentGroupsSalesOrderAmendmentQuoteExpanderPlugin    | Expands each `SalesOrderAmendmentQuoteTransfer` in `SalesOrderAmendmentQuoteCollectionTransfer.salesOrderAmendmentQuotes` with shipment groups data. |               | Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment    |
 
 <details>
@@ -2281,22 +2281,27 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 
 </details>
 
-There are 2 options to enable asynchronous order amendment:
-- Option 1: Enabling the async order amendment conditionally so the general Order amendment checkout process flow will be executed from the beginning but then switched to the asynchronous Order amendment checkout process depending on specific conditions.
-- Option 2: Enabling the async order amendment unconditionally so the asynchronous Order amendment checkout process will be executed from the beginning.
 
-### Option 1: Enabling the async order amendment conditionally
+### Enable asynchronous order amendment
 
-Our Example module provides the possibility to enable the asynchronous order amendment checkout process flow depending on the selected payment method.
+You can set up asynchronous order amendment in two ways:
 
-#### Enable the following behaviors by registering the plugins:
+1. Conditionally: The standard order amendment flow starts first, then switches to the asynchronous flow based on specific conditions.
+2. Unconditionally: The asynchronous flow runs from the start.
+
+Follow the instructions in the following sections according to how you want to set it up.
+
+#### Option 1: Enable async order amendment conditionally
+
+The Example module lets you enable the asynchronous order amendment flow based on the selected payment method. To configure this behavior, follow the steps:
+
+1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                | SPECIFICATION                                                                                                    | PREREQUISITES | NAMESPACE                                                       |
 |-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| PaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin | Sets `QuoteTransfer.quoteProcessFlow` to a new `QuoteProcessFlowTransfer` with the name `order-amendment-async`. |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Checkout |
+| PaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin | Sets `QuoteTransfer.quoteProcessFlow` to a new `QuoteProcessFlowTransfer` with the `order-amendment-async` name. |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Checkout |
 
-<details>
-  <summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
 ```php
 <?php
@@ -2322,9 +2327,8 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-</details>
 
-#### Specify the payment methods that will enable the asynchronous order amendment checkout process flow.
+2. Specify the payment methods to enable the asynchronous order amendment checkout process flow for:
 
 **src/Pyz/Zed/OrderAmendmentExample/OrderAmendmentExampleConfig.php**
 
@@ -2346,11 +2350,9 @@ class OrderAmendmentExampleConfig extends SprykerOrderAmendmentExampleConfig
 }
 ```
 
-### Option 2: Enabling the async order amendment unconditionally
+#### Option 2: Enable async order amendment unconditionally
 
-To enable the asynchronous order amendment unconditionally, configure the default order amendment quote process flow which will be applied when the order amendment is started.
-
-#### Specify the order amendment quote process flow.
+1. Specify the order amendment quote process flow:
 
 **src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentConfig.php**
 
@@ -2379,7 +2381,7 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 }
 ```
 
-#### Enable plugins for the asynchronous order amendment checkout process flow.
+2. Enable plugins for the asynchronous order amendment checkout process flow:
 
 Make sure all the needed plugins in modules dependency providers registered for the `order-amendment` checkout process flow are also registered for the `order-amendment-async` checkout process flow.
 So instead of dependency provider methods with `ForOrderAmendment` postfix use the methods with `ForOrderAmendmentAsync` postfix. Check the `Cart`, `CartReorder`, `Checkout`, `CheckoutRestApi`, `Sales` modules.

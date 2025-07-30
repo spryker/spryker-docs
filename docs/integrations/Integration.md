@@ -49,14 +49,14 @@ Spryker has different methods of integrating third parties in to your Spryker pr
     <div class="cst_card_image"><img src="/images/integrations/int_custom_build.png" alt="Icon for Spryker Custom Building Integrations"></div>
     <div class="cst_card_title">Custom Build</div>
     <div class="cst_card_desc">For more tailored or business specific needs, Spryker allows you to build custom integrations directly into your project code.</div>
-    <a class="cst_card_button" href="custom_build_integrations_with_spryker"> Find out More </a>
+    <a class="cst_card_button" href="custom_building_integrations/custom_build_integrations_with_spryker"> Find out More </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_api.png" alt="Icon for Spryker GLUE APIs"></div>
     <div class="cst_card_title">Spryker APIs</div>
     <div class="cst_card_desc">Spryker APIs—primarily the Glue API—provide a RESTful interface for interacting with the Spryker Commerce OS. They allow external systems, services, and frontend applications to communicate with Spryker in a structured, secure way.</div>
-    <a class="cst_card_button" href="getting_started_with_spryker_api"> Find out More </a>
+    <a class="cst_card_button" href="spryker_glue_api/getting_started_with_spryker_apis/getting_started_with_spryker_api"> Find out More </a>
   </div>
 
   <div class="cst_card">

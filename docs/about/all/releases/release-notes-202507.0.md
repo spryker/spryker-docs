@@ -451,7 +451,7 @@ This release introduces both internal and customer-facing enhancements, includin
 ## [Early Access] Stable Workers
 
 
-Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S now uses a new Stable Worker Architecture. 
+Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S now uses a new Stable Worker Architecture.
 
 This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates.
 
@@ -475,7 +475,7 @@ The new architecture provides isolated worker contexts, automatic retries, and b
 
 Spryker now offers native integration for GitHub Enterprise Server (GHES). This enhancement lets you directly connect your self-hosted GHES repositories with the Spryker platform, eliminating the previous requirement to mirror repositories.
 
-### Business benefits 
+### Business benefits
 
 - Simple, direct integration: Directly connect your GitHub Enterprise Server, removing the complexity and overhead of mirroring repositories
 - Streamlined workflows: Improved development and deployment workflows through a direct, native connection to your GHES infrastructure

@@ -13,12 +13,15 @@ Follow the steps below to install the Amazon QuickSight core.
 
 ### Prerequisites
 
-Install the required features:
+1. Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                              |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analytics                | {{page.version}} | [Install the Analytics feature](/docs/pbc/all/business-intelligence/{{page.version}}/install-the-analytics-feature.html)                           |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+
+
+2. For AI features, update `aws/aws-sdk-php` to `3.342.0`.
 
 ### 1) Install the required modules
 
@@ -517,7 +520,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 | PLUGIN                        | SPECIFICATION                                                                                                                                                    | PREREQUISITES | NAMESPACE                                             |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------|
-| QuicksightUserSyncSaveConsole | Creates new and updates existing Quicksight users in persistence for users registered on the Quicksight side that can be matched with existing Backoffice users. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
+| QuicksightUserSyncSaveConsole | Creates new and updates existing Quicksight users in persistence for users registered on the Quicksight side that can be matched with existing Back Office users. |               | SprykerEco\Zed\AmazonQuicksight\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -616,9 +619,3 @@ Install the required features:
 npm install
 console frontend:zed:build
 ```
-
-{% info_block warningBox "AWS SDK version" %}
-
-In order to use AI features the minimum required version of the `aws/aws-sdk-php` is `3.342.0`.
-
-{% endinfo_block %}

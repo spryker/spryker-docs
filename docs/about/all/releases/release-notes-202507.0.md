@@ -226,7 +226,7 @@ The Algolia ACP app is expanded to support search through content within CMS pag
 ## Vertex Tax ID validator <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App. This release features direct, out-of-the-box integration of the Vertex Validator API into checkout. With Vertex Validator and Vertex ACP App, you can validate business tax IDs for syntax, validity, and location, reducing operational costs from incorrect invoices and ensuring accurate application of VAT.
- 
+
 ### Business benefits
 
 - Automated tax ID validation during checkout or any part of the process thanks to the headless integration
@@ -247,7 +247,7 @@ Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App
 
 ## Multi-Factor Authentication <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Multi-Factor Authentication (MFA) adds an additional layer of protection by requiring users to verify their identity through multiple methods, such as a password and a one-time code sent to their email. 
+Multi-Factor Authentication (MFA) adds an additional layer of protection by requiring users to verify their identity through multiple methods, such as a password and a one-time code sent to their email.
 
 ![MFA-email-code](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/MFA-email-code.png)
 
@@ -280,7 +280,7 @@ Improves the overall security of your project, as well as the security of each c
 
 The Sitemap feature generates XML sitemaps that improve SEO by helping search engines efficiently index your Storefront content. Generated sitemaps include products, categories, product sets, CMS pages, and merchant pages by default. You can configure other entities to be included on the project level.
 
-### Business benefits 
+### Business benefits
 
 Improved SEO
 
@@ -298,15 +298,15 @@ Improved SEO
 
 ## [Early Access] Add to cart from images (AI-powered) <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-This feature enables customers to add products to cart by uploading images on the Quick Order page. 
+This feature enables customers to add products to cart by uploading images on the Quick Order page.
 
 Upload a PDF, image, photo of handwritten notes, or any other text mentioning products to add to cart. Based on the uploaded image, OpenAI detects matching products in your catalog and adds them to cart.
 
-A single image can contain multiple products, and they both will be added to cart. 
+A single image can contain multiple products, and they both will be added to cart.
 
 Customers need own OpenAI accounts to use this feature.
 
-### Business benefits 
+### Business benefits
 
 - Enable more buying routes
 - Reduce friction in transactions for power users
@@ -358,9 +358,9 @@ This release delivers major performance improvements to checkout, order placemen
 - Optimized support for large orders (50–100 items): key features, such as Cart, Checkout, Inventory, OMS, Discounts, Shipments, Product, and Merchant, have been fine-tuned to efficiently handle large orders. Internal benchmarks show up to 40% faster performance across Storefront, Glue API, and background OMS operations.
 - Improved cart page performance: The dynamic cart page now renders up to twice as fast, delivering a more responsive and seamless customer experience.
 
-### Business benefits 
+### Business benefits
 
-Smooth, efficient processing of large carts and orders, enhancing the checkout experience for both B2C and B2B customers. 
+Smooth, efficient processing of large carts and orders, enhancing the checkout experience for both B2C and B2B customers.
 
 ### Docs
 
@@ -374,7 +374,7 @@ Smooth, efficient processing of large carts and orders, enhancing the checkout e
 
 Spryker is migrating its cache solution from Redis to Valkey, a high-performance, open-source in-memory data store, supported by AWS ElasticCache. This integration significantly enhances data processing capabilities, offering improved speed, scalability, and security.
 
-### Business benefits 
+### Business benefits
 
 - Accelerate performance: Leverage Valkey's advanced multi-threading for substantially higher throughput (up to 5x observed in tests for write operations) and more stable latencies, resulting in faster application response times, especially during peak traffic.
 - Enhance scalability and reliability: Benefit from Valkey's superior scaling capabilities and improved cluster failover mechanisms, ensuring your platform can robustly handle business growth and larger, more complex workloads.
@@ -392,7 +392,7 @@ Spryker is migrating its cache solution from Redis to Valkey, a high-performance
 
 Spryker is introducing seamless and efficient data compression in Valkey key-value store to enhance overall system performance and reduce latency. By minimizing the size of stored and transferred data without compromising speed, this feature optimizes data-intensive operations, leading to faster access times and more efficient use of network and storage resources. With intelligent compression levels tailored for performance, Spryker enables businesses to scale more effectively while maintaining rapid user experiences.
 
-### Business benefits 
+### Business benefits
 
 - Enhanced performance: Transparent compression in Valkey boosts application responsiveness by reducing storage overhead
 - Faster data transfer: Up to 50% reduction in data size leads to quicker transfers between database and Spryker applications
@@ -400,9 +400,9 @@ Spryker is introducing seamless and efficient data compression in Valkey key-val
 - Efficient compression: Uses fast compression algorithms that minimize text data without introducing performance overhead
 
 
-### Docs 
+### Docs
 
-[Advanced configuration for Redis compression](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html#advanced-configuration-for-redis-compression)
+[Advanced configuration for Redis compression](/docs/dg/dev/set-up-spryker-locally/key-value-store-configuration#advanced-configuration-for-redis-compression)
 
 ### Technical prerequisites
 
@@ -417,7 +417,7 @@ Spryker is introducing seamless and efficient data compression in Valkey key-val
 
 Cloud Self Service is a new automated system for handling common customer support requests. This feature leverages internal tooling to process requests for IAM user creation, VPN and SSH access, and S3 bucket creation automatically, streamlining the support process and empowering customers with faster resolutions.
 
-### Business benefits 
+### Business benefits
 
 - Reduce lead times: Speed up development and operational tasks by having common requests fulfilled faster
 - Enhance request quality and consistency: Automated processing minimizes human error, ensuring that requests are handled accurately and consistently every time
@@ -433,13 +433,13 @@ Cloud Self Service is a new automated system for handling common customer suppor
 
 This release introduces both internal and customer-facing enhancements, including Multi-Factor Authentication (MFA) and improved password policy, now enabled by default for all new and existing cloud users. All IAM users are now required to activate MFA and use more complex passwords by default. These measures significantly reduce the risk of credential exposure and prevent unauthorized access to your cloud environments.
 
-### Business benefits 
+### Business benefits
 
 - Enhanced account security: Multi-Factor authentication and stronger password policies safeguard your cloud environments against unauthorized access and credential misuse
 - Security best practices by default: Pre-configured security settings ensure a strong baseline without additional setup, making it easier to maintain a secure and resilient cloud setup
 
 
-### Docs 
+### Docs
 
 [Multi-factor authentication and passwords](/docs/ca/dev/security/multi-factor-authentication-and-passwords)
 
@@ -453,14 +453,14 @@ This release introduces both internal and customer-facing enhancements, includin
 
 Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S now uses a new Stable Worker Architecture. 
 
-This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates. 
+This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates.
 
 The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
 
 
 
-### Business benefits 
+### Business benefits
 
 - Improved P&S performance and stability: Faster, more stable catalog data refreshes and timely frontend updates
 - Better handling of complex scenarios: Efficiently manage large, frequently updated catalogs
@@ -473,7 +473,7 @@ The new architecture provides isolated worker contexts, automatic retries, and b
 
 ## Support for GitHub Enterprise <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Spryker now offers native integration for GitHub Enterprise Server (GHES). This enhancement lets you directly connect your self-hosted GHES repositories with the Spryker platform, eliminating the previous requirement to mirror repositories. 
+Spryker now offers native integration for GitHub Enterprise Server (GHES). This enhancement lets you directly connect your self-hosted GHES repositories with the Spryker platform, eliminating the previous requirement to mirror repositories.
 
 ### Business benefits 
 
@@ -491,9 +491,9 @@ Spryker Cloud Autoscaling has been enhanced with a faster reaction to traffic sp
 
 The improvements are already implemented with no action required from you.
 
-### Business benefits 
+### Business benefits
 
-- Improved reliability: Services scale five times faster 
+- Improved reliability: Services scale five times faster
 - Improved end-user experience: No increase in request latency for users
 
 

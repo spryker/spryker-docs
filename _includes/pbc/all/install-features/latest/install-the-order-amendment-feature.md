@@ -2389,12 +2389,16 @@ So instead of dependency provider methods with `ForOrderAmendment` postfix use t
 
 {% info_block warningBox "Verification" %}
 
- - Make sure that right after the Order amendment checkout the changes made in the order are not applied to the order.
- - Make sure the Quote is saved to the `spy_sales_order_amendment_quote` table.
- - Make sure the order items are in the `order amendment draft pending` state.
- - Execute `console oms:check-condition` command, make sure the order items are in the `order amendment draft applied` state.
- - Make sure the changes made in the order are applied to the order.
- - Execute `console oms:check-condition` command, make sure the mail notification is sent to the customer that the order amendment has been applied successfully or has been failed.
+1. Place an order.
+2. Change the order.
+- Make sure that right after the Order amendment checkout the changes made in the order are not applied to the order.
+- Make sure the Quote has been saved to the `spy_sales_order_amendment_quote` table.
+- Make sure the order items are in the `order amendment draft pending` state.
+3. Execute `console oms:check-condition` command.
+- Make sure the order items are in the `order amendment draft applied` state.
+- Make sure the changes made in the order have been applied to the order.
+4. Execute `console oms:check-condition` command.
+- Make sure an email notification about order amendment has been sent.
 
 {% endinfo_block %}
 
@@ -2588,7 +2592,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Using widgets in Twig" %}
 
-If you have Twig templates to be customised and redefined in your project, make sure the corresponding widgets are used in the redefined templates.
+If you have Twig templates to be customized and redefined in your project, make sure the corresponding widgets are used in the redefined templates.
 
 {% endinfo_block %}
 
@@ -2598,11 +2602,11 @@ Make sure the following widgets have been registered:
 
 | MODULE                                    | TEST                                                                                                                                                                         |
 |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OrderAmendmentWidget                      | Make sure the edit order button is displayed on orders and order details pages.                                                                                              |
-| CancelOrderAmendmentWidget                | Make sure the cancel order amendment button is displayed on the cart page.                                                                                                   |
-| OrderAmendmentItemLinkWidget              | Make sure that, on the Cart page, product URL does not exists for deactivated products.                                                                                      |
-| UpdateOrderCheckoutSubmitButtonTextWidget | Make sure that, on the Checkout summary page, the submit button text is displayed as configured for `sales_order_amendment_widget.summary_step.update.order` glossary key.   |
-| UpdateOrderCheckoutSuccessTitleWidget     | Make sure that, on the Successful order update page, the title is displayed as configured for `sales_order_amendment_widget.success_step.update.success.title` glossary key. |
+| OrderAmendmentWidget                      | Make sure the edit order button is displayed on the orders and order details pages.                                                                                              |
+| CancelOrderAmendmentWidget                | Make sure the cancel order amendment button is displayed on the Cart page.                                                                                                   |
+| OrderAmendmentItemLinkWidget              | Make sure that, on the Cart page, product URLs are not displayed for deactivated products.                                                                                      |
+| UpdateOrderCheckoutSubmitButtonTextWidget | Make sure that, on the Checkout summary page, the submit button text is displayed as configured for the `sales_order_amendment_widget.summary_step.update.order` glossary key.   |
+| UpdateOrderCheckoutSuccessTitleWidget     | Make sure that, on the Successful order update page, the title is displayed as configured for the `sales_order_amendment_widget.success_step.update.success.title` glossary key. |
 
 {% endinfo_block %}
 

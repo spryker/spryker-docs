@@ -2,7 +2,7 @@ This document describes how to install the Marketplace Merchant Portal Data Impo
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Merchant Portal Data Import feature.
+Follow the steps below to install the Marketplace Merchant Portal Data Import feature core.
 
 ### Prerequisites
 
@@ -50,7 +50,7 @@ vendor/bin/console translator:generate-cache
 
 ### Configure navigation
 
-Update Merchant Portal navigation to include the Data Import page by adding the following XML snippet to your `config/Zed/navigation-main-merchant-portal.xml` file:
+1. Update Merchant Portal navigation to include the Data Import page by adding the following to your `config/Zed/navigation-main-merchant-portal.xml` file:
 
 ```xml
 <file-import-merchant-portal-gui>
@@ -63,7 +63,7 @@ Update Merchant Portal navigation to include the Data Import page by adding the 
 </file-import-merchant-portal-gui>
 ```
 
-Build navigation cache:
+2. Build navigation cache:
 
 ```bash
 vendor/bin/console navigation:build-cache
@@ -71,11 +71,11 @@ vendor/bin/console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the navigation menu of the Merchant Portal has the **Data Import** section.
+Make sure that, in the Merchant Portal, **Data Import** navigation item is displayed.
 
 {% endinfo_block %}
 
-### Update project configuration
+### Add file system configuration
 
 Update your `config/Shared/config_default.php` file to include the following configuration for the file system that will be used to store merchant files:
 
@@ -106,18 +106,18 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 
 #### Add plugins
 
-Add the following plugins to the dependency providers:
+1. Add the following plugins to the dependency providers:
 
 | PLUGIN                                                                                                                                     | PLACE                                                                                                        | DESCRIPTION                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin` | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`        | Adds access rules to the Data Import page in Merchant Portal.                      |
-| `\Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin`                        | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant files by merchants.                                    |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin`   | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant import files by merchants.                             |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole`                                           | `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`                                           | Reads merchant files for data import and runs data imports. Updates import status. |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds merchant file relation to the merchant file import DB entity.                 |
+| `\Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin`                        | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to  merchant files.                                    |
+| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin`   | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to  import files.                             |
+| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole`                                           | `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`                                           | Reads merchant files for data import, runs data imports, and updates import status. |
+| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds a merchant file relation to the merchant file import DB entity.                 |
 
 
-Synchronize ACL entity rules:
+2. Sync ACL entity rules:
 
 ```bash
 vendor/bin/console acl-entity:synchronize
@@ -136,9 +136,12 @@ acl:
 
 {% endinfo_block %}
 
-#### Jenkins configuration
+#### Add Jenkins configuration
 
-Include new job into `config/Zed/cronjobs/jenkins.php`
+
+Add a job to check if there're new files uploaded for data import by merchants. You can change the schedule according to your project needs.
+
+**config/Zed/cronjobs/jenkins.php**
 
 ```php
 $jobs[] = [
@@ -148,8 +151,6 @@ $jobs[] = [
     'enable' => true,
 ];
 ```
-
-It will be executed every minute to check if there is a new file uploaded for data import by merchants. You can change the schedule according to your project needs.
 
 #### Configure Behavior
 

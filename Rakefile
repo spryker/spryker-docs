@@ -113,6 +113,7 @@ commonOptions = {
     /www.jwt.io\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
     /auth0.com\/[\.\w\-\/\?]+/,    
+    /partner.easycredit.de\/[\.\w\-\/\?]+/,    
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],

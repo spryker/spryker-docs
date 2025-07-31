@@ -1786,16 +1786,16 @@ For every defined table in [Persistence Schema](#persistence-schema), a matching
 
 ### Transfer schemas
 
-- **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+- Must have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
 ### RestAPI Transfer Schemas
 
 The following rules only apply to the API transfer schema definitions following the name pattern `[module_name]_rest_api.transfer.xml`.
 
-- **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
-- **SHOULD** use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.
-- **SHOULD** use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.
-- **SHOULD** use the `restResponseParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the response and if it is required or not.
+- Must have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+- Should use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.
+- Should use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.
+- Should use the `restResponseParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the response and if it is required or not.
 
 Further reading [Document Glue API resources](/docs/dg/dev/glue-api/latest/glue-api-tutorials/document-glue-api-resources.html)
 

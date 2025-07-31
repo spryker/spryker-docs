@@ -15,4 +15,4 @@ redirect_from:
   - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-microsoft-azure-active-directory.html
 ---
 
-{% include pbc/all/install-features/latest/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-microsoft-azure-active-directory.md -->
+{% include pbc/all/install-features/202410.0/install-microsoft-azure-active-directory.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-microsoft-azure-active-directory.md -->

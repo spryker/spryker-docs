@@ -104,7 +104,7 @@ Request sample: create a customer
 
 </details>
 
-{% include /pbc/all/glue-api-guides/latest/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/customers-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/202410.0/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/latest/customers-response-attributes.md -->
 
 
 

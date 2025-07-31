@@ -18,4 +18,4 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
 
-{% include pbc/all/install-features/latest/install-glue-api/install-the-customer-access-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-customer-access-glue-api.md -->
+{% include pbc/all/install-features/202410.0/install-glue-api/install-the-customer-access-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-customer-access-glue-api.md -->

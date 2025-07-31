@@ -18,13 +18,13 @@ related:
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
 ---
 
-Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/dg/dev/glue-api/latest/authentication-and-authorization.html).
+Since shop owners can define which resources are protected, the list is different in each shop. That's why, before sending any requests, you might need to check which resources are protected and [authenticate](/docs/dg/dev/glue-api/202410.0/authentication-and-authorization.html).
 
 In your development, the Customer Access API helps you to protect resources from guest access and perform pre-flight checks to avoid sending requests to protected resources without authentication.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Customer Access feature integration](/docs/pbc/all/identity-access-management/202410.0/install-and-upgrade/install-the-customer-access-glue-api.html).
 
 ## Retrieve protected resources
 
@@ -74,4 +74,4 @@ Response sample: retrieve protected resources
 | --- | --- | --- |
 | resourceTypes | String | Contains a `string` array, where each element is a resource type that is protected from unauthorized access. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/202410.0/rest-api/reference-information-glueapplication-errors.html).

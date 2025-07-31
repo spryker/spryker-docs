@@ -5,4 +5,4 @@ description: This article describes the process how to integrate the Marketplace
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-offer-quick-add-to-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-quick-add-to-cart-feature.md -->
+{% include pbc/all/install-features/202410.0/marketplace/install-the-marketplace-product-offer-quick-add-to-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-quick-add-to-cart-feature.md -->

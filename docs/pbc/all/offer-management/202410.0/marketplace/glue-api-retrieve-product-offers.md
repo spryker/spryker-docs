@@ -18,9 +18,9 @@ In your development, product offers API can help you to retrieve relevant extend
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 
-- [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
-- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/202410.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+- [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/202410.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+- [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/202410.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
 ## Retrieve a product offer
 
@@ -33,7 +33,7 @@ To retrieve the product offers, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | ------------------ | ---------------------- |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html). |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/pbc/all/product-information-management/202410.0/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html). |
 
 <a name="product-offer-included-resources"></a>
 
@@ -254,13 +254,13 @@ To retrieve the product offers, send the request:
 | --------------- | -------- | -------------------- |
 | merchantSku       | String   | The merchant's unique identifier of the product offer. |
 | merchantReference | String   | Unique identifier of the merchant. |
-| isDefault         | Boolean  | Defines if the product offer is [default](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
+| isDefault         | Boolean  | Defines if the product offer is [default](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
 
-{% include pbc/all/glue-api-guides/latest/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202410.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
 For the response attributes of the other included resources, see the following:
-- [Retrieve product offer prices](/docs/pbc/all/price-management/latest/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
-- [Retrieving merchants](/docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
+- [Retrieve product offer prices](/docs/pbc/all/price-management/202410.0/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
+- [Retrieving merchants](/docs/pbc/all/merchant-management/202410.0/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 
 
@@ -270,11 +270,11 @@ For the response attributes of the other included resources, see the following:
 
 You can use the product offers resource as follows:
 
-- [Retrieve product offers of a concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html)
-- Add product offers to a guest cart—[Creating a guest cart](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
-- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
-- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
-- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).
+- [Retrieve product offers of a concrete product](/docs/pbc/all/product-information-management/202410.0/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html)
+- Add product offers to a guest cart—[Creating a guest cart](/docs/pbc/all/cart-and-checkout/202410.0/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
+- Retrieve information for the product offers in a guest cart—[Retrieving a guest cart](/docs/pbc/all/cart-and-checkout/202410.0/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html#retrieve-a-guest-cart).
+- Add product offers to a registered user's cart—[Adding items to a cart of a registered user](/docs/pbc/all/cart-and-checkout/202410.0/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+- Retrieve information for the product offers in registered users' carts—[Retrieving all carts](/docs/pbc/all/cart-and-checkout/202410.0/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 ## Possible errors
 
@@ -283,4 +283,4 @@ You can use the product offers resource as follows:
 | 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/202410.0/rest-api/reference-information-glueapplication-errors.html).

@@ -37,7 +37,7 @@ The endpoints in this document allows you to manage customer passwords. You can 
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/202410.0/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 
 ## Change a customer's password
@@ -59,7 +59,7 @@ To change a customer's password, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 
 Request sample: change a customer's password
@@ -184,8 +184,8 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 | 422 | `newPassword` and `confirmPassword` values are not identical.  |
 | 901 | `newPassword` and `confirmPassword` are not specified; or the password length is invalid (it should be from 8 to 64 characters). |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/202410.0/rest-api/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-[Authenticate as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html)
+[Authenticate as a customer](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-manage-customer-passwords.html)

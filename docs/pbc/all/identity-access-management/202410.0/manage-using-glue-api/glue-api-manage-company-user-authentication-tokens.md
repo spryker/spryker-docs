@@ -33,7 +33,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Refresh a company user authentication token
 
@@ -63,7 +63,7 @@ Request sample: refresh a company user authentication token
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user). |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user). |
 
 
 
@@ -118,7 +118,7 @@ To revoke a company user refresh token, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/pbc/all/identity-access-management/202410.0/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 
@@ -142,4 +142,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 | 004 | Failed to refresh the token. |
 | 901 | Refresh token is not specified or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/202410.0/rest-api/reference-information-glueapplication-errors.html).

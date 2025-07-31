@@ -5,4 +5,4 @@ template: feature-walkthrough-template
 last_updated: Nov 27, 2023
 ---
 
-The *Offer Management* capability consists only of a marketplace addon. It lets multiple merchants sell the same product by creating offers for it. For more information about offers, see [Marketplace Product Offer feature overview](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html).
+The *Offer Management* capability consists only of a marketplace addon. It lets multiple merchants sell the same product by creating offers for it. For more information about offers, see [Marketplace Product Offer feature overview](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html).

@@ -31,7 +31,7 @@ When enabling Spryker to handle such a number of prices, the following challenge
 1. 25,000,000 prices are imported in two separate price dimensions.
 2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `Elasticsearch(ES)` down.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
-4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
+4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/202410.0/developerguide/aes-limits.html) does not allow changing this limit.
 
 5. Each price having unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
@@ -87,7 +87,7 @@ You could increase the limit, but it slows down the reindexing process.
 
 The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and you don't get any related errors.
 
-In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html).
+In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/202410.0/developerguide/aes-limits.html).
 
 ## Evaluated solutions
 

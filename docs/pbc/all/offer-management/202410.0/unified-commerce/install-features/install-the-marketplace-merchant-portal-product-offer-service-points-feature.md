@@ -5,4 +5,4 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-merchant-portal-product-offer-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-merchant-portal-product-offer-service-points-feature.md -->
+{% include pbc/all/install-features/202410.0/marketplace/install-the-marketplace-merchant-portal-product-offer-service-points-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-merchant-portal-product-offer-service-points-feature.md -->

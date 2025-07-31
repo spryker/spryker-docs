@@ -5,12 +5,12 @@ last_updated: Nov 23, 2023
 template: data-import-template
 ---
 
-This document describes the `product_offer_shipment_type.csv` file to assign product offers to [shipment types](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type).
+This document describes the `product_offer_shipment_type.csv` file to assign product offers to [shipment types](/docs/pbc/all/carrier-management/202410.0/base-shop/shipment-feature-overview.html#shipment-type).
 
 ## Import file dependencies
 
-- [merchant_product_offer.csv](/docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html)
-- [shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
+- [merchant_product_offer.csv](/docs/pbc/all/offer-management/202410.0/marketplace/import-and-export-data/import-file-details-combined-merchant-product-offer.csv.html)
+- [shipment_type.csv](/docs/pbc/all/carrier-management/202410.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html)
 
 
 

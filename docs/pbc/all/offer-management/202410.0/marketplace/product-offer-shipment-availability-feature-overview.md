@@ -11,4 +11,4 @@ This features enables product offer availability to be validated per shipment ty
 
 | INSTALLATION GUIDES|
 | -------------- |
-| [Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html) |
+| [Install the Product Offer Shipment Availability feature](/docs/pbc/all/offer-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html) |

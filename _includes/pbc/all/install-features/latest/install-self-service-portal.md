@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 This document describes how to install Self-Service Portal (SSP).
 
 ## Prerequisites

@@ -1,3 +1,12 @@
+{% info_block warningBox %}
+
+Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific
+legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a
+General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory
+features.
+
+{% endinfo_block %}
+
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 
 ## Prerequisites
@@ -5,7 +14,7 @@ This document describes how to install the Self-Service Portal (SSP) Dashboard M
 | FEATURE         | VERSION | INSTALLATION GUIDE  |
 |--------------| ------- | ------------------ |
 | Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 1.1.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## Install the required modules
 
@@ -375,7 +384,6 @@ namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\SelfServicePortal\Widget\DashboardMenuItemWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspServiceListWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider

@@ -11,7 +11,7 @@ This document describes how to configure and instrument application for OpenTele
 
 ## Convention
 
-The current implementation follows [OpenTelemetry Semantic Conventions 1.30.0](https://opentelemetry.io/docs/specs/semconv/).
+The current implementation follows [OpenTelemetry Semantic Conventions 1.36.0](https://github.com/open-telemetry/semantic-conventions/blob/v1.36.0/docs/README.md).
 
 ## Trace
 

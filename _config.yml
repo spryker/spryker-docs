@@ -133,7 +133,6 @@ defaults:
       role: "all"
 
 versions:
-  '202404.0': '202404.0'
   '202410.0': '202410.0'  
   'latest': 'latest'  
 

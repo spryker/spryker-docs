@@ -246,7 +246,7 @@ npm run mp:build
 
 {% info_block warningBox "Verification" %}
 
-Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that the UI is not broken.
+Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that you see data import table and can open new import form.
 
 {% endinfo_block %}
 

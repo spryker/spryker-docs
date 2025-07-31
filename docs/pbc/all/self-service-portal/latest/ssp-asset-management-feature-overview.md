@@ -5,11 +5,6 @@ template: concept-topic-template
 last_updated: Apr 10, 2025
 ---
 
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 The SSP Asset Management feature enables business users to manage assets within their organization.
 

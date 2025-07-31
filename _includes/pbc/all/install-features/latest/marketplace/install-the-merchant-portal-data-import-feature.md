@@ -33,7 +33,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### Generate required transfer objects and DB changes
+### Generate transfer objects and database changes
 
 ```bash
 vendor/bin/console transfer:generate
@@ -50,7 +50,9 @@ vendor/bin/console translator:generate-cache
 
 ### Configure navigation
 
-1. Update Merchant Portal navigation to include the Data Import page by adding the following to your `config/Zed/navigation-main-merchant-portal.xml` file:
+1. Update Merchant Portal navigation:
+
+ **config/Zed/navigation-main-merchant-portal.xml**
 
 ```xml
 <file-import-merchant-portal-gui>
@@ -77,7 +79,9 @@ Make sure that, in the Merchant Portal, **Data Import** navigation item is displ
 
 ### Add file system configuration
 
-Update your `config/Shared/config_default.php` file to include the following configuration for the file system that will be used to store merchant files:
+Add file system configuration for storing merchant files:
+
+**config/Shared/config_default.php**
 
 ```php
 $config[MerchantFileConstants::FILE_SYSTEM_NAME] = 'merchant-files';
@@ -94,7 +98,9 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 ```
 
-For local development, you can use the following configuration (`config/Shared/config_default-docker.dev.php`):
+For local development, you can use the following configuration:
+
+**config/Shared/config_default-docker.dev.php**
 
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
@@ -104,14 +110,14 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 ];
 ```
 
-#### Add plugins
+### Add plugins
 
 1. Add the following plugins to the dependency providers:
 
 | PLUGIN                                                                                                                                     | PLACE                                                                                                        | DESCRIPTION                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin` | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`        | Adds access rules to the Data Import page in Merchant Portal.                      |
-| `\Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin`                        | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to  merchant files.                                    |
+| `\Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin`                        | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to merchant files.                                    |
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin`   | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to  import files.                             |
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole`                                           | `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`                                           | Reads merchant files for data import, runs data imports, and updates import status. |
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds a merchant file relation to the merchant file import DB entity.                 |
@@ -136,7 +142,7 @@ acl:
 
 {% endinfo_block %}
 
-#### Add Jenkins configuration
+### Add Jenkins configuration
 
 
 Add a job to check if there're new files uploaded for data import by merchants. You can change the schedule according to your project needs.
@@ -152,9 +158,9 @@ $jobs[] = [
 ];
 ```
 
-#### Configure Behavior
+### Configure behavior
 
-Now you need to decide what types of files you want to allow for uploading and importing inside the Merchant Portal.
+1. Define file types to allow uploading and importing in the Merchant Portal:
 
 ```php
 
@@ -180,7 +186,7 @@ class MerchantFileConfig extends SprykerMerchantFileConfig
 }
 ```
 
-Then, decide what types of imports you want to enable for merchants with the example or template file that merchants can download:
+2. Define imports types to enable for merchants with the example or template file, which merchants can download:
 
 ```php
 namespace Pyz\Zed\FileImportMerchantPortalGui;
@@ -215,7 +221,7 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
 
 ### Install feature frontend
 
-Update `paths` in the `tsconfig.mp.json` file:
+1. In `tsconfig.mp.json`, update `paths`:
 
 ```json
 {
@@ -231,7 +237,7 @@ Update `paths` in the `tsconfig.mp.json` file:
 }
 ```
 
-Build the frontend:
+2. Build the frontend:
 
 ```bash
 npm ci

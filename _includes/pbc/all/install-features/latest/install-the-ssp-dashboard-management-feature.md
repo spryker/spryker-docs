@@ -426,6 +426,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 - Widgets for Assets, Inquiries, and Files
 
 3. Log out and log in with a compnay user without the role you've created.
-   Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
+
+- Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
 
 {% endinfo_block %}

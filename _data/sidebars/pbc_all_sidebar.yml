@@ -1637,6 +1637,9 @@ entries:
               - title: Vault for Tokens overview
                 url: /docs/pbc/all/miscellaneous/spryker-core-feature-overview/vault-for-tokens-overview.html
 
+
+          - title: Push Notification feature overview
+            url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Install features

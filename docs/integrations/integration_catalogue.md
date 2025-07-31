@@ -184,7 +184,8 @@ layout: custom_new
                     ${partner.commerce ? `<span class="tag comm">${partner.commerce}</span>` : ''}
                   </div>
                   <div class="author-info">
-                     <div class="author_name">Created by: ${partner.Author}</div>
+                    <div class="author_name">Created by: ${partner.Author}</div>
+                    ${partner.tp_partner ? `<div class="spryker_tp_partner">Spryker Partner</div>` : ''}
                   </div>
                 `;
                 containerElement.appendChild(card);

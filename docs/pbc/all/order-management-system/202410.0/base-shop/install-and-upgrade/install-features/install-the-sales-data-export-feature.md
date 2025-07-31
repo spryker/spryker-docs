@@ -18,4 +18,4 @@ related:
     link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-sales-data-export-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-sales-data-export-feature.md -->
+{% include pbc/all/install-features/latest/install-the-sales-data-export-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-sales-data-export-feature.md -->

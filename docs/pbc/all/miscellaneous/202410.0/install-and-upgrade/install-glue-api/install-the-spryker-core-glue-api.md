@@ -25,4 +25,4 @@ related:
     link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-spryker-core-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-spryker-core-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-spryker-core-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-spryker-core-glue-api.md -->

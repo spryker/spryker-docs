@@ -22,4 +22,4 @@ related:
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-price-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-price-glue-api.md -->

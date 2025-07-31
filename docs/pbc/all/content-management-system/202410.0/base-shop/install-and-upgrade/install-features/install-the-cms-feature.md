@@ -19,4 +19,4 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-feature.md -->
+{% include pbc/all/install-features/latest/install-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-feature.md -->

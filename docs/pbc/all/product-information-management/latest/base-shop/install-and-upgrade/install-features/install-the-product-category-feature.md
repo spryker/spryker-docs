@@ -22,4 +22,4 @@ related:
       link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-category-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-product-category-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-category-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-product-category-feature.md -->

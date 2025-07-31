@@ -10,4 +10,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-shopping-lists-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-shopping-lists-feature.md -->

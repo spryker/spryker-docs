@@ -10,4 +10,4 @@ related:
     link: docs/pbc/all/carrier-management/page.version/marketplace/marketplace-shipment-feature-overview.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-marketplace-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-marketplace-shipment-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-marketplace-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-marketplace-shipment-feature.md -->

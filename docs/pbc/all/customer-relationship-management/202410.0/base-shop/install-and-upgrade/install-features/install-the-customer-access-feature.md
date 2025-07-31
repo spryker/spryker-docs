@@ -17,4 +17,4 @@ related:
     link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-access-glue-api.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-customer-access-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-customer-access-feature.md -->
+{% include pbc/all/install-features/latest/install-the-customer-access-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-customer-access-feature.md -->

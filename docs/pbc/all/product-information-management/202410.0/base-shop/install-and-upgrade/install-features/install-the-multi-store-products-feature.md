@@ -24,4 +24,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->
+{% include pbc/all/install-features/latest/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

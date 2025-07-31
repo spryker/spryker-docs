@@ -21,4 +21,4 @@ related:
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-availability-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-availability-notification-feature.md -->
+{% include pbc/all/install-features/latest/install-the-availability-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-availability-notification-feature.md -->

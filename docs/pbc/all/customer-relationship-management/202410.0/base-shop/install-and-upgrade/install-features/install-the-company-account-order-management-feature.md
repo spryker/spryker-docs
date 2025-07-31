@@ -16,4 +16,4 @@ related:
     - title: Company Account
       link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-account-feature-overview.html
 ---
-{% include pbc/all/install-features/{{page.version}}/install-the-company-account-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md -->
+{% include pbc/all/install-features/latest/install-the-company-account-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md -->

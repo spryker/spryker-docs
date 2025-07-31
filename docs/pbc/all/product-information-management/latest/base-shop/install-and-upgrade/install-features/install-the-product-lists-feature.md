@@ -30,4 +30,4 @@ related:
     link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-lists-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-lists-feature.md -->

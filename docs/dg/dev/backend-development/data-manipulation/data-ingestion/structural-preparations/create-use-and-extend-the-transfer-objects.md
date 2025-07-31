@@ -13,13 +13,15 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 ---
 
-{% info_block infoBox %}
-As of 202108.0 release, we recommend creating strict transfer objects.
-{% endinfo_block %}
-
 *Transfer objects* are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 
 This document shows how to create and use transfer objects.
+
+{% info_block infoBox %}
+
+We recommend creating strict transfer objects.
+
+{% endinfo_block %}
 
 ## Create transfer objects
 

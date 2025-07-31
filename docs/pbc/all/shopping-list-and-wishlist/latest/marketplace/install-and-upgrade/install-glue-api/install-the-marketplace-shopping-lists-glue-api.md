@@ -8,4 +8,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
 ---
 
-{% include pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-shopping-lists-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-shopping-lists-glue-api.md -->
+{% include pbc/all/install-glue-api/latest/marketplace/install-the-marketplace-shopping-lists-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-shopping-lists-glue-api.md -->

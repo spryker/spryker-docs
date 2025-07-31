@@ -320,7 +320,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. Log in as a company admin.
-2. Go to `https://www.mysprykershop.com/en/company/company-role.
+2. Go to `https://www.mysprykershop.com/en/company/company-role`.
 3. Click **Edit** next to a role.
     Make sure you can assign the **Send Merchant Relation Request** permission.
 

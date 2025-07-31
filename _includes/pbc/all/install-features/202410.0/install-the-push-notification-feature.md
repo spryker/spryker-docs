@@ -286,6 +286,7 @@ class PushNotificationDependencyProvider extends SprykerPushNotificationDependen
 }
 
 ```
+
 </details>
 
 2. Enable the following installer plugins:
@@ -324,6 +325,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 Ensure that the installer plugin works correctly:
 
 1. Execute install plugins:
+
 ```bash
 docker/sdk console setup:init-db
 ```
@@ -407,9 +409,11 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 1. Create a simple single-page demo application.
 2. Generate `VAPID` keys at `https://vapidkeys.com/`.
 3. Create a directory for the demo application:
+
 ```bash
 mkdir push_notification_spa
 ```
+
 4. In the `push_notification_spa` directory, create the following files:
 
 **.../push_notification_spa/index.html**
@@ -657,6 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 ```
+
 </details>
 
 **.../push_notification_spa/serviceWorker.js**
@@ -685,6 +690,7 @@ self.addEventListener('push', function (event) {
 5. To set up credential, in `.../push_notification_spa/app.js`, set your VAPID public key for the `applicationServerKey` variable.
 6. In `.../push_notification_spa/app.js`, find the `getToken()` method and set the credentials of the user that works in your system.
 7. Run the local HTTP server with the demo app:
+
 ```bash
 php -S localhost:8000
 ```
@@ -694,12 +700,16 @@ php -S localhost:8000
 10. Create the push notification by adding it manually to the `spy_push_notification` database table.
     Use the same group and notification provider that is used by the subscription.
 11. Send the push notification:
+
 ```bash
 docker/sdk console send-push-notifications
 ```
-    The notification is displayed with content from the `spy_push_notification.payload` database field.
+
+  The notification is displayed with content from the `spy_push_notification.payload` database field.
+  
 13. Change the `spy_push_notification_subscription.expired_at` subscription expiration date to the previous year's date.
 14. Remove the outdated subscriptions:
+
 ```bash
 docker/sdk console delete-expired-push-notification-subscriptions
 ```

@@ -36,7 +36,7 @@ Make sure the following module has been installed:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 service_point_widget.validation.error.service_point_not_selected,Please select service point.,en_US
 service_point_widget.validation.error.service_point_not_selected,Bitte Servicestelle auswählen.,de_DE
 service_point_widget.validation.error.billing_address_not_provided,Please add billing address manually.,en_US

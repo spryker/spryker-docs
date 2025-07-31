@@ -49,10 +49,10 @@ Customer delete functionality has been added to the `Customer` module. These cha
 
 ### 1. Database migration
 
-* `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
-* `vendor/bin/console propel:migrate`
-* `vendor/bin/console propel:model:build`
-* `vendor/bin/console transfer:generate`
+- `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
+- `vendor/bin/console propel:migrate`
+- `vendor/bin/console propel:model:build`
+- `vendor/bin/console transfer:generate`
 
 After running the last command, you'll find a new field `anonymized_at` in entities `Orm\Zed\Customer\Persistence\SpyCustomer`, `Orm\Zed\Customer\Persistence\SpyCustomerAddress` and their transfer objects `Generated\Shared\Transfer\CustomerTransfer` and `Generated\Shared\Transfer\CustomerAddressTransfer`.
 

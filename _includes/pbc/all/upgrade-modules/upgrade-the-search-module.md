@@ -132,10 +132,10 @@ Your development environment needs to be updated with Elasticsearch 5.6.x.
 
 **Elasticsearch 5 related breaking change highlights**
 
-* `string fields` replaced by text/keyword field: mapping changed for all string fields in the indexes.
-* `index` property: the index property now only accepts `true/false` instead of `not_analyzed/no`.
-* `size`: 0 on Terms, Significant Terms and Geohash Grid Aggregations: the Demoshop used this feature to aggregate infinite number of categories. Size should be set to a fixed number instead.
-* `missing` query was removed, use a negated exists query instead.
+- `string fields` replaced by text/keyword field: mapping changed for all string fields in the indexes.
+- `index` property: the index property now only accepts `true/false` instead of `not_analyzed/no`.
+- `size`: 0 on Terms, Significant Terms and Geohash Grid Aggregations: the Demoshop used this feature to aggregate infinite number of categories. Size should be set to a fixed number instead.
+- `missing` query was removed, use a negated exists query instead.
 
 **Other breaking changes**
 Previously the `vendor/bin/console setup:search` command installed indexes for all stores.
@@ -148,14 +148,14 @@ Now it only installs the index for the current store.
 With version 7 we have fixed a bug with incorrect mapping of a filter name with request parameters.
 If you have modified/extended:
 
-* `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\CategoryExtractor`
-* `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\FacetExtractor`
-*  `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\RangeExtractor`
+- `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\CategoryExtractor`
+- `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\FacetExtractor`
+- `\Spryker\Client\Search\Model\Elasticsearch\AggregationExtractor\RangeExtractor`
 
 you have to merge the latest changes with the core. Especially this is important for `extractDataFromAggregations` method.
 
-* `\Spryker\Client\Search\Plugin\Config\FacetConfigBuilder` now looks for facet from the request parameters.
-* `\Spryker\Client\Search\Plugin\Config\SortConfigBuilder` now looks for configuration by configuration field name.
+- `\Spryker\Client\Search\Plugin\Config\FacetConfigBuilder` now looks for facet from the request parameters.
+- `\Spryker\Client\Search\Plugin\Config\SortConfigBuilder` now looks for configuration by configuration field name.
 
 **Yves changes:**
 The `UrlGenerator` was incorrectly setting the request parameters, therefore now it's necessary to change processFacetSearchResultTransfer and processRangeSearchResultTransfer as shown in the code sample below.
@@ -207,7 +207,7 @@ You have to change the way filters are configured in twig templates. Previously 
 
 **Twig templates also require changes:**
 
-* **"multi-select.twig"**
+- **"multi-select.twig"**
 
 ```twig
 <input type="checkbox" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[]" ...
@@ -219,7 +219,7 @@ should be
 <input type="checkbox" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[]" ...
 ```
 
-* **"price-range.twig"**
+- **"price-range.twig"**
 
 ```twig
 <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]"
@@ -231,7 +231,7 @@ should be
 <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...
 ```
 
-* **"range.twig"**
+- **"range.twig"**
 
 ```twig
 <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]" ...
@@ -243,7 +243,7 @@ should be
 <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...
 ```
 
-* **"rating.twig"**
+- **"rating.twig"**
 
 ```twig
 <input type="hidden" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ...
@@ -255,7 +255,7 @@ should be
 <input type="hidden" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ...
 ```
 
-* **"single-select.twig"**
+- **"single-select.twig"**
 
 ```twig
 <input type="radio" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}" ...
@@ -267,7 +267,7 @@ should be
 <input type="radio" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}" ...
 ```
 
-* **"Pyz/Yves/Catalog/Theme/default/catalog/partials/filters.twig"**
+- **"Pyz/Yves/Catalog/Theme/default/catalog/partials/filters.twig"**
 
 `{% raw %}{{{% endraw %} ('product.filter.' ~ filter.name) | trans {% raw %}}}{% endraw %}` should be `{% raw %}{{{% endraw %} ('product.filter.' ~ filter.name | lower) | trans {% raw %}}}{% endraw %}`
 
@@ -276,17 +276,17 @@ should be
 
 We changed the way dynamic search configuration was cached and then used. This feature caused the following non-backward compatible changes:
 
-* The `Spryker\Shared\Search\SearchConstants::SEARCH_CONFIG_CACHE_KEY` config was removed, but previously it was required to be filled with a key that was used to save the search config cache into Redis.
-* Removed `SearchFacade::saveSearchConfigCache()` method which stored the given search cache configuration into Redis.
-* In the new version, instead of the removed code mentioned above, you'll need to provide a list of `Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface` in `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()` instead.
+- The `Spryker\Shared\Search\SearchConstants::SEARCH_CONFIG_CACHE_KEY` config was removed, but previously it was required to be filled with a key that was used to save the search config cache into key-value storage (Redis or Valkey).
+- Removed `SearchFacade::saveSearchConfigCache()` method which stored the given search cache configuration into key-value storage (Redis or Valkey).
+- In the new version, instead of the removed code mentioned above, you'll need to provide a list of `Spryker\Client\Search\Dependency\Plugin\SearchConfigExpanderPluginInterface` in `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()` instead.
 
 We moved the possible facet type option constants from `Spryker\Client\Search\Plugin\Config\FacetConfigBuilder` to `\Spryker\Shared\Search\SearchConstants`:
 
-* `FacetConfigBuilder::TYPE_ENUMERATION` -> `SearchConstants::FACET_TYPE_ENUMERATION`
-* `FacetConfigBuilder::TYPE_RANGE` -> SearchConstants::FACET_TYPE_RANGE
-* `FacetConfigBuilder::TYPE_PRICE_RANGE` -> `SearchConstants::FACET_TYPE_PRICE_RANGE`
-* `FacetConfigBuilder::TYPE_CATEGORY` -> `SearchConstants::FACET_TYPE_CATEGORY`
-* `FacetConfigBuilder::TYPE_BOOL`-> not supported
+- `FacetConfigBuilder::TYPE_ENUMERATION` -> `SearchConstants::FACET_TYPE_ENUMERATION`
+- `FacetConfigBuilder::TYPE_RANGE` -> SearchConstants::FACET_TYPE_RANGE
+- `FacetConfigBuilder::TYPE_PRICE_RANGE` -> `SearchConstants::FACET_TYPE_PRICE_RANGE`
+- `FacetConfigBuilder::TYPE_CATEGORY` -> `SearchConstants::FACET_TYPE_CATEGORY`
+- `FacetConfigBuilder::TYPE_BOOL`-> not supported
 
 We have added a type field to the default "page" index type defined by `Search/src/Spryker/Shared/Search/IndexMap/search.json`. With this field it's possible to differentiate multiple item types, products, cms pages, categories. Additionally, we also fixed the indexing strategy of store and `locale` field, they are set to "not_analyzed". These changes require a repeated indexation of your existing data. In a non-production environment this means that you need to delete your index and then install the new one by running `vendor/bin/console setup:search`.
 

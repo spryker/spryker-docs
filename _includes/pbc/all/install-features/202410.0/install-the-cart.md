@@ -100,6 +100,7 @@ protected function getCartPreCheckPlugins(Container $container): array
 Adjust the configuration constant to allow or prevent adding products with zero price:
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 namespace Pyz\Zed\PriceCartConnector;

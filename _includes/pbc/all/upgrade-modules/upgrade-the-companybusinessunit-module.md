@@ -24,41 +24,42 @@ This change allowed company business units to have parent company business units
 
 To upgrade to the new version, do the following:
 
-1. Update modules
+1. Update modules:
 
-   1. Update `spryker/company-business-unit` module version in your `composer.json`:
-  ```bash
-  {
-    "require": {
-      "spryker/company-business-unit": "^2.0.0"
+    1. Update `spryker/company-business-unit` module version in your `composer.json`:
+
+    ```bash
+    {
+      "require": {
+        "spryker/company-business-unit": "^2.0.0"
+      }
     }
-  }
-  ```
+    ```
 
-   2. Run `composer update` to update the installed packages. If the execution of this command fails because of the dependency issues, they should be resolved first.
+    2. Run `composer update` to update the installed packages. If the execution of this command fails because of the dependency issues, they should be resolved first.
 
 2. Perform the database update and migration:
 
-   1. Execute the following SQL query to apply `spy_company_business_unit` database table changes:
+    1. Execute the following SQL query to apply `spy_company_business_unit` database table changes:
 
-  ```SQL
-  BEGIN;
+    ```SQL
+    BEGIN;
 
-  ALTER TABLE "spy_company_business_unit" ADD "fk_parent_company_business_unit" INTEGER;
+    ALTER TABLE "spy_company_business_unit" ADD "fk_parent_company_business_unit" INTEGER;
 
-  ALTER TABLE "spy_company_business_unit" ADD CONSTRAINT "spy_company_business_unit-fk_parent_company_business_unit"
-    FOREIGN KEY ("fk_parent_company_business_unit")
-    REFERENCES "spy_company_business_unit" ("id_company_business_unit");
+    ALTER TABLE "spy_company_business_unit" ADD CONSTRAINT "spy_company_business_unit-fk_parent_company_business_unit"
+      FOREIGN KEY ("fk_parent_company_business_unit")
+      REFERENCES "spy_company_business_unit" ("id_company_business_unit");
 
-  COMMIT;
-  ```
+    COMMIT;
+    ```
 
-   2. Execute the following commands to build Propel models:
+    2. Execute the following commands to build Propel models:
 
-  ```bash
-  console propel:diff;
-  console propel:migrate;
-  console propel:model:build;
-  ```
+    ```bash
+    console propel:diff;
+    console propel:migrate;
+    console propel:model:build;
+    ```
 
-   3.  Execute the `console transfer:generate` command to apply transfer objects changes.
+    3. Execute the `console transfer:generate` command to apply transfer objects changes.

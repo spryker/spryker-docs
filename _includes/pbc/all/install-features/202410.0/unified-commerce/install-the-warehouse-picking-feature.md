@@ -10,7 +10,7 @@ Install the required features:
 | NAME                                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                  |
 |-----------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Warehouse User Management               | {{page.version}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
-| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
+| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Shipment                                | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                       |
 | Push Notification                       | {{page.version}} | [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html)                                     |
@@ -319,6 +319,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 </statemachine>
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -391,9 +392,11 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 To verify the OAuth client exists in the database, run the following SQL query:
+
 ```sql
 SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your-app';
 ```
+
   Make sure the output contains one record and the redirect URI is not empty. If the record doesn't exist, create it.
 
 {% endinfo_block %}
@@ -402,8 +405,9 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'the-client-identifier-of-your
 
 1. Prepare your data according to your requirements using our demo data:
 
-* Base shop:
+- Base shop:
 **data/import/common/common/warehouse.csv**
+
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -411,9 +415,10 @@ Warehouse2,1,multi-shipment
 Warehouse3,0,multi-shipment
 ```
 
-* Marketplace:
+- Marketplace:
 
 **data/import/common/common/marketplace/warehouse.csv**
+
 ```csv
 name,is_active,picking_list_strategy
 Warehouse1,1,multi-shipment
@@ -545,6 +550,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/PickingList/PickingListDependencyProvider.php**
@@ -747,7 +753,7 @@ username={username}&password={password}&response_type=code&client_id={client_id}
 
 For more detailed information about the Authorization (Code Grant flow) Request with PKCE, see to [Authorization Request](https://www.oauth.com/oauth2-servers/pkce/authorization-request/).
 
-    Check that the response contains the 201 response with a code.
+  Check that the response contains the 201 response with a code.
 
 2. Using the code you've retrieved in the previous step, authenticate as a Back Office user:
 
@@ -868,23 +874,23 @@ As a prerequisite, do the following:
 
 Make sure that you can send the following requests:
 
-* Retrieve picklists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
+- Retrieve picklists: `GET https://glue-backend.mysprykershop.com/picking-lists`.
 
-* Retrieve picklists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
+- Retrieve picklists with picking list items included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=picking-list-items`.
 
-* Retrieve picklists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
+- Retrieve picklists with the users information included:  `GET https://glue-backend.mysprykershop.com/picking-lists?include=users`.
 
-* Retrieve picklists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
+- Retrieve picklists with warehouse information included: `GET https://glue-backend.mysprykershop.com/picking-lists?include=warehouses`.
 
-* Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
+- Retrieve a picking list: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}`.
 
-* Start picking: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
+- Start picking: `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/start-picking`
 
-* Retrieve items from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
+- Retrieve items from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items`.
 
-* Retrieve an item from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
+- Retrieve an item from a picklist: `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`.
 
-* Pick one or more items from a picklist:
+- Pick one or more items from a picklist:
 
 `PATCH https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}/picking-list-items/{% raw %}{{{% endraw %}picking-list-item-uuid{% raw %}{{{% endraw %}`
 
@@ -914,7 +920,7 @@ Make sure that you can send the following requests:
 Make sure push notification generation works:
 
 1. Place an order with a product from the warehouse with the `multi-shipment` picking strategy.
-2. In the Back Office, go to **Sales&nbsp;<span aria-label="and then">></span> Orders&nbsp;**.
+2. In the Back Office, go to **Sales**>**Orders**.
 3. On the **Orders** page, next the order you've placed, click **View**.
 4. To make the order ready for picking, manually change the state of the order. For instructions, see [Change the state of order items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
   The order state should be **ready for picking**.

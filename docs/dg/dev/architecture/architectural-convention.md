@@ -1762,6 +1762,7 @@ src
         └── [Module]
             └── Transfer
                 └── [module_name].transfer.xml   
+                └── [module_name]_rest_api.transfer.xml   
 ```
 
 `Transfer Objects` are pure data transfer objects (DTO) with getters and setters. They can be used in all [applications](#applications) and all [layers](#layers). Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
@@ -1787,7 +1788,9 @@ For every defined table in [Persistence Schema](#persistence-schema), a matching
 
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
-### Storefront API Transfer Schemas
+### RestAPI Transfer Schemas
+
+The following rules only apply to the API transfer schema definitions following the name pattern `[module_name]_rest_api.transfer.xml`.
 
 - **MUST** have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 - **SHOULD** use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.

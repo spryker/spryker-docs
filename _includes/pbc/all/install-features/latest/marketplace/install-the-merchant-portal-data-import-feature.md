@@ -112,7 +112,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 
 ### Add plugins
 
-1. Add the following plugins to the dependency providers:
+Add the following plugins to the dependency providers:
 
 | PLUGIN                                                                                                                                     | PLACE                                                                                                        | DESCRIPTION                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -123,15 +123,16 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds a merchant file relation to the merchant file import DB entity.                 |
 
 
-2. Sync ACL entity rules:
+### Sync ACL entity rules
+
+1. Sync ACL entity rules:
 
 ```bash
 vendor/bin/console acl-entity:synchronize
 ```
 
-{% info_block warningBox "Warning" %}
 
-Make sure that this command is also part of your normal deployment process. For example, you have it in `config/install/production.yml`.
+2. To integrate the feature without a destructive deployment, add the following command to your normal deployment process–for example, to `config/install/production.yml`:
 
 ```yaml
 acl:

@@ -29,12 +29,12 @@ Make sure the following packages are now listed in `composer.lock`:
 
 Add the following configuration to `config/Shared/config_default.php`:
 
-| CONFIGURATION                                     | SPECIFICATION                                                                                                            | NAMESPACE                               |
-|---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE           | Provides the core Flysystem configuration, which is essential for managing the storage and retrieval of asset files.     | Spryker\Shared\FileSystem               |
-| SelfServicePortalConstants::BASE_URL_YVES         | Specifies the base URL for the Yves frontend.                                                                            | SprykerFeature\Shared\SelfServicePortal |
-| SelfServicePortalConstants::ASSET_STORAGE_NAME    | Assigns a unique name to the Flysystem storage instance dedicated to SSP assets.                                         | SprykerFeature\Zed\SelfServicePortal    |
-| SelfServicePortalConfig::getAssetStatusClassMap() | Provides a mapping between asset status values (for example, pending, approved) and their corresponding CSS class names. | SprykerFeature\Zed\SelfServicePortal    |
+| CONFIGURATION                                     | SPECIFICATION                                                                                                                                                                                          | NAMESPACE                               |
+|---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE           | Defines the Flysystem service configuration for handling asset file storage. This configuration specifies the adapter (for example, local, S3) and the root path for storing asset files, ensuring they are managed securely and efficiently. | Spryker\Shared\FileSystem               |
+| SelfServicePortalConstants::BASE_URL_YVES         | Specifies the base URL for the Yves frontend. This URL is used to generate absolute links to asset-related pages on the Storefront, ensuring correct navigation and resource loading.                               | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConstants::ASSET_STORAGE_NAME    | Defines the unique identifier for the Flysystem storage instance used for SSP assets. This name links the asset management feature to the specific filesystem configuration defined in `FileSystemConstants::FILESYSTEM_SERVICE`. | SprykerFeature\Zed\SelfServicePortal    |
+| SelfServicePortalConfig::getAssetStatusClassMap() | Defines a map that associates asset status values (for example, `pending`, `approved`) with their corresponding CSS class names. This is used in the Back Office and Storefront to visually represent the status of each asset, for example, with colored labels. | SprykerFeature\Zed\SelfServicePortal    |
 
 **config/Shared/config_default.php**
 

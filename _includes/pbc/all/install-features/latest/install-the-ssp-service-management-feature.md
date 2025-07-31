@@ -34,16 +34,16 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                      | SPECIFICATION                                                                            | NAMESPACE                                   |
-|--------------------------------------------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Shipment types supported by the Click&Collect feature.                                   | SprykerShop\Yves\ClickAndCollectPageExample |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Returns list of service type keys that are considered pickable.                          | SprykerShop\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()             | Reference of a merchant used for creating product offers from the Back Office.           | SprykerFeature\Zed\SelfServicePortal        |
-| DataImportConfig::getFullImportTypes()                             | List of data import entities to be imported during a full import.                        | Pyz\Zed\DataImport                          |
-| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are considered as delivery types.              | SprykerShop\Yves\ServicePointWidget         |
-| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are considered as delivery types.              | SprykerShop\Yves\ShipmentTypeWidget         |
-| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key.                                                         | SprykerFeature\Shared\SelfServicePortal     |
-| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING    | Defines the mapping of payment method names to their respective state machine processes. | SprykerFeature\Shared\SelfServicePortal     |
+| CONFIGURATION                                                      | SPECIFICATION                                                                                                                                                  | NAMESPACE                                   |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Defines the shipment types that are supported by the Click & Collect feature, allowing customers to choose between different delivery or pickup options.       | SprykerShop\Yves\ClickAndCollectPageExample |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Specifies the default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                              | SprykerShop\Yves\ClickAndCollectPageExample |
+| SelfServicePortalConfig::getDefaultMerchantReference()             | Provides the default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
+| DataImportConfig::getFullImportTypes()                             | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                          | Pyz\Zed\DataImport                          |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                       | SprykerShop\Yves\ServicePointWidget         |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                       | SprykerShop\Yves\ShipmentTypeWidget         |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
+| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING    | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                         | SprykerFeature\Shared\SelfServicePortal     |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 

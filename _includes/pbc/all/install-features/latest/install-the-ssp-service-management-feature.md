@@ -4,7 +4,7 @@ Currently, the order amendment feature does not support service products.
 
 {% endinfo_block %}
 
-This document describes how to install the Self-Service Portal (SSP) SSP Inquiry Management feature.
+This document describes how to install the Self-Service Portal (SSP) SSP Service Management feature.
 
 ## Prerequisites
 

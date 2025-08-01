@@ -220,7 +220,7 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
 ```
 
 
-### Install feature frontend
+## Install feature frontend
 
 1. In `tsconfig.mp.json`, update `paths`:
 
@@ -247,7 +247,18 @@ npm run mp:build
 
 {% info_block warningBox "Verification" %}
 
-Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that you see data import table and can open new import form.
+In the Merchant Portal go to **Data Import**. Make sure the data import table is displayed and you can initiate a new import.
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
 

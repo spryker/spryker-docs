@@ -52,11 +52,33 @@ vendor/bin/console translator:generate-cache
 
 #### Add plugins
 
-Add the following plugins to the dependency providers:
+1. Enable product data import by registering the plugin.
 
-| PLUGIN                                                                                                            | PLACE                                                                        | DESCRIPTION                                    |
-|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------|
-| `\Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImport\MerchantCombinedProductDataImportPlugin`  | `\Pyz\Zed\DataImport\DataImportDependencyProvider::getDataImporterPlugins()` | Adds new type of merchant product data import. |
+| PLUGIN | SPECIFICATION | NAMESPACE  |
+| ---------------- | ------------- | ---------------- |
+| MerchantCombinedProductDataImportPlugin | Adds new type of merchant product data import. | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImport\MerchantCombinedProductDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            ...
+            new MerchantCombinedProductDataImportPlugin(),
+        ];
+    }
+}
+```
 
 #### Configure Behavior
 

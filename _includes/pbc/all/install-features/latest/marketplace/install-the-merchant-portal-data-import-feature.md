@@ -25,9 +25,10 @@ composer require spryker/file-import-merchant-portal-gui:"^0.1.0" --update-with-
 
 Make sure that the following modules have been installed:
 
-| MODULE                           | EXPECTED DIRECTORY                                  |
-|----------------------------------|-----------------------------------------------------|
-| MerchantFile                     | vendor/spryker/merchant-file                        |
+| MODULE                      | EXPECTED DIRECTORY                              |
+|-----------------------------|-------------------------------------------------|
+| MerchantFile                | vendor/spryker/merchant-file                    |
+| FileImportMerchantPortalGui | vendor/spryker/file-import-merchant-portal-gui  |
 
 
 {% endinfo_block %}
@@ -103,7 +104,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 ];
 ```
 
-#### Add plugins
+### Add plugins
 
 Add the following plugins to the dependency providers:
 
@@ -116,7 +117,7 @@ Add the following plugins to the dependency providers:
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds merchant file relation to the merchant file import DB entity.                 |
 
 
-Synchronize ACL entity rules:
+### Synchronize ACL entity rules:
 
 ```bash
 vendor/bin/console acl-entity:synchronize
@@ -135,7 +136,7 @@ acl:
 
 {% endinfo_block %}
 
-#### Jenkins configuration
+### Jenkins configuration
 
 Include new job into `config/Zed/cronjobs/jenkins.php`
 
@@ -150,7 +151,7 @@ $jobs[] = [
 
 It will be executed every minute to check if there is a new file uploaded for data import by merchants. You can change the schedule according to your project needs.
 
-#### Configure Behavior
+### Configure Behavior
 
 Now you need to decide what types of files you want to allow for uploading and importing inside the Merchant Portal.
 
@@ -238,7 +239,7 @@ npm run mp:build
 
 {% info_block warningBox "Verification" %}
 
-Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that the UI is not broken.
+Open Merchant Portal, log in with a merchant user, open the **Data Import** section, and make sure that you see data import table and can open new import form.
 
 {% endinfo_block %}
 

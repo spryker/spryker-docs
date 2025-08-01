@@ -65,6 +65,8 @@ Also update `FileImportMerchantPortalGuiConfig`:
 - Add the `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` type to the list of available import types to allow merchants to import their products.
 - Add the product data import file template to the list of templates. Spryker provides a specific CSV template for product data import, which merchants can use to prepare their product data files.
 
+In the example below, the product data import template is labeled "CSV template Product", but it can be customized as needed.
+
 ```php
 namespace Pyz\Zed\FileImportMerchantPortalGui;
 

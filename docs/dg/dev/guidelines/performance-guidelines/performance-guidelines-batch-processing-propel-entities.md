@@ -1,7 +1,7 @@
 ---
 title: "Performance guidelines: Batch processing of Propel entities"
 description: Learn how to optimize Propel ORM performance using ActiveRecordBatchProcessorTrait and CascadeActiveRecordBatchProcessorTrait for efficient batch processing, reduced database load, and support for complex entity relationships. Includes usage examples and best practices.
-last_updated: Jun 20, 2025
+last_updated: Jul 29, 2025
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -112,38 +112,7 @@ class SalesEntityManager extends AbstractEntityManager implements SalesEntityMan
 }
 ```
 
-
-## BatchEntityHooksInterface
-
-BatchEntityHooksInterface provides `postSave` hooks similar to publish and synchronize (P&S) events. When using `ActiveRecordBatchProcessorTrait` or `CascadeActiveRecordBatchProcessorTrait`, storage and search entities must explicitly implement this interface to ensure proper event handling during batch operations because these traits do not automatically trigger P&S events.
-
-### Usage example
-
-```php
-class AbstractSpyProductOfferStorage extends BaseSpyProductOfferStorage implements BatchEntityHooksInterface
-{
-    public function batchPreSaveHook(): void
-    {
-        if (method_exists($this, 'isSynchronizationEnabled') && $this->isSynchronizationEnabled()) {
-            // synchronization behavior
-            $this->setGeneratedKey();
-            $this->setGeneratedKeyForMappingResource();
-            $this->setGeneratedAliasKeys();
-        }
-    }
-
-    public function batchPostSaveHook(): void
-    {
-        if (method_exists($this, 'isSynchronizationEnabled') && $this->isSynchronizationEnabled()) {
-            // synchronization behavior
-            $this->syncPublishedMessage();
-            $this->syncPublishedMessageForMappingResource();
-            $this->syncPublishedMessageForMappings();
-        }
-    }
-```
-
-When saving the `SpyProductOfferStorage` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
+When saving the `SpySalesOrderItem` entity using `ActiveRecordBatchProcessorTrait`, the P&S event is triggered after the batch save completes.
 
 ## Limitations and recommendations
 

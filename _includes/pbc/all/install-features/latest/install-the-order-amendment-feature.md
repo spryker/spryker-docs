@@ -765,29 +765,27 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 <details>
     <summary>src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php</summary>
     
-    **src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
-    
-    ```php
-    <?php
-    
-    namespace Pyz\Service\PriceProductSalesOrderAmendment;
-    
-    use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
-    use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
-    
-    class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
+```php
+<?php
+
+namespace Pyz\Service\PriceProductSalesOrderAmendment;
+
+use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
+use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
+
+class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
+     */
+    protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
     {
-        /**
-         * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
-         */
-        protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
-        {
-            return [
-                new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
-            ];
-        }
+        return [
+            new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
+        ];
     }
-    ```
+}
+```
 
 </details>
 
@@ -2378,7 +2376,7 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 #### Enable plugins for the asynchronous order amendment checkout process flow.
 
 Make sure all the needed plugins in modules dependency providers registered for the `order-amendment` checkout process flow are also registered for the `order-amendment-async` checkout process flow.
-So instead of dependency provider methods with `ForOrderAmendment` postfix use the methods with `ForOrderAmendmentAsync` postfix. Check the `Cart`, `CartReorder`, `Checkout`, `CheckoutRestApi`, `Sales` modules.
+So instead of dependency provider methods with `ForOrderAmendment` postfix register the plugins in the methods with `ForOrderAmendmentAsync` postfix. Check the `Cart`, `CartReorder`, `Checkout`, `CheckoutRestApi`, `Sales` modules.
 
 
 {% info_block warningBox "Verification" %}
@@ -2394,7 +2392,7 @@ So instead of dependency provider methods with `ForOrderAmendment` postfix use t
 
 #### Possible project level customizations
 
-- **Display errors** - you can display errors appeared during the order amendment draft applying. If any errors occur, `ApplyOrderAmendmentDraftCommandByOrderPlugin` saves them to `spy_sales_order_amendment_quote` table to the `quote_data` with the other Quote data. So it is possible to obtain them from the Quote and display in the frontend.
+- **Display errors** - you can display errors appeared during the `ApplyOrderAmendmentDraftCommandByOrderPlugin` execution. If any errors occur, `ApplyOrderAmendmentDraftCommandByOrderPlugin` saves them to `spy_sales_order_amendment_quote` table to the `quote_data` with the other Quote data. So it is possible to obtain them from the Quote and display in the frontend.
 - **Customize the mail templates** - you can customize the mail templates for the order amendment applied and failed notifications by redefining the `notify-order-amendment-applied.html.twig`, `notify-order-amendment-applied.text.twig`, `notify-order-amendment-failed.html.twig`, `notify-order-amendment-failed.text.twig` Twig templates in your project.
 - **Customize the OMS process** - you can customize you OMS processes to add more states and transitions, for example, to add a state and transition to implement the retry logic for the order amendment draft applying in case of errors.
 

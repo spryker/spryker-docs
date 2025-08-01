@@ -100,7 +100,7 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
 {% info_block warningBox "Verification" %}
 
 Open Merchant Portal, login with merchant user, open the **Data Import** section.
-Check that you can see "Product" import type in the list of available import types and "CSV template Product" under the form can be downloaded.
+Check that the "Product" import type is listed among the available import types, and that a product data import template labeled "CSV template Product" (or a custom label) is available for download under the form.
 
 {% endinfo_block %}
 

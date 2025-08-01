@@ -117,7 +117,7 @@ Add the following plugins to the dependency providers:
 | `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds merchant file relation to the merchant file import DB entity.                 |
 
 
-### Synchronize ACL entity rules:
+### Synchronize ACL entity rules
 
 ```bash
 vendor/bin/console acl-entity:synchronize

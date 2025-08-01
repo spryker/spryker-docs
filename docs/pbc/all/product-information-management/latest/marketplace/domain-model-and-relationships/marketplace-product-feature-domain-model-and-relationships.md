@@ -21,7 +21,7 @@ The following diagram illustrates the dependencies between the modules for the *
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
 | [MerchantProduct](https://github.com/spryker/merchant-product) | Provides connection between the product and merchant entities.  |
-| [MerchantProductDataImport](https://github.com/spryker/merchant-product-data-import) | Imports relations between the products and the merchants from the CSV file.  |
+| [MerchantProductDataImport](https://github.com/spryker/merchant-product-data-import) | Imports relations between the products and the merchants from the CSV file. Also supports full product import with related entities from a single file. |
 | [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides components for merchant product management.  |
 | [ProductMerchantPortalGuiExtension](https://github.com/spryker/product-merchant-portal-gui-extension) | Provides extension interfaces for the  `ProductMerchantPortalGui` module.  |
 | [MerchantProductStorage](https://github.com/spryker/merchant-product-storage) | Manages the storage for the merchant product abstract.  |

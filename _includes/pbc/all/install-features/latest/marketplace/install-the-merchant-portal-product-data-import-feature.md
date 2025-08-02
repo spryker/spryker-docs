@@ -44,11 +44,9 @@ Generate a new translation cache:
 vendor/bin/console translator:generate-cache
 ```
 
-## Update project configuration
+## Add configuration
 
-Add the configuration in the following sections.
-
-1. Enable product data import by registering the plugin.
+Enable product data import by registering the plugin.
 
 | PLUGIN | SPECIFICATION | NAMESPACE  |
 | ---------------- | ------------- | ---------------- |
@@ -76,14 +74,15 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-### Configure behavior
+## Configure behavior
 
-Also update `FileImportMerchantPortalGuiConfig`:
+Update `FileImportMerchantPortalGuiConfig` as follows:
 
-- Add the `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` type to the list of available import types to allow merchants to import their products.
-- Add the product data import file template to the list of templates. Spryker provides a specific CSV template for product data import, which merchants can use to prepare their product data files.
+* Add `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` to `getImportTypes()` to enable merchants to import product data.
 
-In the example below, the product data import template is labeled "CSV template Product", but it can be customized as needed.
+* Add the product data CSV template to `getDataImportTemplates()` so merchants can use it to prepare their files.
+
+* Optional: Customize the name of the `CSV template Product` template.
 
 ```php
 namespace Pyz\Zed\FileImportMerchantPortalGui;

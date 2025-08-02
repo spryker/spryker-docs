@@ -73,7 +73,7 @@ vendor/bin/console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the Merchant Portal, **Data Import** navigation item is displayed.
+Make sure that, in the Merchant Portal, the **Data Import** navigation item is displayed.
 
 {% endinfo_block %}
 
@@ -132,7 +132,7 @@ vendor/bin/console acl-entity:synchronize
 ```
 
 
-2. To integrate the feature without a destructive deployment, add the following command to your normal deployment process–for example, to `config/install/production.yml`:
+2. To integrate the feature without a destructive deployment, add the following command to your normal deployment, such as `config/install/production.yml`:
 
 ```yaml
 acl:

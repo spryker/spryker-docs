@@ -78,11 +78,11 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 Update `FileImportMerchantPortalGuiConfig` as follows:
 
-* Add `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` to `getImportTypes()` to enable merchants to import product data.
+- Add `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` to `getImportTypes()` to enable merchants to import product data.
 
-* Add the product data CSV template to `getDataImportTemplates()` so merchants can use it to prepare their files.
+- Add the product data CSV template to `getDataImportTemplates()` so merchants can use it to prepare their files.
 
-* Optional: Customize the name of the `CSV template Product` template.
+- Optional: Customize the name of the `CSV template Product` template.
 
 ```php
 namespace Pyz\Zed\FileImportMerchantPortalGui;

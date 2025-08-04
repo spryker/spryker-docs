@@ -106,7 +106,11 @@ For instructions on configuring the grace period, see [Install the Order Amendme
 
 ## Video overview
 
-![order-amendment-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Related Developer documents

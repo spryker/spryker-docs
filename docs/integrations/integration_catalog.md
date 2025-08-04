@@ -47,6 +47,8 @@ layout: custom_new
     <div class="tags" id="modalTags"></div>
     <hr>
     <div class="doc-links" id="modalDocs"></div>
+    <hr>
+    <div class="cat_art" id="cat_art"></div>
     <div id="modalNotice" style="display: none;"></div>
   </div>
 </div>
@@ -197,7 +199,7 @@ layout: custom_new
         }
 
         window.openModal = function(partner) {
-            document.getElementById('modalLogo').src = partner.Logo;
+            document.getElementById('modalLogo').src = partner.cat_icon;
             document.getElementById('modalName').textContent = partner.Partner;
             document.getElementById('modalAuthor').textContent = "Created By: " + partner.Author;
             const modalNotice = document.getElementById('modalNotice');
@@ -223,10 +225,15 @@ layout: custom_new
             `;
 
             const docs = [];
-            if (partner.ACP_Doc) docs.push(`<a href="${partner.ACP_Doc}" target="_blank">ACP Documentation</a>`);
-            if (partner.Eco_Doc) docs.push(`<a href="${partner.Eco_Doc}" target="_blank">Eco Documentation</a>`);
-            if (partner.Comm_Doc) docs.push(`<a href="${partner.Comm_Doc}" target="_blank">Community Documentation</a>`);
+            if (partner.ACP_Doc) docs.push(`<a href="${partner.ACP_Doc}" target="_blank" class="cat_docs_link">${partner.Partner} ACP Documentation</a>`);
+            if (partner.Eco_Doc) docs.push(`<a href="${partner.Eco_Doc}" target="_blank" class="cat_docs_link">${partner.Partner} Eco Documentation</a>`);
+            if (partner.Comm_Doc) docs.push(`<a href="${partner.Comm_Doc}" target="_blank" class="cat_docs_link">${partner.Partner} Community Documentation</a>`);
             document.getElementById('modalDocs').innerHTML = docs.join('');
+
+            const method_articles = [];
+            if (partner.ACP_Doc) method_articles.push(`<a href="about_spryker_acp_apps.html" target="_blank" class="cat_article_link">Learn About ACP</a>`);
+            if (partner.Eco_Doc) method_articles.push(`<a href="what_are_spryker_eco_modules.html" target="_blank" class="cat_article_link">Learn about Eco Modules</a>`);
+            document.getElementById('cat_art').innerHTML = method_articles.join('');
 
             document.getElementById('modal').style.display = 'flex';
 

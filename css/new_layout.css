@@ -894,14 +894,31 @@ hr {
 
 .spryker_tp_partner {
   font-size: 0.875rem;
-  background: #1ebea0;
+  border: 2px solid var(--custom-primary-color);
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: var(--custom-primary-color);
   border-radius: 30px;
   margin-top: 10px;
 }
 
 img#modalLogo {
   max-height: 100px;
+}
+
+a.cat_article_link, a.cat_docs_link
+ {
+    background: var(--custom-primary-color);
+    color: white;
+    padding: 1.5% 3%;
+    border-radius: 10px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    text-transform:capitalize;
+}
+
+a.cat_docs_link:after, .cat_article_link:after {
+  display: none;
 }

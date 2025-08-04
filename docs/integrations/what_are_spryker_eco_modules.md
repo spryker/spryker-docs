@@ -57,8 +57,10 @@ Although Eco Modules are distributed separately from the Spryker core, they are 
 
 This consistent approach means you can treat Eco Modules like any other Spryker module, adapting or extending them to meet your project's specific needs.
 
-## Conclusion
+## Using Eco Modules
 
 In essence, Spryker Eco Modules provide a standardized and maintainable way to enhance the Spryker Commerce OS by connecting it to the broader technology ecosystem. They empower businesses to build tailored, best of breed solutions that combine the strength of Spryker with the capabilities of leading third party services.
 
 With Eco Modules, you're not limited by what's built into the Spryker core you can tap into a world of possibilities, driving innovation and differentiation in your ecommerce platform.
+
+But, please note, Eco modules are not part of the paid Spryker Products or Services. Customers cannot claim maintenance of or updates for Eco Modules. Spryker cannot be held liable for any use of this kind of integration.

@@ -765,7 +765,7 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
 
 <details>
     <summary>src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -1858,13 +1858,13 @@ Verify that reordering is disabled for orders created from a quote request:
 
 {% endinfo_block %}
 
-## Optionally: Enable order amendment in asynchronous mode.
+## Optionally: Enable order amendment in asynchronous mode
 
-Order amendment can be enabled in asynchronous mode to improve performance so the OMS is responsible for the most resource-intensive operations.
+Order amendment can be enabled in asynchronous mode to improve performance by offloading the most resource-intensive operations to the OMS.
 
 ### 1) Install the required modules
 
-Some of the Async Order Amendment functionality is provided by an example module so you can install it to see how the asynchronous order amendment works in practice and replace it with your own implementation if needed.
+Some of the Async Order Amendment functionality is provided by an example module. You can install it to see how it works in practice and replace it with your own implementation if needed.
 
 Install the OrderAmendmentExample module using Composer:
 
@@ -2402,16 +2402,19 @@ Replace dependency provider methods postfixed with `ForOrderAmendment` with `For
 3. Execute `console oms:check-condition` command.
 - Make sure the order items are in the `order amendment draft applied` state.
 - Make sure the changes made in the order have been applied to the order.
-4. Execute `console oms:check-condition` command.
 - Make sure an email notification about order amendment has been sent.
 
 {% endinfo_block %}
 
-#### Possible project level customizations
+#### Optional: Project level customizations
 
-- **Display errors** - you can display errors appeared during the `ApplyOrderAmendmentDraftCommandByOrderPlugin` execution. If any errors occur, `ApplyOrderAmendmentDraftCommandByOrderPlugin` saves them to `spy_sales_order_amendment_quote` table to the `quote_data` with the other Quote data. So it is possible to obtain them from the Quote and display in the frontend.
-- **Customize the mail templates** - you can customize the mail templates for the order amendment applied and failed notifications by redefining the `notify-order-amendment-applied.html.twig`, `notify-order-amendment-applied.text.twig`, `notify-order-amendment-failed.html.twig`, `notify-order-amendment-failed.text.twig` Twig templates in your project.
-- **Customize the OMS process** - you can customize you OMS processes to add more states and transitions, for example, to add a state and transition to implement the retry logic for the order amendment draft applying in case of errors.
+- Display errors: Display errors appearing during the `ApplyOrderAmendmentDraftCommandByOrderPlugin` execution. If any errors occur, `ApplyOrderAmendmentDraftCommandByOrderPlugin` saves them to `spy_sales_order_amendment_quote` table to the `quote_data` with the other Quote data. You can obtain them from the Quote and display in the frontend.
+- Customize email templates: Customize email templates for the order amendment applied and failed notifications by redefining Twig templates:
+  - `notify-order-amendment-applied.html.twig`
+  - `notify-order-amendment-applied.text.twig`
+  - `notify-order-amendment-failed.html.twig`
+  - `notify-order-amendment-failed.text.twig`
+- Customize the OMS process: you can customize you OMS processes to add more states and transitions, for example, to add a state and transition to implement the retry logic for the order amendment draft applying in case of errors.
 
 ## Install feature frontend
 
@@ -2595,9 +2598,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block warningBox "Using widgets in Twig" %}
+{% info_block warningBox "Widgets in Twig" %}
 
-If you have Twig templates to be customized and redefined in your project, make sure the corresponding widgets are used in the redefined templates.
+If your project uses Twig templates, make sure the corresponding widgets are used in the redefined templates.
 
 {% endinfo_block %}
 

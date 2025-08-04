@@ -59,7 +59,7 @@ $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/order-amend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that accessing `https://mysprykershop.com/order-amendment` as a guest user redirects to login page.
+Make sure that accessing `https://mysprykershop.com/order-amendment` as a guest user redirects to the login page.
 
 {% endinfo_block %}
 
@@ -122,8 +122,9 @@ class QuoteConfig extends SprykerQuoteConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit an order, `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
-Make sure that when you edit an order, `originalSalesOrderItems` is added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
+Make sure that when you edit an order, the following applies:
+- `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
+- `originalSalesOrderItems` is added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
 
 {% endinfo_block %}
 
@@ -497,8 +498,8 @@ Verify the order amendment state machine configuration in the following step.
 
 2. Select **DummyPayment01** and check the following:
 
-- The `grace period started` state has the `amendable` tag.
-- The `order amendment` state exists.
+- The `grace period started` state has the `amendable` tag
+- The `order amendment` state exists
 
 {% endinfo_block %}
 
@@ -1506,7 +1507,7 @@ class PriceDependencyProvider extends SprykerPriceDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make the Glue API call with a currency and price mode different from those in the cart when an order is being edited. For example: `glue.mysprykershop.com/catalog-search?q=001&currency=CHF&priceMode=NET_MODE`. Then, verify that the currency and price mode remain unchanged.
+Make a Glue API call with a currency and price mode different from those in the cart when an order is being edited. For example: `htts://glue.mysprykershop.com/catalog-search?q=001&currency=CHF&priceMode=NET_MODE`. Make sure the currency and price mode remain unchanged.
 
 {% endinfo_block %}
 
@@ -1710,9 +1711,9 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                                          | SPECIFICATION                                                                                                                        | PREREQUISITES | NAMESPACE                                                         |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
 | QuoteRequestVersionReferenceOrderPostSavePlugin | Persists the `QuoteTransfer.quoteRequestVersionReference` transfer property in the `spy_sales_order` table.                                  |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
-| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process; true otherwise.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
+| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process; otherwise, returns true.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
 | OrderAmendmentQuoteRequestValidatorPlugin       | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
-| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create and update of a quote request with quote in order amendment process.                                                        |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
 | QuoteRequestVersionCartReorderValidatorPlugin   | Returns `CartReorderResponseTransfer.errors` with error messages if `CartReorderTransfer.order.quoteRequestVersionReference` is set. |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder  |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -2394,10 +2395,10 @@ Replace dependency provider methods postfixed with `ForOrderAmendment` with `For
 {% info_block warningBox "Verification" %}
 
 1. Place an order.
-2. Change the order.
-- Make sure that right after the Order amendment checkout the changes made in the order are not applied to the order.
-- Make sure the Quote has been saved to the `spy_sales_order_amendment_quote` table.
-- Make sure the order items are in the `order amendment draft pending` state.
+2. Initiate and finish order amendment. Make sure the following applies:
+- The order doesn't show the changes you've submitted.
+- The quote has been saved to the `spy_sales_order_amendment_quote` table.
+- The order items are in the `order amendment draft pending` state.
 3. Execute `console oms:check-condition` command.
 - Make sure the order items are in the `order amendment draft applied` state.
 - Make sure the changes made in the order have been applied to the order.

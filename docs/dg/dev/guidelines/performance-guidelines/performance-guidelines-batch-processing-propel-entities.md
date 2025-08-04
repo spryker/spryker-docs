@@ -39,12 +39,26 @@ class EntityManager {
         // Save all collected entities in a single batch
         $this->commit();
     }
+    
+    public function removeItems(array $itemTransfers): void {
+
+        $items = // Load or create all entities at once from database
+
+        // Queue entities for batch processing
+        foreach ($items as $item) {
+            $this->remove($item);
+        }
+
+        // Remove all collected entities in a single batch
+        $this->commit();
+    }
 }
 ```
 
 ### Key methods
 
 - `persist($entity)`: Adds an entity to the batch queue. Handles separation for insert and update operations.
+- `remove($entity)`: Adds an entity to the batch queue. Handles separation for delete operations.
 - `commit()`: When this method is called, each type of database operation, such as insert and update, is executed within its own dedicated transaction. For each failed operation, the corresponding transaction is rolled back, and an exception is thrown. This ensures data consistency and prevents partial writes in case of failure.
 
 ## CascadeActiveRecordBatchProcessorTrait

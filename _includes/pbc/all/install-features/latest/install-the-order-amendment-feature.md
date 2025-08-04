@@ -2381,8 +2381,14 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 
 2. Enable plugins for the asynchronous order amendment checkout process flow:
 
-Make sure all the needed plugins in modules dependency providers registered for the `order-amendment` checkout process flow are also registered for the `order-amendment-async` checkout process flow.
-So instead of dependency provider methods with `ForOrderAmendment` postfix register the plugins in the methods with `ForOrderAmendmentAsync` postfix. Check the `Cart`, `CartReorder`, `Checkout`, `CheckoutRestApi`, `Sales` modules.
+Make sure all the needed plugins registered for the `order-amendment` checkout process flow are also registered for the `order-amendment-async` checkout process flow.
+
+Replace dependency provider methods postfixed with `ForOrderAmendment` with `ForOrderAmendmentAsync` methods in the following modules:
+- `Cart`
+- `CartReorder`
+- `Checkout`
+- `CheckoutRestApi`
+- `Sales`
 
 
 {% info_block warningBox "Verification" %}

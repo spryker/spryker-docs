@@ -98,6 +98,11 @@ The Product Import feature in the Merchant Portal enables you to bulk upload pro
 - Launch and update product catalogs faster
 - Reduce data entry errors and manual rework
 
+### Docs
+
+- [Install the Marketplace Merchant Portal Data Import feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature.html)
+- [Install the Marketplace Merchant Portal Product Data Import feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature.html)
+
 
 
 ## Marketplace Discounts <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

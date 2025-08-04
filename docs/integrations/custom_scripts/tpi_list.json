@@ -32,7 +32,7 @@
     "Logo": "/images/integrations/cat_logos/bv_logo.png",
     "Author": "Spryker",
     "tp_partner": true,
-    "category": "User Generated Content (UGC)",
+    "category": "User Generated Content",
     "method": ["ACP"],
     "commerce": "",
     "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/ratings-reviews/202410.0/third-party-integrations/bazaarvoice.html",
@@ -60,7 +60,7 @@
     "tp_partner": true,
     "category": "Payment",
     "method": ["ACP"],
-    "commerce": "free",
+    "commerce": "",
     "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html",
     "Eco_Doc": "",
     "Comm_Doc": ""
@@ -73,7 +73,7 @@
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
-    "commerce": "free",
+    "commerce": "",
     "ACP_Doc": "",
     "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/adyen/adyen.html",
     "Comm_Doc": ""
@@ -86,7 +86,7 @@
     "Author": "Spryker",
     "category": "Payment",
     "method": ["Eco"],
-    "commerce": "paid",
+    "commerce": "",
     "ACP_Doc": "",
     "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/unzer/unzer.html",
     "Comm_Doc": ""

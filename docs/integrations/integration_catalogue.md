@@ -38,12 +38,16 @@ layout: custom_new
 <div class="modal" id="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalInfo" style="display: none;"></div>
     <img id="modalLogo" class="logo" alt="Logo" />
     <h2 id="modalName"></h2>
-    <div id="modalNotice" style="display: none;"></div>
+    <p id="modalAuthor" class="author_name"></p>
     <p id="modalDescription"></p>
+    <hr>
     <div class="tags" id="modalTags"></div>
+    <hr>
     <div class="doc-links" id="modalDocs"></div>
+    <div id="modalNotice" style="display: none;"></div>
   </div>
 </div>
 
@@ -195,13 +199,21 @@ layout: custom_new
         window.openModal = function(partner) {
             document.getElementById('modalLogo').src = partner.Logo;
             document.getElementById('modalName').textContent = partner.Partner;
+            document.getElementById('modalAuthor').textContent = "Created By: " + partner.Author;
             const modalNotice = document.getElementById('modalNotice');
 
             if (partner.method && partner.method.some(m => m.toLowerCase() === 'community')) {
-                modalNotice.innerHTML = '<p><strong>This is a community built integration. Please check the author\'s documentation and repository for more information.</strong></p>';
+                modalNotice.innerHTML = '<p class="vendor_notice">Community Contributions are not part of the paid Spryker Products or Services. Customers cannot claim maintenance of or updates for Community Contributions. Spryker cannot be held liable for any use of this kind of integration.</p>';
                 modalNotice.style.display = 'block';
             } else {
                 modalNotice.style.display = 'none';
+            }
+
+            if (partner.tp_partner === true) {
+                modalInfo.innerHTML = '<div class="spryker_tp_partner">Spryker Partner</div>';
+                modalInfo.style.display = 'block';
+            } else {
+                modalInfo.style.display = 'none';
             }
 
             document.getElementById('modalDescription').textContent = partner.Description;
@@ -217,6 +229,24 @@ layout: custom_new
             document.getElementById('modalDocs').innerHTML = docs.join('');
 
             document.getElementById('modal').style.display = 'flex';
+
+            gtag('event', 'vendor_card_click', {
+                event_category: 'vendor_catalog',
+                event_label: partner.Partner,
+                vendor_name: partner.Partner,
+                vendor_tp: partner.tp_partner,
+                vendor_cat: partner.category,
+                vendor_method: partner.method.join(',')
+            });
+
+            const key = 'vendors_viewed';
+                let viewedVendors = JSON.parse(localStorage.getItem(key)) || [];
+
+                // Avoid duplicates
+                if (!viewedVendors.includes(partner.Partner)) {
+                    viewedVendors.push(partner.Partner);
+                    localStorage.setItem(key, JSON.stringify(viewedVendors));
+                }
         }
 
         window.closeModal = function() {

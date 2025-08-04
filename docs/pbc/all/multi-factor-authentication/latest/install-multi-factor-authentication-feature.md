@@ -20,8 +20,6 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Glue Rest API               | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 | Back Office dropdown navigation | 202507.0 | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
 | Glue Storefront and Backend API Applications | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
-| Marketplace Merchant Portal Core             | {{page.version}} | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
-| Merchant Portal Agent Assist                 | {{page.version}} | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
 
 ## 1) Install the required modules
 
@@ -154,7 +152,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-
 
 
 ### Configure brute-force protection limit for customers
@@ -493,99 +490,6 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
 ```
 </details>
 
-### Configure the navigation items
-
-To allow Merchant and MerchantAgent users to access the Multi-Factor Authentication setup page via the navigation menu in the Merchant Portal, 
-add the following entries to the `config/Zed/navigation-secondary-merchant-portal.xml` file:
-
-#### For Merchant Portal
-
-<details>
-<summary>config/Zed/navigation-secondary-merchant-portal.xml</summary>
-
-```xml
-<set-up-multi-factor-auth>
-    <label>Set up Multi-Factor Authentication</label>
-    <title>Set up Multi-Factor Authentication</title>
-    <bundle>multi-factor-auth</bundle>
-    <controller>user-management-merchant-portal</controller>
-    <action>set-up</action>
-</set-up-multi-factor-auth>
-```
-</details>
-
-#### For Merchant Agent Portal
-
-<details>
-<summary>config/Zed/navigation-secondary-merchant-portal.xml</summary>
-
-```xml
-<set-up-multi-factor-auth-agent>
-  <label>Set up Multi-Factor Authentication</label>
-  <title>Set up Multi-Factor Authentication</title>
-  <bundle>multi-factor-auth</bundle>
-  <controller>user-management-agent-merchant-portal</controller>
-  <action>set-up</action>
-</set-up-multi-factor-auth-agent>
-```
-</details>
-
-### Configure whitelisted routes 
-
-#### For the Merchant Portal
-
-To allow Multi-Factor Authentication routes to bypass default security restrictions during login or MFA validation flows 
-in the Merchant Portal, extend the whitelisted route and path patterns in `SecurityMerchantPortalGuiConfig`:
-
-<details>
-<summary>src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php</summary>
-
-```php
-<?php
-namespace Pyz\Zed\SecurityMerchantPortalGui;
-
-use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiConfig as SprykerSecurityMerchantPortalGuiConfig;
-
-class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGuiConfig
-{
-    protected const MERCHANT_PORTAL_ROUTE_PATTERN = '^/((.+)-merchant-portal-gui|multi-factor-auth/(merchant-user|user-management-merchant-portal))/';
-
-    protected const IGNORABLE_PATH_PATTERN = '^/(security-merchant-portal-gui|multi-factor-auth)';
-}
-```
-</details>
-
-#### For the Agent Merchant Portal
-
-<details>
-<summary>src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiConfig.php</summary>
-
-```php
-<?php
-namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
-
-use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiConfig as SprykerAgentSecurityMerchantPortalGuiConfig;
-
-class AgentSecurityMerchantPortalGuiConfig extends SprykerAgentSecurityMerchantPortalGuiConfig
-{
-    /**
-     * @return string
-     */
-    public function getRoutePatternAgentMerchantPortal(): string
-    {
-        return '^/(agent(.+)-merchant-portal-gui|multi-factor-auth/(agent-merchant-user|user-management-agent-merchant-portal))(?!agent-security-merchant-portal-gui\/login$)/';
-    }
-
-    /**
-     * @return string
-     */
-    public function getRoutePatternAgentMerchantPortalLogin(): string
-    {
-        return '^/(agent-security-merchant-portal-gui/login|multi-factor-auth/agent-merchant-user($|/))';
-    }
-}
-```
-</details>
 
 ## 3) Set up the database schema and transfer objects
 
@@ -764,16 +668,6 @@ Enable the following behaviors by registering the plugins:
 | MultiFactorAuthTypeActivateStorefrontResourcePlugin       | Triggers code sending the provided MFA method to be activated for Storefront API.                                                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      | 
 | MultiFactorAuthTypeDeactivateStorefrontResourcePlugin     | Deactivates the provided MFA method for Storefront API.                                                                            |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |                  
 | MultiFactorAuthTypeVerifyStorefrontResourcePlugin         | Verifies MFA code and activates the provided MFA method for Storefront API.                                                        |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
-| UserMultiFactorAuthAclEntityConfigurationExpanderPlugin   | Provides ACL entity configuration for a merchant user.                                                                             |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\AclMerchantPortal                    |
-| MerchantUserMultiFactorAuthenticationHandlerPlugin        | Handles merchant user login MFA.                                                                                                   |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\AuthenticationHandler      |
-| PostMerchantUserLoginMultiFactorAuthenticationPlugin      | Handles merchant user MFA after successful login.                                                                                  |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth            |
-| MerchantAgentUserMultiFactorAuthenticationHandlerPlugin   | Handles agent merchant user login MFA.                                                                                             |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\AuthenticationHandler |
-| PostAgentMerchantUserLoginMultiFactorAuthenticationPlugin | Handles agent merchant user MFA after successful login.                                                                            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth       |
-| MerchantPortalNavigationItemCollectionFilterPlugin        | Controls visibility of the MFA setup option in Merchant Portal navigation menu based on user role and available MFA methods.       |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                           |
-| AgentMerchantPortalNavigationItemCollectionFilterPlugin   | Controls visibility of the MFA setup option in Agent Merchant Portal navigation menu based on user role and available MFA methods. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                           |
-| MultiFactorAuthenticationMerchantUserSecurityPlugin       | Registers merchant user provider  .                                                                                                |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth            |
-| MultiFactorAuthenticationAgentMerchantUserSecurityPlugin  | Registers agent merchant user provider .                                                                                           |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth       |
-
 
 
 ### Register the plugins for customers
@@ -1183,225 +1077,6 @@ Make sure you can authenticate with MFA using Glue API. For instructions, see [A
 
 {% endinfo_block %}
 
-### Register the plugins For Merchant Portal
-
-<details>
-<summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\AclMerchantPortal;
-
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\AclMerchantPortal\UserMultiFactorAuthAclEntityConfigurationExpanderPlugin;
-use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
-
-class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
-{
-    protected function getAclEntityConfigurationExpanderPlugins(): array
-    {
-        return [
-            new UserMultiFactorAuthAclEntityConfigurationExpanderPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\SecurityMerchantPortalGui;
-
-use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiDependencyProvider as SprykerSecurityMerchantPortalGuiDependencyProvider;
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\MerchantUser\MerchantUserMultiFactorAuthenticationHandlerPlugin;
-
-class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchantPortalGuiDependencyProvider
-{
-    protected function getMerchantUserAuthenticationHandlerPlugins(): array
-    {
-        return [
-            new MerchantUserMultiFactorAuthenticationHandlerPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\MultiFactorAuth;
-
-use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
-use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth\PostMerchantUserLoginMultiFactorAuthenticationPlugin;
-
-class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependencyProvider
-{
-    protected function getPostLoginMultiFactorAuthenticationPlugins(): array
-    {
-        return [
-            new PostMerchantUserLoginMultiFactorAuthenticationPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\ZedNavigation;
-
-use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavigationDependencyProvider;
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation\MerchantPortalNavigationItemCollectionFilterPlugin;
-
-class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
-{
-    protected function getNavigationItemCollectionFilterPlugins(): array
-    {
-        return [
-            // Manages the visibility of the "Set up Multi-Factor Authentication" navigation item in the Merchant Portal UI.
-            // It determines whether this option should be shown to users by two key checks:
-            // - Checks if there are any MFA plugin methods registered
-            // - Verifies if the current user has the Merchant role
-            new MerchantPortalNavigationItemCollectionFilterPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\Security;
-
-use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth\MultiFactorAuthenticationMerchantUserSecurityPlugin;
-
-class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
-{
-    protected function getSecurityPlugins(): array
-    {
-        return [
-            new MultiFactorAuthenticationMerchantUserSecurityPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-### Register the plugins for Agent Merchant Portal
-
-<details>
-<summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\AclMerchantPortal;
-
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\AclMerchantPortal\UserMultiFactorAuthAclEntityConfigurationExpanderPlugin;
-use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
-
-class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
-{
-    protected function getAclEntityConfigurationExpanderPlugins(): array
-    {
-        return [
-            new UserMultiFactorAuthAclEntityConfigurationExpanderPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
-
-use Spryker\Zed\AgentSecurityMerchantPortalGui\AgentSecurityMerchantPortalGuiDependencyProvider as SprykerAgentSecurityMerchantPortalGuiDependencyProvider;
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\MerchantAgentUser\MerchantAgentUserMultiFactorAuthenticationHandlerPlugin;
-
-class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecurityMerchantPortalGuiDependencyProvider
-{
-    protected function getMerchantAgentUserAuthenticationHandlerPlugins(): array
-    {
-        return [
-            new MerchantAgentUserMultiFactorAuthenticationHandlerPlugin(),
-        ];
-    }
-}
-```
-
-<details>
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\MultiFactorAuth;
-
-use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
-use Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth\PostAgentMerchantUserLoginMultiFactorAuthenticationPlugin;
-class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependencyProvider
-{
-    protected function getPostLoginMultiFactorAuthenticationPlugins(): array
-    {
-        return [
-            new PostAgentMerchantUserLoginMultiFactorAuthenticationPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\ZedNavigation;
-
-use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavigationDependencyProvider;
-use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation\AgentMerchantPortalNavigationItemCollectionFilterPlugin;
-
-class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
-{
-    protected function getNavigationItemCollectionFilterPlugins(): array
-    {
-        return [
-            // Manages the visibility of the "Set up Multi-Factor Authentication" navigation item in the Agent Merchant Portal UI.
-            // It determines whether this option should be shown to users by two key checks:
-            // - Checks if there are any MFA plugin methods registered
-            // - Verifies if the current user has the Merchant Agent role
-            new AgentMerchantPortalNavigationItemCollectionFilterPlugin(),
-        ];
-    }
-}
-```
-</details>
-
-<details>
-<summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Zed\Security;
-
-use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth\MultiFactorAuthenticationAgentMerchantUserSecurityPlugin;
-
-class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
-{
-    protected function getSecurityPlugins(): array
-    {
-        return [
-            new MultiFactorAuthenticationAgentMerchantUserSecurityPlugin(),
-        ];
-    }
-}
-```
-</details>
 
 ## 7) Set up the frontend
 
@@ -1487,7 +1162,5 @@ docker/sdk up --assets
   - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`
   - Agents: `https://yves.mysprykershop.com/agent/multi-factor-auth/set`
   - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
-  - Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`.
-  - Agent Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`.
 
 {% endinfo_block %}

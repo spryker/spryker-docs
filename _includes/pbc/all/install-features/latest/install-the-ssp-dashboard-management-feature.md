@@ -1,5 +1,4 @@
 
-{% endinfo_block %}
 
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 

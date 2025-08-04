@@ -1680,6 +1680,8 @@ console frontend:zed:build
 
 ## Set up frontend templates
 
+Change or create following files:
+
 [`src/Pyz/Yves/CartPage/Theme/default/components/molecules/product-cart-items-list/product-cart-items-list.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/668/files?file-filters%5B%5D=.js&file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-be7757d682368ef8b6306546d54d41d0eb650dc865fabeddc366a6914bccd74d)
 [`src/Pyz/Yves/CheckoutPage/Theme/default/components/molecules/address-item-form-field-list/address-item-form-field-list.ts`](https://github.com/spryker-shop/b2b-demo-shop/pull/668/files?file-filters%5B%5D=.js&file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-76f4cad1ff0a953fe0174ace4f4e70e20d2b87a56a8253a224ac3db85517b3c7)
 [`src/Pyz/Yves/CheckoutPage/Theme/default/components/molecules/address-item-form-field-list/address-item-form-field-list.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/668/files?file-filters%5B%5D=.js&file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-be8e8fd1ddf324181d112e1480536cd0516659681bb0b907297b6edbfd733385)

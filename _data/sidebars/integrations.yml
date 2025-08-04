@@ -8,8 +8,8 @@ entries:
     url: /docs/integrations/what_are_spryker_eco_modules.html
   - title: About Spryker ACP Apps
     url: /docs/integrations/about_spryker_acp_apps.html
-  - title: Integrations Catalogue
-    url: /docs/integrations/integration_catalogue.html
+  - title: Integrations Catalog
+    url: /docs/integrations/integration_catalog.html
   - title: Spryker GLUE API
     nested:
     - title: Getting Started With Spryker APIs

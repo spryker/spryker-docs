@@ -175,7 +175,7 @@ layout: custom_new
                 card.innerHTML = `
                   <div class="ven-data">
                     <div class="ven-col image">
-                    <img src="${partner.Logo}" class="logo" alt="${partner.Partner} Logo" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eee/ccc?text=Logo'"/>
+                    <img src="${partner.cat_icon}" class="logo" alt="${partner.Partner} Logo" onerror="this.onerror=null;this.src='https://placehold.co/600x400/eee/ccc?text=Logo'"/>
                     </div>
                     <div class="ven-col data">
                         <h3>${partner.Partner}</h3>

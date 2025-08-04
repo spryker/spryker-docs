@@ -770,17 +770,16 @@ margin-top:2%;
 }
 
 .ven-col.image {
-  max-width: 33%;
-  display: inline-flex;
+  width: 33%;
 }
 
 .ven-col.data {
   padding: 0 10px;
+  width:66%;
 }
 
 .card .logo {
  width: 100%;
- min-height: 80px;
  object-fit: contain;
  border-radius: 0.5rem;
  margin-bottom: 1rem;

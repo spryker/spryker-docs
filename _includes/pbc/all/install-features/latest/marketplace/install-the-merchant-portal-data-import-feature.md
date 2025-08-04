@@ -141,8 +141,6 @@ acl:
     stores: true
 ```
 
-{% endinfo_block %}
-
 ### Add Jenkins configuration
 
 

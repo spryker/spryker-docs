@@ -104,6 +104,10 @@ A *grace period* lets you restrict order amendments to a certain time period aft
 
 For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 
+## Video overview
+
+![order-amendment-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4)
+
 
 ## Related Developer documents
 

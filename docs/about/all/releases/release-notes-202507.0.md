@@ -52,7 +52,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 - Preserve original order reference: Maintain consistent tracking and reporting by keeping the original order reference.
 
 
-![Order Amendment](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/Order_Amendment_Release_Notes.png)
+![Order Amendment](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4)
 
 
 ### Business benefits

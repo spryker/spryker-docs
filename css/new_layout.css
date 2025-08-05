@@ -780,7 +780,7 @@ margin-top:2%;
   max-width: 500px;
   width: 90%;
   position: relative;
-  max-height: 5%; /* Limit modal height */
+  max-height: 75%; /* Limit modal height */
   overflow-y: auto; /* Enable scrolling within the modal */
   overflow-x:hidden;
 }

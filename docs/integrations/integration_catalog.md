@@ -27,11 +27,11 @@ layout: custom_new
           <hr/>
       </div>
       <div class="cards" id="cardContainer"></div>
-      <div class="cont_us">
+      <!-- <div class="cont_us">
         <p class="cont_title">Can not find what you are looking for?</p>
         <p class="cont_subtext"> Get in touch to discuss further a solution that is perfect for you!</p>
         <button> contact us </button>
-      </div>
+      </div> -->
   </main>
 </div>
 
@@ -191,7 +191,6 @@ layout: custom_new
                   </div>
                   <div class="author-info">
                     <div class="author_name">Created by: ${partner.Author}</div>
-                    ${partner.tp_partner ? `<div class="spryker_tp_partner">Spryker Partner</div>` : ''}
                   </div>
                 `;
                 containerElement.appendChild(card);
@@ -212,7 +211,6 @@ layout: custom_new
             }
 
             if (partner.tp_partner === true) {
-                modalInfo.innerHTML = '<div class="spryker_tp_partner">Spryker Partner</div>';
                 modalInfo.style.display = 'block';
             } else {
                 modalInfo.style.display = 'none';
@@ -293,8 +291,9 @@ layout: custom_new
                 const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.category);
                 const authorMatch = selectedAuthors.length === 0 || selectedAuthors.includes(p.Author);
                 const methodMatch = selectedMethods.length === 0 || (p.method && selectedMethods.some(sm => p.method.includes(sm)));
+                const statusMatch = p.status === 'active'; // New condition for active status
 
-                return searchMatch && categoryMatch && authorMatch && methodMatch;
+                return searchMatch && categoryMatch && authorMatch && methodMatch && statusMatch;
             });
 
             renderCards(filtered, document.getElementById('cardContainer'));

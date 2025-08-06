@@ -243,33 +243,9 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 
 ### Environment limitations related to DMS
 
-When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
-- Single-store configuration: The feature is only supported for configurations with a single store.
-- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+Dynamic Multi-Store (DMS) is now a prerequisite for the Direct Sync feature. The synchronization process has been optimized to work exclusively with the DMS architecture to ensure consistent data propagation across all store configurations.
 
-Example configuration for multiple stores:
-
-```yaml
-stores:
-    DE:
-        services:
-            broker:
-                namespace: de-docker
-            key_value_store:
-                namespace: 1
-            search:
-                namespace: search
-    AT:
-        services:
-            broker:
-                namespace: at-docker
-            key_value_store:
-                namespace: 1
-            search:
-                namespace: search
-```
-
-When DMS is enabled, there're no environment limitations for the Direct Sync feature.
+To use the Direct Sync feature, you must enable DMS in your project configuration.
 
 
 ## Data Architecture

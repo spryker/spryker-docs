@@ -133,14 +133,17 @@ layout: custom_new
                 const filterChangeHandler = () => applyFilters();
                 nameSearchInput.addEventListener('input', filterChangeHandler);
 
+                const activePartners = allPartners.filter(p => p.status === 'active');
+
                 filtersContainer.innerHTML = '';
-                const categories = [...new Set(allPartners.map(p => p.category).filter(Boolean))].sort();
+
+                const categories = [...new Set(activePartners.map(p => p.category).filter(Boolean))].sort();
                 createAccordionFilter(filtersContainer, 'Categories', categories, 'category', filterChangeHandler);
 
-                const methods = [...new Set(allPartners.flatMap(p => p.method || []))].sort();
+                const methods = [...new Set(activePartners.flatMap(p => p.method || []))].sort();
                 createAccordionFilter(filtersContainer, 'Method', methods, 'method', filterChangeHandler);
 
-                const authors = [...new Set(allPartners.map(p => p.Author).filter(Boolean))].sort();
+                const authors = [...new Set(activePartners.map(p => p.Author).filter(Boolean))].sort();
                 createAccordionFilter(filtersContainer, 'Authors', authors, 'author', filterChangeHandler);
 
                 addAccordionFunctionality();
@@ -291,7 +294,7 @@ layout: custom_new
                 const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(p.category);
                 const authorMatch = selectedAuthors.length === 0 || selectedAuthors.includes(p.Author);
                 const methodMatch = selectedMethods.length === 0 || (p.method && selectedMethods.some(sm => p.method.includes(sm)));
-                const statusMatch = p.status === 'active'; // New condition for active status
+                const statusMatch = p.status === 'active'; 
 
                 return searchMatch && categoryMatch && authorMatch && methodMatch && statusMatch;
             });

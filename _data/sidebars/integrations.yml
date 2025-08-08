@@ -141,8 +141,6 @@ entries:
         url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/integrating_with_spryker_oms.html
       - title: Set up an order management system
         url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/set-up-an-order-management-system.html
-      - title: Creating an Order Management System
-        url: /docs/integrations/custom_building_integrations/integrating_with_spryker_oms/creating_an_order_management_system.html
     - title: Using Jenkins for Third Party Integrations
       url: /docs/integrations/custom_building_integrations/using_jenkins_for_third_party_integrations.html
     - title: Endpoint Security

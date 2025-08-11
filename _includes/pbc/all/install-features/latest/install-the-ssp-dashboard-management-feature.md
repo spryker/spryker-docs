@@ -5,7 +5,6 @@ legal terms, they are unsupported and do not provide production-ready SLAs. They
 General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory
 features.
 
-{% endinfo_block %}
 
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 

@@ -28,7 +28,7 @@ Make sure the following modules have been installed:
 | CONFIGURATION                            | SPECIFICATION                                                                                                                | NAMESPACE                               |
 |------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | FileSystemConstants::FILESYSTEM_SERVICE  | Configures the Flysystem service for managing file uploads, specifying the adapter and storage path for files.                 | Spryker\Shared\FileSystem               |
-| SelfServicePortalConstants::STORAGE_NAME | Defines the storage name for Self-Service Portal files within the Flysystem configuration, linking to the specified file system service. | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConstants::STORAGE_NAME | Defines the storage name for SSP files in the Flysystem configuration, linking to the specified file system service. | SprykerFeature\Shared\SelfServicePortal |
 
 **config/Shared/config_default.php**
 

@@ -1,6 +1,6 @@
 {% info_block warningBox %}
 
-Currently, the order amendment feature does not support service products.
+The Order Amendment feature does not support service products.
 
 {% endinfo_block %}
 

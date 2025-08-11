@@ -224,10 +224,10 @@ console data:import company-role-permission
 | PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                      |
 |--------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------|
 | ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
-| ViewCompanySspServicePermissionPlugin                          | Provides access to the company services on dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
-| ViewBusinessUnitSspServicePermissionPlugin                          | Provides access to the company business unit services on dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
+| ViewCompanySspServicePermissionPlugin                          | Provides access to company services on the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
+| ViewBusinessUnitSspServicePermissionPlugin                          | Provides access to company business unit services on the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
 | CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SelfServicePortal\Plugin\CmsBlockStorage |
-| SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
+| SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
 | SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication   |
 | SspServiceDashboardDataExpanderPlugin         | Expands dashboard data with services. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
 | SspInquiryDashboardDataExpanderPlugin         | Expands dashboard data with inquiries. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
@@ -417,7 +417,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 - Widgets for Assets, Inquiries, and Files
 
 3. Log out and log in with a compnay user without the role you've created.
-
-- Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
+Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
 
 {% endinfo_block %}

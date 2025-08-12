@@ -355,7 +355,7 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Creae modules
+          - title: Create modules
             url: /docs/dg/dev/backend-development/extend-spryker/create-modules.html
 
         - title: Spryker OS module customization

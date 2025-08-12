@@ -36,13 +36,13 @@ Make sure the following package is listed in `composer.lock`:
 
 | CONFIGURATION                                                      | SPECIFICATION                                                                                                                                                  | NAMESPACE                                   |
 |--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Defines the shipment types that are supported by the Click & Collect feature, allowing customers to choose between different delivery or pickup options.       | SprykerShop\Yves\ClickAndCollectPageExample |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Specifies the default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                              | SprykerShop\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()             | Provides the default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Defines the shipment types that are supported by Click & Collect, enabling customers to choose between different delivery or pickup options.       | SprykerShop\Yves\ClickAndCollectPageExample |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Specifies default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                              | SprykerShop\Yves\ClickAndCollectPageExample |
+| SelfServicePortalConfig::getDefaultMerchantReference()             | Provides a default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
 | DataImportConfig::getFullImportTypes()                             | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                          | Pyz\Zed\DataImport                          |
 | ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                       | SprykerShop\Yves\ServicePointWidget         |
 | ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                       | SprykerShop\Yves\ShipmentTypeWidget         |
-| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines the Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines a Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
 | SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING    | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                         | SprykerFeature\Shared\SelfServicePortal     |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
@@ -204,42 +204,30 @@ class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
 $config[SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING];
 ```
 
-
-{% info_block warningBox %}
-
-### ⚠️ **WARNING: Your Google Maps API production key must be protected!**
-
-Unrestricted keys can be stolen and abused, leading to **unauthorized usage and unexpected charges**.
-
----
-
-### ✅ **How to Protect Your API Key (Google Maps)**
-
-1. **Go to** [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
-2. **Select your project** and open **APIs & Services → Credentials**
-3. **Click your API key**, then:
-
-   - **Set Application Restrictions**:
-
-      - For web: choose **HTTP referrers** (for example, `https://yourdomain.com/*`)
-      - For server: choose **IP addresses**
-      - For mobile apps: use **Android/iOS** options
-   - **Set API Restrictions**:
-
-      - Enable only required APIs (for example, Maps JavaScript API, Places API)
-4. **Click Save**
-
----
-
-🔒 **Never leave your API key unrestricted in production!**
-
-{% endinfo_block %}
-
 **config/Shared/config_default.php**
 
 ```php
 $config[SelfServicePortalConstants::GOOGLE_MAPS_API_KEY] = getenv('SPRYKER_GOOGLE_MAPS_API_KEY') ?: '';
 ```
+
+
+
+### Protect Google Maps API key
+
+Your Google Maps API production key must be protected. Unprotected keys can be stolen and abused, leading to unauthorized usage and unexpected charges.
+
+To protect the API key, follow the steps:
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/apis/credentials).
+2. Select your project and open **APIs & Services → Credentials**.
+3. Select the API key you want to protect.
+4. Set application restrictions:
+- For web: choose **HTTP referrers**
+- For server: choose **IP addresses**
+- For mobile apps: use **Android/iOS options**
+5. For API restrictions, enable only required APIs, such as Maps JavaScript API or Places API.
+6. Click **Save**.
+
 
 
 ## Set up database schema
@@ -666,6 +654,8 @@ console data:import shipment
 
 ## Set up behavior
 
+1. Add the following plugins:
+
 | PLUGIN                                                                       | SPECIFICATION                                                                                                                              | PREREQUISITES | NAMESPACE                                                                    |
 |------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | ProductClassFacetConfigTransferBuilderPlugin                                 | Configures a facet filter for product classes as an enumeration type with multi-value support.                                             |               | SprykerFeature\Client\SelfServicePortal\Plugin\Catalog                       |
@@ -688,19 +678,19 @@ console data:import shipment
 | ServiceSspAssetManagementExpanderPlugin                                      | Expands assets with a services collection.                                                                                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement |
 | ProductServiceClassNameTwigPlugin                                            | Adds the `serviceProductClassName` Twig global variable with the value from config.                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig               |
 | FileSizeFormatterTwigPlugin                                                  | Formats the file size into a human-readable format.                                                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig               |
-| SingleAddressPerShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands checkout multi-shipping address form with single address per shipment type checkbox.                                               |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CustomerPage                    |
-| ProductClassItemExpanderPlugin                                               | Expands the cart items with the related product classes.                                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
-| ServicePointItemExpanderPlugin                                               | Expands the cart items with selected service point.                                                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
+| SingleAddressPerShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands the checkout multi-shipping address form with single address per shipment type checkbox.                                               |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CustomerPage                    |
+| ProductClassItemExpanderPlugin                                               | Expands cart items with the related product classes.                                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
+| ServicePointItemExpanderPlugin                                               | Expands cart items with a selected service point.                                                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart               |
 | ProductClassDataImportPlugin                                                 | Imports product classes.                                                                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport         |
 | ProductToProductClassDataImportPlugin                                        | Imports product to product class relations.                                                                                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport         |
-| ProductShipmentTypeDataImportPlugin                                          | Imports product shipment type relation.                                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport         |
+| ProductShipmentTypeDataImportPlugin                                          | Imports a product shipment type relation.                                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport         |
 | ProductClassesProductConcreteExpanderPlugin                                  | Expands `ProductConcreteTransfer` with product classes.                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Product            |
 | ProductClassProductConcreteAfterUpdatePlugin                                 | Updates product classes for an existing product concrete.                                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Product            |
 | ProductClassProductConcretePostCreatePlugin                                  | Saves product classes for a newly created product concrete.                                                                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Product            |
 | ShipmentTypeProductConcreteFormEditDataProviderExpanderPlugin                | Maps shipment types from product concrete to form data.                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
-| ProductClassFormExpanderPlugin                                               | Expands product concrete form with product class field.                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
+| ProductClassFormExpanderPlugin                                               | Expands product concrete form with a product class field.                                                                                    |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
 | ProductClassProductConcreteFormEditDataProviderExpanderPlugin                | Expands product concrete form data with product classes.                                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
-| ProductClassProductConcreteTransferMapperPlugin                              | Maps product class data from form to ProductConcreteTransfer.                                                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
+| ProductClassProductConcreteTransferMapperPlugin                              | Maps product class data from form to `ProductConcreteTransfer`.                                                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
 | ShipmentTypeProductConcreteFormExpanderPlugin                                | Expands the `ProductConcreteForm` with a choice field for shipment types.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
 | ShipmentTypeProductFormTransferMapperExpanderPlugin                          | Maps shipment type form data to `ProductConcreteTransfer`.                                                                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement  |
 | ProductClassProductAbstractMapExpanderPlugin                                 | Adds product class names to product abstract search data.                                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch  |
@@ -709,7 +699,7 @@ console data:import shipment
 | ProductClassProductConcreteStorageCollectionExpanderPlugin                   | Expands `ProductConcreteStorage` transfers with product classes.                                                                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductStorage     |
 | ProductClassOrderExpanderPlugin                                              | Expands order items with product classes.                                                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | ProductClassOrderItemsPostSavePlugin                                         | Persists product classes information from `ItemTransfer.productClasses`.                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
-| SspProductClassSalesOrderItemCollectionPreDeletePlugin                       | Deletes related product class entries for the given sales order items.                                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
+| SspProductClassSalesOrderItemCollectionPreDeletePlugin                       | Deletes related product class entries for given sales order items.                                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | CoordinatesServicePointSearchDataExpanderPlugin                              | Adds latitude and longitude coordinates to the service point search data.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ServicePointSearch |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
@@ -1373,9 +1363,12 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
-Enable the project override to allow the checkout form to handle single addresses per shipment type:
+2. Enable the project override to enable the checkout form to handle single addresses per shipment type:
 
-**src/Pyz/Yves/CustomerPage/Form/CheckoutAddressCollectionForm.php**
+
+<details>
+  <summary>src/Pyz/Yves/CustomerPage/Form/CheckoutAddressCollectionForm.php</summary>
+
 
 ```php
 <?php
@@ -1476,6 +1469,8 @@ class CheckoutAddressCollectionForm extends SprykerCheckoutAddressCollectionForm
 }
 ```
 
+</details>
+
 **src/Pyz/Yves/CustomerPage/Form/DataProvider/CheckoutAddressFormDataProvider.php**
 
 ```php
@@ -1543,16 +1538,19 @@ Set up widgets as follows:
 | ServiceListWidget                                                   | Display the list of the given service products.                                         |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspAddressFormItemsByShipmentTypeWidget                             | Lists address from items grouped by their shipment type.                                |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspProductOfferPriceWidget                                          | Displays the product offer price for the products with a service type.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServiceCancelWidget                                              | Renders a cancel button for the sales order item on the order detail in the storefront. |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServiceCancelWidget                                              | Renders a cancel button for the sales order item on the order details page. |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspServiceDetectorWidget                                            | Provide a method to determine if the product is a service.                              |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspServicePointGeoCodeWidget                                        | Displays the coordinates of the service point.                                          |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServicePointNameForItemWidget                                    | Displays the service point name on the cart items.                                      |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServicePointNameForItemWidget                                    | Displays the service point name for the cart items.                                      |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspServicePointSearchWidget                                         | Displays the service point search modal window.                                         |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SspShipmentTypeServicePointSelectorWidget                           | Displays the shipment type and service point selector.                                  |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
 | SingleAddressPerShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin   | Generates a cache key for the related widget.                                           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
 | AddressFormItemsByShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin | Generates a cache key for the related widget.                                           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+<details>
+  <summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -1612,6 +1610,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+</details>
+
 2. Enable Javascript and CSS changes:
 
 ```bash
@@ -1637,22 +1637,25 @@ console frontend:zed:build
 6. Add several other service and regular products to cart.
 7. Go to the cart page and make sure the following applies:
 
-   - The cart items display the selected service points
-   - Items are grouped by shipment type
-   - Selected service points are displayed
-7. Go to the address page and make sure the following applies:
-   - The cart items display the selected service points
-   - Items are grouped by shipment type
-   - Selected service points are displayed
-8. Place the order.
+- The cart items display the selected service points
+- Items are grouped by shipment type
+- Selected service points are displayed
+
+8. Go to the address page and make sure the following applies:
+
+- The cart items display the selected service points
+- Items are grouped by shipment type
+- Selected service points are displayed
+
+9. Place the order.
    Make sure the order is places successfully and the order summary includes service-specific details.
 
-9. Go to **Customer Account** > **Services**. Make sure the following applies:
+10. Go to **Customer Account** > **Services**. Make sure the following applies:
 
-   - The service associated with the order you've placed is displayed in the list with all the relevant service details
-   - You can change service date and time
+- The service associated with the order you've placed is displayed in the list with all the relevant service details
+- You can change service date and time
 
-10. Next to the service, click **View**. Make sure the following applies on the service details page:
+17. Next to the service, click **View**. Make sure the following applies on the service details page:
 
 - Service point and shipment type are displayed
 - Buttons to reschedule and cancel the service are displayed

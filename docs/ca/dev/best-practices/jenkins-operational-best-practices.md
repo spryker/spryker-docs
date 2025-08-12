@@ -11,6 +11,12 @@ last_updated: March 11, 2024
 This document will help you implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
 Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
+{% info_block infoBox "Stable Workers" %}
+
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This new approach addresses many Jenkins stability challenges by providing isolated worker contexts, dynamic scaling capabilities, and better resource management. The enhanced scalable architecture includes automatic worker scaling, configurable capacity providers, and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
+
+{% endinfo_block %}
+
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.

@@ -1,7 +1,6 @@
 {% info_block warningBox %}
 
-Currently, the Order Amendment feature is not compatible with the Self-Service Portal (SSP) Service Management feature.
-This means that you cannot amend orders that include services booked through the SSP.
+SSP Service Management feature is not compatible with the [Order Amendment feature](/docs/pbc/all/order-management-system/latest/base-shop/order-amendment-feature-overview.html). Orders that include services booked through the SSP can't be amended.
 
 {% endinfo_block %}
 

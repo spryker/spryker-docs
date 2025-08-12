@@ -69,6 +69,27 @@ During the order amendment process, the prices for cart items are displayed acco
 
 Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) can't be amended.
 
+## Stock
+
+Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can use the strategies described in the following sections.
+
+
+### Validate amended order against current stock
+
+If an item is deactivated, unavailable, or out of stock, it is removed from the cart. A notification is displayed to inform the user about the removal.
+
+
+### Preserve original stock and availability
+
+- Items are editable even if they're now out of stock, deactivated, or unavailable
+- Quantity can be reduced or left unchanged according to the original stock and availability
+- Quantity can be increased only if current stock is sufficient
+
+For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
+
+
+You can implement custom strategies on the project level.
+
 
 ## Gift cards and vouchers
 
@@ -82,6 +103,14 @@ For better user experience, we recommend implementing a way to inform customers 
 A *grace period* lets you restrict order amendments to a certain time period after an order reaches an amendable state. For example, you can allow customers to change orders for two hours. This can be useful for shops that process orders quickly but want to give their customers enough time to change orders if needed, preventing order cancellations during processing.
 
 For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
+
+## Video overview
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Related Developer documents

@@ -279,7 +279,7 @@ Used components:
 ### Client
 
 Client is a lightweight application layer that handles all data access, such as the following:
-- Persistence access: key-value storage (Redis), Search (Elasticsearch), Yves sessions
+- Persistence access: key-value storage (Redis or Valkey), Search (Elasticsearch), Yves sessions
 - Zed as a data-source (RPC)
 - Third-party communication
 

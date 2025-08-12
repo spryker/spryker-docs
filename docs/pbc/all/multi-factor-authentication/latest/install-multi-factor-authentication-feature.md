@@ -1156,7 +1156,7 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.md#multi-factor-authentication-methods).
+- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
 - Clicking the menu should open one the following pages depending on your user:
   - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`

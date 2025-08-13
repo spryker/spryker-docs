@@ -2,6 +2,7 @@
 title: Customer Relationship Management
 last_updated: Feb 03, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 The *Customer Relationship Management (CRM)* capability lets you manage customer and company accounts and their information. You can define accesses of accounts to different resources and permissions to perform actions. To learn about the capability, see the following feature overviews: 

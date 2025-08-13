@@ -2,6 +2,7 @@
 title: "Product Offer store relation: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

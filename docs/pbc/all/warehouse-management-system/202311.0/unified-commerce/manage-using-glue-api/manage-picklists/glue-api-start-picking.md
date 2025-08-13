@@ -2,6 +2,7 @@
 title: "Glue API: Start picking"
 description: Learn how to start picking using Glue API
 template: glue-api-storefront-guide-template
+redirect_from:
 last_updated: Dec 7, 2023
 ---
 

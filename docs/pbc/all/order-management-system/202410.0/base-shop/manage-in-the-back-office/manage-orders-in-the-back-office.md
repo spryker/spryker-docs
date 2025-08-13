@@ -3,6 +3,7 @@ title: Manage orders in the Back Office
 description: Learn how you can manage Orders from your store in the Spryker Cloud Commerce OS Back Office
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 This section contains the guides on managing orders in the Back Office:

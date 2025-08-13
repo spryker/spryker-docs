@@ -3,6 +3,7 @@ title: "Glue API: Update service point addresses"
 description: Learn how to update service point addresses using Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you update service point addresses.

@@ -2,6 +2,7 @@
 title: Search data import
 description: Learn how data import works and the different methods and files for the Search module within your Spryker projects.
 template: concept-topic-template
+redirect_from:
 last_updated: Jul 23, 2023
 ---
 

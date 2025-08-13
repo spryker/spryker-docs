@@ -2,6 +2,7 @@
 title: Search
 description: Learn everything you need to know about the Spryker Search Feature for your Spryker Cloud Commerce OS or Spryker Marketplace shop.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

@@ -3,6 +3,7 @@ title: Manage product relations in the Back Office
 description: Learn how to log into the Back Office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 This section contains guides on managing product relations in the Back Office:

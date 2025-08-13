@@ -3,6 +3,7 @@ title: Install the Marketplace Product Offer Prices feature
 last_updated: Mar 7, 2022
 description: This document describes the process how to integrate the Marketplace Product Offer Prices feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
 related:
   - title: Marketplace Product Offer Prices feature walkthrough
     link: docs/pbc/all/price-management/page.version/marketplace/marketplace-product-offer-prices-feature-overview.html

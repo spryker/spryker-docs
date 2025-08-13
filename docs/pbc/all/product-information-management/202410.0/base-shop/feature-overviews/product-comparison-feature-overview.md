@@ -3,6 +3,7 @@ title: Product Comparison feature overview
 description: With the Product Comparison Feature your customers can compare products based on their attributes in your Spryker shop.
 last_updated: Oct 24, 2024
 template: concept-topic-template
+redirect_from:
 ---
 
 The Product Comparison feature lets your customers compare products based on their attributes.

@@ -3,6 +3,7 @@ title: Delete stores
 description: With this guide learn how you can delete stores that are configured within your Spryker Cloud Commerce OS project.
 past_updated: Jun 26, 2023
 template: howto-guide-template
+redirect_from:
 last_updated: Nov 12, 2024
 ---
 

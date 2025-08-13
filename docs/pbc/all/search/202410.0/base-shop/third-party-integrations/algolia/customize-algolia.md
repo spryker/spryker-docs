@@ -3,6 +3,7 @@ title: Customize Algolia
 description: Find out how you can customize Algolia in your Spryker shop
 last_updated: Nov 24, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 

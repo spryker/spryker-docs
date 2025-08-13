@@ -3,6 +3,7 @@ title: Import Merchant Management data
 description: Learn the different ways to import data related to Spryker Merchant Managent Feature in Spryker Marketplace.
 last_updated: Jun 23, 2023
 template: concept-topic-template
+redirect_from:
 ---
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Merchant Management PBC:
 

@@ -3,6 +3,7 @@ title: Manage merchant relations
 description: Learn how to approve, deny, and process merchant relation requests in the Merchant Portal
 last_updated: Mar 30, 2024
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 This document describes how to manage merchant relations in the Merchant Portal.

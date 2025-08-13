@@ -3,6 +3,7 @@ title: Enable Click & Collect
 description: Learn how to enable Click&Collect
 last_updated: Nov 23, 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 To enable the default implementation of Click & Collect, follow the steps.

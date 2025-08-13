@@ -2,6 +2,7 @@
 title: "File details: product_list_to_concrete_product.csv"
 description: Use the product_list_to_concrete_product.csv file to configure configurable product assignments for product lists in your Spryker shop.
 template: data-import-template
+redirect_from:
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

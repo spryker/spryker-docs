@@ -2,6 +2,7 @@
 title: "Marketplace Inventory Management feature: Domain model"
 description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

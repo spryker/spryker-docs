@@ -3,6 +3,7 @@ title: Integrating payment methods for Ratepay
 description: How to integrate RatePay payment methods
 last_updated: Jan 12, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 This section explains how to integrate the following payment methods with RatePay:

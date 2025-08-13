@@ -3,6 +3,7 @@ title: Install the Marketplace Order Management + Order Threshold feature
 last_updated: Dec 16, 2020
 description: This document describes the process how to integrate the Marketplace Order Management Feature + Order Threshold feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
 related:
   - title: Marketplace Order Management feature walkthrough
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html

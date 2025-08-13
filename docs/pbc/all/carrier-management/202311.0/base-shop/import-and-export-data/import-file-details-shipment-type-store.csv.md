@@ -2,6 +2,7 @@
 title: "Import file details: shipment_type_store.csv"
 description: This document describes the shipment_type_store.csv file to configure the shipment information in your Spryker Demo Shop.
 template: data-import-template
+redirect_from:
 last_updated: May 23, 2023
 redirect_From:
   - /docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/file-details-shipment-type-store.csv.html

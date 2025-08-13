@@ -2,6 +2,7 @@
 title: "Marketplace Product Options feature: Domain model and relationships"
 description: Marketplace Product Options lets merchants create their product option groups and values.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

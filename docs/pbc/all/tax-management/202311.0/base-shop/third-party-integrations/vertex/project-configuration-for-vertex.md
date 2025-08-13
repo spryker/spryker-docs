@@ -2,6 +2,7 @@
 title: Project guidelines for the Vertex app
 description: Project guidelines for running Vertex
 template: concept-topic-template
+redirect_from:
 last_updated: June 12, 2024
 ---
 

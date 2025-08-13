@@ -3,6 +3,7 @@ title: Install Product Management powered by OpenAI
 description: Learn how to integrate the ProductManagementAi module into a Spryker project.
 last_updated: Nov 12, 2024
 template: feature-integration-guide-template
+redirect_from:
 ---
 
 AI-powered product management adds the following functionality to the Back Office:

@@ -2,6 +2,7 @@
 title: "Import file details: product_offer_shipment_type.csv"
 last_updated: Nov 23, 2023
 template: data-import-template
+redirect_from:
 ---
 
 This document describes the `product_offer_shipment_type.csv` file to assign product offers to [shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html#shipment-type).

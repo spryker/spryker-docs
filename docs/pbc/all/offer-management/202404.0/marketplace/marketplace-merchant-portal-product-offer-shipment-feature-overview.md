@@ -2,6 +2,7 @@
 title: Marketplace Merchant Portal Product Offer Shipment feature overview
 description: General overview of the Marketplace Merchant Portal Product Offer Shipment feature
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 23, 2023
 ---
 

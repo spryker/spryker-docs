@@ -3,6 +3,7 @@ title: "Glue API: Authenticate as a warehouse user"
 description: Learn how to authenticate as a warehouse user using Glue API in your Spryker Unified Commerce projects.
 last_updated: Nov 13, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint allows authenticating as a warehouse user. Warehouse users need to authenticate to interact with picklists.

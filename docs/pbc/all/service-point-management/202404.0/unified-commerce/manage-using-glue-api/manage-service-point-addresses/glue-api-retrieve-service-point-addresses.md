@@ -3,6 +3,7 @@ title: "Glue API: Retrieve service point addresses"
 description: Learn how to retrieve service point addresses using Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you retrieve service point addresses.

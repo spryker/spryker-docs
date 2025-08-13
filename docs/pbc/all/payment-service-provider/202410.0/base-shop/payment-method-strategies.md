@@ -3,6 +3,7 @@ title: Payment method strategies
 description: This doc describes the different payment method strategies available in Spryker Commerce OS.
 last_updated: Nov 5, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 Spryker and Payment Service Provider (PSP) apps support various payment methods. On the app side, payment methods are configured to use different strategies. A payment method strategy defines where and how payment method or PSP elements, usually the payment form, are displayed in the shop.

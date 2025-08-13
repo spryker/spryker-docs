@@ -2,6 +2,7 @@
 title: Data Exchange
 description: General information about the data exchange options.
 template: concept-topic-template
+redirect_from:
 last_updated: Dec 18, 2023
 ---
 

@@ -2,6 +2,7 @@
 title: PayOne PayPal Express payment flow in headless applications
 description: Payone offers your customers to pay with PayPal Express.
 template: howto-guide-template
+redirect_from:
 last_updated: Now 8, 2024
 related:
   - title: PayOne Credit Card payment flow

@@ -3,6 +3,7 @@ title: "Click & Collect: Shipment Types domain"
 last_updated: Nov 02, 2023
 description: Discover the key extension points for customizing the behavior of shipment types during checkout.
 template: concept-topic-template
+redirect_from:
 ---
 
 Shipment types offer different options for customers to receive their orders.

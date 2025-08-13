@@ -2,6 +2,7 @@
 title: Manage product offers in the Merchant Portal
 description: Learn how log into the Merchant portal and manage product offers
 template: back-office-user-guide-template
+redirect_from:
 last_updated: Jan 9, 2024
 ---
 

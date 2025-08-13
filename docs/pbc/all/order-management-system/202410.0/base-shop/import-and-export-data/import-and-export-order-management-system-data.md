@@ -3,6 +3,7 @@ title: Import and export Order Management System data
 description: Learn about the data importers for Order Management System and how data import works with your Spryker project.
 last_updated: Jun 23, 2023
 template: concept-topic-template
+redirect_from:
 ---
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Order Management System PBC:
 

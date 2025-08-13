@@ -3,6 +3,7 @@ title: "Import file details: service_point_store.csv"
 description: Learn how to configure service point information via importing data through the service point store CSV file in your Spryker unified commerce project.
 last_updated: Nov 23, 2023
 template: data-import-template
+redirect_from:
 ---
 
 This document describes the `service_point_store.csv` file to configure store relations for [service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).

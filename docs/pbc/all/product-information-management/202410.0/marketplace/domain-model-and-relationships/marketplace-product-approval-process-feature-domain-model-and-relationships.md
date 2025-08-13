@@ -2,6 +2,7 @@
 title: "Marketplace Product Approval Process feature: Domain model and relationships"
 description: Marketplace Product Approval Process feature adds Merchant context to product approval process.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

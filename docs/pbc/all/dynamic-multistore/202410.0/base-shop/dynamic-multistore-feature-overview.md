@@ -3,6 +3,7 @@ title: Dynamic Multistore
 description: A list of features that are within Spryker Dynamic Multistore allowing you to create and manage multiple online stores from the Spryker Back Office.
 last_updated: Nov 12, 2024
 template: concept-topic-template
+redirect_from:
 related:
    - title: Install Dynamic Multistore
      link: docs/pbc/all/dynamic-multistore/page.version/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html

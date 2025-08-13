@@ -2,6 +2,7 @@
 title: "Glue API: Update warehouse user assignments"
 description: Learn how to update warehouse user assignments using Glue API within your Spryker Unified Commerce project.
 template: glue-api-storefront-guide-template
+redirect_from:
 last_updated: Dec 7, 2023
 ---
 

@@ -2,6 +2,7 @@
 title: Manage merchant relation requests
 description: Learn how a Back Office user can manage merchant relation requests in the Back Office
 template: back-office-user-guide-template
+redirect_from:
 last_updated: Mar 26, 2024
 ---
 

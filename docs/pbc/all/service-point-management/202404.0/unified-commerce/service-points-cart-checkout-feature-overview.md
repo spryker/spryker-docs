@@ -2,6 +2,7 @@
 title: Service Points Cart + Checkout feature overview
 description: General overview of the Service Points Cart + Checkout feature
 template: concept-topic-template
+redirect_from:
 last_updated: Dec 19, 2023
 ---
 

@@ -3,6 +3,7 @@ title: Warehouse User Management feature overview
 description: General overview of the Warehouse User Management feature
 last_updated: Nov 23, 2023
 template: concept-topic-template
+redirect_from:
 related:
   - title: Fulfillment App overview
     link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/fulfillment-app-overview.html

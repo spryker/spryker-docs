@@ -2,6 +2,7 @@
 title: Configure the timezone in the Back Office
 description: Configure the time-zone used to display date time in the Back Office UI.
 template: howto-guide-template
+redirect_from:
 last_updated: Sep 13, 2023
 ---
 

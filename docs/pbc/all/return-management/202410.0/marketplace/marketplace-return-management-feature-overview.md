@@ -2,6 +2,7 @@
 title: Marketplace Return Management feature overview
 description: This document contains concept information for the Marketplace Return Management feature.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 related:
   - title: Managing marketplace returns

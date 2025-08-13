@@ -2,6 +2,7 @@
 title: "File details: product_list.csv"
 description: Use the product_list.csv file to configure information about product lists in your Spryker shop.
 template: data-import-template
+redirect_from:
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

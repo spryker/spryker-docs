@@ -4,6 +4,7 @@ last_updated: Aug 31, 2022
 description: Integrate the Merchant Portal feature into a Spryker project.
 draft: true
 template: feature-integration-guide-template
+redirect_from:
 related:
   - title: Merchant Portal overview
     link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html

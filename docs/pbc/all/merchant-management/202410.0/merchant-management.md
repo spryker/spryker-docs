@@ -2,6 +2,7 @@
 title: Merchant Management
 description: Learn all about the Spryker Marketplace Merchant Management feature allowing you manage merchant information
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 17, 2023
 ---
 

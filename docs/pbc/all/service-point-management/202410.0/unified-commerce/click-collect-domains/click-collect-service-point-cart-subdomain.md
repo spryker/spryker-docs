@@ -3,6 +3,7 @@ title: "Click & Collect: Service Point Cart subdomain"
 last_updated: Nov 02, 2023
 description: The Service Point Cart subdomain focuses on the validation of service points and the replacement of line items in shopping carts.
 template: concept-topic-template
+redirect_from:
 ---
 
 The Service Point Cart subdomain enables you to validate service points and replace line items within a shopping cart.

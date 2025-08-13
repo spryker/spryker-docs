@@ -2,6 +2,7 @@
 title: Troubleshooting Vertex
 description: Troubleshoot issues related to the Vertex app
 template: troubleshooting-guide-template
+redirect_from:
 last_updated: Dec 4, 2023
 ---
 This document contains common issues related to the Vertex app.

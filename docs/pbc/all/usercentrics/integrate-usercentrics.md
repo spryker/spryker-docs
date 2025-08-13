@@ -2,6 +2,7 @@
 title: Integrate Usercentrics
 description: Learn how you can integrate Spryker Third Party Usercentrics in to your Spryker based shop
 template: howto-guide-template
+redirect_from:
 last_updated: Jan 09, 2024
 ---
 

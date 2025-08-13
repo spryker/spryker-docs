@@ -3,6 +3,7 @@ title: Connect Vertex
 description: Find out how you can configure Vertex in your Spryker shop
 last_updated: Nov 3 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 This document describes how to connect a Spryker project to Vertex.

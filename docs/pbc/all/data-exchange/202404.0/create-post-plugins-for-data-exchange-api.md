@@ -3,6 +3,7 @@ title: Create post plugins for Data Exchange API
 description: This document describes how to create custom post create/update plugin for the Data Exchange API.
 last_updated: Aug 5, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 In some cases, after data is imported or changed through Data Exchange API, you might want particular events to be executed automatically. This document describes how to set up such events by creating custom post plugins.

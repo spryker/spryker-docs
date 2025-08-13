@@ -3,6 +3,7 @@ title: "Stripe: OMS configuration for marketplaces"
 description: Guidelines on the Spryker Ordermanagement system and Stripe integration for Marketplace based stores.
 last_updated: Aug 20, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 This document provides guidelines for projects using Stripe in marketplaces.

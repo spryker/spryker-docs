@@ -2,6 +2,7 @@
 title: Service Points feature overview
 description: General overview of the Service Points feature
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 19, 2024
 ---
 

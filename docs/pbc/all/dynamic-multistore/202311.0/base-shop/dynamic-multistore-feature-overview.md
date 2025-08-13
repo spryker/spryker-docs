@@ -3,6 +3,7 @@ title: Dynamic Multistore
 description: Dynamic Multistore lets you create and manage multiple online stores from the Back Office.
 last_updated: July 31, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 The *Dynamic Multistore* feature lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.

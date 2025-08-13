@@ -4,6 +4,7 @@ description: Learn about the Spryker merchant commission CSV file and how to con
 last_updated: Jul 07, 2024
 description: Import merchant comissions.
 template: import-file-template
+redirect_from:
 ---
 
 This document describes the `merchant_commission.csv` file to configure [merchant commission](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).

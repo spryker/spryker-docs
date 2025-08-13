@@ -2,6 +2,7 @@
 title: "Glue API: Manage marketplace returns"
 description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
+redirect_from:
 last_updated: Nov 21, 2023
 related:
   - title: Retrieving Marketplace orders

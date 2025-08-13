@@ -3,6 +3,7 @@ title: "Persistence ACL feature: Domain model and relationships"
 last_updated: Nov 05, 2021
 description: Learn the Technical details about the Persistence ACL feature in your Spryker Marketplace shop.
 template: concept-topic-template
+redirect_from:
 ---
 
 The following module dependency graph and table list the main modules of the Persistence ACL feature and their interaction.

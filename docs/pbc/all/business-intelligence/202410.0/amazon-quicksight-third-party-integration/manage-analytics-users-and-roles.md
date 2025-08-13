@@ -2,6 +2,7 @@
 title: Manage analytics users and roles
 description: Learn how to add and remove analytics users and update their roles.
 template: concept-topic-template
+redirect_from:
 last_updated: Oct 24, 2024
 ---
 

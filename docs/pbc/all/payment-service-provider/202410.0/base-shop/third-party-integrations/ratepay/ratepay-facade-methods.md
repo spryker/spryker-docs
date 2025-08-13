@@ -11,21 +11,21 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-facade-methods.html
 related:
   - title: Integrating the Invoice payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
   - title: Integrating the Prepayment payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay - Payment Workflow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
   - title: Disabling address updates from the backend application for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Installment payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
   - title: Integrating the Direct Debit payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
 
 | FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |

@@ -9,7 +9,7 @@ The Service Point Cart subdomain enables you to validate service points and repl
 
 ## Installation
 
-[Install the Service Points Cart feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html)
+[Install the Service Points Cart feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html)
 
 ## Modules
 

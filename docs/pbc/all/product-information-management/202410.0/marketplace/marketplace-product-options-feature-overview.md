@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-options-feature-overview.html
 related:
   - title: Creating product options
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/create-product-options.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/create-product-options.html
   - title: Managing product options
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
 ---
 
 With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for marketplace products.

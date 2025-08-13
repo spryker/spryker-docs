@@ -12,9 +12,9 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html
 related:
   - title: Manage carts of registered users
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
   - title: Manage items in carts of registered users
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
 ---
 
 This endpoint allows managing discount vouchers in carts of registered users.

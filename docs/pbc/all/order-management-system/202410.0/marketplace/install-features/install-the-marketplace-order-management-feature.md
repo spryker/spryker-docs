@@ -5,4 +5,4 @@ description: This document describes how to integrate the Marketplace Order Mana
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/marketplace/install-the-marketplace-order-management-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/marketplace/install-the-marketplace-order-management-feature.md -->

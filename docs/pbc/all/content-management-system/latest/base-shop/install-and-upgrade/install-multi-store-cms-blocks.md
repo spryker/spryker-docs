@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
 related:
   - title: Upgrade the CmsBlock module
-    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-multi-store-cms-block-feature.md -->

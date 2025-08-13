@@ -25,7 +25,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
 related:
   - title: Upgrade the Payment module
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/upgrade-the-payment-module.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-checkoutrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-checkoutrestapi-module.md -->

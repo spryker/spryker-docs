@@ -10,9 +10,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
   - title: Order Management feature overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 This endpoint allows retrieving customer's orders.

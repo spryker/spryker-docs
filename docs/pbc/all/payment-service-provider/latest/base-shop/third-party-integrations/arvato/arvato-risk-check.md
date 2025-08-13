@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/arvato/arvato-risk-check.html
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-store-order.html
   - title: Arvato
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 ---
 
 Accounted for by external credit agency data and internal existing customer- and order-details the `RiskCheck` evaluates the probability of payment default for the customer orders.

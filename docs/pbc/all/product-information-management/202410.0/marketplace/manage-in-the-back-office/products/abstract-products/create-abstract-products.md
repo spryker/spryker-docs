@@ -5,11 +5,11 @@ description: This guide explains how to create abstract products in your Spryker
 template: back-office-user-guide-template
 related:
   - title: Editing abstract products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
   - title: Managing products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202108.0/catalog/products/abstract-product-reference-information.html
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/products/abstract-products/creating-abstract-products.html

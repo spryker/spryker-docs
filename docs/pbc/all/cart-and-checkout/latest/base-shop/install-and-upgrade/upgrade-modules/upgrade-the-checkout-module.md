@@ -34,6 +34,6 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
 related:
   - title: Checkout
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-checkout-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-checkout-module.md -->

@@ -5,9 +5,9 @@ description: This guide explains how to manage main merchant returns in the Back
 template: back-office-user-guide-template
 related:
   - title: Managing main merchant orders
-    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
   - title: Marketplace Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
+    link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
 **My Returns** lets you manage the returns as follows:

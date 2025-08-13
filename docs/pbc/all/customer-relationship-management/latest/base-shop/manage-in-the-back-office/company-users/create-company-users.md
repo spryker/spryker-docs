@@ -18,11 +18,11 @@ related:
   - title: Edit company roles
     link: docs/scos/user/back-office-user-guides/202204.0/customer/company-users/edit-company-users.html
   - title: Create company roles
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html
   - title: Managing Companies
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html
   - title: Company user roles and permissions overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to create company users in the Back Office.

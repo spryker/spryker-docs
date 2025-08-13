@@ -5,7 +5,7 @@ last_updated: Nov 23, 2023
 template: data-import-template
 ---
 
-This document describes the `service_point.csv` file to configure [service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
+This document describes the `service_point.csv` file to configure [service points](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html).
 
 
 ## Import file parameters

@@ -7,7 +7,7 @@ redirect_from:
   - docs/scos/dev/set-up-spryker-locally/cleaning-up-devvm.html
 related:
   - title: System requirements
-    link: docs/scos/dev/system-requirements/page.version/system-requirements.html
+    link: docs/scos/dev/system-requirements/latest/system-requirements.html
   - title: Installing Spryker with DevVM on MacOS and Linux
     link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
   - title: Installing Spryker with DevVM on Windows

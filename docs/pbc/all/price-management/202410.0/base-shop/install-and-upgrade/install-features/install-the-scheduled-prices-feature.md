@@ -14,4 +14,4 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-scheduled-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-scheduled-prices-feature.md -->
+{% include pbc/all/install-features/latest/install-the-scheduled-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-scheduled-prices-feature.md -->

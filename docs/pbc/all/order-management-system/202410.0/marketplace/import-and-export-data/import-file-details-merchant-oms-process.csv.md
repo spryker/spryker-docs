@@ -7,11 +7,11 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/file-details-merchant_oms_process.csv.html
 related:
   - title: Merchant Oms
-    link: docs/pbc/all/order-management-system/page.version/marketplace/merchant-oms.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html
   - title: Marketplace and merchant state machines overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.

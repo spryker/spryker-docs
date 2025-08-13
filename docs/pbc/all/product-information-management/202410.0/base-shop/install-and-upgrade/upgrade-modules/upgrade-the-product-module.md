@@ -17,9 +17,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
 related:
   - title: Upgrade the Collector module
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
   - title: Upgrade the ProductManagement module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-product-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-product-module.md -->

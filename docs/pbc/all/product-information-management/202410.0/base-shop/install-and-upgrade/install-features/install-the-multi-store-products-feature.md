@@ -15,13 +15,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/multi-store-products-feature-integration.html
 related:
   - title: Upgrade the Collector module
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
   - title: Upgrade the Touch module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
   - title: Upgrade the Product module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module
   - title: Upgrade the ProductManagement module
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->
+{% include pbc/all/install-features/latest/install-the-multi-store-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-products-feature.md -->

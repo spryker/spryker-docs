@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/edit-content-items.html
 related:
   - title: Content Items feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
 ---
 
 This topic describes how to edit content items in the Back Office.

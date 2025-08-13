@@ -16,9 +16,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
 related:
   - title: CMS pages in search results
-    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
   - title: CMS page
-    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-cms-product-lists-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-product-lists-catalog-feature.md -->

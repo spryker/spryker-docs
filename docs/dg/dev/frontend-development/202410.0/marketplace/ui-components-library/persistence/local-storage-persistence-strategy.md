@@ -10,11 +10,11 @@ redirect_from:
 
 related:
   - title: Persistence
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/persistence.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/persistence.html
   - title: In Memory Persistence Strategy
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
   - title: Url Persistence Strategy
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 ---
 
 This document explains the Local Storage Persistence Strategy service in the Components Library.

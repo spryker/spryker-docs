@@ -9,7 +9,7 @@ redirect_from:
 
 related:
   - title: REST API Marketplace B2C Demo Shop reference
-    link: docs/dg/dev/glue-api/page.version/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
+    link: docs/dg/dev/glue-api/latest/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
 ---
 
 <!-- 202311.0 is the last version to support this doc. Don't move it to the next versions -->

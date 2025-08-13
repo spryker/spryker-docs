@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/import-and-export-data/export-file-details-order-items.csv.html
 related:
   - title: Install the Sales Data Export feature
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 
 

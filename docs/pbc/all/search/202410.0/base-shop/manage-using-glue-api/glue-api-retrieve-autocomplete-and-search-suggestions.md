@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-autocomplete-and-search-suggestions.html
 related:
   - title: Searching the product catalog
-    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
+    link: docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
 ---
 
 In addition to [catalog search](/docs/pbc/all/search/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.

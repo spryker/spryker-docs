@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
 related:
   - title: CMS Page overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: View CMS pages and history
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
 ---
 
 The topic describes how to edit CMS pages in the Back Office.

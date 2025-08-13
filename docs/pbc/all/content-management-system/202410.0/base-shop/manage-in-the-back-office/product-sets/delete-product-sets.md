@@ -8,15 +8,15 @@ redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/delete-product-sets.html
 related:
   - title: Create product sets
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
   - title: Edit product sets
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html
   - title: Reorder product sets
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
   - title: View product sets
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
   - title: Product Sets feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html
 ---
 
 

@@ -5,9 +5,9 @@ description: This guide explains how to manage marketplace returns in the Back O
 template: back-office-user-guide-template
 related:
     - title: Managing marketplace orders
-      link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
+      link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
     - title: Marketplace Return Management feature overview
-      link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
+      link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
 After a [marketplace return](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:

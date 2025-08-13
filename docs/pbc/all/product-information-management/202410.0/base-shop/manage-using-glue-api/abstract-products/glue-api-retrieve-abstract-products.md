@@ -12,15 +12,15 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
 related:
   - title: Retrieve abstract product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/page.version/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/latest/base-shop/manage-using-glue-api/retrieve-tax-sets.html
   - title: Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about abstract products.

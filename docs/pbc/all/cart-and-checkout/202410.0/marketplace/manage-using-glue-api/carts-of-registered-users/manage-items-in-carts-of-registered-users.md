@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:
   - title: Managing carts of registered users
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
 ---
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
 

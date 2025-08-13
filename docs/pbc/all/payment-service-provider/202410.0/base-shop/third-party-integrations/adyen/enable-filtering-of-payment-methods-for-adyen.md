@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html
   - title: Integrating Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 ---
 
 Adyen module provides filtering available payment methods depend on result of `/paymentMethods` API call.

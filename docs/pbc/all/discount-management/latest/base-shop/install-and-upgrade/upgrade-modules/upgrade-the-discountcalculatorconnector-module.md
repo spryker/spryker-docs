@@ -19,11 +19,11 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
 related:
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
   - title: Creating Vouchers
-    link: docs/pbc/all/discount-management/page.version/base-shop/manage-in-the-back-office/create-discounts.html
+    link: docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html
   - title: Upgrade the DiscountSalesAggregatorConnector
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.html
+    link: docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountcalculatorconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountcalculatorconnector-module.md -->

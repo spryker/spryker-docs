@@ -5,7 +5,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 related:
   - title: Afterpay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/afterpay/afterpay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html
 redirect_from:
 - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/afterpay/integrating-afterpay.html
 - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/afterpay/integrating-afterpay.html

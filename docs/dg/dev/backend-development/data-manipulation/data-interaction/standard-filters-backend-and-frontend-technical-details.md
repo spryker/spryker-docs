@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
 related:
   - title: Category Filters feature integration
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
   - title: Managing Category Filters
-    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+    link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
 ---
 
 ## Backend technical details

@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 related:
   - title: Install the Alternative Products feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html
   - title: Retrieving alternative products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-alternative-products-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-alternative-products-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-alternative-products-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-alternative-products-glue-api.md -->

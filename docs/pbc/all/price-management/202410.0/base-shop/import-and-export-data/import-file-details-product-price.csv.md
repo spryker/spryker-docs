@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This article contains content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.

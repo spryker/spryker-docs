@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Cache Strategy Static
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
 ---
 
 This document explains the Cache service in the Component Library.

@@ -9,13 +9,13 @@ redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.

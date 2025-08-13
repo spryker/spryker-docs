@@ -12,11 +12,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/braintree-request-workflow.html
 related:
   - title: Installing and configuring Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
   - title: Integrating Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/integrate-braintree.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/integrate-braintree.html
   - title: Braintree - Performing Requests
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/braintree-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-performing-requests.html
 ---
 
 Both credit card and PayPal utilize the same request flow in:

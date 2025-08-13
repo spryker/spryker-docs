@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html) information in your Spryker Demo Shop.

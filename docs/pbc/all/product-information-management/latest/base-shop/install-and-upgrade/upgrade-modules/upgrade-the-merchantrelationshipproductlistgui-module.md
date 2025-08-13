@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
 related:
   - title: Upgrade the ProductListGui module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.md -->

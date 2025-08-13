@@ -13,7 +13,7 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/reference-information-glueapplication-errors
 related:
   - title: Glue REST API
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-rest-api.html
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

@@ -11,9 +11,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.

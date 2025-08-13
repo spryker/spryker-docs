@@ -5,7 +5,7 @@ last_updated: Nov 23, 2023
 template: concept-topic-template
 ---
 
-This feature lets you assign service types to shipment types. Service and delivery types are used by service points. For more information about service service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
+This feature lets you assign service types to shipment types. Service and delivery types are used by service points. For more information about service service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html).
 
 To import service to shipment type assignments, see [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/file-details-shipment-type-service-type.csv.html).
 
@@ -14,7 +14,7 @@ To import service to shipment type assignments, see [Import file details: shipme
 
 | OVERVIEWS |
 | - |
-| [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html) |
+| [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html) |
 
 ## Related Developer documents
 

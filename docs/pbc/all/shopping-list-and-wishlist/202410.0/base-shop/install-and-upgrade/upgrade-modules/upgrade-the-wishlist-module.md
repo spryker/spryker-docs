@@ -35,9 +35,9 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html
 related:
   - title: Upgrade the Cart
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
   - title: Upgrade the Price
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-wishlist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-wishlist-module.md -->

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
 ---
 
 The document describes the flow of making a product searchable and displayed on the Storefront.

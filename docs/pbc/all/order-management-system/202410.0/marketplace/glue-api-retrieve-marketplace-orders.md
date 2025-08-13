@@ -5,7 +5,7 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/page.version/marketplace/glue-api-manage-marketplace-returns.html
+    link: docs/pbc/all/return-management/latest/marketplace/glue-api-manage-marketplace-returns.html
 ---
 
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.

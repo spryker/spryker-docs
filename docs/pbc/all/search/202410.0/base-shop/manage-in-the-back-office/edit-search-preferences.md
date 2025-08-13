@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-preferences/edit-search-preferences.html
 related:
   - title: Define search preferences
-    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/define-search-preferences.html
+    link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/define-search-preferences.html
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This document describes how to edit search preferences for product attributes in the Back Office.

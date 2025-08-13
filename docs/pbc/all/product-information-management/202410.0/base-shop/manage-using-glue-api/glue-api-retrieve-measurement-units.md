@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:
   - title: Measurement Units feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/measurement-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
 
 The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.

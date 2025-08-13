@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
 related:
   - title: Managing merchant users
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 To view merchant details in the Back Office, follow the steps:

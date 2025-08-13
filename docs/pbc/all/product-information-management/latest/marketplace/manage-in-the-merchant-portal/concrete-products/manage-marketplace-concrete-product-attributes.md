@@ -5,7 +5,7 @@ description: This document describes how to manage marketplace concrete product 
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage attributes of the marketplace concrete products in the Merchant Portal.

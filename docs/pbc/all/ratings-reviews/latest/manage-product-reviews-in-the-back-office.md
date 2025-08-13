@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
 related:
   - title: Product Rating & Reviews feature overview
-    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
+    link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html
 ---
 
 This  document describes how to manage product reviews received from the customers.

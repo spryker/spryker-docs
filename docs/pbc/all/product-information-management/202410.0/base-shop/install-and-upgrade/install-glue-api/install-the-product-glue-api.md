@@ -15,11 +15,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
 related:
   - title: Install the Product feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: "Glue API: Retrieve abstract products"
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: "Glue API: Retrieve concrete products"
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-glue-api/install-the-product-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-product-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-glue-api/install-the-product-glue-api.md -->

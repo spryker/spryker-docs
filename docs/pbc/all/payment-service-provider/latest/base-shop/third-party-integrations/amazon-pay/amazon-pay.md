@@ -10,14 +10,14 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/amazon-pay/amazon-pay.html
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Rendering a "Pay with Amazon" Button on the Cart Page
   - title: Configuring Amazon Pay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
   - title: Handling orders with Amazon Pay API
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
 ---
 
 ## Partner Information

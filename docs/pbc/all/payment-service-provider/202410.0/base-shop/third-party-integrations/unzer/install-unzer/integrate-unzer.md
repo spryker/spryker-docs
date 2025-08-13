@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/install-unzer/integrate-unzer.html
 related:
 - title: Install and configure Unzer
-  link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
+  link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
 ---
 
 ## Unzer feature integration

@@ -16,9 +16,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 related:
   - title: Check out purchases
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Submit checkout data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
 ---
 
 This endpoint allows completing payment with payment verification of a third-party resource.

@@ -9,7 +9,7 @@ This endpoint lets you retrieve service points.
 
 ## Installation
 
-[Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
+[Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)
 
 ## Retrieve service points
 
@@ -432,7 +432,7 @@ This endpoint lets you retrieve service points.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_point_id}}***{% endraw %} | ID of a service point to retrieve. To get it, [add a service point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html) or [retrieve service points](#retrieve-service-points). |
+| {% raw %}***{{service_point_id}}***{% endraw %} | ID of a service point to retrieve. To get it, [add a service point](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html) or [retrieve service points](#retrieve-service-points). |
 
 
 ### Request

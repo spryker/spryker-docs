@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/commenting-orders.html
 related:
   - title: Order Management feature overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 To add a [comment](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/comments-feature-overview.html) to an order in the Back Office, do the following:

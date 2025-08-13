@@ -7,9 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/retrieving-related-
 originalArticleId: db6deab2-f115-4802-a989-c594cebc6120
 related:
   - title: Retrieving alternative products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - title: Product Relations feature overview
-    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
+    link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
 redirect_from:
 - /docs/scos/dev/glue-api-guides/202204.0/retrieve-related-products.html
 ---

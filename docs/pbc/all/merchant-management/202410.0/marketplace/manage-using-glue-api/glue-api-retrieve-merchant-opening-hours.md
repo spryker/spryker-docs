@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchant-opening-hours.html
 related:
   - title: Retrieving merchants
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html
   - title: Retrieving merchant addresses
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
 ---
 
 This document describes how to retrieve merchant opening hours.

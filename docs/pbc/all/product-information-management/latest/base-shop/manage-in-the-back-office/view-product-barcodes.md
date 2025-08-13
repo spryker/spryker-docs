@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/view-product-barcodes.html
 related:
   - title: Barcode Generator feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-barcode-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-barcode-feature-overview.html
 ---
 
 ## Prerequisites

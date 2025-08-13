@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html
 related:
   - title: Multiple Carts feature overview
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/multiple-carts-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/multiple-carts-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202410.0/install-the-multiple-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-multiple-carts-feature.md -->

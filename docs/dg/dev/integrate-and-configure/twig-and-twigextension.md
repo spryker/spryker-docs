@@ -20,7 +20,7 @@ related:
   - title: Cronjob scheduling
     link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
   - title: Data import
-    link: docs/dg/dev/data-import/page.version/data-import.html
+    link: docs/dg/dev/data-import/latest/data-import.html
   - title: Development virtual machine, docker containers & console
     link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
 ---

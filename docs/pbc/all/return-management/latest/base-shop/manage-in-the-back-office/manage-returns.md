@@ -14,13 +14,13 @@ redirect_from:
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-in-the-back-office/manage-returns.html
 related:
   - title: Creating returns
-    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/create-returns.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html
   - title: Viewing returns of an order
-    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Changing the state of order items in returns
-    link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
+    link: docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management.html
+    link: docs/pbc/all/return-management/latest/return-management.html
 ---
 
 This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/pbc/all/return-management/latest/base-shop/return-management-feature-overview.html#return-management-on-the-storefront).

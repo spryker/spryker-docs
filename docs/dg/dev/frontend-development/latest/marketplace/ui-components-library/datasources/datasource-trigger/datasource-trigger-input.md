@@ -8,13 +8,13 @@ redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Dependable
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-dependable.html
   - title: Datasource Http
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 Datasource Trigger Input is an Angular service in the components library that extracts the value from an event trigger element and checks if it meets a certain criteria. If the value is valid, it emits an object containing the value.

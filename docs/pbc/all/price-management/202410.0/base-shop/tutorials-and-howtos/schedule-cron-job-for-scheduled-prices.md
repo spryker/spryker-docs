@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 related:
   - title: Scheduled Prices feature walkthrough
-    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
+    link: docs/pbc/all/price-management/latest/base-shop/scheduled-prices-feature-overview.html
 ---
 
 

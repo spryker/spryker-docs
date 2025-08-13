@@ -17,19 +17,19 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
 related:
   - title: Integrating CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/integrate-crefopay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/integrate-crefopay.html
   - title: CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html
   - title: CrefoPay payment methods
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
   - title: CrefoPay—Enabling B2B payments
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
   - title: CrefoPay callbacks
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-callbacks.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-callbacks.html
   - title: CrefoPay notifications
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
 ---
 
 This document describes how to install and configure CrefoPay.

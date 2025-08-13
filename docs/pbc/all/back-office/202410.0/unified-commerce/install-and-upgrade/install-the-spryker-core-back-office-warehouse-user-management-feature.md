@@ -8,4 +8,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/spryker-core-back-office-warehouse-user-management-feature-integration.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-spryker-core-back-office-warehouse-user-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-spryker-core-back-office-warehouse-user-management-feature.md -->
+{% include pbc/all/install-features/latest/install-the-spryker-core-back-office-warehouse-user-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-spryker-core-back-office-warehouse-user-management-feature.md -->

@@ -11,15 +11,15 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-request-flow.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html
   - title: Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution.html
   - title: Installing and configuring Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html
   - title: Payolution - Performing Requests
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
 ---
 
 Both [invoice](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html) and [installment](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-installment-payment-method-for-payolution.html) payment methods utilize the same request flow. It basically consists of the following requests:

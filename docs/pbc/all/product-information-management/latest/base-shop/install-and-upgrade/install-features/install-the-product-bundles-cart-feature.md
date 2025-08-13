@@ -19,9 +19,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202505.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
 related:
   - title: "Install the Product Bundle + Cart Glue API"
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
   - title: Install the Cart feature
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-product-bundles-cart-feature.md -->

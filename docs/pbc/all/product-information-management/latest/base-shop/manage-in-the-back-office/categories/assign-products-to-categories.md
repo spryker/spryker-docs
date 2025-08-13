@@ -12,9 +12,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
 related:
   - title: Creating Categories
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/categories/create-categories.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/create-categories.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 To assign and deassign products from categories in the Back Office, follow the steps:

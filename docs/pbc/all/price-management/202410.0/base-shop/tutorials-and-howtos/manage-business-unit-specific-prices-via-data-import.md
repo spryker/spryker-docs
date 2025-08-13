@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
 related:
   - title: Merchant Custom Prices feature overview
-    link: docs/pbc/all/price-management/page.version/base-shop/merchant-custom-prices-feature-overview.html
+    link: docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html
 ---
 
 {% info_block warningBox "B2B only" %}

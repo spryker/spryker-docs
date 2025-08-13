@@ -10,13 +10,13 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 Impersonating a customer allows an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to perform actions on their behalf. To impersonate a customer, they receive their Glue API authentication token. Using the token, agent assists perform any action available to the customer.

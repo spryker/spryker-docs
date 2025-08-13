@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/create-warehouses.html
 related:
   - title: Inventory Management feature overview
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html
 ---
 
 The document describes how to create warehouses in the Back Office.

@@ -14,9 +14,9 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
 related:
   - title: Scheduled Prices feature overview
-    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
+    link: docs/pbc/all/price-management/latest/base-shop/scheduled-prices-feature-overview.html
   - title: Creating scheduled prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-in-the-back-office/create-scheduled-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/create-scheduled-prices.html
 ---
 
 

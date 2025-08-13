@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
 related:
   - title: Managing Products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-products.html
 ---
 
 This doc describes how to edit abstract products and product bundles.

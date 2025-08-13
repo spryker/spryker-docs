@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-abstract-products.html
 related:
   - title: Retrieving abstract products in abstract product lists
-    link: docs/pbc/all/content-management-system/page.version/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
+    link: docs/pbc/all/content-management-system/latest/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
 ---
 
 This endpoint allows retrieving general information about abstract products.

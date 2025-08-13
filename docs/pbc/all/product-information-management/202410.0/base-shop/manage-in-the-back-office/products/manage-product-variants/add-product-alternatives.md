@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 related:
   - title: Alternative Products feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
 
 This article describes how to add product alternatives for a product.

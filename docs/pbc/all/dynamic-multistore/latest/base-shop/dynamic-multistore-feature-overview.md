@@ -5,13 +5,13 @@ last_updated: Nov 12, 2024
 template: concept-topic-template
 related:
    - title: Install Dynamic Multistore
-     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+     link: docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
    - title: Import minimum set of data for store
-     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/import-stores.html
+     link: docs/pbc/all/dynamic-multistore/latest/base-shop/import-stores.html
    - title: Install the Dynamic Multistore Glue API
-     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
+     link: docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
    - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature
-     link: docs/pbc/all/dynamic-multistore/page.version/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
+     link: docs/pbc/all/dynamic-multistore/latest/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
 ---
 
 *Dynamic Multistore* (DMS) lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.

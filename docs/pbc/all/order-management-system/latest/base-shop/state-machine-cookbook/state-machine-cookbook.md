@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
 related:
   - title: State machine fundamentals
-    link: docs/pbc/all/order-management-system/page.version/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
   - title: Build a state machine
-    link: docs/pbc/all/order-management-system/page.version/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
   - title: Testing a state machine
     link: docs/dg/dev/backend-development/data-manipulation/set-up-an-order-management-system.html
 ---

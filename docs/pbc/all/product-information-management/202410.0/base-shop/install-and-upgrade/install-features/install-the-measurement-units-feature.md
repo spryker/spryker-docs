@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
 related:
   - title: Install the Measurement Units Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
 ---
 
 ## Install feature core

@@ -17,13 +17,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 related:
   - title: Upgrade the Product module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Upgrade the ProductLabel module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
   - title: Upgrade the ProductBundle module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
   - title: Upgrade the ProductLabelGui module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md -->

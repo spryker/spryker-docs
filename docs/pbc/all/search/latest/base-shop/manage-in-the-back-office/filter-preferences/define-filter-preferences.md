@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/define-filter-preferences.html
 related:
   - title: Standard filters overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/standard-filters-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/standard-filters-overview.html
 ---
 
 This document describes how to create filters and define preferences for them in the Back Office.

@@ -11,13 +11,13 @@ To enable the default implementation of Click & Collect, follow the steps.
 
 Install the following features:
 
-- [Service Points Cart + Checkout](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html)
-- [Service Points Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html)
-- [Service Points + Customer Account Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html)
-- [Service Points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
-- [Service Points + Order Management](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html)
-- [Service Points + Product Offer](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)
-- [Service Points Cart + Shipment](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html)
+- [Service Points Cart + Checkout](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html)
+- [Service Points Cart](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html)
+- [Service Points + Customer Account Management](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html)
+- [Service Points](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)
+- [Service Points + Order Management](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-order-management-feature.html)
+- [Service Points + Product Offer](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)
+- [Service Points Cart + Shipment](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-shipment-feature.html)
 - [Marketplace Merchant Portal Product Offer Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-portal-product-offer-service-points-feature.html)
 - [Marketplace Merchant + Product Offer Service Points Availability](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html)
 - [Marketplace Product Offer + Service Points](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html)
@@ -31,28 +31,28 @@ Install the following features:
 
 ## 1. Add service points and their addresses
 
-To add service points and addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html).
+To add service points and addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html).
 
-To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
+To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
 
-To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html).
+To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html).
 
 ## 2. Add service types
 
 For Click & Collect, you most probably need the pickup service type.
 
-To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
+To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
 
-To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
+To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
 
 
 ## 3. Add services
 
 You need to add services per service point based on the service types you've added.
 
-To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
+To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
 
-To import service types, see [Import file details: service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
+To import service types, see [Import file details: service.csv](/docs/pbc/all/service-point-management/latest/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
 
 
 ## 4. Assign service types to shipment types
@@ -79,7 +79,7 @@ Since the product catalog and the product details page (PDP) do not support Clic
 
 2. To show only one product offer in the offers section, override the Merchant Product Offer Widget behavior with a filter. This filter should display one product offer with an empty service and shipment type set to *empty* or *Delivery*. When adding products to cart, the delivery shipment type applies by default, and the customer can change it to pickup during checkout if needed. For more details on the product offers widget, see [Render merchant product offers on the Storefront](/docs/pbc/all/offer-management/{{page.version}}/marketplace/render-merchant-product-offers-on-the-storefront.html).
 
-3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html).
+3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html).
 
 As a result, customers have the following user journey with Click & Collect:
 1. Go to the PDP.

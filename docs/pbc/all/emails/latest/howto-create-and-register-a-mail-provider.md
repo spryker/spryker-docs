@@ -26,9 +26,9 @@ redirect_from:
   - /docs/pbc/all/emails/202204.0/howto-create-and-register-a-mail-provider.html
 related:
   - title: "HowTo: Create and register a MailTypeBuilderPlugin"
-    link: docs/pbc/all/emails/page.version/howto-create-and-register-a-mail-type-builder-plugin.html
+    link: docs/pbc/all/emails/latest/howto-create-and-register-a-mail-type-builder-plugin.html
   - title: "Tutorial: Sending an email"
-    link: docs/pbc/all/emails/page.version/tutorial-sending-an-email.html
+    link: docs/pbc/all/emails/latest/tutorial-sending-an-email.html
 ---
 
 {% info_block infoBox "Info" %}

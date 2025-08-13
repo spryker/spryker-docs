@@ -9,7 +9,7 @@ This endpoint lets you add service point addresses.
 
 ## Installation
 
-[Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
+[Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)
 
 ## Retrieve service points
 
@@ -20,7 +20,7 @@ This endpoint lets you add service point addresses.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service-point-uuid}}***{% endraw %} | ID of a service point to add the address to. To get it, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html). |
+| {% raw %}***{{service-point-uuid}}***{% endraw %} | ID of a service point to add the address to. To get it, [retrieve service points](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html). |
 
 
 ### Request

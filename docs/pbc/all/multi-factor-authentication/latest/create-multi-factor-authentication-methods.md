@@ -5,11 +5,11 @@ template: howto-guide-template
 last_updated: Apr 7, 2025
 related:
   - title: Multi-Factor Authentication Feature overview
-    link: docs/pbc/all/multi-factor-authentication/page.version/multi-factor-authentication.html
+    link: docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html
   - title: Install the Multi-Factor Authentication feature
-    link: docs/pbc/all/multi-factor-authentication/page.version/install-multi-factor-authentication-feature.html
+    link: docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html
   - title: Install Customer Email Multi-Factor Authentication method
-    link: docs/pbc/all/multi-factor-authentication/page.version/install-email-multi-factor-authentication-method.html
+    link: docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html
 
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/create-multi-factor-authentication-methods.html

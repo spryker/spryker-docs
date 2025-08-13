@@ -5,4 +5,4 @@ description: This document describes how to integrate the Marketplace Merchant P
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-portal-core-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/marketplace/install-merchant-portal-core-cms-feature.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-marketplace-merchant-portal-core-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/marketplace/install-merchant-portal-core-cms-feature.md -->

@@ -8,13 +8,13 @@ redirect_from:
   - /docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html
 related:
   - title: Creating marketplace abstract product
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html
   - title: Managing marketplace abstract product
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html
   - title: Creating marketplace concrete product
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
   - title: Managing marketplace concrete product
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html
 ---
 
 In the Marketplace, products that a merchant owns are referred to as *marketplace products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html) or [import the marketplace products data](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product.csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. For details, see [Managing marketplace abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html).

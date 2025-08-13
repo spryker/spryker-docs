@@ -14,15 +14,15 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 related:
   - title: Install the Configurable Bundle feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Install the Prices feature
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Install the Merchant Product Restrictions feature
-    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->

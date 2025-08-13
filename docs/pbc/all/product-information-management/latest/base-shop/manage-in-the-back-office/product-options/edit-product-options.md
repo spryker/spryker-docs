@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
 related:
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html
 ---
 
 To edit product options in the Back Office, follow the steps below.

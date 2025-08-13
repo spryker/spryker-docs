@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Order Management feature walkthrough
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/marketplace/install-the-marketplace-order-management-order-threshold-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-order-management-order-threshold-feature.md -->

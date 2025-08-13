@@ -5,15 +5,15 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
   - title: Marketplace order overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
   - title: Merchant order overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing marketplace orders
-    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
 ---
 
 When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. Compared to a regular order in Spryker Commerce OS, the Marketplace order contains information about merchants and one or several [merchant orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.

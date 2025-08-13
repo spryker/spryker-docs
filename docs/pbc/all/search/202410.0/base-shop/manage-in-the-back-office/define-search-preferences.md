@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-preferences/define-search-preferences.html
 related:
   - title: Edit search preferences
-    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/edit-search-preferences.html
+    link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/edit-search-preferences.html
   - title: Managing Category Filters
-    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
+    link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - title: Managing Filter Preferences
-    link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
+    link: docs/pbc/all/search/latest/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This topic describes how to add product attributes to search and define search preferences.

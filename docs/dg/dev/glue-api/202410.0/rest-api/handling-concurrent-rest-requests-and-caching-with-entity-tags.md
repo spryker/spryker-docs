@@ -11,9 +11,9 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags
 related:
   - title: Glue Infrastructure
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
   - title: Shared Cart Feature Overview
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

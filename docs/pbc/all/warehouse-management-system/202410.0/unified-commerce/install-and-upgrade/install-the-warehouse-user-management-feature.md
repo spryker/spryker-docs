@@ -8,4 +8,4 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/unified-commerce/install-the-warehouse-user-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/unified-commerce/install-the-warehouse-user-management-feature.md -->
+{% include pbc/all/install-features/latest/unified-commerce/install-the-warehouse-user-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/unified-commerce/install-the-warehouse-user-management-feature.md -->

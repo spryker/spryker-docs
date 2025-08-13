@@ -5,4 +5,4 @@ last_updated: Nov 12, 2024
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-dynamic-multistore-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-dynamic-multistore-the-customer-account-management-feature.md -->
+{% include pbc/all/install-features/latest/install-dynamic-multistore-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-dynamic-multistore-the-customer-account-management-feature.md -->

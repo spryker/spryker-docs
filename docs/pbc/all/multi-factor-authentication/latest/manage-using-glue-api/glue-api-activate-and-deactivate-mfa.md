@@ -131,7 +131,7 @@ Content-Type: application/json
 ### Response
 
 
-`204 No Content` response means that the the MFA method has been deactivated for the user.
+`204 No Content` response means that the MFA method has been deactivated for the user.
 
 
 

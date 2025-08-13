@@ -280,9 +280,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-1. Executing the `console sync:data product_concrete` command, syncs the product data, including images, to Elasticsearch product concrete documents.
-2. When a product or its images are updated in the Back Office, these changes are synced to respective Elasticsearch product concrete documents.
-3. When product attribute translations are updated in the Back Office, the changes are synced to the product abstract storage item in Redis.
+- Executing the `console sync:data product_concrete` command syncs the product data, including images, to Elasticsearch product concrete documents.
+- When a product or its images are updated in the Back Office, these changes are synced to respective Elasticsearch product concrete documents.
+- When product attribute translations are updated in the Back Office, the changes are synced to the product abstract storage items in Redis.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |

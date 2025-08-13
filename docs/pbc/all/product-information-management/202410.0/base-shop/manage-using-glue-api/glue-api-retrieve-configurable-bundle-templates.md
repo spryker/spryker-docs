@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 related:
   - title: Configurable Bundle feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.

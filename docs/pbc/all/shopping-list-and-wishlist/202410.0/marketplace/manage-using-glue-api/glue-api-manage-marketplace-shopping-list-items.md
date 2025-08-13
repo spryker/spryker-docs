@@ -5,7 +5,7 @@ last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Managing shopping lists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
 ---
 
 This endpoint allows managing marketplace shopping list items.

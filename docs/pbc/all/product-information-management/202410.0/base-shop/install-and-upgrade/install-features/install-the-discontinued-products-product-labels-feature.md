@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
 related:
   - title: Install the Discontinued Products feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-discontinued-products-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-discontinued-products-product-labels-feature.md -->

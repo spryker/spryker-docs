@@ -12,7 +12,7 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-rest-api
 related:
   - title: Reference information - GlueApplication errors
-    link: docs/dg/dev/glue-api/page.version/rest-api/reference-information-glueapplication-errors.html
+    link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

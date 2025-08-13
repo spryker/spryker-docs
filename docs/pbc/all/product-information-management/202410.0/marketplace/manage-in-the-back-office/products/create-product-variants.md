@@ -7,11 +7,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-concrete-products/creating-product-variants.html
 related:
   - title: Managing products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Editing product variants
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to add a product variant for an abstract product.

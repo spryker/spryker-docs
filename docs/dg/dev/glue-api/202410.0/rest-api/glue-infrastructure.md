@@ -13,7 +13,7 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure
 related:
   - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

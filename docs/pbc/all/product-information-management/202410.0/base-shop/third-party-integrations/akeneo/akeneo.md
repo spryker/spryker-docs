@@ -14,9 +14,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo.html
 related:
   - title: Akeneo Connector (Eco module) — Console commands
-    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
   - title: Installing and configuring Akeneo Connector (Eco module)
-    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 ---
 
 ## Partner Information

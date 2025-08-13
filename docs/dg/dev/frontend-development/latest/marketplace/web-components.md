@@ -10,9 +10,9 @@ redirect_from:
 
 related:
   - title: Angular Components
-    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-components.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/angular-components.html
   - title: Angular Services
-    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-services.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/angular-services.html
 ---
 
 This document provides details how web components are used and what their function is in the Merchant Portal Frontend.

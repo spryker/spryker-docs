@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/create-product-options.html
 related:
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html
 ---
 
 This document describes how to create product options. Product options are additions to products, like warranty or gift wrapping.

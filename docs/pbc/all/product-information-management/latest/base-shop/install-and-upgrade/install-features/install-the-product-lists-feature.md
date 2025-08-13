@@ -13,21 +13,21 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
 related:
   - title: Install the Product Lists + Catalog feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Install the CMS + Product Lists + Catalog feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Install the Configurable Bundle feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Install the Product feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Install the Prices feature
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Merchant Product Restrictions feature
-    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
   - title: Install the Product Images + Configurable Bundle feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
   - title: Merchant Product Restrictions feature overview
-    link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-lists-feature.md -->

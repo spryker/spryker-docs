@@ -9,7 +9,7 @@ redirect_from:
 
 related:
     - title: Persistence ACL feature walkthrough
-      link: docs/pbc/all/user-management/page.version/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+      link: docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
 ---
 
 This document explains how you can split products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate *Product Manager* roles:

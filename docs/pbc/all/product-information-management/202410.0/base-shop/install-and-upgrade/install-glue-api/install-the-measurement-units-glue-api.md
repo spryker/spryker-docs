@@ -14,15 +14,15 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-measurement-units-feature-integration.html
 related:
   - title: Install the Measurement Units feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
   - title: Measurement Units feature walkthrough
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
   - title: Retrieve measurement units
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
   - title: Retrieving abstract products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: "Glue API: Retrieve concrete products"
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-measurement-units-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-measurement-units-glue-api.md -->

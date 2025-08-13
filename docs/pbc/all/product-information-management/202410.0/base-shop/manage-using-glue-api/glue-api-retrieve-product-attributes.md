@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html
 related:
   - title: Configurable Bundle feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) available in your shop system.

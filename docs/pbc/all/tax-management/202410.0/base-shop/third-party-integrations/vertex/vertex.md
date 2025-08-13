@@ -5,7 +5,7 @@ last_updated: May 17, 2024
 template: concept-topic-template
 related:
   - title: Install Vertex
-    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html

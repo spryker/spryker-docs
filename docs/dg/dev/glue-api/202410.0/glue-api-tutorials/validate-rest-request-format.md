@@ -13,9 +13,9 @@ redirect_from:
 
 related:
   - title: Glue API installation and configuration
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
   - title: Glue infrastructure
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 ---
 
 Glue API lets you validate requests sent to REST endpoints. It lets you check whether all required fields are present and whether the type and format of the fields are correct.

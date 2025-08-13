@@ -15,10 +15,10 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
 related:
   - title: Install the Category Management feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Retrieving category nodes
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 ---
 {% include pbc/all/install-features/latest/install-glue-api/install-the-category-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-category-management-glue-api.md -->

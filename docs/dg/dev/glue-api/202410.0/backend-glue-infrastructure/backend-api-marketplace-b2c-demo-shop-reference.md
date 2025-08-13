@@ -8,7 +8,7 @@ redirect_from:
 
 related:
   - title: Backend API Marketplace B2B Demo Shop reference
-    link: docs/dg/dev/glue-api/page.version/rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
+    link: docs/dg/dev/glue-api/latest/rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
 ---
 
 This document is an overview of default Backend API endpoints provided by Spryker B2C Marketplace. For each endpoint, there is a URL relative to the server, request parameters, as well as the appropriate request and response data formats.

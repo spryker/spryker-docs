@@ -26,15 +26,15 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 related:
   - title: Configure Elasticsearch
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-elasticsearch.html
   - title: Configure search for multi-currency
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Configure a search query
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-a-search-query.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/expand-search-data.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/expand-search-data.html
 ---
 
 A search engine facilitates better navigation, allowing customers to quickly locate desired products.

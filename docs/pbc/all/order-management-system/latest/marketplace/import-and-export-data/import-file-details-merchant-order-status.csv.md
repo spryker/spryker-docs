@@ -7,9 +7,9 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/file-details-merchant-order-status.csv.html
 related:
   - title: Merchant order overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 

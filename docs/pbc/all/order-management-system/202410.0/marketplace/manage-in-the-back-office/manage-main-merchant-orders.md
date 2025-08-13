@@ -5,11 +5,11 @@ description: This guide explains how to manage main merchant orders in the Back 
 template: back-office-user-guide-template
 related:
   - title: Managing main merchant returns
-    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
+    link: docs/pbc/all/return-management/latest/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
   - title: Marketplace Order Management feature overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Main Merchant concept
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/main-merchant.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/main-merchant.html
 ---
 
 *My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html) (Marketplace owner) within the Marketplace.

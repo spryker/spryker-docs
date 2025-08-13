@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/product-options/managing-product-options.html
 related:
   - title: Creating product options
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/product-options/manage-product-options.html
 ---
 
 This document describes how to manage product options.

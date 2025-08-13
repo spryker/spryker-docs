@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
 related:
   - title: Creating a Component
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-components/creating-components.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/creating-components.html
   - title: Using a Component
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-components/using-components.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/using-components.html
   - title: Overriding a Component
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-components/overriding-components.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html
 ---
 
 With the idea of [atomic design](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html) implemented in Spryker Frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html) on your own, but also [replace](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.

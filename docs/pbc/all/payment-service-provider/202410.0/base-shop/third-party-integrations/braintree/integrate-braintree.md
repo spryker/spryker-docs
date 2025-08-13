@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/integrating-braintree.html
 related:
   - title: Installing and configuring Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
   - title: Braintree - Performing Requests
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/braintree-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-performing-requests.html
   - title: Braintree - Request workflow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/braintree-request-workflow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-request-workflow.html
 ---
 
 {% info_block errorBox %}

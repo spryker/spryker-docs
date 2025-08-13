@@ -10,9 +10,9 @@ redirect_from:
 
 related:
   - title: Angular Services
-    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-services.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/angular-services.html
   - title: Web Components
-    link: docs/dg/dev/frontend-development/page.version/marketplace/web-components.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/web-components.html
 ---
 
 This document describes what Angular Components are, how to create and use them.

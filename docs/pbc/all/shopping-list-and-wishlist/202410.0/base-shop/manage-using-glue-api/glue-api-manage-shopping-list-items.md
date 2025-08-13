@@ -12,9 +12,9 @@ redirect_from:
 
 related:
   - title: Managing shopping lists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
   - title: Shopping Lists feature overview
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 This endpoint lets you manage shopping list items.

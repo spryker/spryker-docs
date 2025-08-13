@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/edit-filter-preferences.html
 related:
   - title: Standard filters overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/standard-filters-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/standard-filters-overview.html
 ---
 
 This document describes how to edit filter preferences of category filters in the Back Office.

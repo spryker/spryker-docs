@@ -16,9 +16,9 @@ redirect_from:
 
 related:
   - title: Assigning Products to Categories
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 To create a category in the Back Office, follow the steps below.

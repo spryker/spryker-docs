@@ -10,7 +10,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
 The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.

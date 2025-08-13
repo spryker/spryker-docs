@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
   - title: Managing merchants
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
 ---
 
 A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html).  

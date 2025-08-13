@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/refunds/viewing-refunds.html
 related:
   - title: Refunds feature overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/refunds-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/refunds-feature-overview.html
 ---
 
 This document describes how to view refunds in the Back Office.

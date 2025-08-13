@@ -5,9 +5,9 @@ last_updated: Oct 23, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Create grant type parameters
-    link: docs/dg/dev/glue-api/page.version/create-grant-type-parameters.html
+    link: docs/dg/dev/glue-api/latest/create-grant-type-parameters.html
   - title: How to use authentication server
-    link: docs/dg/dev/glue-api/page.version/use-authentication-servers-with-glue-api.html
+    link: docs/dg/dev/glue-api/latest/use-authentication-servers-with-glue-api.html
 redirect_from:
     - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
     - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/authentication-and-authorization.html

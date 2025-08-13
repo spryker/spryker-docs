@@ -14,13 +14,13 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-api-authentication-and-authorization
 related:
   - title: Searching by company users
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Glue API - Customer Account Management feature integration
-    link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
+    link: docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html
   - title: Company Accounts overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html
   - title: Customer Login overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-login-overview.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions. -->

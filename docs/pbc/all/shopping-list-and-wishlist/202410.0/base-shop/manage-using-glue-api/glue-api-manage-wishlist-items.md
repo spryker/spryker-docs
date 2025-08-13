@@ -9,11 +9,11 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 related:
   - title: Managing wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Wishlist feature overview
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/wishlist-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html
 ---
 
 This endpoint allows you to add and remove items from wishlists.

@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
 related:
   - title: Managing Slots
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html
   - title: Templates & Slots feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.

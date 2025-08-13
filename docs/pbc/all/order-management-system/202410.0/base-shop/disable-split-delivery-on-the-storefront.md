@@ -20,7 +20,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
 related:
   - title: Split Delivery overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/split-delivery-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
 
 Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the [Split Delivery feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/split-delivery-overview.html). In this case, you can disable the Split Delivery feature in the Checkout process; however, it will still work in the Back Office.

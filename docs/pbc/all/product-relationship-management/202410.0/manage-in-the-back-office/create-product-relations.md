@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/create-product-relations.html
 related:
   - title: Edit product relations
-    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/edit-product-relations.html
+    link: docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/edit-product-relations.html
   - title: View product relations
-    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/view-product-relations.html
+    link: docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html
   - title: Product Relations feature overview
-    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
+    link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
 ---
 
 This document describes how to create product relations in the Back Office.

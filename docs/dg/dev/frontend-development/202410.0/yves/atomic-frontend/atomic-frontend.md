@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
 related:
   - title: Customizing Spryker Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html
   - title: Integrating JQuery into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
 
 To provide each customer with the features they require, Spryker Commerce OS has been split into modules. Each customer can have a unique set of modules, and even module versions, specific to their business requirements. This fact combined with the possibility for customers to develop functionality on their own poses a big challenge for frontend developers. To ease the task, Spryker Frontend implements a design methodology called *atomic design*. Because of this, the UI layer of Spryker is called *Atomic Frontend*.

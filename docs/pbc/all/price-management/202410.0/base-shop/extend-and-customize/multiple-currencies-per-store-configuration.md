@@ -20,7 +20,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 related:
   - title: Net and gross prices management
-    link: docs/pbc/all/price-management/page.version/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
+    link: docs/pbc/all/price-management/latest/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
 ---
 
 In a Spryker-based shop, you can define multiple currencies per store for product, product option, and shipping method. A product can, for example, cost 5 EUR in Germany, 6 EUR in France and 5 CHF in Switzerland. Your customers may easily choose between these different currencies.

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html
 related:
   - title: Product Bundles feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-bundles-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-bundles-feature-overview.html
 ---
 
 This endpoint allows retrieving the products that belong to a bundle.

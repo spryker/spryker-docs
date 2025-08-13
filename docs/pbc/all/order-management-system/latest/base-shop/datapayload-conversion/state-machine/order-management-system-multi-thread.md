@@ -15,11 +15,11 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
 related:
   - title: Order process modelling via state machines
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
   - title: State machine console commands
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
   - title: Common pitfalls in OMS design
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
   - title: Create an Order Management System - Spryker Commerce OS
     link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---

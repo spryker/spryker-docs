@@ -14,17 +14,17 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 related:
   - title: Install the Product Labels Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Alternative products + Product Label feature integration
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
   - title: Install the Product group + Product Labels feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
   - title: Install the Product Labels Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Install the Discontinued Products + Product Labels feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
   - title: Install the Product labels + Promotions & Discounts feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-labels-feature.md -->

@@ -15,11 +15,11 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
 related:
   - title: Install the Prices feature
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-price-glue-api.md -->

@@ -15,11 +15,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 related:
   - title: Episerver - Integration into a project
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
   - title: Episerver - Order referenced commands
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
   - title: Episerver - API Requests
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 ---
 
 ## Installation

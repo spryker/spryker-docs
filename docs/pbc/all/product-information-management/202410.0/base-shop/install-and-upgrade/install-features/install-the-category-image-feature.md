@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
 related:
   - title: Product image management
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-category-image-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-category-image-feature.md -->

@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Jun 16, 2024
 related:
   - title: Install the Spryker Core feature
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html
   - title: Extend the audit log structure
     link: docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
   - title: Add audit log types

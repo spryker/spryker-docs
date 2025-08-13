@@ -13,9 +13,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html
 related:
   - title: Retrieving cart permission groups
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
   - title: Managing shared company user carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html
 ---
 
 Company users can share their carts with other company users, so multiple representatives of a company can work on the same order. When sharing carts, users can choose what type of access they want to grant to different each other.

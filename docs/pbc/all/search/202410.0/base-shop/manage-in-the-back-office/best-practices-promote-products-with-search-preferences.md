@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
 related:
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 By default, customers can search by product names and SKUs. Search preferences enable searching by product attribute values. However, enabling search preferences for a big number of attributes results in a huge list of search results. This document describes how to effectively use search preferences to promote products.

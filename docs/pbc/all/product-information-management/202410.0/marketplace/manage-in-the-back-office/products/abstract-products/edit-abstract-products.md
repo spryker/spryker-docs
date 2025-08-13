@@ -7,11 +7,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/editing-abstract-products.html
 related:
   - title: Creating abstract products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
   - title: Managing products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/manage-products.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 
 ---
 

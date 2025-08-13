@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-stock.csv.html
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) information in your Spryker shop.

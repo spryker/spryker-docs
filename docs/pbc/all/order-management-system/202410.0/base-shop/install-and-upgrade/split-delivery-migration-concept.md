@@ -22,7 +22,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/split-delivery-migration-concept.html
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Silex Replacement migration concept

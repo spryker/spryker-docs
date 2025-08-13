@@ -18,7 +18,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/create-tax-rates.html
 related:
   - title: Tax feature overview
-    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html
 ---
 
 To create a [tax rate](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:

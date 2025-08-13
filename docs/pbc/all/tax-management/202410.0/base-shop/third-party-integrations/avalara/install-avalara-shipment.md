@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html
 related:
   - title: Tax feature overview
-    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html
 ---
 
 To enable the Avalara + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.  

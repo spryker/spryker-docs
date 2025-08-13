@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/orders/managing-marketplace-orders.html
 related:
   - title: Marketplace Order Management feature overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 
 This document describes how to manage marketplace orders.

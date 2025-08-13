@@ -10,9 +10,9 @@ redirect_from:
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/page.version/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+    link: docs/pbc/all/return-management/latest/base-shop/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management.html
+    link: docs/pbc/all/return-management/latest/return-management.html
 ---
 
 This endpoint allows retrieving returns reasons.

@@ -24,7 +24,7 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
 related:
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
+    link: docs/pbc/all/search/latest/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This tutorial describes how you can improve the cart-based search in your project.

@@ -10,25 +10,25 @@ redirect_from:
 
 related:
   - title: Table Feature extension
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Editable
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - title: Table Feature Pagination
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-pagination.html
   - title: Table Feature Search
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document explains the Table Feature Row Actions component in the Components Library.

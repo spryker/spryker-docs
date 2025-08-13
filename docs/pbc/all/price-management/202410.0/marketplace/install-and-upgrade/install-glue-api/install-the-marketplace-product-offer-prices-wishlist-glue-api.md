@@ -5,9 +5,9 @@ template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Marketplace Product Offer Prices feature walkthrough
-    link: docs/pbc/all/price-management/page.version/marketplace/marketplace-product-offer-prices-feature-overview.html
+    link: docs/pbc/all/price-management/latest/marketplace/marketplace-product-offer-prices-feature-overview.html
   - title: Marketplace Wishlist feature walkthrough
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-wishlist-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/marketplace-wishlist-feature-overview.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices + Wishlist Glue API feature into a Spryker project.

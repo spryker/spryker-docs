@@ -7,9 +7,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product.csv.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-feature-overview.html) information in your Spryker shop.

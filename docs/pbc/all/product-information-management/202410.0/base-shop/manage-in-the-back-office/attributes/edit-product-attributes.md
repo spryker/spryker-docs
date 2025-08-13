@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
 related:
   - title: Product Attributes
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 This doc describes how to edit product attributes.

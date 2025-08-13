@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/sdk/data-export.html
 related:
   - title: Install the Sales Data Export feature
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.

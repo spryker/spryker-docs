@@ -114,14 +114,98 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
 
 Add the following plugins to the dependency providers:
 
-| PLUGIN                                                                                                                                     | PLACE                                                                                                        | DESCRIPTION                                                                        |
-|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin` | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`        | Adds access rules to the Data Import page in Merchant Portal.                      |
-| `\Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin`                        | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to merchant files.                                    |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin`   | `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()` | Adds ACL rules for merchant access to  import files.                             |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole`                                           | `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`                                           | Reads merchant files for data import, runs data imports, and updates import status. |
-| `\Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin`                  | `\Pyz\Zed\MerchantFile\MerchantFileDependencyProvider::getMerchantFilePostSavePlugins()`                     | Adds a merchant file relation to the merchant file import DB entity.                 |
+| PLUGIN                                                   | SPECIFICATION                                                                      | NAMESPACE                                                                      |
+|----------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin | Adds access rules to the Data Import page in Merchant Portal.                      | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
+| MerchantFileAclEntityConfigurationExpanderPlugin         | Adds ACL rules for merchant files by merchants.                                    | Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal                |
+| MerchantFileImportAclEntityConfigurationExpanderPlugin   | Adds ACL rules for merchant import files by merchants.                             | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
+| MerchantPortalFileImportConsole                          | Reads merchant files for data import and runs data imports. Updates import status. | Spryker\Zed\FileImportMerchantPortalGui\Communication\Console                  |
+| MerchantFileImportMerchantFilePostSavePlugin             | Adds merchant file relation to the merchant file import DB entity.                 | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile      |
 
+****src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php****
+
+```php
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin;
+use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclRuleExpanderPluginInterface>
+     */
+    protected function getMerchantAclRuleExpanderPlugins(): array
+    {
+        return [
+            ...
+            new FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            ...
+            new MerchantFileAclEntityConfigurationExpanderPlugin(),
+            new MerchantFileImportAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
+}
+```
+
+****src/Pyz/Zed/Console/ConsoleDependencyProvider.php****
+
+```php
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            ...
+            new MerchantPortalFileImportConsole(),
+        ];
+    }
+}
+```
+
+****src/Pyz/Zed/MerchantFile/MerchantFileDependencyProvider.php****
+
+```php
+namespace Pyz\Zed\MerchantFile;
+
+use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin;
+use Spryker\Zed\MerchantFile\MerchantFileDependencyProvider as SprykerMerchantFileDependencyProvider;
+
+class MerchantFileDependencyProvider extends SprykerMerchantFileDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\MerchantFileExtension\Dependency\Plugin\MerchantFilePostSavePluginInterface>
+     */
+    protected function getMerchantFilePostSavePlugins(): array
+    {
+        return [
+            ...
+            new MerchantFileImportMerchantFilePostSavePlugin(),
+        ];
+    }
+}
+```
 
 ### Sync ACL entity rules
 

@@ -40,4 +40,4 @@ On the project level, you can extend this feature to support more complex scenar
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html) |
+| [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html) |

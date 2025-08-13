@@ -11,4 +11,4 @@ This feature lets customers select service points for items in cart.
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
+| [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html) |

@@ -35,8 +35,11 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
+Set up the configuration in the following sections.
+
 ### Configure protected routes and forms for users
 
+You can configure multiple forms on the same page to require MFA authentication.
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -67,12 +70,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-{% info_block warningBox "" %}
-
-You can configure multiple forms on the same page to require MFA authentication.
-
-{% endinfo_block %}
-
 
 ### Configure Back Office ACL access
 
@@ -100,15 +97,12 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 ```
 
 
-### Configure the navigation items
+### Configure navigation
 
-To allow Merchant and MerchantAgent users to access the Multi-Factor Authentication setup page via the navigation menu in the Merchant Portal, 
-add the following entries to the `config/Zed/navigation-secondary-merchant-portal.xml` file:
 
-#### For Merchant Portal
+Add the MFA setup navigation item to one of the following files:
 
-<details>
-<summary>config/Zed/navigation-secondary-merchant-portal.xml</summary>
+Merchant Portal: `config/Zed/navigation-secondary-merchant-portal.xml`
 
 ```xml
 <set-up-multi-factor-auth>
@@ -119,12 +113,9 @@ add the following entries to the `config/Zed/navigation-secondary-merchant-porta
     <action>set-up</action>
 </set-up-multi-factor-auth>
 ```
-</details>
 
-#### For Merchant Agent Portal
+Merchant Agent Portal: `config/Zed/navigation-secondary-merchant-portal.xml`
 
-<details>
-<summary>config/Zed/navigation-secondary-merchant-portal.xml</summary>
 
 ```xml
 <set-up-multi-factor-auth-agent>
@@ -135,17 +126,16 @@ add the following entries to the `config/Zed/navigation-secondary-merchant-porta
   <action>set-up</action>
 </set-up-multi-factor-auth-agent>
 ```
-</details>
+
+
+
+
 
 ### Configure whitelisted routes 
 
-#### For the Merchant Portal
+To allow MFA routes to bypass default security restrictions during login or MFA validation flows in the Merchant Portal, extend the whitelisted route and path patterns in one of the following files
 
-To allow Multi-Factor Authentication routes to bypass default security restrictions during login or MFA validation flows 
-in the Merchant Portal, extend the whitelisted route and path patterns in `SecurityMerchantPortalGuiConfig`:
-
-<details>
-<summary>src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php</summary>
+Merchant Portal: `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`
 
 ```php
 <?php
@@ -166,12 +156,8 @@ class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGuiCo
     protected const IGNORABLE_PATH_PATTERN = '^/(security-merchant-portal-gui|multi-factor-auth-merchant-portal|_profiler)';
 }
 ```
-</details>
 
-#### For the Agent Merchant Portal
-
-<details>
-<summary>src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiConfig.php</summary>
+Agent Merchant Portal: `src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiConfig.php`
 
 ```php
 <?php
@@ -198,7 +184,6 @@ class AgentSecurityMerchantPortalGuiConfig extends SprykerAgentSecurityMerchantP
     }
 }
 ```
-</details>
 
 ## 3) Set up transfer objects
 
@@ -232,18 +217,18 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                                                    | SPECIFICATION                                                                                                                      | PREREQUISITES | NAMESPACE                                                                                              |
 |-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------|
 | UserMultiFactorAuthAclEntityConfigurationExpanderPlugin   | Provides ACL entity configuration for a merchant user.                                                                             |               | Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\AclMerchantPortal                       |
-| PostMerchantUserLoginMultiFactorAuthenticationPlugin      | Handles merchant user MFA after successful login.                                                                                  |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                             |
-| PostAgentMerchantUserLoginMultiFactorAuthenticationPlugin | Handles agent merchant user MFA after successful login.                                                                            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                        |
+| PostMerchantUserLoginMultiFactorAuthenticationPlugin      | Handles merchant user MFA after a successful login.                                                                                  |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                             |
+| PostAgentMerchantUserLoginMultiFactorAuthenticationPlugin | Handles agent merchant user MFA after a successful login.                                                                            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                        |
 | MerchantUserMultiFactorAuthenticationHandlerPlugin        | Handles merchant user login MFA.                                                                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\MerchantUser                    |
 | MerchantAgentUserMultiFactorAuthenticationHandlerPlugin   | Handles agent merchant user login MFA.                                                                                             |               | Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\AuthenticationHandler\MerchantAgentUser |
 | MerchantPortalNavigationItemCollectionFilterPlugin        | Controls visibility of the MFA setup option in Merchant Portal navigation menu based on user role and available MFA methods.       |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                                            |
 | AgentMerchantPortalNavigationItemCollectionFilterPlugin   | Controls visibility of the MFA setup option in Agent Merchant Portal navigation menu based on user role and available MFA methods. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                                            |
 | MultiFactorAuthenticationMerchantUserSecurityPlugin       | Registers merchant user provider.                                                                                                  |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                             |
 | MultiFactorAuthenticationAgentMerchantUserSecurityPlugin  | Registers agent merchant user provider.                                                                                            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\MultiFactorAuth                        |
-| MerchantPortalMultiFactorAuthPluginExpanderPlugin         | Expands the list of multi-factor authentication plugins.                                                                           |               | Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\Expander                                |
+| MerchantPortalMultiFactorAuthPluginExpanderPlugin         | Expands the list of MFA plugins.                                                                           |               | Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\Expander                                |
 
 
-### Register the plugins For Merchant Portal
+### Register plugins For Merchant Portal
 
 <details>
 <summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
@@ -383,7 +368,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 ```
 </details>
 
-### Register the plugins for Agent Merchant Portal
+### Register plugins for Agent Merchant Portal
 
 <details>
 <summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
@@ -553,10 +538,50 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.md#multi-factor-authentication-methods).
-- Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
-- Clicking the menu should open one the following pages depending on your user:
-  - Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`.
-  - Agent Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`.
+1. Integrate one of the [supported MFA methods](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.md#multi-factor-authentication-methods).
+2. Log into Merchant Portal or Agent Merchant Portal.
+Make sure the following applies:
+- The **Set up Multi-Factor Authentication** menu item is displayed in the navigation
+- Clicking the menu opens one of the following pages:
+  - Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`
+  - Agent Merchant Portal users: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`
 
 {% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -315,10 +315,11 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### Configure protected routes for Glue Backend API
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "" %}
 
-Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` will not be protected by Multi-Factor Authentication.
-For more information about Glue Backend API resources, see [Create a Backend resource](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
+Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
+
+For more information about Glue Backend API resources, see [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
 
 {% endinfo_block %}
 
@@ -349,7 +350,8 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 {% info_block infoBox "Note" %}
 
-Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` will not be protected by Multi-Factor Authentication.
+Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
+
 For more information about Glue Storefront API resources, see [Create storefront resources](/docs/dg/dev/glue-api/latest/routing/create-storefront-resources.html).
 
 {% endinfo_block %}
@@ -414,15 +416,12 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 ### Configure protected endpoints
 
-{% info_block infoBox %}
+MFA protection is configured differently for each API type. The Glue REST API is the main Storefront API implementation and already has default protected endpoints configured.
 
-Multi-Factor Authentication protection is configured differently for each API type. The Glue REST API is currently the main Storefront API implementation and already has default protected endpoints configured.
+The configuration below focuses on additional API types: Backend and Storefront APIs. If you're only using REST API, you can [skip to the next step](#set-up-the-database-schema-and-transfer-objects).
 
-The configuration below focuses on additional API types (Backend API and Storefront API). If you're only using REST API, the default configuration is sufficient and no additional steps are needed.
 
-{% endinfo_block %}
-
-#### For Glue Backend API
+#### Configure protected endpoints for Glue Backend API
 
 <details>
 <summary>src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php</summary>
@@ -456,7 +455,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 ```
 </details>
 
-#### For Glue Storefront API
+#### Configure protected endpoints for Glue Storefront API
 
 <details>
 <summary>src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php</summary>
@@ -986,7 +985,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 
-### Register the plugins For Glue Backend API
+### Register plugins For Glue Backend API
 
 <details>
 <summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
@@ -1029,7 +1028,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 </details>
 
-### Register the plugins For Glue Storefront API
+### Register plugins For Glue Storefront API
 
 <details>
 <summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>

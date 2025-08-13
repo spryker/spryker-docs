@@ -189,7 +189,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% endinfo_block %}
 
-### 4.2) Set up email MFA for Back Office, Merchant Portal and Agent Merchant Portal users
+### 4.2) Set up email MFA for Back Office, Merchant Portal, and Agent Merchant Portal users
 
 Enable the following behaviors by registering the plugins:
 
@@ -249,9 +249,10 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to the MFA setup page: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`.
-Note, if you are using the Merchant Portal the URL will be `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`.
-For Agent Merchant Portal, the URL will be `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`.
+1. In the Back Office, go to the MFA setup page: 
+- Back Office: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
+- Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`
+- Agent Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`
 
 Make sure the following applies:
 - The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
@@ -338,7 +339,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% endinfo_block %}
 
-### 4.4) Set up email MFA for Glue (Rest or Storefront) API
+### 4.4) Set up email MFA for Glue Rest or Storefront API
 
 Enable the following behaviors by registering the plugins:
 
@@ -405,7 +406,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-### 4.5) For Glue Backend API
+### 4.5) Set up email MFA for Glue Backend API
 
 Enable the following behaviors by registering the plugins:
 

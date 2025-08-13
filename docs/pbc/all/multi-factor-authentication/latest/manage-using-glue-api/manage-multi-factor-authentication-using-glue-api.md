@@ -32,16 +32,14 @@ MFA is supported in all types of Glue APIs:
 
 By default, the following Glue API endpoints are protected by MFA:
 
-#### For Glue REST API
-- customer-password
-- customers
-- addresses
-- carts
-- checkout
-- order-payments
-
-#### For Glue Backend API
-- warehouse-user-assignments
+- Glue REST API:
+  - customer-password
+  - customers
+  - addresses
+  - carts
+  - checkout
+  - order-payments
+- Glue Backend API: warehouse-user-assignments
 
 To customize which endpoints are protected by MFA, see to [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
 

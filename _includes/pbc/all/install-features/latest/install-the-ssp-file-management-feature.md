@@ -1,4 +1,3 @@
-
 This document describes how to install the Self-Service Portal (SSP) File Management feature.
 
 ## Prerequisites
@@ -11,7 +10,7 @@ This document describes how to install the Self-Service Portal (SSP) File Manage
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -26,10 +25,10 @@ Make sure the following modules have been installed:
 
 ## Set up configuration
 
-| CONFIGURATION                            | SPECIFICATION                                                | NAMESPACE                               |
-|------------------------------------------|--------------------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE  | Flysystem configuration for file management.                 | Spryker\Shared\FileSystem               |
-| SelfServicePortalConstants::STORAGE_NAME | Flysystem SelfServicePortal used for uploaded files storage. | SprykerFeature\Shared\SelfServicePortal |
+| CONFIGURATION                            | SPECIFICATION                                                                                                                | NAMESPACE                               |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE  | Configures the Flysystem service for managing file uploads, specifying the adapter and storage path for files.                 | Spryker\Shared\FileSystem               |
+| SelfServicePortalConstants::STORAGE_NAME | Defines the storage name for SSP files in the Flysystem configuration, linking to the specified file system service. | SprykerFeature\Shared\SelfServicePortal |
 
 **config/Shared/config_default.php**
 
@@ -58,17 +57,20 @@ Add the `Files` section to `navigation.xml`:
 ```xml
 <?xml version="1.0"?>
 <config>
-    <content>
-        <self-service-portal-company-file>
+   <ssp>
+      <label>Customer Portal</label>
+      <title>Customer Portal</title>
+      <icon>fa-id-badge</icon>
+      <pages>
+         <self-service-portal-company-file>
             <label>File Attachments</label>
             <title>File Attachments</title>
             <bundle>self-service-portal</bundle>
             <controller>list-file</controller>
             <action>index</action>
-            <icon>fa-paperclip</icon>
-            <visible>1</visible>
-        </self-service-portal-company-file>
-    </content>
+         </self-service-portal-company-file>
+      </pages>
+   </ssp>
 </config>
 ```
 
@@ -234,16 +236,16 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 
 ## Set up behavior
 
-| PLUGIN                                       | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                                                     |
-|----------------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| DownloadCompanyFilesPermissionPlugin         | Enables downloading of files.                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html).                  |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
-| SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.  |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
-| FileAttachmentFilePreDeletePlugin            | Ensures a company file relation is deleted when a file is removed.                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
-| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
+| PLUGIN                                       | SPECIFICATION                                                                                                                                   | PREREQUISITES | NAMESPACE                                                                     |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| DownloadCompanyFilesPermissionPlugin         | Enables downloading ˚f files.                                                                                                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission                       |
+| ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.                                                                                          |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.                                                                                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.                                                                                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
+| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html). |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
+| SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.                                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
+| FileAttachmentFilePreDeletePlugin            | Ensures a company file relation is deleted when a file is removed.                                                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
+| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format.                                                                             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -253,7 +255,6 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 namespace Pyz\Zed\Permission;
 
 use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\DownloadFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
@@ -268,7 +269,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     {
         return [
             new ViewFilesPermissionPlugin(),
-            new DownloadFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
             new ViewCompanyFilesPermissionPlugin(),
@@ -286,7 +286,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Client\Permission;
 
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\DownloadFilesPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\DownloadcompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
@@ -301,7 +301,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     {
         return [
             new ViewFilesPermissionPlugin(),
-            new DownloadFilesPermissionPlugin(),
+            new DownloadCompanyFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
             new ViewCompanyFilesPermissionPlugin(),
@@ -351,6 +351,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             SspCompanyFilesMenuItemWidget::class,
+            SspFileListWidget::class,
         ];
     }
 }

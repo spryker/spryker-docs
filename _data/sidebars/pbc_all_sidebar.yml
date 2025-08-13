@@ -3502,6 +3502,14 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-merchant-portal-feature.html
                       - title: Marketplace Product + Quick Add to Cart
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html
+                      - title: Marketplace Merchant Portal Data Import
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature.html
+                        include_versions:
+                        - "latest"
+                      - title: Marketplace Merchant Portal Product Data Import
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature.html
+                        include_versions:
+                        - "latest"                                                
                       - title: Category Management + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-category-management-marketplace-merchant-commission.html
                         include_versions:

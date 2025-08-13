@@ -3,6 +3,7 @@ title: "Glue API: Manage marketplace shopping lists and shopping list items"
 description: Describes the Glue API endpoints used when developing Marketplace shopping lists in Spryker Marketplace
 last_updated: Jan 13, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 This section provides a collection of articles that explain the Glue API endpoints used when developing Marketplace shopping lists and wishlists:

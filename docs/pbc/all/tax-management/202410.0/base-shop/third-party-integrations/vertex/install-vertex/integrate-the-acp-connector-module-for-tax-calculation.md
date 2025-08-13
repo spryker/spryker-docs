@@ -4,6 +4,7 @@ description: Learn how you can configure and integrate Vertex via Spryker App Co
 draft: true
 last_updated: Jan 10, 2024
 template: howto-guide-template
+redirect_from:
 related:
   - title: Vertex
     link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html

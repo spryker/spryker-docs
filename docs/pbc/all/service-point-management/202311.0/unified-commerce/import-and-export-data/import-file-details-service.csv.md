@@ -2,6 +2,7 @@
 title: "Import file details: service.csv"
 last_updated: Nov 23, 2023
 template: data-import-template
+redirect_from:
 ---
 
 This document describes the `service.csv` file to configure [services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).

@@ -2,6 +2,7 @@
 title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

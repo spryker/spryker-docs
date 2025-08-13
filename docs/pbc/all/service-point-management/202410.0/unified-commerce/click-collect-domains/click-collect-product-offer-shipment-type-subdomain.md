@@ -4,6 +4,7 @@ last_updated: Nov 02, 2023
 description: The Product Offer Shipment Type subdomain establishes the connection between product offers and shipment types.
 
 template: concept-topic-template
+redirect_from:
 ---
 
 The Product Offer Shipment Type subdomain establishes the connection between product offers and shipment types.

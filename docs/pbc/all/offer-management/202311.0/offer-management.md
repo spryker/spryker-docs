@@ -2,6 +2,7 @@
 title: Offer Management
 Description: This document provides reference information about product offers in the Merchant Portal.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 27, 2023
 ---
 

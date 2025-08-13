@@ -3,6 +3,7 @@ title: "Glue API: Add push notification providers"
 description: Learn how to add push notification providers using Spryker Glue API in your Spryker projects.
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you add push notification providers to further subscribe to notifications.

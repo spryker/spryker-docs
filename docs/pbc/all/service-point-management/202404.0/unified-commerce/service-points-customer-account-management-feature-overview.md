@@ -2,6 +2,7 @@
 title: Service Points + Customer Account Management feature overview
 description: General overview of the Service Points + Customer Account Management feature
 template: concept-topic-template
+redirect_from:
 last_updated: Dec 4, 2023
 ---
 

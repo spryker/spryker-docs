@@ -3,6 +3,7 @@ title: Configure Usercentrics
 description: Learn how you can configure Spryker Third Party Usercentrics in to your Spryker based shop
 last_updated: July 3, 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 Based on the tracking tools used in each of your Storefronts, you can define different sets of tracking tool configurations, called *settings* in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/). Every configuration is identified by a unique setting ID. The setting ID lets you add a cookie consent dialog with the defined configuration to a store. By adding different setting IDs to different stores, you can comply with the legislation of different countries on a per-store basis. Each store can have only one setting ID, while the same ID can be used in different stores. For example, all European stores that need to be GDPR compliant can use the same setting ID.

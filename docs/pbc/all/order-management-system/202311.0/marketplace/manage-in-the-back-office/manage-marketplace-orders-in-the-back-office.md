@@ -3,6 +3,7 @@ title: Manage marketplace orders in the Back Office
 description: Learn how to log into the Back Office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 This section contains the guides on managing marketplace orders in the Back Office:

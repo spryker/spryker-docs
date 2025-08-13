@@ -3,6 +3,7 @@ title: Onboard to Stripe in the Merchant Portal
 description: Learn how to onboard to Stripe in the Merchant Portal.
 last_updated: June 28, 2024
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 {% info_block warningBox "" %}

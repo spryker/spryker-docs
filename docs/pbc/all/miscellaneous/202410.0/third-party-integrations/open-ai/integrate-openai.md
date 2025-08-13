@@ -3,6 +3,7 @@ title: Integrate OpenAI
 description: Learn how to integrate the OpenAi module into a Spryker project.
 last_updated: Nov 12, 2024
 template: feature-integration-guide-template
+redirect_from:
 ---
 
 

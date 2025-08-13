@@ -3,6 +3,7 @@ title: Stripe
 description: Learn all about Sprykers Technology partner, Stripe. Enabling and Enhancing your payment process.
 last_updated: Oct 10, 2024
 template: concept-topic-template
+redirect_from:
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.

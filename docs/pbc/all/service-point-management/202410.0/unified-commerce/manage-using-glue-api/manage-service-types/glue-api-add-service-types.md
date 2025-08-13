@@ -3,6 +3,7 @@ title: "Glue API: Add service types"
 description: Learn how to add service types to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you add service types.

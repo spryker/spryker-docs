@@ -2,6 +2,7 @@
 title: Project configuration for Vertex
 description: Project guidelines for running Vertex
 template: concept-topic-template
+redirect_from:
 last_updated: June 12, 2024
 ---
 

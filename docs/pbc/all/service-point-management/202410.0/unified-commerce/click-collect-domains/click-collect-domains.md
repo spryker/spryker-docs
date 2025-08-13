@@ -3,6 +3,7 @@ title: Click & Collect domains
 last_updated: Sep 26, 2023
 description: Learn about the domain model, database, and other technical details of Click & Collect.
 template: concept-topic-template
+redirect_from:
 ---
 
 Click and Collect business models refers to a retail strategy where customers make purchases online and then collect their ordered products from a physical store or a designated pickup location. This model combines the convenience of online shopping with the immediacy of in-store pickup.

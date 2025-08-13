@@ -2,6 +2,7 @@
 title: Marketplace Order overview
 description: Learn all about the Spryker Marketplace order feature and how orders work within your project.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 related:
   - title: Marketplace Order Management feature overview

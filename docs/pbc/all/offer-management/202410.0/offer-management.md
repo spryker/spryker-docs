@@ -2,6 +2,7 @@
 title: Offer Management
 Description: Learn all about the Spryker Offer Management Feature for Spryker Cloud Commerce OS, Spryker Marketplace and Spryker unified commerce.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 27, 2023
 ---
 

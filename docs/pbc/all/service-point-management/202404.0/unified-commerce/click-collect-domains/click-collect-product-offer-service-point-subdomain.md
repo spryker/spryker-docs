@@ -3,6 +3,7 @@ title: "Click & Collect: Product Offer Service Point subdomain"
 last_updated: Nov 02, 2023
 description: The Product Offer Service Point subdomain establishes the connection between product offers and service points.
 template: concept-topic-template
+redirect_from:
 ---
 
 

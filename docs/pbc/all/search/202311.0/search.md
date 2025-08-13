@@ -2,6 +2,7 @@
 title: Search
 description: Search PBC lets you manage the search on the Storefront
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

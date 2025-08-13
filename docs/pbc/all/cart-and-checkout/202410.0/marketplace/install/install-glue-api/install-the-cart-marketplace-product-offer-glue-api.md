@@ -2,6 +2,7 @@
 title: Install the Cart + Marketplace Product Offer Glue API
 description: This integration guide provides steps on how to install the Spryker Marketplace Product Offer + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
 last_updated: Nov 17, 2023
 ---
 

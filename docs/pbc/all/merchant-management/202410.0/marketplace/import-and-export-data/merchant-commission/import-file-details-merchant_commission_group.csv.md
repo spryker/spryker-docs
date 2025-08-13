@@ -4,6 +4,7 @@ description: Learn about the Spryker merchant commission group CSV file and how 
 last_updated: Jul 07, 2024
 description: Import merchant comission groups.
 template: import-file-template
+redirect_from:
 
 ---
 

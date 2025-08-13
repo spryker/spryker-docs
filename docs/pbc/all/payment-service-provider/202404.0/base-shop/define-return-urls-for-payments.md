@@ -3,6 +3,7 @@ title: Define return URLs for payments
 description: Learn how to change the default return URLs to be used by third-party payment service providers
 last_updated: Nov. 27, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 Payment methods are configured to redirect the customer to a specific return URL after the payment process is completed, failed, or cancelled. This document provides information on how to change the default return URLs for payments.

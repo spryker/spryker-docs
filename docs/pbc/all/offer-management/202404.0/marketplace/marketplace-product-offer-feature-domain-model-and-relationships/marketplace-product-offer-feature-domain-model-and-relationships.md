@@ -1,6 +1,7 @@
 ---
 title: "Marketplace Product Offer feature: Domain model and relationships"
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

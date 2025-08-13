@@ -3,6 +3,7 @@ title: "Glue API: Update push notification providers"
 description: Learn how to update push notification providers using Glue API
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you update push notification providers.

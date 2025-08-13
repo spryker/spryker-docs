@@ -2,6 +2,7 @@
 title: Order Management System
 last_updated: Feb 23, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 The *Order Management System (OMS)* capability helps you process orders, refunds, and reclamations. To learn about OMS in details, see the following feature overviews:

@@ -3,6 +3,7 @@ title: Retrieve and use payment details from third-party PSPs
 description: Learn how to retrieve and use payment details from a third-party payment service providers
 last_updated: Mar 20, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 This document describes how to retrieve and use payment details from third-party payment service providers (PSPs).

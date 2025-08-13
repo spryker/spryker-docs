@@ -3,6 +3,7 @@ title: Enable Dynamic Multistore
 description: Learn how to enable the Dynamic Store feature on the latest codebase
 last_updated: Dec 19, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 

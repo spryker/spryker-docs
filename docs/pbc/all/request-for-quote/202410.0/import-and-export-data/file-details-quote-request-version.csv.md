@@ -2,6 +2,7 @@
 title: "File details: quote_request_version.csv"
 description: The quote_request_version.csv file to configure information about quote request versions in your Spryker shop.
 template: data-import-template
+redirect_from:
 last_updated: Jun 1, 2023
 ---
 

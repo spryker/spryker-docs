@@ -3,6 +3,7 @@ title: "Export file details: merchant_order-expenses.csv"
 last_updated: May 27, 2021
 description: This document describes the content of merchant-order-expenses.
 template: import-file-template
+redirect_from:
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html

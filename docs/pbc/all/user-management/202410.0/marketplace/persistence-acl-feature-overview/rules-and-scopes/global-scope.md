@@ -3,6 +3,7 @@ title: Global scope
 last_updated: Nov 05, 2021
 description: Global scope rules apply to an entire collection of entities (for example, Users, Orders).
 template: concept-topic-template
+redirect_from:
 ---
 
 Global scope rules apply to an entire collection of entities (for example, Users, Orders).

@@ -2,6 +2,7 @@
 title: "File details: shopping_list_company_business_unit.csv"
 description: Use the shopping_list_company_business_unit.csv file to configure shopping list sharing with company business units in your Spryker shop.
 template: data-import-template
+redirect_from:
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

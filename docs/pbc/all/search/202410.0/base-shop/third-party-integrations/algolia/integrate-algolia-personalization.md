@@ -3,6 +3,7 @@ title: Integrate Algolia Personalization
 description: Find out how you can enable Algolia personalization in your Spryker shop
 last_updated: Nov 24, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 This document describes how to integrate Algolia Personalization. This integration also enables the following Algolia premium features:

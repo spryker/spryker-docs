@@ -2,6 +2,7 @@
 title: Getting access to Algolia dashboard
 description: Submit a ticket to get access to Algolia dashboard
 template: concept-topic-template
+redirect_from:
 ---
 
 

@@ -3,6 +3,7 @@ title: Handling carts with a big number of items
 description: Challenges that may arise related to big carts within your Spryker store and how to solve them
 last_updated: Jan 09, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 Spryker's cart management easily covers small to medium-sized shopping carts, which satisfies the majority of use cases. However, you may have to deal with really big carts counting many hundreds and sometimes even thousands of line items. Handling such big carts usually means you have to go beyond the usual setup and customize on the project level. This document describes the challenges introduced by big carts and how you can effectively customize Spryker to deal with them.

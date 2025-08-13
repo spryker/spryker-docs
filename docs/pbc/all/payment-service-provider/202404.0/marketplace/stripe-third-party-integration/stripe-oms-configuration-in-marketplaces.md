@@ -3,6 +3,7 @@ title: "Stripe: OMS configuration for marketplaces"
 description: Merchant payouts and reverse payouts
 last_updated: Aug 20, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 This document provides guidelines for projects using Stripe in marketplaces.

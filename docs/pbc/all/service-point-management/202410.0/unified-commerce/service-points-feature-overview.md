@@ -2,6 +2,7 @@
 title: Service Points feature overview
 description: General overview of the Spryker Service Points feature enhancing your Spryker Unified Commerce based projects.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 19, 2024
 ---
 

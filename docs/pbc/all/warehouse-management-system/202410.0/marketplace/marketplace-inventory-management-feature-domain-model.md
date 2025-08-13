@@ -2,6 +2,7 @@
 title: "Marketplace Inventory Management feature: Domain model"
 description: Learn about Marketplace Inventory Management feature domain model within your Spryker Marketplace project.
 template: feature-walkthrough-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

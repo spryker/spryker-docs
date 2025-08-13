@@ -2,6 +2,7 @@
 title: "Unified Commerce: Create and edit product offers"
 description: Learn how to create and edit product offers in the Merchant Portal
 template: back-office-user-guide-template
+redirect_from:
 last_updated: Jan 19, 2024
 ---
 

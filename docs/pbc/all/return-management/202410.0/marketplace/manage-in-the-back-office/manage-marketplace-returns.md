@@ -3,6 +3,7 @@ title: Manage marketplace returns
 last_updated: Aug 09, 2021
 description: This guide explains how to manage marketplace returns in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
 related:
     - title: Managing marketplace orders
       link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-marketplace-orders.html

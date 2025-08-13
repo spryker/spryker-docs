@@ -2,6 +2,7 @@
 title: Search data import
 description: Details about data import files for the Search PBC
 template: concept-topic-template
+redirect_from:
 last_updated: Jul 23, 2023
 ---
 

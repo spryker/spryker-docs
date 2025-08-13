@@ -3,6 +3,7 @@ title: Nosto
 description: Learn how you can integrate Spryker Third Party Nosto in to your Spryker Cloud Commerce OS based projects.
 last_updated: Jun 16, 2021
 template: concept-topic-template
+redirect_from:
 originalLink: https://documentation.spryker.com/2021080/docs/nosto
 originalArticleId: e7d00914-ce24-46dc-a139-0ec2e038ccf9
 ---

@@ -2,6 +2,7 @@
 title: Process incoming HTTP requests from external ERP services for order updates
 description: Learn how you can process incoming HTTP requests from external ERP services for order updates
 template: howto-guide-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

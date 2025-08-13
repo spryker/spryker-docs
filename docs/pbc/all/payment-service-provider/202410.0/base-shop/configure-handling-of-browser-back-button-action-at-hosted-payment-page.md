@@ -3,6 +3,7 @@ title: Configure handling of browser back button action at hosted payment page
 description: Learn how to handle browser back button usage when integrating hosted payment pages
 last_updated: Apr 25, 2025
 template: concept-topic-template
+redirect_from:
 ---
 
 When integrating payment service providers (PSPs) that use hosted payment pages, the application needs to handle browser navigation to maintaining order consistency and stock management. This document explains how to configure applications with hosted payment pages to handle the browser back button action.

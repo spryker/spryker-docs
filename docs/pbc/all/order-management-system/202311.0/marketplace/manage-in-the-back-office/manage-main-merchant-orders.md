@@ -3,6 +3,7 @@ title: Managing main merchant orders
 last_updated: Jul 22, 2021
 description: This guide explains how to manage main merchant orders in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
 related:
   - title: Managing main merchant returns
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html

@@ -3,6 +3,7 @@ title: Edit marketplace concrete products
 last_updated: May 05, 2022
 description: This document describes how to modify marketplace concrete products in the Merchant Portal.
 template: back-office-user-guide-template
+redirect_from:
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html

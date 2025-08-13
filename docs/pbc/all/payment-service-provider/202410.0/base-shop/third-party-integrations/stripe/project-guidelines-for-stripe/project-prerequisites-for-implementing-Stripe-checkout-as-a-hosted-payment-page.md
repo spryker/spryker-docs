@@ -3,6 +3,7 @@ title: Project prerequisites for implementing Stripe checkout as a hosted paymen
 description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
+redirect_from:
 related:
    - title: Stripe
      link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html

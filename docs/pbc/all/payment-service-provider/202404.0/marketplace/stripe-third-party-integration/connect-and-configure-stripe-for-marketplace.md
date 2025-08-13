@@ -3,6 +3,7 @@ title: Connect and configure Stripe for Marketplace
 description: Find out how you can configure the Stripe app for Marketplace
 last_updated: June 31, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 This document describes how to connect and configure the Stripe app in the Back Office.

@@ -2,6 +2,7 @@
 title: Set up Amazon QuickSight
 description: First steps to set up Amazon QuickSight
 template: concept-topic-template
+redirect_from:
 last_updated: Oct 24, 2024
 ---
 

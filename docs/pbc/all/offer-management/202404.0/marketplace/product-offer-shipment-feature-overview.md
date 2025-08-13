@@ -2,6 +2,7 @@
 title: Product Offer Shipment feature overview
 description: General overview of the Product Offer Shipment feature
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 30, 2023
 ---
 

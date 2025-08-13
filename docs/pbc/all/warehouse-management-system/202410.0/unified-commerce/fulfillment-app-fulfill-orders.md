@@ -3,6 +3,7 @@ title: "Fulfillment App: Fulfill orders"
 description: Learn how you can fulfill orders in the Spryker Fulfillment App within your unified commerce store.
 last_updated: Nov 3, 2023
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 This document describes how to prepare an order for shipping by collecting order items using the Fulfillment App.

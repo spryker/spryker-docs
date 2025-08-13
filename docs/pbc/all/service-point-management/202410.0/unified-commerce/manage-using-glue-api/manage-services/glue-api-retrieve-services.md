@@ -3,6 +3,7 @@ title: "Glue API: Retrieve services"
 description: Learn how to retrieve services to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you retrieve services.

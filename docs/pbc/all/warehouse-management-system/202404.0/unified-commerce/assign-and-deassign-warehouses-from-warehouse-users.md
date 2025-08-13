@@ -3,6 +3,7 @@ title: Assign and deassign warehouses from warehouse users
 description: Learn how to assign and deassign warehouses to warehouse users in the Back Office
 last_updated: Sep 23, 2023
 template: back-office-user-guide-template
+redirect_from:
 ---
 
 To assign and deassign warehouses from warehouse users in the Back Office, follow the steps:

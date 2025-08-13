@@ -2,6 +2,7 @@
 title: "Marketplace Merchant Portal Product Offer Management feature: Domain model and relationships"
 description: This document provides reference information about product offers in the Merchant Portal
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

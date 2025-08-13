@@ -2,6 +2,7 @@
 title: Service Points Cart + Checkout feature overview
 description: General overview of the Service Points Cart + Checkout feature for your Spryuker Unified Commerce Projects.
 template: concept-topic-template
+redirect_from:
 last_updated: Dec 19, 2023
 ---
 

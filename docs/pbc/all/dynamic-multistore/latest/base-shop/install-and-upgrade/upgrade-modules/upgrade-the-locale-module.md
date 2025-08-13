@@ -18,5 +18,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-locale.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-locale.html
   - /docs/scos/dev/module-migration-guides/migration-guide-locale.html
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-locale-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-locale-module.md -->

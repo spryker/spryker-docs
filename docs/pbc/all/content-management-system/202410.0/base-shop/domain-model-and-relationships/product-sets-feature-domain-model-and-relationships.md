@@ -6,6 +6,8 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/domain-model-and-relationships/product-sets-domain-model-and-relationships.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/domain-model-and-relationships/product-sets-feature-domain-model-and-relationships.html
+
 ---
 
 The Product Sets feature consists of the following modules:

@@ -4,6 +4,8 @@ description: General overview of the Shipment + Customer Account Management feat
 last_updated: Nov 23, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/carrier-management/latest/base-shop/shipment-customer-account-management-feature-overview.html
+
 ---
 
 This feature adds shipment types to the checkout flow. Shipment types are needed to enable different kinds of shipment, like delivery, curbside pickup, or locker pickup.

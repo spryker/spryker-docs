@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-country.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-country.html
   - /docs/scos/dev/module-migration-guides/202212.0/migration-guide-country.html
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-country-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-country-module.md -->

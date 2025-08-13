@@ -13,6 +13,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-glue-api.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-glue-api.html
+  - /docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-promotions-and-discounts-glue-api.md -->

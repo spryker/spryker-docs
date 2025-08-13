@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
   - /docs/pbc/all/emails/202204.0/howto-create-and-register-a-mai%E2%80%A6
   - /docs/pbc/all/emails/202204.0/howto-create-and-register-a-mailtypeplugin.html
+  - /docs/pbc/all/emails/latest/howto-create-and-register-a-mailtypeplugin.html
 ---
 
 This document shows how to create and register a mail provider you want to use.

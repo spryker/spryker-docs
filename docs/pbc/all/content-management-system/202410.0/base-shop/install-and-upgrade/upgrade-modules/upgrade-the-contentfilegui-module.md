@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-contentfilegui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-contentfilegui-module.md -->

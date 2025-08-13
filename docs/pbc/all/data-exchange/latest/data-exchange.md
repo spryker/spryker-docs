@@ -15,6 +15,7 @@ redirect_from:
   - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
   - /docs/pbc/all/data-exchange/202410.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html  
   - /docs/pbc/all/data-exchange/202410.0/data-exchange-faq.html
+  - /docs/pbc/all/data-exchange/latest/data-exchange.html
 ---
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.

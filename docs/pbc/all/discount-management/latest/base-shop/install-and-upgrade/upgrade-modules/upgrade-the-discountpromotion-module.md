@@ -18,6 +18,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/upgrade-the-discountpromotion-module.html  
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html
+  - /docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html
 ---
 
 

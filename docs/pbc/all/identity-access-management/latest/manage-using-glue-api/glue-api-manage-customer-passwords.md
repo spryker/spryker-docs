@@ -8,6 +8,7 @@ originalArticleId: 51bec82b-e9f6-4c92-a87d-4f609d8176e8
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-passwords.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-passwords.html
+  - /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html
 related:
   - title: Authentication and authorization
     link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
 - /docs/pbc/all/discount-management/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+- /docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/manage-discounts-in-the-back-office.html
 ---
 
 This section contains guides on managing discounts in the Back Office:

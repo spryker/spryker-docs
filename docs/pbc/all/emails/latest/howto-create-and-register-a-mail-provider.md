@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-create-register-provider-plugin
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
   - /docs/pbc/all/emails/202204.0/howto-create-and-register-a-mail-provider.html
+  - /docs/pbc/all/emails/latest/howto-create-and-register-a-mail-provider.html
 related:
   - title: "HowTo: Create and register a MailTypeBuilderPlugin"
     link: docs/pbc/all/emails/page.version/howto-create-and-register-a-mail-type-builder-plugin.html

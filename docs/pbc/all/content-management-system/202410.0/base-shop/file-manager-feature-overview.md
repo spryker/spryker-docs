@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
   - /docs/pbc/all/content-management-system/202311.0/file-manager-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/file-manager-feature-overview.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
 
 The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can do the following:

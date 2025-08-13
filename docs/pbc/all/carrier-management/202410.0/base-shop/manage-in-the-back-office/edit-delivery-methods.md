@@ -7,6 +7,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/edit-delivery-methods.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/edit-delivery-methods.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/edit-delivery-methods.html
+
 ---
 
 This doc describes how to edit delivery methods.

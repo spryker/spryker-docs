@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/customer-login-overview
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-login-overview.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-login-overview.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-login-overview.html
 ---
 
 The *Customer Login* feature with an enhanced secure password policy lets you prevent brute-force login attacks by configuring your project in the following ways:

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+  - /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
 related:
   - title: Retrieving companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html

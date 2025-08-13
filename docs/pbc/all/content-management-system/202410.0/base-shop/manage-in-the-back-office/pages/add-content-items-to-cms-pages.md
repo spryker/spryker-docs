@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
 - docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
+- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
 ---
 
 This document describes how to add content items to Storefront pages using the Back Office.

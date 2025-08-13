@@ -5,6 +5,7 @@ last_updated: June 2, 2022
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
+- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
 related:
   - title: Edit CMS blocks
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html

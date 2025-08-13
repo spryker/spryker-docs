@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-units.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/create-company-units.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units.html
 related:
   - title: Business Units overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html

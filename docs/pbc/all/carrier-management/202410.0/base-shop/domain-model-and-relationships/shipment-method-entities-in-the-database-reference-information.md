@@ -13,6 +13,7 @@ redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202204.0/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
 - /docs/scos/dev/feature-walkthroughs/202311.0/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
  - /docs/pbc/all/carrier-management/202204.0/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
+ - /docs/pbc/all/carrier-management/latest/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
 
 ---
 

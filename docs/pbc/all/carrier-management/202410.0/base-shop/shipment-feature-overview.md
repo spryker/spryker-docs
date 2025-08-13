@@ -11,6 +11,8 @@ redirect_from:
   - /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
   - /docs/scos/user/features/202307.0/shipment-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html
+
 ---
 
 The *Shipment* feature lets you create and manage carrier companies, shipment types, and shipment methods. You can define shipment prices, expected shipment time, tax sets, and the availability of specific shipment methods per store.

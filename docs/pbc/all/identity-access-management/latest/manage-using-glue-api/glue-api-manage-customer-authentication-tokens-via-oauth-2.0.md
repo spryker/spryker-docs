@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-a
 originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
+- /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
 related:
   - title: Authentication and authorization
     link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html

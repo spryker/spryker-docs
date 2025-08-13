@@ -4,6 +4,7 @@ description: This document shows how to import a store and related entities.
 past_updated: Sep 25, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/import-stores.html
 last_updated: Oct 1, 2024
 ---
 

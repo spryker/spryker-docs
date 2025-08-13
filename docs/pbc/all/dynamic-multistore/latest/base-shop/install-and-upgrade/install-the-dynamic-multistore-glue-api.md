@@ -4,6 +4,7 @@ description: A tutorial guide showing you how to Install the Dynamic Multistore 
 last_updated: Nov 12, 2024
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
 ---
 
 {% include pbc/all/install-glue-api/{{page.version}}/install-the-dynamic-multistore-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/install-the-dynamic-multistore-glue-api.md -->

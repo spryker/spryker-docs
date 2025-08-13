@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/customer-registration-overview
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-registration-overview.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-registration-overview.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-registration-overview.html
 ---
 
 In Spryker, customer registration is done by double opt-in. A double opt-in occurs when a user signs up, and an email with a registration confirmation link is sent to them. After they click the verification link, their account is activated, and they can start using the online store as registered customers.

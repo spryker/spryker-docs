@@ -10,6 +10,8 @@ redirect_from:
   - /docs/scos/user/features/202204.0/non-splittable-products-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/non-splittable-products-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/non-splittable-products-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/non-splittable-products-feature-overview.html
+
 ---
 
 

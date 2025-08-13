@@ -9,6 +9,7 @@ redirect_from:
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html
     - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html
     - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/data-exchange-api-integration.html
+      - /docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html
 related:
 - title: How to configure Data Exchange API
   link: docs/pbc/all/data-exchange/page.version/configure-data-exchange-api.html

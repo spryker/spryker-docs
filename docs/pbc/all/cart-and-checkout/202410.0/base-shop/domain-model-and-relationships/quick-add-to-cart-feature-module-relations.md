@@ -8,6 +8,8 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html  
   - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/domain-model-and-relationships/quick-add-to-cart-feature-module-relations.html
+
 ---
 
 <div class="width-100">

@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-protected-resources.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-retrieve-protected-resources.html
+  - /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-retrieve-protected-resources.html
 related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html

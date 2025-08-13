@@ -7,6 +7,8 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/201907.0/marketplace-shipment-cart-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202005.0/marketplace-shipment-cart-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-cart-feature-integration.html
+  - /docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-shipment-cart-feature.md -->

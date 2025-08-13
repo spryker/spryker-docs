@@ -10,6 +10,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/submitting-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+
 related:
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html

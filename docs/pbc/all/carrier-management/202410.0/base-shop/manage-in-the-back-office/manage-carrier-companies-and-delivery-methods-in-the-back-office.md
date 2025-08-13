@@ -6,6 +6,8 @@ template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
 - /docs/pbc/all/carrier-management/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+- /docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/manage-carrier-companies-and-delivery-methods-in-the-back-office.html
+
 ---
 
 This section contains guides on managing carrier companies and delivery methods in the Back Office:

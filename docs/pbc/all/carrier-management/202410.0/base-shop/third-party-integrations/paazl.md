@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/shipment/paazl.html
   - /docs/scos/user/technology-partners/202311.0/shipment/paazl.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/paazl.html  
+  - /docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/paazl.html
+
 ---
 
 ## Partner Information

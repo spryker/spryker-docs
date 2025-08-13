@@ -5,6 +5,7 @@ last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-customer-account-management-glue-api.html
+- /docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html
 related:
   - title: Customer Account Management feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html

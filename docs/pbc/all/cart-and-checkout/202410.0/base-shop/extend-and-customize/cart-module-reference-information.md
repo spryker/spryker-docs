@@ -8,6 +8,8 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/cart-feature-walkthrough/cart-module-reference-information.html
   - /docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/cart-module-reference-information.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/cart-module-reference-information.html
+
 ---
 
 The `Cart` module consists of several components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.

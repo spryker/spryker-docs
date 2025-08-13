@@ -8,6 +8,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/export-voucher-codes.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/export-voucher-codes.html  
+  - /docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/export-voucher-codes.html
 related:
   - title: Promotions & Discounts feature overview
     link: docs/pbc/all/discount-management/page.version/base-shop/promotions-discounts-feature-overview.html

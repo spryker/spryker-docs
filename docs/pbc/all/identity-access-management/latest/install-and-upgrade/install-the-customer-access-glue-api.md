@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-customer-access-feature-integration
   - /docs/en/glue-api-customer-access-feature-integration
   - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-customer-access-glue-api.html
+  - /docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html
 related:
   - title: Customer Access feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html

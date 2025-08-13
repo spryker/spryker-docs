@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
     - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
+    - /docs/pbc/all/emails/latest/third-party-integrations/inxmail-order-referenced-commands.html
 ---
 
 Inxmail module has four different commands:

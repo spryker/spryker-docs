@@ -4,6 +4,8 @@ description: Learn how to add shipment types using Glue API in Spryker Cloud Com
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html
+
 ---
 
 This endpoint lets you add shipment types.

@@ -5,6 +5,7 @@ last_updated: Aug 12, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
 - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+- /docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-retrieve-gift-cards-in-guest-carts.html
 ---
 
 This document describes how to retrieve gift cards in guest carts using Glue API. To retrieve full information about guest carts, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-category-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-category-cms-blocks.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-category-cms-blocks.html
 related:
   - title: Upgrade the CmsBlock module
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html

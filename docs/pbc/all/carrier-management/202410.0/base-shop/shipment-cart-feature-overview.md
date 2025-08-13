@@ -5,6 +5,8 @@ last_updated: Nov 23, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/base-shop/shipment-feature-overview.html
+- /docs/pbc/all/carrier-management/latest/base-shop/shipment-cart-feature-overview.html
+
 ---
 
 This feature enables delivery types for Cart Glue APIs. Delivery types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).

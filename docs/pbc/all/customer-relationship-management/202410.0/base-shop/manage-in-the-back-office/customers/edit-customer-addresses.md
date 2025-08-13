@@ -6,6 +6,7 @@ last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customers/edit-customer-addresses.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customers/edit-customer-addresses.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/customers/edit-customer-addresses.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html

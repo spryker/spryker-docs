@@ -4,6 +4,7 @@ description: Learn how to enable the Dynamic Store feature on the latest codebas
 last_updated: Dec 19, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/enable-dynamic-multistore.html
 ---
 
 

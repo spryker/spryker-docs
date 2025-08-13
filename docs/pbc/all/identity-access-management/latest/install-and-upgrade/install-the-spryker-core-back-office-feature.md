@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/spryker-core-back-office-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/spryker-core-back-office-feature-integration.html
   - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.html
+  - /docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html
 ---
 
 {% include pbc/all/install-features/202410.0/install-the-spryker-core-back-office-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-spryker-core-back-office-feature.md -->

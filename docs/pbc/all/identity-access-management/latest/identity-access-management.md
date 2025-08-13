@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202005.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/202204.0/logging-in-to-the-back-office.html
   - /docs/pbc/all/identity-access-management/202204.0/identity-access-management.html
+  - /docs/pbc/all/identity-access-management/latest/identity-access-management.html
 ---
 
 The Identity Access Management capability enables all types of users in a Spryker shop to create and manage accounts. Different levels of security let users manage the access of other users.

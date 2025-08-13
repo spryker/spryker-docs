@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/user/features/202311.0/cms-feature-overview/cms-blocks-overview.html  
   - /docs/pbc/all/content-management-system/202311.0/cms-feature-overview/cms-blocks-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-blocks-overview.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html
+
 ---
 
 A *CMS block* is a piece of reusable content that you can add to multiple CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/confirming-customer-registration.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+  - /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html
 related:
   - title: Authentication and authorization
     link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html

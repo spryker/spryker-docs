@@ -5,6 +5,8 @@ last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+- /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/manage-thresholds-the-back-office.html
+
 ---
 
 This section contains guides on managing thresholds in the Back Office:

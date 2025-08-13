@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
     - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
+    - /docs/pbc/all/emails/latest/third-party-integrations/integrate-inxmail.html
 ---
 
 This document desribes how to integrate Inxmail.

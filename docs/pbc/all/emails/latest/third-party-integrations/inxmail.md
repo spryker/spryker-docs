@@ -4,6 +4,7 @@ description: Support customers and partners with fantastic email marketing servi
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/emails/latest/third-party-integrations/inxmail.html
 originalLink: https://documentation.spryker.com/2021080/docs/inxmail
 originalArticleId: 8ec1729f-d277-42ae-b8e2-36e15ff2a937
 ---

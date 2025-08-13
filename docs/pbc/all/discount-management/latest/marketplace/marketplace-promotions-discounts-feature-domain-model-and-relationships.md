@@ -3,6 +3,7 @@ title: "Marketplace Promotions & Discounts feature: Domain model and relationshi
 description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
 redirect_from:
+  - /docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-domain-model-and-relationships.html
 last_updated: Nov 17, 2023
 ---
 

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-oauthcompanyuser.html
   - /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
   - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
+  - /docs/pbc/all/identity-access-management/latest/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-oauthcompanyuser-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-oauthcompanyuser-module.md -->

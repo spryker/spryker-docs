@@ -4,6 +4,8 @@ description: Learn how to update shipment types using Glue API in Spryker Cloud 
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html
+
 ---
 
 This endpoint lets you update shipment types.

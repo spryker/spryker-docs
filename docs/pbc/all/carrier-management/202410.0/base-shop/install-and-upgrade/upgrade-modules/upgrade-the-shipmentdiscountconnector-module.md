@@ -33,6 +33,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shipmentdiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shipmentdiscountconnector.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html
 
 ---
 

@@ -4,6 +4,7 @@ description: A guide to help you learn how to add new fields to forms that are u
 last_updated: Jun 5, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/add-fields-to-back-office-forms.html
 ---
 
 This document explains how to add fields to Back Office forms. The email field is used as an example.

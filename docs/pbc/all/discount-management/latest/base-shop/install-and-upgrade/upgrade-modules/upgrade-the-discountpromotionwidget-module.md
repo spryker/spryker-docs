@@ -17,6 +17,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html  
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
+  - /docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotionwidget-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md -->

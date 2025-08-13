@@ -8,6 +8,8 @@ originalArticleId: 8237cdec-4f7a-4361-94b6-8ef7c04e80f5
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/add-shipment-methods.html
+
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/edit-discounts.html
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/edit-discounts.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/edit-discounts.html
+  - /docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html
 ---
 
 This document describes how to edit discounts in the Back Office.

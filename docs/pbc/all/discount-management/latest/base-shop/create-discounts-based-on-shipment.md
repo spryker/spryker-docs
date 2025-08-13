@@ -10,6 +10,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/create-discounts-based-on-shipment.html
+  - /docs/pbc/all/discount-management/latest/base-shop/create-discounts-based-on-shipment.html
 related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html

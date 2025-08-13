@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
 related:
   - title: Email as a CMS block
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html

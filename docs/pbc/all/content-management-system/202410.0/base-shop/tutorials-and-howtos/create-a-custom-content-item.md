@@ -10,6 +10,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-a-custom-content-item.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-create-a-custom-content-item.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
 ---
 
 By default, Spryker provides `Banner`, `Product Abstract List`, `Product Set` and `File List` content items.

@@ -16,6 +16,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/add-delivery-methods.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/add-delivery-methods.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-delivery-methods.html
+
 related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html

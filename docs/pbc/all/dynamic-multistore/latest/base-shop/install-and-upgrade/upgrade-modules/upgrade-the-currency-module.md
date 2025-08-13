@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-currency.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-currency.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-currency.html
+  - /docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-currency-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-currency-module.md -->

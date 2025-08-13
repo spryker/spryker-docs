@@ -14,6 +14,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/import-and-export-data/discount-import.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/import-and-export-data/discount-import.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/import-and-export-data/import-discount-management-data.html
+  - /docs/pbc/all/discount-management/latest/base-shop/import-and-export-data/import-discount-management-data.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:

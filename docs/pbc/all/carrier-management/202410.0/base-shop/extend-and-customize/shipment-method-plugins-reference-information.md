@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/reference-information-shipment-method-plugins
   - /docs/scos/dev/feature-walkthroughs/202311.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
+
 related:
   - title: Upgrade the Shipment module
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html

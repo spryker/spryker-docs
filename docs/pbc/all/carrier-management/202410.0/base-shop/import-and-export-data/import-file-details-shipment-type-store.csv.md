@@ -6,6 +6,8 @@ redirect_from:
 last_updated: May 23, 2023
 redirect_From:
   - /docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/file-details-shipment-type-store.csv.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html
+
 ---
 
 This document describes the `shipment_type_store.csv` file to configure the [shipment method](/docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html) and store information in your Spryker Demo Shop.

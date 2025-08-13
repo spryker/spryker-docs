@@ -4,6 +4,7 @@ description: Learn all about Discounts within Spryker Cloud Commerce OS and Spry
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/discount-management/202204.0/discount-management.html
+- /docs/pbc/all/discount-management/latest/discount-management.html
 last_updated: Nov 17, 2023
 ---
 

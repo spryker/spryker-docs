@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
 ---
 
 This document describes how to add content items to CMS blocks using the Back Office.

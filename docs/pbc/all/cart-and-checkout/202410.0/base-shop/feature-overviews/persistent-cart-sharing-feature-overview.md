@@ -11,6 +11,8 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/persistent-cart-sharing-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html
+
 ---
 
 The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different access levels. To generate the link, you need to be logged in to a company account.

@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
 - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html
 - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-retrieve-gift-cards-in-guest-carts.html
+- /docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-retrieve-gift-cards-in-carts-of-registered-users.html
 ---
 
 This document describes how to retrieve gift cards in carts of registered users using Glue API. To retrieve full information about carts of registered users, see [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).

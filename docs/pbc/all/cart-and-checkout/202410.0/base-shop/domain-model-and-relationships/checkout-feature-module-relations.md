@@ -6,6 +6,8 @@ template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/checkout-feature-module-relations.html
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/checkout-feature-module-relations.html
+- /docs/pbc/all/cart-and-checkout/latest/base-shop/domain-model-and-relationships/checkout-feature-module-relations.html
+
 ---
 
 The following diagram shows the relations of the entities in the order thresholds functionality.  

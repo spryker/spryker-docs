@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/enabling-gift-cards
   - /docs/scos/dev/feature-integration-guides/202311.0/enabling-gift-cards.html
   - /docs/pbc/all/gift-cards/202204.0/install-and-upgrade/enable-gift-cards.html
+  - /docs/pbc/all/gift-cards/latest/enable-gift-cards.html
 related:
   - title: Gift Cards feature walkthrough
     link: docs/pbc/all/gift-cards/page.version/gift-cards.html

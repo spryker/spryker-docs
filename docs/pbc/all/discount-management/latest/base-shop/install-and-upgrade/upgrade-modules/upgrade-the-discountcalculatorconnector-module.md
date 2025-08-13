@@ -17,6 +17,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html  
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
+  - /docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountcalculatorconnector-module.html
 related:
   - title: Upgrade the Discount
     link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html

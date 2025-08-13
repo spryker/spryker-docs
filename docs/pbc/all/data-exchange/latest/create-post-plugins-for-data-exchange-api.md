@@ -4,6 +4,7 @@ description: This document describes how to create custom post create/update plu
 last_updated: Aug 5, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/data-exchange/latest/create-post-plugins-for-data-exchange-api.html
 ---
 
 In some cases, after data is imported or changed through Data Exchange API, you might want particular events to be executed automatically. This document describes how to set up such events by creating custom post plugins.

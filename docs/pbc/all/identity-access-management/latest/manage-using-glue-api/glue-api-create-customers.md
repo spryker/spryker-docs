@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
+- /docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html
 related:
   - title: Authentication and authorization
     link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html

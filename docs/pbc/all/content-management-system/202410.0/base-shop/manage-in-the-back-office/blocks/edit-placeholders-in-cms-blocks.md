@@ -5,6 +5,7 @@ last_updated: May 11, 2022
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
+- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
 related:
   - title: CMS blocks overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html

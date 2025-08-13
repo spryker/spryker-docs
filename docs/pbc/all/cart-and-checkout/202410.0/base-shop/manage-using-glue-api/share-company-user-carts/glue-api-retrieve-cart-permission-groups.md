@@ -11,6 +11,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
+
 related:
   - title: Share company user carts
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html

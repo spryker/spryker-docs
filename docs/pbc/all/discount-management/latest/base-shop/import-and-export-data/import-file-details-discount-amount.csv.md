@@ -17,6 +17,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/import-and-export-data/file-details-discount-amount.csv.html  
   - /docs/pbc/all/discount-management/202311.0/base-shop/import-and-export-data/file-details-discount-amount.csv.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html
+  - /docs/pbc/all/discount-management/latest/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html

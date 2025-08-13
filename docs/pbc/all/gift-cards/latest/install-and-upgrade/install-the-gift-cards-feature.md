@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/gift-cards-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/gift-cards-feature-integration.html  
   - /docs/pbc/all/gift-cards/202204.0/install-and-upgrade/install-the-gift-cards-feature.html
+  - /docs/pbc/all/gift-cards/latest/install-and-upgrade/install-the-gift-cards-feature.html
 ---
 
 {% include pbc/all/install-features/202410.0/install-the-gift-cards-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-gift-cards-feature.md -->

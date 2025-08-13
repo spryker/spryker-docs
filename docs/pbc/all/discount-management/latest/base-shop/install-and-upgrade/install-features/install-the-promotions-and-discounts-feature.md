@@ -8,6 +8,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html  
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-feature.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-feature.html
+  - /docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-promotions-and-discounts-feature.md -->

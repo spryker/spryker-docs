@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
 ---
 title: Change the state of order items in reclamations
 description: Learn how to change the state of order items in reclamations in the Back Office.

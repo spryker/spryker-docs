@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html
 ---
 title: Install the Marketplace Order Management feature
 last_updated: Jun 24, 2024

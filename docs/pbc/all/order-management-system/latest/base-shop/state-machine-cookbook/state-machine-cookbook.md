@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook.html
 ---
 title: State machine cookbook
 description: State machine fundamentals and how to build a state machine that works for your Spryker project.

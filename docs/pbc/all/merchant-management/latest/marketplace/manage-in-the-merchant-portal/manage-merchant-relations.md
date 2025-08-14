@@ -4,6 +4,7 @@ description: Learn how to manage merchant relations in the Spryker Merchant port
 last_updated: Mar 30, 2024
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html
 ---
 
 This document describes how to manage merchant relations in the Merchant Portal.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-cancellation-overview.html
 ---
 title: Order Cancellation overview
 description: Sometimes customers need to cancel their order, learn all about the Spryker Order Cancellation feature allowing orders to be canceled within a timed period.

@@ -6,6 +6,7 @@ template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-open-hours-week-day-schedule.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-open-hours-week-day-schedule.csv.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-open-hours-week-day-schedule.csv.html
 related:
   - title: Merchant Opening Hours feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/merchant-opening-hours-feature-overview.html

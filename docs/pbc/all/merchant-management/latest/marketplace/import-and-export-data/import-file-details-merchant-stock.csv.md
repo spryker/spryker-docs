@@ -6,6 +6,7 @@ template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-stock.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-stock.csv.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

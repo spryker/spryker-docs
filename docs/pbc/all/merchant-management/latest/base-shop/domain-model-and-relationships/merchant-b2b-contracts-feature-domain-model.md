@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/merchant-b2b-contracts-feature-walkthrpugh.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-b2b-contracts-feature-walkthrough.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/domain-model-and-relationships/merchant-b2b-contracts-feature-domain-model.html
 ---
 
 The *Merchant B2B Contracts* feature lets you set up contracts between a merchant and B2B customer.

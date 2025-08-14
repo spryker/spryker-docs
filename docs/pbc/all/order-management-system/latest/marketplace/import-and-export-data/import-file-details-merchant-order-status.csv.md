@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html
 ---
 title: "Import file details: merchant-order-status.csv"
 last_updated: Feb 26, 2021

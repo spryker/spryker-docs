@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/merchant-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/merchant-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html
 related:
   - title: Order Thresholds
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html

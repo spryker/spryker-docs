@@ -3,6 +3,7 @@ title: Product Offer Service Points Availability feature overview
 description: General overview of the Product Offer availability feature for service points for your Spryker Unified Commerce project.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/unified-commerce/product-offer-service-points-availability-feature.html
 last_updated: Nov 30, 2023
 ---
 

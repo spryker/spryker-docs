@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 title: Merchant order overview
 description: This document contains concept information for the Merchant order feature in the Spryker Commerce OS.

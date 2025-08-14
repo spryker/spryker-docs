@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchantgui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchantgui.html
   - /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-merchantgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-merchantgui-module.md -->

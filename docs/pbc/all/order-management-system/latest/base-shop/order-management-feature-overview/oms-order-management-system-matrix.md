@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
 ---
 title: OMS (Order management system) matrix
 description: Efficiently keep track of orders and their states with the Spryker Order Management System Matrix Feature.

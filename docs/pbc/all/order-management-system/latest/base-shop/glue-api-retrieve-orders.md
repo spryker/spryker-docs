@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html
 ---
 title: "Glue API: Retrieve orders"
 description: Learn how you can retrieve all orders of a customer or a particular order via Glue API within your Order Management System.

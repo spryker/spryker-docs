@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202311.0/push-notification-feature-overview.html
   - /docs/pbc/all/push-notification/202311.0/unified-commerce/push-notification-feature-overview.html
+  - /docs/pbc/all/miscellaneous/latest/push-notification-feature-overview.html
 ---
 
 The *Push Notification* feature lets users subscribe to the web push notifications, which are sent from the server to all registered subscriptions.

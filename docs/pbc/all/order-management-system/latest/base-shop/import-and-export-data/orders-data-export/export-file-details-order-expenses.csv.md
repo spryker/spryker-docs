@@ -5,6 +5,7 @@ last_updated: Jun 16, 2021
 template: data-export-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/export-file-details-order-expenses.csv.html
 related:
   - title: Exporting data
     link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html

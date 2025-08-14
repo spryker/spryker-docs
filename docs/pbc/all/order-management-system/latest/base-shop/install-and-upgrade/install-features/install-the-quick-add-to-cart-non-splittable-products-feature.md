@@ -5,6 +5,7 @@ last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
 
 ---
 

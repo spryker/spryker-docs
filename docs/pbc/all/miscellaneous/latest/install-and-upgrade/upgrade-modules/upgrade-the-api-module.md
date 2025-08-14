@@ -1,3 +1,4 @@
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-api-module.html
 ---
 title: Upgrade the Api module
 description: Learn how you can upgrade the API Module within your Spryker Cloud Commerce OS Projects

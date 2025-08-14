@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-merchant-portal-feature.html
 ---
 title: Install the Marketplace Order Management + Merchant Portal feature
 last_updated: Sep 13, 2021

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/disable-split-delivery-on-the-storefront.html
 ---
 title: Disable split delivery on the Storefront
 description: Use the guide to learn how to disable Split Delivery during checkout in your project.

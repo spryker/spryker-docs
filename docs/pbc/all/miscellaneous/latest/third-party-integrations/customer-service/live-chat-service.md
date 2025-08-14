@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/live-chat-service
 originalArticleId: c8b0f94f-7551-4dfc-9b6e-f7d45d6f55bc
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/customer-service/live-chat-service.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/customer-service/live-chat-service.html
 ---
 
 ## Partner Information

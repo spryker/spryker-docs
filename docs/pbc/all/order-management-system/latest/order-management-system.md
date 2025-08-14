@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/order-management-system.html
 ---
 title: Order Management System
 description: Learn everything you need to know about the Spryker Order Management System for your Spryker Cloud Commerce OS or Marketplace project.

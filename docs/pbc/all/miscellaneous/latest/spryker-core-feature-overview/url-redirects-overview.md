@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/spryker-core-feature-walkthrough/url-redirects-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/spryker-core-feature-walkthrough/url-redirects-overview.html
    /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-feature-walkthrough/url-redirects-overview.html
+   - /docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/url-redirects-overview.html
 ---
 
 With the URL redirects, you can create content redirects and increase your store's search engine visibility. Redirects can be store-internal or external and can reflect various HTTP status codes that play a major role in search engine ranking. Besides, redirects for the changed product, CMS pages, categories URLs are auto-generated.

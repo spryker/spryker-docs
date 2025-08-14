@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/export-file-details-merchant-order-items.csv.html
 ---
 title: "Export file details: merchant_order-items.csv"
 last_updated: May 27, 2021

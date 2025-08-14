@@ -5,6 +5,7 @@ description: Learn how to create and configure merchants in the Spryker Back Off
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

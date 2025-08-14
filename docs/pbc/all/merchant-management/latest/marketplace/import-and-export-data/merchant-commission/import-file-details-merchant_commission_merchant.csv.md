@@ -5,6 +5,7 @@ last_updated: Jul 07, 2024
 description: Import relations of merchant comissions to merchants.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_merchant.csv.html
 ---
 
 This document describes the `merchant_commission_merchant.csv` file to assign [merchant commission](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html) to merchants.

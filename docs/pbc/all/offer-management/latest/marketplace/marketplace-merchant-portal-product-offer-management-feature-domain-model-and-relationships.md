@@ -3,6 +3,7 @@ title: "Marketplace Merchant Portal Product Offer Management feature: Domain mod
 description: This document provides reference information about product offers in the Merchant Portal
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html
 last_updated: Nov 21, 2023
 ---
 

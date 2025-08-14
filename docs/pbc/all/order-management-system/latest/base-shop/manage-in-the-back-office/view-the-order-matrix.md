@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/view-the-order-matrix.html
 ---
 title: View the order matrix
 description: The guide provides reference information you see when working with the ordered items in the Back Office.

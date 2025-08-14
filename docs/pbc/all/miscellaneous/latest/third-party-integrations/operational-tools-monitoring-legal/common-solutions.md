@@ -6,6 +6,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/common-solutions
 originalArticleId: d69094dd-b80d-466a-813c-d26c3f4f9efe
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/common-solutions.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/common-solutions.html
 ---
 
 ---

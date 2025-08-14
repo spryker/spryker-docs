@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/merchant-users-overview.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 related:
   - title: Managing merchant users
     link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html

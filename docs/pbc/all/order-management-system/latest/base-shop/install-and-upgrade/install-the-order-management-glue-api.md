@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-the-order-management-glue-api.html
 ---
 title: Install the Order Management Glue API
 last_updated: Jul 27, 2021

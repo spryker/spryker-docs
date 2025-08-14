@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-create-gui-module.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-gui-modules.html
 ---
 
 This document describes how to create a new GUI module and add it to navigation.

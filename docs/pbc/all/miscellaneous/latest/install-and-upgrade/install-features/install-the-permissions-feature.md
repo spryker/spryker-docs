@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/permissions-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/permissions-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/permissions-feature-integration.html
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-permissions-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-permissions-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-permissions-feature.md -->

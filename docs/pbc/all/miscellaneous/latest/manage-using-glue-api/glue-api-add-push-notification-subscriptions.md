@@ -4,6 +4,7 @@ description: Learn how to add push notification subscription using Spryker Glue 
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/miscellaneous/latest/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
 ---
 
 This endpoint lets you subscribe to push notifications using Glue API.

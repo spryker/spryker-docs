@@ -4,6 +4,7 @@ last_updated: Nov 13, 2020
 description: This document describes what information you can check in Dashboard of the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html
 ---
 
 This document describes what information you can check in the dashboard of the Merchant Portal.

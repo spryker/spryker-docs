@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/tradebyte.html
 ---
 title: Tradebyte
 description: Offer SaaS solutions for the electronic exchange of data amongst manufacturers, brands, retailers, and marketplaces by integrating Tradebyte into the Spryker Commerce OS.

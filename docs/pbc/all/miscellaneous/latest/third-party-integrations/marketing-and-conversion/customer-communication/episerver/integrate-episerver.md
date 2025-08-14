@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
 related:
   - title: Episerver - Installation and Configuration
     link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html

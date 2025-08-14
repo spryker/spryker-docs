@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 last_updated: Jan 11, 2024
 redirect_from:
 - /docs/marketplace/user/merchant-portal-user-guides/202212.0/logging-in-to-the-merchant-portal.html
+- /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
 ---
 
 This section contains guides on merchants in the Merchant Portal:

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/invoice-generation-overview.html
 ---
 title: Invoice Generation overview
 description: This document provides the details about Invoice Generation provided by Spryker Commerce OS.
@@ -72,24 +73,3 @@ The invoice generation feature can help streamline your operational processes bu
 |BACK OFFICE USER GUIDES|
 |---|
 | [Trigger invoice generation in the Back Office](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html)  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

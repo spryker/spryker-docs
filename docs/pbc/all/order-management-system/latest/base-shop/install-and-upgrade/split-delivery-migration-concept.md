@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/split-delivery-migration-concept.html
 ---
 title: Split delivery migration concept
 description: The article provides instructions on how to install Split Delivery on all modules affected in bulk and then individually.

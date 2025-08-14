@@ -4,6 +4,7 @@ description: In the context of Spryker Marketplace, there can be three key figur
 last_updated: March 15, 2024
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html
 ---
 
 In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. Both features Marketplace Merchant B2B Contracts and Marketplace Merchant B2B Contract Requests allow for the creation and management of such relation and relation requests. Based on merchant relations, you can define buyer-specific [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) and [products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), as well as [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).

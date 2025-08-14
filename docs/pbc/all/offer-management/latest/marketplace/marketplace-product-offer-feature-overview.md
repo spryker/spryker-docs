@@ -3,6 +3,7 @@ title: Marketplace Product Offer feature overview
 description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html
 last_updated: Jan 12, 2024
 related:
   - title: Managing product offers

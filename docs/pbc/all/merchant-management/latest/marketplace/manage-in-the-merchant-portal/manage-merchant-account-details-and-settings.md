@@ -3,6 +3,7 @@ title: Manage merchant account details and settings
 description: This document describes what you can do in the My account area of the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
 last_updated: Nov 17, 2023
 related:
   - title: Marketplace Merchant feature overview

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-product-restrictions-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/merchant-product-restrictions-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/merchant-product-restrictions-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 related:
   - title: Install the Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html

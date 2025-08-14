@@ -3,6 +3,7 @@ title: Create merchant commission calculator type plugins
 description: Learn how to implement the Spryker merchant commission calculator type plugin to your Spryker Marketplace project.
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html
 last_updated: Jul 22, 2024
 ---
 

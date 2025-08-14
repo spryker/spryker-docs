@@ -4,6 +4,7 @@ description: Learn how to retrieve push notification providers using the Spryker
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/miscellaneous/latest/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html
 ---
 
 This endpoint lets you retrieve push notification providers to further subscribe to notifications.

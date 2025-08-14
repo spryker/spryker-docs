@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 title: Order Management feature overview
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Spryker Order Management feature.

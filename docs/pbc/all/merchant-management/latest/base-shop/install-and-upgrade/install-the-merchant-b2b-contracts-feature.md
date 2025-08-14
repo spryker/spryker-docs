@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/merchant-b2b-contracts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/merchant-b2b-contracts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/merchant-b2b-contracts-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-merchant-b2b-contracts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-merchant-b2b-contracts-feature.md -->

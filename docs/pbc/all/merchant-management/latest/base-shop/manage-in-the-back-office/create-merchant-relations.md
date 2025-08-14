@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
   - /docs/scos/user/back-office-user-guides/202311.0/marketplace/merchant-relations/create-merchant-relations.html
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchant-relations/create-merchant-relations.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html
 related:
   - title: Edit merchant relations
     link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/edit-merchant-relations.html

@@ -5,6 +5,7 @@ description: This guide explains how to create and manage merchant records on th
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
 related:
   - title: Managing merchant users
     link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html

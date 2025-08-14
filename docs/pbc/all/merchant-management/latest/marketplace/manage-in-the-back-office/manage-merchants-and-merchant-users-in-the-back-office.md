@@ -5,6 +5,7 @@ last_updated: Jan 17, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/merchants.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
 ---
 
 This section contains guides on managing merchants and merchant users in the Back Office:

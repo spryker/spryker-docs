@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/add-and-remove-custom-order-references.html
 ---
 title: Add and remove custom order references
 description: Learn how to add and remove custom order references in the Back Office

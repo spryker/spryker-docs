@@ -5,6 +5,7 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchant-addresses.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
 related:
   - title: Retrieving merchants
     link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html

@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 last_updated: Jan 9, 2024
 redirect_from:
   - /docs/pbc/all/offer-management/202311.0/marketplace/manage-product-offers.html
+  - /docs/pbc/all/offer-management/latest/marketplace/manage-in-the-merchant-portal/create-product-offers.html
 related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html

@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Nov 04, 2022
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
+  - /docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
 
 Number formats can vary by locales. For example, if in the DE locale there is a number *123.456,78*, in the US locale it would be *123,456.78*. To enable the proper number formatting by locale in your store, follow the instructions in this document.

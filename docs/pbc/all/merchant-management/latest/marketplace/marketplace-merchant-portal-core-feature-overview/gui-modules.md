@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/gui-modules.html
 related:
   - title: How to create a new GUI module
     link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/create-gui-modules.html

@@ -6,6 +6,7 @@ template: import-file-template
 redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-category.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-category.csv.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-category.csv.html
 related:
   - title: Merchant Category feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/merchant-category-feature-overview.html

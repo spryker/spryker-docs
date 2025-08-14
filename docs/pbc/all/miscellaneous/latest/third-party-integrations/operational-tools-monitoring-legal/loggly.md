@@ -7,7 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/loggly-queue
 originalArticleId: 27b2bc47-2cf9-466c-b944-5a9768b601b3
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/loggly.html  
-  
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/loggly.html
+
 ---
 
 The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-domain-model-and-relationships.html
 ---
 title: "Marketplace Order Management feature: Domain model and relationships"
 description: The Marketplace Order Management feature lets Marketplace customers place orders.

@@ -5,6 +5,7 @@ description: Learn how to integrate the Marketplace Merchant Portal Product Offe
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-merchant-portal-product-offer-management-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
 related:
   - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

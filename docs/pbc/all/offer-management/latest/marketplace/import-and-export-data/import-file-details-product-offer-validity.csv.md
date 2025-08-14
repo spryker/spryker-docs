@@ -5,6 +5,7 @@ description: This document describes the product_offer_validity.csv file to conf
 template: import-file-template
 redirect_from:
 - /docs/pbc/all/offer-management/202311.0/marketplace/import-and-export-data/file-details-product-offer-validity.csv.html
+- /docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

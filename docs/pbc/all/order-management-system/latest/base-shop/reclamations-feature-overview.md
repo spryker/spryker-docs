@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
 title: Reclamations feature overview
 description: With the reclamations in place, you can do three things- create a new connected order, return money paid for the order, or close the reclamation.

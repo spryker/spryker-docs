@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/trustpilot
 originalArticleId: d26d9e19-afe5-4838-91bc-c3fe1894443e
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/trustpilot.html  
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html
 ---
 
 ## Partner Information

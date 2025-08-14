@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/step-engine-use-case-scenario
   - /v1/docs/en/step-engine-use-case-scenario
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
 related:
   - title: "Step engine: Workflow overview"
     link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/step-engine/step-engine-workflow-overview.html

@@ -5,6 +5,7 @@ last_updated: May 20, 2022
 template: module-migration-guide-template
 redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-flysystem-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-flysystem-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-flysystem-module.md -->

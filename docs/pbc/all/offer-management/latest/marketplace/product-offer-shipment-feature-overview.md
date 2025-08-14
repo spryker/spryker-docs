@@ -3,6 +3,7 @@ title: Product Offer Shipment feature overview
 description: General overview of the Product Offer Shipment feature
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/product-offer-shipment-feature-overview.html
 last_updated: Nov 30, 2023
 ---
 

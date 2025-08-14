@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/episerver
 originalArticleId: cbbe8552-c38a-478d-bcda-cd6b393e895b
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/episerver.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver.html
 related:
   - title: Episerver - Integration into a project
     link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html

@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-gui-table-column-types.html
 ---
 
 This document describes how to add new column types to a Gui table.

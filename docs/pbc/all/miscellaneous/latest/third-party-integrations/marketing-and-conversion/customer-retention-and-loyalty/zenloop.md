@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/zenloop
 originalArticleId: 53542a74-7858-44d0-939b-0d9c76aa4011
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/customer-retention-and-loyalty/zenloop.html  
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html
 ---
 
 ## Partner Information

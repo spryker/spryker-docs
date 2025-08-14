@@ -4,6 +4,7 @@ last_updated: Apr 23, 2021
 description: Everything you need to know about the Spryker Marketplace Merchant Commission feature for your Spryker B2B projects.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html
 ---
 
 

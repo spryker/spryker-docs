@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/dotdigital
 originalArticleId: 809fe6a6-5656-415a-bd26-0646c6ee72e4
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/customer-communication/dotdigital.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/dotdigital.html
 ---
 
 ## Partner Information

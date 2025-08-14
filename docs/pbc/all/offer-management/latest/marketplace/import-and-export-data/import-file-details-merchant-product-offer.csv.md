@@ -5,6 +5,7 @@ description: This document describes the `merchant_product_offer.csv` file to co
 template: import-file-template
 redirect_from:
 - /docs/pbc/all/offer-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product-offer.csv.html
+- /docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

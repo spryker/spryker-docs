@@ -5,6 +5,7 @@ description: Learn how you can configure Persistence ACL within your Spryker Mar
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html
 ---
 
 Merchant Portal comes with the pre-configured [Persistence ACL](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html) feature to secure sensitive data.

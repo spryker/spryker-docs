@@ -5,6 +5,7 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/merchant-portal-marketplace-product-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html
 related:
   - title: Marketplace Product feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html

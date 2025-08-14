@@ -5,6 +5,7 @@ description: Learn about Spryker Marketplace Merchant categories allows grouping
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/merchant-category-feature-walkthrough.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/domain-model-and-relationships/merchant-category-feature-domain-model.html
 ---
 
 The *Merchant Category* feature allows splitting merchants into various categories in order to extend business logic of the project.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html
 ---
 title: "Import file details: merchant_oms_process.csv"
 last_updated: Jun 07, 2021

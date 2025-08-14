@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
 redirect_From:
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-push-notification-feature.html
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-push-notification-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-push-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-push-notification-feature.md -->

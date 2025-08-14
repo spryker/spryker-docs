@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/email-invoices-using-bcc.html
 ---
 title: Email invoices using BCC
 description: This document provides detailed instructions on emailing invoices using BCC.

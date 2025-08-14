@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/tideways
 originalArticleId: e42c9f43-b61c-4427-ad2a-3389aae909b6
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/tideways.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/tideways.html
 ---
 
 ## Partner Information

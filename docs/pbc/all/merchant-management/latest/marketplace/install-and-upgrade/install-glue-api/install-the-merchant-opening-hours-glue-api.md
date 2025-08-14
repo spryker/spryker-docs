@@ -5,6 +5,7 @@ description: This document describes how to integrate the Merchant Opening Hours
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/merchant-opening-hours-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-opening-hours-glue-api.html
 ---
 
 {% include pbc/all/install-glue-api/202311.0/marketplace/install-the-merchant-opening-hours-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-merchant-opening-hours-glue-api.md -->

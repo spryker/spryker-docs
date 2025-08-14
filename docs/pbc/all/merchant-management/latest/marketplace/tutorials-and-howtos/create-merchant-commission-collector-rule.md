@@ -3,6 +3,7 @@ title: Create merchant commission collector rules
 description: Learn how to create and register merchant commission collector rules to your Spryker Marketplace project.
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-merchant-commission-collector-rule.html
 last_updated: Jul 22, 2024
 ---
 

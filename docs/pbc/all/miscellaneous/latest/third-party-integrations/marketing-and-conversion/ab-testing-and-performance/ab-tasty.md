@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/ab-tasty
 originalArticleId: eaac5623-d807-4057-ae96-50765c872696
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
 ---
 
 ## Partner Information

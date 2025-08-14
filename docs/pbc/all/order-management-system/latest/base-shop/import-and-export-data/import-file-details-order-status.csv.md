@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-order-status.csv.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/file-details-order-status.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-order-status.csv.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/import-file-details-order-status.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html

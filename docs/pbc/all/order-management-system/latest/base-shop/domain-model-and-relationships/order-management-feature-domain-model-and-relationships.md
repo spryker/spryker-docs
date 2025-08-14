@@ -5,6 +5,7 @@ description: The Order Management feature adds a collection of functionalities t
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202204.0/order-management-feature-walkthrough/order-management-feature-wakthrough.html
+- /docs/pbc/all/order-management-system/latest/base-shop/domain-model-and-relationships/order-management-feature-domain-model-and-relationships.html
 ---
 
 The following schema illustrates the module relations of the Custom Order Reference feature:

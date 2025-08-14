@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-rabbitmq.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-rabbitmq.html
   - /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/upgrade-modules/upgrade-the-rabbitmq-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-rabbitmq-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-rabbitmq-module.md -->

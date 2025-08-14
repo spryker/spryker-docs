@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
 ---
 title: "State machine cookbook: build a state machine"
 description: This tutorial helps you model a state machine using Spryker to manage your sale orders.

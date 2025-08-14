@@ -3,6 +3,7 @@ title: Create merchant relations
 description: Learn how to create merchant relations in the Spryker Marketplace Back Office for your Spryker B2B Projects.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-relations/create-merchant-relations.html
 last_updated: Nov 17, 2023
 ---
 

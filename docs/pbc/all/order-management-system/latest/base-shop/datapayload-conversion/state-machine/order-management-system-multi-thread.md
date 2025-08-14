@@ -13,6 +13,7 @@ redirect_from:
   - /v6/docs/order-management-system-multi-thread
   - /v6/docs/en/order-management-system-multi-thread
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
 related:
   - title: Order process modelling via state machines
     link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html

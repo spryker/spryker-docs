@@ -5,6 +5,7 @@ last_updated: Jan 13, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/merchants.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
 ---
 
 This section provides a collection of articles that explain the Merchant Glue API endpoints used when developing in Spryker Marketplace:

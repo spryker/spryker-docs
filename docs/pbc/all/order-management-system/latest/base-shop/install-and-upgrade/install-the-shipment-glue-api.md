@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
 ---
 title: Install the Shipment Glue API
 last_updated: Dec 14, 2022

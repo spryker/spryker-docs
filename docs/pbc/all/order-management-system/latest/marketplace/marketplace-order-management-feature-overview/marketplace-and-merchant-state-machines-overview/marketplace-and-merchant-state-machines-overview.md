@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
 ---
 title: Marketplace and merchant state machines overview
 description: This document contains concept information about the Marketplace and merchant state machines in the Spryker Commerce OS.

@@ -4,6 +4,7 @@ description: Learn how to manage translations in the Spryker Cloud Commerce OS B
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/manage-translations-in-the-back-office.html
 ---
 
 {% include pbc/all/manage-in-the-back-office/log-into-the-back-office.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-back-office/log-into-the-back-office.md -->

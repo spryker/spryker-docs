@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/sales-data-export-feature-integration.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-features/install-the-sales-data-export-feature.html
   - /docs/scos/dev/feature-integration-guides/202204.0/sales-data-export-feature-integration.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 related:
   - title: Data export
     link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html

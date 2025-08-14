@@ -5,6 +5,7 @@ description: The Merchant Opening Hours feature lets you define opening hours fo
 template: concept-topic-template
 redirect_from:
 - /docs/marketplace/user/features/202311.0/merchant-opening-hours-feature-overview.html
+- /docs/pbc/all/merchant-management/latest/marketplace/merchant-opening-hours-feature-overview.html
 ---
 
 To provide maximum selling activity, merchants can provide their working schedule, by defining the opening hours on weekdays, holidays and exceptional cases.

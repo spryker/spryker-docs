@@ -4,6 +4,7 @@ description: Learn how to retrieve product offer service point availability usin
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/unified-commerce/glue-api-retrieve-product-offer-service-point-availability.html
 ---
 
 This endpoint lets you product offer availability per service points.

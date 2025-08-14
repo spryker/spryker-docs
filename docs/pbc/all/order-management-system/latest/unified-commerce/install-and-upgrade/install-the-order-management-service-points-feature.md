@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/unified-commerce/install-and-upgrade/install-the-order-management-service-points-feature.html
 ---
 title: Install the Order Management + Service Points feature
 description: Learn how to integrate the Order Management + Service Points feature into your project

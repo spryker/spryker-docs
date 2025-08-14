@@ -5,6 +5,7 @@ last_updated: Nov 05, 2021
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-feature-walkthrough.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/domain-model-and-relationships/marketplace-merchant-feature-domain-model.html
 ---
 
 The *Marketplace Merchant* feature lets you create, read, and update merchants in the Marketplace.

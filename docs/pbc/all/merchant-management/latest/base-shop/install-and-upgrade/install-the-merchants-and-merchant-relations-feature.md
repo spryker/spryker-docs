@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/merchant-merchant-relations-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/merchants-and-merchant-relations-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/merchants-and-merchant-relations-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-merchants-and-merchant-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchants-and-merchant-relations-feature.md -->

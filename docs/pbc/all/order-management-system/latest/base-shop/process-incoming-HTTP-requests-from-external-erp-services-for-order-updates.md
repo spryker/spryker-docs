@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/process-incoming-HTTP-requests-from-external-erp-services-for-order-updates.html
 ---
 title: Process incoming HTTP requests from external ERP services for order updates
 description: Learn how you can process incoming HTTP requests from external ERP services for order updates

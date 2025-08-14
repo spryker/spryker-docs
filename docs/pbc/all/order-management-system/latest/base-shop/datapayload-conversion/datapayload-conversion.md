@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/datapayload-conversion.html
 ---
 
 This section explains DataPayload conversion in the Spryker SCOS:

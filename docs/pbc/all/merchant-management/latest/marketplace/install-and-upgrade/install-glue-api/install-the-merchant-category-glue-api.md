@@ -5,6 +5,7 @@ description: This document describes the process how to integrate the Merchant C
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/merchant-category-feature-integration.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html
 ---
 
 {% include pbc/all/install-glue-api/202311.0/marketplace/install-the-merchant-category-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-merchant-category-glue-api.md -->

@@ -4,6 +4,7 @@ description: Learn how to assign services to product offers through the product 
 last_updated: Nov 23, 2023
 template: data-import-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/unified-commerce/import-file-details-product-offer-service.csv.html
 ---
 
 This document describes the `product_offer_service.csv` file to configure the assignment of services to product offers.

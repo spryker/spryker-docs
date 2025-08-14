@@ -8,6 +8,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-features/install-the-order-management-feature.html
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-order-management-feature.html
   - /docs/scos/dev/feature-integration-guides/202204.0/order-management-feature-integration.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
 
 ---
 

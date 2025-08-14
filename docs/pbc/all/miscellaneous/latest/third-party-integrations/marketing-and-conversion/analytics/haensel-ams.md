@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/haensel-ams
 originalArticleId: f282ab4f-da56-4ee3-b09c-b91dd1b32a23
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/haensel-ams.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/haensel-ams.html
 ---
 
 ## Partner Information

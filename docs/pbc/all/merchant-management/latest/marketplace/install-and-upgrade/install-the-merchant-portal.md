@@ -5,6 +5,7 @@ description: Learn how you can integrate the Merchant Portal feature into a Spry
 draft: true
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal.html
 related:
   - title: Merchant Portal overview
     link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html

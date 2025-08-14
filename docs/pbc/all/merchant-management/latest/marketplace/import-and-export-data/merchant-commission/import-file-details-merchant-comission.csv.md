@@ -5,6 +5,7 @@ last_updated: Jul 07, 2024
 description: Import merchant comissions.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html
 ---
 
 This document describes the `merchant_commission.csv` file to configure [merchant commission](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).

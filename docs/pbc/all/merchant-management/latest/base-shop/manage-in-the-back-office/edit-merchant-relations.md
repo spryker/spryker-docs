@@ -6,6 +6,7 @@ last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/marketplace/merchant-relations/edit-merchant-relations.html
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchant-relations/edit-merchant-relations.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html
 related:
   - title: Create merchant relations
     link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/create-merchant-relations.html

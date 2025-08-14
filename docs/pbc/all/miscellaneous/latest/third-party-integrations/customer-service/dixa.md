@@ -11,6 +11,7 @@ redirect_from:
   - /docs/dixa
   - /docs/en/dixa
   - /docs/scos/user/technology-partners/202200.0/customer-service/dixa.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/customer-service/dixa.html
 ---
 
 ## Partner Information

@@ -4,6 +4,7 @@ description: Learn how you can assign products offers by using the product offer
 last_updated: Nov 23, 2023
 template: data-import-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/import-and-export-data/import-file-details-product-offer-shipment-type.csv.html
 ---
 
 This document describes the `product_offer_shipment_type.csv` file to assign product offers to [shipment types](/docs/pbc/all/carrier-management/202410.0/base-shop/shipment-feature-overview.html#shipment-type).

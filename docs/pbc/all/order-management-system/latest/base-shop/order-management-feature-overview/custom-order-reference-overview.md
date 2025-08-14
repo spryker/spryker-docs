@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 ---
 title: Custom Order Reference overview
 description: An overview of Sprykers Custom Order Reference feature to help companies manage their orders using their own custom reference.

@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/plusserver
 originalArticleId: 56e02408-2d1c-4b3f-86b5-f3807b325724
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/plusserver.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/plusserver.html
 ---
 
 ## Partner Information

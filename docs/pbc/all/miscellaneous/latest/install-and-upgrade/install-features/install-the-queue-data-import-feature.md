@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/queue-data-import-feature-integration
   - /docs/scos/dev/feature-integration-guides/202212.0/queue-data-import-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/queue-data-import-feature-integration.html
+  - /docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
 related:
   - title: Data import
     link: docs/dg/dev/data-import/page.version/data-import.html

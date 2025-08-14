@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/manage-orders-in-the-back-office.html
 ---
 title: Manage orders in the Back Office
 description: Learn how you can manage Orders from your store in the Spryker Cloud Commerce OS Back Office

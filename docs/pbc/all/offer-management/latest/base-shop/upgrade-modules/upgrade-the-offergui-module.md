@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-offergui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-offergui.html
   - /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
+  - /docs/pbc/all/offer-management/latest/base-shop/upgrade-modules/upgrade-the-offergui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-offergui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-offergui-module.md -->

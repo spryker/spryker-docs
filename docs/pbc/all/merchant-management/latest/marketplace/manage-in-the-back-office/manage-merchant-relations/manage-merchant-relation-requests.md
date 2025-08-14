@@ -3,6 +3,7 @@ title: Manage merchant relation requests
 description: Learn how a marketplace operator can manage merchant relation requests in the Back Office
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html
 last_updated: Mar 26, 2024
 ---
 

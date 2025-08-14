@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
 ---
 title: Manage marketplace orders
 last_updated: Jul 15, 2021

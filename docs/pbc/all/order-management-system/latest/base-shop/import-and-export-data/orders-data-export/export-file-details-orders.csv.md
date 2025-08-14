@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/data-export-orders-
 originalArticleId: 90c9187a-73af-4fb5-92fd-914ed471f74e
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/import-and-export-data/export-file-details-orders.csv.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/export-file-details-orders.csv.html
 related:
   - title: Exporting data
     link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html

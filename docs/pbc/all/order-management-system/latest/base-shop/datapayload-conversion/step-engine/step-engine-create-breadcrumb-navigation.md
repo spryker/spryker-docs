@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/step-engine-breadcrumb
   - /v1/docs/en/step-engine-breadcrumb
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 related:
   - title: "Step engine: Use case scenario"
     link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/step-engine/step-engine-use-case-scenario.html

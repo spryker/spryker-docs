@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-portal-core-feature-overview/merchant-user.html
 ---
 
 This document provides a short overview of Merchant User concept in the Spryker Marketplace.

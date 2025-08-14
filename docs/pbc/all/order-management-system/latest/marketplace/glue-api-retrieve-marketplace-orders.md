@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html
 ---
 title: "Glue API: Retrieve Marketplace orders"
 description: Retrieve information about Marketplace orders via Glue API for your Spryker Marketplace project.

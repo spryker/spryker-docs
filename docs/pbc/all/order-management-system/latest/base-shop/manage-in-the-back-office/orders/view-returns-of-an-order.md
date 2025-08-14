@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
 ---
 title: View returns of an order
 description: Learn how to view returns of an order in the Spryker Cloud Commerce OS Back Office

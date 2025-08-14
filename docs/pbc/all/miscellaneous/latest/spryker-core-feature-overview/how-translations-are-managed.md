@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/spryker-core-feature-walkthrough/how-translations-are-managed.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-feature-walkthrough/how-translations-are-managed.html
+  - /docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/how-translations-are-managed.html
 ---
 
 The key concept for rendering web pages with translated content very fast and with limited resource usage is using a key-value storage.

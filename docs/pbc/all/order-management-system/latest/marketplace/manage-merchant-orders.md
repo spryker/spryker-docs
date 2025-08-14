@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/manage-merchant-orders.html
 ---
 title: Managing merchant orders
 description: This document describes the actions a merchant can do in the Orders section of the Merchant Portal.

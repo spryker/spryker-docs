@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchant.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchant.html
   - /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-merchant-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-merchant-module.md -->

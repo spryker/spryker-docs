@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
+  - /docs/pbc/all/merchant-management/latest/base-shop/domain-model-and-relationships/merchant-product-restrictions-feature-domain-model.html
 ---
 
 

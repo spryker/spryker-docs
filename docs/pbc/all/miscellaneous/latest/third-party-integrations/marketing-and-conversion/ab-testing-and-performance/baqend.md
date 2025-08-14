@@ -6,6 +6,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/baqend
 originalArticleId: dc885480-133d-423b-b566-e11bfcfe0c39
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/ab-testing-and-performance/baqend.html  
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/ab-testing-and-performance/baqend.html
 ---
 
 ---

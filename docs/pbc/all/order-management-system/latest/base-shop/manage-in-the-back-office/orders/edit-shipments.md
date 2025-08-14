@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/edit-shipments.html
 ---
 title: Editing shipments
 description: Learn how to edit shipments of orders in the Spryker Cloud Commerce OS Back Office

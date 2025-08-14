@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
 ---
 title: Managing main merchant orders
 last_updated: Jul 22, 2021

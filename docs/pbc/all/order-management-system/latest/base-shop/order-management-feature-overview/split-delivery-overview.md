@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
 title: Split Delivery overview
 description: The feature lets you deliver order items to different shipping addresses and on different days, with different shipment methods.

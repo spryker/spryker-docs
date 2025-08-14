@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html
 ---
 title: Install the Marketplace Order Management + Order Threshold feature
 last_updated: Dec 16, 2020

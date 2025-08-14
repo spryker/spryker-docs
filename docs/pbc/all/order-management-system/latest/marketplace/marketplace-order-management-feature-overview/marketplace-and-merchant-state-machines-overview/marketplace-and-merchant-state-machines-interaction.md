@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 ---
 title: Marketplace and merchant state machines interaction
 description: This document contains details about how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.

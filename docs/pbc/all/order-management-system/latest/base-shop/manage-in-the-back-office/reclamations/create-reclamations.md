@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html
 ---
 title: Create reclamations
 description: Learn how you can create new reclamations in the Spryker Cloud Commerce OS Back Office

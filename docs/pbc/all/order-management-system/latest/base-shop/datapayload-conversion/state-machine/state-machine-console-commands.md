@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/state-machine-cronjob
   - /v1/docs/en/state-machine-cronjob
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html  
+  - /docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
 related:
   - title: Order management system multi-thread
     link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html

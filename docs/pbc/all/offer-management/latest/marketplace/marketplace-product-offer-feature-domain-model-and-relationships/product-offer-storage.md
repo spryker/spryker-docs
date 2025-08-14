@@ -3,6 +3,7 @@ title: "Product Offer storage: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-domain-model-and-relationships/product-offer-storage.html
 last_updated: Nov 21, 2023
 ---
 

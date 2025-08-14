@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/splittable-order-items-feature-integration.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-features/install-the-splittable-order-items-feature.html
   - /docs/scos/dev/feature-integration-guides/202204.0/splittable-order-items-feature-integration.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-splittable-order-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md -->

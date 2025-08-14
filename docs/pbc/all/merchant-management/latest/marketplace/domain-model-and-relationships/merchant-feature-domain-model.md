@@ -3,7 +3,9 @@ title: "Merchant feature: Domain model"
 description: In the context of SCOS B2B and Marketplaces, merchant is the selling company.
 template: concept-topic-template
 last_updated: Nov 17, 2023
-redirect_from: /docs/marketplace/dev/feature-walkthroughs/202204.0/merchant.html
+redirect_from: 
+  - /docs/marketplace/dev/feature-walkthroughs/202204.0/merchant.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html
 ---
 
 The *Merchant* feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity.

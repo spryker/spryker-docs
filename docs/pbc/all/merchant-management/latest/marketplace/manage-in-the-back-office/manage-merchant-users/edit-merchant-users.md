@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchant-users.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/manage-in-the-back-office/manage-merchant-users.html
+  - /docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html
 ---
 
 A [merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) is a user that performs tasks on behalf of a merchant in the Merchant Portal. To edit a merchant user in the Back Office, follow the steps:

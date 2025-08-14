@@ -1,3 +1,4 @@
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 title: Marketplace Order Management feature overview
 description: This article explains all about the Spryker Marketplace order feature in the Spryker Cloud Commerce OS.

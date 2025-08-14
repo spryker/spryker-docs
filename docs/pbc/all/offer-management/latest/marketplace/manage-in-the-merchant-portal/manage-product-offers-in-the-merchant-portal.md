@@ -3,6 +3,7 @@ title: Manage product offers in the Merchant Portal
 description: Learn how to manage product offers in the Spryker Marketplace Merchant portal for your Spryker Marketplace store.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/offer-management/latest/marketplace/manage-in-the-merchant-portal/manage-product-offers-in-the-merchant-portal.html
 last_updated: Jan 9, 2024
 ---
 

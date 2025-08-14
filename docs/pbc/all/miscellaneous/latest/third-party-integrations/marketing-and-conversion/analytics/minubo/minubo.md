@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/minubo
 originalArticleId: a59d9ef6-1912-4b3b-bed6-c6c2ad659a71
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/marketing-and-conversion/analytics/minubo.html
+  - /docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/minubo/minubo.html
 ---
 
 ## Partner Information

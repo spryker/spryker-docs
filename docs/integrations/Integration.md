@@ -66,6 +66,6 @@ At their core, integrations follow the design principles:
  </div>
 
 
-## How Spryker integrations
+## How integrations work
 
 Integrations connect external services to your Spryker project through modular, decoupled components. These can be built and used by any of the described integration methods depending on your use case and needs.

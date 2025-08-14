@@ -1,6 +1,6 @@
 ---
-title: About Eco Modules
-description: API documentation for dynamic-entity-availability-abstracts.
+title: Eco modules
+description: Learn how Spryker Eco Modules integrate Spryker Commerce OS with third-party services like payments, PIM, and monitoring, enabling faster, more flexible ecommerce solutions.
 last_updated: Mar 21, 2025
 template: default
 layout: custom_new
@@ -8,10 +8,10 @@ layout: custom_new
 
 
 <div class="content_box">
-Spryker Commerce OS is known for its modular architecture, designed for flexibility and the ability to handle complex ecommerce requirements. While the core platform provides essential ecommerce functions, modern online businesses often need to connect with various specialized third party services to create a complete solution. These external services can include payment gateways, Product Information Management (PIM) systems, monitoring tools, analytics platforms, and more.
+Spryker Commerce OS is known for its modular architecture, designed for flexibility and the ability to handle complex ecommerce requirements. While the core platform provides essential ecommerce functions, modern online businesses often need to connect with various specialized third-party services to create a complete solution. These external services can include payment gateways, Product Information Management systems, monitoring tools, analytics platforms, and more.
 
 
-**Spryker Eco Modules** are the specific components within the Spryker ecosystem designed precisely for this purpose: integrating these third party technologies.
+Eco modules are the specific components within the Spryker ecosystem designed precisely for this purpose: integrating these third-party technologies.
 
 </div>
 
@@ -19,7 +19,7 @@ Spryker Commerce OS is known for its modular architecture, designed for flexibil
 
 Spryker Eco Modules are essential building blocks for extending the Spryker Commerce OS, enabling businesses to integrate seamlessly with external systems and services.
 
-At their core, Spryker Eco Modules act as connectors or adapters. They bridge the functionality of Spryker Commerce OS with third party systems and services, empowering your platform to handle tasks like payment processing, product information management, and system monitoring without needing to reinvent the wheel.
+At their core, Spryker Eco Modules act as connectors or adapters. They bridge the functionality of Spryker Commerce OS with third-party systems and services, empowering your platform to handle tasks like payment processing, product information management, and system monitoring without needing to reinvent the wheel.
 
 For instance, instead of building a custom payment integration from scratch, you can leverage the Spryker Eco Module for Adyen to handle payments reliably and securely.
 
@@ -45,9 +45,9 @@ This naming standard makes it easy to identify Eco Modules and differentiate the
 
 The functionality of Spryker Eco Modules is diverse, enabling Spryker applications to harness the power of external partners and services. Common use cases include:
 
-- **Payments**: Processing payments through providers like Adyen or CrefoPay.
-- **Product Information Management (PIM)**: Synchronizing product data with solutions like Akeneo.
-- **Monitoring**: Sending performance data to services like New Relic for tracking and analysis.
+- Payment: Processing payments through providers like Adyen or CrefoPay.
+- Product Information Management: Synchronizing product data with solutions like Akeneo.
+- Monitorin: Sending performance data to services like New Relic for tracking and analysis.
 
 These modules simplify the integration of powerful external tools, saving development time and reducing the risk of errors that can come with custom implementations.
 
@@ -59,7 +59,7 @@ This consistent approach means you can treat Eco Modules like any other Spryker 
 
 ## Using Eco Modules
 
-In essence, Spryker Eco Modules provide a standardized and maintainable way to enhance the Spryker Commerce OS by connecting it to the broader technology ecosystem. They empower businesses to build tailored, best of breed solutions that combine the strength of Spryker with the capabilities of leading third party services.
+In essence, Spryker Eco Modules provide a standardized and maintainable way to enhance the Spryker Commerce OS by connecting it to the broader technology ecosystem. They empower businesses to build tailored, best of breed solutions that combine the strength of Spryker with the capabilities of leading third-party services.
 
 With Eco Modules, you're not limited by what's built into the Spryker core you can tap into a world of possibilities, driving innovation and differentiation in your ecommerce platform.
 

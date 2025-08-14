@@ -1,21 +1,21 @@
 title: Integrations
 entries:
-- product: integrations
+- product: Integrations
   nested:
   - title: Integrate with Spryker
     url: /docs/integrations/integration.html
-  - title: About Eco Modules
+  - title: Eco modules
     url: /docs/integrations/what-are-spryker-eco-modules.html
-  - title: About Spryker ACP Apps
+  - title: ACP Apps
     url: /docs/integrations/about-spryker-acp-apps.html
-  - title: Integrations Catalog
+  - title: Integrations catalog
     url: /docs/integrations/integration-catalog.html
-  - title: Spryker GLUE API
+  - title: Spryker Glue API
     nested:
-    - title: Getting Started With Spryker APIs
+    - title: Getting started with Spryker APIs
       url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/getting-started-with-spryker-api.html
       nested:
-      - title: Differences between Spryker Storefront and Backend APIs
+      - title: Differences between Storefront and Backend APIs
         url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/backend-and-storefront-api-differences.html
       - title: Implement a REST API resource
         url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/implement-a-rest-api-resource.html
@@ -29,7 +29,7 @@ entries:
         url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/implement-versioning-for-rest-api-resources.html
     - title: API References
       nested:
-      - title: Spryker REST API
+      - title: REST API
         nested:
         - title: REST API B2B Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-b2b-demo-shop-reference.html
@@ -39,13 +39,13 @@ entries:
           url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
         - title: REST API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
-      - title: Spryker Backend API
+      - title: Backend API
         nested:
         - title: Backend API Marketplace B2B Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-marketplace-b2b-demo-shop-reference.html
         - title: Backend API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
-    - title: Authenticating And Authorization
+    - title: Authenticating and authorization
       url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html
       nested:
       - title: Create grant type parameters
@@ -89,15 +89,15 @@ entries:
         url: /docs/integrations/spryker-glue-api/faqs-and-support/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/integrations/spryker-glue-api/faqs-and-support/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-  - title: Custom Building Integrations
+  - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
-    - title: Understanding Spryker Architectual Layers
+    - title: Spryker Architectual Layers
       url: /docs/integrations/custom-building-integrations/spryker-client-layer.html
     - title: Data Exchange
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html
       nested:
-      - title: Installing and Configure Data Exchange API
+      - title: Install and configure Data Exchange API
         nested:
         - title: Install the Data Exchange API
           url: /docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api.html
@@ -107,13 +107,13 @@ entries:
           url: /docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-category-management-feature.html
         - title: Configure Data Exchange API
           url: /docs/integrations/custom-building-integrations/data-exchange/configure-data-exchange-api.html
-        - title: Sending Requests with Data Exchange API
+        - title: Sending requests with Data Exchange API
           url: /docs/integrations/custom-building-integrations/data-exchange/sending-requests-with-data-exchange-api.html
-        - title: Create Post Plugins for Data Exchange API
+        - title: Create post plugins for Data Exchange API
           url: /docs/integrations/custom-building-integrations/data-exchange/create-post-plugins-for-data-exchange-api.html
-      - title: Spryker Data Import From S3 Bucket
+      - title: Data import from S3 bucket
         url: /docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html
-      - title: Data Export
+      - title: Data export
         url: /docs/integrations/custom-building-integrations/data-exchange/data-export/data-export.html
         nested:
         - title: Install the Sales Data Export feature
@@ -127,23 +127,22 @@ entries:
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-orders.csv.html
           - title: 'Export file details: order-items.csv'
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-order-items.csv.html
-      - title: Spryker Data Exchange API
+      - title: Data Exchange API
         url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html
-      - title: Spryker GLUE API for Data Exchange
+      - title: Glue API for Data Exchange
         url: /docs/integrations/custom-building-integrations/data-exchange/glue-api.html
       - title: Integrating with Middleware
         url: /docs/integrations/custom-building-integrations/data-exchange/integrating-with-middleware.html
-    - title: Creating a New Module
+    - title: Creating a new module
       url: /docs/integrations/custom-building-integrations/creating-a-new-module.html
-    - title: Integrating With Spryker Oms
+    - title: Integrating with Spryker OMS
+      url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
       nested:
-      - title: Integrating with Spryker OMS
-        url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
       - title: Set up an order management system
         url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/set-up-an-order-management-system.html
-    - title: Using Jenkins for Third Party Integrations
+    - title: Using Jenkins for third-party integrations
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
-    - title: Endpoint Security
+    - title: Endpoint security
       url: /docs/integrations/custom-building-integrations/endpoint-security.html
-  - title: Community Contributions
+  - title: Community contributions
     url: /docs/integrations/community-contributions.html

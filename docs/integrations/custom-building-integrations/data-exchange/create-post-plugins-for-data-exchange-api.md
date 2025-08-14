@@ -1,0 +1,11 @@
+---
+title: Create Post Plugins For Data Exchange Api
+description: This document describes how to create custom post create/update plugin
+  for the Data Exchange API.
+last_updated: July 9, 2025
+template: howto-guide-template
+layout: custom_new
+redirect_from: null
+---
+
+{% include integrations/create-post-plugins-for-data-exchange-api-body.md %}

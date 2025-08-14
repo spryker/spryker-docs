@@ -1,0 +1,10 @@
+---
+title: Create Glue Api Resources With Parent-Child Relationships
+description: Learn Create Glue API resources with parent-child relationships
+last_updated: '2025-07-07'
+template: howto-guide-template
+redirect_from: null
+layout: custom_new
+---
+
+{% include integrations/create-glue-api-resources-with-parent-child-relationships-body.md %}

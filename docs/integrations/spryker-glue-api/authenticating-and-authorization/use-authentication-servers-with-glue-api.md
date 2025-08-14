@@ -1,0 +1,10 @@
+---
+title: Use Authentication Servers With Glue Api
+description: This document describes Use authentication servers with Glue API.
+last_updated: '2025-07-07'
+template: howto-guide-template
+redirect_from: null
+layout: custom_new
+---
+
+{% include integrations/use-authentication-servers-with-glue-api-body.md %}

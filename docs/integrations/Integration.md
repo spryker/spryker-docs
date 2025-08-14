@@ -1,5 +1,5 @@
 ---
-title: Integrate with Spryker
+title: Integrate With Spryker
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default

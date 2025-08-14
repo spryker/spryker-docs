@@ -3,6 +3,8 @@ title: Business Intelligence
 description: Tools for analyzing and presenting data
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/business-intelligence/latest/business-intelligence.html
+
 last_updated: Oct 24, 2024
 ---
 

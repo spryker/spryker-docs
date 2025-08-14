@@ -5,6 +5,8 @@ last_updated: Nov 1, 2021
 description: Buyers can add notes to carts of their orders.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/latest/marketplace/marketplace-cart-feature-module-relations.html
+
 ---
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Cart* feature.

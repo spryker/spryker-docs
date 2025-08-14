@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 The *Customer Account Management* feature enables a wide range of management options for customer accounts, as well as additional functionalities.

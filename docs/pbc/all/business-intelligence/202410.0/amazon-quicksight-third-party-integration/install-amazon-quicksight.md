@@ -4,6 +4,8 @@ description: Learn how to integrate the Amazon QuickSight into your project
 last_updated: Jan 20, 2025
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/install-amazon-quicksight.html
+
 ---
 
 This document describes how to install Amazon QuickSight.

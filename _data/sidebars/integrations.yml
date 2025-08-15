@@ -134,7 +134,7 @@ entries:
       - title: Integrating with Middleware
         url: /docs/integrations/custom-building-integrations/data-exchange/integrating-with-middleware.html
     - title: Creating a new module
-      url: /docs/integrations/custom-building-integrations/creating-a-new-module.html
+      url: /docs/integrations/custom-building-integrations/creating-modules.html
     - title: Integrating with Spryker OMS
       url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
       nested:

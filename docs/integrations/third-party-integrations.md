@@ -1,5 +1,5 @@
 ---
-title: Third Party Integrations
+title: Third-party integrations
 description: Explore our comprehensive catalogue of third-party integrations, showcasing diverse methods and solutions tailored to your needs.
 last_updated: July 9, 2025
 template: default

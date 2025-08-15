@@ -1,6 +1,5 @@
 This document shows how to implement a REST API resource in your project.
 
-{% info_block warningBox %}
 
 ## Prerequisites
 

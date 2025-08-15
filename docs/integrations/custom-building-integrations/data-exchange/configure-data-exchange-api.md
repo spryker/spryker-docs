@@ -1,5 +1,5 @@
 ---
-title: Configure Data Exchange Api Endpoints
+title: Configure Data Exchange API Endpoints
 description: Learn how to set up and customize Data Exchange API endpoints to streamline
   data integration in your Spryker projects.
 last_updated: July 9, 2025

@@ -1,6 +1,6 @@
 ---
-title: Eco modules
-description: Learn how Spryker Eco Modules integrate Spryker Commerce OS with third-party services like payments, PIM, and monitoring, enabling faster, more flexible ecommerce solutions.
+title: About Spryker Eco Modules
+description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: Mar 21, 2025
 template: default
 layout: custom_new

@@ -1,5 +1,5 @@
 ---
-title: Create Json:Api Relationships
+title: Create JSON API Relationships
 description: This guide describes how to add resources through relationships
 last_updated: '2025-07-07'
 template: howto-guide-template

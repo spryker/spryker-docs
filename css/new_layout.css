@@ -403,7 +403,8 @@
   li code {
     background: var(--custom-secondary-background);
     border-radius: var(--custom-border-radius-medium);
-    padding: 6px 13px;
+    padding: 4px 13px;
+    line-height: 2em;
   }
   
   /* Reset background for highlighted code blocks */

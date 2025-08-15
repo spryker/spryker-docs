@@ -4,7 +4,7 @@ entries:
   nested:
   - title: Integrate with Spryker
     url: /docs/integrations/integrate-with-spryker.html
-  - title: Eco modules
+  - title: About Eco modules
     url: /docs/integrations/eco-modules.html
   - title: ACP apps
     url: /docs/integrations/app-composition-platform-apps.html

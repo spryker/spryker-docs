@@ -27,8 +27,8 @@ For instance, instead of building a custom payment integration from scratch, you
 
 Understanding where Eco Modules live in your project directory is key to maintaining a clean and organized codebase. You'll find them under the `vendor/spryker-eco/` directory, which distinguishes them from:
 
-- **Spryker Core Modules**: Located under `vendor/spryker/`, these are the essential building blocks of the Spryker OS.
-- **Project Specific Code**: Usually found in `src/Pyz/`, this is where your team implements customizations and business logic tailored to your project.
+- Spryker Core Modules: Located under `vendor/spryker/`, these are the essential building blocks of the Spryker OS.
+- Project Specific Code: Usually found in `src/Pyz/`, this is where your team implements customizations and business logic tailored to your project.
 
 This clear separation helps developers navigate the project more efficiently and keeps external integrations modular and easy to manage.
 

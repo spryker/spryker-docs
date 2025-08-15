@@ -67,26 +67,26 @@ API interactions happen by sending HTTPS requests (GET, POST, PATCH, DELETE, etc
 ### Headers
 
 Key headers you'll commonly use with Spryker Glue API include:
-- **Authorization:** To provide an OAuth 2.0 Bearer token for accessing protected resources.
-- **Content-Type:** Often application/vnd.api+json when sending data, adhering to the JSON:API convention.
-- **Accept:** To specify the desired response format, also typically application/vnd.api+json.
-- **Versioning:** Spryker's Glue API can handle versioning through request headers. If no version is specified, the newest version of the resource is usually returned. If a specific version is requested and exists, that version is returned; otherwise, a 404 error may occur.
+- Authorization: To provide an OAuth 2.0 Bearer token for accessing protected resources.
+- Content-Type: Often application/vnd.api+json when sending data, adhering to the JSON:API convention.
+- Accept: To specify the desired response format, also typically application/vnd.api+json.
+- Versioning: Spryker's Glue API can handle versioning through request headers. If no version is specified, the newest version of the resource is usually returned. If a specific version is requested and exists, that version is returned; otherwise, a 404 error may occur.
 
 
 ### Request Parameters (especially with JSON:API)
 
 Spryker's Glue API leverages standardized parameters for efficient data interaction :
-- **Pagination:** Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks (for example `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
-- **Sorting:** Request data to be sorted using parameters like `?sort=attributeName` (ascending) or `?sort=-attributeName` (descending). Sorting parameters can be retrieved using `$glueRequestTransfer->getSortings()`.
-- **Filtering:** Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`. These are accessible via `$glueRequestTransfer->getFilters()`.
-- **Sparse Fields:** To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`. This is retrieved using `$glueRequestTransfer->getQueryFields()`.
-- **Including Related Resources:** Fetch related data in a single request using the include parameter (for example `?include=concrete-product-image-sets`).  The behavior of this included section can be configured in Spryker.  
+- Pagination: Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks (for example `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
+- Sorting: Request data to be sorted using parameters like `?sort=attributeName` (ascending) or `?sort=-attributeName` (descending). Sorting parameters can be retrieved using `$glueRequestTransfer->getSortings()`.
+- Filtering: Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`. These are accessible via `$glueRequestTransfer->getFilters()`.
+- Sparse Fields: To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`. This is retrieved using `$glueRequestTransfer->getQueryFields()`.
+- Including Related Resources: Fetch related data in a single request using the include parameter (for example `?include=concrete-product-image-sets`).  The behavior of this included section can be configured in Spryker.  
 
 
 ### Understanding Spryker Glue API Responses
 
-- **Status Codes:** Standard HTTP status codes indicate the outcome (for example 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 404 Not Found)
-- **Response Body:** The structure often follows the JSON:API convention.
+- Status Codes: Standard HTTP status codes indicate the outcome (for example 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 404 Not Found)
+- Response Body: The structure often follows the JSON:API convention.
   - The resources field in the GlueResponseTransfer typically contains an array of the primary data objects.
   - An included section may contain data for related resources if requested via the include parameter.
   - Responses often include pagination links (next, previous, last, first) automatically calculated when using JSON:API.
@@ -106,18 +106,13 @@ If an invalid, expired, or no token is provided for a protected resource, the AP
 
 The Glue API supports standardized ways to query and manipulate data, especially when using conventions like JSON:API. This makes client interactions predictable and efficient. Key mechanisms include:
 
-- **Pagination:** Handle large datasets effectively by requesting data in manageable chunks (pages).
-- **Sorting:** Allow clients to specify the order in which results should be returned.
-- **Filters:** Enable clients to retrieve subsets of resources based on specific criteria.
-- **Sparse Fields:** Optimize response payloads by allowing clients to request only the specific data fields they need.
-- **To learn more, explore:** "Querying Data with Glue API: Standard Parameters (Pagination, Sorting, Filters, Sparse Fields)."
+- Pagination: Handle large datasets effectively by requesting data in manageable chunks (pages).
+- Sorting: Allow clients to specify the order in which results should be returned.
+- Filters: Enable clients to retrieve subsets of resources based on specific criteria.
+- Sparse Fields: Optimize response payloads by allowing clients to request only the specific data fields they need.
+- To learn more, explore: "Querying Data with Glue API: Standard Parameters (Pagination, Sorting, Filters, Sparse Fields)."
 
-<a class="fl_cont" href="/docs/dg/dev/glue-api/202410.0/use-default-glue-parameters">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Querying Data with GLUE Parameters</div>
-</a>
+For more information, see [Querying Data with GLUE Parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters).
 
 ---
 
@@ -140,23 +135,8 @@ Developing with the Glue API involves a structured approach. At a high level, th
 
 Beyond the standard SAPI and BAPI, Spryker allows you to create entirely new, isolated Glue API applications. This is perfect for projects requiring a dedicated API with its own set of resources, configurations, or even custom request processing workflows.
 
-<a class="fl_cont" href="/docs/dg/dev/glue-api/202410.0/use-default-glue-parameters">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Creating and change GLUE API Conventions</div>
-</a>
+## Further reading
 
-<a class="fl_cont" href="/docs/dg/dev/glue-api/202410.0/use-default-glue-parameters">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Create GLUE API Applications</div>
-</a>
-
-<a class="fl_cont" href="/docs/dg/dev/glue-api/202410.0/use-default-glue-parameters">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Use Default GLUE Parameters</div>
-</a>
+- [Creating and change GLUE API conventions](/docs/dg/dev/glue-api/latest/use-default-glue-parameters)  
+- [Create GLUE API applications](/docs/dg/dev/glue-api/latest/use-default-glue-parameters)  
+- [Use default GLUE parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters)  

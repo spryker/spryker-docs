@@ -1,5 +1,5 @@
 ---
-title: Integrate With Spryker
+title: Integrate with Spryker
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default
@@ -14,7 +14,7 @@ Spryker integrations are connections between a Spryker commerce system and exter
 
 Spryker's modular architecture is built to support a wide range of integrations, whether you're connecting to payment gateways, ERP systems, CRMs, PIMs, shipping providers, or marketing tools. Integrations can range from simple REST API connections to complex, event driven data flows.
 
-At their core, integrations follow the design principles:
+At their core, integrations follow these design principles:
 
 - Decoupled: Don't interfere with the core logic.
 

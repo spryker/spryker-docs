@@ -11,24 +11,12 @@ The Client layer is a lightweight communication layer that connects the front en
 - Place all HTTP or SDK calls in the Client layer.
 - Expose clear, reusable methods so any other layer can call the integration.
 
-<a class="fl_cont" href="https://docs.spryker.com/docs/dg/dev/backend-development/client/client">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Yves Application Layer Client</div>
-</a>
+## Further reading
 
-<a class="fl_cont" href="https://docs.spryker.com/docs/dg/dev/backend-development/client/implement-a-client">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Implement a Client</div>
-</a>
+- [Yves Application Layer Client](/docs/dg/dev/backend-development/client/client)  
 
-<a class="fl_cont" href="https://docs.spryker.com/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong> Use and Configure Redis as a Key-value storage</div>
-</a>
+- [Implement a Client](/docs/dg/dev/backend-development/client/implement-a-client)  
+
+- [Use and configure Redis as a key-value storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage)  
+
 

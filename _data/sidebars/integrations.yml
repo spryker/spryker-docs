@@ -12,22 +12,22 @@ entries:
     url: /docs/integrations/third-party-integrations.html
   - title: Spryker Glue API
     nested:
-    - title: Getting started with Spryker APIs
-      url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/getting-started-with-spryker-api.html
+    - title: Getting started with APIs
+      url: /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
       nested:
       - title: Differences between Storefront and Backend APIs
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/backend-and-storefront-api-differences.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html
       - title: Implement a REST API resource
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/implement-a-rest-api-resource.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html
       - title: Configure the included section
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/configure-the-included-section.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/configure-the-included-section.html
       - title: Validate REST request format
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/validate-rest-request-format.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/validate-rest-request-format.html
       - title: Use default Glue parameters
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/use-default-glue-parameters.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/use-default-glue-parameters.html
       - title: Implement versioning for REST API resources
-        url: /docs/integrations/spryker-glue-api/getting-started-with-spryker-apis/implement-versioning-for-rest-api-resources.html
-    - title: API References
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-versioning-for-rest-api-resources.html
+    - title: API references
       nested:
       - title: REST API
         nested:
@@ -92,7 +92,7 @@ entries:
   - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
-    - title: Spryker Architectual Layers
+    - title: Architectual layers
       url: /docs/integrations/custom-building-integrations/understanding-spryker-architectual-layers.html
     - title: Data Exchange
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html

@@ -1,9 +1,9 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
 ---
 title: Marketplace Order overview
 description: Learn all about the Spryker Marketplace order feature and how orders work within your project.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
 last_updated: Nov 21, 2023
 related:
   - title: Marketplace Order Management feature overview

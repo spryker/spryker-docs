@@ -1,10 +1,10 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders-in-the-back-office.html
 ---
 title: Manage marketplace orders in the Back Office
 description: Learn how to manage the Spryker Marketplace orders using the Spryker back office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders-in-the-back-office.html
 ---
 
 This section contains the guides on managing marketplace orders in the Back Office:

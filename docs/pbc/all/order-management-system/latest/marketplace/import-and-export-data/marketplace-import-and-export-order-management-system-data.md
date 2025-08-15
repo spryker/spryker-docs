@@ -1,10 +1,10 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/marketplace-import-and-export-order-management-system-data.html
 ---
 title: "Marketplace: Import and export Order Management System data"
 description: Details about the data importers for the Spryker Order Management System within your Spryker Marketplace project.
 last_updated: Jun 23, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/marketplace-import-and-export-order-management-system-data.html
 ---
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Order Management System PBC:
 

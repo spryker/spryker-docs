@@ -1,9 +1,9 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html
 ---
 title: Merchant OMS
 description: Merchant Oms provides a dedicated Oms flow for Merchant Orders and their Merchants.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/latest/marketplace/merchant-oms.html
 last_updated: Nov 21, 2023
 ---
 

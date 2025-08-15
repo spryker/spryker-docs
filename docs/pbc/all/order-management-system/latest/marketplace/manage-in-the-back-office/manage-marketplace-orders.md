@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
 ---
 title: Manage marketplace orders
 last_updated: Jul 15, 2021
@@ -6,6 +5,7 @@ description: This document describes how to manage marketplace orders in the Bac
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/orders/managing-marketplace-orders.html
+  - /docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
 related:
   - title: Marketplace Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html

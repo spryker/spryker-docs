@@ -1,5 +1,5 @@
 ---
-title: Install The Data Exchange Api
+title: Install the Data Exchange API
 description: Discover the steps to install the Data Exchange API in your Spryker project,
   enabling efficient and seamless integration with external databases for optimized
   data exchange.

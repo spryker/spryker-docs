@@ -1,5 +1,5 @@
 ---
-title: Spryker Glue Api For Data Exchange
+title: Glue API for Data Exchange
 description: Comprehensive guide to Spryker GLUE API, detailing its capabilities for
   seamless data exchange, integration, and customization using REST, GraphQL, and
   OData protocols.

@@ -6,10 +6,10 @@ template: default
 layout: custom_new
 ---
 
-The Client layer is a lightweight communication layer that connects the front end to storage, search, and the Zed back end. Because it already handles persistence (for example, Redis) and session management, it is the ideal place to isolate calls to third‑party services.
+The Client layer is a lightweight communication layer that connects the frontend to storage, search, and backend. Because it already handles session management and persistence, such as Redis, it's the ideal place to isolate calls to third‑party services.
 
-- Place all HTTP or SDK calls in the Client layer.
-- Expose clear, reusable methods so any other layer can call the integration.
+- Place all HTTP and SDK calls in the Client layer
+- Expose clear, reusable methods so any other layer can call the integration
 
 ## Further reading
 

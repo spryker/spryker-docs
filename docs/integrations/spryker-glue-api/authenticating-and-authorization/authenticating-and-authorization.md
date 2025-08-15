@@ -8,7 +8,7 @@ layout: custom_new
 ---
 
 
-Spryker's Glue API uses the **OAuth 2.0** framework for authentication to secure its resources. On a technical level, this is handled by the Login API. To gain access to a protected resource, a client application must first obtain an **access token**. This token, a JSON Web Token (JWT), identifies the user in subsequent API calls and must be included in the request header.
+Spryker's Glue API uses the OAuth 2.0 framework for authentication to secure its resources. On a technical level, this is handled by the Login API. To gain access to a protected resource, a client application must first obtain an access token. This token, a JSON Web Token (JWT), identifies the user in subsequent API calls and must be included in the request header.
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Authentication+and+Authorization/auth-scheme+%281%29.png)
 
@@ -17,8 +17,8 @@ Spryker's Glue API uses the **OAuth 2.0** framework for authentication to secure
 
 For security, access tokens have a limited lifespan. The default lifetime is **8 hours** (28,800 seconds). When an access token is issued, the response also includes a **refresh token**.
 
-- **Access Token**: Used to authenticate requests to protected resources.
-- **Refresh Token**: When an access token expires, the refresh token can be exchanged for a new access token and a new refresh token. The default lifetime for a refresh token is **1 month** (2,628,000 seconds).
+- Access Token: Used to authenticate requests to protected resources.
+- Refresh Token: When an access token expires, the refresh token can be exchanged for a new access token and a new refresh token. The default lifetime for a refresh token is **1 month** (2,628,000 seconds).
 
 It is recommended to revoke refresh tokens when they are no longer needed or if they become compromised. A revoked token is immediately marked as expired and cannot be used to obtain a new access token.
 
@@ -58,15 +58,15 @@ If the token is valid, the API will process the request. If authorization fails,
 
 Authentication grants access based on user type, and different endpoints may require different user roles. In the Spryker ecosystem, there is a distinction between the Storefront and Backend APIs.
 
-- **Storefront API**: Used to authenticate a **customer**.
-- **Backend API**: Used to authenticate a **user** (for example a company user or agent).
+- Storefront API: Used to authenticate a customer.
+- Backend API: Used to authenticate a user (for example a company user or agent).
 
 By default, you can authenticate as a customer, a company user, or an agent assist.
 
 
 ### Default Protected Resources
 
-Protected resources require authentication before access is granted. The following table lists the default protected resources. However, since Glue API is highly customizable, it's recommended to retrieve the specific list of protected resources for your shop.
+Protected resources require authentication before access is granted. The following table lists the default protected resources. However, since Glue API is highly customizable, we recommend retrieving the specific list of protected resources for your shop.
 
 | ACTION                                                                 | METHOD | ENDPOINTS                                                                    |
 | ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------- |

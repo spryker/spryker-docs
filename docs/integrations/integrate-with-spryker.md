@@ -31,7 +31,7 @@ At their core, integrations follow these design principles:
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_eco.png" alt="Icon for Spryker Eco Modules"></div>
-    <div class="cst_card_title">ECO modules</div>
+    <div class="cst_card_title">ECO Modules</div>
     <div class="cst_card_desc">Spryker Eco Modules are prebuilt, reusable integration packages that connect Spryker with popular third-party services and tools. They help teams save development time and ensure reliable integrations.</div>
     <a class="cst_card_button" href="what_are_spryker_eco_modules"> Find out more </a>
   </div>
@@ -45,7 +45,7 @@ At their core, integrations follow these design principles:
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_custom_build.png" alt="Icon for Spryker Custom Building Integrations"></div>
-    <div class="cst_card_title">Custom build</div>
+    <div class="cst_card_title">Custom Build</div>
     <div class="cst_card_desc">For more tailored or business specific needs, you can build custom integrations directly in your project code.</div>
     <a class="cst_card_button" href="custom_building_integrations/custom_build_integrations_with_spryker"> Find out more </a>
   </div>
@@ -59,7 +59,7 @@ At their core, integrations follow these design principles:
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_community_contributions.png" alt="Icon for Spryker Community Contributions"></div>
-    <div class="cst_card_title">Community contributions</div>
+    <div class="cst_card_title">Community Contributions</div>
     <div class="cst_card_desc">Spryker has an active developer community that contributes to the ecosystem by sharing modules, integrations, and improvements.</div>
     <a class="cst_card_button" href="community_contributions"> Find out more </a>
   </div>

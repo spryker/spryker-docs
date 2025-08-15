@@ -1,5 +1,5 @@
 ---
-title: Resolving Search Engine Friendly Urls
+title: Marketplace Glue API Resolve Search Engine Friendly Urls
 description: Learn how to resolve search engine friendly URLs via Glue API in the
   Spryker Marketplace
 template: glue-api-storefront-guide-template

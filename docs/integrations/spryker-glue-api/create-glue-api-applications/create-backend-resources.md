@@ -1,5 +1,5 @@
 ---
-title: Create A Backend Resource
+title: Create Backend Resources
 description: This guide shows how to create an API endpoint using a resource for the
   backend API application.
 last_updated: '2025-07-07'

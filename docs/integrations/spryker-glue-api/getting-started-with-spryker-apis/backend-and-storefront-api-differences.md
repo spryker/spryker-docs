@@ -1,5 +1,5 @@
 ---
-title: Differences Between Spryker Storefront And Backend Apis
+title: Backend and Storefront API Differences
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default

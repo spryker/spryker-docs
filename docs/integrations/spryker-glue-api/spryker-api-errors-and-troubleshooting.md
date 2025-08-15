@@ -1,5 +1,5 @@
 ---
-title: Sprker Api Errors And Troubleshooting
+title: Sprker API Errors And Troubleshooting
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default

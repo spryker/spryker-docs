@@ -1,5 +1,5 @@
 ---
-title: About App Composition Platform apps
+title: App Composition Platform apps
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default

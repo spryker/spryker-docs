@@ -4,13 +4,9 @@ This document shows how to implement a REST API resource in your project.
 
 ## Prerequisites
 
-Read the following documents:
-
 * [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;
 * [Swagger Tools Reference](https://swagger.io/) to know how to document your API;
 * [REST API Modeling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).
-
-{% endinfo_block %}
 
 ## 1. Create a Glue resource module
 

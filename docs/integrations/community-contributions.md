@@ -73,7 +73,7 @@ Examples include:
 </div>
 
 
-## Where to find them
+## Discover contributions
 
 All contributions are owned and maintained by their creators—but we've curated and categorized them for easy discovery on [CommerceQuest](https://commercequest.space/community-tools/).
 
@@ -89,7 +89,7 @@ Look for tools by the following:
 
 Have you built something useful for Spryker?
 
-**Share it with the community** and help other teams go further, faster. Submit your tool via the [Community Forum](https://commercequest.space/).
+Share it with the community and help other teams go further, faster. Submit your tool via the [Community Forum](https://commercequest.space/).
 
 Every contribution strengthens the Spryker ecosystem.
 

@@ -186,7 +186,6 @@ task :check_integrations do
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
-    /docs\/integrations\/.+/,
     /docs\/dg\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

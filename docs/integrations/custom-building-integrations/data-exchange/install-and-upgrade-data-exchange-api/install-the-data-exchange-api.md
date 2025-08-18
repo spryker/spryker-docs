@@ -4,6 +4,7 @@ description: Discover the steps to install the Data Exchange API in your Spryker
   enabling efficient and seamless integration with external databases for optimized
   data exchange.
 last_updated: July 9, 2025
+template: default
 related:
 - title: How to configure Data Exchange API
   link: docs/pbc/all/data-exchange/page.version/configure-data-exchange-api.html

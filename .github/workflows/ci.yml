@@ -145,6 +145,34 @@ jobs:
 
       - run: bundle exec rake check_dg
 
+  link_validation_check_integrations:
+    name: Links validation (check_integrations)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v4
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-check_sdk-htmlproofer
+
+      - uses: actions/download-artifact@v4
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_dg
+
   page_validation:
     name: Page validation
     runs-on: ubuntu-latest

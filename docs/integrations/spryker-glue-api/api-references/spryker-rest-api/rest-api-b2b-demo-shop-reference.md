@@ -1,5 +1,5 @@
 ---
-title: Rest Api B2B Demo Shop Reference
+title: Rest API B2B Demo Shop reference
 description: This page provides an exhaustive reference for the REST API endpoints
   present in the Spryker B2B demo Shop by default with the corresponding parameters
   and data formats.
@@ -9,7 +9,7 @@ related:
 - title: Reference information- GlueApplication errors
   link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
 redirect_from: null
-layout: custom_new
+
 ---
 
 {% include integrations/rest-api-b2b-demo-shop-reference-body.md %}

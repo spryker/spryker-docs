@@ -1,10 +1,10 @@
 ---
-title: Spryker API Authentication And Authorization
+title: Glue API authentication and authorization
 description: Learn how to authenticate and authorize requests in the Spryker Backend
   API using OAuth 2.0.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
+
 ---
 
 
@@ -13,7 +13,7 @@ Spryker's Glue API uses the OAuth 2.0 framework for authentication to secure its
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Authentication+and+Authorization/auth-scheme+%281%29.png)
 
 
-### Access and Refresh Tokens
+### Access and refresh tokens
 
 For security, access tokens have a limited lifespan. The default lifetime is **8 hours** (28,800 seconds). When an access token is issued, the response also includes a **refresh token**.
 
@@ -23,7 +23,7 @@ For security, access tokens have a limited lifespan. The default lifetime is **8
 It is recommended to revoke refresh tokens when they are no longer needed or if they become compromised. A revoked token is immediately marked as expired and cannot be used to obtain a new access token.
 
 
-### Accessing Protected Resources
+### Accessing protected resources
 
 To make a request to a protected resource, you must pass the access token in the `Authorization` header.
 
@@ -54,7 +54,7 @@ If the token is valid, the API will process the request. If authorization fails,
 ```
 
 
-### User and Application Types
+### User and application types
 
 Authentication grants access based on user type, and different endpoints may require different user roles. In the Spryker ecosystem, there is a distinction between the Storefront and Backend APIs.
 
@@ -64,7 +64,7 @@ Authentication grants access based on user type, and different endpoints may req
 By default, you can authenticate as a customer, a company user, or an agent assist.
 
 
-### Default Protected Resources
+### Default protected resources
 
 Protected resources require authentication before access is granted. The following table lists the default protected resources. However, since Glue API is highly customizable, we recommend retrieving the specific list of protected resources for your shop.
 

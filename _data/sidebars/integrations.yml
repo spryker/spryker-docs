@@ -46,7 +46,7 @@ entries:
         - title: Backend API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
     - title: Authenticating and authorization
-      url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/spryker-api-authenticating-and-authorization.html
+      url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/glue-api-authenticating-and-authorization.html
       nested:
       - title: Create grant type parameters
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-grant-type-parameters.html

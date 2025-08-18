@@ -1,19 +1,18 @@
 ---
-title: Sprker API Errors And Troubleshooting
+title: API errors and troubleshooting
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
 ---
 
 Sometimes an API can return an error for various reasons. Here are some generic steps that can help you debug and troubleshoot those errors. The dedicated documents for specific endpoints contain errors related to those endpoints.
 
 
-## Analyze the HTTP Status Code
+## Analyze the HTTP status code
 
 The HTTP status code provides the initial classification of the error.
 
-### 4xx Client-Side Errors
+### 4xx client-side errors
 
 The request sent by the client is flawed.
 
@@ -25,12 +24,12 @@ The request sent by the client is flawed.
 - `422 Unprocessable Entity`: The request is syntactically correct but contains semantic errors, such as failing a business logic validation.
 - `429 Too Many Requests`: Rate limiting has been triggered, often due to too many failed login attempts.
 
-### 5xx Server-Side Errors
+### 5xx server-side errors
 
 An unexpected error occurred on the server. These issues require checking server-side application and system logs.
 
 
-## Decode the JSON Error Payload
+## Decode the JSON error payload
 
 For 4xx errors, the response body contains a JSON object with specific error details:
 
@@ -38,27 +37,27 @@ For 4xx errors, the response body contains a JSON object with specific error det
 - `code`: A numeric, application-specific error code (for example `"202"`). This code is essential for programmatic error handling and for looking up the precise issue in reference tables.
 
 
-## Correlate with the Request Context
+## Correlate with the request context
 
 Analyze the error in the context of the original request.
 
-### Request Headers
+### Request headers
 
 - `Authorization`: Is the Bearer token present and valid?
 - `Content-Type`: Is the media type correct? Does it include the correct version parameter? A non-existent version will cause a `404 Not Found` error.
 
-### URL and Path
+### URL and path
 
 - Is the endpoint path spelled correctly?
 - If the URL includes a resource ID, does an entity with that ID exist?
 
-### Request Body
+### Request body
 
 - Is the JSON syntax valid?
 - Are all required fields present?
 - Do the data types match the API's expectations?
 
-## Common Error Scenarios
+## Common error scenarios
 
 ### Authentication: `401` and `403` codes
 

@@ -1,9 +1,9 @@
 ---
-title: Understanding Spryker Architectual Layers
+title: Understanding Spryker Architectual layers
 description: Explore the Spryker Client layer, a lightweight communication layer connecting the front end to storage, search, and the Zed back end. Learn how it handles persistence, session management, and integrates third-party services effectively.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
+
 ---
 
 The Client layer is a lightweight communication layer that connects the frontend to storage, search, and backend. Because it already handles session management and persistence, such as Redis, it's the ideal place to isolate calls to third‑party services.

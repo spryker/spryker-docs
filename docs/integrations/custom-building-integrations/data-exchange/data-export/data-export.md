@@ -3,7 +3,6 @@ title: Data export
 description: Learn how to configure and extend Spryker's data export functionality for reporting, analytics, and system integration.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
 ---
 
 Some projects require data export for internal reporting, analytics, or integration with other systems. Spryker includes a default order export feature, which you can extend to support other entities.
@@ -20,13 +19,13 @@ For installation and configuration, refer to:
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
-  <div class="fl_text">How to Install</div>
+  <div class="fl_text">How to install</div>
 </a>
 
 <a class="fl_cont" href="/docs/integrations/custom_building_integrations/data_exchange/data_export/orders_data_export.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
-  <div class="fl_text">Order Usage Example</div>
+  <div class="fl_text">Order usage example</div>
 </a>
 

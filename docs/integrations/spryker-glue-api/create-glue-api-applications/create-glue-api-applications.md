@@ -1,15 +1,15 @@
 ---
-title: Create Glue API Applications
+title: Create Glue API applications
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
+
 ---
 
 Spryker's Glue API is a powerful tool for building custom front end applications, integrating with third party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.
 
 
-### Key Concepts
+### Key concepts
 
 Before diving into the development process, it's important to understand a few key concepts:
 
@@ -21,7 +21,7 @@ Before diving into the development process, it's important to understand a few k
 - Modules and Resources: Your API will be organized into modules, and each module can expose one or more resources (for example "products," "carts," "orders").
 
 
-### The Development Process
+### The development process
 
 Creating a new API application in Spryker involves the following key steps:
 

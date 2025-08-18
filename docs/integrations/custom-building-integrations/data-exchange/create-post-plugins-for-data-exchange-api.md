@@ -4,7 +4,6 @@ description: This document describes how to create custom post create/update plu
   for the Data Exchange API.
 last_updated: July 9, 2025
 template: howto-guide-template
-layout: custom_new
 redirect_from: null
 ---
 

@@ -10,7 +10,7 @@ layout: custom_new
 
 <div class="page-layout">
   <aside class="filters-sidebar">
-      <button class="mobile-filter-toggle">Show Filters</button>
+      <button class="mobile-filter-toggle">Show filters</button>
       <div class="mobile-filter-panel">
           <div class="search-container">
               <input type="search" id="nameSearch" placeholder="Search by name...">
@@ -22,7 +22,7 @@ layout: custom_new
 
   <main class="content-area">
       <div id="featuredContainer" style="display: none;">
-          <h2>Featured Integrations</h2>
+          <h2>Featured integrations</h2>
           <div class="cards" id="featuredCards"></div>
           <hr/>
       </div>

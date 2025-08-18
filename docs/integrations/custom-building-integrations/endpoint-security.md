@@ -1,14 +1,14 @@
 ---
-title: Endpoint Security
+title: Endpoint security
 description: Learn about endpoint security features and best practices for securing integration endpoints in Spryker, including authentication, IP whitelisting, HTTPS enforcement, and monitoring.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
+
 ---
 
-## Out-of-the-Box Security Features in Spryker
+## Out-of-the-box security features
 
-### Basic Authentication
+### Basic authentication
 
 Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You can configure it to restrict access to sensitive endpoints or entire services.
 
@@ -20,7 +20,7 @@ Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You c
 </a>
 
 
-### IP Whitelisting
+### IP whitelisting
 
 Spryker allows you to set up IP allowlists at the web server (for example Nginx) or infrastructure level (for example AWS Security Groups, Cloudflare rules) to limit access to known, trusted sources.
 
@@ -32,14 +32,14 @@ Spryker allows you to set up IP allowlists at the web server (for example Nginx)
 </a>
 
 
-### HTTPS Enforcement
+### HTTPS enforcement
 
 While not specific to Spryker, it is recommended (and often defaulted via infrastructure) to serve all APIs over HTTPS to encrypt data in transit.
 
 
-## Best Practices for Secure Integration Endpoints
+## Best practices for secure integration endpoints
 
-### Use Token-Based Authentication
+### Use token-based authentication
 
 Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for better control and traceability. Glue APIs can be extended to support token-based schemes.
 
@@ -50,12 +50,12 @@ Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for bette
   <div class="fl_text"><strong>Further Reading:</strong> Glue API authentication and authorization</div>
 </a>
 
-### Limit Access Scope
+### Limit access scope
 
 Apply the principle of least privilege: expose only the endpoints and data required for the specific integration.
 - Create custom API roles for partners with fine-grained access control.
 
-### Logging and Monitoring
+### Logging and monitoring
 
 - Log all API access errors with details (timestamp, IP, headers, payload).
 - Monitor unusual patterns and set up alerts for suspicious behavior.
@@ -74,6 +74,6 @@ Apply the principle of least privilege: expose only the endpoints and data requi
   <div class="fl_text"><strong>Further Reading:</strong> OpenTelemetry instrumentation</div>
 </a>
 
-### Input Validation and Sanitization
+### Input validation and sanitization
 
 Ensure all incoming data is strictly validated to prevent injection attacks or malformed payloads.

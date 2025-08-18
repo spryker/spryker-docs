@@ -4,7 +4,6 @@ description: Learn how to integrate external systems with Middleware to streamli
   data exchange, enhance scalability, and simplify maintenance for your core platform.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
 ---
 
 Middleware is an external service or third‑party application that integrates multiple data sources and converts their data into the format your target system expects. Acting as a bridge, it applies complex logic - such as normalization, filtering, and enrichment - before the data reaches your core platform.

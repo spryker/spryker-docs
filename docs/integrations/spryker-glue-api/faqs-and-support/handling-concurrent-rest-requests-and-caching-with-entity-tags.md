@@ -1,5 +1,5 @@
 ---
-title: Handling Concurrent Rest Requests And Caching With Entity Tags
+title: Handling concurrent rest requests and caching with entity tags
 description: This article will provide you with information on how to handle concurrent
   requests and implement client-side caching with the help of entity tags.
 last_updated: '2025-07-07'
@@ -10,9 +10,9 @@ redirect_from: null
 related:
 - title: Glue Infrastructure
   link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
-- title: Shared Cart Feature Overview
+- title: Shared Cart feature overview
   link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
-layout: custom_new
+
 ---
 
 {% include integrations/handling-concurrent-rest-requests-and-caching-with-entity-tags-body.md %}

@@ -1,5 +1,5 @@
 ---
-title: Set Up An Order Management System
+title: Set up an order management system
 description: This task-based document shows how to create a full order management
   process (OMS) using the Spryker state machine and then use it in your shop.
 last_updated: July 9, 2025
@@ -16,7 +16,6 @@ related:
   link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
 - title: Common pitfalls in OMS design
   link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
-layout: custom_new
 ---
 
 {% include integrations/set-up-an-order-management-system-body.md %}

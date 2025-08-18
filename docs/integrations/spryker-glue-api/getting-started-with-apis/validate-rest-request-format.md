@@ -1,5 +1,5 @@
 ---
-title: Validate Rest Request Format
+title: Validate REST request format
 description: Learn about REST request validation format and how to validate requests
   in Glue API.
 last_updated: '2025-07-07'
@@ -12,7 +12,6 @@ related:
   link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 - title: Glue infrastructure
   link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
-layout: custom_new
 ---
 
 {% include integrations/validate-rest-request-format-body.md %}

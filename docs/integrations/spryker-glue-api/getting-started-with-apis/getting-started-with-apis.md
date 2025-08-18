@@ -1,5 +1,5 @@
 ---
-title: Getting Started With APIs
+title: Getting started with APIs
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default
@@ -12,7 +12,7 @@ Spryker's Glue API is a dedicated application layer within the Spryker Cloud Com
 
 </div>
 
-## Spryker GLUE API Types: REST vs Backend (BAPI)
+## Spryker GLUE API types: REST vs Backend (BAPI)
 
 Spryker's Glue API framework offers two primary types of API applications, each tailored for different use cases:
 
@@ -59,7 +59,7 @@ Interacting with Glue API as a client application involves understanding its spe
 
 
 
-### Endpoints and HTTPS Methods
+### Endpoints and HTTPS methods
 
 API interactions happen by sending HTTPS requests, such as GET, POST, PATCH, or DELETE, to specific URLs. In Spryker, resource types are often derived from the request URL–for example, `/carts` for cart resources or `/products/{sku}` for a specific product.  The API documentation for each Spryker resource details the available endpoints and supported HTTPS methods which you an find within the API reference section of our documentation.
 
@@ -73,7 +73,7 @@ Key headers you'll commonly use with Glue API include:
 - Versioning: Spryker's Glue API can handle versioning through request headers. If no version is specified, the newest version of the resource is usually returned. If a specific version is requested and exists, that version is returned; otherwise, a 404 error may occur.
 
 
-### Request Parameters (especially with JSON:API)
+### Request parameters (especially with JSON:API)
 
 Glue API leverages standardized parameters for efficient data interaction:
 - Pagination: Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks–for example, `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
@@ -83,7 +83,7 @@ Glue API leverages standardized parameters for efficient data interaction:
 - Including Related Resources: Fetch related data in a single request using the include parameter–for example, `?include=concrete-product-image-sets`). The behavior of this included section can be configured in Spryker.  
 
 
-### Glue API Responses
+### Glue API responses
 
 - Status Codes: Standard HTTP status codes indicate the outcome, such as 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, or 404 Not Found.
 - Response Body: The structure often follows the JSON:API convention.
@@ -101,7 +101,7 @@ Client applications send user credentials (username and password) to an authenti
 
 ---
 
-## Querying GLUE API Data
+## Querying GLUE API data
 
 The Glue API supports standardized ways to query and manipulate data, especially when using conventions like JSON:API. This makes client interactions predictable and efficient. Key mechanisms are as follows:
 
@@ -115,12 +115,12 @@ For more information, see [Querying Data with GLUE Parameters](/docs/dg/dev/glue
 
 ---
 
-## Building and Customizing Your APIs
+## Building and customizing your APIs
 
 The Glue API is not just for consumption; it's a powerful platform for development and customization.
 
 
-### The Developers Journey: What's Involved in Using Glue API
+### The developers journey: Using Glue API
 
 Developing with the Glue API involves a structured approach. At a high level, this journey includes:
 

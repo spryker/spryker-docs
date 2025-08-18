@@ -1,11 +1,11 @@
 ---
-title: Using Jenkins For Third Party Integrations
+title: Using Jenkins for third-party integrations
 description: Learn how to use Jenkins for automating data exchange tasks in Spryker,
   including importing, exporting, and triggering scheduled operations with third-party
   systems.
 last_updated: July 9, 2025
 template: default
-layout: custom_new
+
 ---
 
 Spryker uses Jenkins primarily for running scheduled or event-based console commands that handle data exchange tasks. This is especially useful for batch operations, such as importing or exporting data between Spryker and third-party systems, such as ERP, PIM, or CRM.

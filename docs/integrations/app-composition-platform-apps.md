@@ -8,17 +8,17 @@ layout: custom_new
 
 <div class="content_box">
 
-## What Is the App Composition Platform (ACP)
+## What is the App Composition Platform
 
 As part of its Composable Commerce approach Spryker offers the App Composition Platform (ACP) to help the modern enterprise to build and deliver any digital business model at the lowest effort.
 
-The App Composition Platform (ACP) is designed to help businesses easily connect, configure, and use third party services, all without the need for complex custom development. Whether you're looking to integrate payments, tax management, search functionality, or marketing tools, ACP makes it possible to do so with minimal effort and maximum flexibility.
+ACP is designed to help businesses easily connect, configure, and use third party services, all without the need for complex custom development. Whether you're looking to integrate payments, tax management, search functionality, or marketing tools, ACP makes it possible to do so with minimal effort and maximum flexibility.
 
 ACP enables a composable approach to digital commerce choosing the 'best of breed' services for each part of your business. With ACP, you can add new capabilities quickly and easily, accelerating your time to market and keeping your platform flexible and scalable.
 </div>
 
 
-## How Does ACP Work
+## How does ACP work
 
 Getting started with ACP is straightforward.
 
@@ -37,7 +37,7 @@ Here's how it works:
 </div>
 
 
-## Key Benefits of ACP
+## Benefits of ACP
 
 
 <div class="grid_container">
@@ -47,7 +47,7 @@ Here's how it works:
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">Speed and Agility</p>
+      <p class="content_title">Speed and agility</p>
       <p class="content_text">ACP empowers your business to respond to market changes quickly. You can roll out new features or scale your platform faster than ever before. Imagine the ability to activate a new payment provider or add advanced search in a fraction of the time it would traditionally take.</p>
     </div>
   </div>
@@ -57,7 +57,7 @@ Here's how it works:
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">Flexibility and Scalability</p>
+      <p class="content_title">Flexibility and scalability</p>
       <p class="content_text">As your business grows, ACP scales with you. You can easily swap out existing apps, add new ones, or configure different services to meet your changing needs, all without disrupting your entire platform. This flexibility ensures you're always using the best tools for your business.</p>
     </div>
   </div>
@@ -67,7 +67,7 @@ Here's how it works:
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">Composable Architecture</p>
+      <p class="content_title">Composable architecture</p>
       <p class="content_text">ACP leverages Spryker's headless, API first architecture, which means you can integrate services with low code. This composable approach allows you to mix and match the best apps for each part of your business, giving you the freedom to create a solution that fits your unique needs.</p>
     </div>
   </div>
@@ -77,16 +77,16 @@ Here's how it works:
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">Security and Compliance</p>
+      <p class="content_title">Security and compliance</p>
       <p class="content_text">With Spryker managing the backend infrastructure, you can trust that every app in ACP is fully vetted, secure, and compliant. We take care of the technical details so you don't have to, from API security to compliance with the latest regulations.</p>
     </div>
   </div>
 </div>
 
 
-## Why Choose ACP
+## Why choose ACP
 
-Spryker's App Composition Platform is built to make your business more agile, secure, and scalable. By allowing you to connect to a growing catalog of third party services without the need for complex coding, ACP empowers you to innovate faster and stay ahead of the competition. Whether you're a business user looking for simplicity or a developer needing flexibility, ACP makes it easier than ever to enhance your platform and scale your digital commerce strategy.
+ACP is built to make your business more agile, secure, and scalable. By allowing you to connect to a growing catalog of third party services without the need for complex coding, ACP empowers you to innovate faster and stay ahead of the competition. Whether you're a business user looking for simplicity or a developer needing flexibility, ACP makes it easier than ever to enhance your platform and scale your digital commerce strategy.
 
 
 ## ACP Apps

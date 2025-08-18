@@ -1,8 +1,6 @@
 This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -12,7 +10,7 @@ Install the required features:
 | Customer Account Management | 202507.0 |
 
 
-### Set up configuration
+## Set up configuration
 
 Provide a prefix used during customer reference generation. If no prefix is provided, it will use the current store name, which can lead to issues in Dynamic Store setup.
 

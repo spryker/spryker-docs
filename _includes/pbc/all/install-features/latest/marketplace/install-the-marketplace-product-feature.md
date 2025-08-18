@@ -114,7 +114,7 @@ Generate a new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Configure export to Redis and Elasticsearch
+### 4) Configure export to key-value storage and Elasticsearch
 
 Install the following plugins:
 
@@ -123,8 +123,8 @@ Install the following plugins:
 | Merchant\MerchantProductSearchWritePublisherPlugin           | Publishes the product by merchant IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProduct\MerchantProductSearchWritePublisherPlugin    | Publishes the product by merchant product abstract IDs to ES. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
 | MerchantProductSearchPublisherTriggerPlugin               | Allows publishing or republishing  merchant product search data manually. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\Publisher |
-| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
-| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
+| MerchantUpdatePublisherPlugin                                | Publishes the product by merchant IDs to key-value storage. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\Merchant |
+| MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to key-value storage. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductPublisherTriggerPlugin                          | Allows publishing or republishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
 <details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
@@ -601,6 +601,41 @@ console data:import merchant-product
 {% info_block warningBox "Verification" %}
 
 Make sure that the imported data is added to the `spy_merchant_product` table.
+
+{% endinfo_block %}
+
+### 7) Set up the Back Office products filter by merchants
+
+Overwrite `ProductManagementConfig::PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES` at the project level and add an `id-merchant` to the array:
+
+**src/Pyz/Zed/ProductManagement/ProductManagementConfig.php**
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\ProductManagement;
+
+use Spryker\Zed\ProductManagement\ProductManagementConfig as SprykerProductManagementConfig;
+
+class ProductManagementConfig extends SprykerProductManagementConfig
+{
+    /**
+     * @var list<string>
+     */
+    protected const PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES = ['id-merchant'];
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the filter by merchants is available on the `/product-management` page.
 
 {% endinfo_block %}
 

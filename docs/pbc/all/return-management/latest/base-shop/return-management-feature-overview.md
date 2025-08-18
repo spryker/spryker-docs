@@ -100,7 +100,13 @@ To define the most suitable return management process for your project, to learn
 
 Check out this video to get more details about how Return Management works:
 
-{% wistia kqxwnzjo3o 960 720 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/return-management/base-shop/return-management-feature-overview.md/Return+Management-16tp4thofv.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 ## Current constraints
 

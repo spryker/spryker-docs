@@ -128,7 +128,12 @@ A content item template defines how a content item is displayed on the Storefron
 
 For more details about navigation, check the video:
 
-{% wistia anlwttuexm 720 480 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/navigation-feature-overview.md/Navigation-anlwttuexm.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Business User documents
 

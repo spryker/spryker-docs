@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/product-feature-overview/product-feature-overview.html  
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-feature-overview/product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
+  - /docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -90,7 +91,7 @@ The abstract products contain all the information about the product. The product
 
 ## Managing product information in a third-party product information management system
 
-Besides the Back Office, you can maintain product information in an external Product Information Management (PIM) system. The data from the PIM systems can be exported to Spryker. An import interface transforms the incoming product data into a Spryker specific data structure and persists it. After that, the data is exported to Redis and Elasticsearch. This way, the Storefront can access the relevant product data very fast. After the import was finished, you can access the products in the Spryker Back Office.
+Besides the Back Office, you can maintain product information in an external Product Information Management (PIM) system. The data from the PIM systems can be exported to Spryker. An import interface transforms the incoming product data into a Spryker specific data structure and persists it. After that, the data is exported to the key-value store (Redis or Valkey) and Elasticsearch. This way, the Storefront can access the relevant product data very fast. After the import was finished, you can access the products in the Spryker Back Office.
 
 ![Product information management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product/product_information_management.png)
 
@@ -99,6 +100,13 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 - [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
 - [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
 - [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
+
+## Concrete product filter
+
+The Concrete SKU product filter lets a Back Office user filter abstract products by SKUs of concrete products.
+
+For example, an abstract product with the `ABCD` SKU has two concrete products with the `ABCD-1` and `ABCD-2` SKUs. Without this feature, you can find this abstract product only by the `ABCD` SKU. With this feature, you can find this product by the `ABCD`, `ABCD-1`, and `ABCD-2` SKUs.
+
 
 
 ## Related Business User documents

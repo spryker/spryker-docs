@@ -1044,7 +1044,7 @@ Check that the response contains all the necessary data.
 
 {% info_block warningBox "Verification" %}
 
-To verify that all the required data is provided in the access token, decode the token at [jwt.io](https://jwt.io/). The `sub` property of the payload data should contain the following:
+To verify that all the required data is provided in the access token, decode the token at `jwt.io`. The `sub` property of the payload data should contain the following:
 - `customer_reference`
 - `id_customer`
 - `id_company_user`

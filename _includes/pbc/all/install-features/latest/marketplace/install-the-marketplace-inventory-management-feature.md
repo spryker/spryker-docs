@@ -408,7 +408,7 @@ Make sure that `AvailabilityFacade::findOrCreateProductConcreteAvailabilityBySku
 
 {% endinfo_block %}
 
-### 6) Configure export to Redis
+### 6) Configure export to the key-value store (Redis or Valkey)
 
 This step publishes tables on change (create, edit) to the `spy_product_offer_availability_storage` and synchronizes the data to the storage.
 
@@ -525,7 +525,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with the Redis storage and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all product offer availability messages to sync with the key-value store (Redis or Valkey) storage and marks messages as failed in case of error. |  | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/ProductOfferAvailabilityStorage/ProductOfferAvailabilityStorageConfig.php**
 
@@ -611,8 +611,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure the following actions take place as expected:
-- The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to Redis.
-- When a product offer availability entity gets created or updated through ORM, it's exported to Redis accordingly.
+- The command `console sync:data merchant_profile` exports data from the `spy_product_offer_availability_storage` table to the key-value store (Redis or Valkey).
+- When a product offer availability entity gets created or updated through ORM, it's exported to the key-value store (Redis or Valkey) accordingly.
 
 {% endinfo_block %}
 

@@ -93,7 +93,7 @@ ACP is built to make your business more agile, secure, and scalable. By allowing
 
 <ul class="partners" data-model="list">
    <li class="partnerCard boxShadow themeReset" data-partner="Algolia" data-category="121" data-region="640">
-      <a href="/docs/pbc/all/search/202410.0/base-shop/third-party-integrations/algolia/algolia.html" class="partnerCard-link">
+      <a href="/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html" class="partnerCard-link">
          <div class="logoWrapper">
             <!--?xml version="1.0" encoding="utf-8"?-->
             <!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -492,7 +492,7 @@ ACP is built to make your business more agile, secure, and scalable. By allowing
       </a>
    </li>
    <li class="partnerCard boxShadow themeReset" data-partner="Bazaarvoice" data-category="856" data-region="640">
-      <a href="/docs/pbc/all/ratings-reviews/202410.0/third-party-integrations/bazaarvoice.html" class="partnerCard-link">
+      <a href="/docs/pbc/all/ratings-reviews/latest/third-party-integrations/bazaarvoice.html" class="partnerCard-link">
          <div class="logoWrapper">
             <!--?xml version="1.0" encoding="utf-8"?-->
             <!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -890,7 +890,7 @@ ACP is built to make your business more agile, secure, and scalable. By allowing
       </a>
    </li>
    <li class="partnerCard boxShadow themeReset" data-partner="Stripe" data-category="680" data-region="641,638,755,640">
-      <a href="/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html" class="partnerCard-link">
+      <a href="/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html" class="partnerCard-link">
          <div class="logoWrapper">
             <!--?xml version="1.0" encoding="utf-8"?-->
             <!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -1288,7 +1288,7 @@ ACP is built to make your business more agile, secure, and scalable. By allowing
       </a>
    </li>
    <li class="partnerCard boxShadow themeReset" data-partner="Payone" data-category="680" data-region="638">
-      <a href="/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app" class="partnerCard-link">
+      <a href="/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app" class="partnerCard-link">
          <div class="logoWrapper">
             <!--?xml version="1.0" encoding="utf-8"?-->
             <!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->

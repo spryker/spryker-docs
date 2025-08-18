@@ -28,5 +28,5 @@ For third party integrations, you primarily use OMS in two ways:
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
-  <div class="fl_text"><strong>Getting Started</strong> with Spryker Glue API</div>
+  <div class="fl_text"><strong>Further Reading:</strong>Setting up an Order Management System</div>
 </a>

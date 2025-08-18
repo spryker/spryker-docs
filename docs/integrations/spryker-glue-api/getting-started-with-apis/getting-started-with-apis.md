@@ -109,7 +109,6 @@ The Glue API supports standardized ways to query and manipulate data, especially
 - Sorting: Allow clients to specify the order in which results should be returned.
 - Filters: Enable clients to retrieve subsets of resources based on specific criteria.
 - Sparse Fields: Optimize response payloads by allowing clients to request only the specific data fields they need.
-- To learn more, explore: "Querying Data with Glue API: Standard Parameters (Pagination, Sorting, Filters, Sparse Fields)."
 
 For more information, see [Querying Data with GLUE Parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters).
 

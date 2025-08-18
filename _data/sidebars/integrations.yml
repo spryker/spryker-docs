@@ -93,7 +93,7 @@ entries:
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
     - title: Architectual layers
-      url: /docs/integrations/custom-building-integrations/understanding-spryker-architectual-layers.html
+      url: /docs/integrations/custom-building-integrations/understanding-spryker-client-layer.html
     - title: Data Exchange
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html
       nested:

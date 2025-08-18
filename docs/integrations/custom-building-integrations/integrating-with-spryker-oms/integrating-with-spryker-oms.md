@@ -7,9 +7,9 @@ template: default
 
 ---
 
-OMS (Order Management System) in Spryker is a built-in workflow engine that manages the lifecycle of an order - from placement to delivery. It defines each step (for example payment, shipping, cancellation) as part of a process, with clear transitions and conditions.
+Order Management System (OMS) in Spryker is a built-in workflow engine that manages the lifecycle of an order - from placement to delivery. It defines each step (for example payment, shipping, cancellation) as part of a process, with clear transitions and conditions.
 
-For third party integrations, you primarily use OMS in two ways:
+For third-party integrations, you can primarily use OMS for event-driven and API-driven integrations.
 
 ## Event-driven integration (OMS as the source)
 
@@ -22,11 +22,6 @@ For third party integrations, you primarily use OMS in two ways:
 - This allows external systems (for example a Warehouse Management System, a Call Center application) to update the order status or trigger actions within Spryker's OMS.
 - You can also extend the OMS process with custom states and transitions specifically designed for your 3rd party's workflow.
 
-## Setting up an OMS
+## Further reading
 
-<a class="fl_cont" href="/docs/integrations/custom_building_integrations/data_exchange/integrating_with_spryker_oms/set-up-an-order-management-system.html">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text"><strong>Further Reading:</strong>Setting up an Order Management System</div>
-</a>
+[Setting up an Order Management System](/docs/dg/dev/backend-development/data-manipulation/set-up-an-order-management-system.html)

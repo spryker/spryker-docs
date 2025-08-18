@@ -110,7 +110,7 @@ The Glue API supports standardized ways to query and manipulate data, especially
 - Filters: Enable clients to retrieve subsets of resources based on specific criteria.
 - Sparse Fields: Optimize response payloads by allowing clients to request only the specific data fields they need.
 
-For more information, see [Querying Data with GLUE Parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters).
+For more information, see [Querying data with GLUE parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters).
 
 ---
 

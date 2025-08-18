@@ -47,14 +47,14 @@ At their core, integrations follow these design principles:
     <div class="cst_card_image"><img src="/images/integrations/int_custom_build.png" alt="Icon for Spryker Custom Building Integrations"></div>
     <div class="cst_card_title">Custom build</div>
     <div class="cst_card_desc">For more tailored or business specific needs, you can build custom integrations directly in your project code.</div>
-    <a class="cst_card_button" href="custom_building_integrations/custom-build-integrations-with-spryker"> Find out more </a>
+    <a class="cst_card_button" href="custom-building-integrations/custom-build-integrations-with-spryker"> Find out more </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_api.png" alt="Icon for Spryker GLUE APIs"></div>
     <div class="cst_card_title">Spryker APIs</div>
     <div class="cst_card_desc">Spryker APIs—primarily the Glue API—provide a RESTful interface for interacting with the Spryker Commerce OS. They enable external systems, services, and frontend applications to communicate with Spryker in a structured, secure way.</div>
-    <a class="cst_card_button" href="spryker_glue_api/getting_started_with_spryker_apis/getting-started-with-spryker-api"> Find out more </a>
+    <a class="cst_card_button" href="spryker-glue-api/getting-started-with-apis/getting-started-with-apis"> Find out more </a>
   </div>
 
   <div class="cst_card">

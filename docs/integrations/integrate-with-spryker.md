@@ -33,35 +33,35 @@ At their core, integrations follow these design principles:
     <div class="cst_card_image"><img src="/images/integrations/int_eco.png" alt="Icon for Spryker Eco Modules"></div>
     <div class="cst_card_title">ECO modules</div>
     <div class="cst_card_desc">Spryker Eco Modules are prebuilt, reusable integration packages that connect Spryker with popular third-party services and tools. They help teams save development time and ensure reliable integrations.</div>
-    <a class="cst_card_button" href="what_are_spryker_eco_modules"> Find out more </a>
+    <a class="cst_card_button" href="eco-modules"> Find out more </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_acp.png" alt="Icon for Spryker App Composition Platform"></div>
     <div class="cst_card_title">Spryker ACP</div>
     <div class="cst_card_desc">The Spryker App Composition Platform is a low code, cloud native solution that enables seamless integration of third-party applications into your Spryker project. </div>
-    <a class="cst_card_button" href="about_spryker_acp_apps"> Find out more </a>
+    <a class="cst_card_button" href="app-composition-platform-apps"> Find out more </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_custom_build.png" alt="Icon for Spryker Custom Building Integrations"></div>
     <div class="cst_card_title">Custom build</div>
     <div class="cst_card_desc">For more tailored or business specific needs, you can build custom integrations directly in your project code.</div>
-    <a class="cst_card_button" href="custom_building_integrations/custom_build_integrations_with_spryker"> Find out more </a>
+    <a class="cst_card_button" href="custom_building_integrations/custom-build-integrations-with-spryker"> Find out more </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_api.png" alt="Icon for Spryker GLUE APIs"></div>
     <div class="cst_card_title">Spryker APIs</div>
     <div class="cst_card_desc">Spryker APIs—primarily the Glue API—provide a RESTful interface for interacting with the Spryker Commerce OS. They enable external systems, services, and frontend applications to communicate with Spryker in a structured, secure way.</div>
-    <a class="cst_card_button" href="spryker_glue_api/getting_started_with_spryker_apis/getting_started_with_spryker_api"> Find out more </a>
+    <a class="cst_card_button" href="spryker_glue_api/getting_started_with_spryker_apis/getting-started-with-spryker-api"> Find out more </a>
   </div>
 
   <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_community_contributions.png" alt="Icon for Spryker Community Contributions"></div>
     <div class="cst_card_title">Community contributions</div>
     <div class="cst_card_desc">Spryker has an active developer community that contributes to the ecosystem by sharing modules, integrations, and improvements.</div>
-    <a class="cst_card_button" href="community_contributions"> Find out more </a>
+    <a class="cst_card_button" href="community-contributions"> Find out more </a>
   </div>
  </div>
 

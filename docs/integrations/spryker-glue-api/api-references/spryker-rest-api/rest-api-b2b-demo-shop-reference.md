@@ -7,7 +7,7 @@ last_updated: '2025-07-07'
 template: glue-api-storefront-guide-template
 related:
 - title: Reference information- GlueApplication errors
-  link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
+  link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
 redirect_from: null
 
 ---

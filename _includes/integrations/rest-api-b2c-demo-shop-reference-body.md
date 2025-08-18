@@ -2,7 +2,7 @@
 
 {% info_block warningBox %}
 
-This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html)
+This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/latest/decoupled-glue-api.html)
 
 {% endinfo_block %}
 

@@ -2,7 +2,7 @@ Glue API lets you validate requests sent to REST endpoints. It lets you check wh
 
 ## Install the `RestRequestValidation` module
 
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-rest-schema-validation-glue-api.html).
 
 ## Use default validation schema
 
@@ -135,7 +135,7 @@ See the following example:
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```
 
-For validation, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
+For validation, you can use a [Spryk](/docs/dg/dev/glue-api/latest/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources

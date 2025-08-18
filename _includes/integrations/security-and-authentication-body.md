@@ -19,4 +19,4 @@ Authentication workflow:
 
 The API can secure each endpoint individually. For this purpose, API has scopes. A scope defines, what resources specifically users can access.
 Follow the [Authorization scopes integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html) guide and check
-[how to use Glue API authorization scopes.](/docs/dg/dev/glue-api/{{page.version}}/use-glue-api-authorization-scopes.html)
+[how to use Glue API authorization scopes.](/docs/dg/dev/glue-api/latest/use-glue-api-authorization-scopes.html)

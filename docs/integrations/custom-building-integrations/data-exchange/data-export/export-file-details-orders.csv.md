@@ -1,5 +1,5 @@
 ---
-title: Export File Details Using Orders.Csv
+title: Export file details using Orders.Csv
 description: The document explains the format of the orders.csv, order-items.csv,
   order-expenses.csv export files for Spryker Order Management System
 last_updated: July 9, 2025

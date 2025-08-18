@@ -1,5 +1,5 @@
 ---
-title: Orders Data Export
+title: Orders data export
 description: This document shows how to export data from a Spryker shop to an external
   system for your third party integrations
 last_updated: July 9, 2025

@@ -1,5 +1,5 @@
 ---
-title: Spryker Data Exchange
+title: Data Exchange
 description: Comprehensive guide on Spryker's data exchange methods, including APIs, middleware, and integrations for seamless e-commerce platform connectivity.
 last_updated: July 9, 2025
 template: default

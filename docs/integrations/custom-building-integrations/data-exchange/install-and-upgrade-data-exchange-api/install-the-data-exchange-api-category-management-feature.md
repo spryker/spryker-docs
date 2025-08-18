@@ -1,5 +1,5 @@
 ---
-title: Install The Data Exchange Api + Category Management Feature
+title: Install the Data Exchange Api + Category Management feature
 description: Learn how to integrate the Data Exchange API with Category Management
   features to enhance data handling and streamline project workflows.
 last_updated: July 9, 2025

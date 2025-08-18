@@ -1,5 +1,5 @@
 ---
-title: Install The Data Exchange Api + Inventory Management Feature
+title: Install the Data Exchange Api + Inventory Management feature
 description: Learn how to integrate the Data Exchange API and Inventory Management
   features into your project for seamless data handling and inventory tracking.
 last_updated: July 9, 2025

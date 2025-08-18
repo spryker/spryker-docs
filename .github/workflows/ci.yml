@@ -171,7 +171,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_dg
+      - run: bundle exec rake check_integrations
 
   page_validation:
     name: Page validation

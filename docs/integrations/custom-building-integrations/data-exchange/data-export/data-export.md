@@ -13,19 +13,9 @@ Example workflow:
 2. Set up a Jenkins job to run the export process at regular intervals.
 3. Extend the existing export command or create a custom one to send the exported data to its destination.
 
-For installation and configuration, refer to:
+For installation and configuration, see the following docs:
 
-<a class="fl_cont" href="/docs/integrations/custom_building_integrations/data_exchange/data_export/install_the_sales_data_export_feature.html">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text">How to install</div>
-</a>
+- [How to install](/docs/integrations/custom-building-integrations/data-exchange/data-export/install-the-sales-data-export-feature.html)
+- [Order usage example](/docs/integrations/custom-building-integrations/data-exchange/data-export/orders-data-export.html)  
 
-<a class="fl_cont" href="/docs/integrations/custom_building_integrations/data_exchange/data_export/orders_data_export.html">
-  <div class="fl_icon">
-    <i class="icon-article"></i>
-  </div>
-  <div class="fl_text">Order usage example</div>
-</a>
 

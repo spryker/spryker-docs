@@ -12,7 +12,7 @@ template: default
 
 Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You can configure it to restrict access to sensitive endpoints or entire services.
 
-<a class="fl_cont" href="/docs/scos/dev/howtos/htaccess-authentication.html">
+<a class="fl_cont" href="/docs/pbc/all/identity-access-management/latest/configure-basic-htaccess-authentication.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
@@ -24,7 +24,7 @@ Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You c
 
 Spryker allows you to set up IP allowlists at the web server (for example Nginx) or infrastructure level (for example AWS Security Groups, Cloudflare rules) to limit access to known, trusted sources.
 
-<a class="fl_cont" href="/docs/scos/dev/operations/maintenance-mode.html">
+<a class="fl_cont" href="/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
@@ -43,7 +43,7 @@ While not specific to Spryker, it is recommended (and often defaulted via infras
 
 Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for better control and traceability. Glue APIs can be extended to support token-based schemes.
 
-<a class="fl_cont" href="/docs/pbc/all/api-management/glue-api/glue-api-authentication-and-authorization.html">
+<a class="fl_cont" href="/docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
@@ -60,14 +60,14 @@ Apply the principle of least privilege: expose only the endpoints and data requi
 - Log all API access errors with details (timestamp, IP, headers, payload).
 - Monitor unusual patterns and set up alerts for suspicious behavior.
 
-<a class="fl_cont" href="/docs/scos/dev/operations/monitoring/new-relic.html">
+<a class="fl_cont" href="/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>
   <div class="fl_text"><strong>Further Reading:</strong> New Relic transactions grouping by queue names</div>
 </a>
 
-<a class="fl_cont" href="/docs/scos/dev/operations/monitoring/open-telemetry.html">
+<a class="fl_cont" href="/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>

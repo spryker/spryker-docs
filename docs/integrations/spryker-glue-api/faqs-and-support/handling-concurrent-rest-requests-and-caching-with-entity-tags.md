@@ -9,7 +9,7 @@ originalArticleId: cad91b14-3390-44bb-8e8e-4c6b72926dcc
 redirect_from: null
 related:
 - title: Glue Infrastructure
-  link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
+  link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 - title: Shared Cart feature overview
   link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
 

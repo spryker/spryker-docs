@@ -15,7 +15,7 @@ It supports different types of APIs tailored for specific use cases, including S
 
 exposes all core Spryker functionalities to external services and third-party applications, making it a flexible foundation for system integration.
 
-<a class="fl_cont" href="/docs/integrations/spryker_glue_api/getting_started_with_spryker_apis/getting_started_with_spryker_api.html">
+<a class="fl_cont" href="/docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>

@@ -107,7 +107,7 @@ The default request and response data format are CamelCase, to apply a snake_cas
 
 {% endinfo_block %}
 
-See also [Create and change Glue API conventions](/docs/dg/dev/glue-api/{{page.version}}/create-and-change-glue-api-conventions.html) guide.
+See also [Create and change Glue API conventions](/docs/dg/dev/glue-api/latest/create-and-change-glue-api-conventions.html) guide.
 
 4. Declare the resource:
 

@@ -3,7 +3,7 @@ When developing REST APIs, you might need to change the data contracts of API re
 {% info_block infoBox %}
 
 Default Spryker resources don't have versions. When developing resources, only new resources or attributes are added without removing anything, which ensures backward compatibility for all clients.
-If necessary, you can implement versioning for built-in resources as well as [extend](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/extend-a-rest-api-resource.html) the corresponding resource module on the project level.
+If necessary, you can implement versioning for built-in resources as well as [extend](/docs/dg/dev/glue-api/latest/glue-api-tutorials/extend-a-rest-api-resource.html) the corresponding resource module on the project level.
 
 {% endinfo_block %}
 
@@ -15,7 +15,7 @@ To add versioning to a resource, the route plugin of the `resource` module needs
 
 {% info_block infoBox %}
 
-For more information on route plugins, see [Resource routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html#resource-routing).
+For more information on route plugins, see [Resource routing](/docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

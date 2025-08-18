@@ -10,7 +10,7 @@ originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
 redirect_from: null
 related:
 - title: Reference information- GlueApplication errors
-  link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
+  link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
 
 ---
 

@@ -178,6 +178,20 @@ task :check_pbc do
   run_htmlproofer_with_retry("./_site", options)
 end
 
+task :check_integrations do
+  options = commonOptions.dup
+  options[:ignore_files] = [
+    /docs\/ca\/.+/,
+    /docs\/acp\/.+/,
+    /docs\/scos\/dev\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/pbc\/.+/,
+    /docs\/integrations\/.+/,
+    /docs\/dg\/.+/
+  ]
+  run_htmlproofer_with_retry("./_site", options)
+end
+
 
 task :check_dg do
   options = commonOptions.dup

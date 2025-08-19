@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/psp.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payment-service-provider-integrations.html
+  - /docs/pbc/all/payment-service-provider/latest/payment-service-provider.html
 ---
 
 The *Payment Service Provider* PBC enables different kinds of payment methods, like credit cards of gift cards, to be used by customers. You can configure multiple payment methods to be available in your shop. The variety of third-party payment solutions let you find the best payment methods for your business requirements.

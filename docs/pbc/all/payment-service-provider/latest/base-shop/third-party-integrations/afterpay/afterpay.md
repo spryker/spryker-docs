@@ -8,6 +8,7 @@ originalArticleId: 3ed914a1-aa6a-472e-b213-f5e60058cbb1
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/afterpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/afterpay/afterpay.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html
 related:
   - title: Afterpay - Installation and Configuration
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/afterpay/install-and-configure-afterpay.html

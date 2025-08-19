@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/email-invoices-using-bcc.html
 ---
 title: Email invoices using BCC
 description: This document provides detailed instructions on emailing invoices using BCC.
@@ -15,6 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-emailing-invoices-using-bcc
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-email-invoices-using-bcc.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/email-invoices-using-bcc.html
 related:
   - title: Invoice Generation overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/invoice-generation-overview.html

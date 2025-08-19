@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/comment-orders.html
 ---
 title: Comment orders
 description: Learn how to add a comment to orders in the Spryker Cloud Commerce OS Back Office
@@ -7,6 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/commenting-orders.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/commenting-orders.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/comment-orders.html
 related:
   - title: Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html

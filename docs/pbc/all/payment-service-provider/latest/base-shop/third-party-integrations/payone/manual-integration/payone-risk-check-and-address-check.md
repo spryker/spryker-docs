@@ -8,6 +8,7 @@ originalArticleId: 38b985f4-811e-4e38-8f43-c7863cb5add2
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-risk-check-and-address-check.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-risk-check-and-address-check.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/manual-integration/payone-risk-check-and-address-check.html
 ---
 
 On the project level, you should override execute and postCondition methods of `SprykerShop\Yves\CheckoutPage\Process\Steps\AddressStep`.

@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/disable-split-delivery-on-the-storefront.html
 ---
 title: Disable split delivery on the Storefront
 description: Use the guide to learn how to disable Split Delivery during checkout in your project.
@@ -19,6 +18,7 @@ redirect_from:
   - /v4/docs/en/ht-disable-split-delivery-in-yves-interface
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/disable-split-delivery-on-the-storefront.html
 related:
   - title: Split Delivery overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/split-delivery-overview.html

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/install-and-configure-unzer.html
 related:
 - title: Integrate Unzer
   link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html

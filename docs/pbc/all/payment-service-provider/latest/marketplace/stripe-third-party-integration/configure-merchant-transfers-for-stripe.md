@@ -4,6 +4,7 @@ description: Learn how to configure merchant transfers with Stripe for your Spry
 last_updated: Aug 20, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html
 ---
 
 The terms *Payout* and *Reverse Payout* refer to transferring money from the Marketplace to the Merchant and reversing the transfer respectively.

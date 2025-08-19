@@ -4,6 +4,7 @@ description: How to integrate RatePay payment methods
 last_updated: Jan 12, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-payment-methods-for-ratepay.html
 ---
 
 This section explains how to integrate the following payment methods with RatePay:

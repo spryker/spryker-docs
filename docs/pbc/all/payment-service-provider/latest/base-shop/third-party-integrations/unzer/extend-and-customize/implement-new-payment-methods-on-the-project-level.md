@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
 ---
 
 This document shows how to implement Unzer payment types, which are not currently available in the Unzer Eco module. This document uses Unzer PayPal as an example.

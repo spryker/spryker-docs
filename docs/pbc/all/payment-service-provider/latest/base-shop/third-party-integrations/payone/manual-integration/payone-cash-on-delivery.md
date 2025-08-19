@@ -8,6 +8,7 @@ originalArticleId: e68a44fe-8cfe-4199-a3d0-537c04107688
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-cash-on-delivery.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/manual-integration/payone-cash-on-delivery.html
 ---
 
 ## Frontend Integration: Extending Checkout Page

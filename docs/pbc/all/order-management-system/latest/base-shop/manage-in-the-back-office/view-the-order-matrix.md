@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/view-the-order-matrix.html
 ---
 title: View the order matrix
 description: The guide provides reference information you see when working with the ordered items in the Back Office.
@@ -16,6 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202311.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/view-the-order-matrix.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/view-the-order-matrix.html
 related:
   - title: Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html

@@ -4,6 +4,7 @@ description: Learn how to implement Stripe using ACP
 last_updated: Nov 8, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 related:
    - title: Stripe
      link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html

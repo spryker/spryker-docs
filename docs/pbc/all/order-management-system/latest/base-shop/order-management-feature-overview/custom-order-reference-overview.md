@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 ---
 title: Custom Order Reference overview
 description: An overview of Sprykers Custom Order Reference feature to help companies manage their orders using their own custom reference.
@@ -13,6 +12,7 @@ redirect_from:
   - /docs/en/custom-order-reference-overview
   - /docs/scos/user/features/202311.0/order-management-feature-overview/custom-order-reference-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/custom-order-reference-overview.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 ---
 
 *Custom Order Reference* helps you control purchases and link the internal orders to external systems from your company using your external order reference. With the feature in place, you can add a custom order reference, such as an invoice, to the order on Yves.

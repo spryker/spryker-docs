@@ -8,6 +8,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/unzer.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/whats-changed-in-unzer.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/unzer.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html
 ---
 
 [Unzer](https://www.unzer.com) is specialized in the European market and its currencies. You need a business located in Europe to be able to use Unzer services.

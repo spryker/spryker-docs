@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
 ---
 title: Change the state of order items in reclamations
 description: Learn how to change the state of order items in reclamations in the Back Office.
@@ -7,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
 related:
   - title: Creating reclamations
     link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html

@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html
 ---
 title: "Import file details: merchant_oms_process.csv"
 last_updated: Jun 07, 2021
@@ -6,6 +5,7 @@ description: This document describes the merchant_oms_process.csv file to config
 template: import-file-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/file-details-merchant_oms_process.csv.html
+  - /docs/pbc/all/order-management-system/latest/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html
 related:
   - title: Merchant Oms
     link: docs/pbc/all/order-management-system/page.version/marketplace/merchant-oms.html

@@ -4,6 +4,7 @@ description: Learn about Stripe technology partner for running in a Spryker Mark
 last_updated: August 8, 2024
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.

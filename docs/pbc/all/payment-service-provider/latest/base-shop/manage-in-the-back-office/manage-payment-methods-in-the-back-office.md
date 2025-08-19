@@ -4,6 +4,7 @@ description: Learn how to manage payment methods in the Spryker Cloud Commerce O
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/manage-payment-methods-in-the-back-office.html
 ---
 
 This section contains guides on managing payment methods in the Back Office:

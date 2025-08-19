@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
   - /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-standard-credentails.html
 ---
 
 This document shows how to add Unzer standard credentials.

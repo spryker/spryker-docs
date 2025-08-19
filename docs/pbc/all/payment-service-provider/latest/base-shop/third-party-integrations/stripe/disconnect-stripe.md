@@ -4,6 +4,7 @@ description: Learn how to disconnect Stripe in the Back Office using Spryker App
 last_updated: Mar 24, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/disconnect-stripe.html
 ---
 
 This document describes how to disconnect Stripe from your store.

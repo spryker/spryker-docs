@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/migration-guide-payment.html
   - /docs/pbc/all/payment-service-provider/202311.0/install-and-upgrade/upgrade-the-payment-module.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-payment-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-payment-module.md -->

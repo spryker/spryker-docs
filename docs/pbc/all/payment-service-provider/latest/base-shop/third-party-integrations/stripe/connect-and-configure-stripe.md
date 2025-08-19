@@ -8,6 +8,7 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/disconnect-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
+- /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
 ---
 
 This document describes how to connect and configure the Stripe app in the Back Office.

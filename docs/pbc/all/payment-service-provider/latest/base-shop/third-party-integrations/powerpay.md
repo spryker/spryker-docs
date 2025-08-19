@@ -7,6 +7,7 @@ redirect_from:
 originalLink: https://documentation.spryker.com/2021080/docs/powerpay
 originalArticleId: f6d0bdfc-6145-4e9f-b2b6-51509e16713c
   - /docs/scos/user/technology-partners/202311.0/payment-partners/powerpay.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/powerpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/powerpay.html
 ---
 

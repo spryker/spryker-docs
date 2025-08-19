@@ -4,6 +4,7 @@ description: Overview of the Stripe integration for Spryker Marketplace based pr
 last_updated: August 8, 2024
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-for-marketplace-overview.html
 ---
 
 This document describes how Stripe marketplace payments and merchant payouts are administered and managed.

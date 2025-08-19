@@ -4,6 +4,7 @@ description: Guidelines on the Spryker Ordermanagement system and Stripe integra
 last_updated: Aug 20, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html
 ---
 
 This document provides guidelines for projects using Stripe in marketplaces.

@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/nitrobox.html
 ---
 title: Nitrobox
 description: Integrate Nitrobox to model, automate and API control customer financial processes.
@@ -12,6 +11,7 @@ redirect_from:
   - /docs/nitrobox
   - /docs/en/nitrobox
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/nitrobox.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/nitrobox.html
 ---
 
 ## Partner Information

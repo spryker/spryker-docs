@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/splittable-order-items-overview.html
 ---
 title: Splittable Order Items overview
 description: Product concretes are splittable. Avoid the creation of numerous sales order items, make them non-splittable (no many sales orders, only one will be created).
@@ -14,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/order-management-feature-overview/splittable-order-items-overview.html
   - /docs/scos/user/features/202311.0/order-management-feature-overview/splittable-order-items-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/splittable-order-items-overview.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/splittable-order-items-overview.html
 ---
 
 As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittable. For example, if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid the creation of numerous individual sales order items for such products, you can make them non-splittable; that is, instead of many sales orders, just one will be created. This can be achieved by specifying either `true` or `false` value for `is_quantity_splittable` field in the product table. The `is_quantity_splittable` attribute (`true` by default) controls how many sales order items are created as a result of checkout.

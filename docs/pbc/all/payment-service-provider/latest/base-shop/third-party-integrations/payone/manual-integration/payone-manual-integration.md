@@ -8,6 +8,7 @@ originalArticleId: ffd53037-46a0-410e-941c-eb9cd4c3ff22
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/bs-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/payone-manual-integration.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
 ---
 
 ## Partner Information

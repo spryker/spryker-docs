@@ -1,5 +1,5 @@
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
 ---
-title: Unzer domain model and relationships
 last_updated: Jun 22, 2022
 description: This document describes domain model & relationships for Unzer in your Spryker based Projects.
 template: concept-topic-template
@@ -7,6 +7,7 @@ redirect_from:
   - /docs/pbc/all/payment/unzer/domain-model-and-relationships.html
   - /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/unzer-domain-model-and-relationships.html
+  title: Unzer domain model and relationships
 ---
 
 Every Sales Order is connected to a payment type (the payment method selected by the customer in the checkout process). You can capture as many times as you wish by your OMS state machine.

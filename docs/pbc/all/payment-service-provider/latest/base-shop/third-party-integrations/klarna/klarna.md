@@ -8,6 +8,7 @@ originalArticleId: 19d4dba2-c122-4a37-8170-e8ad49b71821
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/klarna.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna.html
 related:
   - title: Klarna payment workflow
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html

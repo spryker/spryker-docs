@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/collectai.html
 ---
 title: CollectAI
 description: Integrate Collect AI into Spryker Commerce OS  to have digitized, AI-based payments and collection services to manage account receivables.
@@ -12,6 +11,7 @@ redirect_from:
   - /docs/collect-ai
   - /docs/en/collect-ai
   - /docs/scos/user/technology-partners/202200.0/finance-and-accounting/collectai.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/collectai.html
 ---
 
 ## Partner Information

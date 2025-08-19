@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
 title: Split Delivery overview
 description: The feature lets you deliver order items to different shipping addresses and on different days, with different shipment methods.
@@ -13,6 +12,7 @@ redirect_from:
   - /docs/en/split-delivery-overview
   - /docs/scos/user/features/202311.0/order-management-feature-overview/split-delivery-overview.html
   - /docs/scos/user/features/202204.0/order-management-feature-overview/split-delivery-overview.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/split-delivery-overview.html
 ---
 
 *Split Delivery* enables the same order as *shipments* to multiple delivery addresses, or on different dates, or with different shipment methods. A *shipment* is a set of two or more products combined by the same delivery address.

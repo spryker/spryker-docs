@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
 title: Reclamations feature overview
 description: With the reclamations in place, you can do three things- create a new connected order, return money paid for the order, or close the reclamation.
@@ -13,6 +12,7 @@ redirect_from:
   - /docs/en/reclamations-feature-overview
   - /docs/scos/user/features/202311.0/reclamations-feature-overview.html
   - /docs/scos/user/features/202204.0/reclamations-feature-overview.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
 
 Handling order claims are the reality of doing business for most ecommerce sites. A customer might have bought an item and then discovered that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed.

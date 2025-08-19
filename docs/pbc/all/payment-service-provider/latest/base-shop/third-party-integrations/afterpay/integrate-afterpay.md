@@ -11,6 +11,7 @@ redirect_from:
 - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/afterpay/integrating-afterpay.html
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/afterpay/integrate-afterpay.html
 - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/afterpay/integrating-afterpay.html
+- /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/integrate-afterpay.html
 ---
 
 To integrate AfterPay, do the following:

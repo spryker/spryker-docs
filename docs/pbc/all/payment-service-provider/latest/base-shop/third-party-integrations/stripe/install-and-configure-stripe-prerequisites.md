@@ -8,6 +8,7 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
+- /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
 ---
 
 To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.

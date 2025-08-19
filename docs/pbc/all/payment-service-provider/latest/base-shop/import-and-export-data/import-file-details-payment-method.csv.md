@@ -15,6 +15,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/import-and-export-data/import-file-details-payment-method.csv.html
   - /docs/pbc/all/payment-service-provider/202311.0/import-and-export-data/file-details-payment-method.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-payment-method.csv.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html

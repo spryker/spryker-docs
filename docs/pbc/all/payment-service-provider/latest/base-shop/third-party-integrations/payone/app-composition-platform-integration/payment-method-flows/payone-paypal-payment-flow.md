@@ -3,6 +3,7 @@ title: Payone PayPal payment flow
 description: Payone offers your customers to pay with PayPal.
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html
 last_updated: Nov 8, 2024
 related:
   - title: PayOne Credit Card payment flow

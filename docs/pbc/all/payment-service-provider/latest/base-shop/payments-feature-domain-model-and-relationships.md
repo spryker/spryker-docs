@@ -9,6 +9,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/payments-feature-domain-model-and-relationships.html
   - /docs/pbc/all/payment-service-provider/202311.0/payments-feature-domain-model-and-relationships.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/payments-feature-walkthrough.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-domain-model-and-relationships.html
 ---
 
 The *Payments* feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.

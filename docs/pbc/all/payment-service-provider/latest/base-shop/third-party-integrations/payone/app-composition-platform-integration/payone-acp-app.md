@@ -9,6 +9,7 @@ redirect_from:
    - /docs/pbc/all/payment-service-providers/payone/payone.html
    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
    - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+   - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html
 ---
 
 [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment, and Klarna.

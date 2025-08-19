@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/nekom-cc-gmbh.html
 ---
 title: NEKOM CC GmbH
 description: learn all about Spryker partner, NEKOM. Learn how this provider for ECommerce services and multichannel processes can be integrated into your project.
@@ -12,6 +11,7 @@ redirect_from:
   - /docs/nekom
   - /docs/en/nekom
   - /docs/scos/user/technology-partners/202311.0/order-management-erpoms/nekom-cc-gmbh.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/nekom-cc-gmbh.html
 ---
 
 ## Partner Information

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/pbc/all/payment-service-provider/202311.0/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
 ---
 
 This tutorial shows how to invoke third parties in the API payment process.

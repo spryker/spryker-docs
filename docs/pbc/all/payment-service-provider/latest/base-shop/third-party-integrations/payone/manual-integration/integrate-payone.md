@@ -8,6 +8,7 @@ originalArticleId: a86017aa-d5ce-44cf-b568-6cda73261766
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/bs-payone/scos-integration/payone-integration-into-the-scos-project.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/manual-integration/integrate-payone.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/manual-integration/integrate-payone.html
 ---
 
 {% info_block errorBox %}

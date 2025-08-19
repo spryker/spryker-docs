@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html

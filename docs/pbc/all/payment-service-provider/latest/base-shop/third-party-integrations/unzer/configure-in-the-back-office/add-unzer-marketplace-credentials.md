@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-marketplace-credentials.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/configure-in-the-back-office/add-unzer-marketplace-credentials.html
 ---
 
 This document shows how to add Unzer marketplace credentials.

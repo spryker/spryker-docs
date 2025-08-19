@@ -4,6 +4,7 @@ description: Find out how you can connect and configure the Stripe app for your 
 last_updated: June 31, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html
 ---
 
 This document describes how to connect and configure the Stripe app in the Back Office.

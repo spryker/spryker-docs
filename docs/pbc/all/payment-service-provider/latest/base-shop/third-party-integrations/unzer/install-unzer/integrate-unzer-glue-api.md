@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer-glue-api.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/install-unzer/integrate-unzer-glue-api.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer-glue-api.html
 ---
 
 This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html) Glue API into a Spryker project.

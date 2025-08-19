@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/billie
   - /docs/scos/user/technology-partners/202311.0/payment-partners/billie.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billie.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billie.html
 ---
 
 ## Partner Information

@@ -8,6 +8,7 @@ originalArticleId: baf8a048-9b5c-4c45-aaab-c3093f42bc36
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/arvato.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html

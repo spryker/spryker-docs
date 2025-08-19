@@ -8,6 +8,7 @@ originalArticleId: 76f600d9-1b7f-4a0a-81e6-4c2dc466063c
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html

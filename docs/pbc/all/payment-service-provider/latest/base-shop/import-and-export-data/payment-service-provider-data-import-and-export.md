@@ -4,6 +4,7 @@ description: Learn how data import works and the different ways of importing dat
 last_updated: Jun 23, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/payment-service-provider-data-import-and-export.html
 ---
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Payment Service Provider PBC:
 

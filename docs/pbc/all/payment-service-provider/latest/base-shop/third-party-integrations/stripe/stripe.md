@@ -4,6 +4,7 @@ description: Learn all about Sprykers Technology partner, Stripe. Enabling and E
 last_updated: Oct 10, 2024
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.
@@ -55,34 +56,3 @@ Using the browser back button at Stripe's hosted payment page may lead to issues
 ## Next step
 
 [Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

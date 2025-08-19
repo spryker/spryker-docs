@@ -1,4 +1,3 @@
-  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
 ---
 title: Edit billing addresses in orders
 description: Learn how to edit order billing addresses in the Spryker Cloud Commerce OS Back Office
@@ -7,6 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/editing-billing-addresses-in-orders.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/editing-billing-addresses-in-orders.html
+  - /docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
 related:
   - title: Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html

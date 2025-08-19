@@ -4,6 +4,7 @@ description: Learn how to prepare your Marketplace project for Stripe
 last_updated: Nov 1, 2024
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html
 ---
 
 To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.

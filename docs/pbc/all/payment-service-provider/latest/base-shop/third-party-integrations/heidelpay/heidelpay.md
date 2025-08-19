@@ -8,6 +8,7 @@ originalArticleId: 92607b28-3e51-4b0a-a41f-12bc9852b1cb
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/heidelpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/heidelpay/heidelpay.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay.html
 ---
 
 ## Partner Information

@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
 ---
 
 Depending on your Unzer credentials type defined in the Back Office, the display of the payment method follows a specific logic.

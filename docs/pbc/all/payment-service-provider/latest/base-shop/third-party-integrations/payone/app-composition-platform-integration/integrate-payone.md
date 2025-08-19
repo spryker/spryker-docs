@@ -7,6 +7,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html
 ---
 
 This document describes how to integrate Payone using the Payone app.

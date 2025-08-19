@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/integrating-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/integrate-computop.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-computop.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-computop.html
 ---
 
 {% info_block errorBox %}

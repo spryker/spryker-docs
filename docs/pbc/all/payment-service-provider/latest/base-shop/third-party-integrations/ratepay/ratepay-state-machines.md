@@ -7,6 +7,7 @@ redirect_from:
 - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/ratepay/ratepay-state-machines.html
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-state-machines.html
 - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-state-machines.html
+- /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machines.html
 ---
 
 We use state machines for handling and managing orders and payments. To integrate RatePAY payments, a state machine for RatePAY should be created.

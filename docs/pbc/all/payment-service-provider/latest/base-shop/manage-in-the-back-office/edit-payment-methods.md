@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/administration/payment-methods/edit-payment-methods.html
   - /docs/pbc/all/payment-service-provider/202311.0/manage-in-the-back-office/edit-payment-methods.html  
   - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/edit-payment-methods.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html
 related:
   - title: Payments feature overview
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html

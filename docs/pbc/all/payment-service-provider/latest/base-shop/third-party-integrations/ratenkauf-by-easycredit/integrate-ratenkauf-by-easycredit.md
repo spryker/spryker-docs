@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+  - /docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
 related:
   - title: ratenkauf by easyCredit
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html

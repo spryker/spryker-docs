@@ -44,7 +44,7 @@
             if (input && !input.hasEnterListener) {
                 input.addEventListener('keydown', function(event) {
                     if (event.key === 'Enter' || event.keyCode === 13) {
-                        window.location.href = '/oryx-search.html?q=' + encodeURIComponent(event.target.value);
+                        window.location.href = '/search.html?q=' + encodeURIComponent(event.target.value);
                     }
                 });
                 input.hasEnterListener = true;

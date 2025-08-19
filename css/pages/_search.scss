@@ -7,14 +7,20 @@
     max-width: 800px;
     width: 90%;
     box-sizing: border-box;
+    flex-grow: 1;
 }
 
 .full-text-search h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     font-size: 2rem;
     font-weight: 600;
     color: #333;
+}
+
+.full-text-search small {
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .full-text-search #searchbox {
@@ -55,4 +61,8 @@
 .full-text-search #hits .header {
     font-weight: bold;
     font-size: 1rem;
+}
+
+.full-text-search mark {
+    background: #FEF7C8;
 }

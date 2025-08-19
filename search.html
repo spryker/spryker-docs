@@ -3,11 +3,12 @@ product-type: none
 search: exclude
 layout: default
 title: Search
-permalink: /oryx-search.html
+permalink: /search.html
 ---
 
 <div class="full-text-search">
-    <h1>Oryx Search</h1>
+    <h1>Search</h1>
+    <small>This search scans the full content of every article—including tutorials, how-to guides, and documentation pages—so you can find relevant information even if your keywords appear deep inside the text.</small>
     <div id="searchbox"></div>
     <div id="hits"></div>
     <div id="pagination"></div>
@@ -41,7 +42,7 @@ permalink: /oryx-search.html
     search.addWidgets([
         instantsearch.widgets.searchBox({
             container: '#searchbox',
-            placeholder: 'Enter search query...',
+            placeholder: 'Full Article Search',
             searchAsYouType: true,
             autofocus: true,
         }),

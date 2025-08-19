@@ -241,11 +241,11 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 </table>
 ```
 
-### Environment limitations related to DMS
+### Environment limitations related to Dynamic Multi-Store
 
-Dynamic Multi-Store (DMS) is now a prerequisite for the Direct Sync feature. The synchronization process has been optimized to work exclusively with the DMS architecture to ensure consistent data propagation across all store configurations.
+Dynamic Multi-Store (DMS) is a prerequisite for the Direct Sync feature. The synchronization process works exclusively with the DMS architecture to ensure consistent data propagation across all store configurations.
 
-To use the Direct Sync feature, you must enable DMS in your project configuration.
+To use the Direct Sync feature, enable DMS in your project configuration.
 
 
 ## Data Architecture

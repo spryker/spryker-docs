@@ -7,7 +7,7 @@ template: glue-api-storefront-guide-template
 redirect_from: null
 related:
 - title: Backend API Marketplace B2B Demo Shop reference
-  link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
+  link: docs/dg/dev/glue-api/latest/rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
 
 ---
 

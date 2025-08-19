@@ -30,7 +30,9 @@ permalink: /search.html
         searchFunction(helper) {
             const query = helper.state.query.trim();
             if (query.length < 3) {
-                return
+                document.querySelector('#hits').innerHTML = '';
+                document.querySelector('#pagination').innerHTML = '';
+                return;
             }
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {

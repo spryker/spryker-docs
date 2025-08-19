@@ -6,7 +6,7 @@ layout: none
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.site_title | xml_escape }}</title>
+    <title>{{ site.site_title | xml_escape }} | Security RSS Feed</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}/</link>
     <atom:link href="{{ "/feed.xml" | prepend: site.url }}" rel="self" type="application/rss+xml"/>
@@ -18,7 +18,7 @@ layout: none
       {% if page.url contains '/releases/security-releases' %}
          <item>
             <title>{{ page.title | xml_escape }}</title>
-            <description>{{ page.content | xml_escape }}</description>
+            <description>{{ page.content | markdownify | xml_escape }}</description>
             <pubDate>{{ page.last_modified_at | date_to_rfc822 }}</pubDate>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>

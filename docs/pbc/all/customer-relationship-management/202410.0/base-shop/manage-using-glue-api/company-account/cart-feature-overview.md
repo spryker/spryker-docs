@@ -48,4 +48,3 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 | [Install the Cart + Product Group feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-product-group-feature.html) | | | | |
 | | | | | |
 | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) | | | | |
-

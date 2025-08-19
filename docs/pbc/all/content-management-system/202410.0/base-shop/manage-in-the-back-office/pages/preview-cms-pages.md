@@ -14,6 +14,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/pages/manage-cms-pages.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html
   
 related:
   - title: CMS Page overview

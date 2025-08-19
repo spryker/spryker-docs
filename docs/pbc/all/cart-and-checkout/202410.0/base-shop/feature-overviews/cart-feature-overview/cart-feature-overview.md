@@ -13,6 +13,8 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-feature-overview.html    
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
+
 ---
 
 The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.

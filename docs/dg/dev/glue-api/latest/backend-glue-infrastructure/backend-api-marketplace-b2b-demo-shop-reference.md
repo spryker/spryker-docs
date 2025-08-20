@@ -9,6 +9,7 @@ redirect_from:
 related:
   - title: Backend API Marketplace B2C Demo Shop reference
     link: docs/dg/dev/glue-api/page.version/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
+swagger_url: "/js/temp/b2b_marketplace_backend_api.json"
 ---
 
-{% include integrations/backend-api-marketplace-b2b-demo-shop-reference-body.md %}
+{% include api-references-swagger-block.md %}

@@ -29,18 +29,22 @@ entries:
         url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-versioning-for-rest-api-resources.html
     - title: API references
       nested:
-      - title: REST API
+      - title: Storefront API
         nested:
-        - title: REST API B2B Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-b2b-demo-shop-reference.html
-        - title: REST API B2C Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-b2c-demo-shop-reference.html
-        - title: REST API Marketplace B2B Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
-        - title: REST API Marketplace B2C Demo Shop reference
-          url: /docs/integrations/spryker-glue-api/api-references/spryker-rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
+        - title: Storefront B2B API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-storefront-api/storefront-api-b2b-demo-shop-reference.html
+        - title: Storefront  B2C API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-storefront-api/storefront-api-b2c-demo-shop-reference.html
+        - title: Storefront Marketplace B2B API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html
+        - title: Storefront Marketplace B2C API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html
       - title: Backend API
         nested:
+        - title: Backend B2B API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-b2b-demo-shop-reference.html
+        - title: Backend B2C API reference
+          url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-b2c-demo-shop-reference.html
         - title: Backend API Marketplace B2B Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/spryker-backend-api/backend-api-marketplace-b2b-demo-shop-reference.html
         - title: Backend API Marketplace B2C Demo Shop reference

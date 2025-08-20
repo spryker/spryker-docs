@@ -1,5 +1,64 @@
+# depth 0
 [[redirects]]
-  from = "/:prefix/latest/:splat"
-  to = "/:prefix/202410.0/:splat"
-  status = 301
-  force = true
+from = "/latest/*"
+to = "/202410.0/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/latest"
+to = "/202410.0"
+status = 301
+force = true
+
+# depth 1
+[[redirects]]
+from = "/:a/latest/*"
+to = "/:a/202410.0/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/:a/latest"
+to = "/:a/202410.0"
+status = 301
+force = true
+
+# depth 2
+[[redirects]]
+from = "/:a/:b/latest/*"
+to = "/:a/:b/202410.0/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/:a/:b/latest"
+to = "/:a/:b/202410.0"
+status = 301
+force = true
+
+# depth 3
+[[redirects]]
+from = "/:a/:b/:c/latest/*"
+to = "/:a/:b/:c/202410.0/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/:a/:b/:c/latest"
+to = "/:a/:b/:c/202410.0"
+status = 301
+force = true
+
+# depth 4
+[[redirects]]
+from = "/:a/:b/:c/:d/latest/*"
+to = "/:a/:b/:c/:d/202410.0/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "/:a/:b/:c/:d/latest"
+to = "/:a/:b/:c/:d/202410.0"
+status = 301
+force = true

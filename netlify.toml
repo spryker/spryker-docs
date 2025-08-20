@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/:prefix/latest/:splat"
+  to = "/:prefix/202410.0/:splat"
+  status = 301
+  force = true

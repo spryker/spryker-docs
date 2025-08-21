@@ -12,7 +12,7 @@ related:
     link: docs/ca/dev/best-practices/jenkins-operational-best-practices.html
 ---
 
-Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability and scalability. While Jenkins continues to manage non-P&S tasks, P&S functionality now uses a new Stable Worker Architecture with enhanced scalability features. This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates. The new architecture provides isolated worker contexts, automatic retries, dynamic scaling capabilities, and better error handling for a more robust and scalable P&S operation.
+Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S functionality now uses a new Stable Worker Architecture with enhanced features. This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates. The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
 ## Stable Workers overview
 
@@ -24,7 +24,6 @@ Key characteristics:
 - Automatic retries: Built-in retry mechanisms ensure that temporary failures don't result in data loss
 - Enhanced error handling: Improved error detection and recovery mechanisms
 - Optimized for P&S workloads: Specifically tuned for the memory and processing patterns of Publish and Synchronize operations
-- Dynamic scaling: Automatic scaling of worker instances based on queue length and workload demands
 - Resource optimization: Intelligent distribution of computational resources among parallel processes
 - Configurable capacity: Support for customizable capacity providers and auto-scaling groups for optimal performance
 
@@ -32,10 +31,9 @@ The Stable Worker Architecture addresses common issues encountered with Jenkins-
 
 ## Scalable Architecture
 
-The enhanced Stable Workers architecture incorporates advanced scaling features designed to handle varying workloads efficiently:
+The enhanced Stable Workers architecture incorporates advanced features designed to handle varying workloads efficiently:
 
 ### Dynamic Worker Scaling
-- Automatic scaling: Workers scale up and down based on queue length and processing demands
 - Capacity providers: Configurable Auto Scaling Groups (ASG) with custom capacity providers for optimal resource allocation
 - ECS integration: Seamless integration with Amazon ECS for container-based worker management
 
@@ -63,10 +61,7 @@ Faster, more stable catalog data refreshes and timely frontend updates ensure th
 More robust P&S with isolated task processing eliminates the risk of one failed process affecting others, ensuring consistent data flow across your application.
 
 ### Better Handling of Complex Scenarios
-Efficiently manage large, frequently updated catalogs common in B2B/Marketplace scenarios without performance degradation or system instability. Advanced scaling capabilities automatically adjust resources based on workload demands.
-
-### Optimized Resource Utilization
-Dynamic scaling and intelligent resource distribution ensure optimal use of computational resources, reducing costs while maintaining high performance even during peak loads.
+Efficiently manage large, frequently updated catalogs common in B2B/Marketplace scenarios without performance degradation or system instability.
 
 ### Reduced Operational Disruptions
 Minimized downtime and manual P&S interventions due to enhanced resilience reduce the operational burden on your development and operations teams.
@@ -93,8 +88,6 @@ To enable Stable Workers for your Spryker application, you need to contact Spryk
 
 ### Advanced Configuration Options
 
-For customers requiring enhanced scalability, additional configuration options are available:
-
 #### Scalable Workers Infrastructure
 - Custom capacity providers: Configure Auto Scaling Groups (ASG) for dynamic worker scaling
 - ECS cluster integration: Leverage Amazon ECS for container-based worker management
@@ -104,5 +97,3 @@ For customers requiring enhanced scalability, additional configuration options a
 - `THREAD_POOL_SIZE`: Maximum number of parallel processes (default: 0 = disabled)
 - `QUEUE_PRIORITY`: Configurable ratio per queue for resource allocation (default: 1)
 - `DEFAULT_MAX_QUEUE_WORKER`: Disabled when thread pool size > 0
-
-These advanced features enable automatic scaling based on queue length and workload demands, optimizing resource utilization and processing efficiency.

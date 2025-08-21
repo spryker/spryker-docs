@@ -17,7 +17,7 @@ Unlike in cloud, in a local environment, these commands are executed by a CLI co
 
 {% info_block infoBox "Stable Workers" %}
 
-Spryker now offers Stable Workers architecture for enhanced Publish and Synchronize (P&S) functionality. This new architecture addresses many of the stability challenges described in this document by providing isolated worker contexts, automatic retries, dynamic scaling capabilities, and better error handling specifically for P&S operations. The enhanced scalable architecture includes configurable thread pools, queue prioritization, and automatic worker scaling based on workload demands. While Jenkins continues to manage non-P&S tasks, P&S functionality can now use the more robust and scalable Stable Worker Architecture. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
+Spryker now offers Stable Workers architecture for enhanced Publish and Synchronize (P&S) functionality. This new architecture addresses many of the stability challenges described in this document by providing isolated worker contexts, automatic retries, dynamic scaling capabilities, and better error handling specifically for P&S operations. The enhanced scalable architecture includes configurable thread pools and queue prioritization. While Jenkins continues to manage non-P&S tasks, P&S functionality can now use the more robust and scalable Stable Worker Architecture. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 {% endinfo_block %}
 

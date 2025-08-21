@@ -2949,10 +2949,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
-                      - title: Concrete SKU product filter feature overview
-                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
-                        include_versions:
-                        - "latest"
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -3014,10 +3010,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
                       - title: Category Management
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
-                      - title: Install Concrete SKU product filter feature
-                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-concrete-sku-filter-feature.html
-                        include_versions:
-                        - "latest"       
                                        
                       - title: Install the Category Management + Catalog feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
@@ -3510,6 +3502,14 @@ entries:
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-merchant-portal-feature.html
                       - title: Marketplace Product + Quick Add to Cart
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html
+                      - title: Marketplace Merchant Portal Data Import
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature.html
+                        include_versions:
+                        - "latest"
+                      - title: Marketplace Merchant Portal Product Data Import
+                        url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature.html
+                        include_versions:
+                        - "latest"                                                
                       - title: Category Management + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-category-management-marketplace-merchant-commission.html
                         include_versions:
@@ -4034,9 +4034,8 @@ entries:
             url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html                                  
                       
           - title: Install
+            url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
             nested:
-              - title: Install Self-Service Portal
-                url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
               - title: Install the SSP Asset Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-management-feature.html
               - title: Install the SSP Dashboard Management feature

@@ -1,11 +1,6 @@
 
 
 
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 
 
@@ -104,3 +99,15 @@ vendor/bin/console frontend:project:install-dependencies
 vendor/bin/console frontend:yves:build
 vendor/bin/console frontend:zed:build
 ```
+
+## Install the features
+
+Integrate the following related features:
+
+| FEATURE                                          | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                              |
+|--------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Self-Service Portal (SSP) Asset Management       |                                  | [Self-Service Portal (SSP) Asset Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature)         |
+| Self-Service Portal (SSP) Dashboard Management   |                                  | [Self-Service Portal (SSP) Dashboard Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature) |
+| Self-Service Portal (SSP) File Management        |                                  | [Self-Service Portal (SSP) File Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature)           |
+| Self-Service Portal (SSP) Inquiry Management     |                                  | [Self-Service Portal (SSP) Inquiry Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature)     |
+| Self-Service Portal (SSP) SSP Service Management |                                  | [Self-Service Portal (SSP) SSP Inquiry Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature) |

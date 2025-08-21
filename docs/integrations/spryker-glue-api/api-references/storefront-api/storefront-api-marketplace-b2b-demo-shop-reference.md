@@ -9,7 +9,7 @@ redirect_from:
 related:
 - title: REST API Marketplace B2C Demo Shop reference
   link: docs/dg/dev/glue-api/latest/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
-swagger_url: "/js/temp/b2b_marketplace_storefront_api.json"
+swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2b_marketplace_storefront_api.json"
 ---
 
 {% include api-references-swagger-block.md %}

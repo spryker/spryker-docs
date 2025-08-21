@@ -13,7 +13,7 @@ redirect_from:
 related:
 - title: Reference information- GlueApplication errors
   link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
-swagger_url: "/js/temp/b2c_storefront_api.json"
+swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2c_storefront_api.json"
 ---
 
 {% include api-references-swagger-block.md %}

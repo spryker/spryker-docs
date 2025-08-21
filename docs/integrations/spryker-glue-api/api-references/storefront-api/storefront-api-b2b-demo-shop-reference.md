@@ -11,7 +11,7 @@ related:
 redirect_from:
   - /docs/integrations/api-references/spryker-storefront-api/storefront-api-b2b-demo-shop-reference.html
   - /docs/integrations/api-references/spryker-rest-api/storefront-api-b2b-demo-shop-reference.html
-swagger_url: "/js/temp/b2b_storefront_api.json"
+swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2b_storefront_api.json"
 ---
 
 {% include api-references-swagger-block.md %}

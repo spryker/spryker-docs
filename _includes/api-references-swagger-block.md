@@ -46,10 +46,4 @@ if(swaggerContainer) {
     window.ui = ui
 }
 </script>
-<script>
-    setTimeout(() => {
-  const modelsSection = document.querySelector('section.models.is-open h4');
-  if (modelsSection) modelsSection.click(); // toggle it closed
-}, 1000);
-</script>
 {% endraw %}

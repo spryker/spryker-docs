@@ -5,7 +5,7 @@ last_updated: Aug 20, 2025
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/integrations/api-references/spryker-backend-api/backend-api-b2b-demo-shop-reference.html
-swagger_url: "/js/temp/b2b_backend_api.json"
+swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2b_backend_api.json"
 ---
 
 {% include api-references-swagger-block.md %}

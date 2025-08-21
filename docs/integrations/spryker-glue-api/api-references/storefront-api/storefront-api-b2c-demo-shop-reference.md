@@ -7,7 +7,9 @@ last_updated: Aug 20, 2025
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rest-api-reference
 originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
-redirect_from: null
+redirect_from:
+  - /docs/integrations/api-references/spryker-storefront-api/storefront-api-b2c-demo-shop-reference.html
+  - /docs/integrations/api-references/spryker-rest-api/storefront-api-b2c-demo-shop-reference.html
 related:
 - title: Reference information- GlueApplication errors
   link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html

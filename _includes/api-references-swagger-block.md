@@ -30,7 +30,7 @@
 <script>
 const swaggerContainer = document.getElementById('swagger-ui');
 if(swaggerContainer) {
-    console.log('start');
+    // console.log('start');
     const ui = SwaggerUIBundle({
         url: "{% endraw %}{{ page.swagger_url }}{% raw %}",
         dom_id: '#swagger-ui',
@@ -42,8 +42,14 @@ if(swaggerContainer) {
         filter:true,
         docExpansion: 'list'
     });
-    console.log(ui);
+    // console.log(ui);
     window.ui = ui
 }
+</script>
+<script>
+    setTimeout(() => {
+  const modelsSection = document.querySelector('section.models.is-open h4');
+  if (modelsSection) modelsSection.click(); // toggle it closed
+}, 1000);
 </script>
 {% endraw %}

@@ -2,6 +2,7 @@
 title: Create MerchantOms flows
 description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

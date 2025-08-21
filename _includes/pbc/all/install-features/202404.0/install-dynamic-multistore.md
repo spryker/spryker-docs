@@ -1362,7 +1362,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                       | SPECIFICATION | NAMESPACE |
 |-------------------------------------| --- | --- |

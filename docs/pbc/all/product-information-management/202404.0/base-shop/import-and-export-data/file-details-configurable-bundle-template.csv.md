@@ -2,6 +2,7 @@
 title: "File details: configurable_bundle_template.csv"
 description: Use the configurable_bundle_template.csv file to configure information about configurable bundle templates in your Spryker shop.
 template: data-import-template
+redirect_from:
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

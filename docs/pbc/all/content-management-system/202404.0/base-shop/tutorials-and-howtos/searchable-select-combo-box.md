@@ -3,6 +3,7 @@ title: Convert a dropdown with many items to a searchable select combo box in th
 description: 
 last_updated: Oct 02, 2024
 template: howto-guide-template
+redirect_from:
 ---
 
 By default in the Back Office we use simple select component in the most of cases.

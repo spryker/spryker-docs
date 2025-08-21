@@ -3,6 +3,7 @@ title: Stripe for Marketplace Overview
 description: Overview of the Stripe integration for Marketplace
 last_updated: August 8, 2024
 template: concept-topic-template
+redirect_from:
 ---
 
 This document describes how Stripe marketplace payments and merchant payouts are administered and managed.

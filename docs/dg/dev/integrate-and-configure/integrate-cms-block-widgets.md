@@ -126,8 +126,8 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
 {% info_block warningBox "Verification" %}
 
 1. Create the CMS blocks:
-    * BlockA with some text.
-    * BlockB with the code: `{% raw %}{{{% endraw %} cms_block(['BlockA']) {% raw %}}}{% endraw %}`.    
+    - BlockA with some text.
+    - BlockB with the code: `{% raw %}{{{% endraw %} cms_block(['BlockA']) {% raw %}}}{% endraw %}`.
 2. Add BlockB to a CMS Page.
 3. Make sure that the CMS block widget is rendered correctly on the Storefront.
 

@@ -24,11 +24,12 @@ To start the integration, overview and install the necessary features:
 
 ## 1) Update the required SprykerShop modules using Composer
 
-Run the following command to update the required modules:
+Update the required modules:
 
 ```bash
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/money-widget spryker-shop/price-product-volume-widget spryker-shop/product-review-widget spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/configurable-bundle-page spryker-shop/multi-cart-widget spryker-shop/product-alternative-widget spryker-shop/product-detail-page spryker-shop/product-replacement-for-widget spryker-shop/product-search-widget spryker-shop/shopping-list-page spryker-shop/shopping-list-widget spryker-shop/wishlist-page --with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been updated:
@@ -212,7 +213,7 @@ wrap the `{% raw %}{{{% endraw %} data.nickname | e('html'){% raw %}}}{% endraw 
 
 introduce the `itemprop` microdata directive to the `div` tag:
 
-```
+```html
 <div itemprop="reviewBody" class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__description">
     {% raw %}{{{% endraw %} data.description | e('html'){% raw %}}}{% endraw %}
 </div>
@@ -934,7 +935,7 @@ change the `h2` heading to `h1`  and add the `title title--h2` CSS classes:
 
 Having completed all the steps above, clean the cache to be sure that the twig adjustments are applied properly.
 
-Run the following command:
+Clean cache:
 
 ```bash
 docker/sdk cli console c:e

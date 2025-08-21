@@ -2,6 +2,7 @@
 title: "Marketplace Product Offer Prices feature: Domain model and relationships"
 description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

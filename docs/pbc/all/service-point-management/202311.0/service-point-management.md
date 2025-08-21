@@ -2,6 +2,7 @@
 title: Service Points Management
 description: Service points let you provide services at offline locations.
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 23, 2023
 ---
 

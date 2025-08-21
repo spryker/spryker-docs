@@ -15,6 +15,7 @@ Install the required features:
 | Product | {{page.version}} |
 
 ### 1) Install the required modules
+
 Install the required modules using Composer:
 
 ```bash
@@ -59,7 +60,7 @@ Adjust the schema definition so that entity changes can trigger events:
     </table>
 
 </database>
-```    
+```
 
 Run the following commands:
 

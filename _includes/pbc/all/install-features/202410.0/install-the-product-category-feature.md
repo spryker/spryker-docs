@@ -217,6 +217,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 2. Set up event listeners:
@@ -438,6 +439,7 @@ When a category product assignment is changed through ORM, make sure it's export
    }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -504,6 +506,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

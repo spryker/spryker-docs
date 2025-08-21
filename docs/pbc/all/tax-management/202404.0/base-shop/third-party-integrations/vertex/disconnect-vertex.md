@@ -3,6 +3,7 @@ title: Disconnect Vertex
 description: Find out how you can disconnect Vertex from your Spryker shop
 last_updated: Jan 10, 2024
 template: howto-guide-template
+redirect_from:
 ---
 Disconnecting Vertex permanently deletes all the existing Vertex tax rates.
 

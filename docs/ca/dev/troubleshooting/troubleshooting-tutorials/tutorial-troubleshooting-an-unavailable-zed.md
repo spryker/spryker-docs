@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting an unavailable Zed
-description: Resolve issues with an unavailable Zed in Spryker by troubleshooting ECS services, Redis, RDS, and logs to restore functionality and improve performance.
+description: Resolve issues with an unavailable Zed in Spryker by troubleshooting ECS services, key-value storage (Redis or Valkey), RDS, and logs to restore functionality and improve performance.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -8,19 +8,23 @@ redirect_from:
 ---
 Zed didn't restart after a deployment or you can't access it.
 
+
+<!-- vale on -->
 To troubleshoot this issue, you need to go through all the stages of information flow. The default information flow is:  Front end > Gateway(optional) > Zed > ElastiCache, Elasticsearch, RMQ, and RDS.
+<!-- vale off -->
+
 
 ![information flow diagram](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/informatin-flow-diagram.png)
 
 ## 1. Check logs
 
 Check front-end, gateway, and Zed logs described below. Filter log groups by the following:
-* `frontend`
-* `backgw`
-* `boffice`
-* `mportal`
-* `backapi`
-* `zed`
+- `frontend`
+- `backgw`
+- `boffice`
+- `mportal`
+- `backapi`
+- `zed`
 
 {% info_block warningBox "Troubleshooting error 504" %}
 
@@ -44,12 +48,12 @@ Check logs via Log groups:
 ## 2. Check multiple log groups at once
 
 Check front-end, gateway, and Zed logs described below. Select the log groups containing the following:
-* `frontend`
-* `backgw`
-* `boffice`
-* `mportal`
-* `backapi`
-* `zed`
+- `frontend`
+- `backgw`
+- `boffice`
+- `mportal`
+- `backapi`
+- `zed`
 
 Check logs via Logs Insights:
 
@@ -58,29 +62,29 @@ Check logs via Logs Insights:
 ## 3. Check ECS services and tasks
 
 Check the ECS services and tasks that are postfixed with the following:
-* Front-end: `frontend`
-* If gateway is deployed:
-  * `backgw`
-  * `boffice`
-  * `mportal`
-  * `backapi`
-* Zed: `zed`
+- Front-end: `frontend`
+- If gateway is deployed:
+  - `backgw`
+  - `boffice`
+  - `mportal`
+  - `backapi`
+- Zed: `zed`
 
 To check the services and tasks, do the following:
 
 {% include checking-the-status-of-ecs-services-and-tasks.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 
 
-## 4. Check Redis status
+## 4. Check key-value storage (Redis or Valkey) status
 
-Check the status of Redis via AWS Management Console:
+Check the status of key-value storage (Redis or Valkey) via AWS Management Console:
 
 {% include checking-redis-status-via-aws-management-console.md %} <!-- To edit, see /_includes/checking-redis-status-via-aws-managemet-console.md -->
 
 
-## 5. Check Redis system information
+## 5. Check key-value storage (Redis or Valkey) system information
 
-To check Redis system information via a CLI, do the following.
+To check key-value storage (Redis or Valkey) system information via a CLI, do the following.
 
 {% include checking-redis-system-information-via-a-cli.md %} <!-- To edit, see /_includes/checking-redis-system-information-via-a-cli.md -->
 

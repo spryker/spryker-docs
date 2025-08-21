@@ -2,6 +2,7 @@
 title: "Glue API: Manage marketplace shopping lists"
 last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
 related:
   - title: Install the Marketplace Shopping Lists feature
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html

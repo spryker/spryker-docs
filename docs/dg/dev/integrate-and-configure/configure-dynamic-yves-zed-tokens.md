@@ -44,7 +44,7 @@ To configure dynamic Yves-Zed tokens:
 
 2. In`config/Shared/config_default.php`, update the following parameters:
 
-    * `OauthConstants::PUBLIC_KEY_PATH` and `OauthCryptographyConstants::PUBLIC_KEY_PATH`
+    - `OauthConstants::PUBLIC_KEY_PATH` and `OauthCryptographyConstants::PUBLIC_KEY_PATH`
 
     ```php
     $config[OauthConstants::PUBLIC_KEY_PATH]
@@ -56,7 +56,7 @@ To configure dynamic Yves-Zed tokens:
     ) ?: null;
     ```
 
-   * `OauthConstants::PRIVATE_KEY_PATH`
+   - `OauthConstants::PRIVATE_KEY_PATH`
 
     ```php
     $config[OauthConstants::PRIVATE_KEY_PATH] = str_replace(
@@ -66,25 +66,25 @@ To configure dynamic Yves-Zed tokens:
     ) ?: null;
     ```
 
-    * `OauthConstants::ENCRYPTION_KEY`
+    - `OauthConstants::ENCRYPTION_KEY`
 
     ```php
     $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY') ?: null;
     ```
 
-    * `OauthConstants::OAUTH_CLIENT_IDENTIFIER`
+    - `OauthConstants::OAUTH_CLIENT_IDENTIFIER`
 
     ```php
     $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = getenv('SPRYKER_OAUTH_CLIENT_IDENTIFIER') ?: null;
     ```
 
-    * `OauthConstants::OAUTH_CLIENT_SECRET`
+    - `OauthConstants::OAUTH_CLIENT_SECRET`
 
     ```php
     $config[OauthConstants::OAUTH_CLIENT_SECRET] = getenv('SPRYKER_OAUTH_CLIENT_SECRET') ?: null;
     ```
 
-    * `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS['yves_system']['token']`
+    - `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS['yves_system']['token']`
 
     ```php
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [

@@ -2,8 +2,8 @@ If you are not logged into the Back Office, take the following steps.
 
 ## Prerequisites
 
-* To log in with a Back Office account, create and activate the account in **Users&nbsp;<span aria-label="and then">></span> Users**. An existing Back Office user or a developer can create accounts. For detailed instructions, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
-* To log in with a single sign-on(SSO), check the requirements with your development team. For more details about SSO authentication, see [Identity Access Management](/docs/pbc/all/identity-access-management/{{page.version}}/identity-access-management.html).
+- To log in with a Back Office account, create and activate the account in **Users&nbsp;<span aria-label="and then">></span> Users**. An existing Back Office user or a developer can create accounts. For detailed instructions, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
+- To log in with a single sign-on(SSO), check the requirements with your development team. For more details about SSO authentication, see [Identity Access Management](/docs/pbc/all/identity-access-management/{{page.version}}/identity-access-management.html).
 
 
 ## Log in with a Back Office account

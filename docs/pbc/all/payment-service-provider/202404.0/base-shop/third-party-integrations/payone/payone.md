@@ -2,6 +2,7 @@
 title: Integrate PayOne
 description: Payone partner integration
 template: concept-topic-template
+redirect_from:
 last_updated: Nov 21, 2023
 ---
 

@@ -46,10 +46,10 @@ Each queue system has a different configuration, but all of them can be adjusted
 
 The RabbitMq default configuration in Spryker VM looks like this:
 
-* RabbitMq groups queues into virtual hosts.
-* RabbitMq provides users/permissions to these virtual hosts.
-* Each virtual host belongs to one Store\Environment—for example, DE_development_zed, AT_staging_zed, US_production_zed.
-* Messages can be sent to several virtual hosts.
+- RabbitMq groups queues into virtual hosts.
+- RabbitMq provides users/permissions to these virtual hosts.
+- Each virtual host belongs to one Store\Environment—for example, DE_development_zed, AT_staging_zed, US_production_zed.
+- Messages can be sent to several virtual hosts.
 
 ### Spryker entities and multi-store
 
@@ -57,10 +57,10 @@ Entities in Spryker can be global or store-aware. Global entities, like Glossary
 
 The following diagrams show:
 
-* Two different multi-store configurations: the first one is a database with multiple stores while the second one is a database with one store.
-* Store aware and global entities: ProductAbstract and URL.
-* Routing sync messages based on Store or QueuePool.
-* Updating Redis based on Store\Enviorment.
+- Two different multi-store configurations: the first one is a database with multiple stores while the second one is a database with one store.
+- Store aware and global entities: ProductAbstract and URL.
+- Routing sync messages based on Store or QueuePool.
+- Updating key-value store (Redis or Valkey) based on Store\Enviorment.
 ![Spryker entities and multi-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/Publish+and+Synchronize+and+Multi-Store+Shop+Systems/P%26S+with+multistore.png)
 
 ## How it Works

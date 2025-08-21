@@ -25,13 +25,13 @@ Update modules and set up the configuration as described in the following sectio
 
 Update the following modules to meet the ACP requirements:
 
-* `spryker/app-catalog-gui:^1.4.1`
-* `spryker/kernel-app:^1.4.0`
-* `spryker/message-broker:^1.15.0`
-* `spryker/message-broker-aws:^1.9.0`
-* `spryker/session:^4.15.1`
-* `spryker/oauth-client:^1.5.0`
-* `spryker/oauth-auth0:^1.1.1`
+- `spryker/app-catalog-gui:^1.4.1`
+- `spryker/kernel-app:^1.4.0`
+- `spryker/message-broker:^1.15.0`
+- `spryker/message-broker-aws:^1.9.0`
+- `spryker/session:^4.15.1`
+- `spryker/oauth-client:^1.5.0`
+- `spryker/oauth-auth0:^1.1.1`
 
 
 {% info_block infoBox "ACP app modules" %}
@@ -79,7 +79,7 @@ $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfigurat
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     AppConfigUpdatedTransfer::class => 'app-events',
-    // Here we will define the transport map accordingly to APP
+    // Here we will define the correspondence of messages to channels for ACP
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -100,23 +100,25 @@ $config[MessageBrokerConstants::IS_ENABLED] = (
     && $config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL]
 );
 
-$config[OauthClientConstants::TENANT_IDENTIFIER]
+$config[KernelAppConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerAwsConstants::CONSUMER_ID]
-    = $config[KernelAppConstants::TENANT_IDENTIFIER]
+    = $config[OauthClientConstants::TENANT_IDENTIFIER]
     = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 // ----------------------------------------------------------------------------
 // ------------------------------ OAUTH ---------------------------------------
 // ----------------------------------------------------------------------------
-$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_MESSAGE_BROKER]
+$config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME]
     = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP]
+    = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_MESSAGE_BROKER]
     = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE]
     = OauthAuth0Config::PROVIDER_NAME;
 
-$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_MESSAGE_BROKER]
+$config[AppCatalogGuiConstants::OAUTH_GRANT_TYPE]
     = $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP]
+    = $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_MESSAGE_BROKER]
     = $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE]
     = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 
@@ -124,9 +126,8 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
     = $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE]
     = 'aop-app';
 
-$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-event-platform';
-
 $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
+$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-event-platform';
 ```
 
 </details>
@@ -167,6 +168,8 @@ Make sure that no deprecated plugins are enabled. Ideally, the content of each o
 
 namespace Pyz\Zed\MessageBroker;
 
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\ActiveAppFilterMessageChannelPlugin;
+use Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TenantActorMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TimestampMessageAttributeProviderPlugin;
@@ -179,6 +182,16 @@ use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMess
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
+     */
+    public function getMessageHandlerPlugins(): array
+    {
+        return [
+            new AppConfigMessageHandlerPlugin(),
+        ];
+    }
+
     /**
      * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageSenderPluginInterface>
      */
@@ -277,6 +290,7 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 5. In `MessageBrokerConfig.php`, configure the default worker channels for the system events channel to be enabled:
 
 **src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
+
 ```php
 namespace Pyz\Zed\MessageBroker;
 

@@ -41,8 +41,8 @@ The query used for fetching the data must be injected into the constructor.
 
 The table class must implement the following methods:
 
-* `function configure (TableConfiguration $configuration)`: Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
-* `function prepareData (TableConfiguration $configuration)`: Prepare the data retrieved by the query in the way you want it to be shown in the table.
+- `function configure (TableConfiguration $configuration)`: Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
+- `function prepareData (TableConfiguration $configuration)`: Prepare the data retrieved by the query in the way you want it to be shown in the table.
 
 {% endinfo_block %}
 
@@ -57,10 +57,10 @@ function configure(TableConfiguration $configuration)
 ```
 
 The configuration of the table must be done with the following methods:
-* Set up captions for the table headers (`setHeader()`)
-* Set up searchable fields (`setSearchable()`)
-* Set up sortable fields (`setSortable()`)
-* Set up raw fields — for fields containing HTML markup that should not be escaped (`addRawColumn`)
+- Set up captions for the table headers (`setHeader()`)
+- Set up searchable fields (`setSearchable()`)
+- Set up sortable fields (`setSortable()`)
+- Set up raw fields — for fields containing HTML markup that should not be escaped (`addRawColumn`)
 
 **Code sample:**
 
@@ -238,9 +238,9 @@ To start the download, add a link to the `DownloadController` action on the tabl
 
 To prepare the CSV file, implement the following methods in the `Table` class:
 
-* `GetCsvHeaders()`
-* `GetDownloadQuery()`
-* `FormatCsvRow()`
+- `GetCsvHeaders()`
+- `GetDownloadQuery()`
+- `FormatCsvRow()`
 
 #### Implement `GetCsvHeaders()`
 

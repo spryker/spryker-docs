@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve picklists"
 description: Learn how to retrieve picklists using Glue API
 template: glue-api-storefront-guide-template
+redirect_from:
 last_updated: Dec 7, 2023
 ---
 

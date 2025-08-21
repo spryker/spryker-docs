@@ -3,6 +3,7 @@ title: "Glue API: Add service point addresses"
 description: Learn how to add service point addresses using Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
 ---
 
 This endpoint lets you add service point addresses.

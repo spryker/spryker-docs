@@ -3,6 +3,7 @@ title: Warehouse Picking feature overview
 description: General overview of the Warehouse Picking feature
 last_updated: Oct 3, 2023
 template: concept-topic-template
+redirect_from:
 related:
   - title: Fulfillment App overview
     link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/fulfillment-app-overview.html

@@ -3,6 +3,7 @@ title: Composite entity
 last_updated: Nov 05, 2021
 description: Composite entities of one Main Entity and one or more SubEntities and are represented by multiple tables in the database.
 template: concept-topic-template
+redirect_from:
 ---
 
 There are some Domain Entities represented by multiple tables in the database. To make the feature usable, the CompositeEntity concept was introduced: Composite entities consist of one Main Entity and one or more SubEntities. Access is granted implicitly. An AclEntityRule for the Main Entity grants access to all its Sub Entities. Sub Entities cannot be used as standalone entities in an AclEntityRule or Segment.

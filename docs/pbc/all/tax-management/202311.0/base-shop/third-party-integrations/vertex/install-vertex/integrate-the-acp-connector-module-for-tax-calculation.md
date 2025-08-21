@@ -4,6 +4,7 @@ description: Find out how to integrate the connector module for tax calculation
 draft: true
 last_updated: Jan 10, 2024
 template: howto-guide-template
+redirect_from:
 related:
   - title: Vertex
     link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html

@@ -18,8 +18,8 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-* You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
-* Log in at the [support portal](https://support.spryker.com).
+- You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
+- Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases
 
@@ -90,27 +90,32 @@ When creating a case, or when there are meaningful updates to your case, like a 
 If you are managing multiple projects or have a high volume of cases and communication with us, knowing the structure of our notifications and receipts can help you prepare forwarding or labelling rules in your email client:
 
 
-* Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+- Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+
 ```bash
 Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
 ```
 
-* Change request confirmation emails are sent when you create a change request. Subject pattern:
+- Change request confirmation emails are sent when you create a change request. Subject pattern:
+
 ```bash
 Change Request Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
 ```
 
-* ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+- ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+
 ```bash
 Case ETA Update - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME}} - ETA: {ETA}. {TRACKING ID}
 ```
 
-* Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+- Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+
 ```bash
 Emergency {STATUS} - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} {TRACKING ID}
 ```
 
-* Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+- Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+
 ```bash
 Case Comment Notification - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS} {Tracking ID}
 ```

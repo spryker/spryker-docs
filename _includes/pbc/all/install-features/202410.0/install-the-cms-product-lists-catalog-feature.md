@@ -1,8 +1,6 @@
 
 
-## Install Feature Core
-
-### Prerequisites
+## Prerequisites
 
 Install the following required features:
 
@@ -13,7 +11,7 @@ Install the following required features:
 | Catalog | {{page.version}} |
 | Customer | {{page.version}} |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -33,7 +31,7 @@ Make sure the following modules have been installed:
 
 ## Set up behavior
 
-#### Configure the catalog search count query
+### Configure the catalog search count query
 
 Add the following plugins to your project:
 

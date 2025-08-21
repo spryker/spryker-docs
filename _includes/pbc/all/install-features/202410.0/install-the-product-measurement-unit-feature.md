@@ -316,9 +316,10 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
 
-```
+```bash
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that in the database that the configured infrastructural measurement units are added to the `spy_product_measurement_unit` table.
@@ -458,6 +459,7 @@ ITEM,218
 | --- | --- | --- | --- | --- |
 | code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
+
 Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -651,6 +653,7 @@ sales_unit_19,AT
 | --- | --- | --- | --- | --- |
 | sales_unit_key |mandatory  | string | sales_unit_1 |A reference used for the product measurement sales unit data import.  |
 |store_name|mandatory|string|DE|Contains the store name where the sales unit is available.|
+
 Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -892,6 +895,7 @@ Install the following required features:
 | Spryker Core E-commerce | {{page.version}} |
 |Checkout| {{page.version}} |
 |   |   |
+
 ### 1) Install the required modules
 
 Install the required modules using Composer:
@@ -1017,7 +1021,7 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 | --- | --- |
 |Controls base unit => sales unit calculations. Applies product quantity restrictions on sales unit level. Offers recommendation when invalid quantity is selected. Maintains stock-based quantity and sales unit information for posting  |vendor/spryker-shop/product-measurement-unit-widget/src/SprykerShop/Yves/ProductMeasurementUnitWidget/Theme/default/components/molecules/measurement-quantity-selector/measurement-quantity-selector.ts  |
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

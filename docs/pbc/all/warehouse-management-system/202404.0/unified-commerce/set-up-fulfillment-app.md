@@ -3,6 +3,7 @@ title: Set up Fulfillment App
 description: Learn how to install and configure Fulfillment App
 last_updated: Nov 23, 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 This document describes how to install Fulfillment App and connect it to your project.

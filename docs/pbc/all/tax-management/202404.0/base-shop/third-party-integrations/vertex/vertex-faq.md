@@ -2,6 +2,7 @@
 title: Vertex FAQ
 description: FAQ about Vertex
 template: concept-topic-template
+redirect_from:
 last_updated: May 17, 2024
 ---
 

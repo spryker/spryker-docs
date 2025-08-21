@@ -4,7 +4,7 @@
 
 Version 1.0.0 of the`ProductConfigurationPersistentCart` module introduces the following backward incompatible changes:
 
-* Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`
+- Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`
 
 To upgrade the `ProductConfigurationPersistentCart` module from version 0.1.* to version 1.0.*, do the following:
 

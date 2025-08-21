@@ -17,7 +17,7 @@ Unlike in cloud, in a local environment, these commands are executed by a CLI co
 
 {% info_block infoBox "Stable Workers" %}
 
-Spryker now offers Stable Workers architecture for enhanced Publish and Synchronize (P&S) functionality. This new architecture addresses many of the stability challenges described in this document by providing isolated worker contexts, automatic retries, dynamic scaling capabilities, and better error handling specifically for P&S operations. The enhanced scalable architecture includes configurable thread pools and queue prioritization. While Jenkins continues to manage non-P&S tasks, P&S functionality can now use the more robust and scalable Stable Worker Architecture. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
+Spryker now offers Stable Workers architecture for enhanced Publish and Synchronize (P&S) functionality. This new architecture addresses many of the stability challenges described in this document by providing isolated worker contexts, automatic retries, and better error handling specifically for P&S operations. This enhanced architecture includes configurable thread pools and queue prioritization. While Jenkins continues to manage non-P&S tasks, P&S functionality can now use the more robust Stable Worker Architecture. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 {% endinfo_block %}
 
@@ -50,7 +50,6 @@ While you can create jobs in Jenkins dashboard to quickly run console commands, 
 For Publish and Synchronize (P&S) operations, Spryker offers an enhanced alternative to Jenkins-based execution through the Stable Workers architecture. This approach addresses the memory management, resource contention, and stability challenges described above by:
 
 - **Isolating P&S workloads**: Dedicated worker environments prevent P&S jobs from competing for Jenkins resources
-- **Dynamic scaling**: Automatic scaling based on queue length and workload demands
 - **Enhanced resource management**: Intelligent distribution of computational resources with configurable thread pools and queue priorities
 - **Better error handling**: Built-in retry mechanisms and improved error detection specifically for P&S operations
 

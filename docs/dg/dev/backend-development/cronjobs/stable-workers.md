@@ -1,6 +1,6 @@
 ---
 title: Stable Workers
-description: Learn about Stable Workers architecture for enhanced Publish and Synchronize functionality in Spryker with dynamic worker scaling capabilities.
+description: Learn about Stable Workers architecture for enhanced Publish and Synchronize functionality in Spryker.
 last_updated: Dec 23, 2024
 template: howto-guide-template
 related:

@@ -13,7 +13,7 @@ Before raising issues about Jenkins performance and stability with Spryker, make
 
 {% info_block infoBox "Stable Workers" %}
 
-For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This new approach addresses many Jenkins stability challenges by providing isolated worker contexts, dynamic scaling capabilities, and better resource management. The enhanced scalable architecture includes automatic worker scaling, configurable capacity providers, and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This new approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This new architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 {% endinfo_block %}
 

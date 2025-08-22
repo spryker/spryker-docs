@@ -1,10 +1,3 @@
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a
-General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 This document describes how to install the Self-Service Portal (SSP) Asset Management feature.
 
 ## Prerequisites
@@ -19,7 +12,7 @@ This document describes how to install the Self-Service Portal (SSP) Asset Manag
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -36,11 +29,12 @@ Make sure the following packages are now listed in `composer.lock`:
 
 Add the following configuration to `config/Shared/config_default.php`:
 
-| CONFIGURATION                             | SPECIFICATION                                       | NAMESPACE                               |
-|-------------------------------------------|-----------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE   | Flysystem configuration for file management.        | Spryker\Shared\FileSystem               |
-| SelfServicePortalConstants::BASE_URL_YVES | Yves URL used in image URLs.                        | SprykerFeature\Shared\SelfServicePortal |
-| SelfServicePortalConfig::getStorageName() | Defines the Storage name for asset Flysystem files. | SprykerFeature\Zed\SelfServicePortal    |
+| CONFIGURATION                                     | SPECIFICATION                                                                                                                                                                                          | NAMESPACE                               |
+|---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE           | Defines the Flysystem service configuration for handling asset file storage. This configuration specifies the adapter, such as local or S3, and the root path for storing asset files, ensuring they're managed securely and efficiently. | Spryker\Shared\FileSystem               |
+| SelfServicePortalConstants::BASE_URL_YVES         | Specifies the base URL for the Yves frontend. This URL is used to generate absolute links to asset-related pages on the Storefront, ensuring correct navigation and resource loading.                               | SprykerFeature\Shared\SelfServicePortal |
+| SelfServicePortalConstants::ASSET_STORAGE_NAME    | Defines the unique identifier for the Flysystem storage instance used for SSP assets. This name links the asset management feature to the specific filesystem configuration defined in `FileSystemConstants::FILESYSTEM_SERVICE`. | SprykerFeature\Zed\SelfServicePortal    |
+| SelfServicePortalConfig::getAssetStatusClassMap() | Defines a map that associates asset status values, such as `pending` or `approved`, with their corresponding CSS class names. This is used in the Back Office and Storefront to visually represent the status of each asset, for example, with colored labels. | SprykerFeature\Zed\SelfServicePortal    |
 
 **config/Shared/config_default.php**
 
@@ -58,11 +52,16 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 
 $config[SelfServicePortalConstants::BASE_URL_YVES] = 'https://your-yves-url';
+$config[SelfServicePortalConstants::ASSET_STORAGE_NAME] = 'ssp-asset-image';
 ```
 
 **src/Pyz/Zed/SelfServicePortal/SelfServicePortalConfig.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
 namespace Pyz\Zed\SelfServicePortal;
 
 use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
@@ -70,14 +69,48 @@ use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig as SprykerSelfS
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {
     /**
-     * @return string|null
+     * @return array<string>
      */
-    public function getAssetStorageName(): ?string
+    public function getAssetStatusClassMap(): array
     {
-        return 'ssp-asset-image';
+        return [
+            'pending' => 'label-warning',
+            'in_review' => 'label-primary',
+            'approved' => 'label-success',
+            'deactivated' => 'label-danger',
+        ];
     }
-}
 ```
+
+## Configure navigation
+
+Add the `Assets` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+   <ssp>
+      <label>Customer Portal</label>
+      <title>Customer Portal</title>
+      <icon>fa-id-badge</icon>
+      <pages>
+         <self-service-portal-asset>
+            <label>Assets</label>
+            <title>Assets</title>
+            <bundle>self-service-portal</bundle>
+            <controller>list-asset</controller>
+            <action>index</action>
+         </self-service-portal-asset>
+      </pages>
+   </ssp>
+</config>
+```
+
+{% info_block warningBox "Verification" %}
+Make sure that, in the Back Office, the **Customer portal** > **Assets** section is available.
+{% endinfo_block %}
 
 ## Set up database schema
 
@@ -91,7 +124,9 @@ console propel:install
 Make sure the following tables have been created in the database:
 
 - `spy_ssp_asset`
+- `spy_ssp_asset_file`
 - `spy_ssp_asset_to_company_business_unit`
+- `spy_sales_order_item_ssp_asset`
 
 {% endinfo_block %}
 
@@ -147,10 +182,10 @@ Make sure the following transfer objects have been generated:
 ```csv
 general.confirm.button,Confirm,en_US
 general.confirm.button,Bestätigen,de_DE
-permission.name.ViewCompanySspAssetPermissionPlugin,View company ssp assets,en_US
+permission.name.ViewCompanySspAssetPermissionPlugin,View company assets,en_US
 permission.name.ViewCompanySspAssetPermissionPlugin,Firmen-SSP-Assets anzeigen,de_DE
-permission.name.ViewBusinessUnitSspAssetPermissionPlugin,View business unit ssp assets,en_US
-permission.name.ViewBusinessUnitSspAssetPermissionPlugin,Geschäftseinheit-SSP-Assets anzeigen,de_DE
+permission.name.ViewBusinessUnitSspAssetPermissionPlugin,View business unit assets,en_US
+permission.name.ViewBusinessUnitSspAssetPermissionPlugin,Geschäftseinheit-assets anzeigen,de_DE
 permission.name.CreateSspAssetPermissionPlugin,Create ssp assets,en_US
 permission.name.CreateSspAssetPermissionPlugin,SSP-Assets erstellen,de_DE
 permission.name.UpdateSspAssetPermissionPlugin,Update ssp assets,en_US
@@ -283,8 +318,8 @@ customer.account.no_ssp_assets,No assets at the moment,en_US
 customer.account.no_ssp_assets,Keine Assets vorhanden,de_DE
 company.error.company_user_not_found,Company user not found,en_US
 company.error.company_user_not_found,Firmenbenutzer nicht gefunden,de_DE
-customer.ssp_asset.list.business_unit,Business Unit,en_US
-customer.ssp_asset.list.business_unit,Geschäftseinheit,de_DE
+customer.ssp_asset.list.business_unit,Business Unit Owner,en_US
+customer.ssp_asset.list.business_unit,Inhaber der Geschäftseinheit,de_DE
 customer.ssp_asset.list.image,Image,en_US
 customer.ssp_asset.list.image,Bild,de_DE
 self_service_portal.asset.details_page.created_date,Date added,en_US
@@ -307,8 +342,6 @@ self_service_portal.asset.status.in_review,In Review,en_US
 self_service_portal.asset.status.in_review,In Überprüfung,de_DE
 self_service_portal.asset.status.declined,Declined,en_US
 self_service_portal.asset.status.declined,Abgelehnt,de_DE
-customer.ssp_asset.list.business_unit,Business Unit Owner,en_US
-customer.ssp_asset.list.business_unit,Inhaber der Geschäftseinheit,de_DE
 self_service_portal.asset.information.assigned_bu,Assigned business units,en_US
 self_service_portal.asset.information.assigned_bu,Zugewiesene Geschäftseinheiten,de_DE
 customer.ssp_asset.filter.scope,Access level,en_US
@@ -349,21 +382,21 @@ Make sure glossary keys have been added to `spy_glossary_key` and `spy_glossary_
 
 ## Set up behavior
 
-| PLUGIN                                   | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                        |
-|------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| ViewCompanySspAssetPermissionPlugin      | Enables viewing of company assets.                                                |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| ViewBusinessUnitSspAssetPermissionPlugin | Provides access to assets in the same business unit.                              |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| CreateSspAssetPermissionPlugin           | Enables creation of assets.                                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| UpdateSspAssetPermissionPlugin           | Enables updating of assets.                                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| UnassignSspAssetPermissionPlugin         | Enables unassignment of assets.                                                   |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| SelfServicePortalPageRouteProviderPlugin | Provides Yves routes for the SSP asset management feature.                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
-| SspAssetManagementFilePreDeletePlugin    | Ensures files are deleted when an asset is removed.                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager            |
-| SspAssetDashboardDataExpanderPlugin      | Adds the assets table to the SSP dashboard.                                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
-| FileSizeFormatterTwigPlugin              | Adds a Twig filter to format file sizes in a human-readable format.                  |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin    |
-| SspAssetPreAddToCartPlugin               | Maps asset reference from request parameters to ItemTransfer.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                            |
-| SspAssetItemExpanderPlugin               | Adds SSP asset information to cart items when an SSP asset reference is provided. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                   |
-| SspAssetOrderExpanderPlugin              | Expands order items with SSP assets.                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
-| SspAssetOrderItemsPostSavePlugin         | Creates a relation between a sales order item and an SSP asset in persistence.           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| PLUGIN                                    | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                                        |
+|-------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
+| ViewCompanySspAssetPermissionPlugin       | Grants permission to view assets of an entire company.                           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| ViewBusinessUnitSspAssetPermissionPlugin  | Grants permission to view assets within the user's business unit.                 |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| CreateSspAssetPermissionPlugin            | Grants permission to create assets.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| UpdateSspAssetPermissionPlugin            | Grants permission to update assets.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| UnassignSspAssetPermissionPlugin          | Grants permission to unassign assets from business units.                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
+| SelfServicePortalPageRouteProviderPlugin         | Provides routes for the SSP asset management pages on the Storefront.             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
+| SspAssetDashboardDataExpanderPlugin       | Expands the dashboard data with asset information to display in the assets widget.|               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
+| FileSizeFormatterTwigPlugin               | Adds a Twig filter to format file sizes into a human-readable format.             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin    |
+| SspAssetPreAddToCartPlugin                | When a product is added to cart, maps the asset reference from the request to the item transfer object. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                            |
+| SspAssetItemExpanderPlugin                | Expands cart items with asset data.                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                   |
+| SspAssetOrderExpanderPlugin               | Expands an order with asset data for all its items.                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| SspAssetOrderItemsPostSavePlugin          | After an order is placed, saves the relations between order items and assets.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
+| SspAssetOrderItemExpanderPlugin           | Expands individual order items with asset data.                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                  |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -561,29 +594,14 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new SspAssetOrderItemsPostSavePlugin(),
         ];
     }
-}
-```
-
-**src/Pyz/Zed/FileManager/FileManagerDependencyProvider.php**
-
-```php
-<?php
-
-
-namespace Pyz\Zed\FileManager;
-
-use Spryker\Zed\FileManager\FileManagerDependencyProvider as SprykerFileManagerDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager\SspAssetManagementFilePreDeletePlugin;
-
-class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
-{
+    
     /**
-     * @return list<\Spryker\Zed\FileManagerExtension\Dependency\Plugin\FilePreDeletePluginInterface>
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
      */
-    protected function getFilePreDeletePlugins(): array
+    protected function getOrderItemExpanderPlugins(): array
     {
         return [
-            new SspAssetManagementFilePreDeletePlugin(),
+            new SspAssetOrderItemExpanderPlugin(),
         ];
     }
 }
@@ -591,12 +609,12 @@ class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
 
 ### Set up widgets
 
-| PLUGIN                     | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                    |
-|----------------------------|---------------------------------------------------------------------------|---------------|----------------------------------------------|
-| SspAssetListWidget         | Provides a table display for assets.                                      |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetMenuItemWidget     | Provides a menu item widget for the customer account side menu.           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetInfoForItemWidget  | The widget that displays related asset for a cart item.                   |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspItemAssetSelectorWidget | Provides the autocomplete form field for asset selection on the PDP page. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| PLUGIN                     | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
+|----------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| SspAssetListWidget         | Renders a list of assets on the **My Assets** page in the Customer Account.             |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetMenuItemWidget     | Renders the **My Assets** menu item in the Customer Account side menu.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetInfoForItemWidget  | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspItemAssetSelectorWidget | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

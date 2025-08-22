@@ -5,11 +5,6 @@ template: concept-topic-template
 last_updated: Apr 10, 2025
 ---
 
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 The Inquiry Management feature allows customers to submit and track different types of inquiries in SSP, providing a structured way to handle and resolve customer requests and claims.
 
@@ -21,13 +16,12 @@ Back Office users can manage inquiries, update statuses, and communicate with cu
 - Submit an inquiry with relevant details
 - Attach supporting documents and images
 - Track the status of submitted inquiries
-- Get inquiry resolution details via email
 
 ## Back Office functionalities
 
 - View and manage all customer inquiries
 - Filter and search inquiries by type, status, or customer
-- Update inquiry status and provide resolution details
+- Update inquiry status
 - Attach internal notes visible only to Back Office users for internal collaboration
 
 

@@ -33,7 +33,6 @@ Make sure that the following modules have been installed:
 | SalesOrderAmendmentOms                   | vendor/spryker/sales-order-amendment-oms                     |
 | SalesOrderAmendmentExtension             | vendor/spryker/sales-order-amendment-extension               |
 | OrderAmendmentsRestApi                   | vendor/spryker/sales-order-amendments-rest-api               |
-| OrderAmendmentsRestApi                   | vendor/spryker/sales-order-amendments-rest-api               |
 | PriceProductSalesOrderAmendment          | vendor/spryker/price-product-sales-order-amendment           |
 | PriceProductSalesOrderAmendmentExtension | vendor/spryker/price-product-sales-order-amendment-extension |
 
@@ -60,7 +59,7 @@ $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/order-amend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that accessing `https://mysprykershop.com/order-amendment` as a guest user redirects to login page.
+Make sure that accessing `https://mysprykershop.com/order-amendment` as a guest user redirects to the login page.
 
 {% endinfo_block %}
 
@@ -123,8 +122,9 @@ class QuoteConfig extends SprykerQuoteConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit an order, `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
-Make sure that when you edit an order, `originalSalesOrderItems` is added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
+Make sure that when you edit an order, the following applies:
+- `amendmentOrderReference` and `quoteProcessFlow` are added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
+- `originalSalesOrderItems` is added to the JSON data in the `spy_quote.quote_data` database column of the corresponding quote.
 
 {% endinfo_block %}
 
@@ -164,13 +164,6 @@ class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
 ```
 
 2. Remove the quote fields that are not relevant for your project.
-
-{% info_block warningBox "Verification" %}
-
-The `spy_sales_order_amendment_quote` table should be empty. It can serve as a temporary storage for quote data during the order amendment process, enabling asynchronous processing of order amendments.
-
-
-{% endinfo_block %}
 
 3. Configure the batch availability check facade method:
 
@@ -503,10 +496,10 @@ Verify the order amendment state machine configuration in the following step.
 
 1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
-2. Select **DummyPayment01 [preview-version]** and check the following:
+2. Select **DummyPayment01** and check the following:
 
-- The `grace period started` state has the `amendable` tag.
-- The `order amendment` state exists.
+- The `grace period started` state has the `amendable` tag
+- The `order amendment` state exists
 
 {% endinfo_block %}
 
@@ -717,27 +710,29 @@ Enable the following behaviors by registering the plugins:
 | OriginalSalesOrderItemPriceProductPostResolvePlugin                    | Replaces an item's prices with the original sales order item's prices after resolving prices for the resulting `PriceProductTransfer`.                                                                     |                                                                                                                                             | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProduct                   |
 | OrderItemPriceProductResolveConditionsPriceProductFilterExpanderPlugin | Expands `PriceProductFilterTransfer` with `PriceProductResolveConditionsTransfer` from `ProductViewTransfer`.                                                                                              |                                                                                                                                             | Spryker\Client\PriceProductSalesOrderAmendment\Plugin\PriceProductStorage            |
 | CurrentStoreCartReorderValidatorPlugin                                 | Validates that the current store matches the store of the order and quote.                                                                                                                                 |                                                                                                                                             | Spryker\Zed\Store\Communication\Plugin\CartReorder                                   |
-| ProductOfferOriginalSalesOrderItemGroupKeyExpanderPlugin               | Expands a provided group key with a product offer reference if `ItemTransfer.productOfferReference` is set.                                                                                                    |                                                                                                                                             | Spryker\Service\ProductOffer\Plugin\SalesOrderAmendment                              |
+| ProductOfferOriginalSalesOrderItemGroupKeyExpanderPlugin               | Expands a provided group key with a product offer reference if `ItemTransfer.productOfferReference` is set.                                                                                                |                                                                                                                                             | Spryker\Service\ProductOffer\Plugin\SalesOrderAmendment                              |
+| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin          | Expands a provided price group key with a product offer reference if `ItemTransfer.productOfferReference` is set.                                                                                          |                                                                                                                                             | Spryker\Service\ProductOffer\Plugin\SalesOrderAmendment                              |
 | OrderAmendmentQuantityBatchAvailabilityStrategyPlugin                  | Calculates available quantity for each processed item.                                                                                                                                                     |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Availability                    |
-| OrderAmendmentProductApprovalCartPreCheckPlugin                        | Checks the approval status for products. Skips items that are part of the original order.                                                                                                        |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                                |
-| OrderAmendmentProductApprovalPreReloadItemsPlugin                      | Checks and removes unapproved product items from Quote transfer. Skips items that are part of the original order.                                                                                        |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                                |
-| OrderAmendmentProductBundleAvailabilityCartPreCheckPlugin              | Checks if product bundle items in `CartChangeTransfer` are available and active. Skips `isActive` validation for items with SKUs from `CartChangeTransfer.quote.originalSalesOrderItems`.          |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Cart                                  |
-| OrderAmendmentProductBundleStatusCartPreCheckPlugin                    | Checks if product bundle items in `CartChangeTransfer` are active. Skips validation for items with SKUs from `CartChangeTransfer.quote.originalSalesOrderItems`.                                   |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Cart                                  |
-| OrderAmendmentProductExistsCartPreCheckPlugin                          | Checks if the products added to cart exist. Skips items that are part of the original order.                                                                                                                |                                                                                                                                             | Spryker\Zed\ProductCartConnector\Communication\Plugin\Cart                           |
+| OrderAmendmentProductApprovalCartPreCheckPlugin                        | Checks the approval status for products. Skips items that are part of the original order.                                                                                                                  |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                                |
+| OrderAmendmentProductApprovalPreReloadItemsPlugin                      | Checks and removes unapproved product items from Quote transfer. Skips items that are part of the original order.                                                                                          |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                                |
+| OrderAmendmentProductBundleAvailabilityCartPreCheckPlugin              | Checks if product bundle items in `CartChangeTransfer` are available and active. Skips `isActive` validation for items with SKUs from `CartChangeTransfer.quote.originalSalesOrderItems`.                  |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Cart                                  |
+| OrderAmendmentProductBundleStatusCartPreCheckPlugin                    | Checks if product bundle items in `CartChangeTransfer` are active. Skips validation for items with SKUs from `CartChangeTransfer.quote.originalSalesOrderItems`.                                           |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Cart                                  |
+| OrderAmendmentProductExistsCartPreCheckPlugin                          | Checks if the products added to cart exist. Skips items that are part of the original order.                                                                                                               |                                                                                                                                             | Spryker\Zed\ProductCartConnector\Communication\Plugin\Cart                           |
 | OrderAmendmentRemoveInactiveItemsPreReloadPlugin                       | Removes inactive items from quote. Skips items that are part of the original order.                                                                                                                        |                                                                                                                                             | Spryker\Zed\ProductCartConnector\Communication\Plugin\Cart                           |
-| OrderAmendmentProductDiscontinuedCartPreCheckPlugin                    | Checks all item related products from a cart change request are not discontinued. Skips items that are part of the original order.                                                                  |                                                                                                                                             | Spryker\Zed\ProductDiscontinued\Communication\Plugin\Cart                            |
-| OrderAmendmentFilterInactiveProductOfferPreReloadItemsPlugin           | Checks and removes inactive product offers from cart. Skips inactive product offers that are part of the original order.                                                                               |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Cart                                   |
-| OrderAmendmentProductOfferCartPreCheckPlugin                           | Checks if a cart item product offer belongs to a product. Skips product offers that are part of the original order.                                                                                            |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Cart                                   |
-| OriginalOrderBundleItemCartPreReorderPlugin                            | Expands `CartReorderTransfer.quote` with original sales order items from a provided `CartReorderTransfer.order.bundleItems`.                                                                             |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\CartReorder                           |
-| OriginalSalesOrderItemCartPreReorderPlugin                             | Expands `CartReorderTransfer.quote` with original sales order items from a provided `CartReorderTransfer.order.items`.                                                                                   |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
+| OrderAmendmentProductDiscontinuedCartPreCheckPlugin                    | Checks all item related products from a cart change request are not discontinued. Skips items that are part of the original order.                                                                         |                                                                                                                                             | Spryker\Zed\ProductDiscontinued\Communication\Plugin\Cart                            |
+| OrderAmendmentFilterInactiveProductOfferPreReloadItemsPlugin           | Checks and removes inactive product offers from cart. Skips inactive product offers that are part of the original order.                                                                                   |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Cart                                   |
+| OrderAmendmentProductOfferCartPreCheckPlugin                           | Checks if a cart item product offer belongs to a product. Skips product offers that are part of the original order.                                                                                        |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Cart                                   |
+| OriginalOrderBundleItemCartPreReorderPlugin                            | Expands `CartReorderTransfer.quote` with original sales order items from a provided `CartReorderTransfer.order.bundleItems`.                                                                               |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\CartReorder                           |
+| OriginalSalesOrderItemCartPreReorderPlugin                             | Expands `CartReorderTransfer.quote` with original sales order items from a provided `CartReorderTransfer.order.items`.                                                                                     |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 | RemoveInactiveProductOptionItemsCartReorderPreAddToCartPlugin          | Filters out items with inactive product options from `CartChangeTransfer`.                                                                                                                                 |                                                                                                                                             | Spryker\Zed\ProductOptionCartConnector\Communication\Plugin\CartReorder              |
-| OrderAmendmentProductApprovalCheckoutPreConditionPlugin                | Returns `false` if at least one quote item transfer has items with unapproved product. Skips items that are part of the original order.                                          |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Checkout                            |
+| OrderAmendmentProductApprovalCheckoutPreConditionPlugin                | Returns `false` if at least one quote item transfer has items with unapproved product. Skips items that are part of the original order.                                                                    |                                                                                                                                             | Spryker\Zed\ProductApproval\Communication\Plugin\Checkout                            |
 | OrderAmendmentProductBundleAvailabilityCheckoutPreConditionPlugin      | Checks if the product bundle items in the `QuoteTransfer` are available and active. Skips `isActive` validation for items with SKUs from `QuoteTransfer.originalSalesOrderItems`.                          |                                                                                                                                             | Spryker\Zed\ProductBundle\Communication\Plugin\Checkout                              |
-| OrderAmendmentProductExistsCheckoutPreConditionPlugin                  | Validates if concrete products with the `QuoteTransfer.item.sku` SKU exist and are active. Skips items that are part of the original order.                                                                        |                                                                                                                                             | Spryker\Zed\ProductCartConnector\Communication\Plugin\Checkout                       |
+| OrderAmendmentProductExistsCheckoutPreConditionPlugin                  | Validates if concrete products with the `QuoteTransfer.item.sku` SKU exist and are active. Skips items that are part of the original order.                                                                |                                                                                                                                             | Spryker\Zed\ProductCartConnector\Communication\Plugin\Checkout                       |
 | OrderAmendmentProductDiscontinuedCheckoutPreConditionPlugin            | Checks if there are no discontinued products in checkout. Skips items that are part of the original order.                                                                                                 |                                                                                                                                             | Spryker\Zed\ProductDiscontinued\Communication\Plugin\Checkout                        |
-| OrderAmendmentProductOfferCheckoutPreConditionPlugin                   | Returns `false` if at least one quote item transfer has items with inactive or unapproved `ProductOffer`. Skips product offers that are part of the original order.                               |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Checkout                               |
-| SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin                      | Creates a new sales order amendment quote entity based on a provided `QuoteTransfer`.                                                                                                                    |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
-| UpdateDeletedItemReservationCommandByOrderPlugin                       | Retrieves the sales order amendment quote collection by order reference. If the collection is not empty, updates the reservations of deleted items in the order.                                        |                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms                          |
+| OrderAmendmentProductOfferCheckoutPreConditionPlugin                   | Returns `false` if at least one quote item transfer has items with inactive or unapproved `ProductOffer`. Skips product offers that are part of the original order.                                        |                                                                                                                                             | Spryker\Zed\ProductOffer\Communication\Plugin\Checkout                               |
+| SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin                      | Creates a new sales order amendment quote entity based on a provided `QuoteTransfer`.                                                                                                                      |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout                        |
+| UpdateDeletedItemReservationCommandByOrderPlugin                       | Retrieves the sales order amendment quote collection by order reference. If the collection is not empty, updates the reservations of deleted items in the order.                                           |                                                                                                                                             | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms                          |
+| OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin            | Hydrates `items.originalSalesOrderItemGroupKey` with the original sales order item group key.                                                                                                              |                                                                                                                                             | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder                     |
 
 
 
@@ -761,6 +756,33 @@ class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDe
     {
         return [
             new ProductOfferOriginalSalesOrderItemGroupKeyExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+<details>
+    <summary>src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Service\PriceProductSalesOrderAmendment;
+
+use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
+use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
+
+class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
+     */
+    protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
+    {
+        return [
+            new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
         ];
     }
 }
@@ -832,6 +854,7 @@ use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendm
 use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OrderAmendmentQuoteProcessFlowExpanderCartPreReorderPlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\IsAmendableOrderCartReorderRequestValidatorPlugin;
 use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\CartReorder\StartOrderAmendmentCartReorderPostCreatePlugin;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder\OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin;
 use Spryker\Zed\Store\Communication\Plugin\CartReorder\CurrentStoreCartReorderValidatorPlugin;
 
 class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
@@ -867,6 +890,16 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new AmendmentOrderReferenceCartPreReorderPlugin(),
             new AmendmentQuoteNameCartPreReorderPlugin(),
             new OriginalSalesOrderItemPriceCartPreReorderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderItemHydratorPluginInterface>
+     */
+    protected function getCartReorderItemHydratorPlugins(): array
+    {
+        return [
+            new OriginalSalesOrderItemGroupKeyCartReorderItemHydratorPlugin(),
         ];
     }
 
@@ -1474,7 +1507,7 @@ class PriceDependencyProvider extends SprykerPriceDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make the Glue API call with a currency and price mode different from those in the cart when an order is being edited. For example: `glue.mysprykershop.com/catalog-search?q=001&currency=CHF&priceMode=NET_MODE`. Then, verify that the currency and price mode remain unchanged.
+Make a Glue API call with a currency and price mode different from those in the cart when an order is being edited. For example: `htts://glue.mysprykershop.com/catalog-search?q=001&currency=CHF&priceMode=NET_MODE`. Make sure the currency and price mode remain unchanged.
 
 {% endinfo_block %}
 
@@ -1649,73 +1682,6 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% endinfo_block %}
 
-## Add product offers context
-
-Take the steps in the following sections to add the context for product offers.
-
-### 1) Install the required modules
-
-Install the required modules using Composer:
-
-```bash
-composer require spryker/price-product-offer-sales-order-amendment-connector: "^0.1.0" --update-with-dependencies
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules have been installed:
-
-| MODULE                                        | EXPECTED DIRECTORY                                                 |
-|-----------------------------------------------|--------------------------------------------------------------------|
-| PriceProductOfferSalesOrderAmendmentConnector | vendor/spryker/price-product-offer-sales-order-amendment-connector |
-
-{% endinfo_block %}
-
-### 2) Set up behavior
-
-Enable the following behaviors by registering the plugins:
-
-| PLUGIN                                                         | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                                                            |
-|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin  | Expands a provided group key with a product offer reference if `ItemTransfer.productOfferReference` is set.  |           | Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment |
-
-**src/Pyz/Service/PriceProductSalesOrderAmendment/PriceProductSalesOrderAmendmentDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Service\PriceProductSalesOrderAmendment;
-
-use Spryker\Service\PriceProductOfferSalesOrderAmendmentConnector\Plugin\PriceProductSalesOrderAmendment\ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin;
-use Spryker\Service\PriceProductSalesOrderAmendment\PriceProductSalesOrderAmendmentDependencyProvider as SprykerPriceProductSalesOrderAmendmentDependencyProvider;
-
-class PriceProductSalesOrderAmendmentDependencyProvider extends SprykerPriceProductSalesOrderAmendmentDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Service\PriceProductSalesOrderAmendmentExtension\Dependency\Plugin\OriginalSalesOrderItemPriceGroupKeyExpanderPluginInterface>
-     */
-    protected function getOriginalSalesOrderItemPriceGroupKeyExpanderPlugins(): array
-    {
-        return [
-            new ProductOfferOriginalSalesOrderItemPriceGroupKeyExpanderPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-1. Place an order with a product offer.  
-2. Increase the price of the offer from the order.  
-3. Start the order amendment process for the order you've placed.
-  Make sure the product offer still has the original price.
-4. Go to the order details page and click the product to go to the product details page.
-  Make sure that, on the product details page, the product offer still has the original price.
-
-
-
-{% endinfo_block %}
-
 ## Add the quotation process context
 
 Take the steps in the following sections to add the context for quote requests.
@@ -1745,9 +1711,9 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                                          | SPECIFICATION                                                                                                                        | PREREQUISITES | NAMESPACE                                                         |
 |-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
 | QuoteRequestVersionReferenceOrderPostSavePlugin | Persists the `QuoteTransfer.quoteRequestVersionReference` transfer property in the `spy_sales_order` table.                                  |               | Spryker\Zed\SalesQuoteRequestConnector\Communication\Plugin\Sales |
-| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process; true otherwise.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
+| OrderAmendmentQuoteRequestQuoteCheckPlugin      | Returns false if quote is in amendment process; otherwise, returns true.                                                                      |               | Spryker\Client\SalesOrderAmendment\Plugin\QuoteRequest            |
 | OrderAmendmentQuoteRequestValidatorPlugin       | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
-| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create and update of a quote request with quote in order amendment process.                                                       |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
+| OrderAmendmentQuoteRequestUserValidatorPlugin   | Prevents create and update of a quote request with quote in order amendment process.                                                        |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\QuoteRequest |
 | QuoteRequestVersionCartReorderValidatorPlugin   | Returns `CartReorderResponseTransfer.errors` with error messages if `CartReorderTransfer.order.quoteRequestVersionReference` is set. |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\CartReorder  |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
@@ -1892,6 +1858,564 @@ Verify that reordering is disabled for orders created from a quote request:
 
 {% endinfo_block %}
 
+## Optionally: Enable order amendment in asynchronous mode
+
+Order amendment can be enabled in asynchronous mode to improve performance by offloading the most resource-intensive operations to the OMS.
+
+### 1) Install the required modules
+
+Some of the Async Order Amendment functionality is provided by an example module. You can install it to see how it works in practice and replace it with your own implementation if needed.
+
+Install the OrderAmendmentExample module using Composer:
+
+```bash
+composer require spryker/order-amendment-example: "^0.3.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                | EXPECTED DIRECTORY                     |
+|-----------------------|----------------------------------------|
+| OrderAmendmentExample | vendor/spryker/order-amendment-example |
+
+{% endinfo_block %}
+
+### 2) Set up configuration
+
+1. Add the following configuration:
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesOrderAmendment;
+
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Zed\SalesOrderAmendment\SalesOrderAmendmentConfig as SprykerSalesOrderAmendmentConfig;
+
+class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getQuoteFieldsAllowedForSaving(): array
+    {
+        return array_merge(parent::getQuoteFieldsAllowedForSaving(), [
+            QuoteTransfer::CUSTOMER,
+            QuoteTransfer::CUSTOMER_REFERENCE,
+            QuoteTransfer::STORE,
+            QuoteTransfer::PAYMENT,
+            QuoteTransfer::PAYMENTS,
+            QuoteTransfer::BILLING_ADDRESS,
+            QuoteTransfer::SHIPPING_ADDRESS,
+            QuoteTransfer::ORDER_CUSTOM_REFERENCE,
+            QuoteTransfer::SHIPMENT,
+            QuoteTransfer::ERRORS,
+        ]);
+    }
+}
+```
+
+2. Remove the quote fields that are not relevant for your project.
+
+{% info_block warningBox "Verification" %}
+
+Make sure `SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin` saves the specified fields to `spy_sales_order_amendment_quote`.
+
+{% endinfo_block %}
+
+#### Configure OMS
+
+1. Create the async Order amendment OMS subprocess file using the example:
+
+<details>
+    <summary>config/Zed/oms/DummySubprocess/DummyOrderAmendmentAsync01.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="DummyOrderAmendmentAsync">
+        <states>
+            <state name="order amendment draft pending" reserved="true" display="oms.state.order-amendment-draft-pending">
+                <flag>amendment in progress</flag>
+            </state>
+
+            <state name="order amendment draft" reserved="true" display="oms.state.order-amendment-draft">
+                <flag>amendment in progress</flag>
+            </state>
+
+            <state name="order amendment draft applied" reserved="true" display="oms.state.order-amendment-draft-applied">
+                <flag>amendment in progress</flag>
+            </state>
+
+            <state name="draft apply succeeded" reserved="true" display="oms.state.draft-apply-succeeded">
+                <flag>amendment in progress</flag>
+            </state>
+
+            <state name="draft apply failed" reserved="true" display="oms.state.draft-apply-failed">
+                <flag>amendment in progress</flag>
+            </state>
+        </states>
+
+        <transitions>
+
+            <transition happy="true">
+                <source>order amendment draft pending</source>
+                <target>order amendment draft</target>
+            </transition>
+
+            <transition happy="true">
+                <source>order amendment draft</source>
+                <target>order amendment draft applied</target>
+                <event>apply-order-amendment-draft</event>
+            </transition>
+
+            <transition happy="true" condition="DummyOrderAmendmentAsync/IsSuccessfullyApplied">
+                <source>order amendment draft applied</source>
+                <target>draft apply succeeded</target>
+            </transition>
+
+            <transition happy="true">
+                <source>order amendment draft applied</source>
+                <target>draft apply failed</target>
+            </transition>
+
+            <transition happy="true">
+                <source>draft apply succeeded</source>
+                <target>grace period pending</target>
+                <event>notify-order-amendment-applied</event>
+            </transition>
+
+            <transition happy="true">
+                <source>draft apply failed</source>
+                <target>grace period pending</target>
+                <event>notify-order-amendment-failed</event>
+            </transition>
+
+            <transition>
+                <source>order amendment</source>
+                <target>order amendment draft pending</target>
+                <event>start-order-amendment-draft</event>
+            </transition>
+
+        </transitions>
+
+        <events>
+            <event name="start-order-amendment-draft"/>
+            <event name="apply-order-amendment-draft" command="OrderAmendmentAsync/ApplyOrderAmendmentDraft" onEnter="true"/>
+            <event name="notify-order-amendment-applied" command="OrderAmendmentAsync/NotifyOrderAmendmentApplied" onEnter="true"/>
+            <event name="notify-order-amendment-failed" command="OrderAmendmentAsync/NotifyOrderAmendmentFailed" onEnter="true"/>
+        </events>
+    </process>
+
+</statemachine>
+```
+
+</details>
+
+2. Adjust your OMS state machine configuration according to your project's requirements.
+
+<details><summary>config/Zed/oms/DummyPayment01.xml</summary>
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="DummyPayment01" main="true">
+        <subprocesses>
+            <process>DummyOrderAmendmentAsync</process>
+        </subprocesses>
+
+    </process>
+
+    <process name="DummyOrderAmendmentAsync" file="DummySubprocess/DummyOrderAmendmentAsync01.xml"/>
+
+</statemachine>
+```
+
+</details>
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> OMS**.
+
+2. Select **DummyPayment01 [preview-version]** and make sure the `order amendment draft pending` state exists.
+
+{% endinfo_block %}
+
+### 3) Add translations
+
+1. Append glossary according to your configuration:
+
+
+<details><summary>src/data/import/glossary.csv</summary>
+
+```yaml
+sales_order_amendment_oms.mail.order_amendment_applied.subject,Your order has been successfully updated,en_US
+sales_order_amendment_oms.mail.order_amendment_applied.subject,Ihre Bestellung wurde erfolgreich aktualisiert,de_DE
+sales_order_amendment_oms.mail.order_amendment_applied.salutation,Hello,en_US
+sales_order_amendment_oms.mail.order_amendment_applied.salutation,Hallo,de_DE
+sales_order_amendment_oms.mail.order_amendment_applied.title,Your order has been successfully updated,en_US
+sales_order_amendment_oms.mail.order_amendment_applied.title,Ihre Bestellung wurde erfolgreich aktualisiert,de_DE
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_1,Thank you for shopping at Spryker Shop!,en_US
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_1,Danke für deine Bestellung beim Spryker Shop!,de_DE
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_2,We are writing to let you know that your order has been successfully updated as requested. You will receive a shipping confirmation by e-mail as soon as your updated order has been sent.,en_US
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_2,"Wir möchten Sie darüber informieren, dass Ihre Bestellung wie gewünscht erfolgreich aktualisiert wurde. Sobald Ihre aktualisierte Bestellung versendet wurde, erhalten Sie eine Versandbestätigung per E-Mail.",de_DE
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_3,"If you change your mind, you can return the items within 14 days after delivery. We hope you enjoy your purchase!",en_US
+sales_order_amendment_oms.mail.order_amendment_applied.text.line_3,"Falls Sie es sich anders überlegen, können Sie die Artikel innerhalb von 14 Tagen nach Lieferung zurücksenden. Wir wünschen Ihnen viel Freude mit Ihrem Einkauf!",de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.subject,Order edit could not be saved,en_US
+sales_order_amendment_oms.mail.order_amendment_failed.subject,Bestelländerung konnte nicht gespeichert werden,de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.salutation,Hello,en_US
+sales_order_amendment_oms.mail.order_amendment_failed.salutation,Hallo,de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.title,Order edit could not be saved,en_US
+sales_order_amendment_oms.mail.order_amendment_failed.title,Bestelländerung konnte nicht gespeichert werden,de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_1,Thank you for shopping at Spryker Shop!,en_US
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_1,Danke für deine Bestellung beim Spryker Shop!,de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_2,"We are writing to let you know that we tried to update your order as requested. Unfortunately, the changes could not be saved due to the following error:",en_US
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_2,"Wir möchten Sie darüber informieren, dass wir versucht haben, Ihre Bestellung wie gewünscht zu aktualisieren. Leider konnten die Änderungen aufgrund des folgenden Fehlers nicht gespeichert werden:",de_DE
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_3,"Your original order remains unchanged. If you need help or would like to try again, please contact our customer service team. We’re happy to assist you.",en_US
+sales_order_amendment_oms.mail.order_amendment_failed.text.line_3,"Ihre ursprüngliche Bestellung bleibt unverändert. Wenn Sie Hilfe benötigen oder es erneut versuchen möchten, wenden Sie sich bitte an unser Kundenservice — wir helfen Ihnen gerne weiter.",de_DE
+sales_order_amendment_oms.mail.footer.text.line_1,Viele Grüße,de_DE
+sales_order_amendment_oms.mail.footer.text.line_1,Have a great day!,en_US
+sales_order_amendment_oms.mail.footer.text.line_2,Dein Spryker Shop,de_DE
+sales_order_amendment_oms.mail.footer.text.line_2,Your Spryker Shop,en_US
+sales_order_amendment_oms.error.apply_order_amendment_draft_failed,We could not process your order edit.,en_US
+sales_order_amendment_oms.error.apply_order_amendment_draft_failed,Ihre Bestelländerung konnte nicht bearbeitet werden.,de_DE
+oms.state.order-amendment-draft-pending,Editing in Progress,en_US
+oms.state.order-amendment-draft-pending,Bestelländerung in Bearbeitung,de_DE
+oms.state.order-amendment-draft-applied,Editing in Progress,en_US
+oms.state.order-amendment-draft-applied,Bestelländerung in Bearbeitung,de_DE
+```
+
+</details>
+
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
+
+### 4) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                  | SPECIFICATION                                                                                                                                        | PREREQUISITES | NAMESPACE                                                        |
+|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin         | Maps an original order from `QuoteTransfer.originalOrder` to `SaveOrderTransfer`.                                                                   |               | Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout    |
+| StartOrderAmendmentDraftCheckoutPostSavePlugin          | Triggers the OMS event to start the order amendment draft.                                                                                               |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout |
+| NotifyOrderAmendmentAppliedMailTypeBuilderPlugin        | Builds `MailTransfer` with data for the `notify order amendment applied` email.                                                                       |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| NotifyOrderAmendmentFailedMailTypeBuilderPlugin         | Builds `MailTransfer` with data for the `notify order amendment failed` email.                                                                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail     |
+| ApplyOrderAmendmentDraftCommandByOrderPlugin            | Places an order with a found sales order amendment quote and quote process flow set to `order-amendment`.                                             |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms       |
+| NotifyOrderAmendmentAppliedCommandPlugin                | When a sales order amendment quote is found, sends an email notification about successfully applying order amendment.                        |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| NotifyOrderAmendmentFailedCommandPlugin                 | If a sales order amendment quote is found, sends an email notification about failing order amendment.                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin | Returns `true` if the sales order amendment quote is not found; otherwise returns `false`.                                                           |               | Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms      |
+| ShipmentGroupsSalesOrderAmendmentQuoteExpanderPlugin    | Expands each `SalesOrderAmendmentQuoteTransfer` in `SalesOrderAmendmentQuoteCollectionTransfer.salesOrderAmendmentQuotes` with shipment groups data. |               | Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment    |
+
+<details>
+  <summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin;
+use Spryker\Zed\SalesOrderAmendment\Communication\Plugin\Checkout\SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Checkout\StartOrderAmendmentDraftCheckoutPostSavePlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface>
+     */
+    protected function getCheckoutOrderSaversForOrderAmendmentAsync(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new QuoteToSaveOrderMapperCheckoutDoSaveOrderPlugin(), #Order Amendment Feature
+            new SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin(), #Order Amendment Feature
+        ];
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
+     */
+    protected function getCheckoutPostHooksForOrderAmendmentAsync(Container $container): array // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        return [
+            new StartOrderAmendmentDraftCheckoutPostSavePlugin(), #Order Amendment Feature
+        ];
+    }
+}
+```
+
+</details>
+
+<details>
+  <summary>src/Pyz/Zed/Mail/MailDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail\NotifyOrderAmendmentAppliedMailTypeBuilderPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Mail\NotifyOrderAmendmentFailedMailTypeBuilderPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface>
+     */
+    protected function getMailTypeBuilderPlugins(): array
+    {
+        return [
+            new NotifyOrderAmendmentAppliedMailTypeBuilderPlugin(),
+            new NotifyOrderAmendmentFailedMailTypeBuilderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+<details>
+  <summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Oms\ApplyOrderAmendmentDraftCommandByOrderPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\NotifyOrderAmendmentAppliedCommandPlugin;
+use Spryker\Zed\SalesOrderAmendmentOms\Communication\Plugin\Oms\NotifyOrderAmendmentFailedCommandPlugin;
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendCommandPlugins(Container $container): Container
+    {
+        $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+            $commandCollection->add(new ApplyOrderAmendmentDraftCommandByOrderPlugin(), 'OrderAmendmentAsync/ApplyOrderAmendmentDraft');
+            $commandCollection->add(new NotifyOrderAmendmentAppliedCommandPlugin(), 'OrderAmendmentAsync/NotifyOrderAmendmentApplied');
+            $commandCollection->add(new NotifyOrderAmendmentFailedCommandPlugin(), 'OrderAmendmentAsync/NotifyOrderAmendmentFailed');
+
+            return $commandCollection;
+        });
+
+        return $container;
+    }
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendConditionPlugins(Container $container): Container // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+    {
+        $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
+            $conditionCollection
+                ->add(new IsOrderAmendmentDraftSuccessfullyAppliedConditionPlugin(), 'DummyOrderAmendmentAsync/IsSuccessfullyApplied');
+
+            return $conditionCollection;
+        });
+}
+```
+
+</details>
+
+<details>
+  <summary>src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesOrderAmendment;
+
+use Spryker\Zed\SalesOrderAmendment\SalesOrderAmendmentDependencyProvider as SprykerSalesOrderAmendmentDependencyProvider;
+use Spryker\Zed\Shipment\Communication\Plugin\SalesOrderAmendment\ShipmentGroupsSalesOrderAmendmentQuoteExpanderPlugin;
+
+class SalesOrderAmendmentDependencyProvider extends SprykerSalesOrderAmendmentDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SalesOrderAmendmentExtension\Dependency\Plugin\SalesOrderAmendmentQuoteExpanderPluginInterface>
+     */
+    protected function getSalesOrderAmendmentQuoteExpanderPlugins(): array
+    {
+        return [
+            new ShipmentGroupsSalesOrderAmendmentQuoteExpanderPlugin(),
+        ];
+    }
+}
+```
+
+</details>
+
+
+### Enable asynchronous order amendment
+
+You can set up asynchronous order amendment in two ways:
+
+1. Conditionally: The standard order amendment flow starts first, then switches to the asynchronous flow based on specific conditions.
+2. Unconditionally: The asynchronous flow runs from the start.
+
+Follow the instructions in the following sections according to how you want to set it up.
+
+#### Option 1: Enable async order amendment conditionally
+
+The Example module lets you enable the asynchronous order amendment flow based on the selected payment method. To configure this behavior, follow the steps:
+
+1. Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                | SPECIFICATION                                                                                                    | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| PaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin | Sets `QuoteTransfer.quoteProcessFlow` to a new `QuoteProcessFlowTransfer` with the `order-amendment-async` name. |               | Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Checkout |
+
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\OrderAmendmentExample\Communication\Plugin\Checkout\PaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreSaveHookInterface|\Spryker\Zed\Checkout\Dependency\Plugin\CheckoutPreSaveInterface|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreSavePluginInterface>
+     */
+    protected function getCheckoutPreSaveHooksForOrderAmendment(Container $container): array
+    {
+        return [
+            new PaymentToAsyncOrderAmendmentFlowCheckoutPreSavePlugin(),
+        ];
+    }
+}
+```
+
+
+2. Specify the payment methods to enable the asynchronous order amendment checkout process flow for:
+
+**src/Pyz/Zed/OrderAmendmentExample/OrderAmendmentExampleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\SalesOrderAmendmentWidget;
+
+use Spryker\Zed\OrderAmendmentExample\OrderAmendmentExampleConfig as SprykerOrderAmendmentExampleConfig;
+
+class OrderAmendmentExampleConfig extends SprykerOrderAmendmentExampleConfig
+{
+    /**
+     * @var list<string>
+     */
+    protected const ASYNC_ORDER_AMENDMENT_PAYMENT_METHOD_NAMES = [
+        'dummyPaymentInvoice',
+    ];
+}
+```
+
+#### Option 2: Enable async order amendment unconditionally
+
+1. Specify the order amendment quote process flow:
+
+**src/Pyz/Zed/SalesOrderAmendment/SalesOrderAmendmentConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesOrderAmendment;
+
+use Generated\Shared\Transfer\QuoteProcessFlowTransfer;
+use Spryker\Zed\SalesOrderAmendment\SalesOrderAmendmentConfig as SprykerSalesOrderAmendmentConfig;
+
+class SalesOrderAmendmentConfig extends SprykerSalesOrderAmendmentConfig
+{
+    /**
+     * Specification:
+     * - Returns the default order amendment quote process flow.
+     *
+     * @api
+     *
+     * @return \Generated\Shared\Transfer\QuoteProcessFlowTransfer
+     */
+    public function getDefaultOrderAmendmentQuoteProcessFlow(): QuoteProcessFlowTransfer
+    {
+        return (new QuoteProcessFlowTransfer())->setName(SalesOrderAmendmentExtensionContextsInterface::CONTEXT_ORDER_AMENDMENT_ASYNC);
+    }
+}
+```
+
+2. Enable plugins for the asynchronous order amendment checkout process flow:
+
+Make sure all the needed plugins registered for the `order-amendment` checkout process flow are also registered for the `order-amendment-async` checkout process flow.
+
+Replace dependency provider methods postfixed with `ForOrderAmendment` with `ForOrderAmendmentAsync` methods in the following modules:
+- `Cart`
+- `CartReorder`
+- `Checkout`
+- `CheckoutRestApi`
+- `Sales`
+
+
+{% info_block warningBox "Verification" %}
+
+1. Place an order.
+2. Initiate and finish order amendment. Make sure the following applies:
+- The order doesn't show the changes you've submitted.
+- The quote has been saved to the `spy_sales_order_amendment_quote` table.
+- The order items are in the `order amendment draft pending` state.
+3. Execute `console oms:check-condition` command.
+- Make sure the order items are in the `order amendment draft applied` state.
+- Make sure the changes made in the order have been applied to the order.
+- Make sure an email notification about order amendment has been sent.
+
+{% endinfo_block %}
+
+#### Optional: Project level customizations
+
+- Display errors: Display errors appearing during the `ApplyOrderAmendmentDraftCommandByOrderPlugin` execution. If any errors occur, `ApplyOrderAmendmentDraftCommandByOrderPlugin` saves them to `spy_sales_order_amendment_quote` table to the `quote_data` with the other Quote data. You can obtain them from the Quote and display in the frontend.
+- Customize email templates: Customize email templates for the order amendment applied and failed notifications by redefining Twig templates:
+  - `notify-order-amendment-applied.html.twig`
+  - `notify-order-amendment-applied.text.twig`
+  - `notify-order-amendment-failed.html.twig`
+  - `notify-order-amendment-failed.text.twig`
+- Customize the OMS process: you can customize you OMS processes to add more states and transitions, for example, to add a state and transition to implement the retry logic for the order amendment draft applying in case of errors.
+
 ## Install feature frontend
 
 Take the following steps to install the feature frontend.
@@ -1920,7 +2444,6 @@ Make sure the following modules have been installed:
 | MODULE                        | EXPECTED DIRECTORY                               |
 |-------------------------------|--------------------------------------------------|
 | SalesOrderAmendmentWidget     | vendor/spryker-shop/sales-order-amendment-widget |
-| OrderAmendmentItemLinkWidget  | vendor/spryker-shop/sales-order-amendment-widget |
 
 {% endinfo_block %}
 
@@ -1975,6 +2498,10 @@ sales_order_amendment_widget.amendment_cant_be_canceled,"This order amendment ca
 sales_order_amendment_widget.amendment_cant_be_canceled,"Diese Bestelländerung kann nicht storniert werden. ",de_DE
 sales_order_amendment_widget.amendment_canceled,"The order amendment has been successfully canceled.",en_US
 sales_order_amendment_widget.amendment_canceled,"Die Bestelländerung wurde erfolgreich storniert.",de_DE
+sales_order_amendment_widget.summary_step.update.order,Update order,en_US
+sales_order_amendment_widget.summary_step.update.order,Bestellung aktualisieren,de_DE
+sales_order_amendment_widget.success_step.update.success.title,Your order has been updated successfully!,en_US
+sales_order_amendment_widget.success_step.update.success.title,Ihre Bestellung wurde erfolgreich aktualisiert!,de_DE
 ```
 
 2. Import data:
@@ -2031,11 +2558,13 @@ Make sure order amendment is available on order details and orders pages.
 
 To enable widgets, register the following plugins:
 
-| PLUGIN                        | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                         |
-|-------------------------------|-----------------------------------------------------------------------|---------------|---------------------------------------------------|
-| OrderAmendmentWidget          | Enables customers to edit existing orders.                            |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
-| CancelOrderAmendmentWidget    | Enables customers to cancel order amendment requests.                 |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
-| OrderAmendmentItemLinkWidget  | Handles URL generation for deactivated products in order amendment. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| PLUGIN                                    | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                         |
+|-------------------------------------------|---------------------------------------------------------------------|---------------|---------------------------------------------------|
+| OrderAmendmentWidget                      | Enables customers to edit existing orders.                          |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| CancelOrderAmendmentWidget                | Enables customers to cancel order amendment requests.               |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| OrderAmendmentItemLinkWidget              | Handles URL generation for deactivated products in order amendment. |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| UpdateOrderCheckoutSubmitButtonTextWidget | Displays the text for the submit order update button.               |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
+| UpdateOrderCheckoutSuccessTitleWidget     | Displays the title for the successful order update page.            |               | SprykerShop\Yves\SalesOrderAmendmentWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -2044,7 +2573,11 @@ To enable widgets, register the following plugins:
 
 namespace Pyz\Yves\ShopApplication;
 
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\CancelOrderAmendmentWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\OrderAmendmentItemLinkWidget;
 use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\OrderAmendmentWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\UpdateOrderCheckoutSubmitButtonTextWidget;
+use SprykerShop\Yves\SalesOrderAmendmentWidget\Widget\UpdateOrderCheckoutSuccessTitleWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -2058,20 +2591,30 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             OrderAmendmentWidget::class,
             CancelOrderAmendmentWidget::class,
             OrderAmendmentItemLinkWidget::class,
+            UpdateOrderCheckoutSubmitButtonTextWidget::class,
+            UpdateOrderCheckoutSuccessTitleWidget::class,
         ];
     }
 }
 ```
 
+{% info_block warningBox "Widgets in Twig" %}
+
+If your project uses Twig templates, make sure the corresponding widgets are used in the redefined templates.
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following widgets have been registered:
 
-| MODULE                         | TEST                                                                                 |
-|--------------------------------|--------------------------------------------------------------------------------------|
-| OrderAmendmentWidget           | Make sure the edit order button is displayed on orders and order details pages.      |
-| CancelOrderAmendmentWidget     | Make sure the cancel order amendment button is displayed on the cart page.           |
-| OrderAmendmentItemLinkWidget   | Make sure that, on the Cart page, product URL does not exists for deactivated products. |
+| MODULE                                    | TEST                                                                                                                                                                         |
+|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OrderAmendmentWidget                      | Make sure the edit order button is displayed on the orders and order details pages.                                                                                              |
+| CancelOrderAmendmentWidget                | Make sure the cancel order amendment button is displayed on the Cart page.                                                                                                   |
+| OrderAmendmentItemLinkWidget              | Make sure that, on the Cart page, product URLs are not displayed for deactivated products.                                                                                      |
+| UpdateOrderCheckoutSubmitButtonTextWidget | Make sure that, on the Checkout summary page, the submit button text is displayed as configured for the `sales_order_amendment_widget.summary_step.update.order` glossary key.   |
+| UpdateOrderCheckoutSuccessTitleWidget     | Make sure that, on the Successful order update page, the title is displayed as configured for the `sales_order_amendment_widget.success_step.update.success.title` glossary key. |
 
 {% endinfo_block %}
 

@@ -2,8 +2,8 @@
 title:  Merchant onboarding
 description: This document describes the onboarding process for merchants and gives step-by-step instructions for marketplace operators.
 template: concept-topic-template
-redirect_from:
 last_updated: Mar 29, 2023
+redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
 

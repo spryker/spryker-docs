@@ -4387,6 +4387,13 @@ entries:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
 
+      - title: Text Alternatives
+      - nested:
+          - title: Install the Text Alternatives feature
+            url: /docs/pbc/all/text-alternatives/install-the-text-alternatives-feature.html
+            include_versions:
+              - "latest"
+
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html
         nested:

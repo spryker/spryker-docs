@@ -2,7 +2,7 @@
 title: Manage Multi-Factor Authentication using Glue API
 description: Learn how to create and implement your own Multi-Factor Authentication method in Spryker.
 template: howto-guide-template
-last_updated: Apr 7, 2025
+last_updated: Aug 22, 2025
 related:
   - title: Multi-Factor Authentication Feature overview
     link: docs/pbc/all/multi-factor-authentication/page.version/multi-factor-authentication.html

@@ -2,7 +2,7 @@
 title: Install the Multi-Factor Authentication feature
 description: This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Mar 06, 2025
+last_updated: Aug 22, 2025
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
@@ -19,7 +19,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Agent assist                | 202507.0 | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
 | Glue Rest API               | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 | Back Office dropdown navigation | 202507.0 | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
-| Glue Storefront and Backend API Applications | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| Glue Storefront and Backend API Applications | 202507.0 | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ## 1) Install the required modules
 
@@ -323,7 +323,6 @@ For more information about Glue Backend API resources, see [Create backend resou
 
 {% endinfo_block %}
 
-<details>
 <summary>src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
 
 ```php
@@ -344,7 +343,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
 
 ### Configure protected routes for Glue Storefront API
 
@@ -356,7 +354,6 @@ For more information about Glue Storefront API resources, see [Create storefront
 
 {% endinfo_block %}
 
-<details>
 <summary>src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
 
 ```php
@@ -377,7 +374,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-</details>
 
 ### Configure Back Office ACL access
 
@@ -423,7 +419,6 @@ The configuration below focuses on additional API types: Backend and Storefront 
 
 #### Configure protected endpoints for Glue Backend API
 
-<details>
 <summary>src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php</summary>
 
 ```php
@@ -453,11 +448,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     }
 }
 ```
-</details>
 
 #### Configure protected endpoints for Glue Storefront API
 
-<details>
 <summary>src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php</summary>
 
 ```php
@@ -487,7 +480,6 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
     }
 }
 ```
-</details>
 
 
 ## 3) Set up the database schema and transfer objects
@@ -1128,7 +1120,6 @@ Add the following settings:
 
 </details>
 
-<details>
 <summary>tsconfig.mp.json</summary>
 
 ```javascript
@@ -1145,7 +1136,6 @@ Add the following settings:
 }
 ```
 
-</details>
 
 2. Build the MFA frontend assets:
 

@@ -2,18 +2,18 @@
 title: Install the Multi-Factor Authentication Merchant Portal feature
 description: This document describes how to install the Multi-Factor Authentication Merchant Portal (MFA MP) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Aug 04, 2025
+last_updated: Aug 22, 2025
 ---
 
-This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
+This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html) for the Merchant Portal.
 
 ## Prerequisites
 
 | FEATURE                          | VERSION          | INSTALLATION  GUIDE                                                                                                                                                                                                                     |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core | {{page.version}} | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
-| Merchant Portal Agent Assist     | {{page.version}} | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
-| Multi-Factor Authentication      | {{page.version}} | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html) |
+| Marketplace Merchant Portal Core | 202507.0 | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
+| Merchant Portal Agent Assist     | 202507.0 | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
+| Multi-Factor Authentication      | 202507.0 | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html) |
 
 ## 1) Install the required modules
 
@@ -230,7 +230,6 @@ Enable the following behaviors by registering the plugins:
 
 ### Register plugins For Merchant Portal
 
-<details>
 <summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
 
 ```php
@@ -249,9 +248,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
 
 ```php
@@ -270,9 +267,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php</summary>
 
 ```php
@@ -299,9 +294,7 @@ class MultiFactorAuthMerchantPortalDependencyProvider extends SprykerMultiFactor
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
 
 ```php
@@ -324,9 +317,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php</summary>
 
 ```php
@@ -345,9 +336,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
 
 ```php
@@ -366,11 +355,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     }
 }
 ```
-</details>
 
 ### Register plugins for Agent Merchant Portal
 
-<details>
 <summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
 
 ```php
@@ -389,9 +376,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
 
 ```php
@@ -410,9 +395,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php</summary>
 
 ```php
@@ -439,9 +422,7 @@ class MultiFactorAuthMerchantPortalDependencyProvider extends SprykerMultiFactor
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiDependencyProvider.php</summary>
 
 ```php
@@ -461,7 +442,6 @@ class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecur
 }
 ```
 
-<details>
 <summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
 
 ```php
@@ -484,9 +464,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
     }
 }
 ```
-</details>
 
-<details>
 <summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
 
 ```php
@@ -505,13 +483,11 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     }
 }
 ```
-</details>
 
 ## 7) Set up the frontend
 
 Add the following settings:
 
-<details>
 <summary>tsconfig.mp.json</summary>
 
 ```javascript
@@ -527,8 +503,6 @@ Add the following settings:
     }
 }
 ```
-
-</details>
 
 2. Build the MFA frontend assets:
 

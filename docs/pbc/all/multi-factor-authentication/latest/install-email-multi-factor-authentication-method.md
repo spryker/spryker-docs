@@ -2,7 +2,7 @@
 title: Install email Multi-Factor Authentication method 
 description: Learn how to install and configure email multi-factor authentication in Spryker for all user types.
 template: howto-guide-template
-last_updated: Mar 6, 2025
+last_updated: Aug 22, 2025
 ---
 
 Email Multi-Factor Authentication (MFA) is a security mechanism that verifies identity using an authentication code sent to an email address. This document describes how to install and configure email MFA.
@@ -86,7 +86,6 @@ cms-block-email--multi_factor_auth_email--html,US
 cms-block-email--multi_factor_auth_email--text,US
 ```
 
-<details>
 <summary>data/import/common/common/cms_block.csv</summary>
 
 ```csv
@@ -96,7 +95,6 @@ cms-block-email--multi_factor_auth_email--text,customer_multi_factor_auth_email-
 {% endraw %}
 ```
 
-</details>
 
 ## 4) Set up behavior
 
@@ -474,7 +472,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-<details>
 <summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
@@ -495,7 +492,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 }
 ```
 
-</details>
 
 {% info_block warningBox "Verification" %}
 

@@ -2,7 +2,7 @@
 title: Multi-Factor Authentication
 description: Learn about Multi Factor Authentication (MFA) that you can use within your Spryker project.
 template: concept-topic-template
-last_updated: Jun 02, 2026
+last_updated: Aug 22, 2025
 keywords: mfa
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html

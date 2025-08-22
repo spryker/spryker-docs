@@ -5,6 +5,13 @@ template: concept-topic-template
 last_updated: Nov 1, 2024
 ---
 
+{% info_block warningBox "Warning" %}
+
+As of August 2025, we no longer provide support for PHP 8.3 modules. To ensure continued compatibility, security, and access to new features,
+we highly recommend [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html).
+
+{% endinfo_block %}
+
 This document describes how to upgrade PHP to version 8.3. This upgrades the version in Docker environment and `composer.json`.
 
 ## 1. Check project code for PHP compatibility using PHPCompatibility

@@ -22,7 +22,7 @@ Although Spryker still supports older versions of Symfony, avoid installing them
 ## Main changes in Symfony 6.4
 
 Symfony 6.4 has a new cycle of innovations. When it starts, one cycle lasts two years, on a modernized codebase that has been cleaned up from the dead weight of the past.
-The major change included in Symfony 6.4 is PHP 8.2 being the minimum required version of PHP.
+The major change included in Symfony 6.4 is PHP 8.3 being the minimum required version of PHP.
 The code of Symfony 6.4 has been updated. You can take advantage of all the new features in PHP.
 For example, the code includes PHP 8 [attributes](https://www.php.net/manual/fr/language.attributes.overview.php), more expressive and rigorous type declarations, and more.
 

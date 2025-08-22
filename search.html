@@ -55,11 +55,13 @@ permalink: /search.html
                 item(hit) {
                     const url = hit.url_without_anchor;
                     const title = hit.title ? hit.title : hit.url_without_anchor;
+                    const description = hit.description ? hit.description : '';
 
                     const highlight = hit._highlightResult || {};
                     const headers = Array.isArray(highlight.headers)
                         ? highlight.headers
                             .filter(header => header?.matchLevel !== 'none')
+                            .slice(0, 3)
                             .filter(header => header?.value)
                             .map(header => `<p class="header">${header.value}</p>`)
                             .join('')
@@ -69,13 +71,13 @@ permalink: /search.html
                         ? highlight.keywords
                             .filter(keyword => keyword?.matchLevel !== 'none')
                             .filter(keyword => keyword?.value)
-                            .map(k => `<p class="header">${keyword.value}</p>`)
+                            .map(keyword => `<p class="header">${keyword.value}</p>`)
                             .join('')
                         : '';
 
-                    const contentSnippets = extractMarkedSnippets(
+                    const contentSnippets = extractMarkedContext(
                         highlight.content?.matchLevel !== 'none' ? highlight.content.value : ''
-                    ).join(' ... ');
+                    );
 
                     const contentSnippetsHtml = contentSnippets.length ? `<div class="highlight-content">...${contentSnippets}</div>` : '';
 
@@ -83,6 +85,7 @@ permalink: /search.html
                         <div class="hit">
                             <a href="${url}">${title}</a>
                                 ${headers || `<p class="header">${title}</p>`}
+                                ${description.length > 0 ? `<p>${description}</p>` : ''}
                                 ${keywords}
                                 ${contentSnippetsHtml}
                         </div>
@@ -98,21 +101,28 @@ permalink: /search.html
 
     search.start();
 
-    function extractMarkedSnippets(text) {
-        const regex = /((?:\S+\s+){0,3})?<mark>([^<]+)<\/mark>((?:\s+\S+){0,3})?/g;
-        const results = [];
-        let match;
+    function extractMarkedContext(text, maxMarks = 5, contextSize = 5) {
+        const regex = /<mark>(.*?)<\/mark>/gi;
+        let matches = [...text.matchAll(regex)];
+        let results = [];
 
-        while ((match = regex.exec(text)) !== null) {
-            const before = match[1]?.trim() || '';
-            const highlight = match[2].trim();
-            const after = match[3]?.trim() || '';
-            const snippet = `${before} <mark>${highlight}</mark> ${after}`.trim();
+        for (let i = 0; i < Math.min(maxMarks, matches.length); i++) {
+            const match = matches[i];
+            const before = text.slice(0, match.index).trim();
+            const after = text.slice(match.index + match[0].length).trim();
+
+            // Split into words
+            const beforeWords = before.split(/\s+/).slice(-contextSize);
+            const afterWords = after.split(/\s+/).slice(0, contextSize);
+
+            // Build snippet
+            const snippet = `${beforeWords.join(" ")} ${match[0]} ${afterWords.join(" ")}`;
             results.push(snippet);
         }
 
-        return results;
+        return results.join(" ... ");
     }
+
 
     if (initialQuery) {
         search.setUiState({

@@ -2,7 +2,7 @@ This document describes how to upgrade the Currency module.
 
 ## Prerequisites
 
-[Upgrade to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html)
+[Upgrade to PHP 8.3](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html)
 
 ## Upgrading from version 3.* to version 4.0.0
 

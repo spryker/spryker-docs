@@ -7,8 +7,7 @@ last_updated: Nov 1, 2024
 
 {% info_block warningBox "Warning" %}
 
-As of August 2025, we no longer provide support for PHP 8.3 modules. To ensure continued compatibility, security, and access to new features,
-we highly recommend [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html).
+While PHP 8.3 is still supported, we strongly recommend upgrading to PHP 8.4 by the end of 2026 to ensure continued compatibility, security, and access to new features. See [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html) for details.
 
 {% endinfo_block %}
 

@@ -34,7 +34,7 @@ All required steps are described in this article.
 
 ## 1. Create a base module
 
-We recommend putting a `Publish & Synchromization` related code in a separate module. A module usually represents one database or domain entity. E.g. `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`. 
+We recommend putting a `Publish & Synchronization` related code in a separate module. A module usually represents one database or domain entity. E.g. `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`.
 
 You can create a module with a few options:
 - Create a module manually. For details, see [Create a module](/docs/dg/dev/backend-development/extend-spryker/create-modules).
@@ -74,7 +74,7 @@ The `parameter` element specifies when events should be triggered. It has four a
 
 The *value* and *operator* attributes are optional. You can use them to filter changes based on certain criteria. The following example triggers an event only if the value of the `quantity` column is `0`:
 
-```php
+```xml
 <parameter name="spy_mymodule_quantity" column="quantity" value="0" operator="==="/>
 ```
 
@@ -106,7 +106,7 @@ This actions will trigger the `Entity.spy_store.update` event, which can be used
 
 `Entity.{table_name}.{action}` is a naming convention for the Publish events. The `{table_name}` part is the name of the Propel table that triggers the event, and `{action}` is one of the following actions: create, update, or delete.
 
-In the Spryker packages you can find that such events are defined in the shared `Config` class of the module. For example, the `StoreStorageConfig` class can be created to define the events for the `spy_store` table.
+In the Spryker packages you can find that such events are defined in the shared `Config` class of the module. For example, the `\Spryker\Shared\StoreStorage\StoreStorageConfig` class can be created to define the events for the `spy_store` table.
 
 ```php
     /**
@@ -201,13 +201,15 @@ Let's also take a look at the example of a search table:
 The *Synchronization* behavior added by the above schema files adds a column that stores the actual data to synchronize to Storage or Search (in JSON format). The column name is *data*.
 
 Synchronization behavior parameters:
-- `resource`—specifies the Storage or Search namespace to synchronize with.
-- `store`—specifies whether it's necessary to specify a store for an entity.
-- `locale`—specifies whether it's necessary to specify a locale for an entity.
-- `key_suffix_column`—specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
-- `queue_group`—specifies the queue group for synchronization.
-- `params`—specifies search parameters (Search only).
-- `queue_pool`—specifies the queue pool name for synchronization. If store is not required for the entity, then this parameter must be set to a string with the pool name. If store is required, then this parameter must be omitted.
+- `resource`— specifies the Storage or Search namespace to synchronize with.
+- `store`— specifies whether it's necessary to specify a store for an entity.
+- `locale`— specifies whether it's necessary to specify a locale for an entity.
+- `key_suffix_column`— specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
+- `queue_group`— specifies the queue group for synchronization.
+- `params`— specifies search parameters (Search only).
+- `queue_pool`— specifies the queue pool name for synchronization. If store is not required for the entity, then this parameter must be set to a string with the pool name. If store is required, then this parameter must be omitted.
+
+Make sure that after required tables are created, you run the `propel:install` command to create the tables in the database.
 
 ## 4. Create required plugins
 
@@ -258,19 +260,97 @@ class StoreWritePublisherPlugin extends AbstractPlugin implements PublisherPlugi
 }
 ```
 
-This plugin must be registered in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getDefaultQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
+This plugin must be registered in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `\Pyz\Zed\Publisher\PublisherConfig::getPublishQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
 
 E.g.
 ```php
-protected function getPublishAndSynchronizeHealthCheckPlugins(): array
+protected function getPublisherPlugins(): array
     {
         return [
+            ...
             PublishAndSynchronizeHealthCheckConfig::PUBLISH_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK => [
                 new PublishAndSynchronizeHealthCheckStorageWritePublisherPlugin(),
                 new PublishAndSynchronizeHealthCheckSearchWritePublisherPlugin(),
             ],
+            ...
         ];
     }
+```
+
+In addition `\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface` can be implemented. It will be used by `publish:trigger-events` command in order to go through all entities in entity table and trigger events for them. This is useful when you need to re-publish all data, for example, after changing the mapping or if some data was lost in the Storage or Search database.
+
+```php
+class StorePublisherTriggerPlugin extends AbstractPlugin implements PublisherTriggerPluginInterface
+{
+    /**
+     * @uses \Orm\Zed\Store\Persistence\Map\SpyStoreTableMap::COL_ID_STORE
+     *
+     * @var string
+     */
+    protected const COL_ID_STORE = 'spy_store.id_store';
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param int $offset
+     * @param int $limit
+     *
+     * @return array<\Spryker\Shared\Kernel\Transfer\AbstractTransfer>
+     */
+    public function getData(int $offset, int $limit): array
+    {
+        $storeCriteriaTransfer = (new StoreCriteriaTransfer())
+            ->setPagination(
+                (new PaginationTransfer())
+                    ->setLimit($limit)
+                    ->setOffset($offset),
+            );
+
+        return $this->getFactory()
+            ->getStoreFacade()
+            ->getStoreCollection($storeCriteriaTransfer)
+            ->getStores()
+            ->getArrayCopy();
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @return string
+     */
+    public function getResourceName(): string
+    {
+        return StoreStorageConfig::STORE_RESOURCE_NAME;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @return string
+     */
+    public function getEventName(): string
+    {
+        return StoreStorageConfig::STORE_PUBLISH_WRITE;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @return string|null
+     */
+    public function getIdColumnName(): ?string
+    {
+        return static::COL_ID_STORE;
+    }
+}
 ```
 
 ### 4.2 Create a Synchronization plugin
@@ -367,9 +447,9 @@ class StoreSynchronizationDataPlugin extends AbstractPlugin implements Synchroni
     }
 }
 ```
-If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition `queue_pool` of Synchronization behavior.
+If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition [queue_pool](#create-a-new storage-or-search-table) of Synchronization behavior.
 
-An example of the `getData()` method implementation:
+Below you can see an example of the code that provides data for the `getData()` method. Data taken from the Storage table and mapped to the `SynchronizationDataTransfer` object.:
 ```php
 public function getStoreStorageSynchronizationDataTransfers(StoreStorageCriteriaTransfer $storeStorageCriteriaTransfer): array
     {

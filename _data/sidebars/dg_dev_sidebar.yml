@@ -232,7 +232,7 @@ entries:
         - title: Implement Publish and Synchronization
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
         - title: Publish and synchronize and multi-store shop systems
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
         - title: Add publish events

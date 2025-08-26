@@ -2,7 +2,7 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place. This document describes how to add the *discount prioritization*, *discount validity period supports HH:MM time definition* and *voucher codes removal after the discount type switching* functionality.
+The following feature integration guide expects the basic feature to be in place. This document describes how to add the *discount prioritization*, *HH:MM time definition in discount validity period*, and *voucher codes removal after the discount type switching* functionality.
 
 {% endinfo_block %}
 
@@ -94,7 +94,7 @@ Make sure that all labels and help tooltips in the discount form has English and
 
 {% endinfo_block %}
 
-## 4) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -103,6 +103,7 @@ Enable the following behaviors by registering the plugins:
 | DeleteDiscountVoucherPoolDiscountPostUpdatePlugin | Deletes all vouchers from the voucher pool and the voucher pool itself after switching the discount type from `voucher` to another one. |               | Spryker\Zed\Discount\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
+
 ```php
 <?php
 
@@ -128,10 +129,9 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="'">></span> Discount**.
-2. Create new discount with the type **Voucher**.
-3. Generate some voucher codes for the created discount.
-4. Switch the discount type to different from **Voucher** (for example, **Cart rule**).
-5. Make sure the voucher pool and voucher codes related to discount are deleted from `spy_discount_voucher_pool` and from `spy_discount_voucher` DB tables.
+2. Create a discount with the **Voucher** type.
+3. Generate several voucher codes for the created discount.
+4. Switch the discount type from **Voucher** to another type–for example, **Cart rule**. Make sure the voucher pool and voucher codes related to discount are deleted from `spy_discount_voucher_pool` and from `spy_discount_voucher` DB tables.
 
 {% endinfo_block %}
 

@@ -574,20 +574,20 @@ reference,name,serial_number,note,external_image_url,business_unit_key,assigned_
 AST--1,DemoBrand Print Pro 2100,PRNT000014,"The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",,spryker_systems_HR,"spryker_systems_HR"
 AST--2,DemoHaul Titan X9,TRK1200027,"The DemoHaul Titan X9 is a high-performance heavy-duty truck engineered for demanding transport operations. Built with a reinforced steel chassis and a turbocharged diesel engine, the Titan X9 delivers exceptional hauling power, fuel efficiency, and long-distance reliability. Its ergonomic cabin features advanced driver-assist technology, real-time load monitoring, and a fully digital dashboard for enhanced control. With a payload capacity of up to 18 tons and rugged off-road capability, the Titan X9 is the ultimate solution for logistics professionals and fleet operators.",,spryker_systems_Zurich,spryker_systems_Zurich
 AST--3,OfficeJet Pro 9025e All-in-One Printer,CN1234ABCD,"The OfficeJet Pro 9025e is a high-performance multifunctional printer designed for modern office environments. It offers fast printing, scanning, copying, and faxing capabilities with automatic duplex printing. With built-in Wi-Fi and mobile printing options, this all-in-one device enhances workplace efficiency.",,spryker_systems_HR,spryker_systems_HR
-AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg,spryker_systems_HR,spryker_systems_HR
+AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg`,spryker_systems_HR,spryker_systems_HR
 ```
 
-| COLUMN                      | REQUIRED | DATA TYPE | DATA EXAMPLE                                                  | DATA EXPLANATION                                                          |
-|-----------------------------|----------|-----------|---------------------------------------------------------------|---------------------------------------------------------------------------|
-| reference                   | ✓        | string    | AST--1                                                        | Unique identifier for the asset used as a reference in the system.        |
-| name                        | ✓        | string    | DemoBrand Print Pro 2100                                      | The display name of the asset.                                            |
-| serial_number               | x        | string    | PRNT000014                                                    | The serial number of the asset for identification purposes.               |
-| note                        | x        | string    | The DemoBrand Print Pro 2100...                               | Detailed description or notes about the asset.                            |
-| external_image_url          | x        | string    | https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg | URL to an external image of the asset.                                    |
-| business_unit_key           | x        | string    | spryker_systems_HR                                            | The key of the business unit that owns the asset.                         |
-| assigned_business_unit_keys | x        | string    | spryker_systems_HR                                            | Comma-separated list of business unit keys that have access to the asset. |
+| COLUMN                      | REQUIRED | DATA TYPE | DATA EXAMPLE                                                    | DATA EXPLANATION                                                          |
+|-----------------------------|----------|-----------|----------------------------------------------------------------|---------------------------------------------------------------------------|
+| reference                   | ✓        | string    | AST--1                                                         | Unique identifier for the asset used as a reference in the system.        |
+| name                        | ✓        | string    | DemoBrand Print Pro 2100                                       | The display name of the asset.                                            |
+| serial_number               | x        | string    | PRNT000014                                                     | The serial number of the asset for identification purposes.               |
+| note                        | x        | string    | The DemoBrand Print Pro 2100...                                | Detailed description or notes about the asset.                            |
+| external_image_url          | x        | string    | `https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg` | URL to an external image of the asset.                                    |
+| business_unit_key           | x        | string    | spryker_systems_HR                                             | The key of the business unit that owns the asset.                         |
+| assigned_business_unit_keys | x        | string    | spryker_systems_HR                                             | Comma-separated list of business unit keys that have access to the asset. |
 
-## Extend the data import configuration:
+## Extend the data import configuration
 
 **/data/import/local/full_EU.yml**
 
@@ -599,7 +599,7 @@ AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.n
   source: data/import/common/common/ssp_asset.csv
 ```
 
-## Register the following data import plugins:
+## Register the following data import plugins
 
 | PLUGIN                   | SPECIFICATION                         | PREREQUISITES | NAMESPACE                                                            |
 |--------------------------|---------------------------------------|---------------|----------------------------------------------------------------------|
@@ -823,6 +823,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```php
+<?php
 
 declare(strict_types = 1);
 

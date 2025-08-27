@@ -223,7 +223,7 @@ ssp-pl-001,service-004-1
 ```csv
 reference,name,code,image_url
 MDL--1,OfficeJet Pro,9025e,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg`
-MDL--2,Casa,F-08,https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg
+MDL--2,Casa,F-08,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg`
 ```
 
 | COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE                                                          | DATA EXPLANATION                                     |
@@ -258,7 +258,7 @@ MDL--2,ssp-pl-001
 | model_reference  | ✓        | string    | MDL--2       | Unique identifier for the model used as a reference.                    |
 | product_list_key | ✓        | string    | ssp-pl-001   | Unique identifier for the product list to be associated with the model. |
 
-## Extend the data import configuration:
+## Extend the data import configuration
 
 **/data/import/local/full_EU.yml**
 
@@ -467,6 +467,10 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 4. Upload an image and fill in the required fields.
 5. Click **Save**.
    Make sure the asset gets saved and this opens the asset details page.
+
+{% endinfo_block %}
+
+## Set up frontend templates
 
 {% endinfo_block %}
 

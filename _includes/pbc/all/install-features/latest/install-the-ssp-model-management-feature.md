@@ -257,7 +257,7 @@ MDL--2,ssp-pl-001
 |------------------|----------|-----------|--------------|-------------------------------------------------------------------------|
 | model_reference  | ✓        | string    | MDL--2       | Unique identifier for the model used as a reference.                    |
 | product_list_key | ✓        | string    | ssp-pl-001   | Unique identifier for the product list to be associated with the model. |
-## Extend the data import configuration
+
 ## Extend the data import configuration:
 
 **/data/import/local/full_EU.yml**
@@ -271,9 +271,10 @@ MDL--2,ssp-pl-001
     source: data/import/common/common/ssp_model_asset.csv
   - data_entity: ssp-model-product-list
     source: data/import/common/common/ssp_model_product_list.csv
+```
+
 ## Register the following data import plugins
 
-## Register the following data import plugins:
 
 | PLUGIN                              | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                            |
 |-------------------------------------|-----------------------------------------------------|---------------|----------------------------------------------------------------------|

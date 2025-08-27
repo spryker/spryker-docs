@@ -184,7 +184,7 @@ Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed 
 
 The Text Alternatives functionality allows you to add alternative text to product images for better accessibility and SEO.
 
-### 1) Upgrade the following modules to the specified versions or higher:
+### 1) Upgrade the following modules to the specified versions or higher
 
 | NAME                               | VERSION   |
 |------------------------------------|-----------|

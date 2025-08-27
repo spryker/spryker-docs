@@ -4042,6 +4042,8 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
               - title: Install the SSP File Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Model Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-model-management-feature.html                
               - title: Install the SSP Inquiry Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature

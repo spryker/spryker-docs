@@ -584,7 +584,7 @@ AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.n
 | serial_number               | x        | string    | PRNT000014                                                    | The serial number of the asset for identification purposes.               |
 | note                        | x        | string    | The DemoBrand Print Pro 2100...                               | Detailed description or notes about the asset.                            |
 | external_image_url          | x        | string    | https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg | URL to an external image of the asset.                                    |
-| business_unit_key           | ✓        | string    | spryker_systems_HR                                            | The key of the business unit that owns the asset.                         |
+| business_unit_key           | x        | string    | spryker_systems_HR                                            | The key of the business unit that owns the asset.                         |
 | assigned_business_unit_keys | x        | string    | spryker_systems_HR                                            | Comma-separated list of business unit keys that have access to the asset. |
 
 ## Extend the data import configuration:

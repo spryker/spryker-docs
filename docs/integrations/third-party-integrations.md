@@ -39,7 +39,7 @@ layout: custom_new
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <div id="modalInfo" style="display: none;"></div>
-    <img id="modalLogo" class="logo" alt="Logo" />
+    <img id="modalLogo" src="/images/integrations/cat_icon/icon_default_placeholder.png" class="logo" alt="Logo" />
     <h2 id="modalName"></h2>
     <p id="modalAuthor" class="author_name"></p>
     <p id="modalDescription"></p>

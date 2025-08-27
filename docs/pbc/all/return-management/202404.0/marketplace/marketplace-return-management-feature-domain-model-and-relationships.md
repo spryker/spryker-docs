@@ -17,7 +17,7 @@ The following diagram illustrates the dependencies between the modules for the *
 |------------|----------------------------|
 | MerchantSalesReturn | Provides functionality to link merchant to the sales returns.  |
 | MerchantSalesReturnGui | Provides Backoffice UI for the merchant sales returns.  |
-| MerchantSalesReturnMerchantUserGui | Provides Backoffice UI for managing merchant user sales returns.  |
+| MerchantSalesReturnMerchantUserGui | Provides Back Office UI for managing merchant user sales returns.  |
 | MerchantSalesReturnWidget | Provides merchant information for the sales returns on the Storefront.   |
 | MerchantSalesReturnsRestApi | Provides REST API endpoints to manage merchant sales returns.   |
 | SalesReturn | Handles order returns. |

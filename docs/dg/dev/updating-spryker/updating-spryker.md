@@ -56,7 +56,13 @@ The most *reasonable strategy* of staying up to date is sticking to the Spryker 
 
 Check out the how to migrate and update Spryker projects video for more details on the topic.
 
-{% wistia kitd5w26zq 960 720 %}
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/updating-spryker/updating-spryker.md/How+to+Migrate+and+Upgrade+Spryker+Projects-kitd5w26zq.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Next steps

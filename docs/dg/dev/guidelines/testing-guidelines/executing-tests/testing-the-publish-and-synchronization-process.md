@@ -55,7 +55,7 @@ The main helpers involved in the P&S testing are:
 
 ## P&S testing storage
 
-Let's test that the relevant data of a saved entity is available in the Storage, for example, in Redis.
+Let's test that the relevant data of a saved entity is available in the Storage, for example, in the key-value store (Redis or Valkey).
 
 Since we work with the real database, we execute one test for:
 

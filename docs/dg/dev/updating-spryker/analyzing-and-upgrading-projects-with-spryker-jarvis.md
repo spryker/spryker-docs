@@ -147,4 +147,8 @@ For now, you can not do the following things with Jarvis:
 
 To see Spryker Jarvis in action, check out this video:
 
-{% wistia jtkjogkxht 720 480 %}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.md/How+to+Use+Spryker+Jarvis-jtkjogkxht.mp4" type="video/mp4">
+  </video>
+</figure>

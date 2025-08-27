@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html
-  - title: Use and configure Redis as a key-value storage
+  - title: Use and configure key-value storage (Redis or Valkey)
     link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 

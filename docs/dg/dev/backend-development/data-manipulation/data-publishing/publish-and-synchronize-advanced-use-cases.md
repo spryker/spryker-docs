@@ -44,7 +44,7 @@ To address this, you can use the StorageDatabase module, which:
  
 
 
-For more information, see [Bypass the key-value storage](/docs/dg/dev/backend-development/data-manipulation/data-publishing/bypass-the-key-value-storage).
+For more information, see [Bypass the key-value storage](/docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage).
 
 ## Manually triggering publish in data import
 

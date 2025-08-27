@@ -19,4 +19,4 @@ In this section, you can find the following documents:
 - [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 - [Publish and synchronize and multi-store shop systems](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html)
 - [Publish and Synchronize repeated export](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html)
-- [Synchronization behavior - enabling multiple mappings](/docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html)
+- [Synchronization behavior - enabling multiple mappings](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html)

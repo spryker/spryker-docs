@@ -23,6 +23,7 @@ With the new Aggregated Module Architecture, Spryker shifts from a module-centri
 ### Feature Structure
 
 Example of the Aggregated Module structure:
+
 ```text
 [FeatureName]
 ├── Client

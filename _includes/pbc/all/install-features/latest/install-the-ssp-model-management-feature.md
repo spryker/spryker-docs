@@ -226,12 +226,12 @@ MDL--1,OfficeJet Pro,9025e,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeSto
 MDL--2,Casa,F-08,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg`
 ```
 
-| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE                                                          | DATA EXPLANATION                                     |
-|-----------|----------|-----------|-----------------------------------------------------------------------|------------------------------------------------------|
-| reference | ✓        | string    | MDL--1                                                                | Unique identifier for the model used as a reference. |
-| name      |          | string    | OfficeJet Pro                                                         | The display name of the model.                       |
-| code      | ✓        | string    | 9025e                                                                 | The model code for identification purposes.          |
-| image_url |          | string    | https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg | URL to an image of the model.                        |
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE                                                            | DATA EXPLANATION                                     |
+|-----------|----------|-----------|-------------------------------------------------------------------------|------------------------------------------------------|
+| reference | ✓        | string    | MDL--1                                                                  | Unique identifier for the model used as a reference. |
+| name      |          | string    | OfficeJet Pro                                                           | The display name of the model.                       |
+| code      | ✓        | string    | 9025e                                                                   | The model code for identification purposes.          |
+| image_url |          | string    | `https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg` | URL to an image of the model.                        |
 
 **data/import/common/common/ssp_model_asset.csv**
 
@@ -472,9 +472,6 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ## Set up frontend templates
 
-{% endinfo_block %}
-
-## Set up frontend templates
 [`src/Pyz/Yves/CatalogPage/Theme/default/components/molecules/sort/sort.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-b82014b258cd751113519031eec426902dc873d89a95c80e5027dd99914a8353)
 [`src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-fca7e1df593bbf7891861d2a1c43015eff5fbb46a09ec04903d08bd53310cf21)
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/components/molecules/asset-finder/asset-finder.ts`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-b37bfae7fc611bc18bfddb693dfd1e57cdc9ffb7cdf83decde931ac3de332c9c)

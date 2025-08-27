@@ -222,7 +222,7 @@ ssp-pl-001,service-004-1
 
 ```csv
 reference,name,code,image_url
-MDL--1,OfficeJet Pro,9025e,https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg
+MDL--1,OfficeJet Pro,9025e,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg`
 MDL--2,Casa,F-08,https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg
 ```
 
@@ -257,7 +257,7 @@ MDL--2,ssp-pl-001
 |------------------|----------|-----------|--------------|-------------------------------------------------------------------------|
 | model_reference  | ✓        | string    | MDL--2       | Unique identifier for the model used as a reference.                    |
 | product_list_key | ✓        | string    | ssp-pl-001   | Unique identifier for the product list to be associated with the model. |
-
+## Extend the data import configuration
 ## Extend the data import configuration:
 
 **/data/import/local/full_EU.yml**
@@ -271,7 +271,7 @@ MDL--2,ssp-pl-001
     source: data/import/common/common/ssp_model_asset.csv
   - data_entity: ssp-model-product-list
     source: data/import/common/common/ssp_model_product_list.csv
-```
+## Register the following data import plugins
 
 ## Register the following data import plugins:
 
@@ -478,6 +478,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/components/molecules/asset-list/asset-list.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-7bf406253ca401be2e5a6754c3a01335f3b02ce10a18edc36ce28fc05a9ff9c8)
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/components/molecules/asset-selector/asset-selector.scss`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-4d9a709cd47475a2895e45718177e61dd2ce231dc14ad071c9ab1410e5de3f18)
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/components/molecules/asset-selector/asset-selector.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-5205fa69d2249f1eb17be5597c177327dd64232d69def1d9af031b01cad894da)
+
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/components/molecules/service-point-shipment-types/service-point-shipment-types.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-a121877cb09b3adf2f9468311f6828f14655d2db035b790b9b818989a46963e1)
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/views/asset-filter/asset-filter.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-1b433d8e0608a26e14b6127ece330851365d965798eec52e45af9b39f0d38b34)
 [`src/Pyz/Yves/SelfServicePortal/Theme/default/views/item-asset-selector/item-asset-selector.twig`](https://github.com/spryker-shop/b2b-demo-shop/pull/822/files?file-filters%5B%5D=.scss&file-filters%5B%5D=.ts&file-filters%5B%5D=.twig&show-viewed-files=true#diff-6c9d43b28bcafa509a0e6733627587aa4f29e3f6ae34f311f7b7bac780412694)

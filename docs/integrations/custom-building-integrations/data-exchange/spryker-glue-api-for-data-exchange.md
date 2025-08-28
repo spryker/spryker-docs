@@ -7,7 +7,7 @@ last_updated: July 9, 2025
 template: default
 related:
   - title: Getting started with Spryker Glue API
-    link: /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
+    link: docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis
 ---
 
 GLUE API is Spryker's built-in API interface that supports a wide range of data exchange operations out of the box. You can easily extend it to support custom logic or additional entities as needed. It enables third-party systems and applications to communicate synchronously using REST API, GraphQL, or OData protocols.

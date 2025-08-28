@@ -101,5 +101,6 @@ Example of the Aggregated Module structure:
 - In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.
 
 #### Examples
+
 Feature usage on the Project Level example can be found [here](https://github.com/spryker-shop/b2b-demo-shop/tree/ssp-master/src/Pyz/Zed/SelfServicePortal).
 

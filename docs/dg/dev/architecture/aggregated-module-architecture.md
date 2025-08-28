@@ -96,6 +96,6 @@ Example of the Aggregated Module structure:
 
 ### Feature development changes on the Project Level
 
-* The project-level [application layering](https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention#application-layers) remains unchanged.
-* Feature code at the project level now uses the SprykerFeature (SprykerFeature\Zed\[FeatureName]\...) namespace instead of Spryker (Spryker\Zed\[ModuleName]\...).
-* In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.
+- The project-level [application layering](https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention#application-layers) remains unchanged.
+- Feature code at the project level now uses the SprykerFeature (SprykerFeature\Zed\[FeatureName]\...) namespace instead of Spryker (Spryker\Zed\[ModuleName]\...).
+- In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.

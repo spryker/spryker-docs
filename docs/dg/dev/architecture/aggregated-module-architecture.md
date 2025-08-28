@@ -102,5 +102,5 @@ Example of the Aggregated Module structure:
 
 #### Examples
 
-Feature usage on the Project Level example can be found [here](https://github.com/spryker-shop/b2b-demo-shop/tree/ssp-master/src/Pyz/Zed/SelfServicePortal).
+Feature usage on the Project Level example can be found [in the self-service portal feature](https://github.com/spryker-shop/b2b-demo-shop/tree/ssp-master/src/Pyz/Zed/SelfServicePortal).
 

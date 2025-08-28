@@ -13,13 +13,13 @@ layout: none
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
 
-    {% assign site_pages = site.pages | sort: 'last_modified_at' | reverse %}
+    {% assign site_pages = site.pages | sort: 'page.publish_date' | reverse %}
     {% for page in site_pages %}
       {% if page.url contains '/releases/security-releases' %}
          <item>
             <title>{{ page.title | xml_escape }}</title>
             <description>{{ page.description | xml_escape }}</description>
-            <pubDate>{{ page.last_modified_at | date_to_rfc822 }}</pubDate>
+            <pubDate>{{ page.publish_date | date_to_rfc822 }}</pubDate>
             <link>{{ page.url | prepend: site.url }}</link>
             <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
             {% for tag in page.tags %}

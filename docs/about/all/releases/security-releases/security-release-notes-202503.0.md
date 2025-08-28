@@ -5,6 +5,7 @@ last_updated: Mar 24, 2025
 template: concept-topic-template
 redirect_from:
   - /docs/about/all/releases/security-release-notes-202503.0.html
+publish_date: 2025-03-24
 ---
 
 This document describes the security-related issues that have been recently resolved.

@@ -5,6 +5,7 @@ last_updated: Jun 20, 2025
 template: concept-topic-template
 redirect_from:
   - /docs/about/all/releases/security-release-notes-202506.0.html
+publish_date: 2025-06-20
 ---
 
 This document describes the security-related issues that have been recently resolved.

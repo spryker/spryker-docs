@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
 - /docs/about/all/releases/security-release-notes-202302.0.html
+publish_date: 2023-03-21
 ---
 
 This document describes the security-related issues we have recently resolved. All issues are listed by description and affected modules.

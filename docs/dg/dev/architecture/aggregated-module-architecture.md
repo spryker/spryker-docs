@@ -18,7 +18,7 @@ Your feedback and suggestions are highly valued to enhance the accuracy, relevan
 
 ## Overview
 
-With the new Aggregated Module Architecture, Spryker shifts from a module-centric to a feature-centric mindset, where sub-domains and layers (CRUD, GUI, Yves, P&S, Glue) are combined into a single self-contained package. This creates a holistic, domain-aligned delivery model that reduces fragmentation, simplifies feature consumption, and eliminates cross-module dependencies.
+With the new Aggregated Module Architecture, Spryker shifts from a granular modularisation to a domain oriented modularisation mindset, where sub-domains and layers (CRUD, GUI, Yves, P&S, Glue) are combined into a single self-contained package. This creates a domain aligned packaging that reduces fragmentation, simplifies feature consumption, and significantly reduces cross-module dependencies.
 
 ### Feature Structure
 
@@ -96,5 +96,6 @@ Example of the Aggregated Module structure:
 
 ### Feature development changes on the Project Level
 
-The project-level [application layering](https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention#application-layers) remains unchanged.
-In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.
+* The project-level [application layering](https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention#application-layers) remains unchanged.
+* Feature code at the project level now uses the SprykerFeature namespace instead of Spryker.
+* In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.

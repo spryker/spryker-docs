@@ -3,8 +3,6 @@ title: Aggregated module architecture
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
 last_updated: Apr 25, 2025
 template: concept-topic-template
-redirect_from:
-- /docs/dg/dev/architecture/aggregated-module-architecture.html
 related:
   - title: Conceptual Overview
     link: docs/dg/dev/architecture/conceptual-overview.html

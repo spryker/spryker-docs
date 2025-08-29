@@ -1177,6 +1177,9 @@ entries:
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
 
+    - title: Aggregated Module Architecture Concept
+      url: /docs/dg/dev/architecture/aggregated-module-architecture.html
+
     - title: "Tutorial: Architectural walkthrough"
       url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
 

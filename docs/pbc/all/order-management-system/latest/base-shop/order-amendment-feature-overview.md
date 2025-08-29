@@ -91,11 +91,35 @@ For example, an item's original stock is 2. At the time of initiating amendment,
 You can implement custom strategies on the project level.
 
 
+## Stock
+Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can choose from the following default strategies:
+
+### Preserve Original Stock and Availability
+
+- Items from the original order remain editable even if they are now out of stock, deactivated, or unavailable.
+- The system preserves original order stock and availability.
+**Quantity Rules:**
+- Quantity can be reduced or left unchanged without additional stock validation.
+- Quantity can be increased only if additional stock is available in the catalog.
+  - *Example:* Original Order Stock = 2, Current Catalog Stock = 10 → Max Quantity = 12.
+
+This strategy allows for flexible order amendments while maintaining inventory accuracy.
+
+### Use Default Cart Behavior
+
+- If an item is deactivated, unavailable, or out of stock, it is removed from the cart.
+- A notification is displayed to inform the user about the removal.
+
+> Projects can implement a custom approach to support more flexible post-purchase edits.
+
+
 ## Gift cards and vouchers
 
-When a customer initiates order amendment, gift cards and vouchers are unapplied from the order. The balance of all unapplied gift cards and vouchers is restored once order amendment is complete. They can be used for new orders but not for the order they were unapplied from.
+When a customer initiates an order amendment, gift cards and one-time-use vouchers are unapplied from the order. Their balances are restored once the amendment is complete, making them available for new orders or for subsequent edits to the same order.
 
 For better user experience, we recommend implementing a way to inform customers about gift cards and vouchers being unapplied.
+
+## 
 
 
 ## Grace period

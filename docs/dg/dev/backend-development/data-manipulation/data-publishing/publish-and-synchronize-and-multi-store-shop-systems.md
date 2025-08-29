@@ -49,7 +49,13 @@ When an event is triggered, the publisher determines whether the related entity 
 
 To synchronize global entities, such as URLs, across multiple stores, use the QueuePool configuration. QueuePool defines a set of queues for synchronization. The SynchronizationPool service then uses this configuration to route messages appropriately.
 
-⚠️ An entity cannot define both a store relation and a synchronization pool. This causes a conflict.
+{% info_block warningBox %}
+
+An entity can't define both a store relation and a synchronization pool without causing a conflict.
+
+{% endinfo_block %}
+
+
 
 ## Example
 
@@ -62,8 +68,7 @@ Using the previous example, you can observe the following:
 
 ### Defining a multi-store entity
 
-In schema.xml:
-
+Define a multi-store entity in `schema.xml`:
 
 ```xml
 <table name="spy_product_abstract_storage">
@@ -80,10 +85,14 @@ Setting the store parameter to true marks the entity as store-aware. When a SpyP
 Queue processing diagram:
 
 
+
+
+
+
 ### Defining a global entity
 
 
-In schema.xml:
+Define a multi-store entity in `schema.xml`:
 
 
 ```xml
@@ -97,16 +106,49 @@ In schema.xml:
 ```
 
 
-Here, the queue_pool parameter ensures that synchronization messages are sent to all relevant stores. The pool name must be defined in the store configuration (store.php).
+- The `queue_pool` parameter ensures that synchronization messages are sent to all relevant stores. The pool name must be defined in the store configuration: `store.php`.
 
+- Use `queue_pool` only for global entities. Avoid using it alongside the store flag.
 
-{% info_block infoBox %}
-
-- Use queue_pool only for global entities. Avoid using it alongside the store flag.
-
-- If you define both queue_pool and store parameters in the same schema, Spryker cannot determine where to send the message. This results in the following error:
-```
+- If `queue_pool` and store parameters are defined in the same schema, Spryker can't determine where to send the message. This results in the following error:
+```bash
 Spryker\Zed\Synchronization\Business\Exception\SynchronizationQueuePoolNotFoundException - Exception: You must either have store column or `SynchronizationQueuePoolName` in your schema.xml file
 ```
 
-{% endinfo_block %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

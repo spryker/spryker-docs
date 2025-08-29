@@ -1,5 +1,5 @@
 ---
-title: Aggregated Module Architecture Concept
+title: Aggregated module architecture
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
 last_updated: Apr 25, 2025
 template: concept-topic-template
@@ -12,17 +12,11 @@ related:
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
-This document provides an overview on the Aggregated Module Architecture Concept, utilized for the feature development in Spryker.
+With aggregated module architecture, Spryker shifts from a granular modularization to a domain oriented modularization, where sub-domains and layers, such as CRUD, GUI, Yves, P&S, or Glue, are combined into a single self-contained package. This creates a domain aligned packaging that reduces fragmentation, simplifies feature consumption, and significantly reduces cross-module dependencies.
 
-Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker. We encourage you to contribute your insights and recommendations by submitting changes through our designated channels.
+## Feature structure
 
-## Overview
-
-With the new Aggregated Module Architecture, Spryker shifts from a granular modularisation to a domain oriented modularisation mindset, where sub-domains and layers (CRUD, GUI, Yves, P&S, Glue) are combined into a single self-contained package. This creates a domain aligned packaging that reduces fragmentation, simplifies feature consumption, and significantly reduces cross-module dependencies.
-
-### Feature Structure
-
-Example of the Aggregated Module structure:
+Example of the aggregated module structure:
 
 ```text
 [FeatureName]
@@ -94,13 +88,58 @@ Example of the Aggregated Module structure:
        └── [FeatureName]DependencyProvider.php
 ```
 
-### Feature development changes on the Project Level
+### Feature development on the project level
 
 - The project-level [application layering](https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention#application-layers) remains unchanged.
-- Feature code at the project level now uses the SprykerFeature (SprykerFeature\Zed\[FeatureName]\...) namespace instead of Spryker (Spryker\Zed\[ModuleName]\...).
-- In the new Aggregated Module Architecture, all sub-domains of the same feature are placed into a single feature folder, rather than being split across multiple modules.
+- Feature code at the project level uses the SprykerFeature (SprykerFeature\Zed\[FeatureName]\...) namespace instead of Spryker (Spryker\Zed\[ModuleName]\...).
+- All subdomains of the same feature are placed into a single feature folder, rather than being split across multiple modules.
 
-#### Examples
+### Example
 
-Feature usage on the Project Level example can be found [in the self-service portal feature](https://github.com/spryker-shop/b2b-demo-shop/tree/ssp-master/src/Pyz/Zed/SelfServicePortal).
+For en example of feature usage on the project level, see [the self-service portal feature](https://github.com/spryker-shop/b2b-demo-shop/tree/ssp-master/src/Pyz/Zed/SelfServicePortal).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

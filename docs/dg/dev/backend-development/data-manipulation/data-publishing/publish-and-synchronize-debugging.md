@@ -5,7 +5,7 @@ last_updated: Jun 16, 2025
 template: howto-guide-template
 ---
 
-This guide helps you debug issues related to the Publish & Synchronize (P&S) mechanism in Spryker. A typical issue may include the following:
+This guide helps you debug issues related to the Publish & Synchronize (P&S) mechanism. Typical issues:
 
 - A product (or another entity) is saved, but the data on the product detail page is not updated.
 
@@ -25,7 +25,7 @@ Log output helps identify errors during publishing.
 
 It is recommended to view logs using the dashboard.
 
-image-20250619-135030.png
+![docker-sdk-logs.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/docker-sdk-logs.png)
 
 To find the dashboard address:
 
@@ -47,7 +47,7 @@ In the dashboard logs, you may notice a large number of log groups. To avoid an 
 
 For example, if you want to view all gateway logs, select the **zed-gateway** group. If you need logs for a specific store, such as the EU backend, choose **backend_gateway_eu**.
 
-image-20250717-072453.png
+![log groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/log-groups.png)
 
 
 ## 3. Check queues
@@ -58,7 +58,7 @@ After publishing, Spryker places messages in queues for further processing into 
 
 
 
-### How to find RabbitMQ
+### Find RabbitMQ access details
 
 Open `deploy.dev.yml` file, find the broker configuration: 
 
@@ -77,16 +77,17 @@ Open `deploy.dev.yml` file, find the broker configuration:
 ```                
                 
                 
-In this example, open queue.spryker.local in your browser to inspect queues.
+In this example, open `queue.spryker.local` in your browser to inspect queues.
 
-### How to find a failed queue:
+### How to find a failed queue
 
 In RabbitMQ, you can search for queues by the entity name. In the filtered results, look for queue names that end with .error. These indicate failed queues.
 
-image-20250717-073354.png
+![rabbitmq-queues.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/rabbitmq-queues.png)
 
 
-### Debugging Queue Processing
+### Debugging queue processing
+
 - Queue jobs are automatically processed by Jenkins commands.
 
 - To debug queues manually, you must disable Jenkins automation. You can do this by:
@@ -95,18 +96,20 @@ image-20250717-073354.png
 
 - Temporarily suspending Jenkins itself.
 
-image-20250619-135922.png
-More about Jenkins best practice -Jenkins operational best practices | Spryker Documentation 
+![log groups](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/log-groups.png)
 
-How to debug -  Configure debugging | Spryker Documentation 
+- For more information on Jenkins, see [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices)
 
-Configure debugging - Configure debugging | Spryker Documentation 
+- For setting up a debugging environment, see [Configure debugging](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging)
 
-## 4. Check Storage/Search Tables
+- For configuring debugging in your project, see [Configure debugging](/docs/ca/dev/configure-debugging)
+
+
+## 4. Check storage and search tables
 
 The problem might be in the data not reaching storage (Redis) or search (Elasticsearch).
 
-### Check Storage (Redis)
+### Check storage (Redis)
 
 - Check the spy_product_abstract_storage table. If the table does not contain the correct data or the data for the entity is missing, the issue is likely in the data collection or denormalization during the publishing process. Check the {Entity}PublishListener and review the logs.
 
@@ -128,7 +131,7 @@ Look for:
             redis-commander.spryker.local:
 Open redis-commander.spryker.local in your browser.
 
-### Check Search (Elasticsearch)
+### Check search (Elasticsearch)
 
 Check tables like spy_product_abstract_search. If the table does not contain the correct data or the data for the entity is missing, the issue is likely in the data collection or denormalization during the publishing process
 
@@ -139,11 +142,15 @@ You can also send a direct request to the Elasticsearch endpoint and verify the 
 Open the page that triggers the search request (for example, the catalog page). It may trigger multiple Elasticsearch queries.
 
 
-image-20250717-124305.png
-Open the profiler data for the request.:
+![es-profiles-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/es-search-request-page.png)
 
 
-image-20250717-124357.png
+Open the profiler data for the request:
+
+
+![es-profiles-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/es-profiles-data.png)
+
+
  Identify the destination - the URL where the search request is sent. Note that the profiler may show an incorrect endpoint.
 The correct one for the catalog page might look like:
 http://localhost:9200/spryker_b2b_dev_de_page/_search
@@ -166,21 +173,19 @@ vendor/ruflin/elastica/src/Transport/Http.php::exec()
 Once you have both the destination URL and payload, you can use any HTTP client (e.g., Postman) to make the request.
 
 
-image-20250717-124957.png
+![postman](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.md/postman.png)
+
 If the entity is missing from Redis or Elasticsearch, the synchronization step likely failed. Go back one step and check if the message was processed successfully.
 
-## 5. Manually Re-trigger Sync
+## 5. Manually re-trigger sync
+
 If something is missing, try [re-publishing or re-synchronizing the data manually](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation).
 
 See the article - Publish and synchronize repeated export | Spryker Documentation 
 
 ## 6. Dumping information about the used listener
-When you need to know what events and which listener are used in your setup you can use the 
 
-
-
-console event:dump:listener
-command. This prints a big list of queue names, event names, and listener.
+When you need to know what events and which listener are used in your setup you can use the console `event:dump:listener` command. This prints a big list of queue names, event names, and listener.
 
 To narrow down the list you have several options.
 

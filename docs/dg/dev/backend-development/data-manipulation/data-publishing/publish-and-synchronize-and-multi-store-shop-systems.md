@@ -31,7 +31,7 @@ related:
 
 Spryker is designed for multi-store environments and supports seamless data synchronization across stores. The Publish and Synchronization (P&S) mechanism enables the transfer of data from the backend (database) to the frontend storage (Redis, Elasticsearch). By default, P&S is configured to support multi-store setups.
 
-This article explains key concepts and configurations related to multi-store compatibility in Spryker. For a general overview of P&S, see [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+This article explains key concepts and configuration related to multi-store compatibility in Spryker. For a general overview of P&S, see [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Dynamic multi-store: enabled
 
@@ -45,7 +45,7 @@ Spryker supports both global and store-aware entities:
 
 - Store-aware entities, such as `SpyProductAbstract`, are associated with specific stores.
 
-When an event is triggered, the Publisher determines whether the related entity includes store information. Based on this, it sends a message either to a store-specific sync queue or to the default queue. For example, `spy_product_abstract_storage` includes a store column. This enables the `SpyProductAbstract` entity to be sent to separate queues for each store–for example, AT and DE. In contrast, URL doesn't include store information. By default, it is sent only to the store where Zed is running. For example, you have a Zed application running in the DE store, which means the message is sent only to the DE store sync.
+When an event is triggered, the publisher determines whether the related entity includes store information. Based on this, it sends a message either to a store-specific sync queue or to the default queue. For example, `spy_product_abstract_storage` includes a store column. This enables the `SpyProductAbstract` entity to be sent to separate queues for each store–for example, AT and DE. In contrast, URL doesn't include store information. By default, it is sent only to the store where Zed is running. For example, you have a Zed application running in the DE store, which means the message is sent only to the DE store sync.
 
 To synchronize global entities, such as URLs, across multiple stores, use the QueuePool configuration. QueuePool defines a set of queues for synchronization. The SynchronizationPool service then uses this configuration to route messages appropriately.
 
@@ -53,17 +53,12 @@ To synchronize global entities, such as URLs, across multiple stores, use the Qu
 
 ## Example
 
-From the example above:
+Using the previous example, you can observe the following:
 
-- `SpyProductAbstract` is a multi-store entity.
+- `SpyProductAbstract` is a multi-store entity. The product abstract appears in multiple stores–for example, AT and DE, each with store-specific data.
 
-- `SpyUrl` is a global entity.
+- `SpyUrl` is a global entity. The URL remains the same across stores because it's not store-specific.
 
-This means:
-
-- The product abstract appears in multiple stores (e.g., AT and DE), each with store-specific data.
-
-- The URL remains the same across stores, as it is not store-specific.
 
 ### Defining a multi-store entity
 

@@ -59,7 +59,7 @@ Benefits of P&S:
 
 P&S process schema:
 
-image-20250704-064308.png
+![ps-process-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/ps-process-overview.png)
 
 
 
@@ -203,7 +203,8 @@ How it works:
 3. All messages stored in memory are written directly to Redis and/or Elasticsearch.
 
 
-image-20250704-064847.png
+![direct-ps-process](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/direct-ps-process.png)
+
 
 ───▶ (solid) - Synchronous call or direct write
 
@@ -244,8 +245,7 @@ The following walkthrough shows how the P&S mechanism moves product-abstract dat
 When you save a `SpyProductAbstract` entity in the Back Office - such as clicking **Save** on a product page - Spryker immediately triggers the P&S workflow. In this example, the product is enabled in two stores:
 
 
-image-20250529-083843.png
-
+![publish-stores](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/publish-stores.png)
 
 During the save operation, Spryker generates multiple events called messages and places them in RabbitMQ.
 
@@ -272,7 +272,8 @@ Event example
    2. Populates the entity with the data that will be used on the frontend
    3. Saves the data to the `spy_product_abstract_storage` table, one row per store and locale 
 
-image-20250529-090402.png
+![async-sync-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/async-sync-processing.png)
+
 
 4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
 
@@ -299,8 +300,7 @@ message example
   2. Populates the entity with data
   3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale 
 
-image-20250529-091252.png
-
+![search-event-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/search-event-processing.png)
 
 4. Follow-up event: The listener sends a new message to the `sync.search.product` queue. 
 

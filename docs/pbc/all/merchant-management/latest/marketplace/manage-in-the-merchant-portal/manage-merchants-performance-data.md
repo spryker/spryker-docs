@@ -18,6 +18,50 @@ To start working with the dashboard, navigate to **Merchant Portal&nbsp;<span ar
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
+## Managing products in Dashboard
+
+To manage the existing products in the system, click **Manage Products**. This takes you to the **Products** page of the Merchant Portal.
+
+For more detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
+
+### Reference information: Managing products in Dashboard
+
+This section contains the attributes description you see when managing products in **Dashboard**.
+
+#### Products widget
+
+{ image placeholder }
+
+The **Products** widget provides the following information:
+
+`Products 10`—the total number of products in the Merchant Portal.
+
+#### Stock
+
+With Stock—the total number of products with stock.
+
+Low on Stock—the total number of products that have less than 5 in the stock.
+
+#### Validity
+
+Valid—the total number of valid products, that is, products that have no validity dates or **Valid From & Valid To** includes today's date.
+
+Expiring in 5 days—the total number of products that will expire in the next 5 days.
+
+#### Visibility
+
+Online—the total number of online products.
+
+Offline—the total number of offline products.
+
+#### On Marketplace
+
+The total number of products that are available on the Storefront, that is, all of the products that meet the following criteria:
+
+- Have no validity dates or **Valid From & Valid To** includes today's date.
+- Are online.
+- Have stock.
+
 ## Managing offers in Dashboard
 
 To manage the existing offers in the system, click **Manage Offer**. This takes you to the **Offers** page of the Merchant Portal. <!-- add a link when available -->

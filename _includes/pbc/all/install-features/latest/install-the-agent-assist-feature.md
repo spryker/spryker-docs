@@ -36,6 +36,25 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the database schema
 
+Enabled feature configuration if you want to capture the agent email in the order data:
+
+<details><summary>src/Pyz/Shared/Agent/AgentConfig.php</summary>
+
+```php
+namespace Pyz\Shared\Agent;
+
+use Spryker\Shared\Agent\AgentConfig as SprykerAgentConfig;
+
+class AgentConfig extends SprykerAgentConfig
+{
+    public function isSalesOrderAgentEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+</details>
+
 Apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -45,11 +64,12 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in the database::
+Make sure the following changes have been applied in the database:
 
-| DATABASE ENTITY     | TYPE   | EVENT   |
-|---------------------|--------|---------|
-| spy_user.is_agent   | column | created |
+| DATABASE ENTITY             | TYPE   | EVENT   |
+|-----------------------------|--------|---------|
+| spy_user.is_agent           | column | created |
+| spy_sales_order.agent_email | column | created |
 
 Make sure the following transfers have been created:
 
@@ -123,6 +143,13 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 ```
 
 </details>
+
+Update the Back Office translations:
+
+```bash
+console translator:generate-cache
+```
+
 
 {% info_block warningBox "Verification" %}
 

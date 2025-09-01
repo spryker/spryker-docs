@@ -65,6 +65,7 @@ class AgentConfig extends SprykerAgentConfig
     }
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
@@ -87,6 +88,7 @@ class QuoteDependencyProvider extends \Spryker\Client\Quote\QuoteDependencyProvi
     }
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
@@ -109,6 +111,7 @@ class SalesDependencyProvider extends \Spryker\Zed\Sales\SalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

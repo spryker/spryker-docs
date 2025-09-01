@@ -53,6 +53,7 @@ class AgentConfig extends SprykerAgentConfig
     }
 }
 ```
+
 </details>
 
 Apply database changes and generate entity and transfer changes:

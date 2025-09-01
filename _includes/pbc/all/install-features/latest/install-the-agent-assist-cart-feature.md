@@ -22,7 +22,7 @@ Activate the following plugins:
 |---------------------------------------------------------|---------------------------------------|---------------------------------------------------|-----------------------------------------------|
 | SanitizeCustomerQuoteImpersonationSessionFinisherPlugin | Sanitizes a customer quote.           | None                                              | Spryker\Client\Quote\Plugin\Agent             |
 | AgentQuoteTransferExpanderPlugin                        | Adds agent's user email to the Quote. | AgentConfig::isSalesOrderAgentEnabled() === true  | Spryker\Client\Agent\Plugin\Quote             |
-| AgentOrderExpanderPreSavePlugin                         | Adds agent email to the sales order   | AgentConfig::isSalesOrderAgentEnabled() === true  | Spryker\Zed\Agent\Communication\Plugin\Sales  |
+| AgentOrderExpanderPreSavePlugin                         | Adds agent email to the sales order.  | AgentConfig::isSalesOrderAgentEnabled() === true  | Spryker\Zed\Agent\Communication\Plugin\Sales  |
 
 **src/Pyz/Client/Agent/AgentDependencyProvider.php**
 
@@ -48,25 +48,7 @@ class AgentDependencyProvider extends SprykerAgentDependencyProvider
 }
 ```
 
-For capturing the agent email in the order enable the following configuration:
-
-<details><summary>src/Pyz/Shared/Agent/AgentConfig.php</summary>
-
-```php
-namespace Pyz\Shared\Agent;
-
-use Spryker\Shared\Agent\AgentConfig as SprykerAgentConfig;
-
-class AgentConfig extends SprykerAgentConfig
-{
-    public function isSalesOrderAgentEnabled(): bool
-    {
-        return true;
-    }
-}
-```
-
-</details>
+For capturing the agent email in the order update the following files:
 
 <details><summary>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
 

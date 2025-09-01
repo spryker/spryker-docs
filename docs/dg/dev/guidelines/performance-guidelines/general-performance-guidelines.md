@@ -539,6 +539,24 @@ Performance optimizations in publish and synchronization (merchant-related):
 - [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
 - [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
 
+Performance optimizations in publish and synchronization (product-related):
+- [spryker/price-product:^4.48.0](https://github.com/spryker/price-product/releases/tag/4.48.0)
+- [spryker/product-page-search:^3.40.0](https://github.com/spryker/product-page-search/releases/tag/3.40.0)
+- [spryker/product-search:^5.24.1](https://github.com/spryker/product-search/releases/tag/5.24.1)
+- [spryker/product-storage:^1.47.0](https://github.com/spryker/product-storage/releases/tag/1.47.0)
+- [spryker/product-offer-storage:^1.10.0](https://github.com/spryker/product-offer-storage/releases/tag/1.10.0)
+- [spryker/price-product-offer:^1.7.1](https://github.com/spryker/price-product-offer/releases/tag/1.7.1)
+- [spryker/price-product-offer-storage:^1.5.1](https://github.com/spryker/price-product-offer-storage/releases/tag/1.5.1)
+- [spryker/price-product-storage:^4.13.0](https://github.com/spryker/price-product-storage/releases/tag/4.13.0)
+- [spryker/product-image:^3.20.1](https://github.com/spryker/product-image/releases/tag/3.20.1)
+- [spryker/product-category-storage:^2.11.0](https://github.com/spryker/product-category-storage/releases/tag/2.11.0)
+- [spryker/product-category-search:^1.2.1](https://github.com/spryker/product-category-search/releases/tag/1.2.1)
+- [spryker/propel:^3.47.0](https://github.com/spryker/propel/releases/tag/3.47.0)
+- [spryker/event-behavior:^1.32.0](https://github.com/spryker/event-behavior/releases/tag/1.32.0)
+- [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
+    - `vendor/bin/console propel:model:build` required to rebuild Propel models.
+
+
 ## Performance profiling
 
 We constantly check the performance of Spryker by using profiling tools and work on optimizations whenever we see the need for it. We fix the performance issues as soon as possible when we see them or get informed about them. Therefore, whenever you see a performance issue feel free to [contact us](https://support.spryker.com), ideally with a performance profile that can look at.

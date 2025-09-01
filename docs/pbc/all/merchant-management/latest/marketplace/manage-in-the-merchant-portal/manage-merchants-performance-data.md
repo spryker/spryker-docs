@@ -20,47 +20,44 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Managing products in Dashboard
 
-To manage the existing products in the system, click **Manage Products**. This takes you to the **Products** page of the Merchant Portal.
+To manage the existing products in the system, click **Manage Products**. This will take you to the **Products** page of the Merchant Portal.
 
-For more detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
+For detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
 
 ### Reference information: Managing products in Dashboard
 
-This section contains the attributes description you see when managing products in **Dashboard**.
+This section describes the attributes you see when managing products in the **Dashboard**.
 
 #### Products widget
 
 ![products-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/products-widget.png)
 
-The **Products** widget provides the following information:
+The **Products** widget displays the following information:
 
-`Products 10`—the total number of products in the Merchant Portal.
+- `Products 10`—The total number of products in the Merchant Portal.
 
 #### Stock
 
-With Stock—the total number of products with stock.
-
-Low on Stock—the total number of products that have less than 5 in the stock.
+- **With Stock**—The total number of products that have stock available.
+- **Low on Stock**—The total number of products with less than 5 units in stock.
 
 #### Validity
 
-Valid—the total number of valid products, that is, products that have no validity dates or **Valid From & Valid To** includes today's date.
-
-Expiring in 5 days—the total number of products that will expire in the next 5 days.
+- **Valid**—The total number of valid products, that is, products with no validity dates or where **Valid From** and **Valid To** include today's date.
+- **Expiring in 5 days**—The total number of products that will expire within the next 5 days.
 
 #### Visibility
 
-Online—the total number of online products.
-
-Offline—the total number of offline products.
+- **Online**—The total number of products that are visible online.
+- **Offline**—The total number of products that are currently offline.
 
 #### On Marketplace
 
-The total number of products that are available on the Storefront, that is, all of the products that meet the following criteria:
+The total number of products available on the Storefront—that is, products that meet all of the following criteria:
 
-- Have no validity dates or **Valid From & Valid To** includes today's date.
+- Have no validity dates or **Valid From** and **Valid To** include today's date.
 - Are online.
-- Have stock.
+- Have stock available.
 
 ## Managing offers in Dashboard
 

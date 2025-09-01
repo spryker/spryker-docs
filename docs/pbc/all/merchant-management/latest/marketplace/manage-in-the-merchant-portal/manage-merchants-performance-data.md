@@ -30,7 +30,7 @@ This section contains the attributes description you see when managing products 
 
 #### Products widget
 
-{ image placeholder }
+![products-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/products-widget.png)
 
 The **Products** widget provides the following information:
 

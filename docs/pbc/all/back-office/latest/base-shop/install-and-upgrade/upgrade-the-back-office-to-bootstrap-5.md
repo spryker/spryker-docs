@@ -27,7 +27,7 @@ To migrate Bootstrap in the Back Office to version 5, take the following steps:
 {% raw %}
 
 ```twig
-  {% set isBootstrapLatest = false %}
+  {% set isBootstrapLatest = true %}
 ```
 
 {% endraw %}

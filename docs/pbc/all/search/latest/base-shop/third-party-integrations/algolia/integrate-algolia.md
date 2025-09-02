@@ -755,7 +755,7 @@ After completing the integration, verify the following:
   - On Yves: `/search?q=`, `/search/cms?q=`
   - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
 - Confirm that Algolia is used for search by checking the Algolia Dashboard. Select the index for product or CMS page for the relevant store and locale, and check the number and order of records for the same search term.
-- You can also check Algolia API logs for the selected index. You should see a User-Agent similar to `User-Agent: Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)`.
+- You can also check Algolia API logs for the selected index. You should see the request User-Agent header similar to _"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"_.
 
 {% endinfo_block %}
 

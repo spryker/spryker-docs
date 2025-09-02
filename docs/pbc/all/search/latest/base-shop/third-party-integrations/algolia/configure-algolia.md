@@ -88,5 +88,5 @@ When you enable this setting, you need to provide the following information for 
 
 - **Entity Name**: The custom entity name, which is also used as `sourceIdentifier` in `SearchHttpQueryPlugin((new SearchContextTransfer())->setSourceIdentifier('document'))`.
 - **Store**: The Spryker store name where the search will happen. Use '*' if all stores should use the same Algolia index.
-- **Locales**: The locale(s) for which the index will be used, for example `en_US,en_GB`, or '*' if all locales should use the same Algolia index.
+- **Locales**: The locales for which the index will be used, for example `en_US,en_GB`, or '*' if all locales should use the same Algolia index.
 - **Algolia Index Name**: The name of the Algolia index that contains the data for this entity, for example `documents_en`.

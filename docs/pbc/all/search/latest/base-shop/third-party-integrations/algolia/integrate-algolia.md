@@ -257,6 +257,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     //...
 }
 ```
+
 #### Configure the Search module
 
 Add the following code to `src/Pyz/Client/Search/SearchDependencyProvider.php`:

@@ -1,7 +1,7 @@
 ---
 title: Algolia
 description: Algolia empowers Builders with Search and Recommendation services to create world-class digital experiences.
-last_updated: Nov 24, 2024
+last_updated: Sep 1, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
@@ -10,7 +10,7 @@ redirect_from:
 
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
-Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out because of its performance. With the Algolia ACP app, your users can conduct advanced searches of active concrete products or content in your store.
+Spryker comes with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine, but you can replace it with [Algolia](https://www.algolia.com/). Algolia stands out for its high performance. With the Algolia ACP app, your users can perform advanced searches for active concrete products or content in your store.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -18,7 +18,7 @@ Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) a
   </video>
 </figure>
 
-To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
+To use Algolia as your search engine, you need an Algolia account. For details about integrating Algolia, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 
 
 ## Searchable attributes
@@ -30,34 +30,32 @@ Your users can search for active concrete products by the following attributes:
 - Description
 - Keywords
 
-In addition the Algolia ACP App can cover search of content (CMS pages) and indexed documentation (PDFs). For the indexing of the documentation (PDFs), it is required the use of the Algolia Crawler. In Algolia Dashboard, you can configure other attributes to be searchable.
+Additionally, the Algolia ACP App supports searching content (CMS pages) and indexed documentation (PDFs). To index documentation (PDFs), you must use the Algolia Crawler. In the Algolia Dashboard, you can configure other attributes to be searchable.
 
 {% info_block infoBox "" %}
 
-In search results, Spryker groups all concrete products belonging to the same abstract product and depending on the configuration also presents Pages and Documents results.
+In search results, Spryker groups all concrete products belonging to the same abstract product. Depending on your configuration, it can also display results for Pages and Documents.
 
 {% endinfo_block %}
 
 ## Indexes
 
-An index is a place where the data used by Algolia is stored.
+An index is where Algolia stores data.
 
-In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results. If configured, a separate index is created for CMS pages. In order to create an index for Documents, the use of the Algolia Crawler is required.
+For a Spryker store, the index contains all active concrete products that can appear in search results. If configured, a separate index is created for CMS pages. To create an index for Documents, you must use the Algolia Crawler.
 
-There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by the following options:
+There are separate indexes for each locale and sorting strategy. With the Algolia app, search results in your store can be sorted by:
 
-- Primary index
-- From highest to lowest rating
-- By price in ascending order
-- By price in descending order
-- By name in ascending order
-- By name in descending order
+- Relevance (primary index)
+- Name (ascending and descending)
+- Rating (highest to lowest, products only)
+- Price (ascending and descending, products only)
 
-For example, if you have two locales, there will be 12 indexes for your store in Algolia. One for each locale and sorting strategy:
+For example, for products if you have two locales, there will be 12 indexes for your store in Algolia — one for each locale and sorting strategy:
 
 ![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 
-The Algolia index is always kept up to date with product data changes. That means that if a Back Office user added or changed some searchable product attribute such as a description, the change is immediately reflected in the Algolia search results.
+The Algolia index is always kept up to date with products and CMS pages changes. If a Back Office user adds or changes a searchable product attribute, such as a description, the change is immediately reflected in Algolia search results.
 
 ### How products are stored in Algolia
 
@@ -109,7 +107,7 @@ Here is an example of product data stored in Algolia:
     "MER000002",
     "MER000005"
   ],
-  "search_metadata": [], // Put inside this list all your ranking attributes
+  "search_metadata": [], // Field for project-specific attributes.
   "concrete_prices": {
     "eur": {
       "gross": 345699,
@@ -137,3 +135,4 @@ Here is an example of product data stored in Algolia:
 ## Next step
 
 [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+[Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia)

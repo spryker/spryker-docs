@@ -19,11 +19,11 @@ The purpose of this guide is to walk you through building a modern search experi
 
 Before you begin, ensure you have met the following requirements:
 
-* The **Algolia ACP App** is installed and configured.
-* Product data is successfully **synced to your Algolia indices** for each locale and sorting strategy.
-* You have a clear understanding of your indexed product attributes (for example SKU, Name, Description).
-* You have chosen which **InstantSearch flavor** to use: vanilla JS, React InstantSearch, or Vue InstantSearch.
-* The Algolia **application ID**, **Search-Only API key**, and the index name for the current locale are determined in the application context.
+- The **Algolia ACP App** is installed and configured.
+- Product data is successfully **synced to your Algolia indices** for each locale and sorting strategy.
+- You have a clear understanding of your indexed product attributes (for example SKU, Name, Description).
+- You have chosen which **InstantSearch flavor** to use: vanilla JS, React InstantSearch, or Vue InstantSearch.
+- The Algolia **application ID**, **Search-Only API key**, and the index name for the current locale are determined in the application context.
 
 ## Implementing the Algolia UI Library
 

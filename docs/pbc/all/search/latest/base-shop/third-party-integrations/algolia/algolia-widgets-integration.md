@@ -6,15 +6,15 @@ template: howto-guide-template
 
 # Integration of the Algolia UI Library in the Front End
 
-This guide provides technical instructions for integrating the Algolia UI Library into the Spryker front end for the Algolia ACP App. It focuses on the architectural approach, component customization, and the implementation of core features. The key challenge is that the Algolia UI Library is not natively aligned with the Spryker front-end architecture, so your implementation will function as an independent set of components that consume data directly from the Algolia API.
+This guide provides technical instructions for integrating the Algolia UI Library into the Spryker front end for the Algolia ACP App. It focuses on architectural approach, component customization, and implementation of core features. The key challenge is that the Algolia UI Library is not natively aligned with the Spryker front-end architecture, so your implementation will function as an independent set of components that consume data directly from the Algolia API.
 
-The purpose of this guide is to walk you through the process of building a modern search experience within your Spryker shop. By following these steps, you will be able to implement a flexible and powerful search interface with features like advanced filtering, sorting, and search suggestions, while managing performance and maintaining visual consistency with your existing design.
+The purpose of this guide is to walk you through building a modern search experience within your Spryker shop. By following these steps, you will be able to implement a flexible and powerful search interface with features like advanced filtering, sorting, and search suggestions, while managing performance and maintaining visual consistency with your existing design.
 
 ## Risks and Considerations
 
-* **Support & Maintenance**: Be aware of the additional effort required to support Algolia components, as any changes in related Spryker Core components may not automatically apply and could require manual updates.
-* **Architectural Alignment**: The Algolia UI components are not natively aligned with the Spryker architecture. This may lead to different API or extension points than you are used to.
-* **Performance**: The need for additional API calls to SCOS to get product data (e.g., for variants or detailed information) could impact performance. A UX solution, such as skeleton loaders or partial rendering, is recommended to mitigate the impact of slow API calls.
+* **Support & Maintenance**: Be aware of the additional effort required to support Algolia components. Changes in related Spryker Core components may not automatically apply and could require manual updates.
+* **Architectural Alignment**: Algolia UI components are not natively aligned with the Spryker architecture. This may result in different APIs or extension points than you are used to.
+* **Performance**: Additional API calls to SCOS to get product data (e.g., for variants or detailed information) could impact performance. A UX solution, such as skeleton loaders or partial rendering, is recommended to mitigate the impact of slow API calls.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before you begin, ensure you have met the following requirements:
 * Product data is successfully **synced to your Algolia indices** for each locale and sorting strategy.
 * You have a clear understanding of your indexed product attributes (e.g., SKU, Name, Description).
 * You have chosen which **InstantSearch flavor** to use: vanilla JS, React InstantSearch, or Vue InstantSearch.
-* The Algolia **application ID and Search-Only API key**  and the index name for the current locale are determined in the application context.
+* The Algolia **application ID**, **Search-Only API key**, and the index name for the current locale are determined in the application context.
 
 ## Implementing the Algolia UI Library
 
@@ -32,7 +32,7 @@ Follow this step-by-step process to integrate the Algolia UI Library.
 
 ### 1. Initialize InstantSearch
 
-First, add the necessary dependencies and initialize a single `InstantSearch` instance on your page. It's crucial to maintain only one instance and attach all search widgets to it using selectors. Enable URL routing to ensure search states (queries, filters) are shareable and linkable.
+First, add the necessary dependencies and initialize a single `InstantSearch` instance on your page. It is crucial to maintain only one instance and attach all search widgets to it using selectors. Enable URL routing to ensure search states (queries, filters) are shareable and linkable.
 
 ### 2. Mount Core Widgets
 
@@ -40,7 +40,7 @@ Mount the essential Algolia widgets to build the search interface. This includes
 * **`searchBox`**: For user queries.
 * **`hits`**: To display search results. Use a custom renderer to display product information like URL, name, image, price, and rating directly from Algolia's attributes to avoid extra API calls.
 * **`refinementList`**: For category and attribute filters (e.g., brand).
-* **`sortBy`**: To allow users to switch between different sort strategies (e.g., rating, price asc/desc). Ensure the index names are consistent with those created by the ACP app.
+* **`sortBy`**: To allow users to switch between different sort strategies (e.g., rating, price ascending/descending). Ensure the index names are consistent with those created by the ACP app.
 * **`pagination`** and **`stats`**: For navigation and displaying result counts.
 * **Advanced Filters**: Widgets like `ratingMenu` or `rangeSlider` for price can be implemented for more advanced filtering, provided the corresponding fields exist and are correctly formatted in your index.
 
@@ -59,7 +59,7 @@ Displaying complex product data like variants and prices requires a specific app
 * **Product Variants**: This is a critical feature that requires a custom solution, as default Algolia components may not handle this complexity. You will need to make additional API calls to SCOS to fetch variant data (e.g., colors or sizes). Because these calls can be slow, a clear UX solution like skeleton loaders is necessary to manage user perception of performance.
 * **Pricing**: Whenever possible, render prices directly from the data stored in Algolia records. **Avoid on-demand API calls to SCOS for prices**, as the potential latency can degrade the user experience. For dynamic pricing, consider a deferred hydration pattern.
 * **Categories**: Use the `hierarchical_categories` attribute from your Algolia index to render category breadcrumbs and facets.
-* **Merchants**: Render `merchant_name`/`merchant_reference` if present
+* **Merchants**: Render `merchant_name` or `merchant_reference` if present.
 
 ### 5. Wire Events for Analytics
 

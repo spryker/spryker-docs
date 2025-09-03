@@ -29,7 +29,7 @@ Spryker Cloud Commerce OS (SCCOS) is an e-commerce platform-as-a-service solutio
 
 ## Modular architecture
 
-Modular architecture or modularity means that the system is composed of small parts called modules. A module is the smallest functionality unit in Spryker. Some modules are required to run Spryker, but many are optional and  provide certain functionality or connectivity to internal or external systems. Spryker consists of over 750 modules.
+Modular architecture or modularity means that the system is composed of small parts called modules. A module is the smallest functionality unit in Spryker. Some modules are required to run Spryker, but many are optional and  provide certain functionality or connectivity to internal or external systems. Spryker consists of over 750 modules. 
 
 Modules combine into features and have limited dependencies. Limited dependencies result in less development effort, increasing your return on investment and lowering the total cost of ownership.
 

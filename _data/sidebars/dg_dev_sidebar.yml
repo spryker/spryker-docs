@@ -232,7 +232,7 @@ entries:
         - title: Implement Publish and Synchronization
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
         - title: Publish and synchronize and multi-store shop systems
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
         - title: Add publish events
@@ -245,10 +245,16 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-        - title: Synchronization behavior - enabling multiple mappings
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
         - title: Bypass the key-value storage
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/bypass-the-key-value-storage.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage.html
+        - title: Configuration
+          nested:
+            - title: Chunk size configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/chunk-size-configuration
+            - title: Mapping configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration
+            - title: Configure a queue to be used by a publisher
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-a-queue-to-be-used-by-a-publisher
 
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html

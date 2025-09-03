@@ -20,25 +20,25 @@ entries:
       - title: Security releases
         nested:
         - title: Security release notes 202506.0
-          url: /docs/about/all/releases/security-release-notes-202506.0.html   
+          url: /docs/about/all/releases/security-releases/security-release-notes-202506.0.html   
         - title: Security release notes 202503.0
-          url: /docs/about/all/releases/security-release-notes-202503.0.html                
+          url: /docs/about/all/releases/security-releases/security-release-notes-202503.0.html                
         - title: Security release notes 202412.0
-          url: /docs/about/all/releases/security-release-notes-202412.0.html      
+          url: /docs/about/all/releases/security-releases/security-release-notes-202412.0.html      
         - title: Security release notes 202409.0
-          url: /docs/about/all/releases/security-release-notes-202409.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202409.0.html        
         - title: Security release notes 202403.0
-          url: /docs/about/all/releases/security-release-notes-202403.0.html
+          url: /docs/about/all/releases/security-releases/security-release-notes-202403.0.html
         - title: Security release notes 202312.0
-          url: /docs/about/all/releases/security-release-notes-202312.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202312.0.html        
         - title: Security release notes 202309.0
-          url: /docs/about/all/releases/security-release-notes-202309.0.html
+          url: /docs/about/all/releases/security-releases/security-release-notes-202309.0.html
         - title: Security release notes 202306.0
-          url: /docs/about/all/releases/security-release-notes-202306.0.html
+          url: /docs/about/all/releases/security-releases/security-release-notes-202306.0.html
         - title: Security release notes 202304.0
-          url: /docs/about/all/releases/security-release-notes-202304.0.html
+          url: /docs/about/all/releases/security-releases/security-release-notes-202304.0.html
         - title: Security release notes 202302.0
-          url: /docs/about/all/releases/security-release-notes-202302.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html        
 
     - title: Security audit reports
       nested:

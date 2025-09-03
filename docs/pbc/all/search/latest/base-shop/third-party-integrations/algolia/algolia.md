@@ -10,7 +10,7 @@ redirect_from:
 
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
-Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out because of its performance. With the Algolia app, your users can conduct advanced searches of active concrete products in your store.
+Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine. However, you can replace it with [Algolia](https://www.algolia.com/). The Algolia search engine stands out because of its performance. With the Algolia ACP app, your users can conduct advanced searches of active concrete products or content in your store.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -30,11 +30,11 @@ Your users can search for active concrete products by the following attributes:
 - Description
 - Keywords
 
-In Algolia Dashboard, you can configure other attributes to be searchable.
+In addition the Algolia ACP App can cover search of content (CMS pages) and indexed documentation (PDFs). For the indexing of the documentation (PDFs), it is required the use of the Algolia Crawler. In Algolia Dashboard, you can configure other attributes to be searchable.
 
 {% info_block infoBox "" %}
 
-In search results, Spryker groups all concrete products belonging to the same abstract product.
+In search results, Spryker groups all concrete products belonging to the same abstract product and depending on the configuration also presents Pages and Documents results.
 
 {% endinfo_block %}
 
@@ -42,7 +42,8 @@ In search results, Spryker groups all concrete products belonging to the same ab
 
 An index is a place where the data used by Algolia is stored.
 
-In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results.
+In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results. If configured, a separate index is created for CMS pages. In order to create an index for Documents, the use of the Algolia Crawler is required.
+
 There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by the following options:
 
 - Primary index

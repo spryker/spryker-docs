@@ -29,13 +29,14 @@ This document explains how to connect your Algolia account to Spryker and config
 7. In the **Your API Keys** tab, note the following keys:
     - **Application ID**
     - **Search API Key**
-    - **Admin API Key** (Write API Key with permission to create indexes also works)
+    - **Admin API Key** (**Write API Key** with permission to create indexes also works)
 8. In the Back Office, return to the Algolia app details page.
 9. In the top right corner, click **Configure**.
-10. In the **Configure** pane, enter the values you retrieved in step 7 for **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY**.
+10. In the **Configure** pane, enter the values you retrieved in step 7 for **APPLICATION ID**, **SEARCH API KEY**, and **ADMIN API KEY**. These keys are only required to start data export to Algolia.
 
 ![algolia-settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-settings.png)
-(These keys are only required to start data export to Algolia.)
+
+
 11. **Use Algolia instead of Elasticsearch for products**: Select this option to use Algolia as the search engine for **products** instead of Elasticsearch. This setting is optional and can be enabled later.
 12. **Use Algolia instead of Elasticsearch for CMS pages**: Select this option to use Algolia as the search engine for **CMS pages** instead of Elasticsearch. This setting is optional and can be enabled later.
 13. If your store model includes products without prices, select **Products without prices**. This setting is used for the initial index setup in Algolia and cannot be changed later. Select this only if products without prices can exist in your application.

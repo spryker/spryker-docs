@@ -134,5 +134,5 @@ Here is an example of product data stored in Algolia:
 
 ## Next step
 
-[Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
-[Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia)
+- [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+- [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html)

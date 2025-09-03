@@ -3976,6 +3976,10 @@ entries:
                       include_versions:
                       - "202410.0"
                       - "latest"
+                    - title: Integration of the Algolia UI Library in the Front End
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-widgets-integration.html
+                      include_versions:
+                        - "latest"
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html

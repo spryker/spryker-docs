@@ -34,7 +34,7 @@ In addition the Algolia ACP App can cover search of content (CMS pages) and inde
 
 {% info_block infoBox "" %}
 
-In search results, Spryker groups all concrete products belonging to the same abstract product and depending on the configuration also presents Pages and Documents results. 
+In search results, Spryker groups all concrete products belonging to the same abstract product and depending on the configuration also presents Pages and Documents results.
 
 {% endinfo_block %}
 

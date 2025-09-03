@@ -42,7 +42,8 @@ In search results, Spryker groups all concrete products belonging to the same ab
 
 An index is a place where the data used by Algolia is stored.
 
-In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results. If configured, a separate index is created for CMS pages and for Documents.
+In case of the Spryker store, the index is a complete list of all active concrete products that can appear in search results. If configured, a separate index is created for CMS pages. In order to create an index for Documents, the use of the Algolia Crawler is required.
+
 There are separate indexes for each locale and sorting strategy. With the Algolia app, the search results in your store can be sorted by the following options:
 
 - Primary index

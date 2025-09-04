@@ -1,5 +1,5 @@
 ---
-title: Using Algolia Search for Custom Entity Indexes
+title: Using Algolia search with custom indexes
 description: Learn how to enable Algolia search for custom entities, such as Docs, in your Spryker-based project.
 template: howto-guide-template
 ---

@@ -3976,6 +3976,10 @@ entries:
                       include_versions:
                       - "202410.0"
                       - "latest"
+                    - title: Using Algolia search with custom indexes
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html
+                      include_versions:
+                        - "latest"
                     - title: Integration of the Algolia UI Library in the Front End
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-widgets-integration.html
                       include_versions:

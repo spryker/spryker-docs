@@ -746,13 +746,24 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
+### 3. Integrate Front-End
+
+Make sure you have `spryker-shop/cms-search-page` version 1.5 or higher installed in your project to enable CMS page search on the frontend.
+
+Adjust your Search CMS page templates to the latest changes from Spryker's demo shops if your project is based on an older version than `202507.0-p2`:
+
+- B2C [changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
+- B2C Marketplace [changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
+- B2B [changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
+- B2B Marketplace [changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
+
 {% info_block warningBox "Verification" %}
 
 After completing the integration, verify the following:
 - In the Back Office at `/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, you can see the Spryker ACP URLs and API keys you provided in the Algolia App settings.
 - Product and CMS page data is synchronized from your Spryker instance to Algolia.
 - When you select products or CMS pages for searching in the Algolia App Settings, the frontend displays results from Algolia:
-  - On Yves: `/search?q=`, `/search/cms?q=`
+  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list) 
   - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
 - Confirm that Algolia is used for search by checking the Algolia Dashboard. Select the index for product or CMS page for the relevant store and locale, and check the number and order of records for the same search term.
 - You can also check Algolia API logs for the selected index. You should see the request User-Agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.

@@ -763,7 +763,7 @@ After completing the integration, verify the following:
 - In the Back Office at `/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, you can see the Spryker ACP URLs and API keys you provided in the Algolia App settings.
 - Product and CMS page data is synchronized from your Spryker instance to Algolia.
 - When you select products or CMS pages for searching in the Algolia App Settings, the frontend displays results from Algolia:
-  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list) 
+  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list)
   - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
 - Confirm that Algolia is used for search by checking the Algolia Dashboard. Select the index for product or CMS page for the relevant store and locale, and check the number and order of records for the same search term.
 - You can also check Algolia API logs for the selected index. You should see the request User-Agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.

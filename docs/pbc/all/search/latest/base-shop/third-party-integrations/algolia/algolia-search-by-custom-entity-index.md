@@ -92,6 +92,7 @@ class SearchController extends AbstractController
     }
 }
 ```
+
 7. Similar to the Yves controller, implement a Glue controller to expose the search results via API.
 8. Optionally, you can also enable Docs suggestions in the search autocomplete widget. Example:
 

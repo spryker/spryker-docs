@@ -552,6 +552,7 @@ Performance optimizations in publish and synchronization (product-related):
 - [spryker/product-category-storage:^2.11.0](https://github.com/spryker/product-category-storage/releases/tag/2.11.0)
 - [spryker/product-category-search:^1.2.1](https://github.com/spryker/product-category-search/releases/tag/1.2.1)
 - [spryker/propel:^3.47.0](https://github.com/spryker/propel/releases/tag/3.47.0)
+  - Updated `config/install/destructive.yml` configuration file.
 - [spryker/event-behavior:^1.32.0](https://github.com/spryker/event-behavior/releases/tag/1.32.0)
 - [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
     - `vendor/bin/console propel:model:build` required to rebuild Propel models.

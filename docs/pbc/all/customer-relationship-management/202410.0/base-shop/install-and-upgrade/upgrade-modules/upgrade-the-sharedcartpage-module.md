@@ -29,6 +29,7 @@ redirect_from:
   - /module_migration_guides/mg-shared-cart-page.htm
   - /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
   - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sharedcartpage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sharedcartpage-module.md -->

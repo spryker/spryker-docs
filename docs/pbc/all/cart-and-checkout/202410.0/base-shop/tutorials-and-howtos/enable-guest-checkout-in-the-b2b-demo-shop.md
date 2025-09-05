@@ -8,6 +8,8 @@ originalArticleId: 669e5e5c-f26a-484c-ab68-4588c701aa99
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
+
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html

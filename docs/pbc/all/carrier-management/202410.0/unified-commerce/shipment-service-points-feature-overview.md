@@ -4,6 +4,8 @@ description: Discover the Shipment Service Points feature in Spryker Cloud Comme
 last_updated: Nov 23, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/carrier-management/latest/unified-commerce/shipment-service-points-feature-overview.html
+
 ---
 
 This feature lets you assign service types to shipment types. Service and delivery types are used by service points. For more information about service service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).

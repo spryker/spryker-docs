@@ -4,6 +4,8 @@ description: Cart and Checkout module within your Spryker Cloud Commerce OS stor
 last_updated: Mar 23, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/latest/cart-and-checkout.html
+
 ---
 
 The *Cart and Checkout* capability enables customers and guest users to create and manage multiple shopping carts. After filling a cart, they go through a multi-step checkout to fill in all the details and place an order.

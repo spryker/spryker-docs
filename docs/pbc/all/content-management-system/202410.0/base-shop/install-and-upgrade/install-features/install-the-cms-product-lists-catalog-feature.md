@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/cms-product-lists-catalog-feature-integration.html
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+
 related:
   - title: CMS pages in search results
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html

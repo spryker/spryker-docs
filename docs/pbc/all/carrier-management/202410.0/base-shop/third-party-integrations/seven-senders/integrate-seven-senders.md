@@ -6,6 +6,7 @@ last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/shipment/seven-senders/integrating-seven-senders.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/seven-senders/integrate-seven-senders.html
+  - /docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/seven-senders/integrate-seven-senders.html
 
 ---
 

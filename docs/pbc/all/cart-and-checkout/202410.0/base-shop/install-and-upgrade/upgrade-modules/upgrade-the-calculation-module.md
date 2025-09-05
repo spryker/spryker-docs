@@ -31,6 +31,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-calculation.html
   - /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-calculation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-calculation-module.md -->

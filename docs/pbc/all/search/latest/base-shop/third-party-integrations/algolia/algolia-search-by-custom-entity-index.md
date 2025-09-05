@@ -88,6 +88,8 @@ class SearchController extends AbstractController
         
         $searchResponse = $searchClient->search($searchRequest, $resultFormatters, $request->query->all());
         
+        // $searchResponse['hits'] contains the items from Algolia in the format as they are stored in Algolia index, or empty array if no results found.
+        
         return $this->view(['results' => $searchResponse['hits'], $searchResponse['pagination'], $searchResults['facets']], [], 'docs/search/results.twig');
     }
 }

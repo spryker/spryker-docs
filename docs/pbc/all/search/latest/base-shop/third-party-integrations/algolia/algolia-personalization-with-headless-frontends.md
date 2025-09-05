@@ -14,7 +14,8 @@ Algolia requires events from your application to support the following premium f
 - A/B Testing
 
 
-Spryker collects only Yves events by default. For custom frontends and mobile applications, we recommend using the Algolia SDK for your specific framework or platform and the built-in Algolia UI components. Algolia UI components support event tracking for most of the required events by default. For information on Aloglia SDK for different platform, see the following docs.
+Spryker collects only Yves events by default. For custom frontends and mobile applications, we recommend using the Algolia SDK for your specific framework or platform and the built-in Algolia UI components.
+Algolia UI components support event tracking for most of the required events by default. For information on Aloglia SDK for different platform, see the following docs.
 
 For web applications:  
 - JavaScript applications: [API Reference - JavaScript Widgets](https://www.algolia.com/doc/api-reference/widgets/js/)  

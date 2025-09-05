@@ -1,33 +1,37 @@
 ---
 title: Integrate Algolia
-description: Learn how you can integrate Spryker Third party Algolia in to your Spryker based projects.
+description: Learn how to integrate Algolia Search into your Spryker-based projects.
 template: howto-guide-template
-last_updated: Nov 24, 2024
+last_updated: Sep 1, 2025
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html
 ---
 
-This document describes how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) into a Spryker shop.
+This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
+
 
 ## Prerequisites
 
 - [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)
 
-- In the Back Office, go to **Apps**>**Algolia**. Install or update the packages required for Algolia. Example:
+- In the Back Office, go to **Apps** > **Algolia**. Install or update the required packages for Algolia. For example:
 
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
 ## Integrate Algolia
 
-To integrate Algolia, follow these steps.
+To integrate Algolia, follow these steps:
 
-### 1. Configure shared configs
+### 1. Update project config files
 
-Add the following config to `config/Shared/config_default.php`:
+Add the following configuration to `config/Shared/config_default.php`:
 
 ```php
+use Generated\Shared\Transfer\CmsPagePublishedTransfer;
+use Generated\Shared\Transfer\CmsPageUnpublishedTransfer;
+use Generated\Shared\Transfer\InitializeCmsPageExportTransfer;
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
 use Generated\Shared\Transfer\ProductCreatedTransfer;
 use Generated\Shared\Transfer\ProductDeletedTransfer;
@@ -35,33 +39,33 @@ use Generated\Shared\Transfer\ProductExportedTransfer;
 use Generated\Shared\Transfer\ProductUpdatedTransfer;
 use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
+use Spryker\Shared\KernelApp\KernelAppConstants;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\Product\ProductConstants;
-use Spryker\Shared\SearchHttp\SearchHttpConstants;
 use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
 //...
 
-$config[SearchHttpConstants::TENANT_IDENTIFIER]
-    = $config[KernelAppConstants::TENANT_IDENTIFIER]
+$config[KernelAppConstants::TENANT_IDENTIFIER]
     = $config[ProductConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerAwsConstants::CONSUMER_ID]
     = $config[OauthClientConstants::TENANT_IDENTIFIER]
-    = $config[PaymentConstants::TENANT_IDENTIFIER]
     = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
-    = $config[TaxAppConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
+    CmsPagePublishedTransfer::class => 'cms-page-events',
+    CmsPageUnpublishedTransfer::class => 'cms-page-events',
     ProductExportedTransfer::class => 'product-events',
     ProductCreatedTransfer::class => 'product-events',
     ProductUpdatedTransfer::class => 'product-events',
     ProductDeletedTransfer::class => 'product-events',
     InitializeProductExportTransfer::class => 'product-commands',
+    InitializeCmsPageExportTransfer::class => 'search-commands',
     SearchEndpointAvailableTransfer::class => 'search-commands',
-    SearchEndpointRemovedTransfer::class => 'search-commands',
+    SearchEndpointRemovedTransfer::class => 'search-commands',     
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -73,21 +77,20 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
     'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'cms-page-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'search-entity-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
-
 ```
 
-### 2. Configure modules and dependencies
+### 2. Configure modules and their behavior
 
-Configure modules and add the necessary dependencies according to these guidelines.
+Configure the modules and add the necessary dependencies as described below.
 
-#### Configure Catalog dependencies in `Client`
+#### Configure the Catalog module
 
 Add the following code to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
 
 ```php
-//...
-
 use Generated\Shared\Transfer\SearchContextTransfer;
 use Generated\Shared\Transfer\SearchHttpSearchContextTransfer;
 use Spryker\Client\Catalog\Plugin\SearchHttp\ResultFormatter\ProductConcreteCatalogSearchHttpResultFormatterPlugin;
@@ -95,6 +98,7 @@ use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\QueryExpander\Pro
 use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategorySuggestionsSearchHttpResultFormatterPlugin;
 use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategoryTreeFilterSearchHttpResultFormatterPlugin;
+use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSuggestionsSearchHttpResultFormatterPlugin;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\Catalog\MerchantReferenceSearchHttpQueryExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\Catalog\ProductLabelSearchHttpFacetConfigTransferBuilderPlugin;
 use Spryker\Client\SearchHttp\Plugin\Catalog\Query\ProductConcreteSearchHttpQueryPlugin;
@@ -112,11 +116,7 @@ use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SpellingSuggestionS
 use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchResultCountPlugin;
 use Spryker\Shared\SearchHttp\SearchHttpConfig;
 
-//...
-
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
-
-//...
 
     /**
      * @return array<string, array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>>
@@ -181,6 +181,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
                     new ProductSuggestionSearchHttpResultFormatterPlugin(),
                 ),
                 new CategorySuggestionsSearchHttpResultFormatterPlugin(),
+                new CmsPageSuggestionsSearchHttpResultFormatterPlugin(),
             ],
         ];
     }
@@ -239,34 +240,17 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpSearchResultCountPlugin(),
         ];
     }
-
-    //...
-}
-```
-
-#### Adjust RabbitMq configuration in `Client`
-
-Add the following code to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
-
-```php
-//...
-
-use Spryker\Shared\SearchHttp\SearchHttpConfig;
-
-//...
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    //...
-
+    
+    
     /**
-     * @return array<mixed>
+     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>>
      */
-    protected function getSynchronizationQueueConfiguration(): array
+    protected function createCatalogSearchCountQueryExpanderPluginVariants(): array
     {
         return [
-            //...
-            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
+            SearchHttpConfig::TYPE_SEARCH_HTTP => [
+                new ProductPriceSearchHttpQueryExpanderPlugin(),
+            ],
         ];
     }
 
@@ -274,22 +258,16 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Configure Search dependencies in `Client`
+#### Configure the Search module
 
 Add the following code to `src/Pyz/Client/Search/SearchDependencyProvider.php`:
 
 ```php
-//...
-
 use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchAdapterPlugin;
 use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchContextExpanderPlugin;
 
-//...
-
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
-    //...
-
     /**
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchAdapterPluginInterface>
      */
@@ -310,12 +288,10 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
             new SearchHttpSearchContextExpanderPlugin(), # It is very important to put this plugin at the top of the list.
             //...
         ];
-
-    //...
 }
 ```
 
-#### Configure SearchHttp dependencies in `Client`
+#### Configure the SearchHttp module
 
 Add the following code to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
 
@@ -370,23 +346,110 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
 }
 ```
 
-#### Configure MessageBroker dependencies in `Zed`
+Add the following code to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
+
+```php
+<?php
+
+namespace Pyz\Zed\SearchHttp;
+
+use Pyz\Zed\Synchronization\SynchronizationConfig;
+use Spryker\Zed\SearchHttp\SearchHttpConfig as SprykerSearchHttpConfig;
+
+class SearchHttpConfig extends SprykerSearchHttpConfig
+{
+    /**
+     * @return string|null
+     */
+    public function getSearchHttpSynchronizationPoolName(): ?string
+    {
+        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
+    }
+}
+```
+
+#### Configure the Synchronization module
+
+Add the following code to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
+
+```php
+use Spryker\Zed\SearchHttp\Communication\Plugin\Synchronization\SearchHttpSynchronizationDataPlugin;
+
+class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
+     */
+    protected function getSynchronizationDataPlugins(): array
+    {
+        return [
+            //...
+            new SearchHttpSynchronizationDataPlugin(),
+        ];
+    }
+}
+```
+
+#### Configure the Queue module
+
+Add the following code to `src/Pyz/Zed/Queue/QueueDependencyProvider.php`:
+
+```php
+use Spryker\Shared\SearchHttp\SearchHttpConfig;
+
+class QueueDependencyProvider extends SprykerDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     */
+    protected function getProcessorMessagePlugins(Container $container): array
+    {
+        return [
+            //...
+            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+        ];
+    }
+
+    //...
+}
+```
+
+#### Configure the RabbitMq module
+
+Add the following code to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+
+```php
+use Spryker\Shared\SearchHttp\SearchHttpConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{
+    /**
+     * @return array<mixed>
+     */
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            //...
+            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
+        ];
+    }
+}
+```
+
+#### Configure the MessageBroker module
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
 ```php
-//...
-
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointAvailableMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemovedMessageHandlerPlugin;
-
-//...
+use Spryker\Zed\Cms\Communication\Plugin\MessageBroker\CmsPageMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
-  //...
-
   /**
     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
     */
@@ -396,24 +459,17 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           //...
           new ProductExportMessageHandlerPlugin(),
           new SearchEndpointMessageHandlerPlugin(),
+          new CmsPageMessageHandlerPlugin(),
       ];
   }
-
-  //...
 }
 ```
-
-#### Adjust MessageBroker configuration in `Zed`
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
-//...
-
 class MessageBrokerConfig extends SprykerMessageBrokerConfig
 {
-    //...
-
     /**
      * @return array<string>
      */
@@ -425,19 +481,16 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
             'search-commands',
         ];
     }
-
-    //...
 }
 ```
 
-#### Adjust Product configuration in `Zed`
+#### Configure the Product module
 
-Because Algolia product search index synchronization is triggered by internal Spryker events, it's required to provide a list of events for enabling product data synchronization.
+Algolia product search index synchronization is triggered by internal Spryker events. You must provide a list of events to enable product data synchronization.
+You can add or remove events depending on when you want products to be updated in Algolia.
 Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
-//...
-
 use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
 use Spryker\Zed\PriceProduct\Dependency\PriceProductEvents;
 use Spryker\Zed\Product\ProductConfig as SprykerProductConfig;
@@ -445,15 +498,9 @@ use Spryker\Zed\ProductCategory\Dependency\ProductCategoryEvents;
 use Spryker\Zed\ProductImage\Dependency\ProductImageEvents;
 use Spryker\Zed\ProductReview\Dependency\ProductReviewEvents;
 
-//...
-
 class ProductConfig extends SprykerProductConfig
 {
-    //...
-
     /**
-     * @api
-     *
      * @return array<string>
      */
     public function getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(): array
@@ -482,8 +529,6 @@ class ProductConfig extends SprykerProductConfig
     }
 
     /**
-     * @api
-     *
      * @return array<string>
      */
     public function getProductUpdateMessageBrokerPublisherSubscribedEvents(): array
@@ -507,29 +552,24 @@ class ProductConfig extends SprykerProductConfig
             ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_UPDATE,
         ]);
     }
-
-    //...
 }
 ```
 
 {% info_block warningBox "Warning" %}
 
-If your project has project-specific functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists from the prior methods when you need to send updated data to Algolia.
+If your project has custom functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists in the methods above to ensure updated data is sent to Algolia.
 
 Examples of such functionality include:
-- A custom functionality in the Back Office
-- Custom data import
-- Integration with some middleware when product or product-related data is updated in Spryker
+- Custom features in the Back Office
+- Custom data imports
+- Integration with middleware that updates product or product-related data in Spryker
 
-To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` method. Also, you can use the existing events:
+To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods. You can also use existing events:
 
-- For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
+- For a single product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
 - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
 {% endinfo_block %}
-
-
-#### Configure Product dependencies in `Zed`
 
 Add the following code to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
 
@@ -545,15 +585,13 @@ use Spryker\Zed\ProductLabel\Communication\Plugin\Product\ProductLabelProductCon
 
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
-    //...
-
     /**
      * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
      */
     protected function getProductConcreteExpanderPlugins(): array
     {
         return [
-            ...
+            // ...
             new ProductReviewProductConcreteExpanderPlugin(),
             new MerchantProductOfferProductConcreteExpanderPlugin(), # Marketplace only
             new ProductConcreteCategoriesExpanderPlugin(),
@@ -572,50 +610,91 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ApprovalStatusProductConcreteMergerPlugin(), # Add this plugin if you are using the spryker/product-approval module
         ];
     }
-
-    //...
 }
 ```
 
-#### Configure queue dependencies in `Zed`
+#### Configure the CmsPageSearch module
 
-Add the following code to `src/Pyz/Zed/Queue/QueueDependencyProvider.php`:
+To enable another search provider for CMS page search, add the following code to `src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php`:
 
 ```php
-//...
+namespace Pyz\Client\CmsPageSearch;
 
-use Spryker\Shared\SearchHttp\SearchHttpConfig;
+use Generated\Shared\Transfer\SearchContextTransfer;
+use Spryker\Client\CmsPageSearch\CmsPageSearchConfig;
+use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSearchHttpResultFormatterPlugin;
+use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSortSearchHttpResultFormatterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\BasicSearchHttpQueryExpanderPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\FacetSearchHttpQueryExpanderPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\FacetSearchHttpResultFormatterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\PaginationSearchHttpResultFormatterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchResultCountPlugin;
+# Elasticsearch related plugins, optional, useful for transition period
+use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\Query\CmsPageSearchQueryPlugin;
+use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\SearchResultCount\SearchElasticSearchResultCountPlugin;
 
-//...
-
-class QueueDependencyProvider extends SprykerDependencyProvider
+class CmsPageSearchDependencyProvider extends \Spryker\Client\CmsPageSearch\CmsPageSearchDependencyProvider
 {
-    //...
-
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
-    protected function getProcessorMessagePlugins(Container $container): array
+    protected function getCmsPageHttpSearchQueryExpanderPlugins(): array
     {
         return [
-            //...
-            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
+            new BasicSearchHttpQueryExpanderPlugin(),
+            new FacetSearchHttpQueryExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
+     */
+    protected function getCmsPageHttpSearchResultFormatterPlugins(): array
+    {
+        return [
+            new PaginationSearchHttpResultFormatterPlugin(),
+            new CmsPageSortSearchHttpResultFormatterPlugin(),
+            new CmsPageSearchHttpResultFormatterPlugin(),
+            new FacetSearchHttpResultFormatterPlugin(),
         ];
     }
 
-    //...
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
+     */
+    protected function getCmsPageSearchQueryPlugins(): array
+    {
+        return [
+            new SearchHttpQueryPlugin(
+                (new SearchContextTransfer())
+                    ->setSourceIdentifier(CmsPageSearchConfig::SOURCE_IDENTIFIER_CMS_PAGE),
+            ),
+            new CmsPageSearchQueryPlugin(), # Optional, useful for transition period
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchResultCountPluginInterface>
+     */
+    protected function getCmsPageSearchResultCountPlugins(): array
+    {
+        return [
+            CmsPageSearchConfig::SEARCH_STRATEGY_SEARCH_HTTP => new SearchHttpSearchResultCountPlugin(),
+            CmsPageSearchConfig::SEARCH_STRATEGY_ELASTICSEARCH => new SearchElasticSearchResultCountPlugin(), # Optional, useful for transition period
+        ];
+    }
 }
 ```
 
-#### Adjust Publisher configuration in `Zed`
+
+#### Configure the Publisher module
 
 Add the following code to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
 
 ```php
-//...
-
+use Spryker\Zed\Cms\Communication\Plugin\Publisher\CmsPageUpdateMessageBrokerPublisherPlugin;
+use Spryker\Zed\Cms\Communication\Plugin\Publisher\CmsPageVersionPublishedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductAbstractUpdatedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteCreatedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteDeletedMessageBrokerPublisherPlugin;
@@ -624,12 +703,8 @@ use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteUpdatedMes
 use Spryker\Zed\ProductCategory\Communication\Plugin\Publisher\ProductCategoryProductUpdatedEventTriggerPlugin;
 use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
 
-//...
-
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
-    //...
-
     /**
      * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
      */
@@ -638,6 +713,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return array_merge(
             //...
             $this->getProductMessageBrokerPlugins(),
+            $this->getCmsPageMessageBrokerPlugins(),
         );
     }
 
@@ -657,73 +733,51 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         ];
     }
 
-    //...
-}
-```
-
-#### Add SearchHttp configuration in `Zed`
-
-Add the following code to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
-
-```php
-<?php
-
-namespace Pyz\Zed\SearchHttp;
-
-use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\SearchHttp\SearchHttpConfig as SprykerSearchHttpConfig;
-
-class SearchHttpConfig extends SprykerSearchHttpConfig
-{
     /**
-     * @return string|null
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
-    public function getSearchHttpSynchronizationPoolName(): ?string
-    {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
-    }
-}
-```
-
-#### Configure Synchronization dependencies in `Zed`
-
-Add the following code to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
-
-```php
-//...
-
-use Spryker\Zed\SearchHttp\Communication\Plugin\Synchronization\SearchHttpSynchronizationDataPlugin;
-
-//...
-
-class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
-{
-    //...
-
-    /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
-     */
-    protected function getSynchronizationDataPlugins(): array
+    protected function getCmsPageMessageBrokerPlugins(): array
     {
         return [
-            //...
-            new SearchHttpSynchronizationDataPlugin(),
+            new CmsPageVersionPublishedMessageBrokerPublisherPlugin(),
+            new CmsPageUpdateMessageBrokerPublisherPlugin(),
         ];
     }
-
-    //...
 }
 ```
+
+### 3. Integrate Front-End
+
+Make sure you have `spryker-shop/cms-search-page` version 1.5 or higher installed in your project to enable CMS page search on the frontend.
+
+Adjust your Search CMS page templates to the latest changes from Spryker's demo shops if your project is based on an older version than `202507.0-p2`:
+
+- B2C [changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
+- B2C Marketplace [changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
+- B2B [changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
+- B2B Marketplace [changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
+
+{% info_block warningBox "Verification" %}
+
+After completing the integration, verify the following:
+- In the Back Office at `/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, you can see the Spryker ACP URLs and API keys you provided in the Algolia App settings.
+- Product and CMS page data is synchronized from your Spryker instance to Algolia.
+- When you select products or CMS pages for searching in the Algolia App Settings, the frontend displays results from Algolia:
+  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list)
+  - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
+- Confirm that Algolia is used for search by checking the Algolia Dashboard. Select the index for product or CMS page for the relevant store and locale, and check the number and order of records for the same search term.
+- You can also check Algolia API logs for the selected index. You should see the request User-Agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.
+
+{% endinfo_block %}
+
 
 ## Additional information on Algolia integration
 
-When integrating Algolia, you should keep in mind some peculiarities of the SearchHTTP plugins setup and differences of the default facets.
+When integrating Algolia, keep in mind some specifics of the SearchHttp plugin setup and differences in the default facets.
 
-### SearchHTTP plugins setup
+The `SearchHttp` query is built using `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
 
-Spryker's `SearchHTTP` module transfers Glue search requests to external search providers like Algolia. The `SearchHTTP` query is built using the `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
-
-The order of execution of those plugins can be customized on the project level. By default, all module-specific query builder plugins are executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite search query parameters set before.
+You can customize the order of these plugins at the project level. By default, all module-specific query builder plugins are executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite previously set search query parameters.
 
 ## Next steps
 

@@ -19,14 +19,21 @@
 .scheme-container {
     display: none !important;
 }
+
+.schema_data {
+    background: #f5f5f5;
+    padding: 2%;
+    border-radius: 10px;
+}
 </style>
 
-<div id="swagger-ui"></div>
-
 {% raw %}
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-standalone-preset.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.1/swagger-ui-bundle.js"></script>
+<div class="schema_file"> <strong>OpenAPI File:</strong> <a href="{% endraw %}{{ page.swagger_url }}{% raw %}">{% endraw %}{{ page.swagger_url }}{% raw %}</a></div>
+<div id="swagger-ui"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.28.1/swagger-ui.css" />
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.28.1/swagger-ui-bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.28.1/swagger-ui-standalone-preset.js"></script>
+
 <script>
 const swaggerContainer = document.getElementById('swagger-ui');
 if(swaggerContainer) {
@@ -45,5 +52,35 @@ if(swaggerContainer) {
     // console.log(ui);
     window.ui = ui
 }
+</script>
+<script>
+(function() {
+  const fileUrl = "{% endraw %}{{ page.swagger_url }}{% raw %}";
+
+  fetch(fileUrl, { method: "HEAD" })
+    .then(response => {
+      const lastModified = response.headers.get("Last-Modified");
+      if (lastModified) {
+        const date = new Date(lastModified);
+
+        // Format for human display (DD Month YYYY)
+        const options = { day: "2-digit", month: "long", year: "numeric" };
+        const formattedDate = date.toLocaleDateString("en-GB", options);
+
+        // Format for datetime attribute (YYYY-MM-DD)
+        const isoDate = date.toISOString().split("T")[0];
+
+        // Find the time element and update it
+        const timeEl = document.querySelector(".post-meta time");
+        if (timeEl) {
+          timeEl.textContent = formattedDate;
+          timeEl.setAttribute("datetime", isoDate);
+        }
+      }
+    })
+    .catch(err => {
+      console.error("Could not fetch last modified date:", err);
+    });
+})();
 </script>
 {% endraw %}

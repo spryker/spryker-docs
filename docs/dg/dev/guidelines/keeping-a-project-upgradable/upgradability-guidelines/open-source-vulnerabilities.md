@@ -11,7 +11,7 @@ The Open-source vulnerabilities checker is a tool that uses the `composer audit`
 
 ## Problem description
 
-A project can use dependencies that contain known vulnerabilities. To minimize security risks, such dependencies should be updated to a version where the vulnerability is fixed.
+A project can sometimes use dependencies that contain known vulnerabilities. To minimize security risks, such dependencies should be updated to a version where the vulnerability is fixed.
 
 ## Prerequisites
 

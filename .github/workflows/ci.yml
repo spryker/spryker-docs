@@ -1,4 +1,4 @@
-name: CI
+name: CI Ultra Optimized
 
 on:
   push:
@@ -23,20 +23,35 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
+      # Cache Jekyll incremental build
+      - name: Cache Jekyll build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .jekyll-cache
+            .sass-cache
+          key: jekyll-${{ runner.os }}-${{ hashFiles('_config*.yml', 'Gemfile.lock') }}-${{ hashFiles('**/*.md', '**/*.html', '**/*.yml') }}
+          restore-keys: |
+            jekyll-${{ runner.os }}-${{ hashFiles('_config*.yml', 'Gemfile.lock') }}-
 
-      - name: Pack artifacts
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --config=_config.yml,_config_production.yml --incremental -t
+
+      - name: Pack artifacts (compressed)
         run: tar -czf result.tar.gz _site
 
       - uses: actions/upload-artifact@v4
         with:
           name: build-result
           path: result.tar.gz
+          retention-days: 1
 
-  link_validation_check_about:
-    name: Links validation (check_about)
+  # OPTION 1: Single comprehensive validation (FASTEST - ~5-10 minutes)
+  link_validation_single:
+    name: Links validation (single pass)
     needs: jekyll_build
     runs-on: ubuntu-latest
+    if: github.event_name != 'schedule'  # Use single pass for PR/push
 
     steps:
       - uses: actions/checkout@v4
@@ -47,24 +62,41 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
+      # Get current hour for external URL cache (1h expiry)
+      - name: Get current hour
+        id: date
+        run: echo "hour=$(date +'%Y%m%d%H')" >> $GITHUB_OUTPUT
+
+      - name: Cache HTMLProofer (external URLs only, 1h expiry)
         uses: actions/cache@v4
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_about_all-htmlproofer
+          # Hour-based key for external URL cache only
+          key: ${{ runner.os }}-all-docs-htmlproofer-${{ steps.date.outputs.hour }}-${{ hashFiles('_site/**/*.html') }}
+          restore-keys: |
+            ${{ runner.os }}-all-docs-htmlproofer-${{ steps.date.outputs.hour }}-
+            ${{ runner.os }}-all-docs-htmlproofer-
 
       - uses: actions/download-artifact@v4
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
-      - run: bundle exec rake check_about
+      - name: Validate all links in one pass
+        run: bundle exec rake check_all_fast
 
-  link_validation_check_ca:
-    name: Links validation (check_ca)
+  # OPTION 2: Parallel validation by section (THOROUGH - for scheduled runs)
+  link_validation_parallel:
+    name: Links validation (${{ matrix.section }})
     needs: jekyll_build
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'  # Use parallel for scheduled comprehensive checks
+    strategy:
+      matrix:
+        section: [ca, about, pbc, dg, integrations]
+      fail-fast: false
 
     steps:
       - uses: actions/checkout@v4
@@ -75,103 +107,30 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
+      # Get current hour for external URL cache (1h expiry)
+      - name: Get current hour
+        id: date
+        run: echo "hour=$(date +'%Y%m%d%H')" >> $GITHUB_OUTPUT
+
+      - name: Cache HTMLProofer (external URLs only, 1h expiry)
         uses: actions/cache@v4
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_cloud-htmlproofer
+          # Hour-based key for external URL cache only
+          key: ${{ runner.os }}-${{ matrix.section }}-htmlproofer-${{ steps.date.outputs.hour }}-${{ hashFiles('_site/**/*.html') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.section }}-htmlproofer-${{ steps.date.outputs.hour }}-
+            ${{ runner.os }}-${{ matrix.section }}-htmlproofer-
 
       - uses: actions/download-artifact@v4
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
-      - run: bundle exec rake check_ca
-
-  link_validation_check_pbc:
-    name: Links validation (check_pbc)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: $-check_pbc-htmlproofer
-
-      - uses: actions/download-artifact@v4
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_pbc
-
-  link_validation_check_dg:
-    name: Links validation (check_dg)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_sdk-htmlproofer
-
-      - uses: actions/download-artifact@v4
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_dg
-
-  link_validation_check_integrations:
-    name: Links validation (check_integrations)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_sdk-htmlproofer
-
-      - uses: actions/download-artifact@v4
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_integrations
+      - name: Validate links for ${{ matrix.section }}
+        run: bundle exec rake check_${{ matrix.section }}
 
   page_validation:
     name: Page validation
@@ -190,10 +149,10 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: jekyll_build
-    if: github.ref == 'refs/heads/master'
+    needs: [jekyll_build, link_validation_single]
+    if: github.ref == 'refs/heads/master' && github.event_name != 'schedule'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: akhileshns/heroku-deploy@v3.13.15
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}

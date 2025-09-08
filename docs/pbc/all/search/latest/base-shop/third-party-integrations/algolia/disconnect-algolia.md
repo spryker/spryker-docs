@@ -20,7 +20,7 @@ To disconnect the Algolia app from your store, do the following:
 
 {% info_block infoBox "Algolia indexes" %}
 
-When disconnecting Algolia, indexes aren't deleted from Algolia, so you can access previously collected data from your Spryker shop.
+When disconnecting Algolia, indexes are not deleted from Algolia, so you can access previously collected data from your Spryker shop.
 
 {% endinfo_block %}
 

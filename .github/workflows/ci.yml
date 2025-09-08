@@ -46,12 +46,63 @@ jobs:
           path: result.tar.gz
           retention-days: 1
 
-  # OPTION 1: Single comprehensive validation (FASTEST - ~5-10 minutes)
-  link_validation_single:
-    name: Links validation (single pass)
+  # OPTIMIZED: Smart incremental validation (internal filesystem + external incremental)
+  link_validation_smart:
+    name: Smart incremental link validation
     needs: jekyll_build
     runs-on: ubuntu-latest
-    if: github.event_name != 'schedule'  # Use single pass for PR/push
+    if: github.event_name != 'schedule'  # Use smart incremental for PR/push
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need full history for git diff comparison
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      # Get current hour for external URL cache (1h expiry)
+      - name: Get current hour
+        id: date
+        run: echo "hour=$(date +'%Y%m%d%H')" >> $GITHUB_OUTPUT
+
+      - name: Cache HTMLProofer (external URLs only, 1h expiry)
+        uses: actions/cache@v4
+        with:
+          path: tmp/.htmlproofer
+          # Hour-based key for external URL cache only
+          key: ${{ runner.os }}-smart-htmlproofer-${{ steps.date.outputs.hour }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-smart-htmlproofer-${{ steps.date.outputs.hour }}-
+            ${{ runner.os }}-smart-htmlproofer-
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-result
+
+      - name: Unpack artifacts
+        run: tar -xf result.tar.gz
+
+      - name: Smart incremental validation
+        run: |
+          echo "🧠 Starting smart incremental link validation..."
+          echo "📊 This approach:"
+          echo "   • Internal links: filesystem-based (no HTTP requests)"
+          echo "   • External links: only check URLs in changed files"
+          echo "   • Expected speedup: 70-90% faster than full validation"
+          
+          bundle exec rake check_smart_incremental
+
+  # Fallback: Traditional full validation for scheduled runs
+  link_validation_full:
+    name: Full link validation (scheduled/fallback)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'  # Use full validation for scheduled comprehensive checks
 
     steps:
       - uses: actions/checkout@v4
@@ -72,10 +123,10 @@ jobs:
         with:
           path: tmp/.htmlproofer
           # Hour-based key for external URL cache only
-          key: ${{ runner.os }}-all-docs-htmlproofer-${{ steps.date.outputs.hour }}-${{ hashFiles('_site/**/*.html') }}
+          key: ${{ runner.os }}-full-htmlproofer-${{ steps.date.outputs.hour }}-${{ hashFiles('_site/**/*.html') }}
           restore-keys: |
-            ${{ runner.os }}-all-docs-htmlproofer-${{ steps.date.outputs.hour }}-
-            ${{ runner.os }}-all-docs-htmlproofer-
+            ${{ runner.os }}-full-htmlproofer-${{ steps.date.outputs.hour }}-
+            ${{ runner.os }}-full-htmlproofer-
 
       - uses: actions/download-artifact@v4
         with:
@@ -84,53 +135,10 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf result.tar.gz
 
-      - name: Validate all links in one pass
-        run: bundle exec rake check_all_fast
-
-  # OPTION 2: Parallel validation by section (THOROUGH - for scheduled runs)
-  link_validation_parallel:
-    name: Links validation (${{ matrix.section }})
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-    if: github.event_name == 'schedule'  # Use parallel for scheduled comprehensive checks
-    strategy:
-      matrix:
-        section: [ca, about, pbc, dg, integrations]
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      # Get current hour for external URL cache (1h expiry)
-      - name: Get current hour
-        id: date
-        run: echo "hour=$(date +'%Y%m%d%H')" >> $GITHUB_OUTPUT
-
-      - name: Cache HTMLProofer (external URLs only, 1h expiry)
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          # Hour-based key for external URL cache only
-          key: ${{ runner.os }}-${{ matrix.section }}-htmlproofer-${{ steps.date.outputs.hour }}-${{ hashFiles('_site/**/*.html') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.section }}-htmlproofer-${{ steps.date.outputs.hour }}-
-            ${{ runner.os }}-${{ matrix.section }}-htmlproofer-
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: build-result
-
-      - name: Unpack artifacts
-        run: tar -xf result.tar.gz
-
-      - name: Validate links for ${{ matrix.section }}
-        run: bundle exec rake check_${{ matrix.section }}
+      - name: Full validation (traditional approach)
+        run: |
+          echo "🌐 Running full site validation (scheduled run)..."
+          bundle exec rake check_all_fast
 
   page_validation:
     name: Page validation
@@ -149,7 +157,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [jekyll_build, link_validation_single]
+    needs: [jekyll_build, link_validation_smart]
     if: github.ref == 'refs/heads/master' && github.event_name != 'schedule'
     steps:
       - uses: actions/checkout@v4

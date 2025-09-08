@@ -15,7 +15,7 @@ A project can sometimes use dependencies that contain known vulnerabilities. To 
 
 ## Prerequisites
 
-This checker requires Composer version 2.7.0 or later. To check your Composer version, run the following command:
+This checker requires Composer version 2.7.0 or later. To check your Composer version, execute the command:
 
 ```bash
 composer --version
@@ -63,14 +63,14 @@ The error is caused by a package version with a known vulnerability defined in y
 
 To resolve the error, upgrade the package to a version where the vulnerability is fixed:
 
-1.  Identify the package with the vulnerability from the error message (for example, `guzzlehttp/psr7`).
-2.  Update the package to a secure version:
+1. Identify the package with the vulnerability from the error message (for example, `guzzlehttp/psr7`).
+2. Update the package to a secure version:
 
     ```bash
     composer update guzzlehttp/psr7
     ```
 
-3.  After updating, you can run `composer audit` to confirm that the vulnerability has been resolved.
+3. After updating, you can run `composer audit` to confirm that the vulnerability has been resolved.
 
 ## Run only this checker
 

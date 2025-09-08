@@ -28,7 +28,7 @@
 </style>
 
 {% raw %}
-<div class="schema_file"> <strong>OpenAPI File:</strong> <a href="{% endraw %}{{ page.swagger_url }}{% raw %}">{% endraw %}{{ page.swagger_url }}{% raw %}</a></div>
+<div class="schema_file"><a href="{% endraw %}{{ page.swagger_url }}{% raw %}">{% endraw %}{{ page.title }}{% raw %} API Schema File</a></div>
 <div id="swagger-ui"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.28.1/swagger-ui.css" />
 <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.28.1/swagger-ui-bundle.js"></script>

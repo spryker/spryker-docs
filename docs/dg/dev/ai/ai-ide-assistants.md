@@ -1,10 +1,10 @@
 ---
-title: AI coding assistants
-description: Overview of AI coding assistants for daily work
+title: AI IDE assistants
+description: Overview of AI IDE coding assistants for daily work
 template: concept-topic-template
 ---
 
-This document describes the AI Assistants you can use when developing your Spryker projects. You will read about recommended AI Assistants, how to set up and use them.
+This document describes the AI IDE Assistants you can use when developing your Spryker projects. You will read about recommended AI IDE Assistants, how to set up and use them.
 
 Here are some examples of how you can use AI assistants in your work:
 - Generate a code completion suggestion

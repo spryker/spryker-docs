@@ -6,7 +6,18 @@ entries:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
   - title: AI coding assistants
-    url: /docs/dg/dev/ai-coding-assistants.html
+    url: /docs/dg/dev/ai-assistants.html
+    nested:
+      - title: AI IDE assistants
+        url: /docs/dg/dev/ai/ai-ide-assistants.html
+      - title: Spryker Engineer GPT
+        url: /docs/dg/dev/ai/spryker-engineer-gpt.html
+      - title: Spryker K6 Performance Assistant GPT
+        url: /docs/dg/dev/ai/spryker-k6-performance-assistant-gpt.html
+      - title: Spryker DevQA Assistant GPT
+        url: /docs/dg/dev/ai/spryker-devqa-assistant-gpt.html
+      - title: Spryker Cypress E2E Assistant GPT
+        url: /docs/dg/dev/ai/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -956,7 +967,7 @@ entries:
     - title: Accessibility improvements
       url: /docs/dg/dev/integrate-and-configure/integrate-accessibility-improvements.html
     - title: "Tutorial: Integrate accessibility improvements into B2B Demo Shop"
-      url: /docs/dg/dev/integrate-and-configure/tutorial-integrate-accessiblity-improvements-into-b2b-demoshop.html      
+      url: /docs/dg/dev/integrate-and-configure/tutorial-integrate-accessiblity-improvements-into-b2b-demoshop.html
     - title: Basic SEO techniques
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
     - title: Graceful shutdown
@@ -1140,7 +1151,7 @@ entries:
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
     - title: "Key-value storage: Redis and Valkey"
-      url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html      
+      url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
@@ -1153,7 +1164,7 @@ entries:
       - title: "Semantic Versioning: Major vs. minor vs. patch release"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
       - title: "Semantic Versioning: Zero-major version"
-        url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html        
+        url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1288,7 +1299,7 @@ entries:
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Batch processing of Propel entities
-        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html        
+        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
       - title: Architecture performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
       - title: Frontend performance guidelines
@@ -1692,7 +1703,7 @@ entries:
       - title: Simulating deployments locally
         url: /docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html
       - title: Strategy resolvers
-        url: /docs/dg/dev/miscellaneous-guides/strategy-resolvers.html        
+        url: /docs/dg/dev/miscellaneous-guides/strategy-resolvers.html
       - title: "Tutorial: Hello world"
         url: /docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html
       - title: Using database transactions

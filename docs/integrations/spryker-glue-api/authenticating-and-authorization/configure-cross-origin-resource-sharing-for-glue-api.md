@@ -1,5 +1,5 @@
 ---
-title: Configure cross-origin resource sharing for Glue API
+title: Configure cross-origin resource sharing for APIs
 last_updated: '2025-07-07'
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-glue-for-cross-origin-requests-201903

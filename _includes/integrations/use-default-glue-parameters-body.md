@@ -1,13 +1,13 @@
-This document explains how to pass the parameters and how to use them in code.
+This document explains how to pass the parameters and how to use them in Storefront API code.
 
-The Glue JSON:API convention provides some parameter parsing out of the box. The following are among them:
+The Storefront API JSON:API convention provides some parameter parsing out of the box. The following are among them:
 - Pagination
 - Sorting
 - Filters
 
 ## Pagination
 
-Glue uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
+Storefront API uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
 
 ```json
 ?page[offset]=0&page[limit]=10 # display 10 records starting at 0 (AKA page #1)

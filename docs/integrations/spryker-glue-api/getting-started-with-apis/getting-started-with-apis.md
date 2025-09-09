@@ -12,9 +12,9 @@ Spryker's Glue API is a dedicated application layer within the Spryker Cloud Com
 
 </div>
 
-## Spryker GLUE API types: REST vs Backend (BAPI)
+## Spryker API Types: Storefront and Backend API
 
-Spryker's Glue API framework offers two primary types of API applications, each tailored for different use cases:
+Spryker's API framework offers two primary types of API applications, each tailored for different use cases:
 
 <div class="grid_container">
   <div class="content_card">
@@ -23,8 +23,8 @@ Spryker's Glue API framework offers two primary types of API applications, each 
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">REST API</p>
-      <p class="content_text">REST API (often called the Glue API) is designed for external facing integrations, such as for headless commerce. It's the API layer that powers web shops, mobile apps, marketplaces, and other client-facing systems.</p>
+      <p class="content_title">Storefront API</p>
+      <p class="content_text">Storefront API is an API for consumers designed for external facing integrations, such as for headless commerce. It is based on REST API and is the API layer that powers web shops, mobile apps, marketplaces, and other client-facing systems.</p>
     </div>
   </div>
   <div class="content_card">
@@ -33,8 +33,8 @@ Spryker's Glue API framework offers two primary types of API applications, each 
       </div>
     </div>
     <div class="content_column">
-      <p class="content_title">Backend API (BAPI)</p>
-      <p class="content_text">Tailored for backend processes, administrative tools, or integrations with enterprise systems, such as ERP or CRM. A key advantage of BAPI is its direct access to Spryker's business logic layer (Facades), often leading to more performant backend operations.</p>
+      <p class="content_title">Backend API</p>
+      <p class="content_text">Backend API is an API for Admins and system-to-system communication. Tailored for backend processes, administrative tools, or integrations with enterprise systems, such as ERP or CRM. Technically it is multi-format, but OOTB REST API is shipped. A key advantage is its direct access to Spryker's business logic layer (Facades), often leading to more performant backend operations.</p>
     </div>
   </div>
 </div>
@@ -97,7 +97,7 @@ Glue API leverages standardized parameters for efficient data interaction:
 
 Glue API primarily uses OAuth 2.0 for securing endpoints.
 
-Client applications send user credentials (username and password) to an authentication endpoint (for example, `/token` for SAPI or a separate `/token` for BAPI using Back Office credentials) to obtain an access token and a refresh token. This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources. If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
+Client applications send user credentials (username and password) to an authentication endpoint (for example, `/token` for Storefront API or a separate `/token` for Backend API using Back Office credentials) to obtain an access token and a refresh token. This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources. If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
 
 ---
 
@@ -123,7 +123,7 @@ The Glue API is not just for consumption; it's a powerful platform for developme
 
 Developing with the Glue API involves a structured approach. At a high level, this journey includes:
 
-- Setting up the Application Context: Deciding whether to use the standard SAPI or BAPI, or if a custom API application is needed for your project.
+- Setting up the Application Context: Deciding whether to use the standard Storefront API or Backend API, or if a custom API application is needed for your project.
 - Implementing Resources: This is the core development activity. It involves creating modules that define your API resources, including:
 - Controllers: To handle incoming HTTP requests and manage the request-response flow.
 - Processors/Logic: To contain the business logic for fetching, creating, or updating data.
@@ -131,7 +131,7 @@ Developing with the Glue API involves a structured approach. At a high level, th
 - Configuring Routing: Ensuring that API calls are correctly directed to the appropriate resource and controller action.
 - Considering Conventions and Best Practices: Adhering to API design principles, versioning strategies, and documentation standards.
 
-Beyond the standard SAPI and BAPI, Spryker allows you to create entirely new, isolated Glue API applications. This is perfect for projects requiring a dedicated API with its own set of resources, configurations, or even custom request processing workflows.
+Beyond the standard Storefront API and Backend API, Spryker allows you to create entirely new, isolated API applications. This is perfect for projects requiring a dedicated API with its own set of resources, configurations, or even custom request processing workflows.
 
 ## Further reading
 

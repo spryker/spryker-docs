@@ -1,9 +1,9 @@
-By default, Glue REST API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to Glue API originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, Glue API can accept requests from a list of allowed origins or any origin, depending on the configuration.
+By default, Spryker APIs (Storefront API and Backend API) are configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to APIs originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, APIs can accept requests from a list of allowed origins or any origin, depending on the configuration.
 
 
 ## Configure CORS
 
-To configure CORS, edit the needed deploy file. Example:
+To configure CORS for Storefront API, edit the needed deploy file. Example:
 
 ```yml
 glue_eu:
@@ -61,12 +61,40 @@ glue_eu:
             cors-allow-origin: 'http://www.example1.com'
 ```
 
+## Configure CORS for Backend API
+
+To configure CORS for Backend API, use the `glue_backend_eu` application in your deploy file:
+
+```yml
+glue_backend_eu:
+    application: glue-backend
+    endpoints:
+        glue-backend.de.mysprykershop.com:
+            store: DE
+            cors-allow-origin: 'http://cors-allow-origin1.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,User-Agent,newrelic,traceparent,tracestate"
+        glue-backend.at.mysprykershop.com:
+            store: AT
+            cors-allow-origin: 'http://cors-allow-origin2.domain'
+            cors-allow-headers: "accept,content-type,content-language,accept-language,authorization,If-Match,Cache-Control,If-Modified-Since,User-Agent,newrelic,traceparent,tracestate,X-Device-Id"
+```
+
 ## Verify the CORS configuration
 
-1. Make an _OPTIONS_ pre-flight request to any valid Glue API resource with the correct `Origin` header, for example, `http://www.example1.com`:
+### For Storefront API
+
+1. Make an _OPTIONS_ pre-flight request to any valid Storefront API resource with the correct `Origin` header, for example, `http://www.example1.com`:
 
 ```bash
 curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com
+```
+
+### For Backend API
+
+1. Make an _OPTIONS_ pre-flight request to any valid Backend API resource with the correct `Origin` header:
+
+```bash
+curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue-backend.de.mysprykershop.com
 ```
 
 2. Check that the response contains the following:

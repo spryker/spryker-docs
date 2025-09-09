@@ -1,4 +1,4 @@
-This document describes how to use API Key authorization mechanism in Spryker.
+This document describes how to use API Key authorization mechanism with Backend API in Spryker.
 
 ## How authentication works
 

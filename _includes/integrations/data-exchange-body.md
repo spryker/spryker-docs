@@ -5,11 +5,6 @@ Spryker offers the following options to import and export data:
 - Data Exchange API: available in SCCOS by default
 - Data Importers and Data Exporters: available in Spryker Cloud Commerce OS (SCCOS) by default
 
-
-### Custom integrations with custom connectors
-
-{% include pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->
-
 ## Data Exchange API
 
 Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is exchanged across all integrated platforms. It's part of the SCCOS platform core.

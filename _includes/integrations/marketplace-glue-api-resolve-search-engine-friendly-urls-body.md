@@ -1,6 +1,6 @@
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-This endpoint allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
+This endpoint allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Storefront API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
@@ -14,16 +14,16 @@ In your development, the endpoints can help you to:
 * Significantly boost the SEO presence of your product store.
 * Increase the search engine ranking of your online store.
 
-To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
+To facilitate their usage, Spryker Storefront API provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Storefront API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 
 
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Spryker Сore Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
-## Resolve a SEF URL into a Glue API URL
+## Resolve a SEF URL into a Storefront API URL
 
-To resolve a SEF URL into a Glue API URL, send the request:
+To resolve a SEF URL into a Storefront API URL, send the request:
 
 ---
 `GET` {% raw %}**/url-resolver?url=*{{SEF URL}}***{% endraw %}
@@ -154,7 +154,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 | entityType | String | Resource type, like `abstract-products` or `category-nodes`, `cms-pages` or `merchants`. |
 | entityId | String | Unique resource identifier. |
 
-Using the information from the response and the Glue server name, you can construct the Glue resource URLs. For example:
+Using the information from the response and the Storefront API server name, you can construct the Storefront API resource URLs. For example:
 * `https://glue.mysprykershop.com/abstract-products/134`
 * `https://glue.mysprykershop.com/category-nodes/5`
 * `https://glue.mysprykershop.com/cms-pages/8d378933-22f9-54c7-b45e-db68f2d5d9a3`

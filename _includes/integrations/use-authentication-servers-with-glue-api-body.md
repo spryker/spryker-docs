@@ -1,8 +1,8 @@
-This document describes Use authentication servers with Glue API.
+This document describes how to use authentication servers with Backend API.
 
 Integrate authentication following the [Glue API Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) guide.
 
-Glue allows switching between different authentication servers. In order to provide that ability, the `AuthenticationServerPluginInterface` must be implemented.
+Backend API allows switching between different authentication servers. In order to provide that ability, the `AuthenticationServerPluginInterface` must be implemented.
 That conception allows wiring plugins implemented an authentication server and extend the default functionality.
 
 `OauthAuthenticationServerPlugin` implements `AuthenticationServerPluginInterface` and builds the request to the `Oauth` server out of the box.
@@ -74,9 +74,9 @@ class OauthAuthenticationServerPlugin extends AbstractPlugin implements Authenti
 
 This plugin is run by `AuthenticationFacade::authenticate()`.
 
-For the Glue Storefront API application, `Spryker\Client\AuthenticationOauth\Communication\Plugin\Authentication\OauthAuthenticationServerPlugin` is used and run by `AuthenticationClient::authenticate()`.
+For the Storefront API application, `Spryker\Client\AuthenticationOauth\Communication\Plugin\Authentication\OauthAuthenticationServerPlugin` is used and run by `AuthenticationClient::authenticate()`.
 
-To enable the provided authentication server for the Glue Backend API application, connect the implemented `AuthenticationServerPluginInterface` in the following way:
+To enable the provided authentication server for the Backend API application, connect the implemented `AuthenticationServerPluginInterface` in the following way:
 
 **Pyz\Zed\Authentication\AuthenticationDependencyProvider**
 
@@ -98,7 +98,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 }
 ```
 
-For the Glue Storefront API application perform the following step:
+For the Storefront API application perform the following step:
 
 **Pyz\Client\Authentication\AuthenticationDependencyProvider**
 

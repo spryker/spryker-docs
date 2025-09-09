@@ -15,11 +15,6 @@ redirect_from:
 - [Create new Glue Application](/docs/dg/dev/glue-api/latest/create-glue-api-applications.html)
 - [Differnece between Storefront and Backend application](/docs/dg/dev/glue-api/latest/backend-and-storefront-api-module-differences.html)
 
-{% info_block warningBox %}
-
-This part of this document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/latest/decoupled-glue-api.html)
-
-{% endinfo_block %}
 
 This section contains a collection of guides for working with the Old Spryker Glue API:
 - [Glue REST API](/docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html)

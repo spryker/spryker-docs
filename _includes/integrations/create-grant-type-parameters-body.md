@@ -122,30 +122,28 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Ensure that you can authenticate as a user:
+Ensure that you can authenticate as a user:
 
-    1. Send the request to get the authorization code:
-    ```
-    POST /token/ HTTP/1.1
-    Host: glue-backend.mysprykershop.com
-    Content-Type: application/x-www-form-urlencoded
-    Accept: application/json
-    Content-Length: 66
+1. Send the request to get the authorization code:
+```http
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
 
-    response_type=code&client_id={user_client_id}
-    ```  
+response_type=code&client_id={user_client_id}
+```  
 
-    2. Send the following request to the access token:
-    ```
-    POST /token/ HTTP/1.1
-    Host: glue-backend.mysprykershop.com
-    Content-Type: application/x-www-form-urlencoded
-    Accept: application/json
-    Content-Length: 66
+2. Send the following request to get the access token:
+```http
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
 
-    grant_type=authorization_code&code={user_authorization_code}&client_id={user_client_id}
-    ```
+grant_type=authorization_code&code={user_authorization_code}&client_id={user_client_id}
+```
 
-    2. Check that the output contains the `201` response with a valid token.
+3. Check that the output contains the `201` response with a valid token.
 
 {% endinfo_block %}

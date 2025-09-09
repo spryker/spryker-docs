@@ -75,7 +75,43 @@ Make sure that you can create a new product in the Merchant Portal and, after cr
 
 {% endinfo_block %}
 
-### 4) Configure navigation
+### 4) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--------|---------------|--------------|----------|
+| ProductsMerchantDashboardCardPlugin | Adds the products card to the merchant dashboard. | | Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
+
+**src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\DashboardMerchantPortalGui;
+
+use Spryker\Zed\DashboardMerchantPortalGui\DashboardMerchantPortalGuiDependencyProvider as SprykerDashboardMerchantPortalGuiDependencyProvider;
+use Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui\ProductsMerchantDashboardCardPlugin;
+
+class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface>
+     */
+    protected function getDashboardCardPlugins(): array
+    {
+        return [
+            new ProductsMerchantDashboardCardPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when you log in to the Merchant Portal, you can see the Products card on the Dashboard page.
+
+{% endinfo_block %}
+
+### 5) Configure navigation
 
 1. Add a marketplace section to `navigation-main-merchant-portal.xml`:
 

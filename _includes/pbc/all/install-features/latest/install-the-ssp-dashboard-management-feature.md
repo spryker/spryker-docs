@@ -1,5 +1,3 @@
-
-
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 
 ## Prerequisites
@@ -14,7 +12,7 @@ This document describes how to install the Self-Service Portal (SSP) Dashboard M
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -84,14 +82,30 @@ ssp_dashboard.general.no_data,There is no data yet,en_US
 ssp_dashboard.general.no_data,Es gibt noch keine Daten,de_DE
 ssp_dashboard.general.news,News & Events,en_US
 ssp_dashboard.general.news,Nachrichten & Veranstaltungen,de_DE
-ssp_dashboard.general.news,News & Events,en_US
-ssp_dashboard.general.news,Nachrichten & Veranstaltungen,de_DE
 dashboard.access.denied,Access denied.,en_US
 dashboard.access.denied,Zugriff verweigert.,de_DE
 customer.account.files,Files,en_US
 customer.account.files,Dateien,de_DE
-customer.account.no_files,No Files,en_US
-customer.account.no_files,Keine Dateien,de_DE
+customer.account.no_files,There is no data yet,en_US
+customer.account.no_files,Es existieren noch keine Daten,de_DE
+customer.account.no_ssp_booked_services,You do not have booked services yet.,en_US
+customer.account.no_ssp_booked_services,Sie haben noch keine gebuchten Services.,de_DE
+customer.account.ssp_booked_services,Booked Services,en_US
+customer.account.ssp_booked_services,Gebuchte Services,de_DE
+customer.self_service_portal.service.list.product_name,Product Name,en_US
+customer.self_service_portal.service.list.product_name,Produktname,de_DE
+customer.self_service_portal.service.list.order_reference,Order Reference,en_US
+customer.self_service_portal.service.list.order_reference,Bestellreferenz,de_DE
+customer.self_service_portal.service.list.scheduled_at,Date and Time,en_US
+customer.self_service_portal.service.list.scheduled_at,Datum und Uhrzeit,de_DE
+customer.self_service_portal.service.list.status,Status,en_US
+customer.self_service_portal.service.list.status,Status,de_DE
+ssp_dashboard.general.booked_services,Booked Services,en_US
+ssp_dashboard.general.booked_services,Gebuchte Services,de_DE
+permission.name.ViewCompanySspServicePermissionPlugin,ViewCompanySspServicePermissionPlugin,en_US
+permission.name.ViewCompanySspServicePermissionPlugin,ViewCompanySspServicePermissionPlugin,de_DE
+permission.name.ViewBusinessUnitSspServicePermissionPlugin,ViewBusinessUnitSspServicePermissionPlugin,en_US
+permission.name.ViewBusinessUnitSspServicePermissionPlugin,ViewBusinessUnitSspServicePermissionPlugin,de_DE
 ```
 
 </details>
@@ -141,6 +155,33 @@ ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/defa
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ```
 
+9. Append `company_role_permission.csv`
+
+```csv
+Ottom_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+Spryker_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+test-company_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+trial-company_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+proof-company_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+BoB-Hotel-Jim_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+BoB-Hotel-Kudamm_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+BoB-Hotel-Mitte_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+BoB-Regular_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+test-company-2_Admin,ViewBusinessUnitSspServicePermissionPlugin,
+Spryker_Buyer_With_Limit,ViewBusinessUnitSspServicePermissionPlugin,
+Ottom_Admin,ViewCompanySspServicePermissionPlugin,
+Spryker_Admin,ViewCompanySspServicePermissionPlugin,
+test-company_Admin,ViewCompanySspServicePermissionPlugin,
+trial-company_Admin,ViewCompanySspServicePermissionPlugin,
+proof-company_Admin,ViewCompanySspServicePermissionPlugin,
+BoB-Hotel-Jim_Admin,ViewCompanySspServicePermissionPlugin,
+BoB-Hotel-Kudamm_Admin,ViewCompanySspServicePermissionPlugin,
+BoB-Hotel-Mitte_Admin,ViewCompanySspServicePermissionPlugin,
+BoB-Regular_Admin,ViewCompanySspServicePermissionPlugin,
+test-company-2_Admin,ViewCompanySspServicePermissionPlugin,
+Spryker_Buyer_With_Limit,ViewCompanySspServicePermissionPlugin,
+```
+
 ## Add twig template
 
 1. Create a new CMS template to be used for dashboard content sourced from the CMS:
@@ -169,6 +210,7 @@ console data:import cms-block
 console data:import cms-block-store
 console data:import cms-slot
 console data:import cms-slot-block
+console data:import company-role-permission
 ```
 
 {% info_block warningBox "Verification" %}
@@ -181,33 +223,25 @@ console data:import cms-slot-block
 
 | PLUGIN                                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                      |
 |--------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| ViewDashboardPermissionPlugin                          | Provides access to the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
+| ViewCompanySspServicePermissionPlugin                          | Provides access to company services on the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
+| ViewBusinessUnitSspServicePermissionPlugin                          | Provides access to company business unit services on the dashboard page.                     |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission      |
 | CmsBlockCompanyBusinessUnitCmsBlockStorageReaderPlugin | Enables business unit-specific CMS blocks.                 |               | SprykerFeature\Client\SelfServicePortal\Plugin\CmsBlockStorage |
-| SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
+| SelfServicePortalPageRouteProviderPlugin               | Provides Yves routes for the the SSP dashboard page.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
 | SspDashboardFilterControllerEventHandlerPlugin         | Restricts access to dashboard pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication   |
+| SspServiceDashboardDataExpanderPlugin         | Expands dashboard data with services. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
+| SspInquiryDashboardDataExpanderPlugin         | Expands dashboard data with inquiries. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
+| SspFileDashboardDataExpanderPlugin         | Expands dashboard data with file attachments. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
+| SspAssetDashboardDataExpanderPlugin         | Expands dashboard data with assets. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement   |
 
-**src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
-
-```php
-use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
-
-class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
-{
-    protected function getPermissionPlugins(): array
-    {
-        return [
-            new ViewDashboardPermissionPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
 ```php
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewBusinessUnitSspServicePermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewCompanySspServicePermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -217,6 +251,8 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
             new ViewDashboardPermissionPlugin(),
             new ViewBusinessUnitSspInquiryPermissionPlugin(),
             new ViewCompanySspInquiryPermissionPlugin(),
+            new ViewCompanySspServicePermissionPlugin(),
+            new ViewBusinessUnitSspServicePermissionPlugin(),
         ];
     }
 }
@@ -292,12 +328,43 @@ class CmsBlockStorageDependencyProvider extends SprykerCmsBlockStorageDependency
 }
 ```
 
+**src/Pyz/Zed/SelfServicePortal/SelfServicePortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SelfServicePortal;
+
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspAssetDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspFileDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspInquiryDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspServiceDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
+
+class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDependencyProvider
+{
+    /**
+     * @return array<int, \SprykerFeature\Zed\SelfServicePortal\Dependency\Plugin\DashboardDataExpanderPluginInterface>
+     */
+    protected function getDashboardDataExpanderPlugins(): array
+    {
+        return [
+            new SspInquiryDashboardDataExpanderPlugin(),
+            new SspFileDashboardDataExpanderPlugin(),
+            new SspAssetDashboardDataExpanderPlugin(),
+            new SspServiceDashboardDataExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ## Set up widgets
 
 | PLUGIN                  | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                    |
 |-------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------|
 | DashboardMenuItemWidget | Provides a menu item widget for the customer account side menu.                                           |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspFileListWidget       | Displays a file attachment available to a company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspServiceListWidget       | Displays services available to a company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -319,7 +386,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             DashboardMenuItemWidget::class,
-            SspFileListWidget::class
+            SspFileListWidget::class,
+            SspServiceListWidget::class,
         ];
     }
 }
@@ -349,6 +417,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 - Widgets for Assets, Inquiries, and Files
 
 3. Log out and log in with a compnay user without the role you've created.
-   Make sure the **Dashboard** menu item is not displayed and you can't access the **Dashboard** page.
+Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
 
 {% endinfo_block %}

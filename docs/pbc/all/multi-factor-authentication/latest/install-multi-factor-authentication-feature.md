@@ -315,15 +315,11 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### Configure protected routes for Glue Backend API
 
-{% info_block infoBox "" %}
-
 Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
 
 For more information about Glue Backend API resources, see [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
 
-{% endinfo_block %}
-
-<summary>src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php</summary>
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Glue\MultiFactorAuth;
@@ -342,17 +338,16 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
         ];
     }
 }
+
 ```
 
 ### Configure protected routes for Glue Storefront API
 
-{% info_block infoBox "Note" %}
 
 Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
 
 For more information about Glue Storefront API resources, see [Create storefront resources](/docs/dg/dev/glue-api/latest/routing/create-storefront-resources.html).
 
-{% endinfo_block %}
 
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -417,9 +412,9 @@ MFA protection is configured differently for each API type. The Glue REST API is
 The configuration below focuses on additional API types: Backend and Storefront APIs. If you're only using REST API, you can [skip to the next step](#set-up-the-database-schema-and-transfer-objects).
 
 
-#### Configure protected endpoints for Glue Backend API
+Configure protected endpoints for Glue Backend API:
 
-<summary>src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php</summary>
+**src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
 ```php
 namespace Pyz\Shared\GlueBackendApiApplicationAuthorizationConnector;
@@ -449,9 +444,9 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-#### Configure protected endpoints for Glue Storefront API
+Configure protected endpoints for Glue Storefront API:
 
-<summary>src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php</summary>
+**src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php**
 
 ```php
 namespace Pyz\Shared\GlueStorefrontApiApplicationAuthorizationConnector;
@@ -979,8 +974,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ### Register plugins For Glue Backend API
 
-<details>
-<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
 ```php
 namespace Pyz\Glue\GlueBackendApiApplication;
@@ -1018,12 +1012,9 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 }
 ```
 
-</details>
-
 ### Register plugins For Glue Storefront API
 
-<details>
-<summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php**
 
 ```php
 namespace Pyz\Glue\GlueStorefrontApiApplication;
@@ -1061,7 +1052,6 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -1121,7 +1111,7 @@ Add the following settings:
 
 </details>
 
-<summary>tsconfig.mp.json</summary>
+**tsconfig.mp.json**
 
 ```javascript
 {

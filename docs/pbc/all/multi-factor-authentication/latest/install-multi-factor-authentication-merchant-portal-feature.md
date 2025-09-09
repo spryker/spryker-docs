@@ -39,7 +39,7 @@ Set up the configuration in the following sections.
 
 ### Configure protected routes and forms for users
 
-You can configure multiple forms on the same page to require MFA authentication.
+You can configure multiple forms on the same page to require MFA.
 
 **src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
@@ -73,7 +73,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 ### Configure Back Office ACL access
 
-To allow access to MFA requests during the login process in the Back Office, define a public ACL rule.
+To allow access to MFA requests for the Back Office login, define a public ACL rule.
 
 
 **config/Shared/config_default.php**
@@ -133,7 +133,7 @@ Merchant Agent Portal: `config/Zed/navigation-secondary-merchant-portal.xml`
 
 ### Configure whitelisted routes
 
-To allow MFA routes to bypass default security restrictions during login or MFA validation flows in the Merchant Portal, extend the whitelisted route and path patterns in one of the following files
+To allow MFA routes to bypass default security restrictions during login or MFA validation flows in the Merchant Portal, extend the whitelisted route and path patterns in one of the following files:
 
 Merchant Portal: `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`
 
@@ -228,9 +228,9 @@ Enable the following behaviors by registering the plugins:
 | MerchantPortalMultiFactorAuthPluginExpanderPlugin         | Expands the list of MFA plugins.                                                                           |               | Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\Expander                                |
 
 
-### Register plugins For Merchant Portal
+### Register plugins for Merchant Portal
 
-<summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\AclMerchantPortal;
@@ -249,7 +249,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 }
 ```
 
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -268,7 +268,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 
-<summary>src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php</summary>
+**src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuthMerchantPortal;
@@ -295,7 +295,7 @@ class MultiFactorAuthMerchantPortalDependencyProvider extends SprykerMultiFactor
 }
 ```
 
-<summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
+**src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\ZedNavigation;
@@ -318,7 +318,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 }
 ```
 
-<summary>src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\SecurityMerchantPortalGui;
@@ -337,7 +337,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 }
 ```
 
-<summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
+**src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Security;
@@ -358,7 +358,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 ### Register plugins for Agent Merchant Portal
 
-<summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\AclMerchantPortal;
@@ -377,7 +377,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 }
 ```
 
-<summary>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php</summary>
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -396,7 +396,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
 }
 ```
 
-<summary>src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php</summary>
+**src/Pyz/Zed/MultiFactorAuthMerchantPortal/MultiFactorAuthMerchantPortalDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuthMerchantPortal;
@@ -423,7 +423,7 @@ class MultiFactorAuthMerchantPortalDependencyProvider extends SprykerMultiFactor
 }
 ```
 
-<summary>src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/AgentSecurityMerchantPortalGui/AgentSecurityMerchantPortalGuiDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\AgentSecurityMerchantPortalGui;
@@ -442,7 +442,7 @@ class AgentSecurityMerchantPortalGuiDependencyProvider extends SprykerAgentSecur
 }
 ```
 
-<summary>src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php</summary>
+**src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\ZedNavigation;
@@ -465,7 +465,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 }
 ```
 
-<summary>src/Pyz/Zed/Security/SecurityDependencyProvider.php</summary>
+**src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Security;
@@ -488,7 +488,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 Add the following settings:
 
-<summary>tsconfig.mp.json</summary>
+**tsconfig.mp.json**
 
 ```javascript
 {

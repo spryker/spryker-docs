@@ -247,7 +247,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to the MFA setup page:
+1. Go to the MFA setup page depending on your application:
 - Back Office: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 - Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`
 - Agent Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`
@@ -255,6 +255,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 Make sure the following applies:
 - The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
 - The **Email** authentication method is displayed in the list of available authentication methods
+
 2. For **Email Multi-Factor Authentication**, click **Activate**.
    This sends a verification code to the user's email address.
 3. Enter the received code in the confirmation form.
@@ -410,12 +411,12 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                        | SPECIFICATION                                                                                                                              | PREREQUISITES | NAMESPACE                                                      |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| UserEmailMultiFactorAuthPlugin                | Handles email-based MFA authentication, enabling users to verify their identity via an authentication code sent to their registered email. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email |
+| UserEmailMultiFactorAuthPlugin                | Handles email MFA, enabling users to verify their identity via an authentication code sent to their registered email. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email |
 | UserEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to users.                                                                     |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\User     |
-| UserEmailCodeSenderStrategyPlugin             | Sends the authentication code to the users's email address.                                                                                |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User   |
+| UserEmailCodeSenderStrategyPlugin             | Sends an authentication code to a users's email address.                                                                                |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User   |
 | TwigApplicationPlugin                         | Renders email Twig templates containing MFA verification codes.                                                                            |               | Spryker\Zed\Twig\Communication\Plugin\Application              |
 
-src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 
@@ -434,7 +435,7 @@ class MultiFactorAuthDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 
-src/Pyz/Zed/Mail/MailDependencyProvider.php
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\Mail;
@@ -453,7 +454,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -472,7 +473,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 }
 ```
 
-<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
 ```php
 namespace Pyz\Glue\GlueBackendApiApplication;

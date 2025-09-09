@@ -1,6 +1,5 @@
 This document describes how to install the Marketplace Merchant Portal Data Import feature.
 
-
 ## Prerequisites
 
 Install the required features:
@@ -90,7 +89,7 @@ Enable product data import by registering the plugin.
 | MerchantCombinedProductMerchantFileRequestExpanderPlugin | Expands data import merchant file collection request.                         | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
 | MerchantCombinedProductPossibleCsvHeaderExpanderPlugin   | Expands possible CSV headers for merchant combined product data import files. | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
 
-****src/Pyz/Zed/DataImport/DataImportDependencyProvider.php****
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -116,7 +115,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-****src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php****
+**src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php**
 
 ```php
 <?php
@@ -208,7 +207,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
 }
 ```
 
-****src/Pyz/Zed/DataImportMerchantPortalGui/DataImportMerchantPortalGuiConfig.php****
+**src/Pyz/Zed/DataImportMerchantPortalGui/DataImportMerchantPortalGuiConfig.php**
 
 ```php
 <?php
@@ -236,7 +235,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
 
 Define soft validation rules for CSV files:
 
-****src/Pyz/Zed/MerchantProductDataImport/MerchantProductDataImportConfig.php****
+**src/Pyz/Zed/MerchantProductDataImport/MerchantProductDataImportConfig.php**
 
 ```php
 <?php

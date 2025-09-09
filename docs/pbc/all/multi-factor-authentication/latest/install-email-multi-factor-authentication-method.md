@@ -247,7 +247,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to the MFA setup page: 
+1. In the Back Office, go to the MFA setup page:
 - Back Office: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 - Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`
 - Agent Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`

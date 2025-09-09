@@ -63,7 +63,7 @@ Agent users and Back Office users are technically the same underlying user accou
 
 ### MFA for Merchant and Merchant Agent users
 
-Merchant and Merchant Agent users can manage their MFA settings in the Merchant Portal or Merchant Agent Portal. 
+Merchant and Merchant Agent users can manage their MFA settings in the Merchant Portal or Merchant Agent Portal.
 
 The setup process is similar to that of other user types, ensuring a consistent experience across the platform.
 

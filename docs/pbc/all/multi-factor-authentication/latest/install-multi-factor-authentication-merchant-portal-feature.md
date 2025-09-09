@@ -5,7 +5,7 @@ template: feature-integration-guide-template
 last_updated: Aug 22, 2025
 ---
 
-This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html) for the Merchant Portal.
+This document describes how to install the Multi-Factor Authentication (MFA) feature for the Merchant Portal.
 
 ## Prerequisites
 
@@ -131,7 +131,7 @@ Merchant Agent Portal: `config/Zed/navigation-secondary-merchant-portal.xml`
 
 
 
-### Configure whitelisted routes 
+### Configure whitelisted routes
 
 To allow MFA routes to bypass default security restrictions during login or MFA validation flows in the Merchant Portal, extend the whitelisted route and path patterns in one of the following files
 
@@ -512,7 +512,7 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-1. Integrate one of the [supported MFA methods](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.md#multi-factor-authentication-methods).
+1. Integrate one of the [supported MFA methods](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication#multi-factor-authentication-methods).
 2. Log into Merchant Portal or Agent Merchant Portal.
 Make sure the following applies:
 - The **Set up Multi-Factor Authentication** menu item is displayed in the navigation

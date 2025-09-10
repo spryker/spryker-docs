@@ -4,11 +4,11 @@ This document describes how to install the Marketplace Merchant Portal Data Impo
 
 Install the required features:
 
-| NAME                               | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                                     |
-|------------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core   | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)              |
-| Marketplace Product                | {{page.version}}  | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)                 |
-| Marketplace Merchant Data Import   | {{page.version}}  | [Install the Marketplace Merchant Data Import feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature) |
+| NAME                               | VERSION   | INSTALLATION GUIDE                                                                                                                                                                                           |
+|------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Merchant Portal Core   | 202507.0  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)              |
+| Marketplace Product                | 202507.0  | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)                 |
+| Marketplace Merchant Data Import   | 202507.0  | [Install the Marketplace Merchant Data Import feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature) |
 
 ## Install the required modules
 

@@ -8,10 +8,10 @@ Follow the steps below to install the Marketplace Merchant Portal Data Import fe
 
 Install the required features:
 
-| NAME                              | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                        |
-|-----------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core  | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Marketplace Merchant              | {{page.version}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)             |
+| NAME                              | VERSION   | INSTALLATION GUIDE                                                                                                                                                                              |
+|-----------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Merchant Portal Core  | 202507.0  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant              | 202507.0  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)             |
 
 ### Install the required modules
 
@@ -32,7 +32,6 @@ Make sure that the following modules have been installed:
 | DataImportMerchantPortalGui | vendor/spryker/data-import-merchant-portal-gui |
 | User                        | vendor/spryker/user                            |
 
-
 {% endinfo_block %}
 
 ### Generate transfer objects and database changes
@@ -49,6 +48,35 @@ Generate a new translation cache:
 ```bash
 vendor/bin/console translator:generate-cache
 ```
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+data_import_merchant.validation.importer_type_not_supported,Importer type is not supported.,en_US
+data_import_merchant.validation.importer_type_not_supported,Der Importertyp wird nicht unterstützt.,de_DE
+data_import_merchant.validation.merchant_not_found,Merchant not found.,en_US
+data_import_merchant.validation.merchant_not_found,Handelspartner nicht gefunden.,de_DE
+data_import_merchant.validation.user_not_found,User not found.,en_US
+data_import_merchant.validation.user_not_found,Benutzer nicht gefunden.,de_DE
+data_import_merchant.validation.invalid_file_content_type,Invalid file content type.,en_US
+data_import_merchant.validation.invalid_file_content_type,Ungültiger Dateityp.,de_DE
+merchant_product_data_import.validation.missing_required_header,The required field %header% is missing.,en_US
+merchant_product_data_import.validation.missing_required_header,Das erforderliche Feld %header% fehlt.,de_DE
+```
+
+Import data:
+
+```yaml
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 ### Configure navigation
 

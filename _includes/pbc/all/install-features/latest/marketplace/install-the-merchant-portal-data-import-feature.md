@@ -18,7 +18,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-portal-data-import:"dev-master" spryker/data-import-merchant-portal-gui"^1.0.0" spryker/user:"^3.29.0" --update-with-dependencies
+composer require spryker-feature/merchant-portal-data-import:"dev-master" spryker/user:"^3.29.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

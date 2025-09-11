@@ -86,8 +86,8 @@ Enable product data import by registering the plugin.
 |----------------------------------------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | MerchantCombinedProductDataImportPlugin                  | Adds a type of merchant product data import.                                  | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImport         |
 | MerchantCombinedProductMerchantFileValidationPlugin      | Validates required headers in merchant combined product data import files.    | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
-| MerchantCombinedProductMerchantFileRequestExpanderPlugin | Expands data import merchant file collection request.                         | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
-| MerchantCombinedProductPossibleCsvHeaderExpanderPlugin   | Expands possible CSV headers for merchant combined product data import files. | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
+| MerchantCombinedProductMerchantFileRequestExpanderPlugin | Expands a data import merchant file collection request.                         | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
+| MerchantCombinedProductPossibleCsvHeaderExpanderPlugin   | Expands the CSV headers defined in configuration for merchant combined product data import files. | Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchant |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -115,7 +115,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -163,9 +164,11 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
 }
 ```
 
+</details>
+
 ## Configure behavior
 
-Update `DataImportMerchantPortalGuiConfig` as follows:
+1. Update `DataImportMerchantPortalGuiConfig` as follows:
 
 - Add `MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT` to `getSupportedImporterTypes()` to enable merchants to import product data.
 
@@ -233,9 +236,11 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
 }
 ```
 
-Define soft validation rules for CSV files:
+2. Define soft validation rules for CSV files:
 
-**src/Pyz/Zed/MerchantProductDataImport/MerchantProductDataImportConfig.php**
+<details>
+  <summary>src/Pyz/Zed/MerchantProductDataImport/MerchantProductDataImportConfig.php</summary>
+
 
 ```php
 <?php
@@ -321,6 +326,8 @@ class MerchantProductDataImportConfig extends SprykerMerchantProductDataImportCo
     ];
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 

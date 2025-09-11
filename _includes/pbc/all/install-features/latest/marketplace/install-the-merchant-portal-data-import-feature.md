@@ -43,7 +43,7 @@ vendor/bin/console propel:install
 
 ### Add translations
 
-Generate a new translation cache:
+1. Generate a new translation cache:
 
 ```bash
 vendor/bin/console translator:generate-cache
@@ -66,7 +66,7 @@ merchant_product_data_import.validation.missing_required_header,The required fie
 merchant_product_data_import.validation.missing_required_header,Das erforderliche Feld %header% fehlt.,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```yaml
 console data:import glossary
@@ -254,7 +254,8 @@ class AclConfig extends SprykerAclConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after executing `console setup:init-db`, the `data-import-merchant-portal-gui` rule appears in the `spy_acl_rule` table.
+1. Run `console setup:init-db`.
+2. Verify that the `data-import-merchant-portal-gui` rule has been added to the `spy_acl_rule` table.
 
 {% endinfo_block %}
 

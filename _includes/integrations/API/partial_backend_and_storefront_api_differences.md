@@ -4,7 +4,7 @@ Spryker provides two main API types in the same project. *Storefront APIs* are d
 
 Storefront API uses customer-based authentication, while Backend API uses user-based authentication.
 
-The main difference between storefront and backend APIs is in the base classes that each type of module uses. Because storefront APIs remain lightweight, like the previous Spryker Glue implementation, they use the same base classes. Backend APIs are getting abstract classes that have access to Facades from other modules.
+The main difference between storefront and backend APIs is in the base classes that each type of module uses. Because storefront APIs remain lightweight. Backend APIs are getting abstract classes that have access to Facades from other modules.
 
 The following table shows classes to use for the backend and storefront:
 
@@ -15,7 +15,7 @@ The following table shows classes to use for the backend and storefront:
 | Container | `\Spryker\Glue\Kernel\Container` | `\Spryker\Glue\Kernel\Backend\Container` |
 | AbstractPlugin | `\Spryker\Glue\Kernel\AbstractPlugin` | `\Spryker\Glue\Kernel\Backend\AbstractPlugin` |
 
-Storefront and backend classes MUST be in different modules. For storefront it should be `ResourceNameStorefrontApi`, and for backend `ResourceNameBackendApi`.
+Storefront and backend classes MUST be in different modules. For storefront, it should be `ResourceNameRestApi`, and for backend `ResourceNameBackendApi`.
 
 Let's go through the creation of backend module infrastructure classes:
 

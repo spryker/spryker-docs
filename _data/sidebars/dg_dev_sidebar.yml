@@ -1483,8 +1483,6 @@ entries:
   - title: Glue API
     url: /docs/dg/dev/glue-api/glue-api.html
     nested:
-    - title: Glue Spryks
-      url: /docs/dg/dev/glue-api/glue-spryks.html
     - title: Decoupled Glue API
       url: /docs/dg/dev/glue-api/decoupled-glue-api.html
     - title: Backend and Storefront API module differences

@@ -27,13 +27,7 @@ This guide outlines the recommended approaches to implement data exchange in you
   <div class="cst_card">
     <div class="cst_card_title">Data Exchange API</div>
     <div class="cst_card_desc">The Data Exchange API enables real-time data synchronization by acting as a dynamic interface to your database, ensuring consistent data transfer across integrated platforms.</div>
-    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html"> Find out more </a>
-  </div>
-
-  <div class="cst_card">
-    <div class="cst_card_title">GLUE API</div>
-    <div class="cst_card_desc">Spryker's GLUE API is a built-in interface for synchronous data exchange via REST, GraphQL, or OData, and can be easily extended to support custom logic or additional entities.</div>
-    <a class="cst_card_button" href="/docs/integrations/community-contributions.html"> Find out more </a>
+    <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/introduction.html#data-exchange-api"> Find out more </a>
   </div>
 
 

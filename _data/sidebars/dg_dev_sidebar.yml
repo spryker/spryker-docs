@@ -5,11 +5,9 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
-  - title: AI coding assistants
-    url: /docs/dg/dev/ai-assistants.html
+  - title: AI IDE assistants
+    url: /docs/dg/dev/ai-ide-assistants/ai-ide-assistants.html
     nested:
-      - title: AI IDE assistants
-        url: /docs/dg/dev/ai-ide-assistants/ai-ide-assistants.html
       - title: Spryker Engineer GPT
         url: /docs/dg/dev/ai-ide-assistants/spryker-engineer-gpt.html
       - title: Spryker K6 Performance Assistant GPT

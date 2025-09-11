@@ -9,15 +9,15 @@ entries:
     url: /docs/dg/dev/ai-assistants.html
     nested:
       - title: AI IDE assistants
-        url: /docs/dg/dev/ai/ai-ide-assistants.html
+        url: /docs/dg/dev/ai-ide-assistants/ai-ide-assistants.html
       - title: Spryker Engineer GPT
-        url: /docs/dg/dev/ai/spryker-engineer-gpt.html
+        url: /docs/dg/dev/ai-ide-assistants/spryker-engineer-gpt.html
       - title: Spryker K6 Performance Assistant GPT
-        url: /docs/dg/dev/ai/spryker-k6-performance-assistant-gpt.html
+        url: /docs/dg/dev/ai-ide-assistants/spryker-k6-performance-assistant-gpt.html
       - title: Spryker DevQA Assistant GPT
-        url: /docs/dg/dev/ai/spryker-devqa-assistant-gpt.html
+        url: /docs/dg/dev/ai-ide-assistants/spryker-devqa-assistant-gpt.html
       - title: Spryker Cypress E2E Assistant GPT
-        url: /docs/dg/dev/ai/spryker-cypress-e2e-assistant-gpt.html
+        url: /docs/dg/dev/ai-ide-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

@@ -2,6 +2,8 @@
 title: AI IDE assistants
 description: Overview of AI IDE coding assistants for daily work
 template: concept-topic-template
+redirect_from: 
+  - /docs/dg/dev/ai-coding-assistants
 ---
 
 This document describes the AI IDE Assistants you can use when developing your Spryker projects. You will read about recommended AI IDE Assistants, how to set up and use them.
@@ -18,11 +20,11 @@ Here are some examples of how you can use AI assistants in your work:
 
 {% info_block warningBox %}
 
-Before using a AI-related tools, consult with your legal department.
+Before using AI tools, consult with your legal department.
 
 {% endinfo_block %}
 
-## Install AI Assistants
+## Install AI assistants
 
 We recommend trying the following assistants:
 - GitHub Copilot
@@ -107,7 +109,15 @@ Here's an example of code generated with Cursor:
 
 ![cursor-generate-code](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-coding-assistants.md/cursor-generate-code.png)
 
+## AI IDE assistants 
 
-## Conclusion
+- [AI IDE assistants](ai/ai-ide-assistants)
+- [Spryker Engineer GPT](ai/spryker-engineer-gpt)
+- [Spryker K6 Performance Assistant GPT](ai/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
+- [Spryker DevQA Assistant GPT](ai/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
+- [Spryker Cypress E2E Assistant GPT](ai/spryker-cypress-e2e-assistant-gpt)
+
+
+## Training
 
 This document provides a basic introduction to AI assistants. For a more detailed guide, check out the [AI assistants training course](https://spryker.sana.ai/s/pfsZ5F2hSheE/file:8m9CXXP3TjCD).

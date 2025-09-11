@@ -12,7 +12,6 @@ composer require spryker/product-set spryker/product-set-collector spryker/produ
 ```
 
 2. If you want to enable the Product Sets search powered by Elasticsearch, install the `spryker/search-elasticsearch` module:
-3.
 
 ```bash
 composer require spryker/search-elasticsearch
@@ -182,9 +181,11 @@ Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed 
 
 ## Enable the text alternatives functionality
 
-The Text Alternatives functionality allows you to add alternative text to product images for better accessibility and SEO.
+The Text Alternatives functionality lets you add alternative text to product images for better accessibility and SEO.
 
-### 1) Upgrade the following modules to the specified versions or higher
+### 1) Upgrade modules
+
+Upgrade the following modules to the specified versions or higher
 
 | NAME                               | VERSION   |
 |------------------------------------|-----------|
@@ -278,8 +279,6 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 4) Import text alternatives data
 
-Follow the steps to import text alternatives data:
-
 1. Add text alternatives data for product set images by adding new fields to the data import file, using the following example:
 
 **data/import/common/AT/combined_product.csv**
@@ -295,7 +294,7 @@ New fields are `alt_text_small` and `alt_text_large` with the image number and t
 
 Here is an example of how to extend the data import business logic for product images to handle the new fields: [https://github.com/spryker-shop/b2c-demo-shop/pull/781/files](https://github.com/spryker-shop/b2c-demo-shop/pull/781/files)
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import --config=data/import/local/full_EU.yml product-set

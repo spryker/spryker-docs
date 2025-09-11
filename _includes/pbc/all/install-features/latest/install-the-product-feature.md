@@ -466,7 +466,7 @@ Verify the following widgets have been registered:
 
 ## Enable the text alternatives functionality
 
-The Text Alternatives functionality allows you to add alternative text to product images for better accessibility and SEO.
+The Text Alternatives functionality lets you to add alternative text to product images for better accessibility and SEO.
 
 ### 1) Upgrade the following modules to the specified versions or higher
 
@@ -556,8 +556,6 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 4) Import text alternatives data
 
-Follow the steps to import text alternatives data:
-
 1. Add text alternatives data for product images by adding new fields to the data import file, using the following example:
 
 **data/import/common/common/product_image.csv**
@@ -573,7 +571,7 @@ New fields are `alt_text_small` and `alt_text_large` with the locale name as a s
 
 Here is an example of how to extend the data import business logic for product images to handle the new fields: [https://github.com/spryker-shop/b2c-demo-shop/pull/781/files](https://github.com/spryker-shop/b2c-demo-shop/pull/781/files)
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import --config=data/import/local/full_EU.yml product-image

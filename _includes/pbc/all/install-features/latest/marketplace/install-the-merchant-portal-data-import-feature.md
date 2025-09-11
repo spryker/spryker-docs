@@ -8,28 +8,29 @@ Follow the steps below to install the Marketplace Merchant Portal Data Import fe
 
 Install the required features:
 
-| NAME | VERSION | INSTALLATION GUIDE  |
-| -------------------- | ------- | ------------------ |
-| Marketplace Merchant Portal Core | 202507.0 | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Marketplace Merchant | 202507.0 | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| NAME                              | VERSION   | INSTALLATION GUIDE                                                                                                                                                                              |
+|-----------------------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Merchant Portal Core  | 202507.0  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant              | 202507.0  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)             |
 
 ### Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/file-import-merchant-portal-gui:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/merchant-portal-data-import:"dev-master" spryker/user:"^3.29.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| MODULE                      | EXPECTED DIRECTORY                              |
-|-----------------------------|-------------------------------------------------|
-| MerchantFile                | vendor/spryker/merchant-file                    |
-| FileImportMerchantPortalGui | vendor/spryker/file-import-merchant-portal-gui  |
-
+| MODULE                      | EXPECTED DIRECTORY                             |
+|-----------------------------|------------------------------------------------|
+| DataImportMerchant          | vendor/spryker/data-import-merchant            |
+| DataImportMerchantExtension | vendor/spryker/data-import-merchant-extension  |
+| DataImportMerchantPortalGui | vendor/spryker/data-import-merchant-portal-gui |
+| User                        | vendor/spryker/user                            |
 
 {% endinfo_block %}
 
@@ -42,11 +43,40 @@ vendor/bin/console propel:install
 
 ### Add translations
 
-Generate a new translation cache:
+1. Generate a new translation cache:
 
 ```bash
 vendor/bin/console translator:generate-cache
 ```
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+data_import_merchant.validation.importer_type_not_supported,Importer type is not supported.,en_US
+data_import_merchant.validation.importer_type_not_supported,Der Importertyp wird nicht unterstützt.,de_DE
+data_import_merchant.validation.merchant_not_found,Merchant not found.,en_US
+data_import_merchant.validation.merchant_not_found,Handelspartner nicht gefunden.,de_DE
+data_import_merchant.validation.user_not_found,User not found.,en_US
+data_import_merchant.validation.user_not_found,Benutzer nicht gefunden.,de_DE
+data_import_merchant.validation.invalid_file_content_type,Invalid file content type.,en_US
+data_import_merchant.validation.invalid_file_content_type,Ungültiger Dateityp.,de_DE
+merchant_product_data_import.validation.missing_required_header,The required field %header% is missing.,en_US
+merchant_product_data_import.validation.missing_required_header,Das erforderliche Feld %header% fehlt.,de_DE
+```
+
+2. Import data:
+
+```yaml
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 ### Configure navigation
 
@@ -55,14 +85,14 @@ vendor/bin/console translator:generate-cache
  **config/Zed/navigation-main-merchant-portal.xml**
 
 ```xml
-<file-import-merchant-portal-gui>
+ <data-import-merchant-portal-gui>
     <label>Data Import</label>
     <title>Data Import</title>
-    <icon>file-import</icon>
-    <bundle>file-import-merchant-portal-gui</bundle>
-    <controller>history</controller>
+    <icon>data-import</icon>
+    <bundle>data-import-merchant-portal-gui</bundle>
+    <controller>files</controller>
     <action>index</action>
-</file-import-merchant-portal-gui>
+</data-import-merchant-portal-gui>
 ```
 
 2. Build navigation cache:
@@ -77,60 +107,29 @@ Make sure that, in the Merchant Portal, the **Data Import** navigation item is d
 
 {% endinfo_block %}
 
-### Add file system configuration
-
-Add file system configuration for storing merchant files:
-
-**config/Shared/config_default.php**
-
-```php
-$config[MerchantFileConstants::FILE_SYSTEM_NAME] = 'merchant-files';
-$config[FileSystemConstants::FILESYSTEM_SERVICE] = [
-    'merchant-files' => [
-        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'bucket' => 'YOUR_AWS_S3_BUCKET',
-        'key' => 'YOUR_AWS_S3_BUCKET_KEY',        
-        'secret' => 'YOUR_AWS_S3_BUCKET_SECRET',
-        'path' => '/',
-        'version' => 'latest',
-        'region' => getenv('AWS_REGION'),
-    ],
-];
-```
-
-For local development, you can use the following configuration:
-
-**config/Shared/config_default-docker.dev.php**
-
-```php
-$config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-files'] = [
-    'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => '/data',
-    'path' => '/data/merchant-files',
-];
-```
-
 ### Add plugins
 
 Add the following plugins to the dependency providers:
 
-| PLUGIN                                                   | SPECIFICATION                                                                      | NAMESPACE                                                                      |
-|----------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin | Adds access rules to the Data Import page in Merchant Portal.                      | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
-| MerchantFileAclEntityConfigurationExpanderPlugin         | Adds ACL rules for merchant files by merchants.                                    | Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal                |
-| MerchantFileImportAclEntityConfigurationExpanderPlugin   | Adds ACL rules for merchant import files by merchants.                             | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
-| MerchantPortalFileImportConsole                          | Reads merchant files for data import and runs data imports. Updates import status. | Spryker\Zed\FileImportMerchantPortalGui\Communication\Console                  |
-| MerchantFileImportMerchantFilePostSavePlugin             | Adds merchant file relation to the merchant file import DB entity.                 | Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile      |
+| PLUGIN                                                     | SPECIFICATION                                                                                             | NAMESPACE                                                                      |
+|------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| DataImportMerchantPortalGuiMerchantAclRuleExpanderPlugin   | Adds access rules to the Data Import page in Merchant Portal.                                             | Spryker\Zed\DataImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
+| DataImportMerchantFileAclEntityConfigurationExpanderPlugin | Expands provided `AclEntityMetadataConfig` transfer object with data import merchant file composite data. | Spryker\Zed\DataImportMerchant\Communication\Plugin\AclMerchantPortal          |
+| DataImportMerchantImportConsole                            | Reads data import merchant files for data import and runs data imports. Updates import status.            | Spryker\Zed\DataImportMerchant\Communication\Console                           |
+| UserDataImportMerchantFileExpanderPlugin                   | Expands `DataImportMerchantFile` transfers with `User` data.                                              | Spryker\Zed\User\Communication\Plugin\DataImportMerchant                       |
 
-****src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php****
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
 namespace Pyz\Zed\AclMerchantPortal;
 
 use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
-use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin;
-use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantFileImportAclEntityConfigurationExpanderPlugin;
-use Spryker\Zed\MerchantFile\Communication\Plugin\AclMerchantPortal\MerchantFileAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\DataImportMerchant\Communication\Plugin\AclMerchantPortal\DataImportMerchantFileAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\DataImportMerchantPortalGui\Communication\Plugin\AclMerchantPortal\DataImportMerchantPortalGuiMerchantAclRuleExpanderPlugin;
 
 class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
 {
@@ -140,32 +139,34 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
     protected function getMerchantAclRuleExpanderPlugins(): array
     {
         return [
-            ...
-            new FileImportMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
+            new DataImportMerchantPortalGuiMerchantAclRuleExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
      */
     protected function getAclEntityConfigurationExpanderPlugins(): array
     {
         return [
-            ...
-            new MerchantFileAclEntityConfigurationExpanderPlugin(),
-            new MerchantFileImportAclEntityConfigurationExpanderPlugin(),
+            new DataImportMerchantFileAclEntityConfigurationExpanderPlugin(),
         ];
     }
 }
 ```
 
-****src/Pyz/Zed/Console/ConsoleDependencyProvider.php****
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
 namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\FileImportMerchantPortalGui\Communication\Console\MerchantPortalFileImportConsole;
+use Spryker\Zed\DataImportMerchant\Communication\Console\DataImportMerchantImportConsole;
+use Spryker\Zed\Kernel\Container;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
@@ -177,31 +178,33 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         return [
-            ...
-            new MerchantPortalFileImportConsole(),
+            new DataImportMerchantImportConsole(),
         ];
     }
 }
 ```
 
-****src/Pyz/Zed/MerchantFile/MerchantFileDependencyProvider.php****
+**src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php**
 
 ```php
-namespace Pyz\Zed\MerchantFile;
+<?php
 
-use Spryker\Zed\FileImportMerchantPortalGui\Communication\Plugin\MerchantFile\MerchantFileImportMerchantFilePostSavePlugin;
-use Spryker\Zed\MerchantFile\MerchantFileDependencyProvider as SprykerMerchantFileDependencyProvider;
+declare(strict_types = 1);
 
-class MerchantFileDependencyProvider extends SprykerMerchantFileDependencyProvider
+namespace Pyz\Zed\DataImportMerchant;
+
+use Spryker\Zed\DataImportMerchant\DataImportMerchantDependencyProvider as SprykerDataImportMerchantDependencyProvider;
+use Spryker\Zed\User\Communication\Plugin\DataImportMerchant\UserDataImportMerchantFileExpanderPlugin;
+
+class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\MerchantFileExtension\Dependency\Plugin\MerchantFilePostSavePluginInterface>
+     * @return list<\Spryker\Zed\DataImportMerchantExtension\Dependency\Plugin\DataImportMerchantFileExpanderPluginInterface>
      */
-    protected function getMerchantFilePostSavePlugins(): array
+    protected function getDataImportMerchantFileExpanderPlugins(): array
     {
         return [
-            ...
-            new MerchantFileImportMerchantFilePostSavePlugin(),
+            new UserDataImportMerchantFileExpanderPlugin(),
         ];
     }
 }
@@ -209,14 +212,61 @@ class MerchantFileDependencyProvider extends SprykerMerchantFileDependencyProvid
 
 ### Sync ACL entity rules
 
-1. Sync ACL entity rules:
+1. Add new modules to installer rules:
+
+**src/Pyz/Zed/Acl/AclConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Shared\Acl\AclConstants;
+use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
+
+class AclConfig extends SprykerAclConfig
+{
+    /**
+     * @param array<array<string>> $installerRules
+     *
+     * @return array<array<string>>
+     */
+    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    {
+        $bundleNames = [
+            'data-import-merchant-portal-gui',
+        ];
+
+        foreach ($bundleNames as $bundleName) {
+            $array<installerRules> = [
+                'bundle' => $bundleName,
+                'controller' => AclConstants::VALIDATOR_WILDCARD,
+                'action' => AclConstants::VALIDATOR_WILDCARD,
+                'type' => static::RULE_TYPE_DENY,
+                'role' => AclConstants::ROOT_ROLE,
+            ];
+        }
+
+        return $installerRules;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Run `console setup:init-db`.
+2. Verify that the `data-import-merchant-portal-gui` rule has been added to the `spy_acl_rule` table.
+
+{% endinfo_block %}
+
+2. Sync ACL entity rules:
 
 ```bash
 vendor/bin/console acl-entity:synchronize
 ```
 
 
-2. To integrate the feature without a destructive deployment, add the following command to your normal deployment, such as `config/install/production.yml`:
+3. To integrate the feature without a destructive deployment, add the following command to your normal deployment, such as `config/install/production.yml`:
 
 ```yaml
 acl:
@@ -234,8 +284,8 @@ Add a job to check if there're new files uploaded for data import by merchants. 
 
 ```php
 $jobs[] = [
-    'name' => 'merchant-portal-file-import',
-    'command' => '$PHP_BIN vendor/bin/console merchant-portal:file-import',
+    'name' => 'data-import-merchant-import',
+    'command' => '$PHP_BIN vendor/bin/console data-import-merchant:import',
     'schedule' => '* * * * *',
     'enable' => true,
 ];
@@ -245,52 +295,50 @@ $jobs[] = [
 
 1. Define file types to allow uploading and importing in the Merchant Portal:
 
+**src/Pyz/Zed/DataImportMerchant/DataImportMerchantConfig.php**
+
 ```php
+<?php
 
-namespace Pyz\Zed\MerchantFile;
+declare(strict_types = 1);
 
-use Spryker\Zed\MerchantFile\MerchantFileConfig as SprykerMerchantFileConfig;
+namespace Pyz\Zed\DataImportMerchant;
 
-class MerchantFileConfig extends SprykerMerchantFileConfig
+use Spryker\Zed\DataImportMerchant\DataImportMerchantConfig as SprykerDataImportMerchantConfig;
+
+class DataImportMerchantConfig extends SprykerDataImportMerchantConfig
 {
     /**
-     * @return array<string, list<string>>
+     * @return list<string>
      */
-    public function getFileTypeToContentTypeMapping(): array
+    public function getSupportedContentTypes(): array
     {
         return [
-            'data-import' => [
-                'text/csv',
-                'application/csv',
-                'text/plain',
-            ],
+            'text/csv',
+            'application/csv',
+            'text/plain',
         ];
     }
 }
 ```
 
-2. Define imports types to enable for merchants with the example or template file, which merchants can download:
+2. Define import templates for CSV files:
+
+**src/Pyz/Zed/DataImportMerchantPortalGui/DataImportMerchantPortalGuiConfig.php**
 
 ```php
-namespace Pyz\Zed\FileImportMerchantPortalGui;
+<?php
 
-use Spryker\Zed\FileImportMerchantPortalGui\FileImportMerchantPortalGuiConfig as SprykerFileImportMerchantPortalGuiConfig;
-use Spryker\Zed\MerchantProductDataImport\MerchantProductDataImportConfig;
+declare(strict_types = 1);
 
-class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalGuiConfig
+namespace Pyz\Zed\DataImportMerchantPortalGui;
+
+use Spryker\Zed\DataImportMerchantPortalGui\DataImportMerchantPortalGuiConfig as SprykerDataImportMerchantPortalGuiConfig;
+
+class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalGuiConfig
 {
     /**
-     * @return list<string>
-     */
-    public function getImportTypes(): array
-    {
-        return [
-            MerchantProductDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT,
-        ];
-    }
-
-    /**
-     * @return array<string, list<string>>
+     * @return array<string, string>
      */
     public function getDataImportTemplates(): array
     {
@@ -300,7 +348,6 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
     }
 }
 ```
-
 
 ## Install feature frontend
 
@@ -312,8 +359,8 @@ class FileImportMerchantPortalGuiConfig extends SprykerFileImportMerchantPortalG
   "compilerOptions": {
     "target": "ES2022",
     "paths": {
-      "@mp/file-import-merchant-portal-gui": [
-        "vendor/spryker/file-import-merchant-portal-gui/mp.public-api.ts"
+      "@mp/data-import-merchant-portal-gui": [
+        "vendor/spryker/spryker/Bundles/DataImportMerchantPortalGui/mp.public-api.ts"
       ]
     }
   }
@@ -332,15 +379,3 @@ npm run mp:build
 In the Merchant Portal go to **Data Import**. Make sure the data import table is displayed and you can initiate a new import.
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-

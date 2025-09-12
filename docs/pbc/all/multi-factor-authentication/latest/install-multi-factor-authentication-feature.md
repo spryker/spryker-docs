@@ -2,13 +2,12 @@
 title: Install the Multi-Factor Authentication feature
 description: This document describes how to install the Multi-Factor Authentication (MFA) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Mar 06, 2025
+last_updated: Aug 22, 2025
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
 
 This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
-
 
 ## Prerequisites
 
@@ -20,13 +19,14 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 | Agent assist                | 202507.0 | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
 | Glue Rest API               | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
 | Back Office dropdown navigation | 202507.0 | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
+| Glue Storefront and Backend API Applications | 202507.0 | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/multi-factor-auth:"^0.2.0" spryker/multi-factor-auth-extension:"^1.1.0" --update-with-dependencies
+composer require spryker/multi-factor-auth:"^1.0.0" spryker/multi-factor-auth-extension:"^1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -46,12 +46,12 @@ MFA is configured separately for customers and users (Back Office users and agen
 
 ### Configure MFA code length for customers
 
-**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
+**src/Pyz/Shared/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
-namespace Pyz\Zed\MultiFactorAuth;
+namespace Pyz\Shared\MultiFactorAuth;
 
-use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
+use Spryker\Shared\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
@@ -70,15 +70,14 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-
 ### Configure MFA code length for users
 
-**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
+**src/Pyz/Shared/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
-namespace Pyz\Zed\MultiFactorAuth;
+namespace Pyz\Shared\MultiFactorAuth;
 
-use Spryker\Zed\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
+use Spryker\Shared\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
 
 class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 {
@@ -97,13 +96,11 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 }
 ```
 
-
-
 ### Configure MFA code validity time for customers
 
 Configure the time interval in minutes during which an authentication code is valid by extending the `MultiFactorAuthConfig` class:
 
-**>src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
 namespace Pyz\Zed\MultiFactorAuth;
@@ -126,8 +123,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-
-
 
 ### Configure MFA code validity time for users
 
@@ -157,7 +152,6 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
     }
 }
 ```
-
 
 
 ### Configure brute-force protection limit for customers
@@ -297,7 +291,6 @@ You can configure multiple forms on the same page to require MFA authentication.
 
 ### Configure protected routes and forms for Glue API
 
-
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 
 ```php
@@ -320,11 +313,62 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 ```
 
 
-{% info_block warningBox "" %}
+### Configure protected routes for Glue Backend API
 
-You can configure multiple forms on the same page to require MFA authentication.
+Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
 
-{% endinfo_block %}
+For more information about Glue Backend API resources, see [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
+
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
+
+```php
+namespace Pyz\Glue\MultiFactorAuth;
+
+use Spryker\Glue\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
+
+class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getMultiFactorAuthProtectedBackendResources(): array
+    {
+        return [
+            'YOUR_RESOURCE_NAME',
+        ];
+    }
+}
+
+```
+
+### Configure protected routes for Glue Storefront API
+
+
+Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
+
+For more information about Glue Storefront API resources, see [Create storefront resources](/docs/dg/dev/glue-api/latest/routing/create-storefront-resources.html).
+
+
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
+
+```php
+namespace Pyz\Glue\MultiFactorAuth;
+
+use Spryker\Glue\MultiFactorAuth\MultiFactorAuthConfig as SprykerMultiFactorAuthConfig;
+
+class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getMultiFactorAuthProtectedStorefrontResources(): array
+    {
+        return [
+            'YOUR_RESOURCE_NAME',
+        ];
+    }
+}
+```
 
 ### Configure Back Office ACL access
 
@@ -358,6 +402,77 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
      * @var string
      */
     protected const IGNORABLE_ROUTE_PATTERN = '^/(...|multi-factor-auth|...)';
+}
+```
+
+### Configure protected endpoints
+
+MFA protection is configured differently for each API type. The Glue REST API is the main Storefront API implementation and already has default protected endpoints configured.
+
+The configuration below focuses on additional API types: Backend and Storefront APIs. If you're only using REST API, you can [skip to the next step](#set-up-the-database-schema-and-transfer-objects).
+
+
+Configure protected endpoints for Glue Backend API:
+
+**src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
+
+```php
+namespace Pyz\Shared\GlueBackendApiApplicationAuthorizationConnector;
+
+class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueBackendApiApplicationAuthorizationConnectorConfig
+{
+    public function getProtectedPaths(): array
+    {
+        return [
+            '/multi-factor-auth-types' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-trigger' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-activate' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-verify' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-deactivate' => [
+                'isRegularExpression' => false,
+            ],
+        ];
+    }
+}
+```
+
+Configure protected endpoints for Glue Storefront API:
+
+**src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php**
+
+```php
+namespace Pyz\Shared\GlueStorefrontApiApplicationAuthorizationConnector;
+
+class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGlueStorefrontApiApplicationAuthorizationConnectorConfig
+{
+    public function getProtectedPaths(): array
+    {
+        return [
+            '/multi-factor-auth-types' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-trigger' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-activate' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-verify' => [
+                'isRegularExpression' => false,
+            ],
+            '/multi-factor-auth-type-deactivate' => [
+                'isRegularExpression' => false,
+            ],
+        ];
+    }
 }
 ```
 
@@ -397,6 +512,7 @@ Make sure the following changes have been applied in transfer objects:
 | MultiFactorAuthTypesCollection    | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthTypesCollectionTransfer    |
 | MultiFactorAuthValidationRequest  | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthValidationRequestTransfer  |
 | MultiFactorAuthValidationResponse | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthValidationResponseTransfer |
+| MultiFactorAuthCriteria           | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthCriteria                   |
 | MultiFactorAuthCodeCriteria       | class    | created | src/Generated/Shared/Transfer/MultiFactorAuthCodeCriteriaTransfer       |
 
 {% endinfo_block %}
@@ -419,6 +535,8 @@ multi_factor_auth.error.expired_code,"The multi-factor authentication code has e
 multi_factor_auth.error.expired_code,"Der Multi-Faktor-Authentifizierungscode ist abgelaufen. Bitte versuchen Sie es erneut.",de_DE
 multi_factor_auth.error.authentication_method_not_selected,"Unable to proceed. A multi-factor authentication method must be selected. Please refresh the page and try again or contact support if the problem persists.",en_US
 multi_factor_auth.error.authentication_method_not_selected,"Kann nicht fortgesetzt werden. Es muss eine Multi-Faktor-Authentifizierungsmethode ausgewählt werden. Bitte aktualisieren Sie die Seite und versuchen Sie es erneut oder wenden Sie sich an den Support, wenn das Problem weiterhin besteht.",de_DE
+multi_factor_auth.error.corrupted_code,"The provided code is empty or invalid. Please try again.",en_US
+multi_factor_auth.error.corrupted_code,"Der angegebene Code ist leer oder ungültig. Bitte versuchen Sie es erneut.",de_DE
 multi_factor_auth.method.select,"Select Authentication Method",en_US
 multi_factor_auth.method.select,"Authentifizierungsmethode auswählen",de_DE
 multi_factor_auth.code.validation,"Enter Authentication Code",en_US
@@ -473,9 +591,9 @@ Apply the changes in this section only if you're integrating MFA for customers o
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                           | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                               |
-|----------------------------------|---------------------------------------------------|---------------|-----------------------------------------|
-| MultiFactorAuthHandlerWidget     | Provides MFA handling functionality.               |               | SprykerShop\Yves\MultiFactorAuth\Widget |
+| PLUGIN                           | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                               |
+|----------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------|
+| MultiFactorAuthHandlerWidget     | Provides MFA handling functionality.                      |               | SprykerShop\Yves\MultiFactorAuth\Widget |
 | SetMultiFactorAuthMenuItemWidget | Adds an MFA menu item to the customer profile navigation. |               | SprykerShop\Yves\MultiFactorAuth\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -505,31 +623,43 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                 | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                   |
-|--------------------------------------------------------|---------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------|
-| CustomerMultiFactorAuthenticationHandlerPlugin         | Handles customer login MFA.                                               |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer          |
-| UserMultiFactorAuthenticationHandlerPlugin             | Handles user login MFA.                                                   |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\User |
-| MultiFactorAuthCustomerRouteProviderPlugin             | Provides routes for customer MFA.                                         |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer                         |
-| MultiFactorAuthAgentRouteProviderPlugin                | Provides routes for agent MFA.                                       |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Agent                            |
-| MultiFactorAuthExtensionFormPlugin                     | Provides customer form validation against corrupted requests.             |               | Spryker\Yves\MultiFactorAuth\Plugin\Form                                    |
-| MultiFactorAuthExtensionFormPlugin                     | Provides user form validation against corrupted requests.                 |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Form                       |
-| RemoveMultiFactorAuthCustomerTableActionExpanderPlugin | Removes the MFA table action from the customer table in the Back Office.       |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Customer                   |
-| PostCustomerLoginMultiFactorAuthenticationPlugin       | Handles customer MFA after a successful login.                              |               | SprykerShop\Yves\CustomerPage\Plugin\MultiFactorAuth                        |
-| PostAgentLoginMultiFactorAuthenticationPlugin          | Handles agent user MFA after a successful login.                            |               | SprykerShop\Yves\AgentPage\Plugin\MultiFactorAuth                           |
-| PostUserLoginMultiFactorAuthenticationPlugin           | Handles user MFA after a successful login.                                  |               | Spryker\Zed\SecurityGui\Communication\Plugin\MultiFactorAuth                |
-| MultiFactorAuthSetupNavigationPlugin                   | Adds the optional MFA menu item to the dropdown navigation in the Back Office. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                 |
-| MultiFactorAuthRestUserValidatorPlugin                 | Validates requests against MFA.                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthTypesResourcePlugin                     | Provides available MFA methods.                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthTriggerResourcePlugin                   | Triggers code sending for the provided enabled MFA method.                |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthActivateResourcePlugin                  | Triggers code sending for the provided MFA method to be activated.            |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthDeactivateResourcePlugin                | Deactivates the provided MFA method.                                      |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
-| MultiFactorAuthTypeVerifyResourcePlugin                | Verifies MFA code and activates the provided MFA method.                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                 |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                      | PREREQUISITES | NAMESPACE                                                                             |
+|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------|
+| CustomerMultiFactorAuthenticationHandlerPlugin            | Handles customer login MFA.                                                                                                        |               | Spryker\Yves\MultiFactorAuth\Plugin\AuthenticationHandler\Customer                    |
+| UserMultiFactorAuthenticationHandlerPlugin                | Handles user login MFA.                                                                                                            |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\AuthenticationHandler\User           |
+| MultiFactorAuthCustomerRouteProviderPlugin                | Provides routes for customer MFA.                                                                                                  |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Customer                                   |
+| MultiFactorAuthAgentRouteProviderPlugin                   | Provides routes for agent user MFA.                                                                                                |               | Spryker\Yves\MultiFactorAuth\Plugin\Router\Agent                                      |
+| MultiFactorAuthExtensionFormPlugin                        | Provides customer form validation against corrupted requests.                                                                      |               | Spryker\Yves\MultiFactorAuth\Plugin\Form                                              |
+| MultiFactorAuthExtensionFormPlugin                        | Provides user form validation against corrupted requests.                                                                          |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Form                                 |
+| RemoveMultiFactorAuthCustomerTableActionExpanderPlugin    | Removes the MFA table action from the customer table in BackOffice.                                                                |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Customer                             |
+| PostCustomerLoginMultiFactorAuthenticationPlugin          | Handles customer MFA after successful login.                                                                                       |               | SprykerShop\Yves\CustomerPage\Plugin\MultiFactorAuth                                  |
+| PostAgentLoginMultiFactorAuthenticationPlugin             | Handles agent user MFA after successful login.                                                                                     |               | SprykerShop\Yves\AgentPage\Plugin\MultiFactorAuth                                     |
+| PostUserLoginMultiFactorAuthenticationPlugin              | Handles user MFA after successful login.                                                                                           |               | Spryker\Zed\SecurityGui\Communication\Plugin\MultiFactorAuth                          |
+| MultiFactorAuthSetupNavigationPlugin                      | Adds the optional MFA menu item to the dropdown navigation in BackOffice.                                                          |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Navigation                           |
+| MultiFactorAuthRestUserValidatorPlugin                    | Validates requests against MFA for Glue REST API.                                                                                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthTypesResourcePlugin                        | Provides available MFA methods for Glue REST API.                                                                                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthTriggerResourcePlugin                      | Triggers code sending for the provided enabled MFA method for Glue REST API.                                                       |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthActivateResourcePlugin                     | Triggers code sending the provided MFA method to be activated for Glue REST API.                                                   |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthDeactivateResourcePlugin                   | Deactivates the provided MFA method for Glue REST API.                                                                             |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthTypeVerifyResourcePlugin                   | Verifies MFA code and activates the provided MFA method for Glue REST API.                                                         |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueApplication\RestApi                           |
+| MultiFactorAuthBackendApiRequestValidatorPlugin           | Validates requests against MFA for Backend API.                                                                                    |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthBackendResourcePlugin                      | Provides available MFA methods for Backend API.                                                                                    |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthTriggerBackendResourcePlugin               | Triggers code sending for the provided enabled MFA method for Backend API.                                                         |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthTypeActivateBackendResourcePlugin          | Triggers code sending the provided MFA method to be activated for Backend API.                                                     |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthTypeDeactivateBackendResourcePlugin        | Deactivates the provided MFA method for Backend API.                                                                               |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthTypeVerifyBackendResourcePlugin            | Verifies MFA code and activates the provided MFA method for Backend API.                                                           |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication                         |
+| MultiFactorAuthStorefrontApiRequestValidatorPlugin        | Validates requests against MFA for Storefront API.                                                                                 |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
+| MultiFactorAuthStorefrontResourcePlugin                   | Provides available MFA methods for Storefront API.                                                                                 |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
+| MultiFactorAuthTriggerStorefrontResourcePlugin            | Triggers code sending for the provided enabled MFA method for Storefront API.                                                      |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
+| MultiFactorAuthTypeActivateStorefrontResourcePlugin       | Triggers code sending the provided MFA method to be activated for Storefront API.                                                  |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
+| MultiFactorAuthTypeDeactivateStorefrontResourcePlugin     | Deactivates the provided MFA method for Storefront API.                                                                            |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
+| MultiFactorAuthTypeVerifyStorefrontResourcePlugin         | Verifies MFA code and activates the provided MFA method for Storefront API.                                                        |               | Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication                      |
 
 
 ### Register the plugins for customers
 
 
-<summary>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php
+**src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
 ```php
 namespace Pyz\Yves\CustomerPage;
@@ -589,7 +719,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-</details>
 
 
 **src/Pyz/Yves/Form/FormDependencyProvider.php**
@@ -742,8 +871,6 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 ```
 
 
-
-
 **src/Pyz/Zed/Gui/GuiDependencyProvider.php**
 
 ```php
@@ -844,13 +971,94 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</details>
+
+### Register plugins For Glue Backend API
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthActivateBackendResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthBackendApiRequestValidatorPlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTriggerBackendResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeActivateBackendResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeDeactivateBackendResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypeVerifyBackendResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueBackendApiApplication\MultiFactorAuthTypesBackendResourcePlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new MultiFactorAuthTypesBackendResourcePlugin(),
+            new MultiFactorAuthTriggerBackendResourcePlugin(),
+            new MultiFactorAuthActivateBackendResourcePlugin(),
+            new MultiFactorAuthTypeVerifyBackendResourcePlugin(),
+            new MultiFactorAuthTypeDeactivateBackendResourcePlugin(),
+            new MultiFactorAuthTypeActivateBackendResourcePlugin(),
+        ];
+    }
+    
+    protected function getRequestAfterRoutingValidatorPlugins(): array
+    {
+        return [
+            // This is a crucial part of the MFA integration as this plugin checks all requests to protected resources and enforces Multi-Factor Authentication validation
+            new MultiFactorAuthBackendApiRequestValidatorPlugin(),
+        ];
+    }
+}
+```
+
+### Register plugins For Glue Storefront API
+
+**src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php**
+
+```php
+namespace Pyz\Glue\GlueStorefrontApiApplication;
+
+use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthActivateStorefrontResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthStorefrontApiRequestValidatorPlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthTriggerStorefrontResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthTypeActivateStorefrontResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthTypeDeactivateStorefrontResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthTypeVerifyStorefrontResourcePlugin;
+use Spryker\Glue\MultiFactorAuth\Plugin\GlueStorefrontApiApplication\MultiFactorAuthTypesStorefrontResourcePlugin;
+
+class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
+{
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new MultiFactorAuthTypesStorefrontResourcePlugin(),
+            new MultiFactorAuthTriggerStorefrontResourcePlugin(),
+            new MultiFactorAuthActivateStorefrontResourcePlugin(),
+            new MultiFactorAuthTypeVerifyStorefrontResourcePlugin(),
+            new MultiFactorAuthTypeDeactivateStorefrontResourcePlugin(),
+            new MultiFactorAuthTypeActivateStorefrontResourcePlugin(),
+        ];
+    }
+    
+    protected function getRequestAfterRoutingValidatorPlugins(): array
+    {
+        return [
+            // This is a crucial part of the MFA integration as this plugin checks all requests to protected resources and enforces Multi-Factor Authentication validation
+            new MultiFactorAuthStorefrontApiRequestValidatorPlugin(),
+        ];
+    }
+}
+```
+
 
 {% info_block warningBox "Verification" %}
 
 Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
+
 
 ## 7) Set up the frontend
 
@@ -903,6 +1111,22 @@ Add the following settings:
 
 </details>
 
+**tsconfig.mp.json**
+
+```javascript
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "target": "ES2022",
+        "paths": {
+            ...
+            "@mp/multi-factor-auth": ["vendor/spryker/spryker/Bundles/MultiFactorAuth/mp.public-api.ts"],
+            ...
+        }
+    }
+}
+```
+
 
 2. Build the MFA frontend assets:
 
@@ -920,48 +1144,3 @@ docker/sdk up --assets
   - Back Office users: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

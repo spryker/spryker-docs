@@ -13,7 +13,7 @@
 }
 
 .swagger-ui .opblock-tag {
-  border-bottom: none !important; 
+  border-bottom: none !important;
 }
 
 .scheme-container {
@@ -45,7 +45,7 @@ if(swaggerContainer) {
         presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
         enableCORS: true,
         layout: 'BaseLayout',
-        supportedSubmitMethods: [],
+        supportedSubmitMethods: ['get', 'post', 'put', 'delete']
         filter:true,
         docExpansion: 'list'
     });

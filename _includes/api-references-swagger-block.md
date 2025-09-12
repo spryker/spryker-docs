@@ -45,7 +45,7 @@ if(swaggerContainer) {
         presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
         enableCORS: true,
         layout: 'BaseLayout',
-        supportedSubmitMethods: ['get', 'post', 'put', 'delete']
+        supportedSubmitMethods: ['get', 'post', 'put', 'delete'],
         filter:true,
         docExpansion: 'list'
     });

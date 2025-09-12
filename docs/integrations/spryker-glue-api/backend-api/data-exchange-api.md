@@ -67,6 +67,7 @@ Data Exchange API follows Backend API conventions:
 - **HTTP Methods**: Support for GET, POST, PUT, PATCH, DELETE operations
 
 Example request:
+
 ```bash
 curl -X GET \
   https://your-backend-api.spryker.com/dynamic-entity/products \

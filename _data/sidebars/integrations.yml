@@ -48,6 +48,8 @@ entries:
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
     - title: Storefront API
       nested:
+      - title: Introduction
+        url: /docs/integrations/spryker-glue-api/storefront-api/introduction.html
       - title: Resolving search engine friendly URLs
         url: /docs/integrations/spryker-glue-api/faqs-and-support/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Handling concurrent REST requests and caching with entity tags
@@ -82,6 +84,18 @@ entries:
           url: /docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html
     - title: Backend API
       nested:
+      - title: Introduction
+        url: /docs/integrations/spryker-glue-api/backend-api/introduction.html
+      - title: Data Exchange
+        nested:
+        - title: Data Exchange API
+          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api.html
+        - title: Configure Data Exchange API endpoints
+          url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
+        - title: Sending requests with Data Exchange API
+          url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
+        - title: Create post plugins for Data Exchange API
+          url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
       - title: Developing new APIs
         nested:
       #        - title: Create storefront resources
@@ -155,8 +169,6 @@ entries:
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-order-items.csv.html
       - title: Data Exchange API
         url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html
-      - title: Glue API for Data Exchange
-        url: /docs/integrations/custom-building-integrations/data-exchange/spryker-glue-api-for-data-exchange.html
       - title: Integrating with Middleware
         url: /docs/integrations/custom-building-integrations/data-exchange/integrating-with-middleware.html
     - title: Creating a new module

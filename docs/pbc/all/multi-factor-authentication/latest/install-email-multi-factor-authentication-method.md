@@ -2,7 +2,7 @@
 title: Install email Multi-Factor Authentication method 
 description: Learn how to install and configure email multi-factor authentication in Spryker for all user types.
 template: howto-guide-template
-last_updated: Mar 6, 2025
+last_updated: Aug 22, 2025
 ---
 
 Email Multi-Factor Authentication (MFA) is a security mechanism that verifies identity using an authentication code sent to an email address. This document describes how to install and configure email MFA.
@@ -43,7 +43,6 @@ multi_factor_auth.email.text,"Um mit Ihrer Anfrage fortzufahren, verwenden Sie b
 mail.multi_factor_auth.email.subject,"Verification Code for Secure Access",en_US
 mail.multi_factor_auth.email.subject,"Bestätigungscode für sicheren Zugriff",de_DE
 ```
-
 
 
 2. Import data:
@@ -87,7 +86,6 @@ cms-block-email--multi_factor_auth_email--html,US
 cms-block-email--multi_factor_auth_email--text,US
 ```
 
-<details>
 <summary>data/import/common/common/cms_block.csv</summary>
 
 ```csv
@@ -97,7 +95,6 @@ cms-block-email--multi_factor_auth_email--text,customer_multi_factor_auth_email-
 {% endraw %}
 ```
 
-</details>
 
 ## 4) Set up behavior
 
@@ -190,7 +187,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% endinfo_block %}
 
-### 4.2) Set up email MFA for Back Office users
+### 4.2) Set up email MFA for Back Office, Merchant Portal, and Agent Merchant Portal users
 
 Enable the following behaviors by registering the plugins:
 
@@ -250,9 +247,15 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to the MFA setup page: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`. Make sure the following applies:
+1. Go to the MFA setup page depending on your application:
+- Back Office: `https://backoffice.mysprykershop.com/multi-factor-auth/user-management/set-up`
+- Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-merchant-portal/set-up`
+- Agent Merchant Portal: `https://mp.mysprykershop.com/multi-factor-auth/user-management-agent-merchant-portal/set-up`
+
+Make sure the following applies:
 - The **Set up Multi-Factor Authentication** menu item is displayed in the user profile dropdown navigation menu
 - The **Email** authentication method is displayed in the list of available authentication methods
+
 2. For **Email Multi-Factor Authentication**, click **Activate**.
    This sends a verification code to the user's email address.
 3. Enter the received code in the confirmation form.
@@ -335,7 +338,7 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 {% endinfo_block %}
 
-### 4.4) Set up email MFA for Glue API
+### 4.4) Set up email MFA for Glue Rest or Storefront API
 
 Enable the following behaviors by registering the plugins:
 
@@ -401,6 +404,95 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
     }
 }
 ```
+
+### 4.5) Set up email MFA for Glue Backend API
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                        | SPECIFICATION                                                                                                                              | PREREQUISITES | NAMESPACE                                                      |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
+| UserEmailMultiFactorAuthPlugin                | Handles email MFA, enabling users to verify their identity via an authentication code sent to their registered email. |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email |
+| UserEmailMultiFactorAuthMailTypeBuilderPlugin | Builds and processes an email template for sending MFA codes to users.                                                                     |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\User     |
+| UserEmailCodeSenderStrategyPlugin             | Sends an authentication code to a users's email address.                                                                                |               | Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User   |
+| TwigApplicationPlugin                         | Renders email Twig templates containing MFA verification codes.                                                                            |               | Spryker\Zed\Twig\Communication\Plugin\Application              |
+
+**src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
+
+```php
+
+use Spryker\Glue\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerGlueApplicationDependencyProvider;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Factors\Email\UserEmailMultiFactorAuthPlugin;
+
+class MultiFactorAuthDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+    protected function getUserMultiFactorAuthPlugins(): array
+    {
+        return [
+            new UserEmailMultiFactorAuthPlugin(),
+        ];
+    }
+}
+```
+
+
+**src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Mail\User\UserEmailMultiFactorAuthMailTypeBuilderPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    protected function getMailTypeBuilderPlugins(): array
+    {
+        return [
+            new UserEmailMultiFactorAuthMailTypeBuilderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/MultiFactorAuth/MultiFactorAuthDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\MultiFactorAuth;
+
+use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMultiFactorAuthDependencyProvider;
+use Spryker\Zed\MultiFactorAuth\Communication\Plugin\Sender\User\UserEmailCodeSenderStrategyPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    protected function getUserSendStrategyPlugins(): array
+    {
+        return [
+            new UserEmailCodeSenderStrategyPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    protected function getApplicationPlugins(): array
+    {
+        return [
+            // This plugin enables the Backend API to process Twig templates that format and display the verification codes sent to users' email addresses during the authentication process.
+            new TwigApplicationPlugin(),
+        ];
+    }
+}
+```
+
 
 {% info_block warningBox "Verification" %}
 

@@ -463,3 +463,116 @@ Verify the following widgets have been registered:
 | ProductConcreteSearchGridWidget | Can be checked on the slot edit page of Configurator. |
 
 {% endinfo_block %}
+
+## Enable the text alternatives functionality
+
+The Text Alternatives functionality lets you to add alternative text to product images for better accessibility and SEO.
+
+### 1) Upgrade the following modules to the specified versions or higher
+
+| NAME                          | VERSION |
+|-------------------------------|---------|
+| spryker/product-image         | 3.20.0  |
+| spryker/product-image-storage | 1.19.0  |
+| spryker/product-management    | 0.19.53 |
+| spryker/glossary              | 3.16.0  |
+| spryker/glossary-storage      | 1.5.0   |
+| spryker-shop/shop-ui          | 1.96.0  |
+
+```bash
+composer require spryker/glossary:^3.16.0 spryker/glossary-storage:^1.5.0 spryker/product-image:^3.20.0 spryker/product-image-storage:1.19.0 spryker/product-management:^0.19.53 spryker-shop/shop-ui:^1.96.0 --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE              | EXPECTED DIRECTORY                   |
+|---------------------|--------------------------------------|
+| ProductImage        | vendor/spryker/spryker/product-image |
+| ProductImageStorage | vendor/spryker/product-image-storage |
+| ProductManagement   | vendor/spryker/product-management    |
+| Glossary            | vendor/spryker/glossary              |
+| GlossaryStorage     | vendor/spryker/glossary-storage      |
+| ShopUi              | vendor/spryker-shop/shop-ui          |
+
+{% endinfo_block %}
+
+### 2) Enable the feature in the ProductImage module configuration
+
+**src/Pyz/Shared/ProductImage/ProductImageConfig.php**
+
+```php
+<?php
+declare(strict_types = 1);
+
+namespace Pyz\Shared\ProductImage;
+
+use Spryker\Shared\ProductImage\ProductImageConfig as SprykerProductImageConfig;
+
+class ProductImageConfig extends SprykerProductImageConfig
+{
+    /**
+     * @return bool
+     */
+    public function isProductImageAlternativeTextEnabled(): bool
+    {
+        return true;
+    }
+}
+
+```
+
+### 3) Set up database schema and transfer objects
+
+1. Apply database changes and generate entity and transfer changes:
+
+```bash
+console propel:install
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY                  | TYPE  | EVENT |
+|----------------------------------|-------|-------|
+| spy_product_image.alt_text_small | field | added |
+| spy_product_image.alt_text_large | field | added |
+
+Make sure the following changes have been applied in transfer objects:
+
+| TRANSFER                         | TYPE     | EVENT   | PATH                                                          |
+|----------------------------------|----------|---------|---------------------------------------------------------------|
+| ProductImage.altTextSmall        | property | added   | src/Generated/Shared/Transfer/ProductImageTransfer            |
+| ProductImage.altTextLarge        | property | added   | src/Generated/Shared/Transfer/ProductImageTransfer            |
+| ProductImage.translations        | property | added   | src/Generated/Shared/Transfer/ProductImageTransfer            |
+| ProductImageStorage.altTextSmall | property | added   | src/Generated/Shared/Transfer/ProductImageStorageTransfer     |
+| ProductImageStorage.altTextLarge | property | added   | src/Generated/Shared/Transfer/ProductImageStorageTransfer     |
+| ProductImageTranslation          | class    | created | src/Generated/Shared/Transfer/ProductImageTranslationTransfer |
+
+{% endinfo_block %}
+
+### 4) Import text alternatives data
+
+1. Add text alternatives data for product images by adding new fields to the data import file, using the following example:
+
+**data/import/common/common/product_image.csv**
+
+```csv
+alt_text_small.de_DE,alt_text_small.en_US,alt_text_large.de_DE,alt_text_large.en_US
+"Details ansehen: Samsung Gear S2","View details of Samsung Gear S2","Back view of Samsung Gear S2 Black","Rückansicht von Samsung Gear S2 Black"
+```
+
+New fields are `alt_text_small` and `alt_text_large` with the locale name as a suffix.
+
+2. Apply the changes to the data import business logic:
+
+Here is an example of how to extend the data import business logic for product images to handle the new fields: [https://github.com/spryker-shop/b2c-demo-shop/pull/781/files](https://github.com/spryker-shop/b2c-demo-shop/pull/781/files)
+
+3. Import data:
+
+```bash
+console data:import --config=data/import/local/full_EU.yml product-image
+```

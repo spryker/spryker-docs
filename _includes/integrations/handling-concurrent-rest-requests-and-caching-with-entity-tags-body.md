@@ -1,11 +1,5 @@
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-{% info_block warningBox %}
-
-This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/latest/decoupled-glue-api.html)
-
-{% endinfo_block %}
-
 Some Spryker Glue API resources allow concurrent changes from multiple sources. For example, a shared cart can be changed by multiple users that act independently.
 
 To ensure resource integrity and consistency, such resources implement *Entity Tags* (ETags). An ETag is a unique identifier of the state of a specific resource at a certain point in time. It allows a server to identify if the client initiating a change has received the last state of the resource known to the server prior to sending the change request.

@@ -1,4 +1,4 @@
-Glue API lets you create resources with parent-child relationships or, in other words, nested resources. To enable such relationship, you need to create a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface`.
+Backend API lets you create resources with parent-child relationships or, in other words, nested resources. To enable such relationship, you need to create a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface`.
 
 Such a plugin routes requests from parent resources to the correct child resource. This interface must be implemented together with `ResourceInterface` or with the convention resource interface.
 

@@ -68,7 +68,7 @@ use Generated\Shared\Transfer\OauthGrantTypeConfigurationTransfer;
 use Generated\Shared\Transfer\OauthRequestTransfer;
 use Pyz\Zed\Oauth\Business\Grant\UserAuthorizationCodeGrantTypeBuilder;
 use Pyz\Zed\Oauth\OauthConfig;
-use Spryker\Glue\Kernel\AbstractPlugin;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRequestGrantTypeConfigurationProviderPluginInterface;
 
 class UserAuthCodeOauthRequestGrantTypeConfigurationProviderPlugin extends AbstractPlugin implements OauthRequestGrantTypeConfigurationProviderPluginInterface

@@ -31,16 +31,9 @@ This guide outlines the recommended approaches to implement data exchange in you
   </div>
 
   <div class="cst_card">
-    <div class="cst_card_title">GLUE API</div>
-    <div class="cst_card_desc">Spryker's GLUE API is a built-in interface for synchronous data exchange via REST, GraphQL, or OData, and can be easily extended to support custom logic or additional entities.</div>
-    <a class="cst_card_button" href="/docs/integrations/community-contributions.html"> Find out more </a>
-  </div>
-
-
-  <div class="cst_card">
     <div class="cst_card_title">Using Middleware</div>
     <div class="cst_card_desc">Middleware is an external service that connects multiple data sources, transforming and enriching data into the format expected by your target system before it reaches your core platform.</div>
-    <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html"> Find out more </a>
+    <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/data-exchange-api.html"> Find out more </a>
   </div>
  </div>
 

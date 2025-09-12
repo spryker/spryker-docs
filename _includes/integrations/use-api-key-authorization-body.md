@@ -98,7 +98,7 @@ There are two ways to pass the API Key to access protected resources:
 <summary>An example of how to pass the API Key in the `X-Api-Key` header:</summary>
 
 ```bash
-curl --location 'http://glue-backend.de.spryker.local/dynamic-entity/countries \
+curl --location 'http://glue-backend.eu.spryker.local/dynamic-entity/countries \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'X-Api-Key: 6264714260f980fe38c6be2439b0a8e9'
@@ -109,7 +109,7 @@ curl --location 'http://glue-backend.de.spryker.local/dynamic-entity/countries \
 <summary>An example of how to pass the API Key in the `api_key` URL parameter:</summary>
 
 ```bash
-curl --location 'http://glue-backend.de.spryker.local/dynamic-entity/countries?api_key=6264714260f980fe38c6be2439b0a8e9 \
+curl --location 'http://glue-backend.eu.spryker.local/dynamic-entity/countries?api_key=6264714260f980fe38c6be2439b0a8e9 \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json'
 ```

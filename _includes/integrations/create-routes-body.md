@@ -1,6 +1,6 @@
 This guide describes how to create an API endpoint using a custom route.
 
-Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
+Backend API lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on a Symfony routing component; for more information on it, check out Symfony's [documentation](https://symfony.com/doc/current/routing.html).
 

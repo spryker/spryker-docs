@@ -17,16 +17,6 @@ entries:
       nested:
       - title: Differences between Storefront and Backend APIs
         url: /docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html
-      - title: Implement a REST API resource
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html
-      - title: Configure the included section
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/configure-the-included-section.html
-      - title: Validate REST request format
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/validate-rest-request-format.html
-      - title: Use default Glue parameters
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/use-default-glue-parameters.html
-      - title: Implement versioning for REST API resources
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-versioning-for-rest-api-resources.html
     - title: Authenticating and authorization
       url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/glue-api-authenticating-and-authorization.html
       nested:
@@ -56,12 +46,6 @@ entries:
         url: /docs/integrations/spryker-glue-api/faqs-and-support/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: Developing new APIs
         nested:
-#        - title: Create storefront resources
-#          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-storefront-resources.html
-#        - title: Create JSON:API relationships
-#          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-json-api-relationships.html
-#        - title: Create routes
-#          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-routes.html
         - title: Implement a REST API resource
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html
         - title: Configure the included section
@@ -96,22 +80,16 @@ entries:
           url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
         - title: Create post plugins for Data Exchange API
           url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
-      - title: Developing new APIs
-        nested:
-      #        - title: Create storefront resources
-      #          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-storefront-resources.html
       - title: API references
         nested:
-        - title: Backend API
-          nested:
-          - title: Backend B2B API reference
-            url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2b-demo-shop-reference.html
-          - title: Backend B2C API reference
-            url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html
-          - title: Backend API Marketplace B2B Demo Shop reference
-            url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2b-demo-shop-reference.html
-          - title: Backend API Marketplace B2C Demo Shop reference
-            url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
+        - title: Backend B2B API reference
+          url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2b-demo-shop-reference.html
+        - title: Backend B2C API reference
+          url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html
+        - title: Backend API Marketplace B2B Demo Shop reference
+          url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2b-demo-shop-reference.html
+        - title: Backend API Marketplace B2C Demo Shop reference
+          url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
       - title: Developing new APIs
         url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-glue-api-applications.html
         nested:

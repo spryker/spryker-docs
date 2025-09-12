@@ -27,6 +27,5 @@ This section contains a collection of guides for working with the Old Spryker Gl
 - [Rest API B2B Reference](/docs/dg/dev/glue-api/latest/rest-api/rest-api-b2b-demo-shop-reference.html)
 - [Handling concurrent REST requests and caching with entity tags](/docs/dg/dev/glue-api/latest/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html)
 - [Reference information – GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html)
-- [Glue Spryks](/docs/dg/dev/glue-api/latest/glue-spryks.html)
 - [Glue infrastructure](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html)
 - [Glue API tutorials](/docs/dg/dev/glue-api/latest/glue-api-tutorials/glue-api-tutorials.html)

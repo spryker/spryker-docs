@@ -123,8 +123,6 @@ entries:
           url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-backend-resources.html
         - title: Create JSON:API relationships
           url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-json-api-relationships.html
-        - title: Create storefront resources
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-storefront-resources.html
         - title: Create routes
           url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-routes.html
     - title: Sprker API Errors and Troubleshooting

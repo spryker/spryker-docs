@@ -1,4 +1,4 @@
-This guide shows how to create an API endpoint using a resource for the backend API application.
+This guide shows how to create an API endpoint using a resource for the Backend API application.
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 

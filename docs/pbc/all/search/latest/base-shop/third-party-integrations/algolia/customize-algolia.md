@@ -163,7 +163,7 @@ Learn more about custom ranking and sorting in the [Algolia documentation](https
 ## Retain Algolia configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Algolia.
+[Destructive deployment](/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Algolia.
 
 To run a destructive deployment, follow these steps:
 1. Disconnect Algolia.

@@ -22,6 +22,8 @@ entries:
       nested:
       - title: Create grant type parameters
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-grant-type-parameters.html
+      - title: Configure cross-origin resource sharing
+        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
       - title: Backend API
         nested:
         - title: Use authentication servers with Backend API
@@ -34,8 +36,6 @@ entries:
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-api-key-authorization.html
         - title: Use Glue API authorization scopes
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-glue-api-authorization-scopes.html
-      - title: Configure cross-origin resource sharing for Glue API
-        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
     - title: Storefront API
       nested:
       - title: Introduction

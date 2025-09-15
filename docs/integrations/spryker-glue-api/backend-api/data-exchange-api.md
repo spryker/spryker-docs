@@ -2,9 +2,7 @@
 title: Data Exchange API
 description: Comprehensive documentation for the Spryker Data Exchange API, enabling seamless integration and efficient data transfer between systems.
 last_updated: July 9, 2025
-template: glue-api-storefront-guide-template
-redirect_from:
-  - /docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html
+template: default
 ---
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
 

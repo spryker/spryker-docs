@@ -131,6 +131,17 @@ defaults:
     values:
       sidebar: "about_all_sidebar"
       role: "all"
+  -
+     scope:
+       path: "docs/integrations"
+     values:
+       product: "integrations"
+  -
+    scope:
+      path: "docs/integrations"
+    values:
+      sidebar: "integrations"
+      role: "all"
 
 versions:
   '202410.0': '202410.0'  
@@ -191,6 +202,7 @@ sidebars:
   - pbc_all_sidebar
   - about_all_sidebar
   - dg_dev_sidebar
+  - integrations
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

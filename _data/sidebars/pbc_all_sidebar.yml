@@ -1950,6 +1950,8 @@ entries:
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
           - title: Install customer email Multi-Factor Authentication method
             url: /docs/pbc/all/multi-factor-authentication/install-email-multi-factor-authentication-method.html
+          - title: Install the Multi-Factor Authentication Merchant Portal feature
+            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-merchant-portal-feature.html            
           - title: Create MFA methods
             url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html          
           - title: Manage using Glue API
@@ -3976,6 +3978,14 @@ entries:
                       include_versions:
                       - "202410.0"
                       - "latest"
+                    - title: Using Algolia search with custom indexes
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html
+                      include_versions:
+                        - "latest"
+                    - title: Integration of the Algolia UI Library in the Front End
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-widgets-integration.html
+                      include_versions:
+                        - "latest"
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
@@ -4042,6 +4052,8 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
               - title: Install the SSP File Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Model Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-model-management-feature.html                
               - title: Install the SSP Inquiry Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature

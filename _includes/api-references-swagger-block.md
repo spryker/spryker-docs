@@ -22,6 +22,34 @@
     padding: 2%;
     border-radius: 10px;
 }
+
+.swagger-ui .servers td {
+    width: 100%;
+    clear: left;
+    float: left;
+    max-width: 100% !important;
+}
+
+.computed-url {
+    display: none;
+}
+
+.servers h4 {
+    display: none;
+}
+
+.servers table {
+    margin-top: 2%;
+}
+
+.swagger-ui code {
+    background: none;
+    color: white;
+}
+
+.swagger-ui .scheme-container {
+    box-shadow: none;
+}
 </style>
 
 {% raw %}

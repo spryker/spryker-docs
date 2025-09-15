@@ -50,6 +50,10 @@
 .swagger-ui .scheme-container {
     box-shadow: none;
 }
+
+.swagger-ui table tbody tr td:first-of-type {
+    min-width: 14em;
+}
 </style>
 
 {% raw %}

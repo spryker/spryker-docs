@@ -16,9 +16,6 @@
   border-bottom: none !important;
 }
 
-.scheme-container {
-    display: none !important;
-}
 
 .schema_data {
     background: #f5f5f5;

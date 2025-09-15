@@ -20,10 +20,12 @@ For more details, see [Glue Infrastructure](/docs/dg/dev/glue-api/latest/rest-ap
 
 The Storefront API comes with a set of predefined APIs, which you can extend or add your own APIs. The predefined APIs support Storefront functionality and can be used for integrations with third-party systems. The Storefront functionality enables you to build a custom experience for your customers in any touchpoint leveraging data and functionality at the core of your Commerce OS. For example, it lets you fetch product data to be displayed on a custom product details page in your mobile app.
 
-For more details, see REST API reference:
+For more details, see Storefront API reference:
 
-- [REST API B2B Demo Shop reference](/docs/dg/dev/glue-api/latest/rest-api/rest-api-b2b-demo-shop-reference.html)
-- [REST API B2C Demo Shop reference](/docs/dg/dev/glue-api/latest/rest-api/rest-api-b2c-demo-shop-reference.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 ## B2C API React Example
 

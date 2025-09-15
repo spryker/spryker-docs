@@ -97,26 +97,3 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
     }
 }
 ```
-
-For the Storefront API application perform the following step:
-
-**Pyz\Client\Authentication\AuthenticationDependencyProvider**
-
-```php
-<?php
-
-namespace Pyz\Client\Authentication;
-
-use Spryker\Client\Authentication\AuthenticationDependencyProvider as SprykerAuthenticationDependencyProvider;
-use Spryker\Client\AuthenticationOauth\Plugin\OauthAuthenticationServerPlugin;
-
-class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyProvider
-{
-    protected function getAuthenticationServerPlugins(): array
-    {
-        return [
-            new OauthAuthenticationServerPlugin(),
-        ];
-    }
-}
-```

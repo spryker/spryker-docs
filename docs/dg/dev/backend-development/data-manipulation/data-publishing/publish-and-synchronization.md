@@ -1,7 +1,7 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Oct 18, 2024
+last_updated: Aug 18, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
 originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
@@ -62,11 +62,10 @@ P&S process schema:
 ![ps-process-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/ps-process-overview.png)
 
 
-
+{% raw %}
 ─────────▶ (solid): Synchronous call or direct write
-
 - - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
-
+{% endraw %}
 
 ### 1. Publish 
 
@@ -173,24 +172,25 @@ vendor/bin/console queue:task:start {queueName}
 
 5. These entities are persisted in the database.
 
-#### Asynchronous synchronization
+
+## Synchronization types
+
+P&S supports two types of sync: asynchronous and direct. Their differences are described in the following sections.
+
+### Asynchronous synchronization
 
 Asynchronous synchronization provides greater stability, although it may take slightly longer to complete. It works as follows:
 
 1. When an entity is saved to the database, a new message is generated and placed into a dedicated queue in RabbitMQ.
 
-2. The vendor/bin/console queue:worker:start command detects this non-empty queue and spawns a child process using:
-
-
-```bash
-vendor/bin/console queue:task:start {queueName}
-```
-
+2. `vendor/bin/console queue:worker:start` command detects this non-empty queue and spawns a child process using the `vendor/bin/console queue:task:start {queueName}` command.
 
 3. During execution, the message is processed, and the resulting data is stored in Redis or Elasticsearch.
 
+Asynchronous sync is used by default when you implement P&S.
 
-#### Direct synchronize
+
+### Direct synchronize
 
 Direct synchronize uses in-memory storage to temporarily hold synchronization messages and writes them at the end of the request lifecycle instead of using queues. To improve performance and flexibility, you can enable this method at the project level.
 
@@ -206,12 +206,12 @@ How it works:
 ![direct-ps-process](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/direct-ps-process.png)
 
 
-───▶ (solid) - Synchronous call or direct write
+{% raw %}
+─────────▶ (solid): Synchronous call or direct write
+- - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
+{% endraw %}
 
-- -▶ (dashed) - Asynchronous event, queue, or deferred processing
-
-See how to configure direct synchronization - 
-Direct synchronize configuration 
+For instructions on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
 ### Key differences from asynchronous synchronization
 

@@ -29,7 +29,7 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-To implement *Publish and Synchronize* in your code, follow these steps:
+To implement Publish and Synchronize, take the following steps.
 
 ## 1. Create Publish module
 

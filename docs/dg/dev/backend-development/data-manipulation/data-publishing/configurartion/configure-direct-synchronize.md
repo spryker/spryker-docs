@@ -5,21 +5,21 @@ last_updated: Jun 16, 2025
 template: howto-guide-template
 ---
 
-To optimize performance and flexibility, you can enable direct synchronization on the project level, see how it working - 
-Publish and Synchronization - how it works | Direct synchronize .This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
+To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
+
+For more details on direct sync, see [Synchronization types](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization#Synchronization-types)
 
 To enable direct synchronization, do the following:
 
-Add DirectSynchronizationConsolePlugin to ConsoleDependencyProvider::getEventSubscriber().
+1. Add `DirectSynchronizationConsolePlugin` to `ConsoleDependencyProvider::getEventSubscriber()`.
 
-Enable the SynchronizationBehaviorConfig::isDirectSynchronizationEnabled() configuration.
+2. Enable the `SynchronizationBehaviorConfig::isDirectSynchronizationEnabled()` configuration.
 
-Rebuild Propel models - vendor/bin/console propel:install.
+3. Rebuild Propel models - `vendor/bin/console propel:install`.
 
  
 
-src/Pyz/Zed/Console/ConsoleDependencyProvider.php
-
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -43,7 +43,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-src/Pyz/Zed/Console/ConsoleDependencyProvider.php
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -58,7 +58,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 }
 ```
 
-NOTE: This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
+This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
 
 
 ```xml
@@ -69,17 +69,19 @@ NOTE: This configuration enables direct synchronization for all entities with sy
 </table>
 ```
 
-Environment limitations related to DMS
-When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:
+## Environment limitations related to Dynamic Multi-Store
 
-Single-store configuration: The feature is only supported for configurations with a single store.
+When Dynamic Multi-Store (DMS) is enabled, there’re no environment limitations for direct sync.
 
-Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
+When DMS is disabled, direct sync has the following limitations:
+
+- Single-store configuration: The feature is only supported for configurations with a single store.
+
+- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
 
 Example configuration for multiple stores:
 
-
-
+```yml
 stores:
     DE:
         services:
@@ -97,4 +99,6 @@ stores:
                 namespace: 1
             search:
                 namespace: search
-When DMS is enabled, there’re no environment limitations for the Direct Sync feature.
+```
+
+

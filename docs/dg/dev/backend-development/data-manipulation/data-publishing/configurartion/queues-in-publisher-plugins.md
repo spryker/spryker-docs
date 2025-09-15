@@ -35,7 +35,7 @@ protected function getPublishQueueConfiguration(): array
 }
 ```
 
-## Configuring the Publisher Module
+## Configuring the Publisher module
 
 
 To publish entities data into queues, you need to configure publisher plugins.
@@ -75,3 +75,65 @@ protected function getMerchantStoragePlugins(): array
 
 
 This method uses a multi-dimensional array where the key is the queue name to be used for the attached publisher plugins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

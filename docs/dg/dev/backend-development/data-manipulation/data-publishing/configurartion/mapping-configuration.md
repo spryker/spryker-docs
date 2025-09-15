@@ -55,7 +55,7 @@ You can query Redis using this key to retrieve the stored product data.
 image-20250605-110100.png
  
 
-## Reasons to add more keys
+## Reasons to use mappings
 
 The default key generation may not be suitable in cases such as the following:
 
@@ -69,26 +69,26 @@ To solve these issues, you can define mappings.
 
 ## Mappings
 
-Mappings allow you to associate a resource’s internal ID with an alternative, unique identifier (e.g., a SKU). A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
+Mappings allow you to associate a resource’s internal ID with an alternative, unique identifier–for example, SKU. A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
 
-Mappings are configured in the Propel schema and used during the Publish & Synchronize process.
+Mappings are configured in the Propel schema and used during the P&S process.
 
  
 
-## Defining Mappings
+## Defining mappings
 
 Mappings are defined in the `synchronization` behavior of a Propel schema.
 
-Example: To map `SKU` to `ID` for abstract products in `spy_product_abstract_storage`:
+For example, `SKU` can be mapped to `ID` for abstract products in `spy_product_abstract_storage`:
 
-
-
+```xml
 <table name="spy_product_abstract_storage">
   <behavior name="synchronization">
       <parameter name="mappings" value="sku:id_product_abstract"/>
       ...
   </behavior>
 </table>
+```
 
 `sku` is the source (alternative key).
 
@@ -96,56 +96,100 @@ Example: To map `SKU` to `ID` for abstract products in `spy_product_abstract_sto
 
 These values must match keys in the resource payload.
 
-After rebuilding the Propel entity and re-synchronizing, a new record will be stored in Redis, for example:
+After rebuilding the Propel entity and re-syncing, a new record is stored in Redis. Example:
 
 
 ```
 {"id":1,"_timestamp":1599741494.2676899} 
 ```
 
-With the key:
+Key example:
 
 
 ```
 kv:product_abstract:de:de_de:sku:001
 ```
 
-This allows Redis lookups using sku:001 instead of the database ID.
+This enables Redis lookups using `sku:001` instead of the database ID.
 
 image-20250605-115136.png
 
 
 ## Using mappings
 
-To retrieve data using a mapping:
+To retrieve data using a mapping 
 
-Query the mapping key (e.g., `sku:001`) to get the product ID.
+1. Query the mapping key–for example, `sku:001`, to get the product ID.
 
-Construct the final storage key using the retrieved ID.
+2. Construct the final storage key using the retrieved ID.
 
-Query storage again using the full key (e.g., `kv:product_abstract:de:de_de:100`).
+3. Query storage again using the full key–for example `kv:product_abstract:de:de_de:100`.
 
 This adds one extra lookup step but has minimal performance impact, especially when using Redis.
 
 ## Multiple mappings
 
-Spryker now supports multiple mappings per resource. Define them using the same mappings parameter, separated by a configurable delimiter (`;` by default):
+Spryker supports multiple mappings per resource. Define them using the same mappings parameter, separated by a configurable delimiter (`;` by default):
 
-
-
+```xml
 <table name="spy_product_abstract_storage">
 <behavior name="synchronization">
     <parameter name="mappings" value="sku:id_product_abstract;foo:bar"/>
     ...
 </behavior>
+```
 
-
-To change the delimiter, override: `\Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig::MAPPINGS_DELIMITER`.
 Each mapping results in a separate key in storage. After making changes, regenerate the Propel entity classes.
 
 {% info_block warningBox "" %}
 
-You cannot define multiple mappings with the same source for the same resource. If you do, the last one defined will overwrite the others.
+You can define only one mapping per source for each resource, and the last defined mapping takes precedence.
 
 {% endinfo_block %}
+
+
+To change the delimiter, override: `\Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig::MAPPINGS_DELIMITER`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

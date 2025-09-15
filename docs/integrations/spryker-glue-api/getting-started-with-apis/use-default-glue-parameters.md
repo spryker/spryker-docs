@@ -1,5 +1,5 @@
 ---
-title: Use default Glue parameters
+title: Use default Storefront parameters
 description: This document explains how to pass the parameters and how to use them
   in code
 last_updated: '2025-07-07'

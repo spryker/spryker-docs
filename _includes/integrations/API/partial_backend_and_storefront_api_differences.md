@@ -1,6 +1,6 @@
 This document describes differences between Storefront API (REST API) and Backend API.
 
-Spryker provides two main API types in the same project. *Storefront APIs* are designed for consumer-facing applications and provide access to Storage and Elasticsearch, making RPC Zed calls using Clients. *Backend APIs* are designed for administrative and system-to-system communication with direct access to Facades, enabling performant backend operations.
+Spryker provides two main API applications in the same project. *Storefront APIs* are designed for consumer-facing applications and provide access to Storage and Elasticsearch, making RPC Zed calls using Clients. *Backend APIs* are designed for administrative and system-to-system communication with direct access to Facades, enabling performant backend operations.
 
 Storefront API uses customer-based authentication, while Backend API uses user-based authentication.
 

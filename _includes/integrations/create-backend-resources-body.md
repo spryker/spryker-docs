@@ -1,19 +1,19 @@
 This guide shows how to create an API endpoint using a resource for the Backend API application.
 
-Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
+Let's say you have a module named `ModuleBackendApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
-1. Create `ModuleRestApiConfig` and add the resource name:
+1. Create `ModuleBackendApiConfig` and add the resource name:
 
-**\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig**
+**\Pyz\Glue\ModuleBackendApi\ModuleBackendApiConfig**
 
  ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi;
+namespace Pyz\Glue\ModuleBackendApi;
 
 use Spryker\Glue\Kernel\AbstractBundleConfig;
 
-class ModuleRestApiConfig extends AbstractBundleConfig
+class ModuleBackendApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_MODULE = 'module';
 }
@@ -21,18 +21,18 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 
 2. Create `ModuleController`:
 
-**\Pyz\Glue\ModuleRestApi\Controller\ModuleController**
+**\Pyz\Glue\ModuleBackendApi\Controller\ModuleController**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Controller;
+namespace Pyz\Glue\ModuleBackendApi\Controller;
 
 use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResourceTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
-use Pyz\Glue\ModuleRestApi\ModuleRestApiConfig;
+use Pyz\Glue\ModuleBackendApi\ModuleBackendApiConfig;
 use Spryker\Glue\Kernel\Backend\Controller\AbstractBackendApiController;
 
 class ModuleResourceController extends AbstractBackendApiController
@@ -44,7 +44,7 @@ class ModuleResourceController extends AbstractBackendApiController
         return (new GlueResponseTransfer())
           ->addResource((new GlueResourceTransfer())
             ->setId($id)
-            ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
+            ->setType(ModuleBackendApiConfig::RESOURCE_MODULE)
             ->setAttributes((new ModuleRestAttributesTransfer());
     }
 
@@ -54,7 +54,7 @@ class ModuleResourceController extends AbstractBackendApiController
     ): GlueResponseTransfer {
         return (new GlueResponseTransfer())
           ->addResource((new GlueResourceTransfer())
-            ->setType(ModuleRestApiConfig::RESOURCE_MODULE)
+            ->setType(ModuleBackendApiConfig::RESOURCE_MODULE)
             ->setAttributes((new ModuleRestAttributesTransfer());
     }
 }
@@ -62,18 +62,18 @@ class ModuleResourceController extends AbstractBackendApiController
 
 3. Create `ModuleResource`. For no convention resource, it must implement `ResourceInterface`.
 
-**\Pyz\Glue\ModuleRestApi\Plugin\ModuleResource**
+**\Pyz\Glue\ModuleBackendApi\Plugin\ModuleResource**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin;
+namespace Pyz\Glue\ModuleBackendApi\Plugin;
 
 use Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer;
 use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
 use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
-use Pyz\Glue\ModuleRestApi\Controller\ModuleResourceController;
-use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
+use Pyz\Glue\ModuleBackendApi\Controller\ModuleResourceController;
+use Spryker\Glue\ModuleBackendApi\ModuleBackendApiConfig;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\Backend\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
 
@@ -81,7 +81,7 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
 {
     public function getType(): string
     {
-        return ModuleRestApiConfig::RESOURCE_MODULE;
+        return ModuleBackendApiConfig::RESOURCE_MODULE;
     }
 
     public function getController(): string
@@ -118,7 +118,7 @@ See also [Create and change Glue API conventions](/docs/dg/dev/glue-api/latest/c
 
 namespace Pyz\Glue\GlueBackendApiApplication;
 
-use Pyz\Glue\ModuleRestApi\Plugin\ModuleResource;
+use Pyz\Glue\ModuleBackendApi\Plugin\ModuleResource;
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider

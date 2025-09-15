@@ -1,17 +1,17 @@
 This guide describes how to add scopes to the resource and custom route for the Backend API application.
 
-Let's say you have a module named `ModuleRestApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
+Let's say you have a module named `ModuleBackendApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
 
 1. Set up a resource for the Backend API application.
 
 2. To implement `ScopeDefinitionPluginInterface` and set up the scopes, adjust `ModuleResource`:
 
-**Pyz\Glue\ModuleRestApi\Plugin\ModuleResource.php**
+**Pyz\Glue\ModuleBackendApi\Plugin\ModuleResource.php**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin;
+namespace Pyz\Glue\ModuleBackendApi\Plugin;
 
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
@@ -31,14 +31,14 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
 
 3. To implement `ScopeRouteProviderPluginInterface` and set up the scopes, adjust `ModuleBarRouteProviderPlugin`:
 
-**Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin.php**
+**Pyz\Glue\ModuleBackendApi\Plugin\ModuleBarRouteProviderPlugin.php**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin;
+namespace Pyz\Glue\ModuleBackendApi\Plugin;
 
-use Pyz\Glue\ModuleRestApi\Controller\ModuleBarController;
+use Pyz\Glue\ModuleBackendApi\Controller\ModuleBarController;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
 use Spryker\Glue\Kernel\Backend\AbstractPlugin;
 use Spryker\Glue\OauthExtension\Dependency\Plugin\ScopeRouteProviderPluginInterface;

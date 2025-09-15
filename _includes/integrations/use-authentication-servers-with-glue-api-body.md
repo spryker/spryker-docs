@@ -1,6 +1,6 @@
 This document describes how to use authentication servers with Backend API.
 
-Integrate authentication following the [Glue API Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) guide.
+Integrate authentication following the [Backend API Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) guide.
 
 Backend API allows switching between different authentication servers. In order to provide that ability, the `AuthenticationServerPluginInterface` must be implemented.
 That conception allows wiring plugins implemented an authentication server and extend the default functionality.

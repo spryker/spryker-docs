@@ -4,21 +4,21 @@ Such a plugin routes requests from parent resources to the correct child resourc
 
 The `ResourceInterface` interface provides only one method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context in which the child resource is implemented.
 
-Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
+Let's say you have a module named `ModuleBackendApi`, where you want to have a new endpoint `/module/1/bar` with `GET` and `POST` methods. To create the new endpoint, follow these steps:
 
-1. Create a resource using the steps described in the [Create storefront resources](/docs/dg/dev/glue-api/latest/routing/create-storefront-resources.html) or [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html) guide.
+1. Create a resource using the steps described in the [Create Backend Resources](/docs/integrations/spryker-glue-api/create-glue-api-applications/create-backend-resources.html) guide.
 2. Add a child resource name:
 
-**src\Pyz\Glue\ModuleRestApi\ModuleRestApiConfig.php**
+**src\Pyz\Glue\ModuleBackendApi\ModuleBackendApiConfig.php**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi;
+namespace Pyz\Glue\ModuleBackendApi;
 
 use Spryker\Glue\Kernel\AbstractBundleConfig;
 
-class ModuleRestApiConfig extends AbstractBundleConfig
+class ModuleBackendApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_BAR = 'bar';
 }
@@ -26,18 +26,18 @@ class ModuleRestApiConfig extends AbstractBundleConfig
 
 3. Create `BarResource` that implements `ResourceWithParentPluginInterface`:
 
-<details><summary>src\Pyz\Glue\ModuleRestApi\Plugin\BarResource.php</summary>
+<details><summary>src\Pyz\Glue\ModuleBackendApi\Plugin\BarResource.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin;
+namespace Pyz\Glue\ModuleBackendApi\Plugin;
 
 use Generated\Shared\Transfer\GlueResourceMethodCollectionTransfer;
 use Generated\Shared\Transfer\GlueResourceMethodConfigurationTransfer;
 use Generated\Shared\Transfer\ModuleRestAttributesTransfer;
-use Spryker\Glue\ModuleRestApi\Controller\ModuleResourceController;
-use Spryker\Glue\ModuleRestApi\ModuleRestApiConfig;
+use Spryker\Glue\ModuleBackendApi\Controller\ModuleResourceController;
+use Spryker\Glue\ModuleBackendApi\ModuleBackendApiConfig;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface;
@@ -46,7 +46,7 @@ class ModuleRestResource extends AbstractResourcePlugin implements ResourceInter
 {
     public function getType(): string
     {
-        return ModuleRestApiConfig::RESOURCE_BAR;
+        return ModuleBackendApiConfig::RESOURCE_BAR;
     }
 
     public function getController(): string
@@ -66,7 +66,7 @@ class ModuleRestResource extends AbstractResourcePlugin implements ResourceInter
 
     public function getParentResourceType(): string
     {
-        return ModuleRestApiConfig::RESOURCE_MODULE;
+        return ModuleBackendApiConfig::RESOURCE_MODULE;
     }
 }
 ```
@@ -81,7 +81,7 @@ class ModuleRestResource extends AbstractResourcePlugin implements ResourceInter
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
 
-use Pyz\Glue\ModuleRestApi\Plugin\BarResource;
+use Pyz\Glue\ModuleBackendApi\Plugin\BarResource;
 use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
 
 class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider

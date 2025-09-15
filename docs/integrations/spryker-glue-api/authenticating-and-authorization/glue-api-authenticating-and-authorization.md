@@ -1,5 +1,5 @@
 ---
-title: Glue API authentication and authorization
+title: Authentication and authorization
 description: Learn how to authenticate and authorize requests in the Spryker Backend
   API using OAuth 2.0.
 last_updated: July 9, 2025
@@ -8,7 +8,7 @@ template: default
 ---
 
 
-Spryker's Glue API uses the OAuth 2.0 framework for authentication to secure its resources. On a technical level, this is handled by the Login API. To gain access to a protected resource, a client application must first obtain an access token. This token, a JSON Web Token (JWT), identifies the user in subsequent API calls and must be included in the request header.
+Spryker APIs uses the OAuth 2.0 framework for authentication to secure its resources. On a technical level, this is handled by the Login API. To gain access to a protected resource, a client application must first obtain an access token. This token, a JSON Web Token (JWT), identifies the user in subsequent API calls and must be included in the request header.
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Authentication+and+Authorization/auth-scheme+%281%29.png)
 

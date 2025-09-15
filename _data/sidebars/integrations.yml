@@ -73,7 +73,7 @@ entries:
       - title: Data Exchange
         nested:
         - title: Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api.html
+          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html
         - title: Configure Data Exchange API endpoints
           url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
         - title: Sending requests with Data Exchange API

@@ -33,7 +33,7 @@ This guide outlines the recommended approaches to implement data exchange in you
   <div class="cst_card">
     <div class="cst_card_title">Using Middleware</div>
     <div class="cst_card_desc">Middleware is an external service that connects multiple data sources, transforming and enriching data into the format expected by your target system before it reaches your core platform.</div>
-    <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/data-exchange-api.html"> Find out more </a>
+    <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html"> Find out more </a>
   </div>
  </div>
 

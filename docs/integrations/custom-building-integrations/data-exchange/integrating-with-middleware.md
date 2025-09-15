@@ -14,7 +14,7 @@ As explained in the [Data Exchange overview](/docs/integrations/custom-building-
 
 - **[Data import from S3 bucket](/docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html)**: Import CSV files stored in Amazon S3, ideal for ERP integrations
 - **[Data Export](/docs/integrations/custom-building-integrations/data-exchange/data-export/data-export.html)**: Export data to other systems, with extensible order export functionality  
-- **[Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api.html)**: Real-time database API for dynamic data operations
+- **[Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html)**: Real-time database API for dynamic data operations
 
 Middleware can leverage any combination of these methods depending on your integration requirements - whether you need real-time API synchronization, batch file processing via S3, or scheduled data exports.
 

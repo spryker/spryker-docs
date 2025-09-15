@@ -31,26 +31,22 @@ related:
 During the Publish and Synchronization (P&S) process, a unique key is generated for each published resource. This key is used to store the resource’s denormalized data in storage, enabling efficient data retrieval later. By default, Spryker generates these keys using the database ID of the corresponding record to ensure uniqueness.
 
 
-## Example: Abstract Product Key
+## Example: Abstract product key
 
 For an abstract product, the storage key might look like this:
-
 
 ```
 kv:product_abstract:de:de_de:100
 ```
 
-Where:
+| Parameter               | Meaning                               |
+|--------------------|---------------------------------------|
+| `kv`               | Standard prefix for key-value storage |
+| `product_abstract` | Identifies the entity                 |
+| `de`               | Store where the entity is available   |
+| `de_de`            | Locale for the entity                 |
+| `100`              | Product's unique database ID          |
 
-- `kv` – A standard prefix for key-value storage.
-
-- `product_abstract` – Identifies the entity.
-
-- `de` – The store where the entity is available.
-
-- `de_de` – The locale for the entity.
-
-- `100` – The product's unique database ID.
 
 
 
@@ -59,15 +55,15 @@ You can query Redis using this key to retrieve the stored product data.
 image-20250605-110100.png
  
 
-## When Default Keys Are Not Enough
+## Reasons to add more keys
 
-The default key generation may not be suitable in cases such as:
+The default key generation may not be suitable in cases such as the following:
 
-You only know the product SKU, not its ID.
+- You only know the product SKU, not its ID
 
-You want to avoid exposing internal database IDs externally.
+- You want to avoid exposing internal database IDs externally.
 
-You need a more flexible lookup strategy.
+- You need a more flexible lookup strategy.
 
 To solve these issues, you can define mappings.
 

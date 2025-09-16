@@ -46,29 +46,7 @@ To create a module, follow these steps:
 | `ResourcesDependencyProvider.php` | Provides external dependencies to this module. |
 | `{YOUR_RESOURCE}sRestApiResource.php` | Locatable class that provides resource objects to other modules as a dependency.|
 
-{% info_block infoBox %}
-
-To create a basic structure, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueBasicStructure --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
-```
-
-You must agree to all the default values when prompted.
-
-{% endinfo_block %}
-
 Add a transfer file that is used to automatically map JSON data. Transfers are defined in the `Shared` layer—for example, `src/Pyz/Shared/{YOUR_RESOURCE}sRestApi/Transfer`—as it needs to be accessible to any layer, including Glue. The name of the transfer file is `resources_rest_api.transfer.xml`, where the first part is the name of your resource.
-
-{% info_block infoBox %}
-
-To add a transfer file, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
-```
-
-{% endinfo_block %}
 
 This is a resulting folder structure in the example of the Wishlists REST API module:
 ![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png)
@@ -102,16 +80,6 @@ class WishlistsRestApiConfig extends AbstractBundleConfig
 }
 ```
 
-{% info_block infoBox %}
-
-To create a configuration class, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueConfig --mode=project --module=ResourcesRestApi --organization=Pyz
-```
-
-{% endinfo_block %}
-
 ## 3. Create a factory
 
 A factory is used for instantiating module classes and dependencies and provides access to the resource builder.
@@ -140,16 +108,6 @@ class WishlistsRestApiFactory extends AbstractFactory
     }
 }
 ```
-
-{% info_block infoBox %}
-
-To create a factory, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):  
-
-```bash
-console spryk:run AddGlueFactory --mode=project --module=ResourcesRestApi --organization=Pyz
-```
-
-{% endinfo_block %}
 
 ## 4. Create a resource controller
 
@@ -237,16 +195,6 @@ class WishlistsResourceController extends AbstractController
 
 </details>
 
-{% info_block infoBox %}
-
-To create a resource controller, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController
-```
-
-{% endinfo_block %}
-
 ## 5. Describe fields for post and patch calls
 
 `POST` and `PATCH` let you pass the body in your request. Such parameters can be used in your resource module to manipulate Spryker entities. For example, when changing an entity using REST API, you can pass the modified values as fields of a `POST` or `PATCH` request.
@@ -282,16 +230,6 @@ To generate the respective transfer objects, run the following command:
 ```bash
 vendor/bin/console transfer:generate
 ```
-
-{% info_block infoBox %}
-
-To describe fields for `POST` and `PATCH` calls, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
-```
-
-{% endinfo_block %}
 
 ## 6. Route requests to your controller
 
@@ -472,16 +410,6 @@ class WishlistsResourceRoutePlugin extends AbstractPlugin implements ResourceRou
 ```
 
 </details>
-
-{% info_block infoBox %}
-
-To route requests to your controller, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueResourceRoute --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources --resourceRouteMethod=get
-```
-
-{% endinfo_block %}
 
 ## 7. Process REST requests
 

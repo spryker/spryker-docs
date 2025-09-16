@@ -157,12 +157,4 @@ See the following example:
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```
 
-For validation, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
-```
-
-This command places the default `validation.yaml` file into the specified module. You need to add attributes manually.
-
 {% endinfo_block %}

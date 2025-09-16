@@ -77,7 +77,7 @@ entries:
         - title: Sending requests with Data Exchange API
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-with-data-exchange-api.html
         - title: Create post plugins for Data Exchange API
-          url: docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
+          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
         - title: Batch processing and performance optimization with Data Exchange API
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/batch-processing-and-performance-optimization.html
       - title: API references

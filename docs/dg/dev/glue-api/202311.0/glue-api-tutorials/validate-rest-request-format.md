@@ -146,21 +146,3 @@ To apply new or updated rules, rebuild the validation cache:
 ```bash
 vendor/bin/console rest-api:build-request-validation-cache
 ```
-
-{% info_block infoBox %}
-
-By default, a validation cache is generated for the current store. To generate it for a specific store, use the `APPLICATION_STORE` variable.
-See the following example:
-```bash
-APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
-```
-
-For validation, you can use a [Spryk](/docs/dg/dev/glue-api/{{page.version}}/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
-```
-
-This command places the default `validation.yaml` file into the specified module. You need to add attributes manually.
-
-{% endinfo_block %}

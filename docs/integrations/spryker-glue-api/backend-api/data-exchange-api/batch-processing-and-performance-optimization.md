@@ -55,7 +55,7 @@ To send data in batches, include multiple objects in the `data` array of your re
 
 Complex endpoints allow you to update data across multiple related tables in a single request. This is particularly useful for creating or updating entities with nested relationships.
 
-For configuration details, see [Data Exchange API Configuration](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api-configuration.html).
+For configuration details, see [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html).
 
 ### Product Creation Example
 

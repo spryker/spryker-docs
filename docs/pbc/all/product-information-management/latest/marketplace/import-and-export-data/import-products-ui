@@ -1,0 +1,51 @@
+---
+title: "Merchant Portal: Import products"
+description: Learn how to import product via Merchant Portal.
+last_updated: Aug 26, 2025
+template: back-office-user-guide-template
+---
+
+To import products in the Merchant Portal follow the steps:
+
+1. In the Merchant Portal, go to **Data Import**.
+2. On the **Data Import** page, click **Start Import**.
+  This opens the **Start Import** drawer.
+
+3. Optional: If you don't have a file with products, to prepare it, in **File Templates**, click on **CSV template Product**.
+
+4. In **Import Configuration**, select **Product** and select the file with products on your machine.
+  This displays the name of the file next to **Choose File**.
+
+5. To import the selected file with product, click **Import**.  
+  This opens the **Data Import** page. The imported file is displayed in the table. If there no errors, the Status will be **Successfull**
+
+## Reference information: Product import file
+
+{% info_block infoBox "" %}
+
+- Some editors change the symbols based on your location. To make sure you can import products correctly, we recommend using Google Sheets to edit import files.
+
+
+{% endinfo_block %}
+
+This section explains how to fill out a product import file.
+
+| COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
+|-------------------------|----------|-----------|--------------|----------------------------------------|
+| abstract_sku            | ✓        | String    | 009          | SKU identifier of the abstract product. |
+| is_active               | ✓        | Boolean   | 1            | Product concrete status. Can be active (1) or inactive (0). Required if the concrete does not exist.|
+| concrete_sku            | ✓        | String    | 009_123456   | Required only if a concrete product is created, see assigned_product_type. |
+| store_relations         |         | String    | DE;AT        | Product availability in stores. Supports multiple values, separated by ';'. |
+| product_abstract.categories  |         | String    | cables;camcorders        | Product categories assignment. Supports multiple values, separated by ';'. |
+| product.%ATTRIBUTE_KEY% e.g. product.color  |         | String    | green;blue        | Product attribute. Supports multiple values, separated by ';'. |
+| product.name.LOCALE e.g. product.name.en_US  |         | String    | Video Camera         | Product concrete name. |
+| product.description.LOCALE e.g. product.description.en_US  |         | String    | This is a budget-friendly video camera.        | Product concrete description. |
+| product_abstract.name.LOCALE e.g. product_abstract.name.en_US  |         | String    | Video Camera         | Product abstract name. Supports multiple values, separated by ';'. |
+| product_abstract.description.LOCALE e.g. product_abstract.description.en_US  |         | String    | This is a budget-friendly video camera.        | Product abstract description. |
+| product_abstract.meta_title.%LOCALE% e.g. product_abstract.meta_title.en_US  |         | String    | Affordable Video Camera | High Quality at Low Price        | Product abstract meta title. |
+| product_abstract.meta_description.%LOCALE% e.g. product_abstract.meta_description.en_US  |         | String    | Discover an affordable video camera that delivers excellent quality and performance without breaking the budget. Perfect for creators and everyday use.       | Product abstract meta description. |
+| product_abstract.meta_keywords.%LOCALE% e.g. product_abstract.meta_keywords.en_US  |         | String    | affordable video camera, cheap video camera, budget video camera,       | Product abstract meta keywords. |
+| product_abstract.tax_set_name  | ✓ (Only on creation)        | Taxed Goods    |        | Tax set name assigned to the abstract product. |
+| product_abstract.new_from  |          | 2025-06-01 0:00:00    |        | New from date. |
+| product_abstract.new_to  |          | 2025-06-15 0:00:00    |        |  New to date. |
+| product.assigned_product_type e.g. abstract, concrete, both  | ✓         | 2025-06-15 0:00:00    |        |**abstract** — Indicates that abstract fields are imported.<br>**concrete** — Indicates that concrete fields are imported.<br>**both** — Indicates that both abstract and concrete fields are imported.|

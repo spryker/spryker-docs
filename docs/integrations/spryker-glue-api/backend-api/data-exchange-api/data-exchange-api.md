@@ -64,7 +64,7 @@ Data Exchange API follows Backend API conventions:
 - **Request Format**: JSON format for request and response bodies
 - **HTTP Methods**: Support for GET, POST, PUT, PATCH, DELETE operations
 
-Example request:
+Example request with Bearer token:
 
 ```bash
 curl -X GET \
@@ -73,13 +73,21 @@ curl -X GET \
   -H 'Content-Type: application/json'
 ```
 
-## Post Plugins
+Example request with API Key (header):
 
-The Data Exchange API supports post plugins for extending functionality:
+```bash
+curl -X GET \
+  https://your-backend-api.spryker.com/dynamic-entity/products \
+  -H 'X-Api-Key: YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
+```
 
-- **Data transformation plugins**: Transform data before sending responses
-- **Validation plugins**: Add custom validation rules for incoming data
-- **Audit plugins**: Log API usage and data changes
-- **Integration plugins**: Connect with external systems automatically
+Example request with API Key (URL parameter):
 
-For detailed implementation of post plugins, see the Backend API development guides.
+```bash
+curl -X GET \
+  'https://your-backend-api.spryker.com/dynamic-entity/products?api_key=YOUR_API_KEY' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json'
+```

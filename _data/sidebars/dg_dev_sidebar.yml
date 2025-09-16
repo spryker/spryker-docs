@@ -1491,8 +1491,6 @@ entries:
       url: /docs/dg/dev/glue-api/create-glue-api-applications.html
     - title: Authentication and authorization
       url: /docs/dg/dev/glue-api/authentication-and-authorization.html
-    - title: Security and authentication
-      url: /docs/dg/dev/glue-api/security-and-authentication.html
     - title: Use API Key authorization
       url: /docs/dg/dev/glue-api/use-api-key-authorization.html
     - title: Backend Glue infrastructure
@@ -1554,8 +1552,6 @@ entries:
       url: /docs/dg/dev/glue-api/create-protected-glue-api-endpoints.html
     - title: Document Glue API endpoints
       url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
-    - title: Integrate a CIAM provider
-      url: /docs/dg/dev/glue-api/integrate-a-ciam-provider.html
     - title: Use authentication servers with Glue API
       url: /docs/dg/dev/glue-api/use-authentication-servers-with-glue-api.html
     - title: Use default Glue parameters

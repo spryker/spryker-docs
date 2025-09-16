@@ -20,11 +20,11 @@ With the current setup out of the box, we have a Backend API application that is
 
 ## Key Features
 
+- **Admin-focused**: Designed for administrative operations and back-office tasks
+- **Multi-format Support**: Technically supports multiple conventions, with JSON:API shipped out-of-the-box
 - **Direct Facade Access**: Backend API resources can use direct facade access through the dependency provider and access the database directly
-- **Administrative Focus**: Designed for Backoffice operators, system configuration, and administrative tasks
 - **Enterprise Integration**: Built for ERP, CRM, and other enterprise system integrations
-- **High Performance**: Optimized for performant backend operations with direct database access
-- **Multi-format Support**: Technically supports multiple formats, with REST API shipped out-of-the-box
+- **Multi-format Support**: Technically supports multiple conventions, with JSON:API shipped out-of-the-box
 
 ## Possibility to Create New API Applications
 
@@ -34,9 +34,11 @@ With the current infrastructure, projects can easily create their own API applic
 
 Backend API resources can use any implemented conventions, create new ones, or even not use any. In this case, the "no convention" approach is used, and a request and response are formatted as a plain JSON.
 
-## Authentication Servers
+### Authentication
 
-Current infrastructure lets you switch between different authentication servers. For example, this can be useful if you want to use Auth0 or any other server in addition to implemented servers.
+Backend API uses Back Office credentials for authentication. System administrators and enterprise integrations authenticate using administrative credentials to access backend resources.
+
+For API key-based authentication, see [Use API Key Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/use-api-key-authorization.html).
 
 ## Resource Modules
 
@@ -78,18 +80,33 @@ Backend API is ideal for:
 - Administrative automation and workflows
 - Third-party management tools
 
+## Data Exchange API
+
+Backend API includes the Data Exchange API, a dynamic database API that facilitates data transfer in real-time. It enables you to build, customize, and manage database APIs tailored to your specific business requirements through a user interface.
+
+Key benefits:
+- No coding and deploying  required: API endpoints are created from the user interface
+- Rapid API generation: APIs are generated within minutes
+- Flexibility and customization: Tailor APIs to your specific needs
+- Real-time updates: Dynamic changes and on-the-fly modifications
+- Security and Access Control: Strong security measures and access controls
+
+[Learn more about Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
+
 ## Getting Started
 
 To start working with Backend API:
 
 1. **Authentication**: Obtain Back Office user authentication tokens
 2. **Explore endpoints**: Review available administrative API resources
-3. **Implement requests**: Use appropriate format (REST API OOTB)
-4. **Handle responses**: Process API responses according to format
+3. **Handle responses**: Process API responses according to format
 
 ## Further Reading
 
-- [Backend and Storefront API module differences](/docs/dg/dev/glue-api/latest/backend-and-storefront-api-module-differences.html)
+- [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2b-demo-shop-reference.html)
+- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html)
+- [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2b-demo-shop-reference.html)
+- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html)
 - [Create Backend Resources](/docs/integrations/spryker-glue-api/create-glue-api-applications/create-backend-resources.html)
-- [Use authentication servers with Backend API](/docs/dg/dev/glue-api/latest/use-authentication-servers-with-glue-api.html)
+- [Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/glue-api-authenticating-and-authorization.html)

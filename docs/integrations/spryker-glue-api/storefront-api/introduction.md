@@ -14,7 +14,7 @@ The Storefront API represents a contract that developers can stick to when they 
 
 The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, provides API endpoints, processes requests, and communicates with other layers of the OS for customer-facing functionality.
 
-For more details, see [Glue Infrastructure](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
+For more details, see [Storefront Infrastructure](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
 
 ## Storefront API Features
 

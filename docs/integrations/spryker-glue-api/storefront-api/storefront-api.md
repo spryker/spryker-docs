@@ -6,7 +6,17 @@ template: default
 layout: custom_new
 ---
 
-Storefront API is designed for consumers and customer-facing integrations. It's the API layer that powers web shops, mobile apps, marketplaces, and other client-facing systems. It is based on REST API and follows JSON:API conventions.
+The *Spryker Storefront API* is a JSON REST API that is designed for customer-facing applications and buyer journey touchpoints. It is built to be used as a contract between the Spryker Commerce OS backend and any possible customer touchpoint or integration with third-party systems. As an application, Storefront API knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality for customer experiences.
+
+The Storefront API represents a contract that developers can stick to when they are extending the Spryker Commerce OS with new customer touchpoints or integrations. All REST API requests are handled according to the [JSON REST API specification](https://jsonapi.org/). These specifications define how clients should request data, fetch it, modify it, and how the server should respond to it. Hence, the expected behavior stays the same across all endpoints.
+
+![Storefront API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+REST+API/glue-rest-api.jpg)
+
+## Storefront API Infrastructure
+
+The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, provides API endpoints, processes requests, and communicates with other layers of the OS for customer-facing functionality.
+
+For more details, see [Storefront Infrastructure](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
 
 ## Key Features
 
@@ -45,37 +55,37 @@ Key headers you'll commonly use with Storefront API include:
 ### Request Parameters (especially with JSON:API)
 
 Storefront API leverages standardized parameters for efficient data interaction:
-- **Pagination**: Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks–for example, `?page[offset]=0&page[limit]=10`). These values are accessible within Spryker via `GlueRequestTransfer->getPagination()`.
-- **Sorting**: Request data to be sorted using parameters like `?sort=attributeName` (ascending) or `?sort=-attributeName` (descending). Sorting parameters can be retrieved using `$glueRequestTransfer->getSortings()`.
-- **Filtering**: Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`. These are accessible via `$glueRequestTransfer->getFilters()`.
-- **Sparse Fields**: To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`. This is retrieved using `$glueRequestTransfer->getQueryFields()`.
+- **Pagination**: Use `page[offset]` and `page[limit]` to retrieve data in manageable chunks–for example, `?page[offset]=0&page[limit]=10`).
+- **Sorting**: Request data to be sorted using parameters like `?sort=attributeName` (ascending) or `?sort=-attributeName` (descending).
+- **Filtering**: Narrow down results using filter parameters, often structured like `?filter[resourceName.fieldName]=value`.
+- **Sparse Fields**: To receive only specific fields of a resource and reduce data transfer, use `?fields[resourceName]=attribute1,attribute2`.
 - **Including Related Resources**: Fetch related data in a single request using the include parameter–for example, `?include=concrete-product-image-sets`). The behavior of this included section can be configured in Spryker.
 
 ### Storefront API Responses
 
 - **Status Codes**: Standard HTTP status codes indicate the outcome, such as 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, or 404 Not Found.
 - **Response Body**: The structure often follows the JSON:API convention.
-  - The resources field in `GlueResponseTransfer` typically contains an array of the primary data objects.
+  - The resources field typically contains an array of the primary data objects.
   - An included section may contain data for related resources if requested via the include parameter.
   - Responses often include pagination links, such as next, previous, last, first, automatically calculated when using JSON:API.
-  - The overall response structure is defined by GlueResponseTransfer, which includes fields for HTTP status, metadata, content/resources, errors, filters, sortings, and pagination details.
 
 ### Authentication with Spryker
 
 Storefront API primarily uses OAuth 2.0 for securing endpoints.
 
-Client applications send user credentials (username and password) to an authentication endpoint (for example, `/token` for Storefront API or a separate `/token` for Backend API using Back Office credentials) to obtain an access token and a refresh token. This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources. If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
+Client applications send customer credentials (email and password) to an authentication endpoint (for example, `/access-tokens` for Storefront API or a separate `/token` for Backend API using Back Office credentials) to obtain an access token and a refresh token. This access token (Bearer token) must then be included in the Authorization header for subsequent requests to protected Spryker resources. If an invalid, expired, or no token is provided for a protected resource, the API will respond with a 401 Unauthorized status code.
 
-## Querying Storefront API Data
+## B2C API React Example
 
-The Storefront API supports standardized ways to query and manipulate data, especially when using conventions like JSON:API. This makes client interactions predictable and efficient. Key mechanisms are as follows:
+To help you understand possible use cases, we provide a sample app as an exemplary implementation (which is not a starting point for development). It can coexist with a shop as a second touchpoint in the project. From a technological perspective, it's based on our customers' interests. The app is single-page application based on a React JS library.
 
-- **Pagination**: Handle large datasets effectively by requesting data in manageable chunks (pages).
-- **Sorting**: Allow clients to specify the order in which results should be returned.
-- **Filters**: Enable clients to retrieve subsets of resources based on specific criteria.
-- **Sparse Fields**: Optimize response payloads by allowing clients to request only the specific data fields they need.
+It delivers a full customer experience from browsing the catalog to placing an order. The application helps you understand how you can use the predefined APIs to create a B2C user experience. As an example, the full power of Elasticsearch, which is already present in our [B2B](/docs/about/all/b2b-suite.html) and [B2C Demo Shops](/docs/about/all/b2c-suite.html), is leveraged through dedicated endpoints to deliver catalog search functionality with autocompletion, autosuggestion, facets, sorting, and pagination.
 
-For more information, see [Querying data with Storefront API parameters](/docs/dg/dev/glue-api/latest/use-default-glue-parameters).
+{% info_block infoBox %}
+
+For more details about installing and running, see [B2C API React example](/docs/dg/dev/glue-api/latest/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
+
+{% endinfo_block %}
 
 ## Use Cases
 
@@ -98,6 +108,8 @@ To start working with Storefront API:
 
 ## Further Reading
 
-- [Storefront API References](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
-- [Create Storefront Resources](/docs/integrations/spryker-glue-api/create-glue-api-applications/create-storefront-resources.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/glue-api-authenticating-and-authorization.html)

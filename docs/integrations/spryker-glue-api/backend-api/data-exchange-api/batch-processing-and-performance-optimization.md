@@ -55,6 +55,8 @@ To send data in batches, include multiple objects in the `data` array of your re
 
 Complex endpoints allow you to update data across multiple related tables in a single request. This is particularly useful for creating or updating entities with nested relationships.
 
+For configuration details, see [Data Exchange API Configuration](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api-configuration.html).
+
 ### Product Creation Example
 
 The following example demonstrates creating a product with all related data using a complex endpoint:
@@ -183,7 +185,7 @@ This example shows a single product in the array, but you can include multiple p
 
 ### Related Data Structure
 
-The complex endpoint allows you to create or update:
+The provided complex endpoint example allows you to create or update:
 
 - **Product Abstract**: Main product information
 - **Concrete Products**: Product variants with specific attributes

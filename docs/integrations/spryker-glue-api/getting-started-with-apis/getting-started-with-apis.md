@@ -51,7 +51,7 @@ Spryker's API framework offers two primary types of API applications, each tailo
     <div class="cst_card">
       <div class="cst_card_title">Backend API</div>
       <div class="cst_card_desc">Discover administrative API endpoints for system integration, ERP connections, and backend operations with direct facade access.</div>
-      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/backend-api.html">Learn more</a>
+      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/backend-api/introduction.html">Learn more</a>
     </div>
   </div>
 </div>

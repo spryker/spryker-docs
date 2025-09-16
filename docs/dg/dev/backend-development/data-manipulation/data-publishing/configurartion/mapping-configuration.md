@@ -28,14 +28,14 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
 ---
 
-During the Publish and Synchronization (P&S) process, a unique key is generated for each published resource. This key is used to store the resource’s denormalized data in storage, enabling efficient data retrieval later. By default, Spryker generates these keys using the database ID of the corresponding record to ensure uniqueness.
+During the Publish and Synchronization (P&S) process, a unique key is generated for each published resource. This key is used to store the resource's denormalized data in storage, enabling efficient data retrieval later. By default, Spryker generates these keys using the database ID of the corresponding record to ensure uniqueness.
 
 
 ## Example: Abstract product key
 
 For an abstract product, the storage key might look like this:
 
-```
+```text
 kv:product_abstract:de:de_de:100
 ```
 
@@ -69,7 +69,7 @@ To solve these issues, you can define mappings.
 
 ## Mappings
 
-Mappings allow you to associate a resource’s internal ID with an alternative, unique identifier–for example, SKU. A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
+Mappings allow you to associate a resource's internal ID with an alternative, unique identifier–for example, SKU. A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
 
 Mappings are configured in the Propel schema and used during the P&S process.
 
@@ -99,14 +99,14 @@ These values must match keys in the resource payload.
 After rebuilding the Propel entity and re-syncing, a new record is stored in Redis. Example:
 
 
-```
+```text
 {"id":1,"_timestamp":1599741494.2676899} 
 ```
 
 Key example:
 
 
-```
+```text
 kv:product_abstract:de:de_de:sku:001
 ```
 

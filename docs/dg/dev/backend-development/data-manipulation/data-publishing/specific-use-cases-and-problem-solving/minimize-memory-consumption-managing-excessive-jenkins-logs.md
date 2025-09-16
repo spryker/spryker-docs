@@ -13,14 +13,13 @@ Screenshot 2024-01-10 at 16.19.57.png
 To address this problem, take the following steps:
 
 1. Determine the source of log generation:
-  1. Examine Jenkins logs to identify jobs and builds with significant log generation.
-  2. Analyze build scripts to identify and eliminate unnecessary log generation.
-
+    1. Examine Jenkins logs to identify jobs and builds with significant log generation.
+    2. Analyze build scripts to identify and eliminate unnecessary log generation.
 2. Mute Jenkins from receiving logs if needed:
-  1. Override `\Spryker\Zed\Queue\Business\Process\ProcessManager::triggerQueueProcess()` in the project level to disable child process logging:
+    1. Override `\Spryker\Zed\Queue\Business\Process\ProcessManager::triggerQueueProcess()` in the project level to disable child process logging:
 
 
-```
+```php
 ...
 if (!$this->queueConfig->getQueueWorkerLogStatus()) {
     $process->disableOutput();
@@ -28,10 +27,10 @@ if (!$this->queueConfig->getQueueWorkerLogStatus()) {
 ...
 ```
 
-  2. Override \Spryker\Zed\Queue\Business\Worker\Worker::executeOperation() in the project level to add forwarding for stderr also
+2. Override \Spryker\Zed\Queue\Business\Worker\Worker::executeOperation() in the project level to add forwarding for stderr also
 
 
-```
+```php
 if ($this->queueConfig->getQueueWorkerLogStatus()) {
     $processCommand = sprintf('%s >> %s 2>&1', $processCommand, $this->queueConfig->getQueueWorkerOutputFileName());
 }

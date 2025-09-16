@@ -23,7 +23,7 @@ This approach continuously adjusts the batch size based on the available memory 
 
 - Ensure a more stable and efficient import process
 
-By dynamically adapting to the system’s capacity, this method improves reliability and makes large imports more predictable and resource-friendly.
+By dynamically adapting to the system's capacity, this method improves reliability and makes large imports more predictable and resource-friendly.
 
 
 

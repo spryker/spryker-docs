@@ -41,7 +41,7 @@ You can perform these actions manually using the provided console commands.
 
 ## Re-synchronize data
 
-Re-synchronization is useful when Redis or Elasticsearch data is lost (e.g., due to a flush operation). This command re-exports data from the Storage and Search tables into Redis and Elasticsearch.
+Resynchronization is useful when Redis or Elasticsearch data is lost–for example, because of a flush operation. This command re-exports data from the Storage and Search tables into Redis and Elasticsearch.
 
 Command:
 

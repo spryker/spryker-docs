@@ -139,7 +139,7 @@ You can also send a direct request to the Elasticsearch endpoint and verify the 
 3. Identify the destination - the URL where the search request is sent. 
 The profiler may show an incorrect endpoint. The correct one for the catalog page looks like this:
 
-```
+```text
 http://localhost:9200/spryker_b2b_dev_de_page/_search
 ```
 
@@ -159,9 +159,11 @@ Explanation:
 {% info_block infobox %}
 
 In many cases, it is easier to get the destination and payload directly from the executed request inside:
-```
+
+```bash
 vendor/ruflin/elastica/src/Transport/Http.php::exec()
 ```
+
 {% endinfo_block %}
 
 

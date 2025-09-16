@@ -111,6 +111,7 @@ Define a multi-store entity in `schema.xml`:
 - Use `queue_pool` only for global entities. Avoid using it alongside the store flag.
 
 - If `queue_pool` and store parameters are defined in the same schema, Spryker can't determine where to send the message. This results in the following error:
+
 ```bash
 Spryker\Zed\Synchronization\Business\Exception\SynchronizationQueuePoolNotFoundException - Exception: You must either have store column or `SynchronizationQueuePoolName` in your schema.xml file
 ```

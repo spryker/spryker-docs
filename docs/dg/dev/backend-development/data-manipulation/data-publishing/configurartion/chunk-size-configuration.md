@@ -73,7 +73,7 @@ This sets the number of events that a general event consumer will try to process
 
 ## Calculate the right chunk size
 
-There is no one-size-fits-all value. You should tune chunk size based on your system’s parameters:
+There is no one-size-fits-all value. You should tune chunk size based on your system's parameters:
 
 - Available memory
 - CPU performance
@@ -95,7 +95,7 @@ If no custom chunk size is defined, the system defaults to a chunk size of 500.
 
 You can find the default values in the following constants within the core configuration:
 
-```
+```php
 Spryker\Zed\Event\EventConfig::DEFAULT_EVENT_MESSAGE_CHUNK_SIZE
 Spryker\Zed\Event\EventConfig::ENQUEUE_EVENT_MESSAGE_CHUNK_SIZE
 ```

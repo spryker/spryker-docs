@@ -78,7 +78,7 @@ When an entity implements the Event Propel behavior, any create, update, or dele
 For example, saving an abstract product triggers a `create abstract product` event:
 
 
-```
+```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
 $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
@@ -100,7 +100,7 @@ If the process finishes early and events are not processed during runtime, they 
 
 You can trigger the publish event manually using the event facade:
 
-```
+```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
 ```
 
@@ -123,7 +123,7 @@ When the publish process is triggered, one or more event messages are posted to 
 The message doesn't include the actual changed data. Example:
 
 
-```
+```json
 {
 	"listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",
 	"transferClassName":"Generated\\Shared\\Transfer\\EventEntityTransfer",
@@ -296,9 +296,9 @@ Search event:
 message example
 
 3. The listener does the following processing: 
-  1. Creates a `SpyProductAbstractPageSearch` entity
-  2. Populates the entity with data
-  3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale 
+    1. Creates a `SpyProductAbstractPageSearch` entity
+    2. Populates the entity with data
+    3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale 
 
 ![search-event-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/search-event-processing.png)
 
@@ -314,7 +314,7 @@ By following this workflow, Spryker makes all product changes made in the Back O
 
 In direct synchronization mode, the behavior of entities such as `SpyProductAbstractPageSearch` and `SpyProductAbstractStorage`, changes. Instead of sending messages to the queue for later processing as described in steps 3–5 of the previous example, these entities are written directly to Redis or Elasticsearch during the same PHP process.
 
-This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony’s `onTerminate` event to perform the final synchronization step after the console command completes execution.
+This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony's `onTerminate` event to perform the final synchronization step after the console command completes execution.
 
 For details on configuring direct sync, see See how to configure direct synchronization - 
 Direct synchronize configuration 
@@ -355,7 +355,7 @@ To ensure system stability, it's critical to define and enforce appropriate non-
 
 - Avoid exceeding request limits for storage, such as Redis, and search systems, such as OpenSearch, during the synchronization process.
 
-As with any non-functional requirements, you can adapt these constraints based on project needs. However, this may require a custom implementation or refactoring Spryker’s default functionality.
+As with any non-functional requirements, you can adapt these constraints based on project needs. However, this may require a custom implementation or refactoring Spryker's default functionality.
 
 For example, if your project must support sending API payloads larger than 10 MB - an uncommon scenario for e-commerce platforms - it's still achievable with Spryker. However, this requires a thorough review of the business logic tied to the relevant API endpoints and adjustments to support larger objects.
 

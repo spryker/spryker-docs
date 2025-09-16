@@ -71,7 +71,7 @@ This configuration enables direct synchronization for all entities with synchron
 
 ## Environment limitations related to Dynamic Multi-Store
 
-When Dynamic Multi-Store (DMS) is enabled, there’re no environment limitations for direct sync.
+When Dynamic Multi-Store (DMS) is enabled, there're no environment limitations for direct sync.
 
 When DMS is disabled, direct sync has the following limitations:
 

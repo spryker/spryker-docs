@@ -13,41 +13,6 @@ AI-powered product management adds the following functionality to the Back Offic
 
 This document describes how to install Product Management powered by OpenAI.
 
-## Feature overview
-
-### What this feature does
-
-- Allows back-office users to **generate translations** for:
-  - **Product Abstracts**
-  - **Product Concretes**
-- Fields supported:
-  - **Name**
-  - **Description**
-- The translations are generated from the **any locale** (for example en_US) into any other locales configured in the shop.
-- Translations appear directly in the product edit form, making it faster to localize product content.
-
-<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/third-party-integrations/image-20250912-114415.png" alt="Action Buttons in Back Office">
-
-<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/third-party-integrations/image-20250912-114511.png" alt="Action Buttons in Back Office">
-
-### How to use it in Back Office
-
-1. Go to the **Back Office** and open either a **Product Abstract** or **Product Concrete**.
-2. Locate the **Name** or **Description** field.
-3. Next to the existing **"Clone"** button, you will see a new **AI Translate button** (icon-only).
-4. Click the AI Translate button with desired locale to be filled with translation:
-   - The system will send the **en_US text** to the AI Translator.
-   - Chosen locale will automatically be filled with translated text.
-5. Review the translations.
-6. If satisfied, click **Apply** to store the translations.
-7. Click **Save** to apply changes
-
-<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/third-party-integrations/image-20250912-114549.png" alt="AI-Translation How-To">
-
-{% info_block warningBox %}
-Note: Translations are suggestions. Back-office users are responsible for reviewing and approving them before saving.
-{% endinfo_block %}
-
 ## Install feature core
 
 Follow the steps below to install the ProductManagementAi module core.

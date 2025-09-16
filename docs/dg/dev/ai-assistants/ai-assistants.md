@@ -10,8 +10,8 @@ Before using a AI-related tools, consult with your legal department.
 
 {% endinfo_block %}
 
-- [AI IDE assistants](ai/ai-ide-assistants)
-- [Spryker Engineer GPT](ai/spryker-engineer-gpt)
-- [Spryker K6 Performance Assistant GPT](ai/spryker-k6-performance-assistant-gpt)
-- [Spryker DevQA Assistant GPT](ai/spryker-devqa-assistant-gpt)
-- [Spryker Cypress E2E Assistant GPT](ai/spryker-cypress-e2e-assistant-gpt)
+- [AI IDE assistants](/docs/dg/dev/ai-assistants/ai-ide-assistants)
+- [Spryker Engineer GPT](/docs/dg/dev/ai-assistants/spryker-engineer-gpt)
+- [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt)
+- [Spryker DevQA Assistant GPT](/docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt)
+- [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt)

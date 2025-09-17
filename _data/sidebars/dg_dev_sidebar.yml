@@ -1552,9 +1552,9 @@ entries:
     - title: Create and change Glue API conventions
       url: /docs/dg/dev/glue-api/create-and-change-glue-api-conventions.html
     - title: Create Glue API authorization strategies
-      url: /docs/dg/dev/glue-api/create-glue-api-authorization-strategies.html
+      url: /docs/dg/dev/glue-api/create-backend-api-authorization-strategies.html
     - title: Create Glue API resources with parent-child relationships
-      url: /docs/dg/dev/glue-api/create-glue-api-resources-with-parent-child-relationships.html
+      url: /docs/dg/dev/glue-api/create-backend-api-resources-with-parent-child-relationships.html
     - title: Create grant type parameters
       url: /docs/dg/dev/glue-api/create-grant-type-parameters.html
     - title: Create JSON:API relationships
@@ -1566,7 +1566,7 @@ entries:
     - title: Use authentication servers with Glue API
       url: /docs/dg/dev/glue-api/use-authentication-servers-with-glue-api.html
     - title: Use default Glue parameters
-      url: /docs/dg/dev/glue-api/use-default-glue-parameters.html
+      url: /docs/dg/dev/glue-api/use-default-storefront-parameters.html
     - title: Use Glue API authorization scopes
       url: /docs/dg/dev/glue-api/use-glue-api-authorization-scopes.html
     - title: Glue API tutorials

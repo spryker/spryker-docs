@@ -1,9 +1,15 @@
 ---
-title: Creating modules
+title: Developing standalone modules
 description: Learn how to create a new module in Spryker to encapsulate functionality, improve scalability, and align with modular architecture standards.
 last_updated: July 9, 2025
 template: default
 ---
+
+{% info_block infoBox "Optional step" %}
+
+This step is optional if you want to have a reusable module that can be distributed and used across different projects.
+
+{% endinfo_block %}
 
 Spryker is built on modular architecture, meaning every piece of functionality is encapsulated within its own self-contained module. Introducing functionality in modules keeps your codebase clean, organized, and scalable.
 

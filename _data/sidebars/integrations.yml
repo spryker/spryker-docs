@@ -141,7 +141,7 @@ entries:
     - title: Integrating with Spryker OMS
       url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
     - title: Developing standalone modules
-      url: /docs/integrations/custom-building-integrations/creating-modules.html
+      url: /docs/integrations/custom-building-integrations/developing-standalone-modules.html
     - title: Using Jenkins for third-party integrations
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
   - title: Community contributions

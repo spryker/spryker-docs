@@ -8,7 +8,7 @@ Spryker offers the following options to import and export data:
 
 ### Custom integrations with custom connectors
 
-{% include pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->
+{% include pbc/all/data-exchange/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->
 
 ## Data Exchange API
 

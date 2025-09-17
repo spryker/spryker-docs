@@ -265,7 +265,7 @@ entries:
             - title: Mapping configuration
               url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration
             - title: Configure a queue to be used by a publisher
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-a-queue-to-be-used-by-a-publisher
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/queues-in-publisher-plugins
 
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html

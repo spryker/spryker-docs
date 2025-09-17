@@ -5,9 +5,9 @@ last_updated: Jun 16, 2025
 template: howto-guide-template
 ---
 
-You can decide to which queue you want to push data for each individual entity. This is useful to separate data into dedicated queues and being able to have “high priority“ data, such as products, separated from “low priority“ data, such as translations.
+You can decide to which queue you want to push data for each individual entity. This is useful to separate data into dedicated queues and being able to have "high priority" data, such as products, separated from "low priority" data, such as translations.
 
-We recommend putting “low priority” data into the “global“ publish queue and using specialized queues for “high priority“ data.
+We recommend putting "low priority" data into the "global" publish queue and using specialized queues for "high priority" data.
 
 ## RabbitMQ module configuration
 

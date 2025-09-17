@@ -1,6 +1,6 @@
 ---
-title: Understanding the Spryker Client Layer
-description: Explore the Spryker Client layer, a lightweight communication layer connecting the front end to storage, search, and the Zed back end. Learn how it handles persistence, session management, and integrates third-party services effectively.
+title: Architectural Intro
+description: Introduction to Spryker architecture and the Client layer for third-party integrations.
 last_updated: July 9, 2025
 template: default
 
@@ -11,12 +11,4 @@ The Client layer is a lightweight communication layer that connects the frontend
 - Place all HTTP and SDK calls in the Client layer
 - Expose clear, reusable methods so any other layer can call the integration
 
-## Further reading
-
-- [Yves Application Layer Client](/docs/dg/dev/backend-development/client/client)  
-
-- [Implement a Client](/docs/dg/dev/backend-development/client/implement-a-client)  
-
-- [Use and configure Redis as a key-value storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage)  
-
-
+For comprehensive information about Spryker architecture, see [Architecture](/docs/dg/dev/architecture/architecture.html).

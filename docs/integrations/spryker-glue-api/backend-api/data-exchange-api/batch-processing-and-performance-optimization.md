@@ -8,30 +8,28 @@ redirect_from: null
 
 This document explains how to optimize performance when working with the Data Exchange API by using batch processing and complex endpoints for efficient data operations.
 
-## Overview
+When using the Data Exchange API with basic single-entity operations (one request per entity), processing can be time-consuming for large datasets. To improve performance, you can do the following:
 
-When using the Data Exchange API with basic single-entity operations (one request per entity), processing can be time-consuming for large datasets. To improve performance, you can:
-
-1. **Send data in batches**: Process multiple entities in a single request
-2. **Use complex endpoints**: Update multiple related tables with one request
+- Send data in batches: Process multiple entities in a single request
+- Use complex endpoints: Update multiple related tables with one request
 
 These optimization techniques significantly reduce processing time and improve overall system performance.
 
-## Batch Processing
+## Batch processing
 
-### Basic vs Batch Operations
+### Basic versus batch operations
 
-**Basic operation** (inefficient for large datasets):
+Basic operation (inefficient for large datasets):
 - One request per entity
 - Higher network overhead
 - Slower processing times
 
-**Batch operation** (recommended):
+Batch operation (recommended):
 - Multiple entities per request
 - Reduced network overhead
 - Faster processing times
 
-### Sending Data in Batches
+### Sending data in batches
 
 To send data in batches, include multiple objects in the `data` array of your request:
 
@@ -51,19 +49,20 @@ To send data in batches, include multiple objects in the `data` array of your re
 }
 ```
 
-## Complex Endpoints
+## Complex endpoints
 
-Complex endpoints allow you to update data across multiple related tables in a single request. This is particularly useful for creating or updating entities with nested relationships.
+Complex endpoints let you to update data across multiple related tables in a single request. This is particularly useful for creating or updating entities with nested relationships.
 
 For configuration details, see [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html).
 
-### Product Creation Example
+### Product creation example
 
 The following example demonstrates creating a product with all related data using a complex endpoint:
 
-**Endpoint**: `POST http://glue-backend.eu.spryker.local/dynamic-entity/product-abstracts`
+Endpoint: `POST http://glue-backend.eu.spryker.local/dynamic-entity/product-abstracts`
 
-**Request Body**:
+<details>
+  <summary>Request body</summary>
 
 ```json
 {
@@ -181,35 +180,38 @@ The following example demonstrates creating a product with all related data usin
 }
 ```
 
+</details>
+
+
 This example shows a single product in the array, but you can include multiple products to process them in batches.
 
-### Related Data Structure
+### Related data structure
 
 The provided complex endpoint example allows you to create or update:
 
-- **Product Abstract**: Main product information
-- **Concrete Products**: Product variants with specific attributes
-- **Product Search**: Search configuration for different locales
-- **Product Stocks**: Inventory information
-- **Localized Attributes**: Product names and descriptions in multiple languages
-- **Store Relations**: Store assignments
-- **Product Relations**: Related product configurations
-- **Price Products**: Pricing information with store and currency specifics
-- **Category Relations**: Product category assignments
+- Product abstract: Main product information
+- Concrete products: Product variants with specific attributes
+- Product search: Search configuration for different locales
+- Product stocks: Inventory information
+- Localized attributes: Product names and descriptions in multiple languages
+- Store relations: Store assignments
+- Product relations: Related product configurations
+- Price products: Pricing information with store and currency specifics
+- Category relations: Product category assignments
 
-## Performance Metrics
+## Performance metrics
 
-Based on performance testing, the following metrics demonstrate the efficiency of batch processing:
+Based on performance testing, the following metrics show the efficiency of batch processing:
 
 | Target Volume | Chunk Size | Threads | Time (sec) | Performance (items/sec) | Performance (items/min) |
 |---------------|------------|---------|------------|-------------------------|-------------------------|
 | 100,000       | 100        | 12      | 3,600      | 27.78                   | 1,666.8                 |
 
-### Key Performance Factors
+### Key performance factors
 
-- **Target Volume**: Total number of items to process
-- **Chunk Size**: Number of items processed per request (recommended: 100 items)
-- **Concurrent Threads**: Number of parallel processing threads
-- **Processing Rate**: Approximately 1,667 items per minute with optimal configuration
+- Target volume: Total number of items to process
+- Chunk size: Number of items processed per request (recommended: 100 items)
+- Concurrent threads: Number of parallel processing threads
+- Processing rate: Approximately 1,667 items per minute with optimal configuration
 
 By following these optimization techniques, you can significantly improve the performance of your Data Exchange API operations and efficiently handle large-scale data processing tasks.

@@ -1154,6 +1154,8 @@ merchant_profile.privacy,Data Privacy,en_US
 merchant_profile.privacy,Datenschutz,de_DE
 merchant_profile.delivery_time,Delivery Time,en_US
 merchant_profile.delivery_time,Lieferzeit,de_DE
+merchant_profile.shop_merchant_products,Shop Merchant Products,en_US
+merchant_profile.shop_merchant_products,Händlerartikel kaufen,de_DE
 ```
 
 2. Import data:

@@ -122,7 +122,7 @@ AWS CodePipeline now supports direct integration with Bitbucket repositories. Th
 
 ### Prerequisites
 
-Ensure that your Bitbucket account has *Admin* permissions in the code repository. Some AWS regions are not supported, please review the official AWS documentation for more details.
+Ensure that your Bitbucket account has *Admin* permissions in the code repository. Some AWS regions are not supported, review the official AWS documentation for more details.
 
 ### Connect your Bitbucket repository
 
@@ -154,7 +154,7 @@ AWS CodePipeline now supports direct integration with GitLab repositories. This 
 
 ### Prerequisites
 
-Ensure that your GitLab account has *Admin* permissions in the code repository. Some AWS regions are not supported, please review the official AWS documentation for more details.
+Ensure that your GitLab account has *Admin* permissions in the code repository. Some AWS regions are not supported, review the official AWS documentation for more details.
 
 ### Connect your GitLab repository
 

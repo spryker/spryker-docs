@@ -111,10 +111,10 @@ Here's an example of code generated with Cursor:
 
 ## AI IDE assistants 
 
-- [Spryker Engineer GPT](/docs/dg/dev/ai-ide-assistants/spryker-engineer-gpt)
-- [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai-ide-assistants/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
-- [Spryker DevQA Assistant GPT](/docs/dg/dev/ai-ide-assistants/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
-- [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai-ide-assistants/spryker-cypress-e2e-assistant-gpt)
+- [Spryker Engineer GPT](/docs/dg/dev/ai-assistants/spryker-engineer-gpt)
+- [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
+- [Spryker DevQA Assistant GPT](/docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
+- [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt)
 
 
 ## Training

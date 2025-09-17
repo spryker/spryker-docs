@@ -83,9 +83,9 @@ The key features of the Data Exchange API include the following:
 
 ### Documentation
 
-- [Data Exchange API](/docs/pbc/all/data-exchange/latest/data-exchange.html#data-importers-and-data-exporters)
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/tutorials-and-howtoes/how-to-configure-data-exchange-api.html)
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html)
+- [Data Exchange API](/docs/pbc/all/data-exchange/latest/data-exchange.html)
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api)
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)
 
 ### Technical prerequisites
 
@@ -194,7 +194,7 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 ### Technical prerequisites
 
 - [Install ACP](/docs/acp/user/app-composition-platform-installation.html)
-- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex.html)
+- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

@@ -37,9 +37,8 @@ entries:
         - title: Use Glue API authorization scopes
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-glue-api-authorization-scopes.html
     - title: Storefront API
+      url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
       nested:
-      - title: Introduction
-        url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
       - title: Resolving search engine friendly URLs
         url: /docs/integrations/spryker-glue-api/faqs-and-support/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Handling concurrent REST requests and caching with entity tags
@@ -65,13 +64,11 @@ entries:
         - title: Storefront Marketplace B2C API reference
           url: /docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html
     - title: Backend API
+      url: /docs/integrations/spryker-glue-api/backend-api/introduction.html
       nested:
-      - title: Introduction
-        url: /docs/integrations/spryker-glue-api/backend-api/introduction.html
-      - title: Data Exchange
+      - title: Data Exchange API
+        url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html
         nested:
-        - title: Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html
         - title: Configure Data Exchange API endpoints
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html
         - title: Sending requests with Data Exchange API
@@ -110,9 +107,9 @@ entries:
   - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
-    - title: Architectual layers
+    - title: Architectural Intro
       url: /docs/integrations/custom-building-integrations/understanding-spryker-client-layer.html
-    - title: Data Exchange
+    - title: Data Exchange API
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html
       nested:
       - title: Install and configure Data Exchange API
@@ -123,14 +120,6 @@ entries:
           url: /docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html
         - title: Install the Data Exchange API + Category Management Feature
           url: /docs/integrations/custom-building-integrations/data-exchange/install-and-upgrade-data-exchange-api/install-the-data-exchange-api-category-management-feature.html
-        - title: Configure Data Exchange API
-          url: /docs/integrations/custom-building-integrations/data-exchange/configure-data-exchange-api.html
-        - title: Sending requests with Data Exchange API
-          url: /docs/integrations/custom-building-integrations/data-exchange/sending-requests-with-data-exchange-api.html
-        - title: Create post plugins for Data Exchange API
-          url: /docs/integrations/custom-building-integrations/data-exchange/create-post-plugins-for-data-exchange-api.html
-      - title: Data import from S3 bucket
-        url: /docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html
       - title: Data export
         url: /docs/integrations/custom-building-integrations/data-exchange/data-export/data-export.html
         nested:
@@ -145,20 +134,15 @@ entries:
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-orders.csv.html
           - title: 'Export file details: order-items.csv'
             url: /docs/integrations/custom-building-integrations/data-exchange/data-export/export-file-details-order-items.csv.html
-      - title: Data Exchange API
-        url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html
+      - title: Data import from S3 bucket
+        url: /docs/integrations/custom-building-integrations/data-exchange/data-import-from-s3-bucket.html
       - title: Integrating with Middleware
         url: /docs/integrations/custom-building-integrations/data-exchange/integrating-with-middleware.html
-    - title: Creating a new module
-      url: /docs/integrations/custom-building-integrations/creating-modules.html
     - title: Integrating with Spryker OMS
       url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
-      nested:
-      - title: Set up an order management system
-        url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/set-up-an-order-management-system.html
+    - title: Developing standalone modules
+      url: /docs/integrations/custom-building-integrations/creating-modules.html
     - title: Using Jenkins for third-party integrations
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
-    - title: Endpoint security
-      url: /docs/integrations/custom-building-integrations/endpoint-security.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

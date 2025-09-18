@@ -42,7 +42,7 @@ We recommend mapping your branches to environments as follows:
 
 ## Connect a GitHub code repository
 
-### Standard GitHub
+### Regular GitHub
 
 1. Log into the AWS management console of the environment you want to connect a repository to.
 2. Go to **CodePipeline**.
@@ -82,7 +82,7 @@ Your GitHub repository is now successfully connected!
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **GitHub Enterprise Server**.
-8. For **Connection** choose an existing connection or click **Connect to GitHub** to create a new one.
+8. For **Connection** choose an existing connection or click **Connect to GitHub Enterprise Server** to create a new one.
 9. In the connection setup, select **GitHub Enterprise Server**.
 10. Enter your GitHub Enterprise Server URL.
 11. Follow the authorization process to grant AWS CodePipeline access to your GitHub Enterprise Server repository.

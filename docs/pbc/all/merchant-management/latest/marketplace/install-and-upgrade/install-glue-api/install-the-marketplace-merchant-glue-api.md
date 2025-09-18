@@ -8,4 +8,4 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/marketplace-merchant-feature-integration.html
 ---
 
-{% include pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-merchant-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-merchant-glue-api.md -->
+{% include pbc/all/install-glue-api/latest/marketplace/install-the-marketplace-merchant-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-merchant-glue-api.md -->

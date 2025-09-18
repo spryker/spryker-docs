@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/delete-navigation-nodes.html
 related:
   - title: Navigation feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html
 ---
 
 To delete a navigation node in the Back Office, follow the steps:

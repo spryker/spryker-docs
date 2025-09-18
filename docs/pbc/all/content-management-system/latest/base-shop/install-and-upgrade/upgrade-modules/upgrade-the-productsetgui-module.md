@@ -17,6 +17,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html
 related:
   - title: Upgrade the Price module
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md -->

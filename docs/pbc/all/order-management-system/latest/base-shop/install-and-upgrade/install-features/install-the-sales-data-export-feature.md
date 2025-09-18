@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/sales-data-export-feature-integration.html
 related:
   - title: Data export
-    link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-sales-data-export-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-sales-data-export-feature.md -->

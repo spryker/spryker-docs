@@ -16,11 +16,11 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-file-list.html  
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-tree.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-tree.html
   - title: Add and edit MIME types
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/file-manager-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.

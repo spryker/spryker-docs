@@ -8,11 +8,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html
 related:
   - title: Viewing reclamations
-    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/reclamations/view-reclamations.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/view-reclamations.html
   - title: Changing the state of order items in reclamations
-    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/reclamations/change-the-state-of-order-items-in-reclamations.html
   - title: Reclamations feature overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/reclamations-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html
 ---
 
 To create [order reclamations](/docs/pbc/all/order-management-system/latest/base-shop/reclamations-feature-overview.html) in the Back Office, follow the steps:

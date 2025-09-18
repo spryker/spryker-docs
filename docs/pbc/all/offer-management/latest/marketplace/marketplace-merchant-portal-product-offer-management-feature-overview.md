@@ -5,9 +5,9 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
   - title: Managing marketplace product offers
-    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
+    link: docs/pbc/all/offer-management/latest/marketplace/manage-merchant-product-offers.html
   - title: Managing merchant product offers
-    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
+    link: docs/pbc/all/offer-management/latest/marketplace/manage-merchant-product-offers.html
 ---
 
 In a marketplace environment, merchants manage [product offers](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html) in the Merchant Portal.

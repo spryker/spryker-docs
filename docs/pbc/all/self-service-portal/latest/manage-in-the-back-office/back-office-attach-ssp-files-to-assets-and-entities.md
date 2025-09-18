@@ -11,8 +11,8 @@ This document describes how to add assets managed by companies.
 
 - [Upload SSP files](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-upload-ssp-files.html) to attach
 - Optional: [Add assets](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-add-ssp-assets.html) to attach the file to
-- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/manage-in-the-back-office/manage-companies.html) to attach the file to
-- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/manage-in-the-back-office/company-units/create-company-units) to attach the file to
+- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html) to attach the file to
+- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units) to attach the file to
 
 
 ## Attach a file to company entities

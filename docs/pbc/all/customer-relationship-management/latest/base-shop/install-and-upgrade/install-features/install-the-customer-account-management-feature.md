@@ -16,9 +16,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/customer-account-management-feature-integration.html
 related:
   - title: Install the Customer Account Management + Order Management feature
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
   - title: Install the Customer Account Management Glue API
-    link: docs/pbc/all/identity-access-management/page.version/install-and-upgrade/install-the-customer-account-management-glue-api.html
+    link: docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-account-management-glue-api.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/install-the-customer-account-management-feature.md -->

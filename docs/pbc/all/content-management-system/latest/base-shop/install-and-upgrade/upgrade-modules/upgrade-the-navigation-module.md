@@ -33,7 +33,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
 related:
   - title: Upgrade the NavigationGui
-    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-navigation-module.md -->

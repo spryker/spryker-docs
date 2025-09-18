@@ -17,8 +17,8 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
 related:
   - title: Upgrade the Product module
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Upgrade the Price module
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productmanagement-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productmanagement-module.md -->

@@ -6,7 +6,7 @@ last_updated: Jan 10, 2024
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
 
 ---
 

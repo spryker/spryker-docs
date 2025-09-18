@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_merchant.csv.html
 ---
 
-To import [merchant commissions](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html), follow the steps:
+To import [merchant commissions](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html), follow the steps:
 
 1. In the Back Office, go to **Marketplace&nbsp;<span aria-label="and then">></span>Merchant Commissions**.
 2. On the **Merchant Commissions** page, click **Import**.
@@ -32,7 +32,7 @@ To import [merchant commissions](/docs/pbc/all/merchant-management/202410.0/mark
 
 {% endinfo_block %}
 
-This section explains how to fill out a merchant commission import file. For more information about the fields in this file, see [Marketplace Merchant Commissions feature overview](/docs/pbc/all/merchant-management/202410.0/marketplace/marketplace-merchant-commission-feature-overview.html).
+This section explains how to fill out a merchant commission import file. For more information about the fields in this file, see [Marketplace Merchant Commissions feature overview](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 | COLUMN                    | REQUIRED | DATA EXAMPLE                                 | DATA EXPLANATION |
 |---------------------------|----------|---------------------------------------------|------------------|

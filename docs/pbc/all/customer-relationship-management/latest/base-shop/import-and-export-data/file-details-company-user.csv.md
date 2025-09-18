@@ -5,7 +5,7 @@ template: data-import-template
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 redirect_from:
 - /docs/pbc/all/customer-relationship-management/202311.0/import-and-export-data/file-details-company-user.csv.html
 ---

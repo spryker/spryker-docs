@@ -5,7 +5,7 @@ last_updated: Nov 8, 2024
 template: howto-guide-template
 related:
    - title: Stripe
-     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
+     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html
 ---
 
 This document provides comprehensive guidelines for integrating and utilizing Stripe in your projects through the Stripe App.

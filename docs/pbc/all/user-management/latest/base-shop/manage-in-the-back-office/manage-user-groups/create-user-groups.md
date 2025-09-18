@@ -14,9 +14,9 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html
 related:
   - title: Edit user groups
-    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
+    link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create user groups.

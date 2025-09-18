@@ -15,12 +15,12 @@ redirect_from:
   - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-feature.html 
 related:
     - title: Install the Quotation Process Glue API
-      link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
+      link: docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
     - title: Install the Quotation Process + Approval Process feature
-      link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
+      link: docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
     - title: Install the Quotation Process + Multiple Carts feature
-      link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
+      link: docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
     - title: Install the Checkout + Quotation Process feature
-      link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
+      link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
 ---
 {% include pbc/all/install-features/latest/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-quotation-process-feature.md -->

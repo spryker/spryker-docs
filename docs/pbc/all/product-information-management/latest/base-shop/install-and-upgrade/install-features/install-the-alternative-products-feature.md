@@ -13,17 +13,17 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html
 related:
   - title: Install the Alternative Products Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
   - title: Install the Alternative Products - Inventory Management feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
   - title: Install the Alternative Products - Wishlist feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
   - title: Alternative Products - Product Label feature integration
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
   - title: Alternative Products - Discontinued Products feature integration
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
   - title: Alternative Products feature walkthrough
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-feature.md -->
+{% include pbc/all/install-features/latest/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-feature.md -->

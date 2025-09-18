@@ -11,19 +11,19 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-search-for-multi-currency.html
 related:
   - title: Upgrade the Multi-Currency module
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
   - title: Upgrade the Price module
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Configure Elasticsearch
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-elasticsearch.html
   - title: Configure search features
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Configure a search query
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-a-search-query.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html
   - title: Expand search data
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/expand-search-data.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/expand-search-data.html
   - title: Facet filter overview and configuration
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
+    link: docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---
 
 If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.

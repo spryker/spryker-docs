@@ -19,13 +19,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Install the Order Management feature
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
   - title: Retrieving orders
-    link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html
   - title: Retrieving customer orders
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
   - title: Check out purchases
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-order-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-order-management-glue-api.md -->

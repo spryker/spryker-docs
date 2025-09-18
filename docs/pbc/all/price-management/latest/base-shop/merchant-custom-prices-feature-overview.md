@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/merchant-custom-prices-feature-overview.html
 related:
   - title: HowTo - Manage business unit specific prices via data import
-    link: docs/pbc/all/price-management/page.version/base-shop/tutorials-and-howtos/manage-business-unit-specific-prices-via-data-import.html
+    link: docs/pbc/all/price-management/latest/base-shop/tutorials-and-howtos/manage-business-unit-specific-prices-via-data-import.html
 ---
 
 In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the *Merchant Custom Prices* feature, the shop owners of the [B2B Demo Shop](/docs/about/all/b2b-suite.html) can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.

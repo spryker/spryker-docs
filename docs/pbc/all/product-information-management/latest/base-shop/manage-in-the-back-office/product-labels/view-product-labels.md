@@ -14,11 +14,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
 related:
   - title: Create product labels
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
   - title: Edit product labels
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
 
 To view a product label, do the following:

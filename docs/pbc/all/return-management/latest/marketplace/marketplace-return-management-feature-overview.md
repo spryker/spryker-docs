@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
   - title: Managing marketplace returns
-    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
+    link: docs/pbc/all/return-management/latest/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
 ---
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.

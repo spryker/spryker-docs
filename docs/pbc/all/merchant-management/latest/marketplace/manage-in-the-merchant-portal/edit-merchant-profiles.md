@@ -8,9 +8,9 @@ redirect_from:
   - /docs/pbc/all/merchant-management/202311.0/marketplace/edit-merchant-profiles.html
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 This document describes how to edit merchant's profile details in the Merchant Portal.

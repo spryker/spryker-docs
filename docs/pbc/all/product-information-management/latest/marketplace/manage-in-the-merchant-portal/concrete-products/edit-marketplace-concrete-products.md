@@ -7,9 +7,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202404.0/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/latest/marketplace/marketplace-inventory-management-feature-overview.html
 ---
 
 This document describes how to edit concrete products in the Merchant Portal.

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
 related:
   - title: "Glue API: Retrieve concrete products"
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
 ---
 
 

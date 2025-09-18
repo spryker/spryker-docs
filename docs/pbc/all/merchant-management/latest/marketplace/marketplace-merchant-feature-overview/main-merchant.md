@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:
   - title: Managing main merchant orders
-    link: docs/pbc/all/order-management-system/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/manage-in-the-back-office/manage-main-merchant-orders.html
   - title: Managing main merchant returns
-    link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
+    link: docs/pbc/all/return-management/latest/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
 ---
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.html) model, not only the third-party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.

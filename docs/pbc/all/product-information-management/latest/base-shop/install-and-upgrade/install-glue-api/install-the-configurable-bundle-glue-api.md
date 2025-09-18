@@ -15,15 +15,15 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
 related:
   - title: Glue API - Install the Configurable Bundle + Cart feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - title: Install the Configurable Bundle + Product Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
   - title: Install the Configurable Bundle feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Retrieving configurable bundle templates
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
   - title: Retrieving orders
-    link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->
+{% include pbc/all/install-features/latest/install-glue-api/install-the-configurable-bundle-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-configurable-bundle-glue-api.md -->

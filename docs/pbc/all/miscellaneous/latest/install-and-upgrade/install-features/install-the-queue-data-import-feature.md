@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/queue-data-import-feature-integration.html
 related:
   - title: Data import
-    link: docs/dg/dev/data-import/page.version/data-import.html
+    link: docs/dg/dev/data-import/latest/data-import.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-queue-data-import-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-queue-data-import-feature.md -->

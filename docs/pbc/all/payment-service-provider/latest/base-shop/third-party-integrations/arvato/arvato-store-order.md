@@ -13,7 +13,7 @@ redirect_from:
 related:
 related:
   - title: Arvato
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 ---
 
  As soon as the order is activated in the eShop it has to be directly delivered by the service call StoreOrder in risk solution services. Based on the transmitted data a limit check is processed again. The result and action codes returned by `StoreOrder` should be analyzed and the order process should be stopped if applicable.

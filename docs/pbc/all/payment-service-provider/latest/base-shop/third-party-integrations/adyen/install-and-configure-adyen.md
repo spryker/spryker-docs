@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/installing-and-configuring-adyen.html
 related:
   - title: Integrating Adyen
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.

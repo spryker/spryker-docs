@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/importing-data-with-the-queue-data-importer.html
 related:
   - title: Queue Data Import feature integration
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
 ---
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:

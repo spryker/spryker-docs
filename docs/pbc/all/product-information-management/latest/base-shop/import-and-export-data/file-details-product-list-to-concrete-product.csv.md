@@ -5,7 +5,7 @@ template: data-import-template
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_list_to_concrete_product.csv` file to configure [configurable product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) assignments for [product lists](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-lists-feature-overview.html) in your Spryker shop.

@@ -5,9 +5,9 @@ template: howto-guide-template
 last_updated: Now 8, 2024
 related:
   - title: PayOne Credit Card payment flow
-    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
+    url: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
   - title: Payone PayPal payment flow
-    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html    
+    url: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html    
 ---
 
 ## PayPal Express for checkout in a headless application

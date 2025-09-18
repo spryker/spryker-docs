@@ -34,7 +34,7 @@ A company user can have the following permissions related to file management:
 - View Business Unit Files
 - View Company Files
 
-For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
+For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
 
 

@@ -19,9 +19,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html
 related:
   - title: Refunds feature overview
-    link: docs/pbc/all/order-management-system/page.version/base-shop/refunds-feature-overview.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/refunds-feature-overview.html
   - title: Upgrade the Refund module
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html
 ---
 
 {% info_block infoBox %}

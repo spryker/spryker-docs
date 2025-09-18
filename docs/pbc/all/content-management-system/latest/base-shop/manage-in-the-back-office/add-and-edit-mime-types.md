@@ -17,11 +17,11 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html   
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-tree.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-tree.html
   - title: Managing File List
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-list.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-list.html
   - title: File Manager feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/file-manager-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
 ---
 
 This document describes how to define what files types can be uploaded to a shop.

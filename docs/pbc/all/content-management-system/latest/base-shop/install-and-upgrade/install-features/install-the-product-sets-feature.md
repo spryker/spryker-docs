@@ -17,7 +17,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/install-features/install-the-product-sets-feature.html
 related:
   - title: Product Sets feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-sets-feature.md -->

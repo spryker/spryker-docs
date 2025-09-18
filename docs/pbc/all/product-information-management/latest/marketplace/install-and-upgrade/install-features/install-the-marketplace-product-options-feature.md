@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/marketplace-product-options-feature-integration.html
 related:
   - title: Marketplace Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/marketplace/install-the-marketplace-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-feature.md -->

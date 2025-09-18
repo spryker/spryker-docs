@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 related:
   - title: Atomic Frontend - general overview
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/atomic-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/atomic-frontend.html
   - title: Customizing Spryker Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html
   - title: Integrating JQuery into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
 ---
 
 This guide aims to illustrate how to integrate React within Spryker Frontend.

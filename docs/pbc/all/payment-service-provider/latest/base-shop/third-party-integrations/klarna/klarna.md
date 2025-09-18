@@ -10,13 +10,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna.html
 related:
   - title: Klarna payment workflow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html
   - title: Klarna - Invoice Pay in 14 days
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
   - title: Klarna - Part Payment Flexible
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
   - title: Klarna state machine commands and conditions
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Partner Information

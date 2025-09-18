@@ -35,7 +35,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 - B2B Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202410.0 --single-branch ./b2b-demo-shop && \
+git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202507.0 --single-branch ./b2b-demo-shop && \
 cd b2b-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -44,7 +44,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202410.0 --single-branch ./b2c-demo-shop && \
+git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202507.0 --single-branch ./b2c-demo-shop && \
 cd b2c-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -53,7 +53,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2B Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -62,7 +62,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202410.0 --single-branch ./b2c-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202507.0 --single-branch ./b2c-demo-marketplace && \
 cd b2c-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml

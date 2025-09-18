@@ -16,13 +16,12 @@ Back Office users can manage inquiries, update statuses, and communicate with cu
 - Submit an inquiry with relevant details
 - Attach supporting documents and images
 - Track the status of submitted inquiries
-- Get inquiry resolution details via email
 
 ## Back Office functionalities
 
 - View and manage all customer inquiries
 - Filter and search inquiries by type, status, or customer
-- Update inquiry status and provide resolution details
+- Update inquiry status
 - Attach internal notes visible only to Back Office users for internal collaboration
 
 

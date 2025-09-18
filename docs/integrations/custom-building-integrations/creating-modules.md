@@ -20,5 +20,5 @@ When you create a module, you're building a reusable, decoupled component that c
 
 
 - [Create a module manually](/docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html)
-- [Use AI coding assistants](/docs/dg/dev/ai-coding-assistants)
+- [Use AI assistants](/docs/dg/dev/ai-assistants/ai-ide-assistants)
 - [Use Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks)

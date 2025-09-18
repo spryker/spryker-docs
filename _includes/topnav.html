@@ -23,7 +23,9 @@
                                         <i class="icon-rss"></i>
                                         RSS
                                     </a>
-                                </div>
+                                    <a href="/feed-security.xml" class="button nav-popup__header-button button--small">
+                                        <i class="icon-rss"></i>Security RSS</a>
+                                    </div>
                                 <div class="nav-popup__content">
                                     <div class="main-nav dropdown">
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -120,12 +122,17 @@
                                 <i class="icon-rss"></i>
                                 RSS
                             </a>
+                            <a href="/feed-security.xml" class="button main-header__button button--small header-switcher__default">
+                                <i class="icon-rss"></i>Security RSS</a>
                         </div>
                         {% else %}
                         <a href="/feed.xml" class="button main-header__button button--small">
                             <i class="icon-rss"></i>
                             RSS
                         </a>
+                        <a href="/feed-security.xml" class="button main-header__button button--small">
+                            <i class="icon-rss"></i>Security RSS</a>
+                        </div>
                     {% endif %}
 
                     <a href="#" class="nav-opener" aria-label="navigation popup opener">

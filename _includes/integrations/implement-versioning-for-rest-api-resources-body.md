@@ -15,7 +15,7 @@ To add versioning to a resource, the route plugin of the `resource` module needs
 
 {% info_block infoBox %}
 
-For more information on route plugins, see [Resource routing](/docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-infrastructure.html#resource-routing).
+For more information on route plugins, see [Resource routing](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

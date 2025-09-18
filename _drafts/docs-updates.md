@@ -19,11 +19,11 @@ In March 2024, we have added and updated the following pages:
 - [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html): Implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
 - [Security release notes 202403.0](/docs/about/all/releases/security-release-notes-202403.0.html).
 - [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/202311.0/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html):  how to retrieve and use payment details from third-party payment service providers (PSPs).
-- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
-- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html).
-- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html).
+- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
+- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html).
+- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html).
 - [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/202404.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html).
-- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
+- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
 
 ### Updated pages
 
@@ -63,7 +63,7 @@ In February 2024, we have added and updated the following pages:
 - [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/202404.0/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html).
 - [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
 - [Secure coding practices for external packages](/docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html).
-- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
+- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/latest/marketplace/merchant-portal-agent-assist-feature-overview.html).
 - [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
 - [Manage Stripe configurations in the ACP catalog](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html).
 - [Project guidelines for the Stripe app](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html).
@@ -73,7 +73,7 @@ In February 2024, we have added and updated the following pages:
 - [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): General information about Stripe as an ACP app.
 - [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html).
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Use default Glue parameters](/docs/scos/dev/glue-api-guides/202311.0/use-default-glue-parameters.html).
 
 For more details about these and other updates to the Spryker docs in February 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -106,14 +106,14 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
-- [Install the ACL feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
-- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
+- [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html).
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-- [Install the Agent Assist feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
@@ -192,8 +192,8 @@ In December 2023, we have added and updated the following pages:
 - [Create Glue API authorization strategies](/docs/dg/dev/glue-api/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
-- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Shipment feature overview](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html).
 - [Enable Click & Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html): Learn how to enable Click & Collect.
 - [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
@@ -363,7 +363,7 @@ In September 2023, we have added and updated the following pages:
 - [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
 
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 
 ### Updated pages

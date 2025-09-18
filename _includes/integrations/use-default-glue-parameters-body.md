@@ -32,7 +32,7 @@ $glueRequestTransfer->getPagination()->getOffset();
 $glueRequestTransfer->getPagination()->getLimit();
 ```
 
-Use these to pass them to the facades (the latter must support the pagination).
+Use these to pass them to the facades, which must support the pagination.
 
 In order for the response links to be formed correctly, `GlueResponseTransfer` transfer must contain the information about the requested (and applied, if changed by the code) pagination parameters and the total number of results in the set.
 

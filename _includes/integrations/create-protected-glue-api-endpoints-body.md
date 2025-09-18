@@ -8,7 +8,10 @@ Integrate authorization into your project. For details, see [Authorization prote
 
 Let's say you have a module named `ModuleBackendApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods. To create the protected endpoint, follow these steps:
 
-1. To `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`, add a route or regular expression for the endpoint:
+1. Add a route or regular expression for the endpoint:
+
+<details>
+  <summary>src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php</summary>
 
 ```php
 <?php
@@ -60,6 +63,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
     }
 }
 ```
+
+</details>
 
 2. Try to access `https://glue-backend.mysprykershop.com/module` without an access token.
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.

@@ -8,7 +8,7 @@ template: default
 
 Middleware is an external service or third‑party application that integrates multiple data sources and converts their data into the format your target system expects. Acting as a bridge, it applies complex logic - such as normalization, filtering, and enrichment - before the data reaches your core platform.
 
-## Integration with Spryker Data Exchange Methods
+## Integration with Spryker Data Exchange methods
 
 As explained in the [Data Exchange overview](/docs/integrations/custom-building-integrations/data-exchange/data-exchange.html), Spryker provides several data exchange methods that middleware can connect to:
 

@@ -24,4 +24,4 @@ For third-party integrations, you can primarily use OMS for event-driven and API
 
 ## Further reading
 
-For detailed implementation guide on creating OMS processes, see [Set up an Order Management System](/docs/dg/dev/backend-development/data-manipulation/set-up-an-order-management-system.html).
+For details on implementing creating OMS processes, see [Set up an Order Management System](/docs/dg/dev/backend-development/data-manipulation/set-up-an-order-management-system.html).

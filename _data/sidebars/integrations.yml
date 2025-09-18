@@ -16,9 +16,9 @@ entries:
       url: /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
       nested:
       - title: Differences between Storefront and Backend APIs
-        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/comparison-of-storefront-and-backend-apis.html
     - title: Authenticating and authorization
-      url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/glue-api-authenticating-and-authorization.html
+      url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html
       nested:
       - title: Create grant type parameters
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-grant-type-parameters.html
@@ -27,15 +27,15 @@ entries:
       - title: Backend API
         nested:
         - title: Use authentication servers with Backend API
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-authentication-servers-with-glue-api.html
+          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-authentication-servers-with-backend-api.html
         - title: Create protected Backend API endpoints
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-protected-glue-api-endpoints.html
+          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-protected-backend-api-endpoints.html
         - title: Create Backend API authorization strategies
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-glue-api-authorization-strategies.html
+          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-backend-api-authorization-strategies.html
         - title: Use API Key authorization
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-api-key-authorization.html
         - title: Use Glue API authorization scopes
-          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-glue-api-authorization-scopes.html
+          url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-backend-api-authorization-scopes.html
     - title: Storefront API
       url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
       nested:
@@ -64,7 +64,7 @@ entries:
         - title: Storefront Marketplace B2C API reference
           url: /docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html
     - title: Backend API
-      url: /docs/integrations/spryker-glue-api/backend-api/introduction.html
+      url: /docs/integrations/spryker-glue-api/backend-api/backend-api.html
       nested:
       - title: Data Exchange API
         url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html
@@ -88,20 +88,20 @@ entries:
         - title: Backend API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
       - title: Developing new APIs
-        url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-glue-api-applications.html
+        url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-api-applications.html
         nested:
         - title: Create Glue API resources with parent-child relationships
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-glue-api-resources-with-parent-child-relationships.html
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-glue-api-resources-with-parent-child-relationships.html
         - title: Create and change Glue API conventions
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-and-change-glue-api-conventions.html
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-and-change-backend-api-conventions.html
         - title: Create a backend resource
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-backend-resources.html
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-resources.html
         - title: Create JSON:API relationships
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-json-api-relationships.html
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-json-api-relationships.html
         - title: Create routes
-          url: /docs/integrations/spryker-glue-api/create-glue-api-applications/create-routes.html
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-routes.html
         - title: Use default parameters
-          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/use-default-glue-parameters.html
+          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/use-default-storefront-parameters.html
     - title: Sprker API Errors and Troubleshooting
       url: /docs/integrations/spryker-glue-api/spryker-api-errors-and-troubleshooting.html
   - title: Custom building integrations
@@ -141,7 +141,7 @@ entries:
     - title: Integrating with Spryker OMS
       url: /docs/integrations/custom-building-integrations/integrating-with-spryker-oms/integrating-with-spryker-oms.html
     - title: Developing standalone modules
-      url: /docs/integrations/custom-building-integrations/creating-modules.html
+      url: /docs/integrations/custom-building-integrations/developing-standalone-modules.html
     - title: Using Jenkins for third-party integrations
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
   - title: Community contributions

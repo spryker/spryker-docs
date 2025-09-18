@@ -5,9 +5,9 @@ last_updated: July 9, 2025
 template: default
 ---
 
-{% info_block infoBox "Optional step" %}
+{% info_block infoBox "Optional" %}
 
-This step is optional if you want to have a reusable module that can be distributed and used across different projects.
+Developing a module is useful when you need reusable functionality that can be distributed and used across different projects. However, it is optional.
 
 {% endinfo_block %}
 

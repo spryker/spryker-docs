@@ -1,5 +1,5 @@
 ---
-title: Create Backend API applications
+title: Create API applications
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default

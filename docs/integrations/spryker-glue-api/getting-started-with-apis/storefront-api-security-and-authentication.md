@@ -1,38 +1,19 @@
 ---
-title: Glue API security and authentication
+title: Storefront API security and authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
-last_updated: Jun 16, 2021
+last_updated: Sep 18, 2025
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/security-and-authentication
-originalArticleId: f37cbced-75fa-4ea4-aad6-7afdeea109a4
-redirect_from:
-  - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-api-security-and-authentication.html
-  - /docs/scos/dev/glue-api-guides/202200.0/security-and-authentication.html
-  - /docs/scos/dev/glue-api-guides/202204.0/security-and-authentication.html
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/security-and-authentication.html
-  - /docs/pbc/all/identity-access-management/202404.0/glue-api-security-and-authentication.html
-related:
-  - title: Authentication and Authorization
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html
-  - title: Glue Infrastructure
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-{% info_block warningBox %}
+When exposing information via Spryker Storefront API and integrating with third-party applications, it's essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Storefront API is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
 
-This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html)
-
-{% endinfo_block %}
-
-When exposing information via Spryker Glue API and integrating with third-party applications, it's essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It allows users to authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
-
-The authorization mechanism provided by the Glue is flexible and allows you to define which endpoints specifically require authentication. Usually, protected endpoints include customer wish lists, carts, personal data and the like. Also, you may want to protect additional areas as required by your project. In addition to endpoints, you may require authorization to use specific REST verbs. For example, a certain endpoint can allow retrieving information, but not modifying it. In this case, the GET verb can be allowed for usage without authentication, while the PUT, PATCH and DELETE verbs will require user authentication to use.
+The authorization mechanism provided by the Storefront API is flexible and allows you to define which endpoints specifically require authentication. Usually, protected endpoints include customer wish lists, carts, personal data and the like. Also, you may want to protect additional areas as required by your project. In addition to endpoints, you may require authorization to use specific REST verbs. For example, a certain endpoint can allow retrieving information, but not modifying it. In this case, the GET verb can be allowed for usage without authentication, while the PUT, PATCH and DELETE verbs will require user authentication to use.
 
 ## How authentication works
 
-To authenticate a user, the client must send an authentication request, containing the username and password. If the provided credentials match a valid Spryker user, the API responds with a 201 response code and a message containing an access token, also known as a bearer token. The token can then be used to access protected API resources. Schematically, the authentication and authorization scheme of Spryker REST API can be represented as follows:
+To authenticate a user, the client must send an authentication request, containing the username and password. If the provided credentials match a valid Spryker user, the API responds with a 201 response code and a message containing an access token, also known as a bearer token. The token can then be used to access protected API resources. Schematically, the authentication and authorization scheme of Spryker Storefront API can be represented as follows:
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Security+and+Authentication/auth-scheme.png)
 
@@ -53,7 +34,7 @@ Authentication and authorization are provided by the following modules:
 | Oauth <!-- link to https://documentation.spryker.com/module_guide/spryker/oauth.htm -->| Integrates PhpLeague Oauth Server with Spryker and also provides the necessary extension points. |
 | OauthExtension <!-- link module_guide/spryker/oauth-extension --> | Provides extension point and plugin interfaces for the Oauth module. |
 | OauthCustomerConnector <!-- link module_guide/spryker/oauth-customer-connector--> | Provides authentication plugins for OAuth modules necessary to validate user credentials and scopes. |
-| AuthRestApi <!-- link module_guide/spryker/auth-rest-api--> | Provides authentication resources to the REST API. |
+| AuthRestApi <!-- link module_guide/spryker/auth-rest-api--> | Provides authentication resources to the Storefront API. |
 
 ## User scopes
 
@@ -82,7 +63,7 @@ class MyResourceHandler implements MyResourceInterface
 
 To identify the user, you can use the `getSurrogateIdentifier` and `getNaturalIdentifier` functions:
 
-```
+```php
 $restRequest->getRestUser()->getSurrogateIdentifier();
 $restRequest->getRestUser()->getNaturalIdentifier();
 ```
@@ -91,9 +72,9 @@ $restRequest->getRestUser()->getNaturalIdentifier();
 
 In the B2B scenario, a user can be associated with an additional scope, `company_user`. This scope is added in the following cases:
 
-* the user has impersonated as a Company User via the `/company-user-access-tokens` endpoint;
-* the user is associated with a **single** Company User account;
-* the user is associated with **several** Company User accounts and there is a default one.
+- the user has impersonated as a Company User via the `/company-user-access-tokens` endpoint;
+- the user is associated with a **single** Company User account;
+- the user is associated with **several** Company User accounts and there is a default one.
 
 Using this additional scope, you can perform additional checks to identify whether a resource should be available to a user. For this purpose, you can identify which Company User account is currently active, and also what company and business unit it belongs to. This can be done using the following helper methods:
 
@@ -105,7 +86,7 @@ $restRequest->getRestUser()->getIdCompany();
 
 {% info_block infoBox "Info" %}
 
-B2B functionality is available in Spryker Glue API since version 201907.0.
+B2B functionality is available in Spryker Storefront API since version 201907.0.
 
 {% endinfo_block %}
 
@@ -115,7 +96,7 @@ In addition to user scopes, each endpoint can be secured individually. For this 
 
 {% info_block infoBox %}
 
-For details, see [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html#resource-routing).
+For details, see [Resource Routing](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
@@ -139,7 +120,7 @@ class MyResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePlugi
 
 All data related to API authentication functionality is stored in the following tables:
 
-|TABLE| PURPOSE|
+|TABLE|	PURPOSE|
 | --- | --- |
 | spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it's added for audit purposes only.  |
 |  spy_oauth_client|Contains a list of clients that are currently using OAuth, one record for each frontend customer. The `is_confidental` field identifies whether a specific client must provide a password.  |
@@ -147,7 +128,7 @@ All data related to API authentication functionality is stored in the following 
 
 The `OAuth` and `OAuthExtension` modules also provides the following extension points:
 
-|EXTENSION POINT | METHOD | INTERFACE |
+|EXTENSION POINT	| METHOD | INTERFACE |
 | --- | --- | --- |
 |User provider plugins|`getUserProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface`|
 |Scope provider plugins|`getScopeProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface`|

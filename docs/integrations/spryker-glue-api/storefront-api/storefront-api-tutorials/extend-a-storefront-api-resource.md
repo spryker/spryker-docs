@@ -1,34 +1,17 @@
 ---
-title: Extend a REST API resource
-description: This tutorial shows how to extend REST API resources
-last_updated: Jun 16, 2021
+title: Extend a Storefront API resource
+description: This tutorial shows how to extend Storefront API resources
+last_updated: Sep 18, 2025
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
-originalArticleId: 765f9daa-fe09-4e7b-9344-17dd4e65a952
-redirect_from:
-  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-tutorials/extend-a-rest-api-resource.html
-  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/extend-a-rest-api-resource.html
-related:
-  - title: Glue API installation and configuration
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
-  - title: Glue infrastructure
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
 ---
 
-Spryker Glue REST API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Glue API modules that provide the relevant functionality on your project level.
-
-{% info_block infoBox %}
-
-The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
-
-{% endinfo_block %}
+Spryker Storefront API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Storefront API modules that provide the relevant functionality on your project level.
 
 ## Prerequisites
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
-* [Enable Glue Rest API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
-* [Integrate Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+- [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
+- [Enable Storefront API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+- [Integrate Products API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 {% info_block infoBox %}
 
@@ -36,15 +19,15 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/about/a
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 
-For more details, see [Database schema for product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% endinfo_block %}
 
 Now, add this field to responses of the Products API endpoints:
 
-## 1. Extend Glue transfers
+## 1. Extend transfers
 
-Extend the existing Glue Transfers that describe Glue attributes. Attributes of the `products` resources are defined in the transfer file `products_rest_api.transfer.xml`. To extend it, do the following:
+Extend the existing Transfers that describe attributes. Attributes of the `products` resources are defined in the transfer file `products_rest_api.transfer.xml`. To extend it, do the following:
 
 1. Create file `src/Pyz/Shared/ProductsRestApi/Transfer/products_rest_api.transfer.xml` that extends the transfer on the project level.
 
@@ -76,13 +59,14 @@ All transfer file names end with `.transfer.xml`.
 ```
 
 3. Generate transfers:
+
 ```bash
 vendor/bin/console transfer:generate
 ```
 
 4. Check that generated transfers contain the attribute you have added:
-  * `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
-  * `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
+- `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
+- `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
 
 ## 2. Put data
 
@@ -129,7 +113,7 @@ The implemented mapper extends the original core mapper located in `Spryker\Glue
 
 Override the initialization of the mapper created in the previous step by extending the factory of the `ProductsRestApi` module. A factory is used to create objects and processor classes of a module. Thus, by overriding it, you can invoke your new mapper. To do this, follow these steps:
 
-1. Create the Glue factory on the project level: `\Pyz\Glue\ProductsRestApi\ProductsRestApiFactory`.
+1. Create the factory on the project level: `\Pyz\Glue\ProductsRestApi\ProductsRestApiFactory`.
 2. Implement the factory as follows:
 
 **ProductsRestApiFactory.php**
@@ -159,4 +143,4 @@ Like the mapper, `ProductsRestApiFactory` extends the core factory and only over
 
 ## 4. Verify implementation
 
-You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html) and [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).
+You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html) and [Storefront API: Retrieving concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).

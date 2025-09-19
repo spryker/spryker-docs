@@ -1498,45 +1498,8 @@ entries:
     - title: Create Glue API applications
       url: /docs/dg/dev/glue-api/create-glue-api-applications.html
 
-    - title: REST API
-      nested:
-      - title: Glue API authentication and authorization
-        url: /docs/dg/dev/glue-api/rest-api/glue-api-authentication-and-authorization.html
-      - title: Glue API security and authentication
-        url: /docs/dg/dev/glue-api/rest-api/glue-api-security-and-authentication.html
-      - title: Glue REST API
-        url: /docs/dg/dev/glue-api/rest-api/glue-rest-api.html
-      - title: Glue infrastructure
-        url: /docs/dg/dev/glue-api/rest-api/glue-infrastructure.html
-      - title: Handling concurrent REST requests and caching with entity tags
-        url: /docs/dg/dev/glue-api/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-      - title: "Marketplace: Resolve search engine friendly URLs"
-        url: /docs/dg/dev/glue-api/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html
-      - title: Reference information - GlueApplication errors
-        url: /docs/dg/dev/glue-api/rest-api/reference-information-glueapplication-errors.html
-
-
     - title: Document Glue API endpoints
       url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
-
-    - title: Glue API tutorials
-      url: /docs/dg/dev/glue-api/glue-api-tutorials/glue-api-tutorials.html
-      nested:
-        - title: B2C API React example
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
-          nested:
-            - title: Install B2C API React example
-              url: /docs/dg/dev/glue-api/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
-
-        - title: Document Glue API resources
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/document-glue-api-resources.html
-        - title: Extend a REST API resource
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/extend-a-rest-api-resource.html
-        - title: Implement versioning for REST API resources
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
-        - title: Validate REST request format
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/validate-rest-request-format.html
-
 
   - title: Updating Spryker
     url: /docs/dg/dev/updating-spryker/updating-spryker.html

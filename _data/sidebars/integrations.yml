@@ -45,6 +45,12 @@ entries:
         url: /docs/integrations/spryker-glue-api/faqs-and-support/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: Developing new APIs
         nested:
+        - title: Storefront API security and authentication
+          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api-security-and-authentication.html
+        - title: Storefront API
+          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api.html
+        - title: Storefront API infrastructure
+          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html
         - title: Implement a REST API resource
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html
         - title: Configure the included section
@@ -53,8 +59,17 @@ entries:
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/validate-rest-request-format.html
         - title: Implement versioning for REST API resources
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/implement-versioning-for-rest-api-resources.html
-      - title: API references
+      - title: Storefront API tutorials
         nested:
+        - title: B2C API React example
+          url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
+          nested:
+            - title: Install B2C API React example
+              url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+        - title: Document Storefront API resources
+          url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api-tutorials/document-storefront-api-resources.html
+        - title: Extend a Storefront API resource
+          url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api-tutorials/extend-a-storefront-api-resource.html
         - title: Storefront B2B API reference
           url: /docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html
         - title: Storefront  B2C API reference
@@ -88,8 +103,9 @@ entries:
         - title: Backend API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html
       - title: Developing new APIs
-        url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-api-applications.html
         nested:
+        - title: Create API applications
+          url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-api-applications.html
         - title: Create Glue API resources with parent-child relationships
           url: /docs/integrations/spryker-glue-api/create-backend-api-applications/create-glue-api-resources-with-parent-child-relationships.html
         - title: Create and change Glue API conventions

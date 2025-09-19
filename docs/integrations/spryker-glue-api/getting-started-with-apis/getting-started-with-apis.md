@@ -46,7 +46,7 @@ Spryker's API framework offers two primary types of API applications, each tailo
     <div class="cst_card">
       <div class="cst_card_title">Storefront API</div>
       <div class="cst_card_desc">Learn about customer-facing API endpoints for building headless commerce experiences, mobile apps, and custom storefronts.</div>
-      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/storefront-api/storefront-api.html">Learn more</a>
+      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/storefront-api.html">Learn more</a>
     </div>
     <div class="cst_card">
       <div class="cst_card_title">Backend API</div>

@@ -37,7 +37,7 @@ entries:
         - title: Use Glue API authorization scopes
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/use-backend-api-authorization-scopes.html
     - title: Storefront API
-      url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
+      url: /docs/integrations/spryker-glue-api/storefront-api.html
       nested:
       - title: Resolving search engine friendly URLs
         url: /docs/integrations/spryker-glue-api/faqs-and-support/marketplace-glue-api-resolve-search-engine-friendly-urls.html
@@ -107,8 +107,8 @@ entries:
   - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html
     nested:
-    - title: Architectural Intro
-      url: /docs/integrations/custom-building-integrations/understanding-spryker-client-layer.html
+    - title: Architectural intro
+      url: /docs/integrations/custom-building-integrations/architectural-intro.html
     - title: Data Exchange API
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html
       nested:

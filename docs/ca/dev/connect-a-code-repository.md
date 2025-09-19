@@ -68,7 +68,7 @@ This adds GitHub related fields to the window.
 13. Scroll up and click **Save**.
 14. In the **Save pipeline changes** window, click **Save**.
 
-Your GitHub repository is now successfully connected!
+Your GitHub repository is now connected.
 
 
 ### GitHub Enterprise Server
@@ -82,15 +82,16 @@ Your GitHub repository is now successfully connected!
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **GitHub Enterprise Server**.
-8. For **Connection** choose an existing connection or click **Connect to GitHub Enterprise Server** to create a new one.
-9. In the connection setup, select **GitHub Enterprise Server**.
-10. Enter your GitHub Enterprise Server URL.
-11. Follow the authorization process to grant AWS CodePipeline access to your GitHub Enterprise Server repository.
-12. For **Repository name**, enter and select the repository you want to connect.
-13. For **Branch name**, enter and select the branch you want to connect.
-14. Save the changes to complete the wizard.
+8. For **Connection** choose an existing connection or click **Connect to GitHub Enterprise Server** and follow the authorization proccess to create a connection.
+  Next steps assume you've selected a connection. 
+9. For **Repository name**, enter and select the repository you want to connect.
+10. For **Branch name**, enter and select the branch you want to connect.
+11. Click **Done**.
+12. In the **Edit: Source** pane, click **Done**.
+13. Scroll up and click **Save**.
+14. In the **Save pipeline changes** window, click **Save**.
 
-Your GitHub Enterprise Server repository is now successfully connected!
+Your GitHub Enterprise Server repository is now connected.
 
 
 ### Optional: Disable automatic pipeline triggers
@@ -114,15 +115,9 @@ To manage the rollout manually or prevent a specific pipeline from starting, do 
 
 ## Connect a Bitbucket code repository
 
-{% info_block infoBox "New integration" %}
-
-AWS CodePipeline now supports direct integration with Bitbucket repositories. This replaces the previous CodeStar connection method and provides a more streamlined setup process.
-
-{% endinfo_block %}
-
 ### Prerequisites
 
-Ensure that your Bitbucket account has *Admin* permissions in the code repository. Some AWS regions are not supported, review the official AWS documentation for more details.
+Ensure that your Bitbucket account has **Admin** permissions in the code repository. Some AWS regions are not supported, see [Bitbucket Cloud connections](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-bitbucket.html).
 
 ### Connect your Bitbucket repository
 
@@ -135,26 +130,23 @@ Ensure that your Bitbucket account has *Admin* permissions in the code repositor
 6. In the **Spryker_App_Src** section, click the **Edit action** button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **Bitbucket**.
-8. For **Connection** choose an existing connection or click **Connect to Bitbucket** to create a new one.
-9. Follow the authorization process to grant AWS CodePipeline access to your Bitbucket repository.
-10. For **Repository name**, enter and select the repository you want to connect.
-11. For **Branch name**, enter and select the branch you want to connect.
-12. Save the changes to complete the wizard.
+8. For **Connection** choose an existing connection or click **Connect to Bitbucket** and follow the authorization process to grant AWS CodePipeline access to your Bitbucket repository.
+  Next steps assume you've granted access and selected a connection.
+9. For **Repository name**, enter and select the repository you want to connect.
+10. For **Branch name**, enter and select the branch you want to connect.
+11. Click **Done**.
+12. In the **Edit: Source** pane, click **Done**.
+13. Scroll up and click **Save**.
+14. In the **Save pipeline changes** window, click **Save**.
 
-Your Bitbucket repository is now successfully connected!
+Your Bitbucket repository is now connected.
 
 
 ## Connect a GitLab code repository
 
-{% info_block infoBox "New integration" %}
-
-AWS CodePipeline now supports direct integration with GitLab repositories. This replaces the previous CodeCommit mirroring method and provides a more streamlined setup process.
-
-{% endinfo_block %}
-
 ### Prerequisites
 
-Ensure that your GitLab account has *Admin* permissions in the code repository. Some AWS regions are not supported, review the official AWS documentation for more details.
+Ensure that your GitLab account has **Admin** permissions in the code repository. Some AWS regions are not supported, see [GitLab.com connections](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-gitlab.html).
 
 ### Connect your GitLab repository
 

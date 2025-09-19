@@ -108,8 +108,8 @@ To start working with Storefront API:
 
 ## Further Reading
 
-- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
-- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)

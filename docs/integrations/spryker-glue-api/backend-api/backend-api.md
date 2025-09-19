@@ -38,7 +38,7 @@ Backend API resources can use any implemented conventions, create new ones, or e
 
 Backend API uses Back Office credentials for authentication. System administrators and enterprise integrations authenticate using administrative credentials to access backend resources.
 
-For API key-based authentication, see [Use API Key Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/use-api-key-authorization.html).
+For API key-based authentication, see [Use API Key Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-api-key-authorization.html).
 
 ## Resource Modules
 
@@ -103,10 +103,10 @@ To start working with Backend API:
 
 ## Further Reading
 
-- [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2b-demo-shop-reference.html)
-- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html)
-- [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2b-demo-shop-reference.html)
-- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html)
+- [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html)
+- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html)
+- [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
+- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)
 - [Create Backend Resources](/docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-resources.html)
 - [Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)

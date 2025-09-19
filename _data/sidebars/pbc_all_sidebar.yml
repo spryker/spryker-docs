@@ -3423,10 +3423,10 @@ entries:
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
                   - title: Product Management powered by OpenAI
-                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
-                    include_versions:
-                    - "202410.0"
-                    - "latest"
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
+                    nested:
+                    - title: Product Management powered by OpenAI
+                      url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
 
               - title: Tutorials and HowTos
                 nested:

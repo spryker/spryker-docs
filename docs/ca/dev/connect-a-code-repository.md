@@ -168,17 +168,13 @@ Ensure that your GitLab account has **Admin** permissions in the code repository
 Your GitLab repository is now successfully connected!
 
 
-## Legacy GitLab mirroring setup
+## Legacy: Connect a GitLab code repository through mirroring
 
 {% info_block warningBox "Deprecated method" %}
 
-The following GitLab mirroring setup is deprecated in favor of the direct GitLab integration described above. Use this method only if direct integration is not available for your GitLab instance.
+This section describes how to connect a GitLab repository using a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) mirror.
 
-{% endinfo_block %}
-
-Currently, [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) doesn't have a native integration of GitLab. To make it work, you can configure a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) repository as a mirror of a GitLab repository.
-
-{% info_block warningBox "Pushing changes" %}
+The mirroring setup is deprecated in favor of the [direct GitLab integration](#connect-a-GitLab-code-repository). Use this method only if direct integration is not available for your GitLab instance.
 
 To avoid synchronization issues, do not push any changes to the CodeCommit repository.
 

@@ -1,5 +1,5 @@
 ---
-title: Architectural Intro
+title: Architectural intro
 description: Introduction to Spryker architecture for third-party integrations.
 last_updated: July 9, 2025
 template: default

@@ -68,13 +68,13 @@ By default, you can authenticate as a customer, a company user, or an agent assi
 Protected resources require authentication for interactions. To see which endpoints are protected in your specific implementation, refer to the API references where Swagger shows a lock icon for protected APIs:
 
 Storefront API:
-- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
-- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 Backend API:
-- [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2b-demo-shop-reference.html)
-- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-b2c-demo-shop-reference.html)
-- [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2b-demo-shop-reference.html)
-- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/backend-api/backend-api-marketplace-b2c-demo-shop-reference.html)
+- [Backend API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2b-demo-shop-reference.html)
+- [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html)
+- [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
+- [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)

@@ -107,6 +107,6 @@ To start working with Backend API:
 - [Backend API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-b2c-demo-shop-reference.html)
 - [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
 - [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)
-- [Create Backend Resources](/docs/integrations/spryker-glue-api/create-backend-api-applications/create-backend-resources.html)
+- [Create Backend Resources](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html)
 - [Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)

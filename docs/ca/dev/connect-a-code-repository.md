@@ -174,7 +174,7 @@ Your GitLab repository is now successfully connected!
 
 This section describes how to connect a GitLab repository using a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) mirror.
 
-The mirroring setup is deprecated in favor of the [direct GitLab integration](#connect-a-GitLab-code-repository). Use this method only if direct integration is not available for your GitLab instance.
+The mirroring setup is deprecated in favor of the [direct GitLab integration](#connect-a-gitlab-code-repository). Use this method only if direct integration is not available for your GitLab instance.
 
 To avoid synchronization issues, do not push any changes to the CodeCommit repository.
 

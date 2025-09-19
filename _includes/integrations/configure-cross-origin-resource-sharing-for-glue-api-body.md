@@ -1,4 +1,4 @@
-By default, Glue REST API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to Glue API originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, Glue API can accept requests from a list of allowed origins or any origin, depending on the configuration.
+By default, Storefront API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to Storefront API originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, Storefront API can accept requests from a list of allowed origins or any origin, depending on the configuration.
 
 
 ## Configure CORS
@@ -63,7 +63,7 @@ glue_eu:
 
 ## Verify the CORS configuration
 
-1. Make an _OPTIONS_ pre-flight request to any valid Glue API resource with the correct `Origin` header, for example, `http://www.example1.com`:
+1. Make an _OPTIONS_ pre-flight request to any valid Storefront API resource with the correct `Origin` header, for example, `http://www.example1.com`:
 
 ```bash
 curl -X OPTIONS -H "Origin: http://www.example1.com" -i http://glue.de.mysprykershop.com

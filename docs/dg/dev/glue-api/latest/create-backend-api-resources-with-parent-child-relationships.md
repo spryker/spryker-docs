@@ -1,5 +1,5 @@
 ---
-title: Create Glue API resources with parent-child relationships
+title: Create Backend API resources with parent-child relationships
 description: Learn Create Glue API resources with parent-child relationships
 last_updated: September 30, 2022
 template: howto-guide-template

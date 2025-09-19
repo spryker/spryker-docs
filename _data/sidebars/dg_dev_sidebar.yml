@@ -1565,7 +1565,7 @@ entries:
       url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
     - title: Use authentication servers with Glue API
       url: /docs/dg/dev/glue-api/use-authentication-servers-with-glue-api.html
-    - title: Use default Glue parameters
+    - title: Use default Storefront parameters
       url: /docs/dg/dev/glue-api/use-default-storefront-parameters.html
     - title: Use Glue API authorization scopes
       url: /docs/dg/dev/glue-api/use-glue-api-authorization-scopes.html

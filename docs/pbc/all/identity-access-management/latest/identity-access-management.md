@@ -82,7 +82,7 @@ Each of the identity managers is an ECO module that must be developed separately
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/dg/dev/glue-api/latest/authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/dg/dev/glue-api/latest/security-and-authentication.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

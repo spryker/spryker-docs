@@ -1,19 +1,19 @@
 This guide describes how to create an API endpoint using a custom route.
 
-Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
+Backend API lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on a Symfony routing component; for more information on it, check out Symfony's [documentation](https://symfony.com/doc/current/routing.html).
 
-Let's say you have a Storefront module named `ModuleRestApi`, where you want to have a new backend API endpoint `/module/bar` with `GET` and `POST` methods. To create the new backend API endpoint, follow these steps:
+Let's say you have a Storefront module named `ModuleBackendApi`, where you want to have a new backend API endpoint `/module/bar` with `GET` and `POST` methods. To create the new backend API endpoint, follow these steps:
 
 1. Create a `ModuleBarController` with the action:
 
-**\Pyz\Glue\ModuleRestApi\Controller\ModuleBarController**
+**\Pyz\Glue\ModuleBackendApi\Controller\ModuleBarController**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Controller;
+namespace Pyz\Glue\ModuleBackendApi\Controller;
 
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
@@ -47,14 +47,14 @@ Pay attention to `AbstractController` you use, Storefront and Backend variation 
 
 2. Create `ModuleBarRouteProviderPlugin`
 
-**\Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin**
+**\Pyz\Glue\ModuleBackendApi\Plugin\ModuleBarRouteProviderPlugin**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin;
+namespace Pyz\Glue\ModuleBackendApi\Plugin;
 
-use Pyz\Glue\ModuleRestApi\Controller\ModuleBarController;
+use Pyz\Glue\ModuleBackendApi\Controller\ModuleBarController;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface;
 use Spryker\Glue\Kernel\Backend\AbstractPlugin;
 use Symfony\Component\HttpFoundation\Request;
@@ -127,7 +127,7 @@ In Development mode, you do not need to refresh a cache.
 
 5. Add a `POST` method to the same route:
 
-   1. Add a method to a controller: `\Pyz\Glue\ModuleRestApi\Controller\ModuleBarController`
+   1. Add a method to a controller: `\Pyz\Glue\ModuleBackendApi\Controller\ModuleBarController`
 
    ```php
    ...
@@ -143,7 +143,7 @@ In Development mode, you do not need to refresh a cache.
 
    ```
 
-   2. Add a new route to the same route provider plugin: `\Pyz\Glue\ModuleRestApi\Plugin\ModuleBarRouteProviderPlugin`
+   2. Add a new route to the same route provider plugin: `\Pyz\Glue\ModuleBackendApi\Plugin\ModuleBarRouteProviderPlugin`
 
    ```php
    ...

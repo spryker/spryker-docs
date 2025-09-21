@@ -1490,17 +1490,6 @@ entries:
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 
 
-
-  - title: Glue API
-    nested:
-    - title: Decoupled Glue API
-      url: /docs/dg/dev/glue-api/decoupled-glue-api.html
-    - title: Create Glue API applications
-      url: /docs/dg/dev/glue-api/create-glue-api-applications.html
-
-    - title: Document Glue API endpoints
-      url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
-
   - title: Updating Spryker
     url: /docs/dg/dev/updating-spryker/updating-spryker.html
     nested:

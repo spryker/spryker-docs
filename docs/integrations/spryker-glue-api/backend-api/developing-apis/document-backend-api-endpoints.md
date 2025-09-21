@@ -1,15 +1,8 @@
 ---
-title: Document Glue API endpoints
+title: Document Backend API endpoints
 description: You can enhance the way your resource is described in the OPENAPI v3 schema
-last_updated: September 30, 2022
+last_updated: Sep 21, 2025
 template: howto-guide-template
-redirect_from:
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
-  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
-  - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
-  - /docs/scos/dev/glue-api-guides/202204.0/document-glue-api-endpoints.html
-  - /docs/scos/dev/glue-api-guides/202404.0/document-glue-api-endpoints.html
-
 ---
 
 This document shows Document Glue API endpoints.
@@ -27,7 +20,7 @@ By default, this command generates the documentation for all the configured appl
 To select the application, you can pass the optional parameter `application`:
 
 ```bash
-vendor/bin/glue api:generate:documentation [--application=storefront|backend]
+vendor/bin/glue api:generate:documentation [--application=backend]
 ```
 
 You can describe your resources in the Glue doc-comment annotation on the relevant controller actions:

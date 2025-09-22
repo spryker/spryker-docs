@@ -5,9 +5,9 @@ last_updated: Jun 16, 2025
 template: howto-guide-template
 ---
 
-You can decide to which queue you want to push data for each individual entity. This is useful to separate data into dedicated queues and being able to have "high priority" data, such as products, separated from "low priority" data, such as translations.
+You can decide to which queue you want to push data for each individual entity. This is useful to separate data into dedicated queues and being able to separate "high-priority" data, such as products, from "low-priority" data, such as translations.
 
-We recommend putting "low priority" data into the "global" publish queue and using specialized queues for "high priority" data.
+We recommend putting "low priority" data into the "global" publish queue and using specialized queues for "high-priority" data.
 
 ## RabbitMQ module configuration
 
@@ -35,14 +35,12 @@ protected function getPublishQueueConfiguration(): array
 }
 ```
 
-## Configuring the Publisher module
+## Publisher module configuration
 
 
 To publish entities data into queues, you need to configure publisher plugins.
 
-You can configure plugins with queue names or without them.
-
-If you don't specify a queue name, the default queue configured in `\Spryker\Shared\Publisher\PublisherConfig::PUBLISH_QUEUE` will be used:
+You can configure plugins with queue names or without them. If you don't specify a queue name, the default queue configured in `\Spryker\Shared\Publisher\PublisherConfig::PUBLISH_QUEUE` will be used:
 
 
 ```php

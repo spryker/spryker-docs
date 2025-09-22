@@ -52,7 +52,7 @@ kv:product_abstract:de:de_de:100
 
 You can query Redis using this key to retrieve the stored product data.
 
-image-20250605-110100.png
+![redis-commander](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.md/redis-commander.png)
  
 
 ## Reasons to use mappings
@@ -61,15 +61,13 @@ The default key generation may not be suitable in cases such as the following:
 
 - You only know the product SKU, not its ID
 
-- You want to avoid exposing internal database IDs externally.
+- Avoid exposing internal database IDs externally
 
-- You need a more flexible lookup strategy.
-
-To solve these issues, you can define mappings.
+- Your project needs a more flexible lookup strategy
 
 ## Mappings
 
-Mappings allow you to associate a resource's internal ID with an alternative, unique identifier–for example, SKU. A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
+Mappings enable you to associate a resource's internal ID with an alternative, unique identifier–for example, SKU. A mapping creates an additional storage record that links this identifier to the resource ID using a dedicated key. This key does not include the database ID.
 
 Mappings are configured in the Propel schema and used during the P&S process.
 
@@ -90,9 +88,7 @@ For example, `SKU` can be mapped to `ID` for abstract products in `spy_product_a
 </table>
 ```
 
-`sku` is the source (alternative key).
-
-`id_product_abstract` is the destination (resource ID).
+`sku` is the source (alternative key), and `id_product_abstract` is the destination (resource ID).
 
 These values must match keys in the resource payload.
 
@@ -115,11 +111,11 @@ This enables Redis lookups using `sku:001` instead of the database ID.
 image-20250605-115136.png
 
 
-## Using mappings
+## Retrieve data using a mapping
 
-To retrieve data using a mapping 
+To retrieve data using a mapping, take the following steps:
 
-1. Query the mapping key–for example, `sku:001`, to get the product ID.
+1. To get the product ID, query the mapping key–for example, `sku:001`.
 
 2. Construct the final storage key using the retrieved ID.
 
@@ -148,7 +144,7 @@ You can define only one mapping per source for each resource, and the last defin
 {% endinfo_block %}
 
 
-To change the delimiter, override: `\Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig::MAPPINGS_DELIMITER`.
+To change the delimiter, override `\Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig::MAPPINGS_DELIMITER`.
 
 
 

@@ -7,7 +7,7 @@ template: howto-guide-template
 
 To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
 
-For more details on direct sync, see [Synchronization types](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization#Synchronization-types)
+For more details on direct sync, see [Synchronization types](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization#Synchronization-types).
 
 To enable direct synchronization, do the following:
 
@@ -58,7 +58,9 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 }
 ```
 
-This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
+This configuration enables direct sync for all entities with synchronization behavior.
+
+4. Optional: To disable direct sync for specific entities, add an additional parameter in the Propel schema:
 
 
 ```xml

@@ -59,7 +59,7 @@ groups:
                 endpoints:
                   custom-backend.eu.mysprykershop.com:
                         store: EU
-                        entry-point: BackendCustomApi
+                        entry-point: CustomBackendApi
 ```
 
 1. Activate your new API:

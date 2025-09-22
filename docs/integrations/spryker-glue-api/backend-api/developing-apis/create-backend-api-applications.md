@@ -54,11 +54,11 @@ groups:
     US:
         applications:
            ...
-            glue_backend:
+            custom_backend:
                 application: glue-backend
                 endpoints:
-                    glue-backend.us.spryker.local:
-                        store: US
+                  custom-backend.eu.mysprykershop.com:
+                        store: EU
                         entry-point: BackendCustomApi
 ```
 
@@ -69,7 +69,7 @@ docker/sdk boot
 docker/sdk up
 ```
 
-2. Verify that your domain is now available: `https://backend.mysprykershop.com`.
+2. Verify that your domain is now available: `https://custom-backend.eu.mysprykershop.com`.
 3. Create an entry point for your new API: `public/CustomBackendApi/index.php`.
 
 ```php

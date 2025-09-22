@@ -34,7 +34,7 @@ With the current infrastructure, projects can easily [create](/docs/integrations
 
 ### Decoupling from conventions
 
-StorefrontAPI was tightly coupled with a JSON:API convention, and all resources have to follow it. For Backend API resources can use any implemented conventions, create new ones, or even not use any. In this case, the "no convention" approach is used, and a request and response are formatted as a plain JSON. For more details, see [Create and change Backend API conventions](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html).
+StorefrontAPI is tightly coupled with a JSON:API convention, and all resources have to follow it. For Backend API resources can use any implemented conventions, create new ones, or even not use any. In this case, the "no convention" approach is used, and a request and response are formatted as a plain JSON. For more details, see [Create and change Backend API conventions](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html).
 
 ### Authentication
 

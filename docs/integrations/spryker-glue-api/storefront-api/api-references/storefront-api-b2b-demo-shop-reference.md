@@ -5,9 +5,6 @@ description: This page provides an exhaustive reference for the Storefront API e
   and data formats.
 last_updated: Aug 20, 2025
 template: glue-api-storefront-guide-template
-related:
-- title: Reference information- GlueApplication errors
-  link: docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
 redirect_from:
   - /docs/integrations/api-references/spryker-storefront-api/storefront-api-b2b-demo-shop-reference.html
   - /docs/integrations/api-references/spryker-rest-api/storefront-api-b2b-demo-shop-reference.html

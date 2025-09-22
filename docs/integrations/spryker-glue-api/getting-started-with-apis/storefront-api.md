@@ -28,10 +28,10 @@ The Storefront API comes with a set of predefined APIs, which you can extend or 
 
 For more details, see Storefront API reference:
 
-- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
-- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 ## B2C API React example
 
@@ -41,7 +41,7 @@ It delivers a full customer experience from browsing the catalog to placing an o
 
 {% info_block infoBox %}
 
-For more deatails about installing and running, see [B2C API React example](/docs/integrations/spryker-glue-api/storefront-api/storefront-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
+For more deatails about installing and running, see [B2C API React example](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html).
 
 {% endinfo_block %}
 

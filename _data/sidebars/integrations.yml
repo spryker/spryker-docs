@@ -127,7 +127,7 @@ entries:
     nested:
     - title: Architectural intro
       url: /docs/integrations/custom-building-integrations/architectural-intro.html
-    - title: Data Exchange API
+    - title: Data Exchange
       url: /docs/integrations/custom-building-integrations/data-exchange/data-exchange.html
       nested:
       - title: Install and configure Data Exchange API

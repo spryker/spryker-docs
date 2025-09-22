@@ -1090,27 +1090,16 @@ entries:
       - title: Data Exchange
         url: /docs/pbc/all/data-exchange/data-exchange.html
         nested:
-          - title: Install and upgrade
-            nested:
-              - title: Data Exchange API
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
-              - title: Data Exchange API + Inventory Management feature
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
-              - title: Data Exchange API + Category Management feature
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
-                include_versions:
-                - "202404.0"
-                - "202410.0"
-                - "latest"
-          - title: Configure Data Exchange API endpoints
-            url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
-          - title: Sending requests with Data Exchange API
-            url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
-          - title: Create post plugins for Data Exchange API
-            url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
+          - title: Data Exchange API
+            url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
+          - title: Data Exchange API + Inventory Management feature
+            url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
+          - title: Data Exchange API + Category Management feature
+            url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
             include_versions:
-            - "202410.0"
-            - "latest"
+              - "202404.0"
+              - "202410.0"
+              - "latest"
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html

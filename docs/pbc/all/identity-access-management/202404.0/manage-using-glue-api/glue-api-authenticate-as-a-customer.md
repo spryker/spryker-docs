@@ -34,7 +34,7 @@ related:
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
 

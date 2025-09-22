@@ -12,10 +12,10 @@ The resulting document is a full description of your Storefront API following th
 {% info_block warningBox %}
 
 Storefront API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker Storefront API can be found in Spryker Documentation. For more information, see Storefront API references:
-- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2b-demo-shop-reference.html)
-- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-b2c-demo-shop-reference.html)
-- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2b-demo-shop-reference.html)
-- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/api-references/storefront-api/storefront-api-marketplace-b2c-demo-shop-reference.html)
+- [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
+- [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 {% endinfo_block %}
 
@@ -45,7 +45,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for Storefront API controllers on the *project* level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for Storefront API controllers on the *vendor* level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For information about Storefront API controllers, see [Create a resource controller](/docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html#create-a-resource-controller) in the *Implement a Storefront API resource* document.
+For information about Storefront API controllers, see [Create a resource controller](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#create-a-resource-controller) in the *Implement a Storefront API resource* document.
 
 ## 2. Test the documentation generator
 
@@ -56,7 +56,7 @@ vendor/bin/console rest-api:generate:documentation
 ---
 ```
 
-When the command completes, you can see a specification file generated in the directory with the filename as you configured in [step 2. Configuration](/docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html#create-a-configuration-class). By default, it's `src/Generated/Glue/Specification/spryker_rest_api.schema.yml`.
+When the command completes, you can see a specification file generated in the directory with the filename as you configured in [step 2. Configuration](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#create-a-configuration-class). By default, it's `src/Generated/Glue/Specification/spryker_rest_api.schema.yml`.
 
 ## 3. Describe your Storefront API: Requests and responses
 
@@ -225,7 +225,7 @@ vendor/bin/console rest-api:generate:documentation
 
 ## 6. View results
 
-When the command completes, you can see a specification file generated in the directory with the filename you configure in [step 2. Configuration](/docs/integrations/spryker-glue-api/getting-started-with-apis/implement-a-rest-api-resource.html#create-a-configuration-class).
+When the command completes, you can see a specification file generated in the directory with the filename you configure in [step 2. Configuration](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#create-a-configuration-class).
 
 By default, it's `src/Pyz/Generated/Glue/Specification/spryker_rest_api.schema.yml`. The specification contains all Storefront API endpoints configured in Glue, on the global and project levels, along with data models for all requests and responses.
 

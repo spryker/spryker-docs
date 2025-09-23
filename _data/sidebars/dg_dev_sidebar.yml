@@ -1491,8 +1491,6 @@ entries:
   - title: Glue API
     url: /docs/dg/dev/glue-api/glue-api.html
     nested:
-    - title: Glue Spryks
-      url: /docs/dg/dev/glue-api/glue-spryks.html
     - title: Decoupled Glue API
       url: /docs/dg/dev/glue-api/decoupled-glue-api.html
     - title: Backend and Storefront API module differences
@@ -1501,8 +1499,6 @@ entries:
       url: /docs/dg/dev/glue-api/create-glue-api-applications.html
     - title: Authentication and authorization
       url: /docs/dg/dev/glue-api/authentication-and-authorization.html
-    - title: Security and authentication
-      url: /docs/dg/dev/glue-api/security-and-authentication.html
     - title: Use API Key authorization
       url: /docs/dg/dev/glue-api/use-api-key-authorization.html
     - title: Backend Glue infrastructure
@@ -1553,9 +1549,9 @@ entries:
     - title: Create and change Glue API conventions
       url: /docs/dg/dev/glue-api/create-and-change-glue-api-conventions.html
     - title: Create Glue API authorization strategies
-      url: /docs/dg/dev/glue-api/create-glue-api-authorization-strategies.html
+      url: /docs/dg/dev/glue-api/create-backend-api-authorization-strategies.html
     - title: Create Glue API resources with parent-child relationships
-      url: /docs/dg/dev/glue-api/create-glue-api-resources-with-parent-child-relationships.html
+      url: /docs/dg/dev/glue-api/create-backend-api-resources-with-parent-child-relationships.html
     - title: Create grant type parameters
       url: /docs/dg/dev/glue-api/create-grant-type-parameters.html
     - title: Create JSON:API relationships
@@ -1564,12 +1560,10 @@ entries:
       url: /docs/dg/dev/glue-api/create-protected-glue-api-endpoints.html
     - title: Document Glue API endpoints
       url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
-    - title: Integrate a CIAM provider
-      url: /docs/dg/dev/glue-api/integrate-a-ciam-provider.html
     - title: Use authentication servers with Glue API
       url: /docs/dg/dev/glue-api/use-authentication-servers-with-glue-api.html
-    - title: Use default Glue parameters
-      url: /docs/dg/dev/glue-api/use-default-glue-parameters.html
+    - title: Use default Storefront parameters
+      url: /docs/dg/dev/glue-api/use-default-storefront-parameters.html
     - title: Use Glue API authorization scopes
       url: /docs/dg/dev/glue-api/use-glue-api-authorization-scopes.html
     - title: Glue API tutorials
@@ -1591,31 +1585,6 @@ entries:
           url: /docs/dg/dev/glue-api/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
         - title: Validate REST request format
           url: /docs/dg/dev/glue-api/glue-api-tutorials/validate-rest-request-format.html
-
-
-  - title: Zed API
-    url: /docs/dg/dev/zed-api/zed-api.html
-    nested:
-    - title: Project implementation - Zed API
-      url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
-    - title: Integrate Zed API
-      url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api.html
-      nested:
-        - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
-
-    - title: Zed API configuration
-      url: /docs/dg/dev/zed-api/zed-api-configuration.html
-    - title: "Tutorial: Using Zed API"
-      url: /docs/dg/dev/zed-api/tutorial-using-zed-api.html
-    - title: CRUD functionality - Zed API
-      url: /docs/dg/dev/zed-api/zed-api-crud-functionality.html
-    - title: Processor stack - Zed API
-      url: /docs/dg/dev/zed-api/zed-api-processor-stack.html
-    - title: Zed API resources
-      url: /docs/dg/dev/zed-api/zed-api-resources.html
-    - title: Zed API (BETA)
-      url: /docs/dg/dev/zed-api/zed-api-beta.html
 
 
   - title: Updating Spryker

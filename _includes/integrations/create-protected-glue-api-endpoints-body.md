@@ -1,4 +1,4 @@
-This document describes how to create a protected endpoint for a resource, or a custom-route in storefront and backend API applications.
+This document describes how to create a protected endpoint for a resource, or a custom-route in Backend API applications.
 
 ## Prerequisites
 
@@ -6,21 +6,44 @@ Integrate authorization into your project. For details, see [Authorization prote
 
 ## Create protected endpoints
 
-Let's say you have a module named `ModuleRestApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods. To create the protected endpoint, follow these steps:
+Let's say you have a module named `ModuleBackendApi`, where you want to have a new protected endpoint `/module` with `GET` and `POST` methods. To create the protected endpoint, follow these steps:
 
-1. To `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php`, add a route or regular expression for the endpoint:
+1. Add a route or regular expression for the endpoint:
+
+<details>
+  <summary>src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Shared\GlueStorefrontApiApplicationAuthorizationConnector;
+namespace Pyz\Shared\GlueBackendApiApplicationAuthorizationConnector;
 
-use Spryker\Shared\GlueStorefrontApiApplicationAuthorizationConnector\GlueStorefrontApiApplicationAuthorizationConnectorConfig as SprykerGlueStorefrontApiApplicationAuthorizationConnectorConfig;
+use Spryker\Shared\GlueBackendApiApplicationAuthorizationConnector\GlueBackendApiApplicationAuthorizationConnectorConfig as SprykerGlueBackendApiApplicationAuthorizationConnectorConfig;
 
-class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGlueStorefrontApiApplicationAuthorizationConnectorConfig
+class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueBackendApiApplicationAuthorizationConnectorConfig
 {
+    /**
+     * Specification:
+     * - Returns a list of protected endpoints.
+     * - Structure example:
+     * [
+     *      '/example' => [
+     *          'isRegularExpression' => false,
+     *      ],
+     *      '/\/example\/.+/' => [
+     *          'isRegularExpression' => true,
+     *          'methods' => [
+     *              'patch',
+     *              'delete',
+     *          ],
+     *      ],
+     * ]
+     *
+     * @api
+     *
+     * @return array<string, mixed>
+     */
     public function getProtectedPaths(): array
-    {
         return [
             // Route added by a full name and provide access for all
             // methods if the token is passed and valid
@@ -41,12 +64,8 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
 }
 ```
 
-{% info_block infoBox %}
+</details>
 
-For backend API, use the appropriate backend-specific class `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`.
-
-{% endinfo_block %}
-
-2. Try to access `https://glue-storefront.mysprykershop.com/module` without an access token.
+2. Try to access `https://glue-backend.mysprykershop.com/module` without an access token.
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
-4. Access `https://glue-storefront.mysprykershop.com/module`, with a valid access token.
+4. Access `https://glue-backend.mysprykershop.com/module`, with a valid access token.

@@ -18,12 +18,6 @@ related:
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-{% info_block warningBox %}
-
-This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/latest/decoupled-glue-api.html)
-
-{% endinfo_block %}
-
 This page lists the generic errors that originate from the Glue Application. These errors can occur for any resource, and they are always the same for all the resources.
 
 | ERROR | DESCRIPTION |

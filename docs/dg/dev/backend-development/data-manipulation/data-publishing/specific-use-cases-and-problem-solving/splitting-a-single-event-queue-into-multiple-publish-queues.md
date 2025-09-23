@@ -1,11 +1,11 @@
 ---
-title: Splitting a Single Event Queue into Multiple Publish Queues
+title: Splitting a single event queue into multiple publish queues
 description: Improve event processing by splitting a single event queue into multiple publish queues. Reduce bottlenecks, speed up processing, and enhance observability at scale.
 last_updated: Jun 16, 2025
 template: howto-guide-template
 ---
 
-When you handle a high volume of event messages, processing them through a single event queue can quickly become a bottleneck. As the system scales and the number of messages increases, you may encounter:
+When you handle a high volume of event messages, processing them through a single event queue can quickly become a bottleneck. As the system scales and the number of messages increases, you may encounter the following issues:
 
 - Performance degradation
 
@@ -21,4 +21,4 @@ To address these issues and improve both processing efficiency and observability
 
 
 
-You can explore [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure) for more information.
+For instructions on setting up multiple queues, see [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure) .

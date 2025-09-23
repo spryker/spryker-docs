@@ -31,23 +31,25 @@ related:
 
 The automatic execution of the Publish and Synchronize (P&S) process may not always address all of your use cases. In certain situations, you might need to manually re-synchronize or regenerate published data to ensure the correct information is available in Redis and Elasticsearch.
 
-For example:
+Example use cases:
 
-- You may want to refresh Redis and Elasticsearch with updated data for your shop frontend.
+- Refresh Redis and Elasticsearch with updated data for your shop frontend.
 
-- You may need to regenerate published data to correct issues after an import, ensuring the Storage and Search modules reflect the latest changes.
+- Regenerate published data to correct issues after an import, ensuring the Storage and Search modules reflect the latest changes.
 
-You can perform these actions manually using the provided console commands.
+You can perform these actions manually using the instructions in the following sections.
 
-## Re-synchronize data
+## Data re-sync
 
 Resynchronization is useful when Redis or Elasticsearch data is lost–for example, because of a flush operation. This command re-exports data from the Storage and Search tables into Redis and Elasticsearch.
 
-Command:
+Re-synchronize command:
 
 
-
+```bash
 vendor/bin/console sync:data
+```
+
 This command performs the following steps:
 
 1. Reads aggregated data from the database tables used by Storage and Search modules.
@@ -57,8 +59,6 @@ This command performs the following steps:
 3. Proceed RabbitMQ and sync to Redis and Elasticsearch.
 
 To synchronize a specific entity, include the resource name:
-
-
 
 ```bash
 vendor/bin/console sync:data {resource_name}
@@ -70,14 +70,13 @@ Example:
 vendor/bin/console sync:data cms_block
 ```
 
-To enable synchronization for a specific resource, a corresponding sync plugin must be implemented.
- See Implement synchronization plugins | Spryker Documentation  for details.
+To enable synchronization for a specific resource, you need to implement a corresponding sync plugin. For instructions, see [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins).
 
-## Regenerate published data
+## Data re-generation
 
-Regenerating data is helpful when you need to completely rebuild published content. For example, after a failed import or data corruption, you may want to overwrite the Storage and Search tables. Updates on Redis and Elasticsearch depend on *storage and *_search entity; if it was changed, data will be synced. If you need to sync all data, use `vendor/bin/console sync:data`.
+Re-generating data is helpful when you need to completely rebuild published content. For example, after a failed import or data corruption, you may want to overwrite the Storage and Search tables. Updates on Redis and Elasticsearch depend on `*storage` and `*_search` entities; if it was changed, data will be synced. If you need to sync all data, use `vendor/bin/console sync:data`.
 
-Command:
+Re-generate command:
 
 
 ```bash
@@ -86,18 +85,18 @@ vendor/bin/console publish:trigger-events
 
 This command performs the following steps:
 
-Re-generates data in the Storage and Search tables.
+1. Re-generates data in the Storage and Search tables.
 
-Updates records in Redis and Elasticsearch if the entity was changed.
+2. Updates records in Redis and Elasticsearch if the entity was changed.
 
-To target a specific resource (entity), use the -r option:
+To target a specific resource (entity), use the `-r` option:
 
 
 ```bash
 vendor/bin/console publish:trigger-events -r {resource_name}
 ```
 
-You can also specify one or more entity IDs using the -i option:
+You can also specify one or more entity IDs using the `-i` option:
 
 
 ```bash
@@ -111,5 +110,4 @@ Example:
 vendor/bin/console publish:trigger-events -r availability -i 1,2
 ```
 
-A publisher plugin must be implemented for each resource you want to re-publish.
-See Implement synchronization plugins | Spryker Documentation  for details.
+For each resource you want to re-publish, you need to implement a publisher plugin. For instructions, see [Implement synchronization plugins](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins).

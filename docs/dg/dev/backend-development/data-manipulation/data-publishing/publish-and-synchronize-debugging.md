@@ -137,6 +137,7 @@ You can also send a direct request to the Elasticsearch endpoint and verify the 
 
 
 3. Identify the destination - the URL where the search request is sent. 
+
 The profiler may show an incorrect endpoint. The correct one for the catalog page looks like this:
 
 ```text
@@ -145,9 +146,9 @@ http://localhost:9200/spryker_b2b_dev_de_page/_search
 
 Explanation:
 
-`localhost:9200` - defined in the deploy.dev.yml file under the search configuration.
+`localhost:9200` - defined in the `deploy.dev.yml` under the search configuration.
 
-`spryker_b2b_dev` - the namespace also comes from deploy.dev.yml.
+`spryker_b2b_dev` - the namespace also comes from `deploy.dev.yml`.
 
 `de_page` - indicates the store (de) and the type of search.
 
@@ -178,9 +179,9 @@ If the entity is missing from Redis or Elasticsearch, the synchronization step l
 
 If something is missing, try [re-publishing or re-synchronizing the data manually](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation).
 
-## 6. Dumping information about the used listener
+## 6. Getting information on listener and events used
 
-When you need to know what events and which listener are used in your setup you can use the `event:dump:listener` command. This prints a big list of queue names, event names, and listener.
+When you need to know what events and which listener are used in your setup, you can use the `event:dump:listener` command. This prints a list of queue names, event names, and listener.
 
 You can narrow down the list using the following options:
 

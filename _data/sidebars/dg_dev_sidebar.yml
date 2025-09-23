@@ -262,10 +262,27 @@ entries:
           nested:
             - title: Chunk size configuration
               url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/chunk-size-configuration
+            - title: Configure direct synchronize
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize
             - title: Mapping configuration
               url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration
             - title: Configure a queue to be used by a publisher
               url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/queues-in-publisher-plugins
+        - title: Specific use cases and problem solving
+          nested:
+            - title: Bypass the key-value storage
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage
+            - title: Dynamic batch size
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/dynamic-batch-size
+            - title: "Minimize memory consumption: Managing excessive Jenkins logs"
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/minimize-memory-consumption-managing-excessive-jenkins-logs
+            - title: Splitting a single event queue into multiple publish queues
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/splitting-a-single-event-queue-into-multiple-publish-queues
+            - title: "Worker configuration for optimal memory and CPU usage"
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/worker-configuration-for-optimal-memory-and-cpu-usage
+              
+
+
 
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html

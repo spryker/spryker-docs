@@ -7,7 +7,7 @@ template: howto-guide-template
 
 To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
 
-For more details on direct sync, see [Synchronization types](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization#Synchronization-types).
+For more details on direct sync, see [Synchronization types](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization#synchronization-types).
 
 To enable direct synchronization, do the following:
 

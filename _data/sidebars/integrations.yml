@@ -86,8 +86,8 @@ entries:
         nested:
         - title: Configure Data Exchange API endpoints
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html
-        - title: Sending requests with Data Exchange API
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-with-data-exchange-api.html
+        - title: Sending requests to Data Exchange API
+          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html
         - title: Create post plugins for Data Exchange API
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
         - title: Batch processing and performance optimization with Data Exchange API

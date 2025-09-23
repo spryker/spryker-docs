@@ -58,6 +58,8 @@ The **Data Exchange API** builds on the Dynamic Entity API to facilitate real-ti
    - API key authentication for system-to-system integration
    - OAuth 2.0 for secure third-party integrations
 
+Learn more about how to [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
+
 ### Sending requests
 
 Data Exchange API follows Backend API conventions:
@@ -94,3 +96,5 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json'
 ```
+
+Learn more about [Sending requests to Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)

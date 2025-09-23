@@ -9,7 +9,7 @@ This document describes how to prepare an order for shipping by collecting order
 
 ## Prerequisites
 
-Log into the Fulfillment App. The login details should be provided by your Back Office administrator. A Back Office user can create or convert an existing Back Office user into a warehouse user. For instructions, see [Create users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [Edit users](/docs/pbc/all/user-management/202311.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+Log into the Fulfillment App. The login details should be provided by your Back Office administrator. A Back Office user can create or convert an existing Back Office user into a warehouse user. For instructions, see [Create users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [Edit users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 
 
 ## Fulfill an order

@@ -108,7 +108,7 @@ In January 2024, we have added and updated the following pages:
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 - [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html).
 - [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html).
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html).
 - [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
@@ -150,10 +150,10 @@ In December 2023, we have added and updated the following pages:
 - [Glue API: Add service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html): Learn how to add service points using Glue API.
 - [Glue API: Retrieve service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html): Learn how to retrieve service points using Glue API.
 - [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
-- [Glue API: Add service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
+- [Glue API: Add service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
 - [Glue API: Retrieve service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html): Learn how to retrieve service types using Glue API.
 - [Glue API: Update service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html): Learn how to update service types using Glue API.
-- [Glue API: Add services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
+- [Glue API: Add services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
 - [Glue API: Retrieve services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html): Learn how to retrieve services using Glue API.
 - [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
 - [Click & Collect domains](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-domains.html): Learn about the domain model, database, and other technical details of Click & Collect:
@@ -210,7 +210,7 @@ In November 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Fulfillment App overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html).
+- [Fulfillment App overview](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html).
 - [Warehouse Picking feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-picking-feature-overview.html).
 - [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html): Learn how to assign and deasign warehouses from warehouse users in the Back Office.
 - [Fulfillment App: Fulfill orders](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-fulfill-orders.html).

@@ -136,8 +136,8 @@ You can set different states for your order by clicking the action buttons. The 
 | ORDER STATE | DESCRIPTION |
 |---|---|
 | Pay | Click this button once you receive the payment for the order from your customer. |
-| Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html). |
-| Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html). |
+| Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html). |
+| Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html). |
 | Cancel | Click this button to cancel the order on the customer's behalf. |
 | Close | Click this button when your customer has successfully received the ordered items and is satisfied with their quality. |
 | Refund | Click this button in case of a refund. |

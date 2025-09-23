@@ -344,4 +344,4 @@ To enable merchant commissions, [install the Marketplace Merchant Commission fea
 
 ## Next step
 
-[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)
+[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)

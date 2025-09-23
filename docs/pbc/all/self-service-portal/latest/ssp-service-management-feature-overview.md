@@ -13,7 +13,7 @@ The *Service Management* feature enables customers to book a service, either for
 
 - Add service points and their addresses. A service point is a physical location where services are provided. For more information on service points, see [Service point](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-point).
 - Enable the Service Visit service type for service points as a unique service. For more information on services, see [Service](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service).
-- Configure a shipment method with the On-Site Service shipment type. For more information on shipment types, see [Shipment type](/docs/pbc/all/carrier-management/202410.0/base-shop/shipment-feature-overview.html#shipment-type).
+- Configure a shipment method with the On-Site Service shipment type. For more information on shipment types, see [Shipment type](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type).
 
 ## Selling services as products
 

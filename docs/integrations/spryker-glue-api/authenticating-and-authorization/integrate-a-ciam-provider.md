@@ -7,7 +7,7 @@ redirect_from: null
 
 ---
 
-This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
+This document describes how to integrate a third-party _customer identity and access management (CIAM) provider into a Spryker project.
 
 The following steps help you integrate between a Spryker project and CIAM leveraging standard APIs that the CIAM provider exposes, which can be used in the context of a customer whose data is to be read or updated.
 
@@ -45,7 +45,7 @@ The following diagram illustrates the dependencies between the core modules and 
 
 Create a separate CIAM provider Client layer with the following structure:
 
-```
+```text
 + Client/
   + CiamProvider/
     + Decoder/
@@ -127,11 +127,13 @@ class CiamTokenDecoder implements CiamTokenDecoderInterface
     }
 }
 ```
+
 </details>
 
 In relation to the CIAM provider module, you need to add a service as well to extract and parse the token from the authorization header.
 
 The logic falls under `Pyz/Service/<CIAM Provider>`:
+
 ```php
 <?php
 interface CiamProviderServiceInterface
@@ -223,6 +225,7 @@ class CiamTokenParser implements CiamtokenParserInterface
     }
 }
 ```
+
 </details>
 
 ## 2. Extend the `Customer` module with a customer creation functionality
@@ -231,7 +234,7 @@ Depending on the attributes that you plan to use from the CIAM provider in the c
 
 The following are the Customer `Zed` layer's touchpoints required to be extended or created. In a standard integration, more changes might be required depending on the implementation:
 
-```
+```text
 + Zed/
   + Customer/
     + Business/
@@ -289,7 +292,7 @@ The adjustment of Glue modules to include the new authorization functionality is
 
 In the `OauthApi` module, extend the access token validation step with your CIAM provider token parsing service.
 
-```
+```text
 + Glue/
   + OauthApi/
     + Processor/
@@ -336,7 +339,7 @@ It triggers the CIAM token parser, the CIAM token decoder, and the Customer crea
 
 The folder structure is similar to the following:
 
-```
+```text
 + Glue/
   + CiamProviderRestApi/
     + Plugin/

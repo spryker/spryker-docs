@@ -259,9 +259,9 @@ entries:
         - title: Bypass the key-value storage
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage.html
         - title: "Publish and synchronize: Advanced use cases"
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/publish-and-synchronize-advanced-use-cases.html          
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-advanced-use-cases.html          
         - title: "Publish and synchronize: Debugging"
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/publish-and-synchronize-debugging.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.html
         - title: Configuration
           nested:
             - title: Chunk size configuration

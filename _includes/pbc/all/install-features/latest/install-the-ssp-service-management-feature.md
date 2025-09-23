@@ -717,8 +717,8 @@ Spare parts,US
 
 | COLUMN     | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                           |
 |------------|----------|-----------|--------------|------------------------------------------------------------|
-| name       | ✓        | string    | Service      | Product label name (e.g. Service, Scheduled, Spare parts). |
-| store_name | ✓        | string    | DE           | Store to which the label is assigned (e.g. AT, DE, US).    |
+| name       | ✓        | string    | Service      | Product label name (for example, Service, Scheduled, Spare parts). |
+| store_name | ✓        | string    | DE           | Store to which the label is assigned (for example, AT, DE, US).    |
 
 
 **data/import/common/common/product_label.csv**
@@ -732,7 +732,7 @@ Spare parts,1,0,0,spare-parts,,,Spare parts,Ersatzteile,"service-001,service-002
 
 | COLUMN                | REQUIRED | DATA TYPE              | DATA EXAMPLE              | DESCRIPTION                                                                                                                                 |
 |-----------------------|----------|------------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| name                  | ✓        | string                 | Service                   | Base (default) label name. Must be unique across labels; used to reference the label in other import files (e.g. product_label_store).      |
+| name                  | ✓        | string                 | Service                   | Base (default) label name. Must be unique across labels; used to reference the label in other import files (for example, product_label_store).      |
 | is_active             | ✓        | int (0 or 1)           | 1                         | Activation flag. 1 = label is active and visible; 0 = inactive (kept for future use).                                                       |
 | is_dynamic            | ✗        | int (0 or 1)           | 0                         | Marks label as dynamic (rule-driven) when 1. Keep 0 for manually assigned/static labels.                                                    |
 | is_exclusive          | ✗        | int (0 or 1)           | 0                         | When 1, this label suppresses display of other non-exclusive labels on the same product.                                                    |

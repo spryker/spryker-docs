@@ -554,7 +554,7 @@ self_service_portal.asset.form.external_image_url.note,"Hinweis: Wenn kein Bild 
 self_service_portal.asset.error.not-found,Asset nicht gefunden,de_DE
 self_service_portal.asset.error.not-found,Asset not found,en_US
 self_service_portal.asset.validation.unknown_error,An unexpected error occurred while processing your asset,en_US
-self_service_portal.asset.validation.unknown_error,Beim Verarbeiten Ihres Assets ist ein
+self_service_portal.asset.validation.unknown_error,Beim Verarbeiten Ihres Assets ist ein Fehler aufgetreten,en_DE
 ```
 
 </details>
@@ -1623,3 +1623,4 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
    Make sure the **My Assets** menu item is not displayed, and you can't access the **My Assets** page.
 
 {% endinfo_block %}
+

@@ -692,7 +692,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             SspInquiryMenuItemWidget::class
         ];
     }
-    
+
     protected function getFilterControllerEventSubscriberPlugins(): array
     {
         return [
@@ -798,7 +798,7 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
             new SspInquiryDashboardDataExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
      */
@@ -808,7 +808,7 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
             new SspInquirySspAssetManagementExpanderPlugin(),
         ];
     }
-    
+
      /**
      * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface>
      */

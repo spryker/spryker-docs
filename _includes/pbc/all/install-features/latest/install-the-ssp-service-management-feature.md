@@ -34,16 +34,17 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                      | SPECIFICATION                                                                                                                                                  | NAMESPACE                                   |
-|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES | Defines the shipment types that are supported by Click & Collect, enabling customers to choose between different delivery or pickup options.       | SprykerShop\Yves\ClickAndCollectPageExample |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES   | Specifies default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                              | SprykerShop\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()             | Provides a default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
-| DataImportConfig::getFullImportTypes()                             | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                          | Pyz\Zed\DataImport                          |
-| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()            | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                       | SprykerShop\Yves\ServicePointWidget         |
-| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()               | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                       | SprykerShop\Yves\ShipmentTypeWidget         |
-| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                    | Defines a Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
-| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING    | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                         | SprykerFeature\Shared\SelfServicePortal     |
+| CONFIGURATION                                                                 | SPECIFICATION                                                                                                                                                | NAMESPACE                                   |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES            | Defines the shipment types that are supported by Click & Collect, enabling customers to choose between different delivery or pickup options.                 | SprykerShop\Yves\ClickAndCollectPageExample |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES              | Specifies default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                                | SprykerShop\Yves\ClickAndCollectPageExample |
+| SelfServicePortalConfig::getDefaultMerchantReference()                        | Provides a default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
+| DataImportConfig::getFullImportTypes()                                        | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                        | Pyz\Zed\DataImport                          |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()                       | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                     | SprykerShop\Yves\ServicePointWidget         |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()                          | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                     | SprykerShop\Yves\ShipmentTypeWidget         |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                               | Defines a Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
+| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING               | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                       | SprykerFeature\Shared\SelfServicePortal     |
+| SelfServicePortalConfig::getProductOfferServiceAvailabilityShipmentTypeKeys() | Returns a list of shipment type keys that are applicable for product offer service availability.                                                             | SprykerFeature\Client\SelfServicePortal     |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 
@@ -193,6 +194,37 @@ class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
         return [
             static::SHIPMENT_TYPE_DELIVERY,
             static::SHIPMENT_TYPE_ON_SITE_SERVICE,
+        ];
+    }
+}
+```
+
+
+**src/Pyz/Client/SelfServicePortal/SelfServicePortalConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Client\SelfServicePortal;
+
+use SprykerFeature\Client\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
+
+class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
+{
+    /**
+     * @var string
+     */
+    protected const SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
+
+    /**
+     * @return list<string>
+     */
+    public function getProductOfferServiceAvailabilityShipmentTypeKeys(): array
+    {
+        return [
+            self::SHIPMENT_TYPE_IN_CENTER_SERVICE,
         ];
     }
 }
@@ -652,6 +684,80 @@ console data:import shipment
 
 {% endinfo_block %}
 
+## Import the Product labels for the service products
+
+Prepare your data according to your requirements using our demo data:
+
+**data/import/common/AT/product_label_store.csv**
+
+```csv
+name,store_name
+Service,AT
+Scheduled,AT
+Spare parts,AT
+```
+
+**data/import/common/DE/product_label_store.csv**
+
+```csv
+name,store_name
+Service,DE
+Scheduled,DE
+Spare parts,DE
+```
+
+**data/import/common/US/product_label_store.csv**
+
+```csv
+name,store_name
+Service,US
+Scheduled,US
+Spare parts,US
+```
+
+| COLUMN     | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                           |
+|------------|----------|-----------|--------------|------------------------------------------------------------|
+| name       | ✓        | string    | Service      | Product label name (e.g. Service, Scheduled, Spare parts). |
+| store_name | ✓        | string    | DE           | Store to which the label is assigned (e.g. AT, DE, US).    |
+
+
+**data/import/common/common/product_label.csv**
+
+```csv
+name,is_active,is_dynamic,is_exclusive,front_end_reference,valid_from,valid_to,name.en_US,name.de_DE,product_abstract_skus,priority
+Service,1,0,0,service,,,Service,Service,"service-001,service-002,service-003,service-004",4
+Scheduled,1,0,0,scheduled,,,Scheduled,Geplant,"service-001,service-002,service-003,service-004",5
+Spare parts,1,0,0,spare-parts,,,Spare parts,Ersatzteile,"service-001,service-002,service-003,service-004",6
+```
+
+| COLUMN                | REQUIRED | DATA TYPE              | DATA EXAMPLE              | DESCRIPTION                                                                                                                                 |
+|-----------------------|----------|------------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| name                  | ✓        | string                 | Service                   | Base (default) label name. Must be unique across labels; used to reference the label in other import files (e.g. product_label_store).      |
+| is_active             | ✓        | int (0 or 1)           | 1                         | Activation flag. 1 = label is active and visible; 0 = inactive (kept for future use).                                                       |
+| is_dynamic            | ✗        | int (0 or 1)           | 0                         | Marks label as dynamic (rule-driven) when 1. Keep 0 for manually assigned/static labels.                                                    |
+| is_exclusive          | ✗        | int (0 or 1)           | 0                         | When 1, this label suppresses display of other non-exclusive labels on the same product.                                                    |
+| front_end_reference   | ✗        | string (slug)          | service                   | Front-end identifier/slug usable for CSS hooks, theming, or routing. Should be URL/identifier friendly (lowercase, dashes).                 |
+| valid_from            | ✗        | datetime (Y-m-d H:i:s) | 2025-01-01 00:00:00       | Start of validity window. Leave empty for immediate/no start restriction.                                                                   |
+| valid_to              | ✗        | datetime (Y-m-d H:i:s) | 2025-12-31 23:59:59       | End of validity window. Leave empty for no expiry.                                                                                          |
+| name.en_US            | ✓        | string                 | Service                   | Localized label name for en_US. Required if the locale is part of the project storefront locales.                                           |
+| name.de_DE            | ✗        | string                 | Ersatzteile               | Localized label name for de_DE. Add one column per supported locale (pattern: name.{locale}).                                               |
+| product_abstract_skus | ✗        | comma-separated list   | "service-001,service-002" | List of abstract product SKUs assigned to this label. Empty when using dynamic rules or assigning later.                                    |
+| priority              | ✗        | int                    | 4                         | Sorting / display priority. Lower or higher precedence depends on project logic (by default lower number = higher priority in many setups). |
+
+Prepare your data according to your requirements using our demo data:
+
+```bash
+console data:import:product-label
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the configured data has been added to the following database tables:
+
+- `spy_product_label`
+- `spy_product_label_store`
+{% endinfo_block %}
+
 ## Set up behavior
 
 1. Add the following plugins:
@@ -701,6 +807,7 @@ console data:import shipment
 | ProductClassOrderItemsPostSavePlugin                                         | Persists product classes information from `ItemTransfer.productClasses`.                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | SspProductClassSalesOrderItemCollectionPreDeletePlugin                       | Deletes related product class entries for given sales order items.                                                                         |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | CoordinatesServicePointSearchDataExpanderPlugin                              | Adds latitude and longitude coordinates to the service point search data.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ServicePointSearch |
+| ProductServiceAvailabilityStorageStrategyPlugin                              | Checks the availability of service products by verifying they have a service shipment type and at least one available product offer.       |               | SprykerFeature\Client\SelfServicePortal\Plugin\AvailabilityStorage           |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1363,6 +1470,33 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
+
+**src/Pyz/Client/AvailabilityStorage/AvailabilityStorageDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Client\AvailabilityStorage;
+
+use Spryker\Client\AvailabilityStorage\AvailabilityStorageDependencyProvider as SprykerAvailabilityStorageDependencyProvider;
+use SprykerFeature\Client\SelfServicePortal\Plugin\AvailabilityStorage\ProductServiceAvailabilityStorageStrategyPlugin;
+
+class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\AvailabilityStorageExtension\Dependency\Plugin\AvailabilityStorageStrategyPluginInterface>
+     */
+    protected function getAvailabilityStorageStrategyPlugins(): array
+    {
+        return [
+            new ProductServiceAvailabilityStorageStrategyPlugin(),
+        ];
+    }
+}
+```
+
 2. Enable the project override to enable the checkout form to handle single addresses per shipment type:
 
 
@@ -1519,6 +1653,93 @@ class CheckoutAddressFormDataProvider extends SprykerCheckoutAddressFormDataProv
 - The offer creation form is automatically prepopulated with information from the product
 - You can assign one or more service points to the product offer
 - The on-site service shipment type is available
+
+{% endinfo_block %}
+
+2. Enable following Storefront API endpoints:
+
+| PLUGIN                         | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                    |
+|--------------------------------|---------------------------------------------------------------------|---------------|--------------------------------------------------------------|
+| SspServicesResourceRoutePlugin | Provides the GET endpoint for the service products(booked-services) |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Glue\GlueApplication;
+
+use SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication\SspServicesResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+   /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {    
+        return [
+            new SspServicesResourceRoutePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can see the `booked-services` resources for the company user in the request:
+
+- Prerequisites:
+  - You have a company user with at least one order that contains a service product.
+  - You have the company user credentials (username and password).
+
+- First, get the access token by sending a `POST` request to the token endpoint with the company user credentials.
+`POST https://glue.mysprykershop.com/token`
+
+```json
+{
+    "data": {
+        "type": "token",
+        "attributes": {
+            "grant_type": "password",
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
+        }
+    }
+}
+```
+
+- Then, use the access token to access the `booked-services` endpoint:
+`GET https://glue.mysprykershop.com/booked-services`
+
+```json
+{
+  "data": [
+    {
+      "type": "booked-services",
+      "id": "120b7a51-69e4-54b9-96a6-3b5eab0dfe7a",
+      "attributes": {
+        "uuid": "120b7a51-69e4-54b9-96a6-3b5eab0dfe7a",
+        "productName": "Emergency Repair",
+        "scheduledAt": null,
+        "createdAt": "2025-09-23 11:05:30",
+        "stateDisplayName": "oms.state.new",
+        "stateName": "grace period started"
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/booked-services/120b7a51-69e4-54b9-96a6-3b5eab0dfe7a?page[offset]=0&page[limit]=1"
+      }
+    }
+  ],
+  "links": {
+    "self": "http://glue.eu.spryker.local/booked-services?page[offset]=0&page[limit]=1"
+  }
+}
+```
 
 {% endinfo_block %}
 

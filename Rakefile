@@ -173,6 +173,7 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

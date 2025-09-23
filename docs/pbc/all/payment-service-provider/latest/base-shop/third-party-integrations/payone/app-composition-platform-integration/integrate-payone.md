@@ -2,7 +2,7 @@
 title: Integrate Payone
 description: Learn how you can integrate the Payone app into your Spryker shop using Spryker App Composition Platform.
 template: howto-guide-template
-last_updated: Nov 1, 2024
+last_updated: Sep 22, 2025
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
@@ -222,6 +222,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 namespace Pyz\Zed\Payment;
 
 use Generated\Shared\Transfer\ExpenseTransfer;
+use Generated\Shared\Transfer\GiftCardTransfer;
 use Generated\Shared\Transfer\ItemTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
 use Generated\Shared\Transfer\TaxTotalTransfer;
@@ -244,6 +245,9 @@ class PaymentConfig extends SprykerPaymentConfig
             ],
             QuoteTransfer::EXPENSES => [
                 ExpenseTransfer::TAX_RATE => 'taxRate',
+            ],
+            QuoteTransfer::GIFT_CARDS => [
+                GiftCardTransfer::ACTUAL_VALUE => 'actualValue',
             ],
         ]);
     }

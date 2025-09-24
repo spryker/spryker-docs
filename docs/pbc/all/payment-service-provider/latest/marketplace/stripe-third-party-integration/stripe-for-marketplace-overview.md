@@ -99,4 +99,4 @@ Payouts with Spryker's commissions engine work as follows:
 
 ## Next step
 
-[Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)
+[Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)

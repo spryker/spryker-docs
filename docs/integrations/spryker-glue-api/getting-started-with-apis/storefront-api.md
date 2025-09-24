@@ -30,7 +30,7 @@ For more details, see Storefront API reference:
 
 - [Storefront API B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html)
 - [Storefront API B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html)
-- [Storefront API Marketplace B2B Demo Shop Reference](docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Storefront API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
 - [Storefront API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html)
 
 ## B2C API React example

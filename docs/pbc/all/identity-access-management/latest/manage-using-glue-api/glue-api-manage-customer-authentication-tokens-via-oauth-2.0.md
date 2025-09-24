@@ -148,4 +148,4 @@ To refresh an authentication token, send the request:
 | invalid_request | The refresh token is invalid. |
 | invalid_grant | The provided authorization grant or refresh token is invalid, expired, or revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

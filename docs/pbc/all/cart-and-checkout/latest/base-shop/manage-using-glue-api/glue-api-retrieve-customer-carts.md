@@ -1629,4 +1629,4 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

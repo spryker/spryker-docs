@@ -317,7 +317,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
 
 Only resource routes are supported for MFA protection. Custom routes defined via `RouteProviderPlugins` can't be protected with MFA.
 
-For more information about Glue Backend API resources, see [Create backend resources](/docs/dg/dev/glue-api/latest/routing/create-backend-resources.html).
+For more information about Glue Backend API resources, see [Create backend resources](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html).
 
 **src/Pyz/Glue/MultiFactorAuth/MultiFactorAuthConfig.php**
 

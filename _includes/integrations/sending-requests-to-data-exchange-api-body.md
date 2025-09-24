@@ -3,7 +3,7 @@ This document describes how to interact with databases using the Data Exchange A
 ## Prerequisites
 
 * [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html)
+* [Configure the Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:

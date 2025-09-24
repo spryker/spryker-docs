@@ -174,7 +174,7 @@ Request sample: retrieve a category tree
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |
 | name | String | Name of category associated with the node |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

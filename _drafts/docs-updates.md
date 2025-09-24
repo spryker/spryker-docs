@@ -108,7 +108,7 @@ In January 2024, we have added and updated the following pages:
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 - [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html).
 - [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html).
+- [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html).
 - [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
@@ -297,7 +297,7 @@ In October 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Data Exchange](/docs/pbc/all/data-exchange/202311.0/data-exchange.html): Get an overview of the Data Exchange features: Data Importers and Data Exporters, Data Exchange API, Spryker Middleware powered by Alumio.
+- [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html): Get an overview of the Data Exchange features: Data Importers and Data Exporters, Data Exchange API, Spryker Middleware powered by Alumio.
 - [Data Exchange FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html).
 - [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
 - [Security release notes 202309.0](/docs/about/all/releases/security-release-notes-202309.0.html).

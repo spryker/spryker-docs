@@ -130,7 +130,7 @@ Note that depending on the Login feature configuration for your project, too man
 | 003 | Failed to log in the user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

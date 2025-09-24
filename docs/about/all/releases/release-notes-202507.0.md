@@ -473,6 +473,10 @@ This redesign addresses stability challenges from its previous Jenkins-based exe
 The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
 
+### Docs
+
+[Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers)
+
 
 
 ### Business benefits

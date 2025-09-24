@@ -34,15 +34,18 @@ The Stable Worker Architecture addresses common issues encountered with Jenkins-
 The enhanced Stable Workers architecture incorporates advanced features designed to handle varying workloads efficiently:
 
 ### Dynamic Worker Scaling
+
 - Capacity providers: Configurable Auto Scaling Groups (ASG) with custom capacity providers for optimal resource allocation
 - ECS integration: Seamless integration with Amazon ECS for container-based worker management
 
 ### Resource Management
+
 - Thread pool optimization: Configurable `THREAD_POOL_SIZE` parameter for parallel process management
 - Queue prioritization: `QUEUE_PRIORITY` settings allow fine-tuning of resource allocation per queue
 - Memory distribution: Intelligent RAM allocation across workers to prevent memory limit issues
 
 ### Load Distribution
+
 Workers are distributed across queues using weighted calculations:
 - Queue weight = Queue length × Queue priority
 - Number of workers per queue = (Queue weight × Thread pool size) / Total weight
@@ -55,18 +58,23 @@ This ensures optimal resource utilization and prevents bottlenecks during high-v
 Stable Workers provide several significant advantages for your Spryker application:
 
 ### Improved P&S Performance & Stability
+
 Faster, more stable catalog data refreshes and timely frontend updates ensure that your customers always see the most current product information, prices, and availability.
 
 ### Reliable Data Synchronization
+
 More robust P&S with isolated task processing eliminates the risk of one failed process affecting others, ensuring consistent data flow across your application.
 
 ### Better Handling of Complex Scenarios
+
 Efficiently manage large, frequently updated catalogs common in B2B/Marketplace scenarios without performance degradation or system instability.
 
 ### Reduced Operational Disruptions
+
 Minimized downtime and manual P&S interventions due to enhanced resilience reduce the operational burden on your development and operations teams.
 
 ### Enhanced Logging
+
 Better visibility for logs (CloudWatch) for quicker resolution of P&S issues, enabling faster troubleshooting and reduced time to resolution.
 
 ## Configuration
@@ -89,11 +97,13 @@ To enable Stable Workers for your Spryker application, you need to contact Spryk
 ### Advanced Configuration Options
 
 #### Scalable Workers Infrastructure
+
 - Custom capacity providers: Configure Auto Scaling Groups (ASG) for dynamic worker scaling
 - ECS cluster integration: Leverage Amazon ECS for container-based worker management
 - Resource optimization: Fine-tune thread pool sizes and queue priorities based on specific workload requirements
 
 #### Configuration Parameters
+
 - `THREAD_POOL_SIZE`: Maximum number of parallel processes (default: 0 = disabled)
 - `QUEUE_PRIORITY`: Configurable ratio per queue for resource allocation (default: 1)
 - `DEFAULT_MAX_QUEUE_WORKER`: Disabled when thread pool size > 0

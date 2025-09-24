@@ -33,15 +33,15 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 related:
   - title: Upgrade the Currency
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
   - title: Upgrade the Sales
-    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
   - title: Upgrade the Price
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
   - title: Upgrade the Shipment
-    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
+    link: docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---
 
 This article provides a whole overview of what needs to be done to have the multi-currency feature running in your Spryker shop. The multi-currency feature affects many Spryker modules so we split it into smaller parts. Here you will find the information that will help get you started with the multi-currency feature.

@@ -15,11 +15,11 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/define-global-thresholds.html
 related:
   - title: Managing Merchant Order Thresholds
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/manage-threshold-settings.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/manage-threshold-settings.html
   - title: Order Thresholds feature overview
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 This doc describes how to define [global thresholds](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.

@@ -18,13 +18,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/configuring-amazon-pay.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - State Machine
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-sandbox-simulations.html
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 {% info_block errorBox %}

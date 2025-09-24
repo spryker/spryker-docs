@@ -283,7 +283,7 @@ This endpoint lets you retrieve services.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
+| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
 
 
 ### Request

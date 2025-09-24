@@ -3,6 +3,17 @@ title: Storefront API infrastructure
 description: The guide will walk you through the process of handling Storefront API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.
 last_updated: Sep 18, 2025
 template: glue-api-storefront-guide-template
+originalLink: https://documentation.spryker.com/2021080/docs/glue-infrastructure
+originalArticleId: dd27e960-56f8-4be6-bc6b-b479c71c5e02
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-infrastructure.html
+  - /docs/scos/dev/concepts/glue-api/glue-infrastructure.html
+  - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
+  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure
+related:
+  - title: Authentication and authorization
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

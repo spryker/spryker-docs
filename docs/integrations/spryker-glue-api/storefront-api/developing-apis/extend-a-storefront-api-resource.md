@@ -3,6 +3,17 @@ title: Extend a Storefront API resource
 description: This tutorial shows how to extend Storefront API resources
 last_updated: Sep 18, 2025
 template: howto-guide-template
+originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
+originalArticleId: 765f9daa-fe09-4e7b-9344-17dd4e65a952
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/extend-a-rest-api-resource.html
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/extend-a-rest-api-resource.html
+related:
+  - title: Glue API installation and configuration
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+  - title: Glue infrastructure
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 ---
 
 Spryker Storefront API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Storefront API modules that provide the relevant functionality on your project level.

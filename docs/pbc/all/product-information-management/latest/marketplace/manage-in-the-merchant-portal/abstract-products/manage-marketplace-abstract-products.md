@@ -7,11 +7,11 @@ redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/managing-marketplace-abstract-products.html
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/marketplace-inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/latest/marketplace/marketplace-inventory-management-feature-overview.html
   - title: Marketplace Product Approval Process feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-approval-process-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-approval-process-feature-overview.html
 ---
 
 This document describes how to manage marketplace abstract products in the Merchant Portal.

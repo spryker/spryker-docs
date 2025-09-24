@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202505.0/marketplace/marketplace-promotions-discounts-feature-overview.html
 related:
     - title: Discount
-      link: docs/pbc/all/discount-management/page.version/marketplace/marketplace-promotions-discounts-feature-overview.html
+      link: docs/pbc/all/discount-management/latest/marketplace/marketplace-promotions-discounts-feature-overview.html
 ---
 
 The *Marketplace Promotions and Discounts* feature ensures that discounts are applied to orders.

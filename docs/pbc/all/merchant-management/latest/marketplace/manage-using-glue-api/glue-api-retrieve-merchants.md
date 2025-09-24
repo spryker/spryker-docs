@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchants.html
 related:
   - title: Retrieving merchant opening hours
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
   - title: Retrieving merchant addresses
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
 ---
 
 Merchant is an individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check information like contact information, opening hours, and legal details.

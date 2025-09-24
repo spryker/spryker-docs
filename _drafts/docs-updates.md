@@ -19,11 +19,11 @@ In March 2024, we have added and updated the following pages:
 - [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html): Implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
 - [Security release notes 202403.0](/docs/about/all/releases/security-release-notes-202403.0.html).
 - [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/202311.0/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html):  how to retrieve and use payment details from third-party payment service providers (PSPs).
-- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
-- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html).
-- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html).
+- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
+- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html).
+- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html).
 - [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/202404.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html).
-- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
+- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
 
 ### Updated pages
 
@@ -63,7 +63,7 @@ In February 2024, we have added and updated the following pages:
 - [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/202404.0/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html).
 - [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
 - [Secure coding practices for external packages](/docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html).
-- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
+- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/latest/marketplace/merchant-portal-agent-assist-feature-overview.html).
 - [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
 - [Manage Stripe configurations in the ACP catalog](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html).
 - [Project guidelines for the Stripe app](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html).
@@ -73,7 +73,7 @@ In February 2024, we have added and updated the following pages:
 - [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): General information about Stripe as an ACP app.
 - [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html).
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Use default Glue parameters](/docs/scos/dev/glue-api-guides/202311.0/use-default-glue-parameters.html).
 
 For more details about these and other updates to the Spryker docs in February 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -106,14 +106,14 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
-- [Install the ACL feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
-- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/configure-data-exchange-api.html).
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [Install the ACL feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-acl-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/latest/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-- [Install the Agent Assist feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
@@ -140,9 +140,9 @@ In December 2023, we have added and updated the following pages:
 - [Glue API: Delete warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html): Learn how to activate and deactivate warehouse assignments using Glue API.
 - [Glue API: Retrieve warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-retrieve-warehouse-user-assignments.html): Learn how to retrieve warehouse user assignments using Glue API.
 - [Glue API: Update warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-update-warehouse-user-assignments.html): Learn how to update warehouse user assignments using Glue API.
-- [Glue API: Add shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html): Learn how to add shipment types using Glue API.
-- [Glue API: Retrieve shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html): Learn how to retrieve shipment types using Glue API.
-- [Glue API: Update shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html): Learn how to update shipment types using Glue API.
+- [Glue API: Add shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html): Learn how to add shipment types using Glue API.
+- [Glue API: Retrieve shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html): Learn how to retrieve shipment types using Glue API.
+- [Glue API: Update shipment types](/docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html): Learn how to update shipment types using Glue API.
 - [Glue API: Retrieve product offer service point availability](/docs/pbc/all/offer-management/202311.0/unified-commerce/glue-api-retrieve-product-offer-service-point-availability.html): Learn how to retrieve product offer service point availability using Glue API.
 - [Glue API: Add service point addresses](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html): Learn how to add service point addresses using Glue API.
 - [Glue API: Retrieve service point addresses](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html): Learn how to retrieve service point addresses using Glue API.
@@ -150,10 +150,10 @@ In December 2023, we have added and updated the following pages:
 - [Glue API: Add service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html): Learn how to add service points using Glue API.
 - [Glue API: Retrieve service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html): Learn how to retrieve service points using Glue API.
 - [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
-- [Glue API: Add service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
+- [Glue API: Add service types](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
 - [Glue API: Retrieve service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html): Learn how to retrieve service types using Glue API.
 - [Glue API: Update service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html): Learn how to update service types using Glue API.
-- [Glue API: Add services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
+- [Glue API: Add services](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
 - [Glue API: Retrieve services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html): Learn how to retrieve services using Glue API.
 - [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
 - [Click & Collect domains](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-domains.html): Learn about the domain model, database, and other technical details of Click & Collect:
@@ -192,9 +192,9 @@ In December 2023, we have added and updated the following pages:
 - [Create Glue API authorization strategies](/docs/dg/dev/glue-api/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
-- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
-- [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html).
+- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Shipment feature overview](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html).
 - [Enable Click & Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html): Learn how to enable Click & Collect.
 - [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
 - [Service Points feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
@@ -210,7 +210,7 @@ In November 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Fulfillment App overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html).
+- [Fulfillment App overview](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html).
 - [Warehouse Picking feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-picking-feature-overview.html).
 - [Assign and deassign warehouses from warehouse users](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html): Learn how to assign and deasign warehouses from warehouse users in the Back Office.
 - [Fulfillment App: Fulfill orders](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-fulfill-orders.html).
@@ -227,8 +227,8 @@ In November 2023, we have added and updated the following pages:
 - [Marketplace Install the Product Offer + Service Points feature guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html).
 - [Product Offer Service Points Availability feature integration guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html).
 - [Install the Product Offer + Service Points feature guide](/docs/pbc/all/offer-management/202311.0/unified-commerce/install-features/install-the-product-offer-service-points-feature.html).
-- [Shipment + Service Points feature overview](/docs/pbc/all/carrier-management/202311.0/unified-commerce/shipment-service-points-feature-overview.html).
-- [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/202311.0/unified-commerce/file-details-shipment-type-service-type.csv.html): Learn how to assign shipment types to service types via the data import.
+- [Shipment + Service Points feature overview](/docs/pbc/all/carrier-management/latest/unified-commerce/shipment-service-points-feature-overview.html).
+- [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/latest/unified-commerce/file-details-shipment-type-service-type.csv.html): Learn how to assign shipment types to service types via the data import.
 - [Service Points feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
 - [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
 - [Service Points Cart feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-feature-overview.html).
@@ -282,9 +282,9 @@ In November 2023, we have added and updated the following pages:
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn about the prerequisites for provisioning the Spryker Cloud Commerce OS environment.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html): Learn how to optimize the server-side execution time for a Spryker project.
-- [Install the Shipment Cart feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-cart-feature.html).
+- [Install the Shipment Cart feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-cart-feature.html).
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
-- [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
+- [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
 - [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
 - [Quickstart guide: Install Spryker on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
 
@@ -316,7 +316,7 @@ In October 2023, we have added and updated the following pages:
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
-- [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
+- [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
 - [Install the Marketplace Merchant + Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html).
 
 ### Updated pages
@@ -345,7 +345,7 @@ In October 2023, we have added and updated the following pages:
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
-- [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
+- [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
 - [System requirements](/docs/dg/dev/system-requirements/202307.0/system-requirements.html).
 
@@ -362,7 +362,7 @@ In September 2023, we have added and updated the following pages:
 - [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
 
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/sending-requests-with-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 
 ### Updated pages
@@ -418,9 +418,9 @@ In August 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Install the Shipment + Service Points feature guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
+- [Install the Shipment + Service Points feature guide](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
-- [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
+- [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
@@ -452,7 +452,7 @@ In July 2023, we have added and updated the following pages:
 - [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [System requirements](/docs/scos/dev/system-requirements/202304.0/system-requirements.html): This document provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 - [Supported browsers](/docs/about/all/supported-browsers.html): This document lists browsers supported by Spryker Cloud Commerce OS.
-- [Install the shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+- [Install the shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html)
 - [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
 - [Project development guidelines](/docs/dg/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
@@ -469,12 +469,12 @@ In June 2023, we have added and updated the following pages:
 - [Security release notes 202306.0](/docs/about/all/releases/security-release-notes-202306.0.html).
 
 - [Install the Service Points feature guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
-- [Install the Shipment + Service Points feature guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
+- [Install the Shipment + Service Points feature guide](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
 - Documentation on shipment data import:
-    - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html).
-    - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html).
-    - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
+    - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html).
+    - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html).
+    - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/latest/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 - [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html).
 - [Spryker documentation style guide](/docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html):
     - [Examples](/docs/about/all/about-the-docs/style-guide/style-guide-examples.html).
@@ -556,6 +556,6 @@ In April 2023, we have added and updated the following pages:
 - [Install the Spryker Core Back Office + Warehouse User Management feature](/docs/pbc/all/back-office/202311.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html)
 - [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202307.0/install-the-spryker-core-back-office-feature.html)
 - [Product + Category feature integration](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html)
-- [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
+- [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 
 For more details about the latest additions and updates to the Spryker docs, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

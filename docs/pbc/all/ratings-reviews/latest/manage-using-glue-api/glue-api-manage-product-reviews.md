@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html
 related:
   - title: Product Rating and Reviews feature overview
-    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
+    link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html
 ---
 
 [Ratings and reviews](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.

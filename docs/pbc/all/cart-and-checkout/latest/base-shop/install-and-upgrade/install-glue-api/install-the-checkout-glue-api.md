@@ -8,13 +8,13 @@ originalArticleId: f44bd963-7af3-4ce8-8b7a-3c1477880728
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Install the Checkout feature
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - title: Check out purchases
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Update payment data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
   - title: Submit checkout data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 ---

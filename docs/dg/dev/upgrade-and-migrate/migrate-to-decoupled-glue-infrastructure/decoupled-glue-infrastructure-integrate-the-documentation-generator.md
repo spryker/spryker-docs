@@ -280,4 +280,4 @@ A sure sign that `JsonApiSchemaFormatterPlugin` and `RestApiSchemaFormatterPlugi
 {% endinfo_block %}
 
 
-For more details, see [Document Glue API endpoints](/docs/dg/dev/glue-api/{{site.version}}/document-glue-api-endpoints.html).
+For more details, see [Document Storefront API endpoints](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html).

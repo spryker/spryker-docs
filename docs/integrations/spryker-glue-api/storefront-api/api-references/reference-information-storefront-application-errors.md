@@ -11,9 +11,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/reference-information-glueapplication-errors.html
   - /docs/scos/dev/glue-api-guides/202204.0/reference-information-glueapplication-errors.html
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/reference-information-glueapplication-errors
-related:
-  - title: Glue REST API
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

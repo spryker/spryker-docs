@@ -10,8 +10,6 @@ redirect_from: null
 related:
 - title: Glue API installation and configuration
   link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
-- title: Glue infrastructure
-  link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 ---
 
 {% include integrations/validate-rest-request-format-body.md %}

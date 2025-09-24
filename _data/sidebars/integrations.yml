@@ -36,7 +36,7 @@ entries:
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/create-backend-api-authorization-strategies.html
         - title: Use API Key authorization
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-api-key-authorization.html
-        - title: Use Glue API authorization scopes
+        - title: Use Backend API authorization scopes
           url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-backend-api-authorization-scopes.html
     - title: Storefront API
       url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html

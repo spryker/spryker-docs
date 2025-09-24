@@ -8,8 +8,6 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/document-glue-api-resources.html
 related:
-  - title: Glue infrastructure
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
   - title: Glue API installation and configuration
     link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---

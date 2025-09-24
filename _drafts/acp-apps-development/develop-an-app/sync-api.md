@@ -7,7 +7,7 @@ redirect_from:
 - /docs/acp/user/sync-api.html
 ---
 
-[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it's also known as [Glue API](/docs/dg/dev/glue-api/{{site.version}}/rest-api/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it's also known as [Storefront API](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api.html) with its [REST API B2C Demo Shop](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/dg/dev/glue-api/{{site.version}}/rest-api/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation

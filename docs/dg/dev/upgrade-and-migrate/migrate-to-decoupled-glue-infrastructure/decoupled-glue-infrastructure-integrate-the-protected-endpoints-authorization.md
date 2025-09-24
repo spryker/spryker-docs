@@ -165,4 +165,4 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-To verify that everything is set up correctly and the route is protected, see [Create protected Glue API endpoints](/docs/dg/dev/glue-api/{{site.version}}/create-protected-glue-api-endpoints.html).
+To verify that everything is set up correctly and the route is protected, see [Create protected Backend API endpoints](/docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/create-protected-backend-api-endpoints.html).

@@ -5,41 +5,45 @@ last_updated: July 9, 2025
 template: default
 ---
 
+## Data Exchange API vs. Dynamic Entity API
+
+### What is Data Exchange
+
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
 
-The following options to import and export data are available by default:
+### How the APIs Relate
 
-- Data Exchange API
-- Data importers and exporters
+**In simple terms:**
+The **Data Exchange API** is the business-facing name for Spryker's integration capability that allows data to flow between Spryker and external systems.
+It is **powered by the Dynamic Entity API**, a technical feature in the Spryker Back Office that enables you to create and manage API endpoints without custom development.
+- **Dynamic Entity API ->** technical perspective: how the endpoints are built.
+- **Data Exchange API ->** business perspective: why the endpoints are used.
 
-## Data Exchange API
+### Dynamic Entity API
 
-Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is exchanged across all integrated platforms. It's part of the Backend API suite in Spryker.
+The Dynamic Entity API is part of Spryker Commerce OS. It lets you build, customize, and manage database APIs through a Back Office user interface, with no coding required.
 
-Data Exchange API lets you build, customize, and manage database APIs tailored to your specific business requirements through a user interface, providing direct access to your Spryker data without requiring custom development.
+**Key features**
+- **No coding required**: API endpoints are created directly from the UI.
+- **Rapid API generation**: APIs can be generated in minutes.
+- **Flexibility and customization**: Tailor endpoints and parameters to fit your systems.
+- **Real-time updates**: Modify APIs on the fly without downtime.
+- **Security and access control**: Built-in safeguards and permissions.
+- **Direct database access**: Work with Spryker entities for real-time data operations.
 
-## Key features
+### Data Exchange API
 
-The main benefits of the Data Exchange API include the following:
+The **Data Exchange API** builds on the Dynamic Entity API to facilitate real-time data transfer across all integrated platforms.
 
-- No coding required: API endpoints are created from the user interface
-- Rapid API generation: APIs are generated within minutes
-- Flexibility and customization: Tailor APIs to your needs and define parameters to ensure compatibility with your systems
-- Real-time updates: Infrastructure supports dynamic changes, so you can modify APIs on the fly
-- Security and access control: Incorporates strong security measures and access controls to safeguard sensitive information
-- Direct database access: Provides direct access to Spryker database entities for real-time data operations
+**When to use it**
+- The Data Exchange API is recommended when you want to:
+- Create your own data integration engine via API (without middleware).
+- Synchronize data in real time between Spryker and external systems.
+- Build custom dashboards or reporting tools with direct Spryker data access.
+- Integrate with third-party systems that require immediate updates.
+- Develop custom administrative interfaces for reading/writing Spryker data.
 
-## Use cases
-
-Data Exchange API is recommended when you want to do the following:
-
-- Create your own data integration engine via API without using middleware software
-- Enable real-time data synchronization between Spryker and external systems
-- Build custom dashboards or reporting tools that need direct access to Spryker data
-- Integrate with third-party systems that require immediate data updates
-- Develop custom administrative interfaces that need to read or write Spryker data
-
-## Install and configure
+### Install and configure
 
 1. Installation: The Data Exchange API is available by default as part of the Backend API infrastructure.
 
@@ -54,7 +58,9 @@ Data Exchange API is recommended when you want to do the following:
    - API key authentication for system-to-system integration
    - OAuth 2.0 for secure third-party integrations
 
-## Sending requests
+Learn more about how to [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
+
+### Sending requests
 
 Data Exchange API follows Backend API conventions:
 
@@ -90,3 +96,5 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json'
 ```
+
+Learn more about [Sending requests to Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)

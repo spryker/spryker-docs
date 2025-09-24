@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/offer-management/202311.0/marketplace/manage-product-offers.html
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html
 ---
 
 To create a product offer in the Merchant Portal, follow the steps:

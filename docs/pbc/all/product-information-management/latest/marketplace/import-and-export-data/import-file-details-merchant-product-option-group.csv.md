@@ -7,11 +7,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product-option-group.csv.html
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html
   - title: Marketplace Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-options-feature-overview.html).

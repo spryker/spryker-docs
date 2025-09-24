@@ -5,9 +5,9 @@ template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 This document describes how to manage merchant user account details in the Merchant Portal.

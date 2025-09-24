@@ -15,11 +15,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
 related:
   - title: Edit product labels
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
   - title: View product labels
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
 
 This topic describes how to create product labels in the Back Office.

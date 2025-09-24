@@ -5,11 +5,11 @@ last_updated: May 20, 2022
 template: back-office-user-guide-template
 related:
   - title: Editing abstract products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
   - title: Editing product variants
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
 redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/catalog/products/managing-products/managing-products.html
 ---

@@ -5,9 +5,9 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Retrieving product offer prices
-    link: docs/pbc/all/price-management/page.version/marketplace/glue-api-retrieve-product-offer-prices.html
+    link: docs/pbc/all/price-management/latest/marketplace/glue-api-retrieve-product-offer-prices.html
   - title: Retrieving product offer availabilities
-    link: docs/pbc/all/warehouse-management-system/page.version/marketplace/glue-api-retrieve-product-offer-availability.html
+    link: docs/pbc/all/warehouse-management-system/latest/marketplace/glue-api-retrieve-product-offer-availability.html
 ---
 
 Product offers let different merchants sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.

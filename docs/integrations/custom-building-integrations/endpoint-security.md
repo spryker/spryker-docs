@@ -6,7 +6,7 @@ template: default
 
 ---
 
-## Out-of-the-box security features
+## API endpoint security
 
 ### Basic authentication
 

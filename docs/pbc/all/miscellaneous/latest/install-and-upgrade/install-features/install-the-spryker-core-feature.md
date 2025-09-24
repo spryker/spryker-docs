@@ -21,9 +21,9 @@ redirect_from:
   - /docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html
 related:
     - title: Install the Spryker Core Glue API
-      link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+      link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
     - title: Spryker Core feature walkthrough
-      link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/spryker-core-feature-overview.html
+      link: docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-the-spryker-core-feature.md -->

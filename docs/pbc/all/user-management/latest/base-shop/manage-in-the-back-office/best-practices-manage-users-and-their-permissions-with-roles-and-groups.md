@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
 related:
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create a user with restricted access to the  Back Office.

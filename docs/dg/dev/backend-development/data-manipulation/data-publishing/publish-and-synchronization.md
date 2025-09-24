@@ -1,7 +1,7 @@
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
-last_updated: Oct 18, 2024
+last_updated: Aug 18, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
 originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
@@ -9,59 +9,74 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
 related:
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-To access data rapidly, the Shop App client uses key-value storage (Redis or Valkey) and Elasticsearch as a search engine for data sources. The client does not have direct access to the [SQL database](/docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html) used by the back end. Therefore, to ensure that client data sources are always up-to-date, all changes made in the back end must be propagated to the frontend data sources. To achieve this, Spryker implements a two-step process called Publish and Synchronize (aka P&S):
 
-1. Publish:
-   1. An event that describes a change is generated.
-   2. All the data related to the change is collected.
-   3. The data is published in a form suitable for the client.
-2. Synchronize:
-   1. The data is synced to the key-value store (Redis or Valkey) and Elasticsearch.
+To serve data quickly, your shop application reads from Redis (key–value storage) and Elasticsearch (search and analytics). The client doesn't access the primary SQL database directly. Instead, Spryker uses the Publish and Synchronize (P&S) mechanism to move data from the relational database to Redis and Elasticsearch.
+
+P&S denormalizes and distributes data to achieve the following:
+
+- Reduce the load on the master database.
+
+- Deliver localized data, such as pricing, availability, and product details, in a format prepared for the Storefront.
+
+- Run queries run, which improves Storefront performance.
+
+Benefits of P&S:
+
+- Near real-time updates, which the default interval being one second.
+
+- Batched SQL queries during publishing for better performance.
+
+- Automatic updates when you change (CRUD operations) Propel entities, no manual triggers needed.  
+
+- Incremental exports; full re-exports are unnecessary.  
+
+- Safe fallback: the SQL database always holds the source of truth. You can resync at any time.  
+
+- Store- and locale-specific data support.
+
+- Spryker relies on Propel behaviors to fire events automatically whenever you save, update, or delete an entity. So you don't need to call any P&S code manually.
+
+## P&S process
+
+P&S process schema:
+
+![ps-process-overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/ps-process-overview.png)
 
 
-The advantages of the approach are:
+{% raw %}
+─────────▶ (solid): Synchronous call or direct write
+- - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
+{% endraw %}
 
-- High performance and fast (semi-real-time) sync, with changes synced every second by default.
-- Possibility to stack and optimize SQL queries while publishing data.
-- Possibility to trigger updates automatically by manipulating Propel entities and without triggering the sync manually.
-- Easy data transformation into the format that can be consumed by a frontend application.
-- Updates can be done incrementally without doing full exports.
-- Data is always available in the SQL database, even if key-value store (Redis or Valkey) or Elasticsearch storage is corrupted or outdated. You can re-sync the data at any time.
-- Data can be localized and targeted at a specific store.
+### 1. Publish 
 
+You can start the publish process using automated or manual event emitting.
 
-Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html) to learn more.
+#### Automated event emitting
 
-The process relies heavily on Propel behaviors, which are used to trigger actions automatically when updating the database. Thus, you don't need to trigger any step of the process in the code manually. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
+When an entity implements the Event Propel behavior, any create, update, or delete operation automatically triggers a corresponding publish event. This behavior ensures that entity changes are immediately captured and propagated through the system.
 
-## Triggering the Publish process
+For example, saving an abstract product triggers a `create abstract product` event:
 
-There are 2 ways to start the Publish process: automated and manual.
-
-### Automated event emitting
-
-Any changes done to an entity implementing the *event* Propel behavior triggers a publish event immediately. CUD (create, update, delete) operations are covered by this Propel behavior. So you can expect these three types of events on creation, update, and deletion of DB entities managed by Propel ORM.
-
-For example, saving an abstract product triggers the *create abstract product* event:
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -69,34 +84,44 @@ $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
 ```
 
-Implementing event behaviors is recommended for your project features to keep the Shop App data up-to-date. For example, behaviors are widely used in the `Availability` module to inform customers whether a certain product is available for purchase.
+On calling `save()`, the entity invokes the `saveEventBehaviorEntityChange()` method, which creates a `SpyEventBehaviorEntityChange` record. This record is saved to the database and remains pending until the `onTerminate` symfony event is triggered. During the `onTerminate` event, all queued `SpyEventBehaviorEntityChange` entries are processed, and the corresponding events are dispatched to the message queue.
 
-### Manual event emitting
+The event dispatcher plugin responsible for this behavior is `Spryker\Zed\EventBehavior\Communication\Plugin\EventDispatcher\EventBehaviorEventDispatcherPlugin`
 
-You can trigger the publish event manually using the [Event Facade](/docs/dg/dev/backend-development/data-manipulation/event/add-events.html):
+{% info_block infobox %}
+
+If the process finishes early and events are not processed during runtime, they will still be handled automatically using the `vendor/bin/console event:trigger:timeout` command.
+
+{% endinfo_block %}
+
+
+
+#### Manual event emitting
+
+You can trigger the publish event manually using the event facade:
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
 ```
 
-Manual even emitting is best suited when an entity passes several stages before becoming available to a customer. A typical use case for this method is content management. In most cases, a page does not become available once you create it. Usually, it exists as a draft to be published later. For example, when a new product is released to the market.
+Manual event emitting works best when an entity passes several stages before it becomes available to customers. A typical use case is content management or data import. For example, when you create a page, it usually remains a draft until you decide to publish it, or when you release a new product to the market.
 
-## How Publish and Synchronize works
+#### Event in the queue
 
-Publish and Synchronize Process schema:
-![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png)
+When the publish process is triggered, one or more event messages are posted to a queue. Each message includes metadata about the event that triggered it:
 
-## Publish
+- Event name  
 
-When the publish process is triggered, an event or events are posted to a queue. Each event message posted to the queue contains the following information on the event that triggered it:
-- Event name
-- ID
-- Names of the corresponding publisher and transfer classes
-- The list of modified columns
-- The foreign keys used to backtrack the updated Propel entities
+- The affected entity's ID  
 
+- Names of the corresponding publisher and transfer classes  
 
-However, it will not contain the actual data that has changed. See the following example:
+- A list of modified columns  
+
+- Foreign keys used to trace back the updated Propel entities  
+
+The message doesn't include the actual changed data. Example:
+
 
 ```json
 {
@@ -122,185 +147,286 @@ However, it will not contain the actual data that has changed. See the following
 }
 ```
 
-Each event is consumed by a publisher plugin that is mapped to it. The number of events depends on how many publisher plugins are configured for a specific update. For example, when the last product item is sold, its availability status should be changed to *not available*. The availability status of the product bundle it belongs to should be changed as well. Two publishers are required for this purpose: one for product availability and another for product bundle availability. As a result, two events are posted into the queue.
+### 2. Synchronize
 
-To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into a format suitable for frontend data storage (key-value store such as Redis or Valkey, or Elasticsearch).
+Synchronize  is the process of transferring data from the database to Redis and Elasticsearch, making it accessible to the customer-facing application.
 
-The transformed data is stored in a dedicated database table. It serves as a *mirror table* for the respective key-value store (Redis or Valkey) or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast synchronization. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+How it works:
 
-## Synchronize
+After a publish event is triggered and a message is placed in a queue (RabbitMQ), the following process takes place:
 
-When a change happens in the mirror table, its *synchronization behavior* sends the updated rows as messages to one of the Sync Queues. After consuming a message, the data is pushed to the key-value store (Redis or Valkey) or Elastisearch.
+1. The `vendor/bin/console queue:worker:start` command, typically run via Jenkins, scans for all non-empty queues.
 
-```json
-{
-	"write":{
-		"key":"url:de:\/de\/mypage",
-		"value":{
-			"fk_resource_categorynode":null,
-			"fk_resource_page":7,
-			"fk_resource_product_set":null,
-			"fk_resource_product_abstract":null,
-			"id_url":488,
-			"fk_locale":46,
-			"url":"\/de\/mypage",
-			"fk_resource_redirect":null,
-			"locale_urls":[
-				{
-					"fk_resource_categorynode":null,
-					"fk_resource_page":7,
-					"fk_resource_product_set":null,
-					"fk_resource_product_abstract":null,
-					"id_url":488,
-					"fk_locale":46,
-					"url":"\/de\/mypage",
-					"fk_resource_redirect":null,
-					"localeName":"de_DE"
-				},
-				{
-					"fk_resource_categorynode":null,
-					"fk_resource_page":7,
-					"fk_resource_product_set":null,
-					"fk_resource_product_abstract":null,
-					"id_url":487,
-					"fk_locale":66,
-					"url":"\/en\/mypage",
-					"fk_resource_redirect":null,
-					"localeName":"en_US"
-				}
-			],
-			"_timestamp":1526033491.2159581
-			},
-		"resource":"url",
-		"params":[
-		]
-	}
-}
+2. For each non-empty queue, a subprocess is started using the following command:
+
+
+```bash
+vendor/bin/console queue:task:start {queueName}
 ```
+
+`{queueName}` is the name of the queue being processed.
+
+3. This command identifies the appropriate listener responsible for processing the message.
+
+4. Based on the listener logic, storage or search entities are generated.
+
+5. These entities are persisted in the database.
+
+
+## Synchronization types
+
+P&S supports two types of sync: asynchronous and direct. Their differences are described in the following sections.
+
+### Asynchronous synchronization
+
+Asynchronous synchronization provides greater stability, although it may take slightly longer to complete. It works as follows:
+
+1. When an entity is saved to the database, a new message is generated and placed into a dedicated queue in RabbitMQ.
+
+2. `vendor/bin/console queue:worker:start` command detects this non-empty queue and spawns a child process using the `vendor/bin/console queue:task:start {queueName}` command.
+
+3. During execution, the message is processed, and the resulting data is stored in Redis or Elasticsearch.
+
+Asynchronous sync is used by default when you implement P&S.
+
 
 ### Direct synchronize
 
-To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
+Direct synchronize uses in-memory storage to temporarily hold synchronization messages and writes them at the end of the request lifecycle instead of using queues. To improve performance and flexibility, you can enable this method at the project level.
 
-To enable direct synchronization, do the following:
-1. Add `DirectSynchronizationConsolePlugin` to `ConsoleDependencyProvider::getEventSubscriber()`.
-2. Enable the `SynchronizationBehaviorConfig::isDirectSynchronizationEnabled()` configuration.
+How it works:
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+1. When an entity is saved to the database, synchronization messages are stored in the memory of the current PHP process.
 
-```php
-<?php
+2. After the console command completes, Symfony triggers the `onTerminate` event.
 
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Synchronization\Communication\Plugin\Console\DirectSynchronizationConsolePlugin;
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Symfony\Component\EventDispatcher\EventSubscriberInterface>
-     */
-    public function getEventSubscriber(Container $container): array
-    {
-        return [
-            new DirectSynchronizationConsolePlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SynchronizationBehavior;
-
-use Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig as SprykerSynchronizationBehaviorConfig;
-
-class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
-{
-    public function isDirectSynchronizationEnabled(): bool
-    {
-        return true;
-    }
-}
-```
-
-3. Optional: This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
-
-```xml
-<table name="spy_table_storage" identifierQuoting="true">
-    <behavior name="synchronization">
-        <parameter name="direct_sync_disabled"/>
-    </behavior>
-</table>
-```
-
-### Environment limitations related to DMS
-
-When Dynamic Multi-Store (DMS) is disabled, the Direct Sync feature has the following limitations:  
-- Single-store configuration: The feature is only supported for configurations with a single store.
-- Multi-store configuration with namespace consistency: For configurations with multiple stores, all stores must use the same Storage and Search namespaces.
-
-Example configuration for multiple stores:
-
-```yaml
-stores:
-    DE:
-        services:
-            broker:
-                namespace: de-docker
-            key_value_store:
-                namespace: 1
-            search:
-                namespace: search
-    AT:
-        services:
-            broker:
-                namespace: at-docker
-            key_value_store:
-                namespace: 1
-            search:
-                namespace: search
-```
-
-When DMS is enabled, there're no environment limitations for the Direct Sync feature.
+3. All messages stored in memory are written directly to Redis and/or Elasticsearch.
 
 
-## Data Architecture
+![direct-ps-process](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/direct-ps-process.png)
 
-P&S plays a major role in data denormalization and distribution to Spryker storefronts and API. Denormalization procedure aims for preparing data in the form it will be consumed by data clients. Distribution procedure aims to distribute the data closer to the end users, so that they feel like accessing a local storage.
 
-{% info_block infoBox "Project Example"%}
+{% raw %}
+─────────▶ (solid): Synchronous call or direct write
+- - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
+{% endraw %}
 
-Some of Spryker partners applied P&S features to distribute data over picking devices (barcode scanners) in a warehouse. The picking devices accessed the Spryker catalog as their local one, enabling them to properly function with low quality or missing network access.
+For instructions on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
-In other cases, P&S enabled customer projects to keep their main backend systems with customer data in one region, such as Germany, while distributing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil can browse their catalogs (as "local") with blazing fast response times.
+### Key differences from asynchronous synchronization
 
-P&S inspires intelligent solutions and smart architecture designs!
-{% endinfo_block %}
+| Aspect              | Asynchronous Sync                                      | Direct Sync                                                       |
+|---------------------|--------------------------------------------------------|-------------------------------------------------------------------|
+| Message queue       | Required                                              | Skipped                                                           |
+| Processing delay    | Delays is caused by queuing and worker execution            | Processed after the command ends without a delay                |
+| Performance impact  | Slower during command execution because of additional processing steps | Faster during command execution                                  |
+| Use case            | Default; scalable for large data volumes            | Optimized for speed and reduced infrastructure overhead; performs better with low data volumes |
 
-When designing a solution using P&S we need to consider the following concerns in our applications
-- eventual consistency for data available in storefronts
-- horizontal scalability of publish process (native) and sync process (requires development)
-- data object limitations
 
-### Data Object Limitations
+Asynchronous synchronization is more stable, easier to handle errors, and works with big amounts of data.
 
-In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
-- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
-- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
+Direct synchronization provides faster results, which is particularly useful for the following use cases:
 
-{% info_block infoBox "Are these really limitations?"%}
+- Test environments
 
-As every non-functional requirement (NFR) each of these limitations might be changed and adjusted to the project needs.
-However that might require an additional implementation or refactorring of Spryker OOTB functionallities.
+- Small projects
 
-For examples if your business requirements include sending objects above 10MB via API, which is not typical for e-commerce projects, that is still possible with Spryker. However it might require a review of the business logic attached to the API endpoint, and be adjusted to the new requirements. In this case the default requirement of 256KB for a sync message size is not applicable anymore.
+- Performance-critical operations where immediate consistency is preferred
 
-{% endinfo_block %}
+
+
+
+## P&S process example
+
+The following walkthrough shows how the P&S mechanism moves product-abstract data from the Spryker backend to Redis and Elasticsearch. The example is based on `SpyProductAbstract` sync in the B2B Marketplace Demo Shop. 
+
+### 1. Publish
+
+When you save a `SpyProductAbstract` entity in the Back Office - such as clicking **Save** on a product page - Spryker immediately triggers the P&S workflow. In this example, the product is enabled in two stores:
+
+
+![publish-stores](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/publish-stores.png)
+
+During the save operation, Spryker generates multiple events called messages and places them in RabbitMQ.
+
+### 2. Synchronize
+
+RabbitMQ now contains several events that relate to the product abstract and its dependent entities–for example, product concrete, URL storage, and price.
+
+#### Asynchronous synchronization
+
+Storage events:
+
+
+1. Queue: `publish.product_abstract` receives a storage event. 
+
+2. Listener: `ProductAbstractStoragePublishListener` (registered in `ProductStorageEventSubscriber.php`) consumes the event. 
+This message contains only metadata. The actual payload is constructed later by the storage or search listeners.
+
+
+Event example
+
+
+3. The listener does the following processing: 
+   1. Creates a `SpyProductAbstractStorage` entity
+   2. Populates the entity with the data that will be used on the frontend
+   3. Saves the data to the `spy_product_abstract_storage` table, one row per store and locale 
+
+![async-sync-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/async-sync-processing.png)
+
+
+4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
+
+
+message example
+
+
+5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`. 
+
+6. Result: All storage messages are written to Redis. 
+
+Search event:
+
+
+1. Queue: `publish.page_product_abstract` receives a search event. 
+
+2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message. 
+
+
+message example
+
+3. The listener does the following processing: 
+    1. Creates a `SpyProductAbstractPageSearch` entity
+    2. Populates the entity with data
+    3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale 
+
+![search-event-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/search-event-processing.png)
+
+4. Follow-up event: The listener sends a new message to the `sync.search.product` queue. 
+
+5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processSearchMessages()`. 
+
+6. Result: All search messages are indexed in Elasticsearch. 
+
+By following this workflow, Spryker makes all product changes made in the Back Office becomes available in Redis and Elasticsearch with minimal delay, even across multiple stores and locales.
+
+#### Direct synchronization
+
+In direct synchronization mode, the behavior of entities such as `SpyProductAbstractPageSearch` and `SpyProductAbstractStorage`, changes. Instead of sending messages to the queue for later processing as described in steps 3–5 of the previous example, these entities are written directly to Redis or Elasticsearch during the same PHP process.
+
+This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony's `onTerminate` event to perform the final synchronization step after the console command completes execution.
+
+For details on configuring direct sync, see See how to configure direct synchronization - 
+Direct synchronize configuration 
+
+## Data architecture
+
+P&S supports intelligent solutions and scalable architecture designs by handling data denormalization and distribution across Spryker Storefronts and APIs.
+
+### Denormalization and distribution
+
+- Denormalization prepares data in the format required by the consuming clients, such as storefronts or APIs.
+
+- Distribution ensures that this data is moved closer to end users, enabling fast and responsive access that feels like interacting with a local store.
+
+#### Project examples of data denormalization and distribution
+
+Several Spryker partners leverage P&S to distribute product data to warehouse picking devices, such as barcode scanners. These devices access the product catalog as if it were local, allowing them to function even with poor or no network connectivity.
+
+In other implementations, P&S enables businesses to centralize sensitive customer data - such as in Germany for compliance reasons - while distributing localized catalogs globally. For example, buyers in Brazil can browse the catalog with minimal latency, as if the data were hosted locally.
+
+
+
+### Architectural considerations
+
+When designing a solution that incorporates P&S, consider the following:
+
+- Eventual consistency of data in storefronts and client applications  
+
+- Horizontal scalability of the publish process (supported natively) and the synchronization process (may require custom development)  
+
+- Data object limitations, including payload sizes and system constraints
+
+### Data object limitations
+
+To ensure system stability, it's critical to define and enforce appropriate non-functional requirements for P&S, such as the following:
+
+- The maximum size of a storage synchronization message should not exceed 256 KB. This prevents processing issues and ensures that API consumers can reliably receive data without encountering failures because of large payloads.
+
+- Avoid exceeding request limits for storage, such as Redis, and search systems, such as OpenSearch, during the synchronization process.
+
+As with any non-functional requirements, you can adapt these constraints based on project needs. However, this may require a custom implementation or refactoring Spryker's default functionality.
+
+For example, if your project must support sending API payloads larger than 10 MB - an uncommon scenario for e-commerce platforms - it's still achievable with Spryker. However, this requires a thorough review of the business logic tied to the relevant API endpoints and adjustments to support larger objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

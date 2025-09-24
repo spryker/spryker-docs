@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html
 related:
   - title: Editing user roles
-    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
+    link: docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
 ---
 
 This document describes how to create user roles in the Back Office.

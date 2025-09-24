@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/marketplace-return-management-feature-integration.html
 related:
   - title: Marketplace Return Management feature walkthrough
-    link: docs/pbc/all/return-management/page.version/marketplace/marketplace-return-management-feature-overview.html
+    link: docs/pbc/all/return-management/latest/marketplace/marketplace-return-management-feature-overview.html
 ---
 
-{% include pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-return-management-glue-api.md -->
+{% include pbc/all/install-glue-api/latest/marketplace/install-the-marketplace-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-return-management-glue-api.md -->

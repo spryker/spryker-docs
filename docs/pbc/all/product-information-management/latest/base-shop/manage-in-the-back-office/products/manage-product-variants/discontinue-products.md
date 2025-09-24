@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
 related:
   - title: Adding Product Alternatives
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
   - title: Discontinued products overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

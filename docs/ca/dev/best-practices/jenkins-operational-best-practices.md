@@ -20,7 +20,7 @@ For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's S
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.
-- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/202311.0/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
+- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
 - Fine-tune the chunk size of the queues you work with.
 - Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
 - Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error "PHP Fatal error: Out of memory".

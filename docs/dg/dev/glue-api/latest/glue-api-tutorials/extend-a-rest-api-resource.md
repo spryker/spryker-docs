@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/extend-a-rest-api-resource.html
 related:
   - title: Glue API installation and configuration
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
   - title: Glue infrastructure
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-infrastructure.html
+    link: docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Glue API modules that provide the relevant functionality on your project level.
@@ -85,16 +85,6 @@ vendor/bin/console transfer:generate
 - `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
 - `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
 
-{% info_block infoBox %}
-
-To extend Glue transfers you also can use a [Spryk](/docs/dg/dev/glue-api/latest/glue-spryks.html):
-
-```bash
-console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
-```
-
-{% endinfo_block %}
-
 ## 2. Put data
 
 If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you have added in step 1.
@@ -136,18 +126,6 @@ class AbstractProductsResourceMapper extends SprykerAbstractProductsResourceMapp
 
 The implemented mapper extends the original core mapper located in `Spryker\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper` and calls the parent method in the method you override. This lets you avoid redefining the whole class and lets you define only the things you want to override.
 
-{% info_block infoBox %}
-
-To put data, you can also use a [Spryk](/docs/dg/dev/glue-api/latest/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
-```
-
-The preceding command creates a mapper and adds it to the factory on the project level. You need to extend the mapper from the original feature.
-
-{% endinfo_block %}
-
 ## 3. Override mapper initialization
 
 Override the initialization of the mapper created in the previous step by extending the factory of the `ProductsRestApi` module. A factory is used to create objects and processor classes of a module. Thus, by overriding it, you can invoke your new mapper. To do this, follow these steps:
@@ -179,18 +157,6 @@ class ProductsRestApiFactory extends SprykerProductsRestApiFactory
 ```
 
 Like the mapper, `ProductsRestApiFactory` extends the core factory and only overrides the mapper creation.
-
-{% info_block infoBox %}
-
-To override mapper initialization, you can also use a [Spryk](/docs/dg/dev/glue-api/latest/glue-spryks.html):
-
-```bash
-console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
-```
-
-This adds mapper initialization to the project-level factory.
-
-{% endinfo_block %}
 
 ## 4. Verify implementation
 

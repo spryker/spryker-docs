@@ -8,9 +8,9 @@ redirect_from:
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
 related:
   - title: Merchant Opening Hours feature overview
-    link: docs/pbc/all/merchant-management/page.version/marketplace/merchant-opening-hours-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/merchant-opening-hours-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_open_hours_date_schedule.csv` file to configure [special merchant opening hours](/docs/pbc/all/merchant-management/latest/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.

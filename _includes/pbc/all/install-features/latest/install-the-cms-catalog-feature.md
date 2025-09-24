@@ -231,6 +231,8 @@ global.search.pages,Seiten,de_DE
 global.search.pages,Pages,en_US
 global.search.results.view,Ansehen,de_DE
 global.search.results.view,View,en_US
+global.search.results.no_query,Ergebnisse,de_DE
+global.search.results.no_query,Search Results,en_US
 cms.page.sort.relevance,Nach Relevanz sortieren,de_DE
 cms.page.sort.relevance,Sort by relevance,en_US
 cms.page.sort.name_asc,Nach Name aufsteigend sortieren,de_DE

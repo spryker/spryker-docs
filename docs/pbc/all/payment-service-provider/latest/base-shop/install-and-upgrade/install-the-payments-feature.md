@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/payments-feature-integration.html
 related:
   - title: Install the Payments Glue API
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/install-the-payments-glue-api.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-glue-api.html
   - title: Payments feature walkthrough
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-overview.html
   - title: Payments feature overview
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-overview.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-payments-feature.md -->

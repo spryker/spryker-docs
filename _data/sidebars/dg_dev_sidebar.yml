@@ -242,7 +242,7 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
         - title: Implement Publish and Synchronization
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-        - title: Publish and Synchronize repeated export
+        - title: "Publish and synchronize: Re-synchronization and re-generation"
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
         - title: Publish and synchronize and multi-store shop systems
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
@@ -256,8 +256,6 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-        - title: Bypass the key-value storage
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage.html
         - title: "Publish and synchronize: Advanced use cases"
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-advanced-use-cases.html          
         - title: "Publish and synchronize: Debugging"
@@ -265,25 +263,25 @@ entries:
         - title: Configuration
           nested:
             - title: Chunk size configuration
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/chunk-size-configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/chunk-size-configuration.html
             - title: Configure direct synchronize
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize.html
             - title: Mapping configuration
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
             - title: Configure a queue to be used by a publisher
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/queues-in-publisher-plugins
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/queues-in-publisher-plugins.html
         - title: Specific use cases and problem solving
           nested:
             - title: Bypass the key-value storage
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage.html
             - title: Dynamic batch size
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/dynamic-batch-size
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/dynamic-batch-size.html
             - title: "Minimize memory consumption: Managing excessive Jenkins logs"
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/minimize-memory-consumption-managing-excessive-jenkins-logs
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/minimize-memory-consumption-managing-excessive-jenkins-logs.html
             - title: Splitting a single event queue into multiple publish queues
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/splitting-a-single-event-queue-into-multiple-publish-queues
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/splitting-a-single-event-queue-into-multiple-publish-queues.html
             - title: "Worker configuration for optimal memory and CPU usage"
-              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/worker-configuration-for-optimal-memory-and-cpu-usage
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/worker-configuration-for-optimal-memory-and-cpu-usage.html
               
 
 

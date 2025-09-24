@@ -108,7 +108,7 @@ kv:product_abstract:de:de_de:sku:001
 
 This enables Redis lookups using `sku:001` instead of the database ID.
 
-image-20250605-115136.png
+![redis-sku-lookup](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.md/redis-sku-lookup.png)
 
 
 ## Retrieve data using a mapping

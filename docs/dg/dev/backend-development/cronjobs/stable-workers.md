@@ -1,5 +1,5 @@
 ---
-title: Stable Workers
+title: Stable workers
 description: Learn about Stable Workers architecture for enhanced Publish and Synchronize functionality in Spryker.
 last_updated: Dec 23, 2024
 template: howto-guide-template
@@ -14,8 +14,6 @@ related:
 
 Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S functionality now uses a new Stable Worker Architecture with enhanced features. This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates. The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
-## Stable Workers overview
-
 Stable Workers represent a new architecture for executing Publish and Synchronize (P&S) tasks that replaces the previous Jenkins-based execution model. This architecture is specifically designed to handle the demanding requirements of data synchronization in modern e-commerce environments.
 
 Key characteristics:
@@ -29,22 +27,22 @@ Key characteristics:
 
 The Stable Worker Architecture addresses common issues encountered with Jenkins-based P&S execution, such as memory constraints, resource contention, and stability problems during high-load scenarios.
 
-## Scalable Architecture
+## Scalable architecture
 
 The enhanced Stable Workers architecture incorporates advanced features designed to handle varying workloads efficiently:
 
-### Dynamic Worker Scaling
+### Dynamic worker scaling
 
 - Capacity providers: Configurable Auto Scaling Groups (ASG) with custom capacity providers for optimal resource allocation
 - ECS integration: Seamless integration with Amazon ECS for container-based worker management
 
-### Resource Management
+### Resource management
 
 - Thread pool optimization: Configurable `THREAD_POOL_SIZE` parameter for parallel process management
 - Queue prioritization: `QUEUE_PRIORITY` settings allow fine-tuning of resource allocation per queue
 - Memory distribution: Intelligent RAM allocation across workers to prevent memory limit issues
 
-### Load Distribution
+### Load distribution
 
 Workers are distributed across queues using weighted calculations:
 - Queue weight = Queue length × Queue priority
@@ -53,35 +51,21 @@ Workers are distributed across queues using weighted calculations:
 
 This ensures optimal resource utilization and prevents bottlenecks during high-volume P&S operations.
 
-## Business Benefits
+## Business benefits
 
 Stable Workers provide several significant advantages for your Spryker application:
 
-### Improved P&S Performance & Stability
-
-Faster, more stable catalog data refreshes and timely frontend updates ensure that your customers always see the most current product information, prices, and availability.
-
-### Reliable Data Synchronization
-
-More robust P&S with isolated task processing eliminates the risk of one failed process affecting others, ensuring consistent data flow across your application.
-
-### Better Handling of Complex Scenarios
-
-Efficiently manage large, frequently updated catalogs common in B2B/Marketplace scenarios without performance degradation or system instability.
-
-### Reduced Operational Disruptions
-
-Minimized downtime and manual P&S interventions due to enhanced resilience reduce the operational burden on your development and operations teams.
-
-### Enhanced Logging
-
-Better visibility for logs (CloudWatch) for quicker resolution of P&S issues, enabling faster troubleshooting and reduced time to resolution.
+- Improved P&S performance and stability: Faster, more stable catalog data refreshes and timely frontend updates ensure that your customers always see the most current product information, prices, and availability.
+- Reliable data synchronization: More robust P&S with isolated task processing eliminates the risk of one failed process affecting others, ensuring consistent data flow across your application.
+- Better handling of complex scenarios: Efficiently manage large, frequently updated catalogs common in B2B and Marketplace scenarios without performance degradation or system instability.
+- Reduced operational disruptions: Minimized downtime and manual P&S interventions due to enhanced resilience reduce the operational burden on your development and operations teams.
+- Enhanced logging: Better visibility for logs (CloudWatch) for quicker resolution of P&S issues, enabling faster troubleshooting and reduced time to resolution.
 
 ## Configuration
 
 To enable Stable Workers for your Spryker application, you need to contact Spryker Support. This feature requires infrastructure-level configuration that is managed by the Spryker team.
 
-### How to Enable Stable Workers
+### Enable stable workers
 
 1. Contact Spryker Support: Reach out to your Spryker support team to request Stable Workers activation
 2. Provide Environment Details: Specify which environments (development, staging, production) should have Stable Workers enabled
@@ -94,16 +78,70 @@ To enable Stable Workers for your Spryker application, you need to contact Spryk
 - Monitor Performance: After activation, monitor your application's P&S performance to validate the improvements
 
 
-### Advanced Configuration Options
+### Advanced configuration options
 
-#### Scalable Workers Infrastructure
+#### Scalable workers infrastructure
 
 - Custom capacity providers: Configure Auto Scaling Groups (ASG) for dynamic worker scaling
 - ECS cluster integration: Leverage Amazon ECS for container-based worker management
 - Resource optimization: Fine-tune thread pool sizes and queue priorities based on specific workload requirements
 
-#### Configuration Parameters
+#### Configuration parameters
 
 - `THREAD_POOL_SIZE`: Maximum number of parallel processes (default: 0 = disabled)
 - `QUEUE_PRIORITY`: Configurable ratio per queue for resource allocation (default: 1)
 - `DEFAULT_MAX_QUEUE_WORKER`: Disabled when thread pool size > 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

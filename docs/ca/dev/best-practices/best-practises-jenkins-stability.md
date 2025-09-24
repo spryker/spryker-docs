@@ -49,9 +49,9 @@ While you can create jobs in Jenkins dashboard to quickly run console commands, 
 
 For Publish and Synchronize (P&S) operations, Spryker offers an enhanced alternative to Jenkins-based execution through the Stable Workers architecture. This approach addresses the memory management, resource contention, and stability challenges described above by:
 
-- **Isolating P&S workloads**: Dedicated worker environments prevent P&S jobs from competing for Jenkins resources
-- **Enhanced resource management**: Intelligent distribution of computational resources with configurable thread pools and queue priorities
-- **Better error handling**: Built-in retry mechanisms and improved error detection specifically for P&S operations
+- Isolating P&S workloads: Dedicated worker environments prevent P&S jobs from competing for Jenkins resources
+- Enhanced resource management: Intelligent distribution of computational resources with configurable thread pools and queue priorities
+- Better error handling: Built-in retry mechanisms and improved error detection specifically for P&S operations
 
 While Jenkins continues to manage non-P&S tasks effectively, migrating P&S functionality to Stable Workers can significantly reduce the memory and CPU pressure on your Jenkins instance, improving overall system stability.
 

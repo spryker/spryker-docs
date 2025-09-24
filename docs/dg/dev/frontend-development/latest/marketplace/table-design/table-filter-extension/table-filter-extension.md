@@ -10,11 +10,11 @@ redirect_from:
 
 related:
   - title: Table Filter Date Range
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Select
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-select.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-select.html
   - title: Table Filter Tree Select
-    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter extension in the Components Library.

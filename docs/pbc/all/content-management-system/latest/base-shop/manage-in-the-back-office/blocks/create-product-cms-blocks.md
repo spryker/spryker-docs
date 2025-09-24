@@ -7,7 +7,7 @@ redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
 related:
   - title: Edit CMS blocks
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
 ---
 
 ## Prerequisites

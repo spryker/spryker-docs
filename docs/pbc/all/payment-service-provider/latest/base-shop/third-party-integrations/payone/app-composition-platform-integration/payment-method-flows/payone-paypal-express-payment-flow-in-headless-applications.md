@@ -5,9 +5,9 @@ template: howto-guide-template
 last_updated: Now 8, 2024
 related:
   - title: PayOne Credit Card payment flow
-    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
+    url: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-credit-card-payment-flow.html
   - title: Payone PayPal payment flow
-    url: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html    
+    url: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-payment-flow.html    
 ---
 
 ## PayPal Express for checkout in a headless application
@@ -63,7 +63,7 @@ The payment methods returned by the `/checkout-data?include=payment-methods` end
 When the customer clicks the **Pay with PayPal Express** button, the `InitializePreOrderPayment` Glue API endpoint is called to initialize the payment.
 
 
-For more details on payment methods in a headless chechout, see [Payment Method Strategies](/docs/pbc/all/payment-service-provider/202410.0/base-shop/payment-method-strategies.html).
+For more details on payment methods in a headless chechout, see [Payment Method Strategies](/docs/pbc/all/payment-service-provider/latest/base-shop/payment-method-strategies.html).
 
 
 #### Preorder payment initialization

@@ -18,7 +18,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 related:
   - title: Akeneo
-    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/akeneo/akeneo.html
 ---
 
 ## Installation

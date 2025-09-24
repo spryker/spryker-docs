@@ -45,7 +45,7 @@ When configuring multiple queue workers per queue, consider [Memory management](
 
 While you can create jobs in Jenkins dashboard to quickly run console commands, remember that these jobs are removed when the Jenkins instance is reprovisioned. Jenkins can be reprovisioned during self-healing, recovering from an exception of the underlying instance or container, or during a pipeline execution. For instructions on setting up a job that doesn't get removed, see [Using cronjob schedulers](/docs/dg/dev/backend-development/cronjobs/cronjobs.html#using-cronjob-schedulers).
 
-## Stable Workers Alternative
+## Stable workers alternative
 
 For Publish and Synchronize (P&S) operations, Spryker offers an enhanced alternative to Jenkins-based execution through the Stable Workers architecture. This approach addresses the memory management, resource contention, and stability challenges described above by:
 

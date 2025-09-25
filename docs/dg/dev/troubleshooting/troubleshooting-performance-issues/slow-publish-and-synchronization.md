@@ -17,9 +17,9 @@ Publish and Synchronization is slow on all or some actions.
 
 ## Cause
 
-There are two possible causes for the slow PUblish and Synchronization:
+There are two possible causes for the slow Publish and Synchronization:
 
-- All the PUblish and Synchronization events go to the **event** message queue.
+- All the Publish and Synchronization events go to the **event** message queue.
 
 ![an-event-message-queue](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s/an-event-message-queue.png)
 

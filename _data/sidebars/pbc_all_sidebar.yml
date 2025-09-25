@@ -1050,7 +1050,7 @@ entries:
         url: /docs/pbc/all/data-exchange/data-exchange.html
         nested:
           - title: Install and upgrade
-          - nested:
+            nested:
             - title: Data Exchange API
               url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
             - title: Data Exchange API + Inventory Management feature

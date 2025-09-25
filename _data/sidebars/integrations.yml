@@ -109,7 +109,7 @@ entries:
         - title: Create API applications
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html
         - title: Create Backend API resources with parent-child relationships
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-glue-backend-resources-with-parent-child-relationships.html
+          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-api-resources-with-parent-child-relationships.html
         - title: Create and change Glue API conventions
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-and-change-backend-api-conventions.html
         - title: Create a backend resource

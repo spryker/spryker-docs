@@ -12,9 +12,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/security-and-authentication.html
   - /docs/pbc/all/identity-access-management/202404.0/glue-api-security-and-authentication.html
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-api-security-and-authentication
-related:
-  - title: Authentication and Authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

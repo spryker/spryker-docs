@@ -9,8 +9,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-passwords.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-passwords.html
 related:
-  - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration

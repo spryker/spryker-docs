@@ -28,7 +28,7 @@ Storefront API endpoints shipped by Spryker are covered by documentation by defa
 
 ## Prerequisites
 
-Install and enable [Spryker Storefront API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html). Also, see the following documents:
+Install and enable [Spryker Storefront API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html). Also, see the following documents:
 
 - [Open API Specification](https://github.com/OAI/OpenAPI-Specification)
 - [Swagger Tools Reference](https://swagger.io/)

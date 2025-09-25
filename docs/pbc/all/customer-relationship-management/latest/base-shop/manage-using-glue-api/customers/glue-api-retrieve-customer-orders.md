@@ -13,8 +13,6 @@ redirect_from:
 related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/latest/base-shop/glue-api-retrieve-orders.html
-  - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration

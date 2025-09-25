@@ -270,7 +270,7 @@ In November 2023, we have added and updated the following pages:
     - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html).
     - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html).
 - [Backend API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
-- [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+- [Backend API Marketplace B2C Demo Shop reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
 - [REST API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html).
 - [Release notes 202311.0](/docs/about/all/releases/release-notes-202311.0.html).

@@ -8,6 +8,7 @@ originalArticleId: 094f9906-b82e-49aa-9af5-27199c5d2c01
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
+  - /docs/dg/dev/glue-api/latest/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
 ---
 
 As a part of documentation related to Spryker Storefront API, we have also developed a B2C API React example. It is a [React](https://reactjs.org/) single-page application based on a [webpack](https://webpack.js.org/) dev server, Typescript, [Redux](https://redux.js.org/), and Material UI.

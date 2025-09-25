@@ -10,7 +10,8 @@ redirect_from:
   - /docs/scos/dev/concepts/glue-api/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
-  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure
+  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure.html
+  - /docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

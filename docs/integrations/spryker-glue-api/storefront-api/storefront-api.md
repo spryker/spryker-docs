@@ -4,6 +4,19 @@ description: Storefront API is designed for customer-facing applications and buy
 last_updated: July 9, 2025
 template: default
 layout: custom_new
+redirect_from:
+  - /docs/scoc/dev/glue-api-guides/202404.0/index.html
+  - /docs/scos/dev/glue-api-guides/202404.0/glue-rest-api.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
+  - /docs/scos/dev/glue-api-guides/202204.0/index.html
+  - /docs/scos/dev/glue-api-guides/202404.0/glue-api-guides.html
+  - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-rest-api.html
+  - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
+  - /api/definition-api.htm
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html
+  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-rest-api
+  - /docs/dg/dev/glue-api/latest/glue-api.html
+  - /docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html
 ---
 
 The *Spryker Storefront API* is a JSON REST API that is designed for customer-facing applications and buyer journey touchpoints. It is built to be used as a contract between the Spryker Commerce OS backend and any possible customer touchpoint or integration with third-party systems. As an application, Storefront API knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality for customer experiences.

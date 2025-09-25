@@ -3,6 +3,13 @@ title: Document Backend API endpoints
 description: You can enhance the way your resource is described in the OPENAPI v3 schema
 last_updated: Sep 21, 2025
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202204.0/document-glue-api-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202404.0/document-glue-api-endpoints.html
+  - /docs/dg/dev/glue-api/latest/document-glue-api-endpoints.html
 ---
 
 This document shows Document Glue API endpoints.

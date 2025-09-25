@@ -4,7 +4,8 @@ description: This document describes how to create custom post create/update plu
   for the Data Exchange API.
 last_updated: July 9, 2025
 template: howto-guide-template
-redirect_from: null
+redirect_from:
+  - /docs/pbc/all/data-exchange/latest/create-post-plugins-for-data-exchange-api.html
 ---
 
 {% include integrations/create-post-plugins-for-data-exchange-api-body.md %}

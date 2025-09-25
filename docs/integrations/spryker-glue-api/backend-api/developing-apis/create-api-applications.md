@@ -3,6 +3,14 @@ title: Create API applications
 description: This document describes how to create a new API application
 last_updated: Sep 21, 2025
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-api-applications.html
+  - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/create-glue-api-applications.html
+  - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/create-glue-api-applications.html
+  - /docs/scos/dev/glue-api-guides/202404.0/create-glue-api-applications.html
+  - /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.md
+  - /docs/dg/dev/glue-api/latest/create-glue-api-applications.html
 ---
 
 Spryker's Backend API is a powerful tool for building custom front end applications, integrating with third party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.

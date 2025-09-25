@@ -371,6 +371,7 @@ Make sure the configured data has been added to the following database tables:
 | SspModelToProductListWritePublisherPlugin           | Publishes SSP model data by `SpySspModelToProductList` entity events.                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspModel\Storage |
 | SearchSspAssetToModelWritePublisherPlugin           | Publishes SSP asset data by `SpySspAssetToSspModel` entity events.                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search  |
 | SspModelListSynchronizationDataBulkRepositoryPlugin | Retrieves a collection of SSP model storage transfers according to provided offset, limit and IDs. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage    |
+| SspModelProductListUsedByTableExpanderPlugin        | Expands table data by adding SSP models related to the product list.                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductListGui             |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -458,6 +459,33 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
+**src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\ProductListGui;
+
+use Spryker\Zed\ProductListGui\ProductListGuiDependencyProvider as SprykerProductListGuiDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductListGui\SspModelProductListUsedByTableExpanderPlugin;
+
+class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
+{
+ 
+    /**
+     * @return array<\Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface>
+     */
+    protected function getProductListUsedByTableExpanderPlugins(): array
+    {
+        return [
+            new SspModelProductListUsedByTableExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 1. On the Storefront, log in with the company user you've assigned the role to.
@@ -467,6 +495,11 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 4. Upload an image and fill in the required fields.
 5. Click **Save**.
    Make sure the asset gets saved and this opens the asset details page.
+
+Make sure that assigned models are displayed on the product list page in the back office.
+1. In the Back Office, go to **Catalog** > **Product Lists**.
+2. Edit the product list you have assigned to the model using the data import.
+3. Make sure the **Used By** tab displays the assigned models.
 
 {% endinfo_block %}
 

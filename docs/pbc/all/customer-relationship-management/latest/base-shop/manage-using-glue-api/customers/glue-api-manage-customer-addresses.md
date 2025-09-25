@@ -21,8 +21,6 @@ related:
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/password-management-overview.html
   - title: Customer Accounts
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-  - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -381,7 +379,7 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 | 412 | No address ID provided. |
 | 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

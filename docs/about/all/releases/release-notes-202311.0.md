@@ -83,9 +83,7 @@ The key features of the Data Exchange API include the following:
 
 ### Documentation
 
-- [Data Exchange API](/docs/pbc/all/data-exchange/latest/data-exchange.html)
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api)
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)
+- [Data Exchange API](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html)
 
 ### Technical prerequisites
 

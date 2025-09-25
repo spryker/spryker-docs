@@ -230,7 +230,7 @@ To retrieve a business unit, send the request:
 | 1903 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1901 | Specified business unit is not found or the user does not have access to it. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

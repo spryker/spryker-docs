@@ -1217,4 +1217,4 @@ To retrieve detailed information on an order, send the request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -2334,4 +2334,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204  | Cannot update the wishlist.                   |
 | 205  | Cannot remove the wishlist.                   |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

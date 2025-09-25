@@ -5,9 +5,6 @@ description: Discover the steps to install the Data Exchange API in your Spryker
   data exchange.
 last_updated: July 9, 2025
 template: default
-related:
-- title: How to configure Data Exchange API
-  link: docs/pbc/all/data-exchange/page.version/configure-data-exchange-api.html
 ---
 
 {% include pbc/all/install-features/latest/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api.md -->

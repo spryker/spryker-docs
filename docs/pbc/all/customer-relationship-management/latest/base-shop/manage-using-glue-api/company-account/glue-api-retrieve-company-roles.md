@@ -170,7 +170,7 @@ To retrieve a company role, send the request:
 | 2101 | Company role is not found. |
 | 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

@@ -1051,12 +1051,12 @@ entries:
         nested:
           - title: Install and upgrade
             nested:
-            - title: Data Exchange API
-              url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
-            - title: Data Exchange API + Inventory Management feature
-              url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
-            - title: Data Exchange API + Category Management feature
-              url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
+              - title: Data Exchange API
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
+              - title: Data Exchange API + Inventory Management feature
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
+              - title: Data Exchange API + Category Management feature
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html

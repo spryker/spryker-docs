@@ -30,7 +30,7 @@ For more details about the difference between SAPI and BAPI, refer to [Backend a
 
 ### Possibility to create new API applications
 
-With the current infrastructure, projects can easily [create](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-api-applications.html) their own API applications that would be completely separated from others. This means that resources can be added only to the new application, and users can't access them with existing ones.
+With the current infrastructure, projects can easily [create](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html) their own API applications that would be completely separated from others. This means that resources can be added only to the new application, and users can't access them with existing ones.
 
 ### Decoupling from conventions
 

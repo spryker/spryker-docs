@@ -107,7 +107,7 @@ entries:
       - title: Developing new APIs
         nested:
         - title: Create API applications
-          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-api-applications.html
+          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html
         - title: Create Glue API resources with parent-child relationships
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-glue-api-resources-with-parent-child-relationships.html
         - title: Create and change Glue API conventions

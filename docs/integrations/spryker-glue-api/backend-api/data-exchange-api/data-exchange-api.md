@@ -11,25 +11,25 @@ template: default
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
 
-### How the APIs Relate
+### How the APIs relate
 
-**In simple terms:**
-The **Data Exchange API** is the business-facing name for Spryker's integration capability that allows data to flow between Spryker and external systems.
-It is **powered by the Dynamic Entity API**, a technical feature in the Spryker Back Office that enables you to create and manage API endpoints without custom development.
-- **Dynamic Entity API ->** technical perspective: how the endpoints are built.
-- **Data Exchange API ->** business perspective: why the endpoints are used.
+In simple terms:
+The Data Exchange API is the business-facing name for Spryker's integration capability that allows data to flow between Spryker and external systems.
+It is powered by the Dynamic Entity API, a technical feature in the Spryker Back Office that enables you to create and manage API endpoints without custom development.
+- Dynamic Entity API -> technical perspective: how the endpoints are built.
+- Data Exchange API -> business perspective: why the endpoints are used.
 
 ### Dynamic Entity API
 
 The Dynamic Entity API is part of Spryker Commerce OS. It lets you build, customize, and manage database APIs through a Back Office user interface, with no coding required.
 
-**Key features**
-- **No coding required**: API endpoints are created directly from the UI.
-- **Rapid API generation**: APIs can be generated in minutes.
-- **Flexibility and customization**: Tailor endpoints and parameters to fit your systems.
-- **Real-time updates**: Modify APIs on the fly without downtime.
-- **Security and access control**: Built-in safeguards and permissions.
-- **Direct database access**: Work with Spryker entities for real-time data operations.
+Key features
+- No coding required: API endpoints are created directly from the UI.
+- Rapid API generation: APIs can be generated in minutes.
+- Flexibility and customization: Tailor endpoints and parameters to fit your systems.
+- Real-time updates: Modify APIs on the fly without downtime.
+- Security and access control: Built-in safeguards and permissions.
+- Direct database access: Work with Spryker entities for real-time data operations.
 
 ### Data Exchange API
 

@@ -14,6 +14,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/company-account-order-management-feature-integration.html
 related:
     - title: Company Account
-      link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-account-feature-overview.html
+      link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-account-feature-overview.html
 ---
 {% include pbc/all/install-features/latest/install-the-company-account-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md -->

@@ -39,7 +39,7 @@ If the Vertex app is down or taxes can't be calculated for other reasons, taxes 
 
 ## Next steps
 
-- [Connect Vertex](/docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/connect-vertex.html)
+- [Connect Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)
 
 
 

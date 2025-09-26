@@ -7,11 +7,11 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-product-offer-shopping-list.csv.html
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html
   - title: Marketplace Shopping List feature overview
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/marketplace-shopping-lists-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/marketplace-shopping-lists-feature-overview.html) in your Spryker shop.

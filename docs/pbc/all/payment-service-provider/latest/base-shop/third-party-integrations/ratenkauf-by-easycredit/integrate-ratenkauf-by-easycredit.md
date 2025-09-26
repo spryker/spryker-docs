@@ -11,9 +11,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
 related:
   - title: ratenkauf by easyCredit
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
   - title: Installing and configuring ratenkauf by easyCredit
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
 ---
 
 {% info_block errorBox %}

@@ -15,11 +15,9 @@ Jenkins fulfills the role of a scheduler in the Spryker applications. It is used
 
 Unlike in cloud, in a local environment, these commands are executed by a CLI container. This difference leads to some side effects where the same code and actions work fine in the local development environment but fail when deployed to cloud.
 
-{% info_block infoBox "Stable Workers" %}
+## Stable workers
 
-Spryker now offers Stable Workers architecture for enhanced Publish and Synchronize (P&S) functionality. This new architecture addresses many of the stability challenges described in this document by providing isolated worker contexts, automatic retries, and better error handling specifically for P&S operations. This enhanced architecture includes configurable thread pools and queue prioritization. While Jenkins continues to manage non-P&S tasks, P&S functionality can now use the more robust Stable Worker Architecture. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
-
-{% endinfo_block %}
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 ## Memory management
 

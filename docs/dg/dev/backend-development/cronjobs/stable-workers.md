@@ -1,7 +1,7 @@
 ---
 title: Stable workers
 description: Learn about Stable Workers architecture for enhanced Publish and Synchronize functionality in Spryker.
-last_updated: Dec 23, 2024
+last_updated: Sep 23, 2025
 template: howto-guide-template
 related:
   - title: Cronjobs
@@ -12,28 +12,25 @@ related:
     link: docs/ca/dev/best-practices/jenkins-operational-best-practices.html
 ---
 
-Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S functionality now uses a new Stable Worker Architecture with enhanced features. This redesign addresses stability challenges from its previous Jenkins-based execution, ensuring more reliable data synchronization (products, prices, assets), especially for large catalogs and frequent updates. The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
+While Jenkins manages non-P&S tasks, Publish and Synchronize (P&S) functionality uses a Stable Worker architecture with enhanced features. This architecture addresses stability challenges, ensuring more reliable data synchronization, such as products, prices, assets, especially for large catalogs and frequent updates. The architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
-Stable Workers represent a new architecture for executing Publish and Synchronize (P&S) tasks that replaces the previous Jenkins-based execution model. This architecture is specifically designed to handle the demanding requirements of data synchronization in modern e-commerce environments.
 
 Key characteristics:
 
 - Isolated worker contexts: Each worker operates in its own dedicated environment, preventing interference between different processes
 - Automatic retries: Built-in retry mechanisms ensure that temporary failures don't result in data loss
 - Enhanced error handling: Improved error detection and recovery mechanisms
-- Optimized for P&S workloads: Specifically tuned for the memory and processing patterns of Publish and Synchronize operations
+- Optimized for P&S workloads: Specifically tuned for the memory and processing patterns of P&S operations
 - Resource optimization: Intelligent distribution of computational resources among parallel processes
 - Configurable capacity: Support for customizable capacity providers and auto-scaling groups for optimal performance
 
-The Stable Worker Architecture addresses common issues encountered with Jenkins-based P&S execution, such as memory constraints, resource contention, and stability problems during high-load scenarios.
-
 ## Scalable architecture
 
-The enhanced Stable Workers architecture incorporates advanced features designed to handle varying workloads efficiently:
+The enhanced Stable Workers architecture incorporates advanced features designed to handle varying workloads efficiently.
 
 ### Dynamic worker scaling
 
-- Capacity providers: Configurable Auto Scaling Groups (ASG) with custom capacity providers for optimal resource allocation
+- Capacity providers: Configurable Auto Scaling Groups with custom capacity providers for optimal resource allocation
 - ECS integration: Seamless integration with Amazon ECS for container-based worker management
 
 ### Resource management
@@ -45,9 +42,9 @@ The enhanced Stable Workers architecture incorporates advanced features designed
 ### Load distribution
 
 Workers are distributed across queues using weighted calculations:
-- Queue weight = Queue length × Queue priority
-- Number of workers per queue = (Queue weight × Thread pool size) / Total weight
-- RAM per worker = Total available RAM / Thread pool size
+- Queue weight = queue length × queue priority
+- Number of workers per queue = (queue weight × thread pool size) / total weight
+- RAM per worker = total available RAM / thread pool size
 
 This ensures optimal resource utilization and prevents bottlenecks during high-volume P&S operations.
 
@@ -63,20 +60,7 @@ Stable Workers provide several significant advantages for your Spryker applicati
 
 ## Configuration
 
-To enable Stable Workers for your Spryker application, you need to contact Spryker Support. This feature requires infrastructure-level configuration that is managed by the Spryker team.
-
-### Enable stable workers
-
-1. Contact Spryker Support: Reach out to your Spryker support team to request Stable Workers activation
-2. Provide Environment Details: Specify which environments (development, staging, production) should have Stable Workers enabled
-3. Review Configuration: Spryker Support will work with you to ensure the configuration aligns with your specific requirements
-
-### What Customers Need to Do
-
-- Reach Spryker's Support: The activation process is managed by Spryker's infrastructure team as highlighted above
-- Get this Enabled: Once enabled, Stable Workers will automatically handle your P&S operations without requiring code changes
-- Monitor Performance: After activation, monitor your application's P&S performance to validate the improvements
-
+To enable Stable Workers for your Spryker application, [contact us](https://spryker.com/en/support).
 
 ### Advanced configuration options
 

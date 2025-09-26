@@ -5,18 +5,12 @@ template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
   - /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
-last_updated: March 11, 2024
+last_updated: Sep 23, 2025
 ---
 
-This document will help you implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
+This document describes how to enhance the stability and performance of the Jenkins component in your Spryker environment.
+
 Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
-
-{% info_block infoBox "Stable Workers" %}
-
-For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This new approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This new architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
-
-{% endinfo_block %}
-
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.
@@ -29,6 +23,11 @@ For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's S
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
 - In a standard-sized non-production environment, don't run lengthy imports and sync processes lasting more than 1-2 hours.
 - Be prepared to lose manually created jobs. Make sure that all critical jobs are persisted in your project (jenkins.php).
+
+
+## Stable workers
+
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 ## Theoretical max memory demand and memory constraints
 

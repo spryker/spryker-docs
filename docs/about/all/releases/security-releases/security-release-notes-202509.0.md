@@ -3,8 +3,6 @@ title: Security release notes 202509.0
 description: Security updates released for version 202509.0
 last_updated: Sep 29, 2025
 template: concept-topic-template
-redirect_from:
-  - /docs/about/all/releases/security-release-notes-202509.0.html
 publish_date: "2025-09-29"
 ---
 

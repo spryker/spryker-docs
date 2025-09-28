@@ -12,6 +12,7 @@ The Storefront API provides powerful catalog search capabilities through the `/c
 The basic search endpoint accepts a query parameter and returns matching products with faceted navigation data.
 
 Request:
+
 ```http
 GET /catalog-search?q=Sony
 Content-Type: application/vnd.api+json
@@ -33,11 +34,13 @@ Response structure includes:
 Product labels can be filtered using the `label` parameter. Labels support multi-value filtering, allowing you to filter by multiple labels simultaneously.
 
 Single Label:
+
 ```http
 GET /catalog-search?q=&label=Standard%20Label
 ```
 
 Multiple Labels:
+
 ```http
 GET /catalog-search?q=&label[]=Standard%20Label&label[]=SALE%20%
 ```
@@ -49,6 +52,7 @@ Key characteristics:
 - URL encoding required for special characters
 
 Response includes active labels in the `valueFacets` section:
+
 ```json
 {
   "name": "label",
@@ -76,11 +80,13 @@ Response includes active labels in the `valueFacets` section:
 Brand filtering supports both single and multiple brand selection.
 
 Single Brand:
+
 ```http
 GET /catalog-search?q=&brand=Sony
 ```
 
 Multiple Brands:
+
 ```http
 GET /catalog-search?q=&brand[]=Sony&brand[]=Canon
 ```
@@ -95,11 +101,13 @@ Key characteristics:
 Color filtering allows selection of multiple colors simultaneously.
 
 Single Color:
+
 ```http
 GET /catalog-search?q=&color=Black
 ```
 
 Multiple Colors:
+
 ```http
 GET /catalog-search?q=&color[]=Black&color[]=White&color[]=Red
 ```
@@ -116,6 +124,7 @@ Price filtering uses decimal values representing the actual currency amounts (EU
 Important: Price filter values are in decimal currency format, while product prices in responses are shown in cents.
 
 Price Range:
+
 ```http
 GET /catalog-search?q=Sony&price[min]=99.99&price[max]=150
 ```
@@ -123,7 +132,7 @@ GET /catalog-search?q=Sony&price[min]=99.99&price[max]=150
 Key characteristics:
 - Parameter name: `price`
 - Supports `min` and `max` values
-- Values are in decimal currency format (e.g., 99.99 = €99.99)
+- Values are in decimal currency format (for example, 99.99 = €99.99)
 - Products with prices between 9999 cents (€99.99) and 15000 cents (€150.00) will be returned
 - Multi-valued: `false`
 
@@ -134,6 +143,7 @@ Price Conversion Examples:
 - Matches products: 9999 cents to 15000 cents
 
 Response includes price range information:
+
 ```json
 {
   "name": "price-DEFAULT-EUR-GROSS_MODE",
@@ -154,11 +164,13 @@ Response includes price range information:
 Rating filtering supports minimum and maximum rating values.
 
 Rating Range:
+
 ```http
 GET /catalog-search?q=&rating[min]=3&rating[max]=5
 ```
 
 Exact Rating:
+
 ```http
 GET /catalog-search?q=&rating[min]=3&rating[max]=3
 ```

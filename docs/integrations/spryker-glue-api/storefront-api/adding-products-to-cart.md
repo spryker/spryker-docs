@@ -39,6 +39,7 @@ All cart item requests follow this basic structure:
 For basic products without special configurations:
 
 Request:
+
 ```http
 POST /carts/{cartId}/items
 Content-Type: application/vnd.api+json
@@ -46,6 +47,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {
@@ -63,6 +65,7 @@ Body:
 Configurable products require additional configuration data through the `productConfigurationInstance` attribute.
 
 Request:
+
 ```http
 POST /carts/{cartId}/items?include=items
 Content-Type: application/vnd.api+json
@@ -70,6 +73,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {
@@ -114,6 +118,7 @@ Body:
 These products use sales units and measurement units for quantity specification.
 
 Request:
+
 ```http
 POST /carts/{cartId}/items?include=items,sales-units,product-measurement-units
 Content-Type: application/vnd.api+json
@@ -121,6 +126,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {
@@ -142,6 +148,7 @@ Body:
 Products that have selectable options require the `productOptions` array.
 
 Request:
+
 ```http
 POST /carts/{cartId}/items?include=items
 Content-Type: application/vnd.api+json
@@ -149,6 +156,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {
@@ -174,6 +182,7 @@ Body:
 For marketplace scenarios where products are sold by specific merchants.
 
 Request:
+
 ```http
 POST /carts/{cartId}/items
 Content-Type: application/vnd.api+json
@@ -181,6 +190,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {
@@ -199,6 +209,7 @@ Body:
 Product offers are marketplace-specific variants of products with special pricing or conditions.
 
 Request:
+
 ```http
 POST /carts/{cartId}/items
 Content-Type: application/vnd.api+json
@@ -206,6 +217,7 @@ Authorization: Bearer {access_token}
 ```
 
 Body:
+
 ```json
 {
     "data": {

@@ -20,7 +20,7 @@ The Storefront API represents a contract that developers can stick to when they 
 
 The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, is called Glue. Glue is responsible for providing API endpoints, processing requests, and for communicating with other layers of the OS.
 
-For more details, see [Storefront Infrastructure](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html).
+For more details, see [Storefront Infrastructure](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
 
 ## Storefront API
 

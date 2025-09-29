@@ -15,7 +15,7 @@ To add versioning to a resource, the route plugin of the `resource` module needs
 
 {% info_block infoBox %}
 
-For more information on route plugins, see [Resource routing](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html#resource-routing).
+For more information on route plugins, see [Resource routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

@@ -41,13 +41,11 @@ P&S denormalizes and distributes data to achieve the following:
 
 Benefits of P&S:
 
-- Near real-time updates, which the default interval being one second.
+- Near real-time updates, since by default the empty queues ate checked every 1 second.
 
 - Batched SQL queries during publishing for better performance.
 
-- Automatic updates when you change (CRUD operations) Propel entities, no manual triggers needed.  
-
-- Incremental exports; full re-exports are unnecessary.  
+- Incremental exports; full re-exports are unnecessary.
 
 - Safe fallback: the SQL database always holds the source of truth. You can resync at any time.  
 
@@ -69,14 +67,13 @@ P&S process schema:
 
 ### 1. Publish 
 
-You can start the publish process using automated or manual event emitting.
+You can start the publish process using automated or manual event triggering.
 
-#### Automated event emitting
+#### Automated event triggering
 
-When an entity implements the Event Propel behavior, any create, update, or delete operation automatically triggers a corresponding publish event. This behavior ensures that entity changes are immediately captured and propagated through the system.
+When an entity implements Propel Event behavior, every create, update, or delete operation automatically triggers a corresponding publish event. This behavior ensures that entity changes are immediately captured and propagated through the system.
 
 For example, saving an abstract product triggers a `create abstract product` event:
-
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -84,19 +81,18 @@ $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
 ```
 
-On calling `save()`, the entity invokes the `saveEventBehaviorEntityChange()` method, which creates a `SpyEventBehaviorEntityChange` record. This record is saved to the database and remains pending until the `onTerminate` symfony event is triggered. During the `onTerminate` event, all queued `SpyEventBehaviorEntityChange` entries are processed, and the corresponding events are dispatched to the message queue.
+Calling `save()`, the entity invokes method `saveEventBehaviorEntityChange()`, which creates a `SpyEventBehaviorEntityChange` record. This record is saved into the database and remains pending until the `onTerminate` Symfony event is triggered. During the `onTerminate` event, all `SpyEventBehaviorEntityChange` entries, produced by the current process, are dispatched into the corresponding message queues.
 
 The event dispatcher plugin responsible for this behavior is `Spryker\Zed\EventBehavior\Communication\Plugin\EventDispatcher\EventBehaviorEventDispatcherPlugin`
 
 {% info_block infobox %}
 
-If the process finishes early and events are not processed during runtime, they will still be handled automatically using the `vendor/bin/console event:trigger:timeout` command.
+If the process finishes early and events are not processed during runtime, they will still be handled automatically by the command `vendor/bin/console event:trigger:timeout` in Jenkins, which is executed by default every 5 minutes.
 
 {% endinfo_block %}
 
 
-
-#### Manual event emitting
+#### Manual event triggering
 
 You can trigger the publish event manually using the event facade:
 
@@ -104,24 +100,25 @@ You can trigger the publish event manually using the event facade:
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
 ```
 
-Manual event emitting works best when an entity passes several stages before it becomes available to customers. A typical use case is content management or data import. For example, when you create a page, it usually remains a draft until you decide to publish it, or when you release a new product to the market.
+Manual event triggering works best when an entity passes several stages before it becomes available to customers. The typical use case is content management or data import. For example, when you create a page, it usually remains a draft until you decide to publish it, or when you release a new product to the market.
 
 #### Event in the queue
 
-When the publish process is triggered, one or more event messages are posted to a queue. Each message includes metadata about the event that triggered it:
+When the publish process is triggered, one or more event messages are posted to queues. Each message includes metadata about the event that triggered it:
 
-- Event name  
+- Event name.
 
-- The affected entity's ID  
+- The affected entity's ID.
 
-- Names of the corresponding publisher and transfer classes  
+- Names of the corresponding publisher and transfer classes.
 
-- A list of modified columns  
+- A list of modified columns.
 
-- Foreign keys used to trace back the updated Propel entities  
+- Foreign keys used to trace back the updated Propel entities.
 
-The message doesn't include the actual changed data. Example:
+The message doesn't include the actual changed data, since it might change before the event is being processed.
 
+Example:
 
 ```json
 {
@@ -149,13 +146,13 @@ The message doesn't include the actual changed data. Example:
 
 ### 2. Synchronize
 
-Synchronize  is the process of transferring data from the database to Redis and Elasticsearch, making it accessible to the customer-facing application.
+Synchronize is the process of transferring data from the database to a storage, i.e. Redis and Elasticsearch, making it accessible to fast customer-facing applications.
 
 How it works:
 
 After a publish event is triggered and a message is placed in a queue (RabbitMQ), the following process takes place:
 
-1. The `vendor/bin/console queue:worker:start` command, typically run via Jenkins, scans for all non-empty queues.
+1. The `vendor/bin/console queue:worker:start` command, typically exectured via Jenkins, scans for all non-empty queues.
 
 2. For each non-empty queue, a subprocess is started using the following command:
 
@@ -164,24 +161,24 @@ After a publish event is triggered and a message is placed in a queue (RabbitMQ)
 vendor/bin/console queue:task:start {queueName}
 ```
 
-`{queueName}` is the name of the queue being processed.
+where `{queueName}` is the name of the non-empty queue being processed.
 
-3. This command identifies the appropriate listener responsible for processing the message.
+3. This command identifies the appropriate listener responsible for the processing of the messages in this queue.
 
-4. Based on the listener logic, storage or search entities are generated.
+4. Based on the listener logic, storage or search entities are calculated.
 
 5. These entities are persisted in the database.
 
 
 ## Synchronization types
 
-P&S supports two types of sync: asynchronous and direct. Their differences are described in the following sections.
+P&S supports two types of synchronization: asynchronous and direct. Their differences are described in the following sections.
 
 ### Asynchronous synchronization
 
 Asynchronous synchronization provides greater stability, although it may take slightly longer to complete. It works as follows:
 
-1. When an entity is saved to the database, a new message is generated and placed into a dedicated queue in RabbitMQ.
+1. When a storage or search entity is saved to the database, a new message is generated and placed into a dedicated synchronisation queue in RabbitMQ.
 
 2. `vendor/bin/console queue:worker:start` command detects this non-empty queue and spawns a child process using the `vendor/bin/console queue:task:start {queueName}` command.
 
@@ -196,12 +193,11 @@ Direct synchronize uses in-memory storage to temporarily hold synchronization me
 
 How it works:
 
-1. When an entity is saved to the database, synchronization messages are stored in the memory of the current PHP process.
+1. When a storage or search entity is saved to the database, synchronization messages are stored in the memory of the current PHP process.
 
 2. After the console command completes, Symfony triggers the `onTerminate` event.
 
 3. All messages stored in memory are written directly to Redis and/or Elasticsearch.
-
 
 ![direct-ps-process](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/direct-ps-process.png)
 
@@ -223,18 +219,15 @@ For instructions on configuring direct sync, see [Configure direct synchronize](
 | Use case            | Default; scalable for large data volumes            | Optimized for speed and reduced infrastructure overhead; performs better with low data volumes |
 
 
-Asynchronous synchronization is more stable, easier to handle errors, and works with big amounts of data.
+Asynchronous synchronization is more stable, easier to handle errors, and works with bigger amounts of data.
 
-Direct synchronization provides faster results, which is particularly useful for the following use cases:
+Direct synchronization provides faster results, and is particularly useful for the following use cases:
 
-- Test environments
+- Test environments.
 
-- Small projects
+- Small projects.
 
-- Performance-critical operations where immediate consistency is preferred
-
-
-
+- Performance-critical operations where immediate consistency is preferred.
 
 ## P&S process example
 
@@ -255,7 +248,7 @@ RabbitMQ now contains several events that relate to the product abstract and its
 
 #### Asynchronous synchronization
 
-Storage events:
+##### Storage events:
 
 
 1. Queue: `publish.product_abstract` receives a storage event. 
@@ -264,7 +257,7 @@ Storage events:
 This message contains only metadata. The actual payload is constructed later by the storage or search listeners.
 
 
-Event example
+Event example  <<<< what is this? looks like a placeholder to me
 
 
 3. The listener does the following processing: 
@@ -278,22 +271,21 @@ Event example
 4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
 
 
-message example
+message example <<<< what is this? looks like a placeholder to me
 
 
 5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`. 
 
 6. Result: All storage messages are written to Redis. 
 
-Search event:
+##### Search event:
 
 
 1. Queue: `publish.page_product_abstract` receives a search event. 
 
 2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message. 
 
-
-message example
+message example <<<< what is this? looks like a placeholder to me
 
 3. The listener does the following processing: 
     1. Creates a `SpyProductAbstractPageSearch` entity
@@ -316,8 +308,7 @@ In direct synchronization mode, the behavior of entities such as `SpyProductAbst
 
 This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony's `onTerminate` event to perform the final synchronization step after the console command completes execution.
 
-For details on configuring direct sync, see See how to configure direct synchronization - 
-Direct synchronize configuration 
+For details on configuring direct sync, see See how to configure direct synchronization - [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
 ## Data architecture
 
@@ -334,7 +325,6 @@ P&S supports intelligent solutions and scalable architecture designs by handling
 Several Spryker partners leverage P&S to distribute product data to warehouse picking devices, such as barcode scanners. These devices access the product catalog as if it were local, allowing them to function even with poor or no network connectivity.
 
 In other implementations, P&S enables businesses to centralize sensitive customer data - such as in Germany for compliance reasons - while distributing localized catalogs globally. For example, buyers in Brazil can browse the catalog with minimal latency, as if the data were hosted locally.
-
 
 
 ### Architectural considerations
@@ -358,75 +348,3 @@ To ensure system stability, it's critical to define and enforce appropriate non-
 As with any non-functional requirements, you can adapt these constraints based on project needs. However, this may require a custom implementation or refactoring Spryker's default functionality.
 
 For example, if your project must support sending API payloads larger than 10 MB - an uncommon scenario for e-commerce platforms - it's still achievable with Spryker. However, this requires a thorough review of the business logic tied to the relevant API endpoints and adjustments to support larger objects.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

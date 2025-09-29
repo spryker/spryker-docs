@@ -1858,6 +1858,234 @@ Verify that reordering is disabled for orders created from a quote request:
 
 {% endinfo_block %}
 
+## Enable order editing by company users
+
+Take the steps in the following sections to enable order editing by company users.
+
+### 1) Install the required modules
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/company-business-unit-sales-connector: "^1.3.0" spryker/company-sales-connector: "^1.3.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                            | EXPECTED DIRECTORY                                   |
+|-----------------------------------|------------------------------------------------------|
+| CompanyBusinessUnitSalesConnector | vendor/spryker/company-business-unit-sales-connector |
+| CompanySalesConnector             | vendor/spryker/company-sales-connector               |
+
+{% endinfo_block %}
+
+### 2) Add translations
+
+1. Append glossary according to your configuration:
+
+
+<details><summary>src/data/import/glossary.csv</summary>
+
+```yaml
+permission.name.EditCompanyOrdersPermissionPlugin,Edit Company orders,en_US
+permission.name.EditCompanyOrdersPermissionPlugin,Edit Company orders,de_DE
+permission.name.EditBusinessUnitOrdersPermissionPlugin,Edit Business unit orders,en_US
+permission.name.EditBusinessUnitOrdersPermissionPlugin,Edit Business unit orders,de_DE
+```
+
+</details>
+
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
+
+### 3) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                  | SPECIFICATION                                                                                                                             | PREREQUISITES | NAMESPACE                                                                      |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
+| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company.                                                                   |               | Spryker\Client\CompanySalesConnector\Plugin\Permission                         |
+| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company.                                                                   |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission              |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit.                                                             |               | Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission             |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit.                                                             |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission  |
+| EditCompanyOrderCartReorderOrderProviderPlugin          | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit company orders.                              |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\CartReorder             |
+| EditBusinessUnitOrderCartReorderOrderProviderPlugin     | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit business unit orders.                        |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\CartReorder |
+| EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin      | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has permission to edit company orders.        |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Checkout                |
+| EditBusinessUnitOrderQuoteExpanderCheckoutPreSavePlugin | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has permission to edit  business unit orders. |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Checkout    |
+
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Permission;
+
+use Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission\EditBusinessUnitOrdersPermissionPlugin;
+use Spryker\Client\CompanySalesConnector\Plugin\Permission\EditCompanyOrdersPermissionPlugin;
+use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+
+class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+{
+	/**
+	 * @return list<\Spryker\Shared\PermissionExtension\Dependency\Plugin\PermissionPluginInterface>
+	 */
+	protected function getPermissionPlugins(): array
+	{
+		return [
+			new EditCompanyOrdersPermissionPlugin(),
+			new EditBusinessUnitOrdersPermissionPlugin(),
+		];
+	}
+}
+```
+
+**src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Permission;
+
+use Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission\EditBusinessUnitOrdersPermissionPlugin;
+use Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission\EditCompanyOrdersPermissionPlugin;
+use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+
+class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+{
+	/**
+	 * @return list<\Spryker\Shared\PermissionExtension\Dependency\Plugin\PermissionPluginInterface>
+	 */
+	protected function getPermissionPlugins(): array
+	{
+		return [
+			new EditCompanyOrdersPermissionPlugin(),
+			new EditBusinessUnitOrdersPermissionPlugin(),
+		];
+	}
+}
+```
+
+3. Execute console command:
+
+```bash
+console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in as a company admin.
+2. Go to `https://www.mysprykershop.com/en/company/company-role`.
+3. Click **Edit** next to a role.
+   Make sure you can assign the **Edit Company orders** and **Edit Business unit orders** permissions.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/CartReorder/CartReorderDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CartReorder;
+
+use Spryker\Zed\CartReorder\CartReorderDependencyProvider as SprykerCartReorderDependencyProvider;
+use Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\CartReorder\EditBusinessUnitOrderCartReorderOrderProviderPlugin;
+use Spryker\Zed\CompanySalesConnector\Communication\Plugin\CartReorder\EditCompanyOrderCartReorderOrderProviderPlugin;
+
+class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderOrderProviderPluginInterface>
+     */
+    protected function getCartReorderOrderProviderPlugins(): array
+    {
+        return [
+            new EditCompanyOrderCartReorderOrderProviderPlugin(),
+            new EditBusinessUnitOrderCartReorderOrderProviderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/CartReorderRestApi/CartReorderRestApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\CartReorderRestApi;
+
+use Spryker\Glue\CartReorderRestApi\CartReorderRestApiDependencyProvider as SprykerCartReorderRestApiDependencyProvider;
+use Spryker\Glue\CompaniesRestApi\Plugin\CartReorderRestApi\CompanyUserCompanyCartReorderRequestExpanderPlugin;
+use Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\CartReorderRestApi\CompanyUserCompanyBusinessUnitCartReorderRequestExpanderPlugin;
+
+class CartReorderRestApiDependencyProvider extends SprykerCartReorderRestApiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Glue\CartReorderRestApiExtension\Dependency\Plugin\CartReorderRequestExpanderPluginInterface>
+     */
+    protected function getCartReorderRequestExpanderPlugins(): array
+    {
+        return [
+            new CompanyUserCompanyCartReorderRequestExpanderPlugin(),
+            new CompanyUserCompanyBusinessUnitCartReorderRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+use Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Checkout\EditBusinessUnitOrderQuoteExpanderCheckoutPreSavePlugin;
+use Spryker\Zed\CompanySalesConnector\Communication\Plugin\Checkout\EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreSavePluginInterface>
+     */
+    protected function getCheckoutPreSaveHooksForOrderAmendment(Container $container): array
+    {
+        return [
+            new EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin(),
+            new EditBusinessUnitOrderQuoteExpanderCheckoutPreSavePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Place an order as a company user.
+2. Login as a different company user from the same company and business unit.
+2. Go to `https://www.mysprykershop.com/en/company/company-role`.
+2. Click **Edit** next to a role for your user.
+3. Assign the **Edit Company orders**, **Edit Business unit orders**, **View Company orders** and **View Business Unit orders** permission to the role.
+4. Re-login as the user.
+5. Go to `https://www.mysprykershop.com/en/customer/order` and select **Company orders**.
+6. Make sure that after clicking the **edit order** button for an order from the same company or business unit the order amendment for the order has been started.
+7. Proceed with the order amendment and place the order, make sure the order has been placed successfully.
+
+{% endinfo_block %}
+
 ## Optionally: Enable order amendment in asynchronous mode
 
 Order amendment can be enabled in asynchronous mode to improve performance by offloading the most resource-intensive operations to the OMS.

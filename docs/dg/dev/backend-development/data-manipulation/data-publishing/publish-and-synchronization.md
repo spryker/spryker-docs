@@ -257,7 +257,28 @@ RabbitMQ now contains several events that relate to the product abstract and its
 This message contains only metadata. The actual payload is constructed later by the storage or search listeners.
 
 
-Event example  <<<< what is this? looks like a placeholder to me
+Event example:
+
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
 
 
 3. The listener does the following processing: 
@@ -271,21 +292,66 @@ Event example  <<<< what is this? looks like a placeholder to me
 4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
 
 
-message example <<<< what is this? looks like a placeholder to me
+Message example:
 
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
+
+</details>
 
 5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`. 
 
 6. Result: All storage messages are written to Redis. 
 
-##### Search event:
+
+Search event:
 
 
 1. Queue: `publish.page_product_abstract` receives a search event. 
 
 2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message. 
 
-message example <<<< what is this? looks like a placeholder to me
+
+Message example:
+
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
 
 3. The listener does the following processing: 
     1. Creates a `SpyProductAbstractPageSearch` entity

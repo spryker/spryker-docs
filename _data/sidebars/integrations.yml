@@ -44,7 +44,7 @@ entries:
       - title: Developing new APIs
         nested:
         - title: Storefront API security and authentication
-          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api-security-and-authentication.html
+          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
         - title: Storefront API
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api.html
         - title: Storefront API infrastructure

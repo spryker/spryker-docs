@@ -9,8 +9,8 @@ This document describes how to add assets managed by companies.
 
 ## Prerequisites
 
-- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/manage-in-the-back-office/manage-companies.html) to add the asset to
-- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/manage-in-the-back-office/company-units/create-company-units) to add the asset to
+- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html) to add the asset to
+- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units) to add the asset to
 
 
 ## Add an asset

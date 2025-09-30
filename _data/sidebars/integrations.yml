@@ -24,6 +24,8 @@ entries:
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-grant-type-parameters.html
       - title: Configure cross-origin resource sharing for Glue API
         url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/configure-cross-origin-resource-sharing-for-glue-api.html
+      - title: Integrate a CIAM Provider
+        url: /docs/integrations/spryker-glue-api/authenticating-and-authorization/integrate-a-ciam-provider.html
       - title: Backend API
         nested:
         - title: Use authentication servers with Backend API

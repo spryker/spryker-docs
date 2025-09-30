@@ -10,9 +10,9 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 related:
   - title: Installing and configuring ratenkauf by easyCredit
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/install-and-configure-ratenkauf-by-easycredit.html
   - title: Integrating ratenkauf by easyCredit
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/integrate-ratenkauf-by-easycredit.html
 ---
 
 ## Partner Information

@@ -14,13 +14,13 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/manage-threshold-settings.html
 related:
   - title: Managing Global Thresholds
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/define-global-thresholds.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/define-global-thresholds.html
   - title: Managing Merchant Order Thresholds
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
   - title: Managing Merchant Relations
-    link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/create-merchant-relations.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html
   - title: Order Thresholds feature overview
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 

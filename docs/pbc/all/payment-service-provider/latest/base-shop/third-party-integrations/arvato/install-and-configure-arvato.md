@@ -12,9 +12,9 @@ redirect_from:
 related:
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-store-order.html
   - title: Arvato
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html
 ---
 
 {% info_block errorBox %}

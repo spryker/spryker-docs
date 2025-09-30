@@ -31,7 +31,7 @@ The fulfillment App includes the following features:
 
 ### Documentation
 
-[Fulfillment App overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html)
+[Fulfillment App overview](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html)
 
 
 ## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Click&Collect <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -60,7 +60,7 @@ While pickup has its roots in B2C operations, its utility in B2B contexts is gro
 
 ### Documentation
 
-[Service point management](/docs/pbc/all/service-point-management/202311.0/service-point-management.html)
+[Service point management](/docs/pbc/all/service-point-management/latest/service-point-management.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -83,14 +83,14 @@ The key features of the Data Exchange API include the following:
 
 ### Documentation
 
-- [Data Exchange API](/docs/pbc/all/data-exchange/202311.0/data-exchange.html#data-importers-and-data-exporters)
-- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html)
-- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html)
+- [Data Exchange API](/docs/pbc/all/data-exchange/latest/data-exchange.html)
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/latest/configure-data-exchange-api)
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)
 
 ### Technical prerequisites
 
-- [Install the Data Exchange API](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api.html)
-[Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html)
+- [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
+[Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -109,7 +109,7 @@ Faster time-to-value shortening setup times for integrations
 
 ### Technical prerequisites
 
-To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
+To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
 
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Akeneo PIM Integration App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -189,12 +189,12 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 
 ### Documentation
 
-[Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html)
+[Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html)
 
 ### Technical prerequisites
 
 - [Install ACP](/docs/acp/user/app-composition-platform-installation.html)
-- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html)
+- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -206,11 +206,11 @@ Build an efficient path to purchase for your buyers with Algolia search, an inno
 
 ### Documentation
 
-[Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/algolia.html)
+[Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html)
 
 ### Technical prerequisites
 
-[Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+[Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Autointegration of code releases <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -274,11 +274,11 @@ Save time and effort with Oryx Framework. Spryker's purpose-built framework lets
 
 ### Documentation
 
-[Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/latest/oryx/oryx.html)
 
 ### Technical prerequisites
 
-Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/getting-started/set-up-oryx.html).
+Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/dg/dev/frontend-development/latest/oryx/getting-started/set-up-oryx.html).
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -295,7 +295,7 @@ Composable Storefront is part of the Oryx framework. Oryx provides the features,
 
 ### Documentation
 
-[Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/latest/oryx/oryx.html)
 
 ### Technical prerequisites
 

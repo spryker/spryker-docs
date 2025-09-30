@@ -102,8 +102,6 @@ entries:
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/batch-processing-and-performance-optimization.html
         - title: Data Exchange API limitations
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api-limitations.html
-        - title: Product & Attributes Model
-          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/product-attributes-model.html
       - title: API references
         nested:
         - title: Backend B2B API reference

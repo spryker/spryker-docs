@@ -142,7 +142,7 @@ Price Conversion Examples:
 - Filter: `price[min]=99.99&price[max]=150`
 - Matches products: 9999 cents to 15000 cents
 
-Response includes price range information:
+Response includes price range information (note that prices in the response are in cents):
 
 ```json
 {
@@ -183,6 +183,10 @@ Key characteristics:
 
 ## Facet Types
 
+Facets are aggregated data that provide filtering options and statistics about search results. They enable users to refine their search by showing available filter values and the number of products matching each filter.
+
+There are two main types of facets:
+
 ### Value Facets
 
 Value facets represent categorical filters with discrete values:
@@ -211,13 +215,15 @@ Value facets represent categorical filters with discrete values:
 ```
 
 Common value facets:
-- `category`: Product categories
-- `label`: Product labels
-- `color`: Product colors
-- `brand`: Product brands
+- `category`: Product categories (uses category IDs, not category names)
+- `label`: Product labels (uses label names)
+- `color`: Product colors (uses color names)
+- `brand`: Product brands (uses brand names)
 - `merchant_name`: Merchant names
 - `storage_capacity`: Storage capacity options
 - `weight`: Weight values
+
+Note: Category filtering is different from other filters as it uses category IDs rather than human-readable names. Other filters like brand, color, and label use their respective names as filter values.
 
 ### Range Facets
 
@@ -270,7 +276,7 @@ Parameters:
 - `page[offset]`: Starting position (default: 0)
 - `page[limit]`: Number of items per page (default: 12)
 
-Valid items per page options: `[12, 24, 36]`
+Valid items per page options can be found in the response under `pagination.config.validItemsPerPageOptions`. These values may vary depending on your configuration. Example: `[12, 24, 36]`
 
 ## Sorting
 

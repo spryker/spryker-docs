@@ -294,6 +294,7 @@ Successful requests return a `201 Created` status with cart information:
 Use these include parameters to get additional data in the response:
 
 ### Basic Includes
+
 - `items`: Cart items details
 - `concrete-products`: Product information
 - `sales-units`: Sales unit details (for measurement products)
@@ -301,6 +302,7 @@ Use these include parameters to get additional data in the response:
 - `product-options`: Product option details
 
 ### Advanced Includes
+
 - `product-offers`: Product offer information (requires two-step include: `items,concrete-products,product-offers`)
 - `merchants`: Merchant details for marketplace products
 - `product-offer-prices`: Pricing information for product offers
@@ -309,6 +311,7 @@ Use these include parameters to get additional data in the response:
 - `bundled-products`: Information about products within bundles
 
 ### Configurable Products
+
 For configurable products, the configuration data is included directly in the item attributes as `productConfigurationInstance`. No additional include parameter is needed for the configuration itself, but you can include:
 - `concrete-products`: To get base product information
 - `product-configuration-instances`: For detailed configuration metadata (if available)

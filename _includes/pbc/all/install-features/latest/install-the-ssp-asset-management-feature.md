@@ -1121,10 +1121,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that you can manage `ssp-assets` resources for the company user:
 
 0. Prerequisites:
-  - You have a company user
-  - You have company user credentials: username and password.
-  - Assets are assigned to the business unit of the company user
-  - You have imported assets as described in the previous sections.
+- You have a company user
+- You have company user credentials: username and password
+- Assets are assigned to the business unit of the company user
+- You have imported assets as described in the previous sections
 
 1. get the access token by sending a `POST` request to the token endpoint with the company user credentials.
   `POST https://glue.mysprykershop.com/token`

@@ -299,12 +299,36 @@ Event example:
 4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
 
 
-message example
+<details>
+  <summary>Message example</summary>
 
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
+
+</details>
 
 5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`. 
 
 6. Result: All storage messages are written to Redis. 
+
 
 Search event:
 
@@ -314,7 +338,28 @@ Search event:
 2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message. 
 
 
-message example
+Message example:
+
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
 
 3. The listener does the following processing: 
     1. Creates a `SpyProductAbstractPageSearch` entity

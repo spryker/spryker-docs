@@ -264,7 +264,28 @@ Storage events:
 This message contains only metadata. The actual payload is constructed later by the storage or search listeners.
 
 
-Event example
+Event example:
+
+```php
+{
+  "listenerClassName": "Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener",
+  "transferClassName": "Generated\\Shared\\Transfer\\EventEntityTransfer",
+  "transferData": {
+    "additional_values": [],
+    "id": 416,
+    "foreign_keys": {
+      "spy_product_abstract.fk_tax_set": 1
+    },
+    "modified_columns": [
+      "spy_product_abstract.approval_status"
+    ],
+    "event": "Entity.spy_product_abstract.update",
+    "name": "spy_product_abstract",
+    "original_values": []
+  },
+  "eventName": "Entity.spy_product_abstract.update"
+}
+```
 
 
 3. The listener does the following processing: 

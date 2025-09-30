@@ -496,10 +496,10 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 5. Click **Save**.
    Make sure the asset gets saved and this opens the asset details page.
 
-Make sure that assigned models are displayed on the product list page in the back office.
+Make sure that assigned models are displayed on the product list page in the back office:
 1. In the Back Office, go to **Catalog** > **Product Lists**.
 2. Edit the product list you have assigned to the model using the data import.
-3. Make sure the **Used By** tab displays the assigned models.
+  Make sure the **Used By** tab displays the assigned models.
 
 {% endinfo_block %}
 

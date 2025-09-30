@@ -874,7 +874,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 | PLUGIN                          | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                    |
 |---------------------------------|------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| SspInquiriesResourceRoutePlugin | Provides the GET and POST endpoints for the ssp inquiries. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+| SspInquiriesResourceRoutePlugin | Provides the GET and POST endpoints for the SSP inquiries. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -905,15 +905,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can manage with `ssp-inquiries` resources for the company user:
+1. Create inquiries by importing demo data as described in the previous sections.
 
-- Prerequisites:
-    - You have a company user.
-    - You have the company user credentials (username and password).
-    - You have the inquiries created in the previous steps (importing demo data).
+2. Get the access token by sending a `POST` request to the token endpoint with the company user credentials:
 
-- First, get the access token by sending a `POST` request to the token endpoint with the company user credentials.
-  `POST https://glue.mysprykershop.com/token`
+`POST https://glue.mysprykershop.com/token`
 
 ```json
 {
@@ -928,8 +924,11 @@ Make sure that you can manage with `ssp-inquiries` resources for the company use
 }
 ```
 
-- Then, use the access token to access the `ssp-inquiries` endpoint:
-  `GET https://glue.mysprykershop.com/ssp-inquiries`
+3. Use the access token to access the `ssp-inquiries` endpoint:
+
+
+<details>
+  <summary>GET https://glue.mysprykershop.com/ssp-inquiries</summary>
 
 ```json
 {
@@ -975,7 +974,7 @@ Make sure that you can manage with `ssp-inquiries` resources for the company use
 }
 ```
 
-- To get the particular inquiry, use the access token to send a `GET` request to the `ssp-inquiries` endpoint with the asset ID:
+4. To get the particular inquiry, use the access token to send a `GET` request to the `ssp-inquiries` endpoint with the asset ID:
   `GET https://glue.mysprykershop.com/ssp-inquiries/DE-INQR--1`
 
 ```json
@@ -1000,7 +999,7 @@ Make sure that you can manage with `ssp-inquiries` resources for the company use
 }
 ```
 
-- Then, use the access token to create the `ssp-inquiries` resource:
+5. Use the access token to create the `ssp-inquiries` resource:
   `POST https://glue.mysprykershop.com/ssp-inquiries`
 
 ```json
@@ -1018,7 +1017,7 @@ Make sure that you can manage with `ssp-inquiries` resources for the company use
 }
 ```
 
-An example of the successful response:
+Example of a successful response:
 
 ```json
 {
@@ -1041,6 +1040,7 @@ An example of the successful response:
   }
 }
 ```
+
 {% endinfo_block %}
 
 

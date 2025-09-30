@@ -1087,7 +1087,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 | PLUGIN                       | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                    |
 |------------------------------|---------------------------------------------------------|---------------|--------------------------------------------------------------|
-| SspAssetsResourceRoutePlugin | Provides the GET and POST endpoints for the ssp assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+| SspAssetsResourceRoutePlugin | Provides the GET and POST endpoints for the SSP assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -1120,13 +1120,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that you can manage `ssp-assets` resources for the company user:
 
-- Prerequisites:
-    - You have a company user.
-    - You have the company user credentials (username and password).
-    - You have assets assigned to the business unit of the company user.
-    - You have the assets created in the previous steps (importing demo data).
+0. Prerequisites:
+  - You have a company user
+  - You have company user credentials: username and password.
+  - Assets are assigned to the business unit of the company user
+  - You have imported assets as described in the previous sections.
 
-- First, get the access token by sending a `POST` request to the token endpoint with the company user credentials.
+1. get the access token by sending a `POST` request to the token endpoint with the company user credentials.
   `POST https://glue.mysprykershop.com/token`
 
 ```json
@@ -1142,8 +1142,11 @@ Make sure that you can manage `ssp-assets` resources for the company user:
 }
 ```
 
-- Then, use the access token to access the `ssp-assets` endpoint:
-  `GET https://glue.mysprykershop.com/ssp-assets`
+2. Use the access token to access the `ssp-assets` endpoint:
+
+
+<details>
+  <summary>GET https://glue.mysprykershop.com/ssp-assets</summary>
 
 ```json
 {
@@ -1211,8 +1214,11 @@ Make sure that you can manage `ssp-assets` resources for the company user:
 }
 ```
 
-- To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
-  `GET https://glue.mysprykershop.com/ssp-assets/AST--1`
+</details>
+
+3. To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
+
+`GET https://glue.mysprykershop.com/ssp-assets/AST--1`
 
 ```json
 {
@@ -1233,8 +1239,9 @@ Make sure that you can manage `ssp-assets` resources for the company user:
 }
 ```
 
-- Then, use the access token to create the `ssp-assets` resource:
-    `POST https://glue.mysprykershop.com/ssp-assets`
+4. Use the access token to create the `ssp-assets` resource:
+
+`POST https://glue.mysprykershop.com/ssp-assets`
 
 ```json
 {
@@ -1251,7 +1258,7 @@ Make sure that you can manage `ssp-assets` resources for the company user:
 }
 ```
 
-An example of the successful response:
+Example of a successful response:
 
 ```json
 {
@@ -1271,13 +1278,14 @@ An example of the successful response:
   }
 }
 ```
+
 {% endinfo_block %}
 
 3. Enable the Backend API endpoints:
 
 | PLUGIN                         | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                              |
 |--------------------------------|----------------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| SspAssetsBackendResourcePlugin | Provides the GET, POST and PATCH endpoints for the ssp assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication |
+| SspAssetsBackendResourcePlugin | Provides the GET, POST and PATCH endpoints for SSP assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -1307,14 +1315,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can manage `ssp-assets` resources as a back office user:
+Make sure that you can manage `ssp-assets` resources as a Back Office user:
 
-- Prerequisites:
-    - You have a back office user.
-    - You have the credentials (username and password) of the back office user.
 
-- First, get the access token by sending a `POST` request to the token endpoint with back office user credentials.
-  `POST https://glue-backend.mysprykershop.com/token`
+1. Get the access token by sending a `POST` request to the token endpoint with back office user credentials:
+
+`POST https://glue-backend.mysprykershop.com/token`
 
 ```http
 POST https://glue.backend.com/token HTTP/2.0
@@ -1326,8 +1332,10 @@ Content-Length: 1051
 grant_type=password&username={username}&password={password}
 ```
 
-- Then, use the access token to access the `ssp-assets` backend endpoint:
-  `GET https://glue-backend.mysprykershop.com/ssp-assets`
+2. Use the access token to access the `ssp-assets` backend endpoint:
+
+<details>
+  <summary>GET https://glue-backend.mysprykershop.com/ssp-assets</summary>
 
 ```json
 {
@@ -1424,8 +1432,11 @@ grant_type=password&username={username}&password={password}
 }
 ```
 
-- To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
-  `GET https://glue-backend.mysprykershop.com/ssp-assets/AST--1`
+</details>
+
+3. To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
+
+`GET https://glue-backend.mysprykershop.com/ssp-assets/AST--1`
 
 ```json
 {
@@ -1449,8 +1460,8 @@ grant_type=password&username={username}&password={password}
 }
 ```
 
-- Then, use the access token to create the `ssp-assets` resource:
-  `POST https://glue-backend.mysprykershop.com/ssp-assets`
+4. Use the access token to create the `ssp-assets` resource:
+`POST https://glue-backend.mysprykershop.com/ssp-assets`
 
 ```json
 {
@@ -1469,7 +1480,7 @@ grant_type=password&username={username}&password={password}
 }
 ```
 
-An example of the successful response:
+Example of a successful response:
 
 ```json
 {
@@ -1493,8 +1504,9 @@ An example of the successful response:
 }
 ```
 
-- For updating the particular asset, use the access token to send a `PATCH` request to the `ssp-assets` endpoint with the asset ID:
-  `PATCH https://glue-backend.mysprykershop.com/ssp-assets/AST--6`
+5. For updating the particular asset, use the access token to send a `PATCH` request to the `ssp-assets` endpoint with the asset ID:
+
+`PATCH https://glue-backend.mysprykershop.com/ssp-assets/AST--6`
 
 ```json
 {
@@ -1513,7 +1525,7 @@ An example of the successful response:
 }
 ```
 
-An example of the successful response:
+Example of a successful response:
 
 ```json
 {

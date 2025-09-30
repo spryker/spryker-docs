@@ -684,9 +684,9 @@ console data:import shipment
 
 {% endinfo_block %}
 
-## Import the Product labels for the service products
+## Import product labels for the service products
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **data/import/common/AT/product_label_store.csv**
 
@@ -744,7 +744,7 @@ Spare parts,1,0,0,spare-parts,,,Spare parts,Ersatzteile,"service-001,service-002
 | product_abstract_skus | ✗        | comma-separated list   | "service-001,service-002" | List of abstract product SKUs assigned to this label. Empty when using dynamic rules or assigning later.                                    |
 | priority              | ✗        | int                    | 4                         | Sorting / display priority. Lower or higher precedence depends on project logic (by default lower number = higher priority in many setups). |
 
-Prepare your data according to your requirements using our demo data:
+2. Import data:
 
 ```bash
 console data:import:product-label
@@ -756,6 +756,7 @@ Make sure the configured data has been added to the following database tables:
 
 - `spy_product_label`
 - `spy_product_label_store`
+
 {% endinfo_block %}
 
 ## Set up behavior
@@ -1660,7 +1661,7 @@ class CheckoutAddressFormDataProvider extends SprykerCheckoutAddressFormDataProv
 
 | PLUGIN                         | SPECIFICATION                                                       | PREREQUISITES | NAMESPACE                                                    |
 |--------------------------------|---------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| SspServicesResourceRoutePlugin | Provides the GET endpoint for the service products(booked-services) |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+| SspServicesResourceRoutePlugin | Provides the GET endpoint for the service products (booked-services). |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -1693,11 +1694,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that you can see the `booked-services` resources for the company user in the request:
 
-- Prerequisites:
-  - You have a company user with at least one order that contains a service product.
-  - You have the company user credentials (username and password).
+0. As a company user, place an order with a service product.
 
-- First, get the access token by sending a `POST` request to the token endpoint with the company user credentials.
+1. Get the access token by sending a `POST` request to the token endpoint with the company user credentials:
+
 `POST https://glue.mysprykershop.com/token`
 
 ```json
@@ -1713,7 +1713,8 @@ Make sure that you can see the `booked-services` resources for the company user 
 }
 ```
 
-- Then, use the access token to access the `booked-services` endpoint:
+2. Use the access token to access the `booked-services` endpoint:
+
 `GET https://glue.mysprykershop.com/booked-services`
 
 ```json

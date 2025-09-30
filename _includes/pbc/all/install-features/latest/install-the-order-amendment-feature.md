@@ -1916,10 +1916,10 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                                                             | PREREQUISITES | NAMESPACE                                                                      |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
-| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company.                                                                   |               | Spryker\Client\CompanySalesConnector\Plugin\Permission                         |
-| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company.                                                                   |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission              |
-| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit.                                                             |               | Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission             |
-| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit.                                                             |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission  |
+| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company in the Client layer.                                               |               | Spryker\Client\CompanySalesConnector\Plugin\Permission                         |
+| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company in the Zed layer.                                                  |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission              |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit in the Client layer.                                         |               | Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission             |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit in the Zed layer.                                            |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission  |
 | EditCompanyOrderCartReorderOrderProviderPlugin          | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit company orders.                              |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\CartReorder             |
 | EditBusinessUnitOrderCartReorderOrderProviderPlugin     | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit business unit orders.                        |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\CartReorder |
 | EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin      | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has permission to edit company orders.        |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Checkout                |
@@ -2333,12 +2333,6 @@ oms.state.order-amendment-draft-applied,Bestelländerung in Bearbeitung,de_DE
 ```bash
 console data:import glossary
 ```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
-
-{% endinfo_block %}
 
 ### 4) Set up behavior
 

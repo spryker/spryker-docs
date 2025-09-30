@@ -107,7 +107,7 @@ vendor/bin/console transfer:generate
 
 ### Describe resource relationships
 
-Many Storefront API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html#resource-relationships).
+Many Storefront API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html#resource-relationships).
 
 The already existing resource relationships are added to the documentation automatically. However, some resources are only available through relationships, so they do not have their own resource route. In these cases, to facilitate the implementation of clients based on the Storefront API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related, add an additional annotation to the `ResourceRelationshipPlugin`, which links the resources together. For example, in the following code sample, `ResourceRelationshipPlugin` allows including items while requesting a cart is expanded with the specification of the relationship attributes type:
 
@@ -124,7 +124,7 @@ The already existing resource relationships are added to the documentation autom
 
 {% info_block infoBox "Info" %}
 
-For more information about `ResourceRelationshipPlugins`, see [Resource relationships](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html#resource-relationships).
+For more information about `ResourceRelationshipPlugins`, see [Resource relationships](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 

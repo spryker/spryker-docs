@@ -80,7 +80,7 @@ Currently, the feature has the following functional constraints which are going 
 - Product option values of a product option group can be only from one merchant.
 - Product options of a merchant can be used with all offers from all merchants.
 - There is no Back Office UI for approving or denying merchant product options.
-- [Storefront API](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api.html) does not support merchant product option groups and values.
+- [Storefront API](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api.html) does not support merchant product option groups and values.
 - Merchants can not create and manage product option groups and values in the Merchant Portal.
 
 ## Related Business User documents

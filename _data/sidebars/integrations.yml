@@ -118,8 +118,8 @@ entries:
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-json-api-relationships.html
         - title: Create routes
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-routes.html
-        - title: Use default parameters
-          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/use-default-storefront-parameters.html
+        - title: Use default Backend parameters
+          url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/use-default-backend-parameters.html
         - title: Document Backend API endpoints
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/document-backend-api-endpoints.html
     - title: Sprker API Errors and Troubleshooting

@@ -106,7 +106,7 @@ In addition to user scopes, each endpoint can be secured individually. For this 
 
 {% info_block infoBox %}
 
-For details, see [Resource Routing](/docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html#resource-routing).
+For details, see [Resource Routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

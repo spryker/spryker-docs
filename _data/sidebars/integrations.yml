@@ -41,7 +41,7 @@ entries:
     - title: Storefront API
       url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
       nested:
-      - title: Developing new APIs
+      - title: Developing APIs
         nested:
         - title: Storefront API security and authentication
           url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api-security-and-authentication.html
@@ -104,7 +104,7 @@ entries:
           url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html
         - title: Backend API Marketplace B2C Demo Shop reference
           url: /docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html
-      - title: Developing new APIs
+      - title: Developing APIs
         nested:
         - title: Create API applications
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/create-api-applications.html

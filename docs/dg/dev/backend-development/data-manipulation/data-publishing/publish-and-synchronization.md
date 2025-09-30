@@ -37,17 +37,17 @@ P&S denormalizes and distributes data to achieve the following:
 
 - Deliver localized data, such as pricing, availability, and product details, in a format prepared for the Storefront.
 
-- Run queries run, which improves Storefront performance.
+- Run queries, which improves Storefront performance.
 
 Benefits of P&S:
 
-- Near real-time updates, since by default the empty queues ate checked every 1 second.
+- Near real-time updates because empty queues are checked every second by default.
 
 - Batched SQL queries during publishing for better performance.
 
-- Incremental exports; full re-exports are unnecessary.
+- Incremental exports; full re-exports are not needed.
 
-- Safe fallback: the SQL database always holds the source of truth. You can resync at any time.  
+- Safe fallback: the SQL database always holds the source of truth. You can re-sync at any time.  
 
 - Store- and locale-specific data support.
 
@@ -81,13 +81,19 @@ $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
 ```
 
-Calling `save()`, the entity invokes method `saveEventBehaviorEntityChange()`, which creates a `SpyEventBehaviorEntityChange` record. This record is saved into the database and remains pending until the `onTerminate` Symfony event is triggered. During the `onTerminate` event, all `SpyEventBehaviorEntityChange` entries, produced by the current process, are dispatched into the corresponding message queues.
+Calling `save()`, the entity invokes the `saveEventBehaviorEntityChange()` method, which creates a `SpyEventBehaviorEntityChange` record. This record is saved into the database and remains pending until the `onTerminate` Symfony event is triggered. During the `onTerminate` event, all `SpyEventBehaviorEntityChange` entries, produced by the current process, are dispatched into the corresponding message queues.
 
-The event dispatcher plugin responsible for this behavior is `Spryker\Zed\EventBehavior\Communication\Plugin\EventDispatcher\EventBehaviorEventDispatcherPlugin`
+The event dispatcher plugin responsible for this behavior is `Spryker\Zed\EventBehavior\Communication\Plugin\EventDispatcher\EventBehaviorEventDispatcherPlugin`.
 
 {% info_block infobox %}
 
-If the process finishes early and events are not processed during runtime, they will still be handled automatically by the command `vendor/bin/console event:trigger:timeout` in Jenkins, which is executed by default every 5 minutes.
+If the process finishes early, and events are not processed during runtime, they're handled automatically by the command in Jenkins:
+
+```bash
+vendor/bin/console event:trigger:timeout
+```
+
+This command is executed every five minutes by default.
 
 {% endinfo_block %}
 
@@ -106,17 +112,17 @@ Manual event triggering works best when an entity passes several stages before i
 
 When the publish process is triggered, one or more event messages are posted to queues. Each message includes metadata about the event that triggered it:
 
-- Event name.
+- Event name
 
-- The affected entity's ID.
+- The affected entity's ID
 
-- Names of the corresponding publisher and transfer classes.
+- Names of the corresponding publisher and transfer classes
 
-- A list of modified columns.
+- A list of modified columns
 
-- Foreign keys used to trace back the updated Propel entities.
+- Foreign keys used to trace back the updated Propel entities
 
-The message doesn't include the actual changed data, since it might change before the event is being processed.
+The message doesn't include the actual changed data because the data might change before the event is being processed.
 
 Example:
 
@@ -146,13 +152,11 @@ Example:
 
 ### 2. Synchronize
 
-Synchronize is the process of transferring data from the database to a storage, i.e. Redis and Elasticsearch, making it accessible to fast customer-facing applications.
-
-How it works:
+Synchronize is the process of transferring data from the database to a storage, such as Redis and Elasticsearch, making it accessible to fast customer-facing applications.
 
 After a publish event is triggered and a message is placed in a queue (RabbitMQ), the following process takes place:
 
-1. The `vendor/bin/console queue:worker:start` command, typically exectured via Jenkins, scans for all non-empty queues.
+1. The `vendor/bin/console queue:worker:start` command, typically executed via Jenkins, scans for all non-empty queues.
 
 2. For each non-empty queue, a subprocess is started using the following command:
 
@@ -161,9 +165,9 @@ After a publish event is triggered and a message is placed in a queue (RabbitMQ)
 vendor/bin/console queue:task:start {queueName}
 ```
 
-where `{queueName}` is the name of the non-empty queue being processed.
+`{queueName}` is the name of the non-empty queue being processed.
 
-3. This command identifies the appropriate listener responsible for the processing of the messages in this queue.
+3. This command identifies the appropriate listener responsible for processing the messages in this queue.
 
 4. Based on the listener logic, storage or search entities are calculated.
 
@@ -178,7 +182,7 @@ P&S supports two types of synchronization: asynchronous and direct. Their differ
 
 Asynchronous synchronization provides greater stability, although it may take slightly longer to complete. It works as follows:
 
-1. When a storage or search entity is saved to the database, a new message is generated and placed into a dedicated synchronisation queue in RabbitMQ.
+1. When a storage or search entity is saved to the database, a new message is generated and placed into a dedicated synchronization queue in RabbitMQ.
 
 2. `vendor/bin/console queue:worker:start` command detects this non-empty queue and spawns a child process using the `vendor/bin/console queue:task:start {queueName}` command.
 
@@ -214,20 +218,20 @@ For instructions on configuring direct sync, see [Configure direct synchronize](
 | Aspect              | Asynchronous Sync                                      | Direct Sync                                                       |
 |---------------------|--------------------------------------------------------|-------------------------------------------------------------------|
 | Message queue       | Required                                              | Skipped                                                           |
-| Processing delay    | Delays is caused by queuing and worker execution            | Processed after the command ends without a delay                |
-| Performance impact  | Slower during command execution because of additional processing steps | Faster during command execution                                  |
-| Use case            | Default; scalable for large data volumes            | Optimized for speed and reduced infrastructure overhead; performs better with low data volumes |
+| Processing delay    | Delay is caused by queuing and worker execution.            | Processed after the command ends without a delay.                |
+| Performance impact  | Slower during command execution because of additional processing steps. | Faster during command execution.                                  |
+| Use case            | Default; scalable for large data volumes.            | Optimized for speed and reduced infrastructure overhead; performs better with low data volumes. |
 
 
 Asynchronous synchronization is more stable, easier to handle errors, and works with bigger amounts of data.
 
 Direct synchronization provides faster results, and is particularly useful for the following use cases:
 
-- Test environments.
+- Test environments
 
-- Small projects.
+- Small projects
 
-- Performance-critical operations where immediate consistency is preferred.
+- Performance-critical operations where immediate consistency is preferred
 
 ## P&S process example
 
@@ -248,7 +252,7 @@ RabbitMQ now contains several events that relate to the product abstract and its
 
 #### Asynchronous synchronization
 
-##### Storage events:
+##### Storage events
 
 
 1. Queue: `publish.product_abstract` receives a storage event. 
@@ -322,7 +326,7 @@ Message example:
 6. Result: All storage messages are written to Redis. 
 
 
-Search event:
+##### Search event
 
 
 1. Queue: `publish.page_product_abstract` receives a search event. 
@@ -366,15 +370,15 @@ Message example:
 
 6. Result: All search messages are indexed in Elasticsearch. 
 
-By following this workflow, Spryker makes all product changes made in the Back Office becomes available in Redis and Elasticsearch with minimal delay, even across multiple stores and locales.
+By following this workflow, Spryker makes all product changes made in the Back Office available in Redis and Elasticsearch with minimal delay, even across multiple stores and locales.
 
 #### Direct synchronization
 
-In direct synchronization mode, the behavior of entities such as `SpyProductAbstractPageSearch` and `SpyProductAbstractStorage`, changes. Instead of sending messages to the queue for later processing as described in steps 3–5 of the previous example, these entities are written directly to Redis or Elasticsearch during the same PHP process.
+In direct synchronization mode, the behavior of entities, such as `SpyProductAbstractPageSearch` and `SpyProductAbstractStorage`, changes. Instead of sending messages to the queue for later processing as described in steps 3–5 of the previous example, these entities are written directly to Redis or Elasticsearch during the same PHP process.
 
 This approach uses `DirectSynchronizationConsolePlugin`, which leverages Symfony's `onTerminate` event to perform the final synchronization step after the console command completes execution.
 
-For details on configuring direct sync, see See how to configure direct synchronization - [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
+For details on configuring direct sync, see [Configure direct synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize).
 
 ## Data architecture
 

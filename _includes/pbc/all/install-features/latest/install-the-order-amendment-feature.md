@@ -1904,12 +1904,6 @@ permission.name.EditBusinessUnitOrdersPermissionPlugin,Edit Business unit orders
 console data:import glossary
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
-
-{% endinfo_block %}
-
 ### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
@@ -2333,6 +2327,12 @@ oms.state.order-amendment-draft-applied,Bestelländerung in Bearbeitung,de_DE
 ```bash
 console data:import glossary
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 ### 4) Set up behavior
 

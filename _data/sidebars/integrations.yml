@@ -70,6 +70,12 @@ entries:
           nested:
           - title: Install B2C API React example
             url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/install-b2c-api-react-example.html
+      - title: Using APIs
+        nested:
+        - title: Adding products to cart
+          url: /docs/integrations/spryker-glue-api/storefront-api/adding-products-to-cart.html
+        - title: Catalog search and filtering
+          url: /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
       - title: API references
         nested:
         - title: Storefront B2B API reference
@@ -94,6 +100,8 @@ entries:
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html
         - title: Batch processing and performance optimization with Data Exchange API
           url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/batch-processing-and-performance-optimization.html
+        - title: Data Exchange API limitations
+          url: /docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api-limitations.html
       - title: API references
         nested:
         - title: Backend B2B API reference

@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue Backend Api Application | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
-| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
+| Backend API Application | {{page.version}} | [Integrate Backend API Application](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
+| Backend API Authentication | {{page.version}} | [Backend API - Authentication integration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) |
 
 ### Install the required modules
 

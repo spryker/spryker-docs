@@ -1,15 +1,16 @@
 ---
-title: "Decoupled Glue infrastructure: Integrate the authorization scopes"
-description: This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
+title: Integrate the authorization scopes
+description: This document describes how to use scopes in Authorization for Backend API application into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/authorization-scopes-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-scopes-integration.html
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
+  - /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
 ---
 
-This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
+This document describes how to use scopes in Authorization for Backend API application into a Spryker project.
 
 ## Install feature core
 
@@ -19,9 +20,9 @@ Follow the steps below to install the Authorization feature API.
 
 To start feature integration, overview and install the necessary feature:
 
-| NAME           | VERSION           | INSTALLATION GUIDE |
-| -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
+| NAME           | VERSION           | INSTALLATION GUIDE                                                                                                                                                                 |
+| -------------- | ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Backend API Authentication | {{page.version}} | [Backend API Authentication itegration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) |
 
 ### 1) Set up transfer objects
 
@@ -52,14 +53,6 @@ Make sure the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-**Storefront API plugins**
-
-| PLUGIN | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
-| ScopeRequestAfterRoutingValidatorPlugin | Validates the resource's scopes against the scopes in the token. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueStorefrontApiApplication |
-| StorefrontScopeCollectorPlugin | Provides the set of OAuth scopes for Storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
-| StorefrontScopeFinderPlugin | Gets the scope based on specified identifier. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
-
 **Backend API plugins**
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
@@ -67,31 +60,6 @@ Activate the following plugins:
 | ScopeRequestAfterRoutingValidatorPlugin | Validates the resource's scopes against the scopes in the token. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | BackendScopeCollectorPlugin | Provides the set of OAuth scopes for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\Oauth |
 | BackendScopeFinderPlugin | Gets the scope based on specified identifier. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\Oauth |
-
-**src/Pyz/Glue/GlueStorefrontApiApplication/****GlueStorefrontApiApplicationDependencyProvider****.php**
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueStorefrontApiApplication;
-
-use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\ScopeRequestAfterRoutingValidatorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\RequestCorsValidatorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\GlueStorefrontApiApplicationAuthorizationConnector\AuthorizationRequestAfterRoutingValidatorPlugin;
-
-class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
-{
-    protected function getRequestAfterRoutingValidatorPlugins(): array
-    {
-        return [
-            new RequestCorsValidatorPlugin(),
-            new ScopeRequestAfterRoutingValidatorPlugin(),
-            new AuthorizationRequestAfterRoutingValidatorPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Glue/GlueBackendApiApplication/****GlueBackendApiApplicationDependencyProvider****.php**
 
@@ -128,15 +96,12 @@ namespace Pyz\Zed\Oauth;
 use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\Oauth\BackendScopeCollectorPlugin;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\Oauth\BackendScopeFinderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\Oauth\StorefrontScopeCollectorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\Oauth\StorefrontScopeFinderPlugin;
 
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     protected function getScopeCollectorPlugins(): array
     {
         return [
-            new StorefrontScopeCollectorPlugin(),
             new BackendScopeCollectorPlugin(),
         ];
     }
@@ -145,7 +110,6 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     {
         return [
             new BackendScopeFinderPlugin(),
-            new StorefrontScopeFinderPlugin(),
         ];
     }
 }

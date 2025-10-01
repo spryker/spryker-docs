@@ -79,28 +79,28 @@ The resulting folder structure on the example of the ServicePointsBackendApi Res
 
 ## Glue request structure
 
-| FIELD                | DESCRIPTION                                                                                           |
-|----------------------|-------------------------------------------------------------------------------------------------------|
-| pagination           | `PaginationTransfer` object with request pagination data.                                             |
-| sortings             | Collection of `SortTransfer` objects.                                                                  |
-| queryFields          | Assoc array of query parameters with values.                                                           |
-| resource             | `GlueResourceTransfer` object with resource-related data.                                              |
-| path                 | Returns the path being requested relative to the executed script.                                     |
-| content              | Request body content.                                                                                 |
-| filters              | Collection of `GlueFilterTransfer` objects.                                                            |
-| attributes           | Array of attributes from the `Request` object.                                                         |
-| meta                 | Array of metadata from the `Request` object.                                                          |
-| locale               | Current locale.                                                                                        |
-| host                 | Current host.                                                                                          |
-| convention           | Selected convention that was selected in `ContentNegotiator`.                                          |
-| application          | Selected application.                                                                                  |
-| method               | Request "intended" method.                                                                            |
-| parametersString     | Normalized query string from the `Request` object.                                                     |
-| requestedFormat      | `content-type` header value.                                                                           |
-| acceptedFormat       | `accept` header value that was processed in `ContentNegotiator`                                       |
-| httpRequestAttributes | Request parameters from the `Request` object.                                                          |
-| requestUser          | Backend user requesting the resource (valid only for Glue Backend API).                               |
-| requestCustomer      | Storefront customer requesting the resource (valid only for Glue Storefront API).                     |
+| FIELD                | DESCRIPTION                                                                                      |
+|----------------------|--------------------------------------------------------------------------------------------------|
+| pagination           | `PaginationTransfer` object with request pagination data.                                        |
+| sortings             | Collection of `SortTransfer` objects.                                                             |
+| queryFields          | Assoc array of query parameters with values.                                                      |
+| resource             | `GlueResourceTransfer` object with resource-related data.                                         |
+| path                 | Returns the path being requested relative to the executed script.                                |
+| content              | Request body content.                                                                            |
+| filters              | Collection of `GlueFilterTransfer` objects.                                                       |
+| attributes           | Array of attributes from the `Request` object.                                                    |
+| meta                 | Array of metadata from the `Request` object.                                                     |
+| locale               | Current locale.                                                                                   |
+| host                 | Current host.                                                                                     |
+| convention           | Selected convention that was selected in `ContentNegotiator`.                                     |
+| application          | Selected application.                                                                             |
+| method               | Request "intended" method.                                                                       |
+| parametersString     | Normalized query string from the `Request` object.                                                |
+| requestedFormat      | `content-type` header value.                                                                      |
+| acceptedFormat       | `accept` header value that was processed in `ContentNegotiator`                                  |
+| httpRequestAttributes | Request parameters from the `Request` object.                                                     |
+| requestUser          | Backend user requesting the resource (valid only for Backend API).                               |
+| requestCustomer      | Storefront customer requesting the resource (valid only for Glue Storefront API).                |
 
 ## Glue response structure
 

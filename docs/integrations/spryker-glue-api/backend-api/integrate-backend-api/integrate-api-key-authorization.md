@@ -1,10 +1,11 @@
 ---
-title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
+title: Integrate the API Key authorization
 description: Learn about Integration of the API Key authorization mechanism into a Spryker based project.
 last_updated: October 10, 2023
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
+  - /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
 ---
 
 This document describes how to integrate the API Key authorization to Backend API applications in a Spryker project.
@@ -17,18 +18,18 @@ Follow the steps below to install the API Key authorization feature core.
 
 Install the required features:
 
-| NAME                         | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                                                |
-|------------------------------| ----------------- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                                |
-| Glue Backend API Application | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| NAME                        | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                                              |
+|-----------------------------| ----------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                              |
+| Backend API Application | {{page.version}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-commposer require spryker/api-key-authorization-connector:"^1.0.0" \
-spryker/spryker/glue-backend-api-application-authorization-connector:"^1.4.0"
+commposer require spryker/api-key-authorization-connector:"^1.1.0" \
+spryker/spryker/glue-backend-api-application-authorization-connector:"^1.7.0"
 ```
 
 {% info_block warningBox "Verification" %}
@@ -157,7 +158,7 @@ class GlueBackendApiApplicationAuthorizationConnectorDependencyProvider extends 
 <details>
 <summary>src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php</summary>
 
-```php  
+```php
 <?php
 
 namespace Pyz\Zed\Authorization;

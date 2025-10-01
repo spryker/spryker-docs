@@ -1,6 +1,6 @@
 ---
-title: "Decoupled Glue infrastructure: Integrate Storefront and Backend Glue API applications"
-description: Integrate the Glue Storefront and Backend API applications into a Spryker project.
+title: Integrate Backend API
+description: Integrate the Backend API application into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
 redirect_from:
@@ -8,13 +8,14 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
+  - /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
 ---
 
-This document describes how to integrate the Glue Storefront and Backend API applications into a Spryker project.
+This document describes how to integrate the Backend API application into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Glue Storefront and Backend API applications core.
+Follow the steps below to install the Backend API application core.
 
 ### Prerequisites
 
@@ -22,14 +23,14 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue Application | {{page.version}} | [Glue API - Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Backend API Application | {{page.version}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/glue-storefront-api-application:"^1.0.0" spryker/glue-backend-api-application:"^1.0.0" --update-with-dependencies
+composer spryker/glue-backend-api-application:"^1.7.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -39,7 +40,6 @@ Make sure that the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | GlueApplication | vendor/spryker/glue-application |
-| GlueStorefrontApiApplication | vendor/spryker/glue-storefront-api-application |
 | GlueBackendApiApplication | vendor/spryker/glue-backend-api-application |
 
 {% endinfo_block %}
@@ -54,10 +54,9 @@ Make sure that the following modules have been installed:
 <?php
 
 use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
-use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
 
 // ----------------------------------------------------------------------------
-// ------------------------------ Glue Backend API -------------------------------
+// ------------------------------ Backend API -------------------------------
 // ----------------------------------------------------------------------------
 $sprykerGlueBackendHost = getenv('SPRYKER_GLUE_BACKEND_HOST');
 $config[GlueBackendApiApplicationConstants::GLUE_BACKEND_API_HOST] = $sprykerGlueBackendHost;
@@ -65,11 +64,6 @@ $config[GlueBackendApiApplicationConstants::PROJECT_NAMESPACES] = [
     'Pyz',
 ];
 
-// ----------------------------------------------------------------------------
-// ------------------------------ Glue Storefront API -------------------------------
-// ----------------------------------------------------------------------------
-$sprykerGlueStorefrontHost = getenv('SPRYKER_GLUE_STOREFRONT_HOST');
-$config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $sprykerGlueStorefrontHost;
 ```
 
 **src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBackendApiBootstrap****.php**
@@ -118,31 +112,6 @@ class GlueBootstrap extends SprykerGlueBootstrap
     public function boot(array $glueApplicationBootstrapPluginClassNames = []): ApplicationInterface
     {
         return parent::boot([FallbackStorefrontApiGlueApplicationBootstrapPlugin::class]);
-    }
-}
-```
-
-**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueStorefrontApiBootstrap****.php**
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueApplication\Bootstrap;
-
-use Spryker\Glue\GlueApplication\Bootstrap\GlueBootstrap;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\StorefrontApiGlueApplicationBootstrapPlugin;
-use Spryker\Shared\Application\ApplicationInterface;
-
-class GlueStorefrontApiBootstrap extends GlueBootstrap
-{
-    /**
-     * @param array $glueApplicationBootstrapPluginClassNames
-     *
-     * @return \Spryker\Shared\Application\ApplicationInterface
-     */
-    public function boot(array $glueApplicationBootstrapPluginClassNames = []): ApplicationInterface
-    {
-        return parent::boot([StorefrontApiGlueApplicationBootstrapPlugin::class]);
     }
 }
 ```
@@ -197,29 +166,6 @@ $bootstrap
     ->run();
 ```
 
-**public/GlueStorefront****/index.****php**
-
-```php
-use Pyz\Glue\GlueApplication\Bootstrap\GlueStorefrontApiBootstrap;
-use Spryker\Shared\Config\Application\Environment;
-use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
-
-define('APPLICATION', 'GLUE_STOREFRONT');
-defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', dirname(__DIR__, 2));
-
-require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
-
-Environment::initialize();
-
-$errorHandlerEnvironment = new ErrorHandlerEnvironment();
-$errorHandlerEnvironment->initialize();
-
-$bootstrap = new GlueStorefrontApiBootstrap();
-$bootstrap
-    ->boot()
-    ->run();
-```
-
 **deploy****.yml**
 
 ```yml
@@ -231,11 +177,6 @@ groups:
         endpoints:
           glue.de.spryker.local:
               store: DE
-      glue_storefront_eu:
-        application: glue-storefront
-        endpoints:
-          glue-storefront.de.spryker.local:
-            store: DE
       glue_backend_eu:
         application: glue-backend
         endpoints:
@@ -247,11 +188,6 @@ groups:
         application: glue
         endpoints:
           glue.us.spryker.local:
-            store: US
-      glue_storefront_us:
-        application: glue-storefront
-        endpoints:
-          glue-storefront.us.spryker.local:
             store: US
       glue_backend_us:
         application: glue-backend
@@ -269,7 +205,7 @@ docker/sdk up
 
 {% info_block warningBox "Verification" %}
 
-Verify that your domains are available: `http://glue-storefront.de.spryker.local`, `http://glue-backend.de.spryker.local`, and `http://glue.de.spryker.local`.
+Verify that your domains are available: `http://glue-backend.de.spryker.local`, and `http://glue.de.spryker.local`.
 
 {% endinfo_block %}
 
@@ -311,20 +247,18 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | BackendApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| StorefrontApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication |
 | FallbackStorefrontApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Storefront Fallback API application. | Spryker\\Glue\\GlueApplication\\Plugin\\FallbackStorefrontApiGlueApplicationBootstrapPlugin |
 | ControllerCacheCollectorConsole | Builds a cache of controller parameters for the API applications controllers. | Spryker\\Glue\\GlueApplication\\Plugin\\Console |
 | RouterCacheWarmUpConsole | Builds a Router cache for the ApiApplications. | Spryker\\Glue\\GlueApplication\\Plugin\\Console |
 | RouterDebugGlueApplicationConsole | Renders a table with all available routes for specified API Application | Spryker\\Glue\\GlueApplication\\Plugin\\Console |
-| ApplicationIdentifierRequestBuilderPlugin | Sets `GlueRequestTransfer::$application` to the correct application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| LocaleRequestBuilderPlugin | Builds `GlueRequestTransfer.locale` from the `accept-language` header for Glue Storefront/Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication |
-| SecurityHeaderResponseFormatterPlugin | Extends `GlueResponseTransfer` with security headers for Glue Storefront/Backend API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| RequestCorsValidatorPlugin | Validates cors headers for Glue Storefront API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication |
-| CustomRouteRoutesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface` for the current application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| ResourcesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface` for the current application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| StorefrontRouterProviderPlugin | Gets route collection from current Glue Storefront API Application for route debug console command. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication |
-| BackendRouterProviderPlugin | Gets route collection from current Glue Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| ControllerCacheCollectorPlugin | Returns controllers configuration for GlueStorefrontApiApplication/GlueBackendApiApplication applications. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| ApplicationIdentifierRequestBuilderPlugin | Sets `GlueRequestTransfer::$application` to the correct application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| LocaleRequestBuilderPlugin | Builds `GlueRequestTransfer.locale` from the `accept-language` header for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| SecurityHeaderResponseFormatterPlugin | Extends `GlueResponseTransfer` with security headers for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| RequestCorsValidatorPlugin | Validates cors headers for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| CustomRouteRoutesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface` for the current application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| ResourcesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface` for the current application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| BackendRouterProviderPlugin | Gets route collection from current Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| ControllerCacheCollectorPlugin | Returns controllers configuration for GlueBackendApiApplication application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 
 <details>
 <summary>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
@@ -341,11 +275,6 @@ use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\BackendRouterP
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\ControllerCacheCollectorPlugin as BackendControllerCacheCollectorPlugin;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\CustomRouteRoutesProviderPlugin as BackendCustomRouteRoutesProviderPlugin;
 use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueApplication\ResourcesProviderPlugin as BackendResourcesProviderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\ControllerCacheCollectorPlugin as StorefrontControllerCacheCollectorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\CustomRouteRoutesProviderPlugin as StorefrontCustomRouteRoutesProviderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\ResourcesProviderPlugin as StorefrontResourcesProviderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StorefrontApiGlueApplicationBootstrapPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\StorefrontRouterProviderPlugin;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -355,7 +284,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     protected function getGlueApplicationBootstrapPlugins(): array
     {
         return [
-            new StorefrontApiGlueApplicationBootstrapPlugin(),
             new BackendApiGlueApplicationBootstrapPlugin(),
             new FallbackStorefrontApiGlueApplicationBootstrapPlugin(),
         ];
@@ -377,7 +305,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     protected function getControllerCacheCollectorPlugins(): array
     {
         return [
-            new StorefrontControllerCacheCollectorPlugin(),
             new BackendControllerCacheCollectorPlugin(),
         ];
     }
@@ -389,7 +316,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [
             new BackendRouterProviderPlugin(),
-            new StorefrontRouterProviderPlugin(),
         ];
     }
 
@@ -399,7 +325,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     protected function getRoutesProviderPlugins(): array
     {
         return [
-            new StorefrontCustomRouteRoutesProviderPlugin(),
             new BackendCustomRouteRoutesProviderPlugin(),
         ];
     }
@@ -410,7 +335,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     protected function getResourcesProviderPlugins(): array
     {
         return [
-            new StorefrontResourcesProviderPlugin(),
             new BackendResourcesProviderPlugin(),
         ];
     }
@@ -553,93 +477,6 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 </details>
 
-<details>
-<summary>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueStorefrontApiApplication;
-
-use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\ApplicationIdentifierRequestBuilderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\LocaleRequestBuilderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\RequestCorsValidatorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\ScopeRequestAfterRoutingValidatorPlugin;
-use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueApplication\SecurityHeaderResponseFormatterPlugin;
-use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\GlueStorefrontApiApplicationAuthorizationConnector\AuthorizationRequestAfterRoutingValidatorPlugin;
-use Spryker\Glue\OauthApi\Plugin\CustomerRequestBuilderPlugin;
-
-class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestBuilderPluginInterface>
-     */
-    protected function getRequestBuilderPlugins(): array
-    {
-        return [
-            new ApplicationIdentifierRequestBuilderPlugin(),
-            new LocaleRequestBuilderPlugin(),
-            new CustomerRequestBuilderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
-     */
-    protected function getRequestValidatorPlugins(): array
-    {
-        return [
-            // Wire validators.
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RequestAfterRoutingValidatorPluginInterface>
-     */
-    protected function getRequestAfterRoutingValidatorPlugins(): array
-    {
-        return [
-            new RequestCorsValidatorPlugin(),
-            new ScopeRequestAfterRoutingValidatorPlugin(),
-            new AuthorizationRequestAfterRoutingValidatorPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResponseFormatterPluginInterface>
-     */
-    protected function getResponseFormatterPlugins(): array
-    {
-        return [
-            new SecurityHeaderResponseFormatterPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
-     */
-    protected function getResourcePlugins(): array
-    {
-        return [
-            // Wire resources.
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
-     */
-    protected function getRouteProviderPlugins(): array
-    {
-        return [
-            // Wire routes.
-        ];
-    }
-}
-```
-
-</details>
 
 If everything is set up correctly, you can access it as follows:
-- Glue Backend API application: `http://glue-backend.mysprykershop.com`.
-- Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.
+- Backend API application: `http://glue-backend.mysprykershop.com`.

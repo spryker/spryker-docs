@@ -1,15 +1,16 @@
 ---
-title: "Decoupled Glue infrastructure: Integrate the protected endpoints authorization"
-description: This document describes how to use the protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
+title: Integrate the protected endpoints authorization
+description: This document describes how to use the protected endpoints authorization strategy for Backend API application in a Spryker project.
 last_updated: October 21, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-protected-endpoints-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-scopes-integration.html
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+  - /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
 ---
 
-This document describes how to use a protected endpoints authorization strategy for storefront API and backend API applications in a Spryker project.
+This document describes how to use a protected endpoints authorization strategy for Backend API application in a Spryker project.
 
 ## Install feature core
 
@@ -21,16 +22,14 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{site.version}} | [Glue Authentication itegration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
+| Backend API Authentication | {{site.version}} | [Backend API Authentication itegration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/glue-storefront-api-application-authorization-connector:"^1.0.0" \
-spryker/glue-backend-api-application-authorization-connector:"^1.0.0" \
---update-with-dependencies
+composer require spryker/glue-backend-api-application-authorization-connector:"^1.7.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -39,8 +38,7 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| GlueStorefrontApiApplicationAuthorizationConnector | vendor/spryker/glue-storefront-api-application-authorization-connector|
-| GlueBackendApiApplicationAuthorizationConnector | vendor/spryker/glue-storefront-api-application-authorization-connector|
+| GlueBackendApiApplicationAuthorizationConnector | vendor/spryker/glue-backend-api-application-authorization-connector|
 
 {% endinfo_block %}
 
@@ -76,44 +74,13 @@ Make sure the following changes have been applied in transfer objects:
 ### 3) Set up behavior
 
 Activate the following plugins:
-
-**Storefront API plugins**
-
-| PLUGIN | SPECIFICATION                                                                        | NAMESPACE                                                                                            |
-| --- |--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| IsProtectedTableColumnExpanderPlugin | Extends route description table with protected path-specific data.                              | Spryker\\Glue\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
-| ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route using `ProtectedPath` strategy.                     | Spryker\\Client\\GlueStorefrontApiApplicationAuthorizationConnector\\Plugin\\Authorization                                         |
-
+``
 **Backend API plugins**
 
 | PLUGIN | SPECIFICATION | NAMESPACE                                                                                         |
 | --- | --- |---------------------------------------------------------------------------------------------------|
 | IsProtectedTableColumnExpanderPlugin | Extends route description table with protected path-specific data. | Spryker\\Glue\\GlueBackendApiApplicationAuthorizationConnector\\Plugin\\GlueApplication           |
 | ProtectedPathAuthorizationStrategyPlugin | Authorization rule for the route using `ProtectedPath` strategy.  | Spryker\\Zed\\GlueBackendApiApplicationAuthorizationConnector\\Communication\\Plugin\\Authorization                                            |
-
-**src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\Authorization;
-
-use Spryker\Client\Authorization\AuthorizationDependencyProvider as SprykerAuthorizationDependencyProvider;
-use Spryker\Client\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\Authorization\ProtectedPathAuthorizationStrategyPlugin;
-
-class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Shared\AuthorizationExtension\Dependency\Plugin\AuthorizationStrategyPluginInterface>
-     */
-    protected function getAuthorizationStrategyPlugins(): array
-    {
-        return [
-            new ProtectedPathAuthorizationStrategyPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Zed/Authorization/AuthorizationDependencyProvider.php**
 
@@ -148,7 +115,6 @@ namespace Pyz\Glue\GlueApplication;
 
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueBackendApiApplicationAuthorizationConnector\Plugin\GlueApplication\IsProtectedTableColumnExpanderPlugin as BackendIsProtectedTableColumnExpanderPlugin;
-use Spryker\Glue\GlueStorefrontApiApplicationAuthorizationConnector\Plugin\GlueApplication\IsProtectedTableColumnExpanderPlugin as StorefrontIsProtectedTableColumnExpanderPlugin;
 
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
@@ -159,7 +125,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         return [
             new BackendIsProtectedTableColumnExpanderPlugin(),
-            new StorefrontIsProtectedTableColumnExpanderPlugin(),
         ];
     }
 }

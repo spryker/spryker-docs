@@ -130,6 +130,21 @@ entries:
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/use-default-backend-parameters.html
         - title: Document Backend API endpoints
           url: /docs/integrations/spryker-glue-api/backend-api/developing-apis/document-backend-api-endpoints.html
+    - title: Integrate Backend API
+      nested:
+        - title: Integrate Backend API
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html
+        - title: Integrate the authentication
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html
+        - title: Integrate the API Key authorization
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-api-key-authorization.html
+        - title: Integrate the authorization scopes
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html
+        - title: Integrate the documentation generator
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-documentation-generator.html
+        - title: Integrate the protected endpoints authorization
+          url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-protected-endpoints-authorization.html
+
     - title: Sprker API Errors and Troubleshooting
       url: /docs/integrations/spryker-glue-api/spryker-api-errors-and-troubleshooting.html
   - title: Custom building integrations

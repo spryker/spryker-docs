@@ -188,7 +188,7 @@ In December 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+- [Integrate the authentication](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html): Learn how to create an authentication token for the Backend API application in a Spryker project.
 - [Create Glue API authorization strategies](/docs/dg/dev/glue-api/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
@@ -312,7 +312,7 @@ In October 2023, we have added and updated the following pages:
 - [Oryx: Responsive design system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 - [Entity does not exist: Pyz prefix](/docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
 - [Use API Key authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/backend-api/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
-- [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
+- [Integrate the API Key authorization](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
@@ -422,7 +422,7 @@ In August 2023, we have added and updated the following pages:
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
+- [Integrate the authentication](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html): Learn how to create an authentication token for the Backend API application in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
 
 For more details about these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

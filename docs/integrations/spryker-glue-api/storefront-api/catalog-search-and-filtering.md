@@ -7,7 +7,7 @@ template: default
 
 The Storefront API provides powerful catalog search capabilities through the `/catalog-search` endpoint. This endpoint supports various filtering options, faceted search, and advanced query parameters to help users find products efficiently.
 
-## Basic Search
+## Basic search
 
 The basic search endpoint accepts a query parameter and returns matching products with faceted navigation data.
 
@@ -21,25 +21,26 @@ Authorization: Bearer {access_token}
 
 Response structure includes:
 - `abstractProducts`: Array of matching products
-- `valueFacets`: Categorical filters (brand, color, labels, etc.)
-- `rangeFacets`: Numeric range filters (price, rating)
+- `valueFacets`: Categorical filters, such as brand, color, or labels
+- `rangeFacets`: Numeric range filters: price, rating
 - `categoryTreeFilter`: Category-based navigation
 - `pagination`: Pagination information
 - `sort`: Available sorting options
 
-## Filtering Options
+## Filtering options
 
-### Multiple Labels Filtering
 
-Product labels can be filtered using the `label` parameter. Labels support multi-value filtering, allowing you to filter by multiple labels simultaneously.
+### Multiple labels filtering
 
-Single Label:
+Product labels can be filtered using the `label` parameter. Labels support multi-value filtering, enabling you to filter by multiple labels simultaneously.
+
+Single label:
 
 ```http
 GET /catalog-search?q=&label=Standard%20Label
 ```
 
-Multiple Labels:
+Multiple labels:
 
 ```http
 GET /catalog-search?q=&label[]=Standard%20Label&label[]=SALE%20%
@@ -47,7 +48,7 @@ GET /catalog-search?q=&label[]=Standard%20Label&label[]=SALE%20%
 
 Key characteristics:
 - Parameter name: `label`
-- Multi-valued: `true` (supports multiple values)
+- Multi-valued: `true`
 - Values are case-sensitive
 - URL encoding required for special characters
 
@@ -75,17 +76,17 @@ Response includes active labels in the `valueFacets` section:
 }
 ```
 
-### Brand Filtering
+### Brand filtering
 
 Brand filtering supports both single and multiple brand selection.
 
-Single Brand:
+Single brand:
 
 ```http
 GET /catalog-search?q=&brand=Sony
 ```
 
-Multiple Brands:
+Multiple brands:
 
 ```http
 GET /catalog-search?q=&brand[]=Sony&brand[]=Canon
@@ -96,17 +97,17 @@ Key characteristics:
 - Multi-valued: `false` for single brand, use array notation for multiple
 - Case-sensitive values
 
-### Color Filtering
+### Color filtering
 
 Color filtering allows selection of multiple colors simultaneously.
 
-Single Color:
+Single color:
 
 ```http
 GET /catalog-search?q=&color=Black
 ```
 
-Multiple Colors:
+Multiple colors:
 
 ```http
 GET /catalog-search?q=&color[]=Black&color[]=White&color[]=Red
@@ -117,13 +118,21 @@ Key characteristics:
 - Multi-valued: `true`
 - Case-sensitive values
 
-### Price Filtering
+### Price filtering
 
-Price filtering uses decimal values representing the actual currency amounts (EUR, USD, etc.), not cents.
+Price filtering uses decimal values representing the actual currency amounts, such as EUR, USD, not cents.
 
-Important: Price filter values are in decimal currency format, while product prices in responses are shown in cents.
 
-Price Range:
+{% info_block infobox %}
+
+If the process finishes early, and events are not processed during runtime, they're handled automatically by the command in Jenkins:
+
+Price filter values are in decimal currency format, while product prices in responses are in cents.
+
+{% endinfo_block %}
+
+
+Price range:
 
 ```http
 GET /catalog-search?q=Sony&price[min]=99.99&price[max]=150
@@ -132,17 +141,17 @@ GET /catalog-search?q=Sony&price[min]=99.99&price[max]=150
 Key characteristics:
 - Parameter name: `price`
 - Supports `min` and `max` values
-- Values are in decimal currency format (for example, 99.99 = €99.99)
+- Values are in decimal currency format–for example, 99.99 = €99.99
 - Products with prices between 9999 cents (€99.99) and 15000 cents (€150.00) will be returned
 - Multi-valued: `false`
 
-Price Conversion Examples:
+Price conversion examples:
 - Filter: `price[min]=1&price[max]=9.99`
 - Matches products: 100 cents to 999 cents
 - Filter: `price[min]=99.99&price[max]=150`
 - Matches products: 9999 cents to 15000 cents
 
-Response includes price range information (note that prices in the response are in cents):
+Response includes price range information:
 
 ```json
 {
@@ -159,17 +168,17 @@ Response includes price range information (note that prices in the response are 
 }
 ```
 
-### Rating Filtering
+### Rating filtering
 
 Rating filtering supports minimum and maximum rating values.
 
-Rating Range:
+Rating range:
 
 ```http
 GET /catalog-search?q=&rating[min]=3&rating[max]=5
 ```
 
-Exact Rating:
+Exact rating:
 
 ```http
 GET /catalog-search?q=&rating[min]=3&rating[max]=3
@@ -178,16 +187,16 @@ GET /catalog-search?q=&rating[min]=3&rating[max]=3
 Key characteristics:
 - Parameter name: `rating`
 - Supports `min` and `max` values
-- Integer values (1-5 typically)
+- Integer values, 1-5 typically
 - Multi-valued: `false`
 
-## Facet Types
+## Facet types
 
 Facets are aggregated data that provide filtering options and statistics about search results. They enable users to refine their search by showing available filter values and the number of products matching each filter.
 
-There are two main types of facets:
+The two main types of facets are described in the following sections.
 
-### Value Facets
+### Value facets
 
 Value facets represent categorical filters with discrete values:
 
@@ -215,17 +224,23 @@ Value facets represent categorical filters with discrete values:
 ```
 
 Common value facets:
-- `category`: Product categories (uses category IDs, not category names)
-- `label`: Product labels (uses label names)
-- `color`: Product colors (uses color names)
-- `brand`: Product brands (uses brand names)
+- `category`: Product category IDs
+- `label`: Product labels
+- `color`: Product colors
+- `brand`: Product brands
 - `merchant_name`: Merchant names
 - `storage_capacity`: Storage capacity options
 - `weight`: Weight values
 
-Note: Category filtering is different from other filters as it uses category IDs rather than human-readable names. Other filters like brand, color, and label use their respective names as filter values.
+{% info_block infobox %}
 
-### Range Facets
+Category filtering is different from other filters because it uses category IDs rather than human-readable names. Other filters, like brand, color, and label, use their respective names as filter values.
+
+{% endinfo_block %}
+
+
+
+### Range facets
 
 Range facets represent numeric filters with minimum and maximum values:
 
@@ -249,7 +264,7 @@ Common range facets:
 - `price`: Price ranges (in cents in response, decimal in filter)
 - `rating`: Product ratings
 
-## Combining Filters
+## Combining filters
 
 Multiple filters can be combined in a single request:
 
@@ -257,7 +272,7 @@ Multiple filters can be combined in a single request:
 GET /catalog-search?q=Sony&brand=Sony&color[]=Black&color[]=White&price[min]=50&price[max]=200&label[]=SALE%20%
 ```
 
-This request searches for:
+This request searches for the following:
 - Products matching "Sony" in search
 - Brand: Sony
 - Colors: Black OR White
@@ -272,9 +287,11 @@ Search results support pagination:
 GET /catalog-search?q=Sony&page[offset]=12&page[limit]=24
 ```
 
-Parameters:
-- `page[offset]`: Starting position (default: 0)
-- `page[limit]`: Number of items per page (default: 12)
+| Parameter     | Description                          | Default value |
+|---------------|--------------------------------------|---------|
+| `page[offset]` | Starting position                   | 0       |
+| `page[limit]`  | Number of items per page            | 12      |
+
 
 Valid items per page options can be found in the response under `pagination.config.validItemsPerPageOptions`. These values may vary depending on your configuration. Example: `[12, 24, 36]`
 
@@ -294,9 +311,10 @@ Available sort options:
 - `price_desc`: Sort by price descending
 - `popularity`: Sort by popularity
 
-## Response Structure
+## Response structure
 
-Complete response structure:
+<details>
+  <summary>Complete response structure</summary>
 
 ```json
 {
@@ -371,3 +389,5 @@ Complete response structure:
   }
 }
 ```
+
+</details>

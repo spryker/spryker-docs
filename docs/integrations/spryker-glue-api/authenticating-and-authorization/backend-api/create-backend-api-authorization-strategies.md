@@ -1,7 +1,7 @@
 ---
 title: Create Backend API authorization strategies
 description: This document describes how to create a new authorization strategy.
-last_updated: '2025-07-07'
+last_updated: July 7, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/using-authorization-framework.html

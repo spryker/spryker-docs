@@ -46,9 +46,9 @@ entries:
         - title: Storefront API security and authentication
           url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
         - title: Storefront API
-          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-api.html
+          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api.html
         - title: Storefront API infrastructure
-          url: /docs/integrations/spryker-glue-api/getting-started-with-apis/storefront-infrastructure.html
+          url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html
         - title: Implement a REST API resource
           url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html
         - title: Configure the included section

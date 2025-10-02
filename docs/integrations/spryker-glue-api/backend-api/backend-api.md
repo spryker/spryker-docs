@@ -16,7 +16,7 @@ Out of the box, Spryker Commerce OS provides API applications:
 
 With the current setup out of the box, we have a Backend API application that is meant to be an API application for our Back Office. This means that with this new application, infrastructure has direct access to Zed facades from Backend API resources. Also, out of the box, we have a separate `/token` resource specifically for Backend API that uses Back Office users' credentials to issue a token for a Backend API resource.
 
-For more details about the difference between SAPI and BAPI, refer to [Backend and storefront API module differences](/docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html).
+For more details about the difference between SAPI and BAPI, see [Backend and storefront API module differences](/docs/integrations/spryker-glue-api/getting-started-with-apis/backend-and-storefront-api-differences.html).
 
 ![Backend API](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-api/glue-backend-api.jpeg)
 
@@ -164,11 +164,11 @@ This section provides a list of common HTTP statuses returned by Glue endpoints.
 
 ## Dates
 
-For date formatting, [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) date/time format is used. For requests, any time zone is accepted; however, dates are stored and returned in UTC.
+For date formatting, the [ISO-8601](https://www.iso.org/iso-8601-date-and-time-format.html) format is used. For requests, any time zone is accepted; however, dates are stored and returned in UTC.
 
 Example:
-- request: `1985-07-01T01:22:11+02:00`
-- in storage and responses: `1985-06-30T23:22:11+00:00`
+- Request: `1985-07-01T01:22:11+02:00`
+- In storage and responses: `1985-06-30T23:22:11+00:00`
 
 ## Request header
 

@@ -13,38 +13,35 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/create-glue-api-applications.html
 ---
 
-Spryker's Backend API is a powerful tool for building custom front end applications, integrating with third party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.
+Spryker's Backend API is a powerful tool for building custom front end applications, integrating with third-party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.
 
 
 ### Key concepts
 
-Before diving into the development process, it's important to understand a few key concepts:
-
 - Backend API: The core of Spryker's API infrastructure.
-- Storefront vs. Backend API: Spryker distinguishes between two types of API applications:
-  - Storefront API: Designed for customer facing applications (for example mobile apps, single page applications). It has access to services like search and key value storage.
+  - Storefront API: Designed for customer facing applications–for example mobile apps, single page applications. It has access to services like search and key value storage.
   - Backend API: Intended for backend integrations and administrative tasks. It has more direct access to the database, broker, and other core services.
 - Backend API Applications: The latest version of the Backend API infrastructure, which offers improved flexibility and performance. When creating a new application, it's recommended to use the modern infrastructure.
-- Modules and Resources: Your API will be organized into modules, and each module can expose one or more resources (for example "products," "carts," "orders").
+- Modules and Resources: Your API will be organized into modules, and each module can expose one or more resources–for example, "products," "carts," "orders".
 
 
 ### The development process
 
-Creating a new API application in Spryker involves the following key steps:
+Creating a new API application in Spryker involves the following steps:
 
-1. Define Your Application Type: The first step is to decide whether you are building a Storefront or a Backend API. This choice will determine which services your application has access to and how it's configured.
+1. Define your application Type: Decide whether you are building a Storefront or a Backend API. This choice determines which services your application has access to and how it's configured.
 
-2. Create a New Module: You'll need to create a new module for your API. This module will contain all the code for your new API resources, including controllers, processors, and data transfer objects (DTOs).
+2. Create a new module: You'll need to create a new module for your API. This module will contain all the code for your new API resources, including controllers, processors, and data transfer objects (DTOs).
 
-3. Define Your Resources: For each resource you want to expose through your API (for example a new "wishlists" resource), you'll need to define the corresponding routes, controllers, and business logic.
+3. Define resources: For each resource you want to expose through your API–for example, a new "wishlists" resource–you'll need to define the corresponding routes, controllers, and business logic.
 
-4. Implement Business Logic: This is where you'll write the code that handles the actual work of your API. This might involve retrieving data from the database, calling other services, or performing calculations.
+4. Implement business logic: This is where you'll write the code that handles the actual work of your API. This might involve retrieving data from the database, calling other services, or performing calculations.
 
-5. Data Transfer Objects (DTOs): You'll use DTOs to define the structure of the data that your API sends and receives. This helps to ensure that your API is well documented and easy to use.
+5. Data transfer objects (DTOs): You'll use DTOs to define the structure of the data that your API sends and receives. This helps to ensure that your API is well documented and easy to use.
 
-6. Register Your Resources: Once you've created your resources, you'll need to register them with the Backend API application so that they can be accessed through the API.
+6. Register resources: Once you've created your resources, you'll need to register them with the Backend API application so that they can be accessed through the API.
 
-7. Authentication and Authorization: You'll need to secure your API by implementing authentication and authorization checks to ensure that only authorized users can access your resources.
+7. Authentication and authorization: You'll need to secure your API by implementing authentication and authorization checks to ensure that only authorized users can access your resources.
 
 8. Documentation: It's important to document your API so that other developers can understand how to use it. Spryker provides tools to help you generate API documentation automatically.
 
@@ -78,7 +75,9 @@ docker/sdk up
 ```
 
 2. Verify that your domain is now available: `https://custom-backend.eu.mysprykershop.com`.
-3. Create an entry point for your new API: `public/CustomBackendApi/index.php`.
+3. Create an entry point for your new API:
+
+**public/CustomBackendApi/index.php**
 
 ```php
 <?php
@@ -104,9 +103,9 @@ $bootstrap
 
 ```
 
-*Line 7* defines `APPLICATION`, a constant reused across Spryker.
+Line 7 defines `APPLICATION`, a constant reused across Spryker.
 
-*Line 17* has `GlueCustomApiBootstrap`, a bootstrap the application must use. You create it in the next step.
+Line 17 has `GlueCustomApiBootstrap`, a bootstrap the application must use. You create it in the next step.
 
 4. Create the bootstrap to serve your application:
 
@@ -162,7 +161,7 @@ class CustomApiGlueApplicationBootstrapPlugin extends AbstractPlugin implements 
 }
 ```
 
-*Line 19* creates an instance of `ApplicationInterface`, which can take an array of `ApplicationPluginInterface`. You can add features like DB access using these plugins.
+Line 19 creates an instance of `ApplicationInterface`, which can take an array of `ApplicationPluginInterface`. You can add features like DB access using these plugins.
 
 In the factory, the constructor looks like this:
 

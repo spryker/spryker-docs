@@ -73,9 +73,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 3) Set up behavior
 
-Activate the following plugins:
-``
-**Backend API plugins**
+Activate the following Backend API plugins:
 
 | PLUGIN | SPECIFICATION | NAMESPACE                                                                                         |
 | --- | --- |---------------------------------------------------------------------------------------------------|

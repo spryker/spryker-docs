@@ -30,7 +30,7 @@ This document describes how to set up and run Glue Backend API end-to-end (E2E) 
   composer update spryker/testify:"^3.52.0"
   ```
 
-2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/dg/dev/glue-api/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html).
 
 
 ## Configure the project and set up test files

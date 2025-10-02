@@ -208,4 +208,4 @@ Request sample: retrieve merchant opening hours
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

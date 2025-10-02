@@ -805,7 +805,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is ID not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Other management options
 

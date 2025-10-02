@@ -43,7 +43,7 @@ While not specific to Spryker, it is recommended (and often defaulted via infras
 
 Prefer OAuth2 or API keys with expiration and rotation over Basic Auth for better control and traceability. Glue APIs can be extended to support token-based schemes.
 
-<a class="fl_cont" href="/docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html">
+<a class="fl_cont" href="/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>

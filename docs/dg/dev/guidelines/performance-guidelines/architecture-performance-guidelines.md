@@ -43,7 +43,7 @@ Make sure you carefully check for memory leaks during the query optimizations, a
 
 In project implementations, developers sometimes introduce repeated storage calls inside loops. Each iteration of the loop then results in a new query to the storage, even though the required data could often be retrieved in a more optimized way. This creates a significant performance bottleneck because:
 
-- Storage access is typically slower than in-memory operations. Multiplying these calls by the number of loop iterations can lead to exponential slowdowns.
+- Storage access is typically slower because of the network overhead on each trip to Redis/Valkey. Multiplying these calls by the number of loop iterations can lead to exponential slowdowns.
 - High-frequency storage calls increase infrastructure load, leading to higher operational costs and degraded system responsiveness under load.
 - Unnecessary roundtrips to storage delay the request–response cycle and negatively impact customer-facing performance metrics such as page load time and API latency.
 

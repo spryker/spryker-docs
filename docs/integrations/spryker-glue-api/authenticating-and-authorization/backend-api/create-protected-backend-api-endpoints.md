@@ -1,7 +1,7 @@
 ---
 title: Create protected Backend API endpoints
 description: Learn how to create the protected endpoint using a resource for the Backend API application.
-last_updated: '2025-07-07'
+last_updated: July 7, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html

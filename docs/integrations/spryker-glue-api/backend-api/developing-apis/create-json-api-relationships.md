@@ -1,7 +1,7 @@
 ---
 title: Create JSON API relationships
 description: This guide describes how to add resources through relationships
-last_updated: '2025-07-07'
+last_updated: July 7, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html

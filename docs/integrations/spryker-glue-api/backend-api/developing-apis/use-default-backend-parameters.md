@@ -1,7 +1,7 @@
 ---
 title: Use default Backend parameters
 description: This document explains how to pass the parameters and how to use them in code
-last_updated: '2025-07-07'
+last_updated: July 7, 2025
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/glue-parameters-usage.html

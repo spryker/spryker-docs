@@ -254,11 +254,11 @@ Enable the following behaviors by registering the plugins:
 | ApplicationIdentifierRequestBuilderPlugin | Sets `GlueRequestTransfer::$application` to the correct application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | LocaleRequestBuilderPlugin | Builds `GlueRequestTransfer.locale` from the `accept-language` header for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | SecurityHeaderResponseFormatterPlugin | Extends `GlueResponseTransfer` with security headers for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| RequestCorsValidatorPlugin | Validates cors headers for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| RequestCorsValidatorPlugin | Validates CORS headers for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | CustomRouteRoutesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface` for the current application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | ResourcesProviderPlugin | Returns the stack of `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface` for the current application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| BackendRouterProviderPlugin | Gets route collection from current Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
-| ControllerCacheCollectorPlugin | Returns controllers configuration for GlueBackendApiApplication application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| BackendRouterProviderPlugin | Gets a route collection from current Backend API application for the route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
+| ControllerCacheCollectorPlugin | Returns a controllers configuration for the `GlueBackendApiApplication` application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 
 <details>
 <summary>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>

@@ -5,25 +5,23 @@ last_updated: September 25, 2025
 template: default
 ---
 
-The Storefront API provides comprehensive support for adding various types of products to shopping carts. This document covers the different product types and their specific requirements when adding them to a cart via the `/carts/{cartId}/items` endpoint.
+The Storefront API provides comprehensive support for adding various types of products to shopping carts. This document covers the different product types and their specific requirements when adding them to cart via the `/carts/{cartId}/items` endpoint.
 
 ## Prerequisites
 
-Before adding products to cart, ensure you have:
-
-1. Authentication token: Obtain a customer access token via `/access-tokens` endpoint (for customer carts)
+1. Authentication token: Obtain a customer cart access token via `/access-tokens` endpoint
 2. Cart ID: Create a cart using `/carts` endpoint or use an existing cart
 3. Product information: Know the product SKU and any additional attributes required for the specific product type
 
-### Guest Cart Support
+### Guest cart support
 
-All product types described in this document can also be added to guest carts using the `/guest-carts/{guestCartId}/guest-cart-items` endpoint. Guest carts do not require authentication and follow the same request structure as authenticated carts. The main differences are:
+All product types described in this document can also be added to guest carts using the `/guest-carts/{guestCartId}/guest-cart-items` endpoint. Guest carts do not require authentication and follow the same request structure as authenticated carts. Main differences:
 
 - No authentication token required
 - Use guest cart ID instead of regular cart ID
-- Guest cart endpoints: `/guest-carts/{guestCartId}/guest-cart-items`
+- Guest cart endpoint: `/guest-carts/{guestCartId}/guest-cart-items`
 
-## Basic Cart Item Structure
+## Basic cart item structure
 
 All cart item requests follow this basic structure:
 
@@ -40,11 +38,11 @@ All cart item requests follow this basic structure:
 }
 ```
 
-## Product Types
+## Product types
 
-### Standard Products
+### Standard products
 
-For basic concrete products without special configurations:
+For basic concrete products without special configurations.
 
 Request:
 
@@ -68,7 +66,7 @@ Body:
 }
 ```
 
-### Configurable Products
+### Configurable products
 
 Configurable products require additional configuration data through the `productConfigurationInstance` attribute.
 
@@ -121,7 +119,7 @@ Body:
 }
 ```
 
-### Products with Random Weight/Measurement Units
+### Products with random weight and measurement units
 
 These products use sales units and measurement units for quantity specification.
 
@@ -151,7 +149,7 @@ Body:
 }
 ```
 
-### Products with Options
+### Products with options
 
 Products that have selectable options require the `productOptions` array.
 
@@ -185,7 +183,7 @@ Body:
 }
 ```
 
-### Merchant Products
+### Merchant products
 
 For marketplace scenarios where products are sold by specific merchants.
 
@@ -212,7 +210,7 @@ Body:
 }
 ```
 
-### Product Offers
+### Product offers
 
 Product offers are marketplace-specific variants of products with special pricing or conditions. The offer must belong to the referenced SKU.
 
@@ -239,10 +237,13 @@ Body:
 }
 ```
 
-## Response Structure
+## Response structure
 
 Successful requests return a `201 Created` status with cart information:
 
+<details>
+  <summary>Response sample</summary>
+  
 ```json
 {
     "data": {
@@ -289,19 +290,21 @@ Successful requests return a `201 Created` status with cart information:
 }
 ```
 
-## Common Include Parameters
+</details>
 
-Use these include parameters to get additional data in the response:
+## Common include parameters
 
-### Basic Includes
+Use these include parameters to get additional data in the response.
+
+### Basic includes
 
 - `items`: Cart items details
 - `concrete-products`: Product information
-- `sales-units`: Sales unit details (for measurement products)
+- `sales-units`: Sales unit details for measurement products
 - `product-measurement-units`: Measurement unit information
 - `product-options`: Product option details
 
-### Advanced Includes
+### Advanced includes
 
 - `product-offers`: Product offer information (requires two-step include: `items,concrete-products,product-offers`)
 - `merchants`: Merchant details for marketplace products
@@ -310,16 +313,16 @@ Use these include parameters to get additional data in the response:
 - `configurable-bundle-templates`: Template information for configurable bundles
 - `bundled-products`: Information about products within bundles
 
-### Configurable Products
+### Configurable products
 
-For configurable products, the configuration data is included directly in the item attributes as `productConfigurationInstance`. No additional include parameter is needed for the configuration itself, but you can include:
+For configurable products, the configuration data is included directly in the item attributes as `productConfigurationInstance`. No additional include parameter is needed for the configuration itself, but you can include the following:
 - `concrete-products`: To get base product information
-- `product-configuration-instances`: For detailed configuration metadata (if available)
+- `product-configuration-instances`: For detailed configuration metadata
 
-### Example with Multiple Includes
+### Example with multiple includes
 
 ```http
 POST /carts/{cartId}/items?include=items,concrete-products,product-offers,merchants
 ```
 
-This will return cart items with detailed product information, offer details, and merchant data in the `included` section of the response.
+This returns cart items with detailed product information, offer details, and merchant data in the `included` section of the response.

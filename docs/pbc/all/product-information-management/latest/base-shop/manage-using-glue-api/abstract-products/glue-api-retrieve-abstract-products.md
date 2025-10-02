@@ -73,20 +73,20 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 {% endinfo_block %}
 
 
-| REQUEST | USAGE |
-| --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its default prices. |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options`| Retrieve information about the abstract product with SKU `001` with its product options. |
-| `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET http://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
+| REQUEST                                                                                                                 | USAGE |
+|-------------------------------------------------------------------------------------------------------------------------| --- |
+| `GET https://glue.mysprykershop.com/abstract-products/001`                                                              | Retrieve information about the abstract product with SKU `001`. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets`                          | Retrieve information about the abstract product with SKU `001` with its image sets. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities`                      | Retrieve information about the abstract product with SKU `001` with its availability. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices`                              | Retrieve information about the abstract product with SKU `001` with its default prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices`                              | Retrieve information about the abstract product with SKU `093` with its prices. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes`                                       | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets`                                     | Retrieve information about the abstract product with SKU `001` with its tax sets. |
+| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels`                                        | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products`                                    | Retrieve information about the abstract product with SKU `001` with its concrete products. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options`                                      | Retrieve information about the abstract product with SKU `001` with its product options. |
+| `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews`                                      | Retrieve information about the abstract product with SKU `001` with its product reviews. |
+| `GET https://glue.mysprykershop.com/abstract-products/214?include=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
 
 
 ### Response

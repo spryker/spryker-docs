@@ -19,6 +19,12 @@ vendor/bin/console propel:install
 vendor/bin/console transfer:generate
 ```
 
+3. Generate a new translation cache:
+
+```bash
+vendor/bin/console translator:generate-cache
+```
+
 ## Upgrading from version 0.* to version 1.0.0
 
 In this new version of the `MerchantProductOfferDataImport` module, we have split `ProductOffer` and `Merchant` context. You can find more details about the changes on the [MerchantProductOfferDataImport module](https://github.com/spryker/merchant-product-offer-data-import/releases) release page.

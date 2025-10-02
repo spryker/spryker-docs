@@ -40,11 +40,10 @@ $config[MerchantProductOfferDataImportConstants::FILE_SYSTEM_NAME] = 'merchant-p
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'merchant-product-offer-data-import-files' => [
         'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_MERCHANT_FILES_KEY') ?: '',
-        'bucket' => getenv('SPRYKER_S3_MERCHANT_FILES_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_MERCHANT_FILES_SECRET') ?: '',
-        'root' => '/',
-        'path' => '/',
+        'key' => getenv('S3_MERCHANT_FILES_KEY') ?: '',
+        'bucket' => getenv('S3_MERCHANT_FILES_BUCKET') ?: '',
+        'secret' => getenv('S3_MERCHANT_FILES_SECRET') ?: '',
+        'path' => '/merchant-product-offer-data-import-files',
         'version' => 'latest',
         'region' => getenv('AWS_REGION') ?: 'eu-central-1',
     ],
@@ -58,8 +57,8 @@ For local development, you can use the following configuration:
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-product-offer-data-import-files'] = [
     'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => '/data',
-    'path' => '/data/merchant-product-offer-data-import-files',
+    'root' => '/data/data/merchant-product-offer-data-import-files',
+    'path' => '',
 ];
 ```
 
@@ -111,8 +110,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-<details>
-  <summary>src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php**
 
 ```php
 <?php
@@ -142,8 +140,6 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
     }
 }
 ```
-
-</details>
 
 ## Configure behavior
 

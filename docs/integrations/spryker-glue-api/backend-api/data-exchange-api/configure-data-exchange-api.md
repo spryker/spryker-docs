@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
   - /docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html
   - /docs/pbc/all/data-exchange/latest/configure-data-exchange-api.html
+  - /docs/integrations/custom-building-integrations/data-exchange/configure-data-exchange-api.html
 ---
 
 {% include integrations/configure-data-exchange-api-body.md %}

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
   - /docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html
   - /docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html
+  - /docs/integrations/custom-building-integrations/data-exchange/sending-requests-with-data-exchange-api.html
 ---
 
 {% include integrations/sending-requests-to-data-exchange-api-body.md %}

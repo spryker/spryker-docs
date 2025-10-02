@@ -38,7 +38,7 @@ It supports using the `%theme%` key that will be replaced with the current theme
 Example:
 `$config[\SprykerShop\Shared\ShopUi\ShopUiConstants::YVES_ASSETS_URL_PATTERN] = sprintf('/assets/%s/%s/', $CURRENT_STORE, '%theme%');`
 
-Config for the frontend builder is placed at `/config/Yves/frontend-build-config.json`, but you can change this path using the command with `-c` or `–config` parameter, for example:
+Config for the frontend builder is placed at `/config/Yves/frontend-build-config.json`, but you can change this path using the command with `-c` or `--config` parameter, for example:
 
 `npm run yves -- -c /path/to/config.json`
 

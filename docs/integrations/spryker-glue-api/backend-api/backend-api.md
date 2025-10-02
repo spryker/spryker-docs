@@ -197,7 +197,7 @@ Key benefits:
 - Real-time updates: Dynamic changes and on-the-fly modifications
 - Security and Access Control: Strong security measures and access controls
 
-[Learn more about Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
+[Learn more about Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html)
 
 ## Further Reading
 
@@ -206,5 +206,5 @@ Key benefits:
 - [Backend API Marketplace B2B Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html)
 - [Backend API Marketplace B2C Demo Shop Reference](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2c-demo-shop-reference.html)
 - [Create Backend Resources](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html)
-- [Data Exchange API](/docs/integrations/custom-building-integrations/data-exchange/data-exchange-api.html)
+- [Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/data-exchange-api.html)
 - [Authentication and Authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)

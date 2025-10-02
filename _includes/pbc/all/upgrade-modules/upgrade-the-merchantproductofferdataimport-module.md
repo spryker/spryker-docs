@@ -15,8 +15,8 @@ composer require spryker/merchant-product-offer-data-import: "^2.0.0" --update-w
 2. Apply database changes and generate transfer changes:
 
 ```bash
-console propel:install
-console transfer:generate
+vendor/bin/console propel:install
+vendor/bin/console transfer:generate
 ```
 
 ## Upgrading from version 0.* to version 1.0.0

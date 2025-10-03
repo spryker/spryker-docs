@@ -52,6 +52,29 @@ To avoid these pitfalls, architects and developers should ensure storage interac
 - Batch retrieval: Fetch all required records in a single storage call before entering the loop.
 - Indexing and pre-aggregation: Where possible, prepare optimized structures to avoid repeated lookups.
 
+Bad practice – repeated storage calls inside the loop:
+
+```php
+foreach ($storageKeys as $storageKey) {
+    $productData = $this->storageClient->get($storageKey);
+    // Process $productData
+}
+```
+
+In this example, every loop iteration triggers a new storage request, which can quickly become a performance bottleneck with larger datasets.
+
+Recommended approach – batch retrieval and in-memory processing:
+
+```php
+$productsData = $this->storageClient->getMulti($storageKeys);
+
+foreach ($productsData as $productData) {
+    // Process $productData
+}
+```
+
+By fetching all required records in a single call (getMulti), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
+
 {% info_block warningBox %}
 
 Always evaluate the size of batch requests and memory usage when removing storage calls from loops. While batching improves performance, overly large result sets can increase memory consumption and cause application instability.

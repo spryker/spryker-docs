@@ -1,6 +1,6 @@
 This document explains how to create and use a [grant type](https://oauth.net/2/grant-types/) parameter.
 
-Integrate authentication following the [Glue API Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) guide.
+Integrate authentication following the [Backend API Authentication integration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) guide.
 
 Glue provides [grant types](https://www.rfc-editor.org/rfc/rfc6749#appendix-A.10) `password` for a customer and a user out of the box:
 

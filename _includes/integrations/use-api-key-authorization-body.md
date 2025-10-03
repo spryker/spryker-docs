@@ -6,7 +6,7 @@ The API Key authorization mechanism lets users authenticate themselves with thei
 
 ## Prerequisites
 
-To be able to generate the API key in the Back Office, make sure the required features are installed. For the installation guidelines, see [Integrate the API Key Authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html).
+To be able to generate the API key in the Back Office, make sure the required features are installed. For the installation guidelines, see [Integrate the API Key Authorization](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-api-key-authorization.html).
 
 ## Protect routes with API Key authorization
 

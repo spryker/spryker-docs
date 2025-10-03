@@ -16,7 +16,7 @@ Spryker uses a set of well-known tools:
 - *Twig*. It is a fast and modern PHP templating engine.
 - *Propel2*. It is an ORM library for PHP, offering an object-relational mapping toolkit. It's part of the Symfony framework. Propel's principal function is to provide the mapping between database tables and PHP classes. Propel includes a source code generator for creating PHP classes based on the data model definition given through an XML file. The data model definition is independent of the database used, so Spryker provides a single interface that enables access to different database management systems.
 - *Jenkins*. Cronjobs can be easily configured in the jobs configuration file.
-- *Database: MySQL, MariaDB, or PostgreSQL*. Spryker supports MySQL, MariaDB, or PostgreSQL. You can configure it in the main configuration file.
+- *Database: MySQL, MariaDB*. Spryker supports MySQL, MariaDB. You can configure it in the main configuration file.
 
 ## Application separation
 

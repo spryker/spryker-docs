@@ -1886,7 +1886,7 @@ Make sure that the following modules have been installed:
 1. Append glossary according to your configuration:
 
 
-<details><summary>src/data/import/glossary.csv</summary>
+**>src/data/import/glossary.csv**
 
 ```yaml
 permission.name.EditCompanyOrdersPermissionPlugin,Edit Company orders,en_US
@@ -1895,7 +1895,6 @@ permission.name.EditBusinessUnitOrdersPermissionPlugin,Edit Business unit orders
 permission.name.EditBusinessUnitOrdersPermissionPlugin,Edit Business unit orders,de_DE
 ```
 
-</details>
 
 
 2. Import data:
@@ -1910,14 +1909,14 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                                                                             | PREREQUISITES | NAMESPACE                                                                      |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
-| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company in the Client layer.                                               |               | Spryker\Client\CompanySalesConnector\Plugin\Permission                         |
-| EditCompanyOrdersPermissionPlugin                       | Adds permission for company users to edit orders from the same company in the Zed layer.                                                  |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission              |
-| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit in the Client layer.                                         |               | Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission             |
-| EditBusinessUnitOrdersPermissionPlugin                  | Adds permission for company users to edit orders from the same business unit in the Zed layer.                                            |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission  |
-| EditCompanyOrderCartReorderOrderProviderPlugin          | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit company orders.                              |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\CartReorder             |
-| EditBusinessUnitOrderCartReorderOrderProviderPlugin     | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has permission to edit business unit orders.                        |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\CartReorder |
-| EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin      | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has permission to edit company orders.        |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Checkout                |
-| EditBusinessUnitOrderQuoteExpanderCheckoutPreSavePlugin | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has permission to edit  business unit orders. |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Checkout    |
+| EditCompanyOrdersPermissionPlugin                       | Adds a permission for company users to edit orders from the same company in the Client layer.                                               |               | Spryker\Client\CompanySalesConnector\Plugin\Permission                         |
+| EditCompanyOrdersPermissionPlugin                       | Adds a permission for company users to edit orders from the same company in the Zed layer.                                                  |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Permission              |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds a permission for company users to edit orders from the same business unit in the Client layer.                                         |               | Spryker\Client\CompanyBusinessUnitSalesConnector\Plugin\Permission             |
+| EditBusinessUnitOrdersPermissionPlugin                  | Adds a permission for company users to edit orders from the same business unit in the Zed layer.                                            |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Permission  |
+| EditCompanyOrderCartReorderOrderProviderPlugin          | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has the permission to edit company orders.                              |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\CartReorder             |
+| EditBusinessUnitOrderCartReorderOrderProviderPlugin     | Provides an order if `CartReorderRequestTransfer.companyUserTransfer` has the permission to edit business unit orders.                        |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\CartReorder |
+| EditCompanyOrderQuoteExpanderCheckoutPreSavePlugin      | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has the permission to edit company orders.        |               | Spryker\Zed\CompanySalesConnector\Communication\Plugin\Checkout                |
+| EditBusinessUnitOrderQuoteExpanderCheckoutPreSavePlugin | Expands `QuoteTransfer` with original order if `QuoteTransfer.customer.companyUserTransfer` has the permission to edit  business unit orders. |               | Spryker\Zed\CompanyBusinessUnitSalesConnector\Communication\Plugin\Checkout    |
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
@@ -1971,7 +1970,8 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-3. Execute console command:
+3. Execute registered installer:
+
 
 ```bash
 console setup:init-db
@@ -2069,14 +2069,16 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. Place an order as a company user.
-2. Login as a different company user from the same company and business unit.
-2. Go to `https://www.mysprykershop.com/en/company/company-role`.
-2. Click **Edit** next to a role for your user.
-3. Assign the **Edit Company orders**, **Edit Business unit orders**, **View Company orders** and **View Business Unit orders** permission to the role.
-4. Re-login as the user.
-5. Go to `https://www.mysprykershop.com/en/customer/order` and select **Company orders**.
-6. Make sure that after clicking the **edit order** button for an order from the same company or business unit the order amendment for the order has been started.
-7. Proceed with the order amendment and place the order, make sure the order has been placed successfully.
+3. Log in as a different company user from the same company and business unit.
+4. Go to `https://www.mysprykershop.com/en/company/company-role`.
+5. Click **Edit** next to a role for your user.
+6. Assign the **Edit Company orders**, **Edit Business unit orders**, **View Company orders** and **View Business Unit orders** permissions to the role.
+7. Re-login as the user.
+8. Go to `https://www.mysprykershop.com/en/customer/order`.
+9. Click **Company orders**.
+10. Click **Edit order** for an order from the same company or business unit.
+Make sure the order amendment starts correctly.
+11. Change the order. Make sure the order can be placed successfully.
 
 {% endinfo_block %}
 

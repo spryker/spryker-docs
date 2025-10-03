@@ -11,9 +11,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.
@@ -132,4 +132,4 @@ Request sample: retrieve a category node
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

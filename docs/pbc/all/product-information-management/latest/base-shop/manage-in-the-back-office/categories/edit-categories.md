@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/edit-categories.html
 related:
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 This doc describes how to edit categories in the Back Office.

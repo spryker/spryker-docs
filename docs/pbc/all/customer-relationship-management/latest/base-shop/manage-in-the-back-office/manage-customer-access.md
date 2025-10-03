@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/manage-customer-access.html
 related:
   - title: Customer access feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-access-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-access-feature-overview.html
 ---
 
 This document describes how to manage customer access in the Back Office. Customer access defines what guest users can see and do on the Storefront.

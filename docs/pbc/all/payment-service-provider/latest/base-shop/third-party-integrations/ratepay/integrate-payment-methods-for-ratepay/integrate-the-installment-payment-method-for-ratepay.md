@@ -11,23 +11,23 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
 related:
   - title: RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html
   - title: RatePay - Payment Workflow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
   - title: RatePay facade methods
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html
   - title: Disabling address updates from the backend application for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/disable-address-updates-from-the-backend-application-for-ratepay.html
   - title: Integrating the Invoice payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Prepayment payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay-state-machine-commands-and-conditions.html
   - title: Integrating the Direct Debit payment method for RatePay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 ---
 
 The shop must implement the Calculation Request operation to calculate an example installment plan and show it to the customer. Some input parameters for the calculation are passed from the shop–for example, the shopping basket total. Others are stored in the merchant's RatePAY profile held by the Gateway–for example, the allowed interest rate range. The merchant's profile parameters can be retrieved by the Configuration Request operation.

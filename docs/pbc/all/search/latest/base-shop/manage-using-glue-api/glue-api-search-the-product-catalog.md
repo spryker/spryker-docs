@@ -10,11 +10,11 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
+    link: docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
   - title: Install the Catalog Glue API
-    link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
+    link: docs/pbc/all/search/latest/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - title: Catalog feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/catalog-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -6715,4 +6715,4 @@ For other abstract product attributes, see [Retrieving abstract product prices](
 | 314    | Price mode is invalid.                                                                                                                                                             |
 | 503    | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

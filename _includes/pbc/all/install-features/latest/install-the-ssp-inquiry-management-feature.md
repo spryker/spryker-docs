@@ -525,6 +525,10 @@ ssp_inquiry.mail.trans.ssp_inquiry_list_page,View Inquiries,en_US
 ssp_inquiry.mail.trans.ssp_inquiry_list_page,Anfragen anzeigen,de_DE
 ssp_dashboard.general.inquiries,Pending Inquiries,en_US
 ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
+self_service_portal.inquiry.error.not-found,Anfrage nicht gefunden,de_DE
+self_service_portal.inquiry.error.not-found,Inquiry not found,en_US
+self_service_portal.inquiry.validation.unknown_error,Beim Verarbeiten Ihrer Anfrage ist ein unerwarteter Fehler aufgetreten,de_DE
+self_service_portal.inquiry.validation.unknown_error,An unexpected error occurred while processing your inquiry,en_US
 ```
 
 </details>
@@ -688,7 +692,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             SspInquiryMenuItemWidget::class
         ];
     }
-    
+
     protected function getFilterControllerEventSubscriberPlugins(): array
     {
         return [
@@ -794,7 +798,7 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
             new SspInquiryDashboardDataExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
      */
@@ -804,7 +808,7 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
             new SspInquirySspAssetManagementExpanderPlugin(),
         ];
     }
-    
+
      /**
      * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface>
      */
@@ -866,13 +870,179 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-<!--
+2. Enable following Storefront API endpoints:
+
+| PLUGIN                          | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                    |
+|---------------------------------|------------------------------------------------------------|---------------|--------------------------------------------------------------|
+| SspInquiriesResourceRoutePlugin | Provides the GET and POST endpoints for the SSP inquiries. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Glue\GlueApplication;
+
+use SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication\SspInquiriesResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+   /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {    
+        return [
+            new SspInquiriesResourceRoutePlugin(),
+        ];
+    }
+}
+```
 
 {% info_block warningBox "Verification" %}
- 
+
+1. Create inquiries by importing demo data as described in the previous sections.
+
+2. Get the access token by sending a `POST` request to the token endpoint with the company user credentials:
+
+`POST https://glue.mysprykershop.com/token`
+
+```json
+{
+    "data": {
+        "type": "token",
+        "attributes": {
+            "grant_type": "password",
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
+        }
+    }
+}
+```
+
+3. Use the access token to access the `ssp-inquiries` endpoint:
+
+
+<details>
+  <summary>GET https://glue.mysprykershop.com/ssp-inquiries</summary>
+
+```json
+{
+  "data": [
+    {
+      "type": "ssp-inquiries",
+      "id": "DE-INQR--1",
+      "attributes": {
+        "sspAssetReference": null,
+        "orderReference": null,
+        "type": "general",
+        "status": "pending",
+        "subject": "Request for documentation",
+        "description": "Please provide detailed documentation on the warranty and return policies for the products purchased under my account.",
+        "reference": "DE-INQR--1",
+        "isCancellable": null
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-inquiries/DE-INQR--1"
+      }
+    },
+    {
+      "type": "ssp-inquiries",
+      "id": "DE-INQR--2",
+      "attributes": {
+        "sspAssetReference": null,
+        "orderReference": null,
+        "type": "general",
+        "status": "pending",
+        "subject": "Product catalog issue",
+        "description": "I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.",
+        "reference": "DE-INQR--2",
+        "isCancellable": null
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-inquiries/DE-INQR--2"
+      }
+    }
+  ],
+  "links": {
+    "self": "http://glue.eu.spryker.local/ssp-inquiries"
+  }
+}
+```
+
+4. To get the particular inquiry, use the access token to send a `GET` request to the `ssp-inquiries` endpoint with the asset ID:
+  `GET https://glue.mysprykershop.com/ssp-inquiries/DE-INQR--1`
+
+```json
+{
+  "data": {
+    "type": "ssp-inquiries",
+    "id": "DE-INQR--1",
+    "attributes": {
+      "sspAssetReference": null,
+      "orderReference": null,
+      "type": "general",
+      "status": "pending",
+      "subject": "Request for documentation",
+      "description": "Please provide detailed documentation on the warranty and return policies for the products purchased under my account.",
+      "reference": "DE-INQR--1",
+      "isCancellable": null
+    },
+    "links": {
+      "self": "http://glue.eu.spryker.local/ssp-inquiries/DE-INQR--1"
+    }
+  }
+}
+```
+
+5. Use the access token to create the `ssp-inquiries` resource:
+  `POST https://glue.mysprykershop.com/ssp-inquiries`
+
+```json
+{
+  "data": {
+    "type": "ssp-inquiries",
+    "attributes": {
+      "reference": {% raw %}{{{% endraw %}Inquery reference{% raw %}}}{% endraw %},
+      "subject": {% raw %}{{{% endraw %}Asset reference{% raw %}}}{% endraw %},
+      "description": {% raw %}{{{% endraw %}Description{% raw %}}}{% endraw %},
+      "type": {% raw %}{{{% endraw %}One of the following types: general, order, ssp_asset{% raw %}}}{% endraw %},
+      "sspAssetReference": {% raw %}{{{% endraw %}Asset reference{% raw %}}}{% endraw %}
+    }
+  }
+}
+```
+
+Example of a successful response:
+
+```json
+{
+  "data": {
+    "type": "ssp-inquiries",
+    "id": "DE-INQR--3",
+    "attributes": {
+      "sspAssetReference": "AST--39",
+      "orderReference": null,
+      "type": "ssp_asset",
+      "status": null,
+      "subject": "TestInquiryAPIsubject",
+      "description": "TestInquiryAPIdescription",
+      "reference": "DE-INQR--3",
+      "isCancellable": null
+    },
+    "links": {
+      "self": "http://glue.eu.spryker.local/ssp-inquiries/DE-INQR--3"
+    }
+  }
+}
+```
+
 {% endinfo_block %}
 
--->
 
 ## Set up widgets
 

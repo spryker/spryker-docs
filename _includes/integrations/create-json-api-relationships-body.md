@@ -4,16 +4,16 @@ To query certain data, you often need to use endpoints from different APIs to ge
 
 This guide describes how to add resources through relationships. The following concept is only allowed for resources that implemented the Glue JSON:API convention.
 
-Let's say you have a module named `ModuleRestApi`, where you want to add the `bar` resource related to the `module` resource. To do this, follow these steps:
+Let's say you have a module named `ModuleBackendApi`, where you want to add the `bar` resource related to the `module` resource. To do this, follow these steps:
 
 1. Create `ModuleBarResourceRelationshipPlugin`:
 
-**src\Pyz\Glue\ModuleRestApi\Plugin\ModuleBarResourceRelationshipPlugin.php**
+**src\Pyz\Glue\ModuleBackendApi\Plugin\ModuleBarResourceRelationshipPlugin.php**
 
 ```php
 <?php
 
-namespace Pyz\Glue\ModuleRestApi\Plugin\GlueJsonApiConvention;
+namespace Pyz\Glue\ModuleBackendApi\Plugin\GlueJsonApiConvention;
 
 use Generated\Shared\Transfer\GlueRelationshipTransfer;
 use Generated\Shared\Transfer\GlueRequestTransfer;
@@ -52,7 +52,7 @@ class ModuleBarResourceRelationshipPlugin extends AbstractPlugin implements Reso
 
 namespace Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector;
 
-use Pyz\Glue\ModuleRestApi\Plugin\ModuleBarResourceRelationshipPlugin;
+use Pyz\Glue\ModuleBackendApi\Plugin\ModuleBarResourceRelationshipPlugin;
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
 

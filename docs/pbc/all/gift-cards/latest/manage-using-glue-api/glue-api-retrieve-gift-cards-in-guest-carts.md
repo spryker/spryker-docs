@@ -149,4 +149,4 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | 104 | Cart uuid is missing. |
 | 109 | Anonymous customer unique id is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

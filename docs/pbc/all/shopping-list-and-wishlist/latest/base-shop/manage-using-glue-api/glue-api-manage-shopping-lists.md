@@ -11,11 +11,11 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
 related:
     - title: Install the Shopping Lists Glue API
-      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
+      link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
     - title: Managing shopping list items
-      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
+      link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
     - title: Shopping Lists feature overview
-      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+      link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 With the help of the [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
@@ -860,4 +860,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

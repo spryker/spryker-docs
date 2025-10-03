@@ -7,7 +7,7 @@ redirect_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-cart-configurable-bundle-glue-api.html
 related:
   - title: Install the Configurable Bundle Glue API
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-configurable-bundle-cart-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-configurable-bundle-cart-glue-api.md -->

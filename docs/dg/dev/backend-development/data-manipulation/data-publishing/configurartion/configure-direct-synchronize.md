@@ -1,7 +1,7 @@
 ---
 title: Configure direct synchronize
 description: 
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

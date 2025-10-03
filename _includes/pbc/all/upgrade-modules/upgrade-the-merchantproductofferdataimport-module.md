@@ -1,3 +1,29 @@
+## Upgrading from version 1.* to version 2.0.0
+
+In this new version of the `MerchantProductOfferDataImport` module, we introduced a new importer type: `merchant-combined-product-offer`.
+This importer enables you to import product offers, store relations, prices, stocks, validity dates, from a single file.
+You can find more details about the changes on the [MerchantProductOfferDataImport module](https://github.com/spryker/merchant-product-offer-data-import/releases/tag/2.0.0) release page.
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `MerchantProductOfferDataImport` module to the new version:
+
+```bash
+composer require spryker/merchant-product-offer-data-import: "^2.0.0" --update-with-dependencies
+```
+
+2. Apply database changes and generate transfer changes:
+
+```bash
+vendor/bin/console propel:install
+vendor/bin/console transfer:generate
+```
+
+3. Generate a new translation cache:
+
+```bash
+vendor/bin/console translator:generate-cache
+```
 
 ## Upgrading from version 0.* to version 1.0.0
 

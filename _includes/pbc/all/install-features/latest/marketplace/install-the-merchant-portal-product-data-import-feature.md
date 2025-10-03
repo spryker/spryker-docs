@@ -40,11 +40,10 @@ $config[MerchantProductDataImportConstants::FILE_SYSTEM_NAME] = 'merchant-produc
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'merchant-product-data-import-files' => [
         'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
-        'key' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_KEY') ?: '',
-        'bucket' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_BUCKET') ?: '',
-        'secret' => getenv('SPRYKER_S3_MERCHANT_PRODUCT_DATA_IMPORT_FILES_SECRET') ?: '',
-        'root' => '/',
-        'path' => '/',
+        'key' => getenv('S3_MERCHANT_FILES_KEY') ?: '',
+        'bucket' => getenv('S3_MERCHANT_FILES_BUCKET') ?: '',
+        'secret' => getenv('S3_MERCHANT_FILES_SECRET') ?: '',
+        'path' => '/merchant-product-data-import-files',
         'version' => 'latest',
         'region' => getenv('AWS_REGION') ?: 'eu-central-1',
     ],
@@ -58,8 +57,8 @@ For local development, you can use the following configuration:
 ```php
 $config[FileSystemConstants::FILESYSTEM_SERVICE]['merchant-product-data-import-files'] = [
     'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-    'root' => '/data',
-    'path' => '/data/merchant-product-data-import-files',
+    'root' => '/data/data/merchant-product-data-import-files',
+    'path' => '',
 ];
 ```
 
@@ -103,9 +102,6 @@ use Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImport\Mercha
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
-    /**
-     * @return array<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
-     */
     protected function getDataImporterPlugins(): array
     {
         return [
@@ -115,8 +111,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-<details>
-  <summary>src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImportMerchant/DataImportMerchantDependencyProvider.php**
 
 ```php
 <?php
@@ -132,9 +127,6 @@ use Spryker\Zed\MerchantProductDataImport\Communication\Plugin\DataImportMerchan
 
 class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDependencyProvider
 {
-    /**
-     * @return list<\Spryker\Zed\DataImportMerchantExtension\Dependency\Plugin\DataImportMerchantFileValidatorPluginInterface>
-     */
     protected function getDataImportMerchantFileValidatorPlugins(): array
     {
         return [
@@ -142,9 +134,6 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
         ];
     }
 
-    /**
-     * @return list<\Spryker\Zed\DataImportMerchantExtension\Dependency\Plugin\DataImportMerchantFileRequestExpanderPluginInterface>
-     */
     protected function getDataImportMerchantFileRequestExpanderPlugins(): array
     {
         return [
@@ -152,9 +141,6 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
         ];
     }
 
-    /**
-     * @return list<\Spryker\Zed\DataImportMerchantExtension\Dependency\Plugin\PossibleCsvHeaderExpanderPluginInterface>
-     */
     protected function getPossibleCsvHeaderExpanderPlugins(): array
     {
         return [
@@ -163,8 +149,6 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
     }
 }
 ```
-
-</details>
 
 ## Configure behavior
 
@@ -188,9 +172,6 @@ use Spryker\Zed\MerchantProductDataImport\MerchantProductDataImportConfig;
 
 class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalGuiConfig
 {
-    /**
-     * @return list<string>
-     */
     public function getSupportedImporterTypes(): array
     {
         return [
@@ -198,9 +179,6 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
         ];
     }
 
-    /**
-     * @return array<string, string>
-     */
     public function getDataImportTemplates(): array
     {
         return [
@@ -224,9 +202,6 @@ use Spryker\Zed\MerchantProductDataImport\MerchantProductDataImportConfig;
 
 class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalGuiConfig
 {
-    /**
-     * @return list<string>
-     */
     public function getSupportedImporterTypes(): array
     {
         return [
@@ -253,9 +228,6 @@ use Spryker\Zed\MerchantProductDataImport\MerchantProductDataImportConfig as Spr
 
 class MerchantProductDataImportConfig extends SprykerMerchantProductDataImportConfig
 {
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_HEADERS = [
         'abstract_sku',
         'is_active',
@@ -269,9 +241,6 @@ class MerchantProductDataImportConfig extends SprykerMerchantProductDataImportCo
         'product.assigned_product_type',
     ];
 
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_LOCALE_HEADERS = [
         'product_abstract.name.{locale}',
         'product_abstract.description.{locale}',
@@ -284,25 +253,16 @@ class MerchantProductDataImportConfig extends SprykerMerchantProductDataImportCo
         'product.is_searchable.{locale}',
     ];
 
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_ATTRIBUTE_HEADERS = [
         'product.{attribute}',
         'product.{attribute}.{locale}',
     ];
 
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_STOCK_HEADERS = [
         'product.{stock}.quantity',
         'product.{stock}.is_never_out_of_stock',
     ];
 
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_PRICE_HEADERS = [
         'product_price.{store}.default.{currency}.value_net',
         'product_price.{store}.default.{currency}.value_gross',
@@ -310,9 +270,6 @@ class MerchantProductDataImportConfig extends SprykerMerchantProductDataImportCo
         'abstract_product_price.{store}.default.{currency}.value_gross',
     ];
 
-    /**
-     * @var list<string>
-     */
     protected const POSSIBLE_CSV_IMAGE_HEADERS = [
         'product_image.DEFAULT.default.sort_order',
         'product_image.DEFAULT.default.external_url_large',

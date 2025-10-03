@@ -73,7 +73,7 @@ foreach ($productsData as $productData) {
 }
 ```
 
-By fetching all required records in a single call (getMulti), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
+By fetching all required records in a single call (with `\Spryker\Client\Storage\StorageClientInterface::getMulti`), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
 
 {% info_block warningBox %}
 

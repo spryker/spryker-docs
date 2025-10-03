@@ -2073,7 +2073,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 4. Go to `https://www.mysprykershop.com/en/company/company-role`.
 5. Click **Edit** next to a role for your user.
 6. Assign the **Edit Company orders**, **Edit Business unit orders**, **View Company orders** and **View Business Unit orders** permissions to the role.
-7. Re-login as the user.
+7. Re-login as the same user.
 8. Go to `https://www.mysprykershop.com/en/customer/order`.
 9. Click **Company orders**.
 10. Click **Edit order** for an order from the same company or business unit.

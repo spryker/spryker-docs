@@ -24,8 +24,8 @@ The builder has several modes to build frontend:
 
 ## Parameters
 
-- `-n <namespace name> or --namespace  <namespace name>`—generates the assets for all themes of this `<namespace name>`. To generate several namespaces, use this parameter several times. For example, `npm run yves – -n DE -n US`.
-- `-t <theme name> or --theme <theme name>`—generates assets for all the namespaces which contain `<theme name>`. To generate several themes, use this parameter several times. For example, `npm run yves – -t default -t red-theme`
+- `-n <namespace name> or --namespace  <namespace name>`—generates the assets for all themes of this `<namespace name>`. To generate several namespaces, use this parameter several times. For example, `npm run yves -- -n DE -n US`.
+- `-t <theme name> or --theme <theme name>`—generates assets for all the namespaces which contain `<theme name>`. To generate several themes, use this parameter several times. For example, `npm run yves -- -t default -t red-theme`
 - `-c <path> or --config <path>`—ability to define the path to the config JSON file that overwrites the default config JSON file.
 - `-i or --info`—displays a list of namespaces with all the available themes.
 
@@ -38,9 +38,9 @@ It supports using the `%theme%` key that will be replaced with the current theme
 Example:
 `$config[\SprykerShop\Shared\ShopUi\ShopUiConstants::YVES_ASSETS_URL_PATTERN] = sprintf('/assets/%s/%s/', $CURRENT_STORE, '%theme%');`
 
-Config for the frontend builder is placed at `/config/Yves/frontend-build-config.json`, but you can change this path using the command with `-c` or `–config` parameter, for example:
+Config for the frontend builder is placed at `/config/Yves/frontend-build-config.json`, but you can change this path using the command with `-c` or `--config` parameter, for example:
 
-`npm run yves – -c /path/to/config.json`
+`npm run yves -- -c /path/to/config.json`
 
 The config file should contain the following data:
 

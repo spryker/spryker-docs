@@ -131,7 +131,7 @@ class ProductCollector extends AbstractSearchPdoCollector
 
 Collectors should now be able to export abstract product data per store both for Storage and Search.
 
-10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it's not used within the module. Please check your code if you have customized calls to it.
+10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it's not used within the module. Check your code if you have customized calls to it.
 11. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
 Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Upgrade the ProductManagement module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html).
@@ -176,7 +176,7 @@ Remove the following Propel classes (from all namespaces) which were deleted fro
 
 ### 2. Major class changes
 
-- `Spryker\Zed\Product\Communication\Plugin\Installer` plugin got removed. Please make sure to remove usages in your project from `Pyz\Zed\Installer\InstallerDependencyProvider`.
+- `Spryker\Zed\Product\Communication\Plugin\Installer` plugin got removed. Make sure to remove usages in your project from `Pyz\Zed\Installer\InstallerDependencyProvider`.
 - `Spryker\Zed\Product\Business\Attribute\AttributeManager` was removed. Use the `ProductFacade` from the `Product` module or `Spryker\Zed\Product\Business\Attribute\AttributeKeyManager` inside the `Product` module instead.
 
 ### 3. Major transfer changes

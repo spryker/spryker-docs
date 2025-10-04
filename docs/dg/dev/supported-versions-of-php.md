@@ -13,7 +13,7 @@ redirect_from:
 
 Since August 2025, Spryker has been compatible with PHP 8.4. Support for PHP 8.3 was added in September 2024.
 
-Currently, we *recommend* using *PHP 8.4*. If you are using version 8.3, we encourage you to migrate at the end of 2026 to ensure a smooth upgrade path.
+We recommend using PHP 8.4. If you are using version 8.3, we encourage you to migrate at the end of 2026 to ensure a smooth upgrade path.
 More and more libraries deliver releases, including bug fixes and security updates, only for 8.4+, so this becomes an increasing risk factor for any business.
 
 Before switching PHP versions in production environments, ensure to check this new major version's new features and test it for incompatibilities. For more information, see the following documents:

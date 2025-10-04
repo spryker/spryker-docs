@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
 related:
   - title: Content Items feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about abstract product list content items.
@@ -369,4 +369,4 @@ Request sample: retrieve Abstract Product List with its abstract products
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

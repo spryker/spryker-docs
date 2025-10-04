@@ -1,6 +1,6 @@
 ---
-title: Backend and storefront API differences
-description: API documentation for dynamic-entity-availability-abstracts.
+title: Comparison of Storefront and Backend APIs
+description: Comparison of Storefront API and Backend API capabilities and differences.
 last_updated: July 9, 2025
 template: default
 

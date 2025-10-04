@@ -10,7 +10,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
 The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
@@ -2334,4 +2334,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204  | Cannot update the wishlist.                   |
 | 205  | Cannot remove the wishlist.                   |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

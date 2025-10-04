@@ -12,21 +12,21 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/retrieving-company-users.html
 related:
   - title: Retrieving companies
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
   - title: Retrieving company roles
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
   - title: "Glue API: Authenticating as a company user"
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Managing company user authentication tokens
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
   - title: Searching by company users
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Retrieving business units
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
   - title: Retrieving business unit addresses
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Company Accounts overview
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.
@@ -363,7 +363,7 @@ To retrieve information about a company user, send the request:
 | 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1404 | Specified company user is not found or does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
   - title: Managing items in carts of registered users
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
 
 ---
 
@@ -4530,4 +4530,4 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content` s
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

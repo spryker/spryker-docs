@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchants.html
 related:
   - title: Retrieving merchant opening hours
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
   - title: Retrieving merchant addresses
-    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
+    link: docs/pbc/all/merchant-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
 ---
 
 Merchant is an individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check information like contact information, opening hours, and legal details.
@@ -655,9 +655,9 @@ Retrieve merchant information as a relationship when sending the following reque
 - [Retrieve marketplace orders](/docs/pbc/all/order-management-system/latest/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/latest/marketplace/glue-api-search-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/latest/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

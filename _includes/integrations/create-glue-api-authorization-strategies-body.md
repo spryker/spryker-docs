@@ -1,6 +1,8 @@
-This document describes how to create a new authorization strategy.
+This document describes how to create a new authorization strategy for Backend API and integrate external authentication services.
 
 Integrate authorization following the [Integrating Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html) guide.
+
+## Creating Authorization Strategies
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization:
 

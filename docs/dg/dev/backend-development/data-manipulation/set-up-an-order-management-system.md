@@ -11,13 +11,13 @@ redirect_from:
   - /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 related:
   - title: Order management system multi-thread
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
   - title: Order process modelling via state machines
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
   - title: State machine console commands
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
   - title: Common pitfalls in OMS design
-    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
 ---
 
 {% include integrations/set-up-an-order-management-system-body.md %}

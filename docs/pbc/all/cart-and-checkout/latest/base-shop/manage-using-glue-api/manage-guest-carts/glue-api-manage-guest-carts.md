@@ -12,9 +12,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html
 related:
   - title: Manage guest cart items
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
+    link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
   - title: Managing gift cards of guest users
-    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
+    link: docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint lets you manage guest carts.
@@ -1205,4 +1205,4 @@ In a *single cart* environment, items from the guest cart have been added to t
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

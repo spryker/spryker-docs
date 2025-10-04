@@ -26,25 +26,25 @@ redirect_from:
   - /docs/pbc/all/search/202212.0/best-practices/generic-faceted-search.html
 related:
   - title: Data-driven ranking
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/data-driven-ranking.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/data-driven-ranking.html
   - title: Full-text search
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/full-text-search.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/full-text-search.html
   - title: Precise search by super attributes
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/precise-search-by-super-attributes.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/precise-search-by-super-attributes.html
   - title: On-site search
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/on-site-search.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/on-site-search.html
   - title: Other best practices
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/other-best-practices.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/other-best-practices.html
   - title: Multi-term autocompletion
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/multi-term-auto-completion.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/multi-term-auto-completion.html
   - title: Simple spelling suggestions
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/simple-spelling-suggestions.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/simple-spelling-suggestions.html
   - title: Naive product centric approach
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/naive-product-centric-approach.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/naive-product-centric-approach.html
   - title: Personalization - dynamic pricing
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/personalization-dynamic-pricing.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/personalization-dynamic-pricing.html
   - title: Usage-driven schema and document structure
-    link: docs/pbc/all/search/page.version/base-shop/best-practices/usage-driven-schema-and-document-structure.html
+    link: docs/pbc/all/search/latest/base-shop/best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Faceted search—sometimes also called faceted navigation—lets users navigate through a website by applying filters for categories, attributes, and price ranges. Probably, it's the most basic feature of a search, and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.

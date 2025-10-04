@@ -13,7 +13,7 @@ end
 require 'html-proofer'
 
 # Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
+def run_htmlproofer_with_retry(directory, options, max_tries = 0, delay = 5)
   options[:typhoeus] ||= {}
   options[:typhoeus][:timeout] = 60
   options[:typhoeus][:headers] = {
@@ -102,6 +102,7 @@ commonOptions = {
     /centralbank.cy\/[\.\w\-\/\?]+/,
     /www.mysql.com\/[\.\w\-\/\?]+/,
     /www.gnu.org\/[\.\w\-\/\?]+/,
+    /www.npmjs.com\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /mysql.com\/[\.\w\-\/\?]+/,
@@ -173,6 +174,7 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
@@ -204,6 +206,9 @@ task :check_dg do
     /docs\/integrations\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,    
+    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,    
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

@@ -324,10 +324,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 
 ### Enable PHP extensions
 
-Hooks processing requires you to have a few PHP extensions in place. Spryker has prepared a new PHP image, so you need to install nothing, just enable them in your deploy file.
-
-Hook processing requires specific PHP extensions. There's a preconfigured PHP image, so you only need to enable the extensions in your deploy file:  
-
+Hook processing requires specific PHP extensions. Use the `spryker/php:8.4` image and enable the `otel` extension in your deploy file:
 
 ```yaml
 namespace: spryker-otel
@@ -335,12 +332,10 @@ tag: 'dev'
 
 environment: docker.dev
 image:
-    tag: spryker/php:8.3-alpine3.20-otel
+    tag: spryker/php:8.4
     php:
         enabled-extensions:
-            - opentelemetry
-            - grpc
-            - protobuf
+            - otel
 ```
 
 The blackfire extension conflicts with opentelemetry, so avoid using both simultaneously.

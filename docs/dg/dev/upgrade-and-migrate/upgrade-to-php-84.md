@@ -1,6 +1,6 @@
 ---
 title: 'Upgrade to PHP 8.4'
-description: Starting from Sep 2025, Demo Shops support PHP 8.4.
+description: Upgrade PHP to version 8.4 in your Docker environment and composer.json. Check code and dependencies for compatibility, update configurations, and test your application to ensure a smooth upgrade.
 template: concept-topic-template
 last_updated: Aug 22, 2025
 ---
@@ -41,7 +41,7 @@ This returns the code that's not compatible with PHP 8.4.
 composer why-not php 8.4
 ```
 
-1. Review the output. The command listed dependencies that are not compatible with PHP 8.4, along with the reasons why they can't be upgraded.
+The command listed dependencies that are not compatible with PHP 8.4, along with the reasons why they can't be upgraded.
 
 2. Update dependencies. Check if there are newer versions of these dependencies that support PHP 8.4. You can do this by visiting the package's repository or checking its documentation.
 If updates are available, update your `composer.json` file to require these newer versions.
@@ -50,33 +50,31 @@ If updates are available, update your `composer.json` file to require these newe
 
 ## 3. Update composer.json
 
-Modify your `composer.json` file to reflect the new PHP version requirements.
-
 1. Set the minimum required PHP version to 8.4:
 
 ```bash
-    "require": {
-      "php": ">=8.4",
-    }
+"require": {
+  "php": ">=8.4",
+}
 ```
 
 2. Define PHP 8.4 as the platform version for dependency resolution:
 
 ```bash
-  "config": {
-    "preferred-install": "dist",
-    "platform": {
-      "php": "8.4.0"
-    },
+"config": {
+  "preferred-install": "dist",
+  "platform": {
+    "php": "8.4.0"
+  },
 ```
 
 3. Update dependencies:
 
 ```bash
-  composer update
+composer update
 ```
 
-This updates the dependencies to the latest versions that are compatible with PHP 8.4
+This updates the dependencies to the latest versions that are compatible with PHP 8.4.
 
 ## 4. Update Docker configuration
 

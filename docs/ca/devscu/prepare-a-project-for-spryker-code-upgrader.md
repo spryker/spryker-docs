@@ -42,7 +42,7 @@ The Upgrader supports only projects that run in [cloud environments](/docs/ca/de
 
 For a smooth experience, make sure that your environments meet the minimum technical requirements:
 
-- PHP 8.4+. The Upgrader supports a minimum version of PHP 8.3. PHP 8.2 is in security support only from the beginning of 2025, so in order to make sure that you can use all new features, please migrate to the [recommended version](/docs/dg/dev/supported-versions-of-php.html) as soon as possible. To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+- PHP 8.3+. The Upgrader supports a minimum version of PHP 8.3. PHP 8.2 is in security support only from the beginning of 2025, so in order to make sure that you can use all new features, please migrate to the [recommended version](/docs/dg/dev/supported-versions-of-php.html) as soon as possible. To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 - Composer 2.5+
 - Git 2.24+
 - PHPStan 1.12+

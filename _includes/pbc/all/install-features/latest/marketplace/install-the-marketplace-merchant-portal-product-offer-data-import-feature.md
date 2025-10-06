@@ -79,7 +79,7 @@ vendor/bin/console translator:generate-cache
 
 ## Add configuration
 
-Enable product offer data import by registering the plugin.
+Enable product offer data import by registering the plugins.
 
 | PLUGIN                                                        | SPECIFICATION                                                                    | NAMESPACE                                                                          |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -145,7 +145,7 @@ class DataImportMerchantDependencyProvider extends SprykerDataImportMerchantDepe
 
 1. Update `DataImportMerchantPortalGuiConfig` as follows:
 
-- Add `MerchantProductOfferDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT_OFFER` to `getSupportedImporterTypes()` to enable merchants to import product offer data.
+- To enable merchants to import product offer data, add `MerchantProductOfferDataImportConfig::IMPORT_TYPE_MERCHANT_COMBINED_PRODUCT_OFFER` to `getSupportedImporterTypes()`.
 
 - Add the product offer data CSV template to `getDataImportTemplates()` so merchants can use it to prepare their files.
 

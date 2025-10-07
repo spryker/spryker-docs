@@ -7,5 +7,10 @@ redirect_from:
   - /docs/integrations/api-references/spryker-backend-api/backend-api-b2b-demo-shop-reference.html
 swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2b_backend_api.json"
 ---
+{% info_block infoBox %}
+{% include integrations/API/api-message.md %}
+{% endinfo_block %}
+
+
 
 {% include api-references-swagger-block.md %}

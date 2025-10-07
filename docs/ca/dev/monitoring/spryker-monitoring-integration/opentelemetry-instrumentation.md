@@ -324,7 +324,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 
 ### Enable PHP extensions
 
-Hook processing requires specific PHP extensions. Use the `spryker/php:8.4` image and enable the `otel` extension in your deploy file:
+Hook processing requires specific PHP extensions. Use the `spryker/php:8.3` or `spryker/php:8.4` image and enable the `otel` extension in your deploy file:
 
 ```yaml
 namespace: spryker-otel

@@ -843,7 +843,7 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204 | Cannot update the wishlist. |
 | 205 | Cannot remove the wishlist. |
 | 209 | ID is not specified. |
-| 210 | Please enter the name using only letters, numbers, underscores, spaces or dashes.  |
+| 210 | Enter the name using only letters, numbers, underscores, spaces or dashes.  |
 | 901 | `name` field is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

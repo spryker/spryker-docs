@@ -1,7 +1,7 @@
 ---
 title: Queues in publisher plugins
 description: Configure Spryker to publish data to specific queues for better prioritization. Use RabbitMQ for queue setup and assign publisher plugins to default or custom queues.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

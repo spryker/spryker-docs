@@ -1,7 +1,7 @@
 ---
 title: "Minimize memory consumption: Managing excessive Jenkins logs"
 description: Optimize Jenkins performance by managing excessive logs. Identify high-volume jobs, adjust build scripts, and configure Spryker queue workers to reduce stdout and stderr output.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

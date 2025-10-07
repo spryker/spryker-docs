@@ -4,6 +4,20 @@ description: Learn how to authenticate and authorize requests in the Spryker Bac
   API using OAuth 2.0.
 last_updated: July 9, 2025
 template: default
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/authentication-and-authorization.html
+  - /docs/scos/dev/feature-integration-guides/202404.0/glue-api/glue-api-authentication-integration.html
+  - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202404.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-api-authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202204.0/authentication-and-authorization.html
+  - /docs/pbc/all/identity-access-management/202404.0/glue-api-authentication-and-authorization.html
+  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-api-authentication-and-authorization
+  - /docs/dg/dev/glue-api/latest/authentication-and-authorization.html
+  - /docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 
 ---
 

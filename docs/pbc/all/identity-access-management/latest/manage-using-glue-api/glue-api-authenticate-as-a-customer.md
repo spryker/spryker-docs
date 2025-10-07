@@ -12,8 +12,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/authenticating-as-a-customer.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 related:
-  - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
@@ -34,7 +32,7 @@ related:
     link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
 
@@ -130,7 +128,7 @@ Note that depending on the Login feature configuration for your project, too man
 | 003 | Failed to log in the user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

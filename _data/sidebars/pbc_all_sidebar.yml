@@ -1057,12 +1057,6 @@ entries:
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
-          - title: Configure Data Exchange API endpoints
-            url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
-          - title: Sending requests with Data Exchange API
-            url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
-          - title: Create post plugins for Data Exchange API
-            url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
@@ -1863,6 +1857,8 @@ entries:
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-availability-feature.html
                       - title: Product Offer Shipment
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html
+                      - title: Marketplace Merchant Portal Product Offer Data Import
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-data-import-feature.html
 
                   - title: Install Glue API
                     nested:

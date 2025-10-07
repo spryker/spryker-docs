@@ -1,7 +1,7 @@
 ---
 title: Chunk size configuration
 description: Improve performance and stability in Spryker by using chunking for bulk operations. Configure chunk sizes for events and queues to optimize memory use, throughput, and resilience.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

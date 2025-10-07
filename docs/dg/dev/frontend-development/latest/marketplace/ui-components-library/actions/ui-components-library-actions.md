@@ -125,7 +125,7 @@ export interface ActionHandler<C = unknown, R = unknown>
 The following common Actions are available in UI library as separate packages:
 
 | ACTION | DESCRIPTION |
-
+|----------|----------|
 | [Close-drawer](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/actions/actions-close-drawer.html)  | Closes the first Drawer in the current context.|
 | [Confirmation](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/actions/actions-confirmation.html)  | Calls another registered action with a confirmation.|
 | [Drawer](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/actions/actions-drawer.html)  | Opens a component in the Drawer.|

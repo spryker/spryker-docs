@@ -1,7 +1,7 @@
 ---
 title: Dynamic batch size
 description: Optimize large data imports with dynamic batch sizing to manage memory efficiently, prevent overload, and ensure stable, reliable processing during high-volume operations.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 related:
   - title: RAM-aware batch processing

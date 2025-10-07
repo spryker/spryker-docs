@@ -4,6 +4,19 @@ description: Storefront API is designed for customer-facing applications and buy
 last_updated: July 9, 2025
 template: default
 layout: custom_new
+redirect_from:
+  - /docs/scoc/dev/glue-api-guides/202404.0/index.html
+  - /docs/scos/dev/glue-api-guides/202404.0/glue-rest-api.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
+  - /docs/scos/dev/glue-api-guides/202204.0/index.html
+  - /docs/scos/dev/glue-api-guides/202404.0/glue-api-guides.html
+  - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/glue-rest-api.html
+  - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
+  - /api/definition-api.htm
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html
+  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-rest-api
+  - /docs/dg/dev/glue-api/latest/glue-api.html
+  - /docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html
 ---
 
 The *Spryker Storefront API* is a JSON REST API that is designed for customer-facing applications and buyer journey touchpoints. It is built to be used as a contract between the Spryker Commerce OS backend and any possible customer touchpoint or integration with third-party systems. As an application, Storefront API knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality for customer experiences.
@@ -16,7 +29,7 @@ The Storefront API represents a contract that developers can stick to when they 
 
 The Spryker API infrastructure, which is implemented as a separate layer of the SCCOS, provides API endpoints, processes requests, and communicates with other layers of the OS for customer-facing functionality.
 
-For more details, see [Storefront Infrastructure](/docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html).
+For more details, see [Storefront Infrastructure](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
 
 ## Key Features
 
@@ -83,7 +96,7 @@ It delivers a full customer experience from browsing the catalog to placing an o
 
 {% info_block infoBox %}
 
-For more details about installing and running, see [B2C API React example](/docs/dg/dev/glue-api/latest/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
+For more details about installing and running, see [B2C API React example](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/b2c-api-react-example.html).
 
 {% endinfo_block %}
 

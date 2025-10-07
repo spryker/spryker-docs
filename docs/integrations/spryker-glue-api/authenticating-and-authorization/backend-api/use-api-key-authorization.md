@@ -1,9 +1,13 @@
 ---
 title: Use API key authorization
 description: This document describes how to use API Key authorization mechanism in Spryker.
-last_updated: '2025-07-07'
+last_updated: July 7, 2025
 template: glue-api-storefront-guide-template
-redirect_from: null
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/use-api-key-authorization.html
+  - /docs/scos/dev/glue-api-guides/202212.0/use-api-key-authorization.html
+  - /docs/scos/dev/glue-api-guides/202404.0/use-api-key-authorization.html
+  - /docs/dg/dev/glue-api/latest/use-api-key-authorization.html
 
 ---
 

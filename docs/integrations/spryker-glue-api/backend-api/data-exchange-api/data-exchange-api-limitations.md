@@ -17,9 +17,9 @@ The following features are currently not supported by the Data Exchange API:
 
 ## Other limitations
 
-In addition to not covered features, Data Exchange API also have some technical limitation that you must to consider:
+In addition to the features not covered, the Data Exchange API also has some technical limitations that you must consider:
 
-- No complex validation OOTB. Currently only a basic validation is present. You can check a field type, if it required or not and length or range of the field value.
-- Additional business logic that you might want to be executed together with data saving, possible only after data was saved via [Post Plugins[(/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html)
-- No ManyToMany relations is possible to configure via Complex Endpoint configuration. For those relations extra API calls are required.
-- Currently Complex Endpoints are not possible to configure via GUI and can be done only via install file or directly in database configuration.
+- No complex validation out of the box (OOTB). Currently, only basic validation is available. You can check a field’s type, whether it is required or not, and the length or range of the field value.
+- Additional business logic that you might want to execute together with data saving is only possible after the data has been saved via [Post Plugins[(/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/create-post-plugins-for-data-exchange-api.html).
+- Many-to-many relations cannot be configured via Complex Endpoint configuration. For those relations, additional API calls are required.
+- Currently, Complex Endpoints cannot be configured via the GUI and can only be set up via an install file or directly in the database configuration.

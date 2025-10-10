@@ -6,7 +6,7 @@ template: default
 search: exclude
 ---
 
-To use the interactivity part of our API documentation you will need an API Access token. Here is how you can get a token and apply it to the API documentation for you to test out the APIs. Please choose the server which you want your API token for to test, and hit Get API token. These tokens expire in **8 hours** from the time that they are generated, and you can always come back to this page to see the api token that was generated for you for the server you chose. Happy Testing.
+To use the interactivity part of our API documentation you will need an API Access token. Here is how you can get a token and apply it to the API documentation for you to test out the APIs. Choose the server which you want your API token for to test, and hit Get API token. These tokens expire in **8 hours** from the time that they are generated, and you can always come back to this page to see the api token that was generated for you for the server you chose. Happy Testing.
 
 <label for="serverSelect">Choose server:</label>
 <select id="serverSelect">

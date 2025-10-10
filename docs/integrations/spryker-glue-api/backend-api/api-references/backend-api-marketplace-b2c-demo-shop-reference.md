@@ -10,9 +10,6 @@ redirect_from:
   - /docs/dg/dev/glue-api/latest/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
 swagger_url: "https://spryker.s3.eu-central-1.amazonaws.com/docs/api-specs/b2c_marketplace_backend_api.json"
 ---
-{% info_block infoBox %}
-{% include integrations/API/api-message.md %}
-{% endinfo_block %}
 
 {% include api-references-swagger-block.md %}
 

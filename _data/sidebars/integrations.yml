@@ -41,6 +41,22 @@ entries:
     - title: Storefront API
       url: /docs/integrations/spryker-glue-api/storefront-api/storefront-api.html
       nested:
+      - title: API references
+        nested:
+        - title: Storefront B2B API reference
+          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html
+        - title: Storefront  B2C API reference
+          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html
+        - title: Storefront Marketplace B2B API reference
+          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html
+        - title: Storefront Marketplace B2C API reference
+          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html
+      - title: Using APIs
+        nested:
+        - title: Adding products to cart
+          url: /docs/integrations/spryker-glue-api/storefront-api/adding-products-to-cart.html
+        - title: Catalog search and filtering
+          url: /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
       - title: Developing APIs
         nested:
         - title: Storefront API security and authentication
@@ -70,22 +86,6 @@ entries:
           nested:
           - title: Install B2C API React example
             url: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/b2c-api-react-example/install-b2c-api-react-example.html
-      - title: Using APIs
-        nested:
-        - title: Adding products to cart
-          url: /docs/integrations/spryker-glue-api/storefront-api/adding-products-to-cart.html
-        - title: Catalog search and filtering
-          url: /docs/integrations/spryker-glue-api/storefront-api/catalog-search-and-filtering.html
-      - title: API references
-        nested:
-        - title: Storefront B2B API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2b-demo-shop-reference.html
-        - title: Storefront  B2C API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-b2c-demo-shop-reference.html
-        - title: Storefront Marketplace B2B API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html
-        - title: Storefront Marketplace B2C API reference
-          url: /docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2c-demo-shop-reference.html
     - title: Backend API
       url: /docs/integrations/spryker-glue-api/backend-api/backend-api.html
       nested:

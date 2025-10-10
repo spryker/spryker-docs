@@ -11,9 +11,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 related:
   - title: Retrieving related products
-    link: docs/pbc/all/product-relationship-management/page.version/glue-api-retrieve-related-products.html
+    link: docs/pbc/all/product-relationship-management/latest/glue-api-retrieve-related-products.html
   - title: Alternative Products feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
 
 The *Alternative Products* feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html) and [Discontinued Products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html).
@@ -382,4 +382,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

@@ -377,7 +377,7 @@ $jobs[] = [
 
 {% info_block infoBox %}
 
-For information on how to protect resources, see [Security and authentication](/docs/dg/dev/glue-api/latest/security-and-authentication.html).
+For information on how to protect resources, see [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html).
 
 {% endinfo_block %}
 

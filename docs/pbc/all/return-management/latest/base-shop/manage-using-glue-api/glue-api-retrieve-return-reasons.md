@@ -10,9 +10,9 @@ redirect_from:
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/page.version/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+    link: docs/pbc/all/return-management/latest/base-shop/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/page.version/return-management.html
+    link: docs/pbc/all/return-management/latest/return-management.html
 ---
 
 This endpoint allows retrieving returns reasons.
@@ -86,4 +86,4 @@ Request sample: retrieve return reasons
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

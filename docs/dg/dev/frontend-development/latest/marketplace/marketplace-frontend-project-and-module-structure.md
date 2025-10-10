@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Building the project
-    link: docs/dg/dev/frontend-development/page.version/marketplace/building-the-merchant-portal-frontend.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/building-the-merchant-portal-frontend.html
 ---
 
 This document explains the structure of the frontend project in the Spryker Marketplace.

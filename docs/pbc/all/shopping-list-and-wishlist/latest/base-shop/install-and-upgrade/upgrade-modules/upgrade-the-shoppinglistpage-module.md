@@ -35,7 +35,7 @@ redirect_from:
 
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md -->

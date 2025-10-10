@@ -12,29 +12,29 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/computop-api-calls.html
 related:
   - title: Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html
   - title: Integrating the Sofort payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paypal-payment-method-for-computop.html
   - title: Integrating the Direct Debit payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the iDeal payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html
   - title: Integrating the Credit Card payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-credit-card-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html
   - title: Integrating the Paydirekt payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-paydirekt-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html
 ---
 
 ## Authorization Call
 
 - Authorize money.
-- There is no partial authorization. Please make one API call to make authorization for all items in the order.
+- There is no partial authorization. Make one API call to make authorization for all items in the order.
 - It is not possible to Authorize a higher amount than in the ORDER.
 
 ## Inquire Call
@@ -50,7 +50,7 @@ Status inquiries within Paygate give detailed information about the amounts that
 
 - Capture money.
 - Shipment price is captured with the first capture request.
-- Please contact the helpdesk, if you want to capture amounts < 100 (the smallest currency unit).
+- Contact the helpdesk, if you want to capture amounts < 100 (the smallest currency unit).
 - It is not possible to capture a higher amount than in the ORDER or Auth.
 
 ## Refund Call

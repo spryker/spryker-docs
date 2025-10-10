@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Activate and deactivate MFA"
 description: This article explains how to activate and decativate MFA methods using Glue API
-last_updated: Jun 16, 2025
+last_updated: Aug 22, 2025
 template: glue-api-storefront-guide-template
 ---
 
@@ -131,7 +131,7 @@ Content-Type: application/json
 ### Response
 
 
-`204 No Content` response means that the the MFA method has been deactivated for the user.
+`204 No Content` response means that the MFA method has been deactivated for the user.
 
 
 

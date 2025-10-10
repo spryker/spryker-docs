@@ -12,15 +12,15 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
 related:
   - title: Installing and configuring Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html
   - title: Integrating Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-payolution.html
   - title: Payolution - Performing Requests
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-performing-requests.html
   - title: Payolution request flow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/payolution-request-flow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution-request-flow.html
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html
 ---
 
 ## Installment Scenarios

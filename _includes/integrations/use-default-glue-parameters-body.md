@@ -1,38 +1,38 @@
-This document explains how to pass the parameters and how to use them in code.
+This document explains how to pass the parameters and how to use them in Backend API code.
 
-The Glue JSON:API convention provides some parameter parsing out of the box. The following are among them:
+The Backend JSON:API convention provides some parameter parsing out of the box. The following are among them:
 - Pagination
 - Sorting
 - Filters
 
 ## Pagination
 
-Glue uses an offset-based pagination style: the client passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
+Backend API uses an offset-based pagination style: the user passes two values, `offset` and `limit`, where the limit's the number of records to display, and offset is the number of records to skip. Here is an example:
 
 ```json
 ?page[offset]=0&page[limit]=10 # display 10 records starting at 0 (AKA page #1)
 ?page[offset]=10&page[limit]=10 # display 10 records starting at 10 (AKA page #2)
 ```
 
-In JSON:API responses, the calculation of the next, previous, last, and first pages are provided. Clients can use them to build pagination:k
+In JSON:API responses, the calculation of the next, previous, last, and first pages are provided. Users can use them to build pagination:k
 
 ```json
 "links": {
-    "next": "https://glue.mysprykershop.com/wishlists?page[offset]=3&amp;page[limit]=2",
-    "prev": "https://glue.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2",
-    "last": "https://glue.mysprykershop.com/wishlists?page[offset]=10&amp;page[limit]=2",
-    "first": "https://glue.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2"
+    "next": "https://glue-backend.mysprykershop.com/wishlists?page[offset]=3&amp;page[limit]=2",
+    "prev": "https://glue-backend.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2",
+    "last": "https://glue-backend.mysprykershop.com/wishlists?page[offset]=10&amp;page[limit]=2",
+    "first": "https://glue-backend.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2"
 }
 ```
 
-When pagination parameters are passed from the client, `GlueRequestTransfer` is available as the Glue controller action parameter contains `pagination`. Access them like this:
+When pagination parameters are passed from the user, `GlueRequestTransfer` is available as the Backend API controller action parameter contains `pagination`. Access them like this:
 
 ```php
 $glueRequestTransfer->getPagination()->getOffset();
 $glueRequestTransfer->getPagination()->getLimit();
 ```
 
-Use these to pass them to the clients and facades (the latter must support the pagination).
+Use these to pass them to the facades, which must support the pagination.
 
 In order for the response links to be formed correctly, `GlueResponseTransfer` transfer must contain the information about the requested (and applied, if changed by the code) pagination parameters and the total number of results in the set.
 
@@ -50,13 +50,13 @@ To get an order, you can read it from `$glueRequestTransfer->getSortings()`, whi
 
 ## Filters
 
-To add a filter, the client must send `?filter[wishlists.name]=Test&filter[wishlists.quantity]=1`. In SQL, this is equal to `WHERE wishlists.name='Test' AND wishlists.quantity = 1`.
+To add a filter, the user must send `?filter[wishlists.name]=Test&filter[wishlists.quantity]=1`. In SQL, this is equal to `WHERE wishlists.name='Test' AND wishlists.quantity = 1`.
 
 To use those fields when processing use `$glueRequestTransfer->getFilters()`, this returns an array of `GlueFilterTransfer`. You can loop over it and find filters matching your resource.
 
 ## Sparse fields
 
-You can reduce the amount of data returned by using sparse fields. Clients can provide what fields to process for each resource. The clients must send a request with `?fields[people]=name,last-name`, where `people` is a resource name, and its value is a comma-separated field list as defined in resource attributes.
+You can reduce the amount of data returned by using sparse fields. Users can provide what fields to process for each resource. The users must send a request with `?fields[people]=name,last-name`, where `people` is a resource name, and its value is a comma-separated field list as defined in resource attributes.
 
 When processing a request, you can get this by accessing `$glueRequestTransfer->getQueryFields()`. This returns an array of strings.
 

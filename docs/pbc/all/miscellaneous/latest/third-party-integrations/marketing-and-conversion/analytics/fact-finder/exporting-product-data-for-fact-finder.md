@@ -15,25 +15,25 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
   - title: Integrating FACT-Finder
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - title: FACT-Finder
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html
   - title: Installing and configuring FACT-Finder NG API
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
   - title: Using FACT-Finder tracking
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
   - title: Using FACT-Finder recommendation engine
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
   - title: Using FACT-Finder search suggestions
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
   - title: Using FACT-Finder search
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - title: Using FACT-Finder campaigns
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
   - title: Installing and configuring FACT-Finder web components
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
 ---
  
 ## Output Folder
@@ -96,7 +96,7 @@ public function getConsoleCommands(Container $container)
 You need to create an URL for a CSV file or put it into a public folder. Then you can set up an URL and an interval  in a FACT-Finder channel management panel to download the CSV file.
 - A CSV file export can be scheduled with the help of a cron job or triggered by an event.
 - If additional attributes are available, they can also be used by the search process.
-- If you have attribute types that vary from item to item, it does not make sense to create a separate field for every possible attribute type. Instead, you can create an attribute field that is formatted according to the following pattern: `|attribute1=value|attribute2=value|attribute3=value|`.Please note that  for the Attribute field the pipe separator `(|)` appears between the attributes, as well as at the beginning and at the end of the field contents. Also note, that the symbols `|`, `#` and `=` are reserved symbols in attribute field data and therefore are not permitted here. For some attributes, it's desirable to include a unit or currency designator. You must separate the attribute name from the unit with a double tilde `(~~)`. Please note that there can only be one unit per attribute name (even if the attributes appear in different data records), so the values must be normalized beforehand.
+- If you have attribute types that vary from item to item, it does not make sense to create a separate field for every possible attribute type. Instead, you can create an attribute field that is formatted according to the following pattern: `|attribute1=value|attribute2=value|attribute3=value|`. For the Attribute field the pipe separator `(|)` appears between the attributes, as well as at the beginning and at the end of the field contents. Also note, that the symbols `|`, `#` and `=` are reserved symbols in attribute field data and therefore are not permitted here. For some attributes, it's desirable to include a unit or currency designator. You must separate the attribute name from the unit with a double tilde `(~~)`. There can only be one unit per attribute name (even if the attributes appear in different data records), so the values must be normalized beforehand.
 
 ## Checking Your Setup
 

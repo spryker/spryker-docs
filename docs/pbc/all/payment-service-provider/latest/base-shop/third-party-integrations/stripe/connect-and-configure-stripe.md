@@ -30,7 +30,7 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 {% info_block infobox %}
 
-If you're configuring Stripe for Marketplace, see [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
+If you're configuring Stripe for Marketplace, see [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
 
 {% endinfo_block %}  
 

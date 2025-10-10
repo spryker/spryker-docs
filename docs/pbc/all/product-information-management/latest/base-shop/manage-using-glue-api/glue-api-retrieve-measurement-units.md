@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:
   - title: Measurement Units feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/measurement-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
 
 The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
@@ -79,4 +79,4 @@ You can use the measurement units resource as follows:
 | 3401 | No product measurement unit code was specified. |
 | 3402 | Product measurement unit with the specified code was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

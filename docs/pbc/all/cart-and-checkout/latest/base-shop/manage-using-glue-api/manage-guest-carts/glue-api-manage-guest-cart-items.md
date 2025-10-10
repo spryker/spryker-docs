@@ -11,9 +11,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
 related:
   - title: Manage guest carts
-    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
+    link: docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
-    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
+    link: docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows you to manage guest cart items.
@@ -3376,4 +3376,4 @@ If the item is deleted successfully, the endpoint returns the "204 No Content" s
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

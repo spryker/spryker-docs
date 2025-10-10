@@ -12,13 +12,13 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 related:
   - title: Retrieving abstract products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 ---
 
 This endpoint allows retrieving detailed information about tax sets of abstract products.
@@ -160,4 +160,4 @@ Request sample: retrieve tax sets
 | 310 | Could not get tax set, product abstract with provided id not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

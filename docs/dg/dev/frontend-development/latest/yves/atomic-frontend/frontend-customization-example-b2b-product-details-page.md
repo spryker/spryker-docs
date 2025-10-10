@@ -10,9 +10,9 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/customization-example-b2b-product-details-page.html
 related:
   - title: Customization example - Suite Product Details page
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/frontend-customization-example-suite-product-details-page.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/frontend-customization-example-suite-product-details-page.html
   - title: Customization example - B2C Product Details page
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/frontend-customization-example-b2c-product-details-page.html
+    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/frontend-customization-example-b2c-product-details-page.html
 ---
 
 In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2B Demo Shop](/docs/about/all/b2b-suite.html#b2b-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file.

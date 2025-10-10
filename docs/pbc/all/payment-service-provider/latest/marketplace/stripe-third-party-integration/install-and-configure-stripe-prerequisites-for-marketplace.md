@@ -340,8 +340,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ### Enable merchant commissions for marketplace payments
 
-To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 
-[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)
+[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)

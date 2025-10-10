@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-concrete-products.html
 related:
   - title: Retrieving product offers of concrete products
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -1143,4 +1143,4 @@ For attributes of the other included resources, see the following:
 | --- | --- |
 | 302 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

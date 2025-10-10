@@ -315,6 +315,12 @@ A single image can contain multiple products, and they both will be added to car
 
 Customers need own OpenAI accounts to use this feature.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/AI_Visual_Add_To_Cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ### Business benefits
 
 - Enable more buying routes
@@ -466,6 +472,10 @@ This redesign addresses stability challenges from its previous Jenkins-based exe
 
 The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
+
+### Docs
+
+[Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers)
 
 
 

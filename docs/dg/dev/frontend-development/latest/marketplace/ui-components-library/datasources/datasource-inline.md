@@ -10,11 +10,11 @@ redirect_from:
 
 related:
   - title: Datasources
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasources.html
   - title: Datasource Http
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline-table.html
 ---
 
 

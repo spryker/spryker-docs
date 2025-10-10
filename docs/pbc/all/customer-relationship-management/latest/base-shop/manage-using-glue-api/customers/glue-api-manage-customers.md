@@ -10,26 +10,24 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/managing-customers.html
 related:
-  - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/page.version/rest-api/glue-api-authentication-and-authorization.html
   - title: Searching by company users
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Managing customer authentication tokens
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customer authentication tokens via OAuth 2.0
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customer passwords
-    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Managing customer addresses
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
-    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.
@@ -322,11 +320,11 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 420 | The password character set is invalid. |
 | 422 | `newPassword` and `confirmPassword` values are not identic. |
 | 802 | Request is unauthorized. |
-| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/dg/dev/glue-api/latest/glue-api-tutorials/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
+| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
 | 4606 | Request is unauthorized.|
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Next steps
 

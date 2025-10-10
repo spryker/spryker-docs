@@ -11,9 +11,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
 related:
   - title: Manage carts of registered users
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
   - title: "Glue API: Manage gift cards of registered users"
-    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
+    link: docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
 
 This endpoint allows you to manage items in the carts of registered users by adding, changing, and deleting them.
@@ -3289,4 +3289,4 @@ If the item is deleted successfully, the endpoint returns the "204 No Content" s
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

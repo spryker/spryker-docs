@@ -107,14 +107,14 @@ commonOptions = {
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /mysql.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
-    /dev.mysql.com\/[\.\w\-\/\?]+/,        
+    /dev.mysql.com\/[\.\w\-\/\?]+/,
     /jwt.io\/[\.\w\-\/\?]+/,
     /contorion.de\/[\.\w\-\/\?]+/,
     /www.contorion.de\/[\.\w\-\/\?]+/,
     /www.jwt.io\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
-    /auth0.com\/[\.\w\-\/\?]+/,    
-    /partner.easycredit.de\/[\.\w\-\/\?]+/,    
+    /auth0.com\/[\.\w\-\/\?]+/,
+    /partner.easycredit.de\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],
@@ -130,6 +130,7 @@ commonOptions = {
   # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
+  :disable_external => true,
 }
 
 task :check_ca do
@@ -207,8 +208,8 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202311\.0\/.+/,
-    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,    
-    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,    
+    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

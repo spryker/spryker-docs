@@ -3969,6 +3969,9 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html
                       - title: Retrieve services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
+                      - title: Update services
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
+
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -4449,7 +4452,4 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
-                      - title: Update services
-                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-
 

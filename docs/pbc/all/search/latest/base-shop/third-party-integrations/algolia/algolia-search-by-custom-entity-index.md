@@ -2,18 +2,21 @@
 title: Using Algolia search with custom indexes
 description: Learn how to enable Algolia search for custom entities, such as Docs, in your Spryker-based project.
 template: howto-guide-template
+related:
+  - title: "Additional configuration: Use Algolia for other entities"
+    link: docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html#additional-configuration-use-algolia-for-other-entities
 ---
 
-This guide explains how to enable Algolia search for custom entities, such as Docs, in your Spryker application by mapping them to a custom Algolia index.
+This guide explains how to enable Algolia search for custom entities, such as docs, in your Spryker application by mapping them to a custom Algolia index.
 
-By following this guide, you will be able to:
-- Integrate Algolia search for entities other than products and CMS pages (for example, Docs, Blog, or any custom entity).
+By following this guide, you will be able to do the following:
+- Integrate Algolia search for entities other than products and CMS pages, such as docs or blogs.
 - Configure entity mapping to a custom Algolia index for English language content.
 
 ## Prerequisites
 
-- You have already [configured Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) in your Spryker project.
-- You have an Algolia index created for your custom entity (for example, Docs) and populated with relevant data, for example, using the Algolia Crawler.
+- [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) in your Spryker project.
+- You have an Algolia index created for your custom entity–for example, Docs–and populated with relevant data, for example, using the Algolia Crawler.
 - You have access to Spryker Back Office and the Algolia Dashboard.
 
 ## Step-by-step instructions
@@ -27,8 +30,11 @@ By following this guide, you will be able to:
     - **Locales**: `en_US` (or `*` for all locales)
     - **Algolia Index Name**: `documents_en` (the name of your Algolia index for Docs in English)
 5. Save your changes.
-6. Implement a custom controller or page in your Spryker project to retrieve search results from Algolia using the Spryker `Search` module and [ACP Algolia App](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia). Example:
+6. Implement a custom controller or page in your Spryker project to retrieve search results from Algolia using the Spryker `Search` module and [ACP Algolia App](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia).
 
+<details>
+  <summary>Example</summary>
+  
 ```php
 // src/Pyz/Yves/DocsPage/Controller/SearchController.php
 
@@ -95,8 +101,10 @@ class SearchController extends AbstractController
 }
 ```
 
+</details>
+
 7. Similar to the Yves controller, implement a Glue controller to expose the search results via API.
-8. Optionally, you can also enable Docs suggestions in the search autocomplete widget. Example:
+8. Optional: Enable Docs suggestions in the search autocomplete widget. Example:
 
 ```php
 use Spryker\Client\Kernel\AbstractPlugin;
@@ -128,7 +136,7 @@ class DocsSuggestionsSearchHttpResultFormatterPlugin extends AbstractPlugin  imp
 }
 ```
 
-Enable the plugin in `CatalogDependencyProvider`:
+9. Enable the plugin in `CatalogDependencyProvider`:
 
 ```php
 // src/Pyz/Client/Catalog/CatalogDependencyProvider.php
@@ -159,13 +167,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
-9. Verify that your Docs entity is searchable in Spryker Yves and Glue API applications.
+Verify that your Docs entity is searchable in Spryker Yves and Glue API applications.
 
 ## Summary
 
 After completing these steps, Algolia search will be enabled for your custom entity (Docs) in English for the defined store.
 Users will be able to search Docs content using Algolia-powered search in your Spryker application.
 
-## Related articles
-
-- [Additional configuration: Use Algolia for other entities](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html#additional-configuration-use-algolia-for-other-entities)

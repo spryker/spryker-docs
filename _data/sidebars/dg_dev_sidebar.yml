@@ -207,6 +207,8 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
       - title: Reduce Jenkins execution without P&S and data importers refactoring
         url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
+      - title: Stable Workers
+        url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
 
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html

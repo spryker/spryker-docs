@@ -55,7 +55,7 @@ In `deploy.dev.yml`, find the broker configuration:
 ```yml
     broker:
         engine: rabbitmq
-        version: '3.9'
+        version: '4.1'
         api:
             username: 'spryker'
             password: 'secret'
@@ -264,4 +264,3 @@ You can narrow down the list using the following options:
 
 
 
- 

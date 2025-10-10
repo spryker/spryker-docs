@@ -33,7 +33,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 related:
   - title: Upgrade the MultiCurrency
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-price-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-price-module.md -->

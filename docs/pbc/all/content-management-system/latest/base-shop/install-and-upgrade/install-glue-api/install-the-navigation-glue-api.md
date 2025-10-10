@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
 related:
   - title: Install the Navigation feature
-    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
   - title: "Glue API: Retrieve navigation trees"
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-navigation-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-navigation-glue-api.md -->

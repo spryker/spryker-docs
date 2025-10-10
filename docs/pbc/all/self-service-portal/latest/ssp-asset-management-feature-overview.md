@@ -5,11 +5,6 @@ template: concept-topic-template
 last_updated: Apr 10, 2025
 ---
 
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
 
 The SSP Asset Management feature enables business users to manage assets within their organization.
 
@@ -62,7 +57,7 @@ A company user can have the following permissions related to asset management:
 - Unassign business unit assets
 - Create assets
 
-For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
+For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
 
 

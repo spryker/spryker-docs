@@ -5,11 +5,11 @@ last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Install the Marketplace Shopping Lists feature
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
   - title: Install the Marketplace Shopping Lists Glue API
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
   - title: Managing shopping list items
-    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
 ---
 
 The Marketplace Shopping Lists API feature lets you manage shopping lists in the Marketplace, as well as managing the items in them.
@@ -1085,4 +1085,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1518 | Product is not equal to the current Store. |
 | 1519 | Product offer is not equal to the current Store. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

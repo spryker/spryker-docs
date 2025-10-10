@@ -18,6 +18,47 @@ To start working with the dashboard, navigate to **Merchant Portal&nbsp;<span ar
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
+## Managing products in Dashboard
+
+To manage the existing products in the system, click **Manage Products**. This will take you to the **Products** page of the Merchant Portal.
+
+For detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
+
+### Reference information: Managing products in Dashboard
+
+This section describes the attributes you see when managing products in the **Dashboard**.
+
+#### Products widget
+
+![products-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/products-widget.png)
+
+The **Products** widget displays the following information:
+
+- `Products 10`—The total number of products in the Merchant Portal.
+
+#### Stock
+
+- **With Stock**—The total number of products that have stock available.
+- **Low on Stock**—The total number of products with less than 5 units in stock.
+
+#### Validity
+
+- **Valid**—The total number of valid products, that is, products with no validity dates or where **Valid From** and **Valid To** include today's date.
+- **Expiring in 5 days**—The total number of products that will expire within the next 5 days.
+
+#### Visibility
+
+- **Online**—The total number of products that are visible online.
+- **Offline**—The total number of products that are currently offline.
+
+#### On Marketplace
+
+The total number of products available on the Storefront—that is, products that meet all of the following criteria:
+
+- Have no validity dates or **Valid From** and **Valid To** include today's date.
+- Are online.
+- Have stock available.
+
 ## Managing offers in Dashboard
 
 To manage the existing offers in the system, click **Manage Offer**. This takes you to the **Offers** page of the Merchant Portal. <!-- add a link when available -->

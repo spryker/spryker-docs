@@ -15,9 +15,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchant-relations/create-merchant-relations.html
 related:
   - title: Edit merchant relations
-    link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/edit-merchant-relations.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html
   - title: Merchants and Merchant Relations feature overview
-    link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
 ---
 
 This document describes how to create merchant relations in the Back Office.

@@ -6,8 +6,8 @@ template: feature-integration-guide-template
 ---
 
 AI-powered product management adds the following functionality to the Back Office:
-- Automates product categorization in the Back Office.  
-- Automates the translation of product information in the Back Office.  
+- Automates product categorization in the Back Office.
+- Automates the translation of product information in the Back Office.
 - Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
 

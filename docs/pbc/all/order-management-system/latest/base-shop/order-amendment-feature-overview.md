@@ -69,6 +69,27 @@ During the order amendment process, the prices for cart items are displayed acco
 
 Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{site.version}}/request-for-quote.html) can't be amended.
 
+## Stock
+
+Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can use the strategies described in the following sections.
+
+
+### Validate amended order against current stock
+
+If an item is deactivated, unavailable, or out of stock, it is removed from the cart. A notification is displayed to inform the user about the removal.
+
+
+### Preserve original stock and availability
+
+- Items are editable even if they're now out of stock, deactivated, or unavailable
+- Quantity can be reduced or left unchanged according to the original stock and availability
+- Quantity can be increased only if current stock is sufficient
+
+For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
+
+
+You can implement custom strategies on the project level.
+
 
 ## Stock
 Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can choose from the following default strategies:
@@ -107,14 +128,22 @@ A *grace period* lets you restrict order amendments to a certain time period aft
 
 For instructions on configuring the grace period, see [Install the Order Amendment feature](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
 
+## Video overview
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|
 | [Install the Order Amendment feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
-| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)  |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)  |
 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
 | [Install the Product Bundles + Cart feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html)  |
 | [Install the Reorder feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)  |

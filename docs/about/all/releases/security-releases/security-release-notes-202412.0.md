@@ -5,6 +5,7 @@ last_updated: Dec 20, 2024
 template: concept-topic-template
 redirect_from:
   - /docs/about/all/releases/security-release-notes-202412.0.html
+publish_date: "2024-12-20"
 ---
 
 This document describes the security-related issues that have been recently resolved.

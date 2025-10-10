@@ -5,12 +5,6 @@ template: concept-topic-template
 last_updated: Apr 10, 2025
 ---
 
-{% info_block warningBox %}
-
-Self-Service Portal is currently running under an Early Access Release. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
-
-{% endinfo_block %}
-
 The File Management feature enables company users to access files available within their organization.
 
 
@@ -40,7 +34,7 @@ A company user can have the following permissions related to file management:
 - View Business Unit Files
 - View Company Files
 
-For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
+For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
 
 

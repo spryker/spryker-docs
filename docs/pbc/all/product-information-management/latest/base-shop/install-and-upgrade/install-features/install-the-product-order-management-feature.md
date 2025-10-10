@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
 related:
   - title: Install the Product feature
-    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-order-management-feature.md -->
+{% include pbc/all/install-features/latest/install-the-product-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-order-management-feature.md -->

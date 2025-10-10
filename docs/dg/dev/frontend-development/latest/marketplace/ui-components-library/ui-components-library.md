@@ -10,15 +10,15 @@ redirect_from:
 
 related:
   - title: Actions
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Cache
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
   - title: Data Transformers
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Datasources
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasources.html
   - title: Persistence
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/persistence.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/persistence.html
 ---
 
 Separate from Spryker Core, there is a set of UI Angular components that are distributed independently via npm. Each package can be installed via npm or yarn commands:

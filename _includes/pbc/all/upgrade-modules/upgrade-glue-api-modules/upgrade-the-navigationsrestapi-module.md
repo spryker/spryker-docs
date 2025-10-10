@@ -6,8 +6,8 @@ Version 2.0.0 of the `NavigationsRestApi` module introduces the resourceId field
 
 **BC Breaks and Solutions:**
 
-* Set up project configuration
-* Migrate database
+- Set up project configuration
+- Migrate database
 
 To upgrade to the new version of the module, do the following:
 
@@ -63,4 +63,4 @@ Before migrating a production database, always review each SQL statement individ
 
 {% endinfo_block %}
 
-_Estimated migration time: 30 minutes_
+*Estimated migration time: 30 minutes*

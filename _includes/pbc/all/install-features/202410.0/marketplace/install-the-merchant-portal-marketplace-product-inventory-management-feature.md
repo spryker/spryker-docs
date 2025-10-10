@@ -21,6 +21,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker/availability-merchant-portal-gui:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:

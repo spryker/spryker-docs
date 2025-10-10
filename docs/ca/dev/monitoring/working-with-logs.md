@@ -42,23 +42,23 @@ To make log browsing easier, logs from the same source form a log stream. Log st
 
 Audit logs are a type of logs used to track user-related activities. If [audit logs are installed](/docs/dg/dev/backend-development/audit-logs/audit-logs.html), you can browse them for the following log groups:
 
-* Storefront (Yves)
-* Back Office
-* Merchant Portal
-* Glue API
-* Glue Backend API
+- Storefront (Yves)
+- Back Office
+- Merchant Portal
+- Glue API
+- Glue Backend API
 
 The actual list of applications for which audit logs are enabled depends on your setup.
 
 The following audit events are logged by default:
 
-* Successful login
-* Failed login
-* Password reset requested
-* Password updated after reset
-* [Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html) logs:
-  * Impersonation started
-  * Impersonation ended
+- Successful login
+- Failed login
+- Password reset requested
+- Password updated after reset
+- [Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html) logs:
+  - Impersonation started
+  - Impersonation ended
 
 ## Search in logs
 

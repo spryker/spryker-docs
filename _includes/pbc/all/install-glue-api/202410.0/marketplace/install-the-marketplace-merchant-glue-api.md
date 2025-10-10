@@ -17,6 +17,7 @@ Install the required features:
 ### 1) Install the required modules
 
 Install the required modules using Composer:
+
 ```bash
 composer require spryker/merchants-rest-api:"^1.0.0" --update-with-dependencies
 ```
@@ -34,6 +35,7 @@ Make sure that the following modules have been installed:
 ### 2) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```

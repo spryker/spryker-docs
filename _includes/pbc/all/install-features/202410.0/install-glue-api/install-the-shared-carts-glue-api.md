@@ -59,7 +59,7 @@ Make sure the following changes have been applied in transfer objects:
 | RestSharedCartsAttributesTransfer | class | added | src/Generated/Shared/Transfer/RestSharedCartsAttributesTransfer.php |
 | ShareDetailTransfer.uuid | property | added | src/Generated/Shared/Transfer/ShareDetailTransfer.php |
 | ShareCartRequestTransfer.quoteUuid | property | added | src/Generated/Shared/Transfer/ShareCartRequestTransfer.php |
-| ShareCartRequestTransfer.customerReference | property | added | src/Generated/Shared/Transfer/ShareCartRequestTransfer.php
+| ShareCartRequestTransfer.customerReference | property | added | src/Generated/Shared/Transfer/ShareCartRequestTransfer.php |
 | QuoteTransfer.quotePermissionGroup | property | added | src/Generated/Shared/Transfer/QuoteTransfer.php |
 
 {% endinfo_block %}
@@ -105,11 +105,11 @@ The result should be 0 records.
 
 {% info_block infoBox "" %}
 
-* `SharedCartsResourceRoutePlugin` is a protected resource for the following requests: `POST`, `PATCH`, `DELETE`.
+- `SharedCartsResourceRoutePlugin` is a protected resource for the following requests: `POST`, `PATCH`, `DELETE`.
 
-* `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
+- `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
 
 {% endinfo_block %}
 
@@ -125,7 +125,7 @@ Activate the following plugins:
 | CartPermissionGroupByShareDetailResourceRelationshipPlugin | Adds the `cart-permission-group` resource as a relationship to the `shared cart` resource. |  | Spryker\Glue\CartPermissionGroupsRestApi\Plugin\GlueApplication\CartPermissionGroupByShareDetailResourceRelationshipPlugin |
 | CompanyUserByShareDetailResourceRelationshipPlugin | Adds the `company-users` resource as a relationship to the `shared cart` resource. |  | Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication\CompanyUserByShareDetailResourceRelationshipPlugin |
 | SharedCartQuoteCollectionExpanderPlugin | Expands the quote collection with the carts shared with a user. |  | Spryker\Zed\SharedCart\Communication\Plugin\CartsRestApi\SharedCartQuoteCollectionExpanderPlugin |
-| CompanyUserStorageProviderPlugin | Retrieves information about a company user from the key-value storage. |  | Spryker\Glue\CompanyUserStorage\Communication\Plugin\SharedCartsRestApi\CompanyUserStorageProviderPlugin
+| CompanyUserStorageProviderPlugin | Retrieves information about a company user from the key-value storage. |  | Spryker\Glue\CompanyUserStorage\Communication\Plugin\SharedCartsRestApi\CompanyUserStorageProviderPlugin |
 | CompanyUserCustomerExpanderPlugin | Expands the `customer` transfer with the company user transfer. |  | Spryker\Glue\CompanyUsersRestApi\Plugin\CartsRestApi\CompanyUserCustomerExpanderPlugin |
 | QuotePermissionGroupQuoteExpanderPlugin | Expands the `quote` transfer with a quote permission group. |  | Spryker\Zed\SharedCartsRestApi\Communication\Plugin\CartsRestApi\QuotePermissionGroupQuoteExpanderPlugin |
 
@@ -264,7 +264,7 @@ class SharedCartsRestApiDependencyProvider extends SprykerSharedCartsRestApiDepe
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\CartsRestApi;
@@ -394,7 +394,7 @@ To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check
 }
 ```
 
-</details>   
+</details>
 
 {% endinfo_block %}
 

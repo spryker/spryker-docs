@@ -170,7 +170,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Navigate to Backoffice UI → Maintenance → Sync permissions.
+Navigate to Back Office UI → Maintenance → Sync permissions.
 Make sure that you see rows with plugin names at `spy_permission` table.
 
 {% endinfo_block %}
@@ -213,8 +213,8 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 Re-login (or log in) as a Company Admin and navigate to `http://www.mysprykershop.com/en/company/company-role`.
 Press **Edit** button for some role and make sure that you are able to assign following permissions:
 
-* View Company orders
-* View Business Unit orders
+- View Company orders
+- View Business Unit orders
 
 {% endinfo_block %}
 

@@ -111,7 +111,7 @@ Make sure only the backend application documentation has been generated with rel
 
 **src/Pyz/Glue/GlueJsonApiConvention/GlueJsonApiConventionDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueJsonApiConvention;
@@ -135,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/dg/dev/glue-api/{{site.version}}/routing/create-backend-resources.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html).
 
 {% endinfo_block %}

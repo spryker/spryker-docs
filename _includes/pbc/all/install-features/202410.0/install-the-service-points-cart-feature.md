@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME                    | VERSION           | INSTALLATION GUIDE                                                                                                                                                                               |
 |-------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points          | {{page.version}}  | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                    |
+| Service Points          | {{page.version}}  | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                    |
 | Cart                    | {{page.version}}  | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html) |
 
 ## 1) Install the required modules
@@ -112,8 +112,10 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 {% info_block warningBox "Verification" %}
 
 1. Prepare two product offers for the same product:
-  1. With support for the pickup shipment type and a connection to a service point.
-  2. Without support for the pickup shipment type.
+
+    1. With support for the pickup shipment type and a connection to a service point.
+    2. Without support for the pickup shipment type.
+
 2. Using Glue API, add the product offer 2 to cart.
 3. Using the `checkout-data` endpoint, select a service point for the item.
   Make sure the selected service point is returned in the response. Make sure the product offer 2 has been replaced with the product offer 1.

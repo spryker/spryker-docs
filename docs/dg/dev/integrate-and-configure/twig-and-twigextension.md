@@ -20,7 +20,7 @@ related:
   - title: Cronjob scheduling
     link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
   - title: Data import
-    link: docs/dg/dev/data-import/page.version/data-import.html
+    link: docs/dg/dev/data-import/latest/data-import.html
   - title: Development virtual machine, docker containers & console
     link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
 ---
@@ -37,8 +37,8 @@ To be able to add Twig, we created `TwigApplicationPlugin`. It initializes the T
 
 You can find the list of all the modules related to the service below:
 
-* Twig - spryker/twig
-* TwigExtension - spryker/twig-extension
+- Twig - spryker/twig
+- TwigExtension - spryker/twig-extension
 
 ### Installation
 
@@ -111,7 +111,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 ## Configure Twig
 
-Twig provides wide configuration possibilities. For further information about Twig configuration, check out the Twig documentation [here](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [here](https://twig.symfony.com/doc/2.x/api.html#loaders).
+Twig provides wide configuration possibilities. For further information about Twig configuration, check out the [Environment options](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [Loaders](https://twig.symfony.com/doc/2.x/api.html#loaders).
 
 Some of the Twig options are predefined in our Twig service. You can check them in the TwigConfig files for Zed and Yves on core and project levels.
 

@@ -118,4 +118,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |---|---|---|
-| Marketplace Inventory Management + Wishlist Glue API |  |  [Install the Marketplace Inventory Management + Wishlist Glue API ](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html) |
+| Marketplace Inventory Management + Wishlist Glue API |  |  [Install the Marketplace Inventory Management + Wishlist Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html) |

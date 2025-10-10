@@ -13,19 +13,24 @@ This guide explains how to set up and run Glue API end-to-end (E2E) tests using 
 
 1. Install or update Spryker Testify to version 3.12.0 or higher:
 - Check the current installed version:
+
   ```bash
   composer info spryker/testify
   ```
+
 - Install Spryker Testify:
+
   ```bash
   composer require --dev spryker/testify:"^3.12.0"
   ```
+
 - Update Spryker Testify:
+
   ```bash
   composer update spryker/testify:"^3.12.0"
   ```
 
-2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/dg/dev/glue-api/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Storefront API Resources](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html).
 
 ## Configure the project and set up test files
 

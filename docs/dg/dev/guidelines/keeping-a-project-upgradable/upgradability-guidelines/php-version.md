@@ -31,7 +31,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.4",
     ...
   }
 }
@@ -42,7 +42,7 @@ The PHP version in your deploy files should correspond to the PHP version declar
 ```yaml
 ...
 image:
-    tag: spryker/php:8.3
+    tag: spryker/php:8.4
     php:
         ini:
             "opcache.revalidate_freq": 0
@@ -71,7 +71,7 @@ A `composer.json` file that produces the error message:
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": "7.2",
+    "php": ">=8.4",
     ...
   }
 }
@@ -84,7 +84,7 @@ Below is an example of an unsupported [Spryker SDK](/docs/dg/dev/sdks/sdk/spryke
 PHP VERSION CHECKER
 ===================
 
-Message: The deploy file uses a not allowed PHP image version "spryker/php:7.2-alpine3.12".
+Message: The deploy file uses a not allowed PHP image version "spryker/php:8.4".
          The image tag must contain an allowed PHP version (image:abc-8.0)
 Target: {PATH_TO_PROJECT}/deploy.yml
 ```
@@ -94,7 +94,7 @@ A `deploy.yml` file that produces the error message:
 ```yaml
 ...
 image:
-    tag: spryker/php:7.2
+    tag: spryker/php:8.4
     php:
         ini:
             "opcache.revalidate_freq": 0
@@ -110,13 +110,13 @@ PHP VERSION CHECKER
 ===================
 
 Message: Not all the targets have the same PHP versions
-Target:  Current php version $phpVersion: php7.2
+Target:  Current php version $phpVersion: php8.4
          tests/Acceptance/_data/InvalidProject/composer.json: -
          tests/Acceptance/_data/InvalidProject/deploy**.yml: -
-         SDK php versions: php7.2, php8.3
+         SDK php versions: php8.4
 ```
 
-The `composer.json` file uses PHP version `7.2`:
+The `composer.json` file uses PHP version `8.4`:
 
 ```json
 {
@@ -124,18 +124,18 @@ The `composer.json` file uses PHP version `7.2`:
   "description": "Spryker B2C Demo Shop",
   "license": "proprietary",
   "require": {
-    "php": "7.2",
+    "php": ">=8.4",
     ...
   }
 }
 ```
 
-The `deploy.yml` file uses PHP version `8.3`:
+The `deploy.yml` file uses PHP version `8.4`:
 
 ```yaml
 ...
 image:
-    tag: spryker/php:8.3
+    tag: spryker/php:8.4
     php:
         ini:
             "opcache.revalidate_freq": 0
@@ -155,7 +155,9 @@ To resolve the issue:
 
 
 ## Run only this checker
+
 To run only this checker, include `PHP_VERSION_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=PHP_VERSION_CHECKER
 ```

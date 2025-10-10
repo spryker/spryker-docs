@@ -1,6 +1,6 @@
 ### Check Elasticsearch connection details
 
-Check `SPRYKER_SEARCH_HOST ` and `SPRYKER_SEARCH_PORT` values as follows:
+Check `SPRYKER_SEARCH_HOST` and `SPRYKER_SEARCH_PORT` values as follows:
 
 {% include checking-a-service-connection-configuration.md %}
 

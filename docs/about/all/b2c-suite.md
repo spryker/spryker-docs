@@ -70,6 +70,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 </details>
 
 ## B2C Demo Shop
+
 To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
 {% wistia iqrkesbawu 960 720 %}

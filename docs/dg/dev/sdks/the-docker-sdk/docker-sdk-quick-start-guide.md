@@ -42,10 +42,10 @@ To run the Docker SDK in a local environment, follow the instructions below.
 ### Installing Docker
 
 For Docker installation instructions, see one of the following:
-* [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
-* [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
-* [Installing Docker prerequisites on Windowswith WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+- [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+- [Installing Docker prerequisites on Windowswith WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 ### Setting up a project with the Docker SDK
 
@@ -126,6 +126,6 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/dg
 
 Documents to help you start developing your project:
 
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
+- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)

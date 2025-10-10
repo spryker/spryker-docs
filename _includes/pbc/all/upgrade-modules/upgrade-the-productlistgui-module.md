@@ -49,19 +49,19 @@ Instead of this, an enhanced ownership concept was introduced to allow multiple 
 
 Other changes are listed below:
 
-* Adjusted `EditController::indexAction()` to provide aggregation tabs for the twig template.
-* Introduced `ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin`.
-* Introduced ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin.
-* Introduced `ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin`.
-* Introduced `ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin`.
-* Introduced `ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin`.
-* Introduced `ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin`.
-* Replaced `ProductListFacade::deleteProductList()` usage with `ProductListFacade::removeProductList()` in `DeleteController::confirmAction()`.
-* Introduced extension point to inject buttons for the product list table.
-* Adjusted UI to see the owner domain entities for each product list.
-* Adjusted deletion logic so that it's not possible to delete a product list if it has any owner domain entity.
-* Introduced extension point to define the ownership over product list by another domain entity.
-* Deprecated `ProductListOwnerTypeFormExpanderPluginInterface` to allow multiple owners concept.
+- Adjusted `EditController::indexAction()` to provide aggregation tabs for the twig template.
+- Introduced `ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin`.
+- Introduced ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin.
+- Introduced `ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin`.
+- Introduced `ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin`.
+- Introduced `ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin`.
+- Introduced `ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin`.
+- Replaced `ProductListFacade::deleteProductList()` usage with `ProductListFacade::removeProductList()` in `DeleteController::confirmAction()`.
+- Introduced extension point to inject buttons for the product list table.
+- Adjusted UI to see the owner domain entities for each product list.
+- Adjusted deletion logic so that it's not possible to delete a product list if it has any owner domain entity.
+- Introduced extension point to define the ownership over product list by another domain entity.
+- Deprecated `ProductListOwnerTypeFormExpanderPluginInterface` to allow multiple owners concept.
 
 {% info_block warningBox "Note" %}
 
@@ -106,11 +106,11 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 
 4. Remove the following methods from `src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php` (if any present):
 
-* `getProductListOwnerTypeFormExpanderPlugins`
-* `getProductListTableConfigExpanderPlugins`
-* `getProductListTableQueryCriteriaExpanderPlugins`
-* `getProductListTableDataExpanderPlugins`
-* `getProductListTableHeaderExpanderPlugins`
+- `getProductListOwnerTypeFormExpanderPlugins`
+- `getProductListTableConfigExpanderPlugins`
+- `getProductListTableQueryCriteriaExpanderPlugins`
+- `getProductListTableDataExpanderPlugins`
+- `getProductListTableHeaderExpanderPlugins`
 
 5. If your project has any domain entities that use product list, such as *Configurable Bundle*, *Merchant Relationship*, add the respective plugins to the dependency provider:
 
@@ -151,8 +151,8 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 }
 ```
 
-* `ProductListTopButtonsExpanderPluginInterface[]` plugins are responsible for adding the top button to the product list index page which leads to the domain entity page which uses the product list for its purpose.
-* `ProductListUsedByTableExpanderPluginInterface[]` plugins are responsible for expanding table at Used By tab at Product List Edit page. This table contains a list of domain entities that use exact product list.
+- `ProductListTopButtonsExpanderPluginInterface[]` plugins are responsible for adding the top button to the product list index page which leads to the domain entity page which uses the product list for its purpose.
+- `ProductListUsedByTableExpanderPluginInterface[]` plugins are responsible for expanding table at Used By tab at Product List Edit page. This table contains a list of domain entities that use exact product list.
 
 6. Run the following command to apply JS changes:
 

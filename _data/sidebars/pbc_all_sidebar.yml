@@ -1896,17 +1896,19 @@ entries:
                   - title: "product_offer_validity.csv"
                     url: /docs/pbc/all/offer-management/marketplace/import-and-export-data/import-file-details-product-offer-validity.csv.html
 
-              - title: Manage merchant product offers in the Back Office
+              - title: Manage in the Back Office
                 url: /docs/pbc/all/offer-management/marketplace/manage-merchant-product-offers.html
-              - title: Manage product offers in the Merchant Portal
+              - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/manage-product-offers-in-the-merchant-portal.html
                 nested:
                   - title: Create product offers
                     url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
                   - title: Edit product offers
                     url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
+                  - title: Import Product Offers
+                    url: /docs/pbc/all/offer-management/marketplace/import-offers-ui.html
 
-              - title: Retrieve product offers using Glue API
+              - title: Retrieve using Glue API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
               - title: Render merchant product offers on the Storefront
                 url: /docs/pbc/all/offer-management/marketplace/render-merchant-product-offers-on-the-storefront.html
@@ -3380,6 +3382,9 @@ entries:
                       - title: Manage marketplace concrete product attributes
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html
 
+                  - title: Import Products
+                    url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/import-products-ui.html
+
               - title: Manage in the Back Office
                 url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/manage-marketplace-products-in-the-back-office.html
                 nested:
@@ -3964,9 +3969,6 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html
                       - title: Retrieve services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
-                      - title: Update services
-                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -4447,4 +4449,7 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html
                       - title: Pick picklist items
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
+                      - title: Update services
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
+
 

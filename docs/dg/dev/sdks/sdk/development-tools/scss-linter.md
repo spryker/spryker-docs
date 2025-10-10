@@ -16,24 +16,24 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/development-tools/scss-linter.html
 related:
-  - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
   - title: Code sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+    link: docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
   - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
+  - title: Architecture sniffer
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
     link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: TS linter
-    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
-    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
+    link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
 *SCSS linter* allows you to find and fix code style mistakes. It helps a team follow the same standards and make code more readable.
@@ -56,13 +56,13 @@ npm ci
 
 2. Execute the SCSS Linter in:
 
-* validation mode:
+- validation mode:
 
 ```bash
 npm run yves:stylelint
 ```
 
-*  fix mode:
+- fix mode:
 
 ```bash
 npm run yves:stylelint:fix
@@ -78,11 +78,11 @@ To redefine the path for the config file, adjust `/frontend/libs/stylelint.js`  
 configFile: `${globalSettings.context}/node_modules/@spryker/frontend-config.stylelint/.stylelintrc.json`,
 ```
 
-The SCSS Linter also uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn’t be executed.
+The SCSS Linter also uses the ignore file `/.stylelintignore` that includes directories and files where the SCSS linter shouldn't be executed.
 
 {% info_block infoBox %}
 
-SCSS Linter rules related to formatting aren’t included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+SCSS Linter rules related to formatting aren't included in the [stylelint config](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 
@@ -90,18 +90,18 @@ SCSS Linter rules related to formatting aren’t included in the [stylelint conf
 
 The SCSS Linter is integrated into:
 
-* Pre-commit hooks
+- Pre-commit hooks
 The function that executes the SCSS Linter before the commit resides in `/.githook`:
 
-```
+```text
 - GitHook\Command\FileCommand\PreCommit\StyleLintCommand
 ```
 
-* Travis
+- Travis
 Command to run the SCSS Linter is integrated into `.travis.yml`
 
-```
-- node ./frontend/libs/stylelint
+```bash
+node ./frontend/libs/stylelint
 ```
 
 {% info_block warningBox "Important" %}

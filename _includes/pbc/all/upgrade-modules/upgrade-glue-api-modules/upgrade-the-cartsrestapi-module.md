@@ -4,7 +4,7 @@
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -128,13 +128,13 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 }
 ```
 
-Run the following command:
+Generate transfer objects:
 
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-_Estimated migration time: 1 hour_
+*Estimated migration time: 1 hour*
 
 ## Upgrading from version 1.* to version 2.*
 
@@ -212,15 +212,15 @@ CustomersRestApiDependencyProvider.php
 
 6. Find or create GlueApplicationDependencyProvider in a project. Make sure it extends `\Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider`.
 7. Find the `getResourceRoutePlugins` method and add the following plugins to the plugins stack.
-    * `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartItemsResourceRoutePlugin`
-    * `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartsResourceRoutePlugin`
-    * `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\GuestCartItemsResourceRoutePlugin`
-    * `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\GuestCartsResourceRoutePlugin`
+    - `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartItemsResourceRoutePlugin`
+    - `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\CartsResourceRoutePlugin`
+    - `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\GuestCartItemsResourceRoutePlugin`
+    - `Spryker\Glue\CartsRestApi\Plugin\ResourceRoute\GuestCartsResourceRoutePlugin`
 8. Find the `getValidateRestRequestPlugins` method and add `Spryker\Glue\CartsRestApi\Plugin\Validator\AnonymousCustomerUniqueIdValidatorPlugin` to the plugins stack.
 9. Find the `getControllerBeforeActionPlugins` method and add `Spryker\Glue\CartsRestApi\Plugin\ControllerBeforeAction\SetAnonymousCustomerIdControllerBeforeActionPlugin` to the plugins stack.
 10. Find the `getResourceRelationshipPlugins` method and add `Spryker\Glue\CartItemsProductsRelationship\Plugin\CartItemsProductsRelationshipPlugin` to the plugins stack.
 
-* The file could look like this:
+- The file could look like this:
 
 GlueApplicationDependencyProvider.php
 
@@ -353,4 +353,4 @@ ConsoleDependencyProvider.php
 
 4. Run `vendor/bin/console transfer:generate`.
 
-_Estimated migration time: 1-2 hours_
+*Estimated migration time: 1-2 hours*

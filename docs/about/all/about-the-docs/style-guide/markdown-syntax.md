@@ -85,7 +85,7 @@ Example:
 Make sure to fulfill the requirements:
 
 - `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted.
-- Put a blank row between `<summary>{drop-down toggle button}</summary>` and _```{programming language}_. This will ensure that the code snippet is displayed correctly on the documentation website.
+- Put a blank row between `<summary>{drop-down toggle button}</summary>` and *```{programming language}*. This will ensure that the code snippet is displayed correctly on the documentation website.
 
 {% endinfo_block %}
 
@@ -93,7 +93,7 @@ Make sure to fulfill the requirements:
 
 Currently, by default, when you add an image to your document, its size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
 
-If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the `width-100` class. For example:
+If you want your image or a 2-column table to stretch to the content area's size, wrap the image and the table in `<div>` with the `width-100` class. For example:
 
 To make an image as wide as the content area:
 
@@ -145,13 +145,14 @@ This section describes the Markdown syntax of the notes used only in certain sce
 
 Verification notes are usually used in guides. They describe what a reader can do to find out if the action they have performed was successful. Use the following Markdown syntax for the verification notes:
 
-```
+```md
 {% raw %}{% info_block warningBox "Verification" %}{% endraw %}
 
 The verification step
 
 {% raw %} {% endinfo_block %}{% endraw %}
 ```
+
 Verification example:
 
 {% info_block warningBox "Verification" %}
@@ -172,7 +173,7 @@ Make sure that the following modules have been installed in `vendor/spryker`:
 
 - Info syntax:
 
-```
+```md
 {% raw %}{% info_block infoBox "Info" %}{% endraw %}
 
 Your content
@@ -182,7 +183,7 @@ Your content
 
 Info example:
 
-```
+```md
 {% raw %}{% info_block infoBox "Secured variables" %}{% endraw %}
 
 To make the values of environment variables hidden in logs, set up secured variables.
@@ -192,7 +193,7 @@ To make the values of environment variables hidden in logs, set up secured varia
 
 - Warning syntax:
 
-```
+```md
 {% raw %}{% info_block warningBox "Warning" %}{% endraw %}
 
 Your content
@@ -203,7 +204,7 @@ Your content
 
 Warning example:
 
-```
+```md
 {% raw %}{% info_block warningBox "Important Note" %}{% endraw %}
 
 Ensure that Back Office is protected by a secure VPN connection.
@@ -213,7 +214,7 @@ Ensure that Back Office is protected by a secure VPN connection.
 
 - Error syntax:
 
-```
+```md
 {% raw %}{% info_block errorBox "Error" %}{% endraw %}
 
 Your content
@@ -224,7 +225,7 @@ Your content
 
 Error example:
 
-```
+```md
 {% raw %}{% info_block errorBox %}{% endraw %}
 
 An entity cannot have a store relation and SynchronizationPool defined for it simultaneously.
@@ -271,8 +272,8 @@ Published table:
 
 | Storage Type | Target Entity | Example Expected Data Identifier |
 | --- | --- | --- |
-| Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
-| Redis | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Key-value store (Redis or Valkey) | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+| Key-value store (Redis or Valkey) | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
 
 <details>
 <summary>Example Expected Data Fragment: Product Abstract Price</summary>
@@ -303,6 +304,7 @@ Published table:
 	}
 }
 ```
+
 </details>
 
 <details>
@@ -334,6 +336,7 @@ Published table:
 	}
 }
 ```
+
 </details>
 
 ### Mixed content
@@ -368,12 +371,13 @@ Published table:
 } %}
 {% endraw %}
 ```
+
 </details>
 
 
 ## Anchors
 
-You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors.
+You don't have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors.
 
 Follow these steps to create an anchor and link to it:
 
@@ -412,7 +416,7 @@ To integrate GLUE API in your project, you need to:
 
 To add an inline image, use this wrapper: `<span class="inline-img"></span>`. For example:
 
-```
+```md
 Click **More** <span class="inline-img">![google-chrome-more-button](link-to-an-image)</span>.
 ```
 
@@ -420,18 +424,19 @@ Click **More** <span class="inline-img">![google-chrome-more-button](link-to-an-
 
 To add a link to a Wistia video, use the following code: `{% raw %} {% wistia {{wistia video code}} %}{% endraw %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% raw %}{% wistia eiw5ev4gv2 %}{% endraw %}`.
 
-You can also set video’s width and height. For example:
+You can also set video's width and height. For example:
 
 `{% raw %}{% wistia eiw5ev4gv2 960 720 %}{% endraw %}`
 
 where
-960 - is the video’s width
-720 - is the video’s height
+960 - is the video's width
+720 - is the video's height
 
 ## Adding other videos
+
 To add a link to a video in the .mp4 format that originates not from Wistia, add this block with the link to your video:
 
-```
+```html
 <figure class="video_container">
     <video width="100%" height="auto" controls>
     <source src="link-to-your-video.mp4" type="video/mp4">
@@ -455,7 +460,7 @@ where `http://example.com/the.pdf` is the link to your .pdf file.
 
 Glossary syntax:
 
-```
+```text
 **{glossary item}**
 
 >{glossary item description}

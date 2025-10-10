@@ -48,11 +48,12 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 
 ### 2) Set up transfer objects
 
-Run the following command to generate changes in transfer objects:
+Generate changes in transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you have triggered the following changes in transfer objects. See `src/Generated/Shared/Transfer/`.
@@ -222,6 +223,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker-feature/navigation:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed in `vendor/spryker-shop`:

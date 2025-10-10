@@ -100,6 +100,7 @@ protected function getCartPreCheckPlugins(Container $container): array
 Adjust the configuration constant to allow or prevent adding products with zero price:
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 namespace Pyz\Zed\PriceCartConnector;
@@ -111,7 +112,7 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-If it has the `false` value, while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
+If it has the `false` value, while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Change the currency or remove product from order."
 
 #### Install cart variants
 

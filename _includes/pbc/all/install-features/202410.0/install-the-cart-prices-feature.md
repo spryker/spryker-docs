@@ -13,11 +13,11 @@ The following feature integration guide expects the basic feature to be in place
 
 Install the required features:
 
-| NAME                                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                 |
-|---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cart                                        | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
-| Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
-| Marketplace Product Offer Prices (Optional) | {{site.version}} | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
+| NAME                                        | VERSION          |        REQUIRED |    INSTALLATION GUIDE                                                                                                                                                 |
+|---------------------------------------------|------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Cart                                        | {{site.version}} |       v         |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
+| Prices                                      | {{site.version}} |          v         |[Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
+| Marketplace Product Offer Prices  | {{site.version}} |                 |  [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 
 ### 1) Install the required modules
 
@@ -25,7 +25,7 @@ Install the required features:
 composer require spryker/price-cart-connector:"^6.9.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -40,6 +40,7 @@ Make sure that the following modules have been installed:
 Set up the following configuration:
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 
@@ -68,7 +69,7 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false` while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
+If `IS_ZERO_PRICE_ENABLED_FOR_CART_ACTIONS=false` while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Change the currency or remove product from order."
 
 The `PriceCartConnectorConfig::getItemFieldsForIdentifier()` lets you set up a list of fields that are used to build item identifiers. Based on generated identifiers, the system can recognize duplicate items and perform requests only for unique items.
 
@@ -79,6 +80,7 @@ Apply the following changes only if you have the [Marketplace Product Offer Pric
 {% endinfo_block %}
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
+
 ```php
 <?php
 
@@ -205,4 +207,5 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 </details>

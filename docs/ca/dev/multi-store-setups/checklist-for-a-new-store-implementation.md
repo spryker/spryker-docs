@@ -1,6 +1,6 @@
 ---
 title: Checklist for a new store implementation
-description: Follow a checklist for implementing a new store in Spryker’s multi-store setup, including environment setup, DNS configuration, and integration tasks.
+description: Follow a checklist for implementing a new store in Spryker's multi-store setup, including environment setup, DNS configuration, and integration tasks.
 template: concept-topic-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -96,6 +96,7 @@ Provision of a new fully isolated environment per store.
 10. Manage codebase for all the separate stores taking into account the increased complexity of deployment and store maintenance.
 
 ## Main touchpoints
+
 The touchpoints listed here may vary depending on the project. If view of that, here we defined the most standard ones. Keep in mind that these touchpoints have already been listed in the previous sections as part of the SI/Customer tasks for each setup.
 
 ### Configuration
@@ -109,11 +110,13 @@ The touchpoints listed here may vary depending on the project. If view of that, 
 | deploy.{environment-name}.yml     | Main docker/sdk configuration file, which is used to build all application images.            | Regions, stores, groups, databases, domains. You can create a dedicated environment file for each store.      |
 
 ### Data
+
 1. Generate product data files to add new localized attributes and entries.
 2. Create the folder `data/import/common/{NewStore}` and fill it with all the files that reflect the new store.
 3. Modify install recipes to add the new folder you created or copied in the previous steps.
 
 ### Store domains and certificates
+
 Request the Spryker Cloud team to create domains and certificates.
 
 {% info_block infoBox "Info" %}
@@ -123,12 +126,15 @@ Certificates are created for all domains.
 {% endinfo_block %}
 
 ### Translations
+
 - Re-generate all CSV files consisting of a new locale.
 - Import the updated CSV files.
 
 ### CMS
+
 - Update the list of the [related CMS stores](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html#cms-page-store-relation)
 - Update store-specific Terms & Conditions
 
 ### Add-ons
+
 Configure the project-specific add-ons. The add-ons vary and depend on the project implementation. For example, create country admin roles, configure the outgoing email address, etc.

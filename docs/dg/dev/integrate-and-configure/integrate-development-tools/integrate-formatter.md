@@ -1,6 +1,6 @@
 ---
 title: Integrate Formatter
-description: Learn how to integrate Formatter into your project
+description: Learn how to enable and integrate Formatter and their dependencies into your Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/formatter-integration-guide
@@ -10,13 +10,13 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/formatter-integration-guide.html
 related:
   - title: Integrating SCSS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
   - title: Integrating TS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
   - title: Integrating Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrating Web Profiler Widget for Yves
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
 Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-tools/formatter.html) into your project.
@@ -26,32 +26,43 @@ Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-t
 To install the dependencies:
 
 1. Install Prettier:
+
 ```bash
 npm install prettier@2.0.x --save-dev
 ```
+
 2. Install config for Prettier:
+
 ```bash
 npm install @spryker/frontend-config.prettier --save-dev
 ```
+
 3. Install the CLI parser:
-```
+
+```bash
 npm install commander@4.0.x --save-dev
 ```
+
 ## 2. Update the scripts
 
 To update the scripts:
 
 1. Add formatting file extensions to the global settings `/frontend/settings.js`:
-```const globalSettings = {
-    ....
+
+```js
+const globalSettings = {
+    // ...
 
     formatter: [
-        `**/*.(scss|css|less|js|ts|json|html)`,
+        '**/*.{scss,css,less,js,ts,json,html}',
     ],
 };
+
 ```
+
 2. Add the formatter script to `/frontend/libs/formatter.js`:
-```
+
+```js
 const { spawn } = require('child_process');
 const { globalSettings } = require('../settings');
 const commandLineParser = require('commander');
@@ -73,18 +84,22 @@ spawn(
     { stdio: 'inherit' }
 );
 ```
- Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js) for the example file.
+
+See this example file [formatter.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/formatter.js).
 
 3. Adjust the `/package.json` scripts:
-```
+
+```json
 "scripts": {
     ....
     "formatter": "node ./frontend/libs/formatter",
     "formatter:fix": "node ./frontend/libs/formatter --fix"
 }
 ```
+
 4. Add the ignore file `/.prettierignore`:
-```
+
+```text
 # Ignore paths
 /.github/
 /.yarn/

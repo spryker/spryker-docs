@@ -189,20 +189,21 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox "" %}
 
-* If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
+- If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
 
-* Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
+- Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
 
-* For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
+- For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
 
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns shipping methods in the `shipmentMethods` attribute.
 
@@ -266,6 +267,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAtt
             ...
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -323,6 +325,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
             ...
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -463,6 +466,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -471,7 +475,7 @@ Make sure that the following plugins have been activated:
 
 | PLUGIN                                                | TEST                                                                                                                                                                            |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                   
+| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request. |
 | CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.         |
 | OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.       |
 | CartByRestCheckoutDataResourceRelationshipPlugin      | Check if you get cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request.        |
@@ -484,6 +488,7 @@ Make sure that the following plugins have been activated:
 To make sure that `OrderPaymentsResourceRoutePlugin` has been activated, check if you get a valid response by sending the following request:
 
 `POST https://glue.mysprykershop.com/order-payments`
+
 ```json
 {
     "data": {
@@ -505,6 +510,7 @@ Make sure `CartByRestCheckoutDataResourceRelationshipPlugin` has been activated:
 1. Send the request:
 
 `POST https://glue.mysprykershop.com/checkout-data?include=carts`
+
 ```json
 {
   "data": {
@@ -658,9 +664,9 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-* To make sure `CustomerQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
+- To make sure `CustomerQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
 
-* To make sure `AddressQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
+- To make sure `AddressQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
 
 {% endinfo_block %}
 
@@ -963,7 +969,7 @@ Activate the following plugins:
 
 {% info_block warningBox "Verification" %}
 
-* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid billing address country code. Make sure the following error is returned:
+- Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid billing address country code. Make sure the following error is returned:
 
 ```json
 {
@@ -977,7 +983,7 @@ Activate the following plugins:
 }
 ```
 
-* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid shipping address country code. Make sure the following error is returned:
+- Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid shipping address country code. Make sure the following error is returned:
 
 ```json
 {

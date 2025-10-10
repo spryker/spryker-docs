@@ -20,7 +20,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -39,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied in transfer objects:
 
@@ -61,7 +61,7 @@ quick-order.upload-order.errors.upload-order-invalid-sku-item,Product with this 
 quick-order.upload-order.errors.upload-order-invalid-sku-item,Produkt mit dieser SKU wurde nicht gefunden.,de_DE
 price_product.error.price_not_found,Product price not found.,en_US
 price_product.error.price_not_found,Produktpreis nicht gefunden.,de_DE
-product_discontinued.message.product_discontinued,"Product is discontinued, please choose an alternative one.",en_US
+product_discontinued.message.product_discontinued,"Product is discontinued,  choose an alternative one.",en_US
 product_discontinued.message.product_discontinued,"Produkt ist nicht mehr verfügbar, bitte wählen Sie eine Alternative.",de_DE
 product-quantity.warning.quantity.min.failed,The ordered quantity was adjusted to the next possible quantity for the article because minimum quantity is %min%.,en_US
 product-quantity.warning.quantity.min.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Mindestanzahl ist %min%.,de_DE
@@ -71,7 +71,7 @@ product-quantity.warning.quantity.interval.failed,The ordered quantity was adjus
 product-quantity.warning.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
 
-Run the following command to import glossary changes:
+Import glossary changes:
 
 ```bash
 console data:import:glossary
@@ -119,7 +119,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
+Make the following checks at `https://mysprykershop.com/quick-order` : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
 
 {% endinfo_block %}
 
@@ -144,7 +144,7 @@ Install the required modules using Composer:
 composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -227,7 +227,7 @@ quick-order.input-quantity.message.error,Die bestellte Anzahl wurde auf die näc
 quick-order.input-quantity.message.error,The ordered quantity was adjusted to the next possible quantity for the article.,en_US
 ```
 
-Run the following command to import glossary changes:
+Import glossary changes:
 
 ```bash
 console data:import:glossary
@@ -273,13 +273,13 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following URLs are available on Yves:
 
-* `https://mysprykershop.com/quick-order`
-* `https://mysprykershop.com/en/quick-order`
-* `https://mysprykershop.com/de/quick-order`
+- `https://mysprykershop.com/quick-order`
+- `https://mysprykershop.com/en/quick-order`
+- `https://mysprykershop.com/de/quick-order`
 
 ... and for all other configured languages.
 
@@ -343,13 +343,13 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
-Make the following checks at https://mysprykershop.com/quick-order:
+Make the following checks at `https://mysprykershop.com/quick-order`:
 
-* `QuickOrderCsvFileTemplateStrategyPlugin` provides a template for CSV file uploading. Check if the link for CSV file template is displayed on the Quick Add To Cart page.
-* `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
-* `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
+- `QuickOrderCsvFileTemplateStrategyPlugin` provides a template for CSV file uploading. Check if the link for CSV file template is displayed on the Quick Add To Cart page.
+- `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
+- `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
 
 {% endinfo_block %}
 

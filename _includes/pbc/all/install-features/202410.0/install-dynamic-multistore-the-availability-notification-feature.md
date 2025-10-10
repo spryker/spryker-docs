@@ -14,7 +14,7 @@ Install the required features:
 
 ### Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION  | SPECIFICATION | NAMESPACE | COMMENTS |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ To verify the email links are correct, make sure that the following configuratio
 1. Add a new product and make it unavailable.
 2. As a customer, subscribe to the product's availability notifications on the Storefront.
 3. Make the product available.
-4. In your mailbox, open the email about the product’s availability.
+4. In your mailbox, open the email about the product's availability.
 5. Check if the link to the product opens the correct Product Details page.
     The link should have the correct hostname.
 

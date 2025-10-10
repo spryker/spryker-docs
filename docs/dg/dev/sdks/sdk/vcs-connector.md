@@ -1,6 +1,6 @@
 ---
 title: VCS connector
-description: The VCS connector feature for the Spryker SDK.
+description: A quick guide to learn everyting you need to know about the VCS connector feature for the Spryker SDK.
 template: concept-topic-template
 redirect_from:
 - /docs/sdk/dev/vcs.html
@@ -12,6 +12,7 @@ VCS connector lets you use a different VCS system with a single command interfac
 To run a VCS, do the following:
 
 1. Run a task:
+
 ```shell
 spryker-sdk vcs:clone
 ```

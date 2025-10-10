@@ -246,6 +246,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 #### Set up event listeners
@@ -475,15 +476,15 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 Make sure that after setting up the event listeners, the following commands do the following:
 
-* `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
-* `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
+- `console sync:data product_concrete_product_offers` exports data from the `spy_product_concrete_product_offers_storage` table to Redis.
+- `console sync:data product_offer` exports data from the `spy_product_offer_storage` table to Redis.
 
 Make sure that when the following entities get updated through the ORM, the corresponding Redis keys have the correct values.
 
 | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER                | EXAMPLE EXPECTED DATA FRAGMENT                                                                           |
 |---------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| ProductOffer  | kv:product_offer:offer2                         | {“id_product_offer”:1,“id_merchant”:6,“product_offer_reference”:“offer1",“merchant_sku”:“GS952M00H-Q11"} |
-| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | [“offer3”,“offer4"]                                                                                      |
+| ProductOffer  | kv:product_offer:offer2                         | {"id_product_offer":1,"id_merchant":6,"product_offer_reference":"offer1","merchant_sku":"GS952M00H-Q11"} |
+| ProductOffer  | kv:product_concrete_product_offers:093_24495843 | ["offer3","offer4"]                                                                                      |
 
 {% endinfo_block %}
 
@@ -630,6 +631,7 @@ offer416,112_306918001,MER000002,,1,approved
 offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
+
 </details>
 
 | COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE  | DATA EXPLANATION                                                                                                                                                                                                                                                                                                                                                      |
@@ -1030,6 +1032,7 @@ offer416,AT
 offer417,AT
 offer418,AT
 ```
+
 </details>
 
 | COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                      |
@@ -1039,7 +1042,7 @@ offer418,AT
 
 **data/import/common/common/marketplace/product_offer_validity.csv**
 
-```
+```csv
 product_offer_reference,valid_from,valid_to
 offer1,,2020-01-20 00:00:00.000000
 offer2,,2020-01-20 00:00:00.000000
@@ -1148,8 +1151,8 @@ console data:import product-offer-validity
 {% info_block warningBox "Verification" %}
 
 Make sure the following is true:
-* The product offer data is attached to Merchants in `spy_product_offer` and to Stores in `spy_product_offer_store`.
-* The product offer validity data is imported to `spy_product_offer_validity` correctly.
+- The product offer data is attached to Merchants in `spy_product_offer` and to Stores in `spy_product_offer_store`.
+- The product offer validity data is imported to `spy_product_offer_validity` correctly.
 
 {% endinfo_block %}
 
@@ -1326,6 +1329,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 }
 ```
+
 </details>
 
 <details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
@@ -1388,6 +1392,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
@@ -1485,6 +1490,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1566,11 +1572,11 @@ class ProductOfferShipmentTypeStorageDependencyProvider extends SprykerProductOf
 {% info_block warningBox "Verification" %}
 
 Make sure that the following is true:
-* The default product offer is given when retrieving product concrete data.
-* The validity data is saved when saving a product offer.
-* Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
-* The merchant column is in the Product Offers list, in `ProductOfferGui`.
-* The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
+- The default product offer is given when retrieving product concrete data.
+- The validity data is saved when saving a product offer.
+- Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
+- The merchant column is in the Product Offers list, in `ProductOfferGui`.
+- The console command invalidates expired product offers and reactivates product offers that are within their validity dates.
 
 When a merchant gets updated or published, or when a product offer gets published, created, or updated, the corresponding product abstracts get updated in the catalog search pages.
 
@@ -1651,7 +1657,7 @@ Verify that the following modules have been installed:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US

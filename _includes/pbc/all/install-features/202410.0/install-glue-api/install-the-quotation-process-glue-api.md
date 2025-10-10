@@ -111,6 +111,7 @@ Check that resources specified in `AgentAuthRestApiConfig::getAgentResources()` 
 
 
 ### 3) Set up transfer objects
+
 Generate transfers:
 
 ```bash
@@ -148,7 +149,7 @@ Add translations as follows:
 
 1. Append glossary for the feature:
 
-```
+```csv
 quote_request.validation.error.is_not_applicable,Quote request is not applicable for the given quote.,en_US
 quote_request.validation.error.is_not_applicable,Die Angebotsanfrage gilt nicht für das angegebene Angebot.,de_DE
 quote_request.validation.error.cart_is_empty,The cart is empty.,en_US
@@ -173,13 +174,13 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN     | SPECIFICATION  | PREREQUISITES | NAMESPACE     |
 |------------------|--------------------|---------------|-------------------------------|
-| QuoteRequestAgentCancelResourceRoutePlugin      | Registers the `agent-quote-request-cancel` resource.   | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
-| QuoteRequestAgentReviseResourceRoutePlugin     | Registers the `agent-quote-request-revise` resource.     | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
-| QuoteRequestAgentSendResourceRoutePlugin    | Registers the `agent-quote-request-send-to-customer` resource.  | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
-| QuoteRequestAgentsResourceRoutePlugin    | Registers the `agent-quote-requests` resource.    | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
-| QuoteRequestCancelResourceRoutePlugin   | Registers the `quote-request-cancel` resource.  | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication     |
-| QuoteRequestReviseResourceRoutePlugin     | Registers the `quote-request-revise` resource.   | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication  |
-| QuoteRequestSendResourceRoutePlugin    | Registers the `quote-request-send-to-customer` resource.   | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication   |
+| QuoteRequestAgentCancelResourceRoutePlugin      | Registers the `agent-quote-request-cancel` resource.   | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
+| QuoteRequestAgentReviseResourceRoutePlugin     | Registers the `agent-quote-request-revise` resource.     | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
+| QuoteRequestAgentSendResourceRoutePlugin    | Registers the `agent-quote-request-send-to-customer` resource.  | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication    |
+| QuoteRequestAgentsResourceRoutePlugin    | Registers the `agent-quote-requests` resource.    | | Spryker\Glue\QuoteRequestAgentsRestApi\Plugin\GlueApplication  |
+| QuoteRequestCancelResourceRoutePlugin   | Registers the `quote-request-cancel` resource.  | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication     |
+| QuoteRequestReviseResourceRoutePlugin     | Registers the `quote-request-revise` resource.   | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication  |
+| QuoteRequestSendResourceRoutePlugin    | Registers the `quote-request-send-to-customer` resource.   | | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication   |
 | QuoteRequestsResourceRoutePlugin    | Registers the `quote-requests` resource.                                                            |               | Spryker\Glue\QuoteRequestsRestApi\Plugin\GlueApplication    |
 | CompanyUserByQuoteRequestResourceRelationshipPlugin    | Adds the `company-users` resource as relationship to the `quote-request` resource.    |               | Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication    |
 | CompanyByQuoteRequestResourceRelationshipPlugin               | Adds the `companies` resource as relationship to the `quote-request` resource.    |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication      |
@@ -277,6 +278,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Glue/QuoteRequestsRestApi/QuoteRequestsRestApiDependencyProvider.php**
@@ -315,9 +317,9 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
 
 {% info_block warningBox "Verification" %}
 
-* To verify that the `QuoteRequestsResourceRoutePlugin` resource route plugin and `CompanyUserByQuoteRequestResourceRelationshipPlugin`, `CompanyByQuoteRequestResourceRelationshipPlugin`, `CompanyBusinessUnitByQuoteRequestResourceRelationshipPlugin`, `CustomerByQuoteRequestResourceRelationshipPlugin` and `ConcreteProductByQuoteRequestResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests?include=company-users,companies,company-business-units,customer,concrete-products` endpoint is available for authenticated company user.
+- To verify that the `QuoteRequestsResourceRoutePlugin` resource route plugin and `CompanyUserByQuoteRequestResourceRelationshipPlugin`, `CompanyByQuoteRequestResourceRelationshipPlugin`, `CompanyBusinessUnitByQuoteRequestResourceRelationshipPlugin`, `CustomerByQuoteRequestResourceRelationshipPlugin` and `ConcreteProductByQuoteRequestResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests?include=company-users,companies,company-business-units,customer,concrete-products` endpoint is available for authenticated company user.
 
-* To verify that `ProductOptionsRestQuoteRequestAttributesExpanderPlugin`, `SalesUnitRestQuoteRequestAttributesExpanderPlugin`, `ConfiguredBundleRestQuoteRequestAttributesExpanderPlugin`, `ShipmentsRestQuoteRequestAttributesExpanderPlugin`, `MerchantProductOffersRestQuoteRequestAttributesExpanderPlugin` and `DiscountsRestQuoteRequestAttributesExpanderPlugin` plugins are set up correctly, make sure that the following properties are present in the response body and contain correct data:
+- To verify that `ProductOptionsRestQuoteRequestAttributesExpanderPlugin`, `SalesUnitRestQuoteRequestAttributesExpanderPlugin`, `ConfiguredBundleRestQuoteRequestAttributesExpanderPlugin`, `ShipmentsRestQuoteRequestAttributesExpanderPlugin`, `MerchantProductOffersRestQuoteRequestAttributesExpanderPlugin` and `DiscountsRestQuoteRequestAttributesExpanderPlugin` plugins are set up correctly, make sure that the following properties are present in the response body and contain correct data:
   - data[].attributes.shownVersion.cart.items[].productOfferReference
   - data[].attributes.shownVersion.cart.items[].merchantReference
   - data[].attributes.shownVersion.cart.items[].configuredBundle
@@ -722,7 +724,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
           "reviewCount": 0,
           "productAbstractSku": "118",
           "name": "Fujitsu ESPRIMO E420",
-          "description": "Energy Efficiency As energy saving is one of the core components of Fujitsu’ approach to the environment, we permanently try to improve the energy efficiency of our products. The Fujitsu ESPRIMO E420 features proven technology regarding Intel® chipset and processor and an 85% energy efficient power supply. Fujitsu is committed to eliminating the use of harmful and potentially harmful substances in its products and production processes in order to minimize risk to end users and to the environment. This strategy is captured in Environmental Guideline FTS03230 and forms the basis on which all Fujitsu's products are designed. Especially for Fujitsu ESPRIMO PCs this means that all used printed circuit boards are halogen free. Furthermore they are compliant with several certificates awarding environmental conscience such as ENERGY STAR® and EPEAT.",
+          "description": "Energy Efficiency As energy saving is one of the core components of Fujitsu' approach to the environment, we permanently try to improve the energy efficiency of our products. The Fujitsu ESPRIMO E420 features proven technology regarding Intel® chipset and processor and an 85% energy efficient power supply. Fujitsu is committed to eliminating the use of harmful and potentially harmful substances in its products and production processes in order to minimize risk to end users and to the environment. This strategy is captured in Environmental Guideline FTS03230 and forms the basis on which all Fujitsu's products are designed. Especially for Fujitsu ESPRIMO PCs this means that all used printed circuit boards are halogen free. Furthermore they are compliant with several certificates awarding environmental conscience such as ENERGY STAR® and EPEAT.",
           "attributes": {
             "processor_cache": "6 MB",
             "bus_type": "DMI",
@@ -737,7 +739,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
           ],
           "metaTitle": "Fujitsu ESPRIMO E420",
           "metaKeywords": "Fujitsu,Tax Exempt",
-          "metaDescription": "Energy Efficiency As energy saving is one of the core components of Fujitsu’ approach to the environment, we permanently try to improve the energy efficien",
+          "metaDescription": "Energy Efficiency As energy saving is one of the core components of Fujitsu' approach to the environment, we permanently try to improve the energy efficien",
           "attributeNames": {
             "processor_cache": "Processor cache type",
             "bus_type": "Bus type",
@@ -763,7 +765,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
           "reviewCount": 0,
           "productAbstractSku": "124",
           "name": "HP ProDesk 400 G3",
-          "description": "New powerful processors Give your business the strong foundation it needs for growth with the affordable and reliable HP ProDesk 400 SFF. Designed with essential security and manageability features, the HP ProDesk 400 helps keep your business growing. New 6th Gen Intel® Core™ processors bring powerful processing with Intel® HD 530 Graphics. Available DDR4 memory helps meet the demands of today’s businesses. HP ProDesks are rigorously tested to help ensure reliability. During the HP Total Test Process, PCs experience 120,000 hours of performance trials to help get you through your business day. The HP ProDesk 400 SFF helps affordably build a solid IT infrastructure for your growing business and fits in smaller workspaces for easy deployment.",
+          "description": "New powerful processors Give your business the strong foundation it needs for growth with the affordable and reliable HP ProDesk 400 SFF. Designed with essential security and manageability features, the HP ProDesk 400 helps keep your business growing. New sixth Gen Intel® Core™ processors bring powerful processing with Intel® HD 530 Graphics. Available DDR4 memory helps meet the demands of today's businesses. HP ProDesks are rigorously tested to help ensure reliability. During the HP Total Test Process, PCs experience 120,000 hours of performance trials to help get you through your business day. The HP ProDesk 400 SFF helps affordably build a solid IT infrastructure for your growing business and fits in smaller workspaces for easy deployment.",
           "attributes": {
             "processor_codename": "Skylake",
             "bus_type": "DMI3",
@@ -843,7 +845,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
           "reviewCount": 0,
           "productAbstractSku": "119",
           "name": "Fujitsu ESPRIMO E920",
-          "description": "Green IT Fujitsu is committed to eliminating the use of harmful and potentially harmful substances in its products and production processes in order to minimize risk to end users and to the environment. This strategy is captured in Environmental Guideline FTS03230 and forms the basis on which all Fujitsu's products are designed. Especially for Fujitsu ESPRIMO PCs this means that all used printed circuit boards are halogen free. Furthermore they are compliant with several certificates awarding environmental conscience such as ENERGY STAR® and EPEAT. As energy saving is one of the core components of Fujitsu’ approach to the environment, we permanently try to improve the energy efficiency of our products. The Fujitsu ESPRIMO E920 features latest technology regarding Intel® chipset and processor and optional an up to 94% energy efficient power supply. Furthermore it delivers enhanced power management settings and optional 0-Watt power consumption in off-mode.",
+          "description": "Green IT Fujitsu is committed to eliminating the use of harmful and potentially harmful substances in its products and production processes in order to minimize risk to end users and to the environment. This strategy is captured in Environmental Guideline FTS03230 and forms the basis on which all Fujitsu's products are designed. Especially for Fujitsu ESPRIMO PCs this means that all used printed circuit boards are halogen free. Furthermore they are compliant with several certificates awarding environmental conscience such as ENERGY STAR® and EPEAT. As energy saving is one of the core components of Fujitsu' approach to the environment, we permanently try to improve the energy efficiency of our products. The Fujitsu ESPRIMO E920 features latest technology regarding Intel® chipset and processor and optional an up to 94% energy efficient power supply. Furthermore it delivers enhanced power management settings and optional 0-Watt power consumption in off-mode.",
           "attributes": {
             "internal_memory": "32 GB",
             "intel_smart_cache": "yes",
@@ -1049,7 +1051,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
           "reviewCount": 0,
           "productAbstractSku": "129",
           "name": "Lenovo ThinkCenter E73",
-          "description": "Eco-friendly and Energy Efficient Lenovo Desktop Power Manager lets you balance power management and performance to save energy and lower costs. The E73 is also ENERGY STAR compliant, EPEAT® Gold and Cisco EnergyWise™ certified—so you can feel good about the planet and your bottom line. With SuperSpeed USB 3.0, transfer data up to 10 times faster than previous USB technologies. You can also connect to audio- and video-related devices with WiFi and Bluetooth® technology. With 10% more processing power, 4th generation Intel® Core™ processors deliver the performance to increase business productivity for your business. They can also guard against identity theft and ensure safe access to your network with built-in security features.",
+          "description": "Eco-friendly and Energy Efficient Lenovo Desktop Power Manager lets you balance power management and performance to save energy and lower costs. The E73 is also ENERGY STAR compliant, EPEAT® Gold and Cisco EnergyWise™ certified—so you can feel good about the planet and your bottom line. With SuperSpeed USB 3.0, transfer data up to 10 times faster than previous USB technologies. You can also connect to audio- and video-related devices with WiFi and Bluetooth® technology. With 10% more processing power, fourth generation Intel® Core™ processors deliver the performance to increase business productivity for your business. They can also guard against identity theft and ensure safe access to your network with built-in security features.",
           "attributes": {
             "processor_threads": "8",
             "processor_cores": "4",
@@ -1122,16 +1124,17 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
     ]
   }
   ```
+
   </details>
 
 
-* To verify that the `QuoteRequestCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-cancel` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-cancel` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-revise` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-revise` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-send-to-customer` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-requests/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-request-send-to-customer` endpoint is available for an authenticated company user.
 
-* To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
+- To verify that the `QuoteRequestAgentsResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents` endpoint is available for authenticated agent.
 
   <details>
   <summary>Example</summary>
@@ -1347,12 +1350,13 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
       }
   }
   ```
+
   </details>
 
-* To verify that the `QuoteRequestAgentCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
+- To verify that the `QuoteRequestAgentCancelResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
 
-* To verify that the `QuoteRequestAgentReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
+- To verify that the `QuoteRequestAgentReviseResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated agent.
 
-* To verify that the `QuoteRequestAgentSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated company user.
+- To verify that the `QuoteRequestAgentSendResourceRoutePlugin` resource route plugin is set up correctly, make sure that the `https://glue.mysprykershop.com/quote-request-agents/{% raw %}{{{% endraw %}quote_request_id{% raw %}}}{% endraw %}/quote-agent-request-cancel` endpoint is available for an authenticated company user.
 
 {% endinfo_block %}

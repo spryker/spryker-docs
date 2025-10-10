@@ -15,7 +15,7 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-image-sets-rest-api:"^1.0.3" --update-with-dependencies
@@ -27,7 +27,7 @@ Make sure that the following module is installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| ProductImageSetsRestApi | vendor/spryker/product-image-sets-rest-api |       
+| ProductImageSetsRestApi | vendor/spryker/product-image-sets-rest-api |
 
 {% endinfo_block %}
 
@@ -52,6 +52,7 @@ Make sure that the following changes are present in the transfer objects:
 {% endinfo_block %}
 
 ## 3) Set up behavior
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -114,8 +115,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://mysprykershop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
-* `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`
+- `http://mysprykershop.com//abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
+- `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`
 
 {% endinfo_block %}
 

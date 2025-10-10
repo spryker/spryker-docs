@@ -1,6 +1,6 @@
 ---
 title: Configure debugging
-description: Learn how to configure debugging in Docker.
+description: Learn how you can configure debugging in Docker for your Local environment Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-debugging-in-docker
@@ -168,9 +168,9 @@ If you set unlimited timeout, this affects all Zed requests, not only debugging 
 
 There are several ways to switch to the debugging mode:
 
-* To debug a web application, pass the `XDEBUG_SESSION` cookie with a string value. If you are using the Xdebug helper browser extension, in the extension menu, select **debug**.
-* To run all applications in the debugging mode, run `docker/sdk {run|start|up} -x`.
-* To debug a console command in cli, run it with the `-x` option.
+- To debug a web application, pass the `XDEBUG_SESSION` cookie with a string value. If you are using the Xdebug helper browser extension, in the extension menu, select **debug**.
+- To run all applications in the debugging mode, run `docker/sdk {run|start|up} -x`.
+- To debug a console command in cli, run it with the `-x` option.
 
 ## Debugging with Xdebug
 
@@ -196,12 +196,13 @@ To debug a console command or a test in a debugging mode, run it with the `-x` o
 
 Find several examples below:
 
-* `docker/sdk cli -x`
-* `docker/sdk cli -x console queue:worker:start`
-* `docker/sdk console -x queue:worker:start`
-* `docker/sdk testing -x codecept run -codeception.yml`
+- `docker/sdk cli -x`
+- `docker/sdk cli -x console queue:worker:start`
+- `docker/sdk console -x queue:worker:start`
+- `docker/sdk testing -x codecept run -codeception.yml`
 
 The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) command requires the `PHPMD_ALLOW_XDEBUG` env variable for debug mode:
+
 ```bash
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
@@ -212,7 +213,8 @@ PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 Issue: Receiving no connection in PhpStorm or similar
 
 In rare cases, docker containers running in the debug mode stop XDebug connections after waking computer from the sleep mode.
-So if you don't get a banner "Debug session was finished without being paused", run the following command:
+So if you don't get a banner "Debug session was finished without being paused", restart the containers:
+
 ```bash
 docker/sdk stop && docker/sdk run -x
 ```

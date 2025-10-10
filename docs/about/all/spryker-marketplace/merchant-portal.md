@@ -48,6 +48,7 @@ Merchant Portal tables are adjustable. You can configure the table to display on
 
 
 ### Table filters
+
 In addition to the convenient view, tables in the Merchant Portal have handy filter view options. They let you find the relevant data much faster.
 
 

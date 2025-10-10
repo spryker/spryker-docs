@@ -1,6 +1,6 @@
 ---
 title: Spryker security checker
-description: Reference information for evaluator tools.
+description: Learn how the Spryker security checker and how it checks if security fixes exist for modules present within your spryker projects.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:
@@ -43,10 +43,13 @@ Your `composer.lock` file contains package versions that have security issues:
 ````
 
 ## Resolve the error
+
 To resolve the error, upgrade the package to a version where the vulnerability issue is fixed.
 
 ## Run only this checker
+
 To run only this checker, include `SPRYKER_SECURITY_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=SPRYKER_SECURITY_CHECKER
 ```

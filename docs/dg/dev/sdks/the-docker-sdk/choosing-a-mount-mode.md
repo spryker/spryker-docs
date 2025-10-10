@@ -1,6 +1,6 @@
 ---
 title: Choosing a mount mode
-description: Learn about supported mount modes and how to choose one.
+description: Learn about supported mount modes and how to choose one depending of your operating system for your Spryker Project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-mount-mode
@@ -46,28 +46,28 @@ Depending on your operating system (OS), choose one of the mount modes in the ta
 | mutagen      | ✔️      |                    |                         |                    |
 | docker-sync  | ✅      |                    | ✔️      |                    |
 
-* (✔️) - recommended solution
-* (✅) - supported solution
-* (☑️) - supported solution with very slow performance
+- (✔️) - recommended solution
+- (✅) - supported solution
+- (☑️) - supported solution with very slow performance
 
 ## Supported mount modes
 
 The Docker SDK supports the following mount modes:
 
-* baked
+- baked
 Copies source files into image, so they *cannot* be changed from host machine.
 The file or directory is referenced by its absolute path on the host machine.
 This mount mode is default for the Demo mode. It is not suitable for the application Development mode.
 
-* native
+- native
 Mounts source files directly from host machine into containers.
 Works perfectly with Linux and Windows (WSL2).
 
-* mutagen
+- mutagen
 Synchronizes source files between your host machine and a container in an effective real-time way that combines the performance of the rsync algorithm with bidirectionality and low-latency filesystem watching.
 This mount mode is stable with MacOS.
 
-* docker-sync
+- docker-sync
 Synchronizes source files from host machine into running containers.
 This mount mode is stable with MacOS and Windows (WSL1).
 
@@ -117,17 +117,17 @@ Synchronization mount modes, such as mutagen or docker-sync, use algorithms to s
 - The daemon and the sidecar interact and update files on each side.
 - Applications work with the docker volume directly, which is almost equal to a direct file system access.
 
-### What should I keep in mind when using synchronization mount modes?
+### Things to keep in mind when using synchronization mount modes
 
 Keep the following in mind:
 
-* When you change one or more files, it may take several seconds to synchronize them.
-* When performing big file operations, like `git checkout` or `composer install`, make sure to wait for synchronization by looking at the synchronization status.
-* To check synchronization session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
-* When you finish working, make sure to terminate the synchronization session by running `docker/sdk down`.
+- When you change one or more files, it may take several seconds to synchronize them.
+- When performing big file operations, like `git checkout` or `composer install`, make sure to wait for synchronization by looking at the synchronization status.
+- To check synchronization session status, use `docker/sdk sync logs`. It works for mutagen and docker-sync.
+- When you finish working, make sure to terminate the synchronization session by running `docker/sdk down`.
 
 ## See also
 
-* [Manage data in Docker](https://docs.docker.com/storage/)
-* [Mutagen documentation](https://mutagen.io/documentation/introduction)
-* [Docker-sync documentation](https://docker-sync.readthedocs.io/)
+- [Manage data in Docker](https://docs.docker.com/storage/)
+- [Mutagen documentation](https://mutagen.io/documentation/introduction)
+- [Docker-sync documentation](https://docker-sync.readthedocs.io/)

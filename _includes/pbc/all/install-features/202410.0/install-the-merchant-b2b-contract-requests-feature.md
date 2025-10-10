@@ -159,7 +159,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 console data:import stock
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the defined picking list strategies have been imported to the `spy_stock` database table.
 
@@ -320,7 +320,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. Log in as a company admin.
-2. Go to `https://www.mysprykershop.com/en/company/company-role.
+2. Go to `https://www.mysprykershop.com/en/company/company-role`.
 3. Click **Edit** next to a role.
     Make sure you can assign the **Send Merchant Relation Request** permission.
 

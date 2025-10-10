@@ -12,12 +12,12 @@ related:
 This document describes how to extend the audit log structure with additional data. As an example, a business unit of a logged-in customer for the `Yves` application will be added.
 
 There are two primary methods to extend data in audit logs:
-* Introduce processor plugins: When registered for an audit log type and application, plugins will be executed on each request to try to extend the log data. For more information, see [Add audit log types](/docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html).
-* Pass the data to a specific log context: You can pass additional data directly to a needed log context, providing flexibility for different logging scenarios.
+- Introduce processor plugins: When registered for an audit log type and application, plugins will be executed on each request to try to extend the log data. For more information, see [Add audit log types](/docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html).
+- Pass the data to a specific log context: You can pass additional data directly to a needed log context, providing flexibility for different logging scenarios.
 
 ## Prerequisites
 
-[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202410.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 ## Extend the audit log structure by introducing processor plugins
@@ -216,6 +216,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     }
 }
 ```
+
 Now when you log in as a customer with a business unit, the corresponding business unit name will be added to the log data.
 
 ## Extend the audit log structure by pass the data to the specific log context

@@ -90,7 +90,7 @@ Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
-```
+```csv
 shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
 shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
 shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
@@ -175,7 +175,7 @@ Prepare import data according to your requirements using demo data:
 
 **data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
 
-```
+```csv
 shopping_list_item_key,product_offer_reference
 shopping-list-item-key-38,offer2
 shopping-list-item-key-39,offer402
@@ -342,7 +342,7 @@ Make sure the following widgets were registered:
 | MODULE | TEST  |
 | ----------------- |---------------|
 | ShoppingListMerchantWidget       | Go to the product page. Add concrete product to the shopping list, then login to the admin page. Find a merchant that owns a concrete product and change its state. Refresh shopping list page - item will change its status to 'Currently not available.'    |
-| ShoppingListProductOfferWidget       | Go to the product page containing product offers. Select a product offer, e.g., `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. Change offer availability. Refresh shopping list page - item will change its status to 'Currently not available.'  |
+| ShoppingListProductOfferWidget       | Go to the product page containing product offers. Select a product offer. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. Change offer availability. Refresh shopping list page - item will change its status to 'Currently not available.'  |
 | ProductOfferShoppingListWidget       | Go to the product page and verify that the merchants' product offers are displayed and items are added to the shopping list with correct merchant names.   |
 
 {% endinfo_block %}
@@ -491,9 +491,9 @@ Make sure that the following plugins were registered:
 
 | MODULE | TEST  |
 | ----------------- |-----------------|
-| ProductOfferShoppingListAddItemPreCheckPlugin       | Go to a product page containing product offers. Select a product offer, e.g. `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer validation is enabled. The following cases may be checked: <ol><li>Offer is not found.</li><li>Product offer does not belong to current store.</li><li>The product offer is not active.</li><li>The product offer is not approved.</li></ol> |
+| ProductOfferShoppingListAddItemPreCheckPlugin       | Go to a product page containing product offers. Select a product offer. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer validation is enabled. The following cases may be checked: <ol><li>Offer is not found.</li><li>Product offer does not belong to current store.</li><li>The product offer is not active.</li><li>The product offer is not approved.</li></ol> |
 | ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin       | Go to the product page and select a concrete product. Then open another tab and log into the Back Office. Find a concrete product selected on PDP by a concrete SKU. Uncheck the current store option on the product edit page. Press "Add to shopping list" on the PDP tab to check that the product store validation is enabled. An error message will appear.     |
-| MerchantProductOfferAddItemPreCheckPlugin       | Go to the product page containing product offers. Select a product offer, e.g. `offer96`. Then open another tab and log into the Back office, and find the merchant who owns the previously selected product offer, in our case `michele@sony-experts.com`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer merchant validation is enabled. The following cases may be checked: <ol><li>The merchant of the product offer is not active</li><li>The merchant of the product offer is not approved</li></ol>  |
+| MerchantProductOfferAddItemPreCheckPlugin       | Go to the product page containing product offers. Select a product offer. Then open another tab and log into the Back office, and find the merchant who owns the previously selected product offer, in our case `michele@sony-experts.com`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer merchant validation is enabled. The following cases may be checked: <ol><li>The merchant of the product offer is not active</li><li>The merchant of the product offer is not approved</li></ol>  |
 | MerchantProductAddItemPreCheckPlugin       | Go to the product page and select a concrete product. Then open another tab and log into the admin page. Find the merchant that owns the concrete product and change its state. Press "Add to shopping list" on the PDP tab to check that product merchant status validation is enabled. The following cases may be checked: <ol><li>The merchant that owns the product is not active</li><li>The merchant that owns the product is not approved. </li></ol>|
 | MerchantProductOfferShoppingListItemCollectionExpanderPlugin       | Go to the product page, select the merchant product offer, and add it to the shopping list. Open the shopping list and ensure the "Sold By" field shows the merchant that owns the corresponding product offer. |
 | MerchantProductShoppingListItemCollectionExpanderPlugin       | Go to the product page, select a marketplace product, and add it to the shopping list. Open the shopping list, and ensure that the "Sold By" field shows the merchant that owns the product.  |

@@ -339,6 +339,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
+
 </details>
 
 <details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
@@ -354,6 +355,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
+
 </details>
 
 <details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
@@ -366,6 +368,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
+
 </details>
 
 <details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
@@ -381,6 +384,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
   }
 }
 ```
+
 </details>
 
 
@@ -610,6 +614,7 @@ class ContentGuiDependencyProvider extends SprykerContentGuiDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -672,6 +677,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -710,6 +716,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 }
 
 ```
+
 </details>
 
 
@@ -800,7 +807,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you’ve configured the content items:
+Make sure that you've configured the content items:
 
 1. Add a content item to a CMS block or page.
 

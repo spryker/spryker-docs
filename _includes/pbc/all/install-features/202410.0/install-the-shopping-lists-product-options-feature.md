@@ -13,10 +13,12 @@ To start feature integration, review ad install the necessary features.
 
 ### 1) Install the required modules by bsing Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
+
 ```bash
 composer require spryker-feature/shopping-list-product-option-connector:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Verify that the following modules were installed:
@@ -67,12 +69,12 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 |ShoppingListItemProductOptionRequestMapperPlugin|Provides the ability to map product options from request parameters to `ShoppingListItemTransfer`.|None|Spryker\Client\ShoppingListProductOptionConnector\ShoppingList|
-|ProductOptionQuoteItemToItemMapperPlugin|Provides the ability to map an item product option to a shopping list item product option when transferring items from a shopping list to a cart.|None|                    |Spryker\Client\ShoppingListProductOptionConnector\ShoppingListShoppingListItem|
+| ProductOptionQuoteItemToItemMapperPlugin |Provides the ability to map an item product option to a shopping list item product option when transferring items from a shopping list to a cart. | None |Spryker\Client\ShoppingListProductOptionConnector\ShoppingListShoppingListItem|
 |ProductOptionToItemProductOptionMapperPlugin|Provides the ability to map a shopping list item product option to an item product option when transferring items from a shopping list to a cart.|None|Spryker\Client\ShoppingListProductOptionConnector\ShoppingList|
 
 **src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
 
-```php    
+```php
 <?php
 
 namespace Pyz\Client\ShoppingList;
@@ -132,7 +134,7 @@ Make sure that when creating a cart from a shopping list, the product options ar
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
@@ -178,7 +180,7 @@ Enable the following behaviors by registering the plugins:
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\ShoppingListPage;
@@ -220,7 +222,7 @@ Make sure that items with product options attached to them  have the drop-down m
 
 ### 3) Set up widgets
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```yaml
 console frontend:yves:build

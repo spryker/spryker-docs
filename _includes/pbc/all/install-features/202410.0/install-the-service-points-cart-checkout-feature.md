@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME                | VERSION           | INSTALLATION GUIDE                                                                                                                                                          |
 |---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
+| Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
 | Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                                               |
 
 ## 1) Install the required modules
@@ -75,7 +75,7 @@ Make sure the following changes have been applied in transfer objects:
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\CheckoutPage;
@@ -111,7 +111,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ServicePointCart;

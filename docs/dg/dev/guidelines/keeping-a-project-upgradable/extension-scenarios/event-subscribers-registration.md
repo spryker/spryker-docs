@@ -1,15 +1,15 @@
 ---
 title: Event subscribers' registration
-description: Extension scenario for the registration of event subscribers
+description: Learn about extension scenario for the registration of event subscribers for your Spryker based projects.
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
   - title: Keeping a project upgradable
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
   - title: Modules configuration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
@@ -39,6 +39,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     }
 }
 ```
+
 Manifests fully support the registration of event subscribers in the collection. Restrictions to the order of the plugins in collection are *not supported*. New plugin is added to the end of the collection.
 
 The following is an example of how to register event subscribers in collection with a chain of method calls in a dependency provider:

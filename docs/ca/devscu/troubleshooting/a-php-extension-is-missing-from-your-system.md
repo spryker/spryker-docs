@@ -13,55 +13,55 @@ Spryker Code Upgrader supports the most common PHP extensions. If your applicati
 
 By default Spryker Code Upgrader supports the following PHP extensions:
 
-* apcu
-* bcmath
-* bz2
-* ctype
-* curl
-* date
-* dom
-* fileinfo
-* filter
-* ftp
-* gd
-* gmp
-* hash
-* iconv
-* intl
-* json
-* libxml
-* mbstring
-* mysqli
-* mysqlnd
-* newrelic
-* openssl
-* pcntl
-* pcre
-* pdo
-* pdo_mysql
-* pdo_pgsql
-* pdo_sqlite
-* pgsql
-* phar
-* posix
-* readline
-* redis
-* reflection
-* session
-* simplexml
-* soap
-* sockets
-* sodium
-* spl
-* sqlite3
-* standard
-* tokenizer
-* xml
-* xmlreader
-* xmlwriter
-* xsl
-* zip
-* zlib
+- apcu
+- bcmath
+- bz2
+- ctype
+- curl
+- date
+- dom
+- fileinfo
+- filter
+- ftp
+- gd
+- gmp
+- hash
+- iconv
+- intl
+- json
+- libxml
+- mbstring
+- mysqli
+- mysqlnd
+- newrelic
+- openssl
+- pcntl
+- pcre
+- pdo
+- pdo_mysql
+- pdo_pgsql
+- pdo_sqlite
+- pgsql
+- phar
+- posix
+- readline
+- redis
+- reflection
+- session
+- simplexml
+- soap
+- sockets
+- sodium
+- spl
+- sqlite3
+- standard
+- tokenizer
+- xml
+- xmlreader
+- xmlwriter
+- xsl
+- zip
+- zlib
 
 ## Error
 
@@ -70,7 +70,7 @@ Your requirements could not be resolved to an installable set of packages.
 
   Problem 1
 
-    - <organisation_name>/<package_name> <package_version> requires ext-<extension_name> * -> it is missing from your system. Install or enable PHP\'s <extension_name> extension.
+    - <organisation_name>/<package_name> <package_version> requires ext-<extension_name> * -> it's missing from your system. Install or enable PHP\'s <extension_name> extension.
 
 You can also run `php --ini` in a terminal to see which files are used by PHP in CLI mode.
 
@@ -81,9 +81,9 @@ Installation failed, reverting ./composer.json and ./composer.lock to their orig
 
 ## Solution
 
-Request the missing extension to be added by [contacting us](https://spryker.force.com/support/s/). Make sure to include the name of the required extension and your project's name in the request.
+Request the missing extension to be added by [contacting us](https://support.spryker.com). Make sure to include the name of the required extension and your project's name in the request.
 
 ## Support for Spryker CI
 
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
+- For help with Spryker CI, [contact support](https://support.spryker.com).
+- To learn more about Buddy, see their [docs](https://buddy.works/docs).

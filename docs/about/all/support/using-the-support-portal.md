@@ -18,8 +18,8 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-* You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
-* Log in at the [support portal](https://support.spryker.com).
+- You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
+- Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases
 
@@ -36,10 +36,6 @@ Problems can be reports suspecting a bug or issues with the hosting services. To
 ### Ask a Question
 
 For any questions about Spryker. We want the knowledge about Spryker to be available to everyone. So, we'll provide you with a link to [Spryker Community](https://commercequest.space/) to ask your question there. If there are docs on the topic, we will provide a link to that.
-
-### Request help with Alumio
-
-Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
 
 ### Infrastructure Change Request and Access Management
 
@@ -77,9 +73,9 @@ Emergencies are reserved for problems that have significant business impact now 
 
 {% info_block warningBox "Plan your change requests and use the right request form" %}
 
-Due to verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
+Because of verification processes and role-based access control mechanisms, change requests take some time to process. Expect 3-5 days of processing time.
 
-Due to contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
+Because of contractual reasons, only customers can request new environments or access to environment monitoring, not partners.
 
 {% endinfo_block %}
 
@@ -94,27 +90,32 @@ When creating a case, or when there are meaningful updates to your case, like a 
 If you are managing multiple projects or have a high volume of cases and communication with us, knowing the structure of our notifications and receipts can help you prepare forwarding or labelling rules in your email client:
 
 
-* Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+- Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+
 ```bash
 Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
 ```
 
-* Change request confirmation emails are sent when you create a change request. Subject pattern:
+- Change request confirmation emails are sent when you create a change request. Subject pattern:
+
 ```bash
 Change Request Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
 ```
 
-* ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+- ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+
 ```bash
 Case ETA Update - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME}} - ETA: {ETA}. {TRACKING ID}
 ```
 
-* Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+- Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+
 ```bash
 Emergency {STATUS} - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} {TRACKING ID}
 ```
 
-* Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+- Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+
 ```bash
 Case Comment Notification - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS} {Tracking ID}
 ```

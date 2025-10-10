@@ -111,7 +111,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the `ProductOfferPricesResourceRoutePlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}/product-offer-prices`.
 
-Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-prices`. You should get `product-offers` with all product offer’s `product-offer-prices` as relationships.
+Make sure that the `ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/product-offers/{% raw %}{{offerReference}}{% endraw %}?include=product-offer-prices`. You should get `product-offers` with all product offer's `product-offer-prices` as relationships.
 
 {% endinfo_block %}
 
@@ -122,4 +122,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |---|---|---|
-| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Install the Marketplace Product Offer Prices + Wishlist Glue API ](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-wishlist-glue-api.html) |
+| Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Install the Marketplace Product Offer Prices + Wishlist Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-wishlist-glue-api.html) |

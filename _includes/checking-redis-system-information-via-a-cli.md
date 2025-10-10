@@ -1,4 +1,4 @@
-### Check Redis connection details
+### Check key-value storage connection details
 
 Check `SPRYKER_KEY_VALUE_STORE_PORT` and `SPRYKER_KEY_VALUE_STORE_HOST` values as follows:
 
@@ -6,9 +6,9 @@ Check `SPRYKER_KEY_VALUE_STORE_PORT` and `SPRYKER_KEY_VALUE_STORE_HOST` values a
 {% include checking-a-service-connection-configuration.md %}
 
 
-### Check Redis system information
+### Check key-value storage system information
 
-1. Connect to the desired environment’s VPN.
+1. Connect to the desired environment's VPN.
 
 2. Set the environment variables:
 
@@ -16,11 +16,13 @@ Check `SPRYKER_KEY_VALUE_STORE_PORT` and `SPRYKER_KEY_VALUE_STORE_HOST` values a
 SPRYKER_KEY_VALUE_STORE_HOST={VALUE_FROM_THE_CONNECTION_CONFIGURATION} SPRYKER_KEY_VALUE_STORE_PORT={VALUE_FROM_THE_CONNECTION_CONFIGURATION}
 ```
 
-4. Get Redis system information using one of the following commands:
-  * ```bash
+4. Get key-value storage system information using one of the following commands:
+
+- ```bash
     redis-cli -h ${SPRYKER_KEY_VALUE_STORE_HOST} -p ${SPRYKER_KEY_VALUE_STORE_PORT} INFO
     ```
-  * ```bash
+
+- ```bash
     (printf "INFO\r\n";) | nc ${SPRYKER_KEY_VALUE_STORE_HOST} ${SPRYKER_KEY_VALUE_STORE_PORT}
     ```
 

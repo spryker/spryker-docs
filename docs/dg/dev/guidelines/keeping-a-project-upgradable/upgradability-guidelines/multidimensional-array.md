@@ -1,6 +1,6 @@
 ---
 title: Multidimensional array
-description: Reference information for evaluator tools.
+description: Learn about the multidimensional array and how it checks that your Spryker project does not use deeply nested multidimensional arrays
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:
@@ -40,9 +40,9 @@ class ModuleDependencyProvider extends SprykerModuleDependencyProvider
     ...
     protected function getPlugins(): array
     {
-        return [ // 1st level
-            GlossaryStorageConfig::PUBLISH_TRANSLATION => [ // 2nd level
-                'delete' => [ // 3rd level. Only plugins registration should be on this nesting level
+        return [ // first level
+            GlossaryStorageConfig::PUBLISH_TRANSLATION => [ // second level
+                'delete' => [ // third level. Only plugins registration should be on this nesting level
                     new GlossaryKeyDeletePublisherPlugin(),
                 ],
                 'write' => [
@@ -61,7 +61,9 @@ Try to have simple configuration arrays. They shouldn't have more than two nesti
 
 
 ## Run only this checker
+
 To run only this checker, include `MULTIDIMENSIONAL_ARRAY_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=MULTIDIMENSIONAL_ARRAY_CHECKER
 ```

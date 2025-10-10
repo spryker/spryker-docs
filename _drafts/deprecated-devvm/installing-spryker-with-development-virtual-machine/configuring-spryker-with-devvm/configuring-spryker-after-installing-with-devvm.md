@@ -37,7 +37,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 ## Configuring Git
 
-If you want to commit from within the VM, it is recommended to set the right Git preferences:
+If you want to commit from within the VM, it's recommended to set the right Git preferences:
 
 ```bash
 git config --global user.email "your.email@domain.tld"
@@ -61,7 +61,7 @@ export VM_IP_PREFIX="10.10.0."
 
 For non-standard setups you have the option to disable shared folder with Spryker code.
 
-If you decide not to use shared folders feature, it’s your responsibility to get Spryker code into the `/data/shop/development/current` directory of your VM. For example, you can use a file synchronization utility like [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
+If you decide not to use shared folders feature, it's your responsibility to get Spryker code into the `/data/shop/development/current` directory of your VM. For example, you can use a file synchronization utility like [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
 
 ```bash
 export VM_SKIP_SF=1
@@ -77,7 +77,7 @@ export SPRYKER_REPOSITORY="git@github.com:spryker-shop/suite.git"
 
 {% info_block warningBox %}
 
-Before proceeding with the installation, please make sure you have your SSH public key in GitHub.
+Before proceeding with the installation,  make sure you have your SSH public key in GitHub.
 
 {% endinfo_block %}
 
@@ -110,7 +110,13 @@ A common Spryker Project is like a typical web project. There is the project lev
 
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.
 
-This configuration is not optimized for production environments!
+
+{% info_block warningBox %}
+
+This configuration is not optimized for production environments.
+
+{% endinfo_block %}
+
 
 ```bash
 sudo nano /etc/php7.2/fpm/php.ini

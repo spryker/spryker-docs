@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
 related:
   - title: How translations are managed
-    link: docs/pbc/all/miscellaneous/page.version/spryker-core-feature-overview/how-translations-are-managed.html
+    link: docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/how-translations-are-managed.html
   - title: Yves overview
     link: docs/dg/dev/backend-development/yves/yves.html
   - title: CLI entry point for Yves

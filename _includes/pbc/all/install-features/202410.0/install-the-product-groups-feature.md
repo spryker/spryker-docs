@@ -132,7 +132,7 @@ This step will publish tables on change (create, edit, delete) to the `spy_produ
 
 #### Set up Event Listeners
 
-Set up the following plugin(s):
+Set up the following plugins:
 
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -161,7 +161,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 #### Setup re-generate and re-sync features
 
-Set up the following plugin(s):
+Set up the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -320,7 +320,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 
-2. Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -330,9 +330,9 @@ console frontend:yves:build
 
 Make sure that `ProductGroupWidget` has been registered:
 
-1.     Open `http://mysprykershop.com/en/product-sets`.
-2.     Pick one of the product sets with more than one abstract product in it.
-3.     You can see the product card of every product in the product set.
+1. Open `http://mysprykershop.com/en/product-sets`.
+2. Pick one of the product sets with more than one abstract product in it.
+3. You can see the product card of every product in the product set.
 
 {% endinfo_block %}
 
@@ -340,9 +340,9 @@ Make sure that `ProductGroupWidget` has been registered:
 
 Make sure that `ProductGroupColorWidget` has been registered:
 
-1.     Open `http://mysprykershop.com/`.
-2.     Product cards on the homepage have circles showing the available colors.
-3.     Hovering over a color circle changes the abstract product image, title, rating, label, and the price.
+1. Open `http://mysprykershop.com/`.
+2. Product cards on the homepage have circles showing the available colors.
+3. Hovering over a color circle changes the abstract product image, title, rating, label, and the price.
 
 {% endinfo_block %}
 

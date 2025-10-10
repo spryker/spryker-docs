@@ -6,24 +6,24 @@
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
-| --- | --- |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
-| Non-splittable Products (optional) | {{page.version}} |
+| NAME |       REQUIRED |   VERSION |
+| --- | --- | --- |
+| Cart |       v        |      {{page.version}} |
+| Product | v       |{{page.version}} |
+| Non-splittable Products |              | {{page.version}} |
 
 ### 1) Check the installed modules
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| Cart | vendor/spryker/cart |
-| Product | vendor/spryker/product |
-| ProductQuantity (optional) | vendor/spryker/product-quantity |
-| ProductSearchWidget | vendor/spryker-shop/product-search-widget |
+| MODULE | REQUIRED | EXPECTED DIRECTORY |
+| --- | --- | --- |
+| Cart | v | vendor/spryker/cart |
+| Product | v | vendor/spryker/product |
+| ProductQuantity |    | vendor/spryker/product-quantity |
+| ProductSearchWidget |      | vendor/spryker-shop/product-search-widget |
 
 {% endinfo_block %}
 
@@ -35,7 +35,7 @@ Apply database changes and generate entity and transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes are present in the transfer objects:
 
@@ -120,7 +120,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following widgets were registered:
 

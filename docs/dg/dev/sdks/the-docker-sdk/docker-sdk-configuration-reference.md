@@ -1,6 +1,6 @@
 ---
 title: Docker SDK configuration reference
-description: Instructions for the most common configuration cases of the Docker SDK.
+description: A guide with instructions for the most common configuration cases of the Docker SDK for Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-configuration-reference
@@ -89,6 +89,7 @@ The environment variables defined in `environment:` are embedded into all applic
 To increase maximum upload size, update `deploy.*.yml` as follows:
 
 1. In Nginx configuration, update maximum request body size:
+
 ```yaml
 ...
 		applications:

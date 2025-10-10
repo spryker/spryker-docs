@@ -452,15 +452,15 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the product configuration trigger plugin works correctly:
-1.  Fill the `spy_product_configuration` table with some data.
-2.  Run the `console publish:trigger-events -r product_configuration` command.
-3.  Make sure that the `spy_product_configuration_storage` table has been filled with respective data.
-4.  In your system, make sure that storage entries are displayed with the `kv:product_configuration:sku` mask.
+1. Fill the `spy_product_configuration` table with some data.
+2. Run the `console publish:trigger-events -r product_configuration` command.
+3. Make sure that the `spy_product_configuration_storage` table has been filled with respective data.
+4. In your system, make sure that storage entries are displayed with the `kv:product_configuration:sku` mask.
 
 Make sure that the product configuration synchronization plugin works correctly:
-1.  Fill the `spy_product_configuration_storage` table with some data.
-2.  Run the `console sync:data product_configuration` command.
-3.  In your system, make sure that the storage entries are displayed with the `kv:product_configuration:sku` mask.
+1. Fill the `spy_product_configuration_storage` table with some data.
+2. Run the `console sync:data product_configuration` command.
+3. In your system, make sure that the storage entries are displayed with the `kv:product_configuration:sku` mask.
 
 {% endinfo_block %}
 
@@ -1484,7 +1484,7 @@ Make sure that the following modules have been installed:
 
 Add translations as follows:
 
-1.  Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 ```php
 product_configuration.checkout.validation.error.is_not_complete,"Product configuration is not completed.",en_US
@@ -1707,6 +1707,7 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -1778,6 +1779,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -2244,7 +2246,7 @@ console frontend:date-time-product-configurator:build
 {% info_block warningBox "Verification" %}
 
 Make sure that the frontend part has been built:
-1. Check that the folder `public/Configurator/dist` exists, and it’s not empty.
+1. Check that the folder `public/Configurator/dist` exists, and it's not empty.
 2. Check that you can access the configurator at `https://date-time-configurator-example.mysprykershop.com/`.
 
 {% endinfo_block %}

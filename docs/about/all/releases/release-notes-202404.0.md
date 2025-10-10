@@ -29,8 +29,8 @@ Currently, Stripe app supports B2C and B2B modes. We are working on enabling Str
 
 ### Technical prerequisites
 
-* [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
-* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+- [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 
 ## Agent Assist in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -47,7 +47,7 @@ Excellence in merchant care: Provide your merchants with comprehensive support, 
 
 ### Documentation
 
-[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html)
+[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/latest/marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
 ## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -76,7 +76,7 @@ The managed Security Operations Center (SOC) provides continuous monitoring, det
 ### Business benefits
 
 - 24/7 security monitoring: Stay protected with round-the-clock vigilance against threats.
-- Optimized for Spryker’s infrastructure: Tailored specifically for the Spryker ecosystem, our service seamlessly integrates with your existing infrastructure.
+- Optimized for Spryker's infrastructure: Tailored specifically for the Spryker ecosystem, our service seamlessly integrates with your existing infrastructure.
 - Threat detection and analysis: Use cutting-edge technology and intelligence to promptly identify and assess cybersecurity risks. Our proactive approach ensures that potential threats are detected early, minimizing the risk to your business.
 - Streamlined incident response: In the event of a security incident, our coordinated response mechanism allows for a swift reaction, mitigation, and remediation. This ensures that any impact is minimized and business continuity is maintained.
 - Compliance and reporting: The service is aligned with industry regulations like SOC2 and ISO27001.
@@ -93,9 +93,9 @@ Available for cloud environments.
 ## Merchant Portal UI/UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 We introduced the following Merchant Portal improvements:
-* Color adjustments
-* Updated icons
-* A reorganized sidebar.
+- Color adjustments
+- Updated icons
+- A reorganized sidebar.
 
 The sidebar's state, whether expanded or collapsed, is now saved.
 
@@ -129,8 +129,8 @@ Based on your input in the UX research, we restructured the layout of Pull Reque
 ![scu-prs](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/scu-prs.png)
 
 PR examples to compare:
-Before: https://github.com/spryker-shop/b2c-demo-shop/pull/297
-Now: https://github.com/spryker-shop/b2c-demo-shop/pull/441
+Before: <https://github.com/spryker-shop/b2c-demo-shop/pull/297>
+Now: <https://github.com/spryker-shop/b2c-demo-shop/pull/441>
 
 ### Business benefit
 
@@ -150,20 +150,19 @@ In this release, we added the support of CRUD for combined entities allowing to 
 
 ### Business benefits
 
-* Faster data imports
-* Friendlier API interface to import data into Spryker
+- Faster data imports
+- Friendlier API interface to import data into Spryker
 
 
 ### Documentation
 
-* [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
-* [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
-* [Data Exchange FAQ](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange-faq.html)
+- [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
+- [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
 
 ### Technical prerequisites
 
-* [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
-* [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
+- [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
+- [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
 ## Symfony 6.4 LTS support <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -183,8 +182,8 @@ The latest Symfony framework LTS version provides enhanced stability, security, 
 
 ### Documentation
 
-* [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html)
-* [Symfony blog posts related to new features](https://symfony.com/blog/category/living-on-the-edge/7.0-6.4)
+- [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html)
+- [Symfony blog posts related to new features](https://symfony.com/blog/category/living-on-the-edge/7.0-6.4)
 
 ### Technical prerequisites
 

@@ -1,0 +1,27 @@
+{
+  "MD004": {
+    "style": "dash"
+  },    
+  "MD009": false,
+  "MD041": false,
+  "MD012": false,
+  "MD010": false,
+  "MD013": false,
+  "MD024": false,
+  "MD029": false,  
+  "MD032": false,
+  "MD033": false,
+  "MD034": false,
+  "MD035": false,    
+  "MD036": false, 
+  "MD037": false,       
+  "MD047": false,
+  "MD051": false,
+  "MD049": {
+    "style": "asterisk"
+  },
+  "MD040": {
+    "enabled": true,
+    "fenced_code_language": true
+  }
+}

@@ -18,12 +18,12 @@ related:
 
 We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method that is deep in the core.
 
-Before you proceed, double-check if there is no other way to solve your requirement, maybe there is a facade method that fits in or you can use plugins. You must understand that if you do a core extension, you are behind the stable internal APIs, so there is no guarantee that the extended class is not modified, renamed, or even non-existing in the next release. Therefore, you take over responsibility for your extension, and it is highly recommended to cover it with unit tests. If it is not urgent, you can request a change in our support desk to get an official extension point.
+Before you proceed, double-check if there is no other way to solve your requirement, maybe there is a facade method that fits in or you can use plugins. You must understand that if you do a core extension, you are behind the stable internal APIs, so there is no guarantee that the extended class is not modified, renamed, or even non-existing in the next release. Therefore, you take over responsibility for your extension, and it's highly recommended to cover it with unit tests. If it's not urgent, you can request a change in our support desk to get an official extension point.
 
 There are three ways to extend classes from the core:
-* Replacement class
-* Inheritance object
-* Composition
+- Replacement class
+- Inheritance object
+- Composition
 
 Each of them has its advantages and disadvantages.
 

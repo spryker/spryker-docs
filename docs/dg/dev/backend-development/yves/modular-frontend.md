@@ -90,7 +90,7 @@ Before you start using the widget system, make sure to register the following pl
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Yves\EventDispatcher;
@@ -154,14 +154,13 @@ For more information on how to implement a Widget, see the [How to Implement a W
 | TAG | DESCRIPTION | ADDITIONAL COMMENTS |
 | --- | --- | --- |
 | `{% raw %}{%{% endraw %} widget ... {% raw %}%}{% endraw %}...{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Required a twig tag to render a widget. | A widget is rendered only when it can be found in the local or global widget registry. |
-| `WIDGET_EXPRESSION` | Can be a string that represents the widget name or an instance of a widget.
- | This argument is required. |
+| `WIDGET_EXPRESSION` | Can be a string that represents the widget name or an instance of a widget. | This argument is required. |
 | `args WIDGET_ARGUMENTS` | Array of arguments that the widget is initialized with (by `constructor() of new widgets` or by `initialize()` method of old widget plugins). This parameter is only available when `WIDGET_EXPRESSION` was not an instance of a widget.| This parameter is optional, depending if the widget object to be initialized requires any arguments or not. |
 | `use TWIG_TEMPLATE_PATH` | Render the widget with a different template then defined by the widget. `TWIG_TEMPLATE_PATH` is a string that represents a valid path for a twig template that can be loaded. | This parameter is optional. |
 | `with TWIG_PARAMETERS` | Pass an associative array of variables for the scope of the rendered widget twig blocks.  | This parameter is optional. |
 | `{% raw %}{%{% endraw %} block WIDGET_BLOCK_N {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}` | Twig blocks to overwrite/customize blocks of the twig template to be rendered. `{% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}` can be used to render the original content of a block.  | This tag is optional. |
 | `only` | Optional argument to reduce the context of the template to be rendered to only the provided `TWIG_PARAMETERS`.  | By convention, in Spryker core we always provide this argument to prevent mixing template scopes. |
-| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widget(s) were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
+| `{% raw %}{%{% endraw %} elsewidget ... {% raw %}%}{% endraw %}` | Optional twig tag to render a widget when the previous widgets were not found. Has the same parameters as the base widget tag including `WIDGET_BLOCK_N`.  | Listing multiple `elsewidget` tags will render the first widget that is found. |
 | `{% raw %}{%{% endraw %} nowidget {% raw %}%}{% endraw %} WIDGET_FALLBACK` | Optional twig tag to render any content `(WIDGET_FALLBACK)`, when no widget is found by the widget tag. | N/A |
 
 ### findWidget() twig function reference
@@ -212,4 +211,4 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin).  
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html#implementing-a-widget-plugin).  

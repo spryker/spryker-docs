@@ -11,27 +11,27 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
 related:
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 Spryker supports a number of test helpers to assist you in testing your project. This article provides details on the supported helpers.
@@ -61,7 +61,7 @@ Shared helpers can be used for all application tests.
 This helper lets you easily mock configurations and gives you access to `ModuleConfig`.
 To find out `ModuleConfig` of the current module under test, run the following:
 
-```
+```php
 $this->tester->getModuleConfig()
 ```
 
@@ -77,8 +77,8 @@ This helper lets you mock away the real filesystem.
 
 This helper has the following methods:
 
-* `\SprykerTest\Shared\Testify\Helper\VirtualFilesystemHelper::getVirtualDirectory()`: Returns a string that points to a virtual directory.
-* `\SprykerTest\Shared\Testify\Helper\VirtualFilesystemHelper::getVirtualDirectoryContents()`: Returns the contents of the file in the virtual directory.
+- `\SprykerTest\Shared\Testify\Helper\VirtualFilesystemHelper::getVirtualDirectory()`: Returns a string that points to a virtual directory.
+- `\SprykerTest\Shared\Testify\Helper\VirtualFilesystemHelper::getVirtualDirectoryContents()`: Returns the contents of the file in the virtual directory.
 
 There are also some `assert*()` methods that you can use to make assertions for your tests.
 
@@ -187,12 +187,14 @@ This helper has the following methods:
 
 Lets you mock and access business layer classes like `BusinessFactory` inside a mocked facade.
 Example of usage:
-```
+
+```php
 $this->tester->mockFacadeMethod('reloadItems', function(){ return new QuoteTransfer()});
 $this->tester->mockFactoryMethod('createQuoteReloader', function() { return ... });
 $facade = $this->tester->getFacade();
 $facade->someThing();
 ```
+
 Alternatively, you can pass this as a mock to another module using `DependencyHelper`.
 
 
@@ -268,5 +270,6 @@ Lets you create a table in the database and the `\Propel\Generator\Model\Table` 
 
 Lets you create Propel model files based on builders and tables.
 
-## Next step:
+## Next step
+
 [Enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).

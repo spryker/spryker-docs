@@ -39,7 +39,7 @@ Add translations as follows:
 
 1. Append glossary for the feature:
 
-```
+```csv
 product_comparison_page.page_title,Artikel vergleichen,de_DE
 product_comparison_page.page_title,Compare products,en_US
 product_comparison_page.empty_comparison,Vergleichsliste ist leer.,de_DE
@@ -54,7 +54,7 @@ product_comparison_page.list_link,Artikelvergleich,de_DE
 product_comparison_page.list_link,Product comparison,en_US
 product_comparison_page.add_to_comparison.success,Zum Vergleich hinzugefügt,de_DE
 product_comparison_page.add_to_comparison.success,Added to comparison,en_US
-product_comparison_page.add_to_comparison.error.max,Das Limit ist bereits erreicht,de_DE
+product_comparison_page.add_to_comparison.error.max,Das Limit'st bereits erreicht,de_DE
 product_comparison_page.add_to_comparison.error.max,The limit has already been reached,en_US
 product_comparison_page.removed_from_the_list,Artikel wurde aus der Vergleichsliste entfernt.,de_DE
 product_comparison_page.removed_from_the_list,Product was removed from the comparison list.,en_US

@@ -1,10 +1,8 @@
 
 
-## Install Feature Core
+## Prerequisites
 
-### Prerequisites
-
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -13,9 +11,9 @@ Please overview and install the necessary features before beginning the integrat
 | Catalog | {{page.version}} |
 | Customer | {{page.version}} |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
@@ -33,7 +31,7 @@ Make sure the following modules have been installed:
 
 ## Set up behavior
 
-#### Configure the catalog search count query
+### Configure the catalog search count query
 
 Add the following plugins to your project:
 

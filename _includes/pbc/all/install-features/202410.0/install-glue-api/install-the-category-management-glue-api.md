@@ -15,8 +15,9 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
-```
+Install the required modules using Composer:
+
+```bash
 composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 ```
 
@@ -148,7 +149,7 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 Make sure that the following endpoints are available:
 
-*   `https://glue.mysprykershop.com/category-trees`
-*   `https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
+- `https://glue.mysprykershop.com/category-trees`
+- `https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}

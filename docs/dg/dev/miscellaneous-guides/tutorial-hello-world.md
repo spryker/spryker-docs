@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world-spryker-commerce-os.html
 related:
   - title: Module configuration convention
-    link: docs/scos/dev/guidelines/module-configuration-convention.html
+    link: docs/dg/dev/guidelines/module-configuration-convention.html
 ---
 
 {% info_block infoBox %}

@@ -36,7 +36,7 @@ Make sure that the following module has been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 **src/Pyz/Shared/QuoteApproval/QuoteApprovalConfig.php**
 
@@ -69,7 +69,7 @@ Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
 
-If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), add the following configuration to your project:
+If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), Add the following configuration:
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 
@@ -137,11 +137,11 @@ quote_approval.request.send,Send Request,en_US
 quote_approval.request.send,Anfrage Senden,de_DE
 quote_approval.remove,Cancel Request,en_US
 quote_approval.remove,Anfrage Abbrechen,de_DE
-quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit, please send your cart for approval or contact your manager.",en_US
+quote_approval.cart.require_approval,"You can't place this order because of your purchasing limit,  send your cart for approval or contact your manager.",en_US
 quote_approval.cart.require_approval,"Sie können diese Bestellung aufgrund Ihres Einkaufslimits nicht aufgeben. Senden Sie Ihren Einkaufswagen zur Genehmigung oder wenden Sie sich an Ihren Kontakmanager.",de_DE
-quote_approval.cart.waiting_approval,"You can't place this order due to pending approval request.",en_US
+quote_approval.cart.waiting_approval,"You can't place this order because of pending approval request.",en_US
 quote_approval.cart.waiting_approval,"Sie können diese Bestellung aufgrund einer ausstehenden Genehmigungsanfrage nicht aufgeben.",de_DE
-quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request due to approver limit.",en_US
+quote_approval.create.approver_cant_approve_quote,"Selected approver cannot approve your request because of approver limit.",en_US
 quote_approval.create.approver_cant_approve_quote,"Der ausgewählte Manager kann Ihre Anfrage aufgrund des Genehmigungslimits nicht genehmigen.",de_DE
 quote_approval.create.you_cant_approve_quote,"You can't approve or decline this cart because it's amount higher that your Approver limit.",en_US
 quote_approval.create.you_cant_approve_quote,"Sie können diesen Einkaufswagen nicht genehmigen oder ablehnen, weil dessen Betrag höher als ihr Genehmigungslimit ist.",de_DE
@@ -177,7 +177,7 @@ Import the glossary data:
 console data:import glossary
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
 
@@ -274,17 +274,17 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-#### Synchronize permission plugins with storage:
+#### Synchronize permission plugins with storage
 
 Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
 
 {% info_block warningBox "Verification" %}
 
 Check that the following happens:
-* The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
-* The customer, with the `ApproveQuotePermission` permission, can approve the request.
-* The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
-* When you reset the cart lock, all the approval process-related data is removed from the quote.
+- The customer, with the `RequestQuoteApprovalPermission` permission, can request approval.
+- The customer, with the `ApproveQuotePermission` permission, can approve the request.
+- The customer, with the `PlaceOrderPermissionPlugin` permission, can place an order from the quote with the approved request for approval.
+- When you reset the cart lock, all the approval process-related data is removed from the quote.
 
 {% endinfo_block %}
 
@@ -347,9 +347,9 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following:
-* The quote is expanded with data from the database table `spy_quote_approval` on quote loading.
-* The records from the database table `spy_quote_approval` related to the quote are removed before the quote deletion.
-* The billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
+- The quote is expanded with data from the database table `spy_quote_approval` on quote loading.
+- The records from the database table `spy_quote_approval` related to the quote are removed before the quote deletion.
+- The billing address and payment are saved with the quote in the `spy_quote` table after sending an approval request.
 
 {% endinfo_block %}
 
@@ -448,7 +448,7 @@ quote_approval_widget.cart.status.waiting,"Waiting",en_US
 quote_approval_widget.cart.status.waiting,"Wartet",de_DE
 quote_approval_widget.shared_cart_warning,"After a cart has been sent to approval, all of its shares will be dismissed.",en_US
 quote_approval_widget.shared_cart_warning,"Nachdem der Warenkorb zur Genehmigung gesendet wurde, wird sein Sharing aufgehoben.",de_DE
-quote_approval_widget.limit_text,"Your purchase limit is %amount%. To spend more, request approval from your manager.",en_US
+quote_approval_widget.limit_text,"Your purchase limit's %amount%. To spend more, request approval from your manager.",en_US
 quote_approval_widget.limit_text,"Ihr Einkaufsrahmen liegt bei %amount%. Um mehr auszugeben, fordern Sie bitte die Genehmigung bei Ihrem Manager an",de_DE
 quote_approval_widget.no_limit_text,"You do not have a purchase limit",en_US
 quote_approval_widget.no_limit_text,"Sie haben kein Einkaufslimit",de_DE
@@ -532,8 +532,8 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 {% info_block warningBox "Verification" %}
 
 On the storefront, make sure the following:
-* The customer with the sent approval request can't open the address step on the cart page.
-* The customer with the sent approval request can't open the payment step on the cart page.
+- The customer with the sent approval request can't open the address step on the cart page.
+- The customer with the sent approval request can't open the payment step on the cart page.
 
 {% endinfo_block %}
 
@@ -641,6 +641,6 @@ Make sure that the plugin has been registered:
 4. Open `https://mysprykershop.com/cart/`.
 5. Click the **Approve** button. Quote approval status becomes approved and the **Proceed to checkout** button must be displayed.
 6. Create a new quote with items.
-7. Open ` https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status must become waiting, and the approver functionality must be shown.
+7. Open `https://mysprykershop.com/cart/` and click the **Request for Approval** button. The quote approval status must become waiting, and the approver functionality must be shown.
 
 {% endinfo_block %}

@@ -169,13 +169,13 @@ Import the following data.
 
 ```yaml
 message_key,owner_type,owner_key,customer_reference,message,tags
-message--1,quote,quote-25,DE--21,"We have a new Scrum master in our Berlin office. In addition to our standard Newcomers package, could you please add the following items to the cart: big colored stickers, flip chart and whiteboard to put it on a wall. Please contact him for more details regarding the needed amount of items.",
+message--1,quote,quote-25,DE--21,"We have a new Scrum master in our Berlin office. In addition to our standard Newcomers package, could you  add the following items to the cart: big colored stickers, flip chart and whiteboard to put it on a wall. Please contact him for more details regarding the needed amount of items.",
 message--2,quote,quote-25,DE--20,"I have contacted Greg and he said that he also plans to work from home office twice a week. So he requested the stickers, whiteboard and flip chart to be ordered for his home office. Can we do that?",
 message--3,quote,quote-25,DE--21,"Yes, we can.",
 message--4,quote,quote-25,DE--20,"Should we add the above mentioned items to this order, or should we create a new one?",
 message--5,quote,quote-25,DE--21,"Please add the items to this order and attach the delivery instructions in a separate comment.",
 message--6,quote,quote-25,DE--21,"Delivery instructions: Max-Müllner-Straße 1 80933 München",
-message--7,quote,quote-76,DE--34,"Could you please provide additional details regarding this cart: the reason to buy new office accessories in the middle of the month. Do you have any new employees onboarded?",
+message--7,quote,quote-76,DE--34,"Could you  provide additional details regarding this cart: the reason to buy new office accessories in the middle of the month. Do you have any new employees onboarded?",
 message--8,quote,quote-76,DE--33,"On Friday, June 11th we had a Company Birthday party in our Berlin office. Currently we are replacing the office accessories after the party: 2 office chairs, 3 desks, 1 schreder and 2 keyboards.",
 message--9,quote,quote-76,DE--34,"Why do you replace those accessories? Was it planned?",
 message--10,quote,quote-76,DE--33,"It was an unexpected expense. It is beyond our budget and my purchase limit.",
@@ -314,7 +314,7 @@ Install the required features:
 | NAME                        | VERSION          | INSTALLATION GUIDE |
 |-----------------------------|------------------|--|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html)
+| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html) |
 
 ### 1) Install the required modules
 
@@ -323,6 +323,7 @@ Install the required modules using Composer:
 ```bash
 composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
@@ -424,7 +425,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {% info_block warningBox "Verification" %}
 
 - Log in as a customer and open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`. Make sure that the error flash message is displayed.
-- Open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/async/add and make sure that the JSON with messages is displayed.
+- Open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/async/add` and make sure that the JSON with messages is displayed.
 
 {% endinfo_block %}
 

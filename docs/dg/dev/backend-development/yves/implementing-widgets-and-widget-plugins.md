@@ -11,9 +11,9 @@ redirect_from:
 
 This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/dg/dev/backend-development/yves/modular-frontend.html).
 
-## How to implement a widget?
-
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.
+
+## Implement the widget
 
 ### 1. Implement the widget class
 
@@ -196,8 +196,7 @@ Widgets are placed and rendered in twig templates. The following examples show s
 
 ## Deprecations
 
-### How to implement a widget plugin?
-<a href="#how-to-implement-a-widget-plugin"></a>
+### Implementing a widget plugin
 
 {% info_block infoBox %}
 
@@ -207,9 +206,9 @@ This section is valid only for projects which are running module `spryker/kernel
 
 To implement a widget, follow these steps:
 
-### 1. Place widget extensions
+#### 1. Place widget extensions
 
-In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](#how-to-implement-a-widget) section.
+In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function or functions. See the [How to implement a Widget](#implement-the-widget) section.
 
 **@MyPage/views/foo/foo-bar.twig**
 
@@ -231,7 +230,7 @@ The following twig functions can be used to hook widgets in any twig template:
 | `widgetExists()` | Use this function when you need to check if a widget is registered in the current render context (for example, will be rendered) and do something in that case. For example, when you need to add `container/separator` when the widget is rendered, or when you want to render something else, when a widget is not shown. | `{% raw %}{{{% endraw %} widgetExists('WidgetName', ...$arguments) {% raw %}}}{% endraw %}` |
 | `widgetGlobalExists()` | Use this function when you need to check if a global widget is registered (for example, will be rendered) and do something in that case. For example, when you need to add a container/separator when the widget is rendered, or when you want to render something else, when a widget is not shown. | `{% raw %}{{{% endraw %} widgetGlobalExists('WidgetName', ...$arguments) {% raw %}}}{% endraw %}` |
 
-### 2. Create widget interface and contract
+#### 2. Create widget interface and contract
 
 In the same module, you will create an interface that represents the widget used in the template. This step is important to make Dependency Inversion visible on PHP level in the caller module.
 
@@ -264,13 +263,13 @@ interface MyWidgetPluginInterface extends WidgetPluginInterface
 }
 ```
 
-### 3. Implement the widget plugin
+#### 3. Implement the widget plugin
 
 In the target widget module (MyWidget in the examples), you can implement the widget plugin. Extend your plugin from `\Spryker\Yves\Kernel\Widget\AbstractWidgetPlugin` and implement the following methods:
 
-* `getName()` - returns the name of the widget as it's used in the template. Most cases you can return `static::NAME;` in the method when the name is defined in the interface.
-* `getTemplate()` - returns the template file path to renter the widget.
-* `initialize()` - initializes the rendering of the widget template, by processing the input parameters and providing parameters for the template to be rendered. Also, sub-widgets can be registered here.
+- `getName()` - returns the name of the widget as it's used in the template. Most cases you can return `static::NAME;` in the method when the name is defined in the interface.
+- `getTemplate()` - returns the template file path to renter the widget.
+- `initialize()` - initializes the rendering of the widget template, by processing the input parameters and providing parameters for the template to be rendered. Also, sub-widgets can be registered here.
 
 {% info_block infoBox "Info" %}
 
@@ -319,7 +318,7 @@ class MyWidgetPlugin extends AbstractWidgetPlugin implements MyWidgetPluginInter
 
 {% endinfo_block %}
 
-### 4. Implement widget template
+#### 4. Implement widget template
 
 Create the template file that was added to your Widget's `getTemplate()` method previously.
 
@@ -341,13 +340,13 @@ Create the template file that was added to your Widget's `getTemplate()` method 
 
 In the widget template, the parameters are accessible through the `_widget` twig variable. This way in twig template it's easy to determine where a parameter is coming from. When you see `_widget.foo`, it means that the `foo` parameter is coming from the widget directly.
 
-### 5. Activate the widget
+#### 5. Activate the widget
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](#activate-a-widget-to-be-available-globally)
+- [Activate a widget in a Controller action](#activate-a-widget-in-a-controller-action)
+- [Activate a widget in another widget](#activate-a-widget-in-another-widget)
+- [Activate a widget to be available globally](#activate-a-widget-to-be-available-globally)
 
 ### Activate a widget in a controller action
 
@@ -485,6 +484,7 @@ class ProductSetDetailPageDependencyProvider extends AbstractBundleDependencyPro
 	}
 }
 ```
+
 {% endinfo_block %}
 
 ### Activate a widget in another widget

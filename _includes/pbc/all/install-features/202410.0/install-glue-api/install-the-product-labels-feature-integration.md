@@ -3,6 +3,7 @@
 Follow the steps below to install Product Labels Feature API.
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
@@ -14,13 +15,13 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-labels-rest-api:"^1.0.1" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following module is installed:
 
@@ -38,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes are present in transfer objects:
 
@@ -111,6 +112,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure the following endpoint is available: `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
 
-Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels `and verify if the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the product-labels resources.
+Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels`and verify if the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the product-labels resources.
 
 {% endinfo_block %}

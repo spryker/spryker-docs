@@ -51,8 +51,8 @@ class CmsBlockFactory extends AbstractFactory
 ## Conventions for factory methods
 
 The factories contain two types of methods:
-* Methods that create internal classes.
-* Methods that provide external dependencies.
+- Methods that create internal classes.
+- Methods that provide external dependencies.
 
 | NAMING CONVENTION | EXAMPLE  | PURPOSE |
 | ----------------- | ----------------- | -------------- |
@@ -71,7 +71,7 @@ The extended `AbstractFactory` holds some important methods:
 
 ## Snippets to create a new factory
 
-The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
+The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it's recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
 
 ### Yves
 
@@ -142,6 +142,7 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
 ```
 
 ### Zed - Persistence layer
+
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Persistence;
@@ -179,10 +180,10 @@ You can retrieve an instance of the factory by calling `$this->getFactory();`. T
 ## Related Spryks
 
 You might use the following definitions to generate related code:
-* `vendor/bin/console spryk:run AddZedPersistenceFactory`: Adds Zed Persistence Factory.
-* `vendor/bin/console spryk:run AddZedCommunicationFactory`: Adds Zed Communication Factory.
-* `vendor/bin/console spryk:run AddZedBusinessFactory`: Adds Zed Business Factory.
-* `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
-* `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
+- `vendor/bin/console spryk:run AddZedPersistenceFactory`: Adds Zed Persistence Factory.
+- `vendor/bin/console spryk:run AddZedCommunicationFactory`: Adds Zed Communication Factory.
+- `vendor/bin/console spryk:run AddZedBusinessFactory`: Adds Zed Business Factory.
+- `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
+- `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
 
 For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

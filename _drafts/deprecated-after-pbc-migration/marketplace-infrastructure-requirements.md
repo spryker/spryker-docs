@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
 related:
   - title: System requirements
-    link: docs/marketplace/dev/setup/page.version/system-requirements.html
+    link: docs/marketplace/dev/setup/latest/system-requirements.html
 ---
 
 This document describes the system infrastructure requirements that help mitigate security risks for Spryker Marketplace projects.

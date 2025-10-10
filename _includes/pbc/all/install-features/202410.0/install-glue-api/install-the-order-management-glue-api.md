@@ -69,7 +69,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
+`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
 
 {% endinfo_block %}
 
@@ -126,6 +126,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
+
 </details>
 
 
@@ -319,6 +320,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

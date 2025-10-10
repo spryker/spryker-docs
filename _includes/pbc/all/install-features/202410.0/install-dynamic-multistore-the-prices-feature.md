@@ -84,7 +84,7 @@ Make sure you can add a currency to a store when editing a product in the Back O
 
 ### 3) Configure export to Redis
 
-1.  Set up publisher plugins:
+1. Set up publisher plugins:
 
 | PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -128,7 +128,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Using the following data, make sure that when you add, update, or delete a store currency, it is exported to or removed from Storage.
+Using the following data, make sure that when you add, update, or delete a store currency, it's exported to or removed from Storage.
 
 Storage type: Redis
 Target entity: Store
@@ -159,7 +159,7 @@ Example expected data fragment:
 
 Import locale, store, and country data:
 
-1.  Prepare your data according to your requirements using the demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 Example for the DE store currency-store configurations:
 **data/import/common/DE/currency_store.csv**
@@ -182,17 +182,17 @@ There can only be one default currency per store.
 
 {% endinfo_block %}
 
-{% info_block warningBox “Import requirements” %}
+{% info_block warningBox "Import requirements" %}
 
-*  The `.csv` files must have an empty line in the end.
-*  For each `currency_code` entry in the CSV files, there must be a respective `code` entry in the `spy_currency` database table.
+- The `.csv` files must have an empty line in the end.
+- For each `currency_code` entry in the CSV files, there must be a respective `code` entry in the `spy_currency` database table.
 
 {% endinfo_block %}
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{REGION\_STORE}.yml`
-    * `data/import/local/full\_{REGION\_STORE}.yml`
-    * `data/import/production/full\_{SPRYKER\_STORE}.yml`
+    - `data/import/common/commerce_setup_import_config_{REGION\_STORE}.yml`
+    - `data/import/local/full\_{REGION\_STORE}.yml`
+    - `data/import/production/full\_{SPRYKER\_STORE}.yml`
 
 ```yaml
 data_import:
@@ -416,9 +416,9 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 {% info_block warningBox "Verification" %}
 
 
-* Create or update a store with a default currency that is not assigned to the store.
+- Create or update a store with a default currency that is not assigned to the store.
     This should give you an error message.
-* Create or update a store.
+- Create or update a store.
     This should update the `spy_currency_store` database table with the default currency. Also, this should expand store transfers with currency codes.
 
 {% endinfo_block %}
@@ -503,6 +503,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 }
 
 ```
+
 {% info_block warningBox "Verification" %}
 
 Steps:

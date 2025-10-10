@@ -34,7 +34,7 @@ redirect_from:
   - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
 related:
   - title: System requirements
-    link: docs/scos/dev/system-requirements/page.version/system-requirements.html
+    link: docs/scos/dev/system-requirements/latest/system-requirements.html
   - title: Installing Spryker with development virtual machine
     link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
   - title: Installing Spryker with DevVM on Windows

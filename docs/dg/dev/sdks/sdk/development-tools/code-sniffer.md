@@ -17,23 +17,23 @@ redirect_from:
   - /docs/scos/dev/sdk/development-tools/code-sniffer.html
 related:
   - title: Architecture sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+    link: docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
   - title: Formatter
-    link: docs/scos/dev/sdk/development-tools/formatter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/formatter.html
   - title: Performance audit tool- Benchmark
-    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+    link: docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
   - title: PHPStan
     link: docs/dg/dev/sdks/sdk/development-tools/phpstan.html
   - title: SCSS linter
-    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
   - title: TS linter
-    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+    link: docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
   - title: Spryk code generator
-    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+    link: docs/dg/dev/sdks/sdk/spryks/spryks.html
   - title: Static Security Checker
-    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+    link: docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
   - title: Tooling config file
-    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
+    link: docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
 ---
 
 To correspond to [PSR-2](http://www.php-fig.org/psr/psr-2/) and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -74,8 +74,8 @@ There are two levels of the Sniffer's severity: Level 1 (normal, used by default
 
 Additional options:
 
-* `-v`: Verbose output
-* `-d`: Dry-run, only output the command to be run
+- `-v`: Verbose output
+- `-d`: Dry-run, only output the command to be run
 
 Remember to always commit your changes before executing this command!
 

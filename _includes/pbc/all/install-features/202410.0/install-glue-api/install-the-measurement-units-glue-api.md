@@ -13,7 +13,7 @@ To start the feature integration, overview and install the necessary features:
 
 ## 1)  Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-measurement-units-rest-api:"^1.0.0" --update-with-dependencies
@@ -32,7 +32,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Run the following command to generate the transfer changes:
+Generate the transfer changes:
 
 ```bash
 console propel:install
@@ -86,8 +86,8 @@ console event:trigger -r product_concrete
 
 Make sure that the following Redis keys exist and there is data in them:
 
-* `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
-* `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
+- `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
+- `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
@@ -172,6 +172,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 
@@ -197,6 +198,7 @@ Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up
     }
 }
 ```
+
 {% endinfo_block %}
 
 
@@ -257,6 +259,7 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -403,6 +406,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -520,6 +524,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -616,8 +621,8 @@ Make sure that the plugins have been set up:
 ```
 
 2. Send the request `GET https://glue.mysprykershop.com/carts?include=items` and make sure that the following attributes are included:
-    * `salesUnits.id`
-    * `salesUnits.amount`
+    - `salesUnits.id`
+    - `salesUnits.amount`
 
 
 {% endinfo_block %}

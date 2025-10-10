@@ -2,13 +2,13 @@
 
 The Gift Cards feature is shipped with the following modules:
 
-* **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
+- **GiftCard**: implements the basic functionality of the Gift Cards feature as  well as the Replacement value-checking strategy.
 
-* **GiftCardBalance**: implements gift card Balance value-checking strategy<.
+- **GiftCardBalance**: implements gift card Balance value-checking strategy<.
 
-* **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
+- **GiftCardMailConnector**: responsible for sending e-mails on gift cards usage (balance change) as well as gift cards codes delivery.
 
-* **Nopayment**: implements payment methods if the price to pay is fully covered by a gift card.
+- **Nopayment**: implements payment methods if the price to pay is fully covered by a gift card.
 
 To enable the gift cards in your project, do the following:
 
@@ -27,15 +27,15 @@ spryker/product-management:"^0.12.0"
 | PLUGIN | DESCRIPTION | WHERE TO INSTALL | STRATEGY |
 | --- | --- | --- | --- |
 | `GiftCardCalculatorPlugin`  | Splits applicable and non-applicable Gift Cards. Creates payment methods for applicable Gift Cards. |`CalculationDependencyProvider::getQuoteCalculatorPluginStack`  |  - |
-| `GiftCardCurrencyMatchDecisionRulePlugin` |Doesn’t allow using a Gift Card with a different currency rather than the one the customer has used while performing the payment.  | `GiftCardDependencyProvider::getDecisionRulePlugins` | - |
-| `GiftCardIsActiveDecisionRulePlugin` | Doesn’t allow using inactive Gift Cards. |`GiftCardDependencyProvider::getDecisionRulePlugins`  | - |
+| `GiftCardCurrencyMatchDecisionRulePlugin` |Doesn't allow using a Gift Card with a different currency rather than the one the customer has used while performing the payment.  | `GiftCardDependencyProvider::getDecisionRulePlugins` | - |
+| `GiftCardIsActiveDecisionRulePlugin` | Doesn't allow using inactive Gift Cards. |`GiftCardDependencyProvider::getDecisionRulePlugins`  | - |
 | `GiftCardDiscountableItemFilterPlugin` |Restricts using a Gift Card for another Gift Cards in a cart. The plugin filters out Gift Cards from discountable items.  |`DiscountDependencyProvider::getDiscountableItemFilterPlugins`  | -  |
 | `GiftCardIsUsedDecisionRulePlugin` | As a part of the replacement strategy, this plugin does not allow using a Gift Card twice. |`GiftCardDependencyProvider::getDecisionRulePlugins`  | Replacement |
-| `GiftCardMetadataExpanderPlugin` | Populates Gift Card information when it is in the cart. | `CartDependencyProvider::getExpanderPlugins` | - |
+| `GiftCardMetadataExpanderPlugin` | Populates Gift Card information when it's in the cart. | `CartDependencyProvider::getExpanderPlugins` | - |
 | `GiftCardCheckoutDoSaveOrderPlugin` | Saves a Gift Card with populated data when an order is placed. Keeps Gift Card as an order payment method.  | `CheckoutDependencyProvider::getCheckoutOrderSavers` | - |
 | `GiftCardPaymentMethodFilterPlugin` | Now, every payment method is compatible with a Gift Card in the cart. The plugin filters out all incompatible payment methods from available ones during checkout payment methods step. | `PaymentDependencyProvider::getPaymentMethodFilterPlugins` | - |
 | `GiftCardCheckoutPreConditionPlugin` | Confirms that a Gift Card is not used at the moment and that payment method amount assigned to the Gift Card is no more than the Gift Card amount itself.. | `CheckoutDependencyProvider::getCheckoutPreConditions` | - |
-| `GiftCardRecreateValueProviderPlugin` |For replacement: defines a Gift Card leftover. It’s simply a Gift Card amount for this strategy.  | `GiftCardDependencyProvider::getValueProviderPlugin` | Replacement |
+| `GiftCardRecreateValueProviderPlugin` |For replacement: defines a Gift Card leftover. It's simply a Gift Card amount for this strategy.  | `GiftCardDependencyProvider::getValueProviderPlugin` | Replacement |
 | `CreateGiftCardCommandPlugin` |  It is an order management system command to create a Gift Card based on a paid order item (a Gift Card item). |  `OmsDependencyProvider::extendCommandPlugins` | - |
 | `ReplaceGiftCardsCommandPlugin` | For placement strategy: creates a new Gift Card based on leftover from the previous one. | `OmsDependencyProvider::extendCommandPlugins` | Replacement |
 | `IsGiftCardConditionPlugin` | This plugin is used to define an order management system state machine process routing. | `OmsDependencyProvider::extendConditionPlugins` | - |
@@ -47,7 +47,7 @@ spryker/product-management:"^0.12.0"
 | `GiftCardUsageMailTypePlugin` | Sends an e-mail on Gift Card usage to its user. | `MailDependencyProvider::MAIL_TYPE_COLLECTION` | - |
 | `ShipGiftCardByEmailCommandPlugin` | An order management system command which triggers Gift Card electronic shipment. |`OmsDependencyProvider::extendCommandPlugins`  | - |
 | `NopaymentHandlerPlugin` | A payment method placeholder that is used when an order is paid by only a Gift Card without a real payment method. | `CheckoutDependencyProvider::extendPaymentMethodHandler` | - |
-| `NopaymentCheckoutPreConditionPlugin` | Doesn’t allow placing an order with a price to pay more than 0 with a NoPayment payment method.  | `CheckoutDependencyProvider::getCheckoutPreConditions` | - |
+| `NopaymentCheckoutPreConditionPlugin` | Doesn't allow placing an order with a price to pay more than 0 with a NoPayment payment method.  | `CheckoutDependencyProvider::getCheckoutPreConditions` | - |
 | `PriceToPayPaymentMethodFilterPlugin` | Filters payment methods based on cart totals. | `PaymentDependencyProvider::getPaymentMethodFilterPlugins` | - |
 | `PaymentFormFilterPlugin` | Each payment method provides its subforms. The plugin filters them out based on an available payment method list. | `CheckoutDependencyProvider::getPaymentFormFilterPlugins` | - |
 | `PaymentCalculatorPlugin` | Distributes total prices to payment methods. Calculates price to pay to quote totals. | `CalculationDependencyProvider::getQuoteCalculatorPluginStack` | - |

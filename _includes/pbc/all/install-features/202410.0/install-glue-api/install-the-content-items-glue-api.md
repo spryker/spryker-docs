@@ -20,7 +20,7 @@ Install the required modules using Composer:
 composer require spryker/content-banners-rest-api:"^2.1.0" spryker/content-product-abstract-lists-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed in `vendor/spryker`:
 
@@ -39,7 +39,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 
 Make sure that the following changes have been applied in transfer objects, see `src/Generated/Shared/Transfer/` folder:
@@ -61,7 +61,7 @@ Make sure that the following changes have been applied in transfer objects, see 
 
 {% info_block infoBox %}
 
-`ContentBannerResourceRoutePlugin` GET, `ContentProductAbstractListRoutePlugin` GET verbs are protected resources. Please refer to the Configure section of the *Configure documentation*.
+`ContentBannerResourceRoutePlugin` GET, `ContentProductAbstractListRoutePlugin` GET verbs are protected resources. Refer to the Configure section of the *Configure documentation*.
 
 {% endinfo_block %}
 
@@ -100,10 +100,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints return the result with the all necessary data. For example:
-- https://glue.mysprykershop.com/content-banners/{content_key}-
-- https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract
+- `https://glue.mysprykershop.com/content-banners/{content_key}`  
+- `https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract`
+
 
 {% endinfo_block %}

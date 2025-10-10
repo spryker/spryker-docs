@@ -16,13 +16,13 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/catalog-search-rest-api:"^2.1.2" spryker/catalog-search-products-resource-relationship:"^1.1.0" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -41,7 +41,7 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in transfer objects:
 
@@ -127,7 +127,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoutePlugin` are installed correctly, the following endpoints should now be available:
 `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
@@ -135,7 +135,7 @@ If `CatalogSearchResourceRoutePlugin` and `CatalogSearchSuggestionsResourceRoute
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 To make sure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` are functioning correctly, do the following:
 Send a request to `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products` and verify that the response includes relationships to `abstract-products` resources.

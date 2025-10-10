@@ -263,7 +263,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a category image is created, updated, or deleted, it is exported or removed from Redis accordingly.
+Make sure that when a category image is created, updated, or deleted, it's exported or removed from Redis accordingly.
 
 {% endinfo_block %}
 
@@ -303,7 +303,7 @@ In this step, the category template is configured to display category images.
 
 **data/import/category_template.csv**
 
-```
+```csv
 template_name,template_path
 "Sub Categories grid","@CatalogPage/views/sub-categories-grid/sub-categories-grid.twig"
 ```
@@ -421,6 +421,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

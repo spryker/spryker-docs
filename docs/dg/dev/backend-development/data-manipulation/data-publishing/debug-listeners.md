@@ -10,39 +10,32 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
 related:
   - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-{% info_block infoBox %}
 
-The document provides information on the `event:trigger:listener` command.
+The document provides information on the `event:trigger:listener` command. The command debugs an event message with a specific listener mapped to it.
 
-{% endinfo_block %}
-
-## What does the command do?
-
-The command debugs an event message with a specific listener mapped to it.
-
-## Where is the command used?
 Upon triggering the publish process, an event or events are posted to the event queue. Each event message posted to the queue contains the following information about the event that triggered it: event name, ID, names of the corresponding listeners and transfer classes, list of modified columns, as well as foreign keys necessary to backtrack the updated Propel entities. However, it does not contain the actual data that has changed, making it hard to debug the issue when the transformed data is not stored in the specific storage table. In this case, you need to debug the event message with a specific event listener mapped to it using the `event:trigger:listener` command.
 
 ## How to use the command
+
 To debug an event message with a specific listener mapped to it, use the `vendor/bin/console event:trigger:listener` command with the following parameters:
 
 | PARAMETER NAME | TRANSCRIPTION |

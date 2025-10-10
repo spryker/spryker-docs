@@ -408,7 +408,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 }
 ```
 
-**src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider.php **
+**src/Pyz/Zed/PersistentCart/PersistentCartDependencyProvider.php**
 
 ```php
 <?php
@@ -556,7 +556,7 @@ Before removing company user, all records from DB table `spy_quote_company_user`
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|
@@ -707,7 +707,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -762,8 +762,8 @@ class YvesBootstrap extends SprykerYvesBootstrap
 {% info_block warningBox "Verification" %}
 
 Make sure that the following plugin has been registered:
-* Open Yves and log in with customer.
-* Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.
-* Click on the share link. The share cart page should open.
+- Open Yves and log in with customer.
+- Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.
+- Click on the share link. The share cart page should open.
 
 {% endinfo_block %}

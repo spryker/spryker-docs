@@ -9,7 +9,7 @@ Follow the steps below to install the Alternative Products + Discontinued Produc
 
 ### Prerequisites
 
-Please review and install the necessary features before beginning the integration.
+Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
@@ -22,7 +22,7 @@ Register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | Expects `SKU `and `idProductConcrete` to be set for `ProductViewTransfer`. | Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage |
+| DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | Expects `SKU`and `idProductConcrete` to be set for `ProductViewTransfer`. | Spryker\Client\ProductDiscontinuedStorage\Plugin\ProductAlternativeStorage |
 | DiscontinuedCheckAlternativeProductApplicablePlugin | Checks if product alternatives should be shown for the product. | None | Spryker\Zed\ProductDiscontinued\Communication\Plugin\ProductAlternative |
 
 **src/Pyz/Client/ProductAlternativeStorage/ProductAlternativeStorageDependencyProvider.php**

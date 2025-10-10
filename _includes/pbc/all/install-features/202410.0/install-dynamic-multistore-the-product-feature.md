@@ -49,7 +49,7 @@ class ProductCategoryFilterGuiDependencyProvider extends SprykerProductCategoryF
 
 Make sure that the following data is displayed on the **Product Category Filter** page:
 
-* Store
-* Category
+- Store
+- Category
 
 {% endinfo_block %}

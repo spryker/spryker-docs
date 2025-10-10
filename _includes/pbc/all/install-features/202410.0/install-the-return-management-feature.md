@@ -75,7 +75,7 @@ class SalesConfig extends SprykerSalesConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure the order detail page in the Back Office shows a table with order’s returns in the **Returns** section.
+Make sure the order detail page in the Back Office shows a table with order's returns in the **Returns** section.
 
 Make sure that when the `StateHistoryOrderItemExpanderPlugin` is not configured and `SalesConfig::isHydrateOrderHistoryToItems()` is false, the order item state history is not shown in the order items table on the order detail page.
 
@@ -634,7 +634,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Adjust your project’s corresponding .yml configuration file to enable import as a part of full import.
+Adjust your project's corresponding .yml configuration file to enable import as a part of full import.
 
 **data/import/config/full_import_config.yml**
 
@@ -652,7 +652,7 @@ actions:
   - data_entity: return-reason
 ```
 
-Run the following command to import data:
+Import data:
 
 ```bash
 console data:import
@@ -975,6 +975,7 @@ return.create_return.validation.store_error,Retoure kann nicht angestellt werden
 return.create_return.validation.items_error,Return cannot be cretaed for this set of items,en_US
 return.create_return.validation.items_error,Für dieses Set der Artikel kann die Retoure nicht erstellt werden,de_DE
 ```
+
 </details>
 
 2. Import data:
@@ -991,7 +992,7 @@ Ensure that the configured data has been added to the `spy_glossary` table in th
 
 ### 3) Enable controllers
 
-Register the following route provider(s) on the Storefront:
+Register the following route provider on the Storefront:
 
 | PROVIDER | NAMESPACE |
 | --- | --- |
@@ -1064,7 +1065,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Ensure that:
 
-* The `BarcodeWidget` widget has been registered.
-* The barcode (with return reference encoded) is shown on the return print screen.
+- The `BarcodeWidget` widget has been registered.
+- The barcode (with return reference encoded) is shown on the return print screen.
 
 {% endinfo_block %}

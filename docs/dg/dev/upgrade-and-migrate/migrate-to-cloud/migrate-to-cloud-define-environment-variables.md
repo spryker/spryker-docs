@@ -16,6 +16,7 @@ $config[ServiceApiConstants::BASE_URL] = env('SERVICE_API_BASE_URL');
 $config[ServiceApiConstants::API_KEY] = env('SERVICE_API_KEY');
 $config[ServiceApiConstants::API_SECRET] = env('SERVICE_API_SECRET');
 ```
+
 Follow the same configuration approach to define the variables in your application.
 
 ## Next step

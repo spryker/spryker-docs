@@ -10,7 +10,7 @@ Install the required features:
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Shipment       | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)  |
-| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html) |
+| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html) |
 
 ## 1) Install the required modules
 
@@ -34,7 +34,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                                                   | SPECIFICATION                                                                                                                              | NAMESPACE                |
 |---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
@@ -163,7 +163,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:shipment-type-service-type
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities have been imported into the `spy_shipment_type_service_type` database table.
 
@@ -277,8 +277,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that you can include the `service-types` relation in the `shipment-types` resource requests:
-* `GET https://glue.mysprykershop.com/shipment-types?include=service-types`
-* `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}?include=service-types`
+- `GET https://glue.mysprykershop.com/shipment-types?include=service-types`
+- `GET https://glue.mysprykershop.com/shipment-types/{{shipment-type-uuid}}?include=service-types`
 
 {% endinfo_block %}
 
@@ -382,6 +382,7 @@ Make sure that validation plugins work as expected:
   }
 }
 ```
+
 3. Check that the response contains information about the validation error.
 
 Make sure a service point address is set as a shipping address during checkout:
@@ -463,6 +464,7 @@ Make sure a service point address is set as a shipping address during checkout:
   }
 }
 ```
+
 3. In the database, check that `spy_sales_order_address` contains the service point address data for the created order.
 
 {% endinfo_block %}

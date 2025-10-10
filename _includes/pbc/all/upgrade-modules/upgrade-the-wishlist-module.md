@@ -4,7 +4,7 @@
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -23,7 +23,7 @@ We have added a new dependency to `ProductStoreClient`: now use `Spryker\Client\
 
 ## Upgrading from Version 2.* to Version 3.*
 
-If you’re migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
+If you're migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
 Version 3 of the Wishlist module introduced new schema, and old tables have to be deleted while new created.
 First you need to drop old tables:
 
@@ -31,7 +31,9 @@ First you need to drop old tables:
 DROP TABLE spy_wishlist_item;
 DROP TABLE spy_wishlist;
 ```
+
 Then you need to create new schema tables:
+
 ```sql
 CREATE TABLE spy_wishlist
 (

@@ -70,7 +70,7 @@ Make sure that you can't see the **Checkout** button on the Quote request items 
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -116,6 +116,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Verify that when you add/edit shipping information in RFQ as an agent or a buyer you have access only to the address step and the shipment step.

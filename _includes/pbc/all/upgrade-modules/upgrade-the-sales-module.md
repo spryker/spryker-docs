@@ -84,7 +84,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block infoBox %}
 
-To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -214,12 +214,13 @@ BEGIN;
 
  COMMIT;  
  ```
+
 4. Now that the required fields/tables have been created,  migrate your data using the following script: *Sales Migration Console Command*.
 
     **This command will migrate:**
 
-   * all `sales_order.fk_customer` data to `sales_order.customer_reference`
-   * all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
+   - all `sales_order.fk_customer` data to `sales_order.customer_reference`
+   - all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
 Place the console command invoked by `vendor/bin/console` into your Sales module under `\Pyz\Zed\Sales\Communication\Console\ShipmentAndCustomerMigrationConsole.php`.
 
 5. Register the console command at `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`.
@@ -254,11 +255,11 @@ Migrating the calculated data and moving from the `sales-aggregator` concept req
 
 Now you have two options:
 
-* keep old calculators (deprecated)
+- keep old calculators (deprecated)
 
 **OR**
 
-* migrate to the new calculators logic.
+- migrate to the new calculators logic.
 
 1. To keep old calculation logic, see [Updating calculator stacks](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
@@ -270,7 +271,7 @@ With the Product-Bundle module release, the Sales schema file `spy_sales.schema.
 
 {% info_block errorBox "Important" %}
 
-Please update your templates if overwritten.
+Update your templates if overwritten.
 
 {% endinfo_block %}
 

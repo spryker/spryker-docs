@@ -62,7 +62,7 @@ Adjust the schema definition so that entity changes trigger events.
     </table>
 
     </database>
-```   
+```
 
 **src/Pyz/Zed/Company/Persistence/Propel/Schema/spy_company.schema.xml**
 
@@ -329,7 +329,7 @@ Enable the following behaviors by registering the plugins:
 | DefaultCompanyUserCustomerTransferExpanderPlugin | Sets a default company user for a Business on Behalf customer if a company user has not been selected yet. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
 | IsOnBehalfCustomerTransferExpanderPlugin | Sets the `CustomerTransfer.IsOnBehalf` property so that other features can determine if the selected company user is a Business on Behalf company user. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
 | CompanyUserAccessTokenAuthenticationHandlerPlugin | Provides functionality to log in a customer by an access token. | None | Spryker\Client\OauthCompanyUser\Plugin\Customer |
-| CompanyUserReloadCustomerTransferExpanderPlugin | Reloads a company user if it is already set in `CustomerTransfer`. | None | Spryker\Zed\CompanyUser\Communication\Plugin\Customer |
+| CompanyUserReloadCustomerTransferExpanderPlugin | Reloads a company user if it's already set in `CustomerTransfer`. | None | Spryker\Zed\CompanyUser\Communication\Plugin\Customer |
 | CompanyUserAccessTokenOauthUserProviderPlugin | Provides a user transfer by a company user ID. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
 | CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin | Provides the configuration of `CompanyUser` `GrantType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
 | OauthCompanyUserInstallerPlugin| Creates new OAuth scope—adds `company_user scope` to the `spy_oauth_scope` table.) | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Installer |
@@ -729,7 +729,7 @@ business_on_behalf_widget.change_company_user,Change Company User,en_US
 business_on_behalf_widget.change_company_user,Firmenbenutzer Profil ändern,de_DE
 company_user.business_on_behalf.error.company_not_active,"You can not select this company user, company is not active.",en_US
 company_user.business_on_behalf.error.company_not_active,"Sie können diesen Firmennutzer nicht auswählen da die Firma inaktiv ist",de_DE
-company_user.business_on_behalf.error.company_user_invalid,"You can not select this company user, it is invalid.",en_US
+company_user.business_on_behalf.error.company_user_invalid,"You can not select this company user, it's invalid.",en_US
 company_user.business_on_behalf.error.company_user_invalid,"Sie können diesen Firmennutzer nicht auswählen da er ungültig ist",de_DE
 customer_page.error.customer_already_logged_in,Customer already logged in.,en_US
 customer_page.error.customer_already_logged_in,Der Kunde ist bereits eingeloggt.,de_DE

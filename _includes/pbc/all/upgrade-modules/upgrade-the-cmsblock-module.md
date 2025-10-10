@@ -4,12 +4,12 @@
 
 `CmsBlock` version 3.0.0 introduces the following backward incompatible changes:
 
-* Introduced the `spy_cms_block.spy_cms_block-key` unique index.
-* Adjusted `CmsBlockWriter` to use `CmsBlockKeyProvider` that persists the `key` field while writing a content entity.
-* Removed `CmsBlockClient`. Use the `CmsBlockStorageClient` module instead.
-* Removed the deprecated columns in `spy_cms_block`:  `type`, `fk_page`, `value`. If you use them directly, make sure to add their definition on the project level to `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`.
-* Removed `CmsBlockConstants::YVES_THEME`. Use `CmsBlockConfig::getThemeName()` instead.
-* Moved `CmsBlockPlaceholderTwigPlugin` to the `SprykerShop\CmsBlockWidget` module.
+- Introduced the `spy_cms_block.spy_cms_block-key` unique index.
+- Adjusted `CmsBlockWriter` to use `CmsBlockKeyProvider` that persists the `key` field while writing a content entity.
+- Removed `CmsBlockClient`. Use the `CmsBlockStorageClient` module instead.
+- Removed the deprecated columns in `spy_cms_block`:  `type`, `fk_page`, `value`. If you use them directly, make sure to add their definition on the project level to `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`.
+- Removed `CmsBlockConstants::YVES_THEME`. Use `CmsBlockConfig::getThemeName()` instead.
+- Moved `CmsBlockPlaceholderTwigPlugin` to the `SprykerShop\CmsBlockWidget` module.
 
 To upgrade to the new version of the module, do the following:
 
@@ -189,9 +189,9 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 4. Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 5. Apply the database changes: `vendor/bin/console propel:migrate`
 6. Generate and update ORM models: `vendor/bin/console propel:model:build`
-7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It’s important to make sure that they extend the base classes from the Spryker core, for example:
-   * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
-   * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
+7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It's important to make sure that they extend the base classes from the Spryker core, for example:
+   - `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
+   - `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
 
 8. The newly created `spy_cms_block_store` table defines 1 row per CMS Block-store association. Populate this table according to your requirements.
 
@@ -232,11 +232,11 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
 
 9. Additionally, the following internal classes/methods have changed. Take a look if you have customized them:
 
-* `CmsBlockGlossaryManager::getCmsBlockEntity()`
-* `CmsBlockReader::findCmsBlockById()`
-* `CmsBlockQueryContainer::queryCmsBlockByIdWithTemplateWithGlossary()`
-* `CmsBlockMapper`
-* `CmsBlockWriter`
+- `CmsBlockGlossaryManager::getCmsBlockEntity()`
+- `CmsBlockReader::findCmsBlockById()`
+- `CmsBlockQueryContainer::queryCmsBlockByIdWithTemplateWithGlossary()`
+- `CmsBlockMapper`
+- `CmsBlockWriter`
 
 You can find more details for these changes on [CMS Block module release page](https://github.com/spryker/cms-block/releases).
 

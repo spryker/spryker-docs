@@ -310,7 +310,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the following changes have been applied in the database:
+- Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                          | TYPE  | EVENT   |
 |------------------------------------------|-------|---------|
@@ -328,7 +328,7 @@ console transfer:generate
 | spy_category_image_set_to_category_image | table | created |
 | spy_category_image_storage               | table | created |
 
-* Make sure propel entities have been generated successfully by checking their existence.
+- Make sure propel entities have been generated successfully by checking their existence.
 
 {% endinfo_block %}
 
@@ -397,6 +397,7 @@ Make sure that the following changes have been implemented in transfer objects:
 1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
+
 ```csv
 category.validation.category_node_entity_not_found,The category node ID '%category_node_id%' cannot be relocated because this category node no longer exists.,en_US
 category.validation.category_node_entity_not_found,"Die Kategorieknoten-ID '%category_node_id%' kann nicht verschoben werden, da dieser Kategorieknoten nicht mehr existiert.",de_DE
@@ -580,6 +581,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 2. Set up event listeners:
@@ -699,20 +701,20 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure that the `category-node` and `category-tree` trigger plugins work correctly:
 
-1.  Fill the `spy_category` table with some data.
-2.  Run the `console publish:trigger-events -r category_node` command.
-3.  Run the `console publish:trigger-events -r category_tree` command.
-4.  Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
-5.  Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
+1. Fill the `spy_category` table with some data.
+2. Run the `console publish:trigger-events -r category_node` command.
+3. Run the `console publish:trigger-events -r category_tree` command.
+4. Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
+5. Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
 Make sure that *category-node* and *category-tree* synchronization plugins works correctly:
 
-1.  Fill the `spy_category_node_storage` and `spy_category_tree_storage` tables with some data.
-2.  Run the `console sync:data -r category_node` command.
-3.  Run the `console sync:data -r category_tree` command.
-4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
+1. Fill the `spy_category_node_storage` and `spy_category_tree_storage` tables with some data.
+2. Run the `console sync:data -r category_node` command.
+3. Run the `console sync:data -r category_tree` command.
+4. Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-Make sure that, when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
+Make sure that, when a category is created or edited through ORM, it's exported to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE  | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 |---------------|---------------|----------------------------------|
@@ -830,6 +832,7 @@ Make sure that, when a category is created or edited through ORM, it is exported
     "_timestamp": 1621934332.368688
 }
 ```
+
 </details>
 
 <details>
@@ -912,7 +915,7 @@ Make sure that, when a category is created or edited through ORM, it is exported
 
 ### 7) Import data
 
-1.  Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **data/import/common/common/category.csv**
 
@@ -1143,6 +1146,7 @@ class CategoryDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php**
@@ -1209,9 +1213,9 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* To verify you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
+- To verify you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
 
-* To verify you've integrated category store assignments successfully, check that you can manage store relations when creating and editing categories in the Back Office.
+- To verify you've integrated category store assignments successfully, check that you can manage store relations when creating and editing categories in the Back Office.
 
 {% endinfo_block %}
 
@@ -1253,6 +1257,7 @@ Register the following global widgets:
 | CategoryImageStorageWidget | Finds the given category image set in Storage and displays its first image in a given size format. | SprykerShop\Yves\CategoryImageStorageWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
 ```php
 <?php   
 

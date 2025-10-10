@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME      | VERSION  | INSTALLATION GUIDE |
 | --------- | -------- | ------------------|
-| Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
-| Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
+| Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### Set up behavior
 
@@ -84,7 +84,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 Make sure that inactive product offers get removed from cart on reload.
 
-Make sure that it is only possible to have items in cart where the product offer reference belongs to the correct concrete product.
+Make sure that it's only possible to have items in cart where the product offer reference belongs to the correct concrete product.
 
 {% endinfo_block %}
 
@@ -111,7 +111,7 @@ Enable the following behaviors by registering the plugins:
 
 **src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Yves\CartPage;

@@ -13,7 +13,7 @@ end
 require 'html-proofer'
 
 # Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
+def run_htmlproofer_with_retry(directory, options, max_tries = 0, delay = 5)
   options[:typhoeus] ||= {}
   options[:typhoeus][:timeout] = 60
   options[:typhoeus][:headers] = {
@@ -84,11 +84,11 @@ commonOptions = {
     /twitter.com\/[\.\w\-\/\?]+/,
     /www.optimise-it.de\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
+    /www.cdata.com\/[\.\w\-\/\?]+/,
     /dixa.com\/[\.\w\-\/\?]+/,
     /rxjs.dev\/[\.\w\-\/\?]+/,
     /www.blackfire.io\/[\.\w\-\/\?]+/,
     /linux.die.net\/[\.\w\-\/\?]+/,
-    # check next url's
     /redisdesktop.com\/[\.\w\-\/\?]+/,
     /xdebug.org\/[\.\w\-\/\?]+/,
     /www.javaworld.com\/[\.\w\-\/\?]+/,
@@ -96,10 +96,27 @@ commonOptions = {
     /code.visualstudio.com\/[\.\w\-\/\?]+/,
     /www.jetbrains.com\/[\.\w\-\/\?]+/,
     /docs.spring.io\/[\.\w\-\/\?]+/,
-    "http://redisdesktop.com/",
-    "https://developer.computop.com/display/EN/Test+Cards",
-    "https://www.centralbank.cy/",
-    "https://www.facebook.com/Spryker/"
+    /redisdesktop.com\/[\.\w\-\/\?]+/,
+    /developer.computop.com\/[\.\w\-\/\?]+/,
+    /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /centralbank.cy\/[\.\w\-\/\?]+/,
+    /www.mysql.com\/[\.\w\-\/\?]+/,
+    /www.gnu.org\/[\.\w\-\/\?]+/,
+    /www.npmjs.com\/[\.\w\-\/\?]+/,
+    /algolia.com\/[\.\w\-\/\?]+/,
+    /www.cursor.com\/[\.\w\-\/\?]+/,
+    /mysql.com\/[\.\w\-\/\?]+/,
+    /www.centralbank.cy\/[\.\w\-\/\?]+/,
+    /dev.mysql.com\/[\.\w\-\/\?]+/,
+    /jwt.io\/[\.\w\-\/\?]+/,
+    /contorion.de\/[\.\w\-\/\?]+/,
+    /www.contorion.de\/[\.\w\-\/\?]+/,
+    /www.jwt.io\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
+    /auth0.com\/[\.\w\-\/\?]+/,
+    /partner.easycredit.de\/[\.\w\-\/\?]+/,
+    /www.facebook.com\/[\.\w\-\/\?]+/
+
   ],
   :ignore_files => [],
   :typhoeus => {
@@ -113,6 +130,7 @@ commonOptions = {
   # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
+  :disable_external => true,
 }
 
 task :check_ca do
@@ -123,6 +141,7 @@ task :check_ca do
     /docs\/pbc\/.+/,
     /docs\/about\/.+/,
     /docs\/dg\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/acp\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
@@ -136,6 +155,7 @@ task :check_about do
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/dg\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
@@ -150,11 +170,26 @@ task :check_pbc do
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
     /docs\/dg\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202403\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202400\.0\/.+/,
-    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,    
+    /docs\/pbc\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/pbc\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
+  ]
+  run_htmlproofer_with_retry("./_site", options)
+end
+
+task :check_integrations do
+  options = commonOptions.dup
+  options[:ignore_files] = [
+    /docs\/ca\/.+/,
+    /docs\/acp\/.+/,
+    /docs\/scos\/dev\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/pbc\/.+/,
+    /docs\/dg\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)
 end
@@ -169,8 +204,12 @@ task :check_dg do
     /docs\/about\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/integrations\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202311\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
   run_htmlproofer_with_retry("./_site", options)

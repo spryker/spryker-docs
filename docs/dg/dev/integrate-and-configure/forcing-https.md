@@ -1,6 +1,6 @@
 ---
 title: Forcing HTTPS
-description: Use the guide to configure HTTPs and HTTP for your pages.
+description: Learn with this guide to configure HTTPs and HTTP for your pages within your Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-force-https
@@ -71,7 +71,7 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED] = [
 ];
 ```
 
-## When is a request secure?
+## How to determine if a request is secure
 
 Two options identify if a request is secure or not:
 

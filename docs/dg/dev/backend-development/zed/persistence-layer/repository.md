@@ -9,17 +9,17 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity.html
   - title: Entity manager
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
 ---
 
 Since Kernel version 3.2 it's possible to use a Repository class in your persistence layer. The repository implements the [repository pattern](https://martinfowler.com/eaaCatalog/repository.html), which means you have a clear separation between business and persistence layers. Propel entities are not allowed outside the persistence layer. We are using transfer objects instead. This separation enables switching to different database systems or ORMs, you could even use NOSQL to store your data.
@@ -53,7 +53,7 @@ class BlogRepository extends AbstractRepository implements BlogRepositoryInterfa
 
 ## EntityTransfers
 
-With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables, `EntityTransfer` has all properties and relations defined, also it holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping entity when data is persisted. Names of `EntityTransfers` start with `Spy`, followed by the table name, and then the `EntityTransfer` suffix. For example, `SpyBlogEntityTransfer` would map to SpyBlog Propel entity.
+With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables, `EntityTransfer` has all properties and relations defined, also it holds FQCN to the Propel entity it's mapped to. This FQCN is used when mapping entity when data is persisted. Names of `EntityTransfers` start with `Spy`, followed by the table name, and then the `EntityTransfer` suffix. For example, `SpyBlogEntityTransfer` would map to SpyBlog Propel entity.
 
 ## Abstract Repository Class
 
@@ -113,11 +113,11 @@ class BlogPersistenceFactory extends AbstractPersistenceFactory
 
 ## Conventions
 
-#### Querying
+### Querying
 
-* When returning filtered collections by certain field, use `find{Entity}CollectionBy{field}($field, CriteriaTransfer $criteriaTransfer)`. For example, `findBlogCollectionByFirstName($firstName, CriteriaTransfer $criteriaTransfer = null)`
-* When returning a single item: `find{Entity}By{field}`. For example: `public function findBlogByName($firstName)`.
-* When counting records `public function count{Entity}By{Name}({name})`. For example: `public function countBlogByName($firstName)`.
+- When returning filtered collections by certain field, use `find{Entity}CollectionBy{field}($field, CriteriaTransfer $criteriaTransfer)`. For example, `findBlogCollectionByFirstName($firstName, CriteriaTransfer $criteriaTransfer = null)`
+- When returning a single item: `find{Entity}By{field}`. For example: `public function findBlogByName($firstName)`.
+- When counting records `public function count{Entity}By{Name}({name})`. For example: `public function countBlogByName($firstName)`.
 
 Those three queries share the same queries. For better reusability, it's recommended to extract this logic to a protected method. For example:
 
@@ -146,9 +146,9 @@ The repository is available in all ZED layers where Spryker classes are resolvab
 
 You might use the following definitions to generate related code:
 
-* `vendor/bin/console spryk:run AddZedPersistenceRepository` - Add Zed Persistence Repository
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterface` - Add Zed Persistence Repository Interface
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
+- `vendor/bin/console spryk:run AddZedPersistenceRepository` - Add Zed Persistence Repository
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterface` - Add Zed Persistence Repository Interface
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
 
 For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

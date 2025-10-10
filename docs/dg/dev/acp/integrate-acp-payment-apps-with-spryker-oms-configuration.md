@@ -11,18 +11,24 @@ This document describes how to set up your project with the ACP payment app, ens
 
 ## Prerequisites
 
-Before you begin, make sure the following prerequisites are met:
-- You have installed the Spryker Order Management System. For the installation instructions, see [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
-- You are familiar with the basics of OMS provided in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html) and their sub-pages.
+- [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
+- Learn the basics of OMS described in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html), and their sub-pages.
 
-## Default ACP payment OMS  
+## Default ACP payment app OMS  
 
-The default ACP payment OMS configuration is located at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
-This configuration is assigned to each order paid with the ACP payment method. 
+The default ACP payment app OMS configuration is located in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+This configuration is assigned to each order paid with an ACP payment app payment method. Use it as a starting point to build your configuration.
 
 ### XML file structure
 
-The main OMS file includes `<subprocesses>` – similar to libraries or building blocks with their own `<states>`, `<transitions>`, and `<events>`:
+The main OMS file includes `<subprocesses>`, which function like libraries or building blocks containing their own `<states>`, `<transitions>`, and `<events>`.  
+
+
+#### Subprocesses
+
+A typical state machine consists of a couple of subprocesses that represent a complete order process.
+
+Example of how to add subprocesses:
 
 ```xml
 <subprocesses>
@@ -31,45 +37,109 @@ The main OMS file includes `<subprocesses>` – similar to libraries or building
 </subprocesses>
 ```
 
-Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main State Machine .xml file.
+Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main state machine XML file.
 
-![default-oms](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration/default-oms.png)
+Subprocesses used by ForeignPaymentStateMachine01:
+- `ItemClose01`
+- `ItemReturn01`
+- `ItemSupply01`
+- `ItemSupplyNonMarketplace01`
+- Marketplace-only: `MerchantOrder01`
+- Marketplace-only: `MerchantPayout01`
+- Marketplace-only: `MerchantPayoutReverse01`
+- `PaymentCancel01`
+- `PaymentCapture01`
+- `PaymentRefund01`
+- `PaymentRefund01NonMarketplace`
 
-The default setup assumes a two-step process for collecting money, beginning with the `PaymentAuthorization` subprocess.
+You can use them as examples or building blocks for your own state machine definition.
+
+
+### Transition of orders and order items
+
+Transitions between states in payment apps can be handled in two ways:  
+
+
+
+| Approach      | Description | Setup |  
+|--------------|-------------|---------|  
+| Event-based  | Trigger events based on Payment App messages. | Add `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider`. |  
+| Conditional  | Use conditional transitions based on Payment App messages and condition plugins. | Add `Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` to `MessageBrokerDependencyProvider` along with the necessary condition plugins. |
+
+The following sections provide detailed instructions for configuring each option.  
+
+
+
+#### Transition based on event triggers  
+
+The `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` contains message handlers that trigger events based on messages received from the payment app.  
+
+State transitions occur automatically through asynchronous ACP messages, processed by the `spryker/message-broker` module. The following sub-processes have auto-transitions:
+
+- `PaymentAuthorization`
+- `PaymentCapture`
+- `PaymentRefund`
+- `PaymentCancel`
+
+The MessageBroker worker runs in the background as a cron job, checking for new messages and triggering OMS events based on the configuration in `Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`. You can change this configuration to fit your project's needs.  
+
+Use this approach if your configuration is similar to the default `ForeignPaymentStateMachine01`, particularly if your OMS doesn't contain slow-running commands that could cause transition failures. The payment status on the app side can change rapidly, which may cause issues if your OMS is not in the correct state for the transition. For example, if a command between `PaymentAuthorized` and `PaymentCapturePending` takes too long to process and a message arrives attempting to transition from `PaymentCapturePending` to `PaymentCaptured`, the OMS may not be able to complete the transition because it is not yet in the required state.  
+
+#### Conditional transitions
+
+This setup enables the payment app to progress through states independently of OMS while ensuring that OMS conditions execute correctly. For example, if the payment app status advances to `PaymentCaptured` while the OMS remains in the `new` state, querying whether the payment is authorized returns true because authorization occurs before the `PaymentCaptured` state.
+
+`Spryker\Zed\PaymentApp\Communication\Plugin\MessageBroker\PaymentAppOperationsMessageHandlerPlugin` contains message handlers that store the payment status provided by the app. The OMS evaluates this status against predefined conditions to determine if the transition to the next state is possible.
+
+
+The following condition plugins verify if the payment is in a needed state before allowing a transition:
+
+- `IsPaymentAppPaymentStatusAuthorizationFailedConditionPlugin`
+- `IsPaymentAppPaymentStatusAuthorizedConditionPlugin`
+- `IsPaymentAppPaymentStatusCanceledConditionPlugin`
+- `IsPaymentAppPaymentStatusCancellationFailedConditionPlugin`
+- `IsPaymentAppPaymentStatusCapturedConditionPlugin`
+- `IsPaymentAppPaymentStatusCaptureFailedConditionPlugin`
+- `IsPaymentAppPaymentStatusCaptureRequestedConditionPlugin`
+- `IsPaymentAppPaymentStatusOverpaidConditionPlugin`
+- `IsPaymentAppPaymentStatusUnderpaidConditionPlugin`
+
+This approach decouples OMS from the payment app, enabling you to run slow-processing commands within the OMS while maintaining fine-grained control over state transitions.
+
+To use this approach, add the provided condition plugins to your OMS configuration in the `OmsDependencyProvider::extendConditionPlugins` method.
+
+If some transitions don't occur as expected, you can adjust the configuration using the `Spryker\Zed\PaymentApp\PaymentAppConfig::STATUS_MAP` constant.
+
 
 ### Automatic transitions of states
 
-Transitions between states occur automatically via asynchronous ACP messages handled by the `spryker/message-broker` module. 
-The sub-processes with auto-transitions are: `PaymentAuthorization`, `PaymentCapture`, `PaymentRefund`, and `PaymentCancel`.
+The following predefined payment event messages apply to all payment methods from the ACP App Catalog:
 
-The MessageBroker worker checks for new messages in the background (cron job) and triggers OMS events based on
-the configuration in `\Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()`.You can modify this configuration for your project.
+- `PaymentAuthorized`
+- `PaymentAuthorizationFailed`
+- `PaymentCanceled`
+- `PaymentCancellationFailed`
+- `PaymentCaptured`
+- `PaymentCaptureFailed`
+- `PaymentRefunded`
+- `PaymentRefundFailed`
+- `PaymentOverpaid`
+- `PaymentUnderpaid`
 
-The list of payment event messages is predefined, and they are common for all payment methods from the ACP App Catalog:
-- PaymentAuthorized
-- PaymentAuthorizationFailed
-- PaymentCanceled
-- PaymentCancellationFailed
-- PaymentCaptured
-- PaymentCaptureFailed
-- PaymentRefunded
-- PaymentRefundFailed
-
-For example, a submitted order from the state `"new"` moves to the `PaymentAuthorization` sub-process where OMS will wait for a payment event from ACP apps. Depending on the received message, the order is then moved to the next state: either `"payment authorized"` or `"payment authorization failed"`.
-
-A similar approach is implemented also in the `PaymentCapture`, `PaymentRefund` and `PaymentCancel` sub-processes.
+Configure them in `config_default.php`.
 
 {% info_block infoBox "Manual transition between states" %}
 
-In case where a payment operation happened offline or was changed in the payment provider system, but the corresponding message about it wasn't sent or was lost, you can manually trigger a transition for each operation in the Back Office. For instructions on how to change states of orders, see [Change the state of order items](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
+If a payment operation occurs offline or changes in the payment provider's system but the corresponding message is not sent or is lost, you can manually trigger a transition in the Back Office. For instructions on changing states of orders, see [Change the state of order items](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html).
 
-For example, if an order got stuck in the `"payment capture pending"` state, a Back office user can make sure that the payment is resolved through alternative means and click **payment capture successful** to transition the order to the `"payment captured"` state.
+For example, if an order gets stuck in the `payment capture pending` state, a Back office user can resolve the payment by clicking **payment capture successful** to transition the order to the `payment captured` state.
 
 {% endinfo_block %}
 
 ### Payment operation commands
 
-The default OMS setup has three commands:
+The following default commands are triggered from OMS to instruct the Payment App on the next steps:
+
 - `Payment/Capture`
 - `Payment/Cancel`
 - `Payment/Refund`
@@ -77,9 +147,9 @@ The default OMS setup has three commands:
 The commands send asynchronous ACP messages to a payment app, allowing it to schedule the requested operation for a specific amount for the selected order and its items. The payment app responds with a payment event message indicating either success or failure.
 
 The list of payment command messages is predefined:
-- CapturePayment
-- CancelPayment
-- RefundPayment
+- `CapturePayment`
+- `CancelPayment`
+- `RefundPayment`
 
 In the project OMS configuration, you can put these commands into the needed transition.
 
@@ -107,15 +177,74 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
+### Adding commands
+
+You can add new commands to the OMS configuration by extending the `OmsDependencyProvider::extendCommandPlugins` method. Example:
+
+```php
+...
+protected function extendCommandPlugins(Container $container): Container
+{
+    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+        ...
+        // ----- External PSP
+        $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
+        $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
+        $commandCollection->add(new RefundCommandPlugin(), 'Payment/Refund/Confirm');
+        $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
+        $commandCollection->add(new MerchantPayoutCommandByOrderPlugin(), 'SalesPaymentMerchant/Payout');
+        $commandCollection->add(new MerchantPayoutReverseCommandByOrderPlugin(), 'SalesPaymentMerchant/ReversePayout');
+
+        return $commandCollection;
+    });
+
+    return $container;
+}
+
+```
+
+
+### Adding conditions
+
+You can add new conditions to the OMS configuration by extending the `OmsDependencyProvider::extendConditionPlugins` method. Example:
+
+```php
+protected function extendConditionPlugins(Container $container): Container // phpcs:ignore SlevomatCodingStandard.Functions.UnusedParameter
+{
+    $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
+        // ----- External PSP
+        $conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPaidOut');
+        $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
+
+        // ----- External PSP V2 Condition to ask for payment state instead of getting it told by the PSP
+        $conditionCollection->add(new IsPaymentAppPaymentStatusAuthorizationFailedConditionPlugin(), 'Payment/IsAuthorizationFailed');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusAuthorizedConditionPlugin(), 'Payment/IsAuthorized');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusCanceledConditionPlugin(), 'Payment/IsCanceled');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusCancellationFailedConditionPlugin(), 'Payment/IsCancellationFailed');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusCapturedConditionPlugin(), 'Payment/IsCaptured');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusCaptureFailedConditionPlugin(), 'Payment/IsCaptureFailed');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusCaptureRequestedConditionPlugin(), 'Payment/IsCaptureRequested');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusOverpaidConditionPlugin(), 'Payment/IsOverpaid');
+        $conditionCollection->add(new IsPaymentAppPaymentStatusUnderpaidConditionPlugin(), 'Payment/IsUnderpaid');
+
+        return $conditionCollection;
+    });
+
+    return $container;
+}
+```
+
+
 ## Customizing for your business flow
 
-You have several options to customize your business flow: 
+You have several options to customize your business flow:
 
 - Without shipping
 - Without return and refund
 - Without payment authorization and cancellation
 
 ### OMS without shipping
+
 If your project doesn't involve product shipping, customize the main .XML file and each subprocess in the .XML file.
 For example, you can change the transition from `"invoiced"` to `"payment capture ready"` state, making a direct transition
 from `"invoiced"` to `"payment capture pending"` with `event = start payment capture`, which has the command `"Payment/Capture"` on-enter:
@@ -172,7 +301,7 @@ For a simpler payment flow without pre-authorization, cancellation, and refunds,
     xmlns="spryker:oms-01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="spryker:oms-01 https://static.spryker.com/oms-01.xsd">
-    
+
     <process name="ForeignPaymentStateMachine01" main="true">
         <subprocesses>
             <process>PaymentCapture</process>
@@ -225,13 +354,10 @@ For a simpler payment flow without pre-authorization, cancellation, and refunds,
 The following elements are critical and must stay in your project. They are responsible for the messages sent to the ACP payment apps to run payment operations for the specific order or order items:
 
 1. `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::PLUGINS_MESSAGE_HANDLER` has plugins:
-- `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` 
+- `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin`
 - `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin`
 
-2. `\Spryker\Zed\Oms\OmsDependencyProvider::COMMAND_PLUGINS` has commands: 
+2. `\Spryker\Zed\Oms\OmsDependencyProvider::COMMAND_PLUGINS` has commands:
 - `$commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');`
 - `$commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');`
 - `$commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');`
-
-
-

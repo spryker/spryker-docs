@@ -246,8 +246,8 @@ configurable_bundle_page.invalid_template_slot_combination,Invalid template/slot
 configurable_bundle_page.invalid_template_slot_combination,Invalid template/slot combination.,de_DE
 configurable_bundle_page.configurator.tip.header,Create your own bundle.,en_US
 configurable_bundle_page.configurator.tip.header,Create your own bundle.,de_DE
-configurable_bundle_page.configurator.tip.text,"To create the bundle, please select the slot from the left side, and choose the product from the list.",en_US
-configurable_bundle_page.configurator.tip.text,"To create the bundle, please select the slot from the left side, and choose the product from the list.",de_DE
+configurable_bundle_page.configurator.tip.text,"To create the bundle,  select the slot from the left side, and choose the product from the list.",en_US
+configurable_bundle_page.configurator.tip.text,"To create the bundle,  select the slot from the left side, and choose the product from the list.",de_DE
 configurable_bundle_page.configurator.selected_product,Selected product,en_US
 configurable_bundle_page.configurator.selected_product,Selected product,de_DE
 configurable_bundle_page.configurator.summary,Summary,en_US
@@ -265,6 +265,7 @@ configurable_bundle_page.configurator.slot_became_unavailable,Configured slot wi
 configurable_bundle_page.configurator.product_became_unavailable,Product with SKU '%sku%' configured for slot with ID '%id%' became unavailable.,en_US
 configurable_bundle_page.configurator.product_became_unavailable,Product with SKU '%sku%' configured for slot with ID '%id%' became unavailable.,de_DE
 ```
+
 </details>
 
 2. Optional: If you have existing or imported configurable bundle entities, provide translations for templates and slots following the example:
@@ -608,11 +609,11 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 3. Run the `console sync:data configurable_bundle_template` command.
     Make sure the data has been exported as follows:
-    * from `spy_configurable_bundle_template_storage` table to Redis
-    * from `spy_configurable_bundle_template_page_search` table to Elasticsearch
+    - from `spy_configurable_bundle_template_storage` table to Redis
+    - from `spy_configurable_bundle_template_page_search` table to Elasticsearch
 
 4. Create or edit a configurable bundle template or template slot through ORM.
-  Make sure it is exported to Redis or Elasticsearch accordingly.
+  Make sure it's exported to Redis or Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
@@ -824,8 +825,8 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 Place an order with a configured bundle and make sure the following applies:
 
-* Data has been saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
-* On the Storefront order details page, you can see items grouped by configured bundle details.
+- Data has been saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
+- On the Storefront order details page, you can see items grouped by configured bundle details.
 
 {% endinfo_block %}
 
@@ -939,8 +940,8 @@ Add a configurable bundle to cart. Delete or deactivate it. Make sure it's been 
 
 Update configured bundle quantity on the cart page. Make sure the following applies:
 
-* The quantity of each item in the bundle has changed.
-* The quantity of bundle has changed.
+- The quantity of each item in the bundle has changed.
+- The quantity of bundle has changed.
 
 {% endinfo_block %}
 
@@ -948,8 +949,8 @@ Update configured bundle quantity on the cart page. Make sure the following appl
 
 1. Add a configurable item to cart.
 2. Make clean up for a configured bundle item in `session/database` storage: `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`.
-* Reload the cart page.
-* Make sure that `ConfiguredBundleItem::quantityPerSlot` isn't `null`.
+- Reload the cart page.
+- Make sure that `ConfiguredBundleItem::quantityPerSlot` isn't `null`.
 
 {% endinfo_block %}
 
@@ -1092,14 +1093,15 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure the following tabs exist on the **Configurable Bundle Template Slot Edit** page:
 
-* **Assign Categories**.
-* **Assign Products**.
+- **Assign Categories**.
+- **Assign Products**.
 
 {% endinfo_block %}
 
@@ -1148,8 +1150,8 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* On the **Overview of Product lists** page, the **Configurable Bundle Templates** button is displayed.
-* On the **Edit Product List** page, the **Used by** table is populated by configurable bundle template slots.    
+- On the **Overview of Product lists** page, the **Configurable Bundle Templates** button is displayed.
+- On the **Edit Product List** page, the **Used by** table is populated by configurable bundle template slots.
 
 {% endinfo_block %}
 
@@ -1169,8 +1171,8 @@ Take the following steps to install the feature frontend.
 
 Install the required features.
 
-| Feature | Version |
-| --- | --- |
+| Feature | Version | Installation guide |
+| --- | --- | --- |
 | -------------- | ----------------- | ----------------- |
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
@@ -1251,7 +1253,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 | ConfigurableBundleWidgetRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart. |
 | ConfigurableBundleWidgetAsyncRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart with the cart actions AJAX mode enabled. |
 | ConfigurableBundlePageRouteProviderPlugin | You can go to the `/configurator/template-selection` page. |
-| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | You can add a configurable item note with the cart actions AJAX mode enabled.
+| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | You can add a configurable item note with the cart actions AJAX mode enabled. |
 
 {% endinfo_block %}
 

@@ -7,27 +7,40 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202507.0
+        url: /docs/about/all/releases/release-notes-202507.0.html  
       - title: Release notes 202410.0
         url: /docs/about/all/releases/release-notes-202410.0.html
-      - title: Security release notes 202409.0
-        url: /docs/about/all/releases/security-release-notes-202409.0.html
       - title: Release notes 202404.0
         url: /docs/about/all/releases/release-notes-202404.0.html
-      - title: Security release notes 202403.0
-        url: /docs/about/all/releases/security-release-notes-202403.0.html
-      - title: Security release notes 202312.0
-        url: /docs/about/all/releases/security-release-notes-202312.0.html
       - title: Release notes 202311.0
-        url: /docs/about/all/releases/release-notes-202311.0.html
-      - title: Security release notes 202309.0
-        url: /docs/about/all/releases/security-release-notes-202309.0.html
-
-      - title: Security release notes 202306.0
-        url: /docs/about/all/releases/security-release-notes-202306.0.html
-      - title: Security release notes 202304.0
-        url: /docs/about/all/releases/security-release-notes-202304.0.html
-      - title: Security release notes 202302.0
-        url: /docs/about/all/releases/security-release-notes-202302.0.html
+        url: /docs/about/all/releases/release-notes-202311.0.html  
+      - title: Upcoming major module releases
+        url: /docs/about/all/releases/upcoming-major-module-releases.html
+      - title: Security releases
+        nested:
+        - title: Security release notes 202509.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
+        - title: Security release notes 202506.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202506.0.html   
+        - title: Security release notes 202503.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202503.0.html                
+        - title: Security release notes 202412.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202412.0.html      
+        - title: Security release notes 202409.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202409.0.html        
+        - title: Security release notes 202403.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202403.0.html
+        - title: Security release notes 202312.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202312.0.html        
+        - title: Security release notes 202309.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202309.0.html
+        - title: Security release notes 202306.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202306.0.html
+        - title: Security release notes 202304.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202304.0.html
+        - title: Security release notes 202302.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html        
 
     - title: Security audit reports
       nested:
@@ -55,6 +68,8 @@ entries:
         url: /docs/about/all/support/reporting-and-handling-security-issues.html
       - title: GDPR compliance guidelines
         url: /docs/about/all/support/gdpr-compliance-guidelines.html
+      - title: General Product Safety Regulations
+        url: /docs/about/all/support/general-product-safety-regulation.html
       - title: Getting the most out of Spryker Support
         url: /docs/about/all/support/getting-the-most-out-of-spryker-support.html
       - title: Understand SLAs
@@ -74,7 +89,8 @@ entries:
       url: /docs/about/all/b2c-suite.html
     - title: B2B Suite
       url: /docs/about/all/b2b-suite.html
-
+    - title: Self-Service Portal
+      url: /docs/about/all/self-service-portal.html
     - title: Spryker Marketplace
       url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:
@@ -117,8 +133,6 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
-          - title: Merge pull requests
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

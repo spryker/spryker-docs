@@ -1,6 +1,6 @@
 ---
 title: "Benchmark: Performance audit tool"
-description: The Benchmark tool allows you to assess an application's performance by seeing how long it takes to load a page and how much memory the application consumes during requests.
+description: The Benchmark tool allows you to assess an application's performance by how long it takes to load a page and how much memory the it consumes during requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-audit-tool-benchmark
@@ -23,7 +23,7 @@ The Benchmark tool allows you to profile requests to an application and see how 
 
 To install the Benchmark tool, follow the steps below.
 
-1. Install the package via composer. You might want to add it to the `composer dev` section if you don’t want to use it on the production environment:
+1. Install the package via composer. You might want to add it to the `composer dev` section if you don't want to use it on the production environment:
 
 ```bash
 composer require --dev spryker-sdk/benchmark
@@ -80,6 +80,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block infoBox %}
@@ -90,7 +91,7 @@ To have the same code on production and development environments, we recommend a
 
 4. Create test folders, so there is a different folder for each application: `tests/Benchmark(Yves|Glue|Zed)`.
 
-5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g. `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
+5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file–for example, `public/Zed/index.php`. The Benchmark tool has default bootstrap files out-of-the-box, but it's recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
 
@@ -115,7 +116,7 @@ Environment::initialize();
 require_once __DIR__ . '/../bootstrap.php';
 ```
 
-That’s it. You now have the Benchmark tool installed.
+That's it. You now have the Benchmark tool installed.
 
 ## Running the tests
 
@@ -145,17 +146,17 @@ Before you start writing the tests, check out the [PHPBench documentation](https
 
 You can write tests without any additional knowledge, but Benchmark has some default helpers that can make writing benchmarks easier for Spryker:
 
-* **RequestBuilder**—helps you to build the `Request` object.
-* **HttpHelper**—sends a request.
-* **LoginHelper**—lets you log in with some credentials during or before the benchmark.
-* **FormCsrfTokenHelper**—lets you get a valid CSRF token if you want to submit a form on the page.
+- **RequestBuilder**—helps you to build the `Request` object.
+- **HttpHelper**—sends a request.
+- **LoginHelper**—lets you log in with some credentials during or before the benchmark.
+- **FormCsrfTokenHelper**—lets you get a valid CSRF token if you want to submit a form on the page.
 
 To use these helpers, there are several respective factory classes:
 
-* `RequestBuilderFactory`
-* `HttpHelperFactory`
-* `LoginHelperFactory`
-* `CsrfTokenHelperFactory`
+- `RequestBuilderFactory`
+- `HttpHelperFactory`
+- `LoginHelperFactory`
+- `CsrfTokenHelperFactory`
 
 {% info_block warningBox %}
 

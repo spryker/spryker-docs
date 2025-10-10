@@ -26,16 +26,15 @@ ACP supports the following integrations:
 | [Vertex](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/vertex/vertex.html) | Tax compliance. |
 | [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) | Search engine. |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html) | Payment service provider. |
-| [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html) | Consent management platform. |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | Platform for user-generated content. |
 | [Stripe](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/stripe.html) |  Financial infrastructure platform. |
 
 ## ACP components
 
 ACP consists of the following components:
-* App catalog: The interface for managing all ACP apps. The App catalog provides details about an integration, enables users connect to the ACP and add configurations to connect to a third-party app. It can be accessed via the Spryker Back Office. You can view the read-only version of the ACP Catalog in the [Spryker Product Portal](https://product.spryker.com/features/acp/acp-catalog/#/catalog).
-*  App Composition Platform and infrastructure: The underlying platform for the ACP facilitates defining how Spryker projects communicate with third-party integrations via the ACP.
-*  ACP apps: Integrations provided by Spryker by default via the ACP. Spryker offers a range of zero to low-code applications.
+- App catalog: The interface for managing all ACP apps. The App catalog provides details about an integration, enables users connect to the ACP and add configurations to connect to a third-party app. It can be accessed via the Spryker Back Office.
+- App Composition Platform and infrastructure: The underlying platform for the ACP facilitates defining how Spryker projects communicate with third-party integrations via the ACP.
+- ACP apps: Integrations provided by Spryker by default via the ACP. Spryker offers a range of zero to low-code applications.
 
 ## Installing the ACP Catalog
 

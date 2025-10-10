@@ -1,6 +1,6 @@
 ---
 title: Integrate profiler module
-description: Learn how to integrate profiler module
+description: Learn the prerequisites and how to enable and integrate profiler module in to a Spryker based project.
 last_updated: March 22, 2023
 template: howto-guide-template
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
 
 This document describes how to integrate profiler module into a Spryker project.
 
-## Prerequisites
+### Prerequisites
 
 To start the integration, install the necessary features:
 
@@ -19,7 +19,7 @@ To start the integration, install the necessary features:
 | Web Profiler for Zed  | {{page.version}} | [Web Profiler feature integration](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html) |
 | Web Profiler for Yves | {{page.version}} | [Web Profiler feature integration](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html) |
 
-## 1) Enable extension
+### 1) Enable extension
 
 To collect execution traces, enable the `xhprof` extension.
 
@@ -31,19 +31,19 @@ tag: 'dev'
 
 environment: docker.dev
 image:
-  tag: spryker/php:8.3
+  tag: spryker/php:8.4
   php:
     enabled-extensions:
       - xhprof
 ```
 
-## 2) Bootstrap the Docker setup
+### 2) Bootstrap the Docker setup
 
 ```shell
 docker/sdk boot deploy.dev.yml
 ```
 
-## 3) Install the required modules using Composer
+### 3) Install the required modules using Composer
 
 {% info_block warningBox "Verification" %}
 
@@ -60,7 +60,7 @@ Ensure that the following modules have been updated:
 composer require --dev spryker/profiler --ignore-platform-reqs
 ```
 
-### Set up behavior
+#### Set up behavior
 
 1. For `Yves` application, register the following plugins:
 
@@ -191,15 +191,15 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
 }
 ```
 
-# Generate transfers
+## Generate transfers
 
 Run the `console transfer:generate` command to generate all the necessary transfer objects.
 
 
-# Enable the configuration
+## Enable the configuration
 
 Module Profile works as a part of Web Profiler feature. By default, Web Profiler is disabled.
-To enable Web Profiler, please update `config/Shared/config_default-docker.dev.php` configuration file.
+To enable Web Profiler,  update `config/Shared/config_default-docker.dev.php` configuration file.
 
 ```php
 if (interface_exists(WebProfilerConstants::class, true)) {

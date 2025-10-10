@@ -44,7 +44,7 @@ This release is a part of the Split delivery concept migration. When you upgrade
 
 To upgrade to the new version of the module, do the following:
 
-1.  Upgrade the `Shipment` module to the new version:
+1. Upgrade the `Shipment` module to the new version:
 
 ```bash
 composer require spryker/shipment: "^7.0.0" --update-with-dependencies
@@ -107,7 +107,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 /**
 * This file is part of the Spryker Suite.
-* For full license information, please view the LICENSE file that was distributed with this source code.
+* For full license information,  view the LICENSE file that was distributed with this source code.
 */
 
 namespace Pyz\Zed\Oms;
@@ -184,12 +184,12 @@ Database structure is as follows:
 1. Update `spryker/shipment` module to at least 6.0.0 version.
 2. Update the database:
 
-    * Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
-    * Apply the database changes: `vendor/bin/console propel:migrate`.
-    * Generate and update ORM models: `vendor/bin/console propel:model:build`.
-    * You will find some new classes in your project under `\Orm\Zed\Shipment\Persistence` namespace. It’s important that you make sure that they extend the base classes from the Spryker core, e.g.:
-        * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPrice` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPrice`
-        * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPriceQuery` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPriceQuery`
+    - Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
+    - Apply the database changes: `vendor/bin/console propel:migrate`.
+    - Generate and update ORM models: `vendor/bin/console propel:model:build`.
+    - You will find some new classes in your project under `\Orm\Zed\Shipment\Persistence` namespace. It's important that you make sure that they extend the base classes from the Spryker core, e.g.:
+        - `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPrice` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPrice`
+        - `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPriceQuery` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPriceQuery`
 
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
@@ -197,8 +197,8 @@ Database structure is as follows:
 
     Property `defaultPrice` in `ShipmentMethod` transfer object is replaced by prices, and      `storeCurrencyPrice` properties.
 
-    * `prices transfer` object property contains the shipment method related prices from `spy_shipment_method_price` database table as a `MoneyValue` transfer object collection.
-    * `storeCurrencyPrice` transfer object property contains 1 specific price, based on the pre-configured `store + price` mode and for the requested currency.
+    - `prices transfer` object property contains the shipment method related prices from `spy_shipment_method_price` database table as a `MoneyValue` transfer object collection.
+    - `storeCurrencyPrice` transfer object property contains 1 specific price, based on the pre-configured `store + price` mode and for the requested currency.
 
     `ShipmentMethod` transfer object now contains a shipmentMethodKey property, accordingly to the new database structure.
 
@@ -430,6 +430,7 @@ class MigrateShipmentMethodPricesConsole extends Console
 
 }                         
 ```
+
 </details>
 
 6. Register the prepared multi-currency handling `MoneyCollectFormType` form type in your project.
@@ -470,11 +471,11 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% endinfo_block %}
 
-10.  The `MethodForm::setDefaultOptions` deprecated method was removed, use `MethodForm::configureOptions` instead.
-11.  The `ShipmentDependencyProvider::STORE` static dependency access was replaced with proper `StoreFacadeInterface` bridged access. Amend your implementation if you have customized it.
-12.  Note: The `MethodForm.defaultPrice` form field was replaced with its multi-currency representation. Amend your implementation if you have customized it.
-13.  Note: The `MethodForm` form now works on the `ShipmentMethod` transfer object instead of simple array. Amend your implementation if you have customized it.
-14.  Note: The `ShipmentMethodDeliveryTimePluginInterface` interface now expects the returned delivery time in seconds. Amend your implementations of this plugin accordingly. The DemoShop example implementation of the plugin and its usage in the `ShipmentFormDataProvider::getDeliveryTime` method are also updated.
+10. The `MethodForm::setDefaultOptions` deprecated method was removed, use `MethodForm::configureOptions` instead.
+11. The `ShipmentDependencyProvider::STORE` static dependency access was replaced with proper `StoreFacadeInterface` bridged access. Amend your implementation if you have customized it.
+12. Note: The `MethodForm.defaultPrice` form field was replaced with its multi-currency representation. Amend your implementation if you have customized it.
+13. Note: The `MethodForm` form now works on the `ShipmentMethod` transfer object instead of simple array. Amend your implementation if you have customized it.
+14. Note: The `ShipmentMethodDeliveryTimePluginInterface` interface now expects the returned delivery time in seconds. Amend your implementations of this plugin accordingly. The DemoShop example implementation of the plugin and its usage in the `ShipmentFormDataProvider::getDeliveryTime` method are also updated.
 
 Go to the Shipment management Back Office to verify your shipment method prices.
 

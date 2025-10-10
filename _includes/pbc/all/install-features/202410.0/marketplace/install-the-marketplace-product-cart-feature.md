@@ -19,6 +19,7 @@ Install the required features:
 ### 1) Set up transfer objects
 
 Generate transfer changes:
+
 ```bash
 console transfer:generate
 ```
@@ -71,7 +72,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can’t add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
+Make sure that you can't add an item with `merchantReference` and `sku` that do not belong to the same `MerchantProduct`(see `spy_merchant_product_abstract`).
 
 {% endinfo_block %}
 

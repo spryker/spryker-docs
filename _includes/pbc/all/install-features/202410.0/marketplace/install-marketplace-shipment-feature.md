@@ -35,7 +35,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 |-|-|-|
@@ -65,7 +65,7 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Place an order and check that items are grouped by merchant shipment in backoffice.
+Place an order and check that items are grouped by merchant shipment in Back Office.
 
 {% endinfo_block %}
 
@@ -111,7 +111,7 @@ Enable the following behaviors by registering the plugins:
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ShipmentGui;

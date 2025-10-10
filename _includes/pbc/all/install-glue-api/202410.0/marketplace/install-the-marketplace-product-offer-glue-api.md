@@ -15,6 +15,7 @@ Install the required features:
 ### 1) Install the required modules
 
 Install the required modules using Composer:
+
 ```bash
 composer require spryker/merchant-product-offers-rest-api:"^1.1.0" --update-with-dependencies
 ```
@@ -121,7 +122,7 @@ Make sure that `ProductOffersResourceRoutePlugin` is set up by sending the reque
 
 Make sure that `ConcreteProductsProductOffersResourceRoutePlugin` is set up by sending the request `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}/product-offers`.
 
-Make sure that `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}?include=product-offers`. You should get `concrete-products` with all product’s `product-offers` as relationships.
+Make sure that `ProductOffersByProductConcreteSkuResourceRelationshipPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{sku}}{% endraw %}?include=product-offers`. You should get `concrete-products` with all product's `product-offers` as relationships.
 
 Make sure that `MerchantByMerchantReferenceResourceRelationshipPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/product-offers/{% raw %}{{sku}}{% endraw %}?include=merchants`. The response should include the `merchants` resource along with `product-offers`.
 

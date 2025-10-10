@@ -39,11 +39,12 @@ To ensure compatibility and take advantage of the latest features, you need to u
 ```bash
 composer update "phpunit/phpunit":"11.4.0" "codeception/codeception":"~5.1.2" "codeception/lib-innerbrowser":"^4.0.3" "codeception/module-webdriver":"^4.0.1" --with-dependencies
 ```
+
 This updates PHPUnit to version 11.4.0 and the specified Codeception packages to their respective versions, ensuring all dependencies are resolved.
 
 {% info_block warningBox "Resolve dependency conflicts" %}
 
-If errors are returned during the installation, run the following command to identify conflicting dependencies:
+If errors are returned during the installation, identify conflicting dependencies:
 
 ```bash
 composer why-not phpunit/phpunit:11.4.0

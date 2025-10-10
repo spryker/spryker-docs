@@ -1,15 +1,15 @@
 ---
 title: Plugins registration
-description: Plugins registration extension scenario
+description: Learn all about plugins registration extension scenario and how it can support your Spryker based proejct.
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
   - title: Keeping a project upgradable
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
   - title: Modules configuration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
@@ -19,7 +19,7 @@ Manifests support plugins registration in the dependency provider and plugins re
 
 ## Plugins registration in the configuration file
 
-The following is an example of how to have single plugin registration in the global configuration file (e.g. config_default.php):
+The following is an example of how to have single plugin registration in the global configuration file, such as `config_default.php`:
 
 ```php
 <?php
@@ -92,11 +92,11 @@ Manifests fully support multiple plugins registration in an indexed array. Manif
 
 Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`.
 
-If the plugin doesn’t contain any of these keys, it is added to the end of the plugin stack.
+If the plugin doesn't contain any of these keys, it's added to the end of the plugin stack.
 
-If the plugin contains the `after` key and defined plugins in the `after` parameter don’t exist on the project side, the plugin is added to the end of the plugin stack.
+If the plugin contains the `after` key and defined plugins in the `after` parameter don't exist on the project side, the plugin is added to the end of the plugin stack.
 
-If the plugin contains the `before` key and defined plugins in the `before` parameter don’t exist on the project side, the plugin is added as the first plugin in plugin stack.
+If the plugin contains the `before` key and defined plugins in the `before` parameter don't exist on the project side, the plugin is added as the first plugin in plugin stack.
 
 The following is an example of how to have multiple plugins registration in an indexed array:
 
@@ -206,9 +206,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 Manifests fully support multiple plugins registration in an associative array. As a key, you can use:
 
-* string
-* constant
-* function call with arguments
+- string
+- constant
+- function call with arguments
 
 The following is an example of how to have multiple plugins registration in an indexed array:
 
@@ -375,12 +375,12 @@ Manifests fully support the possibility of merging the results of calling multip
 
 Inside of array merge function call you can use:
 
-* wrap methods calls
-* parent method call
-* indexed arrays
-* associative arrays
-* multidimensional arrays
-* variables
+- wrap methods calls
+- parent method call
+- indexed arrays
+- associative arrays
+- multidimensional arrays
+- variables
 
 Multidimensional associative arrays are supported inside of the `array_merge()` up to two levels, but to use them, you must use the wrapped functions.
 
@@ -460,10 +460,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Special situations
 
-* If the target dependency provider class doesn’t exist in the project, it is created and all required methods are created automatically as well.
+- If the target dependency provider class doesn't exist in the project, it's created and all required methods are created automatically as well.
 
-* If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
+- If the target dependency provider class exists in the project without the target method, but such method exists in the parent class, the method is created and the changes are applied.
 
-* If the target dependency provider class exists in the project without the target method, and such method also doesn’t exist in the parent class, the method is NOT created and the changes is NOT applied.
+- If the target dependency provider class exists in the project without the target method, and such method also doesn't exist in the parent class, the method is NOT created and the changes is NOT applied.
 
-* If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won’t find the array, and the changes won’t be applied.
+- If the target method inside of the dependency provider class was modified on the project level and for example array was extracted into the separated method, the upgrader won't find the array, and the changes won't be applied.

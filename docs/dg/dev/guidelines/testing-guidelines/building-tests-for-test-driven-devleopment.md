@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
 ---
 
-This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *test-driven development (TDD)* approach.
+This document helps you understand the main concepts of testing with Spryker and see how simple it's to build tests. You will use the *test-driven development (TDD)* approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
 
@@ -81,6 +81,7 @@ class StringReverserDependencyProvider extends AbstractBundleDependencyProvider
 
 4. Add the `Business` folder inside `tests/PyzTest/Zed/StringReverser`.
 5. From `Codeception`, generate the needed test classes:
+
 ```bash
 vendor/bin/codecept build -c tests/PyzTest/Zed/StringReverser
 ```
@@ -162,11 +163,13 @@ Data builders cannot even be generated if the transfer object is not there. In `
 ```
 
 9. Generate the transfer object first:
+
 ```bash
 console transfer:generate
 ```
 
 10. Generate the data builder:
+
 ```bash
 console transfer:databuilder:generate
 ```
@@ -177,8 +180,8 @@ You must have both of them generated.
 
 A test in Spryker consists of three main blocks:
 
-* *Arrange*—to prepare the test data.
-* *Act*—to act on the data.
+- *Arrange*—to prepare the test data.
+- *Act*—to act on the data.
 
 {% info_block infoBox %}
 
@@ -186,7 +189,7 @@ In the case described in this tutorial, *Act* calls the facade method.
 
 {% endinfo_block %}
 
-* *Assert*—to check the results.
+- *Assert*—to check the results.
 
 **Code sample**
 
@@ -301,6 +304,7 @@ class StringReverser implements StringReverserInterface
 </details>
 
 3. Run the test again
+
 ```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/StringReverser
 ```

@@ -25,43 +25,43 @@ SCCOS uses example modules to implement functionality that is tailored to specif
 
 ## What Spryker delivers
 
-* **Compliance:**
-  * All example modules will be part of the Spyker Example organization on GitHub.
-  * All example modules will be released as standalone modules.
-  * All example modules will be released under the MIT license.
-* **Uniformity:**
-  * Example modules will be suffixed with “example”.
-* **Testability:**
-  * Example modules might include tests, but they don't have to.
-* **Learnability:**
-  * A proper explanation of the implemented functionality will be provided in the `readme.md` file.
+- **Compliance:**
+  - All example modules will be part of the Spyker Example organization on GitHub.
+  - All example modules will be released as standalone modules.
+  - All example modules will be released under the MIT license.
+- **Uniformity:**
+  - Example modules will be suffixed with "example".
+- **Testability:**
+  - Example modules might include tests, but they don't have to.
+- **Learnability:**
+  - A proper explanation of the implemented functionality will be provided in the `readme.md` file.
 
 ## What isn't included
 
 In contrast to Spryker SCCOS core modules, example modules do not adhere to strict guidelines and regulations.
 
-* **Stability:**
+- **Stability:**
   While we strive to maintain the quality of our example modules, we do not guarantee a stable release.
-* **Compatibility:**
-  * While we do our best to keep things compatible, we can't guarantee forward or backward compatibility.
-  * There is no upgradability support for projects or Demo Shop integrations.
-* **Learnability:**
-  While documentation is provided when possible, it is not a firm commitment. We encourage community learning and support.
-* **Maintainability:**
-  * There is no obligation to maintain example modules.
-  * Example modules may be abandoned at any time.
-  * Example modules aren't supported in any way.
-  * Maintenance isn't part of the design.
-* **Customizability:**
-  * We neither support nor encourage customization of example modules.
-  * Example modules have not been designed for use, extension, or configuration in projects.
-* **Modularity:**
+- **Compatibility:**
+  - While we do our best to keep things compatible, we can't guarantee forward or backward compatibility.
+  - There is no upgradability support for projects or Demo Shop integrations.
+- **Learnability:**
+  While documentation is provided when possible, it's not a firm commitment. We encourage community learning and support.
+- **Maintainability:**
+  - There is no obligation to maintain example modules.
+  - Example modules may be abandoned at any time.
+  - Example modules aren't supported in any way.
+  - Maintenance isn't part of the design.
+- **Customizability:**
+  - We neither support nor encourage customization of example modules.
+  - Example modules have not been designed for use, extension, or configuration in projects.
+- **Modularity:**
   No additional effort will be invested in enhancing modularity and extendibility for example modules.
-* **Security:**
+- **Security:**
   Spryker ensures security for its production-grade core modules. While example modules might receive security updates, there is no urgency for fixes, as they are not intended for production use.
-* **Performance:**
+- **Performance:**
   While we aim for good performance, optimizing example modules beyond existing best practices is not a priority.
-* **Testability:**
+- **Testability:**
   We might provide tests for example modules, but they don't have high priority, as the modules aren't intended for production use or extension.
 
 In a nutshell, think of our example packages as a playground - they offer potential for fun and innovation, so explore them at your own pace.

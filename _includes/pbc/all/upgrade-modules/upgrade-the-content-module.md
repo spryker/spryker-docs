@@ -4,16 +4,16 @@
 
 The `Content` module version 2.0.0 implemented the following improvements:
 
-* Introduced the `spy_content.key` field to store the identifier for entities.
-* Introduced the `spy_content.spy_content-key` unique index.
-* Introduced the `ContentTransfer::$key` transfer object property.
-* Introduced `ContentFacadeInterface::findContentByKey()`.
-* Adjusted `\Spryker\Zed\Content\Business\ContentValidator\ContentConstraintsProvider` so it also verifies the key property.
-* Adjusted `ContentWriter` so it uses `ContentKeyProvider` to persist the key field while writing the content entity.
-* Added dependency to `spryker/util-uuid-generator`.
+- Introduced the `spy_content.key` field to store the identifier for entities.
+- Introduced the `spy_content.spy_content-key` unique index.
+- Introduced the `ContentTransfer::$key` transfer object property.
+- Introduced `ContentFacadeInterface::findContentByKey()`.
+- Adjusted `\Spryker\Zed\Content\Business\ContentValidator\ContentConstraintsProvider` so it also verifies the key property.
+- Adjusted `ContentWriter` so it uses `ContentKeyProvider` to persist the key field while writing the content entity.
+- Added dependency to `spryker/util-uuid-generator`.
 
 
-_Estimated migration time: 30minutes-1h_
+*Estimated migration time: 30minutes-1h*
 
 To upgrade to the new version of the module, do the following:
 
@@ -35,7 +35,7 @@ console transfer:generate
 console propel:install
 ```
 
-**If you need to update the existing content items in the database, please follow these steps:**
+**If you need to update the existing content items in the database,  follow these steps:**
 
 1. In `src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml`, update the key column's property "required" to false for the data migration on the project level:
 
@@ -63,7 +63,7 @@ console propel:install
 
 3. Create a new command in `src/Pyz/Zed/Content/Communication/Console/ContentItemKeyGeneratorConsoleCommand.php`.
 
-```php                
+```php
 <?php
 
 /**
@@ -153,11 +153,11 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 		return new ContentRepository();
 	}
 }
-```				
+```
 
 4. Add the newly created command to `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`:
 
-```php                    
+```php
 <?php
 
 /**

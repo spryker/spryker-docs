@@ -26,7 +26,7 @@ The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://git
 
 {% info_block infoBox "Info" %}
 
-We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html).
+We write the Spryker documentation using Markdown. If you don't know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html).
 
 {% endinfo_block %}
 
@@ -50,8 +50,8 @@ To propose changes to the Spryker documentation, take the following steps:
 ![editing-the-document](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/2-editing-a-document.png)
 3. On the **Edit file** tab, edit the document.
 4. To complete your editing and propose changes, in the **Propose changes** section, fill in the following fields:
-   * **Create *[document-name.md]***: Give your commit a name that matches the page title or section you create or edit. For example, if you edit the document called "Install the Cart feature", your commit must also be named "Install the Cart feature".
-   * **Add an optional extended description...** (optional): Provide an optional detailed description of your commit. For information about commits, see [About commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) in the official GitHub documentation.
+   - **Create *[document-name.md]***: Give your commit a name that matches the page title or section you create or edit. For example, if you edit the document called "Install the Cart feature", your commit must also be named "Install the Cart feature".
+   - Optional: **Add an optional extended description...**: Provide an optional detailed description of your commit. For information about commits, see [About commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) in the official GitHub documentation.
 5. Click **Propose changes**.
    This takes you to the **Comparing changes** page.
 ![proposing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/3-saving-changes.png)

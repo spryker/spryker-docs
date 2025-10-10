@@ -1,6 +1,6 @@
 ---
 title: Integrate SCSS linter
-description: Learn how to integrate the SCSS linter into your project
+description: Learn how to enable and integrate the SCSS linter and its dependencies for your Spryker based project
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter-integration-guide
@@ -10,29 +10,34 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/scss-linter-integration-guide.html
 related:
   - title: Integrating Formatter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating TS linter
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
   - title: Integrating Web Profiler for Zed
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrating Web Profiler Widget for Yves
-    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
-Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/development-tools/scss-linter.html)into your project.
+Follow the steps below to integrate the [SCSS linter](/docs/dg/dev/sdks/sdk/development-tools/scss-linter.html) into your project.
 
 ## 1. Install the dependencies
 
 To install the dependencies:
 1. Install Stylelint:
+
 ```bash
 npm install stylelint@13.7.x --save-dev
 ```
+
 2. Install config for Stylelint:
+
 ```bash
 npm install @spryker/frontend-config.stylelint --save-dev
 ```
+
 3. Install the CLI parser:
+
 ```bash
 npm install commander@4.0.x --save-dev
 ```
@@ -42,7 +47,8 @@ npm install commander@4.0.x --save-dev
 To update the scripts:
 
 1. Add the SCSS lint script to `/frontend/libs/stylelint.js`
-```
+
+```js
 const stylelint = require('stylelint');
 const { globalSettings } = require('../settings');
 const commandLineParser = require('commander');
@@ -73,18 +79,22 @@ stylelint.lint({
     process.exit(1);
 });
 ```
-Check [here](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js) for the file example.
 
-2.  Adjust the `/package.json` scripts:
-```
+See this example file: [stylelint.js](https://github.com/spryker-shop/suite/blob/master/frontend/libs/stylelint.js).
+
+2. Adjust the `/package.json` scripts:
+
+```json
 "scripts": {
     ....
     "yves:stylelint": "node ./frontend/libs/stylelint",
     "yves:stylelint:fix": "node ./frontend/libs/stylelint --fix"
 }
 ```
+
 3. Add the ignore `file /.stylelintignore`:
-```
+
+```text
 # Ignore paths
 **/node_modules/**
 **/DateTimeConfiguratorPageExample/**

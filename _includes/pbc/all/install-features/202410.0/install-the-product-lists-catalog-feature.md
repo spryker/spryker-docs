@@ -16,7 +16,7 @@ Install the required features:
 
 Install the required modules using Composer:
 
-```
+```bash
 composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
 ```
 
@@ -43,7 +43,7 @@ Once the Product List data is exported to Elasticsearch, make sure to extend you
 
 {% info_block infoBox "Info" %}
 
-The order of the query expander plugins matters for the search result. Make sure that your query expanders are in the appropriate order. I.e., the `FacetQueryExpanderPlugin` needs to be placed after all the other plugins that filter down the result; otherwise, it can't generate the proper query fragment for itself.
+The order of the query expander plugins matters for the search result. Make sure that your query expanders are in the appropriate order. The `FacetQueryExpanderPlugin` needs to be placed after all the other plugins that filter down the result; otherwise, it can't generate the proper query fragment for itself.
 
 {% endinfo_block %}
 

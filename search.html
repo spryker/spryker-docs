@@ -1,0 +1,134 @@
+---
+product-type: none
+search: exclude
+layout: default
+title: Full Article Search
+permalink: /search.html
+---
+
+<div class="full-text-search">
+    <h1>Search</h1>
+    <small>Search by text and code inside documentation pages.</small>
+    <div id="searchbox"></div>
+    <div id="hits"></div>
+    <div id="pagination"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || '';
+    let debounceTimer;
+
+    const search = instantsearch({
+        indexName: 'spryker_full_content',
+        searchClient: algoliasearch('SF7W0R2XNG', '8f2c94685deea955c12e82e73f333f4a'),
+        routing: true,
+        searchFunction(helper) {
+            const query = helper.state.query.trim();
+            if (query.length < 3) {
+                document.querySelector('#hits').innerHTML = '';
+                document.querySelector('#pagination').innerHTML = '';
+                return;
+            }
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                helper.search();
+            }, 500);
+        },
+    });
+
+    search.addWidgets([
+        instantsearch.widgets.searchBox({
+            container: '#searchbox',
+            placeholder: 'Enter search query...',
+            searchAsYouType: true,
+            autofocus: true,
+        }),
+
+        instantsearch.widgets.hits({
+            container: '#hits',
+            templates: {
+                item(hit) {
+                    const url = hit.url_without_anchor;
+                    const title = hit.title ? hit.title : hit.url_without_anchor;
+                    const description = hit.description ? hit.description : '';
+
+                    const highlight = hit._highlightResult || {};
+                    const headers = Array.isArray(highlight.headers)
+                        ? highlight.headers
+                            .filter(header => header?.matchLevel !== 'none')
+                            .slice(0, 3)
+                            .filter(header => header?.value)
+                            .map(header => `<p class="header">${header.value}</p>`)
+                            .join('')
+                        : '';
+
+                    const keywords = Array.isArray(highlight.keywords)
+                        ? highlight.keywords
+                            .filter(keyword => keyword?.matchLevel !== 'none')
+                            .filter(keyword => keyword?.value)
+                            .map(keyword => `<p class="header">${keyword.value}</p>`)
+                            .join('')
+                        : '';
+
+                    const contentSnippets = extractMarkedContext(
+                        highlight.content?.matchLevel !== 'none' ? highlight.content.value : ''
+                    );
+
+                    const contentSnippetsHtml = contentSnippets.length ? `<div class="highlight-content">...${contentSnippets}</div>` : '';
+
+                    return `
+                        <div class="hit">
+                            <a href="${url}">${title}</a>
+                                ${headers || `<p class="header">${title}</p>`}
+                                ${description.length > 0 ? `<p>${description}</p>` : ''}
+                                ${keywords}
+                                ${contentSnippetsHtml}
+                        </div>
+                    `;
+                }
+            }
+        }),
+        instantsearch.widgets.pagination({
+            container: '#pagination'
+        })
+
+    ]);
+
+    search.start();
+
+    function extractMarkedContext(text, maxMarks = 5, contextSize = 5) {
+        const regex = /<mark>(.*?)<\/mark>/gi;
+        let matches = [...text.matchAll(regex)];
+        let results = [];
+
+        for (let i = 0; i < Math.min(maxMarks, matches.length); i++) {
+            const match = matches[i];
+            const before = text.slice(0, match.index).trim();
+            const after = text.slice(match.index + match[0].length).trim();
+
+            // Split into words
+            const beforeWords = before.split(/\s+/).slice(-contextSize);
+            const afterWords = after.split(/\s+/).slice(0, contextSize);
+
+            // Build snippet
+            const snippet = `${beforeWords.join(" ")} ${match[0]} ${afterWords.join(" ")}`;
+            results.push(snippet);
+        }
+
+        return results.join(" ... ");
+    }
+
+
+    if (initialQuery) {
+        search.setUiState({
+            [search.indexName]: {
+                query: initialQuery
+            }
+        });
+    }
+</script>

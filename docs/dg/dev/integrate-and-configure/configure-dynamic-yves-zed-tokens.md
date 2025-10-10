@@ -14,16 +14,16 @@ This document describes how to improve security between Yves and Zed communicati
 
 A dynamic Yves-Zed token is an OAuth token that is refreshed after running `docker/sdk bootstrap`.
 
-## What is OAuth?
+## OAuth
 
 The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service, either on behalf of a resource owner by orchestrating an approval interaction between the resource owner and the HTTP service, or by allowing the third-party application to obtain access on its own behalf.  
 See [The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749) to learn more about OAuth.
 
-## Why should you implement dynamic Yves-Zed tokens?
+## Why implement dynamic Yves-Zed tokens
 
 With frequent token rotation, the chances of a token being compromised are reduced to a minimum.
 
-## How are Yves-Zed tokens generated?
+## Generation of Yves-Zed tokens
 
 After running `docker/sdk bootstrap`, you can find all the tokens in environment variables (env variables). You can find parameters that are responsible for token generation and respective env variables in the table below.
 
@@ -44,7 +44,7 @@ To configure dynamic Yves-Zed tokens:
 
 2. In`config/Shared/config_default.php`, update the following parameters:
 
-    * `OauthConstants::PUBLIC_KEY_PATH` and `OauthCryptographyConstants::PUBLIC_KEY_PATH`
+    - `OauthConstants::PUBLIC_KEY_PATH` and `OauthCryptographyConstants::PUBLIC_KEY_PATH`
 
     ```php
     $config[OauthConstants::PUBLIC_KEY_PATH]
@@ -56,7 +56,7 @@ To configure dynamic Yves-Zed tokens:
     ) ?: null;
     ```
 
-   * `OauthConstants::PRIVATE_KEY_PATH`
+   - `OauthConstants::PRIVATE_KEY_PATH`
 
     ```php
     $config[OauthConstants::PRIVATE_KEY_PATH] = str_replace(
@@ -66,25 +66,25 @@ To configure dynamic Yves-Zed tokens:
     ) ?: null;
     ```
 
-    * `OauthConstants::ENCRYPTION_KEY`
+    - `OauthConstants::ENCRYPTION_KEY`
 
     ```php
     $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY') ?: null;
     ```
 
-    * `OauthConstants::OAUTH_CLIENT_IDENTIFIER`
+    - `OauthConstants::OAUTH_CLIENT_IDENTIFIER`
 
     ```php
     $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = getenv('SPRYKER_OAUTH_CLIENT_IDENTIFIER') ?: null;
     ```
 
-    * `OauthConstants::OAUTH_CLIENT_SECRET`
+    - `OauthConstants::OAUTH_CLIENT_SECRET`
 
     ```php
     $config[OauthConstants::OAUTH_CLIENT_SECRET] = getenv('SPRYKER_OAUTH_CLIENT_SECRET') ?: null;
     ```
 
-    * `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS['yves_system']['token']`
+    - `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS['yves_system']['token']`
 
     ```php
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
@@ -102,4 +102,4 @@ To configure dynamic Yves-Zed tokens:
 
 3. `config_default-docker.dev.php`
 
-You’ve configured dynamic Yves-Zed tokens.
+You've configured dynamic Yves-Zed tokens.

@@ -1,0 +1,29 @@
+name: Is style great?
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  vale-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Install Vale
+    - name: Install Vale
+      run: |
+        sudo apt update
+        sudo snap install vale
+        vale --version
+
+    # Step 3: Run Vale linter
+    - name: Run Vale linter
+      run: |
+        vale $(find docs/ _includes/pbc/ -type f -name "*.md" ! -path "*/202311.0/*" ! -path "*/202404.0/*") --minAlertLevel=error
+      continue-on-error: false

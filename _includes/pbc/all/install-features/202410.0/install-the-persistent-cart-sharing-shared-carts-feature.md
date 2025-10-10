@@ -94,7 +94,7 @@ Make sure, that you're able to share a cart with the "Internal Access" links (bo
 
 {% info_block warningBox "Verification" %}
 
-Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Please login to access requested shared resource." error message.
+Make sure, that when you have a cart share link with Read-only or Full Access and you're not logged in - you can see the "Login to access requested shared resource." error message.
 
 {% endinfo_block %}
 
@@ -142,7 +142,7 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 {% endinfo_block %}
 
-##  2) Set up behavior
+## 2) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -202,7 +202,7 @@ class ResourceSharePageDependencyProvider extends SprykerResourceSharePageDepend
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

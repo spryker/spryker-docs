@@ -16,7 +16,7 @@ To start the feature integration, overview and install the necessary features:
 ## 1) Install the required modules
 
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/agent-auth-rest-api:"^1.0.0" --update-with-dependencies
@@ -151,25 +151,27 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Ensure that:
 
-*   Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
+- Invalid agent access tokens passed in the `X-Agent-Authorization` header are rejected with the 401 error code.
 
-*   The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
+- The `X-Agent-Authorization` header is required for `/agent-customer-impersonation-access-tokens` and `/agent-customer-search` resources. Requests without the header return the 401 error code.
 
-*   When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
+- When a valid agent access token is provided via the `X-Agent-Authorization`, the `RestRequest` object in Glue controllers populates `restUser.idAgent` with the current agent identifier.
 
-*   The following resources are available:   
+- The following resources are available:
 
 | RESOURCE | REQUEST TO CHECK |
 | --- | --- |
-| /agent-access-tokens | POST https://glue.mysprykershop.com/agent-access-tokens |
-| /agent-customer-impersonation-access-tokens | POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens |
-| /agent-customer-search | GET https://glue.mysprykershop.com/agent-customer-search |
+| `/agent-access-tokens` | `POST https://glue.mysprykershop.com/agent-access-tokens` |
+| `/agent-customer-impersonation-access-tokens` | `POST https://glue.mysprykershop.com/agent-customer-impersonation-access-tokens` |
+| `/agent-customer-search` | `GET https://glue.mysprykershop.com/agent-customer-search` |
+
 
 {% endinfo_block %}
 

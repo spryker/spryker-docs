@@ -2,8 +2,8 @@
 title:  Merchant onboarding
 description: This document describes the onboarding process for merchants and gives step-by-step instructions for marketplace operators.
 template: concept-topic-template
-redirect_from:
 last_updated: Mar 29, 2023
+redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/merchant-onboarding.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
 
@@ -13,8 +13,8 @@ This document describes how to onboard merchants.
 Once created and approved, merchants become official marketplace members and can create products and offers to sell, fulfill orders and manage their profile in [Merchant Portal](/docs/about/all/spryker-marketplace/merchant-portal.html).
 
 There are two primary roles: *operator* and *merchant*:
-* An [operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
-* A [merchant](/docs/about/all/spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
+- An [operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
+- A [merchant](/docs/about/all/spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
 
 The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take.
 
@@ -71,8 +71,8 @@ The email with the password is automatically sent to access the Merchant Portal 
 ### 4) Merchant and operator: Create and update the product and offers
 
 Operator: Decide who is the owner of the product data:
-* If the operator is the owner and manages the product data, other merchants can create offers with specific prices and available quantities on top of existing products.
-* If merchants can create products, the operator needs to make sure there are no duplicates in the Marketplace and regularly check the product data quality.
+- If the operator is the owner and manages the product data, other merchants can create offers with specific prices and available quantities on top of existing products.
+- If merchants can create products, the operator needs to make sure there are no duplicates in the Marketplace and regularly check the product data quality.
 
 In the Merchant Portal, merchants can [create and update products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and offers individually. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or establish the data exchange process from the merchant's PIM or ERP system.
 
@@ -116,8 +116,8 @@ The State Machine models the order management process, including both delivery a
 
 
 There are two fulfillment models applicable to Marketplace you can choose:
-* Fulfillment by merchants: Merchants receive, process, and dispatch orders directly to your marketplace buyers.
-* Fulfillment by marketplace: Merchants sell products and the operator manages the logistics, including returns.
+- Fulfillment by merchants: Merchants receive, process, and dispatch orders directly to your marketplace buyers.
+- Fulfillment by marketplace: Merchants sell products and the operator manages the logistics, including returns.
 
 The shipping process needs to be set up on a project level.
 

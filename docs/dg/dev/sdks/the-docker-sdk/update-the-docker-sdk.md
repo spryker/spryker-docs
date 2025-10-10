@@ -1,5 +1,6 @@
 ---
 title: Update the Docker SDK
+description: Learn how you can update the Docker SDK to a newer version depending on the installation of your Spryker instance.
 last_updated: Jun 1, 2024
 template: howto-guide-template
 
@@ -19,7 +20,7 @@ For local environments, we recommend using the [Git submodule](/docs/dg/dev/sdks
 
 In cloud environments, versions are managed only using `.git.docker`.
 
-For more details on choosing a version, see [Choosing a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#why-should-i-use-a-particular-version-of-the-docker-sdk).
+For more details on choosing a version, see [Choosing a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#using-a-particular-version-of-docker-sdk).
 
 To update the Docker SDK version in a cloud environment, follow the steps:
 
@@ -27,6 +28,7 @@ To update the Docker SDK version in a cloud environment, follow the steps:
 2. Choose the version to upgrade to, preferably one of the [releases](https://github.com/spryker/docker-sdk/releases).
 3. Install the needed version.
 4. Bootstrap the Docker setup:
+
 ```shell
 docker/sdk boot {your_deploy_file}
 5. Compare the current `docker/deployment/default/terraform` to the copy you've created in step 1.

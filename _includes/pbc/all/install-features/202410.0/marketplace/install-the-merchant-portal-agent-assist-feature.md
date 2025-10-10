@@ -12,7 +12,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/merchant-portal-agent-assist:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-agent-assist:"{{page.version}}" spryker/agent-dashboard-merchant-portal-gui:"1.0.0" spryker/agent-security-blocker-merchant-portal-gui:"1.1.0" spryker/agent-security-merchant-portal-gui:"1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -39,10 +39,11 @@ Make sure the following modules have been installed:
 | CONFIGURATION                                                  | SPECIFICATION                                                                                                    | NAMESPACE                |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------|
 | AclConstants::ACL_DEFAULT_RULES                                | Default ACL rules.                                                           | Spryker\Shared\Acl       |
-| AclMerchantAgentConfig::MERCHANT_AGENT_ACL_BUNDLE_ALLOWED_LIST | A collection of bundles which a merchant agent has ACL access to.                                                    | Pyz\Zed\AclMerchantAgent |
-| AclConfig::getInstallerRules()                                 | The default ACL rules that are added to the respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
+| AclMerchantAgentConfig::MERCHANT_AGENT_ACL_BUNDLE_ALLOWED_LIST | A collection of bundles a merchant agent has ACL access to.                                                    | Pyz\Zed\AclMerchantAgent |
+| AclConfig::getInstallerRules()                                 | The default ACL rules that are added to a respective database table after executing `setup:init-db`. | Pyz\Zed\Acl              |
 
 **config/Shared/config_default.php**
+
 ```php
 
 use Spryker\Shared\Acl\AclConstants;
@@ -149,10 +150,10 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-* Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
-* Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
-* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+- Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
+- Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+- Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
 
 {% endinfo_block %}
 
@@ -166,6 +167,7 @@ console setup:init-db
 | AclConfig::getInstallerUsers()  | Default ACL groups for users.                                              | Pyz\Zed\Acl  |
 
 **src/Pyz/Zed/User/UserConfig.php**
+
 ```php
 <?php
 
@@ -196,6 +198,7 @@ class UserConfig extends SprykerUserConfig
 ```
 
 **src/Pyz/Zed/Acl/AclConfig.php**
+
 ```php
 <?php
 
@@ -260,7 +263,7 @@ Make sure the following changes have been triggered in transfer objects:
 
 1. Append the glossary:
 
-```
+```csv
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
@@ -280,18 +283,20 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 ### Set up behavior
 
-| PLUGIN                                                                | SPECIFICATION                                                                                                         | PREREQUISITES | NAMESPACE                                                                                 |
-|-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
-| AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent merchant portal settings.                                  |               | Spryker\Client\AgentSecurityBlockerMerchantPortal\Plugin\SecurityBlocker                  |
-| ZedAgentMerchantUserSecurityPlugin                                    | Extends the security service with the AgentMerchantUser firewall.                                                             |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\Security                  |
-| SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies an agent access after exceeding the limit of failed merchant portal agent login attempts.                       |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
-| MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for the given user and rule.                   |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
-| AgentMerchantUserCriteriaExpanderPlugin                               | Sets `null` for `MerchantUserCriteria.status` and `MerchantUserCriteria.merchantStatus` for Merchant agents.           |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
-| MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands the user's table query criteria with the `isMerchantAgent` condition.                                         |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
-| MerchantAgentUserFormExpanderPlugin                                   | Expands the user's form with the `is_merchant_agent` checkbox.                                                        |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
-| MerchantAgentUserTableConfigExpanderPlugin                            | Expands the user's table with the `isMerchantAgent` column.                                                           |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
-| MerchantAgentUserTableDataExpanderPlugin                              | Expands the user's `isMerchantAgent` table column with data.                                                          |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
+| PLUGIN                                                                | SPECIFICATION                                                                                                           | PREREQUISITES | NAMESPACE                                                                                 |
+|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
+| AgentMerchantPortalSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent merchant portal settings.                                    |               | Spryker\Client\AgentSecurityBlockerMerchantPortal\Plugin\SecurityBlocker                  |
+| ZedAgentMerchantUserSecurityPlugin                                    | Extends the security service with the AgentMerchantUser firewall.                                                       |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\Security                  |
+| SecurityBlockerAgentMerchantPortalEventDispatcherPlugin               | Denies access to an agent after exceeding the limit of failed merchant portal agent login attempts.                        |               | Spryker\Zed\AgentSecurityBlockerMerchantPortalGui\Communication\Plugin\EventDispatcher    |
+| MerchantAgentAclAccessCheckerStrategyPlugin                           | Checks if the merchant agent ACL access checker strategy is applicable for a given user and rule.                     |               | Spryker\Zed\AclMerchantAgent\Communication\Plugin\Acl                                     |
+| AgentMerchantUserCriteriaExpanderPlugin                               | Sets `null` for `MerchantUserCriteria.status` and `MerchantUserCriteria.merchantStatus` for Merchant agents.            |               | Spryker\Zed\AgentSecurityMerchantPortalGui\Communication\Plugin\SecurityMerchantPortalGui |
+| MerchantAgentUserQueryCriteriaExpanderPlugin                          | Expands a user's table query criteria with the `isMerchantAgent` condition.                                           |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
+| MerchantAgentUserFormExpanderPlugin                                   | Expands a user's form with the `is_merchant_agent` checkbox.                                                          |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
+| MerchantAgentUserTableConfigExpanderPlugin                            | Expands a user's table with the `isMerchantAgent` column.                                                             |               | Spryker\Zed\MerchantAgentGui\Communication\Plugin\User                                    |
+| MerchantAgentUserTableDataExpanderPlugin                              | Expands a user's `isMerchantAgent` table column with data.                                                            |               | Spryker\Zed\MerchantAgent\Communication\Plugin\User                                       |
 | BackofficeAllowedAclGroupMerchantUserTableDataExpanderPlugin          | Sets `null` to the response data under the `assistUser` keys for users belonging to ACL groups with Back Office access. |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AgentDashboardMerchantPortalGui        |
+| MerchantUserTwigPlugin                                                | Adds the `merchantName` Twig global variable.                                                                               |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                                        |
+| MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin           | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted.     |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui          |
 
 **src/Pyz/Client/SecurityBlocker/SecurityBlockerDependencyProvider.php**
 
@@ -320,6 +325,11 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 }
 ```
 
+{% info_block warningBox %}
+
+If `SecurityDependencyProvider::getSecurityPlugins()` already contains plugins, add the `ZedAgentMerchantUserSecurityPlugin` as *first* in the list.
+
+{% endinfo_block %}
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 
 ```php
@@ -500,6 +510,54 @@ class AgentDashboardMerchantPortalGuiDependencyProvider extends SprykerAgentDash
 }
 ```
 
+**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Twig;
+
+use Spryker\Zed\MerchantUser\Communication\Plugin\Twig\MerchantUserTwigPlugin;
+use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigPlugins(): array
+    {
+        return [
+            new MerchantUserTwigPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/UserMerchantPortalGui/UserMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\UserMerchantPortalGui;
+
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui\MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin;
+use Spryker\Zed\UserMerchantPortalGui\UserMerchantPortalGuiDependencyProvider as SprykerUserMerchantPortalGuiDependencyProvider;
+
+class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface>
+     */
+    public function getMerchantUserPostChangePlugins(): array
+    {
+        return [
+            new MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 1. Log into the Back Office as a `root` user.
@@ -518,9 +576,9 @@ class AgentDashboardMerchantPortalGuiDependencyProvider extends SprykerAgentDash
 7. Log in with the login details of the user you've added the agent merchant role to.
     Make sure this opens `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users` and there is a **Merchant Users** table.
 
-* Make sure you can see and assist the users regardless of their status.
-* Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
-* Make sure you can assist the users that have the **Assist User** button next to them.
+- Make sure you can see and assist the users regardless of their status.
+- Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
+- Make sure you can assist the users that have the **Assist User** button next to them.
 
 {% endinfo_block %}
 
@@ -568,7 +626,27 @@ Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Use
 
 ## Install feature frontend
 
-For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
+1. For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
+
+2. Update glossary keys:
+
+```csv
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
+agent_security_blocker_merchant_portal_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE 
+```
+
+3. In `tsconfig.mp.json`, add agent related paths to `compilerOptions.paths`:
+
+```json
+"compilerOptions": {
+        "paths": {
+            "@mp/agent-dashboard-merchant-portal-gui": [
+                "vendor/spryker/spryker/Bundles/AgentDashboardMerchantPortalGui/mp.public-api.ts"
+            ],
+            "@mp/agent-security-merchant-portal-gui": [
+                "vendor/spryker/spryker/Bundles/AgentSecurityMerchantPortalGui/mp.public-api.ts"
+            ],...
+```
 
 Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
 

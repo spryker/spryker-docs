@@ -10,23 +10,23 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
 related:
   - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
 [Publish and Synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow these steps to register the events for them:
@@ -174,6 +174,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 5. If you need original values or an additional data set in `EventEntityTransfer`, provide the configuration in the Entity class. `getOriginalValueColumnNames` is called only on a save event.
+
 ```php
 <?php
 
@@ -204,4 +205,4 @@ class SpyGlossary extends BaseSpyGlossary
 }
 ```
 
-Now, you can track the changes in the `Glossary` entity. When it is created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).
+Now, you can track the changes in the `Glossary` entity. When it's created, updated, or deleted, an event is created and posted to the specified RabbitMQ publish queue (`publish.translation`).

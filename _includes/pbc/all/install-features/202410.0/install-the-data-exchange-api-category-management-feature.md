@@ -86,6 +86,7 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 To verify that plugins are installed correctly, follow the steps:
 
 1. Create a category using dynamic entity API:
+
 ```bash
 POST /dynamic-entity/categories HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -110,6 +111,7 @@ Content-Length: 257
 Take note of the `id_category` in the response.
 
 2. Create a category-store relation:
+
 ```bash
 POST /dynamic-entity/category-stores HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -127,6 +129,7 @@ Content-Length: 100
 ```
 
 3. Create a category attribute:
+
 ```bash
 POST /dynamic-entity/category-attributes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -148,6 +151,7 @@ Content-Length: 184
 ```
 
 4. Create a category node:
+
 ```bash
 POST /dynamic-entity/category-nodes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -170,16 +174,19 @@ Content-Length: 203
 Take note of the `id_category_node` in the response.
 
 5. Check that the category closure table entities have been created:
+
 ```sql
 SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {ID_CATEGORY_NODE};
 ```
 
 6. Check that the category URLs have been created:
+
 ```sql
 SELECT * FROM spy_url WHERE fk_resource_categorynode = {ID_CATEGORY_NODE};
 ```
 
 7. Check that the category tree has been published:
+
 ```sql
 SELECT spy_category_tree_storage.`data`
 FROM spy_category_tree_storage
@@ -192,6 +199,7 @@ WHERE spy_locale.id_locale = 66
 8. Check that newly created category is present in the category tree JSON.
 
 9. Update the category attribute:
+
 ```bash
 PATCH /dynamic-entity/category-attributes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -210,11 +218,13 @@ Content-Length: 173
 ```
 
 10. Check that the category URL has been updated:
+
 ```sql
 SELECT * FROM spy_url WHERE fk_resource_categorynode = {ID_CATEGORY_NODE};
 ```
 
 11. Update the category node:
+
 ```bash
 PATCH /dynamic-entity/category-nodes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -232,11 +242,13 @@ Content-Length: 120
 ```
 
 12. Check that category closure table entities have been updated:
+
 ```sql
 SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {ID_CATEGORY_NODE};
 ```
 
 13. Check that category tree has been updated:
+
 ```sql
 SELECT spy_category_tree_storage.`data`
 FROM spy_category_tree_storage

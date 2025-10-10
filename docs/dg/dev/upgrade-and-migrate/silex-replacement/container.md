@@ -18,14 +18,14 @@ A *container* is a class which holds one or more object collections or definitio
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html).
 
-It's important that almost everything that is accessible through the container should only be instantiated when it is requested. It's not as important for static values like `isDebugMode` as it is important for expensive instantiations.                
+It's important that almost everything that is accessible through the container should only be instantiated when it's requested. It's not as important for static values like `isDebugMode` as it's important for expensive instantiations.
 
-## Where is the container used?
+## Container usage
 
 Spryker uses several container instances to separate the access to services. The first container is used for services like Twig, which are added to the application through `Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface`.
 The second container is used on a per-module basis. Each module creates its own container instance and can add its dependencies to the container. Usually, those dependencies are plugin stacks.
 
-## How to use the container?
+## How to use the container
 
 The container implements the [PSR-11 interface](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md). On top of it, we added the following methods:
 
@@ -33,7 +33,7 @@ The container implements the [PSR-11 interface](https://github.com/php-fig/fig-s
 | --- | --- |
 | `set()` | Adds services to the container. |
 | `setGlobal()` | Adds global services to the container. |
-| `configure()` | Configures existing services (e.g. makes them global, adds aliases). |
+| `configure()` | Configures existing services, such as makes them global, adds aliases. |
 | `extend()` | Extends existing services. |
 | `remove()` | Removes added services. |
 
@@ -166,7 +166,7 @@ if ($container->has('your service identifier')) {
 }
 ```
 
-With the code, you can alter your service without loading it. Your service will only be loaded when it is requested from the container using `container::get()`.
+With the code, you can alter your service without loading it. Your service will only be loaded when it's requested from the container using `container::get()`.
 
 ## Global services
 
@@ -228,4 +228,4 @@ class ModuleCommunicationFactory extends AbstractCommunicationFactory
 `FrozenServiceException` - The service `your service identifier` is marked as frozen and can't be extended at this point.
 
 **then**
-If you try to extend a service which was already requested from the container, you will see this exception. A debugger will help you to find a solution. Check which code causes this error by setting a breakpoint in the container where this exception is thrown. Most likely, you will spot the issue right away. If not, set an additional conditional breakpoint in the first line of the `container::get()` method: `$id === 'your service identifier'`. It instructs the debugger to stop when the service identifier which brings the exception is retrieved from the container. Now check the code which wants to retrieve the service and change it in a way that it is called only after `container::extend()` was executed.
+If you try to extend a service which was already requested from the container, you will see this exception. A debugger will help you to find a solution. Check which code causes this error by setting a breakpoint in the container where this exception is thrown. Most likely, you will spot the issue right away. If not, set an additional conditional breakpoint in the first line of the `container::get()` method: `$id === 'your service identifier'`. It instructs the debugger to stop when the service identifier which brings the exception is retrieved from the container. Now check the code which wants to retrieve the service and change it in a way that it's called only after `container::extend()` was executed.

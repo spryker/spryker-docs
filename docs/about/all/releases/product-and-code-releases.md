@@ -42,7 +42,7 @@ To accommodate both the fast pace of innovation and predictability of the upgrad
 
 ## Atomic (code) releases
 
-Atomic, or code release approach, implies that we introduce changes gradually and release updates only for the modified modules. So you don’t need to invest time in updating all the modules available in your project every time there is an update. Each Spryker module is released independently and has its own version. Also, every module has its own repository and dependencies declared in a `composer.json` file, which means you can select a specific module version and update it separately.
+Atomic, or code release approach, implies that we introduce changes gradually and release updates only for the modified modules. So you don't need to invest time in updating all the modules available in your project every time there is an update. Each Spryker module is released independently and has its own version. Also, every module has its own repository and dependencies declared in a `composer.json` file, which means you can select a specific module version and update it separately.
 
 New versions of the existing Spryker modules as well as new modules are released as soon as they are ready in the [Spryker Commerce OS \(SCOS\) project repository](https://github.com/spryker-shop/suite).
 
@@ -75,4 +75,4 @@ To receive the security updates, request a subscription at [support@spryker.com]
 
 ## Next steps
 
-* [Release notes](/docs/about/all/releases/product-and-code-releases.html)
+- [Release notes](/docs/about/all/releases/product-and-code-releases.html)

@@ -1,6 +1,6 @@
 ---
 title: N+1 problem
-description: N+1 problem
+description: Learn how to troubleshoot and resolve issues for N+1 problems within your Spryker based projects.
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html
@@ -38,7 +38,7 @@ For example, suppose there is an order with 42 items. In the [New Relic tool](/d
 
 As you can see in the profiling, we make 42 external calls, which is equal to the number of items in the order.
 
-On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 91.19% of the total time spent on this request.Therefore, optimizing the number of requests should be the priority.
+On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 91.19% of the total time spent on this request. Therefore, optimizing the number of requests should be the priority.
 
 3. Define a strategy to fix the problem. Specifically, you can:
 
@@ -47,7 +47,7 @@ On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 
 
 However, these approaches may not always be applicable. For example, in the cases when:
 
-- A 3rd party system does not support bulk operations.
+- A third-party system does not support bulk operations.
 - You have to make a call right during the order placement.
 
 In the cases like these, you need to develop your solution. Some of the most common recommendations include:  

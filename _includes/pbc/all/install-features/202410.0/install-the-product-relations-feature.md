@@ -1,6 +1,7 @@
 
 
 ## Install feature core
+
 Follow the steps below to install feature core.
 
 ### Prerequisites
@@ -446,11 +447,11 @@ class ProductRelationGuiDependencyProvider extends SprykerProductRelationGuiDepe
 {% info_block warningBox "Verification" %}
 
 Make sure that:
-* You can see the list of product relations in the Back Office > **Product** >  **Product Relations**.
-* You can see the product relation information in the Back Office > **Product** >  **Product Relations** >  **View Product Relation**.
-* You can edit the product relation in the Back Office > **Product** >  **Product Relations** > **Edit Product Relation**.
-* You can create a product relation in the Back Office > **Product** >  **Product Relations** > **Create Product Relation**.
-* You can delete the product relation in the Back Office > **Product** >  **Product Relations** > **Delete Product Relation**.
+- You can see the list of product relations in the Back Office > **Product** >  **Product Relations**.
+- You can see the product relation information in the Back Office > **Product** >  **Product Relations** >  **View Product Relation**.
+- You can edit the product relation in the Back Office > **Product** >  **Product Relations** > **Edit Product Relation**.
+- You can create a product relation in the Back Office > **Product** >  **Product Relations** > **Create Product Relation**.
+- You can delete the product relation in the Back Office > **Product** >  **Product Relations** > **Delete Product Relation**.
 
 {% endinfo_block %}
 

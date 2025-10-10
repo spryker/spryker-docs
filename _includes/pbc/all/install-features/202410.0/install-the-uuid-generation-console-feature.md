@@ -11,7 +11,7 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/uuid:"^1.0.0" --update-with-dependencies
@@ -83,6 +83,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {% info_block warningBox "Verification" %}
 
 
-To make sure you’ve set up `UuidGeneratorConsole`, run `console | grep uuid:generate` and check that the command is found.
+To make sure you've set up `UuidGeneratorConsole`, run `console | grep uuid:generate` and check that the command is found.
 
 {% endinfo_block %}

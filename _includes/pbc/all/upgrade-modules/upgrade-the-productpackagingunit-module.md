@@ -22,7 +22,7 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
 
 3. Clean up the old database tables:
 
-   * `src/Pyz/Zed/IndexGenerator/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
+   - `src/Pyz/Zed/IndexGenerator/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
 
     ```xml
     <?xml version="1.0"?>
@@ -34,7 +34,8 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
     </table>
     </database>
     ```
-   * `src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
+
+   - `src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
 
     ```xml
     <?xml version="1.0"?>
@@ -56,25 +57,25 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
 
 4. Run the following commands for **every store**:
 
-    * Merge database schema definition files:
+    - Merge database schema definition files:
 
     ```bash
 	console propel:schema:copy
     ```
 
-   * Build propel models:
+   - Build propel models:
 
 	```bash
     console propel:model:build
     ```
 
-    * Generate migration files:
+    - Generate migration files:
 
 	```bash
     console propel:diff
     ```
 
-    * To migrate existing Packaging Unit data in your database, adjust **all generated migration files** for with the `preUp()` and `postUp()` scripts:
+    - To migrate existing Packaging Unit data in your database, adjust **all generated migration files** for with the `preUp()` and `postUp()` scripts:
 
     {% info_block warningBox "Note" %}
 
@@ -169,7 +170,7 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
 
 
 
-    * Change the `ALTER TABLE "spy_product_packaging_unit"` command in the `getUpSQL()` method of the migration file to the following script:
+    - Change the `ALTER TABLE "spy_product_packaging_unit"` command in the `getUpSQL()` method of the migration file to the following script:
 
     ```sql
     ALTER TABLE "spy_product_packaging_unit"
@@ -182,7 +183,7 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
     DROP COLUMN "has_lead_product";
     ```
 
-    * Implement the `postUp()` method the following way:
+    - Implement the `postUp()` method the following way:
 
     ```sql
     public function postUp(MigrationManager $manager)
@@ -318,6 +319,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}

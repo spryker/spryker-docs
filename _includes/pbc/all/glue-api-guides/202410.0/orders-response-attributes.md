@@ -1,19 +1,19 @@
 
 **General order information**
 
-| RESOURCE | ATTRIBUTE       | TYPE   | DESCRIPTION  |
-| --------------- | ------ | ---| - |
-| itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
+| ATTRIBUTE       | TYPE   | DESCRIPTION  |
+| ------ | ---| - |
+| itemStates      | Array  | Statuses of the order's items in the [state machine](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.                    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
 
 **Totals calculations**
 
-| RESOURCE | Attribute                | Type    | Description                                     |
-| ------------------------ | ------- | ----------------------- | ------------------------ |
+ | Attribute                | Type    | Description                                     |
+| ------- | ----------------------- | ------------------------ |
 | totals                   | Object  | Totals calculations.                            |
-| totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
+| totals.expenseTotal      | Integer | Total amount of expenses, such as shipping costs. |
 | totals.discountTotal     | Integer | Total amount of discounts applied.              |
 | totals.taxTotal          | Integer | Total amount of taxes paid.                     |
 | totals.subtotal          | Integer | Subtotal of the order.                          |
@@ -23,16 +23,16 @@
 
 **Billing and shipping addresses**
 
-| RESOURCE | Attribute                  | Type   | Description       |
-| -------------------------- | ------ | ------------- | --------------------------- |
+ | Attribute                  | Type   | Description       |
+| ------ | ------------- | --------------------------- |
 | billingAddress             | object | List of attributes describing the billing address of the order. |
 | billingAddress.salutation  | String | Salutation to use when addressing the customer.              |
 | billingAddress.firstName   | String | Customer's first name.                                       |
 | billingAddress.middleName  | String | Customer's middle name.                                      |
 | billingAddress.lastName    | String | Customer's last name.                                        |
-| billingAddress.address1    | String | 1st line of the customer's address.                          |
-| billingAddress.address2    | String | 2nd line of the customer's address.                          |
-| billingAddress.address3    | String | 3rd line of the customer's address.                          |
+| billingAddress.address1    | String | first line of the customer's address.                          |
+| billingAddress.address2    | String | second line of the customer's address.                          |
+| billingAddress.address3    | String | third line of the customer's address.                          |
 | billingAddress.company     | String | Specifies the customer's company.                            |
 | billingAddress.city        | String | Specifies the city.                                          |
 | billingAddress.zipCode     | String | ZIP code.                                                    |
@@ -48,8 +48,8 @@
 
 **Order item information**
 
-| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| ------------------- | ------- | ----------- | -------------- |
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| ------- | ----------- | -------------- |
 | items                                   | array   | Items in the order.                                          |
 | items.state                             | String  | Defines the state of the order in the state machine.         |
 | bundleItems | Array | Array of objects describing the concrete product bundles in the order. |
@@ -64,7 +64,7 @@
 | items.taxRate                           | Integer | Current tax rate, in percent.                                |
 | items.unitNetPrice                      | Integer | Single item net price.                                       |
 | items.sumNetPrice                       | Integer | Sum total of net prices for all items.                       |
-| items.unitPrice                         | Integer | Single item price without assuming if it is new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
+| items.unitPrice                         | Integer | Single item price without assuming if it's new or gross. *This price should be displayed everywhere when a product price is displayed. It allows switching tax mode without side effects*. |
 | items.unitTaxAmountFullAggregation      | Integer | Total tax amount for a given item, with additions.           |
 | items.sumTaxAmountFullAggregation       | Integer | Total tax amount for a given sum of items, with additions.   |
 | items.refundableAmount                  | Integer | Available refundable amount for an item (order only).        |
@@ -101,10 +101,10 @@
 
 **Measurement unit calculations**
 
-| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
+| conversion | integer | Factor to convert a value from sales to base unit. If it's "null", the information is taken from the global conversions. |
 | precision | integer | Ratio between a sales unit and a base unit. |
 | measurementUnit | string | Code of the measurement unit. |
 | name | String | Name of the measurement unit. |
@@ -112,8 +112,8 @@
 
 **Calculated discounts for items**
 
-| RESOURCE | ATTRIBUTE  | TYPE    | DESCRIPTION   |
-| -------------------- | ------ | ---------| -------- |
+| ATTRIBUTE  | TYPE    | DESCRIPTION   |
+| ------ | ---------| -------- |
 | items.calculatedDiscounts             | Array   | List of attributes describing the discount calculated for this item. |
 | items.calculatedDiscounts.unitAmount  | Integer | Discount value applied to this order item.                  |
 | items.calculatedDiscounts.sumAmount   | Integer | Sum of the discount values applied to this order item.       |
@@ -124,8 +124,8 @@
 
 **Product options**
 
-| RESOURCE | ATTRIBUTE   | TYPE    | DESCRIPTION   |
-| ------------------- | ----- | -----------| -------------- |
+| ATTRIBUTE   | TYPE    | DESCRIPTION   |
+| ----- | -----------| -------------- |
 | items.productOptions                 | Array   | List of product options ordered with this item.         |
 | items.productOptions.optionGroupName | String  | Name of the group to which the product option belongs. |
 | items.productOptions.sku             | String  | SKU of the product option.                             |
@@ -134,8 +134,8 @@
 
 **Calculated discounts**
 
-| RESOURCE | ATTRIBUTE   | TYPE    | DESCRIPTION    |
-| --------------- | ----- | ---------- | ------------- |
+| ATTRIBUTE   | TYPE    | DESCRIPTION    |
+| ----- | ---------- | ------------- |
 | calculatedDiscounts             | Array   | Discounts applied to this order item.                        |
 | calculatedDiscounts.unitAmount  | Integer | Amount of the discount provided by the given item for each unit of the product, in cents. |
 | calculatedDiscounts.sumAmount   | Integer | Total amount of the discount provided by the given item, in cents. |
@@ -146,8 +146,8 @@
 
 **Expenses**
 
-| RESOURCE | ATTRIBUTE    | TYPE    | DESCRIPTION     |
-| ------------------- | ----- | -----------| ------- |
+| ATTRIBUTE    | TYPE    | DESCRIPTION     |
+| ----- | -----------| ------- |
 | expenses                | array   | Additional expenses of the order. |
 | expenses.type           | String  | Expense type.                     |
 | expenses.name           | String  | Expense name.                     |
@@ -170,8 +170,8 @@
 
 **Payments**
 
-| RESOURCE | ATTRIBUTE   | TYPE    |DESCRIPTION   |
-| ------------ | ------ | -------------| -------------- |
+| ATTRIBUTE   | TYPE    |DESCRIPTION   |
+| ------ | -------------| -------------- |
 | payments        | Array   | A list of payments used in this order.                       |
 | amount          | Integer | Amount paid via the corresponding payment provider in cents. |
 | paymentProvider | String  | Name of the payment provider.                                |
@@ -179,6 +179,6 @@
 
 **Shipments**
 
-| RESOURCE | ATTRIBUTE | TYPE   | DESCRIPTION      |
-| -------- | ----- | -------------| ---------- |
+| ATTRIBUTE | TYPE   | DESCRIPTION      |
+| ----- | -------------| ---------- |
 | shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |

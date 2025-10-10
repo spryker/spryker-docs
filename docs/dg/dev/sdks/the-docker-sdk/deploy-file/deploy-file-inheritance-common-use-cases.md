@@ -1,6 +1,6 @@
 ---
 title: "Deploy file inheritance: common use cases"
-description: Examples of using deploy file inheritance
+description: Learn about common use cases for deploy file inheritance and how you can enhance your Spryker projects.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
@@ -18,9 +18,9 @@ redirect_from:
 
 This document contains examples of using deploy file inheritance. The examples show how to do the following:
 
-* Avoid defining duplicate parameters in deploy files.
-* Re-use configuration from a deploy file in multiple deploy files.
-* Use dynamic parameters when the a configuration is reused in multiple environments.
+- Avoid defining duplicate parameters in deploy files.
+- Re-use configuration from a deploy file in multiple deploy files.
+- Use dynamic parameters when the a configuration is reused in multiple environments.
 
 For comparison, we provide examples of achieving the same result with and without deploy file inheritance.
 
@@ -316,6 +316,7 @@ groups:
 3. In `deploy.prod.yml` and `deploy.dev.yml`, include `merchant-application.yml` with the `hostname` dynamic parameter defined:
 
 **deploy.prod.yml**
+
 ```yaml
 version: '0.1'
 
@@ -627,7 +628,7 @@ regions:
                         namespace: 1
                     search:
                         namespace: uk_search
-```                        
+```
 
 3. Include `regions.yml` into the build of the desired environments by extending their respective deploy files as follows:
 

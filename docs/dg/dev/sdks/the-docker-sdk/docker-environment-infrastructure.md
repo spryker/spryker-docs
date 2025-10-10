@@ -1,5 +1,6 @@
 ---
 title: Docker environment infrastructure
+description: Learn all about the infrastructure of Spryker in a Docker environment for your Spryker baed projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-environment-infrastructure
@@ -42,7 +43,7 @@ Spryker containers follow the rules:
 2. **Immutability** - container does not create or change files in its own file system. If container requires storage, a volume should be designated for the purpose. Temporary files are not covered by the rule.
 3. **A single process or a process group** - there is a single process running as an entry point of container. The name of the process must be defined in specification.
 4. **Process run without root permissions.**
-5. **Only single-purpose ports are exposed** - the only exposed ports are the ones supporting the single responsibility of container. The port(s) must be defined in specification. Service ports are not covered by the rule.
+5. **Only single-purpose ports are exposed** - the only exposed ports are the ones supporting the single responsibility of container. The ports must be defined in specification. Service ports are not covered by the rule.
 
 Below, you can find the diagram of Spryker in Docker environment:
 

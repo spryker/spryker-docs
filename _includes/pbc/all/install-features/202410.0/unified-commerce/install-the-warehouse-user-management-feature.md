@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME                           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |--------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |  |
+| Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |
 | Spryker Core Back Office       | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
 | Inventory Management           | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
 
@@ -194,11 +194,13 @@ class OauthWarehouseUserConfig extends SprykerOauthWarehouseUserConfig
     }
 }
 ```
+
 </details>
 
 3. Optional: To give any type of users access to the backend API endpoints that are protected by the  `WarehouseTokenAuthorizationStrategy` strategy, set the following module configuration:
 
 **src/Pyz/Zed/OauthWarehouse/OauthWarehouseConfig.php**
+
 ```php
 <?php
 
@@ -266,13 +268,13 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
-* Verify that the translation cache has been built:
+- Make sure the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+- Verify that the translation cache has been built:
    1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
    2. For a user of your choice, click **Assign Warehouses**.
    Make sure that the **Warehouse User Assignment** table is translatable.
 
-* Verify that you can switch the language in the Back Office:
+- Verify that you can switch the language in the Back Office:
   1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
   2. For a user of your choice, click **Edit**.
     The **Edit User: `USER_NAME`** page opens.
@@ -434,6 +436,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Glue/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorDependencyProvider.php**
@@ -513,6 +516,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
+
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
@@ -583,6 +587,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -669,9 +674,9 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 Make sure you can send the following requests:
 
-* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
-* `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+- `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments`
+- `GET https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+- `POST https://glue-backend.mysprykershop.com/warehouse-user-assignments`
 
 ```json
 {
@@ -688,7 +693,7 @@ Make sure you can send the following requests:
 }
 ```
 
-* `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`
 
 ```json
 {
@@ -701,7 +706,7 @@ Make sure you can send the following requests:
 }
 ```
 
-* `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
+- `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/{% raw %}{{{% endraw %}warehouse-user-assignments-uuid{% raw %}}{{% endraw %}`.
 
 {% endinfo_block %}
 
@@ -757,6 +762,7 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 To verify the plugins are set up correctly, authenticate as a warehouse user:
 
 `POST https://glue-backend.mysprykershop.com/token`
+
 ```json
 {
     "data": {

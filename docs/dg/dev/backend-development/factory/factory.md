@@ -7,10 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/factory
 originalArticleId: 08d03a8a-184b-46a0-87ff-8594976ab795
 redirect_from:
   - /docs/scos/dev/back-end-development/factory/factory.html
-
-related:
-  - title: Injecting dependencies within factories - container globals
-    link: docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 ---
 
 All modules are shipped with a dedicated factory for each layer. The responsibility of the factory is to create new instances of the classes from the same layer and module.
@@ -55,8 +51,8 @@ class CmsBlockFactory extends AbstractFactory
 ## Conventions for factory methods
 
 The factories contain two types of methods:
-* Methods that create internal classes.
-* Methods that provide external dependencies.
+- Methods that create internal classes.
+- Methods that provide external dependencies.
 
 | NAMING CONVENTION | EXAMPLE  | PURPOSE |
 | ----------------- | ----------------- | -------------- |
@@ -75,7 +71,7 @@ The extended `AbstractFactory` holds some important methods:
 
 ## Snippets to create a new factory
 
-The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
+The factory pattern is used all over our code base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace `MyBundle` with your real module name. To enable auto-completion, it's recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
 
 ### Yves
 
@@ -146,6 +142,7 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
 ```
 
 ### Zed - Persistence layer
+
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Persistence;
@@ -183,10 +180,10 @@ You can retrieve an instance of the factory by calling `$this->getFactory();`. T
 ## Related Spryks
 
 You might use the following definitions to generate related code:
-* `vendor/bin/console spryk:run AddZedPersistenceFactory`: Adds Zed Persistence Factory.
-* `vendor/bin/console spryk:run AddZedCommunicationFactory`: Adds Zed Communication Factory.
-* `vendor/bin/console spryk:run AddZedBusinessFactory`: Adds Zed Business Factory.
-* `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
-* `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
+- `vendor/bin/console spryk:run AddZedPersistenceFactory`: Adds Zed Persistence Factory.
+- `vendor/bin/console spryk:run AddZedCommunicationFactory`: Adds Zed Communication Factory.
+- `vendor/bin/console spryk:run AddZedBusinessFactory`: Adds Zed Business Factory.
+- `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
+- `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
 
 For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

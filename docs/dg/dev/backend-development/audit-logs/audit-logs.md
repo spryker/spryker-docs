@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Jun 16, 2024
 related:
   - title: Install the Spryker Core feature
-    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html
   - title: Extend the audit log structure
     link: docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
   - title: Add audit log types
@@ -18,10 +18,10 @@ Audit logging is used in web applications for tracking user activities and detec
 
 To install audit logs, install the following features:
 
-* [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202410.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-* [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
-* [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202410.0/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)
-* [Install the Agent Assist feature](/docs/pbc/all/user-management/202410.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)
+- [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+- [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+- [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)
 
 ## AuditLoggerConfigPluginInterface interface
 

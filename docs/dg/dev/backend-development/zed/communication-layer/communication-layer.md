@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 related:
   - title: Addi indexes to foreign key columns - index generator
-    link: docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
+    link: docs/dg/dev/backend-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
   - title: About the Business layer
-    link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+    link: docs/dg/dev/backend-development/zed/business-layer/business-layer.html
   - title: About the Persistence layer
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+    link: docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
 ---
 
 Zed's `Communication` layer is the entry point to the system. Here are executed all of the external requests from users, the Yves application, and all command-line calls. The purpose of this layer is to retrieve the data, delegate it to the `Business` layer, and hand it over to the `Presentation` layer.
@@ -81,7 +81,7 @@ public function testAction(Request $request)
 }
 ```
 
-Now, the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %} `.
+Now, the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %}`.
 
 ***
 
@@ -101,24 +101,24 @@ Examples of paths:
 
 As you can see there are some path-resolver rules:
 
-* The term `index` is automatically used when the path is not fully specified.
-* The camel case class and method names are presented with a dash (`-`) separator.
-* Suffixes like `Controller` and `Action` are removed.
+- The term `index` is automatically used when the path is not fully specified.
+- The camel case class and method names are presented with a dash (`-`) separator.
+- Suffixes like `Controller` and `Action` are removed.
 
 ## Mapping twig templates
 
 Each action returning `$this->viewResponse()` must have a dedicated Twig template:
 
-* Controller and action:
+- Controller and action:
 `MyNamespace/Zed/MyModule/Communication/Controller/TestController::doSomethingAction()`
-* Expected path of template:
+- Expected path of template:
 `MyNamespace/Zed/MyModule/Presentation/Test/do-something.twig`
 
 ## Related Spryks
 
 You might use the following definitions to generate related code:
 
-* `vendor/bin/console spryk:run AddZedCommunicationController`: Add Zed communication controller.
-* `vendor/bin/console spryk:run AddZedCommunicationControllerAction`: Add Zed communication controller method.
+- `vendor/bin/console spryk:run AddZedCommunicationController`: Add Zed communication controller.
+- `vendor/bin/console spryk:run AddZedCommunicationControllerAction`: Add Zed communication controller method.
 
 For details, see the [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

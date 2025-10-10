@@ -87,6 +87,7 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
+
 </details>
 
 
@@ -98,8 +99,8 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
-* Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
+- The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
+- Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
 
 {% endinfo_block %}
 

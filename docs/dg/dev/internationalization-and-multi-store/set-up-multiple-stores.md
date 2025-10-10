@@ -1,6 +1,6 @@
 ---
 title: Set up multiple stores
-description: Learn how to set up multiple stores for your project.
+description: Learn how to enable and set up and create multiple stores for multiple countries or regions for your Spryker Based project.
 last_updated: Dec 22, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores
@@ -15,10 +15,10 @@ redirect_from:
 
 You can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
 
-* Build one store for multiple countries and languages or separate stores for each region.
-* Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
-* Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
-* Set up a default store.
+- Build one store for multiple countries and languages or separate stores for each region.
+- Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
+- Define separate search preferences to create an entirely different set of rankings, rules, and settings per store—for example, a date format or a currency.
+- Set up a default store.
 
 For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
 
@@ -111,11 +111,12 @@ $stores['AT'] = [
 
 return $stores;
 ```
+
 </details>
 
 2. Optional: Define store-specific configuration:
-  1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
-  2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
+1. For one or more stores you've defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
 
   In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#environment):
 
@@ -230,8 +231,8 @@ regions:
 
 The following configuration parameters are used in this example:
 
-* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region, which refers to geographical terms like data centers, regions, and continents in the real world.
-* The `stores` parameter defines the list of stores and store-specific settings for `services`.
+- The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region, which refers to geographical terms like data centers, regions, and continents in the real world.
+- The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
@@ -252,6 +253,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 The workaround is only supported by the [multi-store store setup 1](/docs/ca/dev/multi-store-setups/multistore-setup-options.html#setup-1-shared-infrastructure-resources-default) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
+
 ```php
 <?php
 
@@ -269,6 +271,7 @@ Environment::initialize();
 ```
 
 To check if the workaround works, in the browser console, run the following:
+
 ```php
 fetch("http://{domain-name}/catalog-search", {
   "headers": {

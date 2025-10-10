@@ -111,19 +111,19 @@ A merchant profile is a page where all the information about a merchant is locat
 
 On the **Merchant Profile** page, customers can find the following merchant-specific information:
 
-* Logo
-* Banner
-* Contact details and address
-* Estimated delivery time
-* Regular and special opening hours
-* Terms and conditions
-* Cancellation policy
-* Imprint
-* Data privacy statement
+- Logo
+- Banner
+- Contact details and address
+- Estimated delivery time
+- Regular and special opening hours
+- Terms and conditions
+- Cancellation policy
+- Imprint
+- Data privacy statement
 
 Customers can access only the profile pages of [active](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
-For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
+For an example, see the [Spryker merchant profile](https://www.b2c-marketplace-eu.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
 
 ## Read next
 

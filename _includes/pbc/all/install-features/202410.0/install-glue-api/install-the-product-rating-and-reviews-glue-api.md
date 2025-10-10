@@ -21,6 +21,7 @@ To start feature integration, integrate the required features and Glue APIs:
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following module has been installed:
@@ -40,6 +41,7 @@ console transfer:generate
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in the transfer objects:
@@ -68,6 +70,7 @@ Reload abstract and product data to storage.
 console event:trigger -r product_abstract
 console event:trigger -r product_concrete
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that there is data in Redis with keys:
@@ -112,7 +115,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
+- `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details>
 <summary>Example</summary>
@@ -193,9 +196,10 @@ Make sure that the following endpoints are available:
     }
 }
 ```
+
 </details>
 
-* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
+- `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews/{% raw %}{{{% endraw %}review_id{% raw %}}}{% endraw %}`
 
 <details>
 <summary>Example</summary>
@@ -217,6 +221,7 @@ Make sure that the following endpoints are available:
     }
 }
 ```
+
 </details>
 
 {% endinfo_block %}
@@ -325,7 +330,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
             "averageRating": 4,
             "reviewCount": 5,
             "name": "Asus Transformer Book T200TA",
-            "description": "As light as you like Transformer Book T200 is sleek, slim and oh so light—just 26mm tall and 1.5kg docked. And when need to travel even lighter, detach the 11.6-inch tablet for 11.95mm slenderness and a mere 750g weight! With up to 10.4 hours of battery life that lasts all day long, you’re free to work or play from dawn to dusk. And ASUS Instant On technology ensures that Transformer Book T200 is always responsive and ready for action! Experience outstanding performance from the latest Intel® quad-core processor. You’ll multitask seamlessly and get more done in less time. Transformer Book T200 also delivers exceptional graphics performance—with Intel HD graphics that are up to 30% faster than ever before! Transformer Book T200 is equipped with USB 3.0 connectivity for data transfers that never leave you waiting. Just attach your USB 3.0 devices to enjoy speeds that are up to 10X faster than USB 2.0!",
+            "description": "As light as you like Transformer Book T200 is sleek, slim and oh so light—just 26mm tall and 1.5kg docked. And when need to travel even lighter, detach the 11.6-inch tablet for 11.95mm slenderness and a mere 750g weight! With up to 10.4 hours of battery life that lasts all day long, you're free to work or play from dawn to dusk. And ASUS Instant On technology ensures that Transformer Book T200 is always responsive and ready for action! Experience outstanding performance from the latest Intel® quad-core processor. You'll multitask seamlessly and get more done in less time. Transformer Book T200 also delivers exceptional graphics performance—with Intel HD graphics that are up to 30% faster than ever before! Transformer Book T200 is equipped with USB 3.0 connectivity for data transfers that never leave you waiting. Just attach your USB 3.0 devices to enjoy speeds that are up to 10X faster than USB 2.0!",
             "attributes": {
                 "product_type": "Hybrid (2-in-1)",
                 "form_factor": "clamshell",
@@ -459,6 +464,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
     ]
 }
 ```
+
 </details>
 
 
@@ -481,7 +487,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
             "averageRating": 4,
             "reviewCount": 5,
             "name": "Asus Transformer Book T200TA",
-            "description": "As light as you like Transformer Book T200 is sleek, slim and oh so light—just 26mm tall and 1.5kg docked. And when need to travel even lighter, detach the 11.6-inch tablet for 11.95mm slenderness and a mere 750g weight! With up to 10.4 hours of battery life that lasts all day long, you’re free to work or play from dawn to dusk. And ASUS Instant On technology ensures that Transformer Book T200 is always responsive and ready for action! Experience outstanding performance from the latest Intel® quad-core processor. You’ll multitask seamlessly and get more done in less time. Transformer Book T200 also delivers exceptional graphics performance—with Intel HD graphics that are up to 30% faster than ever before! Transformer Book T200 is equipped with USB 3.0 connectivity for data transfers that never leave you waiting. Just attach your USB 3.0 devices to enjoy speeds that are up to 10X faster than USB 2.0!",
+            "description": "As light as you like Transformer Book T200 is sleek, slim and oh so light—just 26mm tall and 1.5kg docked. And when need to travel even lighter, detach the 11.6-inch tablet for 11.95mm slenderness and a mere 750g weight! With up to 10.4 hours of battery life that lasts all day long, you're free to work or play from dawn to dusk. And ASUS Instant On technology ensures that Transformer Book T200 is always responsive and ready for action! Experience outstanding performance from the latest Intel® quad-core processor. You'll multitask seamlessly and get more done in less time. Transformer Book T200 also delivers exceptional graphics performance—with Intel HD graphics that are up to 30% faster than ever before! Transformer Book T200 is equipped with USB 3.0 connectivity for data transfers that never leave you waiting. Just attach your USB 3.0 devices to enjoy speeds that are up to 10X faster than USB 2.0!",
             "attributes": {
                 "product_type": "Hybrid (2-in-1)",
                 "form_factor": "clamshell",
@@ -606,6 +612,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

@@ -15,7 +15,7 @@ To start the feature integration, overview and install the necessary features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-dependencies
@@ -118,6 +118,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -160,15 +161,15 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 Ensure that you have activated the plugins:
 
-1.  Place an order with product bundles.
+1. Place an order with product bundles.
 
-2.  Send the request: `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}orderReference{% raw %}}}{% endraw %}`.
+2. Send the request: `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}orderReference{% raw %}}}{% endraw %}`.
 
-3.  Check that, in the response:
+3. Check that, in the response:
 
-    *   There is a `data.attributes.bundleItems` section.
+    - There is a `data.attributes.bundleItems` section.
 
-    *   The `data.attributes.items.relatedBundleItemIdentifier` attribute value of a bundled item is the same as the `data.attributes.bundleItems.bundleItemIdentifier` attribute value of the product bundle item it belongs to.
+    - The `data.attributes.items.relatedBundleItemIdentifier` attribute value of a bundled item is the same as the `data.attributes.bundleItems.bundleItemIdentifier` attribute value of the product bundle item it belongs to.
 
 {% endinfo_block %}
 

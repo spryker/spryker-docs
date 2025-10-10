@@ -641,6 +641,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 
@@ -750,6 +751,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     }
 }
 ```
+
 </details>
 
 
@@ -1034,7 +1036,7 @@ Verify the feature is set up correctly:
 
 2. [Retrieve available company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html#retrieve-available-company-users).
 
-3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
+3. Using the company user ID you've retrieved in the previous step, [authenticate as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
 
 {% endinfo_block %}
@@ -1043,10 +1045,10 @@ Check that the response contains all the necessary data.
 {% info_block warningBox "Verification" %}
 
 To verify that all the required data is provided in the access token, decode the token at [jwt.io](https://jwt.io/). The `sub` property of the payload data should contain the following:
-* `customer_reference`
-* `id_customer`
-* `id_company_user`
-* Permissions
+- `customer_reference`
+- `id_customer`
+- `id_company_user`
+- Permissions
 
 {% endinfo_block %}
 
@@ -1122,26 +1124,26 @@ To verify that `CompanyUserRestUserValidatorPlugin` is set up correctly, try to 
 - Send the `GET https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
   - All the company users of the company your current company user belong to.
   - Relationships:
-    * `company-roles`
-    * `companies`
-    * `company-business-units`
-    * `customers`
+    - `company-roles`
+    - `companies`
+    - `company-business-units`
+    - `customers`
 
 - Send the `GET https://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
-    - A collection of resources with all the company users that the current user can impersonate as.
-    - Relationships:
-      * `company-roles`
-      * `companies`
-      * `company-business-units`
-      * `customers`
+  - A collection of resources with all the company users that the current user can impersonate as.
+  - Relationships:
+    - `company-roles`
+    - `companies`
+    - `company-business-units`
+    - `customers`
 
 - Send the `GET https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
-    - One company user
-    - Relationships:
-      * `company-roles`
-      * `companies`
-      * `company-business-units`
-      * `customers`
+  - One company user
+  - Relationships:
+    - `company-roles`
+    - `companies`
+    - `company-business-units`
+    - `customers`
 
 {% endinfo_block %}
 

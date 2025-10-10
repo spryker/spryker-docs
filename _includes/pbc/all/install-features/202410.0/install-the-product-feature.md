@@ -28,6 +28,7 @@ Install the required features:
 ```bash
 composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -166,7 +167,7 @@ class ProductPageSearchConfig extends SprykerProductPageSearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products that can be added to cart have the `add_to_cart_sku` field in the ElasticSearch document.
+Make sure that abstract products that can be added to cart have the `add_to_cart_sku` field in the Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -181,6 +182,7 @@ Enable the following behaviors by registering the plugins:
 | ProductImageProductConcretePageDataExpanderPlugin | Expands product concrete page data with the images data. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
 | ProductConcretePublisherTriggerPlugin | Triggers the concrete products resource to be published. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\Publisher |
 | MultiSelectProductAttributeDataFormatterPlugin | Formats product attributes with input type `multiselect` to array. |  | Spryker\Zed\ProductAttribute\Communication\Plugin\ProductAttribute |
+| ProductLocalizedAttributesProductAbstractWritePublisherPlugin | Publishes product abstract data by `SpyProductLocalizedAttributes` entity events. |  | Spryker\Zed\ProductStorage\Communication\Plugin\Publisher\ProductAbstract |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -258,8 +260,18 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getPublisherPlugins(): array
     {
         return [
-            new ProductConcretePublisherTriggerPlugin(),
             new CategoryStoreProductAbstractPageSearchWritePublisherPlugin(),
+            new ProductLocalizedAttributesProductAbstractWritePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     */
+    protected function getPublisherTriggerPlugins(): array
+    {
+        return [
+            new ProductConcretePublisherTriggerPlugin(),
         ];
     }
 }
@@ -268,8 +280,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-1. Executing the `console sync:data product_concrete` command, syncs the product data, including images, to Elasticsearch product concrete documents.
-2. When a product or its images are updated in the Back Office, these changes are synced to respective Elasticsearch product concrete documents.
+- Executing the `console sync:data product_concrete` command syncs the product data, including images, to Elasticsearch product concrete documents.
+- When a product or its images are updated in the Back Office, these changes are synced to respective Elasticsearch product concrete documents.
+- When product attribute translations are updated in the Back Office, the changes are synced to the product abstract storage items in Redis.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |

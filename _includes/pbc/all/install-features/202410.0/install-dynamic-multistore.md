@@ -45,7 +45,7 @@ Make sure the following modules have been installed:
 | CountryDataImport | vendor/spryker/country-data-import |
 | СountryGui | vendor/spryker/country-gui |
 | LocaleDataImport | vendor/spryker/locale-data-import |
-| LocaleGui | vendor/spryker/locale-gui |   
+| LocaleGui | vendor/spryker/locale-gui |
 | SecurityBlockerStorefrontCustomer  |spryker/security-blocker-storefront-customer |
 | StoreDataImport | vendor/spryker/store-data-import |
 | StoreGui | vendor/spryker/store-gui |
@@ -90,7 +90,7 @@ image:
 regions:
     EU:
         # Services for EU region. Use one of the following services: mail, database, broker, key_value_store, search for all stores in EU region.
-        # Stores MUST not be defined in the deploy file as it was before due to their dynamic nature
+        # Stores MUST not be defined in the deploy file as it was before because of their dynamic nature
         services:
             mail:
                 sender:
@@ -261,6 +261,7 @@ To preserve the availability of old links in search engines, we recommend making
 **config/Shared/config_default.php**
 
 Original configuration:
+
 ```php
 <?php
 
@@ -277,6 +278,7 @@ foreach ($rabbitConnections as $key => $connection) {
 ```
 
 Updated configuration:
+
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [];
 $connectionKeys = array_keys($rabbitConnections);
@@ -382,6 +384,7 @@ Run `vendor/bin/console queue:worker:start` and make sure RabbitMQ connection er
 With the dynamic store setup, commands for Jenkins are executed per region instead of per store. The command for Jenkins uses the `SPRYKER_CURRENT_REGION` variable instead of `APPLICATION_STORE`.
 
 1. In `config/Zed/cronjobs/jenkins.php`, remove the `$allStores` variable and its usage in the configuration of the jobs through the `stores` parameter. Example of updated job configuration:
+
 ```php
 $jobs[] = [
     'name' => 'job-name',
@@ -415,7 +418,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 
 For an example of an updated file, see [jenkins.php in the Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 1. Remove Jenkins jobs per store:
 
@@ -618,7 +621,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 4) Configure export to Storage
 
-1.  Set up publisher plugins and trigger plugins:
+1. Set up publisher plugins and trigger plugins:
 
 | PLUGIN | SPECIFICATION | PRERQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -689,7 +692,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a store’s data is created, updated, or deleted, including local and country information, make sure it is correctly exported to or removed from Redis.
+When a store's data is created, updated, or deleted, including local and country information, make sure it's correctly exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Store
@@ -739,7 +742,7 @@ Example expected data fragment:
 
 Import locale, store, and country data:
 
-1.  Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 Example of locales configuration for the DE store:
 
@@ -748,6 +751,7 @@ Example of locales configuration for the DE store:
 |name        | ✓ | string | DE | Define store name. |
 
 **data/import/common/{REGION}/store.csv**
+
 ```csv
 name
 DE
@@ -760,6 +764,7 @@ AT
 |name        | ✓ |string | DE | Define store name. |
 
 **data/import/common/DE/locale_store.csv**
+
 ```csv
 locale_name,store_name
 en_US,DE
@@ -776,7 +781,8 @@ de_DE,DE
 Example of the default locale configuration for the DE store:
 
 **data/import/common/DE/default_locale_store.csv**
-```
+
+```csv
 locale_name,store_name
 en_US,DE
 
@@ -805,6 +811,7 @@ DE,FR
 | store_name |✓ |string | DE | Store name. |
 
 **data/import/common/DE/store_context.csv**
+
 ```csv
 store_name,application_context_collection
 DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
@@ -817,20 +824,20 @@ DE,"[{""application"": null, ""timezone"": ""Europe/Berlin""}]"
 | application_context_collection | ✓ | string | `[{""application"": null, ""timezone"": ""Europe/Berlin""}]` | Defines a store context collection in JSON. |
 
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following applies:
 
-*  For each `store_name` entry in the imported CSV files, a respective `name` entry has been added to the `spy_store` database table.
-*  For each `locale_name` entry in the imported CSV files, a respective `locale_name` entry has been added to the `spy_locale` database table.
+- For each `store_name` entry in the imported CSV files, a respective `name` entry has been added to the `spy_store` database table.
+- For each `locale_name` entry in the imported CSV files, a respective `locale_name` entry has been added to the `spy_locale` database table.
 
 {% endinfo_block %}
 
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
-    * `data/import/local/full\_{REGION\STORE}.yml`
-    * `data/import/production/full\_{SPRYKER\STORE}.yml`
+    - `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
+    - `data/import/local/full\_{REGION\STORE}.yml`
+    - `data/import/production/full\_{SPRYKER\STORE}.yml`
 
 ```yaml
 data_import:
@@ -1083,6 +1090,7 @@ Make sure `store` and `locale` metadata is provided with Zed requests.
 {% endinfo_block %}
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 <?php
 namespace Pyz\Zed\Console;
@@ -1363,7 +1371,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
 - Make sure the default locale ISO code is displayed on the Store view page.
 - Make sure the table with assigned locales is displayed on the Store view page.
 - Make sure the table with assigned countries is displayed on the Store view page.
-- Make sure the locale codes are displayed in the store table.   
+- Make sure the locale codes are displayed in the store table.
 - Make sure the countries are displayed in the store table.
 
 {% endinfo_block %}
@@ -1404,6 +1412,7 @@ Make sure the following modules have been installed:
 1. Append the glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
+
 ```csv
 store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
@@ -1526,11 +1535,18 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         return [
             new StoreApplicationPlugin(),
         ];
-    }    
+    }
 }
 ```
 
-## Launch and set up environment
+
+## Launch and set up environment locally
+
+{% info_block warningBox "" %}
+
+To enable Dynamic Multistore in a production environment, see [Enable Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/enable-dynamic-multistore.html).
+
+{% endinfo_block %}
 
 Rebuild the application with assets and activate new endpoints:
 
@@ -1544,3 +1560,129 @@ docker/sdk boot && docker/sdk up --assets
 - Make sure the store switcher is displayed on the Storefront.
 
 {% endinfo_block %}
+
+## Add store name to Storefront URLs
+
+If you want a store name as part of the URL path, follow the steps below.
+
+{% info_block warningBox "Verification" %}
+
+If you're using internal URLs in Twig templates, now they must be wrapped using the `generatePath()` Twig function provided by the `GeneratePathTwigPlugin` plugin. This ensures the URLs contain the necessary context, such as a store name, based on the current request.
+
+{% endinfo_block %}
+
+1. Configure store name in URLs:
+
+**config/Shared/config_default.php**
+
+```php
+<?php
+use Spryker\Shared\Locale\LocaleConstants;
+use Spryker\Shared\Router\RouterConstants;
+use SprykerShop\Shared\ShopUi\ShopUiConstants;
+use SprykerShop\Shared\StorageRouter\StorageRouterConstants;
+use SprykerShop\Shared\StoreWidget\StoreWidgetConstants;
+
+$config[RouterConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[StoreWidgetConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[StorageRouterConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[ShopUiConstants::IS_STORE_ROUTING_ENABLED]
+    = $config[LocaleConstants::IS_STORE_ROUTING_ENABLED] = true;
+
+```
+
+Enable the following behaviors by registering the plugins and a Twig command:
+
+| PLUGIN | SPECIFICATION                                                                                                                                                                                                                                                                                      | PREREQUISITES | NAMESPACE |
+| --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
+|StorePrefixRouterEnhancerPlugin| Extracts and adds the current store name to route parameters and prefixes the generated URL with the store name. The \Spryker\Yves\Router\RouterConfig::getAllowedStores() configuration specifies the store names the plugin should handle.                   ||Spryker\Yves\Router\Plugin\RouterEnhancer|
+|LanguagePrefixRouterEnhancerPlugin| Extracts and adds the current language to route parameters and prefixes generated URLs with the language. Using the `\Spryker\Yves\Router\RouterConfig::getAllowedLanguages()` configuration, you can define the languages the plugin should support.  ||Spryker\Yves\Router\Plugin\RouterEnhancer|
+|StorePrefixStorageRouterEnhancerPlugin| Extracts the current store name, adds it to route parameters, and prefixes generated URLs accordingly. Using the `\SprykerShop\Yves\StorageRouter\StorageRouterConfig::getAllowedStores()` configuration, you specify which store names the plugin supports. ||SprykerShop\Yves\StorageRouter\Plugin\RouterEnhancer|
+|GeneratePathTwigPlugin| Wrapper for Symfony Router `generate()` function.                                                                                                                                                                                                                                                   ||SprykerShop\Yves\ShopUi\Plugin\Twig|
+
+
+In the `RouterDependencyProvider::getRouterEnhancerPlugins()` stack, the plugin execution order has been updated to reflect changes in how URL prefixes are structured.
+
+By default, the store name appears before the URL's language prefix. For example: `https://yves.eu.mysprykershop.com/DE/en/`
+To support this change in URL structure, the `StorePrefixRouterEnhancerPlugin` must now be executed before the `LanguagePrefixRouterEnhancerPlugin` in the plugin stack. This ensures that the store prefix is processed first, followed by the language prefix. Failing to update this order might result in incorrect routing behavior, where language and store prefixes could be misinterpreted or improperly structured in the URL.
+Verify the plugin stack in `RouterDependencyProvider::getRouterEnhancerPlugins()` and ensure that the `StorePrefixRouterEnhancerPlugin` precedes the `LanguagePrefixRouterEnhancerPlugin`. Adjusting the order of these plugins is necessary to maintain proper URL generation and routing consistency across the application.
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\Plugin\RouterEnhancer\LanguagePrefixRouterEnhancerPlugin;
+use Spryker\Yves\Router\Plugin\RouterEnhancer\StorePrefixRouterEnhancerPlugin;
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface>
+     */
+    protected function getRouterEnhancerPlugins(): array
+    {
+        return [
+            new StorePrefixRouterEnhancerPlugin(),
+            new LanguagePrefixRouterEnhancerPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\StorageRouter;
+
+use SprykerShop\Yves\StorageRouter\Plugin\RouterEnhancer\StorePrefixStorageRouterEnhancerPlugin;
+use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerShopStorageRouterDependencyProvider;
+
+
+class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\StorageRouterEnhancerPluginInterface>
+     */
+    protected function getStorageRouterEnhancerPlugins(): array
+    {
+        return [
+            new StorePrefixStorageRouterEnhancerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block infoBox "" %}
+
+`LanguagePrefixRouterEnhancerPlugin` isn't needed for `StorageRouter` because the language is already part of the URL for `StorageRouter`.
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/Twig/TwigDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\Twig;
+
+use Spryker\Yves\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+use SprykerShop\Yves\ShopUi\Plugin\Twig\GeneratePathTwigPlugin;
+
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigPlugins(): array
+    {
+        return [
+            new GeneratePathTwigPlugin(),
+        ];
+    }
+}
+```

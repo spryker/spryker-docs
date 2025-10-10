@@ -116,19 +116,20 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
 
-*   Make sure that the following endpoints are available:
+- Make sure that the following endpoints are available:
 
-    *   `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
+  - `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
 
-    *   `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
+  - `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
 
-*   Send the `GET http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices` request. Make sure that the response contains relationships to the `abstract-product-prices` resources.
+- Send the `GET http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices` request. Make sure that the response contains relationships to the `abstract-product-prices` resources.
 
-*   Send the `GET http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices` request. Make sure that the response contains relationships to the `concrete-product-prices` resources.  
+- Send the `GET http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices` request. Make sure that the response contains relationships to the `concrete-product-prices` resources.  
 
 {% endinfo_block %}
 
@@ -159,9 +160,9 @@ class ProductPricesRestApiDependencyProvider extends SprykerProductPricesRestApi
 
 {% info_block warningBox "Verification" %}
 
-To verify that you’ve activated `PriceProductVolumeRestProductPricesAttributesMapperPlugin`:
+To verify that you've activated `PriceProductVolumeRestProductPricesAttributesMapperPlugin`:
 
-1.  Create an abstract product with a volume price.
-2.  Send the request `GET https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.
+1. Create an abstract product with a volume price.
+2. Send the request `GET https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.
 
 {% endinfo_block %}

@@ -1,6 +1,6 @@
 ---
 title: Node Sass does not yet support your current environment
-description: Learn how to fix the issue with unsupported Saas
+description: Learn how to troubleshoot and resolve the issue of unsupported Sass within your Spryker local environment.
 last_updated: May 4, 2022
 template: troubleshooting-guide-template
 redirect_from:
@@ -9,19 +9,19 @@ redirect_from:
 
 related:
   - title: An error during front end setups
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
   - title: Demo data was imported incorrectly
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
   - title: Docker daemon is not running
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
   - title: docker-sync cannot start
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
   - title: Error 403 No valid crumb was included in the request
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
   - title: Setup of new indexes throws an exception
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
   - title: Vendor folder synchronization error
-    link: docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+    link: docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
 ---
 
 You get the error: `Node Sass does not yet support your current environment: Linux Unsupported architecture (arm64) with Node.js`.
@@ -49,6 +49,7 @@ Replace x86 based Sass with an ARM based one:
 ```
 
 4. In `frontend/configs/development.js`, add configuration for `saas-loader`:
+
 ```js
 loader: 'sass-loader',
 options: {
@@ -63,14 +64,18 @@ docker/sdk cli
 ```
 
 6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
+    - npm:
+
     ```bash
     npm install
     ```
-    * yarn:
+
+    - yarn:
+
     ```bash
     yarn install
     ```
+
 7. Rebuild Yves:
 
 ```bash

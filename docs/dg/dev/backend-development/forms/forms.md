@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/forms/forms.html
 related:
   - title: Creating forms
-    link: docs/scos/dev/back-end-development/forms/creating-forms.html
+    link: docs/dg/dev/backend-development/forms/create-forms.html
 ---
 
 Spryker uses **Symfony Forms** as the default form engine and **Symfony Validator** for form validation. In combination with Symfony components, we also use an additional **Validator** Service.
@@ -26,21 +26,21 @@ In this guide, you will learn how to integrate and extend the service in your pr
 
 The following modules are related to the service:
 
-* `spryker/form`
-* `spryker/form-extension`
-* `spryker/validator`
-* `spryker/validator-extension`
+- `spryker/form`
+- `spryker/form-extension`
+- `spryker/validator`
+- `spryker/validator-extension`
 
 ## Installation
 
-For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
+For information on how to install and integrate *Form* and *Validator* in your project, perform the steps detailed in the following guides:
 
-* [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
-* [Upgrade the Validator module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html)
+- [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
+- [Upgrade the Validator module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html)
 
 ## Extending the form
 
-The _Form_ component provides several possibilities to add additional functionality like form types or validators. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.
+The *Form* component provides several possibilities to add additional functionality like form types or validators. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.
 
 The extension module provides the `FormPluginInterface` interface as follows:
 
@@ -64,9 +64,9 @@ interface FormPluginInterface
 }
 ```
 
-This interface gets the `FormFactoryBuilderInterface` and the `ContainerInterface` that are used to extend the _Form Service_ with all possible extensions and get other services from the `ContainerInterface`, when required.
+This interface gets the `FormFactoryBuilderInterface` and the `ContainerInterface` that are used to extend the *Form Service* with all possible extensions and get other services from the `ContainerInterface`, when required.
 
-To use the _Validator Service_ as an application plugin, it needs to be connected to the _Form Service_. To do so, we provide `ValidatorExtensionFormPlugin` for _Yves_ and `ValidatorFormPlugin` for _Zed_.
+To use the *Validator Service* as an application plugin, it needs to be connected to the *Form Service*. To do so, we provide `ValidatorExtensionFormPlugin` for *Yves* and `ValidatorFormPlugin` for *Zed*.
 
 **Implementation Sample:**
 
@@ -173,7 +173,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 ## Extending the validator
 
-The _Validator_ offers several possibilities to extend it. For example, you can add a translator or enable a validation factory. To do so, we provide the `spryker/validator-extension` module, which will be installed automatically when the `spryker/validator` module is installed.
+The *Validator* offers several possibilities to extend it. For example, you can add a translator or enable a validation factory. To do so, we provide the `spryker/validator-extension` module, which will be installed automatically when the `spryker/validator` module is installed.
 
 The extension module provides the `ValidatorPluginInterface` as follows:
 
@@ -197,7 +197,7 @@ interface ValidatorPluginInterface
 }
 ```
 
-The interface gets `ValidatorBuilderInterface` and `ContainerInterface` to extend the _Validator Service_ with all possible extensions and get other services from the `ContainerInterface` when required.
+The interface gets `ValidatorBuilderInterface` and `ContainerInterface` to extend the *Validator Service* with all possible extensions and get other services from the `ContainerInterface` when required.
 
 In order to enable a new constraint factory, we need to add it via a plugin that implements the interface.
 
@@ -330,7 +330,7 @@ interface ConstraintPluginInterface
 }
 ```
 
-The interface gets `ContainerInterface` to get every service that a constraint might require. By default, Spryker has one _Constraint Plugin_ out of the box.
+The interface gets `ContainerInterface` to get every service that a constraint might require. By default, Spryker has one *Constraint Plugin* out of the box.
 
 **Implementation Example:**
 
@@ -378,7 +378,7 @@ class YvesUserPasswordValidatorConstraintPlugin extends AbstractPlugin implement
 }
 ```
 
-The constraint plugins should also be added to `ValidatorDependencyProvider` for the _Zed_ and _Yves_ layers.  
+The constraint plugins should also be added to `ValidatorDependencyProvider` for the *Zed* and *Yves* layers.  
 
 **Zed:**
 

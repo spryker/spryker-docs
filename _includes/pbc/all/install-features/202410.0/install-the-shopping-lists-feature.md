@@ -15,7 +15,7 @@ Install the required features:
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 | Cart                        | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
 | Prices                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
+| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 
 ### 1) Install the required modules
@@ -417,7 +417,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 Make sure when shopping lists are exported or created, updated, deleted manually in the Back Office, they are exported (or removed) to Redis accordingly.
 
-| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |   
+| STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- |  --- |
 | Redis | Shopping List |`shopping_list_customer:de--1` |
 
@@ -473,9 +473,9 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 Make sure the following occurred in the database:
-* Permission groups have been added to the `spy_shoppping_list_permission_group` table.
-* Permissions have been added to the `spy_permission`
-* The relations between them have been added to the `spy_shopping_list_permission_group_to_permission` table.
+- Permission groups have been added to the `spy_shoppping_list_permission_group` table.
+- Permissions have been added to the `spy_permission`
+- The relations between them have been added to the `spy_shopping_list_permission_group_to_permission` table.
 
 {% endinfo_block %}
 
@@ -496,7 +496,7 @@ Workstations,WorkstationsDE--21
 | --- | --- | --- | --- | --- |
 | shopping_list_key        | ✓        | string    | Laptops      | This identifier is used to refer to a shopping list in other imports. |
 | name                     | ✓        | string    | Laptops      | Name of the shopping list.                                                    |
-| owner_customer_reference | ✓        | string    | DE--21       | Customer reference of the shopping list owner.       
+| owner_customer_reference | ✓        | string    | DE--21       | Customer reference of the shopping list owner. |
 
 2. Register the following plugin to enable data import:
 
@@ -706,7 +706,7 @@ Workstations,spryker_systems_Berlin,READ_ONLY
 | --- | --- | --- | --- | --- |
 | shopping_list_key     | ✓        | string    | Laptops            | Defines a shopping list to assign to a business unit.                                |
 | business_unit_key     | ✓        | string    | spryker_systems_HR | Defines a business unit to share a shopping list with. |
-| permission_group_name | ✓        | integer   | FULL_ACCESS        | Defines a business unit's permissions to access a shopping list.             |
+| permission_group_name | ✓        | integer   | FULL_ACCESS        | Defines a business unit is permissions to access a shopping list.             |
 
 2. Register the following plugin to enable data import:
 
@@ -877,6 +877,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
+
 <details>
 <summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
@@ -974,8 +975,8 @@ Also, make sure shared shopping lists have the permission group you've configure
 {% info_block warningBox "Verification" %}
 
 Make sure the following applies:
-* When saving a shopping list item, shopping list item notes are also saved.
-* When deleting a shopping list item, shopping list item notes are also deleted.
+- When saving a shopping list item, shopping list item notes are also saved.
+- When deleting a shopping list item, shopping list item notes are also deleted.
 
 Also, make sure that shopping list item notes are transferred to cart item notes when creating a cart from a shopping list.
 
@@ -1241,6 +1242,7 @@ product_quick_add_widget.form.error.redirect_route_empty,"Redirect Router kann n
 product_quick_add_widget.form.error.sku.empty,"SKU should not be empty",en_US
 product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 ```
+
 </details>
 
 2. Import data:

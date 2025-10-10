@@ -5,6 +5,12 @@ template: concept-topic-template
 last_updated: Nov 1, 2024
 ---
 
+{% info_block warningBox "Warning" %}
+
+While PHP 8.3 is still supported, we strongly recommend upgrading to PHP 8.4 by the end of 2026 to ensure continued compatibility, security, and access to new features. See [upgrading to PHP 8.4](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html) for details.
+
+{% endinfo_block %}
+
 This document describes how to upgrade PHP to version 8.3. This upgrades the version in Docker environment and `composer.json`.
 
 ## 1. Check project code for PHP compatibility using PHPCompatibility
@@ -18,6 +24,7 @@ composer require --dev phpcompatibility/php-compatibility --ignore-platform-reqs
 ```
 
 2. Configure `phpcs` to use `php-compatibility` rules:
+
 ```bash
 vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility
 ```
@@ -95,8 +102,8 @@ docker/sdk boot && docker/sdk up --build
 
 ## 5. Test the upgrade
 
-Thoroughly test your application to identify any issues due to the PHP version upgrade:
+Thoroughly test your application to identify any issues because of the PHP version upgrade:
 
- - Automated tests: Run unit, integration, and functional tests.
- - Manual testing: Test critical application functionality.
- - Monitor for deprecations: Check for deprecation notices or warnings that may arise from running on PHP 8.3.
+- Automated tests: Run unit, integration, and functional tests.
+- Manual testing: Test critical application functionality.
+- Monitor for deprecations: Check for deprecation notices or warnings that may arise from running on PHP 8.3.

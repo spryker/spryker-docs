@@ -135,6 +135,7 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -171,6 +172,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -218,6 +220,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }     
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -239,9 +242,9 @@ This option is only available if you have the [Marketplace Product Offer feature
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                                   | SPECIFICATION                     | PREREQUISITES | NAMESPACE                                                                      |
+| PLUGIN    | SPECIFICATION       |     REQUIRED          | PREREQUISITES | NAMESPACE                                                                      |
 |--------------------------------------------------------------------------|-----------------------------------|---------------|--------------------------------------------------------------------------------|
-| PriceProductOfferPriceProductTableFilterPlugin (Optional)                | Maps merchant relationship data.  |               | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui |
+| PriceProductOfferPriceProductTableFilterPlugin            | Maps merchant relationship data.  |        |       | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui |
 
 ```php
 namespace Pyz\Zed\ProductMerchantPortalGui;

@@ -116,8 +116,8 @@ Make sure the following changes have been applied in the database:
 | spy_region.uuid                     | column | created |
 | spy_sales_order_item_service_point  | table  | created |
 
-* Make sure propel entities have been generated successfully by checking their existence.
-* Make sure the existing Propel classes have been extended to include the new added columns.
+- Make sure propel entities have been generated successfully by checking their existence.
+- Make sure the existing Propel classes have been extended to include the new added columns.
 
 | CLASS NAMESPACE                                                           | EXTENDS                                                                                      |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
@@ -796,8 +796,8 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 {% info_block warningBox "Verification" %}
 
 1. Fill the `spy_service_point` table with some data and run `console publish:trigger-events -r service_point`.
-    * Make sure the `spy_service_point_search` table is filled with respective data per store.
-    * Make sure, in Elasticearch documents, data is structured in the following format:
+    - Make sure the `spy_service_point_search` table is filled with respective data per store.
+    - Make sure, in Elasticearch documents, data is structured in the following format:
 
 ```yaml
 {
@@ -1058,8 +1058,8 @@ Verify the `service-point` trigger plugin works correctly:
 
 1. Fill the `spy_service_point`, `spy_service_point_store`, and `spy_servoce_point_address` tables with data.
 2. Run the `console publish:trigger-events -r service_point` command.
-  * Make sure the `spy_service_point_storage` table has been filled with respective data.
-  * Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
+- Make sure the `spy_service_point_storage` table has been filled with respective data.
+- Make sure storage entries are now displayed with the `kv:service_point:{store}:{service_point_id}` mask.
 
 {% endinfo_block %}
 
@@ -1075,9 +1075,10 @@ Verify the `service-point` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that, when a service point is created or edited through BAPI, it is exported to Redis accordingly.
+- Make sure that, when a service point is created or edited through BAPI, it's exported to Redis accordingly.
 
-* Make sure that, in Redis, data is displayed in the following format:
+- Make sure that, in Redis, data is displayed in the following format:
+
 ```yaml
 {
    "id_service_point": 1,
@@ -1129,8 +1130,8 @@ Verify the `service-type` trigger plugin works correctly:
 
 1. Fill the `spy_service_type` table with data.
 2. Run the `console publish:trigger-events -r service_type` command.
-  * Make sure the `spy_service_type_storage` table has been filled with respective data.
-  * Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
+- Make sure the `spy_service_type_storage` table has been filled with respective data.
+- Make sure storage entries are now displayed with the `kv:service_type:{service_type_id}` mask.
 
 {% endinfo_block %}
 
@@ -1148,9 +1149,10 @@ Verify the `service-type` synchronization plugin works correctly:
 
 {% info_block warningBox "Verification" %}
 
-* Make sure that when a service type is created or edited through BAPI, it is exported to Redis accordingly.
+- Make sure that when a service type is created or edited through BAPI, it's exported to Redis accordingly.
 
-* Make sure that, in Redis, data is displayed in the following format:
+- Make sure that, in Redis, data is displayed in the following format:
+
 ```json
 {
     "id_service_type": 1,
@@ -1266,7 +1268,8 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 Make sure that you can send the following requests:
 
-* `POST https://glue-backend.mysprykershop.com/service-points`
+- `POST https://glue-backend.mysprykershop.com/service-points`
+
    ```json
       {
           "data": {
@@ -1281,7 +1284,8 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+
     ```json
         {
             "data": {
@@ -1293,9 +1297,10 @@ Make sure that you can send the following requests:
         }
     ```
 
-* `GET https://glue-backend.mysprykershop.com/service-points/`
-* `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
+- `GET https://glue-backend.mysprykershop.com/service-points/`
+- `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+- `POST https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
+
    ```json
       {
           "data": {
@@ -1312,7 +1317,8 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses/{% raw %}{{service-point-address-uuid}}{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses/{% raw %}{{service-point-address-uuid}}{% endraw %}`
+
   ```json
      {
          "data": {
@@ -1329,11 +1335,12 @@ Make sure that you can send the following requests:
      }
   ```
 
-* `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
+- `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
 
-* `GET https://glue-backend.mysprykershop.com/service-types/`
-* `GET https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/service-types/`
+- `GET https://glue-backend.mysprykershop.com/service-types/`
+- `GET https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
+- `POST https://glue-backend.mysprykershop.com/service-types/`
+
    ```json
       {
           "data": {
@@ -1346,7 +1353,8 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
+
   ```json
       {
           "data": {
@@ -1358,9 +1366,10 @@ Make sure that you can send the following requests:
       }
   ```
 
-* `GET https://glue-backend.mysprykershop.com/services/`
-* `GET https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
-* `POST https://glue-backend.mysprykershop.com/services/`
+- `GET https://glue-backend.mysprykershop.com/services/`
+- `GET https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
+- `POST https://glue-backend.mysprykershop.com/services/`
+
    ```json
       {
           "data": {
@@ -1375,7 +1384,8 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
+- `PATCH https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
+
   ```json
       {
           "data": {
@@ -1466,13 +1476,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure you can send the following requests:
 
-* `GET https://glue.mysprykershop.com/service-points`
-* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
-* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
+- `GET https://glue.mysprykershop.com/service-points`
+- `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+- `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
 
 Make sure that you can include the `service-point-addresses` resource in the `service-points` resource requests.
-* `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
-* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}?include=service-point-addresses`
+- `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
+- `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}?include=service-point-addresses`
 
 {% endinfo_block %}
 

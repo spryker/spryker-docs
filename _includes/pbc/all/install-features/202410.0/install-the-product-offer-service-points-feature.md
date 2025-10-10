@@ -13,7 +13,7 @@ Install the required features:
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer  | {{page.version}} | [Install the Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
+| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
 
 ### 1) Install the required modules
 
@@ -43,6 +43,7 @@ Make sure that the following modules have been installed:
 | spy_product_offer_service     | Entity.spy_product_offer_service.create<br>Entity.spy_product_offer_service.delete                                            |
 
 **src/Pyz/Zed/ProductOfferServicePoint/Persistence/Propel/Schema/spy_product_offer_service.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductOfferServicePoint\Persistence" package="src.Orm.Zed.ProductOfferServicePoint.Persistence">
@@ -215,7 +216,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 console data:import:product-offer-service
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that entities were imported to the following database tables respectively:
 
@@ -318,7 +319,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\ProductOfferServicePointStorage;
@@ -417,6 +418,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 5. Set up synchronization plugins:
@@ -464,7 +466,7 @@ Make sure that the `product-offer-service` synchronization plugin works correctl
 2. Run the `console sync:data -r product_offer_service` command.
 3. Make sure that, in your system, storage entries are displayed with the `kv:product_offer_service:{store}:{product_offer_reference}` mask.
 
-Make sure when a product offer service is created via DataImport, it is exported to Redis accordingly.
+Make sure when a product offer service is created via DataImport, it's exported to Redis accordingly.
 
 Make sure that, in Redis, data is displayed in the following format:
 
@@ -476,6 +478,7 @@ Make sure that, in Redis, data is displayed in the following format:
     "_timestamp": 1683216744.8334839
 }
 ```
+
 {% endinfo_block %}
 
 ### 7) Set up behavior
@@ -539,6 +542,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**

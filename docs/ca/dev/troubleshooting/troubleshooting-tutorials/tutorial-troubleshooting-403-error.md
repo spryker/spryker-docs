@@ -16,7 +16,7 @@ To check 403 errors via browser console, do the following:
 
 ## Checking the WAF rule that triggered the 403 error
 
-If you found a 403 status response code in the frontend logs or in the browser console, it is most likely that it had been triggered by a [WAF(web application firewall)](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) rule. Knowing the rule that triggered the error will help you to understand the source of the issue.  
+If you found a 403 status response code in the frontend logs or in the browser console, it's most likely that it had been triggered by a [WAF(web application firewall)](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) rule. Knowing the rule that triggered the error will help you to understand the source of the issue.  
 
 To check the WAF rule that triggered the error, do the following:
 
@@ -36,15 +36,15 @@ To check the WAF rule that triggered the error, do the following:
 5. To download the file, select **Download**.
 
 6. Open the file in an editor and find the triggered WAF rule by the following parameters:
-* `clientIp`
-* `"action":"BLOCK"`
-* `uri`
-* `requestId`
+- `clientIp`
+- `"action":"BLOCK"`
+- `uri`
+- `requestId`
 
 An example of a blocking request from the WAF log file:
 
 
-```
+```text
 {
 "timestamp":1639057983286,
 "formatVersion":1,

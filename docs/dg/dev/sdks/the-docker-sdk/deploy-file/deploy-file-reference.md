@@ -42,8 +42,12 @@ This reference page describes version 1 of the Deploy file format. This is the n
  <dt>Store</dt>
  <dd>A store related context a request is processed in.</dd>
 
- <dt>Application</dt>
- <dd>A Spryker application, like Backoffice(Zed), Backend-Gateway, Yves, GlueStorefront(Glue), GlueBackend or MerchantPortal.</dd>
+<!-- vale off -->
+
+<dt>Application</dt>
+<dd>A Spryker application, like Backoffice(Zed), Backend-Gateway, Yves, GlueStorefront(Glue), GlueBackend or MerchantPortal.</dd>
+
+<!-- vale on -->
 
  <dt>Service</dt>
  <dd>An external storage or utility service. Represents service type and configuration. The configuration can be defined on different levels: project-wide, region-wide, store-specific or endpoint-specific with limitations based on the service type.</dd>
@@ -67,6 +71,8 @@ Find B2B and B2C deploy file examples for [development](/docs/dg/dev/set-up-spry
 | [B2B Demo Shop deploy file](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.dev.yml) | [B2B Demo Shop deploy file](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.yml) |
 
 ***
+
+<!-- markdownlint-disable -->
 
 ### version:
 
@@ -345,7 +351,7 @@ image:
 Defines PHP settings.
 {% info_block warningBox "Memory Limits" %}
 
-Please note that the maximum recommended PHP memory limit is 2048M. Going above this limit is rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
+The maximum recommended PHP memory limit's 2048M. Going above this limit's rarely necessary and can lead to stability and performance issues in your environment. Test any configuration change carefully in a non-production setting.
 
 {% endinfo_block %}
 
@@ -852,7 +858,7 @@ Defines the composer settings to be used during deployment.
 ## Services
 
 You can configure and use external tools that are shipped with Spryker in Docker as services.
-If a service has a dedicated configuration, it is configured and run when the current environment is set up and executed.
+If a service has a dedicated configuration, it's configured and run when the current environment is set up and executed.
 
 
 The following services are supported:
@@ -864,7 +870,7 @@ The following services are supported:
 * key_value_store
 * kibana
 * mail_catcher
-* redis-gui
+* Key-value store (Redis or Valkey)-gui
 * scheduler
 * search
 * session
@@ -1052,6 +1058,8 @@ A **Service** to control user agents.
 
 ***
 
+<!-- markdownlint-enable -->
+
 ## Change log
 
-* Initial reference document is introduced.
+Initial reference document is introduced.

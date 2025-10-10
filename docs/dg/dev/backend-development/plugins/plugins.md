@@ -1,6 +1,6 @@
 ---
 title: Plugins
-description: Plugins are small classes that are used to connect modules in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
+description: Plugins are small classes that are used to connect modules. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/plugins/implementing-and-using-plugins.html
 related:
   - title: Get an overview of the used plugins
-    link: docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
+    link: docs/dg/dev/backend-development/plugins/get-an-overview-of-the-used-plugins.html
 ---
 
 *Plugins* are small classes that are used to connect modules in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.

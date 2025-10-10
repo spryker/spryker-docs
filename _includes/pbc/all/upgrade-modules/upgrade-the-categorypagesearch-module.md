@@ -9,19 +9,19 @@ This section describes how to upgrade the `CategoryPageSearch` from version `1.*
 
 Version 2.* of the `CategoryPageSearch` module changes the storage data structure to maintain the relations of categories to stores.
 
-_Estimated migration time: 1 hour._ 
+*Estimated migration time: 1 hour.*
 
 To upgrade to the new version of the module, do the following:
 
 1. Install the `ProductCategorySearch` module:
 
-```bash    
+```bash
 composer require spryker/product-category-search
 ```
 
 2. Upgrade the `CategoryPageSearch` module to version `2.0.0`:
 
-```bash    
+```bash
 composer require spryker/category-page-search:"^2.0.0" --update-with-dependencies
 ```
 
@@ -29,20 +29,20 @@ composer require spryker/category-page-search:"^2.0.0" --update-with-dependenci
 
 4. Update the database schema and the generated classes:
 
-```bash    
+```bash
 console propel:install
 console transfer:generate
 ```
 
 5. In the `CategoryPageSearch` module, replace the deprecated plugins:
 
-* `ProductCategoryPageDataLoaderExpanderPlugin`
-* `CategoryPageDataLoaderPlugin`
-* `ProductCategoryMapExpanderPlugin`
+- `ProductCategoryPageDataLoaderExpanderPlugin`
+- `CategoryPageDataLoaderPlugin`
+- `ProductCategoryMapExpanderPlugin`
 
 <details><summary>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
 
-```php        
+```php
 <?php
 
 namespace Pyz\Zed\ProductPageSearch;
@@ -86,8 +86,9 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
         ];
     }
 }
-```     
-</details>   
+```
+
+</details>
 
 6. From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryPageSearchEventSubscriber`.
 
@@ -97,7 +98,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 <details><summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Publisher;
@@ -157,13 +158,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
 </details>
 
 9. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugin:`CategoryPageSynchronizationDataPlugin`.
 
 10. Add the new synchronization plugin to `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`:
 
-```php    
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -187,22 +189,25 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 11. Refill storage:
 
-    1.  Truncate the `spy_category_node_page_search` database table:
+    1. Truncate the `spy_category_node_page_search` database table:
 
     ```sql
     TRUNCATE TABLE spy_category_node_page_search;
     ```
-     2.  Remove all the data:
+
+     2. Remove all the data:
 
     ```bash
     console sync:data category_node
     ```
-    3.  Trigger the event:
+
+    3. Trigger the event:
 
     ```bash
     console publish:trigger-events -r category_node
     ```
-    4.  Sync all table storage data to the storage:
+
+    4. Sync all table storage data to the storage:
 
     ```bash
     console sync:data category_node
@@ -230,7 +235,7 @@ To upgrade to the new version of the module, do the following:
 composer update spryker/category-page-search
 ```
 
-2. Remove deprecated plugin usages listed below (in case it is used) from `Pyz\Zed\Search\SearchDependencyProvider`:
+2. Remove deprecated plugin usages listed below (in case it's used) from `Pyz\Zed\Search\SearchDependencyProvider`:
 
 ```bash
 Spryker\Zed\CategoryPageSearch\Communication\Plugin\Search\CategoryNodeDataPageMapBuilder

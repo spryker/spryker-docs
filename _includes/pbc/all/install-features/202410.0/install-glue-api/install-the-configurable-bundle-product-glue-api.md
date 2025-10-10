@@ -46,7 +46,7 @@ Make sure that the following changes have been applied in the transfer objec
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer |
-| ProductConcreteCriteriaFilterTransfer | class | created src/Generated/Shared/Transfer/ProductConcreteCriteriaFilterTransfer |
+| ProductConcreteCriteriaFilterTransfer | class | created | src/Generated/Shared/Transfer/ProductConcreteCriteriaFilterTransfer |
 | ConfigurableBundleTemplateSlotStorageTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotStorageTransfer |
 | ProductListTransfer | class | created | src/Generated/Shared/Transfer/ProductListTransfer |
 

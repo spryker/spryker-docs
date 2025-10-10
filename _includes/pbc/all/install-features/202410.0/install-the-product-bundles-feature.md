@@ -14,7 +14,7 @@ Install the required features:
 
 ## 1) Install required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-bundles --update-with-dependencies
@@ -92,7 +92,7 @@ console transfer:generate
 
 Ensure that the following changes have been applied in transfer objects:
 
- TRANSFER | TYPE | EVENT | PATH |
+| TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | ProductBundleStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductBundleStorageTransfer |
 | ProductForProductBundleStorageTransfer| class| created |src/Generated/Shared/Transfer/ProductForProductBundleStorageTransfer|
@@ -210,7 +210,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a product bundle is created, updated, or deleted, it is exported to or removed from Redis.
+Ensure that, when a product bundle is created, updated, or deleted, it's exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Product Bundle

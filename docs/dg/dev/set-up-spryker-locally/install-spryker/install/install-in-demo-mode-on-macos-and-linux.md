@@ -1,6 +1,6 @@
 ---
 title: Install in Demo mode on MacOS and Linux
-description: Learn how to install Spryker in Demo mode on MacOS and Linux.
+description: Learn how you can install Spryker in Demo mode on MacOS and Linux in a local environment.
 last_updated: Jul 5, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-macos-and-linux
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html
 related:
   - title: Database access credentials
-    link: docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html
+    link: docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
 ---
 
 {% info_block infoBox "" %}
@@ -24,41 +24,47 @@ This document describes how to install Spryker in [Demo Mode](/docs/dg/dev/set-u
 
 ## Install Docker prerequisites on MacOS and Linux
 
-* [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
 
 ## Clone a Demo Shop and the Docker SDK
+
+{% info_block warningBox %}
+
+Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
+
+{% endinfo_block %}
 
 1. Open a terminal.
 2. Clone *one* of the following Demo Shops and navigate into its folder:
 
-    * B2C Demo Shop:
+    - B2C Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202404.0 --single-branch ./b2c-demo-shop && \
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202507.0 --single-branch ./b2c-demo-shop && \
     cd b2c-demo-shop
     ```
 
-    * B2B Demo Shop:
+    - B2B Demo Shop:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202404.0 --single-branch ./b2b-demo-shop && \
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202507.0 --single-branch ./b2b-demo-shop && \
     cd b2b-demo-shop
     ```
 
-    * B2C Marketplace Demo Shop
+    - B2C Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202404.0 --single-branch ./b2c-demo-marketplace && \
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202507.0 --single-branch ./b2c-demo-marketplace && \
     cd b2c-demo-marketplace
     ```
 
-    * B2B Marketplace Demo Shop
+    - B2B Marketplace Demo Shop
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202404.0 --single-branch ./b2b-demo-marketplace && \
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
     cd b2b-demo-marketplace
-    ```    
+    ```
 
 3. Clone the Docker SDK:
 
@@ -113,8 +119,8 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
-* [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
+- [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
+- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
+- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

@@ -1,6 +1,6 @@
 ---
 title: Reduce Jenkins execution without P&S and data importers refactoring
-description: Learn how to reduce Jenkins execution costs in Spryker’s backend without refactoring P&S and data importers. Optimize cronjob processes for better performance.
+description: Learn how to reduce Jenkins execution costs in Spryker's backend without refactoring P&S and data importers. Optimize cronjob processes for better performance.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
@@ -9,9 +9,9 @@ redirect_from:
 
 By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes aren't functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes.
 
-By default, Spryker has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
+By default, Spryker has a limit of two Jenkins executors for each environment. This limit's usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
-Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores.
+Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption because of a random combination of several workers simultaneously processing heavy messages for multiple stores.
 
 There are two potential solutions to address this problem that can be implemented simultaneously: application optimization and better background job orchestration.
 
@@ -47,7 +47,7 @@ A pool refers to a collection of resources that are kept in memory and ready to 
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/NewWorker+Flow.png)
 
-We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it is too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
+We define the total number of simultaneously running processes for the entire setup on the EC2 instance level. This makes it easier to manage, as we can monitor the average memory consumption for the process pool. If it's too low, we can increase the pool size, and if it's too high, we can decrease it. Additionally, we check the available memory (RAM) and prevent spawning additional processes if it's too low, ensuring system stability. Execution statistics provide valuable insights for decision-making, including adjusting the pool size or scaling the EC2 instance up or down.
 
 The following parameters exist:
 
@@ -70,13 +70,13 @@ In addition to statistics, we also capture the output of children's processes in
 
 ### Edge cases and limitation
 
-Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, keep in mind that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to roughly 10 seconds, to reduce the number of messages that will be retried.
+Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn't notice any issues with this approach, keep in mind that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to roughly 10 seconds, to reduce the number of messages that will be retried.
 
 ## Background job orchestration solution implementation
 
 There are two ways to implement the background job orchestration:
 
-1. Applying a patch, although it may require conflict resolution since it is applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation.
+1. Applying a patch, although it may require conflict resolution since it's applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation.
 
 ```bash
 git apply one-worker.diff
@@ -101,10 +101,10 @@ The main components of the solution are:
 - NewWorker custom worker implementation.
 - SystemResourcesManager - a class to provide the system and worker memory information.
 - Strategy - several implementations possible, a class decides which queue is next for processing, depending on any custom logic. We have implemented two:
-    - `\Pyz\Zed\Queue\Business\Strategy\OrderedQueuesStrategy` strategy which processes queues in the order these were defined in `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins`.
-    - `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` - first processes those queues which have the biggest amount of messages.
+  - `\Pyz\Zed\Queue\Business\Strategy\OrderedQueuesStrategy` strategy which processes queues in the order these were defined in `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins`.
+  - `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` - first processes those queues which have the biggest amount of messages.
 - QueueScanner component - scans queues to get such information as amount of messages to provide this info to a strategy.
-- Custom RabbitMQ client to expose the [queue_declare method ](https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) to the Business layer code. This method returns queue statistics for the existing queue and doesn't change anything in a queue.
+- Custom RabbitMQ client to expose the [queue_declare method](https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) to the Business layer code. This method returns queue statistics for the existing queue and doesn't change anything in a queue.
 - Slightly modified `\Spryker\Zed\Queue\Business\Process\ProcessManager` to store information about a queue in the context of a store.
 
 <details>
@@ -133,7 +133,7 @@ class NewWorker implements WorkerInterface
     public function start(string $command, array $options = []): void
     {
         // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS
-        // default is 60 seconds, 1 minute, it is safe to have it as 1 hour instead
+        // default is 60 seconds, 1 minute, it's safe to have it as 1 hour instead
         $maxThreshold = $this->queueConfig->getQueueWorkerMaxThreshold();
 
         // minimum interval after starting one process before executing another
@@ -171,7 +171,7 @@ class NewWorker implements WorkerInterface
 
             // QUEUE_WORKER_MEMORY_MAX_GROWTH_FACTOR, 50 by default
             // measures how much Worker own memory consumption increased after first iteration
-            // when more than 50% - it is considered a memory leak and Worker will finish its operation
+            // when more than 50% - it's considered a memory leak and Worker will finish its operation
             // allowing Jenkins to run Worker again
             if ($ownMemGrowthFactor > $this->queueConfig->maxAllowedWorkerMemoryGrowthFactor()) {
                 $this->logger->emergency(sprintf('Worker memory grew more than %d%%, probably a memory leak, exiting', $ownMemGrowthFactor));
@@ -255,6 +255,7 @@ class NewWorker implements WorkerInterface
 
     // ...
 ```
+
 </details>
 
 ### System resource manager
@@ -336,6 +337,7 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
         return $memory ?? 0;
     }
 ```
+
 </details>
 
 ### QueueScanner
@@ -406,6 +408,7 @@ class QueueScanner implements QueueScannerInterface
 
     // ...
 ```
+
 </details>
 
 ### Customized process manager
@@ -434,6 +437,7 @@ class ProcessManager extends SprykerProcessManager implements ProcessManagerInte
     }
 }
 ```
+
 </details>
 
 ### Simple ordered strategy
@@ -485,4 +489,5 @@ class OrderedQueuesStrategy implements QueueProcessingStrategyInterface
         return $this->queueScanner->scanQueues();
     }
 ```
+
 </details>

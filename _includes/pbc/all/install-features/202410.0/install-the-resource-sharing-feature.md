@@ -3,6 +3,7 @@
 ## Install feature core
 
 ### Prerequisites
+
 Install the required features:
 
 | NAME | VERSION |
@@ -17,7 +18,7 @@ Install the required modules using Composer:
 composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -37,7 +38,7 @@ console propel:install
 console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes applied by checking your database:
 
@@ -47,7 +48,7 @@ Make sure that the following changes applied by checking your database:
 
 {% endinfo_block %}
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
 
@@ -65,7 +66,7 @@ Make sure that the following changes in transfer objects have been applied:
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -79,7 +80,7 @@ Install the required modules using Composer:
 composer require spryker-feature/resource-sharing: "{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
 
@@ -158,7 +159,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build

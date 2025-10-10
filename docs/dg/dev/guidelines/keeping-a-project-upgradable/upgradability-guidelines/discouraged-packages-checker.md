@@ -1,6 +1,6 @@
 ---
 title: Discouraged packages checker
-description: Reference information for evaluator tools.
+description: Learn about the discourage packages checker and how it checksif discouraged packages are installed within your Spryker project.
 template: howto-guide-template
 last_updated: Nov 10, 2023
 redirect_from:
@@ -28,6 +28,7 @@ Target: sllh/composer-versions-check
 ## Example of code that causes an evaluator error
 
 **composer.lock**
+
 ```json
 {
   "_readme": [
@@ -51,6 +52,7 @@ To resolve the issue, remove the discouraged package or follow the instructions 
 ## Run only this checker
 
 To run only this checker, include `DISCOURAGED_PACKAGES_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=DISCOURAGED_PACKAGES_CHECKER
 ```

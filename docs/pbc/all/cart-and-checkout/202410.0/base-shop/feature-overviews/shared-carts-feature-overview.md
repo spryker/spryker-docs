@@ -11,6 +11,8 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/shared-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/shared-carts-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html
+
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.

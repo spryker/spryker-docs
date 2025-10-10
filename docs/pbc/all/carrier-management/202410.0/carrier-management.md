@@ -4,6 +4,8 @@ description: Explore the comprehensive carrier management features in Spryker Cl
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/carrier-management.html
+- /docs/pbc/all/carrier-management/latest/carrier-management.html
+
 last_updated: Nov 17, 2023
 ---
 

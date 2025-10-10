@@ -4,6 +4,8 @@ description: Learn how to install the File Manager feature, which lets you uploa
 last_updated: Aug 22, 2023
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-file-manager-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-file-manager-feature.md -->

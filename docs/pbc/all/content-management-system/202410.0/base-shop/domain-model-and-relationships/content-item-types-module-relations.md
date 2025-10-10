@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/content-item-types-module-relations
   - /docs/scos/dev/feature-walkthroughs/202204.0/content-items-feature-walkthrough/content-item-types-module-relations.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/domain-model-and-relationships/content-item-types-module-relations.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/domain-model-and-relationships/content-item-types-module-relations.html
+
 ---
 
 This document describes each content item type and the modules relations used for them.

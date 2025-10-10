@@ -8,6 +8,7 @@ redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
 - /docs/scos/dev/feature-walkthroughs/202311.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
 - /docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
+- /docs/pbc/all/customer-relationship-management/latest/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html
 ---
 
 A *token* is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in base64url format.

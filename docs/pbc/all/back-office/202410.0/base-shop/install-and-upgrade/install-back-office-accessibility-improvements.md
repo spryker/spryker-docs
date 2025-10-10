@@ -4,6 +4,8 @@ description: Learn how to install Back Office accessibility improvements to impr
 last_updated: Feb 5, 2025
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
+
 ---
 
 Back Office accessibility improvements include the following changes:

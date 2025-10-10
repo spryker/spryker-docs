@@ -1,7 +1,7 @@
 ---
 title: Splitting a single event queue into multiple publish queues
 description: Improve event processing by splitting a single event queue into multiple publish queues. Reduce bottlenecks, speed up processing, and enhance observability at scale.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

@@ -59,7 +59,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_about -- --disable-external
+      - run: bundle exec rake check_about
 
   link_validation_check_ca:
     name: Links validation (check_ca)
@@ -87,7 +87,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_ca -- --disable-external
+      - run: bundle exec rake check_ca
 
   link_validation_check_pbc:
     name: Links validation (check_pbc)
@@ -115,7 +115,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_pbc -- --disable-external
+      - run: bundle exec rake check_pbc
 
   link_validation_check_dg:
     name: Links validation (check_dg)
@@ -143,7 +143,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_dg -- --disable-external
+      - run: bundle exec rake check_dg
 
   link_validation_check_integrations:
     name: Links validation (check_integrations)
@@ -171,7 +171,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_integrations -- --disable-external
+      - run: bundle exec rake check_integrations
 
   page_validation:
     name: Page validation

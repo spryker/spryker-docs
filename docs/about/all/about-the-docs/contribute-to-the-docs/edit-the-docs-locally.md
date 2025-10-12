@@ -5,7 +5,7 @@ last_updated: Jan 23, 2023
 template: howto-guide-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
-
+- /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests
 ---
 
 
@@ -13,9 +13,9 @@ This document describes how to edit documents on your machine and submit your ch
 
 ## Prerequisites
 
-* Account on [GitHub](https://github.com/).
-* [GitHub Desktop](https://desktop.github.com/).
-* Editor of your choice. We recommend [Visual Studio Code](https://code.visualstudio.com/) or similar editors which let you browse files.
+- Account on [GitHub](https://github.com/).
+- [GitHub Desktop](https://desktop.github.com/).
+- Editor of your choice. We recommend [Visual Studio Code](https://code.visualstudio.com/) or similar editors which let you browse files.
 
 ## Clone the Spryker docs repository
 
@@ -74,7 +74,7 @@ At this point, you are most likely to know which document you want to edit. To f
     <video width="100%" height="auto" controls>
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.md/Commit+and+push.mp4" type="video/mp4">
   </video>
-</figure>    
+</figure>
 
 
 ## Submit changes for publishing
@@ -105,4 +105,4 @@ The name of the pull request must match the title of the page or section you've 
 </figure>
 
 
-That's it. We'll take it from here. During the review, we may post comments for your changes. Notifications about comments and PR status changes will be sent to the email address of your GitHub account. After the pull request is merged, the changes will appear on the website.     
+That's it. We'll take it from here. During the review, we may post comments for your changes. Notifications about comments and PR status changes will be sent to the email address of your GitHub account. After the pull request is merged, the changes will appear on the website.

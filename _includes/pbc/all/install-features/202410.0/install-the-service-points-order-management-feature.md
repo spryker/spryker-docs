@@ -12,7 +12,7 @@ Install the required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                         |
+| Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                         |
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ### Set up behavior
@@ -67,11 +67,11 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1.  Add a product offer with the service point shipment type to cart.
+1. Add a product offer with the service point shipment type to cart.
 
-2.  Place the order.
+2. Place the order.
 
-3.  Check that the `spy_sales_order_item_service_point` database table contains a record with the product and the selected service point.
+3. Check that the `spy_sales_order_item_service_point` database table contains a record with the product and the selected service point.
 
 {% endinfo_block %}
 
@@ -316,6 +316,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Add the widget to a Twig template:
+
 ```twig
 {% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}

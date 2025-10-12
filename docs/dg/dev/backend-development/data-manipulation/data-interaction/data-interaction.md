@@ -7,8 +7,8 @@ redirect_from:
 ---
 
 This section contains a collection of articles describing how data interaction happens in the Spryker SCOS. Topics include:
-* [Standard filters – backend and frontend technical details](/docs/dg/dev/backend-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html)
+- [Standard filters – backend and frontend technical details](/docs/dg/dev/backend-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html)
 
-* [Transfer data between Yves and Zed](/docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html)
+- [Transfer data between Yves and Zed](/docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html)
 
-* [Define the module dependencies – dependency provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html)
+- [Define the module dependencies – dependency provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html)

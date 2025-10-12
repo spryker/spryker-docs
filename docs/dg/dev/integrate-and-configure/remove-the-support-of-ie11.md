@@ -32,6 +32,7 @@ Update the following configuration files:
 ### Update `.browserslistrc`
 
 Remove IE11 usage:
+
 ```text
 IE 11
 ```
@@ -39,6 +40,7 @@ IE 11
 ### Update `frontend/configs/development.js`
 
 1. Remove the `buildVariantSettings` variable declaration and usage:
+
 ```js
 const { buildVariantSettings } = require('../settings');
 ...
@@ -46,6 +48,7 @@ const { buildVariant, isES6Module } = buildVariantSettings;
 ```
 
 2. Remove the `es6PolyfillTs` variable declaration and usage:
+
 ```js
 const es6PolyfillTs = await findAppEntryPoint(appSettings.find.shopUiEntryPoints, './es6-polyfill.ts');
 ...
@@ -53,6 +56,7 @@ const es6PolyfillTs = await findAppEntryPoint(appSettings.find.shopUiEntryPoints
 ```
 
 3. Remove browsers support as specified in the `.browserslistrc` file:
+
 ```js
 browsers: [
     '> 1%',
@@ -78,6 +82,7 @@ Remove the `autoprefixer` import at the top of the file.
 
 
 4. Set the `esmodules` property to `true` instead of using the `isES6Module` variable:
+
 ```js
 esmodules: isES6Module,
 // must be
@@ -85,6 +90,7 @@ esmodules: true,
 ```
 
 5. Replace usage for the following conditions:
+
 ```js
 filename: isES6Module ? `./js/${appSettings.name}.[name].js` : `./js/${appSettings.name}.[name].${buildVariant}.js`,
 // must be
@@ -104,6 +110,7 @@ filename: `./js/${appSettings.name}.[name].js`,
 ```
 
 6. Adjust `watchLifecycleEventNames` to use only the `yves:watch` lifecycle event:
+
 ```js
 const watchLifecycleEventNames = ['yves:watch:esm', 'yves:watch:legacy'];
 // must be
@@ -113,6 +120,7 @@ const watchLifecycleEventNames = ['yves:watch'];
 ### Update `frontend/libs/command-line-parser.js`
 
 Remove the `build determined module version` message:
+
 ```js
 .option('-m, --module <module>', 'build determined module version', globalSettings.buildVariants)
 ```
@@ -120,11 +128,13 @@ Remove the `build determined module version` message:
 ### Update `frontend/libs/compiler.js`
 
 1. Remove import of the `buildVariantSettings` variable:
+
 ```js
 const { buildVariantSettings } = require('../settings');
 ```
 
 2. Remove the console command from the config section:
+
 ```js
 const buildVariant = buildVariantSettings.buildVariant;
 
@@ -134,6 +144,7 @@ console.log(`${config.namespace} (${config.theme}) building ${buildVariant} modu
 ### Update `frontend/settings.js`
 
 1. Remove build variants:
+
 ```js
 buildVariants: {
     esm: 'esm',
@@ -152,6 +163,7 @@ const buildVariantSettings = {
 ```
 
 2. Remove `buildVariantSettings` variable export:
+
 ```js
 module.exports = {
     ...,
@@ -200,6 +212,7 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 ## Update `package.json`
 
 1. Update YVES build commands to the following:
+
 ```json
 "yves": "node ./frontend/build development",
 "yves:watch": "node ./frontend/build development-watch",
@@ -207,6 +220,7 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 ```
 
 2. Remove IE11-related dependencies:
+
 ```json
 "@webcomponents/custom-elements",
 "@webcomponents/webcomponents-platform",
@@ -221,6 +235,7 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 ```
 
 3. Update the `autoprefixer` dependency:
+
 ```json
 "autoprefixer": "~9.8.8",
 ```
@@ -228,11 +243,13 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 ## Install and build using Docker
 
 1. Install dependencies:
+
 ```bash
 docker/sdk cli npm i
 ```
 
 2. Build the project assets:
+
 ```bash
 docker/sdk up --assets
 ```
@@ -240,11 +257,13 @@ docker/sdk up --assets
 ## Install and build locally
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Build the project assets:
+
 ```bash
 npm run yves
 npm run zed

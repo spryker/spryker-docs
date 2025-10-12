@@ -13,9 +13,15 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 ---
 
-_Transfer objects_ are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
+*Transfer objects* are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 
 This document shows how to create and use transfer objects.
+
+{% info_block infoBox %}
+
+We recommend creating strict transfer objects.
+
+{% endinfo_block %}
 
 ## Create transfer objects
 
@@ -31,7 +37,7 @@ The following example describes a Customer with email, first name, last name, an
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
-    <transfer name="Customer">
+    <transfer name="Customer" strict="true">
         <property name="email" type="string"/>
         <property name="firstName" type="string"/>
         <property name="lastName" type="string"/>
@@ -44,7 +50,7 @@ The following example describes a Customer with email, first name, last name, an
 ### Available types
 
 You can use any name for your transfer objects. However, make sure that the property names start with a small letter and use the camelCase format.
-As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the _[]_ symbols.
+As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the *[]* symbols.
 
 ```xml
 <transfer name="MyTransfer" strict="true">
@@ -57,9 +63,11 @@ As for the types, you can use PHP native types: `int`, `string`, `bool`, and `ar
 </transfer>
 ```
 
+### Associative arrays and collections
+
 The transfer object associative property attribute allows working with associative arrays and collections. An *associative array* is an array with a string index where instead of linear storage, each value can be assigned a specific key.
 
-The associative attribute can be used with all PHP native data types or collections. As of 202108.0 release, we recommend creating strict transfer objects.
+The associative attribute can be used with all PHP native data types or collections.
 
 Schema generation example:
 
@@ -69,12 +77,12 @@ Schema generation example:
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd" >
 
-    <transfer name="Foo">
+    <transfer name="Foo" strict="true">
         <property name="bars" type="Bar[]" singular="bar" associative="true" />
         <property name="bazs" type="array" singular="baz" associative="true" />
     </transfer>
 
-    <transfer name="Bar">
+    <transfer name="Bar" strict="true">
         <property name="test" type="string"/>
     </transfer>
 
@@ -124,6 +132,7 @@ echo $customerTransfer->getFirstName(); // echos 'John'
 ```
 
 ## Nest transfer objects
+
 Transfer objects can be nested—for example, a cart object contains several items like this:
 
 ```php
@@ -294,7 +303,8 @@ $taxId = $customerTransfer->getTaxId();
 
 ## Transfer strict types
 
-Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers support the so-called *strict* mode. In the strict mode, all the relevant *get-*, *set-* and *add-* methods are generated with PHP data types in place of their arguments and return values. The strict mode is disabled by default for backward compatibility reasons and can be enabled for specific transfer properties or for an entire transfer. To enable the strict mode, you need to use the new `strict` XML attribute while defining a transfer. If the `strict` attribute is applied to a property, then only that property is considered as a strict property while applying the attribute to a `<transfer/>` element means that the whole transfer is supposed to be strict:
+Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers support the so-called *strict* mode. In the strict mode, all the relevant *get-*, *set-* and *add-* methods are generated with PHP data types in place of their arguments and return values. The strict mode is disabled by default for backward compatibility reasons and can be enabled for specific transfer properties or for an entire transfer. To enable the strict mode, you need to use the new `strict` XML attribute while defining a transfer. If the `strict` attribute is applied to a property, then only that property is considered as a strict property while applying the attribute to a `<transfer/>` element means that each property of the transfer is considered as strict.
+The only acceptable value of this new attribute is `true`.
 
 ```xml
 <?xml version="1.0"?>
@@ -316,10 +326,8 @@ Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transf
 </transfers>
 ```
 
-In the previous example, the `Foo` transfer is fully strict, meaning that all of its getters, setters, and adders have data types where possible. The only acceptable value of this new attribute is `true`.
-
-In the previous example, the `Foo` transfer is fully strict, meaning that all of its getters, setters, and adders have data types where possible. The only acceptable value of this new attribute is `true`.
-Also, in the example, the `Buzz` transfer has a nested transfer `Foo` declared as a strict property. In case of trying to put to the `foo` property something other than `Foo` transfer object, an exception is thrown.
+In the previous example, the `Foo` transfer is fully strict, meaning that all of its getters, setters, and adders have data types where possible.
+Also, in the example, the `Buzz` transfer has a nested strict property with the tranfer `Foo` declared as a strict property. In case of trying to put to the `foo` property something other than `Foo` transfer object, an exception is thrown.
 
 {% info_block warningBox %}
 
@@ -366,5 +374,5 @@ The only valid attribute value of the root `<transfers></transfers>` element is 
 
 You can use the following definitions to generate the related code:
 
-* Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
- 
+- Add shared transfer schema. For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
+

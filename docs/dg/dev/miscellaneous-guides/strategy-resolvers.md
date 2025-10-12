@@ -54,9 +54,9 @@ The following section defines how to configure a fallback in case context is mis
 ## Strategy resolver configuration in the factory
 
 The factory is responsible for the following:
-* Creating the strategy resolver
-* Mapping all supported contexts to plugin stacks
-* Choosing fallbacks
+- Creating the strategy resolver
+- Mapping all supported contexts to plugin stacks
+- Choosing fallbacks
 
 To ensure type safety, the generic type of the strategy resolver must be well-defined.
 

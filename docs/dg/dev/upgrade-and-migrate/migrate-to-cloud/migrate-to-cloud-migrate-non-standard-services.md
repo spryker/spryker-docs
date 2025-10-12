@@ -8,11 +8,11 @@ redirect_from:
 
 Spryker comes pre-configured with the following services by default:
 
-* RabbitMQ
-* Elasticsearch
-* Redis
-* MariaDB
-* Jenkins
+- RabbitMQ
+- Elasticsearch
+- Key-value store (Redis or Valkey)
+- MariaDB
+- Jenkins
 
 After you have [upgraded the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html), you can migrate these services. You should be able to do that without significant challenges. However, check their versions to make sure if the on-prem versions of your services are different from those of the Spryker Cloud Commerce OS. If your project uses components beyond the standard configuration, such as Kafka, we highly recommend conducting a thorough investigation and making a decision on whether to replace them or find a way to continue using them.
 

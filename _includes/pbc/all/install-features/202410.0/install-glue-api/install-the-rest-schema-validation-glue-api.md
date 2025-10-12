@@ -81,7 +81,7 @@ To verify that `BuildValidationCacheConsole` is activated, make sure that the fo
 
 ### Generate Validation Cache
 
-Run the following command to generate the validation cache:
+Generate the validation cache:
 
 ```bash
 console glue:rest:build-request-validation-cache
@@ -141,7 +141,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
     a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
-    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html) for more details. Example:
+    b. In the file, describe validation rules for endpoints. See [Validate REST request format](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/validate-rest-request-format.html) for more details. Example:
 
     ```yaml
     access-tokens:
@@ -152,11 +152,13 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         password:
           - NotBlank
     ```
+
     c. Collect the validation cache:
 
     ```bash
     console glue:rest:build-request-validation-cache
     ```
+
 3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 `POST http://example.org/access-tokens`
 

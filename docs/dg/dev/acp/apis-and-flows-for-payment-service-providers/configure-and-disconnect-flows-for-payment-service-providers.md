@@ -23,10 +23,10 @@ The following diagram explains the configuration and disconnect flows for a paym
 ![configure-and-disconnect-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/acp/apis-and-overview-diagrams-for-payment-service-providers.md/configure-and-disconnect-flows.png)
 
 Optional messages:
-* `AddPaymentMethod`
-* `UpdatePaymentMethod`
-* `DeletePaymentMethod`
-* `ReadyForMerchantAppOnboarding`
+- `AddPaymentMethod`
+- `UpdatePaymentMethod`
+- `DeletePaymentMethod`
+- `ReadyForMerchantAppOnboarding`
 
 The Payment Method related messages are used to manage payment methods in Spryker. These messages are sent only when a payment method configuration changes or when the list of available payment methods changes.
 

@@ -84,8 +84,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-* `https://glue.mysprykershop.com/carts`
-* `https://glue.mysprykershop.com/guest-carts`
+- `https://glue.mysprykershop.com/carts`
+- `https://glue.mysprykershop.com/guest-carts`
 
 {% endinfo_block %}
 

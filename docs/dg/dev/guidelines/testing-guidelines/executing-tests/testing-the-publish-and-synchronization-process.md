@@ -55,7 +55,7 @@ The main helpers involved in the P&S testing are:
 
 ## P&S testing storage
 
-Let's test that the relevant data of a saved entity is available in the Storage, for example, in Redis.
+Let's test that the relevant data of a saved entity is available in the Storage, for example, in the key-value store (Redis or Valkey).
 
 Since we work with the real database, we execute one test for:
 
@@ -69,10 +69,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
-    - [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#storagehelper)
+  - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
+  - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
+  - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
+  - [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#storagehelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -81,25 +81,25 @@ This being done, you can start testing the entire process.
 
 When you save an entity to the database:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
-* `$this->tester->assertEntityIsSynchronizedToStorage('storage queue name');` method starts the queue worker for the given queue name and pushes the data to the storage. This method also asserts that at least one message was consumed from the queue.
-* `$this->tester->assertStorageHasKey('your expected storage key');` method asserts that the expected key can be found in the Storage.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsSynchronizedToStorage('storage queue name');` method starts the queue worker for the given queue name and pushes the data to the storage. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertStorageHasKey('your expected storage key');` method asserts that the expected key can be found in the Storage.
 
 
 ### Updating an entity
 
 When you update an entity:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
-* `$this->tester->assertEntityIsUpdatedInStorage('storage queue name');` method starts the queue worker for the given queue name and pushes the data to the storage. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsUpdatedInStorage('storage queue name');` method starts the queue worker for the given queue name and pushes the data to the storage. This method also asserts that at least one message was consumed from the queue.
 
 ### Deleting an entity
 
 When you delete an entity:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
-* `$this->tester->assertEntityIsRemovedFromStorage('storage queue name');` method starts the queue worker for the given queue name and removes the data from the storage. This method also asserts that at least one message was consumed from the queue.
-* `$this->tester->assertStorageNotHasKey('your expected storage key');` method ensures that the key and its data have been removed from the Storage.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsRemovedFromStorage('storage queue name');` method starts the queue worker for the given queue name and removes the data from the storage. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertStorageNotHasKey('your expected storage key');` method ensures that the key and its data have been removed from the Storage.
 
 
 ## P&S testing Search
@@ -118,10 +118,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Search` module
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
-    - [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#searchhelper)
+  - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
+  - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
+  - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
+  - [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#searchhelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -130,24 +130,24 @@ This being done, you can start testing the entire process.
 
 When you save an entity to the database:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
-* `$this->tester->assertEntityIsSynchronizedToSearch('search queue name');` method starts the queue worker for the given queue name and pushes the data to the Search. This method also asserts that at least one message was consumed from the queue.
-* `$this->tester->assertSearchHasKey('your expected search key');` method asserts that the expected key can be found in the Search.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsSynchronizedToSearch('search queue name');` method starts the queue worker for the given queue name and pushes the data to the Search. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertSearchHasKey('your expected search key');` method asserts that the expected key can be found in the Search.
 
 ### Updating an entity
 
 When you update an entity:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.        
-* `$this->tester->assertEntityIsUpdatedInSearch('search queue name');` method starts the queue worker for the given queue name and pushes the data to the Search. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsUpdatedInSearch('search queue name');` method starts the queue worker for the given queue name and pushes the data to the Search. This method also asserts that at least one message was consumed from the queue.
 
 ### Deleting an entity
 
 When you delete an entity:
 
-* `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
-* `$this->tester->assertEntityIsRemovedFromSearch('search queue name');` method starts the queue worker for the given queue name and removes the data from the Search. This method also asserts that at least one message was consumed from the queue.
-* `$this->tester->assertSearchNotHasKey('your expected search key');` method ensures that the key and it's data was removed from the Search.
+- `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
+- `$this->tester->assertEntityIsRemovedFromSearch('search queue name');` method starts the queue worker for the given queue name and removes the data from the Search. This method also asserts that at least one message was consumed from the queue.
+- `$this->tester->assertSearchNotHasKey('your expected search key');` method ensures that the key and it's data was removed from the Search.
 
 ## Troubleshooting
 

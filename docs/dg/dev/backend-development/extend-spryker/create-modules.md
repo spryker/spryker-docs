@@ -15,7 +15,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This tutorial shows how to create a test `HelloWorld` module; the module's functionality is to display a _Hello world!_ message to users.
+This tutorial shows how to create a test `HelloWorld` module; the module's functionality is to display a *Hello world!* message to users.
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ touch src/Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php
 touch src/Pyz/Zed/HelloWorld/HelloWorldDependencyProvider.php
 ```
 
-2. In the view (`index.twig`), add the _Hello world !_ message:
+2. In the view (`index.twig`), add the *Hello world !* message:
 
 ```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
@@ -84,6 +84,7 @@ Additionally, you can use the code generator to create a module. For this, creat
 ```bash
 console spryk:run AddModule
 ```
+
 Requesting the URL `https://zed.mysprykershop.com/hello-world` shows the Hello World example.
 
 ## Display a random salutation message

@@ -12,8 +12,6 @@ redirect_from:
 related:
   - title: Install module structure and configuration
     link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
-  - title: Redis configuration
-    link: docs/dg/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
 Spryker Cloud Commerce OS (SCCOS) uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.
@@ -66,17 +64,18 @@ In the project level `composer.json` file you can specify the components that yo
 
 Pulling hundreds of composer dependencies declared in `composer.json` file takes time and can be tricky sometimes. On the one hand, you want your system to have all the newest functionality and improvements, but on the other hand, you might be reluctant to invest additional development effort into the updates. While minor updates do not affect compatibility, that might not be the case for major updates. Check the recommendations below in order to perform the core updates smoothly.
 
-* **Stay Up-to-Date with the New Features**
+- **Stay Up-to-Date with the New Features**
   First of all, make sure you do not miss our release mail newsletter ([subscribe](https://now.spryker.com/release-notes) to them and be well informed). Staying up-to-date with the improvements and the new features will help you to understand what releases will bring business value to your company. It's not recommended to take all major releases or the new modules just because they exist. Once you have taken a module, keep on following the release notes for minor releases and patches and incorporate them once they come out. This method of continuous updates should help to prevent the likelihood of incompatibility and breaks in your project. Always think of the business value you gain from the update, as updates always take some time and it's up to you to decide if the migration effort is justified in your specific case.
 
-* **Know What You Have**
+- **Know What You Have**
   We update dependencies based on Atomic Release process. To check what you have installed you can use the `composer.lock` file, that reflects the real status of your installation. composer.lock file can also be found in project's root folder.
 
-* **Check for Newer Module Versions**
+- **Check for Newer Module Versions**
   You can easily keep track of new module versions [using composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) as add-on for your local composer tool. It will warn you about outdated Spryker Commerce OS module dependencies.
 
-* **Stay Up-to-Date with the PHP version**
-Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum version. Please make sure to upgrade your server to the latest stable PHP version and adjust (or remove) config section in *composer.json*:
+- **Stay Up-to-Date with the PHP version**
+Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum version. Make sure to upgrade your server to the latest stable PHP version and adjust (or remove) config section in *composer.json*:
+
 ```bash
 "config": {
   	"platform": {
@@ -95,7 +94,7 @@ Make sure every minor or patch release is applied before upgrading to a major re
 
 <a name="composer-update"></a>
 
-To update all the modules, run the following command:
+Update all the modules:
 
 ```bash
 composer update "spryker/*"
@@ -128,14 +127,14 @@ The following process describes adding a replace command into a new module to in
 
 For each module that you want to add:
 
-* Replace the old module with the new one by creating a dummy module repository in a directory accessible to composer.
+- Replace the old module with the new one by creating a dummy module repository in a directory accessible to composer.
 
   1. Name or rename the new module by using the old module's name and prefixing it with `replace_`. For example, create a dummy file called `replace_refund` to replace the refund module. This will help to keep track of any replaces you do in the project.
   2. In the newly created dummy module directory, create an empty `composer.json` file and add the following Composer Configuration Information.
   3. Add the newly created module to your project's `composer.json` file by going into your project's `composer.json` and adding the new location.
   4. Check if the core module is in your project's `composer.json` file and if it's, remove it.
 
-* Execute composer update with the replace module name:
+- Execute composer update with the replace module name:
 
   ```php
   composer update "replace_*the name of the module you are replacing*

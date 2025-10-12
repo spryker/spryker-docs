@@ -11,6 +11,6 @@ This section contains solutions to common issues and troubleshooting tutorials.
 
 Browse the troubleshooting categories:
 
-* [Troubleshooting deployment](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html)
-* [Troubleshooting general issues](/docs/ca/dev/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html)
-* [Troubleshooting tutorials](/docs/ca/dev/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html)
+- [Troubleshooting deployment](/docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html)
+- [Troubleshooting general issues](/docs/ca/dev/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html)
+- [Troubleshooting tutorials](/docs/ca/dev/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html)

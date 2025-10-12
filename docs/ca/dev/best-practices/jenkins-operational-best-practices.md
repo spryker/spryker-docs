@@ -5,16 +5,16 @@ template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
   - /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
-last_updated: March 11, 2024
+last_updated: Sep 23, 2025
 ---
 
-This document will help you implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
-Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
+This document describes how to enhance the stability and performance of the Jenkins component in your Spryker environment.
 
+Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.
-- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/202311.0/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
+- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
 - Fine-tune the chunk size of the queues you work with.
 - Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
 - Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error "PHP Fatal error: Out of memory".
@@ -23,6 +23,11 @@ Before raising issues about Jenkins performance and stability with Spryker, make
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
 - In a standard-sized non-production environment, don't run lengthy imports and sync processes lasting more than 1-2 hours.
 - Be prepared to lose manually created jobs. Make sure that all critical jobs are persisted in your project (jenkins.php).
+
+
+## Stable workers
+
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 ## Theoretical max memory demand and memory constraints
 
@@ -91,6 +96,7 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
     ],
 ];
 ```
+
 Import jobs, as well as Publish and Sync-related processes, can be taxing on the database. Make sure that you conduct profiling with a realistic dataset. You can take a database dump from your PaaS environments or use AI to generate test data in realistic quantities.
 
 ### Imports and Publish and Synchronize
@@ -105,6 +111,7 @@ While fine-tuning your chunk size, check out the following articles:
 A valuable general recommendation is to [split up publishing queues](https://docs.spryker.com/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html#set-up-a-publish-queue-for-a-publisher-plugin) for improved performance and precise control. You will observe varying memory and CPU demands for different messages in your queues, and by dividing the queues to accommodate various events, you can establish appropriate chunk sizes for each of them.
 
 ### CPU credits
+
 Standard-sized non-production environments aren't intended to handle long periods of high load. Most infrastructure components in this package size operate with a burst configuration, allowing for increased performance during limited periods. However, if these environments are under heavy load for an extended duration, the components will eventually run out of "burst credits" and throttle until the load decreases and the credits can replenish over time. When an instance is throttled, its CPU performance is capped at 20%. Consequently, the instance may struggle to complete standard tasks, resulting in the following common symptoms:
 
 - Deployment-related steps in the Deploy_Scheduler pipeline may encounter issues because of insufficient processing capacity.
@@ -124,6 +131,7 @@ Make sure the following criteria are met:
 - You've configured the chunk size of the queues you are working with to align with the memory constraints of your environment.
 
 ## Jenkins job configuration
+
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.

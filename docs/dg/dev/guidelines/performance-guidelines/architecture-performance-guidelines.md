@@ -30,12 +30,54 @@ Let's consider an example illustrating the impact of a bad architecture design w
 
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries into one query with a bigger result (unfiltered).
-* Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+- Merging several queries into one query with a bigger result (unfiltered).
+- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
 
 Make sure you carefully check for memory leaks during the query optimizations, as the results will be bigger or shared in one transaction.
+
+{% endinfo_block %}
+
+### Duplicated storage calls (storage calls in a loop)
+
+In project implementations, developers sometimes introduce repeated storage calls inside loops. Each iteration of the loop then results in a new query to the storage, even though the required data could often be retrieved in a more optimized way. This creates a significant performance bottleneck because:
+
+- Storage access is typically slower because of the network overhead on each trip to Redis/Valkey. Multiplying these calls by the number of loop iterations can lead to exponential slowdowns.
+- High-frequency storage calls increase infrastructure load, leading to higher operational costs and degraded system responsiveness under load.
+- Unnecessary roundtrips to storage delay the request–response cycle and negatively impact customer-facing performance metrics such as page load time and API latency.
+
+To avoid these pitfalls, architects and developers should ensure storage interactions are minimized and structured efficiently. Best practices include:
+
+- Batch retrieval: Fetch all required records in a single storage call before entering the loop.
+- Indexing and pre-aggregation: Where possible, prepare optimized structures to avoid repeated lookups.
+
+Bad practice – repeated storage calls inside the loop:
+
+```php
+foreach ($storageKeys as $storageKey) {
+    $productData = $this->storageClient->get($storageKey);
+    // Process $productData
+}
+```
+
+In this example, every loop iteration triggers a new storage request, which can quickly become a performance bottleneck with larger datasets.
+
+Recommended approach – batch retrieval and in-memory processing:
+
+```php
+$productsData = $this->storageClient->getMulti($storageKeys);
+
+foreach ($productsData as $productData) {
+    // Process $productData
+}
+```
+
+By fetching all required records in a single call (with `\Spryker\Client\Storage\StorageClientInterface::getMulti`), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
+
+{% info_block warningBox %}
+
+Always evaluate the size of batch requests and memory usage when removing storage calls from loops. While batching improves performance, overly large result sets can increase memory consumption and cause application instability.
 
 {% endinfo_block %}
 
@@ -130,9 +172,9 @@ Database queries are the slowest parts of each application. They have different 
 
 Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
 
-### Wildcards in Redis
+### Wildcards in the key-value store
 
-Avoid using wildcards (*) in Redis, as they can significantly impact performance.
+Avoid using wildcards (*) in the key-value store, as they can significantly impact performance.
 
 ### RPC calls
 
@@ -145,10 +187,13 @@ Propel instance pooling is a  Propel feature that determines whether object inst
 If you encounter memory leak issues while running console commands, consider temporarily disabling instance pooling:
 
 1. Before executing a memory-intensive script, disable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::disableInstancePooling();
 ```
+
 2. After the memory-intensive script has been executed, reenable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::enableInstancePooling();
 ```
@@ -169,7 +214,7 @@ Publishers use queues to propagate events and let workers consume them to provid
 
 The default Spryker configuration comes with one worker per publisher queue. Nevertheless, you can increase this configuration to the maximum number of CPUs for a specific queue if other queues do not receive any loads. For example:
 
-```
+```text
 Publisher.ProductAbstract 10000 msg/minute (2 workers)
 Publisher.ProductConcrete 10000 msg/minute (2 workers)
 Publisher.Translation 10 msg/minute (1 worker)
@@ -200,7 +245,7 @@ Spryker also recommends enabling the benchmark tests for each publisher queue an
 
 Example of benchmark for each queue:
 
-```
+```text
 time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
 ....
 ```
@@ -217,7 +262,7 @@ As the Spryker boilerplate comes with most of the features enabled, make sure yo
 
 Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it's necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
 
-- Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
+- Exporting necessary data, only product-related ones, from Zed to the key-value store (Redis or Valkey) at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
 {% info_block infoBox "" %}

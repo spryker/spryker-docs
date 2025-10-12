@@ -40,11 +40,12 @@ Plug and Play is Spryker's out-of-the-box development strategy that allows custo
 Check out our [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html) article to get more information.
 
 ### Private API customization
+
 Spryker generally allows changing private APIs and core code. However in this case, part of the upgrade responsibilities move to the side of the customer.
 
 What is a Private API?
 
-A [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a _Business model_, or any file in the _Persistence_ layer, except for _QueryContainer_.
+A [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a *Business model*, or any file in the *Persistence* layer, except for *QueryContainer*.
 
 ## Project customization and release types in terms of upgradability
 

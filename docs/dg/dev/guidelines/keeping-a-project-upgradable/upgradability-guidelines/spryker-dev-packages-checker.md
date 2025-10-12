@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 ---
 
-Spryker dev packages checker checks the project Spryker dependencies for the _dev-*_ constraints.
+Spryker dev packages checker checks the project Spryker dependencies for the *dev-** constraints.
 
 ## Problem description
 
@@ -16,6 +16,7 @@ Projects contain the Spryker packages dependencies in the `require` section of t
 ## Example of code that causes the evaluator error
 
 composer.json
+
 ```json
 {
     "name": "spryker-shop/b2b-demo-shop",

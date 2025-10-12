@@ -23,7 +23,7 @@ The Spryker Monitoring Integration focuses on the following entities to provide 
 ### Traces and spans
 
 {% info_block infoBox %}
-The supported version of OTel Semantic Conventions is 1.30.0.
+The supported version of OTel Semantic Conventions is 1.36.0.
 {% endinfo_block %}
 
 In OpenTelemetry, a *trace* represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A *span* is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.
@@ -57,6 +57,7 @@ hc_rabbitmq: Reports 0 or 1 for RabbitMQ health.
 #### Metrics with dimensions
 
 These metrics have the following labels:
+
 ```yaml
 hc_rabbitmq_message_count_sum: A count of RabbitMQ messages [dimension_queue, dimension_virtualhost].
 hc_jenkins_builds_success_build_count_total.count: A count of successful Jenkins jobs [jenkins_job].
@@ -92,9 +93,10 @@ This section describes how to request and set up Spryker Monitoring Integration 
 
 ### Activate Spryker Monitoring Integration
 
-To request the Spryker Monitoring Integration, on [Support Portal](https://support.spryker.com/), create a Change Request with the following details:
+To request the Spryker Monitoring Integration for your environment, on [Support Portal](https://support.spryker.com/), create a Change Request with the following details:
 - Endpoint: The endpoint URL of your APM tool
 - Token: API token of the APM tool to configure the connection and communication with Spryker
+- Environment name
 
 We'll guide you through the setup process once you submit the request.
 

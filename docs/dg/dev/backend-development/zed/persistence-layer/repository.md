@@ -113,11 +113,11 @@ class BlogPersistenceFactory extends AbstractPersistenceFactory
 
 ## Conventions
 
-#### Querying
+### Querying
 
-* When returning filtered collections by certain field, use `find{Entity}CollectionBy{field}($field, CriteriaTransfer $criteriaTransfer)`. For example, `findBlogCollectionByFirstName($firstName, CriteriaTransfer $criteriaTransfer = null)`
-* When returning a single item: `find{Entity}By{field}`. For example: `public function findBlogByName($firstName)`.
-* When counting records `public function count{Entity}By{Name}({name})`. For example: `public function countBlogByName($firstName)`.
+- When returning filtered collections by certain field, use `find{Entity}CollectionBy{field}($field, CriteriaTransfer $criteriaTransfer)`. For example, `findBlogCollectionByFirstName($firstName, CriteriaTransfer $criteriaTransfer = null)`
+- When returning a single item: `find{Entity}By{field}`. For example: `public function findBlogByName($firstName)`.
+- When counting records `public function count{Entity}By{Name}({name})`. For example: `public function countBlogByName($firstName)`.
 
 Those three queries share the same queries. For better reusability, it's recommended to extract this logic to a protected method. For example:
 
@@ -146,9 +146,9 @@ The repository is available in all ZED layers where Spryker classes are resolvab
 
 You might use the following definitions to generate related code:
 
-* `vendor/bin/console spryk:run AddZedPersistenceRepository` - Add Zed Persistence Repository
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterface` - Add Zed Persistence Repository Interface
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
-* `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
+- `vendor/bin/console spryk:run AddZedPersistenceRepository` - Add Zed Persistence Repository
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterface` - Add Zed Persistence Repository Interface
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
+- `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
 
 For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

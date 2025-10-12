@@ -7,13 +7,29 @@ redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
 ---
 
-Open-source vulnerabilities checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.
+The Open-source vulnerabilities checker is a tool that uses the `composer audit` command to check if your PHP application depends on packages with known security vulnerabilities.
 
 ## Problem description
 
-A project can sometimes use dependencies that contain known vulnerabilities. To minimize the security risk for the project, such dependencies should be updated to the version that has the vulnerability fixed.
+A project can sometimes use dependencies that contain known vulnerabilities. To minimize security risks, such dependencies should be updated to a version where the vulnerability is fixed.
+
+## Prerequisites
+
+This checker requires Composer version 2.7.0 or later. To check your Composer version, execute the command:
+
+```bash
+composer --version
+```
+
+If your version is lower than 2.7.0, upgrade Composer:
+
+```bash
+composer self-update
+```
 
 ## Example of an evaluator error message
+
+When a vulnerability is detected, the evaluator displays an error message similar to the following:
 
 ```bash
 ===================================
@@ -21,12 +37,14 @@ OPEN SOURCE VULNERABILITIES CHECKER
 ===================================
 
 Message: Improper header validation (CVE-2023-29197): https://github.com/guzzle/psr7/security/advisories/GHSA-wxmh-65f7-jcvw
-Target:  guzzlehttp/psr7:2.4.1
+Subject: guzzlehttp/psr7 (1 advisories)
 ```
+
+This message indicates that the `guzzlehttp/psr7` package has a known security issue.
 
 ## Example of code that causes an evaluator error
 
-Your `composer.lock` file contains package versions that have security issues:
+The error is caused by a package version with a known vulnerability defined in your `composer.lock` file:
 
 ```json
 ...
@@ -43,12 +61,21 @@ Your `composer.lock` file contains package versions that have security issues:
 
 ## Resolve the error
 
-To resolve the error:
-1. Upgrade the package to a version where the vulnerability issue is fixed.
+To resolve the error, upgrade the package to a version where the vulnerability is fixed:
 
+1. Identify the package with the vulnerability from the error message (for example, `guzzlehttp/psr7`).
+2. Update the package to a secure version:
+
+    ```bash
+    composer update guzzlehttp/psr7
+    ```
+
+3. After updating, you can run `composer audit` to confirm that the vulnerability has been resolved.
 
 ## Run only this checker
-To run only this checker, include `OPEN_SOURCE_VULNERABILITIES_CHECKER` into the checkers list. Example:
+
+To run only this checker, include `OPEN_SOURCE_VULNERABILITIES_CHECKER` in the checkers list:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=OPEN_SOURCE_VULNERABILITIES_CHECKER
 ```

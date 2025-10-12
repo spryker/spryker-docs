@@ -1,4 +1,4 @@
-version: "202410.0"
+version: "latest"
 
 repository: spryker/spryker-docs
 
@@ -131,12 +131,22 @@ defaults:
     values:
       sidebar: "about_all_sidebar"
       role: "all"
+  -
+     scope:
+       path: "docs/integrations"
+     values:
+       product: "integrations"
+  -
+    scope:
+      path: "docs/integrations"
+    values:
+      sidebar: "integrations"
+      role: "all"
 
 versions:
-  '202311.0': '202311.0'
-  '202404.0': '202404.0'
-  '202505.0': '202505.0'  
-  '202410.0': '202410.0'
+  '202410.0': '202410.0'  
+  'latest': 'latest'  
+
 
 
 # versioned categories - these must match corresponding directories
@@ -192,6 +202,7 @@ sidebars:
   - pbc_all_sidebar
   - about_all_sidebar
   - dg_dev_sidebar
+  - integrations
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

@@ -89,6 +89,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 | broke | rabbitmq | 3.7           |             |    |
 |       |          | 3.8           | &check;     |    |
 |       |          | 3.9           | &check;     |    |
+|       |          | 4.1           | &check;     |    |
 | session         | redis    | 5.0           | &check;     |    |
 | key_value_store | redis    | 5.0           | &check;     |    |
 | search          | elastic  | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |

@@ -87,31 +87,7 @@ If an item is deactivated, unavailable, or out of stock, it is removed from the 
 
 For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
 
-
 You can implement custom strategies on the project level.
-
-
-## Stock
-Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can choose from the following default strategies:
-
-### Preserve Original Stock and Availability
-
-- Items from the original order remain editable even if they are now out of stock, deactivated, or unavailable.
-- The system preserves original order stock and availability.
-**Quantity Rules:**
-- Quantity can be reduced or left unchanged without additional stock validation.
-- Quantity can be increased only if additional stock is available in the catalog.
-  - *Example:* Original Order Stock = 2, Current Catalog Stock = 10 → Max Quantity = 12.
-
-This strategy allows for flexible order amendments while maintaining inventory accuracy.
-
-### Use Default Cart Behavior
-
-- If an item is deactivated, unavailable, or out of stock, it is removed from the cart.
-- A notification is displayed to inform the user about the removal.
-
-> Projects can implement a custom approach to support more flexible post-purchase edits.
-
 
 ## Gift cards and vouchers
 

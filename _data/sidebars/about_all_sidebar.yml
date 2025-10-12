@@ -49,6 +49,12 @@ entries:
       - title: 2020.11 - Penetration test by Port Zero (executive summary)
         url: /docs/about/all/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
 
+    - title: Certificates & Compliance
+      url: /docs/about/all/certificates-and-compliance/certificates-and-compliance.html
+      nested:
+        - title: Tisax Certification
+          url: /docs/about/all/certificates-and-compliance/tisax-certification.html
+
     - title: Support
       url: /docs/about/all/support/getting-support.html
       nested:

@@ -1,19 +1,12 @@
-## PR labels
-
-When the PR is ready for review, add a **TW review needed** label. This lets us keep track of PRs that need to be merged and merge them in time.
-
-
 ## PR Description
 Describe the context for your changes and the changes you've made.
 
-## Desired merge date
-
-Provide a realistic estimation of when you would like the changes to be available on the docs website.
-
 ## Tickets
-
-If changes are associated with a ticket, add a docs ticket here. 
+If changes are associated with a ticket, add a docs ticket here.
 
 
 ## Checklist
 - [x] I agree with the Code Contribution License Agreement in CONTRIBUTING.md
+- [x] I validated and improved the content with [Custom GPT](https://chatgpt.com/g/g-68e8bc4bab7081918e8f45caa311ee5b-spryker-doc-genius)
+- [x] I checked my pages at the deployment preview website.
+- [x] I invited a person to review and merge this PR.

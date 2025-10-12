@@ -2,7 +2,7 @@ This document describes how to create a protected endpoint for a resource, or a 
 
 ## Prerequisites
 
-Integrate authorization into your project. For details, see [Authorization protected endpoints integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html).
+Integrate authorization into your project. For details, see [Authorization protected endpoints integration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-protected-endpoints-authorization.html).
 
 ## Create protected endpoints
 

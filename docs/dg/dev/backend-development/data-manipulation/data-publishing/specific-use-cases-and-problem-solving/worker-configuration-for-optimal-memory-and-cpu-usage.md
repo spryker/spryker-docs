@@ -1,7 +1,7 @@
 ---
 title: "Worker configuration for optimal memory and CPU usage"
 description: Improve queue processing by running multiple workers per queue while managing PHP memory limits, CPU usage, and Jenkins executors to maintain system stability.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 

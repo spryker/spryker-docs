@@ -1,7 +1,7 @@
 ---
 title: "Publish and synchronize: Debugging"
 description: Data synchronization in Spryker ensures consistent, high-performance data exchange across Redis, Elasticsearch, and databases. Learn how to re-publish data, optimize imports, handle error queues, and reduce event load.
-last_updated: Jun 16, 2025
+last_updated: Sep 18, 2025
 template: howto-guide-template
 ---
 
@@ -55,7 +55,7 @@ In `deploy.dev.yml`, find the broker configuration:
 ```yml
     broker:
         engine: rabbitmq
-        version: '3.9'
+        version: '4.1'
         api:
             username: 'spryker'
             password: 'secret'
@@ -264,4 +264,3 @@ You can narrow down the list using the following options:
 
 
 
- 

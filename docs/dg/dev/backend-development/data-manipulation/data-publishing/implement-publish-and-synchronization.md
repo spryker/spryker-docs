@@ -527,5 +527,5 @@ For the publishing we are using the default publish queue, which is defined in t
 
 To validate the implementation, you can update a Propel entity in the backoffice and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
 
-For the Search you can check this [document](/docs/pbc/all/search/202410.0/base-shop/tutorials-and-howtos/configure-a-search-query) to get more info how you can work with data that you just sync.
+For the Search you can check this [document](docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html) to get more info how you can work with data that you just sync.
 For the Storage on the other hand, you can check this [document](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage) to learn more.

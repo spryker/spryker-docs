@@ -1,7 +1,7 @@
 ---
 title: Implement Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
-last_updated: Sep 18, 2025
+last_updated: Oct 13, 2025
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
@@ -109,6 +109,7 @@ This actions will trigger the `Entity.spy_store.update` event, which can be used
 In the Spryker packages you can find that such events are defined in the shared `Config` class of the module. For example, the `\Spryker\Shared\StoreStorage\StoreStorageConfig` class can be created to define the events for the `spy_store` table.
 
 ```php
+
     /**
      * Specification:
      * - Represents spy_store entity creation event.
@@ -138,6 +139,7 @@ In the Spryker packages you can find that such events are defined in the shared 
      * @var string
      */
     public const ENTITY_SPY_STORE_DELETE = 'Entity.spy_store.delete';
+
 ```
 
 This is not a mandatory step, but it is a good idea to define event names in the code once and use it later.
@@ -158,6 +160,7 @@ All mirror tables must implement the *Synchronization* behavior, that is used to
 This is how a storage table for store entity can look. The *Synchronization* behavior will add a `data` and `key` columns automatically, so you don't need to define them in the table definition, but you still can do it if you want to specify the column type or other parameters. Also any fields that might be required for the synchronization process can be added to the table definition.
 
 ```xml
+
     <table name="spy_store_storage" identifierQuoting="true">
          <column name="id_spy_store_storage" type="INTEGER" autoIncrement="true" primaryKey="true"/>
          <column name="fk_store" type="INTEGER" required="true"/>
@@ -175,11 +178,13 @@ This is how a storage table for store entity can look. The *Synchronization* beh
          </behavior>
          <behavior name="timestampable"/>
       </table>
+
 ```
 
 Let's also take a look at the example of a search table:
 
 ```xml
+
     <table name="spy_cms_page_search" identifierQuoting="true">
         <column name="id_cms_page_search" type="INTEGER" autoIncrement="true" primaryKey="true"/>
         <column name="fk_cms_page" type="INTEGER" required="true"/>
@@ -196,6 +201,7 @@ Let's also take a look at the example of a search table:
         </behavior>
         <behavior name="timestampable"/>
     </table>
+
 ```
 
 The *Synchronization* behavior added by the above schema files adds a column that stores the actual data to synchronize to Storage or Search (in JSON format). The column name is *data*.
@@ -224,6 +230,7 @@ The `handleBulk` method is meant to be called in order to prepare the data for t
 The `getSubscribedEvents` defines the events that the plugin listens to.
 
 ```php
+
 class StoreWritePublisherPlugin extends AbstractPlugin implements PublisherPluginInterface
 {
     /**
@@ -258,12 +265,14 @@ class StoreWritePublisherPlugin extends AbstractPlugin implements PublisherPlugi
         ];
     }
 }
+
 ```
 
 This plugin must be registered in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `\Pyz\Zed\Publisher\PublisherConfig::getPublishQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
 
 E.g.
 ```php
+
 protected function getPublisherPlugins(): array
     {
         return [
@@ -275,11 +284,13 @@ protected function getPublisherPlugins(): array
             ...
         ];
     }
+
 ```
 
 In addition `\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface` can be implemented. It will be used by `publish:trigger-events` command in order to go through all entities in entity table and trigger events for them. This is useful when you need to re-publish all data, for example, after changing the mapping or if some data was lost in the Storage or Search database.
 
 ```php
+
 class StorePublisherTriggerPlugin extends AbstractPlugin implements PublisherTriggerPluginInterface
 {
     /**
@@ -351,6 +362,7 @@ class StorePublisherTriggerPlugin extends AbstractPlugin implements PublisherTri
         return static::COL_ID_STORE;
     }
 }
+
 ```
 
 ### 4.2 Create a Synchronization plugin
@@ -358,6 +370,7 @@ A Synchronization plugin is used to synchronize data to the frontend.
 It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables. 
 
 ```php
+
 class StoreSynchronizationDataPlugin extends AbstractPlugin implements SynchronizationDataBulkRepositoryPluginInterface
 {
     /**
@@ -446,11 +459,13 @@ class StoreSynchronizationDataPlugin extends AbstractPlugin implements Synchroni
             ->getStoreSynchronizationPoolName();
     }
 }
+
 ```
 If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition [queue_pool](#create-a-new storage-or-search-table) of Synchronization behavior.
 
 Below you can see an example of the code that provides data for the `getData()` method. Data taken from the Storage table and mapped to the `SynchronizationDataTransfer` object.:
 ```php
+
 public function getStoreStorageSynchronizationDataTransfers(StoreStorageCriteriaTransfer $storeStorageCriteriaTransfer): array
     {
         $storeStorageQuery = $this->getFactory()->createStoreStorageQuery();
@@ -479,6 +494,7 @@ public function getStoreStorageSynchronizationDataTransfers(StoreStorageCriteria
 
         return $synchronizationDataTransfers;
     }
+
 ```
 
 ## 5. Configure Publish & Synchronization queues
@@ -500,6 +516,7 @@ As a naming convention, names of queues that synchronize data to Redis start wit
 Error queue is created automatically by adding error suffix to the queue name. For example, if the queue name is `sync.storage.product`, then the error queue name is `sync.storage.product.error`.
 
 ```php
+
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
     /**
@@ -518,6 +535,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
         ];
     }
 }
+
 ```
 
 As you can see, for the Store entity, the `Spryker\Shared\StoreStorage\StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE` queue is used for synchronizing data to Redis. The queue name is defined in the `Spryker\Shared\StoreStorage\StoreStorageConfig` class.

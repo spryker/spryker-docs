@@ -456,7 +456,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
 1. To stop processing all queues, turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html). Use the following command:
 
    ```bash
-   console setup:jenkins:disable
+   console scheduler:suspend
    ```
 
 2. Trigger your Publish event. You can see the messages in the corresponding publish queue of the RabbitMQ management UI. To open it, use the following URL: `https://mysprykershop.com:15672/#/queues`.
@@ -474,7 +474,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
 6. Re-enable the queues after debugging:
 
    ```bash
-   console setup:jenkins:enable
+   console scheduler:resume
    ```
 
 ## Re-synchronize Storage and Search data to Redis or Elasticsearch

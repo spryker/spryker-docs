@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
 related:
   - title: Retrieve subscriptions to availability notifications
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
+    link: docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
 ---
 
 *Availability Notification* allows registered and guest customers to subscribe to availability notifications for an unavailable product so that when the product is back in stock, they could receive a notification.
@@ -123,4 +123,4 @@ If a customer's subscription is deleted successfully, the endpoint returns the `
 | 4603 | Subscription doesn't exist. |
 | 4606 | Request is not authorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

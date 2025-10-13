@@ -86,7 +86,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_type_id}}***{% endraw %} | ID of a service type to retrieve. To get it, [add a service type](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html) or [retrieve service types](#retrieve-service-types). |
+| {% raw %}***{{service_type_id}}***{% endraw %} | ID of a service type to retrieve. To get it, [add a service type](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html) or [retrieve service types](#retrieve-service-types). |
 
 
 ### Request
@@ -125,4 +125,4 @@ Request sample: `https://glue-backend.mysprykershop.com/service-types/7a263a50-1
 | --- | --- |
 | 5418 | The service type with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

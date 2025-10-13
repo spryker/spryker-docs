@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
 related:
   - title: Multiple currencies per store configuration
-    link: docs/pbc/all/price-management/page.version/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
+    link: docs/pbc/all/price-management/latest/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 ---
 
 The following price modes are used to identify pricing type:

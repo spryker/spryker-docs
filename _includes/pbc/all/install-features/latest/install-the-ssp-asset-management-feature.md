@@ -547,6 +547,14 @@ self_service_portal.asset.compatibility.compatible,Compatible,en_US
 self_service_portal.asset.compatibility.compatible,Kompatibel,de_DE
 self_service_portal.asset.compatibility.not_compatible,Not Compatible,en_US
 self_service_portal.asset.compatibility.not_compatible,Nicht kompatibel,de_DE
+self_service_portal.asset.form.external_image_url,External Image URL,en_US
+self_service_portal.asset.form.external_image_url,Externe Bild-URL,de_DE
+self_service_portal.asset.form.external_image_url.note,"Note: If no image is uploaded locally, the asset will use the image from the provided URL.",en_US
+self_service_portal.asset.form.external_image_url.note,"Hinweis: Wenn kein Bild lokal hochgeladen wird, verwendet das Asset standardmäßig das Bild von der angegebenen URL.",de_DE
+self_service_portal.asset.error.not-found,Asset nicht gefunden,de_DE
+self_service_portal.asset.error.not-found,Asset not found,en_US
+self_service_portal.asset.validation.unknown_error,An unexpected error occurred while processing your asset,en_US
+self_service_portal.asset.validation.unknown_error,Beim Verarbeiten Ihres Assets ist ein Fehler aufgetreten,en_DE
 ```
 
 </details>
@@ -571,10 +579,10 @@ Prepare your data according to your requirements using our demo data:
 
 ```csv
 reference,name,serial_number,note,external_image_url,business_unit_key,assigned_business_unit_keys
-AST--1,DemoBrand Print Pro 2100,PRNT000014,"The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",,spryker_systems_HR,"spryker_systems_HR"
-AST--2,DemoHaul Titan X9,TRK1200027,"The DemoHaul Titan X9 is a high-performance heavy-duty truck engineered for demanding transport operations. Built with a reinforced steel chassis and a turbocharged diesel engine, the Titan X9 delivers exceptional hauling power, fuel efficiency, and long-distance reliability. Its ergonomic cabin features advanced driver-assist technology, real-time load monitoring, and a fully digital dashboard for enhanced control. With a payload capacity of up to 18 tons and rugged off-road capability, the Titan X9 is the ultimate solution for logistics professionals and fleet operators.",,spryker_systems_Zurich,spryker_systems_Zurich
-AST--3,OfficeJet Pro 9025e All-in-One Printer,CN1234ABCD,"The OfficeJet Pro 9025e is a high-performance multifunctional printer designed for modern office environments. It offers fast printing, scanning, copying, and faxing capabilities with automatic duplex printing. With built-in Wi-Fi and mobile printing options, this all-in-one device enhances workplace efficiency.",,spryker_systems_HR,spryker_systems_HR
-AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,`https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg`,spryker_systems_HR,spryker_systems_HR
+AST--1,DemoBrand Print Pro 2100,PRNT000014,"The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg,spryker_systems_HR,"spryker_systems_HR"
+AST--2,DemoHaul Titan X9,TRK1200027,"The DemoHaul Titan X9 is a high-performance heavy-duty truck engineered for demanding transport operations. Built with a reinforced steel chassis and a turbocharged diesel engine, the Titan X9 delivers exceptional hauling power, fuel efficiency, and long-distance reliability. Its ergonomic cabin features advanced driver-assist technology, real-time load monitoring, and a fully digital dashboard for enhanced control. With a payload capacity of up to 18 tons and rugged off-road capability, the Titan X9 is the ultimate solution for logistics professionals and fleet operators.",https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Truck.png,spryker_systems_Zurich,spryker_systems_Zurich
+AST--3,OfficeJet Pro 9025e All-in-One Printer,CN1234ABCD,"The OfficeJet Pro 9025e is a high-performance multifunctional printer designed for modern office environments. It offers fast printing, scanning, copying, and faxing capabilities with automatic duplex printing. With built-in Wi-Fi and mobile printing options, this all-in-one device enhances workplace efficiency.",https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg,spryker_systems_HR,spryker_systems_HR
+AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg,spryker_systems_HR,spryker_systems_HR
 ```
 
 | COLUMN                      | REQUIRED | DATA TYPE | DATA EXAMPLE                                                    | DATA EXPLANATION                                                          |
@@ -675,7 +683,7 @@ Make sure the configured data has been added to the following database tables:
 - `spy_ssp_asset_to_company_business_unit`
 - `spy_ssp_asset_storage`
 - `spy_ssp_asset_search`
-  {% endinfo_block %}
+{% endinfo_block %}
 
 ## Set up behavior
 
@@ -1075,6 +1083,474 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
+2. Enable the Storefront API endpoints:
+
+| PLUGIN                       | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                    |
+|------------------------------|---------------------------------------------------------|---------------|--------------------------------------------------------------|
+| SspAssetsResourceRoutePlugin | Provides the GET and POST endpoints for the SSP assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication |
+
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Glue\GlueApplication;
+
+use SprykerFeature\Glue\SelfServicePortal\Plugin\GlueApplication\SspAssetsResourceRoutePlugin;
+
+class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
+{
+   /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {    
+        return [
+            new SspAssetsResourceRoutePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can manage `ssp-assets` resources for the company user:
+
+0. Prerequisites:
+- You have a company user
+- You have company user credentials: username and password
+- Assets are assigned to the business unit of the company user
+- You have imported assets as described in the previous sections
+
+1. get the access token by sending a `POST` request to the token endpoint with the company user credentials.
+  `POST https://glue.mysprykershop.com/token`
+
+```json
+{
+    "data": {
+        "type": "token",
+        "attributes": {
+            "grant_type": "password",
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
+        }
+    }
+}
+```
+
+2. Use the access token to access the `ssp-assets` endpoint:
+
+
+<details>
+  <summary>GET https://glue.mysprykershop.com/ssp-assets</summary>
+
+```json
+{
+  "data": [
+    {
+      "type": "ssp-assets",
+      "id": "AST--1",
+      "attributes": {
+        "reference": "AST--1",
+        "name": "DemoBrand Print Pro 2100",
+        "serialNumber": "PRNT000014",
+        "note": "The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",
+        "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg"
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-assets/AST--1"
+      }
+    },
+    {
+      "type": "ssp-assets",
+      "id": "AST--2",
+      "attributes": {
+        "reference": "AST--2",
+        "name": "DemoHaul Titan X9",
+        "serialNumber": "TRK1200027",
+        "note": "The DemoHaul Titan X9 is a high-performance heavy-duty truck engineered for demanding transport operations. Built with a reinforced steel chassis and a turbocharged diesel engine, the Titan X9 delivers exceptional hauling power, fuel efficiency, and long-distance reliability. Its ergonomic cabin features advanced driver-assist technology, real-time load monitoring, and a fully digital dashboard for enhanced control. With a payload capacity of up to 18 tons and rugged off-road capability, the Titan X9 is the ultimate solution for logistics professionals and fleet operators.",
+        "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Truck.png"
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-assets/AST--2"
+      }
+    },
+    {
+      "type": "ssp-assets",
+      "id": "AST--3",
+      "attributes": {
+        "reference": "AST--3",
+        "name": "OfficeJet Pro 9025e All-in-One Printer",
+        "serialNumber": "CN1234ABCD",
+        "note": "The OfficeJet Pro 9025e is a high-performance multifunctional printer designed for modern office environments. It offers fast printing, scanning, copying, and faxing capabilities with automatic duplex printing. With built-in Wi-Fi and mobile printing options, this all-in-one device enhances workplace efficiency.",
+        "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg"
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-assets/AST--3"
+      }
+    },
+    {
+      "type": "ssp-assets",
+      "id": "AST--4",
+      "attributes": {
+        "reference": "AST--4",
+        "name": "Logistic Casa F-08",
+        "serialNumber": "",
+        "note": "1FUJGLDR5KL123456",
+        "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg"
+      },
+      "links": {
+        "self": "http://glue.eu.spryker.local/ssp-assets/AST--4"
+      }
+    }
+  ],
+  "links": {
+    "self": "http://glue.eu.spryker.local/ssp-assets"
+  }
+}
+```
+
+</details>
+
+3. To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
+
+`GET https://glue.mysprykershop.com/ssp-assets/AST--1`
+
+```json
+{
+    "data": {
+        "type": "ssp-assets",
+        "id": "AST--1",
+        "attributes": {
+            "reference": "AST--1",
+            "name": "DemoBrand Print Pro 2100",
+            "serialNumber": "PRNT000014",
+            "note": "The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",
+            "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg"
+        },
+        "links": {
+            "self": "http://glue.eu.spryker.local/ssp-assets/AST--1"
+        }
+    }
+}
+```
+
+4. Use the access token to create the `ssp-assets` resource:
+
+`POST https://glue.mysprykershop.com/ssp-assets`
+
+```json
+{
+  "data": {
+    "type": "ssp-assets",
+    "attributes": {
+      "reference": {% raw %}{{{% endraw %}Asset reference{% raw %}}}{% endraw %},
+      "name": {% raw %}{{{% endraw %}Asset name{% raw %}}}{% endraw %},
+      "serialNumber": {% raw %}{{{% endraw %}Serial number{% raw %}}}{% endraw %},
+      "note": {% raw %}{{{% endraw %}Note{% raw %}}}{% endraw %},
+      "externalImageUrl": {% raw %}{{{% endraw %}URL{% raw %}}}{% endraw %}
+    }
+  }
+}
+```
+
+Example of a successful response:
+
+```json
+{
+  "data": {
+    "type": "ssp-assets",
+    "id": "AST--5",
+    "attributes": {
+      "reference": "AST--5",
+      "name": "AssetName1",
+      "serialNumber": "serialNumberAsset1API",
+      "note": "noteAsset",
+      "externalImageUrl": "http://emaple.com"
+    },
+    "links": {
+      "self": "http://glue.eu.spryker.local/ssp-assets/AST--5"
+    }
+  }
+}
+```
+
+{% endinfo_block %}
+
+3. Enable the Backend API endpoints:
+
+| PLUGIN                         | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                              |
+|--------------------------------|----------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| SspAssetsBackendResourcePlugin | Provides the GET, POST and PATCH endpoints for SSP assets. |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication |
+
+**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication\SspAssetsBackendResourcePlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     */
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new SspAssetsBackendResourcePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you can manage `ssp-assets` resources as a Back Office user:
+
+
+1. Get the access token by sending a `POST` request to the token endpoint with back office user credentials:
+
+`POST https://glue-backend.mysprykershop.com/token`
+
+```http
+POST https://glue.backend.com/token HTTP/2.0
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 1051
+
+grant_type=password&username={username}&password={password}
+```
+
+2. Use the access token to access the `ssp-assets` backend endpoint:
+
+<details>
+  <summary>GET https://glue-backend.mysprykershop.com/ssp-assets</summary>
+
+```json
+{
+    "data": [
+        {
+            "id": "AST--1",
+            "type": "ssp-assets",
+            "attributes": {
+                "reference": "AST--1",
+                "name": "DemoBrand Print Pro 2100",
+                "serialNumber": "PRNT000014",
+                "status": "pending",
+                "note": "The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",
+                "createdDate": "2025-09-23 10:37:21",
+                "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg",
+                "companyBusinessUnitOwnerUuid": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            },
+            "links": {
+                "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--1"
+            }
+        },
+        {
+            "id": "AST--2",
+            "type": "ssp-assets",
+            "attributes": {
+                "reference": "AST--2",
+                "name": "DemoHaul Titan X9",
+                "serialNumber": "TRK1200027",
+                "status": "pending",
+                "note": "The DemoHaul Titan X9 is a high-performance heavy-duty truck engineered for demanding transport operations. Built with a reinforced steel chassis and a turbocharged diesel engine, the Titan X9 delivers exceptional hauling power, fuel efficiency, and long-distance reliability. Its ergonomic cabin features advanced driver-assist technology, real-time load monitoring, and a fully digital dashboard for enhanced control. With a payload capacity of up to 18 tons and rugged off-road capability, the Titan X9 is the ultimate solution for logistics professionals and fleet operators.",
+                "createdDate": "2025-09-23 10:37:21",
+                "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Truck.png",
+                "companyBusinessUnitOwnerUuid": "5860fdd0-21fc-5389-87c9-5f1507d1ef3e"
+            },
+            "links": {
+                "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--2"
+            }
+        },
+        {
+            "id": "AST--3",
+            "type": "ssp-assets",
+            "attributes": {
+                "reference": "AST--3",
+                "name": "OfficeJet Pro 9025e All-in-One Printer",
+                "serialNumber": "CN1234ABCD",
+                "status": "pending",
+                "note": "The OfficeJet Pro 9025e is a high-performance multifunctional printer designed for modern office environments. It offers fast printing, scanning, copying, and faxing capabilities with automatic duplex printing. With built-in Wi-Fi and mobile printing options, this all-in-one device enhances workplace efficiency.",
+                "createdDate": "2025-09-23 10:37:21",
+                "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_125577546.jpeg",
+                "companyBusinessUnitOwnerUuid": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            },
+            "links": {
+                "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--3"
+            }
+        },
+        {
+            "id": "AST--4",
+            "type": "ssp-assets",
+            "attributes": {
+                "reference": "AST--4",
+                "name": "Logistic Casa F-08",
+                "serialNumber": "",
+                "status": "pending",
+                "note": "1FUJGLDR5KL123456",
+                "createdDate": "2025-09-23 10:37:21",
+                "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/AdobeStock_223498915.jpeg",
+                "companyBusinessUnitOwnerUuid": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            },
+            "links": {
+                "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--4"
+            }
+        },
+        {
+            "id": "AST--5",
+            "type": "ssp-assets",
+            "attributes": {
+                "reference": "AST--5",
+                "name": "AssetName1",
+                "serialNumber": "serialNumberAsset1API",
+                "status": "pending",
+                "note": "noteAsset",
+                "createdDate": "2025-09-23 12:50:06",
+                "externalImageUrl": "http://emaple.com",
+                "companyBusinessUnitOwnerUuid": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            },
+            "links": {
+                "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--5"
+            }
+        }
+    ],
+    "links": {
+        "self": "http://glue-backend.eu.spryker.local/ssp-assets"
+    }
+}
+```
+
+</details>
+
+3. To get the particular asset, use the access token to send a `GET` request to the `ssp-assets` endpoint with the asset ID:
+
+`GET https://glue-backend.mysprykershop.com/ssp-assets/AST--1`
+
+```json
+{
+  "data": {
+    "id": "AST--1",
+    "type": "ssp-assets",
+    "attributes": {
+      "reference": "AST--1",
+      "name": "DemoBrand Print Pro 2100",
+      "serialNumber": "PRNT000014",
+      "status": "pending",
+      "note": "The DemoBrand Print Pro 2100 is a compact, high-speed monochrome LaserJet printer designed for home offices and small workgroups. It delivers crisp text and sharp graphics with a print speed of up to 24 pages per minute. Featuring wireless connectivity, auto-duplex printing, and a user-friendly control panel, the BlazeJet 2100 ensures professional output with minimal maintenance. Compatible with Windows, macOS, and mobile devices via Wi-Fi.",
+      "createdDate": "2025-09-23 10:37:21",
+      "externalImageUrl": "https://d2s0ynfc62ej12.cloudfront.net/image/Demo_Printer.jpeg",
+      "companyBusinessUnitOwnerUuid": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+    },
+    "links": {
+      "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--1"
+    }
+  }
+}
+```
+
+4. Use the access token to create the `ssp-assets` resource:
+`POST https://glue-backend.mysprykershop.com/ssp-assets`
+
+```json
+{
+  "data": {
+    "type": "ssp-assets",
+    "attributes":
+    {
+      "name": {% raw %}{{{% endraw %}Asset name{% raw %}}}{% endraw %},
+      "serialNumber": {% raw %}{{{% endraw %}Serial number{% raw %}}}{% endraw %}",
+      "status": {% raw %}{{{% endraw %}One of the following statuses: pending, in_review, approved and deactivated{% raw %}}}{% endraw %},
+      "note":{% raw %}{{{% endraw %}Note{% raw %}}}{% endraw %},
+      "externalImageUrl": {% raw %}{{{% endraw %}URL to an image{% raw %}}}{% endraw %},
+      "companyBusinessUnitOwnerUuid": {% raw %}{{{% endraw %}The UUID of the company business unit{% raw %}}}{% endraw %},
+    }
+  }
+}
+```
+
+Example of a successful response:
+
+```json
+{
+  "data": {
+    "id": "AST--6",
+    "type": "ssp-assets",
+    "attributes": {
+      "reference": "AST--6",
+      "name": "Test Asset for CRUD TEST",
+      "serialNumber": "CRUD-TEST-YYYYY",
+      "status": "pending",
+      "note": "This asset will be used for testing all CRUD operations!!!!!",
+      "createdDate": "2025-09-23 13:59:35",
+      "externalImageUrl": "https://example.com/asset-image_1.jpg",
+      "companyBusinessUnitOwnerUuid": "5860fdd0-21fc-5389-87c9-5f1507d1ef3e"
+    },
+    "links": {
+      "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--6"
+    }
+  }
+}
+```
+
+5. For updating the particular asset, use the access token to send a `PATCH` request to the `ssp-assets` endpoint with the asset ID:
+
+`PATCH https://glue-backend.mysprykershop.com/ssp-assets/AST--6`
+
+```json
+{
+  "data": {
+    "type": "ssp-assets",
+    "attributes":
+    {
+      "name": {% raw %}{{{% endraw %}Asset name{% raw %}}}{% endraw %},
+      "serialNumber": {% raw %}{{{% endraw %}Serial number{% raw %}}}{% endraw %}",
+      "status": {% raw %}{{{% endraw %}One of the following statuses: pending, in_review, approved and deactivated{% raw %}}}{% endraw %},
+      "note":{% raw %}{{{% endraw %}Note{% raw %}}}{% endraw %},
+      "externalImageUrl": {% raw %}{{{% endraw %}URL to an image{% raw %}}}{% endraw %},
+      "companyBusinessUnitOwnerUuid": {% raw %}{{{% endraw %}The UUID of the company business unit{% raw %}}}{% endraw %},
+    }
+  }
+}
+```
+
+Example of a successful response:
+
+```json
+{
+  "data": {
+    "id": "AST--6",
+    "type": "ssp-assets",
+    "attributes": {
+      "reference": "AST--6",
+      "name": "Test Asset for CRUD TEST",
+      "serialNumber": "CRUD-TEST-XXXX",
+      "status": "pending",
+      "note": "This asset will be used for testing all CRUD operations!!!!!",
+      "createdDate": "2025-09-23 13:59:35",
+      "externalImageUrl": "https://example.com/asset-image_1.jpg",
+      "companyBusinessUnitOwnerUuid": "5860fdd0-21fc-5389-87c9-5f1507d1ef3e"
+    },
+    "links": {
+      "self": "http://glue-backend.eu.spryker.local/ssp-assets/AST--6"
+    }
+  }
+}
+```
+
+{% endinfo_block %}
+
 ### Set up widgets
 
 | PLUGIN                        | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
@@ -1159,3 +1635,4 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
    Make sure the **My Assets** menu item is not displayed, and you can't access the **My Assets** page.
 
 {% endinfo_block %}
+

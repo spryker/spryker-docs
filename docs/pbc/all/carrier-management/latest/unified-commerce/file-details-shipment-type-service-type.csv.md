@@ -5,7 +5,7 @@ template: data-import-template
 last_updated: Nov 23, 2023
 ---
 
-This document describes the `shipment_type_service_type.csv` file to assign [shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html#shipment-type) to [service types](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-type).
+This document describes the `shipment_type_service_type.csv` file to assign [shipment types](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type) to [service types](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-type).
 
 ## Import file dependencies
 

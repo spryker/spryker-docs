@@ -14,9 +14,9 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202204.0/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
 related:
   - title: Upgrade the Shipment module
-    link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
+    link: docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
   - title: Shipment feature overview
-    link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
+    link: docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html
 ---
 
 The main concerns regarding shipping services are:

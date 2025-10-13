@@ -2,7 +2,7 @@
 title: Multi-Factor Authentication
 description: Learn about Multi Factor Authentication (MFA) that you can use within your Spryker project.
 template: concept-topic-template
-last_updated: Jun 02, 2026
+last_updated: Aug 22, 2025
 keywords: mfa
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
@@ -18,7 +18,7 @@ By using this feature, you accept full responsibility for any potential issues, 
 
 {% endinfo_block %}
 
-Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, and agents by requiring multiple methods of authentication before allowing an action.
+Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, agents, merchant, and merchant agent users by requiring multiple methods of authentication before allowing an action.
 
 Benefits of MFA:
 
@@ -37,6 +37,8 @@ The login process with MFA looks as follows:
 - Customer: `multi-factor-auth/get-customer-enabled-types`
 - Agent: `multi-factor-auth/get-user-enabled-types`
 - Back Office user: `multi-factor-auth/user/get-enabled-types`
+- Merchant: `multi-factor-auth/merchant-user/get-enabled-types`
+- Merchant agent: `multi-factor-auth/merchant-agent-user/get-enabled-types`
 
 3. Evaluate the number of enabled MFA methods:
 - Multiple MFA methods: the system presents a selection screen where the user selects a preferred authentication method
@@ -46,6 +48,8 @@ The login process with MFA looks as follows:
 - Customer: `multi-factor-auth/send-customer-code`
 - Agent: `multi-factor-auth/send-user-code`
 - Back Office user: `multi-factor-auth/user/send-code`
+- Merchant: `multi-factor-auth/merchant-user/send-code`
+- Merchant agent: `multi-factor-auth/merchant-agent-user/send-code`
 
  The delivery method depends on the MFA configuration:
 - If multiple MFA methods are enabled, the authentication code is sent via the platform selected by the user
@@ -70,21 +74,19 @@ For the login MFA flow, MFA is triggered only after validating credentials to pr
 
 MFA adds an additional authentication layer for critical operations, protecting both user accounts and sensitive business data.
 
-### Protected actions for all user types
+Protected actions:
 
-- Login authentication
-- Password changes
-
-#### Customer protected actions
-
-- Update email address
-- Delete account
-
-#### Back Office user and agent protected actions
-
-- Update user profile information
-- Create, update, or delete other users' accounts
-- Create, update, or delete API keys
+- All user types:
+  - Login authentication
+  - Password changes
+- Customer:
+  - Update email address
+  - Delete account
+- Back Office user and agent:
+  - Update user profile information
+  - Create, update, or delete other users' accounts
+  - Create, update, or delete API keys
+- Merchant and merchant agent user: Update user password
 
 You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
 

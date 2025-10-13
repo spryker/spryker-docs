@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discounts.html
 related:
   - title: Promotions and Discounts feature overview
-    link: docs/pbc/all/discount-management/page.version/base-shop/promotions-discounts-feature-overview.html
+    link: docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html
 ---
 
 The [Promotions](/docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html) functionality lets sellers provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase must fulfill certain discount conditions—for example, the purchase amount exceeding a certain threshold.

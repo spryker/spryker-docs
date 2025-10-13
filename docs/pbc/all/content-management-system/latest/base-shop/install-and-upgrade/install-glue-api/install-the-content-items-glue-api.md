@@ -15,11 +15,11 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html 
 related:
   - title: Install the Content Items feature
-    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
   - title: "Glue API: Retrieve abstract product list content items"
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
   - title: "Glue API: Retrieve banner content items"
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 ---
 
 {% include pbc/all/install-features/latest/install-glue-api/install-the-content-items-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-content-items-glue-api.md -->

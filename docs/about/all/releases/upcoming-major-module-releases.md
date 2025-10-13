@@ -136,3 +136,18 @@ This document lists all upcoming [major module releases](/docs/dg/dev/architectu
 | UserMerchantPortalGui | Oct 30 2025 | Bootstrap upgrade because of security reasons. |
 | WarehouseUserGui | Oct 30 2025 | Bootstrap upgrade because of security reasons. |
 | Gui | Oct 30 2025 | Bootstrap upgrade because of security reasons. |
+| AgentDashboardMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| AgentSecurityMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| DashboardMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| DummyMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| GuiTable | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| MerchantAppMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| MerchantProfileMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| MerchantRelationRequestMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| MerchantRelationshipMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| ProductMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| ProductOfferMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| SalesMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| SecurityMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| UserMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| ZedUi | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |

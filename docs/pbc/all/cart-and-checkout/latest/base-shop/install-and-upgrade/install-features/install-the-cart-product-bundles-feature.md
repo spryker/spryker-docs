@@ -5,9 +5,9 @@ last_updated: Jun 20, 2022
 template: feature-integration-guide-template
 related:
   - title: Install the Cart + Product Bundle Glue API
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-cart-product-bundle-glue-api.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-product-bundle-glue-api.html
   - title: Install the Cart feature
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
+    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
 ---

@@ -39,6 +39,48 @@ Make sure you carefully check for memory leaks during the query optimizations, a
 
 {% endinfo_block %}
 
+### Duplicated storage calls (storage calls in a loop)
+
+In project implementations, developers sometimes introduce repeated storage calls inside loops. Each iteration of the loop then results in a new query to the storage, even though the required data could often be retrieved in a more optimized way. This creates a significant performance bottleneck because:
+
+- Storage access is typically slower because of the network overhead on each trip to Redis/Valkey. Multiplying these calls by the number of loop iterations can lead to exponential slowdowns.
+- High-frequency storage calls increase infrastructure load, leading to higher operational costs and degraded system responsiveness under load.
+- Unnecessary roundtrips to storage delay the request–response cycle and negatively impact customer-facing performance metrics such as page load time and API latency.
+
+To avoid these pitfalls, architects and developers should ensure storage interactions are minimized and structured efficiently. Best practices include:
+
+- Batch retrieval: Fetch all required records in a single storage call before entering the loop.
+- Indexing and pre-aggregation: Where possible, prepare optimized structures to avoid repeated lookups.
+
+Bad practice – repeated storage calls inside the loop:
+
+```php
+foreach ($storageKeys as $storageKey) {
+    $productData = $this->storageClient->get($storageKey);
+    // Process $productData
+}
+```
+
+In this example, every loop iteration triggers a new storage request, which can quickly become a performance bottleneck with larger datasets.
+
+Recommended approach – batch retrieval and in-memory processing:
+
+```php
+$productsData = $this->storageClient->getMulti($storageKeys);
+
+foreach ($productsData as $productData) {
+    // Process $productData
+}
+```
+
+By fetching all required records in a single call (with `\Spryker\Client\Storage\StorageClientInterface::getMulti`), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
+
+{% info_block warningBox %}
+
+Always evaluate the size of batch requests and memory usage when removing storage calls from loops. While batching improves performance, overly large result sets can increase memory consumption and cause application instability.
+
+{% endinfo_block %}
+
 ### Optimistic vs. pessimistic locking
 
 Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance because of the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.

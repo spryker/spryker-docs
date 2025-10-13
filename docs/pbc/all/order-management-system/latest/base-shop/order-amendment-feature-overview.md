@@ -8,7 +8,6 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202505.0/base-shop/order-amendment-feature-overview.html
 ---
 
-
 The *Order Amendment* feature enables customers to make changes to previously placed orders before they enter processing. Customers can adjust items, quantities, delivery details, and payment options.
 
 Only registered customers can make changes to placed orders because guest users don't have access to order history.
@@ -16,7 +15,6 @@ Only registered customers can make changes to placed orders because guest users 
 A customer can change an order once it reaches a state that allows amendments. By default, customers can initiate an amendment when an order is in the `grace period started` state.
 
 You can customize which states allow amendments in the state machine. For instructions, on customizing state machines, see [Configure OMS](https://docs.spryker.com/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature#set-up-configuration).
-
 
 ## Order amendment flow
 
@@ -27,7 +25,6 @@ A customer can change their order as follows:
 2. Customers can add, remove, or modify items in the cart
 3. Checkout proceeds via the standard flow.
 4. Upon confirmation, the original order is updated with the amendments.
-
 
 ## Cart strategies
 
@@ -47,7 +44,6 @@ The following details are carried over from the order to cart:
 
 You can customize what details are carried over on the project level.
 
-
 ## Products
 
 When a customer initiates an order amendment, the following happens to products:
@@ -55,7 +51,6 @@ When a customer initiates an order amendment, the following happens to products:
 - Abstract and concrete products are added to cart
 - Out-of-stock, disabled, and removed products are excluded from the cart
 - [Configurable products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are reset, and the customer needs to configure them again
-
 
 ## Pricing
 
@@ -73,11 +68,9 @@ Orders created through [request for quote](/docs/pbc/all/request-for-quote/{{sit
 
 Stock availability at the time of initiating an amendment may differ from when the original order was placed. To handle such cases, you can use the strategies described in the following sections.
 
-
 ### Validate amended order against current stock
 
 If an item is deactivated, unavailable, or out of stock, it is removed from the cart. A notification is displayed to inform the user about the removal.
-
 
 ### Preserve original stock and availability
 
@@ -87,16 +80,13 @@ If an item is deactivated, unavailable, or out of stock, it is removed from the 
 
 For example, an item's original stock is 2. At the time of initiating amendment, the item's stock is 10. In this case, the maximum quantity in the amended order can be 12.
 
-
 You can implement custom strategies on the project level.
-
 
 ## Gift cards and vouchers
 
-When a customer initiates order amendment, gift cards and vouchers are unapplied from the order. The balance of all unapplied gift cards and vouchers is restored once order amendment is complete. They can be used for new orders but not for the order they were unapplied from.
+When a customer initiates an order amendment, gift cards and one-time-use vouchers are unapplied from the order. Their balances are restored once the amendment is complete, making them available for new orders or for subsequent edits to the same order.
 
 For better user experience, we recommend implementing a way to inform customers about gift cards and vouchers being unapplied.
-
 
 ## Grace period
 
@@ -112,41 +102,16 @@ For instructions on configuring the grace period, see [Install the Order Amendme
   </video>
 </figure>
 
-
 ## Related Developer documents
 
 | INSTALLATION GUIDES |
 |---------|
 | [Install the Order Amendment feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
-| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)  |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html)  |
 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html)  |
 | [Install the Product Bundles + Cart feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html)  |
 | [Install the Reorder feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -10,35 +10,35 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
 related:
   - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-_Publish and Synchronization_ (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
+*Publish and Synchronization* (P&S) lets you export data from Spryker backend (Zed) to external endpoints. The default external endpoints are key-value store (Redis or Valkey) and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).
 
-This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created, or deleted in the table, the module automatically makes changes in Redis.
+This document shows how P&S works and how to export data using a HelloWorld P&S module example. The module synchronizes the data stored in a Zed database table to the key-value store (Redis or Valkey). When a record is changed, created, or deleted in the table, the module automatically makes changes in the key-value store (Redis or Valkey).
 
 ## 1. Module and table
 
 Follow these steps to create the following:
-* Data source module
-* Zed database table
-* Data publishing module
+- Data source module
+- Zed database table
+- Data publishing module
 
 1. Create the `HelloWorld` module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing.
 
@@ -59,29 +59,30 @@ Follow these steps to create the following:
     {% endraw %}
 
     ```
+
     2. Based on the schema, create the table in the database:
 
     ```bash
     console propel:install
     ```
 
-    3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
+    3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to the key-value store (Redis or Valkey).
 
 {% info_block infoBox "Naming conventions" %}
 
 The following P&S naming conventions are applied:
-- All the modules related to Redis should have the `Storage` suffix.
+- All the modules related to the key-value store (Redis or Valkey) should have the `Storage` suffix.
 - All the modules related to Elasticsearch should have the `Search` suffix.
 
 {% endinfo_block %}
 
 ## 2. Data structure
 
-The data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
+The data for Yves is structured differently than the data for Zed. It's because the data model used in the key-value store (Redis or Valkey) and Elasticsearch is optimized to be used by the frontend. With P&S, data is always carried in the form of [transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
 
 Follow these steps to create a transfer object that represents the target data structure of the frontend.
 
-1.  Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
+1. Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
 
 ```xml
 {% raw %}
@@ -99,6 +100,7 @@ console transfer:generate
 ```
 
 ## 3. Publish events
+
 To publish changes in the Zed database table automatically, you need to enable an event for each particular change. This example monitors the events of `SpyHelloWorldMessage`.
 
 To enable events, follow the steps:
@@ -119,7 +121,7 @@ To enable events, follow the steps:
 
 {% info_block infoBox "Info" %}
 
-To track changes in all the table columns, the _*_ (asterisk) for the `column` attribute is used. To track changes in particular columns, specify their names instead.
+To track changes in all the table columns, the *** (asterisk) for the `column` attribute is used. To track changes in particular columns, specify their names instead.
 
 {% endinfo_block %}
 
@@ -220,6 +222,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
     }
 }
 ```
+
 </details>
 
 2. Create a plugin that handles the deletion of the `spy_hello_world_message` entity.
@@ -276,7 +279,52 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 </details>
 
-3. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
+Now publish events issued by your domain object will appear to `publish` queue per default, together with other publish events.
+
+3. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins.
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+...
+use Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+...
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return array_merge(
+            ......,
+            $this->getHelloWorldStoragePlugins()
+        );
+    }
+
+    /**
+     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     */
+    protected function getHelloWorldStoragePlugins(): array
+    {
+        return [
+		new HelloWorldWritePublisherPlugin(),
+                new HelloWorldDeletePublisherPlugin(),
+        ];
+    }
+}
+```
+
+<details>
+<summary>How high-performance domains you can create a separate queue for publish events issued by your new domain object</summary>
+High-performance domains have special requirements to publishing performance. Such domains have high number of items, such as prices, or large size of a single object.
+In this case it's better to separate their queue for faster, more predictable processing and easy debugging.
+
+3.1 Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php
 <?php
@@ -296,7 +344,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
 }
 ```
 
-4. Adjust the RabbitMQ configuration with the newly introduced queue.
+3.2. Adjust the RabbitMQ configuration with the newly introduced queue.
 
 ```php
 <?php
@@ -326,7 +374,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-5. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins and define the publish queue.
+3.3. In `Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins():array`, register the `HelloWorldStorage` publisher plugins and define the publish queue.
 
 ```php
 <?php
@@ -366,11 +414,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
+</details>
+
 ## 5. Usage
 
 Now, you can manually trigger events. For this, do the following:
 
-1.  Stop all cron jobs or disable background queue processing in Jenkins:
+1. Stop all cron jobs or disable background queue processing in Jenkins:
 
 ```bash
 vendor/bin/console scheduler:suspend
@@ -411,7 +461,7 @@ Ensure that the event has been created:
 
 Ensure that the triggered event has the correct structure:
 
-1. Open the message in the `publish.hello_world` queue. You should see a message like this one:
+1. Open the message in the `publish` queue. You should see a message like this one:
 
 ```xml
 {% raw %}
@@ -436,12 +486,12 @@ Ensure that the triggered event has the correct structure:
 
 2. Verify the data required for the publisher to process it:
 
-* Event name: `Entity.spy_hello_spryker_message.create`
-* Listener: `HelloWorldWritePublisherPlugin`
-* Table name: `spy_hello_spryker_message`
-* Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
-* ID: the primary key of the record
-* ForeignKey: the key to backtrack the updated Propel entities
+- Event name: `Entity.spy_hello_spryker_message.create`
+- Listener: `HelloWorldWritePublisherPlugin`
+- Table name: `spy_hello_spryker_message`
+- Modified columns: `spy_hello_spryker_message.name` and `spy_hello_spryker_message.message`
+- ID: the primary key of the record
+- ForeignKey: the key to backtrack the updated Propel entities
 
 {% endinfo_block %}
 
@@ -481,7 +531,7 @@ console queue:task:start publish.hello_world
 
 The command is executed by the worker, which is defined as a job in Jenkins:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 Hello World Writer!
@@ -500,7 +550,7 @@ For debugging purposes, use the `-k` option to keep messages in the queue `queue
 
 ## 6. Storage table
 
-To synchronize data with Redis, an intermediate Zed database table is required. The table stores the data until it is sent to Redis. The data in the table is already structured for Redis.
+To synchronize data with the key-value store (Redis or Valkey), an intermediate Zed database table is required. The table stores the data until it's sent to the key-value store (Redis or Valkey). The data in the table is already structured for Redis.
 
 Follow the steps to create the table:
 
@@ -542,14 +592,14 @@ The schema file defines the table as follows:
 
 - `ID` is a primary key of the table (`id_hello_world_message_storage` in the example).
 - `ForeignKey` is a foreign key to the main resource that you want to export (`fk_hello_world_message` for `spy_hello_world_message`).
--  `SynchronizationBehaviour` modifies the table as follows:
-    - Adds the `Data` column that stores data in the format that can be sent directly to Redis. The database field type is `TEXT`.
-    - Adds the `Key` column that stores the Redis Key. The data type is `VARCHAR`.
-    - Defines `Resource` name for key generation.
-    - Defines `Store` value for store-specific data.
-    - Defines `Locale` value for localizable data.
-    - Defines `Key Suffix Column` value for key generation.
-    - Defines `queue_group` to send a copy of the `data` column.
+- `SynchronizationBehaviour` modifies the table as follows:
+  - Adds the `Data` column that stores data in the format that can be sent directly to the key-value store (Redis or Valkey). The database field type is `TEXT`.
+  - Adds the `Key` column that stores the key-value store (Redis or Valkey) Key. The data type is `VARCHAR`.
+  - Defines `Resource` name for key generation.
+  - Defines `Store` value for store-specific data.
+  - Defines `Locale` value for localizable data.
+  - Defines `Key Suffix Column` value for key generation.
+  - Defines `queue_group` to send a copy of the `data` column.
 - Timestamp behavior is added to keep timestamps and use an incremental sync strategy.
 
 {% info_block infoBox "Incremental sync" %}
@@ -560,7 +610,7 @@ An *incremental sync* is a sync that only processes the data records that have c
 
 **Key generation strategy**
 
-| Resource | Store | Locale | Key suffix column | Redis key |
+| Resource | Store | Locale | Key suffix column | key-value store key |
 | --- | --- | --- | --- | --- |
 | message | x | x | -  | `message` |
 | message | v | v | - | `message.de.de_de` |
@@ -873,9 +923,10 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 }      
 ```
+
 ## 8. Queue
 
-This section describes how to create the queue to synchronize data to Redis.
+This section describes how to create the queue to synchronize data to the key-value store (Redis or Valkey).
 
 To create the `sync.storage.hello` queue, do the following:
 
@@ -932,6 +983,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
+Execute ```console queue:setup``` to update the queue setup with the new sync queue, so it will appear in RabbitMq.
+Error queue will be added automatically with .error postfix.
+
 3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`.
 
 ```php
@@ -967,7 +1021,7 @@ Ensure that a new event is created in the `publish.hello_world` queue.
 
 5. To start processing the messages from the *Publisher* queue that have been published, run the queue:
 
-```
+```bash
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
 ```
@@ -994,7 +1048,7 @@ Ensure that the data has been exported to a secondary queue for the Synchronize 
 
 {% endinfo_block %}
 
-6. Synchronize data with Redis:
+6. Synchronize data with the key-value store (Redis or Valkey):
 
 ```bash
 console queue:task:start sync.storage.hello
@@ -1012,20 +1066,20 @@ To run all queues at once, run use the following command: `console queue:worker:
 
 {% endinfo_block %}
 
-## 9. Redis
+## 9. Key-value store (Redis or Valkey)
 
-This section describes how to check the data synchronization in Redis.
+This section describes how to check the data synchronization in the key-value store (Redis or Valkey).
 
-Follow the steps to check the data in Redis:
-1. Connect to Redis Desktop Manager at `http(s)://{host}:10009`.
-2. Check if the data is structured correctly:   
+Follow the steps to check the data in the key-value store (Redis or Valkey):
+1. Connect to the key-value store (Redis or Valkey) Desktop Manager at `http(s)://{host}:10009`.
+2. Check if the data is structured correctly:
 ![data-structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Publishing/Handling+data+with+Publish+and+Synchronization/data-structure.jpeg)
 
 ## 10. Client
 
-This section describes how to read the data from Redis.
+This section describes how to read the data from the key-value store (Redis or Valkey).
 
-To read the data from Redis, follow these steps:
+To read the data from the key-value store (Redis or Valkey), follow these steps:
 
 1. Create the client interface in `Pyz\Client\HelloWorldStorage\HelloWorldStorageClientInterface.php`.
 
@@ -1117,7 +1171,7 @@ class HelloWorldStorageFactory extends AbstractFactory
 }
 ```
 
-4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the Redis and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider.
+4. The HelloWorldFactory needs a dependency provider to handle dependencies required by the key-value store (Redis or Valkey) and reader classes. Add the `Pyz/Client/HelloWorldStorage/HelloWorldStorageDependencyProvider.php` dependency provider.
 
 ```php
 <?php
@@ -1225,6 +1279,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
+
 8. Add the `Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader.php` class.
 
 ```php
@@ -1307,14 +1362,10 @@ class MessageStorageReader implements MessageStorageReaderInterface
 
 Update the routes for the Back Office using the following command:
 
-```
+```bash
 docker/sdk console router:cache:warm-up:backoffice
 ```
 
-You should now have another endpoint to get a message from the Redis storage via the newly created HelloWorldClient.
+You should now have another endpoint to get a message from the key-value store (Redis or Valkey) via the newly created HelloWorldClient.
 
-Check the redis-commander to get ID of the message object that actually exists. Then access the message via the following endpoint:
-
-```
-http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]
-```
+Check the key-value store (Redis or Valkey)-commander to get ID of the message object that actually exists. Then access the message via the following endpoint: `http://[YOUR_BACKOFFICE_URL]/hello-world/index/search?id=[ID_IN_REDIS]`

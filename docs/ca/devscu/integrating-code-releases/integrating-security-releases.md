@@ -1,21 +1,21 @@
 ---
 title: Integrating security releases
-description: Spryker Code Upgrader prioritizes security releases over regular releases
+description: Integrate Spryker security releases to mitigate vulnerabilities, enhance protection, and maintain compliance by applying critical security updates via the Spryker Code Upgrader.
 template: concept-topic-template
 last_updated: Dec 20, 2023
 ---
 
 Being on top of security releases of your vendor or third parties is very crucial:
-* *Vulnerability mitigation*: Security updates often address known vulnerabilities or weaknesses in software. Installing these updates helps to mitigate these vulnerabilities, reducing the risk of unauthorized access, data breaches, or malicious activities.
-* *Enhanced protection and risk mitigation*: Security updates typically include patches and improvements that enhance the overall security of the system.
-* *Regulatory compliance*: Many regulatory bodies require organizations to maintain up-to-date security measures, which often includes installing security updates promptly. Compliance with these regulations reduces legal and financial risks and helps to maintain a positive reputation and trust with stakeholders and customers.
+- *Vulnerability mitigation*: Security updates often address known vulnerabilities or weaknesses in software. Installing these updates helps to mitigate these vulnerabilities, reducing the risk of unauthorized access, data breaches, or malicious activities.
+- *Enhanced protection and risk mitigation*: Security updates typically include patches and improvements that enhance the overall security of the system.
+- *Regulatory compliance*: Many regulatory bodies require organizations to maintain up-to-date security measures, which often includes installing security updates promptly. Compliance with these regulations reduces legal and financial risks and helps to maintain a positive reputation and trust with stakeholders and customers.
 
 ## Coverage of security releases
 
 The static code analysis tools provide the capability to detect various known vulnerabilities. These tools assist in identifying and preventing potential security risks from the following sources:
-* Spryker security releases
-* PHP ecosystem
-* NPM ecosystem
+- Spryker security releases
+- PHP ecosystem
+- NPM ecosystem
 
 ## Spryker Security releases
 

@@ -1,6 +1,6 @@
 ---
 title: Create and configure Zed tables
-description: This document helps you get started on working with tables.
+description: Learn how to create and configure Zed tables. This guide details steps for building custom tables, defining data sources, and enhancing backend user interfaces.
 last_updated: Jan 02, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
   - title: Add buttons to Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+    link: docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
@@ -41,8 +41,8 @@ The query used for fetching the data must be injected into the constructor.
 
 The table class must implement the following methods:
 
-* `function configure (TableConfiguration $configuration)`: Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
-* `function prepareData (TableConfiguration $configuration)`: Prepare the data retrieved by the query in the way you want it to be shown in the table.
+- `function configure (TableConfiguration $configuration)`: Set up the captions for the tables header, the searchable and sortable fields, and specify the raw fields.
+- `function prepareData (TableConfiguration $configuration)`: Prepare the data retrieved by the query in the way you want it to be shown in the table.
 
 {% endinfo_block %}
 
@@ -57,10 +57,10 @@ function configure(TableConfiguration $configuration)
 ```
 
 The configuration of the table must be done with the following methods:
-* Set up captions for the table headers (`setHeader()`)
-* Set up searchable fields (`setSearchable()`)
-* Set up sortable fields (`setSortable()`)
-* Set up raw fields — for fields containing HTML markup that should not be escaped (`addRawColumn`)
+- Set up captions for the table headers (`setHeader()`)
+- Set up searchable fields (`setSearchable()`)
+- Set up sortable fields (`setSortable()`)
+- Set up raw fields — for fields containing HTML markup that should not be escaped (`addRawColumn`)
 
 **Code sample:**
 
@@ -98,12 +98,12 @@ To configure the field on which the table is sorted by default when it's initial
 ```php
 <?php
 
-$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_AT, \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
 
 ### Configure search by columns
 
-The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator ‘LIKE’ in combination with ‘LOWER’ for comparison. It may result in performance issues on larger tables due to indexes not being used.
+The default search option in Back Office data tables searches for anything that contains the specified substrings. This default search makes use of the SQL logical operator `LIKE` in combination with `LOWER` for comparison. It may result in performance issues on larger tables because of indexes not being used.
 
 Search by columns can be used on all Back Office data tables which extend the `AbstractTable` class.
 
@@ -238,9 +238,9 @@ To start the download, add a link to the `DownloadController` action on the tabl
 
 To prepare the CSV file, implement the following methods in the `Table` class:
 
-* `GetCsvHeaders()`
-* `GetDownloadQuery()`
-* `FormatCsvRow()`
+- `GetCsvHeaders()`
+- `GetDownloadQuery()`
+- `FormatCsvRow()`
 
 #### Implement `GetCsvHeaders()`
 

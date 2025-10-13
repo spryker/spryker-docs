@@ -1,6 +1,6 @@
 ---
 title: Configure Bitbucket Pipelines
-description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+description: Set up Bitbucket Pipelines for continuous integration and delivery in Spryker Cloud Commerce OS, with steps for configuring YAML files, validation, and test grouping.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/configuring-bitbucket-pipelines
@@ -14,11 +14,13 @@ redirect_from:
 This document describes how to configure continuous integration using Bitbucket Pipelines.
 
 ## Bitbucket Pipelines
+
 Bitbucket Pipelines is an integrated CI/CD service, built into Bitbucket. It allows you to automatically build, test, and deploy your code, based on a configuration file in your repository.
 
 For more information on Bitbucket Pipelines, see [Get started with Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/).
 
 ## Prerequisites
+
 1. In the repository root, create the CI/CD configuration file: `bitbucket-pipelines.yml`.
 2. To choose the language, create a basic pipeline template and environment variables, follow [Get started with Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/).
 
@@ -35,10 +37,10 @@ To make the values of environment variables hidden in logs, set up secured varia
 
 Configure services and a basic validation of:
 
-* code style
-* architecture
-* security
-* database schema
+- code style
+- architecture
+- security
+- database schema
 
 <details>
     <summary>Example of bitbucket-pipelines.yml</summary>
@@ -90,7 +92,7 @@ definitions:
       environment:
         ES_JAVA_OPTS: '-Xms512m -Xmx512m'
     broker:
-      image: spryker/rabbitmq:3.7.14
+      image: spryker/rabbitmq:4.1
       environment:
         RABBITMQ_DEFAULT_USER: $RABBITMQ_DEFAULT_USER
         RABBITMQ_DEFAULT_PASS: $RABBITMQ_DEFAULT_PASS
@@ -115,6 +117,7 @@ Docker SDK tests will be supported after Bitbucket starts supporting [Docker Bui
 To set up a job that runs a specific group of tests:
 
 1. To `bitbucket-pipelines.yml`, add the following configuration template:
+
 ```yaml
 ...
     - step:
@@ -138,6 +141,7 @@ To set up a job that runs a specific group of tests:
             - vendor/bin/install $APPLICATION_STORE -r testing -x frontend -x queue -v
             - APPLICATION_ENV=devtest vendor/bin/codecept run -c {tests_configuration_file}
 ```
+
 2. Replace the placeholders with the actual values using the following description.
 
 |PLACEHOLDER | DESCRIPTION | EXAMPLE IN THE PROPERTY VALUE |

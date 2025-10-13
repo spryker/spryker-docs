@@ -39,12 +39,12 @@ To run a health check, either open the URL of an application endpoint in a brows
 
 Depending on the application status, you will see:
 
-* status code 200 and the list of application services with the `available` status;
-* status code 503 and the list of application services where at least one service has the `unavailable` status.
+- status code 200 and the list of application services with the `available` status;
+- status code 503 and the list of application services where at least one service has the `unavailable` status.
 
 ## Running Application Service Health Checks
 
-When an application service is unavailable, you might want to apply a fix and run a health check for that particular service. To do that, you can specify the application service(s) you want to run a health check for in the request URL. The pattern is `http://application.mysprykershop.com/health-check?services={service},{service}`. For example, `https://glue.mysprykershop.com/health-check?services=storage`.
+When an application service is unavailable, you might want to apply a fix and run a health check for that particular service. To do that, you can specify the application services you want to run a health check for in the request URL. The pattern is `http://application.mysprykershop.com/health-check?services={service},{service}`. For example, `https://glue.mysprykershop.com/health-check?services=storage`.
 
 ## Integration
 
@@ -58,13 +58,13 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -173,7 +173,7 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 | SessionHealthCheckPlugin | Performs a health check for the Session service. | None | Spryker\Yves\Session\Plugin\HealthCheck |
 | KeyValueStoreHealthCheckPlugin | Performs a health check for the Storage service. | None | Spryker\Yves\Storage\Plugin\HealthCheck |
 | SearchHealthCheckPlugin |Performs a health check for the Search service.| None | Spryker\Yves\Search\Plugin\HealthCheck |
-| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |    
+| ZedRequestHealthCheckPlugin | Performs a health check for the ZedRequest service. | None | Spryker\Yves\ZedRequest\Plugin\HealthCheck |
 
 ```php
 <?php
@@ -239,13 +239,13 @@ class HealthCheckDependencyProvider extends SprykerHealthCheckDependencyProvider
 
 ### 4) Set up transfer objects
 
-Run the following command to apply transfer changes:
+Apply transfer changes:
 
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes took place in transfer objects:
 

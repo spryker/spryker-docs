@@ -31,10 +31,10 @@ console transfer:generate
 
 In this new version of the `CheckoutPage` module, we have:
 
-* Integrated Gift Card related functionality.
-* Added "no shipment" shipment method handling in case only gift card(s) are to be ordered.
-* Added "no payment" payment method handling in case the price to pay of a cart is 0.
-* Added filtering logic of selectable payment methods.
+- Integrated Gift Card related functionality.
+- Added "no shipment" shipment method handling in case only gift cards are to be ordered.
+- Added "no payment" payment method handling in case the price to pay of a cart is 0.
+- Added filtering logic of selectable payment methods.
 
 You can find more details about the changes on [CheckoutPage module release page](https://github.com/spryker-shop/checkout-page/releases).
 

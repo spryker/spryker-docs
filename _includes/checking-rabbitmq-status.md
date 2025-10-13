@@ -15,7 +15,7 @@ Check the details as follows:
 
 ### Check RabbitMQ node status and errors
 
-1. Using the login details you’ve checked in the [Check RabbitMQ connection details](#check-rabbitmq-connection-details), log into the RabbitMQ Management interface at `http://rabbitmq.{ENVIRONMENT_NAME}.{SPRYKER_BROKER_API_HOST}:{SPRYKER_BROKER_API_PORT}`
+1. Using the login details you've checked in the [Check RabbitMQ connection details](#check-rabbitmq-connection-details), log into the RabbitMQ Management interface at `http://rabbitmq.{ENVIRONMENT_NAME}.{SPRYKER_BROKER_API_HOST}:{SPRYKER_BROKER_API_PORT}`
 2. In the *Nodes* section of the **Overview** tab, check the node status. If all the columns are green, the node is working properly.
 
 ![status-of-nodes](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/_includes/checking-rabbitmq-status.md/status-of-nodes.png)

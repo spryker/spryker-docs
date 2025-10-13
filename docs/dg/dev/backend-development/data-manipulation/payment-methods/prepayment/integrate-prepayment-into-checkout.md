@@ -1,6 +1,6 @@
 ---
 title: Integrate prepayment into checkout
-description: This document describes how to integrate prepayment into Checkout.
+description: Integrate prepayment into Spryker's checkout process with this guide. Learn how to enhance your ecommerce payment flow with seamless prepayment solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-checkout
@@ -10,15 +10,15 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
 related:
   - title: Implement prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - title: Implement prepayment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - title: Implement prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
   - title: Test the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector`, from Yves, add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:
@@ -88,6 +88,7 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
     }
 }
 ```
+
 </details>
 
 {% info_block errorBox %}

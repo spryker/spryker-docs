@@ -1,7 +1,7 @@
 ---
 title: Prepare a project for Spryker Code Upgrader
 last_updated: Sep 4, 2023
-description: Get your project ready to start using Spryker Code Upgrader
+description: Prepare your project for Spryker Code Upgrader by ensuring code compliance, updating modules, and meeting technical requirements for a smooth upgrade process.
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
@@ -11,7 +11,7 @@ To start managing upgrades with Spryker Code Upgrader, fulfill the following pre
 
 ## Make your code compliant with upgradability guidelines
 
-Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it is highly customized.
+Our [upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) ensure your project stays upgradable. When an application is compliant with the guidelines, it can take minor and patch updates without breaking functionality, even if it's highly customized.
 
 To check if your code is compliant with the guidelines, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
@@ -22,17 +22,17 @@ By sticking to the [recommended extension points](/docs/scos/dev/guidelines/keep
 
 ## Update all Spryker modules to version 2022.04 or higher
 
-The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json `, update all `spryker-feature-*` packages to version `2022.04` or higher.
+The Upgrader provides automatic minor and patch updates for the current version of each module. Because most updates are released for the latest module versions, modules need to be of the latest major version. To do that, in `composer.json`, update all `spryker-feature-*` packages to version `2022.04` or higher.
 
 To check if your module versions are supported by the Upgrader, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 
 ## Implement E2E testing in development workflow
 
-Upgrades are provided as PRs that are automatically created in a project’s repository. To make sure all functionality works as expected, you will need to review and test the PRs before merging.
+Upgrades are provided as PRs that are automatically created in a project's repository. To make sure all functionality works as expected, you will need to review and test the PRs before merging.
 
 ## Migrate to a supported version control system
 
-Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://spryker.force.com/support/s/), so we can implement its support in future.
+Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a different version control system, [contact support](https://support.spryker.com), so we can implement its support in future.
 
 ## Migrate to cloud
 
@@ -42,11 +42,11 @@ The Upgrader supports only projects that run in [cloud environments](/docs/ca/de
 
 For a smooth experience, make sure that your environments meet the minimum technical requirements:
 
-* PHP 8.1+. The Upgrader supports a minimum version of PHP 8.0. However, PHP 8.0 reached end of life in November 2023, so make sure to update PHP to the [recommended version](/docs/dg/dev/supported-versions-of-php.html). To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
-* Composer 2.5+
-* Git 2.24+
-* PHPStan 1.9+
-* PHPCodeSniffer 3.6.2+
+- PHP 8.3+. PHP 8.2 is in security support only from the beginning of 2025, so to use all new features, migrate to the [recommended version](/docs/dg/dev/supported-versions-of-php.html) as soon as possible. To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+- Composer 2.5+
+- Git 2.24+
+- PHPStan 1.12+
+- PHPCodeSniffer 3.6.2+
 
 ## Optional: Implement headless design
 

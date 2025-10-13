@@ -1,6 +1,6 @@
 ---
 title: Add global sections to the docs
-description: Learn how to add a new global section to Spryker docs.
+description: Want to contribute but need a new section to add your articles to? Learn how to add global sections to Spryker Documentation.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
@@ -245,7 +245,7 @@ jobs:
 
 2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles:
 
-```
+```text
 ...
 task :check_acp_user do
   options = commonOptions.dup
@@ -276,7 +276,7 @@ end
 
 3. In `Rakefile`, in `options[:file_ignore]` of all the existing checks, exclude the new section:
 
-```
+```text
 ...
 task :check_mp_dev do
   options = commonOptions.dup

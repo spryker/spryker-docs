@@ -40,18 +40,18 @@ The backend is only required for more complex business logic such as cart calcul
 
 ### Yves
 
-Yves is the slimline frontend application that gets its data from fast **Key-Value storage** like Redis, and a **Search storage** like Elasticsearch.
+Yves is the slimline frontend application that gets its data from fast **Key-Value storage** like key-value stores (Redis or Valkey), and a **Search storage** like Elasticsearch.
 
 Yves is built on top of Symfony components and uses Twig as its templating engine. It has no connection to the database in Zed.
 
 Some of the key features:
 
-* Based on Symfony components
-* Redis for storage
-* Elasticsearch for full-text search and facet navigation
-* Multi-language support
-* Shared session storage
-* SEO friendly
+- Based on Symfony components
+- Redis for storage
+- Elasticsearch for full-text search and facet navigation
+- Multi-language support
+- Shared session storage
+- SEO friendly
 
 ### Zed
 
@@ -59,14 +59,14 @@ Zed is more of a heavy-duty backend application. Like Yves, it's built on top of
 
 Some of the key features are as follows:
 
-* Based on Symfony components
-* MySQL, MariaDB, and PostgreSQL support
-* UI framework
-* Database schema management and migrations
-* Advanced cron-job scheduling with Jenkins
-* CLI tools
-* OMS Code Management Tools
-* Application Integrity Checks
+- Based on Symfony components
+- MySQL, MariaDB, and PostgreSQL support
+- UI framework
+- Database schema management and migrations
+- Advanced cron-job scheduling with Jenkins
+- CLI tools
+- OMS Code Management Tools
+- Application Integrity Checks
 
 ## Data synchronization
 
@@ -79,6 +79,6 @@ Our frontend works without a full page cache. This allows continuous updates and
 In order for Yves to display any data, the data has to be first aggregated and exported.
 
 The synchronization happens in three steps:
-* Touch
-* Collect
-* Export
+- Touch
+- Collect
+- Export

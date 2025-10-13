@@ -6,9 +6,9 @@
 
 Version 1.0.0 of the `ProductConfiguration` module introduces the following backward incompatible changes:
 
-* Adjusted `ProductConfigurationFacade::getProductConfigurationCollection()` so it is now getting product configurations by `ProductConfigurationCriteria` instead of `ProductConfigurationFilterTransfer`.
-* Introduced the `spy_product_configuration.uuid` field to allow unique identifier.
-* Introduced the `spy_product_configuration-unique-uuid` unique index.
+- Adjusted `ProductConfigurationFacade::getProductConfigurationCollection()` so it's now getting product configurations by `ProductConfigurationCriteria` instead of `ProductConfigurationFilterTransfer`.
+- Introduced the `spy_product_configuration.uuid` field to allow unique identifier.
+- Introduced the `spy_product_configuration-unique-uuid` unique index.
 
 To upgrade the `ProductConfiguration` module from version 0.2.* to version 1.0.*, do the following:
 

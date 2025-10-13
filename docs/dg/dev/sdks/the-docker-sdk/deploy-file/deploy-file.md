@@ -1,6 +1,6 @@
 ---
 title: Deploy file
-description: Overview of the deploy file
+description: Learn about the Spryker Deploy yaml file and how it works to deploy your Spryker environment.
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
@@ -91,15 +91,15 @@ imports:
 
 You can include a deploy file into an application's configuration using one of the following import types.
 
-* File path:
+- File path:
 
 ```yaml
 imports:
     deploy.base.template.yml:
     deploy.project.template.yml:
-```      
+```
 
-* Named array:
+- Named array:
 
 ```yaml
 imports:
@@ -111,7 +111,7 @@ last_updated: Nov 21, 2023
 last_updated: Nov 21, 2023
 ```
 
-* Unnamed array:
+- Unnamed array:
 
 ```yaml
 imports:
@@ -162,8 +162,8 @@ To check how the final deploy file looks without stopping containers, run `docke
 {% endinfo_block %}
 
 The deploy file builder parses deploy files from the following layers:
-* `Project layer`: located on a project layer at`./config/deploy-templates`.
-* `Base layer`: located on the Docker SDK layer at`./{DOCKER_SDK_DIRECTORY}/generator/deploy-file-generator/templates`.
+- `Project layer`: located on a project layer at`./config/deploy-templates`.
+- `Base layer`: located on the Docker SDK layer at`./{DOCKER_SDK_DIRECTORY}/generator/deploy-file-generator/templates`.
 
 
 Deploy files are merged in the following order:
@@ -174,7 +174,7 @@ Deploy files are merged in the following order:
 
 ## Parameter inheritance
 
-When merging deploy files, the deploy file builder skips each duplicate parameter that was present in the previous parsed deploy files. For example, in `deploy.dev.yml`, memory limit is defined as follows:
+When merging deploy files, the deploy file builder skips each duplicate parameter that was present in the previous parsed deploy files. For example, in `deploy.dev.yml`, memory limit's defined as follows:
 
 ```yaml
 image:
@@ -184,7 +184,7 @@ image:
             memory_limit: 2048M
 ```
 
-And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit is defined as follows:
+And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit's defined as follows:
 
 ```yaml
 image:

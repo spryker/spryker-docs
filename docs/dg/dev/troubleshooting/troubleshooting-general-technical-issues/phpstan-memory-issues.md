@@ -1,5 +1,6 @@
 ---
 title: PHPStan memory issues
+description: Learn how to troubleshoot and resolve PHPStan memory issues that you may come across in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan-memory-issues
@@ -10,7 +11,7 @@ redirect_from:
 
 ## Cause
 
-PHPStan needs to parse all files and due to Spryker's magic with resolving classes, e.g., `$this->getFacade()`, PHPStan needs to look up this class on its own when the `@method` annotation is missing.
+PHPStan needs to parse all files and because of Spryker's magic with resolving classes–for example, `$this->getFacade()`, PHPStan needs to look up this class on its own when the `@method` annotation is missing.
 
 ## Solution
 

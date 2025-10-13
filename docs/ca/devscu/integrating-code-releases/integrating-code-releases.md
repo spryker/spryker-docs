@@ -1,6 +1,6 @@
 ---
 title: Integrating code releases
-description: Spryker Code Upgrader automatically integrates code releases
+description: Automate the integration of code releases in Spryker with the Code Upgrader, handling plugins, configurations, schemas, and more to streamline feature additions.
 template: concept-topic-template
 last_updated: Oct 20, 2023
 ---
@@ -46,4 +46,4 @@ If you see errors in the generated code, do the following:
 1. Double-check if your code follows the upgradability guidelines by [running the Evaluator](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
     After fixing the upgradability issues, close the PR with errors and restart the Upgrader to get a new PR.
 2. If you see any quick fixes, try manually correcting the errors.
-3. [Contact us](/docs/about/all/support/using-the-support-portal.html) for further assistance. 
+3. [Contact us](/docs/about/all/support/using-the-support-portal.html) for further assistance.

@@ -6,27 +6,27 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-fe
 originalArticleId: 54c8c994-968d-4a53-aab8-8642ef56ac57
 redirect_from:
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-front-end.html
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
 related:
   - title: Implement prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - title: Implement prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
   - title: Integrate Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
   - title: Test the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
 ## Create the form
 
 In Yves, the starting point is to build a form.
 
-* Add a new module in Yves.
-* Add the `Form` folder to place the implementation for building the form.
+- Add a new module in Yves.
+- Add the `Form` folder to place the implementation for building the form.
 
 1. In the `Form/DataProvider` folder, add the data provider:
 

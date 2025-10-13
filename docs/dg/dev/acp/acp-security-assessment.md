@@ -1,21 +1,21 @@
 ---
 title: ACP security assessment
-Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
+Description: Ensure robust security for your Spryker ACP environment with our comprehensive guide on assessments, compliance, and protection best practices.
 template: howto-guide-template
 last_updated: Aug 30, 2023
 redirect_from:
 - /docs/acp/user/intro-to-acp/aop-security-assessment.html
 ---
 
-This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog or the app store. It covers the following app types:
+This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker's app catalog or the app store. It covers the following app types:
 
-- Pure API integrations (with 3rd party services and vendors)
+- Pure API integrations (with third-party services and vendors)
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
 - Hybrid apps
 
 ## ACP security
 
-In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security.
+In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it's important that every app they use with SCCOS offers a satisfactory level of security.
 
 ## Security responsibility
 
@@ -88,7 +88,7 @@ Spryker will be provided with the following information for conducting a test:
 Test results will be shared in a PDF, Word, or HTML format and will contain the following information:
 
 - The type/classification of the vulnerability - (XSS, SQL Injection, CSRF, etc.) according to [OWASP](https://owasp.org/www-community/vulnerabilities/), [CWE](https://cwe.mitre.org/data/definitions/699.html), or [NIST NVD](https://nvd.nist.gov/vuln/).
-- The location of the issue within the code or steps to reproduce the issue (e.g. example of a network request triggering the vulnerability).
+- The location of the issue within the code or steps to reproduce the issue–for example, a network request triggering the vulnerability.
 - Recommendation on how to fix or mitigate it.
 As stated earlier, these results will not cover the entire code base.
 
@@ -109,7 +109,7 @@ External integrations will undergo an endpoint assessment in accordance with OWA
 
 Spryker (or an authorized third party) will test code that runs on ACP/SCCOS or code that a partner makes available to us for review. This testing will consist of Static Code Analysis with a SAST tool, as well as a manual review of the code for critical parts of the application. Partners will provide documentation to indicate the critical features of the app.
 
-Vulnerabilities will be sent back to the partner to fix. The partner will be expected to conduct a full review on their side before resubmitting for another round of testing. The review fee includes **three** cycles of testing. If the app requires more cycles of testing because the issues weren’t fixed, every subsequent test cycle will attract a cost.
+Vulnerabilities will be sent back to the partner to fix. The partner will be expected to conduct a full review on their side before resubmitting for another round of testing. The review fee includes **three** cycles of testing. If the app requires more cycles of testing because the issues weren't fixed, every subsequent test cycle will attract a cost.
 
 Every app will undergo an annual full test cycle. The partner can continue enhancing the app and use static code checkers to test every release on their side.
 
@@ -126,7 +126,7 @@ Spryker expects that the following actions are taken by partners and app develop
 
 {% info_block warningBox "Warning" %}
 
-The app developers should not consider Spryker as an outsourced security QA team. Rather, Spryker’s assessment process is a validation of the measures they have taken to ensure a secure app. They should always aim to clear the review in the first attempt.
+The app developers should not consider Spryker as an outsourced security QA team. Rather, Spryker's assessment process is a validation of the measures they have taken to ensure a secure app. They should always aim to clear the review in the first attempt.
 
 {% endinfo_block %}
 
@@ -158,9 +158,9 @@ The diagram below demonstrates the security assessment procedure:
 ## Review results
 
 - As soon as a review is cleared, an app is marked as approved, and a badge is displayed on the marketplace listing.
-- During subsequent full reviews (typically annually), the app will retain its badge while it is in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
-	- The app developer fails to respond to repeated requests for annual re-assessments.
-	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn’t able to fix the reported issues.
+- During subsequent full reviews (typically annually), the app will retain its badge while it's in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
+ 	- The app developer fails to respond to repeated requests for annual re-assessments.
+ 	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn't able to fix the reported issues.
 - At this time, customers can choose to look at an alternate application or work with the developer to remedy the issues.
 - Spryker can also decide to terminate the partner contract in such a scenario.
 

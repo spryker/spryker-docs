@@ -1,6 +1,6 @@
 ---
 title: Email deliverability
-description: Explanation and tips on email deliverability
+description: Ensure high email deliverability in Spryker Cloud Commerce OS by configuring SPF, DKIM, and DMARC DNS records
 last_updated: Jun 19, 2024
 template: concept-topic-template
 ---
@@ -29,6 +29,7 @@ There are extensive resources available on email DNS records, so we only provide
 Sender Policy Framework (SPF) record lists authorized servers for sending emails from a domain. Mail servers check SPF records before delivering emails.
 
 Your cloud environments use AWS SES to send emails. To allow this email server to send emails with your domain, set the following TXT DNS record for the domain you are using to send emails:
+
 ```bash
 v=spf1 include:amazonses.com -all
 ```
@@ -44,6 +45,7 @@ To configure this record, follow the steps:
   This opens the domain's page.
 4. In the **DomainKeys Identified Mail (DKIM)** pane, click **Publish DNS records**.
 This displays CNAME records in the following format:
+
 ```bash
 CNAME
 NAME 123EXAMPLEHASH123._domainkey.example.com

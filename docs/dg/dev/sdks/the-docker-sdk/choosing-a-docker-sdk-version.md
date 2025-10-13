@@ -39,7 +39,7 @@ related:
 This document describes why and how to select a particular version of the Docker SDK and use it in your project.
 
 
-## Why should I use a particular version of the Docker SDK?
+## Using a particular version of Docker SDK
 
 You should use a particular Docker SDK version for:
 
@@ -69,7 +69,7 @@ Depending on your project requirements, choose one of the versioning approaches:
 
 {% info_block infoBox "Forking the Docker SDK" %}
 
-[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
+Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
 
 {% endinfo_block %}
 
@@ -77,13 +77,13 @@ Depending on your project requirements, choose one of the versioning approaches:
 
 Depending on your project requirements, choose one of the following ways to configure a Docker SDK version:
 
-* Git submodule:
-  * To contribute in the Docker SDK.
-  * To have a simple way to fetch a particular version of the Docker SDK.
-  * To use the hash as a versioning approach.
-* Reference file:
-  * To use a branch as a versioning approach.
-  * When Git Submodule is not supported.
+- Git submodule:
+  - To contribute in the Docker SDK.
+  - To have a simple way to fetch a particular version of the Docker SDK.
+  - To use the hash as a versioning approach.
+- Reference file:
+  - To use a branch as a versioning approach.
+  - When Git Submodule is not supported.
 
 
 {% info_block warningBox "Spryker Cloud Commerce OS" %}
@@ -200,6 +200,7 @@ cd ..
 If you're using CI and store the commit hash in `.git.docker`, make sure the reference and submodule hashes match.
 
 The following is an example of what the code can look like:
+
 ```bash
 git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
 ```

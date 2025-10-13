@@ -8,13 +8,13 @@ So, `MerchantRelationshipProductListGui` currently provides plugins to extend th
 
 Here is the change list for the `MerchantRelationshipProductListGui` v2.0.0:
 
-* Added `spryker/util-text` module to dependencies.
-* Added `spryker/merchant-relationship-product-list` module to dependencies.
-* Introduced `ProductListMerchantRelationshipEditFormExpanderPlugin` and `ProductListMerchantRelationshipCreateFormExpanderPlugin` form expander plugins for the `MerchantRelationshipGui` module.
-* Introduced `MerchantRelationshipProductListUsedByTableExpanderPlugin` and `MerchantRelationListProductListTopButtonsExpanderPlugin` expander plugins for the `ProductListGui` module.
-* Added Zed translations for form elements and labels.
-* Deprecated `MerchantRelationshipProductListOwnerTypeFormExpanderPlugin`.
-* Deprecated `MerchantRelationshipTableExpanderPlugin`.
+- Added `spryker/util-text` module to dependencies.
+- Added `spryker/merchant-relationship-product-list` module to dependencies.
+- Introduced `ProductListMerchantRelationshipEditFormExpanderPlugin` and `ProductListMerchantRelationshipCreateFormExpanderPlugin` form expander plugins for the `MerchantRelationshipGui` module.
+- Introduced `MerchantRelationshipProductListUsedByTableExpanderPlugin` and `MerchantRelationListProductListTopButtonsExpanderPlugin` expander plugins for the `ProductListGui` module.
+- Added Zed translations for form elements and labels.
+- Deprecated `MerchantRelationshipProductListOwnerTypeFormExpanderPlugin`.
+- Deprecated `MerchantRelationshipTableExpanderPlugin`.
 
 *Estimated migration time: 1hour*
 

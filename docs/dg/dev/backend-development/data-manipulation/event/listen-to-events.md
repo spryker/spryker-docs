@@ -1,6 +1,6 @@
 ---
 title: Listen to events
-descritpion: This document shows how to listen to events with direct listeners or a subsriber
+descritpion: Learn how to listen to and handle backend events in Spryker, improving your eCommerce platform's data manipulation and event management.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-listen
@@ -56,6 +56,7 @@ class ProductRelationAbstractProductChangeListener extends AbstractPlugin implem
 Add this listener to `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`
 
 Example:
+
 ```php
 $eventCollection->addListener(ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE, new ProductRelationAbstractProductChangeListener())`
 ```

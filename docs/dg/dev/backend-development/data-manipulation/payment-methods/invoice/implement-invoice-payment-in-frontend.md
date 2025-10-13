@@ -1,6 +1,6 @@
 ---
 title: Implement invoice payment in frontend
-description: This document describes how to implement invoice payment in frontend.
+description: Implement an invoice payment method in Spryker storefronts with step-by-step guidance. Learn backend integration for seamless ecommerce payment solutions.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe
@@ -10,22 +10,22 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
 related:
   - title: Implement invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
   - title: Implement invoice payment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
   - title: Implement invoice payment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
   - title: Integrate invoice payment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
   - title: Test the invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
 ## Create a form
 
 In Yves, the starting point is to build a form.
-* Add a new module in Yves.
-* Add the `Form` folder, where you will place the implementation for building the form.
+- Add a new module in Yves.
+- Add the `Form` folder, where you will place the implementation for building the form.
 
 ### 1. Add the data provider
 
@@ -264,6 +264,7 @@ Add the Twig template that's rendered when the invoice payment method is selecte
     {% raw %}{{{% endraw %} form_errors(form.paymentmethods_invoice) {% raw %}}}{% endraw %}
 </div>
 ```
+
 </details>
 
 {% info_block errorBox %}

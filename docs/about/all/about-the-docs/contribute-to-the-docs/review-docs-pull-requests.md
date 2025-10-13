@@ -1,6 +1,6 @@
 ---
 title: Review pull requests
-description: Learn how you can propose your changes to a pull request
+description: Learn how you can review a pull request that has been submitted to Spryker Documentation
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
@@ -20,17 +20,17 @@ related:
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
 
-When someone requests your review of a pull request, you get an email about the request. <!--Also, a message with the review request is displayed on the pull request page:IMAGE-->
+When someone requests your review of a pull request (PR), you get an email about the request.
 
-To review a pull request, do the following:
+To review a PR, do the following:
 
-1. At the pull request page, click the **Files changed** tab.
+1. At the PR's page, click the **Files changed** tab.
 Here you can see how many files have been changed and the changes themselves. Old text is displayed in red, the new one - in green:
 ![Files changed](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-changed.png)
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-You can view each file in a more readable form: with images, normally-looking tables, etc. For this, click on three dots at the file path and select **View file**:
+To preview a file, click on more options menu and select **View file**:
 
 ![View file](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/view-file.png)
 
@@ -62,4 +62,4 @@ Before you submit your review, your line comments are pending and only visible t
 5. Once you are done reviewing all the files, click **Review changes** in the top right corner and select either *Comment*, *Approve* or *Request changes*.
 
 6. Click **Submit review**:
-![Submit review](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/submit-review.png)   
+![Submit review](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/submit-review.png)

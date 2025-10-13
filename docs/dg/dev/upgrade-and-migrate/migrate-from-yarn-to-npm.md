@@ -1,7 +1,7 @@
 ---
 title: Migrate from Yarn to npm
 last_updated: May 15, 2023
-description: Use this guide to migrate the project from Yarn to npm.
+description: Learn how to migrate your Spryker based projects from Yarn to npm in this helpful migration guide.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
@@ -154,7 +154,7 @@ npm -v
 
 To update the versions, use official documentation:
 
-- [Node.js](https://nodejs.org/en/download)
+- [Node.js](https://nodejs.org/en/download/package-manager)
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 {% endinfo_block %}

@@ -1,6 +1,6 @@
 ---
 title: Implement synchronization plugins
-description: Learn how to implement synchronization plugins.
+description: Implement synchronization plugins in Spryker to streamline data consistency across systems. Follow this guide for seamless backend data synchronization.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-synchronization-plugins
@@ -10,30 +10,30 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
 related:
   - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
+Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html#data-re-generation) the published model data with the key-value store (Redis or Valkey) or Elasticsearch. To do that, you need to implement a synchronization plugin.
 
 Follow these steps to implement and register a synchronization plugin.
 
-1.  Implement the synchronization(sync) plugin:
+1. Implement the synchronization(sync) plugin:
 
 <details><summary>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
 
@@ -112,20 +112,20 @@ class HelloWorldSynchronizationDataRepositoryPlugin extends AbstractPlugin imple
 
 
 The method descriptions:
-* `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
-* `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or ElasticSearch.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
-* `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
+- `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for key-value store (Redis or Valkey) or Elasticsearch.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
+- `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
 
 {% info_block infoBox %}
 
 Make sure to fulfill the requirements:
 
-* The resource name must be the same as in the Propel schema definition.
+- The resource name must be the same as in the Propel schema definition.
 
-* The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
+- The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
 
 {% endinfo_block %}
 

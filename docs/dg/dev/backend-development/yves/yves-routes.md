@@ -1,5 +1,6 @@
 ---
 title: Yves routes
+description: Define and manage Yves routes in Spryker. Learn how to create, configure, and optimize routing for efficient request handling in your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
@@ -8,19 +9,19 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/yves-routes.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
-    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+    link: docs/dg/dev/backend-development/yves/controllers-and-actions.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
-    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+    link: docs/dg/dev/backend-development/yves/modular-frontend.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
 ---
 
 Whenever you need to create a new controller, you need to define a path where it's available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.
@@ -114,9 +115,9 @@ Routers are responsible for finding a matching controller action for each reques
 
 By default we provide three routers:
 
-* *The `YvesRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
-* The `StorageRouterPlugin` router: Tries to match the path with the key-value storage (Redis).
-* The default `YvesDevelopmentRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
+- *The `YvesRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
+- The `StorageRouterPlugin` router: Tries to match the path with the key-value storage (Redis or Valkey).
+- The default `YvesDevelopmentRouterPlugin` router: Tries to match the path with the registered `RouteProviders`.
 
 If you want to add a new router, add it to `RouterDependencyProvider` but make sure you do it in the right ordering.
 

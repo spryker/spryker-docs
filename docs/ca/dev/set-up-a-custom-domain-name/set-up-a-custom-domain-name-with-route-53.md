@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name with Route 53
+description: Set up a custom domain name with Route 53 for your Spryker application, including DNS configuration and deployment in production or staging environments.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name-with-route-53
@@ -14,7 +15,7 @@ This document describes how to set up a custom domain name (domain) with its DNS
 
 ## 1. Set up hosted zones
 
-To set up a hosted zone, provide the domain name via [support](https://spryker.force.com/support/s/).
+To set up a hosted zone, provide the domain name via [support](https://support.spryker.com).
 
 ## 2. Point domain names to Route 53
 
@@ -51,6 +52,7 @@ groups:
                     {domain_name}:
                         store: {store_relation}
 ```
+
 Example:
 
 ```yaml
@@ -67,7 +69,7 @@ groups:
 
 {% info_block warningBox "Store configuration" %}
 
-`store:` must correspond to `groups:` and `region:`. For example, it is impossible to set a US store in the DE region.
+`store:` must correspond to `groups:` and `region:`. For example, it's impossible to set a US store in the DE region.
 
 {% endinfo_block %}
 
@@ -75,12 +77,12 @@ See [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-
 
 4. Depending on the environment you are setting up the domain for:
 
-* [Deploy the application in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
+- [Deploy the application in the production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 
-* [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
+- [Deploy the application in the staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html).
 
 
-5.  Let us know about the desired change via [support](https://spryker.force.com/support/s/).
+5. Let us know about the desired change via [support](https://support.spryker.com).
 
 Give the DNS configuration 24-48 hours to propagate and you will be able to access your application via the domain.
 

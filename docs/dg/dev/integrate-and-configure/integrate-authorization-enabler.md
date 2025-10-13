@@ -1,6 +1,6 @@
 ---
 title: Integrate Authorization Enabler
-description: Learn how to enable the Authorization Enabler
+description: Learn how to enable and integrate the Authorization Enabler for your Spryker based projects.
 last_updated: Sep 2, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
@@ -111,6 +111,7 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
+
 </details>
 
 <details>
@@ -149,6 +150,7 @@ class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyPr
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

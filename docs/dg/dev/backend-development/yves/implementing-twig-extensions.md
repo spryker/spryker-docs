@@ -1,5 +1,6 @@
 ---
 title: Implementing Twig extensions
+description: Create custom Twig extensions to enhance frontend templates. Learn to implement, register, and utilize Twig functions for a flexible ecommerce experience.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
@@ -17,7 +18,7 @@ To implement a Twig extension, take the following steps.
 
 ## 1. Implement the filter
 
-To implement the filter, add the logic to a dedicated class in the module you’re currently working on:
+To implement the filter, add the logic to a dedicated class in the module you're currently working on:
 
 ```php
 <?php

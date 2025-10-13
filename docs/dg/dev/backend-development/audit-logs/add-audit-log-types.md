@@ -1,6 +1,6 @@
 ---
 title: Add audit log types
-description: Learn how to add an audit log type.
+description: Learn how to add custom audit log types in Spryker for effective tracking and management of backend activities, improving system transparency and security.
 template: howto-guide-template
 last_updated: Jun 16, 2024
 related:
@@ -14,7 +14,7 @@ In this guide, `Checkout` log type for the `Yves` application is added as an exa
 
 ## Prerequisites
 
-[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202407.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 ## Add a checkout log type for Yves

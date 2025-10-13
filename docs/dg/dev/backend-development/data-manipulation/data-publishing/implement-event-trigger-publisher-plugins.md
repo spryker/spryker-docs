@@ -1,6 +1,6 @@
 ---
 title: Implement event trigger publisher plugins
-description: Learn how to implement event trigger publisher plugins.
+description: Implement event-trigger publisher plugins in Spryker to automate data publishing. Enhance backend functionality with this comprehensive guide on event handling.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins
@@ -10,26 +10,26 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
 related:
   - title: Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implement Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Handle data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
 
-To [publish or republish](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the model data manually for all or a particular resource, you need to implement an event trigger publisher plugin.
+To [publish or republish](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html#data-re-generation) the model data manually for all or a particular resource, you need to implement an event trigger publisher plugin.
 
 Follow these steps to implement and register a new event trigger publisher plugin.
 
@@ -90,11 +90,11 @@ class HelloWorldPublisherTriggerPlugin extends AbstractPlugin implements Publish
 </details>
 
 Find method descriptions below:
-* `HelloWorldPublisherTriggerPlugin::getResourceName()`—defines the resource name for key generation.
-* `HelloWorldPublisherTriggerPlugin::getData()`—retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
-* `HelloWorldPublisherTriggerPlugin::getEventName()`—defines an event name for publishing.
+- `HelloWorldPublisherTriggerPlugin::getResourceName()`—defines the resource name for key generation.
+- `HelloWorldPublisherTriggerPlugin::getData()`—retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
+- `HelloWorldPublisherTriggerPlugin::getEventName()`—defines an event name for publishing.
 
-* `HelloWorldPublisherTriggerPlugin::getIdColumnName()`—defines an ID column name for publishing.
+- `HelloWorldPublisherTriggerPlugin::getIdColumnName()`—defines an ID column name for publishing.
 
 {% info_block infoBox %}
 

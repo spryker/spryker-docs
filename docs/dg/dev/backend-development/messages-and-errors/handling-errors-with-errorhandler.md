@@ -1,6 +1,6 @@
 ---
 title: Handling errors with ErrorHandler
-description: The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed error-Wrelated information. The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
+description: The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/error-handler
@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
 related:
   - title: Handling Internal Server messages
-    link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
+    link: docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html
   - title: Showing messages in Zed
     link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---
@@ -42,9 +42,9 @@ You can change the ErrorRenderer error output to suit the environment you work i
 
 Change the renderer in your configuration files as follows:
 
-* To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
-* To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
-* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
+- To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
+- To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
+- To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
 
 The following example shows how to change the error renderer for a development environment:
 

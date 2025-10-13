@@ -1,6 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a failed deployment
-description: Learn how to troubleshoot a failed deployment
+description: Troubleshoot failed deployments in Spryker by following detailed steps to identify issues in build, pre-deploy, and service deployment stages.
 template: troubleshooting-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -72,9 +72,11 @@ To locate the deploy file in which the script is located and check its commands,
 In this example, the value `vendor/bin/install -r EU/pre-deploy -vvv` means that the script of the build step is located in `config/install/EU/pre-deploy.yml`.
 
 If the variable isn't set, the default script is executed:
+
 ```bash
 vendor/bin/install -r pre-deploy -vvv
 ```
+
 This default scripts are located in `config/install/`. This particular one is located in `config/install/pre-deploy.yml`.
 
 {% info_block infoBox "Deploy file" %}
@@ -89,7 +91,7 @@ Alternatively, you can check the script of the step in the environment's deploy 
 
 ![pre-deploy-file]
 
-In this example, the `scheduler:suspendddddddddddd` is misspelled, and it is the root cause of the issue.
+In this example, the `scheduler:suspendddddddddddd` is misspelled, and it's the root cause of the issue.
 
 
 {% info_block infoBox "Debugging pre-deploy scripts" %}

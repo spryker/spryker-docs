@@ -1,15 +1,15 @@
 ---
 title: Modules configuration
-description: Modules configuration extension scenario
+description: Learn all about how manifests support changes in the configuration files of modules within your Spryker Project.
 last_updated: Mar 13, 2023
 template: concept-topic-template
 related:
   - title: Keeping a project upgradable
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
   - title: Plugins registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
   - title: Event subscribers registration
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+    link: docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
@@ -59,6 +59,7 @@ class CustomerConfig extends SprykerCustomerConfig
 ```
 
 The following is an example of how to have the method return a string:
+
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
@@ -104,7 +105,8 @@ class DevelopmentConfig extends SprykerDevelopmentConfig
     }
 }
 ```
-##  Array as a return
+
+## Array as a return
 
 There's a multitude of ways to view arrays as the return. Manifests support the following array types:
 
@@ -187,10 +189,10 @@ Manifests fully support merging the results of calling multiple methods.
 
 Inside of an array merge function call you can use the following:
 
-* wrap methods calls
-* parent method call
-* indexed arrays
-* associative arrays
+- wrap methods calls
+- parent method call
+- indexed arrays
+- associative arrays
 
 The following is an example of how to have the method return an associative array (with constants, parent method call and array merging):
 
@@ -210,6 +212,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
     }
 }
 ```
+
 multidimensional arrays of up to two levels are also supported, but to use them, you must use the wrapped function.
 
 The following is an example of how to have the method return a multidimensional array (with constants, wrap methods call and array merging):
@@ -244,7 +247,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
-* variables
+
+- variables
 
 ## Null as the return
 

@@ -1,6 +1,6 @@
 ---
 title: Configure services
-description: Learn how to configure services.
+description: Learn how to set up and configure services that come out of the box of your Spryker shop.
 last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
@@ -73,41 +73,42 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 
 When configuring a service, you need to define its version. The Docker SDK supports the following service versions:
 
-| SERVICE | ENGINE  | VERSIONS | ARM SUPPORT | NOTE |
-|----|----|----|----|---|
-| datab | postgres | 9.6*         | &check;     |    |
-|       |          | 10           | &check;     |    |
-|       |          | 11           | &check;     |    |
-|       |          | 12           | &check;     |    |
-|       | mysql    | 5.7          |             |    |
-|       |          | mariadb-10.2 | &check;     |    |
-|       |          | mariadb-10.3 | &check;     |    |
-|       |          | mariadb-10.4 | &check;     |    |
-|       |          | mariadb-10.5 | &check;     |    |
-|       |          | mariadb-10.6 | &check;     |    |
+| SERVICE | ENGINE  | VERSIONS      | ARM SUPPORT | NOTE |
+|----|----|---------------|----|---|
+| datab | postgres | 17            | &check;     |    |
+|       |          | 10            | &check;     |    |
+|       |          | 11            | &check;     |    |
+|       |          | 12            | &check;     |    |
+|       | mysql    | 5.7           |             |    |
+|       |          | mariadb-10.2  | &check;     |    |
+|       |          | mariadb-10.3  | &check;     |    |
+|       |          | mariadb-10.4  | &check;     |    |
+|       |          | mariadb-10.5  | &check;     |    |
+|       |          | mariadb-10.6  | &check;     |    |
 |       |          | mariadb-10.11 | &check;     |    |
-| broke | rabbitmq | 3.7          |             |    |
-|       |          | 3.8          | &check;     |    |
-|       |          | 3.9          | &check;     |    |
-| session         | redis    | 5.0          | &check;     |    |
-| key_value_store | redis    | 5.0          | &check;     |    |
-| search          | elastic  | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-|                 | opensearch | 1.3         | &check;     |    |
-| scheduler       | jenkins  | 2.176        |             |    |
-|                 |          | 2.305        | &check;     |    |
-|                 |          | 2.324        | &check;     |    |
-| webdriver       | phantomjs| latest*      |             |    |
-|                 | chromedriver | latest   | &check;      |    |
-| mail_catcher    | mailhog  | 1.0          | &check;     |    |
-| swagger         | swagger-ui   | v3.24    | &check;      |    |
-| kibana          | kibana   | 5.6*         | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
-|                 |          | 7.6          | &check;     |    |
-|                 |          | 7.10         | &check;     |    |
-| blackfire       | blackfire  | latest   | &check;      |      |
+| broke | rabbitmq | 3.7           |             |    |
+|       |          | 3.8           | &check;     |    |
+|       |          | 3.9           | &check;     |    |
+|       |          | 4.1           | &check;     |    |
+| session         | redis    | 5.0           | &check;     |    |
+| key_value_store | redis    | 5.0           | &check;     |    |
+| search          | elastic  | 5.6*          | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
+|                 |          | 6.8           | &check;     | [Policy and Product End of Life Dates](https://www.elastic.co/support/eol) |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+|                 | opensearch | 1.3           | &check;     |    |
+| scheduler       | jenkins  | 2.176         |             |    |
+|                 |          | 2.305         | &check;     |    |
+|                 |          | 2.324         | &check;     |    |
+| webdriver       | phantomjs| latest*       |             |    |
+|                 | chromedriver | latest        | &check;      |    |
+| mail_catcher    | mailhog  | 1.0           | &check;     |    |
+| swagger         | swagger-ui   | v3.24         | &check;      |    |
+| kibana          | kibana   | 5.6*          | &check;     |  |
+|                 |          | 6.8           | &check;     |  |
+|                 |          | 7.6           | &check;     |    |
+|                 |          | 7.10          | &check;     |    |
+| blackfire       | blackfire  | latest        | &check;      |      |
 
 
 ## Database services
@@ -118,7 +119,7 @@ You can switch to MySQL or PostgreSQL as described in the following sections.
 
 ### MariaDB
 
-[MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.
+[MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://dev.mysql.com/doc/) relational database management system.
 
 For more details, see [MariaDB knowledge base](https://mariadb.com/kb/en/).
 
@@ -156,7 +157,7 @@ docker/sdk up --build --data
 
 ### MySQL
 
-[MySQL](https://www.mysql.com) is an open-source relational database management system based on Structured Query Language (SQL). MySQL allows data to be stored and accessed across multiple storage engines, including InnoDB, CSV, and NDB. Also, MySQL can replicate data and partition tables for better performance and durability.
+[MySQL](https://dev.mysql.com/doc/) is an open-source relational database management system based on Structured Query Language (SQL). MySQL allows data to be stored and accessed across multiple storage engines, including InnoDB, CSV, and NDB. Also, MySQL can replicate data and partition tables for better performance and durability.
 
 For more details, see [MySQL documentation](https://dev.mysql.com/doc/).
 
@@ -203,6 +204,7 @@ To switch the database engine to PostgreSQL, follow these steps:
 services:
     database:
         engine: postgres
+        version: 17
         ...
         endpoints:
             localhost:5432:
@@ -217,18 +219,19 @@ docker/sdk clean-data
 docker/sdk up --build --data
 ```
 
-## ElasticSearch
+## Elasticsearch
 
 [Elasticsearch](https://www.elastic.co/elasticsearch/) is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
-* [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
+- [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+- [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about Elasticsearch.
 
-### Configure ElasticSearch
+### Configure Elasticsearch
 
-In `deploy.*.yml`, adjust the `services` section to open the port used for accessing ElasticSearch:
+In `deploy.*.yml`, adjust the `services` section to open the port used for accessing Elasticsearch:
+
 ```yaml
 services:
     search:
@@ -274,6 +277,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 ### Configure RabbitMQ
 
 In `deploy.*.yml`, adjust the `services` section to open the port used for accessing RabbitMQ:
+
 ```yaml
 services:
     broker:
@@ -287,7 +291,7 @@ services:
 
 ## Swagger UI
 
-[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
+[Swagger UI](https://swagger.io/tools/swagger-ui/) allows anyone—be it your development team or your end consumers—to visualize and interact with the API's resources without having any of the implementation logic in place. It's automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for backend implementation and client-side consumption.
 
 For more details, see [Swagger UI documentation](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/).
 
@@ -338,6 +342,7 @@ services:
 ```
 
 ## Redis GUI
+
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys, or import and export databases.
 
 ### Configure Redis GUI
@@ -366,15 +371,15 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 [MailHog](https://github.com/mailhog/MailHog) is a mail catcher service that is used with Spryker in Docker for Demo and Development environments. Developers use this email testing tool to catch and show emails locally without an SMTP (Simple Mail Transfer Protocol) server.
 
 With the MailHog service, developers can do the following:
-* Configure an application to use MailHog for SMTP delivery.
-* View messages in the web UI or retrieve them via JSON API.
+- Configure an application to use MailHog for SMTP delivery.
+- View messages in the web UI or retrieve them via JSON API.
 
 {% info_block infoBox %}
 
 By default, the following applies:
 
-* `http://mail.demo-spryker.com/` is used to see incoming emails.
-* Login is not required.
+- `http://mail.demo-spryker.com/` is used to see incoming emails.
+- Login is not required.
 
 {% endinfo_block %}
 
@@ -394,6 +399,16 @@ services:
 ## Blackfire
 
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize the performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked through the Blackfire web interface.
+
+{% info_block warningBox %}
+
+While we recommend Blackfire for PHP code profiling, *Blackfire is not compatible with OpenTelemetry (OTel)*. If OTel resolves this compatibility in future, we will inform you. Meantime, for profiling needs compatible with OTel, we suggest using tools like [Tideways](/docs/dg/dev/integrate-and-configure/configure-services.html#tideways), which can integrate seamlessly with your OTel-based monitoring stack.
+
+
+{% endinfo_block %}
+
+
+
 
 ### Configure Blackfire
 
@@ -425,7 +440,7 @@ services:
 
 #### Alternative configuration
 
-Use the following configuration if you are going to change server or client details often or if you don’t want to define them in your deploy file.
+Use the following configuration if you are going to change server or client details often or if you don't want to define them in your deploy file.
 
 To enable Blackfire, follow these steps:
 
@@ -477,10 +492,10 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
-* NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
-* NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
-* The New Relic module.
+- [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
+- NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
+- NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
+- The New Relic module.
 
 ### Install the New Relic module
 
@@ -509,15 +524,15 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 
 3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
-  * NEWRELIC_LICENSE
-  * NEWRELIC_ACCOUNT_ID
-  * NEWRELIC_INSIGHTS_KEY
+- NEWRELIC_LICENSE
+- NEWRELIC_ACCOUNT_ID
+- NEWRELIC_INSIGHTS_KEY
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 
@@ -567,7 +582,7 @@ To do it, add the `NewRelicMonitoringExtensionPlugin` by creating the class `src
 ​
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\Monitoring;
@@ -596,7 +611,7 @@ Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtens
 ​
 /**
  * MIT License
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 ​
 namespace Pyz\Service\NewRelic\Plugin;
@@ -630,9 +645,9 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
 
 {% info_block infoBox %}
 
-* Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
+- Some builds have the Monitoring service built into the Yves application. If `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php` does not exist, you may want to check `src/Pyz/Yves/Monitoring/`.
 
-* If the class is missing from the Monitoring service, create it.
+- If the class is missing from the Monitoring service, create it.
 
 
 {% endinfo_block %}
@@ -646,6 +661,7 @@ With `new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(
 ### Track deployments
 
 To notify New Relic about new deployments, include the console command `\SprykerEco\Zed\NewRelic\Communication\Console\RecordDeploymentConsole` in `\Pyz\Zed\Console\ConsoleDependencyProvider` as follows:
+
 ```php
 namespace Pyz\Zed\Console;
 
@@ -675,6 +691,7 @@ From now on you can use the record deployment functionality built-in in the cons
 ```bash
 vendor/bin/console newrelic:record-deployment <AppName>
 ```
+
 where `AppName` corresponds to the preconfigured in NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY.
 For more details, see [Upgrade the Monitoring module](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 

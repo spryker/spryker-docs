@@ -1,6 +1,6 @@
 ---
 title: Supported browsers
-description: This document lists browsers supported by Spryker Commerce OS.
+description: A list of browsers that the Spryker Cloud Commerce OS and Spryker Marketplace support for desktop, tablet and mobile.
 last_updated: Jun 8, 2022
 template: howto-guide-template
 redirect_from:

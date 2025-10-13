@@ -36,7 +36,7 @@ When you [install Spryker with Vagrant](/docs/dg/dev/set-up-spryker-locally/inst
 MacOS issues:
 
   * [Mac OSX: iterm2 (locale error)](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html)
-  * [Mac OSX: Installation fails or project folder can not be mounted due to SIP](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html)
+  * [Mac OSX: Installation fails or project folder can not be mounted because of SIP](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html)
   * [Mac OSX: Wrong curl version error](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html)
 
 Windows issues:
@@ -64,12 +64,12 @@ Other Spryker in Vagrant issues:
   * [Failed to decode response: zlib_decode(): data error](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/failed-to-decode-response-zlib-decode-data-error.html)
   * [Dev VM takes a lot of disk space (40+ GB)](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/dev-vm-takes-a-lot-of-disk-space-40-gb.html)
 
-If you found a solution to a repetitive issue, please suggest a change to this page using "Edit and Report" button.
+If you found a solution to a repetitive issue,  suggest a change to this page using "Edit and Report" button.
 
 {% info_block infoBox %}
 
-If you encounter a Spryker in Vagrant issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://spryker.force.com/support/s/) for technical support.
+If you encounter a Spryker in Vagrant issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://support.spryker.com) for technical support.
 
-If you found a solution to a repetitive issue, please suggest a change to this page by clicking the **Edit or Report** button.
+If you found a solution to a repetitive issue,  suggest a change to this page by clicking the **Edit or Report** button.
 
 {% endinfo_block %}

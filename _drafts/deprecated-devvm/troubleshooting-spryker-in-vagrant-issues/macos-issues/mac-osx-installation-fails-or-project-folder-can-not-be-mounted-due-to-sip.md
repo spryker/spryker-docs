@@ -1,6 +1,6 @@
 ---
-title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
-description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted due to SIP
+title: Mac OSX - Installation fails or project folder can not be mounted because of SIP
+description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted because of SIP
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
@@ -21,7 +21,7 @@ related:
 
 ## Description
 
-Sometimes, installation fails or project folder can not be mounted due to SIP on MacOS.
+Sometimes, installation fails or project folder can not be mounted because of SIP on MacOS.
 
 ## Cause
 
@@ -39,7 +39,7 @@ To solve this problem, disable SIP during the installation:
 
 1. Reboot your Mac and hold down the Command+R as it boots.
 2. Wait for entering the recovery environment.
-3. Click on the “Utilities” menu and select “Terminal”.
+3. Click on the **Utilities** menu and select **Terminal**.
 4. Type `csrutil disable` in the terminal and press Enter.
 5. Type `reboot`.
 

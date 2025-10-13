@@ -9,22 +9,22 @@ redirect_from:
   - /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 related:
   - title: Yves overview
-    link: docs/scos/dev/back-end-development/yves/yves.html
+    link: docs/dg/dev/backend-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+    link: docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
-    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+    link: docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
   - title: Implement URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+    link: docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
-    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+    link: docs/dg/dev/backend-development/yves/modular-frontend.html
   - title: Yves bootstrapping
-    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+    link: docs/dg/dev/backend-development/yves/yves-bootstrapping.html
   - title: Yves routes
-    link: docs/scos/dev/back-end-development/yves/yves-routes.html
+    link: docs/dg/dev/backend-development/yves/yves-routes.html
 ---
 
-_Controllers_ are placed inside the `Controllers` folder in Yves; they provide an entry point to the system for requests submitted by the D users.
+*Controllers* are placed inside the `Controllers` folder in Yves; they provide an entry point to the system for requests submitted by the D users.
 
 Methods inside a controller are called *actions*. Usually, an action reads the incoming request data, maybe validates it with a form, delegates it to a client, and writes the response.
 
@@ -87,7 +87,7 @@ public function testAction(Request $request)
 }
 ```
 
-Now the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %} `.
+Now the data can be accessed in the twig template like this: `{% raw %}{{{% endraw %}customer.name{% raw %}}}{% endraw %}`.
 
 ## Controllers and paths in Yves
 
@@ -99,13 +99,13 @@ To learn more about URL routing in Yves, see [Implement URL routing in Yves](/do
 
 Each action which returns `$this->viewResponse()` must have a dedicated Twig template:
 
-* Controller and action:
+- Controller and action:
 
 ```twig
 MyNamespace/Yves/MyBundle/Controller/TestController::doSomethingAction()
 ```
 
-* The expected path of a template:
+- The expected path of a template:
 
 ```twig
 MyNamespace/Yves/MyBundle/Theme/{ThemeName}/Test/do-something.twig

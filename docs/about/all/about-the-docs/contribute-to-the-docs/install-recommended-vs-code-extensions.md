@@ -20,9 +20,9 @@ related:
 ---
 
 We recommend the following VS Code extensions for writing and reviewing documents:
-* *Grammarly*: Checks grammar, spelling, and punctuation in real-time as you write.
-* *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
-* *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
+- *Grammarly*: Checks grammar, spelling, and punctuation in real-time as you write.
+- *Vale*: Customizable linter that checks for style and grammar issues in Markdown and other supported files.
+- *Markdown Shortcuts*: Provides shortcuts for formatting Markdown text.
 
 ## Install extensions
 
@@ -44,7 +44,7 @@ When Vale identifies an issue, it highlights the relevant text and displays an i
 Additionally, Vale displays feedback in the VS Code **PROBLEMS** pane, which provides a list of all the issues found in the file.
 To navigate directly to the relevant line of code in the file and make corrections, you need to click an issue in the **PROBLEMS** pane.
 
-For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/vale-cli/overview/).
+For more information about Vale, see [Vale's official documentation](https://vale.sh/docs/cli).
 
 ## Install Vale
 

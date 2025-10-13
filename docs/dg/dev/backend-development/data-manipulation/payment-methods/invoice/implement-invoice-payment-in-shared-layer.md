@@ -1,6 +1,6 @@
 ---
 title: Implement invoice payment in shared layer
-description: This procedure will help us to identify the new payment type through some unique constants.
+description: Integrate invoice payment into Spryker's shared layer with detailed steps. Enhance backend capabilities for seamless ecommerce payment integration.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe-be-shared
@@ -10,15 +10,15 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
 related:
   - title: Implement invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
   - title: Implement invoice payment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
   - title: Implement invoice payment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
   - title: Integrate invoice payment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
   - title: Test the invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
 This tutorial helps you identify the new payment type through some unique constants. Those constants are going to be defined in the `Shared` namespace, since they're needed both by Yves and Zed.
@@ -53,6 +53,7 @@ interface PaymentMethodsConstants
 
 }
 ```
+
 </details>
 
 2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method. Add `Shared/PaymentMethods/Transfer/invoicepayment.transfer.xml` file with the following content:
@@ -73,9 +74,11 @@ interface PaymentMethodsConstants
     </transfer>
     </transfers>
 ```
+
 </details>
 
 3. Update the `PaymentTransfer` class:
-```
+
+```bash
 vendor/bin/console transfer:generate
 ``

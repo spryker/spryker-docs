@@ -1,6 +1,6 @@
 ---
 title: Customize deployment pipelines
-description: Learn how to customize deployment pipelines.
+description: Customize deployment pipelines in Spryker Cloud Commerce OS by adding different commands using YAML files and shell scripts.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines
@@ -16,23 +16,23 @@ This document describes how to customize deployment pipelines.
 
 {% info_block warningBox %}
 
-* To prevent timeouts and issues, avoid adding long operations like data import to deployment pipelines. Export long operations to Jenkins jobs that run separately from deployment. To learn how long operations affect pipelines, see [Deploymment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
+- To prevent timeouts and issues, avoid adding long operations like data import to deployment pipelines. Export long operations to Jenkins jobs that run separately from deployment. To learn how long operations affect pipelines, see [Deploymment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 
-* In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#deployment-stages).
+- In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#deployment-stages).
 
-* Also, we use the default location of deployment scripts: `/config/install/`. Before you edit or add new scripts, make sure to check where they are stored in your project.
+- Also, we use the default location of deployment scripts: `/config/install/`. Before you edit or add new scripts, make sure to check where they are stored in your project.
 
 {% endinfo_block %}
 
 
-### Adding a single command to a deployment pipeline
+## Adding a single command to a deployment pipeline
 
 To customize the `pre-deploy` stage of a pipeline:
 
-1.  In a deploy file of the desired environment, set the shell command as a value of the `SPRYKER_HOOK_BEFORE_DEPLOY:` variable:
+1. In a deploy file of the desired environment, set the shell command as a value of the `SPRYKER_HOOK_BEFORE_DEPLOY:` variable:
 
-```yaml    
+```yaml
 environment: ...
 image:
   tag: ...
@@ -46,15 +46,15 @@ image:
 
 During the next deployment, the command will be executed in the `pre-deploy` stage.
 
-### Adding multiple commands to a deployment pipeline via a shell script
+## Adding multiple commands to a deployment pipeline via a shell script
 
 To add multiple commands to the `pre-deploy` stage:
 
-1.  Create a shell script with the desired commands.
+1. Create a shell script with the desired commands.
 
 The file should have a `.yml` extension. For example, `pre-deploy.yml`.
 
-2. In `deploy.yml`, define `SPRYKER_HOOK_BEFORE_DEPLOY` with the command that executes the script you’ve created:
+2. In `deploy.yml`, define `SPRYKER_HOOK_BEFORE_DEPLOY` with the command that executes the script you've created:
 
 ```yaml
 environment: ...
@@ -70,9 +70,9 @@ Do not include the `.yml` extension of the file name in `{path_to_script}`. For 
 
 During the next deployment, the commands in the script will be executed in the `pre-deploy` stage.
 
-### Adding different commands for different environments and pipeline types
+## Adding different commands for different environments and pipeline types
 
-By default, in `pre-deploy` and `post-deploy` stages, there is no possibility to run different commands for combinations of different environments and pipeline types. To do that, you can set up a custom shell script with _if statements_.
+By default, in `pre-deploy` and `post-deploy` stages, there is no possibility to run different commands for combinations of different environments and pipeline types. To do that, you can set up a custom shell script with *if statements*.
 
 Using the following script example, create your own script and add it to the desired pipeline by following [Adding multiple commands to a deployment pipeline via a shell script](#adding-multiple-commands-to-a-deployment-pipeline-via-a-shell-script).
 
@@ -94,17 +94,17 @@ if [ "${SPRYKER_PIPELINE_TYPE}" == "destructive" ]; then
 fi
 ```
 
-### Adding commands to the install stage of deployment pipelines
+## Adding commands to the install stage of deployment pipelines
 
 To add one or more commands to the `install` stage of a deployment pipeline:
 
-1.  Depending on the desired environment, add the desired commands to one of the following files:
+1. Depending on the desired environment, add the desired commands to one of the following files:
 
-* Normal: `config/install/production`
+- Normal: `config/install/production`
 
-* Destructive: `config/install/destructive`
+- Destructive: `config/install/destructive`
 
-2.  Push the changes to the repository.
+2. Push the changes to the repository.
 
 
 During the next deployment, the commands in the script will be executed in the `install` stage.

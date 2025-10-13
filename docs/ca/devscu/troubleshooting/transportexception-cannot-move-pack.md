@@ -1,6 +1,6 @@
 ---
 title: "TransportException: Cannot move pack"
-description: How to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
+description: Learn how to solve the problem of cannot move pack while trying to connect the repository to the Spryker Code Upgrader project
 template: concept-topic-template
 last_updated: May 8, 2023
 redirect_from:
@@ -21,14 +21,14 @@ TransportException: Cannot move pack to ...
 
 1. Double-check the permissions of the access token based on the requirements:
 
-* [GitHub access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
-* [GitLab access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
-* [GitLab access token requirements for self-hosted projects](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html#prerequisites)
-* [Azure access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html#prerequisites)
+- [GitHub access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+- [GitLab access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html#prerequisites)
+- [GitLab access token requirements for self-hosted projects](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html#prerequisites)
+- [Azure access token requirements](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html#prerequisites)
 
 2. If the permissions are correct, reconnect the repository.
 
 ## Support for Spryker CI
 
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
+- For help with Spryker CI, [contact support](https://support.spryker.com).
+- To learn more about Buddy, see their [docs](https://buddy.works/docs).

@@ -12,17 +12,17 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay-callbacks.html
 related:
   - title: Integrating CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/integrate-crefopay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/integrate-crefopay.html
   - title: Installing and configuring CrefoPay
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html
   - title: CrefoPay—Enabling B2B payments
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
   - title: CrefoPay payment methods
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
   - title: CrefoPay notifications
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
 ---
 
 Callbacks are redirects performed by the CrefoPay system. The CrefoPay system redirects customers back to the URLs configured for the merchants shop. For each shop, you can define a single URL of each of the following types: confirmation, success and error.

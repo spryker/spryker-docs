@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html
 related:
   - title: Product Rating and Reviews feature overview
-    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
+    link: docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html
 ---
 
 [Ratings and reviews](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
@@ -177,4 +177,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

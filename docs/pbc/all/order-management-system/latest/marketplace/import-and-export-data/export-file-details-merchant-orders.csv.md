@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/marketplace/import-and-export-data/data-export-merchant-orders-csv-files-format.html
 related:
   - title: Merchant order overview
-    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/pbc/all/order-management-system/latest/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 These are the parameters included in the `merchant_orders.csv` file:

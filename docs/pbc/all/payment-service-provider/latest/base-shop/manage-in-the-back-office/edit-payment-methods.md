@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/edit-payment-methods.html
 related:
   - title: Payments feature overview
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/payments-feature-overview.html
 ---
 
 To edit a payment method in the Back Office, follow the steps:

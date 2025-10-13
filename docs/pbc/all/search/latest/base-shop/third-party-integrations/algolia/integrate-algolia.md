@@ -16,7 +16,7 @@ This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/ba
 
 - [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)
 
-- In the Back Office, go to **Apps** > **Algolia**. Install or update the required packages for Algolia. For example:
+- In the Back Office, go to **Apps** > **Algolia**. Install or update the required packages for Algolia. Example:
 
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
@@ -26,7 +26,9 @@ To integrate Algolia, follow these steps:
 
 ### 1. Update project config files
 
-Add the following configuration to `config/Shared/config_default.php`:
+
+<details>
+  <summary>config/Shared/config_default.php</summary>
 
 ```php
 use Generated\Shared\Transfer\CmsPagePublishedTransfer;
@@ -82,13 +84,16 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
+</details>
+
 ### 2. Configure modules and their behavior
 
-Configure the modules and add the necessary dependencies as described below.
+Configure modules and add dependencies as described in the following sections.
 
 #### Configure the Catalog module
 
-Add the following code to `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`:
+<details>
+  <summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php5</summary>
 
 ```php
 use Generated\Shared\Transfer\SearchContextTransfer;
@@ -258,6 +263,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 }
 ```
 
+</details>
+
 #### Configure the Search module
 
 Add the following code to `src/Pyz/Client/Search/SearchDependencyProvider.php`:
@@ -293,7 +300,10 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 
 #### Configure the SearchHttp module
 
-Add the following code to `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php`:
+
+<details>
+  <summary>src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -346,7 +356,12 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
 }
 ```
 
-Add the following code to `src/Pyz/Zed/SearchHttp/SearchHttpConfig.php`:
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/SearchHttp/SearchHttpConfig.php</summary>
+
 
 ```php
 <?php
@@ -367,6 +382,10 @@ class SearchHttpConfig extends SprykerSearchHttpConfig
     }
 }
 ```
+
+
+</details>
+
 
 #### Configure the Synchronization module
 
@@ -440,7 +459,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 #### Configure the MessageBroker module
 
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+1. Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
 ```php
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
@@ -465,7 +484,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+2. Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
 class MessageBrokerConfig extends SprykerMessageBrokerConfig
@@ -486,9 +505,17 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Configure the Product module
 
-Algolia product search index synchronization is triggered by internal Spryker events. You must provide a list of events to enable product data synchronization.
-You can add or remove events depending on when you want products to be updated in Algolia.
-Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
+Algolia product search index synchronization is triggered by internal Spryker events. To enable product data synchronization, you need to provide a list of events that trigger sync. You can add or remove events depending on when you want products to be updated in Algolia.
+
+If your project has custom functionality where abstract or concrete products are created, updated, or deleted, add respective events to the methods to ensure updated data is sent to Algolia.
+
+Examples of such functionality:
+- Custom features in the Back Office
+- Custom data imports
+- Integration with middleware that updates product or product-related data in Spryker
+
+<details>
+  <summary>src/Pyz/Zed/Product/ProductConfig.php</summary>
 
 ```php
 use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
@@ -555,21 +582,13 @@ class ProductConfig extends SprykerProductConfig
 }
 ```
 
-{% info_block warningBox "Warning" %}
-
-If your project has custom functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists in the methods above to ensure updated data is sent to Algolia.
-
-Examples of such functionality include:
-- Custom features in the Back Office
-- Custom data imports
-- Integration with middleware that updates product or product-related data in Spryker
+</details>
 
 To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods. You can also use existing events:
 
 - For a single product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
 - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
-{% endinfo_block %}
 
 Add the following code to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
 
@@ -615,7 +634,10 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 #### Configure the CmsPageSearch module
 
-To enable another search provider for CMS page search, add the following code to `src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php`:
+Enable another search provider for CMS page search:
+
+<details>
+  <summary>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Client\CmsPageSearch;
@@ -687,10 +709,13 @@ class CmsPageSearchDependencyProvider extends \Spryker\Client\CmsPageSearch\CmsP
 }
 ```
 
+</details>
+
 
 #### Configure the Publisher module
 
-Add the following code to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
+<details>
+  <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 use Spryker\Zed\Cms\Communication\Plugin\Publisher\CmsPageUpdateMessageBrokerPublisherPlugin;
@@ -746,27 +771,29 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-### 3. Integrate Front-End
+</details>
 
-Make sure you have `spryker-shop/cms-search-page` version 1.5 or higher installed in your project to enable CMS page search on the frontend.
+### 3. Integrate frontend
 
-Adjust your Search CMS page templates to the latest changes from Spryker's demo shops if your project is based on an older version than `202507.0-p2`:
+To enable CMS page search on the frontend, install `spryker-shop/cms-search-page` of version 1.5 or higher.
 
-- B2C [changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
-- B2C Marketplace [changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
-- B2B [changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
-- B2B Marketplace [changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
+If your project is based on an older version than `202507.0-p2`, adjust your Search CMS page templates to the latest changes from Spryker's demo shops:
+
+- [B2C changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
+- [B2C Marketplace changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
+- [B2B changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
+- [B2B Marketplace changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
 
 {% info_block warningBox "Verification" %}
 
-After completing the integration, verify the following:
-- In the Back Office at `/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, you can see the Spryker ACP URLs and API keys you provided in the Algolia App settings.
+Verify the following:
+- At `https://backoffice.mysprykershop.com/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, the Spryker ACP URLs and API keys you've provided in the Algolia App settings are displayed.
 - Product and CMS page data is synchronized from your Spryker instance to Algolia.
 - When you select products or CMS pages for searching in the Algolia App Settings, the frontend displays results from Algolia:
   - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list)
   - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
-- Confirm that Algolia is used for search by checking the Algolia Dashboard. Select the index for product or CMS page for the relevant store and locale, and check the number and order of records for the same search term.
-- You can also check Algolia API logs for the selected index. You should see the request User-Agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.
+- Algolia is used for search. In Algolia Dashboard, select the index for product or CMS page for the relevant store and locale. Check the number and order of records for the same search term.
+- In Algolia API logs for the selected index, make sure there's a user-agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.
 
 {% endinfo_block %}
 
@@ -782,3 +809,49 @@ You can customize the order of these plugins at the project level. By default, a
 ## Next steps
 
 [Configure the Algolia app](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

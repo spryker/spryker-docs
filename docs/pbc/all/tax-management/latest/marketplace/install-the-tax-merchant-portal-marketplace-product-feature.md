@@ -5,7 +5,7 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
 ---
 

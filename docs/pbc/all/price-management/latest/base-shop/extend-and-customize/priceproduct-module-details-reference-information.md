@@ -72,7 +72,7 @@ class PriceProductConfig extends SprykerPriceProductConfig
 
 Alternatively, automatic removal of "orphaned records" can be controlled by `OrphanPriceProductStoreRemovalVoterPluginInterface` plugins.
 
-Such plugins can vote _for_ or _against_ automatic removal of "orphaned records". The first plugin in the stack, that votes against the removal, disables it. If a plugin votes for removal, all other plugins in the stack are still checked and may vote against.
+Such plugins can vote *for* or *against* automatic removal of "orphaned records". The first plugin in the stack, that votes against the removal, disables it. If a plugin votes for removal, all other plugins in the stack are still checked and may vote against.
 
 Removal voter plugins are registered in `src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php`:
 

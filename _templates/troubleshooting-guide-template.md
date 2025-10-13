@@ -14,11 +14,11 @@ Every troubleshooting article should have its own page in the respective section
 
 ## Title
 
-<!-- Summary of the issue, e.g. Unable to resolve hosts for RabbitMq -->
+<!-- Summary of the issue, e.g., Unable to resolve hosts for RabbitMq -->
 
 ## {Description}
 
-<!-- Describe when the issue occurs, specify the environment and all the details that matter for the issue. Do not use probability conditions like “you might get the following issue”. -->
+<!-- Describe when the issue occurs, specify the environment and all the details that matter for the issue. Do not use probability conditions like "you might get the following issue". -->
 
 ## Cause
 

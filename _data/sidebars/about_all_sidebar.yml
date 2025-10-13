@@ -1,0 +1,160 @@
+title: About Spryker
+entries:
+  - product: About Spryker
+    nested:
+    - title: About Spryker
+      url: /docs/about/all/about-spryker.html
+    - title: Releases
+      url: /docs/about/all/releases/product-and-code-releases.html
+      nested:
+      - title: Release notes 202507.0
+        url: /docs/about/all/releases/release-notes-202507.0.html  
+      - title: Release notes 202410.0
+        url: /docs/about/all/releases/release-notes-202410.0.html
+      - title: Release notes 202404.0
+        url: /docs/about/all/releases/release-notes-202404.0.html
+      - title: Release notes 202311.0
+        url: /docs/about/all/releases/release-notes-202311.0.html  
+      - title: Upcoming major module releases
+        url: /docs/about/all/releases/upcoming-major-module-releases.html
+      - title: Security releases
+        nested:
+        - title: Security release notes 202509.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
+        - title: Security release notes 202506.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202506.0.html   
+        - title: Security release notes 202503.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202503.0.html                
+        - title: Security release notes 202412.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202412.0.html      
+        - title: Security release notes 202409.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202409.0.html        
+        - title: Security release notes 202403.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202403.0.html
+        - title: Security release notes 202312.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202312.0.html        
+        - title: Security release notes 202309.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202309.0.html
+        - title: Security release notes 202306.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202306.0.html
+        - title: Security release notes 202304.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202304.0.html
+        - title: Security release notes 202302.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html        
+
+    - title: Security audit reports
+      nested:
+      - title: 2019.11 - Security audit by SektionEins
+        url: /docs/about/all/security-audit-reports/2019.11-security-audit-by-sektioneins.html
+      - title: 2020.11 - Penetration test by Port Zero (executive summary)
+        url: /docs/about/all/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
+
+    - title: Certificates & Compliance
+      url: /docs/about/all/certificates-and-compliance/certificates-and-compliance.html
+      nested:
+        - title: Tisax Certification
+          url: /docs/about/all/certificates-and-compliance/tisax-certification.html
+
+    - title: Support
+      url: /docs/about/all/support/getting-support.html
+      nested:
+      - title: How Spryker Support works
+        url: /docs/about/all/support/how-spryker-support-works.html
+      - title: Support case escalations
+        url: /docs/about/all/support/support-case-escalations.html
+      - title: Preparing for heavy loads and traffic
+        url: /docs/about/all/support/preparing-for-heavy-loads-and-traffic.html
+      - title: How to use the Support Portal
+        url: /docs/about/all/support/using-the-support-portal.html
+      - title: Share secrets with the Spryker Support Team
+        url: /docs/about/all/support/share-secrets-with-the-spryker-support-team.html
+      - title: Understanding ticket status
+        url: /docs/about/all/support/support-ticket-statuses.html
+      - title: Handling security issues
+        url: /docs/about/all/support/reporting-and-handling-security-issues.html
+      - title: GDPR compliance guidelines
+        url: /docs/about/all/support/gdpr-compliance-guidelines.html
+      - title: General Product Safety Regulations
+        url: /docs/about/all/support/general-product-safety-regulation.html
+      - title: Getting the most out of Spryker Support
+        url: /docs/about/all/support/getting-the-most-out-of-spryker-support.html
+      - title: Understand SLAs
+        url: /docs/about/all/support/understanding-slas.html
+      - title: Escalations
+        url: /docs/about/all/support/support-case-escalations.html
+      - title: Prioritizing support cases
+        url: /docs/about/all/support/prioritzing-support-cases.html
+      - title: Understanding project and core level fixes
+        url: /docs/about/all/support/project-level-and-core-level-fixes.html
+
+    - title: Supported browsers
+      url: /docs/about/all/supported-browsers.html
+    - title: Master Suite
+      url: /docs/about/all/master-suite.html
+    - title: B2C Suite
+      url: /docs/about/all/b2c-suite.html
+    - title: B2B Suite
+      url: /docs/about/all/b2b-suite.html
+    - title: Self-Service Portal
+      url: /docs/about/all/self-service-portal.html
+    - title: Spryker Marketplace
+      url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
+      nested:
+      - title: Marketplace concept
+        url: /docs/about/all/spryker-marketplace/marketplace-concept.html
+      - title: Marketplace personas
+        url: /docs/about/all/spryker-marketplace/marketplace-personas.html
+      - title: Back Office for Marketplace Operator
+        url: /docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html
+      - title: Merchant onboarding
+        url: /docs/about/all/spryker-marketplace/merchant-onboarding.html
+      - title: Marketplace Storefront
+        url: /docs/about/all/spryker-marketplace/marketplace-storefront.html
+      - title: Merchant Portal
+        url: /docs/about/all/spryker-marketplace/merchant-portal.html
+      - title: Marketplace B2C Suite
+        url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
+      - title: Marketplace B2B Suite
+        url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
+
+    - title: About the docs
+      url: /docs/about/all/about-the-docs/about-spryker-docs.html
+      nested:
+      - title: Contribute
+        url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
+        nested:
+          - title: Edit using a web browser
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
+          - title: Edit locally
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
+          - title: Add and edit diagrams
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+          - title: Add images and other media
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html
+          - title: Report issues
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
+          - title: Review pull requests
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
+          - title: Add global sections
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
+          - title: Install recommended VS Code extensions
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
+
+      - title: Style guide
+        url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html
+        nested:
+          - title: Examples
+            url: /docs/about/all/about-the-docs/style-guide/style-guide-examples.html
+          - title: Spelling
+            url: /docs/about/all/about-the-docs/style-guide/style-guide-spelling.html
+          - title: Word list
+            url: /docs/about/all/about-the-docs/style-guide/word-list.html
+          - title: General rules and guidance for adding docs
+            url: /docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html
+          - title: Markdown syntax
+            url: /docs/about/all/about-the-docs/style-guide/markdown-syntax.html
+
+      - title: Run the docs locally
+        url: /docs/about/all/about-the-docs/run-the-docs-locally.html
+
+...

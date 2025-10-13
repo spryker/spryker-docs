@@ -16,7 +16,7 @@ To a code snippet with up to 35 lines, apply the following formatting:
 To a code snippet with more than 35 lines, apply the following formatting:
 
 <details>
-  <summary markdown='span'>{path/to/the/file}</summary>
+  <summary>{path/to/the/file}</summary>
 
 ```{language}
 

@@ -1,0 +1,18 @@
+---
+title: Changing a source branch fails
+description: Resolve issues when changing a source branch in Spryker by adjusting pipeline settings with our troubleshooting guide to prevent branch update errors
+template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/changing-a-source-branch-fails.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/changing-a-source-branch-fails.html
+---
+
+
+After saving pipeline settings with a new source branch, the branch is not added.
+
+## Solution
+
+Add the branch once again. When updating the pipeline settings, make sure to select **No resource updates needed for this source action change**.
+
+![troubleshooting-branch-source-change](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Troubleshooting/troubleshooting-branch-source-change.png)

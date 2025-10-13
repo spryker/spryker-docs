@@ -1,0 +1,11 @@
+extends: existence
+message: "Avoid using exclamation points per the Google Style Guide."
+level: warning
+scope: sentence
+nonword: true
+tokens:
+  - '!'
+ignorecase: false
+exceptions:
+  - '<!--.*?-->'  # Ignore exclamation marks inside comments
+  - '!\\[*\\]'        # Ignore exclamation marks before square brackets (Markdown images/links)

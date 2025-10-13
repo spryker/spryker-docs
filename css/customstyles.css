@@ -364,20 +364,6 @@ span.soft {
     padding:10px;
 }
 
-/* this part adds an icon after external links, using FontAwesome*/
-a[href^="http://"]:after, a[href^="https://"]:after {
-    content: "\f08e";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-    display: inline-block;
-    vertical-align: baseline;
-    text-decoration: none;
-    padding-left: 3px;
-    min-height: 1em;
-}
-
 /* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after,
 a.no_icon:after
@@ -486,4 +472,8 @@ div.box.box1 {
 h4.panel-title {
     padding-top: 0px;
     margin-top: 0px;
+}
+
+code {
+    line-height: 1.4;
 }

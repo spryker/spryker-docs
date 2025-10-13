@@ -1,2 +1,11 @@
+---
+layout: null
+---
+{% if site.noindex %}
+User-agent: *
+Disallow: /
+{% else %}
 User-agent: *
 Allow: /
+Sitemap: https://docs.spryker.com/sitemap.xml
+{% endif %}

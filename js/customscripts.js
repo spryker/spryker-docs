@@ -361,7 +361,7 @@ function initHomeSearchPosition() {
 
     function handleScroll() {
         pageOffsetTop = page.scrollTop();
-        searchOffsetTop = searchContainer.offset().top;
+        searchOffsetTop = searchContainer.offset()?.top ?? 0;
 
         if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');
@@ -382,7 +382,8 @@ function initSearchPopup() {
         opener = $('.js-search-popup-opener'),
         close = $('.js-search-popup-close'),
         body = $('body'),
-        input = $('.search-input.aa-input');
+        input = $('.search-input.aa-input'),
+        drop = $('.aa-dropdown-menu');
 
     // mobile-overflow
 
@@ -399,6 +400,10 @@ function initSearchPopup() {
         body.removeClass('tablet-overflow');
 
         popup.fadeOut(300);
+    });
+
+    input.on('blur', function(e){
+       drop.hide();
     });
 }
 

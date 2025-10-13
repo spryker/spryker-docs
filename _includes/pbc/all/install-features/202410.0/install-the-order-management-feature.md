@@ -1250,7 +1250,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 Follow the steps below to install the Order Matrix functionality.
 
-#### Set up Order Matrix behavior.
+#### Set up Order Matrix behavior
 
 
 | PLUGIN             | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                      |

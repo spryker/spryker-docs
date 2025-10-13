@@ -106,6 +106,7 @@ Make sure the following changes have been applied in transfer objects:
 | OrderMatrixConditions                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixConditionsTransfer          |
 | OrderMatrixCollection                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixCollectionTransfer          |
 
+
 {% endinfo_block %}
 
 ### 3) Set up configuration
@@ -1242,6 +1243,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
     ]
 }
 ```
+
 </details>
 
 {% endinfo_block %}

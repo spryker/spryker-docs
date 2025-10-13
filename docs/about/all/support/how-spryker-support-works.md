@@ -1,5 +1,6 @@
 ---
 title: How Spryker Support works
+description: A quick guide to understand how Spryker support works, including support processes and what their status means.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support-works-1
@@ -45,11 +46,12 @@ By conducting an initial investigation on your end, you can help us speed up thi
 
 #### Security issues
 
-To say that we take security issues seriously would be an understatement. The topic is so important to us, that when you raise a case with us that has a suspected impact on the security of our software or our infrastructure, it is escalated to our senior management and most senior engineering personnel. We believe it is better to deal with quite some false positives than to underestimate only one report. While we cannot guarantee certain resolution times here, you can see from our response that we take your case very seriously. If we discover a genuine security threat, we work with you to resolve it with the highest priority.
+To say that we take security issues seriously would be an understatement. The topic is so important to us, that when you raise a case with us that has a suspected impact on the security of our software or our infrastructure, it's escalated to our senior management and most senior engineering personnel. We believe it's better to deal with quite some false positives than to underestimate only one report. While we cannot guarantee certain resolution times here, you can see from our response that we take your case very seriously. If we discover a genuine security threat, we work with you to resolve it with the highest priority.
 
 ### Customer Effort Score (CES) and Customer Satisfaction Score (CSS)
+
 Proven scores that we use to measure your experience with our support.
-When we close a case, we send out a case closure notification email. This email contains a link to our feedback portal. Whenever you can, please provide honest feedback. We evaluate every single feedback form that we receive from customers. Your feedback matters to us and has a real impact on our support operations.
+When we close a case, we send out a case closure notification email. This email contains a link to our feedback portal. Whenever you can,  provide honest feedback. We evaluate every single feedback form that we receive from customers. Your feedback matters to us and has a real impact on our support operations.
 Because your time is valuable, include only two questions. For these questions, we use the broadly accepted metrics CES and CSS. For CES, you can rate on a five-point scale, how easy it was to work with us. On the CSS, you can indicate how satisfied you were with your interaction, overall.
 If you rate us low, we would like to ask you in a comment, why. Depending on your comment, our team lead might contact you for a follow-up. The feedback we receive is discussed openly in our weekly team meetings.
 
@@ -67,6 +69,7 @@ From an organization's point of few, we are part of the Customer Success Team. T
 We are also wired up directly with Software Development and DevOps in Spryker. This direct link ensures that we can escalate things quickly to subject matter experts and react to emergencies without long and complex signal paths.
 
 ### Case status
+
 When you open a case with us, you receive notification emails that tell you what the status of your case is.
 This table lists these stages that Spryker Support Cases go through and gives an explanation of what happens with your case on each of them.
 
@@ -75,4 +78,4 @@ This table lists these stages that Spryker Support Cases go through and gives an
 | Received | Your case was successfully created in our case system. Spryker Support Personnel can now pick up your case. |
 | Diagnosis | Spryker Support Agent has taken over your case and is evaluating your input. It is common that Support Agents get in contact with you on this stage to clarify open questions. |
 | Solution Proposed | Good News! We think that we have a solution for your problem and have communicated that solution to you. We ask you to confirm whether the solution provided is acceptable |
-| Closed | You confirmed our solution, or closed the case because we could not get feedback from you.
+| Closed | You confirmed our solution, or closed the case because we could not get feedback from you. |

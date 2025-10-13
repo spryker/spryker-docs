@@ -1,5 +1,6 @@
 ---
 title: Event
+description: Learn how to implement event-driven architecture in Spryker's backend, enabling efficient data manipulation and event handling for your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event
@@ -18,5 +19,5 @@ related:
 The `Event` module implements an [observer pattern](https://en.wikipedia.org/wiki/Observer_pattern), where you can add hooks (events) to your code and allow other modules to listen and react to those events.
 
 There are two methods:
-1. _Traditional Synchronous_: Listeners are handled at the same time as they are dispatched.
-2. _Asynchronous (Queueable)_: Events are put into a queue and handled later by some queue service.
+1. *Traditional Synchronous*: Listeners are handled at the same time as they are dispatched.
+2. *Asynchronous (Queueable)*: Events are put into a queue and handled later by some queue service.

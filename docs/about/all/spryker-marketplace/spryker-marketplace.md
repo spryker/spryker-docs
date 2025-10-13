@@ -1,6 +1,6 @@
 ---
 title: Spryker Marketplace
-description: This document is an overview of Spryker Marketplace
+description: A short introduction guide on how to start developing for your Spryker Marketplace project.
 template: concept-topic-template
 last_updated: Sep 25, 2023
 redirect_from:
@@ -20,14 +20,14 @@ If you are new to Spryker, first see our [Intro to Spryker](/docs/about/all/abou
 
 To learn what Spryker Marketplace is, read the following documents:
 
-* [Marketplace concept](/docs/about/all/spryker-marketplace/marketplace-concept.html)
-* [Marketplace personas](/docs/about/all/spryker-marketplace/marketplace-personas.html)
-* [Back Office for Marketplace Operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html)
-* [Marketplace Storefront](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
-* [Merchant Portal](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
+- [Marketplace concept](/docs/about/all/spryker-marketplace/marketplace-concept.html)
+- [Marketplace personas](/docs/about/all/spryker-marketplace/marketplace-personas.html)
+- [Back Office for Marketplace Operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html)
+- [Marketplace Storefront](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
+- [Merchant Portal](/docs/about/all/spryker-marketplace/marketplace-storefront.html)
 
 
-## How do I start with Spryker Marketplace?
+## First steps with a Spryker Marketplace
 
 For new projects, we provide [B2C](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html) and [B2B Demo Marketplace](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html) templates, which are a great starting point.
 
@@ -35,9 +35,9 @@ Even if you don't need marketplace features at first, but you are going to use t
 
 To learn how to install B2C or B2B Demo Marketplace, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
-## Can I upgrade to marketplace from a regular B2B or B2C shop?
+## Upgrading from B2B and B2C shops to Marketplace
 
-To upgrade to marketplace from a regular Demo Shop, follow [How-To: Upgrade Spryker instance to the Marketplace](/docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html).
+To upgrade to marketplace from a regular Demo Shop, follow [How-To: Upgrade Spryker instance to the Marketplace](/docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html).
 
 ## Read next
 

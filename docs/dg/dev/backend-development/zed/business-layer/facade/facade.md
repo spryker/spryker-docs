@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
 related:
   - title: A facade implementation
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/a-facade-implementation.html
   - title: Facade use cases
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
   - title: Design by Contract (DBC) - Facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
+    link: docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
 A *facade* acts as an internal API. The main responsibility of the facade is to hide the internal implementation.

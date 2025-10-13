@@ -35,7 +35,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResul
 2. Enable the replacement plugins:
 
 <details>
-<summary markdown='span'>Pyz\Client\Catalog</summary>
+<summary>Pyz\Client\Catalog</summary>
 
 ```php
 <?php
@@ -164,11 +164,12 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
+
 </details>
 
 ## Upgrading from version 3.* to version 4.*
 
-Due to introducing the Suggestion Search feature, the Catalog bundle now requires Search >=5.2.
+Because of introducing the Suggestion Search feature, the Catalog bundle now requires Search >=5.2.
 To upgrade from 3.* to 4.\*:
 
 1. Before upgrading to the new version, make sure that you do not use any deprecated code from the version 3.\*. Check the description of the deprecated code to see what you will need to use instead.

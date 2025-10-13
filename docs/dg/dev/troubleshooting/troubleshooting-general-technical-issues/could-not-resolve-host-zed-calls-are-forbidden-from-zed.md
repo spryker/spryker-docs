@@ -1,6 +1,6 @@
 ---
 title: Could not resolve host zed.calls.are.forbidden.from.zed
-description: The solution for the zed.calls.are.forbidden.from.zed
+description: The solution to resolve the zed.calls.are.forbidden.from.zed issue within your Spryker based project.
 last_updated: Nov 24, 2023
 template: troubleshooting-guide-template
 related:
@@ -26,8 +26,8 @@ related:
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
   - title: RuntimeException - Failed to execute regex - PREG_JIT_STACKLIMIT_ERROR
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/runtimeexception-failed-to-execute-regex-preg-jit-stacklimit-error.html
-  - title: The spy_oms_transition_log table takes up too much space
-    link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
+  - title: The Database tables take up too much space or have ID overflow
+    link: docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/database-tables-take-up-too-much-space-or-have-id-overflow.html
   - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
 ---

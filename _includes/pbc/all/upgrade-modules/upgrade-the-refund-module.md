@@ -4,7 +4,7 @@
 
 Version 4 of the Refund module no longer uses `SalesAggregatorFacade` , it was replaced with `SalesFacade`.
 The `RefundCalculator` business class must now replace `RefundToSalesAggregatorInterface` with the `RefundToSalesInterface` bridge.
-To learn more see [Migration Guide - Calculation](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
+To learn more see [Upgrade the Calculation module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
 ## Upgrading from version 2.* to version 3.*
 
@@ -20,8 +20,8 @@ Check your code and where you make use of the `RefundFacade` change your impleme
 
 These methods are:
 
-* `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
-* `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`
+- `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
+- `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`
 
 **You need to:**
 

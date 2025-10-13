@@ -1,6 +1,6 @@
 ---
 title: Integrate multi-queue publish structure
-description: The single event queue is replaced by multiple publish queues.
+description: Learn how to integrate the Multi-queue publish structure to improve debugging and slow events in your Spryker based projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-publish-queue-structure
@@ -15,7 +15,7 @@ To improve debugging of failures and slow events in Spryker, we introduced a new
 | PROPERTY | SINGLE PUBLISH QUEUE STRUCTURE | MULTIPLE PUBLISH QUEUE STRUCTURE |
 | --- | --- | --- |
 | Event processing | Infrastructure and application events are processed in the same event queue. | Infrastructure events are spread across multiple publish events. Application events are processed in the event queue. |
-| Monitoring of event consumption speed | Due to mixed listeners, event consumption speed is unpredictable and not linear. | You can monitor the speed of event consumption in each queue separately. |
+| Monitoring of event consumption speed | Because of mixed listeners, event consumption speed is unpredictable and not linear. | You can monitor the speed of event consumption in each queue separately. |
 | Per event configuration of chunk size |  | &check; |
 | Per event separation of workers |  | &check; |
 
@@ -76,7 +76,7 @@ class PublisherConfig extends SprykerPublisherConfig
 
 2. Set `\Pyz\Client\RabbitMqRabbitMqConfig::getPublishQueueConfiguration()` to use the `publish` queue.
 
-<details><summary markdown='span'>Pyz\Client\RabbitMq</summary>
+<details><summary>Pyz\Client\RabbitMq</summary>
 
 ```php
 <?php
@@ -128,6 +128,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ...
 }
 ```
+
 </details>
 
 3. Set `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()` to use the `publish` queue.
@@ -172,7 +173,7 @@ We introduce the GlossaryStorage publish queue as an example. Adjust the publish
 
 To introduce the GlossaryStorage publish queue:
 
-1.  Update the `GlossaryStorage` module:
+1. Update the `GlossaryStorage` module:
 
 ```bash
 composer update spryker/glossary-storage:"1.8.0" --update-with-dependencies
@@ -238,7 +239,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` to use the `publish.translation` queue.
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details><summary>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php
@@ -280,6 +281,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     ...
 }
 ```
+
 </details>
 
 ### Publish events using the default publish queue
@@ -319,7 +321,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 You can set up an individual publish queue for a publisher plugin or a set of publisher plugins as follows:
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details><summary>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php
@@ -354,4 +356,5 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     ...
 }
 ```
+
 </details>

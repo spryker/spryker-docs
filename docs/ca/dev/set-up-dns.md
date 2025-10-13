@@ -1,6 +1,6 @@
 ---
 title: Set up DNS
-description: Learn how to set up DNS for your SCCOS project
+description: Set up DNS for your Spryker Cloud Commerce OS application by adding CNAME or A records, ensuring proper domain routing and TLS certificate configuration.
 template: concept-topic-template
 last_updated: Dec 18, 2023
 ---
@@ -14,7 +14,7 @@ You normally add a CNAME record in your DNS Management for the domains you want 
 
 {% info_block infoBox "Info" %}
 
-This process can take a full week to complete due to DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
+This process can take a full week to complete because of DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
 
 {% endinfo_block %}
 
@@ -22,6 +22,6 @@ To use a root domain for your application (for example, spryker.com), use an IP 
 
 {% info_block infoBox "Info" %}
 
-We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain’s NS records to ours.
+We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain's NS records to ours.
 
 {% endinfo_block %}

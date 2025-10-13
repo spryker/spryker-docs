@@ -1,7 +1,7 @@
 ---
 title: Add and configure cronjobs
 last_updated: Jun 16, 2021
-description: Learn to add and configure cronjobs
+description: Learn how to add and configure cronjobs in Spryker's backend for automating tasks. Optimize your ecommerce platform's operations with effective cronjob management.
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-and-configuring-cronjob
 originalArticleId: 6af304f1-b8ba-417b-874e-878e5d9a5730
@@ -23,9 +23,9 @@ This document shows how to add and configure cronjobs in Jenkins.
 
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
 
-* Jobs are queued and can be manually executed.
-* Job definitions are under version control and can be changed by any developer.
-* Console output is available for debugging.
+- Jobs are queued and can be manually executed.
+- Job definitions are under version control and can be changed by any developer.
+- Console output is available for debugging.
 
 ## Add a new job and run it
 
@@ -44,9 +44,8 @@ $jobs[] = [
 ];
 ```
 
-To import this configuration to Jenkins, run the following command in the console. In a production environment, this is part of the deployment process.
+To import this configuration to Jenkins, run `vendor/bin/console scheduler:setup`. In a production environment, this is part of the deployment process.
 
-`vendor/bin/console scheduler:setup`
 
 After this, you can open Jenkins on port `10007` and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different hostname).
 

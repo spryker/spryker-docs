@@ -9,15 +9,15 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
 related:
   - title: Zed overview
-    link: docs/scos/dev/back-end-development/zed/zed.html
+    link: docs/dg/dev/backend-development/zed/zed.html
 ---
 
 This document describes how to make a controller action accessible in the navigation bar.
 
 There are two places to define the navigation configuration:
 
-* In the global configuration file: `config/Zed/navigation.xml`.
-* In a module configuration file: `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`.
+- In the global configuration file: `config/Zed/navigation.xml`.
+- In a module configuration file: `src/Pyz/Zed/{moduleName}/Communication/navigation.xml`.
 
 {% info_block infoBox "Replace a placeholder" %}
 

@@ -1,5 +1,6 @@
 ---
 title: Integrate custom location for static assets
+description: Learn how you can enable and integrate custom location for static assets within your Spryker based project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-location-for-static-assets
@@ -13,8 +14,8 @@ redirect_from:
 
 In Spryker, the default folders of static assets are:
 
-* `public/Yves/assets/`
-* `public/Zed/assets/`
+- `public/Yves/assets/`
+- `public/Zed/assets/`
 
 For organizational or cost and speed optimization purposes, you may need to change the location of static assets to an external source, like a CDN (content delivery network).
 

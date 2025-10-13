@@ -38,8 +38,6 @@ entries:
         url: /docs/ca/dev/deploy-in-a-staging-environment.html
       - title: Configure debugging
         url: /docs/ca/dev/configure-debugging.html
-      - title: Working with logs
-        url: /docs/ca/dev/working-with-logs.html
       - title: Preparation for going live
         url: /docs/ca/dev/preparation-for-going-live.html
       - title: Deploy in a production environment
@@ -61,14 +59,6 @@ entries:
           - title: Configure access to applications in maintenance mode
             url: /docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
 
-      - title: Monitoring
-        url: /docs/ca/dev/monitoring/monitoring.html
-        nested:
-          - title: Performance and availability monitoring via New Relic
-            url: /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
-          - title: Customize AWS CloudWatch dashboards
-            url: /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html
-
       - title: Security
         url: /docs/ca/dev/security/security.html
         nested:
@@ -79,7 +69,7 @@ entries:
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication
-            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html
+            url: /docs/ca/dev/security/multi-factor-authentication-and-passwords.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
 
@@ -113,7 +103,7 @@ entries:
           - title: Email quota restrictions
             url: /docs/ca/dev/email-service/email-quota-restrictions.html
           - title: Verify email addresses
-            url: /docs/ca/dev/verify-email-addresses.html
+            url: /docs/ca/dev/email-service/verify-email-addresses.html
           - title: Email Deliverability
             url: /docs/ca/dev/email-service/email-deliverability.html
 
@@ -123,8 +113,20 @@ entries:
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
       - title: Environment scaling
         url: /docs/ca/dev/environment-scaling.html
-      - title: Monitoring issues and informing about alerts
-        url: /docs/ca/dev/monitoring-issues-and-informing-about-alerts.html
+      - title: Monitoring
+        url: /docs/ca/dev/monitoring/monitoring.html
+        nested:
+          - title: Working with logs
+            url: /docs/ca/dev/monitoring/working-with-logs.html
+          - title: Spryker Monitoring Integration
+            url: /docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html
+            nested:
+              - title: OpenTelemetry instrumentation
+                url: /docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html
+                
+          - title: Monitoring issues and informing about alerts
+            url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
+
       - title: Multi-store setups
         url: /docs/ca/dev/multi-store-setups/multi-store-setups.html
         nested:
@@ -134,7 +136,8 @@ entries:
             url: /docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html
           - title: Checklist for a new store implementation
             url: /docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html
-
+      - title: Set up data export to S3
+        url: /docs/ca/dev/set-up-data-export-to-s3.html
       - title: Troubleshooting
         url: /docs/ca/dev/troubleshooting/troubleshooting.html
         nested:
@@ -143,7 +146,7 @@ entries:
             nested:
               - title: Assets, logs, or pipelines are not visible in AWS Management Console
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
-              - title: Deployment fails due to a failed docker authentication
+              - title: Deployment fails because of a failed docker authentication
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html
               - title: Jenkins does not restart
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html

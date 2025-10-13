@@ -22,7 +22,7 @@ Spryker lets you have multi-stores and different logic for different stores in a
 
 Just extend the functionality for a specific store and postfix the module name with your store name.
 
-This tutorial shows how to implement different home pages for the Backend Office for different stores.
+This tutorial shows how to implement different home pages for the Back Office for different stores.
 
 {% info_block infoBox %}
 
@@ -62,7 +62,7 @@ Add a new store and a new home page for it.
 
 1. Add a new store and call it `DEMO` by adding a new array key to the store configuration file in `config/Shared/stores.php`.
 
-```
+```php
 $stores['DEMO'] = $stores['DE'];
 ```
 
@@ -112,6 +112,7 @@ class IndexController extends AbstractController
 
 2. Restart Nginx by running `sudo /etc/init.d/nginx restart`.
 3. Create a store record in your `spy_store database` table:
+
 ```bash
 console data:import:store
 ```

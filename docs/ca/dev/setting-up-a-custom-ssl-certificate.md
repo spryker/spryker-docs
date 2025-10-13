@@ -1,6 +1,6 @@
 ---
 title: Setting up a custom SSL certificate
-description: Set up a third-party SSL certificate for an application
+description: Set up a custom SSL certificate for your Spryker Cloud Commerce OS production environment, including steps for certificate registration and configuration for secure connections.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-ssl-certificate
@@ -17,7 +17,7 @@ By default, all the domain names (domains) are provided with generic SSLs, which
 
 {% info_block infoBox "Third-party DNS zone provider" %}
 
-If the DNS zone of a domain name is hosted with a third-party provider, it is impossible to use the generic SSLs and manage custom SSLs in Spryker Cloud Commerce OS.
+If the DNS zone of a domain name is hosted with a third-party provider, it's impossible to use the generic SSLs and manage custom SSLs in Spryker Cloud Commerce OS.
 
 {% endinfo_block %}
 
@@ -33,11 +33,11 @@ If you provided custom SSLs for the initial setup, they are already installed an
 To set up a custom SSL:
 
 1. Register an SSL.
-2. Provide the following details via [support](https://spryker.force.com/support/s/):
-    * Domain name
-    * Certificate body
-    * Certificate private key
-    * Optional: Certificate chain
+2. Provide the following details via [support](https://support.spryker.com):
+- Domain name
+- Certificate body
+- Certificate private key
+- Optional: Certificate chain
 
 {% info_block warningBox "Format" %}
 
@@ -49,4 +49,5 @@ We set up the SSL shortly after you have provided it.
 
 
 ## Next step
+
 [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

@@ -1,6 +1,6 @@
 ---
 title: Database access credentials
-description: Database access credentials for MariaDB, MySQL, and PostgreSQL.
+description: Learn how to find Database access credentials for MariaDB, MySQL, and PostgreSQL for your Local Spryker Environments.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-access-credentials
@@ -13,24 +13,24 @@ In this document, you can find credentials for accessing your database. By defau
 
 MySQL or MariaDB database:
 
-* `host` - `localhost`
-* `port` - `3306`
-* `user` - `spryker`
-* `pw` - `secret`
+- `host` - `localhost`
+- `port` - `3306`
+- `user` - `spryker`
+- `pw` - `secret`
 
 PostgreSQL database:
 
-* `host` - `localhost`
-* `port` - `5432`
-* `user` - `spryker`
-* `pw` - `secret`
+- `host` - `localhost`
+- `port` - `5432`
+- `user` - `spryker`
+- `pw` - `secret`
 
 You can change the credentials in the [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 You can find the credentials in your project with this command:
 
 ```bash
-$ grep SPRYKER_DB_ docker/deployment/default/env/cli/de.env | grep -v ROOT
+grep SPRYKER_DB_ docker/deployment/default/env/cli/de.env | grep -v ROOT
 ```
 
 Example output:

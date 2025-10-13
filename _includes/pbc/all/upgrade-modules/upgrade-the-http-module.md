@@ -143,17 +143,17 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 4. Configure the *Http Module* with the following `\Spryker\Shared\Http\HttpConstants` options:
 
-* `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_PORT` - sets the HTTP port for Yves (Spryker Frontend);
-* `\Spryker\Shared\Http\HttpConstants::YVES_HTTPS_PORT` - sets the HTTPS port for Yves;
-* `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_PROXIES` - sets an array of trusted proxies for Yves;
-* `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_HEADER` - sets a trusted header for Yves requests;
-* `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_HOSTS` - sets a list of trusted hosts for Yves;
-* `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED` - use this option to enable or disable the _HTTP Strict-Transport-Security_ header for Yves (*disabled** by default);
-* `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG` - sets the body of the _HTTP Strict-Transport-Security_ header for Yves;
-* `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_PORT` - sets the HTTP port for Zed (Spryker backend);
-* `\Spryker\Shared\Http\HttpConstants::ZED_HTTPS_PORT` - sets the HTTPS port for Zed;
-* `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_PROXIES` - sets an array of trusted proxies for Zed;
-* `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_HEADER` - sets a trusted header for Zed requests;
-* `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_HOSTS` - sets a list of trusted hosts for Zed;
-* `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED` - use this option to enable or disable the _HTTP Strict-Transport-Security_ header for Zed (*disabled* by default);
-* `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG` - sets the body of the _HTTP Strict-Transport-Security_ header for Zed.
+- `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_PORT` - sets the HTTP port for Yves (Spryker Frontend);
+- `\Spryker\Shared\Http\HttpConstants::YVES_HTTPS_PORT` - sets the HTTPS port for Yves;
+- `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_PROXIES` - sets an array of trusted proxies for Yves;
+- `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_HEADER` - sets a trusted header for Yves requests;
+- `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_HOSTS` - sets a list of trusted hosts for Yves;
+- `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED` - use this option to enable or disable the *HTTP Strict-Transport-Security* header for Yves (*disabled** by default);
+- `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG` - sets the body of the *HTTP Strict-Transport-Security* header for Yves;
+- `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_PORT` - sets the HTTP port for Zed (Spryker backend);
+- `\Spryker\Shared\Http\HttpConstants::ZED_HTTPS_PORT` - sets the HTTPS port for Zed;
+- `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_PROXIES` - sets an array of trusted proxies for Zed;
+- `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_HEADER` - sets a trusted header for Zed requests;
+- `\Spryker\Shared\Http\HttpConstants::ZED_TRUSTED_HOSTS` - sets a list of trusted hosts for Zed;
+- `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED` - use this option to enable or disable the *HTTP Strict-Transport-Security* header for Zed (*disabled* by default);
+- `\Spryker\Shared\Http\HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG` - sets the body of the *HTTP Strict-Transport-Security* header for Zed.

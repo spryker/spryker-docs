@@ -9,17 +9,16 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 related:
   - title: Queue pool
-    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-  - title: Migration Guide - RabbitMQ
-    link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+    link: docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
+
 ---
 
 ## Concepts
 
-* Sender - a program that sends messages.
-* Receiver - a program that waits to receive messages.
-* Message - a string or binary data passed from Sender to Receiver.
-* Queue - similar to Mailbox; here you can store, send, and receive messages.
+- Sender - a program that sends messages.
+- Receiver - a program that waits to receive messages.
+- Message - a string or binary data passed from Sender to Receiver.
+- Queue - similar to Mailbox; here you can store, send, and receive messages.
 
 ## Introduction
 
@@ -60,6 +59,7 @@ For information on how to work with RabbitMQ, see [Rabbit MQ tutorial](https://w
 ## Set up RabbitMQ connection
 
 You can override the default connection settings by specifying this config:
+
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
     'DE' => [
@@ -129,7 +129,29 @@ class SampleQueueMessageProcessorPlugin implements QueueMessageProcessorPluginIn
 ?>
 ```
 
-Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
+### Configuration for chunk size
+
+Instead of relying on the `getChunkSize()` method in the plugin, you can use project-level configuration to define a more flexible chunk size for any queue. This configuration takes precedence over the `getChunkSize()` method. If a chunk size is defined for a queue in `QUEUE_MESSAGE_CHUNK_SIZE_MAP`, that size is used. Otherwise, the chunk size falls back to the value returned by the `getChunkSize()` method of the `QueueMessageProcessorPluginInterface`.
+
+To define a flexible chunk size, follow the steps:
+
+1. Configure chunk size using `QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP`:
+
+```php
+<?php
+
+use Spryker\Shared\Queue\QueueConstants;
+
+$config[QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP] = [
+    'publish' => 2000,
+    'event' => 1000,
+    'sync.search.product' => 100
+];
+?>
+```
+
+
+2. Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php

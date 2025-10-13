@@ -24,11 +24,11 @@ Example of Git commit hash: `290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
 Example of the ECR images with the application version in tags:
 
-* `spryker-prod-b2c-yves:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-prod-b2c-zed:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-prod-b2c-glue:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-prod-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
-* `spryker-prod-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-prod-b2c-yves:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-prod-b2c-zed:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-prod-b2c-glue:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-prod-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
+- `spryker-prod-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
 
 
@@ -95,7 +95,7 @@ To deploy a specific application version, copy the version of the respective Git
 
 ![release change](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/release-change.png)
 
-If the deployment is successful, the **/spryker-prod/lastdeployedversion** parameter in the Parameter Store is updated with the application version you’ve deployed.
+If the deployment is successful, the **/spryker-prod/last_deployed_version** parameter in the Parameter Store is updated with the application version you've deployed.
 
 
 ## Check the deployed application version
@@ -105,11 +105,11 @@ To check the deployed application version in the ECS cluster, follow the steps:
 1. In the AWS Management Console, go to **Services** > **Elastic Container Service**.
 2. Click **spryker-prod**.
 3. Click one of the following services:
-    * **spryker-prod-storeapp**
-    * **spryker-prod-backoffice**
-    * **spryker-prod-frontend**
-    * **spryker-prod-zed**
-    * **spryker-prod-yves**
+    - **spryker-prod-storeapp**
+    - **spryker-prod-backoffice**
+    - **spryker-prod-frontend**
+    - **spryker-prod-zed**
+    - **spryker-prod-yves**
 
 ![cluster](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+production+environment/cluster-spryker-prod.png)
 

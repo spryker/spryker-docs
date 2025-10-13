@@ -13,7 +13,7 @@ In the previous version (3*), the calculator stack was called `getCalculatorSta
 
 {% endinfo_block %}
 
-By default, the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
+By default, the demoshop ships with these plugins. If you have your custom plugins,  add them accordingly, old and new calculators plugins are backwards compatible.
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
 
 **Code sample:**
@@ -30,7 +30,7 @@ new ExpenseTaxCalculatorPlugin(),
 
 {% info_block errorBox %}
 
-The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
+The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
 
 {% endinfo_block %}
 
@@ -38,7 +38,7 @@ The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_
 
 After this you should see the new values calculated + the legacy ones.
 
-<details open><summary markdown='span'>Code sample:</summary>
+<details><summary>Code sample:</summary>
 
 ```php
 <?php
@@ -150,6 +150,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
        }
 }
 ```
+
 </details>
 
 **Changing the displayed calculated values**
@@ -299,9 +300,9 @@ COMMIT;
 
 3. Run the console commands:
 
-* `vendor/bin/console transfer:generate`
-* `vendor/bin/console propel:diff`
-* `vendor/bin/console propel:model:build`
+- `vendor/bin/console transfer:generate`
+- `vendor/bin/console propel:diff`
+- `vendor/bin/console propel:model:build`
 
 {% info_block infoBox %}
 
@@ -351,11 +352,11 @@ After this, when you read an order using `SalesFacade::getOrderByIdSalesOrder()`
 
 {% info_block errorBox %}
 
-The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it is no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
+The Sales module does not depend on the `SalesAggregator` anymore. Therefore, you need to remove the `/sales-aggregator/sales/list` from `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls` as it's no longer in use. Totals were moved to Sales to the template `Spryker/Zed/Sales/Presentation/Detail/boxes/totals.twig` available in Sales version >= 6.\*.
 
 {% endinfo_block %}
 
-### Template changes in the SalesBundle >= 6.\*:
+### Template changes in the SalesBundle >= 6.\*
 
 Item and Item option display have been split into three separate template files:
 
@@ -460,7 +461,7 @@ Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\
 
 {% info_block errorBox %}
 
-Please back up your data now!
+Back up your data as soon as possible.
 
 {% endinfo_block %}
 

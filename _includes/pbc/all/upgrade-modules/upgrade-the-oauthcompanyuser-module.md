@@ -4,18 +4,18 @@
 
 `OauthCompanyUser` module version 2.0.0 brings two major changes:
 
-* GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Migration Guide - CompanyUserAuthRestApi](/docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
-* `OauthCompanyUserConfig::OAUTH_CLIENT_IDENTIFIER`, `OauthCompanyUserConfig::OAUTH_CLIENT_SECRET` constants have been removed.
+- GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Upgrade the CompanyUserAuthRestApi module](/docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
+- `OauthCompanyUserConfig::OAUTH_CLIENT_IDENTIFIER`, `OauthCompanyUserConfig::OAUTH_CLIENT_SECRET` constants have been removed.
 
 BC Breaking changes:
 
-* Moved Glue layer to the `CompanyUserAuthRestApi` module.
-* Removed `OauthCompanyUserConfig::getClientSecret()`.
-* Removed `OauthCompanyUserConfig::getClientId()`.
-* Removed `OauthCompanyUserConstants::OAUTH_CLIENT_IDENTIFIER`.
-* Removed `OauthCompanyUserConstants::OAUTH_CLIENT_SECRET`.
-* Removed `OauthCompanyUserClient::getClientSecret()`.
-* Removed `OauthCompanyUserClient::getClientId()`.
+- Moved Glue layer to the `CompanyUserAuthRestApi` module.
+- Removed `OauthCompanyUserConfig::getClientSecret()`.
+- Removed `OauthCompanyUserConfig::getClientId()`.
+- Removed `OauthCompanyUserConstants::OAUTH_CLIENT_IDENTIFIER`.
+- Removed `OauthCompanyUserConstants::OAUTH_CLIENT_SECRET`.
+- Removed `OauthCompanyUserClient::getClientSecret()`.
+- Removed `OauthCompanyUserClient::getClientId()`.
 
 *Estimated migration time: ~10m*
 

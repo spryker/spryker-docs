@@ -140,7 +140,7 @@ Common properties of a widget are:
 ```
 </details>
 
-<details open>
+<details>
 <summary>notification example</summary>
 
 ```json
@@ -152,7 +152,7 @@ Common properties of a widget are:
         "id": "notification"
       },
       "notificationType": "info",
-      "content": "Don’t have credentials yet? Visit <a href=\"https://google.com/\" target=\"_blank\">admin.usercentrics.eu/#/login</a> to create your account."
+      "content": "Don't have credentials yet? Visit <a href=\"https://google.com/\" target=\"_blank\">admin.usercentrics.eu/#/login</a> to create your account."
     }
   }
 }
@@ -183,7 +183,7 @@ Common properties of a widget are:
   <tr>
     <td>select</td>
     <td>Single selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/single-selection.png"> Image Multi-selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/multi-selection.png"></td>
-    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, you can use <code>select</code> for selection in a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as options.</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as options. Can be used instead of <code>oneOf</code>.</li>See <i>example for select with oneOf</i> under this table.</ul>In case you don’t need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>.<br> See <i>example for select without oneOf</i> under this table.</td>
+    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, you can use <code>select</code> for selection in a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as options.</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as options. Can be used instead of <code>oneOf</code>.</li>See <i>example for select with oneOf</i> under this table.</ul>In case you don't need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>.<br> See <i>example for select without oneOf</i> under this table.</td>
   </tr>
   <tr>
     <td>app-status</td>
@@ -366,7 +366,7 @@ The returned object looks like this:
 ```
 
 ### Order of fields
-The `properties` within the form configuration are to define the form’s fields and their corresponding widgets. By default, the fields are displayed in that order also. In some cases, you can use the `order` or `fieldsets` property to change the order of the fields.
+The `properties` within the form configuration are to define the form's fields and their corresponding widgets. By default, the fields are displayed in that order also. In some cases, you can use the `order` or `fieldsets` property to change the order of the fields.
 
 The `order` property changes the order of the fields within the form:
 
@@ -480,7 +480,7 @@ Here is an example of the full configuration:
         "id": "notification"
       },
       "notificationType": "info",
-      "content": "Don’t have credentials yet? Visit <a href=\"https://google.com/\" target=\"_blank\">admin.usercentrics.eu/#/login</a> to create your account."
+      "content": "Don't have credentials yet? Visit <a href=\"https://google.com/\" target=\"_blank\">admin.usercentrics.eu/#/login</a> to create your account."
     },
     "userCentricIntegrationType": {
       "type": "string",
@@ -577,7 +577,7 @@ This is how the configuration looks in the Back Office:
 ![full-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/full-configuration.png)
 
 ## Translation appendix
-Translation for an app configuration is provided in the `app-store-suite/app/config/<app-name>/translation.json` file. Each field defined in the JSON’s `properties` needs to match its corresponding translation entity in the `translation.json` file. For example, to translate the `title` of the widget `isLiveMode`, we provide `"title": "isLiveMode"` in the app configuration JSON.
+Translation for an app configuration is provided in the `app-store-suite/app/config/<app-name>/translation.json` file. Each field defined in the JSON's `properties` needs to match its corresponding translation entity in the `translation.json` file. For example, to translate the `title` of the widget `isLiveMode`, we provide `"title": "isLiveMode"` in the app configuration JSON.
 
 *translation.json* file example:
 

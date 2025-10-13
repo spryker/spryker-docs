@@ -1,6 +1,6 @@
 ---
 title: Implement prepayment in backend
-description: This document describes how to implement prepayment in the backend.
+description: Set up prepayment methods in Spryker with backend integration guidance. Learn to implement secure payment processes and enhance your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
@@ -10,28 +10,28 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
 related:
   - title: Implement prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - title: Implement prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
   - title: Integrate Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
   - title: Test the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
 To integrate the prepayment method into the checkout, you need to provide implementations for these two plugins:
 
-* `CheckoutPreCondition`
-* `PaymentSaveOrder`
+- `CheckoutPreCondition`
+- `PaymentSaveOrder`
 
 Perform the following steps:
 
 1. Add the following plugins in Zed, in the `Communication/Plugin/Checkout/` folder of the newly added module.
 
 <details>
-<summary markdown='span'>PrepaymentPreCheckPlugin</summary>
+<summary>PrepaymentPreCheckPlugin</summary>
 
 ```php
 <?php
@@ -64,7 +64,7 @@ class PrepaymentPreCheckPlugin extends AbstractPlugin implements CheckoutPreChec
 </details>
 
 <details>
-<summary markdown='span'>PrepaymentSaveOrderPlugin</summary>
+<summary>PrepaymentSaveOrderPlugin</summary>
 
 ```php
 <?php
@@ -154,7 +154,7 @@ Use the prepayment state machine that's delivered with Demoshop.
 
 In the `SalesConfig` class, add this configuration:
 
-```
+```php
 /**
      * @var array
      */

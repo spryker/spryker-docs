@@ -10,23 +10,23 @@ redirect_from:
   - docs/scos/dev/back-end-development/forms/creating-forms.html
 related:
   - title: Forms
-    link: docs/scos/dev/back-end-development/forms/forms.html
+    link: docs/dg/dev/backend-development/forms/forms.html
 ---
 
 Spryker uses Symfony forms; this tutorial helps you get started on working with forms and shows how to build a simple newsletter subscription form that contains a field for entering the email address and a submit button.
 
 Follow the steps in these sections to create the newsletter subscription form:
-* [Create FormType](/docs/dg/dev/backend-development/forms/create-forms.html#create-the-formtype-class)
-* [Render a form](/docs/dg/dev/backend-development/forms/create-forms.html#render-forms)
-* [Handle posted data](/docs/dg/dev/backend-development/forms/create-forms.html#handle-posted-data)
+- [Create FormType](/docs/dg/dev/backend-development/forms/create-forms.html#create-the-formtype-class)
+- [Render a form](/docs/dg/dev/backend-development/forms/create-forms.html#render-forms)
+- [Handle posted data](/docs/dg/dev/backend-development/forms/create-forms.html#handle-posted-data)
 
 ## Create the FormType class
 
 The best practice is to create a `FormType` class for each form you need to handle. Here you define the fields contained in the form and the rules of validation.
 
 Define the email field that has two constraints attached:
-* It's a required field.
-* It must be a valid email address.
+- It's a required field.
+- It must be a valid email address.
 
 **Code sample:**
 
@@ -95,8 +95,8 @@ class NewsletterFactory extends AbstractFactory
 ## Render forms
 
 To render your form in a template, pass the form to the template through the controller action:
-* Get an instance of your form (using the factory method implemented above).
-* Pass the form to the template.
+- Get an instance of your form (using the factory method implemented above).
+- Pass the form to the template.
 
 ```php
 <?php

@@ -1,6 +1,6 @@
 ---
 title: Run Spryker Code Upgrader
-description: Instructions for running Spryker Code Upgrader
+description: Manually run Spryker Code Upgrader by triggering it from the Upgrader UI, allowing project analysis and automatic creation of pull requests for updates.
 template: concept-topic-template
 last_updated: Sep 25, 2023
 redirect_from:
@@ -19,5 +19,5 @@ To manually trigger the Upgrader, follow the steps:
 
 ## Next step
 
-* [Troubleshooting](/docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html)
-* [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html)
+- [Troubleshooting](/docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html)
+- [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html)

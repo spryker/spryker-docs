@@ -4,14 +4,14 @@
 
 Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
-### BC breaks and solutions:
+### BC breaks and solutions
 
-* Update deprecated methods and classes
-* Update removed exceptions
-* Update storage behavior
-* Migrate database
+- Update deprecated methods and classes
+- Update removed exceptions
+- Update storage behavior
+- Migrate database
 
-_Estimated migration time: 2 hours_
+*Estimated migration time: 2 hours*
 
 To upgrade to the new version of the module, do the following:
 
@@ -24,23 +24,23 @@ To upgrade to the new version of the module, do the following:
 2. Remove all the deprecated references:
 Search for and update usage of any deprecated class or method that was used.
 
-* Renamed the `createLocaleQuery` method to `getLocaleQuery` in `CmsPersistenceFactory`.
-* Removed the deprecated method `getName()` in favor of `getBlockPrefix()` in `CmsGlossaryForm.php`.
-* Removed deprecated method `getName()` in favor of `getBlockPrefix()` in `CmsRedirectForm.php`.
+- Renamed the `createLocaleQuery` method to `getLocaleQuery` in `CmsPersistenceFactory`.
+- Removed the deprecated method `getName()` in favor of `getBlockPrefix()` in `CmsGlossaryForm.php`.
+- Removed deprecated method `getName()` in favor of `getBlockPrefix()` in `CmsRedirectForm.php`.
 
 Interfaces were moved to the `CmsExtension` module.
 
-* Moved the `CmsVersionPostSavePluginInterface` interface from `Cms` to `CmsExtension`
-* Moved the `CmsVersionTransferExpanderPluginInterface` interface from `Cms` to `CmsExtension`
-* Moved the `CmsPageDataExpanderPluginInterface.php` interface from `Cms` to `CmsExtension`
-* Removed the deprecated class `CmsBlockKeyBuilder` in favor of installing the new `CmsBlock` module instead.
+- Moved the `CmsVersionPostSavePluginInterface` interface from `Cms` to `CmsExtension`
+- Moved the `CmsVersionTransferExpanderPluginInterface` interface from `Cms` to `CmsExtension`
+- Moved the `CmsPageDataExpanderPluginInterface.php` interface from `Cms` to `CmsExtension`
+- Removed the deprecated class `CmsBlockKeyBuilder` in favor of installing the new `CmsBlock` module instead.
 
 Exceptions were replaced by Throwables.
 
-* Replaced Exception in favor of _Throwable_ in `CmsPageSaver`
-* Replaced Exception in favor of _Throwable_ in `PageRemover`
-* Replaced Exception in favor of _Throwable_ in `CmsPageActivator`
-* Replaced Exception in favor of _Throwable_ in `CmsGlossarySaver`
+- Replaced Exception in favor of *Throwable* in `CmsPageSaver`
+- Replaced Exception in favor of *Throwable* in `PageRemover`
+- Replaced Exception in favor of *Throwable* in `CmsPageActivator`
+- Replaced Exception in favor of *Throwable* in `CmsGlossarySaver`
 
 Also, keep in mind that a doc block with non-existing methods was removed from `CmsQueryContainerInterface`.
 
@@ -194,8 +194,8 @@ Don't forget to sync your newly updated Zed data with the storage tables.
 {% endinfo_block %}
 
 ```bash
-$ console event:trigger -r cms_page
-$ console event:trigger -r cms_page_search
+console event:trigger -r cms_page
+console event:trigger -r cms_page_search
 ```
 
 
@@ -214,15 +214,15 @@ To install the module, `"spryker/cms-block": "^1.0.0"` with Composer is required
 
 ### Perform database migration
 
-* `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file
-*  `vendor/bin/console propel:migrate`
-*  `vendor/bin/console propel:model:build`
+- `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file
+- `vendor/bin/console propel:migrate`
+- `vendor/bin/console propel:model:build`
 
-After running the last command, you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace.
+After running the last command, you'll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace.
 
-It’s important to make sure that they are extending the base classes from the core, for example:
-* `Orm\Zed\Cms\Persistence\SpyCmsBlock` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlock`
-* `Orm\Zed\Cms\Persistence\SpyCmsBlockQuery` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockQuery.`
+It's important to make sure that they are extending the base classes from the core, for example:
+- `Orm\Zed\Cms\Persistence\SpyCmsBlock` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlock`
+- `Orm\Zed\Cms\Persistence\SpyCmsBlockQuery` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockQuery.`
 
 The same is for `SpyCmsBlockGlossaryKeyMapping`, `SpyCmsBlockGlossaryKeyMappingQuery`, `SpyCmsBlockTemplate`, and `SpyCmsBlockTemplateQuery`.
 
@@ -235,7 +235,7 @@ Move CMS Block templates to the `src/Pyz/Shared/CmsBlock/Theme/default/template/
 
 For quick and smooth migration, we have prepared a migration script. You can find it below.
 
-<details><summary markdown='span'>Code sample</summary>
+<details><summary>Code sample</summary>
 
 ```php
 <?php
@@ -429,6 +429,7 @@ class CmsToCmsBlockDataMigration extends Console
 
 }
 ```
+
 </details>
 
 Copy the script to `src/Pyz/Zed/CmsBlock/Communication/Console/CmsToCmsBlockDataMigration.php` and register it in the `Pyz\Zed\Console\ConsoleDependencyProvider`.
@@ -467,14 +468,14 @@ Before upgrading, make sure that you do not use any deprecated code from version
 
 To start the database migration, run the following commands:
 
-* `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
-* `vendor/bin/console propel:migrate`
-* `vendor/bin/console propel:model:build`
+- `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
+- `vendor/bin/console propel:migrate`
+- `vendor/bin/console propel:model:build`
 
 After running the last command, you will find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It is important to make sure that they are extending the base classes from the core, for example:
 
-* `Orm\Zed\Cms\Persistence\SpyCmsVersion` extends  `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersion`
-* `Orm\Zed\Cms\Persistence\SpyCmsVersionQuery` extends `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersionQuery`
+- `Orm\Zed\Cms\Persistence\SpyCmsVersion` extends  `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersion`
+- `Orm\Zed\Cms\Persistence\SpyCmsVersionQuery` extends `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersionQuery`
 
 ### CMS templates
 
@@ -483,7 +484,7 @@ In this version, we have moved all CMS templates to the Shared layer instead of 
 
 ### CMS twig functions
 
-The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available.
+The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to key-value storage (Redis or Valkey) when the translations are not available.
 You can still work with the current version although upgrading is highly recommended.
 You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 
@@ -623,7 +624,7 @@ We have extended CMS pages with localized attributes such as name and HTML meta 
 
 1. Before upgrading to the new version, make sure that you do not use any deprecated code from version 2.* Check the description of the deprecated code to see what you will need to use instead.
 2. Database migration:
-* `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
-* `vendor/bin/console propel:migrate`
-* `vendor/bin/console propel:model:build`
-* After running the last command you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It’s important to make sure that they are extending the base classes from the core, for example, `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.
+- `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
+- `vendor/bin/console propel:migrate`
+- `vendor/bin/console propel:model:build`
+- After running the last command you'll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It's important to make sure that they are extending the base classes from the core, for example, `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.

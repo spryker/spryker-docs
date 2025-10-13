@@ -18,11 +18,11 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
 related:
   - title: Cronjob scheduling
-    link: docs/scos/dev/sdk/cronjob-scheduling.html
+    link: docs/dg/dev/backend-development/cronjobs/cronjobs.html
   - title: Data import
-    link: docs/scos/dev/sdk/data-import.html
+    link: docs/dg/dev/data-import/latest/data-import.html
   - title: Development virtual machine, docker containers & console
-    link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
 ---
 
 ## Twig
@@ -37,8 +37,8 @@ To be able to add Twig, we created `TwigApplicationPlugin`. It initializes the T
 
 You can find the list of all the modules related to the service below:
 
-* Twig - spryker/twig
-* TwigExtension - spryker/twig-extension
+- Twig - spryker/twig
+- TwigExtension - spryker/twig-extension
 
 ### Installation
 
@@ -111,7 +111,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
 ## Configure Twig
 
-Twig provides wide configuration possibilities. For further information about Twig configuration, check out the Twig documentation [here](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [here](https://twig.symfony.com/doc/2.x/api.html#loaders).
+Twig provides wide configuration possibilities. For further information about Twig configuration, check out the [Environment options](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [Loaders](https://twig.symfony.com/doc/2.x/api.html#loaders).
 
 Some of the Twig options are predefined in our Twig service. You can check them in the TwigConfig files for Zed and Yves on core and project levels.
 
@@ -169,19 +169,29 @@ This interface gets the Twig environment and `ContainerInterface` to be able to 
 ```php
 <?php
 
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
 namespace Spryker\Shared\Twig\Plugin;
 
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface;
+use Symfony\Bridge\Twig\Extension\DumpExtension;
+use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Twig\Environment;
-use Twig\Extension\DebugExtension;
 
-class DebugTwigPlugin implements TwigPluginInterface
+class VarDumperTwigPlugin implements TwigPluginInterface
 {
+    /**
+     * @var string
+     */
     protected const SERVICE_DEBUG = 'debug';
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     * - Added pretty print for debug extension.
      *
      * @api
      *
@@ -196,11 +206,12 @@ class DebugTwigPlugin implements TwigPluginInterface
             return $twig;
         }
 
-        $twig->addExtension(new DebugExtension());
+        $twig->addExtension(new DumpExtension(new VarCloner()));
 
         return $twig;
     }
 }
+
 ```
 
 {% info_block infoBox %}

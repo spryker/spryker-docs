@@ -4,8 +4,8 @@
 
 `ProductConfiguratorGatewayPage` v1.0.0 introduces the following backward incompatible changes:
 
-* Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
-* Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
+- Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstanceBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
+- Replaced `ProductConfigurationStorageClientInterface::findProductConfigurationInstancesIndexedBySku()` with `ProductConfigurationStorageClientInterface::getProductConfigurationInstanceCollection()`.
 
 To upgrade the `ProductConfiguratorGatewayPage` module from version 0.5.* to version 1.0.*, do the following:
 
@@ -43,8 +43,8 @@ console transfer:generate
 
 4. In `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, on the project level, register the new strategy plugins:
 
-<details open>
-<summary markdown='span'>\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider</summary>
+<details>
+<summary>\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -89,4 +89,5 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
     }
 }
 ```
+
 </details>

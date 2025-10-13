@@ -1,6 +1,6 @@
 ---
 title: Add and remove databases of stores
-description: Learn how to add and remove databases of stores
+description: Learn how to add and remove store-specific databases in Spryker Cloud Commerce OS, including configuration and deployment steps for multi-store setups.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -23,6 +23,7 @@ In this example, there is an existing DE store with a dedicated database, and yo
 ### Define a database
 
 1. In the needed deploy file, define the AT database:
+
 ```yaml
 ...
 
@@ -68,14 +69,14 @@ regions:
                         namespace: at_search
                     database:
                         name: eu-region-at-database
-```                        
+```
 
 ### Deploy the database
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 ## Remove a database of store
@@ -86,6 +87,7 @@ To remove a database of a store, you need to remove its configuration from the n
 ### Remove the configuration of the database
 
 1. In the needed deploy file, remove the definition the AT database:
+
 ```yaml
 ...
 
@@ -120,12 +122,12 @@ regions:
                         namespace: de_search
                     database:
                         name: eu-region-existing-database
-```                        
+```
 
 
 ### Deploy the application without the removed database
 
 Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
-* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
+- [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+- [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)

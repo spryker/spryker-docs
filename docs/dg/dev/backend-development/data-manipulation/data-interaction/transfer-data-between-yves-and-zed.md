@@ -96,7 +96,7 @@ Move to the client part to add support for calling the added controller action a
 1. In `src/Pyz/Client/HelloWorld/Zed`, create a `HelloWorldStub` stub. This stub lets you submit an HTTP request to Zed.
 
 <details>
-<summary markdown='span'>Pyz\Client\HelloWorld\Zed</summary>
+<summary>Pyz\Client\HelloWorld\Zed</summary>
 
 ```php
 <?php
@@ -135,6 +135,7 @@ class HelloWorldStub implements HelloWorldStubInterface
 
 }
 ```
+
 </details>
 
 {% info_block infoBox "Request parameter" %}
@@ -150,7 +151,7 @@ Through the second parameter, you can pass a transfer object as a request parame
 In the example, the stub depends on `ZedRequestClient` that can be provided by implementing `HelloWorldDependencyProvider`:
 
 <details>
-<summary markdown='span'>Pyz\Client\HelloWorld</summary>
+<summary>Pyz\Client\HelloWorld</summary>
 
 ```php
 <?php
@@ -193,6 +194,7 @@ class HelloWorldDependencyProvider extends SprykerCustomerDependencyProvider
 
 }
 ```
+
 </details>
 
 {% endinfo_block %}

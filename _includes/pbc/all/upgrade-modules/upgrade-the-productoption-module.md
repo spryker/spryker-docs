@@ -4,7 +4,7 @@
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. [Contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
 
@@ -47,10 +47,10 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 }
 ```
 
-11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it is free of charge.
+11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it's free of charge.
 
-<details open>
-<summary markdown='span'>Example of the migration</summary>
+<details>
+<summary>Example of the migration</summary>
 
 ```php
 <?php
@@ -300,6 +300,7 @@ class MigrateProductOptionValuePricesConsole extends Console
     }
 }
 ```
+
 </details>
 
 12. The product option collector has to be amended to support multi-currency prices on product option values. The Storage has to save all product option value prices within a given store using the new Storage data structure:
@@ -329,6 +330,7 @@ class MigrateProductOptionValuePricesConsole extends Console
    "value":"product.option.warranty_1"
 },
 ```
+
 A new API call was added to get the store specific prices back: `ProductOptionFacadeInterface::getProductOptionValueStorePrices()`.
 
 **Example of the collector upgrade**
@@ -409,39 +411,39 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 13. Transfer objects were amended to support multi-currency price storage. Check your customized codes for the following fields to apply the new behavior:
 
-    * `ProductOptionValue` transfer object's price field is replaced by prices field which contains a collection of `MoneyValue` transfer objects to support multi-currency behavior. This field can not be used directly anymore to display a price to customer in Yves.
-    * `StorageProductOptionValue` transfer object contains a "prices" field which contains prices within a specific store for all currencies and price modes.
-    * `StorageProductOptionValue` transfer object's price field now represents a price for a given store, currency, and price mode trio.
+    - `ProductOptionValue` transfer object's price field is replaced by prices field which contains a collection of `MoneyValue` transfer objects to support multi-currency behavior. This field can not be used directly anymore to display a price to customer in Yves.
+    - `StorageProductOptionValue` transfer object contains a "prices" field which contains prices within a specific store for all currencies and price modes.
+    - `StorageProductOptionValue` transfer object's price field now represents a price for a given store, currency, and price mode trio.
 
 14. The following public API elements were changed, check your custom calls to them:
 
-    * `ProductOptionFacadeInterface::getProductOptionGroupById()` populates all multi-currency prices instead of the singular price.
-    * `ProductOptionFacadeInterface::getProductOptionValueById()` sets both net and gross prices for the current store and current currency.
-    * `ProductOptionFacadeInterface::saveProductOptionValue()` saves multi-currency prices instead of a single price and expects new data structure accordingly.
-    * `ProductOptionFacadeInterface::saveProductOptionGroup()` saves multi-currency prices instead of a single price and expects new data structure accordingly.
-    * `ProductOptionClientInterface::getProductOptions()` uses the modified StorageProductOptionValue transfer, selects a multi-currency price.
-    * `ProductOptionQueryContainer::queryProductOptionGroupWithValues()` is removed without replacement.
-    * `ProductOptionQueryContainerInterface::queryProductsAbstractBySearchTerm()` is removed from public API and now it's a protected method.
-    * `ProductOptionToTaxInterface::getTaxAmountFromGrossPrice()` is removed.
-    * `ProductOptionToMoneyInterface::convertIntegerToDecimal()` is removed.
-    * `ProductOptionToMoneyInterface::fromFloat()` is removed.
-    * `ProductOptionToMoneyInterface::fromString()` is removed.
-    * `ProductOptionFacadeInterface::toggleOptionActive()` expects 1st argument to be int.
-    * `ProductOptionCommunicationFactory::createProductOptionGroup()` does not accept null argument anymore.
-    * `ProductOptionDependencyProvider`'s constants are refactored.
-    * Client dependency interfaces are renamed (postfixed with "Client").
-    * Zed dependency interfaces are renamed (postfixed with the corresponding layer name).
+    - `ProductOptionFacadeInterface::getProductOptionGroupById()` populates all multi-currency prices instead of the singular price.
+    - `ProductOptionFacadeInterface::getProductOptionValueById()` sets both net and gross prices for the current store and current currency.
+    - `ProductOptionFacadeInterface::saveProductOptionValue()` saves multi-currency prices instead of a single price and expects new data structure accordingly.
+    - `ProductOptionFacadeInterface::saveProductOptionGroup()` saves multi-currency prices instead of a single price and expects new data structure accordingly.
+    - `ProductOptionClientInterface::getProductOptions()` uses the modified StorageProductOptionValue transfer, selects a multi-currency price.
+    - `ProductOptionQueryContainer::queryProductOptionGroupWithValues()` is removed without replacement.
+    - `ProductOptionQueryContainerInterface::queryProductsAbstractBySearchTerm()` is removed from public API and now it's a protected method.
+    - `ProductOptionToTaxInterface::getTaxAmountFromGrossPrice()` is removed.
+    - `ProductOptionToMoneyInterface::convertIntegerToDecimal()` is removed.
+    - `ProductOptionToMoneyInterface::fromFloat()` is removed.
+    - `ProductOptionToMoneyInterface::fromString()` is removed.
+    - `ProductOptionFacadeInterface::toggleOptionActive()` expects first argument to be int.
+    - `ProductOptionCommunicationFactory::createProductOptionGroup()` does not accept null argument anymore.
+    - `ProductOptionDependencyProvider`'s constants are refactored.
+    - Client dependency interfaces are renamed (postfixed with "Client").
+    - Zed dependency interfaces are renamed (postfixed with the corresponding layer name).
 
 15. Some additional changes that might have effect on you if you have customized any of these classes directly or their factory method:
 
-    * `AbstractProductOptionSaver`
-    * `ProductOptionGroupReader`
-    * `ProductOptionListTable`
-    * `ProductOptionStorage`
-    * `ProductOptionTaxRateCalculator`
-    * `ProductOptionValueForm`
-    * `ProductOptionValueReader`
-    * `ProductOptionValueSaver`
+    - `AbstractProductOptionSaver`
+    - `ProductOptionGroupReader`
+    - `ProductOptionListTable`
+    - `ProductOptionStorage`
+    - `ProductOptionTaxRateCalculator`
+    - `ProductOptionValueForm`
+    - `ProductOptionValueReader`
+    - `ProductOptionValueSaver`
 
 16. Verify your product option value prices on the Product Options page in the Back Office.
 
@@ -449,4 +451,4 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.
-To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
+To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Upgrade the Calculation module*.

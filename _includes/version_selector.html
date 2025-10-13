@@ -1,28 +1,25 @@
-{% if page.version %}
-    {% assign current_version = page.version %}
-{% else %}
-    {% assign current_version = site.version %}
-{% endif %}
-
-{% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
-
-{% if page.all_versions.size > 1 %}
-    <div class="alt-nav dropdown">
-        <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="alt-nav__opener-text">{{ current_version_label }}</span>
-            <i class="alt-nav__opener-icon icon-arrow-down"></i>
-        </span>
-        <span class="alt-nav__opener-label">Versions</span>
-        <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
-            {% for version in page.all_versions %}
-                {% assign version_label = site.versions[version.version] | default: 'undefined' %}
-                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version_label }}</a></li>
-            {% endfor %}
-        </ul>
+<div class="alt-nav dropdown">
+    <div class="alt-nav__opener nav-link" id="versionDropdownMenuLink">
+        <div class="alt-nav__opener-text">
+            Current version: 202507.0</br>For older versions, see the 
+            <a href="#" onclick="redirectToArchive()" class="alt-nav__link" target="_blank" rel="noopener">
+                docs archive
+                <svg class="alt-nav__icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+            </a>
+        </div>
     </div>
-    <div class="alt-nav__overlay"></div>
-{% else %}
-    <div class="alt-nav">
-        <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
-    </div>
-{% endif %}
+    <span class="alt-nav__opener-label">Versions</span>
+</div>
+<div class="alt-nav__overlay"></div>
+
+<script>
+    function redirectToArchive() {
+        const path = window.location.pathname;
+        const archiveUrl = 'https://docs-archive.spryker.com' + path;
+        window.open(archiveUrl, '_blank');
+    }
+</script>

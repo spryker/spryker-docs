@@ -1,6 +1,6 @@
 ---
 title: ProcessTimedOutException after queue-task-start
-description: Learn how to fix the exception after running queue-task-start
+description: Learn how to fix the exception after running queue-task-start within your Spryker based projects.
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/processtimedoutexception-after-queuetaskstart
@@ -10,6 +10,7 @@ redirect_from:
 ---
 
 ## Description
+
 After running `queue:task:start`, the following exception is thrown:
 
 ```bash

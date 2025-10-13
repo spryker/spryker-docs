@@ -1,6 +1,6 @@
 ---
 title: Integrate Authorization Enabler
-description: Learn how to enable the Authorization Enabler
+description: Learn how to enable and integrate the Authorization Enabler for your Spryker based projects.
 last_updated: Sep 2, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
@@ -88,7 +88,7 @@ Activate the following plugins:
 | AuthorizationRouterParameterExpanderPlugin                   | Expands a route with additional parameters.                  | Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication |
 
 <details>
-<summary markdown='span'>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
+<summary>src/Pyz/Client/Authorization/AuthorizationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -111,10 +111,11 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
     }
 }
 ```
+
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -149,6 +150,7 @@ class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyPr
     }
 }
 ```
+
 </details>
 
 {% info_block warningBox "Verification" %}

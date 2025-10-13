@@ -10,29 +10,29 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
 related:
   - title: Implement invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
   - title: Implement invoice payment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
   - title: Implement invoice payment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
   - title: Integrate invoice payment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
   - title: Test the invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
 ## Checkout plugins
 
 To integrate the invoice payment method into the checkout, you need to provide implementations for the following plugins:
-* `CheckoutPreCondition`
-* `PaymentSaveOrder`
+- `CheckoutPreCondition`
+- `PaymentSaveOrder`
 
 Perform the following steps:
 
 1. Add the following plugins to Zed, inside the `Communication/Plugin/Checkout/` folder of the newly added module.
 
 <details>
-<summary markdown='span'>InvoicePreCheckPlugin</summary>
+<summary>InvoicePreCheckPlugin</summary>
 
 ```php
 <?php
@@ -61,10 +61,11 @@ class InvoicePreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPl
 
 }
 ```
+
 </details>
 
 <details>
-<summary markdown='span'>InvoiceSaveOrderPlugin</summary>
+<summary>InvoiceSaveOrderPlugin</summary>
 
 ```php
 <?php
@@ -94,12 +95,13 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
     }
 }
 ```
+
 </details>
 
 2. Next, inject these two plugins into the `Payment` module by creating a `PaymentDependencyInjector` under the `Dependency/Injector/` folder:
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary>Code sample:</summary>
 
 ```php
 <?php
@@ -147,6 +149,7 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 }
 ```
+
 </details>
 
 ## Design a state machine
@@ -156,7 +159,7 @@ Once the preceding procedures are completed, you need to design a state machine.
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary>Code sample:</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -284,12 +287,13 @@ Once the preceding procedures are completed, you need to design a state machine.
 </statemachine>
 
 ```
+
 </details>
 
 2. Add this new state machine to `OmsConfig`:
 
 <details>
-<summary markdown='span'>Code sample</summary>
+<summary>Code sample</summary>
 
 ```php
 <?php
@@ -307,6 +311,7 @@ Once the preceding procedures are completed, you need to design a state machine.
         ];
     }
 ```
+
 </details>
 
 3. Link the invoice state machine to process the orders submitted with the payment method we're implementing.

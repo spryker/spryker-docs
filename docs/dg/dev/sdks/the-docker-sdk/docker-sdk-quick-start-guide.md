@@ -1,6 +1,6 @@
 ---
 title: Docker SDK quick start guide
-description: Get started with Spryker Docker SDK.
+description: Get up and running quickly with this Quick start guide for Docker SDK for your Spryker projects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
@@ -42,10 +42,10 @@ To run the Docker SDK in a local environment, follow the instructions below.
 ### Installing Docker
 
 For Docker installation instructions, see one of the following:
-* [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
-* [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
-* [Installing Docker prerequisites on Windowswith WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+- [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+- [Installing Docker prerequisites on Windowswith WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 ### Setting up a project with the Docker SDK
 
@@ -122,8 +122,10 @@ Depending on your requirements, you can select any combination of the following 
 For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html).
 
 
-## What documents should I use to start developing and configuring my project?
+## Next steps
 
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+Documents to help you start developing your project:
+
+- [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
+- [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)

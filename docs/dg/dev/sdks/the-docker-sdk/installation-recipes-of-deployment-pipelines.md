@@ -1,6 +1,6 @@
 ---
 title: Installation recipes of deployment pipelines
-description: Installation recipe commands and file structure.
+description: Learn all about the Spryker Installation recipes of your deployment pipelines for your spryker based projects.
 last_updated: Nov 29, 2022
 template: howto-guide-template
 redirect_from:
@@ -14,7 +14,7 @@ redirect_from:
 
 Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):
 
-```
+```text
 config
 ├── install
 │   ├── ci.yml
@@ -151,11 +151,13 @@ vendor/bin/install -r {RECIPE_NAME} -s {SECTION_NAME}
 ```
 
 For example, run the build section of [config/install/docker.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/install/docker.yml):
+
 ```shell
 vendor/bin/install -r docker -s build
 ```
 
 To run several sections of a recipe, list them as follows:
+
 ```shell
 vendor/bin/install -r docker -s build -s build-static -s build-development
 ```

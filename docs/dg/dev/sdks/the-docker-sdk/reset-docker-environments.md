@@ -1,6 +1,6 @@
 ---
 title: Reset Docker environments
-description: Learn how to restart your Spryker in Docker from scratch.
+description: Learn how to restart and reset your docker environments to start from scratch for your Spryker projects.
 last_updated: Jun 18, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-reset-a-docker-environment
@@ -28,4 +28,4 @@ sudo docker/sdk prune
 docker/sdk clean-data && docker/sdk boot {deploy_file_name} && docker/sdk up
 ```
 
-You’ve restarted your instance from scratch.
+You've restarted your instance from scratch.

@@ -1,6 +1,6 @@
 ---
 title: Word list
-description: A list of words specific to Spryker Cloud Commerce OS
+description: A glossary of terms that are specific to Spryker Cloud Commerce OS
 last_updated: Jun 23, 2023
 template: concept-topic-template
 redirect_from:

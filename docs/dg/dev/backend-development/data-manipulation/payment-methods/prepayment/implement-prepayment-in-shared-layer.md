@@ -1,6 +1,6 @@
 ---
 title: Implement prepayment in shared layer
-description: This procedure will help us to identify the new payment type through some unique constants.
+description: Integrate prepayment into Spryker's shared layer with this guide. Discover best practices for seamless payment implementation across your ecommerce platform.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-shared
@@ -10,15 +10,15 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
 related:
   - title: Implement prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in frontend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - title: Implement prepayment in backend
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - title: Integrate Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
   - title: Test the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+    link: docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
 This tutorial shows how to identify the new payment type through some unique constants. Those constants are going to be defined under the Shared namespace because both Yves and Zed need them.
@@ -71,6 +71,7 @@ interface PaymentMethodsConstants
 ```
 
 3. Update the `PaymentTransfer` class:
+
 ```bash
 vendor/bin/console transfer:generate
 ```

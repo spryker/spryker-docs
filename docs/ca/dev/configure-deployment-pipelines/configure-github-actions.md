@@ -1,7 +1,7 @@
 ---
 title: Configuring GitHub Actions
 last_updated: May 15, 2023
-description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
+description: Set up GitHub Actions for continuous integration and delivery in Spryker Cloud Commerce OS, with detailed guidance on workflow configuration, running tests, and automating deployments.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/configuring-github-actions
 originalArticleId: ad8a174f-1372-4cae-b530-fa77a9cd5479
@@ -20,8 +20,8 @@ This document describes how to configure continuous integration using GitHub Act
 GitHub Actions helps you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
 
 For more information on GitHub Actions, see the following documents:
-* [GitHub Actions](https://github.com/features/actions)
-* [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
+- [GitHub Actions](https://github.com/features/actions)
+- [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
 
 <details>
@@ -34,13 +34,13 @@ In a GitHub repository, create the workflow configuration file: `.github/workflo
 ## Configuring basic validation with GitHub Actions
 
 Set up the job that performs the basic validation like the following:
-* Code style
-* Architecture
-* Security
-* Database schema
+- Code style
+- Architecture
+- Security
+- Database schema
 
 
-<details open>
+<details>
 <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
@@ -183,6 +183,7 @@ jobs:
               run: vendor/bin/console security:check
 ...
 ```
+
 </details>
 
 ## Configuring groups of tests via the Docker SDK
@@ -219,8 +220,9 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 ```
 
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
-* `docker/sdk testing codecept fixtures`
-* `docker/sdk testing console queue:worker:start --stop-when-empty`
+- `docker/sdk testing codecept fixtures`
+- `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -259,6 +261,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -267,6 +270,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -274,15 +278,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -320,6 +328,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -328,6 +337,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -337,14 +347,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -379,8 +394,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and a specific version is not needed, don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so you don’t need to define it in the deploy file.
+- Since Alpine is the default platform and a specific version is not needed, don't define it in the image tag in the deploy and workflow files.
+- MariaDB is the default database engine, so you don't need to define it in the deploy file.
 
 {% endinfo_block %}
 
@@ -388,6 +403,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4, follow these steps:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -396,6 +412,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:
@@ -426,11 +443,11 @@ image:
 
 ## Related documentation
 
-* To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
-* To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
-* To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-* To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
+- To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
+- To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
+- To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>
 
 <details>
@@ -443,13 +460,13 @@ In a GitHub repository, create the workflow configuration file: `.github/workflo
 ## Configuring basic validation with GitHub Actions
 
 Set up the job that performs the basic validation like the following:
-* Code style
-* Architecture
-* Security
-* Database schema
+- Code style
+- Architecture
+- Security
+- Database schema
 
 
-<details open>
+<details>
 <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
@@ -586,6 +603,7 @@ jobs:
               run: vendor/bin/console security:check
 ...
 ```
+
 </details>
 
 ## Configuring groups of tests via the Docker SDK
@@ -622,8 +640,9 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 ```
 
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
-* `docker/sdk testing codecept fixtures`
-* `docker/sdk testing console queue:worker:start --stop-when-empty`
+- `docker/sdk testing codecept fixtures`
+- `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -662,6 +681,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -670,6 +690,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -677,15 +698,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -723,6 +748,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these st
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -731,6 +757,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -740,14 +767,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -782,8 +814,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and a specific version is not needed, don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so you don’t need to define it in the deploy file.
+- Since Alpine is the default platform and a specific version is not needed, don't define it in the image tag in the deploy and workflow files.
+- MariaDB is the default database engine, so you don't need to define it in the deploy file.
 
 {% endinfo_block %}
 
@@ -791,6 +823,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4, follow these steps:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -799,6 +832,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:
@@ -829,11 +863,11 @@ image:
 
 ## Related documentation
 
-* To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
-* To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
-* To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-* To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
+- To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
+- To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
+- To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>
 
 
@@ -847,13 +881,13 @@ In a GitHub repository, create the workflow configuration file: `.github/workflo
 ## Configuring basic validation with GitHub Actions
 
 Set up the job that performs the basic validation like:
-* Code style
-* Architecture
-* Security
-* Database schema
+- Code style
+- Architecture
+- Security
+- Database schema
 
 
-<details open>
+<details>
     <summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
@@ -1044,8 +1078,9 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/d
 ```
 
 2. Glue API tests: To fill the storage with the data used by Glue API, add the following commands to load fixtures to the `Run docker` action as shown in the code snippet:
-* `docker/sdk testing codecept fixtures`
-* `docker/sdk testing console queue:worker:start --stop-when-empty`
+- `docker/sdk testing codecept fixtures`
+- `docker/sdk testing console queue:worker:start --stop-when-empty`
+
 ```yaml
 ...
             - name: Run docker
@@ -1084,6 +1119,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -1092,6 +1128,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
         ```
 
     2. Define the MySQL database engine:
+
         ```yaml
         ...
         services:
@@ -1099,15 +1136,19 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
                 engine: mysql
                 ...
         ```
+
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
 
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
 
 ```yaml
@@ -1145,6 +1186,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
+
         ```yaml
         ...
         image:
@@ -1153,6 +1195,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
         ```
 
     2. Define the PostgreSQL database engine:
+
         ```yaml
         ...
         services:
@@ -1162,14 +1205,19 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
         ```
 
     3. Bootstrap docker setup:
+
         ```bash
         docker/sdk boot {deploy_file.yml}
         ```
+
     4. Run the application with the new configuration:
+
         ```bash
         docker/sdk up
         ```
+
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-80-postgresql-glue-debian:
@@ -1204,8 +1252,8 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and we don’t need a specific version, we don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so we don’t need to define it in the deploy file.
+- Since Alpine is the default platform and we don't need a specific version, we don't define it in the image tag in the deploy and workflow files.
+- MariaDB is the default database engine, so we don't need to define it in the deploy file.
 
 {% endinfo_block %}
 
@@ -1213,6 +1261,7 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 To run acceptance tests on Alpine with MariaDB and PHP 7.4:
 
 1. In the desired deploy file, define the Docker image tag:
+
 ```yaml
 ...
 image:
@@ -1221,6 +1270,7 @@ image:
 ```
 
 2. Update the desired workflow configuration file:
+
 ```yaml
 ...
     php-7.4-mariadb-acceptance-alpine:
@@ -1251,9 +1301,9 @@ image:
 
 ## Related documentation
 
-* To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
-* To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
-* To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-* To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
+- To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
+- To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
+- To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
+- To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>

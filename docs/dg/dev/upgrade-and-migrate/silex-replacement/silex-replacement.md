@@ -14,9 +14,9 @@ related:
     link: docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
 
-Originally, *Silex* was used to integrate Symfony Components with Spryker using _Service Providers_. Also, there were other Service Providers added by Spryker and customer projects to bootstrap the application. Such providers implemented Symfony components and other entities by adding them to the *Pimple container*. Since Silex project is abandoned and the Pimple version is outdated, we replace them with a Spryker solution.
+Originally, *Silex* was used to integrate Symfony Components with Spryker using *Service Providers*. Also, there were other Service Providers added by Spryker and customer projects to bootstrap the application. Such providers implemented Symfony components and other entities by adding them to the *Pimple container*. Since Silex project is abandoned and the Pimple version is outdated, we replace them with a Spryker solution.
 
-## What did we replace?
+## What we replaced
 
 We replaced `silex/silex` and `pimple/pimple`.
 
@@ -24,11 +24,11 @@ To be able to replace Silex, we removed all the dependencies in Spryker version 
 
 We added a new Spryker application to replace Silex and a container to replace Pimple.
 
-## Is Silex replacement backward compatible?
+## Silex replacement backward compatibility
 
 To avoid forcing an immediate update of the majority of modules, we introduced several small changes, which are backward compatible.
 
-As Silex was an instance of Pimple with all services attached to, we introduced our own _Container_ that implemented the `ContainerInterface` from PSR-11<!--](https://www.php-fig.org/psr/psr-11/) check if it works before restoring -->. Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
+As Silex was an instance of Pimple with all services attached to, we introduced our own *Container* that implemented the `ContainerInterface` from PSR-11<!--](https://www.php-fig.org/psr/psr-11/) check if it works before restoring -->. Additionally, we added a mock class for Pimple that further extended the Container. The mock class allows us to keep using the `\Pimple;` `USE` statement without the `pimple/pimple` package. In this case, we don't have to refactor the code that has Pimple dependencies and all the changes are backward compatible.
 
 {% info_block warningBox %}
 
@@ -37,7 +37,7 @@ When you update a module partially, you might have to add `spryker/silex` to you
 
 {% endinfo_block %}
 
-## What changed?
+## Changes
 
 This section describes the changes caused by the Silex replacement.
 
@@ -75,11 +75,11 @@ To replace Silex, follow the instructions below,
 
 Update the following modules using Composer:
 
-*   `spryker/application` >= `3.13.2`
-*   `spryker/container` >= `1.1.0`
-*   `spryker/silex` >= `2.1.0`
-*   `spryker/symfony` >= `3.2.2`
-*   `spryker-shop/shop-application` >= `1.4.1`
+- `spryker/application` >= `3.13.2`
+- `spryker/container` >= `1.1.0`
+- `spryker/silex` >= `2.1.0`
+- `spryker/symfony` >= `3.2.2`
+- `spryker-shop/shop-application` >= `1.4.1`
 
 The versions above are the minimum requirements. We recommend updating all the modules to the latest versions.
 
@@ -97,12 +97,12 @@ Update the following modules using the provided migration guides:
 | --- | --- |
 | ErrorHandler | [Migration guide - ErrorHandler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-errorhandler-module.html) |
 | EventDispatcher | [Migration guide - EventDispatcher](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html) |
-| Form | [Migration guide - Form](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html) |
+| Form | [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html) |
 | Http | [Migration guide - Http](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html) |
 | Locale | [Migration guide - Locale](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-locale-module.html) |
 | Propel | [Migration guide - Propel](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-propel-module.html) |
 | Messenger | [Migration guide - Messenger](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-messenger-module.html) |
-| Router | [Migration guide - Router](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html) |
+| Router | [Upgrade the Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html) |
 | Security | [Migration guide -Security](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-security-module.html) |
 | Session | [Migration guide - Session](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-session-module.html) |
 | Store | [Migration guide - Store](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-store-module.html) |

@@ -1,6 +1,6 @@
 ---
 title: Integrate elastic computing
-description: Learn how to integrate elastic computing.
+description: Learn how to integrate elastic computing including New Relic and other features for your Spryker based project.
 last_updated: Jan 23, 2023
 template: concept-topic-template
 redirect_from:
@@ -15,6 +15,7 @@ To integrate New Relic monitoring for the infastructure of queue workers in publ
 
 1. Update module `spryker/monitoring` to version 2.5.0 or higher.
 2. In `Pyz\Zed\Monitoring\MonitoringConfig`, add `queue:task:start` command to the argument grouped transactions:
+
 ```php
 namespace Pyz\Zed\Monitoring;
 
@@ -33,6 +34,7 @@ class MonitoringConfig extends BaseMonitoringConfig
 ```
 
 3. In `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory`, enable `FirstArgumentMonitoringConsoleTransactionNamingStrategy` to be used for transaction naming.
+
 ```php
     /**
      * @return array<\Spryker\Zed\Monitoring\Business\MonitoringTransactionNamingStrategy\MonitoringTransactionNamingStrategyInterface>
@@ -63,9 +65,9 @@ To intagrate elastic batch for the glossary data import as an example, follow th
 
 1. In `Pyz\Zed\DataImport\DataImportConfig`, add the following configuration:
 
-* `BulkWriteGradualityFactor`: estimates an upper limit of memory that can be safely utilized by operations. A bigger value enables a more precise approximation but requires more iterations. A smaller value gives a less precise approximation but requires less iterations.
+- `BulkWriteGradualityFactor`: estimates an upper limit of memory that can be safely utilized by operations. A bigger value enables a more precise approximation but requires more iterations. A smaller value gives a less precise approximation but requires less iterations.
 
-* `BulkWriteMemoryThresholdPercent`: defines a margin of PHP memory limit configured in PHP.
+- `BulkWriteMemoryThresholdPercent`: defines a margin of PHP memory limit configured in PHP.
 
 
 ```php
@@ -128,14 +130,14 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 }
 ```
 
-3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
+3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it's full.
 
 
 ```php
 <?php
 /**
  * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information,  view the LICENSE file that was distributed with this source code.
  */
 namespace Pyz\Zed\DataImport\Business\Model\Glossary;
 use Orm\Zed\Glossary\Persistence\SpyGlossaryKeyQuery;
@@ -278,6 +280,7 @@ As a result, the worker spawns a group of processes per each non-empty queue bas
 1. Update module `spryker/propel-orm` to version 1.15.1 or higher.
 2. Update module `spryker/propel-replication-cache` to version 1.0.0 or higher.
 3. In `config/Shared/config_default.php`, add the following configuration.
+
 ```php
 <?php
 use Spryker\Shared\PropelReplicationCache\PropelReplicationCacheConstants;

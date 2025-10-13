@@ -1,6 +1,6 @@
 ---
 title: Connect Spryker Code Upgrader to an Azure managed project
-description: Learn how to connect Spryker CI to Azure managed project
+description: Connect Spryker Code Upgrader to Azure Managed Project with an access token for repository analysis, enabling automated upgrades and project management.
 template: howto-guide-template
 last_updated: May 9, 2023
 redirect_from:

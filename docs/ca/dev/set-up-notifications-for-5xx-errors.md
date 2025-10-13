@@ -1,6 +1,6 @@
 ---
 title: Set up a notifications for 5xx errors
-description: Learn how to set up notifications for 5xx errors via SNS
+description: Set up email notifications for 5xx errors in Spryker Cloud using AWS Simple Notification Service, ensuring prompt alerts for server issues impacting performance.
 template: howto-guide-template
 last_updated: Oct 6, 2023
 redirect_from:
@@ -34,9 +34,9 @@ To set up the notifications, do the following:
 
 {% info_block warningBox "Verification" %}
 
-Return to the subscription’s page in the AWS Management Console. Refresh the page and check that the subscription’s status is *Confirmed*.
+Return to the subscription's page in the AWS Management Console. Refresh the page and check that the subscription's status is *Confirmed*.
 
 {% endinfo_block %}
 
 
-You’ve set up the notifications and will receive emails about 5xx errors to the specified email address.
+You've set up the notifications and will receive emails about 5xx errors to the specified email address.

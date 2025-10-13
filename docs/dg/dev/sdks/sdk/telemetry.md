@@ -1,6 +1,6 @@
 ---
 title: Telemetry
-description: Learn about the Spryker SDK telemetry configuration.
+description: Learn about the Spryker SDK telemetry configuration and how to implement custom events within your Spryker project.
 template: howto-guide-template
 redirect_from:
 - /docs/sdk/dev/telemetry.html
@@ -53,6 +53,7 @@ All the event listeners are located in `SprykerSdk\Sdk\Infrastructure\Event\Tele
 To filter the appropriate events, `\SprykerSdk\Sdk\Infrastructure\Event\Telemetry\TelemetryConsoleEventValidatorInterface` is used.
 
 ## Metadata
+
 Project settings `developer_email` and `developer_github_account` are used for user identification.
 The project `composer.json` is used to populate the project name. All this data is sent in the event's metadata.
 

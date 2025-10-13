@@ -1,6 +1,6 @@
 ---
 title: Install Docker prerequisites on Windows with WSL2
-description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
+description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows with WSL2.
 last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-windows
@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html  
 related:
   - title: Install Docker prerequisites on Linux
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
   - title: Install Docker prerequisites on MacOS
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
   - title: Install Docker prerequisites on Windows with WSL1
-    link: docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+    link: docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
 ---
 
 This document describes the prerequisites for installing Spryker on Windows.
@@ -23,15 +23,16 @@ This document describes the prerequisites for installing Spryker on Windows.
 
 ## System requirements for installing Spryker
 
-| REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
-| --- | --- | --- |
-| Windows | 10 or 11 (64bit) | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
-| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. You can check this setting in the **Task Manager&nbsp;<span aria-label="and then">></span> Performance** tab. For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
-| CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
-| Docker | 18.09.1 or higher |
-| Docker Compose | 2.0 or higher |  
-| RAM  | 4GB or more |
-| Swap  | 2GB or more |
+| REQUIREMENT            | VALUE OR VERSION         | ADDITIONAL DETAILS                                                                                                                                                         |
+|------------------------|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Windows                | 10 or 11 (64-bit)        | Pro, Enterprise, or Education editions (1607 Anniversary Update, Build 14393 or later).                                                                                    |
+| BIOS Virtualization    | Enabled                  | Usually enabled by default. This is different from Hyper-V. Check via **Task Manager > Performance** tab. [See details](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
+| CPU SLAT-capable       | Enabled                  | SLAT (Second Level Address Translation), also known as Rapid Virtualization Indexing (RVI).                                                                                |
+| Docker                 | 18.09.1 or higher        |                                                                                                                                                                            |
+| Docker Compose         | 2.0 or higher            |                                                                                                                                                                            |
+| RAM                    | 16 GB or more            |                                                                                                                                                                            |
+| Swap                   | 4 GB or more             |                                                                                                                                                                            |
+
 
 ## Install and configure the required software
 
@@ -66,6 +67,6 @@ You've installed and configured the required software.
 
 To choose an installation mode, see [Choose an installation mode](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html).
 If you've already selected an installation mode, follow one of the guides below:
-* [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
-* [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
+- [Install in Development mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
+- [Install in Demo mode on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
+- [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)

@@ -1,5 +1,6 @@
 ---
 title: Session management
+description: Manage user sessions effectively in. Learn how to configure session handling for performance and security, ensuring a seamless user experience.
 last_updated: Oct 4, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-management-201903

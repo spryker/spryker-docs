@@ -1,6 +1,6 @@
 ---
 title: Container set function
-description: Reference information for evaluator tools.
+description: Learn about the container set function and how it checks the way plugins are registered in the dependency provider within your Spryker project.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:
@@ -98,6 +98,7 @@ class ExampleDependencyProvider
 ## Run only this checker
 
 To run only this checker, include `CONTAINER_SET_FUNCTION_CHECKER` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=CONTAINER_SET_FUNCTION_CHECKER
 ```

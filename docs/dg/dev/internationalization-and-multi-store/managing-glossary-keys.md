@@ -11,8 +11,8 @@ redirect_from:
 
 Glossary keys present two layers of persistence:
 
-* SQL database storage
-* In-memory key-value storage: Redis
+- SQL database storage
+- In-memory key-value storage: Key-value store (Redis or Valkey)
 
 This document shows how to manage the glossary keys of the Back Office user interface and how to manage the glossary keys of the Storefront interface via Twig extensions.
 
@@ -37,8 +37,8 @@ getFactory()->getEnabledLocales();
 $grid = $this->getFactory()->createGlossaryKeyTranslationGrid($request);
 ```
 
-* `getEnabledLocales()` retrieves the list of locales that are contained in the `stores.php` configuration file.
-* `createGlossaryKeyTranslationGrid()` queries the database for the list of glossary keys for each of the supported languages.
+- `getEnabledLocales()` retrieves the list of locales that are contained in the `stores.php` configuration file.
+- `createGlossaryKeyTranslationGrid()` queries the database for the list of glossary keys for each of the supported languages.
 
 {% info_block warningBox "Removing locales from configuration" %}
 

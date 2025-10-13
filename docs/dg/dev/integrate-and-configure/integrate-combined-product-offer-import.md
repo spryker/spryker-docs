@@ -38,7 +38,7 @@ There is no need to install core features.
 Adjust the following files:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -203,6 +203,7 @@ class MerchantProductOfferDataImportBusinessFactory extends SprykerMerchantProdu
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/MerchantProductOfferDataImport/Business/MerchantProductOfferDataImportFacade.php**
@@ -355,6 +356,7 @@ interface CombinedMerchantProductOfferDataSetInterface
 }
 
 ```
+
 **src/Pyz/Zed/MerchantProductOfferDataImport/Business/Model/Step/CombinedApprovalStatusValidationStep.php**
 
 ```php
@@ -787,7 +789,7 @@ class CombinedStoreToIdStoreStep extends StoreToIdStoreStep
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -943,6 +945,7 @@ class PriceProductOfferDataImportBusinessFactory extends SprykerPriceProductOffe
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/PriceProductOfferDataImport/Business/PriceProductOfferDataImportFacade.php**
@@ -1193,7 +1196,7 @@ class CombinedStockNameToIdStockStep extends StockNameToIdStockStep
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1300,6 +1303,7 @@ class ProductOfferStockDataImportBusinessFactory extends SprykerProductOfferStoc
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/ProductOfferStockDataImport/Business/ProductOfferStockDataImportFacade.php**
@@ -1522,7 +1526,7 @@ class CombinedProductOfferValidityWriterStep extends ProductOfferValidityWriterS
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/ProductOfferValidityDataImport/Business/ProductOfferValidityDataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1619,6 +1623,7 @@ class ProductOfferValidityDataImportBusinessFactory extends SprykerProductOfferV
     }
 }
 ```
+
 </details>
 
 
@@ -1806,7 +1811,7 @@ To import data:
 
 **data/import/common/DE/combined_merchant_product_offer.csv**
 
-```
+```csv
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
 offer1000,093_24495843,MER000006,SE1000-01,1,approved,DE,Budget Cameras MER000005 Warehouse 1,100,1,DEFAULT,DE,EUR,50,70,,,
 offer1000,,,,,,,,,,ORIGINAL,DE,EUR,150,170,,,
@@ -1820,7 +1825,7 @@ offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 
 **data/import/common/US/combined_merchant_product_offer.csv**
 
-```
+```csv
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
 offer1000,093_24495843,MER000006,SE1000-01,1,approved,DE,Budget Cameras MER000005 Warehouse 1,100,1,DEFAULT,DE,EUR,50,70,,,
 offer1000,,,,,,,,,,ORIGINAL,DE,EUR,150,170,,,
@@ -1836,7 +1841,7 @@ offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 
 **data/import/common/combined_merchant_product_offer_import_config_EU.yml**
 
-```
+```yml
 # Example of demo shop 'combined merchant product offer' data import.
 version: 0
 
@@ -1856,7 +1861,7 @@ actions:
 
 **data/import/common/combined_merchant_product_offer_import_config_US.yml**
 
-```
+```yml
 # Example of demo shop 'combined merchant product offer' data import.
 version: 0
 

@@ -1,6 +1,6 @@
 ---
 title: Single plugin argument
-description: Reference information for evaluator tools.
+description: Learn how the single plugin argument checks that plugins do not require complicated constructor arguments within your spryker projects.
 template: howto-guide-template
 last_updated: Oct 24, 2023
 redirect_from:
@@ -15,12 +15,12 @@ Inside of the dependency provider, you can register the plugin directly in the m
 To keep the plugins simple, they shouldn't require complicated objects as constructor arguments.
 
 Supported argument types:
- - int
- - float
- - string (constant or concatenations with the constant)
- - bool
- - null
- - usage of new statement to instantiate a class (without further methods calls)
+- int
+- float
+- string (constant or concatenations with the constant)
+- bool
+- null
+- usage of new statement to instantiate a class (without further methods calls)
 
 ## Example of evaluator error message
 
@@ -67,7 +67,9 @@ To resolve the error:
 
 
 ## Run only this checker
+
 To run only this checker, include `SINGLE_PLUGIN_ARGUMENT` into the checkers list. Example:
+
 ```bash
 vendor/bin/evaluator evaluate --checkers=SINGLE_PLUGIN_ARGUMENT
 ```

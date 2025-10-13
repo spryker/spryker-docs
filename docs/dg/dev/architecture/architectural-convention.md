@@ -38,7 +38,7 @@ There are two types of directives:
 ## Applications
 
 Spryker uses application layers to enable the construction of the necessary application architecture for specific business requirements to provide a quick project start and long-term maintainability.
-- Backend applications, like Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
+- Backend applications, like Zed, Backend API, Backend Gateway, Back Office, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
 - Storefront applications, like Yves, Configurator, Glue, GlueStorefront, Console, typically use the Yves-, Glue-, Client-, Service-, and Shared application layers.
 
 ## Application layers
@@ -160,7 +160,7 @@ Used components:
 
 Yves application layer provides a lightweight shop application.
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -231,7 +231,7 @@ Used components:
 
 The Glue application layer provides data access points through APIs. It acts as an interface for external systems to interact with the application's data.
 
-```
+```text
 [Organization]
 └── Glue
     └── [Module]
@@ -279,7 +279,7 @@ Used components:
 ### Client
 
 Client is a lightweight application layer that handles all data access, such as the following:
-- Persistence access: key-value storage (Redis), Search (Elasticsearch), Yves sessions
+- Persistence access: key-value storage (Redis or Valkey), Search (Elasticsearch), Yves sessions
 - Zed as a data-source (RPC)
 - Third-party communication
 
@@ -333,7 +333,7 @@ Used components:
 
 The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
-A service primarily consists of reusable lightweight stateless business logic components. Due to its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+A service primarily consists of reusable lightweight stateless business logic components. Because of its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
 
 ```text
 [Organization]
@@ -422,7 +422,7 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ### Conventions
 
-- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture  to take effect.
+- Components must be placed according to the corresponding [application layer's](#application-layers) directory architecture  to take effect.
 - Components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
 
 <details>
@@ -448,7 +448,7 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ### Controller
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -499,6 +499,7 @@ The `index` action name acts as the default action during request action resolut
 </details>
 
 #### Guidelines
+
 - `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
 - The inherited `getFactory()` method grants access to the [Factory](#factory).
 - The inherited `getFacade()` and `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
@@ -541,7 +542,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 ### Dependency Provider
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]        
@@ -575,6 +576,7 @@ Dependency injection is orchestrated through a `provide-add-get` structure. See 
 - Dependencies that require individual instances per injection need to additionally use the `Container::factory()` method to ensure expected behavior. For example, [Query Objects](#query-object). See the following examples.
 - `Provide` methods need to call their parent `provide` method to inject the parent-level dependencies.
 - Dependencies need to be wired through the target layer corresponding to the inherited method to be accessible via the corresponding [Factory](#factory):
+
 ```php
 public function provideCommunicationLayerDependencies(Container $container)
 public function provideBusinessLayerDependencies(Container $container)
@@ -588,6 +590,7 @@ public function provideServiceLayerDependencies(Container $container)
   <summary>For *module development* and *core module development*</summary>
 
 - Only three types of methods can be defined: `provide`, `get`, or `add`.
+
 ```php
 function provide*Dependencies(Container $container)
 function add[Dependency](Container $container)
@@ -595,6 +598,7 @@ function add[PluginInterfaceName]Plugins(Container $container)
 function get[Dependency](Container $container)
 function get[PluginInterfaceName]Plugins(Container $container)
 ```
+
 - All class constants are required to be `public` to decrease conflicts in definition for being a public API class and to allow referring to them from [Factory](#factory).
 - `Add`, `provide`, and `get` methods must have the `$container` `Container` as the only argument.
 - `Provide` methods can call only  `add` methods.
@@ -744,7 +748,7 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
 
 ### Entity
 
-```
+```text
 src
 ├── Generated
 │   └── Shared
@@ -802,6 +806,7 @@ For more details on domains, see [Persistence Schema](#persistence-schema).
 #### Examples
 
 The lowest-level class generated by Propel, containing the base Propel functionality.
+
 ```php
 namespace Orm\Zed\ConfigurableBundle\Persistence\Base;
 
@@ -812,6 +817,7 @@ abstract class SpyConfigurableBundleTemplate implements Propel\Runtime\ActiveRec
 ```
 
 The middle-level class generated in a Spryker module, containing the core module functionality.
+
 ```php
 namespace Spryker\Zed\ConfigurableBundle\Persistence\Propel;
 
@@ -819,6 +825,7 @@ abstract class AbstractSpyConfigurableBundleTemplate extends Orm\Zed\Configurabl
 ```
 
 The highest-level class generated on project, containing the project-specific functionality.
+
 ```php
 namespace Orm\Zed\ConfigurableBundle\Persistence;
 
@@ -827,7 +834,7 @@ class SpyConfigurableBundleTemplate extends Spryker\Zed\ConfigurableBundle\Persi
 
 ## Entity Manager
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -849,12 +856,13 @@ No general conventions.
 - Creating, updating, and deleting functions need to be separated by concern, even if they use overlapping internal methods.
 - The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.
 - `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.
-- `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Object(s)](#transfer-object).
+- `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Objects](#transfer-object).
 -`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
 
 </details>
 
 ### Guidelines
+
 No general guidelines.
 
 <details><summary>For *project development*</summary>
@@ -865,7 +873,7 @@ Solutions in `Entity manager` can use raw SQL queries for performance reasons, b
 
 ### Facade design pattern
 
-```
+```text
 [Organization]
 ├── Client
 │   └── [Module]
@@ -895,6 +903,7 @@ There are four components that use the facade design pattern, referred to as fac
 The facades provide functionality for other layers and modules. The functionality behind the facade accesses other sibling functionality directly and not from the facade. For example, [Models](#model) call their sibling [Models](#model) as a dependency rather than through the `facade`.
 
 #### Conventions
+
 - All methods need to have [Transfer Objects](#transfer-object) or native types as an argument and return a value.
 
 <details><summary>For *module development* and *core module development*</summary>
@@ -935,6 +944,7 @@ The facades provide functionality for other layers and modules. The functionalit
 </details>
 
 #### Guidelines
+
 - The `Service` facade functionalities are commonly used to transform data, so CUD directives are usually not applicable.
 - Avoid single-item-flow methods because they aren't scalable.
 
@@ -945,6 +955,7 @@ The facades provide functionality for other layers and modules. The functionalit
 </details>
 
 #### Examples
+
 ```php
 namespace Spryker\Client\ConfigurableBundleCart;
 
@@ -1053,7 +1064,7 @@ interface ConfigurableBundleFacadeInterface
 
 ### Factory
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1098,7 +1109,7 @@ No general conventions.
 
 ### Gateway Controller
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1116,7 +1127,7 @@ No general conventions.
 
 ### Layout
 
-```
+```text
 [Organization]
 ├── Yves
 │   └── [Module]
@@ -1146,6 +1157,7 @@ To differentiate between the recurring cases of data mapping, and to provide a c
 - `Expanders` source additional data into the provided input; restructuring may also happen.
 
 #### Conventions
+
 No general conventions.
 
 <details><summary>For *module development* and *core module development*</summary>
@@ -1227,7 +1239,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 ### Model
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1267,6 +1279,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 - [Persistence layer](#persistence-layer-responsibilities) `Models` are present in [Zed](#zed).
 
 #### Conventions
+
 - `Model` dependencies can be [facades](#facade-design-pattern) or from the same module, either `Models`, [Repository](#repository), [Entity Manager](#entity-manager) or [Config](#module-configurations).
   - `Models` can't directly interact with other modules' `Models`: via inheritance, shared constants, instantiation, etc.
 
@@ -1284,7 +1297,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 ### Module Configurations
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1317,6 +1330,7 @@ When `module configuration` is defined in the [Shared](#shared) application laye
 When `module configuration` is defined in an [application layer](#application-layers) other than [Shared](#shared), they are dedicated and accessible only to that single [application layer](#application-layers).
 
 #### Conventions
+
 No general conventions.
 
 <details><summary>For *module development* and *core module development*</summary>
@@ -1364,9 +1378,9 @@ interface OmsConstants
 ```
 
 
-### Navigation.XML
+### Navigation.xml
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1377,6 +1391,7 @@ interface OmsConstants
 Module entries of the Back Office navigation panel. The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4/).
 
 #### Examples
+
 The following example adds navigation elements under the existing `product` navigation element, which is defined in another module:
 - The `pages` reserved node holds the navigation items.
 - The navigation items are defined within the `configurable-bundle-templates` logical node according to business requirements.
@@ -1414,7 +1429,7 @@ The following example adds navigation elements under the existing `product` navi
 
 ### Permission Plugin
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -1447,6 +1462,7 @@ The following example adds navigation elements under the existing `product` navi
 - `Permission Plugins` need to adhere to [Plugin](#plugin) conventions.
 
 #### Guidelines
+
 - When using one of the traits in a [Model](#model),  when possible, refer directly to the remote `Permission Plugin` key string instead of defining a local constant.
 - The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait enables the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
 
@@ -1482,7 +1498,7 @@ class QuotePermissionChecker implements QuotePermissionCheckerInterface
 
 ### Persistence Schema
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1520,6 +1536,7 @@ The schema file defines the module's tables and columns. Schema files are organi
 </details>
 
 #### Guidelines
+
 - `PhpName` is usually the CamelCase version of the "SQL name", for example—`<table name="spy_customer" phpName="SpyCustomer">`.
 - A module, like the `Product` module, may inject columns into a table which belongs to another module, like the `Url` module. This usually happens if the direction of a relation is opposed to the direction of the dependency. For this scenario, the injector module contains a separate foreign module schema definition file. For example, the `Product` module contains `spy_url.schema.xml` next to `spy_product.schema.xml` that defines the injected columns into the `Url` `domain`. See the following examples.
 - The `database` element's `package` and `namespace` attributes are used during class generation and control the placement and namespace of generated files.
@@ -1556,6 +1573,7 @@ The schema file defines the module's tables and columns. Schema files are organi
 ```
 
 Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.schema.xml` schema file in the `Product` module.
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
@@ -1572,7 +1590,7 @@ Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.
 
 ### Provider / Router
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]  
@@ -1590,6 +1608,7 @@ Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.
 Controllers in the [Zed](#zed) application layer are autowired and don't require a manual registration. An `ExampleController::indexAction()` in `ExampleModule` can be accessed via the `/example-module/example/index` URI.
 
 #### Conventions
+
 - A `Controller Provider` needs to extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Router` needs to extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
 - A `providers` are `routers` are classified as a [Plugin](#plugin) so the plugin's conventions apply.
@@ -1597,7 +1616,7 @@ Controllers in the [Zed](#zed) application layer are autowired and don't require
 
 ### Query Object
 
-```
+```text
 src
 ├── Orm
 │   └── Zed   
@@ -1617,8 +1636,8 @@ src
 Enables to write queries to the related table in an SQL engine agnostic way. `Query Objects` can be instantiated and used only from the [Repository](#repository) and [Entity Manager](#entity-manager) of the definer module or modules.
 
 For more information, see the following:
-* [Query class in the Propel docs](https://propelorm.org/documentation/reference/model-criteria.html)
-* More details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
+- [Query class in the Propel docs](https://propelorm.org/documentation/reference/model-criteria.html)
+- More details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
 
 #### Conventions
 
@@ -1651,7 +1670,7 @@ In the following example, the `SpyProductQuery` is part of the `Product` `domain
 
 ### Repository
 
-```
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -1690,7 +1709,7 @@ Methods can use native PHP types as input arguments or result values. Because it
 
 ### Theme
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -1730,7 +1749,7 @@ Spryker implements the concept of [atomic web design](https://bradfrost.com/blog
 
 ### Transfer Object
 
-```
+```text
 src
 ├── Generated
 │   └── Shared
@@ -1749,6 +1768,7 @@ src
 For every defined table in [Peristence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
 
 #### Conventions
+
 - `Transfer Objects` need to be defined in the transfer XML file.
 - The `Attributes` transfer name suffix is reserved for `Glue API modules`, that is modules with the `RestApi` suffix, and must not be used for other purposes to avoid collision.
 - The `ApiAttributes` transfer name suffix is reserved for `Storefront API modules`, that is modules with the `Api` suffix, and must not be used for other purposes to avoid collision.
@@ -1767,10 +1787,11 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 `Transfer Objects` can be directly instantiated everywhere, not just via [Factory](#factory).
 
 #### Examples
+
 - BAPI resource names: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
 - SAPI resource names: `PickingListsApiAttributes` for picking list, `PickingListItemsApiAttributes` for picking list items.
 
-```
+```xml
 <?xml version="1.0"?>
 <transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="spryker:transfer-01" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
@@ -1787,7 +1808,7 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 
 ### Widget
 
-```
+```text
 [Organization]
 └── Yves
     └── [Module]
@@ -1869,7 +1890,7 @@ class CurrencyWidget extends \Spryker\Yves\Kernel\Widget\AbstractWidget
 
 ### Zed Stub
 
-```
+```text
 [Organization]
 └── Client
     └── [Module]
@@ -1936,7 +1957,8 @@ The following components are used in `core module development` to ensure modular
 For `project development` and `module development`, these components are recommended. Consider implementing these components based on their relevance to your business or technical requirements.
 
 ### Conventions
-- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture to take effect.
+
+- Components must be placed according to the corresponding [application layer's](#application-layers) directory architecture to take effect.
 - The components must inherit from the [application layer's](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
 <details><summary>For *core module development*</summary>
@@ -1946,6 +1968,7 @@ For `project development` and `module development`, these components are recomme
 </details>
 
 ### Guidelines
+
 - Components should be stateless to be deterministic and easy to comprehend.
 
 <details><summary>For *project development*</summary>
@@ -1962,7 +1985,7 @@ For `project development` and `module development`, these components are recomme
 
 ### Bridge
 
-```
+```text
 [Organization]
 ├── Zed
 │   └── [Module]
@@ -2029,6 +2052,7 @@ According to the Interface Segregation Principle, every module defines an interf
 </details>
 
 #### Guidelines
+
 - Bridge versus adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a core [facade](#facade-design-pattern). Adapters are used when the remote class' life cycle is independent to the core or there is a huge technical difference between the adaptee and adaptor.
 - During `Bridge` definitions, type definition mistakes in remote [facades](#facade-design-pattern) become more visible. In these cases, be aware of the cascading effect of changing or restricting an argument type in [facades](#facade-design-pattern) when you consider such changes.
 - [QueryContainer](#facade-design-pattern) and [Facade](#facade-design-pattern) dependencies are available only in the [Glue](#glue) application layers that have access to the database.
@@ -2068,7 +2092,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ### Plugin
 
-```
+```text
 [Organization]
 ├── Zed
 │   ├── [Module]
@@ -2125,7 +2149,7 @@ No general conventions.
 
 <details><summary>For *module development* and *core module development*</summary>
 
-- `Plugins` can't contain business logic but delegate to the underlying [facade](#facade-design-pattern).
+- `Plugins` can't contain business logic but delegate to the underlying models, preferably via [Factory](#factory).
 - `Plugin` method names need to contain `pre` and `post` instead of `before`, `after`.
 - `Plugin` class names need to contain `pre`, `post`, `create`, `update`, and `delete`, instead of `creator`, `updater`, and `deleter`.
 - `Plugin` classes need to implement a [Plugin Interface](#plugin-interface), which is provided by an `extension module`.
@@ -2148,7 +2172,7 @@ No general conventions.
 
 ### Plugin Interface
 
-```
+```text
 [Organization]
 ├── Zed
 │   ├── [Module]
@@ -2201,10 +2225,11 @@ No general conventions.
 There are three modules involved:
 
 1. **Plugin definer** (aka **extension module**): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module).
-2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
+2. **Plugin executor**: The module that uses the [plugin or plugins](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
 3. **Plugin providers**: The modules that implement a [Plugin](#plugin) thus provide extension for the given extension point (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
 
 #### Conventions
+
 No general conventions.
 
 <details><summary>Conventions For *module development* and *core module development*</summary>
@@ -2217,8 +2242,9 @@ No general conventions.
 </details>
 
 #### Guidelines
+
 - Operations on single items in plugin stack methods is not feasible, except for the following reasons:
-  - it is strictly and inevitably a single-item flow.
+  - it's strictly and inevitably a single-item flow.
   - the items go in FIFO order and there is no other way to use a collection instead.
 - Plugin interface class specification should explain:
   - how the [Plugins](#plugin) will be used,

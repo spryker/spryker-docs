@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Angular 15
-description: Use the guide to update versions of the Angular and related modules.
+description: Learn how you can upgrade to Version 15 of Angular for your Spryker project for bug fixes, optimized performance and tooling.
 last_updated: Mar 24, 2023
 template: module-migration-guide-template
 redirect_from:
@@ -72,7 +72,7 @@ Before starting the migration, make sure that Webpack is v5; if it's v4, the [We
 
 {% info_block infoBox "Info" %}
 
-Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download).
+Make sure you are using [Node.js 18 or later](https://nodejs.org/en/download/package-manager).
 
 {% endinfo_block %}
 

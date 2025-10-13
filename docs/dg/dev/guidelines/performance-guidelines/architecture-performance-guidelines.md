@@ -7,9 +7,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 related:
   - title: General performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - title: Frontend performance guidelines
-    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 
 Performance shows the response of a system to carrying out certain actions for a certain period. Performance is an important quality attribute in each application architecture that can impact user experience behavior and business revenues. Therefore, we highly recommend following the best practices and avoiding performance drawbacks in the architecture design.
@@ -22,7 +22,7 @@ Below, you will find the most common architecture design mistakes and impediment
 
 ### Duplications of slow operations
 
-Sometimes, due to business requirements, it’s mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
+Sometimes, because of business requirements, it's mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
 
 Let's consider an example illustrating the impact of a bad architecture design with slow operations. Imagine you have a method called `caluculateDiscount()` that generates some discounts for cart items. However, each call of this method takes 100ms, which might be a proper response time for an API. Now think of another business requirement when you need to calculate the discount for 10 separated groups of items in the cart. In this case, you need to call the `caluculateDiscount()` method 10 times, leading to 1000ms (1 second), which already poses a performance problem.
 
@@ -30,8 +30,8 @@ Let's consider an example illustrating the impact of a bad architecture design w
 
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries into one query with a bigger result (unfiltered).
-* Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+- Merging several queries into one query with a bigger result (unfiltered).
+- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
 
@@ -39,9 +39,51 @@ Make sure you carefully check for memory leaks during the query optimizations, a
 
 {% endinfo_block %}
 
+### Duplicated storage calls (storage calls in a loop)
+
+In project implementations, developers sometimes introduce repeated storage calls inside loops. Each iteration of the loop then results in a new query to the storage, even though the required data could often be retrieved in a more optimized way. This creates a significant performance bottleneck because:
+
+- Storage access is typically slower because of the network overhead on each trip to Redis/Valkey. Multiplying these calls by the number of loop iterations can lead to exponential slowdowns.
+- High-frequency storage calls increase infrastructure load, leading to higher operational costs and degraded system responsiveness under load.
+- Unnecessary roundtrips to storage delay the request–response cycle and negatively impact customer-facing performance metrics such as page load time and API latency.
+
+To avoid these pitfalls, architects and developers should ensure storage interactions are minimized and structured efficiently. Best practices include:
+
+- Batch retrieval: Fetch all required records in a single storage call before entering the loop.
+- Indexing and pre-aggregation: Where possible, prepare optimized structures to avoid repeated lookups.
+
+Bad practice – repeated storage calls inside the loop:
+
+```php
+foreach ($storageKeys as $storageKey) {
+    $productData = $this->storageClient->get($storageKey);
+    // Process $productData
+}
+```
+
+In this example, every loop iteration triggers a new storage request, which can quickly become a performance bottleneck with larger datasets.
+
+Recommended approach – batch retrieval and in-memory processing:
+
+```php
+$productsData = $this->storageClient->getMulti($storageKeys);
+
+foreach ($productsData as $productData) {
+    // Process $productData
+}
+```
+
+By fetching all required records in a single call (with `\Spryker\Client\Storage\StorageClientInterface::getMulti`), the system significantly reduces storage interactions and improves performance. The retrieved data is stored in memory and reused during processing.
+
+{% info_block warningBox %}
+
+Always evaluate the size of batch requests and memory usage when removing storage calls from loops. While batching improves performance, overly large result sets can increase memory consumption and cause application instability.
+
+{% endinfo_block %}
+
 ### Optimistic vs. pessimistic locking
 
-Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance due to the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
+Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance because of the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
 
 Some of the pessimistic locking use cases are:
 
@@ -50,9 +92,9 @@ Some of the pessimistic locking use cases are:
 
 To avoid performance issues, architects can recommend using optimistic locking with several different implementations according to the faced problems.
 
-### Synchronous communications and 3rd party calls
+### Synchronous communications and third-party calls
 
-Another architectural mistake is relying on a 3rd party response time to achieve promised performance for an application. Having a direct external call to a 3rd party organization during a transaction can make the performance unpredictable and impact the user experience.
+Another architectural mistake is relying on a third-party response time to achieve promised performance for an application. Having a direct external call to a third-party organization during a transaction can make the performance unpredictable and impact the user experience.
 
 We recommend architects fulfill the requirements by providing a different solution like asynchronous communication<!-- or pre/after indirect hooks that are not visible for the end users-->.
 
@@ -66,7 +108,7 @@ Below, you will find an analysis of the Spryker architecture and solutions for t
 
 ### Database queries in plugins
 
-Spryker widely uses plugins to reduce module dependencies and to increase flexibility to make features work together smoothly. However, this can lead to some performance issues if there are database queries in each plugin. That's why it is essential to aggregate all queries to decrease the number of database operations.
+Spryker widely uses plugins to reduce module dependencies and to increase flexibility to make features work together smoothly. However, this can lead to some performance issues if there are database queries in each plugin. That's why it's essential to aggregate all queries to decrease the number of database operations.
 
 Let's consider an example. Suppose there are 10 plugins for the cart feature to calculate items price, discount, tax, etc. Each plugin has a query to find a product by SKU per order item, which means the code will execute 10 same queries per each item in the cart.
 
@@ -106,7 +148,7 @@ Spryker uses Propel ORM as a database abstraction layer which allows to stay DBM
 
 Performance is one of the key attributes when it comes to synchronous combinations. Therefore, as a rule of thumb, any database operations must be high performant and be executed fast. If ORM cannot guarantee the high-speed database operation because of the lack of features or complexity, one should avoid using it.
 
-For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
+For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation because of the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
 
 For data import of large files, it's also important to use bulk processing. Therefore, consider importing data into the database with chunks of 1000+ elements. The same applies to triggering events. Using bulk processing saves a lot of time for communication with the database and queues.
 
@@ -114,7 +156,7 @@ For more information about improving data import performance, see [Data importer
 
 Features affected by the ORM approach:
 
-- [Data import](/docs/scos/dev/sdk/data-import.html)
+- [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
 - [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Database query optimization
@@ -130,9 +172,9 @@ Database queries are the slowest parts of each application. They have different 
 
 Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
 
-### Wildcards in Redis
+### Wildcards in the key-value store
 
-Avoid using wildcards (*) in Redis, as they can significantly impact performance.
+Avoid using wildcards (*) in the key-value store, as they can significantly impact performance.
 
 ### RPC calls
 
@@ -145,10 +187,13 @@ Propel instance pooling is a  Propel feature that determines whether object inst
 If you encounter memory leak issues while running console commands, consider temporarily disabling instance pooling:
 
 1. Before executing a memory-intensive script, disable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::disableInstancePooling();
 ```
+
 2. After the memory-intensive script has been executed, reenable instance pooling:
+
 ```php
 \Propel\Runtime\Propel::enableInstancePooling();
 ```
@@ -169,7 +214,7 @@ Publishers use queues to propagate events and let workers consume them to provid
 
 The default Spryker configuration comes with one worker per publisher queue. Nevertheless, you can increase this configuration to the maximum number of CPUs for a specific queue if other queues do not receive any loads. For example:
 
-```
+```text
 Publisher.ProductAbstract 10000 msg/minute (2 workers)
 Publisher.ProductConcrete 10000 msg/minute (2 workers)
 Publisher.Translation 10 msg/minute (1 worker)
@@ -200,7 +245,7 @@ Spryker also recommends enabling the benchmark tests for each publisher queue an
 
 Example of benchmark for each queue:
 
-```
+```text
 time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
 ....
 ```
@@ -215,12 +260,12 @@ As the Spryker boilerplate comes with most of the features enabled, make sure yo
 
 ### Zed calls
 
-Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it is necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
+Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it's necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:
 
-- Exporting necessary data, only product-related ones, from Zed to Redis at the pre-calculation phase with the help of Publish and Synchronization.
+- Exporting necessary data, only product-related ones, from Zed to the key-value store (Redis or Valkey) at the pre-calculation phase with the help of Publish and Synchronization.
 - Merging duplicate Zed requests to only one customer request (AddToCart + Validations + …).
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
@@ -228,12 +273,14 @@ Avoid making ZED calls within QueryExpanderPlugin (from Storage or Search).
 
 ### OMS optimization
 
-OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it is necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
+OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. So, make sure transitions related to unsused features are disabled, for example–Reservation or Timeout transitions.
 
-One can avoid using the unnecessary transitions by:
+You can avoid using the unnecessary transitions as follows:
 
-- Removing the *Reservation* flag from the NEW and other steps in the OMS.
-- Removing the *Timeout* transition from the NEW step in the OMS.
+- Remove the `Reservation` flag from the `NEW` and other steps in the OMS.
+- Remove the `Timeout` transition from the `NEW` step in the OMS.
+
+For more ways to optimize OMS, see [Slow checkout endpoint](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html#slow-checkout-endpoint).
 
 ### Performance checklist
 
@@ -265,4 +312,4 @@ We strongly recommend our customers enable APM systems for their projects. Spryk
 
 ### Performance CI
 
-Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html) tool.
+Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html) tool.

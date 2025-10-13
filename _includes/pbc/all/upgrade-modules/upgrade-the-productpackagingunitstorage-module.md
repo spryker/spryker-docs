@@ -63,7 +63,7 @@ console transfer:generate
 console event:trigger -r product_packaging_unit
 ```
 
-6. Run the following - or create a bash file for it - to clean up the Redis storage from the entries with the old data:
+6. Run the following - or create a bash file for it - to clean up the key-value storage (Redis or Valkey) from the entries with the old data:
 
 ```bash
 for k in $(redis-cli -p 10009 --scan --pattern "*:product_abstract_packaging:*"); do
@@ -105,7 +105,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 
 {% info_block infoBox %}
 
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please contact us if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Contact us if you have any questions.
 
 {% endinfo_block %}
 

@@ -1,6 +1,6 @@
 ---
 title: Migrate to Jenkins
-description: Learn how to migrate to the Jenkins scheduler.
+description: Learn how to migrate cronjobs to Jenkins in Spryker's backend to streamline task automation. Improve the efficiency of your ecommerce platform with Jenkins integration.
 template: howto-guide-template
 last_updated: Nov 1, 2021
 redirect_from:
@@ -28,9 +28,9 @@ Jenkins is the default scheduler shipped with Spryker Demo Shops. Follow the ins
 
 Check `composer.json` and `package.json` to make sure that the following Composer packages are installed:
 
-* `spryker/scheduler: *`
-* `spryker/scheduler-extension: *`
-* `spryker/scheduler-jenkins: *`
+- `spryker/scheduler: *`
+- `spryker/scheduler-extension: *`
+- `spryker/scheduler-jenkins: *`
 
 ## 1. Configure Jenkins
 

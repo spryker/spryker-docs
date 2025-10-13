@@ -1,6 +1,6 @@
 ---
 title: Upgrade to Angular 12
-description: Use the guide to update versions of the Angular and related modules.
+description: Learn how you can upgrade to Version 12 of Angular for your Spryker project for improved performance and security.
 template: module-migration-guide-template
 last_updated: Jul 13, 2023
 redirect_from:
@@ -15,7 +15,7 @@ This document shows how to upgrade Angular to version 12 in your Spryker project
 
 ### Overview
 
-Every six months, the Angular community releases a major update, and on 12th May 2021 version 12 of Angular was released.
+Every six months, the Angular community releases a major update, and on May 12, 2021 version 12 of Angular was released.
 
 A version upgrade is necessary for improved performance, stability, and security. Stability allows reusable components and tools and makes medium and large applications thrive and shine.
 
@@ -169,7 +169,7 @@ module.exports = { ...nxPreset };
 5. Compare and update the following files:  
 
 <details>
-<summary markdown='span'>angular.json</summary>
+<summary>angular.json</summary>
 
 ```json
 {
@@ -285,6 +285,7 @@ module.exports = { ...nxPreset };
     "defaultProject": "merchant-portal"
 }
 ```
+
 </details>
 
 `jest.config.js` in the `frontend/merchant-portal/` folder:

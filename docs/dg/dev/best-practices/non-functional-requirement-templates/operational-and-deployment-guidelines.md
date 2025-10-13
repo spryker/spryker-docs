@@ -34,35 +34,39 @@ As the system is being developed, the NFRs may also need to be adjusted to refle
 
 Software architecture and design must ensure that there is no negative impact on application availability by following the guidelines:
 
-* Avoid designing the application to limit its own startup and shutdown:
-  * Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
-  * Avoid using flags or other mechanisms to block the application from starting.
-  * Avoid setting limits on the number of concurrent processes that can be run by the application.
-* Avoid designing the application to lock shared resources at the application level. For example, if the application uses a database, it shouldn't lock the database tables or rows that it reads or writes to. This can cause other parts of the system to become unavailable.
-* Align resource consumption with expected workloads. For example, if using PHP-FPM, make sure the number of worker processes is sufficient to handle the expected workload without overloading the system.
+- Avoid designing the application to limit its own startup and shutdown:
+  - Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
+  - Avoid using flags or other mechanisms to block the application from starting.
+  - Avoid setting limits on the number of concurrent processes that can be run by the application.
+- Avoid designing the application to lock shared resources at the application level. For example, if the application uses a database, it shouldn't lock the database tables or rows that it reads or writes to. This can cause other parts of the system to become unavailable.
+- Align resource consumption with expected workloads. For example, if using PHP-FPM, make sure the number of worker processes is sufficient to handle the expected workload without overloading the system.
 
 ## Security guidelines
 
-Make sure to define and follow your own project's [security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
+Make sure to define and follow your own project's [security best practices](/docs/dg/dev/guidelines/security-guidelines.html).
 
 ## Deployability guidelines
 
-* The same release candidate and branch must be redeployable without side effects.
-* Deploy scripts must not break the behavior of the current system.
-  * Deploy script elements must be configured according to your project setup following the [deployment pipeline](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) process.
-  * The application to be deployed (version N+1) must upgrade the data structures and constants and data sets without causing downtime and without failing, losing, or compromising any (version N+1 or N) functionality.
-  * The message consumers to be deployed (version N+1) must be backward compatible with the present (<N+1) messages and broker structure.
-  * The deployed (version N+1) application *can* clean up obsolete data structures, constants, and data sets if it causes no downtime, unless it's breaking version N.
+- The same release candidate and branch must be redeployable without side effects.
+- Deploy scripts must not break the behavior of the current system.
+  - Deploy script elements must be configured according to your project setup following the [deployment pipeline](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) process.
+  - The application to be deployed (version N+1) must upgrade the data structures and constants and data sets without causing downtime and without failing, losing, or compromising any (version N+1 or N) functionality.
+  - The message consumers to be deployed (version N+1) must be backward compatible with the present (<N+1) messages and broker structure.
+  - The deployed (version N+1) application *can* clean up obsolete data structures, constants, and data sets if it causes no downtime, unless it's breaking version N.
 
 ## Rollback-ability guidelines
 
 The rollback scripts must not break the behavior of the current system:
-* Rollback script elements must be configured according to your project setup following the rollback pipeline process.
-* The deployed (version N+1) application can rollback current version (N+1) data structures, constants, and data sets to previous version (N) without causing downtime.
+- Rollback script elements must be configured according to your project setup following the rollback pipeline process.
+- The deployed (version N+1) application can rollback current version (N+1) data structures, constants, and data sets to previous version (N) without causing downtime.
 
 ## Performance guidelines
 
-* Zed UI's average load performance should be under 450ms.
-* Glue GET requests with subsequent Zed requests should be under 180ms on average.
-* Glue GET requests without subsequent Zed requests should be under 140ms on average.
-* Glue POST, PATCH, and PUT requests with subsequent Zed requests should be under 290ms on average.
+- Zed UI's average load performance should be under 450ms.
+- Glue GET requests with subsequent Zed requests should be under 180ms on average.
+- Glue GET requests without subsequent Zed requests should be under 140ms on average.
+- Glue POST, PATCH, and PUT requests with subsequent Zed requests should be under 290ms on average.
+
+## Scaleability guidelines
+
+[P&S](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) processes must have O(n) time complexity and O(n) resource complexity. In other words, they scale linearly with the number of entities they're processing. Specifically, memory and CPU consumption must grow proportionally to the number of entities. For example, if a process handles 100 entities, its resource consumption is X. When it handles 200 entities, the resource consumption must not exceed 2X.

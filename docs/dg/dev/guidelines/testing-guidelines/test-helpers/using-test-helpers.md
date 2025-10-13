@@ -11,27 +11,27 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
 related:
   - title: Available test helpers
-    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - title: Code coverage
-    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+    link: docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
   - title: Data builders
-    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+    link: docs/dg/dev/guidelines/testing-guidelines/data-builders.html
   - title: Executing tests
-    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
   - title: Publish and Synchronization testing
-    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
   - title: Setting up tests
-    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Test framework
-    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/test-framework.html
   - title: Testify
-    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testify.html
   - title: Testing best practices
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - title: Testing concepts
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - title: Testing console commands
-    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+    link: docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 [Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html) for information on some of them.
@@ -67,12 +67,12 @@ For a real example, check out the [codeception.yml file of the Router module](ht
 Helpers give easy access to every point of the test lifecycle. A test lifecycle looks as follows:
 
 - Before test suite
-    - Before test
-        - test
-    - After test
-    - Before test
-        - test
-    - After test
+  - Before test
+    - test
+  - After test
+  - Before test
+    - test
+  - After test
 - After test suite
 
 With the helpers, you can hook into every point of this lifecycle and do things that are required for your test case. For example, create an application state before the test itself has been executed, or clean up after the test has been executed, etc.
@@ -80,6 +80,7 @@ With the helpers, you can hook into every point of this lifecycle and do things 
 Checkout the [Codeception helper](https://codeception.com/docs/06-ModulesAndHelpers), the *Hooks* section, for information about each method of the Codeception's module class.
 
 ## Helper methods
+
 When you have code blocks that are re-usable in other modules as well, consider creating a helper with a method that provides the re-usable code.
 
 Every public method in your helper will be generated into the tester class, and can be executed from within your test after you run `vendor/bin/codecept build`.
@@ -144,8 +145,8 @@ class YourHelper extends Module
 
 ## Next steps
 
-* Learn about the [available test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
-* [Execute your tests](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
-* Learn [how to test console commands](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
-* [Configure data builders to create transfers for your tests](/docs/dg/dev/guidelines/testing-guidelines/data-builders.html).
-* [Generate code coverage report for your tests](/docs/dg/dev/guidelines/testing-guidelines/code-coverage.html).
+- Learn about the [available test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
+- [Execute your tests](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
+- Learn [how to test console commands](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).
+- [Configure data builders to create transfers for your tests](/docs/dg/dev/guidelines/testing-guidelines/data-builders.html).
+- [Generate code coverage report for your tests](/docs/dg/dev/guidelines/testing-guidelines/code-coverage.html).

@@ -1,0 +1,10 @@
+defaultConfig: .markdownlint.json
+
+customRules:
+  - ./mdlint/bare-links.js
+  - ./mdlint/no-space-in-emphasis.js
+  
+
+ignores:
+  - "**/202311.0/**"
+  - "**/202404.0/**"

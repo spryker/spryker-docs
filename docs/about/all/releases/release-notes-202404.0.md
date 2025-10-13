@@ -47,7 +47,7 @@ Excellence in merchant care: Provide your merchants with comprehensive support, 
 
 ### Documentation
 
-[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html)
+[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/latest/marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
 ## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>

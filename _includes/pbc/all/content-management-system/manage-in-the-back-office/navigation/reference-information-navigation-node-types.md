@@ -17,3 +17,10 @@ Depending on the type of the node, there is various node related information tha
 - External URL (only for **External URL** type): If you would like to link an external URL to your nodes, you will use this field to define the absolute URL. This could be used, for example, to link your corporate website page in your shop. Unlike internal links, the URL of the external link should be absolute, which means it needs to include the protocol as well as domain, such as `https://mydomain.com/page`.
 
 {% wistia 2iepfhl6fu 960 720 %}
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.md/How+to+Configure+Navigation+in+Spryker+B2C-pvp8jxj85s.mp4" type="video/mp4">
+  </video>
+</figure>

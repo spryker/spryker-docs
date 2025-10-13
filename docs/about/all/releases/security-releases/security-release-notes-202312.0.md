@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
 - /docs/about/all/releases/security-release-notes-202312.0.html
-
+publish_date: "2023-12-18"
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -17,7 +17,7 @@ If you need any additional support with this content, [contact our support](http
 
 The password reset functionality missed security-related controls that could lead to manipulation by attackers. The security flaws related to fixing this issue included the following:
 - Reusable password reset tokens: Upon successful completion of a password reset, the same link containing a token could be reused to reset the password again.<br>
-Affected applications: BackOffice, Merchant Portal.
+Affected applications: Back Office, Merchant Portal.
 - Extended expiration time for password reset tokens:  The password reset token expiration time was too long.<br>
 Affected applications: Storefront, Back Office, Merchant Portal.
 - No rate limiting the password reset attempts: It was possible to make an infinite number of attempts to reset any account using any email address.<br>

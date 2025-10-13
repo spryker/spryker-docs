@@ -32,7 +32,7 @@ The Spryker OS provides the following Application Layers:
 
 - [Yves](/docs/dg/dev/backend-development/yves/yves.html) — provides twig-based (PHP) frontend functionality with the light-weight data access.
 - [Zed](/docs/dg/dev/backend-development/zed/zed.html) — provides back office/backend functionality with business logic and complex calculations.
-- [Glue](/docs/dg/dev/glue-api/{{site.version}}/rest-api/glue-infrastructure.html) — provides infrastructure for API endpoints.
+- [Glue](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html) — provides infrastructure for API endpoints.
 - [Client](/docs/dg/dev/backend-development/client/client.html) — provides data access infrastructure.
 - Shared — provides shared code abstractions to be used in other Application Layers of the same module.
 - Service — provides infrastructure for the stateless operations, usually utils.
@@ -67,7 +67,7 @@ Frontend applications require de-normalized data in order to quickly be able to 
 
 Key-value storages work like a hash-tables where retrieval time is faster compared to the complicated joins and queries in a relational database. For example, to render a product detail page, the system needs several pieces of information like the product title, description, attributes, images, and prices. Instead of the execution of time-consuming queries in the SQL database, all the data is placed in a few entries in the storage and can be loaded by a single lookup.
 
-Redis is the default data storage in Spryker, but it can be easily replaced by other technologies, like MongoDB, Cassandra, or even a separate relational DB like PostgreSQL.
+Key-value storage (Redis or Valkey) are the default data storages in Spryker, but it can be easily replaced by other technologies, like MongoDB, Cassandra, or even a separate relational DB like PostgreSQL.
 
 ### Search
 

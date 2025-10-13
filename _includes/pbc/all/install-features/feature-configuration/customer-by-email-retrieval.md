@@ -32,13 +32,13 @@ When this flag is set to `false` (default), the system uses case-insensitive com
 - With case-insensitive validation (default: `false`), queries use `UPPER(email) = UPPER(?)` for comparisons
 - SQL functions like `UPPER()` on indexed columns prevent the database (MariaDB/MySQL) from using indexes efficiently
 - The database cannot use the email column index because it's wrapped in a function
-- As the `spy_customer` table grows (e.g., 300,000+ records), queries can slow down significantly (3-4 seconds or more)
+- As the `spy_customer` table grows (for example, 300,000+ records), queries can slow down significantly (3-4 seconds or more)
 - This is particularly problematic during customer registration and login flows
 
 **When to enable case-sensitive validation (`true`):**
 
 ✓ **Recommended for most projects:**
-- Most Spryker projects use case-insensitive database collation by default (e.g., `utf8mb4_unicode_ci`)
+- Most Spryker projects use case-insensitive database collation by default (for example, `utf8mb4_unicode_ci`)
 - When your database collation is already case-insensitive, using `UPPER()` is redundant
 - Enabling this flag removes the unnecessary `UPPER()` function, allowing proper index usage
 - This improves query performance from seconds to milliseconds for large customer tables
@@ -52,7 +52,7 @@ When this flag is set to `false` (default), the system uses case-insensitive com
 **When to keep case-insensitive validation (`false`):**
 
 ✗ **Only if:**
-- Your database uses a case-sensitive collation (e.g., `utf8mb4_bin`)
+- Your database uses a case-sensitive collation (for example, `utf8mb4_bin`)
 - You have a specific business requirement to distinguish between `user@example.com` and `User@example.com` as different accounts
 - Note: This scenario is uncommon and not recommended for most e-commerce applications
 
@@ -62,7 +62,7 @@ For optimal performance, set `isCustomerEmailValidationCaseSensitive()` to retur
 
 **Migration consideration:**
 
-If you're enabling this flag on an existing system, ensure you don't have duplicate customer records with emails that differ only in case (e.g., `user@example.com` and `User@example.com`). Run a query to check for duplicates before making this change:
+If you're enabling this flag on an existing system, ensure you don't have duplicate customer records with emails that differ only in case (for example, `user@example.com` and `User@example.com`). Run a query to check for duplicates before making this change:
 
 ```sql
 SELECT LOWER(email) as email_lower, COUNT(*) as count

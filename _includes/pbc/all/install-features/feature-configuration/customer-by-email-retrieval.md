@@ -1,14 +1,16 @@
-7. Optional: Configure case sensitivity for customer email validation by adjusting the `CustomerConfig::isCustomerEmailValidationCaseSensitive()` method:
+7. Configure case sensitivity for customer email validation by adjusting the `CustomerConfig::isCustomerEmailValidationCaseSensitive()` method:
+
+<details>
+  <summary>src/Pyz/Zed/Customer/CustomerConfig.php</summary>
 
 ```php
 <?php
-
 namespace Pyz\Zed\Customer;
-
-use Spryker\Zed\Customer\CustomerConfig as SprykerCustomerConfig;
 
 class CustomerConfig extends SprykerCustomerConfig
 {
+    ...
+    
     /**
      * @return bool
      */
@@ -16,8 +18,11 @@ class CustomerConfig extends SprykerCustomerConfig
     {
         return true;
     }
+    
+    ...
 }
 ```
+</details>
 
 {% info_block infoBox "Performance considerations" %}
 
@@ -25,7 +30,11 @@ The `isCustomerEmailValidationCaseSensitive` flag controls how customer emails a
 
 **How it works:**
 
-When this flag is set to `false` (default), the system uses case-insensitive comparison via the `UPPER()` SQL function when querying customer records by email. This behavior is controlled by Propel's `\Propel\Runtime\ActiveQuery\Criterion\BasicCriterion` class (see `appendPsForUniqueClauseTo()` method) which calls `\Propel\Runtime\Adapter\Pdo\PdoAdapter::ignoreCase()` to wrap columns in `UPPER()`. The Spryker implementation in `\Spryker\Zed\Customer\Persistence\Propel\AbstractSpyCustomerQuery::filterByEmail()` allows controlling this behavior via the `$ignoreCase` parameter, which is set by `\Spryker\Zed\Customer\Persistence\CustomerRepository::isEmailAvailableForCustomer()` based on the `isCustomerEmailValidationCaseSensitive()` configuration.
+When this flag is set to `false` (default), the system uses case-insensitive comparison via the `UPPER()` SQL function:
+
+- **Propel ORM layer**: `\Propel\Runtime\ActiveQuery\Criterion\BasicCriterion::appendPsForUniqueClauseTo()` calls `\Propel\Runtime\Adapter\Pdo\PdoAdapter::ignoreCase()` to wrap columns in `UPPER()`
+- **Spryker abstraction**: `\Spryker\Zed\Customer\Persistence\Propel\AbstractSpyCustomerQuery::filterByEmail()` accepts an `$ignoreCase` parameter to control this behavior
+- **Configuration point**: `\Spryker\Zed\Customer\Persistence\CustomerRepository::isEmailAvailableForCustomer()` reads the `isCustomerEmailValidationCaseSensitive()` config and passes it to the query builder
 
 **Performance impact:**
 

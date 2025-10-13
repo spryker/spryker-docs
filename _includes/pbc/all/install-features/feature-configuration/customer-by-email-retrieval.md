@@ -22,6 +22,7 @@ class CustomerConfig extends SprykerCustomerConfig
     ...
 }
 ```
+
 </details>
 
 {% info_block infoBox "Performance considerations" %}

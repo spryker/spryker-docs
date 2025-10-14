@@ -26,6 +26,13 @@ A customer can change their order as follows:
 3. Checkout proceeds via the standard flow.
 4. Upon confirmation, the original order is updated with the amendments.
 
+## B2B order amendments
+
+In B2B contexts, company users can amend orders based on their permissions:
+
+- Company users can amend orders created by other company users within their Business Unit if they have the appropriate permissions.
+- Company users can amend orders across the entire Company if they have company-level permissions.
+
 ## Cart strategies
 
 Order amendment uses the cart functionality as an interface. When a customer initiates an amendment, the order is carried over to cart for making changes. There're two default strategies to handle this process:

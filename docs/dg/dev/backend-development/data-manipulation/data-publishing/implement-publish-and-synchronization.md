@@ -34,7 +34,7 @@ All required steps are described in this article.
 
 ## 1. Create a base module
 
-We recommend putting a `Publish & Synchronization` related code in a separate module. A module usually represents one database or domain entity. E.g. `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`.
+We recommend putting a `Publish & Synchronization` related code in a separate module. A module usually represents one database or domain entity. For example `StoreStorage` module will populate storage with `Store` data and also with data from related tables like `StoreContext`.
 
 You can create a module with a few options:
 - Create a module manually. For details, see [Create a module](/docs/dg/dev/backend-development/extend-spryker/create-modules).
@@ -151,7 +151,7 @@ This table is used to store records that will be later synced into Storage or Se
 
 {% info_block infoBox "Naming convention"%}
 
-As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with storage database (e.g. Redis), and `_search` if it's synchronized with search database (e.g. Elasticsearch).
+As a naming convention, it's recommended to append `_storage` to the end of the table name if it's synchronized with storage database (for example Redis), and `_search` if it's synchronized with search database (for example Elasticsearch).
 
 {% endinfo_block %}
 
@@ -270,7 +270,8 @@ class StoreWritePublisherPlugin extends AbstractPlugin implements PublisherPlugi
 
 This plugin must be registered in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method. The plugins are listening to the default publish queue, which is defined in the `\Pyz\Zed\Publisher\PublisherConfig::getPublishQueueName()` method. Custom queue names can be set by providing a key as a queue name in the `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` method.
 
-E.g.
+For example
+
 ```php
 
 protected function getPublisherPlugins(): array
@@ -366,6 +367,7 @@ class StorePublisherTriggerPlugin extends AbstractPlugin implements PublisherTri
 ```
 
 ### 4.2 Create a Synchronization plugin
+
 A Synchronization plugin is used to synchronize data to the frontend. 
 It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables. 
 
@@ -461,9 +463,11 @@ class StoreSynchronizationDataPlugin extends AbstractPlugin implements Synchroni
 }
 
 ```
+
 If the entity is store related - `hasStore()` method must return `true`, otherwise `getSynchronizationQueuePoolName()` need to return a string with the pool name. It should be the same as is provided in table definition [queue_pool](#create-a-new storage-or-search-table) of Synchronization behavior.
 
 Below you can see an example of the code that provides data for the `getData()` method. Data taken from the Storage table and mapped to the `SynchronizationDataTransfer` object.:
+
 ```php
 
 public function getStoreStorageSynchronizationDataTransfers(StoreStorageCriteriaTransfer $storeStorageCriteriaTransfer): array
@@ -543,7 +547,7 @@ For the publishing we are using the default publish queue, which is defined in t
 
 ## 6. Validate the implementation
 
-To validate the implementation, you can update a Propel entity in the backoffice and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
+To validate the implementation, you can update a Propel entity in the Backoffice and check if the data is published to the *Storage* or *Search* databases. If any errors occur during the process, you can check the error queue in the RabbitMQ management UI. The error queue is created automatically by adding an `error` suffix to the queue name.
 
-For the Search you can check this [document](docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html) to get more info how you can work with data that you just sync.
+For the Search you can check this [document](/docs/pbc/all/search/latest/base-shop/tutorials-and-howtos/configure-a-search-query.html) to get more info how you can work with data that you just sync.
 For the Storage on the other hand, you can check this [document](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage) to learn more.

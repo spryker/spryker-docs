@@ -11,15 +11,15 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 related:
   - title: Retrieve concrete product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -77,8 +77,8 @@ To retrieve general information about a concrete product, send the request:
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
 | `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products` | Retrieve the concrete product with SKU `214_123`. If it's a product bundle, retrieve the bundled products. |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products,concrete-products,abstract-products` | Retrieve the concrete product with SKU `214_123`. If it's a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
+| `GET https://glue.mysprykershop.com/concrete-products/214_123?include=bundled-products` | Retrieve the concrete product with SKU `214_123`. If it's a product bundle, retrieve the bundled products. |
+| `GET https://glue.mysprykershop.com/concrete-products/214_123?include=bundled-products,concrete-products,abstract-products` | Retrieve the concrete product with SKU `214_123`. If it's a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
 
 ### Response
 
@@ -1661,4 +1661,4 @@ To retrieve general information about a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

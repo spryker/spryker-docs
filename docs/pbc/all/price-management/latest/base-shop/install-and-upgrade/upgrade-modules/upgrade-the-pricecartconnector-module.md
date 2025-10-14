@@ -35,9 +35,9 @@ redirect_from:
   - /module_migration_guides/mg-price-cart-connector.htm
 related:
   - title: Upgrade the Price
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Upgrade the MultiCurrency
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md -->

@@ -5,11 +5,11 @@ description: This document provides details about the Persistence service in the
 template: concept-topic-template
 related:
   - title: In Memory Persistence Strategy
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
   - title: Local Storage Persistence Strategy
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
   - title: Url Persistence Strategy
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 redirect_from:
 - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/persistence.html
 - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/persistence/persistence.html

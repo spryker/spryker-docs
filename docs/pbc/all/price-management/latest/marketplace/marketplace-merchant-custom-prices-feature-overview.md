@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-custom-prices-feature-overview.html
 related:
   - title: Managing marketplace abstract product prices
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
   - title: Managing marketplace concrete product prices
-    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
+    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
 ---
 
 The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to define custom prices for the marketplace products within specific business units of B2B customers via the Merchant Portal.

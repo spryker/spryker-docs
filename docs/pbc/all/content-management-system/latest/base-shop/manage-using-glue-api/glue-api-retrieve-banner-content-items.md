@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 related:
   - title: Content Items feature overview
-    link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about banner content items.
@@ -83,4 +83,4 @@ Response sample: retrieve a banner content item
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

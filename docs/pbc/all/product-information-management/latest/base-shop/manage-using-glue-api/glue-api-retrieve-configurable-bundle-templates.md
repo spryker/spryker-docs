@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 related:
   - title: Configurable Bundle feature overview
-    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html
+    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.
@@ -749,7 +749,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).
 
 ## Other management options
 

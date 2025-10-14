@@ -86,4 +86,4 @@ Response sample:
 | 5400 | The service point address with the specified ID doesn't exist. |
 | 5415 | Zip code value is length from 4 to 15 characters. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

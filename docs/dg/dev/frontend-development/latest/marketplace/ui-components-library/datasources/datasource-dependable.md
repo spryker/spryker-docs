@@ -8,13 +8,13 @@ redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Trigger
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
   - title: Datasource Http
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 

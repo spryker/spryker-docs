@@ -52,7 +52,11 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 - Preserve original order reference: Maintain consistent tracking and reporting by keeping the original order reference.
 
 
-![Order Amendment](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/Order_Amendment_Release_Notes.png)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.md/Order_Amendment_Explained.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ### Business benefits
@@ -93,6 +97,11 @@ The Product Import feature in the Merchant Portal enables you to bulk upload pro
 - Empower merchants with self-service tools
 - Launch and update product catalogs faster
 - Reduce data entry errors and manual rework
+
+### Docs
+
+- [Install the Marketplace Merchant Portal Data Import feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-data-import-feature.html)
+- [Install the Marketplace Merchant Portal Product Data Import feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature.html)
 
 
 
@@ -306,6 +315,12 @@ A single image can contain multiple products, and they both will be added to car
 
 Customers need own OpenAI accounts to use this feature.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/AI_Visual_Add_To_Cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ### Business benefits
 
 - Enable more buying routes
@@ -457,6 +472,10 @@ This redesign addresses stability challenges from its previous Jenkins-based exe
 
 The new architecture provides isolated worker contexts, automatic retries, and better error handling for a more robust P&S operation.
 
+
+### Docs
+
+[Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers)
 
 
 

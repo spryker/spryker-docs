@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-category-cms-blocks.html
 related:
   - title: Upgrade the CmsBlock module
-    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 
 A category block is a CMS block that can be embedded into a category template.

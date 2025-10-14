@@ -283,7 +283,7 @@ This endpoint lets you retrieve services.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
+| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
 
 
 ### Request
@@ -437,4 +437,4 @@ This endpoint lets you retrieve services.
 | --- | --- |
 | 5403 | The service point with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

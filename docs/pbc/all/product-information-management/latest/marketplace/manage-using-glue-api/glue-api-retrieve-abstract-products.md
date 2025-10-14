@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-abstract-products.html
 related:
   - title: Retrieving abstract products in abstract product lists
-    link: docs/pbc/all/content-management-system/page.version/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
+    link: docs/pbc/all/content-management-system/latest/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
 ---
 
 This endpoint allows retrieving general information about abstract products.
@@ -1491,4 +1491,4 @@ For the attributes of other included resources, see:
 | 301 |  Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

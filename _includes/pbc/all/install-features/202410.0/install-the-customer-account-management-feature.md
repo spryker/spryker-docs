@@ -231,6 +231,8 @@ class CustomerConfig extends SprykerCustomerConfig
 
 </details>
 
+{% include pbc/all/install-features/feature-configuration/customer-by-email-retrieval.md %} <!-- To edit, see /_includes/pbc/all/install-features/feature-configuration/customer-by-email-retrieval.md -->
+
 The following table describes the settings:
 
 | SETTING                                            | MEANING                                                                                                                                                                   |

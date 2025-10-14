@@ -28,10 +28,10 @@ A customer can change their order as follows:
 
 ## B2B order amendments
 
-In B2B contexts, company users can amend orders based on their permissions:
+In B2B contexts, company users can amend orders according to their permissions:
 
-- Company users can amend orders created by other company users within their Business Unit if they have the appropriate permissions.
-- Company users can amend orders across the entire Company if they have company-level permissions.
+- A company user can amend orders created by other users within the same business unit if they have the required permissions.
+- A company user can amend orders across the entire company if they have company-level permissions.
 
 ## Cart strategies
 

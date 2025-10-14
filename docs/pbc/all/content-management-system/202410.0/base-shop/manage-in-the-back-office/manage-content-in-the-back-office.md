@@ -7,6 +7,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/log-into-the-back-office.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-content-in-the-back-office.html
 ---
 
 This section contains guides on managing content in the Back Office:

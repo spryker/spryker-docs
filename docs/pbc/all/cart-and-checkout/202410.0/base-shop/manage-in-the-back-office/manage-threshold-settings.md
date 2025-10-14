@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/managing-threshold-settings
   - /docs/scos/user/back-office-user-guides/202311.0/administration/thresholds/managing-threshold-settings.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/manage-threshold-settings.html
+  - /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-in-the-back-office/manage-threshold-settings.html
+
 related:
   - title: Managing Global Thresholds
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/define-global-thresholds.html

@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/references/reference-information-content-item-widgets-types.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/creating-content-items.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html
 ---
 
 This topic describes how to create content items in the Back Office.

@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/email-as-a-cms-block-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/email-as-a-cms-block-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
+
 ---
 
 Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.

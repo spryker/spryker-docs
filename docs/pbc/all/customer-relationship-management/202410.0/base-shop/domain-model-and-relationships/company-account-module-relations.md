@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-module-relations.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/company-account-feature-walkthrough/company-account-module-relations.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/company-account-module-relations.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/domain-model-and-relationships/company-account-module-relations.html
 ---
 
 The schema below illustrates relations between company, business unit, company unit address, and company user (customer).

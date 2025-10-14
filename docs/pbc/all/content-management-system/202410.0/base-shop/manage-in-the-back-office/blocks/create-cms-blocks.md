@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/creating-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/view-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html
+  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html
 related:
   - title: Edit CMS blocks
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html

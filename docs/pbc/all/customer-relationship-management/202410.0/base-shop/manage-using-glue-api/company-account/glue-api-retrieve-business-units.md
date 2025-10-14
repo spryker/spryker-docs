@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/retrieving-business-units.html
+  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
 related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html

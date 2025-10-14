@@ -12,6 +12,7 @@ The following feature integration guide expects the basic feature to be in place
 - Invoice generation
 - Custom order reference
 - Sales Orders Backend API
+- Order Matrix
 
 {% endinfo_block %}
 
@@ -47,6 +48,8 @@ Make sure that the following modules have been installed:
 | OrderCustomReferenceGui        | vendor/spryker/order-custom-reference-gui         |
 | SalesOrdersBackendApi          | vendor/spryker/sales-orders-backend-api           |
 | SalesOrdersBackendApiExtension | vendor/spryker/sales-orders-backend-api-extension |
+| OrderMatrix                    | vendor/spryker/order-matrix                       |
+| OrderMatrixGui                 | vendor/spryker/order-matrix-gui                   |
 
  {% endinfo_block %}
 
@@ -96,6 +99,13 @@ Make sure the following changes have been applied in transfer objects:
 | QuoteUpdateRequestAttributes.orderCustomReference | property | created | src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer   |
 | Order.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/OrderTransfer                          |
 | Item.uuid                                         | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
+| OrderMatrix                                       | class    | created | src/Generated/Shared/Transfer/OrderMatrixTransfer                    |
+| OrderMatrixCriteria                               | class    | created | src/Generated/Shared/Transfer/OrderMatrixCriteriaTransfer            |
+| OrderMatrixRequest                                | class    | created | src/Generated/Shared/Transfer/OrderMatrixRequestTransfer             |
+| IndexedOrderMatrixResponse                        | class    | created | src/Generated/Shared/Transfer/IndexedOrderMatrixResponseTransfer     |
+| OrderMatrixConditions                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixConditionsTransfer          |
+| OrderMatrixCollection                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixCollectionTransfer          |
+
 
 {% endinfo_block %}
 
@@ -616,6 +626,29 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 You will be able to verify the invoice template configuration in a later step.
 
 {% endinfo_block %}
+
+3. Adjust the scheduler configuration:
+
+**config/Zed/cronjobs/jenkins.php**
+
+```php
+/* Order matrix sync */
+$jobs[] = [
+    'name' => 'sync-order-matrix',
+    'command' => '$PHP_BIN vendor/bin/console order-matrix:sync',
+    'schedule' => '*/1 * * * *',
+    'enable' => true,
+    'global' => true,
+];
+```
+
+4. Apply the scheduler configuration update:
+
+```bash
+vendor/bin/console scheduler:suspend
+vendor/bin/console scheduler:setup
+vendor/bin/console scheduler:resume
+```
 
 
 ### 4) Add translations
@@ -1210,7 +1243,85 @@ Make sure that, on the following Storefront pages, even if the `display` propert
     ]
 }
 ```
+
 </details>
+
+{% endinfo_block %}
+
+Follow the steps below to install the Order Matrix functionality.
+
+#### Set up Order Matrix behavior
+
+
+| PLUGIN             | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                      |
+|--------------------|----------------------------------------------------------------------|---------------|------------------------------------------------|
+| OrderMatrixConsole | A console command writes whole order matrix statistics to a storage. |               | Spryker\Zed\OrderMatrix\Communication\Console |
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\OrderMatrix\Communication\Console\OrderMatrixConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            new OrderMatrixConsole(),
+        ];
+    }
+}
+```
+
+#### Configure navigation
+
+1. Adjust the order matrix page in `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <sales>
+        <label>Sales</label>
+        <uri>/sales</uri>
+        <title>Sales</title>
+        <icon>fa-shopping-cart</icon>
+        <pages>
+          <order-matrix>
+            <label>Order Matrix</label>
+            <title>Order Matrix</title>
+            <bundle>sales</bundle>
+            <bundle>order-matrix-gui</bundle>
+            <controller>matrix</controller>
+            <action>index</action>
+            <visible>1</visible>
+          </order-matrix>
+        </pages>
+    </sales>
+</config>
+```
+
+2. Build the navigation cache:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, make sure you can go to **Sales&nbsp;<span aria-label="and then">></span> Order Matrix**.
 
 {% endinfo_block %}
 

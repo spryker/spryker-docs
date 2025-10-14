@@ -145,7 +145,7 @@ entries:
         - title: Integrate the protected endpoints authorization
           url: /docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-protected-endpoints-authorization.html
 
-    - title: Sprker API Errors and Troubleshooting
+    - title: Spryker API Errors and Troubleshooting
       url: /docs/integrations/spryker-glue-api/spryker-api-errors-and-troubleshooting.html
   - title: Custom building integrations
     url: /docs/integrations/custom-building-integrations/custom-build-integrations-with-spryker.html

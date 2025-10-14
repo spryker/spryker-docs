@@ -3,3 +3,5 @@ layout: null
 ---
 User-agent: *
 Disallow: /
+User-agent: Algolia Crawler
+Allow: /

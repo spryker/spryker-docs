@@ -1,11 +1,10 @@
-name: CI
+name: Weekly Link Check
 
 on:
-  push:
-    branches:
-      - 'master'
-  pull_request:
-  workflow_dispatch:
+  schedule:
+    # Run every Monday at 9:00 UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch: # Allow manual trigger
 
 jobs:
   jekyll_build:
@@ -31,24 +30,8 @@ jobs:
         with:
           name: build-result
           path: result.tar.gz
+          retention-days: 1 # Only keep for 1 day since this is a weekly check
 
-  page_validation:
-    name: Page validation
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Validate Jekyll pages
-        run: bundle exec jekyll validate
-
-  # TEMPORARY: Testing link checks in CI before moving to weekly schedule
   link_check_about:
     name: Check Links - About
     needs: jekyll_build
@@ -168,4 +151,3 @@ jobs:
 
       - name: Check internal links (Integrations)
         run: bundle exec rake check_integrations
-

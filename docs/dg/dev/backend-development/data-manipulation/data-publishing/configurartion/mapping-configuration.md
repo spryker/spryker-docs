@@ -25,7 +25,7 @@ related:
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
 ---
 
 During the Publish and Synchronization (P&S) process, a unique key is generated for each published resource. This key is used to store the resource's denormalized data in storage, enabling efficient data retrieval later. By default, Spryker generates these keys using the database ID of the corresponding record to ensure uniqueness.

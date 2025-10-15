@@ -48,9 +48,8 @@ jobs:
       - name: Validate Jekyll pages
         run: bundle exec jekyll validate
 
-  # TEMPORARY: Testing link checks in CI before moving to weekly schedule
-  link_check_about:
-    name: Check Links - About
+  link_validation_check_about:
+    name: Links validation (check_about)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -64,17 +63,14 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v4
-        with:
-          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xzf result.tar.gz
+        run: tar -xf build-result/result.tar.gz
 
-      - name: Check internal links (About)
-        run: bundle exec rake check_about
+      - run: bundle exec rake check_about
 
-  link_check_ca:
-    name: Check Links - Cloud Administration
+  link_validation_check_ca:
+    name: Links validation (check_ca)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -88,17 +84,14 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v4
-        with:
-          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xzf result.tar.gz
+        run: tar -xf build-result/result.tar.gz
 
-      - name: Check internal links (CA)
-        run: bundle exec rake check_ca
+      - run: bundle exec rake check_ca
 
-  link_check_pbc:
-    name: Check Links - PBC
+  link_validation_check_pbc:
+    name: Links validation (check_pbc)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -112,17 +105,14 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v4
-        with:
-          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xzf result.tar.gz
+        run: tar -xf build-result/result.tar.gz
 
-      - name: Check internal links (PBC)
-        run: bundle exec rake check_pbc
+      - run: bundle exec rake check_pbc
 
-  link_check_dg:
-    name: Check Links - Developer Guide
+  link_validation_check_dg:
+    name: Links validation (check_dg)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -136,17 +126,14 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v4
-        with:
-          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xzf result.tar.gz
+        run: tar -xf build-result/result.tar.gz
 
-      - name: Check internal links (DG)
-        run: bundle exec rake check_dg
+      - run: bundle exec rake check_dg
 
-  link_check_integrations:
-    name: Check Links - Integrations
+  link_validation_check_integrations:
+    name: Links validation (check_integrations)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -160,12 +147,9 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v4
-        with:
-          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xzf result.tar.gz
+        run: tar -xf build-result/result.tar.gz
 
-      - name: Check internal links (Integrations)
-        run: bundle exec rake check_integrations
+      - run: bundle exec rake check_integrations
 

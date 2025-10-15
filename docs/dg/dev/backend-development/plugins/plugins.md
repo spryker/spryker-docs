@@ -204,6 +204,7 @@ class ItemTaxCalculatorPlugin extends AbstractPlugin implements CalculatorPlugin
 ```
 
 ## Recommendations
+
 - Make sure that your plugin is stateless. Do not store any state in the plugin instance.
 - Do not use constructor arguments. Always use the `getFactory()` or `getFacade()` methods to access other parts of your module.
 - Design your plugin interfaces carefully. Once a plugin interface is released, it should not be changed in a backward-incompatible way.

@@ -16,7 +16,7 @@ related:
 
 *Plugins* are small classes that are used to connect modules in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 
-Plugins is the approach that we use for Inversion of Control ([IoC](https://martinfowler.com/bliki/InversionOfControl.html)) in Spryker. They allow us to give control from the module that executes the logic to the module that provides the plugins. This way, we can change the behavior of a module without changing its code. E.g. we can provide a stack of plugins that extends the calculation of a quote in the `Calculation` module. And in this way we allows to add any required calculations from any other module that might need it.
+Plugins is the approach that we use for Inversion of Control ([IoC](https://martinfowler.com/bliki/InversionOfControl.html)) in Spryker. They allow us to give control from the module that executes the logic to the module that provides the plugins. This way, we can change the behavior of a module without changing its code. For example we can provide a stack of plugins that extends the calculation of a quote in the `Calculation` module. And in this way we allows to add any required calculations from any other module that might need it.
 
 ## How to implement a plugin
 

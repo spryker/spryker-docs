@@ -60,12 +60,14 @@ We always try to avoid breaking changes of BC and reduce the effort needed to up
 To maintain a clean and upgradable architecture, Spryker explicitly designates certain components as internal implementation details. Interacting with these components from outside their parent module is an anti-pattern that leads to tight coupling and future maintenance issues.
 
 ### Business Models (Readers, Writers, etc.)
+
 The true business logic of a module is implemented in various model classes residing within the Business layer, often following patterns like Readers and Writers. The entire purpose of the Facade is to hide this internal complexity from the rest of the system. Architectural conventions state that "Models can't directly interact with other modules' Models". These classes must be considered private to their module.
 
 
 
 ### Persistence Layer Components
-The Persistence Layer contains components for data storage and retrieval, including Repositories, EntityManagers, and Query Containers. While these components have interfaces (e.g., ModuleRepositoryInterface, ModuleEntityManagerInterface), they are strictly for internal use within their own module.
+
+The Persistence Layer contains components for data storage and retrieval, including Repositories, EntityManagers, and Query Containers. While these components have interfaces (for example, ModuleRepositoryInterface, ModuleEntityManagerInterface), they are strictly for internal use within their own module.
 
 Repositories and EntityManagers: The Repository pattern is used to read data, while the EntityManager handles create, update, and delete operations. The documentation is clear that to expose functionality from a Repository, a developer "have to create a Facade method in a corresponding module which would delegate to Repository". This rule explicitly designates the Facade as the public boundary, making direct calls to another module's Repository or EntityManager an architectural violation.
 

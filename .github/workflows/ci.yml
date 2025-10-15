@@ -6,8 +6,6 @@ on:
       - 'master'
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
 
 jobs:
   jekyll_build:
@@ -23,7 +21,8 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
 
       - name: Pack artifacts
         run: tar -czf result.tar.gz _site
@@ -32,6 +31,22 @@ jobs:
         with:
           name: build-result
           path: result.tar.gz
+
+  page_validation:
+    name: Page validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      - name: Validate Jekyll pages
+        run: bundle exec jekyll validate
 
   link_validation_check_about:
     name: Links validation (check_about)
@@ -46,13 +61,6 @@ jobs:
         with:
           ruby-version: 3.2.2
           bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_about_all-htmlproofer
 
       - uses: actions/download-artifact@v4
 
@@ -75,13 +83,6 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_cloud-htmlproofer
-
       - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
@@ -102,13 +103,6 @@ jobs:
         with:
           ruby-version: 3.2.2
           bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: $-check_pbc-htmlproofer
 
       - uses: actions/download-artifact@v4
 
@@ -131,13 +125,6 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_sdk-htmlproofer
-
       - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
@@ -159,32 +146,10 @@ jobs:
           ruby-version: 3.2.2
           bundler-cache: true
 
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v4
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_sdk-htmlproofer
-
       - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
       - run: bundle exec rake check_integrations
-
-  page_validation:
-    name: Page validation
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - run: bundle exec jekyll validate
 

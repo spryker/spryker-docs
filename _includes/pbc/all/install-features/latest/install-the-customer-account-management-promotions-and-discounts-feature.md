@@ -15,7 +15,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/customer-discount-connector:"^1.0.0" --update-with-dependencies
+composer require spryker/customer-discount-connector:"^1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -53,7 +53,7 @@ Set up the following behaviors:
 | PLUGIN                                               | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                               |
 |------------------------------------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
 | CustomerReferenceDecisionRulePlugin              | Checks if a customer reference matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
-| CustomerOrderAmountDecisionRulePlugin              | Checks if a customer's order number matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
+| CustomerMaximumOrderAmountDecisionRulePlugin              | Checks if a customer's order number matches the discount's condition.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount |
 | CustomerDiscountOrderSavePlugin              | Stores the relationship between a customer and discount.       |               | Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
@@ -63,7 +63,7 @@ Set up the following behaviors:
 
 namespace Pyz\Zed\Discount;
 
-use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount\CustomerOrderAmountDecisionRulePlugin;
+use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount\CustomerMaximumOrderAmountDecisionRulePlugin;
 use Spryker\Zed\CustomerDiscountConnector\Communication\Plugin\Discount\CustomerReferenceDecisionRulePlugin;
 use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
 
@@ -76,7 +76,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
     {
         return array_merge(parent::getDecisionRulePlugins(), [
             new CustomerReferenceDecisionRulePlugin(),
-            new CustomerOrderAmountDecisionRulePlugin(),
+            new CustomerMaximumOrderAmountDecisionRulePlugin(),
         ]);
     }
 }
@@ -112,7 +112,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a `customer-reference` field.
-2. Add the `max-uses-per-customer` condition with value `1`.
+2. Add the `maximum-uses-per-customer` condition with value `1`.
 3. Log in as a customer with a customer reference defined in the discount you've created. Make sure that the discount is applied to the cart automatically.
 4. Place an order. Make sure a relationship between the customer and the discount is created in the `spy_customer_discount` database table.
 5. Create a new cart and add some items. Make sure the same discount is not applied.

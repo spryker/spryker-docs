@@ -19,8 +19,6 @@ entries:
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases
         nested:
-        - title: Security release notes for RabbitMQ Update
-          url: /docs/about/all/releases/security-releases/security-release-notes-rabbitmq-update.html
         - title: Security release notes 202509.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
         - title: Security release notes 202506.0
@@ -43,6 +41,12 @@ entries:
           url: /docs/about/all/releases/security-releases/security-release-notes-202304.0.html
         - title: Security release notes 202302.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html
+      - title: Image releases
+        nested:
+        - title: RabbitMQ
+          nested:
+          - title: Release notes for RabbitMQ 4.1 Update
+            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-rabbitmq-4.1-update.html
 
     - title: Security audit reports
       nested:

@@ -1,12 +1,12 @@
 ---
-title: Security release notes for RabbitMQ Update
-description: Security release notes for RabbitMQ Update
+title: Release notes for RabbitMQ 4.1 Update
+description: Release notes for RabbitMQ 4.1 Update
 last_updated: October 24, 2025
 template: concept-topic-template
 publish_date: "2025-10-24"
 ---
 
-For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
+For additional support with this content, [contact our support](https://support.spryker.com/).
 
 We are upgrading one of our key services at Spryker—RabbitMQ—to version 4.1. This update provides several important benefits, including enhanced performance, improved scalability, and continued security patch support.
 
@@ -17,6 +17,7 @@ Before your scheduled maintenance slot, complete these two steps:
 2. Minimize unprocessed RabbitMQ messages by:
     1. [Checking and purging **error queues**](https://docs.spryker.com/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues#cause).
     2. Pausing **external data import processes** for the duration of the maintenance window.
+3. Ensure the size of a message is **less than 16 MB**.
 
 ## Key benefits of RabbitMQ 4.1
 

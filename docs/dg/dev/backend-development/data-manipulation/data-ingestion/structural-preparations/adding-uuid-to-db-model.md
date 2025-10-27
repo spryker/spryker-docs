@@ -14,7 +14,7 @@ Expose only UUIDs through customer-facing APIs, such as the Storefront API and G
 composer require spryker/uuid-behavior
 ```
 
-2. Extend your Propel model definition:
+2. Extend your `<table-name>` Propel model definition with:
 
 ```xml
         <column name="uuid" required="false" type="VARCHAR" size="36"/>
@@ -47,15 +47,15 @@ console propel:install
 4. Verify that the `uuid` column is present in the database table.
 Insert a new entity to confirm that UUIDs are generated automatically.
 
-5. Optional onwards: If the tables already contain entities, backfill the `uuid` column.
- 
-6. Require the composer dependency:
+## For tables with existing data
+
+5. Require the composer dependency:
 
 ```shell
 composer require spryker/uuid
 ```
 
-7. Add `\Spryker\Zed\Uuid\Communication\Console\UuidGeneratorConsole` to `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`:
+6. Add `\Spryker\Zed\Uuid\Communication\Console\UuidGeneratorConsole` to `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`:
 
 ```php
 namespace Pyz\Zed\Console;
@@ -74,10 +74,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ```
 
-8. Execute the `uuid:generate` console command for each affected table:
+7. Execute the `uuid:generate` console command for each affected table:
 
 ```shell
-console uuid:generate Module table 
+console uuid:generate <module> <table-name> 
 ```
 
-9. Verify that all `uuid` values  in the table `table` are filled with values.
+8. Verify that all `uuid` values in the table `<table-name>` are filled with values.

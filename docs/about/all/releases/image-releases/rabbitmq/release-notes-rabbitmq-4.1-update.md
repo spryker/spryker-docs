@@ -8,7 +8,7 @@ publish_date: "2025-10-24"
 
 For additional support with this content, [contact our support](https://support.spryker.com/).
 
-We are upgrading one of our key services at Spryker—RabbitMQ—to version 4.1. This update provides several important benefits, including enhanced performance, improved scalability, and continued security patch support.
+We are upgrading one of our key services at Spryker - RabbitMQ - to version 4.1. This update provides several important benefits, including enhanced performance, improved scalability, and continued security patch support.
 
 During the upgrade, the **RabbitMQ service restarts**, which may take **up to 30 minutes**. While core touchpoints such as the **product catalog, search, and order placement** remain unaffected, **asynchronous processes** such as **product information updates** might experience temporary delays. To avoid disruptions, **do not run product information updates during the maintenance window**.
 

@@ -371,6 +371,8 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+          - title: Adding UUID to the DB model
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/adding-uuid-to-db-model.html
 
         - title: Spryker LINK Middleware
           url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html

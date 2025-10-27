@@ -123,7 +123,7 @@ entries:
             nested:
               - title: OpenTelemetry instrumentation
                 url: /docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html
-                
+
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
 
@@ -185,7 +185,5 @@ entries:
               - title: Troubleshooting Yves or Zed not restarting after deployment
                 url: /docs/ca/dev/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
 
-      - title: Release notes
-        url: /docs/ca/dev/release-notes.html
       - title: Spryker Cloud Commerce OS management
         url: /docs/ca/dev/spryker-cloud-commerce-os-management.html

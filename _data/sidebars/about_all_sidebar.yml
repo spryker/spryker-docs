@@ -8,13 +8,13 @@ entries:
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
       - title: Release notes 202507.0
-        url: /docs/about/all/releases/release-notes-202507.0.html  
+        url: /docs/about/all/releases/release-notes-202507.0.html
       - title: Release notes 202410.0
         url: /docs/about/all/releases/release-notes-202410.0.html
       - title: Release notes 202404.0
         url: /docs/about/all/releases/release-notes-202404.0.html
       - title: Release notes 202311.0
-        url: /docs/about/all/releases/release-notes-202311.0.html  
+        url: /docs/about/all/releases/release-notes-202311.0.html
       - title: Upcoming major module releases
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases
@@ -22,17 +22,17 @@ entries:
         - title: Security release notes 202509.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
         - title: Security release notes 202506.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202506.0.html   
+          url: /docs/about/all/releases/security-releases/security-release-notes-202506.0.html
         - title: Security release notes 202503.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202503.0.html                
+          url: /docs/about/all/releases/security-releases/security-release-notes-202503.0.html
         - title: Security release notes 202412.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202412.0.html      
+          url: /docs/about/all/releases/security-releases/security-release-notes-202412.0.html
         - title: Security release notes 202409.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202409.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202409.0.html
         - title: Security release notes 202403.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202403.0.html
         - title: Security release notes 202312.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202312.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202312.0.html
         - title: Security release notes 202309.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202309.0.html
         - title: Security release notes 202306.0
@@ -40,7 +40,13 @@ entries:
         - title: Security release notes 202304.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202304.0.html
         - title: Security release notes 202302.0
-          url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html        
+          url: /docs/about/all/releases/security-releases/security-release-notes-202302.0.html
+      - title: Image releases
+        nested:
+        - title: RabbitMQ
+          nested:
+          - title: Release notes for RabbitMQ 4.1 Update
+            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-rabbitmq-4.1-update.html
 
     - title: Security audit reports
       nested:
@@ -156,5 +162,3 @@ entries:
 
       - title: Run the docs locally
         url: /docs/about/all/about-the-docs/run-the-docs-locally.html
-
-...

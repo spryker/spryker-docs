@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Oct 13, 2025
+last_updated: Oct 29, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -555,6 +555,10 @@ Performance optimizations in publish and synchronization (product-related):
   - *Note*: If you still use destructive deployments, update the `config/install/destructive.yml` file. You can copy it from any demo shop.
 - [spryker/event-behavior:^1.32.0](https://github.com/spryker/event-behavior/releases/tag/1.32.0)
 - [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
+
+Performance optimizations in cart page and checkout for big carts (100+ items):
+- Check the [Cart page performance configuration](/docs/dg/dev/guidelines/performance-guidelines/cart-page-performance-configuration.html) guideline.
+
 
 
 ## Performance profiling

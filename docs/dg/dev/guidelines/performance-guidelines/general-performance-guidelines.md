@@ -557,9 +557,7 @@ Performance optimizations in publish and synchronization (product-related):
 - [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
 
 Performance optimizations in cart page and checkout for big carts (100+ items):
-- Check the [Cart page performance configuration](/docs/dg/dev/guidelines/performance-guidelines/cart-page-performance-configuration.html) guideline.
-
-
+- Check the [Cart page performance configuration](/docs/pbc/all/cart-and-checkout/cart-page-performance-configuration.html) guideline.
 
 ## Performance profiling
 

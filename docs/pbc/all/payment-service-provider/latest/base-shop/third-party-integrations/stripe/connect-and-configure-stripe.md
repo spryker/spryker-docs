@@ -10,12 +10,13 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
 ---
 
-This document describes how to connect and configure the Stripe app in the Back Office.
+This document outlines the steps to connect and configure the Stripe app in the Back Office.
 
 ## Prerequisites
 
 - [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 - Obtain Stripe account ID in [Stripe Dashboard](https://dashboard.stripe.com). For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
+- (Only for the shops with the B2C business model) Please contact your Spryker account manager with the request to connect your Stripe account to Spryker's account.
 
 ## Connect and configure the Stripe app
 

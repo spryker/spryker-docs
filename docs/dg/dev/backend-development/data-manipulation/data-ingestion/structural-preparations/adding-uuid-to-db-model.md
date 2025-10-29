@@ -49,6 +49,6 @@ Insert a new entity to confirm that UUIDs are generated automatically.
 
 {% info_block infoBox "For tables with existing data" %}
 
-If you are adding the column `uuid` into existing table, please follow [this guide](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature#set-up-console-command) to fill daata into existing columns.
+If you are adding the column `uuid` into existing table, follow [this guide](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature#set-up-console-command) to fill daata into existing columns.
 
 {% endinfo_block %}

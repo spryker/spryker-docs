@@ -8,9 +8,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/new-data-export-fea
 originalArticleId: 0a32b993-f10c-4f6c-20db-247a62cd22e7
 ---
 
-# Data Export
+## Data Export
 
-## How to export the entity.
+## How to export the entity
 
 The new export system greatly simplifies the process. For example, creating a `QuoteRequestDataExport` requires only:
 
@@ -42,6 +42,7 @@ actions:
 ```
 
 #### fields config explanation
+
 The fields configuration defined in the YAML file has higher priority than the configuration defined in the plugin. <br>
 If the same field is defined in both the plugin and the YAML configuration, the value from the YAML file will be used.
 
@@ -55,6 +56,7 @@ If a field appears in both configurations, the YAML version replaces the plugin 
 Otherwise, fields from both configurations are kept in the final output.
 
 In plugin:
+
 ```php
         return [
             'name:$.name',
@@ -65,6 +67,7 @@ In plugin:
 ```
 
 yml fields
+
 ```yaml
          field_name_in_export_file: $.fieldNameInYourTransfer
          entity_id: $.entityId
@@ -74,6 +77,7 @@ yml fields
 ```
 
 output:
+
 ```yaml
          name: $.name
          field_name_in_export_file: $.fieldNameInYourTransfer
@@ -148,9 +152,12 @@ public function getQuoteRequestData(
     return $dataExportBatchTransfer->setData($data);
 }
 ```
+
 The repository prepares the query, applies filters, and maps results into DataExportBatchTransfer.
 
 ---
 
 ### 4. Alternative: Streaming with Generator
+
+
 Also, you can return a \Generator<\Generated\Shared\Transfer\DataExportResultTransfer> by implementing DataEntityGeneratorPluginInterface.

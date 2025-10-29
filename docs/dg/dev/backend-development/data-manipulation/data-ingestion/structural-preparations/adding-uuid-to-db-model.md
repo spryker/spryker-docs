@@ -22,7 +22,7 @@ composer require spryker/uuid-behavior
         <behavior name="uuid">
             <parameter
                 name="key_columns"
-                value="<column list, dot-separated, e.g. id_table_name.some_column.>"
+                value="<column list, dot-separated, e.g. id_table_name.some_column.another_column>"
         />
         </behavior>
 ```
@@ -47,37 +47,8 @@ console propel:install
 4. Verify that the `uuid` column is present in the database table.
 Insert a new entity to confirm that UUIDs are generated automatically.
 
-## For tables with existing data
+{% info_block infoBox "For tables with existing data" %}
 
-5. Require the composer dependency:
+If you are adding the column `uuid` into existing table, follow [this guide](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature#set-up-console-command) to fill daata into existing columns.
 
-```shell
-composer require spryker/uuid
-```
-
-6. Add `\Spryker\Zed\Uuid\Communication\Console\UuidGeneratorConsole` to `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`:
-
-```php
-namespace Pyz\Zed\Console;
-
-...
-use Spryker\Zed\Uuid\Communication\Console\UuidGeneratorConsole;
-...
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-
-    ...
-    protected function getConsoleCommands(Container $container): array
-            ...
-            new UuidGeneratorConsole(),
-            ...
-
-```
-
-7. Execute the `uuid:generate` console command for each affected table:
-
-```shell
-console uuid:generate <module> <table-name> 
-```
-
-8. Verify that all `uuid` values in the table `<table-name>` are filled with values.
+{% endinfo_block %}

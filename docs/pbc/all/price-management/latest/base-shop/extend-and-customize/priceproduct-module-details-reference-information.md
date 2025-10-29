@@ -70,7 +70,11 @@ class PriceProductConfig extends SprykerPriceProductConfig
 }
 ```
 
-Alternatively, automatic removal of "orphaned records" can be enabled by using `AclEntityOrphanPriceProductStoreRemovalVoterPlugin` in `src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php`:
+Alternatively, automatic removal of "orphaned records" can be controlled by `OrphanPriceProductStoreRemovalVoterPluginInterface` plugins.
+
+Such plugins can vote *for* or *against* automatic removal of "orphaned records". The first plugin in the stack, that votes against the removal, disables it. If a plugin votes for removal, all other plugins in the stack are still checked and may vote against.
+
+Removal voter plugins are registered in `src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php`:
 
 ```php
 namespace Pyz\Zed\PriceProduct;
@@ -89,12 +93,12 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables the removal of "orphaned" records in the `spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI.
+`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` is an example of voter plugins. It enables removal of "orphaned" records in `spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI.
 In the latter case, removal is only possible by running `price-product-store:optimize` command (see below).
 
 {% info_block warningBox "Warning" %}
 
-Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` described above, either of the two must be used only, with the plugin being preferred, since the config constant is deprecated and will be removed in the next major release of the `PriceProduct` module.
+Note, that if any `OrphanPriceProductStoreRemovalVoterPluginInterface` plugins are registered, config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` is ignored.
 
 {% endinfo_block %}
 

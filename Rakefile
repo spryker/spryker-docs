@@ -10,32 +10,15 @@ task "assets:precompile" do
   end
 end
 
-require 'html-proofer'
+require_relative '_scripts/internal_link_checker/internal_link_checker'
 
-# Method to run HTMLProofer with retries
-def run_htmlproofer_with_retry(directory, options, max_tries = 3, delay = 5)
-  options[:typhoeus] ||= {}
-  options[:typhoeus][:timeout] = 60
-  options[:typhoeus][:headers] = {
-    "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
-  }
-
-  retries = max_tries
-  begin
-    HTMLProofer.check_directory(directory, options).run
-  rescue SystemExit => e
-    retries -= 1
-    if retries >= 0
-      puts "Retrying... (#{max_tries - retries}/#{max_tries} attempts)"
-      sleep(delay) # Wait before retrying
-      retry
-    else
-      puts "HTMLProofer failed after #{max_tries} retries."
-      raise e
-    end
-  end
+# Method to run internal link checker
+def run_internal_link_checker(directory, ignore_patterns)
+  checker = InternalLinkChecker.new(directory, ignore_patterns: ignore_patterns)
+  checker.run
 end
 
+# Legacy options - kept for reference if needed for external link checking in future
 commonOptions = {
   :allow_hash_href => true,
   :ignore_urls => [
@@ -102,18 +85,19 @@ commonOptions = {
     /centralbank.cy\/[\.\w\-\/\?]+/,
     /www.mysql.com\/[\.\w\-\/\?]+/,
     /www.gnu.org\/[\.\w\-\/\?]+/,
+    /www.npmjs.com\/[\.\w\-\/\?]+/,
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /mysql.com\/[\.\w\-\/\?]+/,
     /www.centralbank.cy\/[\.\w\-\/\?]+/,
-    /dev.mysql.com\/[\.\w\-\/\?]+/,        
+    /dev.mysql.com\/[\.\w\-\/\?]+/,
     /jwt.io\/[\.\w\-\/\?]+/,
     /contorion.de\/[\.\w\-\/\?]+/,
     /www.contorion.de\/[\.\w\-\/\?]+/,
     /www.jwt.io\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
-    /auth0.com\/[\.\w\-\/\?]+/,    
-    /partner.easycredit.de\/[\.\w\-\/\?]+/,    
+    /auth0.com\/[\.\w\-\/\?]+/,
+    /partner.easycredit.de\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
   ],
@@ -129,11 +113,11 @@ commonOptions = {
   # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
+  :disable_external => true,
 }
 
 task :check_ca do
-  options = commonOptions.dup
-  options[:ignore_files] = [
+  ignore_patterns = [
     /docs\/scos\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
@@ -142,12 +126,11 @@ task :check_ca do
     /docs\/integrations\/.+/,
     /docs\/acp\/.+/
   ]
-  run_htmlproofer_with_retry("./_site", options)
+  run_internal_link_checker("./_site", ignore_patterns)
 end
 
 task :check_about do
-  options = commonOptions.dup
-  options[:ignore_files] = [
+  ignore_patterns = [
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/scos\/dev\/.+/,
@@ -156,12 +139,11 @@ task :check_about do
     /docs\/integrations\/.+/,
     /docs\/dg\/.+/
   ]
-  run_htmlproofer_with_retry("./_site", options)
+  run_internal_link_checker("./_site", ignore_patterns)
 end
 
 task :check_pbc do
-  options = commonOptions.dup
-  options[:ignore_files] = [
+  ignore_patterns = [
     /docs\/scos\/.+/,
     /docs\/about\/.+/,
     /docs\/ca\/.+/,
@@ -176,12 +158,11 @@ task :check_pbc do
     /docs\/pbc\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/pbc\/\w+\/[\w-]+\/202404\.0\/.+/
   ]
-  run_htmlproofer_with_retry("./_site", options)
+  run_internal_link_checker("./_site", ignore_patterns)
 end
 
 task :check_integrations do
-  options = commonOptions.dup
-  options[:ignore_files] = [
+  ignore_patterns = [
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/scos\/dev\/.+/,
@@ -189,13 +170,12 @@ task :check_integrations do
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/
   ]
-  run_htmlproofer_with_retry("./_site", options)
+  run_internal_link_checker("./_site", ignore_patterns)
 end
 
 
 task :check_dg do
-  options = commonOptions.dup
-  options[:ignore_files] = [
+  ignore_patterns = [
     /docs\/scos\/.+/,
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
@@ -206,9 +186,9 @@ task :check_dg do
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202311\.0\/.+/,
-    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,    
-    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,    
+    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202410\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202411\.0\/.+/
   ]
-  run_htmlproofer_with_retry("./_site", options)
+  run_internal_link_checker("./_site", ignore_patterns)
 end

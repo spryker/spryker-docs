@@ -83,7 +83,7 @@ The terms *payouts* and *transfers* are interchangeable in Spryker's context. Ho
 
 The Stripe app lets you configure how you want to manage payouts (also called transfers). An example OMS configuration is provided as a reference.
 
-To use Spryker's marketplace commissions engine, you need to [install the Marketplace Merchant Commissions feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To use Spryker's marketplace commissions engine, you need to [install the Marketplace Merchant Commissions feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 Payouts with Spryker's commissions engine work as follows:
 1. Set up the marketplace merchant commissions feature and the Stripe app.
@@ -99,4 +99,4 @@ Payouts with Spryker's commissions engine work as follows:
 
 ## Next step
 
-[Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)
+[Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)

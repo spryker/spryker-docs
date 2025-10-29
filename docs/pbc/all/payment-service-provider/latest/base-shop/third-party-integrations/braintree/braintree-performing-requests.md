@@ -12,11 +12,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/braintree-performing-requests.html
 related:
   - title: Installing and configuring Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/install-and-configure-braintree.html
   - title: Integrating Braintree
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/integrate-braintree.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/integrate-braintree.html
   - title: Braintree - Request workflow
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/braintree/braintree-request-workflow.html
+    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree-request-workflow.html
 ---
 
 In order to perform the necessary requests in the project based on Spryker Commerce OS or SCOS, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

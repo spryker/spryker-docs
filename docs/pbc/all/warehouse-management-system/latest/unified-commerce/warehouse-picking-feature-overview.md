@@ -5,9 +5,9 @@ last_updated: Oct 3, 2023
 template: concept-topic-template
 related:
   - title: Fulfillment App overview
-    link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/fulfillment-app-overview.html
+    link: docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html
   - title: Install the Warehouse Picking feature
-    link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
+    link: docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
 ---
 
 

@@ -8,9 +8,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchant-relations/edit-merchant-relations.html
 related:
   - title: Create merchant relations
-    link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/create-merchant-relations.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html
   - title: Merchants and Merchant Relations feature overview
-    link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
+    link: docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
 ---
 
 This document describes how to edit merchant relations in the Back Office.
@@ -18,7 +18,7 @@ This document describes how to edit merchant relations in the Back Office.
 ## Prerequisites
 
 
-1. Optional: [Create a product list](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
+1. Optional: [Create a product list](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html). It's needed to allow or deny a company access to certain products.
 2. Review the [reference information](#reference-information-edit-a-merchant-relation) before you start, or look up the necessary information as you go through the process.
 
 ## Edit a merchant relation

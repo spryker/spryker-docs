@@ -207,6 +207,8 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
       - title: Reduce Jenkins execution without P&S and data importers refactoring
         url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
+      - title: Stable Workers
+        url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
 
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html
@@ -242,8 +244,8 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
         - title: Implement Publish and Synchronization
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-        - title: Publish and Synchronize repeated export
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+        - title: "Publish and synchronize: Re-synchronization and re-generation"
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
         - title: Publish and synchronize and multi-store shop systems
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
         - title: Add publish events
@@ -256,10 +258,35 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-        - title: Synchronization behavior - enabling multiple mappings
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
-        - title: Bypass the key-value storage
-          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/bypass-the-key-value-storage.html
+        - title: "Publish and synchronize: Advanced use cases"
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-advanced-use-cases.html          
+        - title: "Publish and synchronize: Debugging"
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-debugging.html
+        - title: Configuration
+          nested:
+            - title: Chunk size configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/chunk-size-configuration.html
+            - title: Configure direct synchronize
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/configure-direct-synchronize.html
+            - title: Mapping configuration
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
+            - title: Configure a queue to be used by a publisher
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/queues-in-publisher-plugins.html
+        - title: Specific use cases and problem solving
+          nested:
+            - title: Bypass the key-value storage
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/bypass-the-key-value-storage.html
+            - title: Dynamic batch size
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/dynamic-batch-size.html
+            - title: "Minimize memory consumption: Managing excessive Jenkins logs"
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/minimize-memory-consumption-managing-excessive-jenkins-logs.html
+            - title: Splitting a single event queue into multiple publish queues
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/splitting-a-single-event-queue-into-multiple-publish-queues.html
+            - title: "Worker configuration for optimal memory and CPU usage"
+              url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/specific-use-cases-and-problem-solving/worker-configuration-for-optimal-memory-and-cpu-usage.html
+              
+
+
 
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html
@@ -344,6 +371,8 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+          - title: Adding UUID to the DB model
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/adding-uuid-to-db-model.html
 
         - title: Spryker LINK Middleware
           url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html
@@ -775,23 +804,6 @@ entries:
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
     nested:
-    - title: Migrate to decoupled Glue infrastructure
-      nested:
-        - title: Integrate Storefront and Backend Glue API applications
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
-        - title: Integrate the authentication
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
-        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
-        - title: Integrate the authorization scopes
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
-        - title: Integrate the documentation generator
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
-        - title: Integrate the Glue JSON:API convention
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
-        - title: Integrate the protected endpoints authorization
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
-
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1215,9 +1227,6 @@ entries:
       url: /docs/dg/dev/data-import/implementing-data-installers.html
     - title: Implement incremental installers
       url: /docs/dg/dev/data-import/implement-incremental-installers.html
-      include_versions:
-      - "202404.0"
-      - "202410.0"
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1488,106 +1497,6 @@ entries:
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
         - title: Port is already occupied on host
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
-
-
-
-  - title: Glue API
-    url: /docs/dg/dev/glue-api/glue-api.html
-    nested:
-    - title: Decoupled Glue API
-      url: /docs/dg/dev/glue-api/decoupled-glue-api.html
-    - title: Backend and Storefront API module differences
-      url: /docs/dg/dev/glue-api/backend-and-storefront-api-module-differences.html
-    - title: Create Glue API applications
-      url: /docs/dg/dev/glue-api/create-glue-api-applications.html
-    - title: Authentication and authorization
-      url: /docs/dg/dev/glue-api/authentication-and-authorization.html
-    - title: Use API Key authorization
-      url: /docs/dg/dev/glue-api/use-api-key-authorization.html
-    - title: Backend Glue infrastructure
-      nested:
-      - title: Backend API Marketplace B2B Demo Shop reference
-        url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
-      - title: Backend API Marketplace B2C Demo Shop reference
-        url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
-
-    - title: REST API
-      nested:
-      - title: Glue API authentication and authorization
-        url: /docs/dg/dev/glue-api/rest-api/glue-api-authentication-and-authorization.html
-      - title: Glue API security and authentication
-        url: /docs/dg/dev/glue-api/rest-api/glue-api-security-and-authentication.html
-      - title: Glue REST API
-        url: /docs/dg/dev/glue-api/rest-api/glue-rest-api.html
-      - title: Glue infrastructure
-        url: /docs/dg/dev/glue-api/rest-api/glue-infrastructure.html
-      - title: Handling concurrent REST requests and caching with entity tags
-        url: /docs/dg/dev/glue-api/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-      - title: "Marketplace: Resolve search engine friendly URLs"
-        url: /docs/dg/dev/glue-api/rest-api/marketplace-glue-api-resolve-search-engine-friendly-urls.html
-      - title: Reference information - GlueApplication errors
-        url: /docs/dg/dev/glue-api/rest-api/reference-information-glueapplication-errors.html
-      - title:  REST API B2B Demo Shop reference
-        url: /docs/dg/dev/glue-api/rest-api/rest-api-b2b-demo-shop-reference.html
-      - title: REST API B2C Demo Shop reference
-        url: /docs/dg/dev/glue-api/rest-api/rest-api-b2c-demo-shop-reference.html
-      - title: REST API Marketplace B2B Demo Shop reference
-        url: /docs/dg/dev/glue-api/rest-api/rest-api-marketplace-b2b-demo-shop-reference.html
-      - title: REST API Marketplace B2C Demo Shop reference
-        url: /docs/dg/dev/glue-api/rest-api/rest-api-marketplace-b2c-demo-shop-reference.html
-
-    - title: Routing
-      nested:
-        - title: Create storefront resources
-          url: /docs/dg/dev/glue-api/routing/create-storefront-resources.html
-        - title: Create backend resources
-          url: /docs/dg/dev/glue-api/routing/create-backend-resources.html
-        - title: Create routes
-          url: /docs/dg/dev/glue-api/routing/create-routes.html
-
-    - title: Configure the included section
-      url: /docs/dg/dev/glue-api/configure-the-included-section.html
-    - title: Configure cross-origin resource sharing
-      url: /docs/dg/dev/glue-api/configure-cross-origin-resource-sharing-for-glue-api.html
-    - title: Create and change Glue API conventions
-      url: /docs/dg/dev/glue-api/create-and-change-glue-api-conventions.html
-    - title: Create Glue API authorization strategies
-      url: /docs/dg/dev/glue-api/create-backend-api-authorization-strategies.html
-    - title: Create Glue API resources with parent-child relationships
-      url: /docs/dg/dev/glue-api/create-backend-api-resources-with-parent-child-relationships.html
-    - title: Create grant type parameters
-      url: /docs/dg/dev/glue-api/create-grant-type-parameters.html
-    - title: Create JSON:API relationships
-      url: /docs/dg/dev/glue-api/create-json-api-relationships.html
-    - title: Create protected Glue API endpoints
-      url: /docs/dg/dev/glue-api/create-protected-glue-api-endpoints.html
-    - title: Document Glue API endpoints
-      url: /docs/dg/dev/glue-api/document-glue-api-endpoints.html
-    - title: Use authentication servers with Glue API
-      url: /docs/dg/dev/glue-api/use-authentication-servers-with-glue-api.html
-    - title: Use default Storefront parameters
-      url: /docs/dg/dev/glue-api/use-default-storefront-parameters.html
-    - title: Use Glue API authorization scopes
-      url: /docs/dg/dev/glue-api/use-glue-api-authorization-scopes.html
-    - title: Glue API tutorials
-      url: /docs/dg/dev/glue-api/glue-api-tutorials/glue-api-tutorials.html
-      nested:
-        - title: B2C API React example
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
-          nested:
-            - title: Install B2C API React example
-              url: /docs/dg/dev/glue-api/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
-
-        - title: Document Glue API resources
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/document-glue-api-resources.html
-        - title: Extend a REST API resource
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/extend-a-rest-api-resource.html
-        - title: Implement a REST API resource
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/implement-a-rest-api-resource.html
-        - title: Implement versioning for REST API resources
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
-        - title: Validate REST request format
-          url: /docs/dg/dev/glue-api/glue-api-tutorials/validate-rest-request-format.html
 
 
   - title: Updating Spryker

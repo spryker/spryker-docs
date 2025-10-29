@@ -16,7 +16,7 @@ This document outlines the steps to connect and configure the Stripe app in the 
 
 - [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 - Obtain Stripe account ID in [Stripe Dashboard](https://dashboard.stripe.com). For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
-- (Only for the shops with the B2C business model) Please contact your Spryker account manager with the request to connect your Stripe account to Spryker's account.
+- (Only for the shops with the B2C business model) Contact your Spryker account manager with the request to connect your Stripe account to Spryker's account.
 
 ## Connect and configure the Stripe app
 

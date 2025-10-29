@@ -1,3 +1,13 @@
+---
+title: New data export
+description: This document shows how to export data from a Spryker shop to an external
+  system for your third party integrations
+last_updated: October 20
+template: concept-topic-template
+originalLink: https://documentation.spryker.com/2021080/docs/new-data-export-feature
+originalArticleId: 0a32b993-f10c-4f6c-20db-247a62cd22e7
+---
+
 # Data Export
 
 ## How to export the entity.

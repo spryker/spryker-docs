@@ -87,7 +87,7 @@ If you use the Merchant feature, enable widget caching to reduce server load and
 
 ### 2.3 Configure Product Relations feature
 
-If your cart page displays [product relations](docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) (for example, related products or upsells), ensure that the Product Relations feature is properly configured to optimize performance.
+If your cart page displays [product relations](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) (for example, related products or upsells), ensure that the Product Relations feature is properly configured to optimize performance.
 
 Limit the number of product relations loaded on the cart page in the `ProductRelationStorageConfig` class:
 

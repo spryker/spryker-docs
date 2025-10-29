@@ -17,5 +17,5 @@ For installation and configuration, see the following docs:
 
 - [How to install](/docs/integrations/custom-building-integrations/data-exchange/data-export/install-the-sales-data-export-feature.html)
 - [Order usage example](/docs/integrations/custom-building-integrations/data-exchange/data-export/orders-data-export.html)  
-
+- [New Data Export](/docs/integrations/custom-building-integrations/data-exchange/data-export/new-data-export-feature.html)
 

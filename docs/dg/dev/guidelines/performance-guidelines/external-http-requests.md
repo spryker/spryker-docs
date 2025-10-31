@@ -115,7 +115,7 @@ class MyApiClient
     }
 }
 ```
-![img](Screenshot%202025-10-31%20at%2011.48.39.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/WebProfilerWidget-ExternalHttp.png)
 
 ### New Relic APM monitoring of external HTTP calls
 

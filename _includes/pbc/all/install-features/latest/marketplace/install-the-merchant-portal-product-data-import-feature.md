@@ -182,7 +182,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
     public function getDataImportTemplates(): array
     {
         return [
-            'CSV template Product' => 'js/static/MerchantProductDataImport/data/files/combined_product.csv',
+            'CSV template Product' => 'js/static/merchant-product-data-import/data/files/combined_product.csv',
         ];
     }
 }

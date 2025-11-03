@@ -359,7 +359,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
   "compilerOptions": {
     "target": "ES2022",
     "paths": {
-      "@mp/data-import-merchant-portal-gui": ["vendor/spryker/merchant-product-data-import/mp.public-api.ts"]
+      "@mp/data-import-merchant-portal-gui": ["vendor/spryker/data-import-merchant-portal-gui/mp.public-api.ts"]
     }
   }
 }

@@ -364,6 +364,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
   }
 }
 ```
+
 2. In `project.json`, add the new rule to `assets`, that will copy CSV template files into `public/MerchantPortal/assets/js/static/` folder:
 
 ```json

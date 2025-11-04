@@ -32,6 +32,8 @@ related:
     link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
   - title: Create an Order Management System - Spryker Commerce OS
     link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
+  - title: Multi process run console
+    link: docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 ---
 
 There are three console commands dedicated for the state machine:

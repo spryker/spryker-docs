@@ -46,15 +46,22 @@ entries:
       - title: Troubleshooting
         url: /docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html
         nested:
-        - title: Check Spryker Code Upgrader logs
-          url: /docs/ca/devscu/check-spryker-code-upgrader-logs.html
-        - title: "Entity does not exist: Pyz prefix"
-          url: /docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html
-        - title: "TransportException: Cannot move pack"
-          url: /docs/ca/devscu/troubleshooting/transportexception-cannot-move-pack.html
-        - title: The process exceeded the timeout
-          url: /docs/ca/devscu/troubleshooting/the-process-exceeded-the-timeout.html
-        - title: You have an unprocessed PR from a previous update
-          url: /docs/ca/devscu/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
-        - title: A PHP extension is missing from your system
-          url: /docs/ca/devscu/troubleshooting/a-php-extension-is-missing-from-your-system.html
+          - title: Check Spryker Code Upgrader logs
+            url: /docs/ca/devscu/check-spryker-code-upgrader-logs.html
+          - title: "Entity does not exist: Pyz prefix"
+            url: /docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html
+          - title: "TransportException: Cannot move pack"
+            url: /docs/ca/devscu/troubleshooting/transportexception-cannot-move-pack.html
+          - title: The process exceeded the timeout
+            url: /docs/ca/devscu/troubleshooting/the-process-exceeded-the-timeout.html
+          - title: You have an unprocessed PR from a previous update
+            url: /docs/ca/devscu/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
+          - title: A PHP extension is missing from your system
+            url: /docs/ca/devscu/troubleshooting/a-php-extension-is-missing-from-your-system.html
+      - title: Manual upgrade alternatives
+        url: /docs/ca/devscu/manual-upgrade-alternatives/when-and-why-to-do-manual-upgrade.html
+        nested:
+          - title: When and why to do manual upgrade?
+            url: /docs/ca/devscu/manual-upgrade-alternatives/when-and-why-to-do-manual-upgrade.html
+          - title: Migration SDK
+            url: /docs/ca/devscu/manual-upgrade-alternatives/migration-sdk.html

@@ -43,6 +43,11 @@ You can change the upgrade schedule to better fit your development process.
 
 The Upgrader is shipped with PaaS+ in the EU and US regions.
 
+{% info_block infoBox "Tip" %}
+Cannot use the Spryker Code Upgrader?
+Explore our open-source [Migration SDK](manual-upgrade-alternatives/migration-sdk.html) for planning and executing manual upgrades.
+{% endinfo_block %}
+
 ## Next steps
 
 [How Spryker Code Upgrader works](/docs/ca/devscu/how-spryker-code-upgrader-works.html)

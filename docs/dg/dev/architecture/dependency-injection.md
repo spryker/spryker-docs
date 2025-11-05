@@ -30,16 +30,17 @@ This document describes how to use the Symfony Dependency Injection component in
 
 You can configure your services in the following files:
 
-* `config/services.php`
-* `config/services.yml`
-* `config/ApplicationServices.php`
-* `config/*Services.php`
+- `config/services.php`
+- `config/services.yml`
+- `config/ApplicationServices.php`
+- `config/*Services.php`
 
 We recommend following the Symfony standard for configuring your container setup. For details, see [Service Configuration](https://symfony.com/doc/current/service_container/service_config.html) in the Symfony documentation.
 
 A project-level `ApplicationServices.php` file can be used to discover and register your services automatically. Here is an example of how you can configure it:
 
 `config/ApplicationServices.php`
+
 ```php
 <?php
 
@@ -111,8 +112,8 @@ Since Spryker's core modules are not yet using the Symfony Dependency Injection 
 
 To compile the container, you have two options:
 
-*   On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one. (perfect in dev mode)
-*   Run the following command to build the cache. The application then immediately uses the freshly compiled container.
+- On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one. (perfect in dev mode)
+- Run the following command to build the cache. The application then immediately uses the freshly compiled container.
 
 ```bash
 console container:build
@@ -135,6 +136,7 @@ Here is an example of how to inject a service into a controller.
 First, define your controller and inject the service using constructor property promotion:
 
 `src/Pyz/Yves/MyModule/Controller/IndexController.php`
+
 ```php
 <?php
 
@@ -169,6 +171,7 @@ Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in
 Here is an example of a service with a dependency on a repository.
 
 `src/Pyz/MyModule/src/Pyz/MyModule/SomeService.php`
+
 ```php
 <?php
 
@@ -185,6 +188,7 @@ class SomeService
 ```
 
 `src/Pyz/MyModule/src/Pyz/MyModule/MyService.php`
+
 ```php
 <?php
 
@@ -207,5 +211,5 @@ Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in
 
 ## Next steps
 
-* [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
-* [Bundles](/docs/dg/dev/architecture/bundles.html)
+- [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
+- [Bundles](/docs/dg/dev/architecture/bundles.html)

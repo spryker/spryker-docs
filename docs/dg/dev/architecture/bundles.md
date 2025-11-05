@@ -43,5 +43,5 @@ Additionally, you can configure bundles in the same way as provided by Symfony b
 
 ## Next steps
 
-* [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
-* [Dependency injection](/docs/dg/dev/architecture/dependency-injection.html)
+- [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
+- [Dependency injection](/docs/dg/dev/architecture/dependency-injection.html)

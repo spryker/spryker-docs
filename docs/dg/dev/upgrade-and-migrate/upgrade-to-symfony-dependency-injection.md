@@ -100,8 +100,8 @@ For details about configuring bundles, see [Bundles](/docs/dg/dev/architecture/b
 
 To compile the container, you have two options:
 
-*   On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one.
-*   Run the following command to build the cache. The application then immediately uses the freshly compiled container.
+- On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one.
+- Run the following command to build the cache. The application then immediately uses the freshly compiled container.
 
 For CI and production environment you should run the command manually:
 
@@ -113,5 +113,5 @@ While in development mode you don't need to manually build the container, as it 
 
 ## Next steps
 
-* [Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
-* [Bundles](/docs/dg/dev/architecture/bundles.html)
+- [Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
+- [Bundles](/docs/dg/dev/architecture/bundles.html)

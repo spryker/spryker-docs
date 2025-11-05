@@ -10,10 +10,20 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
 
-To configure bundles, do the following:
+{% info_block warningBox "On your own risk" %}
 
-1. Create a new configuration file in `config/bundles.php`.
-2. In the new file, add the Symfony Framework bundle:
+This feature is experimental, and we do not recommend using it on production.
+
+{% endinfo_block %}
+
+
+This document describes how to use [Symfony Bundles](https://symfony.com/doc/current/bundles.html) in your Spryker project.
+
+## Registering a bundle
+
+To use a bundle, you need to register it in `config/bundles.php`.
+
+For example, to use the `FrameworkBundle`, which is required to use the Dependency Injection component, add the following to your `config/bundles.php` file:
 
 ```php
 <?php
@@ -25,3 +35,13 @@ return [
 ];
 ```
 
+## Configuring bundles and services
+
+You can configure a bundle in your `config/services.php` or `config/services.yml` file. For details, see the documentation of the bundle you are using.
+
+Additionally, you can configure bundles in the same way as provided by Symfony by adding `packages/*.yml` files to the `config/` folder. For more information, see [Configuring Bundles](https://symfony.com/doc/current/bundles/configuration.html).
+
+## Next steps
+
+* [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
+* [Dependency injection](/docs/dg/dev/architecture/dependency-injection.html)

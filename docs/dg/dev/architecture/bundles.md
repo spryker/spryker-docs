@@ -10,7 +10,14 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
 
-This document describes how to use [Symfony Bundles](https://symfony.com/doc/current/bundles.html) in your Spryker project. This feature is experimental.
+{% info_block warningBox "On your own risk" %}
+
+This feature is experimental, and we do not recommend using it on production.
+
+{% endinfo_block %}
+
+
+This document describes how to use [Symfony Bundles](https://symfony.com/doc/current/bundles.html) in your Spryker project.
 
 ## Registering a bundle
 

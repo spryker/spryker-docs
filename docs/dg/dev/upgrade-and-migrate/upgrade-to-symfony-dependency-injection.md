@@ -94,18 +94,7 @@ You can configure your services in `config/services.php`. `ApplicationServices.p
 
 ## 4. Configure bundles
 
-1. Create a new configuration file in `config/bundles.php`.
-2. In the new file, add the Symfony Framework bundle:
-
-```php
-<?php
-
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-
-return [
-    FrameworkBundle::class => ['all' => true],
-];
-```
+For details about configuring bundles, see [Bundles](/docs/dg/dev/architecture/bundles.html).
 
 ## 5. Compile the container
 
@@ -114,9 +103,13 @@ To compile the container, you have two options:
 *   On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one.
 *   Run the following command to build the cache. The application then immediately uses the freshly compiled container.
 
+For CI and production environment you should run the command manually:
+
 ```bash
 console container:build
 ```
+
+While in development mode you don't need to manually build the container, as it will be built automatically on demand.
 
 ## Next steps
 

@@ -50,7 +50,7 @@ entries:
         - title: Spryker-PHP
           nested:
           - title: Release notes for Spryker-PHP Image
-            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-spryker-php.html
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html
 
     - title: Security audit reports
       nested:

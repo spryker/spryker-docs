@@ -30,25 +30,33 @@ This document describes how to use the Symfony Dependency Injection component in
 
 You can configure your services in the following files:
 
-- `config/services.php`
-- `config/services.yml`
-- `config/ApplicationServices.php`
-- `config/*Services.php`
+- `config/Symfony/{APPLICATION}/services.php`
+- `config/Symfony/{APPLICATION}/services.yml`
+- `config/Symfony/{APPLICATION}/ApplicationServices.php`
+- `config/Symfony/{APPLICATION}/*Services.php`
 
 We recommend following the Symfony standard for configuring your container setup. For details, see [Service Container](https://symfony.com/doc/current/service_container.html) in the Symfony documentation.
 
 A project-level `ApplicationServices.php` file can be used to discover and register your services automatically. Here is an example of how you can configure it:
 
-`config/ApplicationServices.php`
+`config/Symfony/{APPLICATION}/ApplicationServices.php`
 
 ```php
 <?php
 
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+/**
+ * This is an example configuration that can be used inside a project to tell Symfony which services it has to make
+ * available through the Dependency Injection Container. It automatically loads all services from all project modules,
+ * except for the ones that are explicitly excluded in the $excludedModuleConfiguration array.
+ * 
+ * You can also write your custom solution as it is explained in the Symfony documentation.
+ */
+
+declare(strict_types = 1);
+
 use Spryker\Service\Container\ProxyFactory;
 use Spryker\Zed\ModuleFinder\Business\ModuleFinderFacade;
-use Spryker\Shared\ModuleFinder\Transfer\Organization;
-use Spryker\Shared\ModuleFinder\Transfer\ModuleFilter;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $configurator): void {
     $services = $configurator->services()
@@ -57,8 +65,18 @@ return static function (ContainerConfigurator $configurator): void {
         ->public()
         ->autoconfigure();
 
+    /**
+     * Make ProxyFactory available in the DIC. The Proxy is used to be able to lazy load services which are not known to
+     * the ContainerBuilder at compile time. The Container is compiled based on this configuration file, so services from modules
+     * that are not included here will not be available at runtime unless they are proxied.
+     */
     $services->set(ProxyFactory::class)->public();
 
+    /**
+     * Configuration array to exclude specific modules or specific applications within modules from being loaded into the DIC.
+     * If a module is fully excluded, it will not be loaded at all. If only specific applications within a module are to be excluded,
+     * the module name is the key and the value is an array with application names as keys and exclusion patterns as values.
+     */
     $excludedModuleConfiguration = [
         'DataImport' => true,
         'ProductPageSearch' => true,
@@ -68,38 +86,62 @@ return static function (ContainerConfigurator $configurator): void {
         'DocumentationGeneratorRestApi' => true,
     ];
 
-    $organization = new Organization();
-    $organization->setName('Pyz');
-
-    $moduleFilter = new ModuleFilter();
-    $moduleFilter->setOrganization($organization);
-
+    /**
+     * Find all on the project level defined modules, including code bucket ones as well. The ModuleFinder also takes care of
+     * filtering out modules that are not relevant for the current environment.
+     *
+     * F.e. In a dev environment you want to include all modules (composer:require-dev is installed), while in a production
+     * environment you don't have all modules available but code in your project that extends it for such cases the compilation
+     * process would fail if those modules are not found.
+     */
     $moduleFinder = new ModuleFinderFacade();
-    $projectModules = $moduleFinder->getProjectModules($moduleFilter);
+    $projectModules = $moduleFinder->getProjectModules();
 
     foreach ($projectModules as $moduleTransfer) {
-        // Fully excluded Modules: The $excludedModuleConfiguration has the module name as the key but no further exclude configuration.
+        /**
+         * Skip excluded modules entirely when configured in the `$excludedModuleConfiguration`.
+         */
         if (isset($excludedModuleConfiguration[$moduleTransfer->getName()]) && !is_array($excludedModuleConfiguration[$moduleTransfer->getName()])) {
             continue;
         }
 
+        // Organization may be Pyz, or any of on the project level defined ones
+        $organization = $moduleTransfer->getOrganization()->getName();
+
         foreach ($moduleTransfer->getApplications() as $applicationTransfer) {
-            // We are only using the "default" organization namespace here as the Container takes care of correctly resolving.
-            $namespace = sprintf('Pyz\\%s\\', $applicationTransfer->getName());
+            // If you want to exclude specific applications within a module, you can skip them here.
+            //
+            // Example:
+            //
+            // if ($applicationTransfer->getApplication() === 'UnwantedApplication') {
+            //    continue;
+            // }
 
-            $path = sprintf('../src/Pyz/%s/', $applicationTransfer->getName());
+            $namespace = sprintf('%s\\%s\\', $organization, $applicationTransfer->getName());
 
-            // A module may have an `exclude` configuration, when that is the case, we have to add exclude to the load method.
-            if (isset($excludedModuleConfiguration[$moduleTransfer->getName()][$applicationTransfer->getName()])) {
-                $services->load($namespace, $path)->exclude($excludedModuleConfiguration[$moduleTransfer->getName()][$applicationTransfer->getName()]);
+            /**
+             * Here is the path built to the services directory of the module for the specific application.
+             * 
+             * This path structure is based on the standard Spryker project structure.
+             */
+            $path = sprintf(
+                '../../../src/%s/%s/%s/',
+                $organization,
+                $applicationTransfer->getName(),
+                $moduleTransfer->getName(),
+            );
 
-                continue;
-            }
-
+            /**
+             * This is the important part: Load all services from the module's application services directory into the DIC.
+             * 
+             * You can also only use this line instead of the whole code in this file. But then you would have to make sure
+             * that all modules you want to be available in the DIC are included manually here, which is not the preferred way.
+             */
             $services->load($namespace, $path);
         }
     }
 };
+
 ```
 
 ### Autowiring
@@ -207,7 +249,7 @@ class MyService
 }
 ```
 
-Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
+Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Symfony/{APPLICATION}/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
 
 ## Next steps
 

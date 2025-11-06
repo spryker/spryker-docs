@@ -19,7 +19,7 @@ composer require "spryker/application:^3.0.0" "spryker/console:^3.0.0" "spryker/
 
 Add the `EventDispatcherApplicationPlugin` to the respective `ConsoleDependencyProvider`:
 
-`src/Pyz/Console/src/Pyz/Glue/Console/ConsoleDependencyProvider.php`
+`src/Pyz/Glue/Console/ConsoleDependencyProvider.php`
 
 ```php
 use Spryker\Glue\EventDispatcher\Plugin\Console\EventDispatcherApplicationPlugin;
@@ -40,7 +40,7 @@ use Spryker\Glue\EventDispatcher\Plugin\Console\EventDispatcherApplicationPlugin
 // ...
 ```
 
-`src/Pyz/Console/src/Pyz/Yves/Console/ConsoleDependencyProvider.php`
+`src/Pyz/Yves/Console/ConsoleDependencyProvider.php`
 
 ```php
 use Spryker\Yves\EventDispatcher\Plugin\Console\EventDispatcherApplicationPlugin;
@@ -56,7 +56,7 @@ use Spryker\Yves\EventDispatcher\Plugin\Console\EventDispatcherApplicationPlugin
 // ...
 ```
 
-`src/Pyz/Console/src/Pyz/Zed/Console/ConsoleDependencyProvider.php`
+`src/Pyz/Zed/Console/ConsoleDependencyProvider.php`
 
 ```php
 use Spryker\Zed\EventDispatcher\Communication\Plugin\Console\EventDispatcherApplicationPlugin;

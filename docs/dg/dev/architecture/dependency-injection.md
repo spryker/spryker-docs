@@ -35,7 +35,7 @@ You can configure your services in the following files:
 - `config/ApplicationServices.php`
 - `config/*Services.php`
 
-We recommend following the Symfony standard for configuring your container setup. For details, see [Service Configuration](https://symfony.com/doc/current/service_container/service_config.html) in the Symfony documentation.
+We recommend following the Symfony standard for configuring your container setup. For details, see [Service Container](https://symfony.com/doc/current/service_container.html) in the Symfony documentation.
 
 A project-level `ApplicationServices.php` file can be used to discover and register your services automatically. Here is an example of how you can configure it:
 
@@ -170,7 +170,7 @@ Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in
 
 Here is an example of a service with a dependency on a repository.
 
-`src/Pyz/MyModule/src/Pyz/MyModule/SomeService.php`
+`src/Pyz/Yves/MyModule/SomeService.php`
 
 ```php
 <?php
@@ -187,7 +187,7 @@ class SomeService
 }
 ```
 
-`src/Pyz/MyModule/src/Pyz/MyModule/MyService.php`
+`src/Pyz/Yves/MyModule/MyService.php`
 
 ```php
 <?php

@@ -37,7 +37,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-9231**: A timing side-channel which could potentially allow remote recovery of the private key exists in the SM2 algorithm implementation on 64 bit ARM platforms.
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 - **CVE-2025-49794**: A use-after-free vulnerability was found in libxml2. This issue occurs when parsing XPath elements under certain circumstances when the XML schematron has the <sch:name path="..."/> schema elements. This flaw allows a malicious actor to craft a malicious XML document used as input for libxml, resulting in the program's crash using libxml or other possible undefined behaviors.
 
@@ -62,7 +62,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-58050**: Vulnerability of improper access permission in the HDC module. Impact: Successful exploitation of this vulnerability may affect service confidentiality.
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 - **CVE-2025-49796**: A vulnerability was found in libxml2. Processing certain sch:name elements from the input XML file can trigger a memory corruption issue. This flaw allows an attacker to craft a malicious XML input file that can lead libxml to crash, resulting in a denial of service or other possible undefined behavior due to sensitive data being corrupted in memory.
 
@@ -111,7 +111,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-6021**: A flaw was found in libxml2's xmlBuildQName function, where integer overflows in buffer size calculations can lead to a stack-based buffer overflow. This issue can result in memory corruption or a denial of service when processing crafted input.
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 - **CVE-2025-49795**: A NULL pointer dereference vulnerability was found in libxml2 when processing XPath XML expressions. This flaw allows an attacker to craft a malicious XML input to libxml2, leading to a denial of service.
 
@@ -137,14 +137,14 @@ busy-loop.
 
 - **CVE-2025-10148**: curl's websocket code did not update the 32 bit mask pattern for each new outgoing frame as the specification says. Instead it used a fixed mask that persisted and was used throughout the entire connection.
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 
 ### spryker/php:8.2-alpine3.20
 
 - **CVE-2024-3094**: Malicious code was discovered in the upstream xz/liblzma library, which could allow for unauthorized remote access.
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 - **CVE-2025-59375**: libexpat in Expat before 2.7.2 allows attackers to trigger large dynamic memory allocations via a small document that is submitted for parsing.
 
@@ -159,7 +159,7 @@ busy-loop.
 
 ### spryker/php:8.1-alpine3.20
 
-- **CVE-2025-47907**: Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
+- **CVE-2025-47907**: Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel
 
 - **CVE-2025-5025**: libcurl supports pinning of the server certificate public key for HTTPS transfers.
 

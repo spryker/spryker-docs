@@ -7,7 +7,7 @@ template: concept-topic-template
 
 {% info_block infoBox "Delayed release" %}
 
-Due to technical issues, the major upgrade is postponed for 2 weeks, please see new dates below.
+Due to technical issues, the major upgrade is postponed for 2 weeks, see new dates below.
 
 {% endinfo_block %}
 

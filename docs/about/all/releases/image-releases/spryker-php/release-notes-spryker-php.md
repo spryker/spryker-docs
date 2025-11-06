@@ -10,7 +10,7 @@ This document describes the changes that have been recently released.
 For additional support with this content, contact our support.
 If you found a new security vulnerability, contact us at **security@spryker.com**.
 
-## Release notes for spryker-php 20251031.0
+## Release notes for spryker-php 20251106.0
 
 ### Improvements
 

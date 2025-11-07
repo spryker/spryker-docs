@@ -51,7 +51,6 @@ This document lists all upcoming [major module releases](/docs/dg/dev/architectu
 | ProductOfferValidityGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
 | ProductRelationGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
 | ProductSetGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
-| SalesMerchantCommission | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
 | SalesMerchantCommissionMerchantPortalGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
 | SalesOrderThresholdGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |
 | SalesReclamationGui | Nov 21 2025 | Bootstrap upgrade because of security reasons. |

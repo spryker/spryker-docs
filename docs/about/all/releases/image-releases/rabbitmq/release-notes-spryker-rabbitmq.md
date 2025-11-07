@@ -21,5 +21,5 @@ Improvements
 Version release notes
 -------------------
 
-RMQ 4.1 -- [github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5](https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5)
+RabbitMQ 4.1 -- [github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5](https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5)
 

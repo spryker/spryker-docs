@@ -28,7 +28,7 @@ This document describes how to use the Symfony Dependency Injection component in
 
 ## Service configuration
 
-You can configure your services in the following files:
+You can configure your services in one of the following files:
 
 - `config/Symfony/{APPLICATION}/services.php`
 - `config/Symfony/{APPLICATION}/services.yml`

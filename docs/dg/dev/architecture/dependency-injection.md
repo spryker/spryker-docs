@@ -50,6 +50,8 @@ A project-level `ApplicationServices.php` file can be used to discover and regis
  * except for the ones that are explicitly excluded in the $excludedModuleConfiguration array.
  * 
  * You can also write your custom solution as it is explained in the Symfony documentation.
+ * 
+ * @see https://symfony.com/doc/current/service_container.html
  */
 
 declare(strict_types = 1);

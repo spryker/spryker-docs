@@ -76,6 +76,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     AddPaymentMethodTransfer::class => 'payment-method-commands',
+    UpdatePaymentMethodTransfer::class => 'payment-method-commands',
     DeletePaymentMethodTransfer::class => 'payment-method-commands',
     CancelPaymentTransfer::class => 'payment-commands',
     CapturePaymentTransfer::class => 'payment-commands',
@@ -90,6 +91,8 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentCancellationFailedTransfer::class => 'payment-events',
     PaymentCreatedTransfer::class => 'payment-events',
     PaymentUpdatedTransfer::class => 'payment-events',
+    PaymentOverpaidTransfer::class => 'payment-events',
+    PaymentUnderpaidTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [

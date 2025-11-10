@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Back Office to Bootstrap 5
-description: Learn how to migrate Spryker Back Office to Bootstrap 5 by updating dependencies, enabling assets, and configuring layouts for compatibility.
-last_updated: Apr 15, 2025
+description: Learn how to migrate Spryker Back Office to Bootstrap 5 by updating dependencies and assets.
+last_updated: Nov 10, 2025
 template: howto-guide-template
 ---
 
@@ -10,7 +10,7 @@ To migrate Bootstrap in the Back Office to version 5, take the following steps:
 1. Update the required modules:
 
 ```bash
-  composer update spryker/configurable-bundle-gui:^1.4.1 spryker/customer-group:^2.8.1 spryker/customer-user-connector-gui:^1.5.1 spryker/file-manager-gui:^2.8.1 spryker/gui:^3.59.0 spryker/navigation-gui:^2.10.1 spryker/product-category:^4.28.2 spryker/product-category-filter-gui:^2.5.1 spryker/product-label-gui:^3.6.1 spryker/product-list-gui:^2.6.2 spryker/product-option:^8.22.1 spryker/product-relation-gui:^1.6.1 spryker/product-set-gui:^2.12.1 spryker/security-gui:^1.9.1 spryker/warehouse-user-gui
+  composer update spryker/agent-gui:"^2.0.0" spryker/availability-gui:"^7.0.0" spryker/configurable-bundle-gui:"^2.0.0" spryker/content-gui:"^3.0.0" spryker/customer-user-connector-gui:"^2.0.0" spryker/file-manager-gui:"^3.0.0" spryker/gui:"^4.0.0" spryker/locale-gui:"^2.0.0" spryker/merchant-agent-gui:"^2.0.0" spryker/merchant-commission-gui:"^2.0.0" spryker/merchant-gui:"^4.0.0" spryker/merchant-product-offer-gui:"^2.0.0" spryker/merchant-relation-request-gui:"^2.0.0" spryker/merchant-sales-order-merchant-user-gui:"^2.0.0" spryker/merchant-sales-return-merchant-user-gui:"^2.0.0" spryker/multi-factor-auth:"^2.0.0" spryker/navigation-gui:"^3.0.0" spryker/payment-gui:"^2.0.0" spryker/price-product-offer-gui:"^2.0.0" spryker/price-product-schedule-gui:"^3.0.0" spryker/product-alternative-gui:"^2.0.0" spryker/product-approval-gui:"^2.0.0" spryker/product-attribute-gui:"^2.0.0" spryker/product-category-filter-gui:"^3.0.0" spryker/product-label-gui:"^4.0.0" spryker/product-list-gui:"^3.0.0" spryker/product-management:"^0.20.0" spryker/product-offer-gui:"^2.0.0" spryker/product-offer-service-point-gui:"^2.0.0" spryker/product-offer-shipment-type-gui:"^2.0.0" spryker/product-offer-validity-gui:"^2.0.0" spryker/product-relation-gui:"^2.0.0" spryker/product-set-gui:"^3.0.0" spryker/sales-order-threshold-gui:"^2.0.0" spryker/sales-reclamation-gui:"^2.0.0" spryker/sales-return-gui:"^2.0.0" spryker/search-elasticsearch-gui:"^2.0.0" spryker/security-gui:"^2.0.0" spryker/shipment-gui:"^3.0.0" spryker/spryker-feature.self-service-portal:"^16.0.0" spryker/stock-gui:"^3.0.0" spryker/storage-gui:"^2.0.0" spryker/store-gui:"^2.0.0" spryker/warehouse-user-gui:"^2.0.0" 
 ```
 
 2. Update the `oryx-for-zed` dependency:
@@ -19,134 +19,62 @@ To migrate Bootstrap in the Back Office to version 5, take the following steps:
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
 
-3. Override the general layout from `Gui/Presentation/Layout/layout.twig` on the project level.
-
-4. Enable Bootstrap 5 assets by setting the `isBootstrapLatest` twig variable:
-
-**layout.twig**
-{% raw %}
-
-```twig
-  {% set isBootstrapLatest = true %}
-```
-
-{% endraw %}
-
-
-5. Update the `head_css` block:
-
-**layout.twig**
-{% raw %}
-
-```twig
-{% block head_css %}
-    {% if isBootstrapLatest %}
-        <link rel="stylesheet" href="{{ assetsPath('css/spryker-zed-gui-commons-bootstrap-compatibility.css') }}">
-    {% else %}
-        <link rel="stylesheet" href="{{ assetsPath('css/spryker-zed-gui-commons.css') }}">
-    {% endif %}
-    ...
-{% endblock %}
-```
-
-{% endraw %}
-
-
-6. Update the `footer_js` block:
-
-**layout.twig**
-{% raw %}
-
-```twig
-{% block footer_js %}
-    {% if isBootstrapLatest %}
-        <script src="{{ assetsPath('js/spryker-zed-gui-commons-bootstrap-compatibility.js') }}"></script>
-    {% else %}
-        <script src="{{ assetsPath('js/spryker-zed-gui-commons.js') }}"></script>
-    {% endif %}
-    ...
-{% endblock %}
-```
-
-{% endraw %}
-
-
-7. Repeat steps 4-6 for the login layout in the separate module: `SecurityGui/Presentation/Layout/layout.twig`.
-
-
-8. Clear cache:
+3. Clear cache:
 
 ```bash
   docker/sdk console c:e
 ```
 
-
-9. Run twig cache warmer:
+4. Run twig cache warmer:
 
 ```bash
   docker/sdk console t:c:w
 ```
 
-
-10. Build JS and CSS assets compatible with Bootstrap 5. To manage the version of bootstrap, set the `BOOTSTRAP_VERSION` variable:
+5. Build JS and CSS assets.
 
 ```bash
-docker/sdk cli BOOTSTRAP_VERSION=5 npm run zed
+docker/sdk cli npm run zed
 ```
 
 {% info_block warningBox "Verification" %}
 
-To make sure that the assets are built with Bootstrap 5, check the public directory for the following files:
-- /public/Backoffice/assets/css/spryker-zed-gui-commons-bootstrap-compatibility.css
-- /public/Backoffice/assets/js/spryker-zed-gui-commons-bootstrap-compatibility.js
+⚡️ Summary of Grid Class Updates
+| Bootstrap 3                        | Bootstrap 5 Replacement   | Notes                     |
+| ---------------------------------- | ------------------------- | ------------------------- |
+| `.col-xs-*`                        | `.col-*`                  | Replaced, “xs” dropped    |
+| `.col-sm-*`                        | `.col-sm-*`               | Same                      |
+| `.col-md-*`                        | `.col-md-*`               | Same                      |
+| `.col-lg-*`                        | `.col-lg-*`               | Same                      |
+| *(none)*                           | `.col-xl-*`, `.col-xxl-*` | New breakpoints           |
+| `.col-md-offset-*`                 | `.offset-md-*`            | New syntax                |
+| `.col-md-push-*`, `.col-md-pull-*` | `.order-md-*`             | Flexbox ordering          |
+| `.row-no-gutters`                  | `.g-0`                    | Simplified gutter control |
+
+⚡️ HTML Attribute Changes for JavaScript Components
+| **Bootstrap 3 Attribute**                 | **Bootstrap 5 Equivalent**                      | **Notes / Changes**                                         |
+| ----------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
+| `data-toggle="modal"`                     | `data-bs-toggle="modal"`                        | All JS data attributes now start with `data-bs-*`           |
+| `data-target="#myModal"`                  | `data-bs-target="#myModal"`                     | Updated prefix to `data-bs-`                                |
+| `data-toggle="dropdown"`                  | `data-bs-toggle="dropdown"`                     | Same behavior, new prefix                                   |
+| `data-toggle="collapse"`                  | `data-bs-toggle="collapse"`                     | Required for collapsible elements                           |
+| `data-target="#menu"`                     | `data-bs-target="#menu"`                        | Used with dropdowns, collapse, offcanvas, etc.              |
+| `data-toggle="tab"`                       | `data-bs-toggle="tab"`                          | For tab navigation                                          |
+| `data-toggle="tooltip"`                   | `data-bs-toggle="tooltip"`                      | Still requires JS initialization via `Tooltip` class        |
+| `data-toggle="popover"`                   | `data-bs-toggle="popover"`                      | Still requires JS initialization via `Popover` class        |
+| `data-dismiss="alert"`                    | `data-bs-dismiss="alert"`                       | For closing alerts                                          |
+| `data-dismiss="modal"`                    | `data-bs-dismiss="modal"`                       | For closing modals                                          |
+| `data-dismiss="toast"`                    | `data-bs-dismiss="toast"`                       | New in Bootstrap 4+, same pattern                           |
+| *(none)*                                  | `data-bs-spy="scroll"`                          | Scrollspy syntax updated from `data-spy` to `data-bs-spy`   |
+| `data-offset-top` / `data-offset-bottom`  | *(Removed)*                                     | Scrollspy offset handled via JS or CSS, not data attributes |
+| `data-ride="carousel"`                    | `data-bs-ride="carousel"`                       | For auto-sliding carousels                                  |
+| `data-slide="next"` / `data-slide="prev"` | `data-bs-slide="next"` / `data-bs-slide="prev"` | For carousel controls                                       |
+| `data-slide-to="0"`                       | `data-bs-slide-to="0"`                          | For carousel indicators                                     |
+| `data-interval="5000"`                    | `data-bs-interval="5000"`                       | Same meaning, updated prefix                                |
+| `data-pause="hover"`                      | `data-bs-pause="hover"`                         | Carousel pause behavior                                     |
+| `data-keyboard="true"`                    | `data-bs-keyboard="true"`                       | For modals and carousels                                    |
+| `data-backdrop="static"`                  | `data-bs-backdrop="static"`                     | For modal backdrop behavior                                 |
+| `data-toggle="button"`                    | `data-bs-toggle="button"`                       | For toggling active button states                           |
+| *(none)*                                  | `data-bs-toggle="offcanvas"`                    | New in Bootstrap 5 for offcanvas menus                      |
 
 {% endinfo_block %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

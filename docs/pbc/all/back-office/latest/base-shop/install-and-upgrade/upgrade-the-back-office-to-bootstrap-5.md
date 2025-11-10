@@ -43,7 +43,7 @@ docker/sdk cli npm run zed
 
 | **Bootstrap 3**                    |**Bootstrap 5 replacement**| **Notes**                 |
 | ---------------------------------- | ------------------------- | ------------------------- |
-| `.col-xs-*`                        | `.col-*`                  | Replaced, “xs” dropped    |
+| `.col-xs-*`                        | `.col-*`                  | Replaced, "xs" dropped    |
 | `.col-sm-*`                        | `.col-sm-*`               | Same                      |
 | `.col-md-*`                        | `.col-md-*`               | Same                      |
 | `.col-lg-*`                        | `.col-lg-*`               | Same                      |

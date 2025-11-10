@@ -205,7 +205,7 @@ class IndexController extends AbstractController
 }
 ```
 
-Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/ApplicationServices.php` and autowiring is enabled, all controllers will be available in the Container when requested.
+Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/ApplicationServices.php` and autowiring is enabled, MyService will be available in the Container when requested.
 
 
 ### Model/Service example

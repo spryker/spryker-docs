@@ -5,7 +5,7 @@ last_updated: Nov 10, 2025
 template: howto-guide-template
 ---
 
-To migrate the Back Office to Bootstrap version 5, follow these steps:
+To migrate your Back Office to Bootstrap 5, complete the following steps:
 
 1. Update the required modules:
 
@@ -13,13 +13,13 @@ To migrate the Back Office to Bootstrap version 5, follow these steps:
 composer require --with-dependencies spryker/agent-gui:"^2.0.0" spryker/availability-gui:"^7.0.0" spryker/configurable-bundle-gui:"^2.0.0" spryker/content-gui:"^3.0.0" spryker/customer-user-connector-gui:"^2.0.0" spryker/file-manager-gui:"^3.0.0" spryker/gui:"^4.0.0" spryker/locale-gui:"^2.0.0" spryker/merchant-agent-gui:"^2.0.0" spryker/merchant-commission-gui:"^2.0.0" spryker/merchant-gui:"^4.0.0" spryker/merchant-product-offer-gui:"^2.0.0" spryker/merchant-relation-request-gui:"^2.0.0" spryker/merchant-sales-order-merchant-user-gui:"^2.0.0" spryker/merchant-sales-return-merchant-user-gui:"^2.0.0" spryker/multi-factor-auth:"^2.0.0" spryker/navigation-gui:"^3.0.0" spryker/payment-gui:"^2.0.0" spryker/price-product-offer-gui:"^2.0.0" spryker/price-product-schedule-gui:"^3.0.0" spryker/product-alternative-gui:"^2.0.0" spryker/product-approval-gui:"^2.0.0" spryker/product-attribute-gui:"^2.0.0" spryker/product-category-filter-gui:"^3.0.0" spryker/product-label-gui:"^4.0.0" spryker/product-list-gui:"^3.0.0" spryker/product-management:"^0.20.0" spryker/product-offer-gui:"^2.0.0" spryker/product-offer-service-point-gui:"^2.0.0" spryker/product-offer-shipment-type-gui:"^2.0.0" spryker/product-offer-validity-gui:"^2.0.0" spryker/product-relation-gui:"^2.0.0" spryker/product-set-gui:"^3.0.0" spryker/sales-order-threshold-gui:"^2.0.0" spryker/sales-reclamation-gui:"^2.0.0" spryker/sales-return-gui:"^2.0.0" spryker/search-elasticsearch-gui:"^2.0.0" spryker/security-gui:"^2.0.0" spryker/shipment-gui:"^3.0.0" spryker/spryker-feature.self-service-portal:"^16.0.0" spryker/stock-gui:"^3.0.0" spryker/storage-gui:"^2.0.0" spryker/store-gui:"^2.0.0" spryker/warehouse-user-gui:"^2.0.0"
 ```
 
-2. Update the `oryx-for-zed` dependency:
+2. Update the `@spryker/oryx-for-zed` dependency:
 
 ```bash
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
 
-3. Clear the cache:
+3. Clear the application cache:
 
 ```bash
   docker/sdk console c:e
@@ -31,7 +31,7 @@ composer require --with-dependencies spryker/agent-gui:"^2.0.0" spryker/availabi
   docker/sdk console t:c:w
 ```
 
-5. Build the JavaScript and CSS assets:
+5. Build the JavaScript and CSS assets to apply the Bootstrap 5 updates:
 
 ```bash
 docker/sdk cli npm run zed
@@ -39,8 +39,9 @@ docker/sdk cli npm run zed
 
 {% info_block warningBox "Verification" %}
 
-⚡️ Summary of grid class updates
-| Bootstrap 3                        | Bootstrap 5 Replacement   | Notes                     |
+⚡️ **Summary of grid class updates**
+
+| **Bootstrap 3**                    |**Bootstrap 5 replacement**| **Notes**                 |
 | ---------------------------------- | ------------------------- | ------------------------- |
 | `.col-xs-*`                        | `.col-*`                  | Replaced, “xs” dropped    |
 | `.col-sm-*`                        | `.col-sm-*`               | Same                      |
@@ -51,8 +52,9 @@ docker/sdk cli npm run zed
 | `.col-md-push-*`, `.col-md-pull-*` | `.order-md-*`             | Flexbox ordering          |
 | `.row-no-gutters`                  | `.g-0`                    | Simplified gutter control |
 
-⚡️ HTML attribute changes for JavaScript components
-| **Bootstrap 3 Attribute**                 | **Bootstrap 5 Equivalent**                      | **Notes / Changes**                                         |
+⚡️ **HTML attribute changes for JavaScript components**
+
+| **Bootstrap 3 attribute**                 | **Bootstrap 5 equivalent**                      | **Notes and changes**                                         |
 | ----------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
 | `data-toggle="modal"`                     | `data-bs-toggle="modal"`                        | All JS data attributes now start with `data-bs-*`           |
 | `data-target="#myModal"`                  | `data-bs-target="#myModal"`                     | Updated prefix to `data-bs-`                                |

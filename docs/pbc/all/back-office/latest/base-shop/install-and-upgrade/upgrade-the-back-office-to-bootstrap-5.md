@@ -5,7 +5,7 @@ last_updated: Nov 10, 2025
 template: howto-guide-template
 ---
 
-To migrate Bootstrap in the Back Office to version 5, take the following steps:
+To migrate the Back Office to Bootstrap version 5, follow these steps:
 
 1. Update the required modules:
 
@@ -19,19 +19,19 @@ To migrate Bootstrap in the Back Office to version 5, take the following steps:
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
 
-3. Clear cache:
+3. Clear the cache:
 
 ```bash
   docker/sdk console c:e
 ```
 
-4. Run twig cache warmer:
+4. Run the Twig cache warmer:
 
 ```bash
   docker/sdk console t:c:w
 ```
 
-5. Build JS and CSS assets.
+5. Build the JavaScript and CSS assets:
 
 ```bash
 docker/sdk cli npm run zed
@@ -39,7 +39,7 @@ docker/sdk cli npm run zed
 
 {% info_block warningBox "Verification" %}
 
-⚡️ Summary of Grid Class Updates
+⚡️ Summary of grid class updates
 | Bootstrap 3                        | Bootstrap 5 Replacement   | Notes                     |
 | ---------------------------------- | ------------------------- | ------------------------- |
 | `.col-xs-*`                        | `.col-*`                  | Replaced, “xs” dropped    |
@@ -51,7 +51,7 @@ docker/sdk cli npm run zed
 | `.col-md-push-*`, `.col-md-pull-*` | `.order-md-*`             | Flexbox ordering          |
 | `.row-no-gutters`                  | `.g-0`                    | Simplified gutter control |
 
-⚡️ HTML Attribute Changes for JavaScript Components
+⚡️ HTML attribute changes for JavaScript components
 | **Bootstrap 3 Attribute**                 | **Bootstrap 5 Equivalent**                      | **Notes / Changes**                                         |
 | ----------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
 | `data-toggle="modal"`                     | `data-bs-toggle="modal"`                        | All JS data attributes now start with `data-bs-*`           |

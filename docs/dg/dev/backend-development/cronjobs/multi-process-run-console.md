@@ -21,13 +21,11 @@ It allows you to:
 
 - Automatically restart console commands in the Jenkins job.
 
-- Run commands in a continuous loop with a defined total execution time limit.
+- Run commands in a continuous loop with an expected maximum execution time limit.
 
 - Execute commands in separate processes to prevent shared memory or cache collisions.
 
 - Enforce child process execution timeouts.
-
-- Gracefully stop via signals (SIGTERM, SIGQUIT).
 
 ## Installing the `MultiProcessRunConsole`
 
@@ -90,7 +88,7 @@ Escape quotes inside the string (\"...\") in `config/Zed/cronjobs/jenkins.php` t
 | **`child`**                      | Argument (Required) | yes      | —       | The child console command to execute, for example: `"queue:task:start publish"`                                                                                                                                                          |
 | **`total_timeout`**              | Argument            | no       | `600`   | Total duration (in seconds) to keep running the loop. Seting to `0` makes it run endlessly, which is not recommended, since it folly occupies executor.                                                                                  |
 | **`--separate_thread`, `-s`**    | Option              | no       | `false` | Runs each child console command in a separate child sub-process. Prevents memory leaks and state collisions.                                                                                                                             |
-| **`--child_timeout`, `-t`**      | Option              | no       | `60`    | Maximum execution time for each child sub-process, in seconds.                                                                                                                                                                           |
+| **`--child_timeout`, `-t`**      | Option              | no       | `60`    | Expected maximum execution time for each child sub-process, in seconds.                                                                                                                                                                           |
 | **`--child_min_duration`, `-m`** | Option              | no       | `0`     | Minimum execution time for child console command excution including child sub-process. If the command finishes too quickly, the process waits to reach this time. Leave the default one to start the next command execution immediately. |
 
 

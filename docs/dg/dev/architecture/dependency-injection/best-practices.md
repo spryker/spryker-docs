@@ -16,7 +16,7 @@ This document describes best practices and recommendations when working with Sym
 
 ## When to use DI vs Factory pattern
 
-### Use Dependency Injection when:
+### Use Dependency Injection when
 
 - ✅ **Building new features** - Start with DI for all new code
 - ✅ **Services are reused** - Multiple consumers need the same service instance
@@ -24,14 +24,14 @@ This document describes best practices and recommendations when working with Sym
 - ✅ **Testing is priority** - You want easy mocking and testability
 - ✅ **Cross-module dependencies** - Services need to be shared across modules
 
-### Use Factory pattern when:
+### Use Factory pattern when
 
 - ✅ **Legacy code migration** - Existing code not yet migrated to DI
 - ✅ **Complex creation logic** - Object instantiation requires conditional logic
 - ✅ **Module-specific instances** - Need to create new instances per call
 - ✅ **Gradual migration** - Transitioning from factory to DI incrementally
 
-### Hybrid approach (recommended):
+### Hybrid approach (recommended)
 
 For facades and larger modules, use a hybrid approach during migration:
 
@@ -114,7 +114,7 @@ class CustomerService
 }
 ```
 
-### Benefits of interfaces:
+### Benefits of interfaces
 
 1. **Flexibility** - Easy to swap implementations
 2. **Testability** - Simple to create mocks
@@ -239,7 +239,7 @@ class PaymentService
 }
 ```
 
-### Benefits:
+### Benefits
 
 1. **Single configuration point** - Configure once, use everywhere
 2. **Type safety** - Strong typing for all configuration

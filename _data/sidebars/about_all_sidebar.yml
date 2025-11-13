@@ -45,8 +45,18 @@ entries:
         nested:
         - title: RabbitMQ
           nested:
+          - title: Release notes for RabbitMQ
+            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-spryker-rabbitmq.html
           - title: Release notes for RabbitMQ 4.1 Update
             url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-rabbitmq-4.1-update.html
+        - title: Jenkins
+          nested:
+          - title: Release notes for Jenkins
+            url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins.html
+        - title: Spryker-PHP
+          nested:
+          - title: Release notes for Spryker-PHP Image
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html
 
     - title: Security audit reports
       nested:

@@ -157,7 +157,7 @@ To use this handler, follow these steps:
 1. Ensure the `spryker/session-redis` module has the required version. You can do this with Composer:
 
 ```bash
-composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
+composer require spryker/session-redis:"^1.11.1" --update-with-dependencies
 ```
 
 2. Register **one** session handling plugin in `SessionDependencyProvider`. This can be one of the following:
@@ -233,7 +233,36 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
-Read more about exclusion condition plugins in the [release notes](https://github.com/spryker/session-redis/releases/tag/1.10.0)
+5. Configure session redis locking exclusion patterns and user-agent names:
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
+{
+    public function getSessionRedisLockingExcludedUrlPatterns(): array
+    {
+        return [
+            '/^.*\/error-page\/*.*$/',
+            '/^.*\/health-check$/',
+            '/\/[^\/]+\/[^\/]+\/search\?q=/', 
+            '/^\/$/',
+            '/\/search\/suggestion\?q=/',
+            // ..
+        ];
+    }
+    
+    public function getSessionRedisLockingExcludedBotUserAgents(): array
+    {
+        return [
+            'Googlebot',
+            'bingbot',
+            'Baiduspider',
+            // ...
+        ];
+    }
+}
+```
 
 ### Lock TTL configuration
 

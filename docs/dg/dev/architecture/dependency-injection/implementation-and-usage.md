@@ -286,7 +286,7 @@ class CustomerImportCommand extends Command
 
 When the container resolves a dependency, it recursively resolves all nested dependencies:
 
-```
+```markdown
 Controller (Entry Point)
     ↓ requires CustomerFacadeInterface
     CustomerFacade

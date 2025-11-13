@@ -24,7 +24,7 @@ The container compilation fails with an error about an unknown class from a Spry
 
 **Example error:**
 
-```
+```php
 The service "Spryker\Zed\Product\Business\ProductFacade" has a dependency on a non-existent service "Spryker\Zed\Product\Business\SomeInternalService".
 ```
 
@@ -81,7 +81,7 @@ Core module doesn't have a pre-compiled container, and autowiring fails.
 
 **Example error:**
 
-```
+```php
 Could not find the "Spryker\Zed\Customer\Business\CustomerFacade" in any of the attached containers.
 ```
 
@@ -120,7 +120,7 @@ Container compilation fails when a service constructor has scalar type hints (in
 
 **Example error:**
 
-```
+```php
 Cannot autowire service "Pyz\Zed\MyModule\MyService": argument "$timeout" of method "__construct()" is type-hinted "int", you should configure its value explicitly.
 ```
 
@@ -183,7 +183,7 @@ Container compilation fails when transfer objects are used in class properties o
 
 **Example error:**
 
-```
+```php
 Class "Generated\Shared\Transfer\CustomerTransfer" not found.
 ```
 

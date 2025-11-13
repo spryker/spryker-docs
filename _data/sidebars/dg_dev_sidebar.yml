@@ -1181,6 +1181,13 @@ entries:
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html
     - title: Dependency Injection
       url: /docs/dg/dev/architecture/dependency-injection.html
+      nested:
+        - title: Implementation and Usage
+          url: /docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
+        - title: Best Practices
+          url: /docs/dg/dev/architecture/dependency-injection/best-practices.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
     - title: Symfony Bundles
       url: /docs/dg/dev/architecture/bundles.html
 

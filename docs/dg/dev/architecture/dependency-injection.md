@@ -253,6 +253,14 @@ class MyService
 
 Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Symfony/{APPLICATION}/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
 
+## Related documentation
+
+For detailed guidance on implementing and using Dependency Injection in your Spryker project, see:
+
+- [Implementation and usage](/docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html) - Detailed examples of manual wiring, using core classes, and the `getService()` pattern
+- [Troubleshooting](/docs/dg/dev/architecture/dependency-injection/troubleshooting.html) - Common issues and debugging techniques
+- [Best practices](/docs/dg/dev/architecture/dependency-injection/best-practices.html) - Recommendations for DI vs Factory pattern, avoiding anti-patterns, and performance optimization
+
 ## Next steps
 
 - [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)

@@ -2781,6 +2781,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
+                      - title: Product Readiness
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html

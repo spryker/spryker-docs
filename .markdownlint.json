@@ -1,5 +1,7 @@
 {
-  "MD001": false,
+  "MD001": {
+    "front_matter_title": ""
+  },
   "MD004": {
     "style": "dash"
   },    

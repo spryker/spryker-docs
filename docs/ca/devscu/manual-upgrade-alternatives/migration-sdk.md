@@ -13,7 +13,7 @@ Instead, it provides the data and guidance you need to perform updates manually 
 
 {% info_block warningBox "Warning" %}
 The Migration SDK is a community-maintained tool. It is not officially supported or guaranteed by Spryker.  
-Use it at your own discretion. Contributions are welcome on [GitHub](https://github.com/spryker-projects/migration-program-sdk)
+Use it at your own discretion. Contributions are welcome on [GitHub](https://github.com/spryker-community/migration-program-sdk)
 {% endinfo_block %}
 
 ## When to use the Migration SDK
@@ -55,13 +55,13 @@ Use these reports to resolve incompatibilities before running updates.
 
 ## Typical workflow
 
-1. Clone the [Migration SDK repository](https://github.com/spryker-projects/migration-program-sdk).
+1. Clone the [Migration SDK repository](https://github.com/spryker-community/migration-program-sdk).
 2. Create a `config.ini` file based on the provided `config.dist.ini` template.
 3. Run the desired analysis or estimation scripts from the command line.
 4. Review the generated reports in the `outputs/` directory to plan your upgrade steps.
 5. Apply the upgrade changes manually based on the reports and upgrade instructions.
 
-All scripts and configuration options are documented in detail in the [GitHub README](https://github.com/spryker-projects/migration-program-sdk).
+All scripts and configuration options are documented in detail in the [GitHub README](https://github.com/spryker-community/migration-program-sdk).
 
 ## Example use cases
 

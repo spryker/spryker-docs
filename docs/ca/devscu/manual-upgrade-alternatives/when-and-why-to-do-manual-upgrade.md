@@ -43,7 +43,7 @@ The Migration SDK does **not** modify your codebase or create merge requests. In
 
 {% info_block warningBox "Warning" %}
 The Migration SDK is not officially maintained or supported by Spryker. It is provided as a community project and used at your own discretion.  
-Contributions are welcome on [GitHub](https://github.com/spryker-projects/migration-program-sdk).
+Contributions are welcome on [GitHub](https://github.com/spryker-community/migration-program-sdk).
 {% endinfo_block %}
 
 ## Next steps

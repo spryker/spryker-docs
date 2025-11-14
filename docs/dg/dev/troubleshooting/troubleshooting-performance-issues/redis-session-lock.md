@@ -290,3 +290,7 @@ Reducing the lock TTL too much can result in side effects similar to having no l
 ### Traffic control
 
 To mitigate issues with session locks caused by high traffic or automated bot activity, you can use [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).
+
+### Crawler Control
+
+[Crowler Control](docs/pbc/all/miscellaneous/crowler-control.html) reduces server load by preventing bots from crawling useless URLs.

@@ -11,7 +11,7 @@ related:
   - title: How to upgrade to Symfony Dependency Injection
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
   - title: Bundles
-    link: docs/dg/dev/architecture/bundles.html
+    link: docs/dg/dev/architecture/symfony-bundles.html
   - title: Conceptual overview
     link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
@@ -264,4 +264,4 @@ For detailed guidance on implementing and using Dependency Injection in your Spr
 ## Next steps
 
 - [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
-- [Bundles](/docs/dg/dev/architecture/bundles.html)
+- [Symfony Bundles in Spryker](/docs/dg/dev/architecture/symfony-bundles.html)

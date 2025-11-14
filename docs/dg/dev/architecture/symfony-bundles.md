@@ -1,5 +1,5 @@
 ---
-title: Bundles
+title: Symfony Bundles in Spryker
 description: This document describes how to use Symfony Bundles in your Spryker project.
 last_updated: Nov 5, 2025
 template: concept-topic-template

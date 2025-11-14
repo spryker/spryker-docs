@@ -39,7 +39,7 @@ The Back Office readiness view is powered by plugins that aggregate diagnostics 
 
 ### 1. Register readiness provider plugins
 
-Extend **\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider**. with the readiness providers that match your catalog requirements.
+Extend **\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider** with the readiness providers that match your catalog requirements.
 
 ```php
 <?php
@@ -84,6 +84,55 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+
+## Extend readiness conditions on project level
+
+You can add your own diagnostics by implementing the readiness provider plugin interfaces delivered by `spryker/product-management-extension`.
+
+- `ProductAbstractReadinessProviderPluginInterface::provide()` receives a `ProductAbstractReadinessRequestTransfer` that contains the current `ProductAbstractTransfer`, its related `ProductConcreteTransfer` collection, and the existing `ProductReadinessTransfer` entries gathered so far. Return the same collection after appending your insights.
+- `ProductConcreteReadinessProviderPluginInterface::provide()` works the same way for concrete products by consuming a `ProductConcreteReadinessRequestTransfer` that exposes the current `ProductConcreteTransfer`.
+- Each `ProductReadinessTransfer` represents a single check. Populate the `title` and add one or more `values` that describe the current state (for example, *Yes*, *Missing price*).
+
+### Sample concrete readiness plugin
+
+The following example appends information about whether a concrete product is active. Use the same approach to describe other project-specific requirements, such as approval workflows or third-party data feeds.
+
+```php
+use ArrayObject;
+use Generated\Shared\Transfer\ProductConcreteReadinessRequestTransfer;
+use Generated\Shared\Transfer\ProductReadinessTransfer;
+use Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteReadinessProviderPluginInterface;
+
+class IsActiveConcreteProductReadinessProvider implements ProductConcreteReadinessProviderPluginInterface
+{
+    protected const TITLE_STATUS_IS_ACTIVE = 'Status is active';
+    protected const VALUE_YES = 'Yes';
+    protected const VALUE_NO = 'No';
+
+    public function provide(
+        ProductConcreteReadinessRequestTransfer $productConcreteReadinessRequestTransfer,
+        ArrayObject $productReadinessTransfers
+    ): ArrayObject {
+        if (!$productConcreteReadinessRequestTransfer->getProductConcrete()) {
+            return $productReadinessTransfers;
+        }
+
+        $productReadinessTransfers->append(
+            (new ProductReadinessTransfer())
+                ->setTitle(static::TITLE_STATUS_IS_ACTIVE)
+                ->addValue(
+                    $productConcreteReadinessRequestTransfer->getProductConcrete()->getIsActive()
+                        ? static::VALUE_YES
+                        : static::VALUE_NO,
+                ),
+        );
+
+        return $productReadinessTransfers;
+    }
+}
+```
+
+Register the new plugin in the dependency provider methods shown above so it appears in the Back Office readiness view together with the built-in checks.
 
 ## Related Business User documents
 

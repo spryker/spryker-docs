@@ -19,6 +19,8 @@ entries:
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases
         nested:
+        - title: Security release notes 202512.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202512.0.html
         - title: Security release notes 202509.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
         - title: Security release notes 202506.0

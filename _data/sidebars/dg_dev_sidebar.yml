@@ -209,6 +209,8 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
+      - title: Multi process run
+        url: /docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html

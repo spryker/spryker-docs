@@ -157,7 +157,7 @@ To use this handler, follow these steps:
 1. Ensure the `spryker/session-redis` module has the required version. You can do this with Composer:
 
 ```bash
-composer require spryker/session-redis:"^1.10.0" --update-with-dependencies
+composer require spryker/session-redis:"^1.11.2" --update-with-dependencies
 ```
 
 2. Register **one** session handling plugin in `SessionDependencyProvider`. This can be one of the following:
@@ -233,7 +233,36 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
-Read more about exclusion condition plugins in the [release notes](https://github.com/spryker/session-redis/releases/tag/1.10.0)
+5. Configure session redis locking exclusion patterns and user-agent names:
+
+```php
+namespace Pyz\Yves\SessionRedis;
+
+class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
+{
+    public function getSessionRedisLockingExcludedUrlPatterns(): array
+    {
+        return [
+            '/^.*\/error-page\/*.*$/',
+            '/^.*\/health-check$/',
+            '/\/[^\/]+\/[^\/]+\/search\?q=/', 
+            '/^\/$/',
+            '/\/search\/suggestion\?q=/',
+            // ..
+        ];
+    }
+    
+    public function getSessionRedisLockingExcludedBotUserAgents(): array
+    {
+        return [
+            'Googlebot',
+            'bingbot',
+            'Baiduspider',
+            // ...
+        ];
+    }
+}
+```
 
 ### Lock TTL configuration
 
@@ -261,3 +290,7 @@ Reducing the lock TTL too much can result in side effects similar to having no l
 ### Traffic control
 
 To mitigate issues with session locks caused by high traffic or automated bot activity, you can use [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).
+
+### Crawler Control
+
+[Crawler Control](docs/pbc/all/miscellaneous/crawler-control.html) reduces server load by preventing bots from crawling useless URLs.

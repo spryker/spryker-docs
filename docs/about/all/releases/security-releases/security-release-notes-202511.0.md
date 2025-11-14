@@ -1,6 +1,6 @@
 ---
-title: Security release notes 202512.0
-description: Security updates released for version 202512.0
+title: Security release notes 202511.0
+description: Security updates released for version 202511.0
 last_updated: Nov 14, 2025
 template: concept-topic-template
 publish_date: "2025-11-14"

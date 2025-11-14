@@ -1,4 +1,7 @@
 {
+  "MD001": {
+    "front_matter_title": ""
+  },
   "MD004": {
     "style": "dash"
   },    
@@ -23,5 +26,6 @@
   "MD040": {
     "enabled": true,
     "fenced_code_language": true
-  }
+  },
+  "MD060": false
 }

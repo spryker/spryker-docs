@@ -157,7 +157,7 @@ To use this handler, follow these steps:
 1. Ensure the `spryker/session-redis` module has the required version. You can do this with Composer:
 
 ```bash
-composer require spryker/session-redis:"^1.11.1" --update-with-dependencies
+composer require spryker/session-redis:"^1.11.2" --update-with-dependencies
 ```
 
 2. Register **one** session handling plugin in `SessionDependencyProvider`. This can be one of the following:

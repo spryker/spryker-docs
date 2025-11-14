@@ -94,7 +94,7 @@ You can configure your services in `config/Symfony/{APPLICATION}/services.php`. 
 
 ## 4. Configure bundles
 
-For details about configuring bundles, see [Bundles](/docs/dg/dev/architecture/bundles.html).
+For details about configuring bundles, see [Symfony Bundles](/docs/dg/dev/architecture/symfony-bundles.html).
 
 ## 5. Compile the container
 
@@ -114,4 +114,4 @@ While in development mode you don't need to manually build the container, as it 
 ## Next steps
 
 - [Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
-- [Bundles](/docs/dg/dev/architecture/bundles.html)
+- [Bundles](/docs/dg/dev/architecture/symfony-bundles.html)

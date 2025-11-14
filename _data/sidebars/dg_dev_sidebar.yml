@@ -1191,7 +1191,7 @@ entries:
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
     - title: Symfony Bundles
-      url: /docs/dg/dev/architecture/bundles.html
+      url: /docs/dg/dev/architecture/symfony-bundles.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

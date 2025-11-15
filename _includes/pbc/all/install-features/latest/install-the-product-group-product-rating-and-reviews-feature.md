@@ -12,7 +12,7 @@ Install the required features:
 | NAME | VERSION |
 | --- | --- |
 | Product Group | 202507.0 |
-| Product Rating & Reviews | 202507.0 |
+| Product Rating & Reviews | 202507.1 |
 
 
 ### Set up behavior
@@ -22,7 +22,7 @@ Register the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductReviewSummaryProductViewExpanderPlugin | Expands `ProductViewTransfer` with the product review summary data (average rating). | None | SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget |
+| ProductReviewStorageProductViewExpanderPlugin | Expands `ProductViewTransfer` with the product review summary data (average rating). | None | SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget |
 
 
 ```php
@@ -31,7 +31,7 @@ Register the following plugin:
 namespace Pyz\Yves\ProductGroupWidget;
 
 use SprykerShop\Yves\ProductGroupWidget\ProductGroupWidgetDependencyProvider as SprykerShopProductGroupWidgetDependencyProvider;
-use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewSummaryProductViewExpanderPlugin;
+use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewStorageProductViewExpanderPlugin;
 
 class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidgetDependencyProvider
 {
@@ -41,7 +41,7 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
     protected function getProductViewExpanderPlugins(): array
     {
         return [
-            new ProductReviewSummaryProductViewExpanderPlugin(),
+            new ProductReviewStorageProductViewExpanderPlugin(),
         ];
     }
 }

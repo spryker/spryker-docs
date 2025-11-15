@@ -18,7 +18,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product-rating-reviews:"202507.1" --update-with-dependencies
+composer require spryker-feature/product-rating-reviews:"202507.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -652,7 +652,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 | PLUGIN                                            | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                      |
 |---------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
-| ProductReviewStorageProductViewExpanderPlugin | Expands `ProductViewTransfer` objects with product review rating data.                                    | None          | SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget |
+| ProductReviewSummaryProductViewBulkExpanderPlugin | Expands `ProductViewTransfer` objects with product review rating data.                                    | None          | SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget |
 
 **src/Pyz/Yves/ProductGroupWidget/ProductGroupWidgetDependencyProvider.php**
 
@@ -662,7 +662,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 namespace Pyz\Yves\ProductGroupWidget;
 
 use SprykerShop\Yves\ProductGroupWidget\ProductGroupWidgetDependencyProvider as SprykerShopProductGroupWidgetDependencyProvider;
-use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewStorageProductViewExpanderPlugin;
+use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewSummaryProductViewBulkExpanderPlugin;
 
 class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidgetDependencyProvider
 {
@@ -672,7 +672,7 @@ class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidget
     protected function getProductViewBulkExpanderPlugins(): array
     {
         return [
-            new ProductReviewStorageProductViewExpanderPlugin(),
+            new ProductReviewSummaryProductViewBulkExpanderPlugin(),
         ];
     }
 }

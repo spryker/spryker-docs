@@ -19,19 +19,9 @@ publish_date: "2025-11-17"
 
 ### Security Fixes
 
-- [CVE-2025-47907](https://github.com/advisories/GHSA-j5pm-7495-qmr3): Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
+- [CVE-2025-47907](https://github.com/advisories/GHSA-j5pm-7495-qmr3): Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
 - [CVE-2025-47906](https://github.com/advisories/GHSA-gwrf-jf3h-w649): If the PATH environment variable contains paths which are executables (rather than just directories), passing certain strings to LookPath ("", ".", and ".."), can result in the binaries listed in the PATH being unexpectedly returned.
 
-## Steps before you submit a PR
-- Please add tests for the code you add if it's possible.
-- Please check out our contribution guide: https://docs.spryker.com/docs/dg/dev/code-contribution-guide.html
-- Add a `contribution-license-agreement.txt` file with the following content:
-`I hereby agree to Spryker\'s Contribution License Agreement in https://github.com/spryker/docker-php/blob/HASH_OF_COMMIT_YOU_ARE_BASING_YOUR_BRANCH_FROM_MASTER_BRANCH/CONTRIBUTING.md.`
-
-This is a mandatory step to make sure you are aware of the license agreement and agree to it. `HASH_OF_COMMIT_YOU_ARE_BASING_YOUR_BRANCH_FROM_MASTER_BRANCH` is a hash of the commit you are basing your branch from the master branch. You can take it from commits list of master branch before you submit a PR.
-
-## Checklist
-- [x] I agree with the Code Contribution License Agreement in CONTRIBUTING.md
 
 This document describes the changes that have been recently released.
 For additional support with this content, contact our support.

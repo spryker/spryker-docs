@@ -5,21 +5,11 @@ last_updated: Nov 5, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dependency-injection
 originalArticleId: 8c24a5f6-f45a-4ff5-838f-b25712309bd0
-redirect_from:
-  - /docs/scos/dev/architecture/dependency-injection.html
 related:
   - title: How to upgrade to Symfony Dependency Injection
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
-  - title: Bundles
+  - title: Symfony Bundles
     link: docs/dg/dev/architecture/symfony-bundles.html
-  - title: Conceptual overview
-    link: docs/dg/dev/architecture/conceptual-overview.html
-  - title: Programming concepts
-    link: docs/dg/dev/architecture/programming-concepts.html
-  - title: Technology stack
-    link: docs/dg/dev/architecture/technology-stack.html
-  - title: Modules and layers
-    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 Spryker uses the [Symfony Dependency Injection component](https://symfony.com/doc/current/components/dependency_injection.html) to manage dependencies in your application. This allows you to use the "Symfony way" of injecting dependencies via service configuration and autowiring, while still keeping the existing Spryker way of dependency injection via Factories and Dependency Providers.

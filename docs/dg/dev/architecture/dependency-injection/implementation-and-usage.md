@@ -110,7 +110,7 @@ Spryker core classes are not automatically available in the container. You need 
 
 ### Making facades/clients/services available
 
-To use core facades, clients, or services through DI, you need to register them in your `ApplicationServices.php`:
+To use core facades, clients, or services through dependency injection, you need to register them in your `ApplicationServices.php`:
 
 ```php
 <?php
@@ -136,8 +136,6 @@ return static function (ContainerConfigurator $configurator): void {
     $services->set(UtilTextServiceInterface::class, UtilTextService::class);
 };
 ```
-
-Alternatively, if a core module has a pre-compiled container, it will be automatically discovered when referenced.
 
 ## Wiring plugin stacks
 
@@ -171,7 +169,7 @@ class CustomerFacade extends AbstractFacade implements CustomerFacadeInterface
 }
 ```
 
-**New DI pattern with getService():**
+**New dependency injection pattern with getService():**
 
 ```php
 <?php
@@ -194,7 +192,7 @@ class CustomerFacade extends AbstractFacade implements CustomerFacadeInterface
 ### When to use each approach
 
 - **Use `getService()`**: When you want to leverage dependency injection and the service is configured in the container
-- **Use `getFactory()`**: For traditional Spryker architecture or when gradually migrating to DI
+- **Use `getFactory()`**: For traditional Spryker architecture or when gradually migrating to dependency injection
 
 ### Benefits of the getService() pattern
 
@@ -313,13 +311,13 @@ For a class to be an entry point and trigger autowiring:
 2. It must have constructor parameters with type hints
 3. The type-hinted dependencies must be available in the container or be autowirable
 
-## Gradually migrating from factory pattern to DI
+## Gradually migrating from factory pattern to dependency injection
 
 You can migrate your application incrementally without breaking existing functionality.
 
 ### Migration strategy
 
-1. **Start with new features**: Implement new features using DI from the beginning
+1. **Start with new features**: Implement new features using dependency injection from the beginning
 2. **Migrate isolated services**: Begin with services that have few dependencies
 3. **Update facades gradually**: Convert facade methods to use `getService()` one at a time
 4. **Keep factories for legacy code**: Leave existing factory-based code unchanged until you're ready to migrate it
@@ -351,7 +349,7 @@ class CustomerFacade extends AbstractFacade
 }
 ```
 
-**Step 2 - Migrate one method to DI:**
+**Step 2 - Migrate one method to dependency injection:**
 
 ```php
 <?php
@@ -368,7 +366,7 @@ class CustomerFacade extends AbstractFacade
             ->process($customer);
     }
 
-    // New DI pattern
+    // New dependency injection pattern
     public function validateCustomer(CustomerTransfer $customer): bool
     {
         return $this->getService(CustomerValidatorInterface::class)
@@ -403,7 +401,7 @@ class CustomerFacade extends AbstractFacade
 ### Coexistence considerations
 
 - Both patterns can coexist in the same facade
-- Factory-based services won't benefit from DI until migrated
+- Factory-based services won't benefit from dependency injection until migrated
 - Test both patterns separately during migration
 - Update tests to accommodate the new pattern
 

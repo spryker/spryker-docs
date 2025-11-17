@@ -42,7 +42,7 @@ namespace Pyz\Zed\Customer\Business;
 
 use Spryker\Zed\Kernel\Business\AbstractFacade;
 
-class CustomerFacade extends AbstractFacade
+class CustomerFacade extends AbstractFacade implements CustomerFacadeInterface
 {
     // New DI pattern for new features
     public function validateCustomerEmail(string $email): bool
@@ -102,10 +102,10 @@ class CustomerService
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Business;
+namespace Pyz\Zed\Customer\Business\Customer;
 
 // Consumer depends on concrete class
-class CustomerService
+class Customer
 {
     public function __construct(
         private CustomerProcessor $processor // Tightly coupled!
@@ -130,20 +130,20 @@ Circular dependencies occur when Service A depends on Service B, which depends o
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Business;
+namespace Pyz\Zed\Customer\Business\Customer;
 
-class CustomerService
+class Customer implements CustomerInterface
 {
     public function __construct(
-        private OrderServiceInterface $orderService
+        private OrderInterface $order
     ) {
     }
 }
 
-class OrderService implements OrderServiceInterface
+class Order implements OrderInterface
 {
     public function __construct(
-        private CustomerServiceInterface $customerService // Circular!
+        private CustomerInterface $customer // Circular!
     ) {
     }
 }
@@ -154,29 +154,29 @@ class OrderService implements OrderServiceInterface
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Business;
+namespace Pyz\Zed\Customer\Business\Customer;
 
 // Create a shared service that both can depend on
-class CustomerDataProvider
+class CustomerDataProvider implements CustomerDataProviderInterface
 {
-    public function getCustomerData(int $customerId): CustomerData
+    public function getCustomerData(int $customerId): CustomerTransfer
     {
         // Implementation
     }
 }
 
-class CustomerService
+class Customer
 {
     public function __construct(
-        private CustomerDataProvider $dataProvider
+        private CustomerDataProviderInterface $customerDataProvider
     ) {
     }
 }
 
-class OrderService
+class Order
 {
     public function __construct(
-        private CustomerDataProvider $dataProvider
+        private CustomerDataProviderInterface $customerDataProvider
     ) {
     }
 }
@@ -191,9 +191,9 @@ Scalar constructor arguments (int, string, bool, float) require manual configura
 ```php
 <?php
 
-namespace Pyz\Zed\Payment\Business;
+namespace Pyz\Zed\Payment\Business\Payment;
 
-class PaymentService
+class Payment implements PaymentInterface
 {
     public function __construct(
         private int $timeout,
@@ -206,7 +206,7 @@ class PaymentService
 This requires manual configuration:
 
 ```php
-$services->set(PaymentService::class)
+$services->set(Payment::class)
     ->arg('$timeout', 30)
     ->arg('$sandboxMode', true);
 ```
@@ -230,7 +230,7 @@ class PaymentConfig
     }
 }
 
-class PaymentService
+class Payment implements PaymentInterface
 {
     public function __construct(
         private PaymentConfig $config
@@ -255,7 +255,7 @@ Each service should have one clear purpose:
 <?php
 
 // ✅ Good: Focused services
-class CustomerEmailValidator
+class CustomerEmailValidator implements EmailValidatorInterface
 {
     public function validate(string $email): bool
     {
@@ -265,7 +265,7 @@ class CustomerEmailValidator
 
 class CustomerAddressValidator
 {
-    public function validate(AddressTransfer $address): bool
+    public function validate(AddressTransfer $addressTransfer): bool
     {
         // Only validates addresses
     }
@@ -355,9 +355,9 @@ $excludedModuleConfiguration = [
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Business;
+namespace Pyz\Zed\Customer\Business\Customer;
 
-class CustomerService
+class Customer implements CustomerInterface
 {
     public function __construct(
         private CustomerRepositoryInterface $repository,
@@ -365,31 +365,18 @@ class CustomerService
     ) {
     }
 
-    public function registerCustomer(CustomerTransfer $customer): bool
+    public function registerCustomer(CustomerTransfer $customerTransfer): bool
     {
-        if (!$this->validator->validate($customer->getEmail())) {
+        if (!$this->validator->validate($customerTransfer->getEmail())) {
             return false;
         }
 
-        $this->repository->save($customer);
+        $this->repository->save($customerTransfer);
 
         return true;
     }
 }
 ```
-
-## Migration checklist
-
-When migrating a module to DI, follow this checklist:
-
-- [ ] Update facades to use `getService()` instead of `getFactory()`
-- [ ] Configure services in `ApplicationServices.php` if needed
-- [ ] Remove scalar constructor arguments (use config objects)
-- [ ] Verify no circular dependencies exist
-- [ ] Check for transfer object usage in properties/constants
-- [ ] Test container compilation
-- [ ] Run full test suite
-
 
 ## Common anti-patterns to avoid
 
@@ -399,7 +386,7 @@ When migrating a module to DI, follow this checklist:
 <?php
 
 // Don't inject the entire container
-class CustomerService
+class Customer implements CustomerInterface
 {
     public function __construct(
         private ContainerInterface $container // Anti-pattern!
@@ -420,7 +407,7 @@ class CustomerService
 <?php
 
 // Don't use static dependencies
-class CustomerService
+class Customer implements CustomerInterface
 {
     public function process(): void
     {
@@ -436,7 +423,7 @@ class CustomerService
 <?php
 
 // Don't instantiate dependencies directly
-class CustomerService
+class Customer implements CustomerInterface
 {
     public function process(): void
     {

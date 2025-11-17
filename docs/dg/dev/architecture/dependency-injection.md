@@ -240,7 +240,7 @@ namespace Pyz\Yves\MyModule;
 
 class MyService
 {
-    public function __construct(private SomeService $someService)
+    public function __construct(private SomeServiceInterface $someService)
     {
     }
 

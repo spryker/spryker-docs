@@ -491,6 +491,40 @@ protected function getOrderItemExpanderPreSavePlugins(): array
 
 After enabling the plugin and configuring the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
 
+## Product performance
+
+Product reviews are displayed on the catalog page, search page, and product detail page. To optimize performance when displaying product ratings, use the `ProductReviewStorageProductViewExpanderPlugin` instead of `ProductReviewSummaryProductViewBulkExpanderPlugin`.
+
+The new plugin retrieves product ratings from storage in bulk, which is more efficient than fetching reviews from a search source and calculating ratings based on reviews.
+
+### Set up the plugin
+
+Replace `ProductReviewSummaryProductViewBulkExpanderPlugin` with `ProductReviewStorageProductViewExpanderPlugin` in your dependency provider:
+
+**src/Pyz/Yves/ProductGroupWidget/ProductGroupWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductGroupWidget;
+
+use SprykerShop\Yves\ProductGroupWidget\ProductGroupWidgetDependencyProvider as SprykerShopProductGroupWidgetDependencyProvider;
+use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewStorageProductViewExpanderPlugin;
+
+class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\ProductGroupWidgetExtension\Dependency\Plugin\ProductViewBulkExpanderPluginInterface>
+     */
+    protected function getProductViewBulkExpanderPlugins(): array
+    {
+        return [
+            new ProductReviewStorageProductViewExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ## Reduce functionality
 
 Check if you require all features you currently use and check all applied plugins if you need them. Some plugins can probably be removed. Specifically, check the following ones:

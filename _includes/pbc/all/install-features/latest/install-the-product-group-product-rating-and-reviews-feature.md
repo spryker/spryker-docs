@@ -12,7 +12,7 @@ Install the required features:
 | NAME | VERSION |
 | --- | --- |
 | Product Group | 202507.0 |
-| Product Rating & Reviews | 202507.1 |
+| Product Rating & Reviews | 202507.0 |
 
 
 ### Set up behavior

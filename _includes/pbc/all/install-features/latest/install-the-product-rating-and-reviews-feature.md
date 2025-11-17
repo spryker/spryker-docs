@@ -18,7 +18,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product-rating-reviews:"202507.1" --update-with-dependencies
+composer require spryker-feature/product-rating-reviews:"202507.0" spryker-shop/product-review-widget:"^1.17.0" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}

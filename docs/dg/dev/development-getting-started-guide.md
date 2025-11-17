@@ -20,7 +20,7 @@ Spryker Demo Shops are a good starting point for any project. They are shipped w
 You can choose from the following options:
 
 - [B2C Demo Shop](/docs/about/all/b2c-suite.html)
-- [B2B Demo Shop](/docs/about/all//b2b-suite.html)
+- [B2B Demo Shop](/docs/about/all/b2b-suite.html)
 - [Marketplace B2C Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
 - [Marketplace B2B Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
 

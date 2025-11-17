@@ -293,4 +293,4 @@ To mitigate issues with session locks caused by high traffic or automated bot ac
 
 ### Crawler Control
 
-[Crawler Control](docs/pbc/all/miscellaneous/crawler-control.html) reduces server load by preventing bots from crawling useless URLs.
+[Crawler Control](/docs/pbc/all/miscellaneous/latest/crawler-control.html) reduces server load by preventing bots from crawling useless URLs.

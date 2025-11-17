@@ -142,10 +142,7 @@ class InternalLinkChecker
         target_path, anchor = parse_link(href, current_dir)
         next unless target_path # Skip if parsing failed or external link
         
-        # Skip if target is in ignored section (cross-section links)
-        next if target_in_ignored_section?(target_path)
-        
-        # Check if target exists
+        # Check if target exists (including cross-section links)
         unless link_exists?(target_path)
           file_errors << {
             file: relative_file_path,
@@ -173,14 +170,6 @@ class InternalLinkChecker
     return true if href.match?(/\.(xml|json|css|js|jpg|jpeg|png|gif|svg|pdf|zip|ico)$/i)
     
     false
-  end
-
-  def target_in_ignored_section?(target_path)
-    # Remove leading slash for pattern matching
-    path_for_matching = target_path.sub(/^\//, '')
-    
-    # Check if target matches any ignore pattern
-    ignore_patterns.any? { |pattern| pattern.match?(path_for_matching) }
   end
 
   def parse_link(href, current_dir)

@@ -491,11 +491,19 @@ protected function getOrderItemExpanderPreSavePlugins(): array
 
 After enabling the plugin and configuring the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
 
-## Product performance
+## Product review performance
 
 Product reviews are displayed on the catalog page, search page, and product detail page. To optimize performance when displaying product ratings, use the `ProductReviewStorageProductViewExpanderPlugin` instead of `ProductReviewSummaryProductViewBulkExpanderPlugin`.
 
 The new plugin retrieves product ratings from storage in bulk, which is more efficient than fetching reviews from a search source and calculating ratings based on reviews.
+
+### Prerequisites
+
+Update `spryker-shop/product-review-widget` to version `^1.17.0` or higher:
+
+```bash
+composer require spryker-shop/product-review-widget:"^1.17.0" --update-with-dependencies
+```
 
 ### Set up the plugin
 

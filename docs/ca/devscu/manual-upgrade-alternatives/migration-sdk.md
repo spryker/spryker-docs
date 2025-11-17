@@ -72,6 +72,6 @@ All scripts and configuration options are documented in detail in the [GitHub RE
 
 ## Related documentation
 
-- [When and why to use manual upgrade](/docs/ca/devscu/spryker-code-upgrader/manual-upgrade-alternatives/when-and-why-to-do-manual-upgrade.html)
-- [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader/spryker-code-upgrader.html)
+- [When and why to use manual upgrade](/docs/ca/devscu/manual-upgrade-alternatives/when-and-why-to-do-manual-upgrade.html)
+- [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html)
 - [Upgradability Guidelines](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)

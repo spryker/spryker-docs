@@ -7,6 +7,8 @@ template: concept-topic-template
 
 The Product Readiness feature provides diagnostic checks that evaluate the completeness and configuration quality of your products. It consolidates the critical prerequisites for making products available for sale and gives you immediate insight into what still needs attention. By surfacing potential data gaps and misconfigurations early, Product Readiness shortens the time required to prepare products for your storefront.
 
+You can access the Product Readiness page from the product view page in the Back Office via the Product Readiness button.
+
 {% info_block warningBox %}
 
 Product Readiness identifies missing data and configuration inconsistencies, but it does not guarantee storefront visibility. Additional business logic or channel-specific rules can still prevent a product from appearing to shoppers.
@@ -132,7 +134,7 @@ class IsActiveConcreteProductReadinessProvider implements ProductConcreteReadine
 }
 ```
 
-Register the new plugin in the dependency provider methods shown above so it appears in the Back Office readiness view together with the built-in checks.
+Register the new plugin in the dependency provider method ProductManagementDependencyProvider::getProductConcreteReadinessProviderPlugins shown above so it appears in the Back Office Product Concrete readiness view together with the built-in checks.
 
 ## Related Business User documents
 

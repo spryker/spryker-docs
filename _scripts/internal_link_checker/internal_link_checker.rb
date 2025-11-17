@@ -26,7 +26,9 @@ class InternalLinkChecker
     
     puts "📝 Found #{html_files.size} HTML files"
     puts "🏗️  Building valid files index..."
-    build_valid_files_index(html_files)
+    # Build index from ALL files, not just filtered ones
+    all_html_files = collect_all_html_files
+    build_valid_files_index(all_html_files)
     
     puts "🔗 Processing redirects from markdown files..."
     process_redirects
@@ -39,6 +41,15 @@ class InternalLinkChecker
   end
 
   private
+
+  def collect_all_html_files
+    html_files = []
+    Find.find(site_dir.to_s) do |path|
+      next unless path.end_with?('.html')
+      html_files << path
+    end
+    html_files
+  end
 
   def collect_html_files
     html_files = []

@@ -251,7 +251,7 @@ class MyService
 }
 ```
 
-Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Symfony/{APPLICATION}/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
+Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Symfony/Yves/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
 
 ## Related documentation
 

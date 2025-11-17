@@ -221,7 +221,7 @@ Here is an example of a service with a dependency on a repository.
 
 namespace Pyz\Yves\MyModule;
 
-class SomeService
+class SomeService implements SomeServiceInterface
 {
     public function findData(): array
     {

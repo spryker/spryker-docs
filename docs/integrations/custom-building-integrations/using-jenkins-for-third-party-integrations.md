@@ -10,13 +10,13 @@ template: default
 
 Spryker uses Jenkins primarily for running scheduled or event-based console commands that handle data exchange tasks. This is especially useful for batch operations, such as importing or exporting data between Spryker and third-party systems, such as ERP, PIM, or CRM.
 
-### Common use cases
+## Common use cases
 
 - Importing data from an external source: CSV, S3, APIs.
 - Exporting orders or stock levels to ERP or logistics systems.
 - Triggering custom business logic on a schedule–for example, nightly cleanup, status updates.
 
-### Configure Jenkins
+## Configure Jenkins
 
 1. Create a custom console command in your Spryker project: `vendor/bin/console your:custom:command`
 2. Configure Jenkins to run this command via CLI:

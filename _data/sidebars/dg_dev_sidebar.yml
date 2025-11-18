@@ -806,6 +806,8 @@ entries:
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
     nested:
+    - title: Upgrade to Symfony Dependency Injection
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1179,6 +1181,17 @@ entries:
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
       - title: "Semantic Versioning: Zero-major version"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html
+    - title: Dependency Injection
+      url: /docs/dg/dev/architecture/dependency-injection.html
+      nested:
+        - title: Implementation and Usage
+          url: /docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
+        - title: Best Practices
+          url: /docs/dg/dev/architecture/dependency-injection/best-practices.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
+    - title: Symfony Bundles
+      url: /docs/dg/dev/architecture/symfony-bundles.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

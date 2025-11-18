@@ -139,9 +139,32 @@ return static function (ContainerConfigurator $configurator): void {
 
 ## Wiring plugin stacks
 
-For now, refer to the Stack attribute documentation in the codebase:
-- `Spryker\Service\Container\Attributes\Stack`
-- `Spryker\Service\Container\Pass\StackResolverPass`
+To tell the container how to resolve plugin stacks defines as array dependency in a class constructor, you can use the Stack Attribute:
+
+```php
+<?php
+
+namespace Spryker\Glue\AuthRestApi\Processor\AccessTokens;
+
+use Spryker\Service\Container\Attributes\Stack;
+
+class AccessTokenUserFinder implements AccessTokenUserFinderInterface
+{
+    /**
+     * @param array<\Spryker\Glue\AuthRestApiExtension\Dependency\Plugin\RestUserMapperPluginInterface> $restUserExpanderPlugins
+     */
+    #[Stack(
+        dependencyProvider: AuthRestApiDependencyProvider::class,
+        dependencyProviderMethod: 'getRestUserExpanderPlugins',
+        provideToArgument: '$restUserExpanderPlugins',
+    )]
+    public function __construct(
+        protected array $restUserExpanderPlugins
+    ) {}
+}
+```
+
+During compilation the `\Spryker\Service\Container\Pass\StackResolverPass` understands this configuration and will inject the array dependency through this configuration. When the class is requested from the container, the container knows that it has to pass the returned array from the `AuthRestApiDependencyProvider::getRestUserExpanderPlugins()` method to the argument `$restUserExpanderPlugins`.
 
 ## Using Dependency Injection in facades
 

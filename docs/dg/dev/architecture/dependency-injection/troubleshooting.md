@@ -235,6 +235,51 @@ foreach ($projectModules as $moduleTransfer) {
 }
 ```
 
+### Argument is type-hinted "array"
+
+**Problem:**
+
+The container compilation fails with an error about configuring values explicitly.
+
+**Example error:**
+
+```php
+Cannot autowire service "Spryker\Glue\AuthRestApi\Processor\AccessTokens\AccessTokenUserFinder": argument "$restUserExpanderPlugins" of method "__construct()" is type-hinted "array", you should configure its value explicitly.
+```
+
+**Cause:**
+
+Symfony can't automatically detect which classes it should inject as dependency for array's. There is a type-hint to an array of interfaces but which ones should be added here can't be automatically detected.
+
+**Solution - Use the Stack Attribute:**
+
+```php
+<?php
+
+namespace Spryker\Glue\AuthRestApi\Processor\AccessTokens;
+
+use Spryker\Service\Container\Attributes\Stack;
+
+class AccessTokenUserFinder implements AccessTokenUserFinderInterface
+{
+    /**
+     * @param array<\Spryker\Glue\AuthRestApiExtension\Dependency\Plugin\RestUserMapperPluginInterface> $restUserExpanderPlugins
+     */
+    #[Stack(
+        dependencyProvider: AuthRestApiDependencyProvider::class,
+        dependencyProviderMethod: 'getRestUserExpanderPlugins',
+        provideToArgument: '$restUserExpanderPlugins',
+    )]
+    public function __construct(
+        protected array $restUserExpanderPlugins
+    ) {}
+}
+```
+
+During compilation the `\Spryker\Service\Container\Pass\StackResolverPass` understands this configuration and will inject the array dependency through this configuration. When the class is requested from the container, the container knows that it has to pass the returned array from the `AuthRestApiDependencyProvider::getRestUserExpanderPlugins()` method to the argument `$restUserExpanderPlugins`.
+
+Multiple Stack attributes can be used on a class constructor.
+
 ## Debugging
 
 When you need to understand how the container resolves services or troubleshoot issues, debug into these key classes:

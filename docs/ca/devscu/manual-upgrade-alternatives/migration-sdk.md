@@ -13,8 +13,10 @@ Instead, it provides the data and guidance you need to perform updates manually 
 
 {% info_block warningBox "Warning" %}
 The Migration SDK is a community-maintained tool. It is not officially supported or guaranteed by Spryker.  
-Use it at your own discretion. Contributions are welcome on [GitHub](https://github.com/spryker-community/migration-program-sdk)
+Use it at your own discretion.
 {% endinfo_block %}
+
+Contributions are welcome on [GitHub](https://github.com/spryker-community/migration-program-sdk)
 
 ## When to use the Migration SDK
 

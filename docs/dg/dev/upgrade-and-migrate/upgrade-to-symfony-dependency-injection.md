@@ -12,7 +12,25 @@ This document describes how to upgrade your application to use Symfony's Depende
 To get the Dependency Injection component, upgrade the following modules:
 
 ```bash
-composer require spryker/application:"^3.37.0" spryker/console:"^4.17.0" spryker/container:"^1.5.0" spryker/development:"^3.48.0" spryker/event-dispatcher:"^1.8.0" spryker/glue-application:"^1.69.0" spryker/http:"^1.13.0" spryker/kernel:"^3.80.0" spryker/module-finder:"^1.4.0" spryker/router:"^1.24.0" spryker/sales-oms:"^0.1.5" spryker/checkout-rest-api:"^3.13.1" spryker/data-import:"^1.31.1" spryker/merchant-oms:"^1.0.4" spryker/sales-payment-merchant-sales-merchant-commission:"^1.0.1" spryker-shop/service-point-cart-page:"^1.0.1" --update-with-dependencies --ignore-platform-req=ext-grpc
+composer require \
+  spryker/application:"^3.37.0" \
+  spryker/console:"^4.17.0" \
+  spryker/container:"^1.5.0" \
+  spryker/development:"^3.48.0" \
+  spryker/event-dispatcher:"^1.8.0" \
+  spryker/glue-application:"^1.69.0" \
+  spryker/http:"^1.13.0" \
+  spryker/kernel:"^3.80.0" \
+  spryker/module-finder:"^1.4.0" \
+  spryker/router:"^1.24.0" \
+  spryker/sales-oms:"^0.1.5" \
+  spryker/checkout-rest-api:"^3.13.1" \
+  spryker/data-import:"^1.31.1" \
+  spryker/merchant-oms:"^1.0.4" \
+  spryker/sales-payment-merchant-sales-merchant-commission:"^1.0.1" \
+  spryker-shop/service-point-cart-page:"^1.0.1" \
+  --update-with-dependencies \
+  --ignore-platform-req=ext-grpc
 ```
 
 ## 2. Update the console dependency provider

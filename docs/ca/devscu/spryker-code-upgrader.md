@@ -45,8 +45,10 @@ The Upgrader is shipped with PaaS+ in the EU and US regions.
 
 {% info_block infoBox "Tip" %}
 Cannot use the Spryker Code Upgrader?
-Explore our open-source [Migration SDK](manual-upgrade-alternatives/migration-sdk.html) for planning and executing manual upgrades.
+Explore our open-source Migration SDK for planning and executing manual upgrades.
 {% endinfo_block %}
+
+Find out more about our Migration SDK [here](manual-upgrade-alternatives/migration-sdk.html)
 
 ## Next steps
 

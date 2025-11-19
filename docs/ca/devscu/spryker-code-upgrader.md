@@ -48,7 +48,7 @@ Cannot use the Spryker Code Upgrader?
 Explore our open-source Migration SDK for planning and executing manual upgrades.
 {% endinfo_block %}
 
-Find out more about our Migration SDK [here](manual-upgrade-alternatives/migration-sdk.html)
+Find out more about our [Migration SDK](manual-upgrade-alternatives/migration-sdk.html)
 
 ## Next steps
 

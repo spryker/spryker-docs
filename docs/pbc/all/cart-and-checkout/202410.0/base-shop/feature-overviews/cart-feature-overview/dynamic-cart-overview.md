@@ -3,8 +3,6 @@ title: Dynamic cart overview
 description: Learn how Spryker Cloud Commerce OS dynamic cart feature improves user experience with seamless cart management and a frictionless checkout process.
 last_updated: May 21, 2024
 template: concept-topic-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html
 
 ---
 

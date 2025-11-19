@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/company-account-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/company-account-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/company-account-order-management-feature-integration.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
 related:
     - title: Company Account
       link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-account-feature-overview.html

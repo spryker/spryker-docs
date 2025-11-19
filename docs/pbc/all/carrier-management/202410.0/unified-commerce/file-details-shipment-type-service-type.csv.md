@@ -2,8 +2,6 @@
 title: "Import file details: shipment_type_service_type.csv"
 description: This document describes the hipment_type_service_type.csv file to configure the shipment information in your Spryker Demo Shop.
 template: data-import-template
-redirect_from:
-  - /docs/pbc/all/carrier-management/latest/unified-commerce/file-details-shipment-type-service-type.csv.html
 
 last_updated: Nov 23, 2023
 ---

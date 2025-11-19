@@ -7,10 +7,9 @@ originalLink: https://documentation.spryker.com/2021080/docs/cart-widget-overvie
 originalArticleId: 0c78b70a-a43b-487d-8aa7-1f7deee0cc4a
 redirect_from:
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-widget-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
 
 ---
 

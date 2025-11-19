@@ -9,7 +9,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-banner-content-items.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html

@@ -12,7 +12,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-content-navigation.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-content-navigation.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html
 
 related:
   - title: Execution order of data importers in Demo Shop

@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/import-and-export-data/file-details-sales-order-threshold.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
+
 
 related:
   - title: Execution order of data importers in Demo Shop

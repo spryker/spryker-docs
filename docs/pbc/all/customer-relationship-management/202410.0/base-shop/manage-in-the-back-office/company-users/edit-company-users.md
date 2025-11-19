@@ -7,7 +7,6 @@ redirect_from:
 - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
 - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-users.html
 - /docs/scos/user/back-office-user-guides/202204.0/customer/company-users/edit-company-users.html
-- /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-users/edit-company-users.html
 related:
   - title: Create company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/company-users/create-company-users.html

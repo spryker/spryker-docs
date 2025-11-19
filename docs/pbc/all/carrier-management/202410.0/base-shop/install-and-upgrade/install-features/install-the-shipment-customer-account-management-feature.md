@@ -3,8 +3,6 @@ title: Install the Shipment + Customer Account Management feature
 description: Learn how to integrate the Shipment + Customer Account Management feature into your project
 last_updated: July 31, 2023
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html
 
 ---
 

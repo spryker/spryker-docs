@@ -5,7 +5,6 @@ last_updated: Jul 05, 2021
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-checkout-feature-integration.html
-  - /docs/pbc/all/carrier-management/latest/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html
 
 ---
 

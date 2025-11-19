@@ -22,7 +22,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-customerpage.html
   - /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
   - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-customerpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-customerpage-module.md -->

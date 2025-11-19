@@ -13,7 +13,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-navigation-feature-integration.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
 related:
   - title: Install the Navigation feature
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html

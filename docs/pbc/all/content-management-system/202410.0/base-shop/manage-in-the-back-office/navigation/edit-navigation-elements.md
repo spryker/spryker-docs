@@ -6,7 +6,6 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/navigation/edit-navigation-nodes.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html
 
 ---
 

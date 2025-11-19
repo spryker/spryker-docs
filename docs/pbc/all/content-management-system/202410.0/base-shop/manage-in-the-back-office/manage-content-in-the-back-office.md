@@ -1,13 +1,12 @@
 ---
 title: Manage content the Back Office
-description: Learn more about Content items with these guides, helping you to create and manage different content items in the Spryker Back Office 
+description: Learn more about Content items with these guides, helping you to create and manage different content items in the Spryker Back Office
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/log-into-the-back-office.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-content-in-the-back-office.html
 ---
 
 This section contains guides on managing content in the Back Office:

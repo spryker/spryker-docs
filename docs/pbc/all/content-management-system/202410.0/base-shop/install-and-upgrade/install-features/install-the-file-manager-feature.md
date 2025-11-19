@@ -3,8 +3,6 @@ title: Install the File Manager feature
 description: Learn how to install the File Manager feature, which lets you upload and manage your assets effectively.
 last_updated: Aug 22, 2023
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html
 
 ---
 

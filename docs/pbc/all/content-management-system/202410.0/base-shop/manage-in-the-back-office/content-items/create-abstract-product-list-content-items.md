@@ -5,7 +5,6 @@ last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
-- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
 ---
 
 This topic describes how to create abstract product list content items in the Back Office.
@@ -22,7 +21,7 @@ Make sure to review [reference information](#reference-information-create-abstra
 4. Optional: Enter a **DESCRIPTION**.
 5. In the **Add more products** section, click **Add to list** next to the products you want to add to the list.
     The products appear in the **Default** tab.
-6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.  
+6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.
 7. Optional: Repeat steps 5-6 on one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}

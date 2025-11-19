@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/persistent-cart-sharing-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/persistent-cart-sharing-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
 
 ---
 

@@ -8,10 +8,9 @@ originalArticleId: b6d4ac1a-fd06-420a-a4bf-9db638e20447
 redirect_from:
   - /docs/scos/user/features/202311.0/checkout-feature-overview/order-thresholds-overview.html
   - /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/order-thresholds-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/order-thresholds-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/order-thresholds-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
 
 ---
 

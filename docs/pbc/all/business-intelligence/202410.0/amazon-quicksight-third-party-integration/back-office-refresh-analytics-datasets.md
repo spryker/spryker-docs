@@ -3,9 +3,6 @@ title: "Back Office: Refresh analytics datasets"
 description: Learn how to refresh analytics datasets in the Back Office.
 last_updated: Oct 24, 2024
 template: back-office-user-guide-template
-redirect_from:
-  - /docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html
-
 related:
 ---
 

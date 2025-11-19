@@ -7,7 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-a
 originalArticleId: 8811d81a-5a7a-4c30-a73f-d1ae53494e9e
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html
 related:
   - title: Authentication and Authorization
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html

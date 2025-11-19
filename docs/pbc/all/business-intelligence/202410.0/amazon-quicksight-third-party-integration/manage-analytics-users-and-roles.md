@@ -2,9 +2,6 @@
 title: Manage analytics users and roles
 description: Learn how to add and remove analytics users and update their roles.
 template: concept-topic-template
-redirect_from:
-  - /docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/manage-analytics-users-and-roles.html
-
 last_updated: Oct 24, 2024
 ---
 

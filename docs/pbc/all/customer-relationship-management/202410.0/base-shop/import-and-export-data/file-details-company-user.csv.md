@@ -8,7 +8,6 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 redirect_from:
 - /docs/pbc/all/customer-relationship-management/202311.0/import-and-export-data/file-details-company-user.csv.html
-- /docs/pbc/all/customer-relationship-management/latest/base-shop/import-and-export-data/file-details-company-user.csv.html
 ---
 
 This document describes the `company_user.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.

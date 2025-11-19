@@ -5,7 +5,6 @@ last_updated: June 23, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/content-management-system.html
-- /docs/pbc/all/content-management-system/latest/content-management-system.html
 ---
 
 *Content Management System* (CMS) capability enables content managers to add, customize, and effectively manage content on all the pages of a shop.

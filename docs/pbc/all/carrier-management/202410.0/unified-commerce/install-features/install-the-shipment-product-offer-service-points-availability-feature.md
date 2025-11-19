@@ -3,8 +3,6 @@ title: Install the Shipment Product Offer Service Points Availability feature
 description: Learn how to integrate the Shipment Product Offer Service Points Availability feature feature into your project
 last_updated: Sep 21, 2023
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html
 
 ---
 

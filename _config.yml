@@ -36,6 +36,8 @@ exclude:
   - gemfiles/
   - docker-compose.yml
   - Dockerfile
+  - docker/
+  - vale 
   - Gemfile
   - Gemfile.lock
   - Rakefile
@@ -47,6 +49,9 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - redirect.html
+  - rename_files.rb
+  - netlify.toml
+  - README.md  
   - docs/scos/dev/drafts-dev/
   - docs/scos/dev/developers-corner/
 

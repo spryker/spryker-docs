@@ -8,7 +8,6 @@ originalArticleId: 2c4285af-8248-4624-8e69-4cc5e9e72c7f
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/shipment/seven-senders.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/seven-senders/seven-senders.html
-  - /docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/seven-senders/seven-senders.html
 
 ---
 

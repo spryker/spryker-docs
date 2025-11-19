@@ -5,7 +5,6 @@ last_updated: Aug 28, 2023
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-shipment-service-points-feature.html
-  - /docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html
 
 ---
 

@@ -9,7 +9,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
 
 related:
   - title: Manage carts of registered users

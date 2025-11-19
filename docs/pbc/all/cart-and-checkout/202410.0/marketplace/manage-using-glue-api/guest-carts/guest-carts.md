@@ -5,7 +5,6 @@ last_updated: Jan 13, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/guest-carts/guest-carts.html
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/guest-carts.html
 
 ---
 

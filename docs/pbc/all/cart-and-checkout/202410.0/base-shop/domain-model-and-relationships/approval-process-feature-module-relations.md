@@ -11,7 +11,6 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/approval-process-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/approval-process-feature-module-relations.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/approval-process-feature-module-relations.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/domain-model-and-relationships/approval-process-feature-module-relations.html
 
 ---
 

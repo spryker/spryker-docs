@@ -11,7 +11,6 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/quick-add-to-cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html
 
 ---
 

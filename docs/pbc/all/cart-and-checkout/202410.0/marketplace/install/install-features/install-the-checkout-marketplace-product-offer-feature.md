@@ -5,7 +5,6 @@ description: This document describes the process how to implement the Spryker Ma
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-offer-checkout-feature-integration.html
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/install/install-features/install-the-checkout-marketplace-product-offer-feature.html
 
 ---
 

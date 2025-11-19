@@ -6,12 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-overview
 originalArticleId: 85a7c630-a6ef-465f-80fd-176d1c5e0937
 redirect_from:
-  - /docs/scos/user/features/202311.0/shared-carts-feature-overview.html  
+  - /docs/scos/user/features/202311.0/shared-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shared-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/shared-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/shared-carts-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html
 
 ---
 
@@ -147,7 +146,7 @@ On the storefront, company users can share a cart with other users within the sa
     <video width="100%" height="auto" controls>
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/shared-carts-feature-overview.md/share-a-shopping-cart.mp4" type="video/mp4">
   </video>
-</figure>  
+</figure>
 
 
 ## Related Developer documents

@@ -15,8 +15,9 @@
         <span class="alt-nav__opener-label">Versions</span>
         <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
             {% for version in page.all_versions %}
-                {% assign version_label = site.versions[version.version] | default: 'undefined' %}
-                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ version_label }}</a></li>
+                {% if site.versions[version.version] %}
+                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ site.versions[version.version] }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

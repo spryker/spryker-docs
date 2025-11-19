@@ -1,10 +1,8 @@
 ---
 title: "Cart and Checkout"
-description: Cart and Checkout module within your Spryker Cloud Commerce OS store enables customers to create multiple carts and check out with ease 
+description: Cart and Checkout module within your Spryker Cloud Commerce OS store enables customers to create multiple carts and check out with ease
 last_updated: Mar 23, 2023
 template: concept-topic-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/cart-and-checkout.html
 
 ---
 

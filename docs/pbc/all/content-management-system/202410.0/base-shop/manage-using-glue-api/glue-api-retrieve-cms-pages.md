@@ -12,7 +12,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-cms-pages.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-cms-pages.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
 related:
   - title: CMS Pages overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html

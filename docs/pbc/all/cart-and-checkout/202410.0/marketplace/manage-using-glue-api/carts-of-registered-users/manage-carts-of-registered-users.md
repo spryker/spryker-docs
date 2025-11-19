@@ -5,7 +5,6 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/carts-of-registered-users/managing-carts-of-registered-users.html
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html
 
 related:
   - title: Managing items in carts of registered users

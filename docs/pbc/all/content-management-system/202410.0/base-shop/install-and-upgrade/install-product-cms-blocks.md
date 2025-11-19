@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-product-cms-blocks.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-product-cms-blocks.html
+
 ---
 
 Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.

@@ -7,7 +7,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
 ---
 
 This document describes how to add content items to CMS blocks using the Back Office.
@@ -16,7 +15,7 @@ This document describes how to add content items to CMS blocks using the Back Of
 
 - Create the content items you want to add to pages. For instructions, see the docs:
   - [Create abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html)
-  - [Create banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html)  
+  - [Create banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html)
   - [Create file list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.html)
   - [Create navigation content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html)
   - [Create product set content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html)

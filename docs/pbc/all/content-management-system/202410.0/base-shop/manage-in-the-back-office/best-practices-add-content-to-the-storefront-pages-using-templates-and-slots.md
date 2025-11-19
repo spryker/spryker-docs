@@ -13,7 +13,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
 related:
   - title: Managing Slots
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html

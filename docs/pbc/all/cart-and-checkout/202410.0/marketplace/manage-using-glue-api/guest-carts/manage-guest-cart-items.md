@@ -5,7 +5,6 @@ template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202204.0/guest-carts/managing-guest-cart-items.html
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
 
 related:
   - title: Managing guest carts

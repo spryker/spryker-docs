@@ -5,7 +5,6 @@ last_updated: May 11, 2022
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
-- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
 related:
   - title: CMS blocks overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
@@ -25,7 +24,7 @@ This document describes how to edit placeholders in CMS blocks in the Back Offic
     This opens the **Blocks** page.
 2. Next to the block you want to edit the placeholders of, click **Edit Placeholder**.
     This opens the **Edit CMS Block Glossary** page on the **Title** tab.
-3. Add **CONTENT** to the needed locales and placeholders.  
+3. Add **CONTENT** to the needed locales and placeholders.
 4. Click **Save**.
     This refreshes the page with a success message displayed.
 

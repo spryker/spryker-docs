@@ -6,7 +6,6 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/carrier-management/202311.0/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html
-  - /docs/pbc/all/carrier-management/latest/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html
 
 ---
 

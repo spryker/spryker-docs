@@ -3,8 +3,6 @@ title: Handling carts with a big number of items
 description: Challenges that may arise related to big carts within your Spryker store and how to solve them
 last_updated: Jan 09, 2024
 template: howto-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html
 
 ---
 

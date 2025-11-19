@@ -8,7 +8,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-roles/edit-company-roles.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-unit-addresses/edit-company-unit-addresses.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html
 related:
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html

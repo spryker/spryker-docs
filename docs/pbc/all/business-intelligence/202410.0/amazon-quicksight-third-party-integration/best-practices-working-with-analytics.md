@@ -3,9 +3,6 @@ title: "Best practices: working with analytics"
 description: Learn how to analyze and present shop data.
 last_updated: Oct 24, 2024
 template: back-office-user-guide-template
-redirect_from:
-  - /docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
-
 related:
 ---
 
@@ -121,7 +118,7 @@ Now you know how to add data and format it in different ways. For more informati
 5. To add filter controls, click the three dots next to the filter and select **Add control**>**Top of this sheet**.
   This adds the filter controls to the top of the sheet.
 
-![store-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/store-filter.png)  
+![store-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/best-practices-analyzing-shop-data.md/store-filter.png)
 
 
 ## Share the analysis

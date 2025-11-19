@@ -13,7 +13,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/approval-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/approval-process-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
 
 related:
   - title: Install the Quotation Process + Approval Process feature

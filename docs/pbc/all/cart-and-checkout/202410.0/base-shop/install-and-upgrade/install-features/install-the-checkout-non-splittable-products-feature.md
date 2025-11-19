@@ -3,8 +3,6 @@ title: Install the Checkout + Non-splittable Products feature
 description: The guide walks you through the process of installing the Checkout + Non-splittable Products feature into the project.
 last_updated: Mar 12, 2024
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-non-splittable-products-feature.html
 
 ---
 

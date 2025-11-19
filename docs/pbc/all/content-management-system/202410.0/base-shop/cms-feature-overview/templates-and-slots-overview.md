@@ -12,7 +12,6 @@ redirect_from:
   - /docs/en/templates-and-slots-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/templates-and-slots-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/templates-and-slots-overview.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html
 
 ---
 

@@ -9,7 +9,6 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202311.0/guest-carts/managing-guest-carts.html
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
 
 related:
   - title: Manage guest cart items

@@ -15,7 +15,6 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/content-management.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/import-content-management-system-data.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-content-management-system-data.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-content-management-system-data.html
 
 ---
 

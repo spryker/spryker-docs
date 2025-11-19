@@ -10,16 +10,15 @@ redirect_from:
   - /docs/scos/user/features/202009.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/cart-feature-walkthrough/cart-feature-walkthrough.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-feature-overview.html    
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html
 
 ---
 
 The *Cart* feature lets your customers add products to their cart by selecting the preferred quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
 
-Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Predefined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.  
+Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Predefined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied based on the customers' final choice of items.
 

@@ -7,7 +7,6 @@ redirect_from:
   - /docs/pbc/all/back-office/202311.0/install-the-spryker-core-back-office-feature.html
   - /docs/pbc/all/back-office/202311.0/install-and-upgrade/install-the-spryker-core-back-office-feature.html
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-spryker-core-back-office-feature.html
-  - /docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html
 
 ---
 

@@ -5,7 +5,6 @@ last_updated: June 2, 2022
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
-- /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
 related:
   - title: Edit CMS blocks
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
@@ -28,7 +27,7 @@ related:
 4. For **TEMPLATE**, select **Product Block**.
 5. Enter a **NAME**.
 6. Optional: Select a **VALID FROM** date.
-7. Optional: Select a **VALID TO** date.  
+7. Optional: Select a **VALID TO** date.
 8. Optional: Enter and select one or more **PRODUCTS**.
 9. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.

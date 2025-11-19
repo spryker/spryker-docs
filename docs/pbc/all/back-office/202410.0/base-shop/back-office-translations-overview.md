@@ -12,7 +12,6 @@ redirect_from:
   - /docs/scos/user/features/202200.0/spryker-core-back-office-feature-overview/back-office-translations-overview.html
   - /docs/pbc/all/back-office/202311.0/back-office-translations-overview.html
   - /docs/scos/user/features/202204.0/spryker-core-back-office-feature-overview/back-office-translations-overview.html
-  - /docs/pbc/all/back-office/latest/base-shop/back-office-translations-overview.html
 
 ---
 

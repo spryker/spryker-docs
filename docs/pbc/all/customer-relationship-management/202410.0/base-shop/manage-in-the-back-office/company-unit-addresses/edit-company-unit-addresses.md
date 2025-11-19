@@ -6,7 +6,6 @@ last_updated: Nov 17, 2023
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-unit-addresses.html
 - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-unit-addresses.html
-- /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html
 related:
   - title: Business Units overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html

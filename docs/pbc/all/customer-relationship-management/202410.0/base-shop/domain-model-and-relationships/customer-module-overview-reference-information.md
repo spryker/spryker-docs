@@ -8,7 +8,6 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
 ---
 
 The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This document describes how new customers can be created and managed and how to enable specific features related to customers.

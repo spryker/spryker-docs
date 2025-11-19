@@ -5,7 +5,6 @@ last_updated: Nov 23, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/base-shop/shipment-feature-overview.html
-- /docs/pbc/all/carrier-management/latest/base-shop/shipment-cart-feature-overview.html
 
 ---
 

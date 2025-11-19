@@ -18,7 +18,6 @@ redirect_from:
   - /docs/pbc/all/back-office/202311.0/spryker-core-back-office-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
-  - /docs/pbc/all/back-office/latest/base-shop/spryker-core-back-office-feature-overview.html
 
 ---
 

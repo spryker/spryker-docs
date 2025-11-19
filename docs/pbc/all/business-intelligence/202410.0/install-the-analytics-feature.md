@@ -3,8 +3,6 @@ title: Install the Analytics feature
 description: Learn how to integrate the Analytics feature into your project
 last_updated: Nov 19, 2024
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/business-intelligence/latest/install-the-analytics-feature.html
 
 ---
 

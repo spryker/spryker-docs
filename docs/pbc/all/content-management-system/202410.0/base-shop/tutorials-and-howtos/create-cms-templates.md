@@ -14,7 +14,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-cms-templates.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-cms-templates.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html
 related:
   - title: CMS Pages overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
@@ -69,7 +68,7 @@ To learn how the template is created, check the following exemplary procedure:
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderContactHeader') {% raw %}}}{% endraw %} </strong> <br>
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderPhoneNr') {% raw %}}}{% endraw %} </strong> +1 (000) 000-0000 <br>
         <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderEmail') {% raw %}}}{% endraw %}  </strong> info@companyname.com <br>
-        <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderStoreAddress') {% raw %}}}{% endraw %}  
+        <strong>{% raw %}{{{% endraw %} spyCms('PlaceholderStoreAddress') {% raw %}}}{% endraw %}
         </strong><br>
 
         123 Demo Street<br>

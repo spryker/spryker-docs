@@ -14,7 +14,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-company-account-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-company-account-feature-integration.html
   - /docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-company-account-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-company-account-glue-api.md -->

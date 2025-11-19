@@ -3,8 +3,6 @@ title: Install the Comments + Merchant B2B Contracts feature
 description: The guide walks you through the process of installing the Spryker Marketplace Comments + Merchant Contracts feature into the project.
 last_updated: Mar 13, 2024
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html
 
 ---
 

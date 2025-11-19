@@ -10,7 +10,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
 related:
   - title: Templates & Slots overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html

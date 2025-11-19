@@ -14,7 +14,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/manage-customer-access.html
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-customer-access.html
 related:
   - title: Customer access feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-access-feature-overview.html

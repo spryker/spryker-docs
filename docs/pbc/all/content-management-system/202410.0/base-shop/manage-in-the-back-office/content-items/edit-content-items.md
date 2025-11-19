@@ -11,7 +11,6 @@ redirect_from:
   - /docs/editing-content-items
   - /docs/en/editing-content-items
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/edit-content-items.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/edit-content-items.html
 related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html

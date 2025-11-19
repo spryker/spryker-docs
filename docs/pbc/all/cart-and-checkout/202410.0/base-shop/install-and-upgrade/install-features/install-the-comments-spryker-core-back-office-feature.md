@@ -3,8 +3,6 @@ title: Install the Comments + Spryker Core Back Office feature
 description: The guide walks you through the process of installing the Comments + Spryker Core Back Office feature into a Spryker Cloud Commerce OS project.
 last_updated: Mar 12, 2024
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html
 
 ---
 

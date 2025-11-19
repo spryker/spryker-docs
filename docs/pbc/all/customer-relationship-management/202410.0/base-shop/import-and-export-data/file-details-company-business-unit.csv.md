@@ -2,8 +2,6 @@
 title: "File details: company_business_unit.csv"
 description: Use the company_business_unit.csv file to configure information about company accounts in your Spryker shop.
 template: data-import-template
-redirect_from:
-  - /docs/pbc/all/customer-relationship-management/latest/base-shop/import-and-export-data/file-details-company-business-unit.csv.html
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

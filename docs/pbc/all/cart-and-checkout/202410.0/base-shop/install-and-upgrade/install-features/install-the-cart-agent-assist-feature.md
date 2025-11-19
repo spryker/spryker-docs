@@ -5,7 +5,6 @@ last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
-- /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
 
 ---
 

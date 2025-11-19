@@ -28,7 +28,6 @@ redirect_from:
   - /module_migration_guides/mg-quick-order-page.htm
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html
 
 ---
 

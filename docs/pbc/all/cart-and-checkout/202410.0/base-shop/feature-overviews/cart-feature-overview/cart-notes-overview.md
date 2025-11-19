@@ -8,10 +8,9 @@ originalArticleId: 07d6ed20-0503-4df6-a59b-6a5c7b0595fc
 redirect_from:
   - /docs/scos/user/features/202200.0/cart-feature-overview/cart-notes-overview.html
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-notes-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-notes-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-notes-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-notes-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-notes-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-notes-overview.html
 
 ---
 

@@ -5,12 +5,11 @@ last_updated: Aug 2, 2021
 template: concept-topic-template
 originalArticleId: 7db585a7-80d6-4584-a662-e00d42f27cf4
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/201907.0/non-splittable-products-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/201907.0/non-splittable-products-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/non-splittable-products-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/non-splittable-products-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/non-splittable-products-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/non-splittable-products-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/non-splittable-products-feature-overview.html
 
 ---
 

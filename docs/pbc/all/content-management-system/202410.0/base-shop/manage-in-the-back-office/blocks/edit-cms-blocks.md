@@ -13,7 +13,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/managing-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/managing-cms-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
 related:
   - title: CMS blocks overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
@@ -37,7 +36,7 @@ This opens the **Edit CMS Block** page.
 4. Select a **TEMPLATE**.
 5. Enter a **NAME**.
 6. Select a **VALID FROM** date.
-7. Select a **VALID TO** date.  
+7. Select a **VALID TO** date.
 8. For **PRODUCTS**, do the following:
     - Next to the products you want to deassign, click **x**.
     - Enter and select products you want to assign.

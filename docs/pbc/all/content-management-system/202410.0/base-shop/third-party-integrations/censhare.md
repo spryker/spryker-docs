@@ -1,7 +1,7 @@
 ---
 title: Censhare
 description: Learn how to integrate Censhare with Spryker Cloud Commerce OS and enhance your e-commerce platform through advanced third-party integration capabilities.
-description: 
+description:
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/censhare
@@ -14,7 +14,6 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/content-management/censhare.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/censhare.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/censhare.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/censhare.html
 ---
 
 ## Partner Information

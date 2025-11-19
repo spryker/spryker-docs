@@ -3,8 +3,6 @@ title: Upgrade the Back Office to Bootstrap 5
 description: Learn how to migrate Spryker Back Office to Bootstrap 5 by updating dependencies, enabling assets, and configuring layouts for compatibility.
 last_updated: Apr 15, 2025
 template: howto-guide-template
-redirect_from:
-  - /docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html
 
 ---
 

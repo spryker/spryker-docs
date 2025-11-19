@@ -11,7 +11,6 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
 
 ---
 

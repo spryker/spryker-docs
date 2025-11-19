@@ -10,7 +10,6 @@ redirect_from:
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
 
 ---
 

@@ -3,8 +3,6 @@ title: Install the Cart + Marketplace Product Offer feature
 last_updated: Dec 17, 2020
 description: This integration guide provides steps on how to integrate the Spryker Marketplace Product Offer + Cart feature into a Spryker project.
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/marketplace/install/install-features/install-the-cart-marketplace-product-offer-feature.html
 
 ---
 

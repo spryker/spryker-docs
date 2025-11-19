@@ -12,9 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-content-banner.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-content-banner.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-content-banner.csv.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-content-banner.csv.html
 
-  
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html

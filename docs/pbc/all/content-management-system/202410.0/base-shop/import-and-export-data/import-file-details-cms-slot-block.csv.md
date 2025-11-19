@@ -7,11 +7,10 @@ originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-sl
 originalArticleId: 848a3e6c-edad-4c9b-b7af-0b0c847b258f
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html
-  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html  
-  - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-slot-block.csv.html  
-  - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html  
+  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html
+  - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-slot-block.csv.html
+  - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html
 
 related:
   - title: Execution order of data importers in Demo Shop

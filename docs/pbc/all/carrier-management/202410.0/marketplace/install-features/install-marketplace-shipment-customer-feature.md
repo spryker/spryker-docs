@@ -4,7 +4,6 @@ last_updated: Jul 06, 2021
 description: This document describes the process how to integrate Marketplace Shipment + Customer feature into your project
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-customer-feature-integration.html
-  - /docs/pbc/all/carrier-management/latest/marketplace/install-features/install-marketplace-shipment-customer-feature.html
 
 template: feature-integration-guide-template
 ---

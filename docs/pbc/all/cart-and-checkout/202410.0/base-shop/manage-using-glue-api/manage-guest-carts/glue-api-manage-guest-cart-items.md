@@ -9,7 +9,6 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/guest-carts/managing-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
 
 related:
   - title: Manage guest carts

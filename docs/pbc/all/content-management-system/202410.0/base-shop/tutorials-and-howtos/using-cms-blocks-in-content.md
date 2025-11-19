@@ -10,7 +10,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-use-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-use-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/using-cms-blocks-in-content.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/using-cms-blocks-in-content.html
 ---
 
 Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.

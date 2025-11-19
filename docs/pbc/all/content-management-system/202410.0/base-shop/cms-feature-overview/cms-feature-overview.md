@@ -13,7 +13,6 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/cms-feature-overview/cms-feature-overview.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/tutorial-cms.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-feature-overview.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-feature-overview.html
 
 ---
 

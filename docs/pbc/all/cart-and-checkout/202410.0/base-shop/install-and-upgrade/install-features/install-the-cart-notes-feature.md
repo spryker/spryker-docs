@@ -3,8 +3,6 @@ title: Install the Cart Notes feature
 description: Learn how to integrate the Spryker Cloud Commerce OS Cart Notes feature into a Spryker project.
 last_updated: Apr 14, 2023
 template: feature-integration-guide-template
-redirect_from:
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html
 
 ---
 

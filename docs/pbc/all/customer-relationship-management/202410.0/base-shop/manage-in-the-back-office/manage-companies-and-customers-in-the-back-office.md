@@ -5,7 +5,6 @@ last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/customer-relationship-management/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
-- /docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies-and-customers-in-the-back-office.html
 ---
 
 This section contains guides on managing companies and customers in the Back Office:

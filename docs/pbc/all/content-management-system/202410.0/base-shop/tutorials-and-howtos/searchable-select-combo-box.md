@@ -1,10 +1,8 @@
 ---
 title: Convert a dropdown with many items to a searchable select combo box in the Back Office
-description: 
+description:
 last_updated: Oct 02, 2024
 template: howto-guide-template
-redirect_from:
-  - /docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/searchable-select-combo-box.html
 ---
 
 By default in the Back Office we use simple select component in the most of cases.

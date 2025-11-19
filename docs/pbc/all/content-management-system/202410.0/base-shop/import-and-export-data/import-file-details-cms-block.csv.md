@@ -7,11 +7,10 @@ originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-bl
 originalArticleId: 2fde5c8a-6217-4151-a511-23b71759feb0
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block.csv.html
-  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-block.csv.html  
+  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-block.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-block.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-block.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-cms-block.csv.html
-  - /docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block.csv.html
 
 related:
   - title: Execution order of data importers in Demo Shop

@@ -3,8 +3,6 @@ title: Shipment + Customer Account Management feature overview
 description: General overview of the Shipment + Customer Account Management feature
 last_updated: Nov 23, 2023
 template: concept-topic-template
-redirect_from:
-  - /docs/pbc/all/carrier-management/latest/base-shop/shipment-customer-account-management-feature-overview.html
 
 ---
 

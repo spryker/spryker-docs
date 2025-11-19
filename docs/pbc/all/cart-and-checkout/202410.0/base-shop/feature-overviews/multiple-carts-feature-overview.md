@@ -10,7 +10,6 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/multiple-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/multiple-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/multiple-carts-feature-overview.html
-  - /docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/multiple-carts-feature-overview.html
 
 ---
 

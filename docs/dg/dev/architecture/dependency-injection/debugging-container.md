@@ -77,7 +77,7 @@ console debug:container
 
 **Example output:**
 
-```
+```text
 Symfony Container Services
 ===========================
 
@@ -107,7 +107,7 @@ console debug:container "Pyz\Zed\{Module}\Business\{Module}FacadeInterface"
 
 **Example output:**
 
-```
+```text
 Information for Service "Pyz\Zed\{Module}\Business\{Module}FacadeInterface"
 ================================================================
 

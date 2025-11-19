@@ -22,7 +22,7 @@ Our team will validate and set up the export for you.
 
 ## Limitations and recommendations
 
-- Blacklisted tables and columns: Tables known to contain sensitive information, such as credentials or internal data in `spy_user` or `spy_customer` tables, are automatically excluded to prevent security breaches.
+- Blacklisted tables and columns: Tables known to contain sensitive information, such as credentials or internal data in `spy_user`, `spy_customer` or `spy_api_key` tables, are automatically excluded to prevent security breaches.
 - Only full export: The system exports full table snapshots each time. Consider frequency carefully to avoid unnecessary outbound traffic costs.
 - Retention policy: Exported files are retained for seven days and then automatically deleted to optimize storage.
 - We recommend reviewing your export requests to ensure no credentials or compliance-relevant fields are included.

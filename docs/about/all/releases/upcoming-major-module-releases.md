@@ -22,7 +22,7 @@ This document lists all upcoming [major module releases](/docs/dg/dev/architectu
 | DashboardMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
 | DummyMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
 | GuiTable | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
-| MerchantAppMerchantPortalGui | Jan 12 2026 | Angular upgrade because Angular 18 will no longer be supported. |
+| MerchantAppMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
 | MerchantProfileMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
 | MerchantRelationRequestMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |
 | MerchantRelationshipMerchantPortalGui | Feb 3 2026 | Angular upgrade because Angular 18 will no longer be supported. |

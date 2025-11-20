@@ -91,11 +91,25 @@ Symfony Container Services
 
 ### Search for specific services
 
-Use grep to filter services by name or pattern:
+Spryker services can be found by any part of their class name (for example, `Spryker\Zed\Product\...`). When you want to find services that contain a specific name like "Product", you can search the container to find the exact service name, which can then be used to debug that service in more detail.
+
+You can search for services in two ways:
+
+**Using the built-in search:**
+
+```bash
+console debug:container Product
+```
+
+This searches for services containing "Product" in their name and displays matching results.
+
+**Using grep to filter:**
 
 ```bash
 console debug:container | grep Product
 ```
+
+This filters the full service list by pattern.
 
 ### Display service details
 

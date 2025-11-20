@@ -1,5 +1,3 @@
-require 'pathname'
-
 def setup_current_page_version(page, config)
     config['page']['version'] = page.data['version'] if page.data['version']
     return if config['page']['version']

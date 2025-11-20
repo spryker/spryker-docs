@@ -12,3 +12,5 @@ Performance guidelines help you analyze and optimize performance of your website
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html) for general approaches to optimizing the server-side execution time.
 - [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html) to optimize performance in the very end servers.
 - [Frontend performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html) to do the frontend-specific optimization.
+- [Batch processing of Propel entities](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html) for efficient batch processing, reduced database load, and support for complex entity relationships.
+- [External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html) to manage external HTTP requests.

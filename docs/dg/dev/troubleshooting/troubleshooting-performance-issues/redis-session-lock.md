@@ -116,7 +116,9 @@ Ensure you have a sufficient pool of PHP-FPM workers defined. You can configure 
 
 ### Optimize external calls
 
-Evaluate if you can combine Redis operations—for example, by using MGET. In general, try to reduce Redis calls in sessions as much as possible. Work with asynchronous calls to external systems where possible and handle failures to reach them gracefully.
+Evaluate if you can combine Redis operations—for example, by using MGET. In general, try to reduce Redis calls in sessions as much as possible. 
+Work with asynchronous calls to external systems where possible and handle failures to reach them gracefully.
+Follow [Performance guidelines: External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html)
 
 ### Optimize timeouts
 

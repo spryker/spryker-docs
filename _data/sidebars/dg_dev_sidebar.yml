@@ -1188,6 +1188,8 @@ entries:
           url: /docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
         - title: Best Practices
           url: /docs/dg/dev/architecture/dependency-injection/best-practices.html
+        - title: Debugging the Symfony Container
+          url: /docs/dg/dev/architecture/dependency-injection/debugging-container.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
     - title: Symfony Bundles

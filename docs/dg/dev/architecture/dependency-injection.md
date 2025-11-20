@@ -248,6 +248,7 @@ Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in
 For detailed guidance on implementing and using Dependency Injection in your Spryker project, see:
 
 - [Implementation and usage](/docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html) - Detailed examples of manual wiring, using core classes, and the `getService()` pattern
+- [Debugging the Symfony Container](/docs/dg/dev/architecture/dependency-injection/debugging-container.html) - How to inspect and debug services in the container
 - [Troubleshooting](/docs/dg/dev/architecture/dependency-injection/troubleshooting.html) - Common issues and debugging techniques
 - [Best practices](/docs/dg/dev/architecture/dependency-injection/best-practices.html) - Recommendations for DI vs Factory pattern, avoiding anti-patterns, and performance optimization
 

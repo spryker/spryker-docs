@@ -8,6 +8,8 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
   - title: Implementation and usage
     link: docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
+  - title: Debugging the Symfony Container
+    link: docs/dg/dev/architecture/dependency-injection/debugging-container.html
   - title: Best practices for Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection/best-practices.html
 ---

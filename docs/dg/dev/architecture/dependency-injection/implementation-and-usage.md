@@ -6,6 +6,8 @@ template: howto-guide-template
 related:
   - title: Dependency injection
     link: docs/dg/dev/architecture/dependency-injection.html
+  - title: Debugging the Symfony Container
+    link: docs/dg/dev/architecture/dependency-injection/debugging-container.html
   - title: Troubleshooting Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection/troubleshooting.html
   - title: Best practices for Dependency Injection

@@ -3,7 +3,6 @@ title: Install Amazon QuickSight
 description: Learn how to integrate the Amazon QuickSight into your project
 last_updated: Jan 20, 2025
 template: feature-integration-guide-template
-redirect_from:
 ---
 
 This document describes how to install Amazon QuickSight.

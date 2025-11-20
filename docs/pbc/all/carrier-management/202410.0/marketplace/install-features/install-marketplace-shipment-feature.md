@@ -5,6 +5,7 @@ description: This document describes the process how to integrate Marketplace Sh
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-shipment-feature-integration.html
+
 related:
   - title: Marketplace Shipment feature walkthrough
     link: docs/pbc/all/carrier-management/page.version/marketplace/marketplace-shipment-feature-overview.html

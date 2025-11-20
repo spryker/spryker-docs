@@ -36,7 +36,7 @@ There are five customer registration options:
 
 The *regular registration* is the registration triggered from the registration page of the **My Account** page on the Storefront. It is a two-step process:
 
-1. A customer fills out the registration form and selects **Sign Up**. A message about the email verification is displayed.  
+1. A customer fills out the registration form and selects **Sign Up**. A message about the email verification is displayed.
 
 2. The customer selects the verification link in the email and gets redirected to the login page, where the message about successful account activation is displayed.
 

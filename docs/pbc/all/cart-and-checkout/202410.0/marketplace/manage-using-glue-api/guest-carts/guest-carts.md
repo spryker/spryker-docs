@@ -5,6 +5,7 @@ last_updated: Jan 13, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/guest-carts/guest-carts.html
+
 ---
 
 This section provides a collection of articles that explain the Glue API endpoints for guest carts used when developing in Spryker Marketplace:

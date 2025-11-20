@@ -2,7 +2,7 @@
 title: Business Intelligence
 description: Tools for analyzing and presenting data
 template: concept-topic-template
-redirect_from:
+
 last_updated: Oct 24, 2024
 ---
 

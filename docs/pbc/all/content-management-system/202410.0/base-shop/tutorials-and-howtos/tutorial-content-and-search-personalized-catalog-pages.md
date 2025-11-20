@@ -474,7 +474,7 @@ The `render()` method takes a path for the route name as a parameter. It creates
 		{% raw %}{{{% endraw %} render(path('personalized-product-index', {'limit': 12})) {% raw %}}}{% endraw %}
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-```		
+```
 
 To check the results, go to `https://mysprykershop.com/my-offers`.
 

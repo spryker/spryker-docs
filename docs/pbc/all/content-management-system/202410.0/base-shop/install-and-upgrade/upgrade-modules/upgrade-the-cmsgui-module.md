@@ -1,6 +1,6 @@
 ---
 title: Upgrade the CmsGui module
-description: Learn how to upgrade to a newer version of the Spryker CMS GUI Module from an older version. 
+description: Learn how to upgrade to a newer version of the Spryker CMS GUI Module from an older version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-cmsgui

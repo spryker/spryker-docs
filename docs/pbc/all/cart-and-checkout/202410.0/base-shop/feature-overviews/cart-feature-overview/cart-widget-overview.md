@@ -7,9 +7,10 @@ originalLink: https://documentation.spryker.com/2021080/docs/cart-widget-overvie
 originalArticleId: 0c78b70a-a43b-487d-8aa7-1f7deee0cc4a
 redirect_from:
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-widget-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
+
 ---
 
 The shopping cart is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications, add extra items if needed, and purchase the products. Many B2B customers use multiple shopping carts to cover different purchasing purposes. With the Shopping Cart widget, they can access their shopping carts from any place in the online shop with just one click.

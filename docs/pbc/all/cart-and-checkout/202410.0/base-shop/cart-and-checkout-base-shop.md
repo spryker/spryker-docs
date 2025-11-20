@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/cart-and-checkout.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/cart-and-checkout-base-shop.html
+
 ---
 
 To learn about the base Cart and Checkout, see the following feature overviews:

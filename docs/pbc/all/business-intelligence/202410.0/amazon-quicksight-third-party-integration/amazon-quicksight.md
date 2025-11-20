@@ -2,7 +2,6 @@
 title: Amazon QuickSight
 description: Amazon QuickSight overview
 template: concept-topic-template
-redirect_from:
 last_updated: Oct 24, 2024
 ---
 

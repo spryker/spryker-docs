@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/comments-feature-module-relations.html
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/domain-model-and-relationships/comments-feature-module-relations.html
+
 ---
 
 The following schema illustrates module relations in the Comments feature:

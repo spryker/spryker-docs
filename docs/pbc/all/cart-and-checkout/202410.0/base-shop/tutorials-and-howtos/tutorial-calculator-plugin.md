@@ -8,6 +8,7 @@ originalArticleId: d0f57a1d-9914-4a39-9cff-1796c26a27cb
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/tutorial-calculator-plugin.html
+
 ---
 
 <!-- used to be: http://spryker.github.io/tutorials/zed/calculator-plugin/

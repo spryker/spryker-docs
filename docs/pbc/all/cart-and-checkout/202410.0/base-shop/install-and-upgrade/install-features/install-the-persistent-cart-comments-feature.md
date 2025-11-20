@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
 redirec_from:
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-comments-persistent-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-comments-persistent-cart-feature.md -->

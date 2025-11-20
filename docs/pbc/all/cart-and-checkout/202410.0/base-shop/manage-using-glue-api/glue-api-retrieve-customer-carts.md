@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/retrieving-customer-carts.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/retrieve-customer-carts.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
+
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html

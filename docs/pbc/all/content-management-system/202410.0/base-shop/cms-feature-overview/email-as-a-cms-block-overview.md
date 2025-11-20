@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/email-as-a-cms-block-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/email-as-a-cms-block-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
+
 ---
 
 Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
@@ -130,7 +131,7 @@ To learn how a Back Office User creates translations, see [Managing Glossary](/d
 
 ### Variables in Email Templates
 
-Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it's sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.  
+Also, you can use variables to adjust details like a customer name in the emails automatically. For example, if you add the `firstName` variable, when the email is sent, the variable is replaced with the first name of the customer it's sent to. Unlike glossary keys, variables are defined on the code level, namely in the transfer object definition.
 
 A developer can provide a full list of variables and create new ones.
 

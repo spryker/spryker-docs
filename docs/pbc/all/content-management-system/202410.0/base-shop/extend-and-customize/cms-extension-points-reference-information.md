@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/cms-feature-walkthrough/cms-extension-points-reference-information.html
   - /docs/pbc/all/content-management-system/202311.0/extend-and-customize/cms-extension-points-reference-information.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/extend-and-customize/cms-extension-points-reference-information.html
+
 ---
 
 The `CMS` module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:

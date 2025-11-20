@@ -27,7 +27,7 @@ related:
 4. For **TEMPLATE**, select **Product Block**.
 5. Enter a **NAME**.
 6. Optional: Select a **VALID FROM** date.
-7. Optional: Select a **VALID TO** date.  
+7. Optional: Select a **VALID TO** date.
 8. Optional: Enter and select one or more **PRODUCTS**.
 9. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.

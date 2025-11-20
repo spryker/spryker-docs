@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/add-carrier-companies.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/creating-carrier-companies.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/add-carrier-companies.html
+
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/pbc/all/carrier-management/page.version/base-shop/manage-in-the-back-office/add-delivery-methods.html

@@ -21,7 +21,7 @@ Make sure to review [reference information](#reference-information-create-abstra
 4. Optional: Enter a **DESCRIPTION**.
 5. In the **Add more products** section, click **Add to list** next to the products you want to add to the list.
     The products appear in the **Default** tab.
-6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.  
+6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.
 7. Optional: Repeat steps 5-6 on one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}

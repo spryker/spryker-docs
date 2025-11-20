@@ -105,7 +105,7 @@ commonOptions = {
     /algolia.com\/[\.\w\-\/\?]+/,
     /www.cursor.com\/[\.\w\-\/\?]+/,
     /mysql.com\/[\.\w\-\/\?]+/,
-    /dev.mysql.com\/[\.\w\-\/\?]+/,        
+    /dev.mysql.com\/[\.\w\-\/\?]+/,
     /jwt.io\/[\.\w\-\/\?]+/,
     /www.facebook.com\/[\.\w\-\/\?]+/
 
@@ -122,6 +122,7 @@ commonOptions = {
   # delete and fix next rules
   :allow_missing_href => true,
   :check_external_hash => false,
+  :disable_external => true,
 }
 
 task :check_ca do

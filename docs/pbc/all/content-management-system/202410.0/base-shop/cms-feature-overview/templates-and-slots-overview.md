@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/templates-and-slots-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/templates-and-slots-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/templates-and-slots-overview.html
+
 ---
 
 *Templates and Slots* lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).

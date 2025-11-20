@@ -7,9 +7,10 @@ originalLink: https://documentation.spryker.com/2021080/docs/quick-order-from-th
 originalArticleId: a931a32d-1f7d-4177-b99c-1146e26b885e
 redirect_from:
   - /docs/scos/user/features/202311.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+
 ---
 
 Buyers can add simple products with one product variant to the cart directly from the Category page by clicking the **Add to cart** icon on the product card.

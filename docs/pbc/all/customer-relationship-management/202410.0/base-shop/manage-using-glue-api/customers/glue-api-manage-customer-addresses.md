@@ -87,7 +87,7 @@ Request sample: add an address
             "phone": "22111-3-4-5",
             "isDefaultShipping": false,
             "isDefaultBilling": false
-    	}   
+    	}
     }
 }
 ```

@@ -24,7 +24,7 @@ This document describes how to edit placeholders in CMS blocks in the Back Offic
     This opens the **Blocks** page.
 2. Next to the block you want to edit the placeholders of, click **Edit Placeholder**.
     This opens the **Edit CMS Block Glossary** page on the **Title** tab.
-3. Add **CONTENT** to the needed locales and placeholders.  
+3. Add **CONTENT** to the needed locales and placeholders.
 4. Click **Save**.
     This refreshes the page with a success message displayed.
 

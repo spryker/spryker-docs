@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/enabling-cms-widget/docs/scos/dev/feature-integration-guides/202200.0/enabling-the-content-widget.html
   - /docs/scos/dev/feature-integration-guides/202311.0/enabling-the-content-widget.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-the-content-widget.html
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/enable-the-content-widget.md -->

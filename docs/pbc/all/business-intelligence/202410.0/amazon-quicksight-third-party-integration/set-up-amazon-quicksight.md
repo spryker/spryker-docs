@@ -2,7 +2,6 @@
 title: Set up Amazon QuickSight
 description: First steps to set up Amazon QuickSight
 template: concept-topic-template
-redirect_from:
 last_updated: Oct 24, 2024
 ---
 
@@ -27,7 +26,7 @@ This document describes how to set up Amazon QuickSight.
 
 The user who enables analytics is assigned as an owner of all the default assets, such as data sets, analyses, and dashboards. You can transfer ownership later.
 
-{% endinfo_block %}  
+{% endinfo_block %}
 
 
 8. Wait for the estimated amount of time and refresh the page.
@@ -35,4 +34,4 @@ The user who enables analytics is assigned as an owner of all the default assets
 
 ## Next steps
 
-[Best practices: Working with analytics](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)  
+[Best practices: Working with analytics](/docs/pbc/all/business-intelligence/202410.0/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)

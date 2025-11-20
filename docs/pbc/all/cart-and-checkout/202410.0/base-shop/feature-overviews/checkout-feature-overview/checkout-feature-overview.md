@@ -11,6 +11,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
+
 ---
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.

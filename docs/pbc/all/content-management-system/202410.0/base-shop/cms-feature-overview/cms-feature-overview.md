@@ -13,6 +13,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/cms-feature-overview/cms-feature-overview.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/tutorial-cms.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/cms-feature-overview.html
+
 ---
 
 The *CMS* feature is lets you create and manage the content of custom pages that are not part of the product catalog.

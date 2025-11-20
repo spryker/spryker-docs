@@ -10,6 +10,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
+
 ---
 
 After placing an order, the cart can either be deleted or saved. If you configure carts to be saved, after placing an order, the cart is duplicated, and the customer can access it.

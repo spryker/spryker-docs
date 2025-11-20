@@ -63,4 +63,4 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 
 ## Next steps
 
-[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)  
+[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)

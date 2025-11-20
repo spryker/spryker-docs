@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/managing-mime-type-settings
   - /docs/scos/user/back-office-user-guides/202200.0/administration/mime-type-settings/managing-mime-type-settings.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/mime-type-settings/managing-mime-type-settings.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/add-and-edit-mime-types.html   
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/add-and-edit-mime-types.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/add-and-edit-mime-types.html
-  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html   
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
 related:
   - title: Managing File Tree
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-tree.html

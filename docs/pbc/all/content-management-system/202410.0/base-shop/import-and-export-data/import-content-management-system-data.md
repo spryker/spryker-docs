@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/content-management.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/import-content-management-system-data.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-content-management-system-data.html
+
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Content Management System PBC.

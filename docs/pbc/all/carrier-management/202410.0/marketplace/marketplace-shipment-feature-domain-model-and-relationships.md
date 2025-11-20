@@ -3,7 +3,6 @@ title: "Marketplace Shipment feature: Domain model and relationships"
 last_updated: Nov 2, 2021
 description: The Marketplace Shipment feature provides the connection between Merchant and Shipment.
 template: feature-walkthrough-template
-redirect_from:
 ---
 
 The *Marketplace Shipment* feature provides the connection between Merchant and Shipment, and works together with [marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) to split order items into several shipments based on the merchants from which they were bought.

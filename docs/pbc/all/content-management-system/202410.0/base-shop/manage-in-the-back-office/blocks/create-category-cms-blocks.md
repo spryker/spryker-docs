@@ -31,7 +31,7 @@ This topic describes how to create category CMS blocks in the Back Office.
 4. For **TEMPLATE**, select **Category Block**.
 5. Enter a **NAME**.
 6. Optional: Select a **VALID FROM** date.
-7. Optional: Select a **VALID TO** date.  
+7. Optional: Select a **VALID TO** date.
 8. Optional: For **CATEGORIES: TOP**, enter and select one or more categories.
 9. Optional: For **CATEGORIES: MIDDLE**, enter and select one or more categories.
 10. Optional: For **CATEGORIES: BOTTOM**, enter and select one or more categories.
@@ -63,4 +63,4 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Next steps
 
-[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)  
+[Edit CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html)

@@ -3,7 +3,7 @@ title: Install Back Office accessibility improvements
 description: Learn how to install Back Office accessibility improvements to improve navigation and pagination.
 last_updated: Feb 5, 2025
 template: feature-integration-guide-template
-redirect_from:
+
 ---
 
 Back Office accessibility improvements include the following changes:

@@ -3,7 +3,7 @@ title: Dynamic cart overview
 description: Learn how Spryker Cloud Commerce OS dynamic cart feature improves user experience with seamless cart management and a frictionless checkout process.
 last_updated: May 21, 2024
 template: concept-topic-template
-redirect_from:
+
 ---
 
 The dynamic cart functionality enables users to seamlessly manage their carts without reloading the Cart page. Users can perform actions like updating item quantity or adding cart notes without being redirected to the top of the page. This eliminates friction in the checkout experience and increases conversion rates. Additionally, giving customers immediate feedback on their cart actions without losing the context improves the user experience.

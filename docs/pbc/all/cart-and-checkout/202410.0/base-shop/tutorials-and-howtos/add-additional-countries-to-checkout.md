@@ -10,6 +10,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html
+
 ---
 
 This document explains how to add additional shipping countries selected by customers upon checkout.

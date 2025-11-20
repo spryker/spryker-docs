@@ -14,9 +14,10 @@ related:
   - title: Update payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
   - title: Submit checkout data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
 redirect_from:
 - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md -->

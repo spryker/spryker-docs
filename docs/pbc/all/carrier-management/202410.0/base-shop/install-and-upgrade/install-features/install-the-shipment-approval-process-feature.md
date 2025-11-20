@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/shipment-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/shipment-approval-process-feature-integration.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
+
 related:
   - title: Install the Approval Process feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html

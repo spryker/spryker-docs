@@ -3,7 +3,7 @@ title: "Glue API: Retrieve shipment types"
 description: Learn how to retrieve shipment types using Glue API in Spryker Cloud Commerce OS, providing access to shipment type data.
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
-redirect_from:
+
 ---
 
 This endpoint lets you retrieve shipment types.

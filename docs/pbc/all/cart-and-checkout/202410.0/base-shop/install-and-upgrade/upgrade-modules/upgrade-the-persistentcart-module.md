@@ -32,6 +32,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
   - /module_migration_guides/mg-persistent-cart.htm
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-persistentcart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-persistentcart-module.md -->

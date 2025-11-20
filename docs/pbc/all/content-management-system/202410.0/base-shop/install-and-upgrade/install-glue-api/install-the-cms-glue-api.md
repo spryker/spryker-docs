@@ -14,12 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
----  
 related:
 - title: Install the CMS feature
-    link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
+  link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html
 - title: "Glue API: Retrieve CMS pages"
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
+  link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-cms-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-cms-glue-api.md -->

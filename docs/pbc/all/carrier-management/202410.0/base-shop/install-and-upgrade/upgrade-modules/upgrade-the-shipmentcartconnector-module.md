@@ -21,8 +21,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentcartconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentcartconnector.html
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shipmentcartconnector.html
-  - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shipmentcartconnector.html  
+  - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shipmentcartconnector.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shipmentcartconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shipmentcartconnector-module.md -->

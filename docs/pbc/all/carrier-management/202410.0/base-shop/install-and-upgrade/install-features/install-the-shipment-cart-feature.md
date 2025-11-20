@@ -15,6 +15,7 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202311.0/install-and-upgrade/install-the-shipment-feature.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
+
 related:
   - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html

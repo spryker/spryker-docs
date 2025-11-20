@@ -10,11 +10,12 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/checking-out-purchases.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/check-out-purchases.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+
 ---
 
 This endpoint allows finalizing the checkout process by placing an order.
 
-After sending a request, the cart is deleted, and you cannot make any further changes in the checkout data. This means the endpoint is best used for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).  
+After sending a request, the cart is deleted, and you cannot make any further changes in the checkout data. This means the endpoint is best used for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).
 
 The endpoint also provides information on whether it's necessary to redirect the user to a third-party page to complete the payment.
 

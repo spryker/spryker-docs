@@ -6,11 +6,12 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-overview
 originalArticleId: 9090caf1-5dfb-4b5a-ac10-13f268edab9f
 redirect_from:
-  - /docs/scos/user/features/202311.0/shipment-feature-overview.html  
+  - /docs/scos/user/features/202311.0/shipment-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - /docs/pbc/all/carrier-management/base-shop/shipment-feature-overview.html
-  - /docs/scos/user/features/202307.0/shipment-feature-overview.html  
+  - /docs/scos/user/features/202307.0/shipment-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+
 ---
 
 The *Shipment* feature lets you create and manage carrier companies, shipment types, and shipment methods. You can define shipment prices, expected shipment time, tax sets, and the availability of specific shipment methods per store.

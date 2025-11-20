@@ -36,7 +36,7 @@ This opens the **Edit CMS Block** page.
 4. Select a **TEMPLATE**.
 5. Enter a **NAME**.
 6. Select a **VALID FROM** date.
-7. Select a **VALID TO** date.  
+7. Select a **VALID TO** date.
 8. For **PRODUCTS**, do the following:
     - Next to the products you want to deassign, click **x**.
     - Enter and select products you want to assign.

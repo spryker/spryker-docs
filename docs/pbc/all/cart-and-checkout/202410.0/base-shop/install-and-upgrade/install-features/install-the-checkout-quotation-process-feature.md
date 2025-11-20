@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/checkout-quotation-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/checkout-quotation-process-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
+
 related:
   - title: Install the Quotation Process feature
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-feature.html

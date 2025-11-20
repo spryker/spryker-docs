@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/submitting-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+
 related:
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
@@ -19,7 +20,7 @@ related:
 
 This endpoint allows submitting checkout data as many times as required. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps, and execute other operations that require multiple calls to complete. This endpoint does not allow placing an order.
 
-To help customers select payment and shipment methods, the endpoint allows retrieving all the available methods so that you can display them to the customers. To simplify navigation through all the available methods, you can sort them by any attribute.  
+To help customers select payment and shipment methods, the endpoint allows retrieving all the available methods so that you can display them to the customers. To simplify navigation through all the available methods, you can sort them by any attribute.
 
 ## Installation
 
@@ -1000,7 +1001,7 @@ In case of a successful update, the endpoint responds with information that can 
             }
         }
     ]
-}       
+}
 ```
 
 </details>

@@ -26,7 +26,9 @@ class InternalLinkChecker
     
     puts "📝 Found #{html_files.size} HTML files"
     puts "🏗️  Building valid files index..."
-    build_valid_files_index(html_files)
+    # Build index from ALL files, not just filtered ones
+    all_html_files = collect_all_html_files
+    build_valid_files_index(all_html_files)
     
     puts "🔗 Processing redirects from markdown files..."
     process_redirects
@@ -39,6 +41,15 @@ class InternalLinkChecker
   end
 
   private
+
+  def collect_all_html_files
+    html_files = []
+    Find.find(site_dir.to_s) do |path|
+      next unless path.end_with?('.html')
+      html_files << path
+    end
+    html_files
+  end
 
   def collect_html_files
     html_files = []
@@ -142,10 +153,7 @@ class InternalLinkChecker
         target_path, anchor = parse_link(href, current_dir)
         next unless target_path # Skip if parsing failed or external link
         
-        # Skip if target is in ignored section (cross-section links)
-        next if target_in_ignored_section?(target_path)
-        
-        # Check if target exists
+        # Check if target exists (including cross-section links)
         unless link_exists?(target_path)
           file_errors << {
             file: relative_file_path,
@@ -173,14 +181,6 @@ class InternalLinkChecker
     return true if href.match?(/\.(xml|json|css|js|jpg|jpeg|png|gif|svg|pdf|zip|ico)$/i)
     
     false
-  end
-
-  def target_in_ignored_section?(target_path)
-    # Remove leading slash for pattern matching
-    path_for_matching = target_path.sub(/^\//, '')
-    
-    # Check if target matches any ignore pattern
-    ignore_patterns.any? { |pattern| pattern.match?(path_for_matching) }
   end
 
   def parse_link(href, current_dir)

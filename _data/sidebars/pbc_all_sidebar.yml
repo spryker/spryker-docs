@@ -1598,7 +1598,9 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html
+          - title: Crawler Control
+            url: /docs/pbc/all/miscellaneous/crawler-control.html
           - title: Install and upgrade
             nested:
               - title: Install features

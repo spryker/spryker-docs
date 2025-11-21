@@ -1,47 +1,45 @@
 ---
 title: Install the Merchant Self-Registration feature
 last_updated: Nov 21, 2025
-description: Learn how to install the Merchant Self-Registration feature into your Spryker Marketplace project.
+description: Learn how to install the Merchant Self-Registration feature in your Spryker Marketplace project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to install the Merchant Self-Registration feature.
+This document describes how to install the Merchant Self-Registration feature in your project.
 
-## Install feature core
+## Install the feature core
 
 Follow the steps below to install the Merchant Self-Registration feature core.
 
 ### Prerequisites
 
-Install the required features:
+Install the following required features:
 
-| NAME                    | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
-|-------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core            | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant    | 202507.0 | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| NAME                 | VERSION   | INSTALLATION GUIDE |
+|----------------------|-----------|---------------------|
+| Spryker Core         | 202507.0  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | 202507.0  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 
-Install the required modules using Composer:
+Install the required modules by using Composer:
 
 ```bash
 composer require spryker/merchant-registration-request:"^1.1.0" spryker-shop/merchant-registration-request-page:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
+Verify that the following modules are installed:
 
-Make sure the following modules have been installed:
-
-| MODULE                              | EXPECTED DIRECTORY                                     |
-|-------------------------------------|--------------------------------------------------------|
-| MerchantRegistrationRequest         | vendor/spryker/merchant-registration-request           |
-| MerchantRegistrationRequestPage     | vendor/spryker-shop/merchant-registration-request-page |
-
+| MODULE                          | EXPECTED DIRECTORY                                   |
+|---------------------------------|------------------------------------------------------|
+| MerchantRegistrationRequest     | vendor/spryker/merchant-registration-request         |
+| MerchantRegistrationRequestPage | vendor/spryker-shop/merchant-registration-request-page |
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2) Set up the database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+1. Apply the database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -50,13 +48,11 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure the following changes have occurred in the database:
+Verify that the following changes appear in the database:
 
 | DATABASE ENTITY                   | TYPE  | EVENT   |
 |-----------------------------------|-------|---------|
 | spy_merchant_registration_request | table | created |
-
 {% endinfo_block %}
 
 2. Generate transfer changes:
@@ -66,20 +62,18 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure the following changes have occurred in transfer objects:
+Verify that the following transfer objects are created:
 
 | TRANSFER                             | TYPE  | EVENT   | PATH                                                                      |
 |--------------------------------------|-------|---------|---------------------------------------------------------------------------|
 | MerchantRegistrationRequest          | class | Created | src/Generated/Shared/Transfer/MerchantRegistrationRequestTransfer         |
 | MerchantRegistrationResponse         | class | Created | src/Generated/Shared/Transfer/MerchantRegistrationResponseTransfer        |
 | SpyMerchantRegistrationRequestEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantRegistrationRequestEntityTransfer |
-
 {% endinfo_block %}
 
 ### 3) Add translations
 
-1. Append glossary for the Back Office and Storefront according to your configuration:
+1. Append glossary entries for the Back Office and Storefront according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -139,18 +133,16 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
-
+Verify that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 4) Set up behavior
 
-Enable the following behaviors by registering the plugins:
+Enable the following behaviors by registering the plugins listed below:
 
-| PLUGIN                                       | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                    |
-|----------------------------------------------|------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| CommentThreadMerchantRegistrationRequestPostCreatePlugin | Creates a comment thread for the merchant registration request after creation.     |               | Spryker\Zed\Comment\Communication\Plugin\MerchantRegistrationRequest |
+| PLUGIN                                               | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                    |
+|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
+| CommentThreadMerchantRegistrationRequestPostCreatePlugin | Creates a comment thread for the merchant registration request after creation.      |               | Spryker\Zed\Comment\Communication\Plugin\MerchantRegistrationRequest |
 
 **src/Pyz/Zed/MerchantRegistrationRequest/MerchantRegistrationRequestDependencyProvider.php**
 
@@ -177,9 +169,7 @@ class MerchantRegistrationRequestDependencyProvider extends SprykerMerchantRegis
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that when you create a merchant registration request through the Storefront, a comment thread is also created for it.
-
+Verify that when you create a merchant registration request through the Storefront, the system also creates a comment thread for it.
 {% endinfo_block %}
 
 ### 5) Configure navigation
@@ -215,17 +205,15 @@ console navigation:build-cache
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that in the Back Office, under **Marketplace**, you can see the **Merchant Registrations** menu item.
-
+Verify that in the Back Office, under **Marketplace**, you can see the **Merchant Registrations** menu item.
 {% endinfo_block %}
 
 ### 6) Set up Storefront routing
 
-Register the route provider plugin to enable the merchant registration page on the Storefront:
+Register the route provider plugin to enable the merchant registration page in the Storefront:
 
-| PLUGIN                                           | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                        |
-|--------------------------------------------------|----------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| PLUGIN                                            | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                        |
+|---------------------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------------------|
 | MerchantRegistrationRequestPageRouteProviderPlugin | Adds routes for the merchant registration request pages.     |               | SprykerShop\Yves\MerchantRegistrationRequestPage\Plugin\Router  |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
@@ -253,14 +241,12 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that the `/merchant-registration-request` route is available on the Storefront by navigating to `https://mysprykershop.com/merchant-registration-request`.
-
+Verify that the `/merchant-registration-request` route is available in the Storefront by navigating to `https://mysprykershop.com/merchant-registration-request`.
 {% endinfo_block %}
 
 ### 7) Set up Storefront navigation
 
-To add a link to the merchant registration page in the Storefront footer, you can import the following navigation node:
+To add a link to the merchant registration page in the Storefront footer, import the following navigation node:
 
 1. Prepare navigation node data:
 
@@ -278,7 +264,5 @@ console data:import navigation-node
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that the "Sell on Spryker" link appears in the footer of the Storefront and navigates to the merchant registration request page.
-
+Verify that the **Sell on Spryker** link appears in the Storefront footer and navigates to the merchant registration request page.
 {% endinfo_block %}

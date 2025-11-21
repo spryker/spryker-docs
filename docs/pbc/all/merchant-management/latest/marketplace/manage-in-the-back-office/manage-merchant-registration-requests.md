@@ -88,7 +88,7 @@ To approve a merchant registration request, do the following:
 3. Optional: Review the request details and internal comments.
 4. In the top-right corner, click **Create Merchant**.  
    This opens the **Approve Request** confirmation page.
-5. Review the confirmation message: “Approving this request will create a merchant account.”
+5. Review the confirmation message: "Approving this request will create a merchant account."
 6. Click **Create merchant** to confirm.
 
 The system performs the following actions:
@@ -97,7 +97,7 @@ The system performs the following actions:
 - Creates a new merchant with the provided company information.
 - Creates a default merchant user with the email address from the request.
 - Assigns the merchant the status *Inactive* and approval status *Waiting for Approval*.
-- Displays a success message: “Merchant has been created.”
+- Displays a success message: "Merchant has been created."
 
 {% info_block infoBox "Next steps" %}
 
@@ -119,13 +119,13 @@ To reject a merchant registration request, do the following:
 3. Optional: Add an internal comment explaining why the request is being rejected.
 4. In the top-right corner, click **Reject Merchant**.  
    This opens the **Reject Request** confirmation page.
-5. Review the confirmation message: “Reject this request if you do not want to create a merchant account.”
+5. Review the confirmation message: "Reject this request if you do not want to create a merchant account."
 6. Click **Reject Request** to confirm.
 
 The system performs the following actions:
 
 - Updates the request status to **Rejected**.
-- Displays a success message: “Merchant has been rejected.”
+- Displays a success message: "Merchant has been rejected."
 
 {% info_block warningBox "Warning" %}
 

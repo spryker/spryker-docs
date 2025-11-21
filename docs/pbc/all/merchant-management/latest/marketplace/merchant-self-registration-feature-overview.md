@@ -26,7 +26,7 @@ The feature provides a dedicated registration page on the Storefront, accessible
 - Last name
 - Role in the company
 - Email address (used for the merchant user account)
-- Phone number (optional)
+- Optional: Phone number
 
 **Terms acceptance:**
 - Checkbox to accept marketplace terms and conditions
@@ -72,7 +72,7 @@ The details page displays the following information:
 When a marketplace operator approves a registration request:
 
 1. The operator selects **Create Merchant** on the request details page.
-2. A confirmation dialog appears: “Approving this request will create a merchant account.”
+2. A confirmation dialog appears: "Approving this request will create a merchant account."
 3. Upon confirmation, the system:
     - Updates the request status to **Accepted**
     - Creates a merchant with the provided company information
@@ -81,7 +81,7 @@ When a marketplace operator approves a registration request:
         - Status: **Inactive**
         - Approval status: **Waiting for Approval**
     - Creates a comment thread for the merchant
-4. The system displays a success message: “Merchant has been created.”
+4. The system displays a success message: "Merchant has been created."
 
 After approval, the marketplace operator must:
 - Update the merchant status to **Active** and the approval status to **Approved** in the merchant management section
@@ -93,10 +93,10 @@ When a marketplace operator rejects a registration request:
 
 1. The operator selects **Reject Merchant** on the request details page.
 2. The operator can add an internal comment explaining the rejection reason.
-3. A confirmation dialog appears: “Reject this request to avoid creating a merchant account.”
+3. A confirmation dialog appears: "Reject this request to avoid creating a merchant account."
 4. Upon confirmation, the system:
     - Updates the request status to **Rejected**
-    - Displays a success message: “Merchant has been rejected.”
+    - Displays a success message: "Merchant has been rejected."
 
 Rejected requests cannot be reopened. If a merchant wants to register again, they must submit a new registration request.
 

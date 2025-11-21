@@ -35,6 +35,7 @@ Verify that the following modules are installed:
 |---------------------------------|------------------------------------------------------|
 | MerchantRegistrationRequest     | vendor/spryker/merchant-registration-request         |
 | MerchantRegistrationRequestPage | vendor/spryker-shop/merchant-registration-request-page |
+
 {% endinfo_block %}
 
 ### 2) Set up the database schema and transfer objects
@@ -53,6 +54,7 @@ Verify that the following changes appear in the database:
 | DATABASE ENTITY                   | TYPE  | EVENT   |
 |-----------------------------------|-------|---------|
 | spy_merchant_registration_request | table | created |
+
 {% endinfo_block %}
 
 2. Generate transfer changes:
@@ -69,6 +71,7 @@ Verify that the following transfer objects are created:
 | MerchantRegistrationRequest          | class | Created | src/Generated/Shared/Transfer/MerchantRegistrationRequestTransfer         |
 | MerchantRegistrationResponse         | class | Created | src/Generated/Shared/Transfer/MerchantRegistrationResponseTransfer        |
 | SpyMerchantRegistrationRequestEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantRegistrationRequestEntityTransfer |
+
 {% endinfo_block %}
 
 ### 3) Add translations

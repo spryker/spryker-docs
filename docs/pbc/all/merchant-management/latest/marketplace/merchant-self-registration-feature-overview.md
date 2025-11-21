@@ -120,7 +120,7 @@ The feature includes an internal comments system that allows marketplace operato
 These comments are:
 - Visible only to Back Office users
 - Not visible to the prospective merchant
-- Timestamped with the author’s name
+- Timestamped with the author's name
 - Threaded for easy conversation tracking
 
 ## Data storage

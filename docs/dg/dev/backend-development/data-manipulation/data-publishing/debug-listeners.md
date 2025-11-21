@@ -24,7 +24,7 @@ related:
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---

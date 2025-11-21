@@ -28,7 +28,7 @@ Product Restriction works on the basis of allowlist and excludelist lists. That 
 
 To restrict the products, a shop administrator needs to create a product list, include the necessary products to the list and excludelist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html).
+To create product lists, follow [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html).
 
 You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/pbc/all/merchant-management/latest/base-shop/merchant-product-restrictions-feature-overview/restricted-products-behavior.html) page.
 
@@ -41,7 +41,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop//manage-in-the-back-office/product-lists/create-product-lists.html)  |
+| [Create product lists](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html)  |
 | [Edit product lists](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html) |
 | [Create merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html) |
 | [Edit merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/edit-merchant-relations.html) |

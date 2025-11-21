@@ -42,7 +42,7 @@ The purpose of this guide is to show you how to integrate Spryker's load testing
 For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/dg/dev/development-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
 
 Some of the following options are available to choose from:
-- [B2B Demo Shop](/docs/about/all//b2b-suite.html): A boilerplate for B2B commerce projects.
+- [B2B Demo Shop](/docs/about/all/b2b-suite.html): A boilerplate for B2B commerce projects.
 - [B2C Demo Shop](/docs/about/all/b2c-suite.html): A starting point for B2C implementations.
 
 If you wish to start with a demo shop that has been pre-configured with the Spryker load testing module, you can use the [Spryker Suite Demo Shop](https://github.com/spryker-shop/suite).

@@ -107,8 +107,6 @@ entries:
           - title: Email Deliverability
             url: /docs/ca/dev/email-service/email-deliverability.html
 
-      - title: Set up notifications for 5xx errors
-        url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
       - title: Performance testing in staging environments
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
       - title: Environment scaling
@@ -123,7 +121,7 @@ entries:
             nested:
               - title: OpenTelemetry instrumentation
                 url: /docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html
-                
+
           - title: Monitoring issues and informing about alerts
             url: /docs/ca/dev/monitoring/monitoring-issues-and-informing-about-alerts.html
 
@@ -185,7 +183,5 @@ entries:
               - title: Troubleshooting Yves or Zed not restarting after deployment
                 url: /docs/ca/dev/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
 
-      - title: Release notes
-        url: /docs/ca/dev/release-notes.html
       - title: Spryker Cloud Commerce OS management
         url: /docs/ca/dev/spryker-cloud-commerce-os-management.html

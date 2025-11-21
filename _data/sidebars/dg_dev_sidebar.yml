@@ -209,6 +209,8 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
+      - title: Multi process run
+        url: /docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html
@@ -371,6 +373,8 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+          - title: Adding UUID to the DB model
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/adding-uuid-to-db-model.html
 
         - title: Spryker LINK Middleware
           url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html
@@ -802,6 +806,8 @@ entries:
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
     nested:
+    - title: Upgrade to Symfony Dependency Injection
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1175,6 +1181,19 @@ entries:
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
       - title: "Semantic Versioning: Zero-major version"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html
+    - title: Dependency Injection
+      url: /docs/dg/dev/architecture/dependency-injection.html
+      nested:
+        - title: Implementation and Usage
+          url: /docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
+        - title: Best Practices
+          url: /docs/dg/dev/architecture/dependency-injection/best-practices.html
+        - title: Debugging the Symfony Container
+          url: /docs/dg/dev/architecture/dependency-injection/debugging-container.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
+    - title: Symfony Bundles
+      url: /docs/dg/dev/architecture/symfony-bundles.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

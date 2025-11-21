@@ -529,6 +529,9 @@ entries:
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
 
+          - title: Cart page performance configuration
+            url: /docs/pbc/all/cart-and-checkout/cart-page-performance-configuration.html
+
       - title: Content Management System
         url: /docs/pbc/all/content-management-system/content-management-system.html
         nested:
@@ -1595,7 +1598,9 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html
+          - title: Crawler Control
+            url: /docs/pbc/all/miscellaneous/crawler-control.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -2778,6 +2783,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
+                      - title: Product Readiness
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html

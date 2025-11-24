@@ -124,22 +124,6 @@ These comments are:
 - Timestamped with the author's name
 - Threaded for easy conversation tracking
 
-## Data storage
-
-The system stores registration request data in the `spy_merchant_registration_request` database table, which contains the following key information:
-- Company details (name, registration number, address)
-- Contact person information (name, title, role, phone number, email address)
-- Status tracking
-- Foreign key relationships to country and store
-- Automatic timestamps (`created_at`, `updated_at`)
-
-The table includes indexes on:
-- `email` + `status`
-- `company_name` + `status`
-- `status`
-
-These indexes optimize searches and validation processes for potential duplicate registrations.
-
 ## Related Business User documents
 
 - [Manage merchant registration requests](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html)

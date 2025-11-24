@@ -104,7 +104,7 @@ The system performs the following actions:
 After approving a registration request, you need to:
 
 1. [Edit the merchant](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html) to update its status to *Active* and approval status to *Approved*.
-2. [Edit the user](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html)Activate the merchant user account and set a password
+2. [Edit the user](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html) - activate the merchant user account and set a password
 3. Notify the merchant user about their account so they can log in to the Merchant Portal.
 
 {% endinfo_block %}

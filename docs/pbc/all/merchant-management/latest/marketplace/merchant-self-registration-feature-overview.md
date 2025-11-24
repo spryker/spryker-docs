@@ -92,7 +92,7 @@ After approval, the marketplace operator must:
 
 When a marketplace operator rejects a registration request:
 
-1. The operator selects **Reject Merchant** on the request details page.
+1. The operator selects **Decline Merchant** on the request details page.
 2. The operator can add an internal comment explaining the rejection reason.
 3. A confirmation dialog appears: "Reject this request to avoid creating a merchant account."
 4. Upon confirmation, the system:

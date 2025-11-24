@@ -255,6 +255,6 @@ redirect_from:
   json: false
 
 form_endpoints:
-  feedback: 'https://formspree.io/f/xdoboyro'
+  feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSe7PX_n3IyJxq4nr-0pyt0nArWwQBwQ6CTqD04Try0vrMEEcQ/viewform?usp=pp_url&entry.1016977793=%URL%&entry.1645582234=%YES_NO%'
 
 noindex: false

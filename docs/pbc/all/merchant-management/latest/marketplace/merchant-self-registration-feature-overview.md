@@ -85,6 +85,7 @@ When a marketplace operator approves a registration request:
 
 After approval, the marketplace operator must:
 - Update the merchant status to **Active** and the approval status to **Approved** in the merchant management section
+- Activate the merchant user account and set a password
 - Notify the merchant user about their account credentials
 
 ### Request rejection

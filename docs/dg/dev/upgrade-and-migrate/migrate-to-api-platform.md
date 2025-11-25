@@ -429,7 +429,7 @@ Verify:
 - ✅ Validation rules work correctly
 - ✅ Error handling is appropriate
 - ✅ Pagination works for collections
-- ✅ OpenAPI documentation is generated at `/docs`
+- ✅ OpenAPI documentation is generated at root URL `/`
 
 ### Step 8: Run existing Glue API tests
 
@@ -491,6 +491,9 @@ curl -X GET http://backoffice.eu.spryker.local/customers/DE--1
 
 # Verify OpenAPI docs include the resource
 curl http://backoffice.eu.spryker.local/docs.json | jq '.paths'
+
+# Check the interactive documentation at root URL
+# Visit: http://backoffice.eu.spryker.local/
 ```
 
 ### Step 11: Repeat for remaining resources
@@ -557,7 +560,8 @@ rm -rf tests/PyzTest/Glue/CustomersRestApi/
 
 Update internal API documentation to reference new endpoints:
 
-- OpenAPI documentation: `http://backoffice.eu.spryker.local/docs`
+- OpenAPI documentation: `http://backoffice.eu.spryker.local/` (root URL)
+- OpenAPI JSON spec: `http://backoffice.eu.spryker.local/docs.json`
 - Update Postman collections
 - Update integration documentation for partners
 

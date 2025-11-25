@@ -219,7 +219,7 @@ resource:
 API Platform fully integrates with Symfony Dependency Injection:
 
 ```php
-// config/Symfony/ZED/ApplicationServices.php
+// config/Zed/ApplicationServices.php
 $services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
 ```
 
@@ -298,8 +298,8 @@ console api:debug customers --api-type=backoffice --show-sources
 
 API Platform generates interactive OpenAPI documentation:
 
-- Swagger UI at `/docs`
-- OpenAPI JSON at `/docs.json`
+- Swagger UI at the root URL `/`
+- OpenAPI JSON specification at `/docs.json`
 
 ### Built-in validation
 

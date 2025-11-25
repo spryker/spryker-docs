@@ -108,7 +108,7 @@ use Spryker\Zed\Container\Communication\Console\ContainerBuilderConsole;
 
 ## 3. Configure services
 
-You can configure your services in `config/Symfony/{APPLICATION}/services.php`. `ApplicationServices.php`, and `*Service.php` can also be used. We recommend following the Symfony standard for configuring your container setup. For details, see [Service Configuration](https://symfony.com/doc/current/service_container/service_config.html) in the Symfony documentation.
+You can configure your services in `config/{APPLICATION}/services.php`. `ApplicationServices.php`, and `*Service.php` can also be used. We recommend following the Symfony standard for configuring your container setup. For details, see [Service Configuration](https://symfony.com/doc/current/service_container/service_config.html) in the Symfony documentation.
 
 ## 4. Configure bundles
 

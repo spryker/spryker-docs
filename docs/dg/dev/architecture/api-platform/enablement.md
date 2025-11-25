@@ -302,7 +302,7 @@ The generated class includes:
 
 Make your Provider and Processor available through dependency injection:
 
-`config/Symfony/ZED/ApplicationServices.php`
+`config/Zed/ApplicationServices.php`
 
 ```php
 <?php

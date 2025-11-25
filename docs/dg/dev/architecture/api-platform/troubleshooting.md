@@ -33,7 +33,7 @@ This document provides solutions to common issues when working with API Platform
 
 2. **API type not configured**
 
-   Check `config/Symfony/{APPLICATION}/packages/spryker_api_platform.php`:
+   Check `config/{APPLICATION}/packages/spryker_api_platform.php`:
 
    ```php
    $containerConfigurator->extension('spryker_api_platform', [
@@ -45,7 +45,7 @@ This document provides solutions to common issues when working with API Platform
 
 3. **Bundle not registered**
 
-   Verify `config/Symfony/{APPLICATION}/bundles.php` includes:
+   Verify `config/{APPLICATION}/bundles.php` includes:
 
    ```php
    SprykerApiPlatformBundle::class => ['all' => true],
@@ -201,6 +201,48 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
    public ?string $email = null;
    ```
 
+### API documentation UI not displaying correctly
+
+**Symptom:** When accessing the root URL of your API application, you see:
+- Missing styles/CSS
+- Broken JavaScript functionality
+- Plain HTML without formatting
+- "Failed to load resource" errors in browser console
+
+**Cause:** Assets were not installed after API Platform integration.
+
+**Solution:**
+
+Run the appropriate assets:install command for your application:
+
+**For Glue application (Storefront):**
+
+```bash
+glue assets:install
+```
+
+**For Zed application (Backoffice):**
+
+```bash
+console assets:install
+```
+
+After installing assets, clear the cache:
+
+```bash
+console cache:clear
+```
+
+Then verify the documentation UI loads correctly by visiting the root URL:
+- Storefront: `https://glue.mysprykershop.com/`
+- Backoffice: `https://backoffice.mysprykershop.com/`
+
+{% info_block warningBox "Required after integration" %}
+
+The `assets:install` command must be run after integrating API Platform and whenever API Platform assets are updated. This is a required step documented in [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html).
+
+{% endinfo_block %}
+
 ### 404 Not Found for API endpoints
 
 **Symptom:** API requests return 404.
@@ -229,9 +271,11 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
 2. Check API documentation for correct URLs:
 
    ```bash
-   Storefront: https://glue.mysprykershop.com/docs
-   Backoffice: https://backoffice.mysprykershop.com/docs
+   Storefront: https://glue.mysprykershop.com/
+   Backoffice: https://backoffice.mysprykershop.com/
    ```
+
+   The interactive API documentation is available at the root URL of each application.
 
 3. Use correct URL format:
 
@@ -418,7 +462,7 @@ If you encounter issues not covered here:
 2. **Enable debug mode:**
 
    ```php
-   // config/Symfony/{APPLICATION}/packages/spryker_api_platform.php
+   // config/{APPLICATION}/packages/spryker_api_platform.php
    $containerConfigurator->extension('spryker_api_platform', [
        'debug' => true,
    ]);
@@ -441,6 +485,7 @@ If you encounter issues not covered here:
 | `Route not found` | Router not configured | Add `SymfonyRouterPlugin` |
 | `Validation failed` | Schema mismatch | Regenerate with `--force` |
 | `Cache is stale` | Outdated cache | Run `cache:clear` |
+| API docs UI broken/unstyled | Assets not installed | Run `console/glue assets:install` |
 
 ## Next steps
 

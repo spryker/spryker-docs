@@ -39,7 +39,7 @@ Register the required bundles in your application's bundle configuration files f
 
 ### For Glue application (Storefront APIs)
 
-`config/Symfony/GLUE/bundles.php`
+`config/Glue/bundles.php`
 
 ```php
 <?php
@@ -63,7 +63,7 @@ return [
 
 ### For Zed application (Backoffice APIs)
 
-`config/Symfony/ZED/bundles.php`
+`config/Zed/bundles.php`
 
 ```php
 <?php
@@ -91,7 +91,7 @@ Create configuration files for API Platform in each application layer.
 
 ### Configure for Glue (Storefront)
 
-`config/Symfony/GLUE/packages/spryker_api_platform.php`
+`config/Glue/packages/spryker_api_platform.php`
 
 ```php
 <?php
@@ -126,7 +126,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 ### Configure for Zed (Backoffice)
 
-`config/Symfony/ZED/packages/spryker_api_platform.php`
+`config/Zed/packages/spryker_api_platform.php`
 
 ```php
 <?php
@@ -237,9 +237,31 @@ console api:generate --validate-only
 
 The generated resources will be created in `src/Generated/Api/{ApiType}/` directory.
 
-## 6. Clear caches
+## 6. Install assets
 
-After generation, clear application caches:
+Install the necessary assets for API Platform to function correctly:
+
+### For Glue application (Storefront)
+
+```bash
+glue assets:install
+```
+
+### For Zed application (Backoffice)
+
+```bash
+console assets:install
+```
+
+{% info_block warningBox "Required step" %}
+
+The `assets:install` command is required to copy the necessary assets (CSS, JavaScript, images) for the API Platform documentation interface. Without this step, the API documentation UI will not display correctly.
+
+{% endinfo_block %}
+
+## 7. Clear caches
+
+After generation and asset installation, clear application caches:
 
 ```bash
 # Clear all caches
@@ -271,8 +293,10 @@ To verify your integration:
    ```
 
 3. **Access API documentation:**
-   - Glue (Storefront): `https://your-domain/docs`
-   - Zed (Backoffice): `https://your-backoffice-domain/docs`
+   - Glue (Storefront): `https://your-domain/`
+   - Zed (Backoffice): `https://your-backoffice-domain/`
+
+   The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
 
 ## Next steps
 

@@ -21,8 +21,8 @@ This document describes how to implement and use Symfony's Dependency Injection 
 Before implementing Dependency Injection, ensure you have:
 
 - Upgraded the required modules as described in [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
-- Configured your `config/Symfony/Zed/ApplicationServices.php` file
-- Registered the necessary bundles in `config/Symfony/Zed/bundles.php`
+- Configured your `config/Zed/ApplicationServices.php` file
+- Registered the necessary bundles in `config/Zed/bundles.php`
 
 ## Manual dependency wiring in ApplicationServices.php
 
@@ -30,7 +30,7 @@ While autowiring handles most dependencies automatically, you may need to manual
 
 ### Registering services manually
 
-You can manually define services in your `config/Symfony/Zed/ApplicationServices.php` file:
+You can manually define services in your `config/Zed/ApplicationServices.php` file:
 
 ```php
 <?php

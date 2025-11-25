@@ -44,7 +44,6 @@ Verify that the following modules are installed:
 
 ```bash
 console propel:install
-console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}

@@ -10,7 +10,7 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
 
-Spryker's API Platform integration provides schema-based REST API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML or XML schemas and automatically generate fully-functional API endpoints with validation, pagination, and serialization.
+Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML or XML schemas and automatically generate fully-functional API endpoints with validation, pagination, and serialization.
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
@@ -28,7 +28,7 @@ API Platform is a framework for building modern APIs based on web standards and 
 
 ### Resource generation workflow
 
-```
+```MARKDOWN
 Schema Files (YAML/XML)
     ↓
 Schema Discovery & Validation
@@ -48,20 +48,21 @@ REST API Endpoints
 
 Resources are defined in YAML or XML files located in module directories:
 
-```
+```MARKDOWN
 src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.yml
 src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.validation.yml
 ```
 
 Example schema:
+
 ```yaml
 resource:
   name: Customers
   shortName: Customer
   description: "Customer resource for backoffice API"
 
-  provider: "Pyz\\Zed\\Customer\\Api\\Provider\\CustomerBackofficeProvider"
-  processor: "Pyz\\Zed\\Customer\\Api\\Processor\\CustomerBackofficeProcessor"
+  provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+  processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
 
   paginationEnabled: true
 
@@ -120,6 +121,7 @@ final class CustomersBackofficeResource
 #### 3. State providers and processors
 
 **Provider (read operations):**
+
 ```php
 class CustomerBackofficeProvider implements ProviderInterface
 {
@@ -132,6 +134,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 ```
 
 **Processor (write operations):**
+
 ```php
 class CustomerBackofficeProcessor implements ProcessorInterface
 {
@@ -148,31 +151,35 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 Spryker supports multiple API types for different use cases:
 
 ### Storefront API (Glue)
+
 - **API Type:** `storefront`
 - **Application:** Glue
-- **Base URL:** `/api/storefront/`
+- **Base URL:** `http://glue.eu.spryker.local/` - Configurable per project
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
-- **Example:** `/api/storefront/access-tokens`
+- **Example:** `/access-tokens`
 
 ### Backoffice API (Zed)
+
 - **API Type:** `backoffice`
 - **Application:** Zed
-- **Base URL:** `/api/backoffice/`
+- **Base URL:** `http://backoffice.eu.spryker.local/`
 - **Use cases:** Admin panels, internal tools, ERP integrations
-- **Example:** `/api/backoffice/customers`
+- **Example:** `/customers`
 
 ### Merchant Portal API
+
 - **API Type:** `merchant-portal`
 - **Application:** MerchantPortal
-- **Base URL:** `/api/merchant-portal/`
+- **Base URL:** `http://mp.glue.eu.spryker.local/`
 - **Use cases:** Marketplace merchant interfaces
-- **Example:** `/api/merchant-portal/products`
+- **Example:** `/products`
 
 ## Multi-layer schema merging
 
 One of the key features is support for multi-layer schema definitions that automatically merge:
 
 **Core layer** (vendor/spryker):
+
 ```yaml
 resource:
   name: Customers
@@ -182,6 +189,7 @@ resource:
 ```
 
 **Feature layer** (src/SprykerFeature):
+
 ```yaml
 resource:
   name: Customers
@@ -191,6 +199,7 @@ resource:
 ```
 
 **Project layer** (src/Pyz):
+
 ```yaml
 resource:
   name: Customers
@@ -291,7 +300,6 @@ API Platform generates interactive OpenAPI documentation:
 
 - Swagger UI at `/docs`
 - OpenAPI JSON at `/docs.json`
-- ReDoc at `/docs` (alternative UI)
 
 ### Built-in validation
 
@@ -316,8 +324,8 @@ public ?string $email = null;
 
 Standardized pagination with query parameters:
 
-```
-GET /api/backoffice/customers?page=2&itemsPerPage=20
+```MARKDOWN
+GET /customers?page=2&itemsPerPage=20
 ```
 
 Provider returns `PaginatorInterface`:
@@ -337,11 +345,11 @@ Define different validation and behavior per operation:
 
 ```yaml
 operations:
-  - type: Post        # Create
-  - type: Get         # Read one
-  - type: GetCollection  # Read many
-  - type: Patch       # Update
-  - type: Delete      # Delete
+  - type: Post            # Create
+  - type: Get             # Read one
+  - type: GetCollection   # Read many
+  - type: Patch           # Update
+  - type: Delete          # Delete
 ```
 
 Each operation can have specific validation rules and security settings.
@@ -363,24 +371,12 @@ Pre-generate resources during deployment:
 
 ```bash
 console api:generate
+```
+
+or
+
+```bash
 console cache:warmup
-```
-
-## Security
-
-### Resource-level security
-
-```yaml
-resource:
-  security: "is_granted('ROLE_ADMIN')"
-```
-
-### Operation-level security
-
-```yaml
-operations:
-  - type: Delete
-    security: "is_granted('ROLE_SUPER_ADMIN')"
 ```
 
 ### Property-level access control
@@ -404,13 +400,14 @@ properties:
 | Flexibility | High | Very high |
 | Use cases | Standard CRUD | Complex business logic |
 
-Both can coexist in the same application.
+Both can coexist in the same application. For further migration guidance, see [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html).
 
 ## Related documentation
 
 For detailed implementation guides:
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup and configuration
+- [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue REST API
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema syntax reference
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

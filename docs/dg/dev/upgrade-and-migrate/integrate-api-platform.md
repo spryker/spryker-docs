@@ -254,12 +254,14 @@ console container:build
 To verify your integration:
 
 1. **Check generated resources:**
+
    ```bash
    ls -la src/Generated/Api/Storefront/
    ls -la src/Generated/Api/Backoffice/
    ```
 
 2. **Debug available resources:**
+
    ```bash
    # List all API resources
    console api:debug --list

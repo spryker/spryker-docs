@@ -40,8 +40,8 @@ resource:
     shortName: Customer
     description: "Customer resource for backoffice API"
 
-    provider: "Pyz\\Zed\\Customer\\Api\\Provider\\CustomerBackofficeProvider"
-    processor: "Pyz\\Zed\\Customer\\Api\\Processor\\CustomerBackofficeProcessor"
+    provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+    processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
 
     paginationEnabled: true
     paginationItemsPerPage: 10
@@ -125,12 +125,12 @@ patch:
 
 The Provider is responsible for fetching data (GET operations). Implement the `ProviderInterface`:
 
-`src/Pyz/Zed/Customer/Api/Provider/CustomerBackofficeProvider.php`
+`src/Pyz/Zed/Customer/Api/Backoffice/Provider/CustomerBackofficeProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Api\Provider;
+namespace Pyz\Zed\Customer\Api\Backoffice\Provider;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\Pagination\TraversablePaginator;
@@ -173,11 +173,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 
         // Map to API resource
         $resource = new CustomersBackofficeResource();
-        $resource->idCustomer = $customerTransfer->getIdCustomer();
-        $resource->email = $customerTransfer->getEmail();
-        $resource->firstName = $customerTransfer->getFirstName();
-        $resource->lastName = $customerTransfer->getLastName();
-        $resource->customerReference = $customerTransfer->getCustomerReference();
+        $resource->fromArray($customerTransfer->toArray());
 
         return $resource;
     }
@@ -193,11 +189,7 @@ class CustomerBackofficeProvider implements ProviderInterface
         $resources = [];
         foreach ($customerCollection->getCustomers() as $customerTransfer) {
             $resource = new CustomersBackofficeResource();
-            $resource->idCustomer = $customerTransfer->getIdCustomer();
-            $resource->email = $customerTransfer->getEmail();
-            $resource->firstName = $customerTransfer->getFirstName();
-            $resource->lastName = $customerTransfer->getLastName();
-            $resource->customerReference = $customerTransfer->getCustomerReference();
+            $resource->fromArray($customerTransfer->toArray());
 
             $resources[] = $resource;
         }
@@ -216,12 +208,12 @@ class CustomerBackofficeProvider implements ProviderInterface
 
 The Processor handles data modifications (POST, PUT, PATCH, DELETE). Implement the `ProcessorInterface`:
 
-`src/Pyz/Zed/Customer/Api/Processor/CustomerBackofficeProcessor.php`
+`src/Pyz/Zed/Customer/Api/Backoffice/Processor/CustomerBackofficeProcessor.php`
 
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Api\Processor;
+namespace Pyz\Zed\Customer\Api\Backoffice\Processor;
 
 use ApiPlatform\Metadata\Delete;
 use ApiPlatform\Metadata\Operation;
@@ -272,9 +264,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
     private function mapToTransfer(CustomersBackofficeResource $resource): CustomerTransfer
     {
         $transfer = new CustomerTransfer();
-        $transfer->setEmail($resource->email);
-        $transfer->setFirstName($resource->firstName);
-        $transfer->setLastName($resource->lastName);
+        $transfer->fromArray($resource->toArray(), true);
 
         return $transfer;
     }
@@ -282,11 +272,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
     private function mapToResource(CustomerTransfer $transfer): CustomersBackofficeResource
     {
         $resource = new CustomersBackofficeResource();
-        $resource->idCustomer = $transfer->getIdCustomer();
-        $resource->email = $transfer->getEmail();
-        $resource->firstName = $transfer->getFirstName();
-        $resource->lastName = $transfer->getLastName();
-        $resource->customerReference = $transfer->getCustomerReference();
+        $resource->fromArray($transfer->toArray());
 
         return $resource;
     }
@@ -312,7 +298,7 @@ The generated class includes:
 - Getters and setters
 - `toArray()` and `fromArray()` methods
 
-### 6. Register services in DI container
+### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
 
@@ -341,13 +327,13 @@ After generation, your API is immediately available:
 
 ```bash
 # List all customers
-GET /api/backoffice/customers
+GET /customers
 
 # Get single customer
-GET /api/backoffice/customers/{customerReference}
+GET /customers/{customerReference}
 
 # Create customer
-POST /api/backoffice/customers
+POST /customers
 {
   "email": "john@example.com",
   "firstName": "John",
@@ -355,13 +341,13 @@ POST /api/backoffice/customers
 }
 
 # Update customer
-PATCH /api/backoffice/customers/{customerReference}
+PATCH /customers/{customerReference}
 {
   "firstName": "Jane"
 }
 
 # Delete customer
-DELETE /api/backoffice/customers/{customerReference}
+DELETE /customers/{customerReference}
 ```
 
 ## API types and use cases
@@ -369,18 +355,21 @@ DELETE /api/backoffice/customers/{customerReference}
 Spryker supports multiple API types for different use cases:
 
 ### Storefront API (Glue)
+
 - **API Type:** `storefront`
 - **Module location:** `src/Spryker/{Module}/resources/api/storefront/`
 - **Generated namespace:** `Generated\Api\Storefront`
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
 
 ### Backoffice API (Zed)
+
 - **API Type:** `backoffice`
 - **Module location:** `src/Pyz/Zed/{Module}/resources/api/backoffice/`
 - **Generated namespace:** `Generated\Api\Backoffice`
 - **Use cases:** Admin panels, internal tools, ERP integrations
 
 ### Merchant Portal API
+
 - **API Type:** `merchant-portal`
 - **Module location:** `src/Spryker/{Module}/resources/api/merchant-portal/`
 - **Generated namespace:** `Generated\Api\MerchantPortal`
@@ -391,12 +380,15 @@ Spryker supports multiple API types for different use cases:
 API Platform supports multi-layer schema definitions with automatic merging:
 
 ### Core layer
+
 `vendor/spryker/customer/resources/api/backoffice/customer.yml` - Base definition
 
 ### Feature layer
+
 `src/SprykerFeature/CustomerRelationManagement/resources/api/backoffice/customer.yml` - Feature enhancements
 
 ### Project layer
+
 `src/Pyz/Zed/Customer/resources/api/backoffice/customer.yml` - Project customizations
 
 The generator automatically merges these schemas with project layer taking precedence.

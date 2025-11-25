@@ -25,7 +25,8 @@ This document provides solutions to common issues when working with API Platform
 **Possible causes:**
 
 1. **Schema file location is incorrect**
-   ```
+
+   ```bash
    ❌ src/Pyz/Zed/Customer/api/customers.yml
    ✅ src/Pyz/Zed/Customer/resources/api/backoffice/customers.yml
    ```
@@ -33,6 +34,7 @@ This document provides solutions to common issues when working with API Platform
 2. **API type not configured**
 
    Check `config/Symfony/{APPLICATION}/packages/spryker_api_platform.php`:
+
    ```php
    $containerConfigurator->extension('spryker_api_platform', [
        'api_types' => [
@@ -44,6 +46,7 @@ This document provides solutions to common issues when working with API Platform
 3. **Bundle not registered**
 
    Verify `config/Symfony/{APPLICATION}/bundles.php` includes:
+
    ```php
    SprykerApiPlatformBundle::class => ['all' => true],
    ```
@@ -92,10 +95,13 @@ console api:generate --force
 
 1. Check schema against examples in documentation
 2. Use `--validate-only` flag for detailed validation:
+
    ```bash
    console api:generate --validate-only
    ```
+
 3. Inspect merged schema:
+
    ```bash
    console api:debug resource-name --show-merged
    ```
@@ -122,33 +128,37 @@ console container:build
 ### Provider/Processor not found
 
 **Symptom:**
-```
-Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not found
+
+```bash
+Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvider" not found
 ```
 
 **Possible causes:**
 
 1. Class doesn't exist or namespace is wrong
-2. Not registered in DI container
-3. Typo in schema file
+2. Not registered in the Dependency Injection container
+3. Typo in the schema file
 
 **Solution:**
 
-1. Verify class exists and namespace matches:
+1. Verify the class exists and namespace matches:
+
    ```php
-   namespace Pyz\Zed\Customer\Api\Provider;
+   namespace Pyz\Zed\Customer\Api\Backoffice\Provider;
 
    class CustomerBackofficeProvider implements ProviderInterface
    ```
 
 2. Ensure services are auto-discovered in `ApplicationServices.php`:
+
    ```php
    $services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
    ```
 
 3. Check class name in schema matches exactly:
+
    ```yaml
-   provider: "Pyz\\Zed\\Customer\\Api\\Provider\\CustomerBackofficeProvider"
+   provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
    ```
 
 ### Validation not working
@@ -164,11 +174,13 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
 **Solution:**
 
 1. Ensure validation file exists:
-   ```
+
+   ```bash
    ✅ resources/api/backoffice/customers.validation.yml
    ```
 
 2. Match operation names to HTTP methods:
+
    ```yaml
    post:      # For POST /customers
      email:
@@ -182,6 +194,7 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
    ```
 
 3. Check generated resource class has validation attributes:
+
    ```php
    #[Assert\NotBlank(groups: ['customers:create'])]
    #[Assert\Email(groups: ['customers:create'])]
@@ -201,6 +214,7 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
 **Solution:**
 
 1. Verify `SymfonyRouterPlugin` is registered:
+
    ```php
    // RouterDependencyProvider
    protected function getRouterPlugins(): array
@@ -213,16 +227,17 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
    ```
 
 2. Check API documentation for correct URLs:
-   ```
+
+   ```bash
    Storefront: https://glue.mysprykershop.com/docs
    Backoffice: https://backoffice.mysprykershop.com/docs
    ```
 
 3. Use correct URL format:
-   ```
-   ❌ /customers
+
+   ```bash
    ❌ /api/v1/customers
-   ✅ /api/backoffice/customers
+   ✅ /customers
    ```
 
 ### Pagination not working
@@ -232,6 +247,7 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
 **Solution:**
 
 1. Enable pagination in schema:
+
    ```yaml
    resource:
      paginationEnabled: true
@@ -239,6 +255,7 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
    ```
 
 2. Return `PaginatorInterface` from provider:
+
    ```php
    use ApiPlatform\State\Pagination\TraversablePaginator;
 
@@ -251,8 +268,9 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
    ```
 
 3. Use pagination query parameters:
-   ```
-   GET /api/backoffice/customers?page=2&itemsPerPage=20
+
+   ```bash
+   GET /customers?page=2&itemsPerPage=20
    ```
 
 ## Dependency Injection issues
@@ -260,7 +278,8 @@ Error: Class "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider" not foun
 ### Services not autowired
 
 **Symptom:**
-```
+
+```bash
 Cannot autowire service "CustomerBackofficeProvider": argument "$customerFacade"
 references class "CustomerFacadeInterface" but no such service exists.
 ```
@@ -268,6 +287,7 @@ references class "CustomerFacadeInterface" but no such service exists.
 **Solution:**
 
 1. Register facade in `ApplicationServices.php`:
+
    ```php
    use Pyz\Zed\Customer\Business\CustomerFacadeInterface;
    use Pyz\Zed\Customer\Business\CustomerFacade;
@@ -276,6 +296,7 @@ references class "CustomerFacadeInterface" but no such service exists.
    ```
 
 2. Ensure constructor uses interface type hints:
+
    ```php
    public function __construct(
        private CustomerFacadeInterface $customerFacade,  // ✅ Interface
@@ -285,7 +306,8 @@ references class "CustomerFacadeInterface" but no such service exists.
 ### Circular reference detected
 
 **Symptom:**
-```
+
+```bash
 Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider"
 ```
 
@@ -304,17 +326,20 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 **Solution:**
 
 1. Use caching in production:
+
    ```bash
    # Don't use --force in production
    console api:generate
    ```
 
 2. Generate specific API types only:
+
    ```bash
    console api:generate backoffice
    ```
 
 3. Reduce number of source directories:
+
    ```php
    $containerConfigurator->extension('spryker_api_platform', [
        'source_directories' => [
@@ -330,6 +355,7 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 **Solution:**
 
 1. Enable Symfony cache:
+
    ```bash
    console cache:warmup
    ```
@@ -349,7 +375,8 @@ console api:debug customers --api-type=backoffice --show-sources
 ```
 
 Output:
-```
+
+```bash
 Source Files (priority order):
   ✓ vendor/spryker/customer/resources/api/backoffice/customers.yml (CORE)
   ✓ src/SprykerFeature/CRM/resources/api/backoffice/customers.yml (FEATURE)
@@ -382,12 +409,14 @@ console api:generate --dry-run
 If you encounter issues not covered here:
 
 1. **Check logs:**
+
    ```bash
    tail -f var/log/application.log
    tail -f var/log/exception.log
    ```
 
 2. **Enable debug mode:**
+
    ```php
    // config/Symfony/{APPLICATION}/packages/spryker_api_platform.php
    $containerConfigurator->extension('spryker_api_platform', [
@@ -396,6 +425,7 @@ If you encounter issues not covered here:
    ```
 
 3. **Validate environment:**
+
    ```bash
    php -v  # Check PHP version (8.1+)
    composer show | grep api-platform

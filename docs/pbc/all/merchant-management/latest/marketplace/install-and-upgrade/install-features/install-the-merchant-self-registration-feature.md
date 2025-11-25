@@ -43,7 +43,6 @@ Verify that the following modules are installed:
 1. Apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -139,43 +138,7 @@ console data:import glossary
 Verify that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
-### 4) Set up behavior
-
-Enable the following behaviors by registering the plugins listed below:
-
-| PLUGIN                                               | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                    |
-|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| CommentThreadMerchantRegistrationRequestPostCreatePlugin | Creates a comment thread for the merchant registration request after creation.      |               | Spryker\Zed\Comment\Communication\Plugin\MerchantRegistrationRequest |
-
-**src/Pyz/Zed/MerchantRegistrationRequest/MerchantRegistrationRequestDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantRegistrationRequest;
-
-use Spryker\Zed\Comment\Communication\Plugin\MerchantRegistrationRequest\CommentThreadMerchantRegistrationRequestPostCreatePlugin;
-use Spryker\Zed\MerchantRegistrationRequest\MerchantRegistrationRequestDependencyProvider as SprykerMerchantRegistrationRequestDependencyProvider;
-
-class MerchantRegistrationRequestDependencyProvider extends SprykerMerchantRegistrationRequestDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\MerchantRegistrationRequestExtension\Dependency\Plugin\MerchantRegistrationRequestPostCreatePluginInterface>
-     */
-    protected function getMerchantRegistrationRequestPostCreatePlugins(): array
-    {
-        return [
-            new CommentThreadMerchantRegistrationRequestPostCreatePlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-Verify that when you create a merchant registration request through the Storefront, the system also creates a comment thread for it.
-{% endinfo_block %}
-
-### 5) Configure navigation
+### 4) Configure navigation
 
 1. Add the Merchant Registrations section to the Back Office navigation:
 
@@ -211,7 +174,7 @@ console navigation:build-cache
 Verify that in the Back Office, under **Marketplace**, you can see the **Merchant Registrations** menu item.
 {% endinfo_block %}
 
-### 6) Set up Storefront routing
+### 5) Set up Storefront routing
 
 Register the route provider plugin to enable the merchant registration page in the Storefront:
 
@@ -247,7 +210,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 Verify that the `/merchant-registration-request` route is available in the Storefront by navigating to `https://mysprykershop.com/merchant-registration-request`.
 {% endinfo_block %}
 
-### 7) Set up Storefront navigation
+### 6) Set up Storefront navigation
 
 To add a link to the merchant registration page in the Storefront footer, import the following navigation node:
 

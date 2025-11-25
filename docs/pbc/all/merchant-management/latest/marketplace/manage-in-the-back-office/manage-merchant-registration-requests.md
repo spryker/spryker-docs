@@ -15,8 +15,10 @@ To manage merchant registration requests, verify that the [Merchant Self-Registr
 
 To view the list of merchant registration requests, do the following:
 
-1. In the Back Office, go to **Marketplace** > **Merchant Registrations**.  
+1. In the Back Office, go to **Marketplace** > **Merchant Registrations**.
    This displays the **Merchant Registrations** page with a list of all submitted requests.
+
+![merchant-registration-request-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Merchant+Registration/bo-request-list.png)
 
 The table displays the following information:
 
@@ -38,8 +40,10 @@ You can:
 To view the details of a merchant registration request, do the following:
 
 1. In the Back Office, go to **Marketplace** > **Merchant Registrations**.
-2. In the **Actions** column, click **View** for the request you want to review.  
+2. In the **Actions** column, click **View** for the request you want to review.
    This opens the merchant registration request details page.
+
+![merchant-registration-request-details](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Merchant+Registration/bo-pending-request-view-page.png)
 
 The page displays the following sections.
 
@@ -77,6 +81,8 @@ To add an internal comment:
 
 Your comment is added to the thread with your username and timestamp. Your colleagues can see and respond to these internal comments.
 
+![internal-comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Merchant+Registration/bo-internal-comment.png)
+
 ## Approve a merchant registration request
 
 When you approve a registration request, a new merchant account and a default merchant user are created in the system with the status *Inactive* and approval status *Waiting for Approval*.
@@ -86,7 +92,7 @@ To approve a merchant registration request, do the following:
 1. In the Back Office, go to **Marketplace** > **Merchant Registrations**.
 2. In the **Actions** column, click **View** for the request you want to approve.
 3. Optional: Review the request details and internal comments.
-4. In the top-right corner, click **Create Merchant**.  
+4. In the top-right corner, click **Create Merchant**.
    This opens the **Approve Request** confirmation page.
 5. Review the confirmation message: "Approving this request will create a merchant account."
 6. Click **Create merchant** to confirm.

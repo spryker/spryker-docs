@@ -9,7 +9,11 @@ The Merchant Self-Registration feature streamlines merchant onboarding by provid
 
 ## Storefront registration form
 
-The feature provides a dedicated registration page on the Storefront, accessible from a configurable link, typically in the footer. The registration form collects the following information:
+The feature provides a dedicated registration page on the Storefront, accessible from a configurable link, typically in the footer.
+
+![merchant-registration-form](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Merchant+Registration/merchant-registration-form.png)
+
+The registration form collects the following information:
 
 **Company information:**
 - Company name

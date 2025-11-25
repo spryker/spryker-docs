@@ -77,7 +77,7 @@ At the bottom of the page, you can view and add internal comments to communicate
 To add an internal comment:
 
 1. In the **Internal Comments** section, enter your comment in the text field.
-2. Click **Add Comment**.
+2. Click **Send Comment**.
 
 Your comment is added to the thread with your username and timestamp. Your colleagues can see and respond to these internal comments.
 

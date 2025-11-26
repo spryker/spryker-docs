@@ -1393,6 +1393,8 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Marketplace Merchant B2B Contracts and Contract Requests features overview
                 url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html
+              - title: Merchant Self-Registration feature overview
+                url: /docs/pbc/all/merchant-management/marketplace/merchant-self-registration-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1445,6 +1447,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html
                       - title: Merchant Switcher + Wishlist
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html
+                      - title: Merchant Self-Registration
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html
 
                   - title: Install Glue API
                     nested:
@@ -1521,6 +1525,9 @@ entries:
 
                   - title: Import merchant commissions
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/back-office-import-merchant-commissions.html
+
+                  - title: Manage merchant registration requests
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html
 
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html

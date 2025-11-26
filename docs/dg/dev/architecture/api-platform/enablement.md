@@ -28,7 +28,7 @@ Before creating API resources, ensure you have:
 
 Create a schema file that defines your API resource structure. Schemas should be placed in `resources/api/{api-type}/` directory within your module.
 
-**Example: Customer resource for Backoffice API**
+**Example: Customer resource for Back Office API**
 
 `src/Pyz/Zed/Customer/resources/api/backoffice/customers.yml`
 
@@ -361,7 +361,7 @@ Spryker supports multiple API types for different use cases:
 - **Generated namespace:** `Generated\Api\Storefront`
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
 
-### Backoffice API (Zed)
+### Back Office API (Zed)
 
 - **API Type:** `backoffice`
 - **Module location:** `src/Pyz/Zed/{Module}/resources/api/backoffice/`

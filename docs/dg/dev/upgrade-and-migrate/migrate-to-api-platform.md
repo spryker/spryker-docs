@@ -756,7 +756,7 @@ If response formats differ, document changes for API consumers:
 The `/customers` endpoint is being migrated to API-Platform.
 
 ### Changes:
-- Response format: JSON:API → JSON-LD (optional)
+- Response format: JSON:API → JSON-LD
 - Date format: unix timestamp → ISO 8601
 - Error format: JSON:API errors → RFC 7807 Problem Details
 

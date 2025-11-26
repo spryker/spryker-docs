@@ -221,7 +221,7 @@ Run the appropriate assets:install command for your application:
 glue assets:install
 ```
 
-**For Zed application (Backoffice):**
+**For Zed application (Back Office):**
 
 ```bash
 console assets:install

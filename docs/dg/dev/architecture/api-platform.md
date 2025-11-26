@@ -14,7 +14,7 @@ Spryker's API Platform integration provides schema-based API resource generation
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
-## What is API Platform?
+## What is API Platform
 
 API Platform is a framework for building modern APIs based on web standards and best practices. In Spryker, it complements the existing Glue API infrastructure by providing:
 

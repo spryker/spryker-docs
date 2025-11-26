@@ -20,15 +20,15 @@ This document provides solutions to common issues when working with API Platform
 
 ### Resources not generating
 
-**Symptom:** Running `console api:generate` completes but no resources are created.
+**Symptom:** Running `docker/sdk glue api:generate` completes but no resources are created.
 
 **Possible causes:**
 
 1. **Schema file location is incorrect**
 
    ```bash
-   ❌ src/Pyz/Zed/Customer/api/customers.yml
-   ✅ src/Pyz/Zed/Customer/resources/api/backoffice/customers.yml
+   ❌ src/Pyz/Glue/Customer/api/customers.yml
+   ✅ src/Pyz/Glue/Customer/resources/api/backoffice/customers.yml
    ```
 
 2. **API type not configured**
@@ -55,13 +55,13 @@ This document provides solutions to common issues when working with API Platform
 
 ```bash
 # Debug to see what's being discovered
-console api:debug --list
+docker/sdk glue api:debug --list
 
 # Check schema validation
-console api:generate --validate-only
+docker/sdk glue api:generate --validate-only
 
 # Force regeneration
-console api:generate --force
+docker/sdk glue api:generate --force
 ```
 
 ### Schema validation errors
@@ -97,13 +97,13 @@ console api:generate --force
 2. Use `--validate-only` flag for detailed validation:
 
    ```bash
-   console api:generate --validate-only
+   docker/sdk glue api:generate --validate-only
    ```
 
 3. Inspect merged schema:
 
    ```bash
-   console api:debug resource-name --show-merged
+   docker/sdk glue api:debug resource-name --show-merged
    ```
 
 ### Cache not invalidating
@@ -114,13 +114,13 @@ console api:generate --force
 
 ```bash
 # Clear all caches
-console cache:clear
+docker/sdk glue cache:clear
 
 # Force resource regeneration
-console api:generate --force
+docker/sdk glue api:generate --force
 
 # Rebuild container
-console container:build
+docker/sdk glue container:build
 ```
 
 ## Runtime issues
@@ -130,7 +130,7 @@ console container:build
 **Symptom:**
 
 ```bash
-Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvider" not found
+Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvider" not found
 ```
 
 **Possible causes:**
@@ -144,7 +144,7 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
 1. Verify the class exists and namespace matches:
 
    ```php
-   namespace Pyz\Zed\Customer\Api\Backoffice\Provider;
+   namespace Pyz\Glue\Customer\Api\Backoffice\Provider;
 
    class CustomerBackofficeProvider implements ProviderInterface
    ```
@@ -152,13 +152,13 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
 2. Ensure services are auto-discovered in `ApplicationServices.php`:
 
    ```php
-   $services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
+   $services->load('Pyz\\Glue\\', '../../../src/Pyz/Glue/');
    ```
 
 3. Check class name in schema matches exactly:
 
    ```yaml
-   provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+   provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
    ```
 
 ### Validation not working
@@ -207,7 +207,7 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
 - Missing styles/CSS
 - Broken JavaScript functionality
 - Plain HTML without formatting
-- "Failed to load resource" errors in browser console
+- "Failed to load resource" errors in browser docker/sdk glue
 
 **Cause:** Assets were not installed after API Platform integration.
 
@@ -215,22 +215,22 @@ Error: Class "Pyz\Zed\Customer\Api\Backoffice\Provider\CustomerBackofficeProvide
 
 Run the appropriate assets:install command for your application:
 
-**For Glue application (Storefront):**
+### For Glue application
 
 ```bash
-glue assets:install
+docker/sdk cli glue assets:install public/Glue/assets  --symlink
 ```
 
-**For Zed application (Back Office):**
+### For GlueStorefront
 
 ```bash
-console assets:install
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue assets:install public/GlueStorefront/assets/  --symlink
 ```
 
-After installing assets, clear the cache:
+### For GlueBackend
 
 ```bash
-console cache:clear
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBackend/assets/  --symlink
 ```
 
 Then verify the documentation UI loads correctly by visiting the root URL:
@@ -333,8 +333,8 @@ references class "CustomerFacadeInterface" but no such service exists.
 1. Register facade in `ApplicationServices.php`:
 
    ```php
-   use Pyz\Zed\Customer\Business\CustomerFacadeInterface;
-   use Pyz\Zed\Customer\Business\CustomerFacade;
+   use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
+   use Pyz\Glue\Customer\Business\CustomerFacade;
 
    $services->set(CustomerFacadeInterface::class, CustomerFacade::class);
    ```
@@ -352,7 +352,7 @@ references class "CustomerFacadeInterface" but no such service exists.
 **Symptom:**
 
 ```bash
-Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerBackofficeProvider"
+Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\CustomerBackofficeProvider"
 ```
 
 **Solution:**
@@ -365,7 +365,7 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 
 ### Slow resource generation
 
-**Symptom:** `console api:generate` takes very long to complete.
+**Symptom:** `docker/sdk glue api:generate` takes very long to complete.
 
 **Solution:**
 
@@ -373,13 +373,13 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 
    ```bash
    # Don't use --force in production
-   console api:generate
+   docker/sdk glue api:generate
    ```
 
 2. Generate specific API types only:
 
    ```bash
-   console api:generate backoffice
+   docker/sdk glue api:generate backoffice
    ```
 
 3. Reduce number of source directories:
@@ -401,7 +401,7 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 1. Enable Symfony cache:
 
    ```bash
-   console cache:warmup
+   docker/sdk glue cache:warmup
    ```
 
 2. Use pagination for collections
@@ -415,7 +415,7 @@ Circular reference detected for service "Pyz\Zed\Customer\Api\Provider\CustomerB
 See which schemas contribute to final resource:
 
 ```bash
-console api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backoffice --show-sources
 ```
 
 Output:
@@ -424,7 +424,7 @@ Output:
 Source Files (priority order):
   ✓ vendor/spryker/customer/resources/api/backoffice/customers.yml (CORE)
   ✓ src/SprykerFeature/CRM/resources/api/backoffice/customers.yml (FEATURE)
-  ✓ src/Pyz/Zed/Customer/resources/api/backoffice/customers.yml (PROJECT)
+  ✓ src/Pyz/Glue/Customer/resources/api/backoffice/customers.yml (PROJECT)
 ```
 
 ### Inspecting generated code
@@ -445,7 +445,7 @@ Check for:
 Preview generation without writing files:
 
 ```bash
-console api:generate --dry-run
+docker/sdk glue api:generate --dry-run
 ```
 
 ## Getting help
@@ -473,7 +473,7 @@ If you encounter issues not covered here:
    ```bash
    php -v  # Check PHP version (8.1+)
    composer show | grep api-platform
-   console debug:container | grep -i api
+   docker/sdk glue debug:container | grep -i api
    ```
 
 4. **Common error patterns:**
@@ -485,7 +485,7 @@ If you encounter issues not covered here:
 | `Route not found` | Router not configured | Add `SymfonyRouterPlugin` |
 | `Validation failed` | Schema mismatch | Regenerate with `--force` |
 | `Cache is stale` | Outdated cache | Run `cache:clear` |
-| API docs UI broken/unstyled | Assets not installed | Run `console/glue assets:install` |
+| API docs UI broken/unstyled | Assets not installed | Run `docker/sdk glue/glue assets:install` |
 
 ## Next steps
 

@@ -5,7 +5,7 @@ last_updated: Nov 24, 2025
 template: howto-guide-template
 ---
 
-This document describes how to integrate API Platform into your Spryker application to enable schema-based REST API resource generation.
+This document describes how to integrate API Platform into your Spryker application to enable schema-based API resource generation.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ The exact module versions will be provided in the final documentation. The above
 
 Register the required bundles in your application's bundle configuration files for each application layer where you want to enable API Platform.
 
-### For Glue application (Storefront APIs)
+### For Glue application
 
 `config/Glue/bundles.php`
 
@@ -61,9 +61,33 @@ return [
 ];
 ```
 
-### For Zed application (Backoffice APIs)
+### For GlueStorefront application
 
-`config/Zed/bundles.php`
+`config/GlueStorefront/bundles.php`
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
+use Nelmio\CorsBundle\NelmioCorsBundle;
+use Spryker\ApiPlatform\SprykerApiPlatformBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+
+return [
+    FrameworkBundle::class => ['all' => true],
+    ApiPlatformBundle::class => ['all' => true],
+    SprykerApiPlatformBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
+    NelmioCorsBundle::class => ['all' => true],
+];
+```
+
+### For GlueBackoffice application
+
+`config/GlueBackoffice/bundles.php`
 
 ```php
 <?php
@@ -87,9 +111,9 @@ return [
 
 ## 3. Configure API Platform
 
-Create configuration files for API Platform in each application layer.
+Create configuration files for the API Platform in each application layer.
 
-### Configure for Glue (Storefront)
+### Configure for Glue
 
 `config/Glue/packages/spryker_api_platform.php`
 
@@ -124,9 +148,29 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-### Configure for Zed (Backoffice)
+### Configure for GlueStorefront
 
-`config/Zed/packages/spryker_api_platform.php`
+`config/GlueStorefront/packages/spryker_api_platform.php`
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->extension('spryker_api_platform', [
+        'api_types' => [
+            'storefront',
+        ],
+    ]);
+};
+```
+
+### Configure for GlueBackoffice
+
+`config/GlueBackoffice/packages/spryker_api_platform.php`
 
 ```php
 <?php
@@ -171,7 +215,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     protected function getRouterPlugins(): array
     {
         return [
-            new GlueRouterPlugin(), // Existing Glue REST API router
+            new GlueRouterPlugin(), // Existing Glue API router
             new SymfonyRouterPlugin(), // Add this for API Platform routes
         ];
     }
@@ -184,55 +228,32 @@ The order of router plugins matters. The `SymfonyRouterPlugin` should be added a
 
 {% endinfo_block %}
 
-### For Zed application
-
-`src/Pyz/Zed/Router/RouterDependencyProvider.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Zed\Router;
-
-use Spryker\Zed\Router\Plugin\Router\SymfonyRouterPlugin;
-use Spryker\Zed\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-
-class RouterDependencyProvider extends SprykerRouterDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterPluginInterface>
-     */
-    protected function getBackofficeRouterPlugins(): array
-    {
-        return [
-            // ... existing router plugins
-            new SymfonyRouterPlugin(), // Add this for API Platform routes
-        ];
-    }
-}
-```
-
 ## 5. Generate API resources
 
 After configuration, generate your API resources from schema files:
 
 ```bash
-# Generate resources for all configured API types
-console api:generate
+# Generate resources for all configured API types in Glue
+docker/sdk glue api:generate
 
-# Generate resources for a specific API type
-console api:generate storefront
-console api:generate backoffice
+# Generate resources for all configured API types in GlueStorefront
+docker/sdk GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate
+
+# Generate resources for all configured API types in GlueBackoffice
+docker/sdk GLUE_APPLICATION=GLUE_BACKOFFICE glue api:generate
+
+# Generate resources for a specific API type in Glue (others can follow the env var examples above) 
+docker/sdk glue api:generate storefront
+docker/sdk glue api:generate backoffice
 
 # Force regeneration (bypass cache)
-console api:generate --force
+docker/sdk glue api:generate --force
 
 # Dry run (see what would be generated)
-console api:generate --dry-run
+docker/sdk glue api:generate --dry-run
 
 # Validate schemas only
-console api:generate --validate-only
+docker/sdk glue api:generate --validate-only
 ```
 
 The generated resources will be created in `src/Generated/Api/{ApiType}/` directory.
@@ -244,7 +265,7 @@ Install the necessary assets for API Platform to function correctly:
 ### For Glue application
 
 ```bash
-docekr/sdk cli glue assets:install public/Glue/assets
+docker/sdk cli glue assets:install public/Glue/assets  --symlink
 ```
 
 ### For GlueStorefront
@@ -292,15 +313,16 @@ To verify your integration:
 
    ```bash
    # List all API resources
-   console api:debug --list
+   docker/sdk glue api:debug --list
 
    # Inspect specific resource
-   console api:debug access-tokens --api-type=storefront
+   docker/sdk glue api:debug access-tokens --api-type=storefront
    ```
 
 3. **Access API documentation:**
-   - Glue (Storefront): `https://your-domain/`
-   - Zed (Backoffice): `https://your-backoffice-domain/`
+   - Glue: `https://glue.your-domain/`
+   - GlueStorefront: `https://glue-storefront.your-domain/`
+   - GlueBackoffice: `https://glue-backoffice.your-domain/`
 
    The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
 

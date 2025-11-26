@@ -41,7 +41,7 @@ src/
 │               └── backoffice/
 │                   └── resource-name.yml
 └── Pyz/
-    └── Zed/
+    └── Glue/
         └── {Module}/
             └── resources/
                 └── api/
@@ -92,8 +92,8 @@ resource:
   description: "Customer resource"   # OpenAPI description
 
   # State providers and processors
-  provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-  processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+  provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+  processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
 
   # Pagination configuration
   paginationEnabled: true
@@ -441,7 +441,7 @@ resource:
 **Project layer** (highest priority):
 
 ```yaml
-# src/Pyz/Zed/Customer/resources/api/backoffice/customer.yml
+# src/Pyz/GLue/Customer/resources/api/backoffice/customer.yml
 resource:
   name: Customers
   properties:
@@ -521,10 +521,10 @@ The generator uses intelligent caching:
 
 ```bash
 # Force full regeneration
-console api:generate --force
+docker/sdk glue api:generate --force
 
 # Check cache status
-console api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backoffice
 ```
 
 ## Debugging schemas
@@ -533,19 +533,19 @@ console api:debug customers --api-type=backoffice
 
 ```bash
 # List all resources
-console api:debug --list
+docker/sdk glue api:debug --list
 
 # Show specific resource
-console api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backoffice
 
 # Show merged schema
-console api:debug customers --api-type=backoffice --show-merged
+docker/sdk glue api:debug customers --api-type=backoffice --show-merged
 
 # Show contributing source files
-console api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backoffice --show-sources
 
 # Validate schemas without generating
-console api:generate --validate-only
+docker/sdk glue api:generate --validate-only
 ```
 
 ### Common schema errors
@@ -563,7 +563,7 @@ Error: Invalid operation type "INVALID". Must be one of: Get, Post, Put, Patch, 
 Error: Property "age" has invalid type "int". Must be one of: string, integer, number, boolean, array, object
 
 # Provider class not found
-Error: Provider class "Pyz\Zed\Customer\Api\Backoffice\Provider\MissingProvider" does not exist
+Error: Provider class "Pyz\Glue\Customer\Api\Backoffice\Provider\MissingProvider" does not exist
 ```
 
 ## Advanced schema features
@@ -577,7 +577,7 @@ operations:
   - type: Post
     uriTemplate: "/customers/{id}/activate"
     method: "POST"
-    processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerActivationProcessor"
+    processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerActivationProcessor"
 ```
 
 ### Nested resources
@@ -614,17 +614,17 @@ resource:
 
 ```bash
 # Generate all configured API types
-console api:generate
+docker/sdk glue api:generate
 
 # Generate specific API type
-console api:generate backoffice
-console api:generate storefront
+docker/sdk glue api:generate backoffice
+docker/sdk glue api:generate storefront
 
 # Generate with options
-console api:generate --dry-run           # Preview without writing
-console api:generate --validate-only     # Only validate schemas
-console api:generate --force             # Bypass cache, regenerate all
-console api:generate --resource=customers  # Generate single resource
+docker/sdk glue api:generate --dry-run           # Preview without writing
+docker/sdk glue api:generate --validate-only     # Only validate schemas
+docker/sdk glue api:generate --force             # Bypass cache, regenerate all
+docker/sdk glue api:generate --resource=customers  # Generate single resource
 ```
 
 ### Output
@@ -744,7 +744,7 @@ resource:
       type: string
 
 # Project: Only override what's needed
-# src/Pyz/Zed/Customer/resources/api/backoffice/customer.yml
+# src/Pyz/Glue/Customer/resources/api/backoffice/customer.yml
 resource:
   name: Customers
   properties:

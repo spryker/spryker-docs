@@ -1,6 +1,6 @@
 ---
 title: API Platform
-description: Spryker's API Platform integration provides schema-based REST API resource generation with automatic OpenAPI documentation.
+description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation.
 last_updated: Nov 24, 2025
 template: concept-topic-template
 related:
@@ -39,7 +39,7 @@ Resource Class Generation
     ↓
 API Platform Resource (with attributes)
     ↓
-REST API Endpoints
+API Endpoints
 ```
 
 ### Core components
@@ -61,8 +61,8 @@ resource:
   shortName: Customer
   description: "Customer resource for backoffice API"
 
-  provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-  processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+  provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+  processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
 
   paginationEnabled: true
 
@@ -150,7 +150,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 
 Spryker supports multiple API types for different use cases:
 
-### Storefront API (Glue)
+### Glue API 
 
 - **API Type:** `storefront`
 - **Application:** Glue
@@ -158,11 +158,19 @@ Spryker supports multiple API types for different use cases:
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
 - **Example:** `/access-tokens`
 
-### Backoffice API (Zed)
+### GlueStorefront API 
+
+- **API Type:** `storefront`
+- **Application:** Glue
+- **Base URL:** `http://glue-storefront.eu.spryker.local/` - Configurable per project
+- **Use cases:** Customer-facing APIs, mobile apps, PWAs
+- **Example:** `/access-tokens`
+
+### GlueBackoffice API
 
 - **API Type:** `backoffice`
 - **Application:** Zed
-- **Base URL:** `http://backoffice.eu.spryker.local/`
+- **Base URL:** `http://glue-backoffice.eu.spryker.local/`
 - **Use cases:** Admin panels, internal tools, ERP integrations
 - **Example:** `/customers`
 
@@ -261,35 +269,35 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 
 ```bash
 # Generate all configured API types
-console api:generate
+docker/sdk glue api:generate
 
 # Generate specific API type
-console api:generate backoffice
+docker/sdk glue api:generate backoffice
 
 # Validate schemas only
-console api:generate --validate-only
+docker/sdk glue api:generate --validate-only
 
 # Force regeneration (bypass cache)
-console api:generate --force
+docker/sdk glue api:generate --force
 
 # Dry run
-console api:generate --dry-run
+docker/sdk glue api:generate --dry-run
 ```
 
 ### Debug commands
 
 ```bash
 # List all resources
-console api:debug --list
+docker/sdk glue api:debug --list
 
 # Inspect specific resource
-console api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backoffice
 
 # Show merged schema
-console api:debug customers --api-type=backoffice --show-merged
+docker/sdk glue api:debug customers --api-type=backoffice --show-merged
 
 # Show contributing files
-console api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backoffice --show-sources
 ```
 
 ## Features
@@ -370,13 +378,13 @@ The generator uses intelligent caching:
 Pre-generate resources during deployment:
 
 ```bash
-console api:generate
+docker/sdk glue api:generate
 ```
 
 or
 
 ```bash
-console cache:warmup
+docker/sdk glue cache:warmup
 ```
 
 ### Property-level access control
@@ -388,10 +396,10 @@ properties:
     readable: false  # Not in responses
 ```
 
-## Comparison with Glue REST API
+## Comparison with Glue API
 
-| Feature | API Platform | Glue REST API |
-|---------|-------------|---------------|
+| Feature | API Platform | Glue API |
+|---------|-------------|--------------|
 | Definition | Schema-based (YAML/XML) | Code-based (PHP) |
 | Documentation | Auto-generated OpenAPI | Manual |
 | Validation | Declarative | Programmatic |
@@ -407,7 +415,7 @@ Both can coexist in the same application. For further migration guidance, see [H
 For detailed implementation guides:
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup and configuration
-- [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue REST API
+- [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue API
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema syntax reference
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

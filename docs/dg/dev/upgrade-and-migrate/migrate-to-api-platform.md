@@ -1,6 +1,6 @@
 ---
 title: How to migrate to API Platform
-description: This document describes how to migrate existing Glue REST API resources to API Platform.
+description: This document describes how to migrate existing Glue API resources to API Platform.
 last_updated: Nov 24, 2025
 template: howto-guide-template
 related:
@@ -12,11 +12,11 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
 ---
 
-This document describes how to migrate existing Glue REST API resources to API Platform while maintaining backward compatibility.
+This document describes how to migrate existing Glue API resources to the API-Platform while maintaining backward compatibility.
 
 ## Overview
 
-Migrating from Glue REST API to API Platform provides several benefits:
+Migrating from Glue API to API Platform provides several benefits:
 
 - **Schema-based development**: Define resources declaratively in YAML/XML instead of PHP code
 - **Automatic OpenAPI documentation**: Interactive API docs generated from schemas
@@ -39,7 +39,7 @@ Before migrating resources, ensure you have:
 
 The migration follows a **gradual replacement** approach:
 
-1. **Coexistence**: Both Glue REST API and API Platform run side by side
+1. **Coexistence**: Both Glue API and API Platform run side by side
 2. **Router priority**: Existing Glue endpoints are matched first, API Platform endpoints second
 3. **Resource-by-resource**: Migrate one resource at a time, verify, then move to the next
 4. **No breaking changes**: Existing API consumers continue to work during migration
@@ -147,7 +147,7 @@ Create the equivalent API Platform schema for the resource.
 
 **Map Glue concepts to API Platform:**
 
-| Glue REST API | API Platform |
+| Glue API | API Platform |
 |---------------|--------------|
 | Resource class | Provider class |
 | Resource builder | Schema definition (YAML) |
@@ -167,8 +167,8 @@ resource:
     shortName: Customer
     description: "Customer resource for backoffice API"
 
-    provider: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-    processor: "Pyz\\Zed\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+    provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+    processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
 
     paginationEnabled: true
     paginationItemsPerPage: 10
@@ -567,7 +567,7 @@ Update internal API documentation to reference new endpoints:
 
 ## Migration comparison
 
-### Before: Glue REST API
+### Before: Glue API
 
 ```bash
 Request: GET /customers/DE--1
@@ -605,8 +605,8 @@ Response: JSON (auto-serialized)
 
 ## Key differences
 
-| Aspect | Glue REST API | API Platform |
-|--------|--------------|--------------|
+| Aspect | Glue API | API Platform |
+|--------|----------|--------------|
 | **Definition** | PHP classes & plugins | YAML schemas |
 | **Routing** | ResourceRoutePlugin | Schema operations |
 | **Reading data** | Reader classes | Provider classes |

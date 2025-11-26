@@ -387,7 +387,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 
 ### Step 6: Generate API Platform resource
 
-Generate the backoffice resource class from the schema:
+Generate the Back Office resource class from the schema:
 
 ```bash
 console api:generate

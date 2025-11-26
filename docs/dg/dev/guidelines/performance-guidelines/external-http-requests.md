@@ -71,14 +71,17 @@ $responses = Promise\Utils::unwrap($promises);
 
 ### WebProfiler Widget monitoring of external HTTP calls
 
-To effectively monitor external service integrations, use the [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves) Widget Collector to log external HTTP requests, presenting them within a profiler panel.
+To effectively monitor external service integrations, use the [WebProfiler](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves).
+Log external HTTP requests with `Spryker\Shared\Http\Logger\ExternalHttpInMemoryLoggerTrait`, so that you can easily see the request details in the WebProfiler Widget.
+
+WebProfiler Widget is available for local development only.
 
 ```php
 <?php
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
-use \Spryker\Shared\Http\Logger\ExternalHttpInMemoryLoggerTrait;
+use Spryker\Shared\Http\Logger\ExternalHttpInMemoryLoggerTrait;
 
 class MyApiClient
 {

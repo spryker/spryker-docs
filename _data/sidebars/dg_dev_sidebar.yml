@@ -808,6 +808,8 @@ entries:
     nested:
     - title: Upgrade to Symfony Dependency Injection
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
+    - title: How to integrate API Platform
+      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1194,6 +1196,16 @@ entries:
           url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
     - title: Symfony Bundles
       url: /docs/dg/dev/architecture/symfony-bundles.html
+
+    - title: API Platform
+      url: /docs/dg/dev/architecture/api-platform.html
+      nested:
+        - title: Schemas and Resource Generation
+          url: /docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+        - title: Enablement
+          url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

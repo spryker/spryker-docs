@@ -241,16 +241,22 @@ The generated resources will be created in `src/Generated/Api/{ApiType}/` direct
 
 Install the necessary assets for API Platform to function correctly:
 
-### For Glue application (Storefront)
+### For Glue application
 
 ```bash
-glue assets:install
+docekr/sdk cli glue assets:install public/Glue/assets
 ```
 
-### For Zed application (Backoffice)
+### For GlueStorefront
 
 ```bash
-console assets:install
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue assets:install public/GlueStorefront/assets/  --symlink
+```
+
+### For GlueBackend
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBackend/assets/  --symlink
 ```
 
 {% info_block warningBox "Required step" %}

@@ -130,16 +130,12 @@ layout: default
                             <span class="confirm-block__title-text">Thanks for letting us know!</span>
                         </strong>
                         <div class="confirm-block__buttons">
-                            <button class="button button--red confirm-block__button js-form-collapse__opener">Leave feedback</button>
+                            <a class="button button--red confirm-block__button feedback-form-url" target="_blank" href=# data-url-template="{{ site.form_endpoints['feedback'] }}">Leave feedback</a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </aside>
-
-        
     </div>
 
     <aside class="alt-sidebar">
@@ -160,44 +156,6 @@ layout: default
                     {% endfor %}
                 </div>
             {% endif %}
-        </div>
-
-        <div class="js-form-collapse__slide feedback-form__slide">
-            <form id="feedback-form" class="feedback-form" action="{{ site.form_endpoints['feedback'] }}" method="POST">
-                <input type="hidden" name="url" value="{{ page.url }}">
-                <input type="hidden" name="helpful" class="js-form-collapse__short-feedback">
-                <h3 class="feedback-form__title" data-toc-skip>Tell us what could be better</h3>
-                <div class="feedback-form__block">
-                    <div class="feedback-form__column">
-                        <div class="feedback-form__relative">
-                            <input id="feedback-name" type="text" name="name" class="feedback-form__input" placeholder="Name (Optional)">
-                            <label for="feedback-name">Name <mark>(Optional)</mark></label>
-                        </div>
-                    </div>
-                    <div class="feedback-form__column">
-                        <div class="feedback-form__relative">
-                            <input id="feedback-email" type="email" name="email" class="feedback-form__input optional-email" placeholder="Email (Optional)">
-                            <label for="feedback-email">Email <mark>(Optional)</mark></label>
-                            <span class="feedback-form__error">Invalid email format.</span>
-                        </div>
-                    </div>
-                    <div class="feedback-form__column feedback-form__column--full">
-                        <div class="feedback-form__relative">
-                            <textarea id="feedback-text" name="feedback" class="feedback-form__textarea required-field" placeholder="Type your thoughts here"></textarea>
-                            <label for="feedback-text">Type your thoughts here</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="feedback-form__action-row">
-                    <input id="feedback-submit" type="submit" value="Send feedback" class="feedback-form__submit button button--black">
-                </div>
-            </form>
-            <div class="feedback-form__success-message">
-                <p>We appreciate the time you took to share the feedback <br class="mobile-hidden">and will consider it as soon as possible.</p>
-            </div>
-            <a href="#" class="feedback-form__close js-form-collapse__close">
-                <i class="icon-cross"></i>
-            </a>
         </div>
     </aside>
 

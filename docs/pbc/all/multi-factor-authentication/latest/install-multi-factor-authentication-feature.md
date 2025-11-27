@@ -26,7 +26,7 @@ This document describes how to install the [Multi-Factor Authentication (MFA) fe
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/multi-factor-auth:"^1.0.0" spryker/multi-factor-auth-extension:"^1.1.0" --update-with-dependencies
+composer require spryker/multi-factor-auth:"^2.1.0" spryker/multi-factor-auth-extension:"^1.2.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

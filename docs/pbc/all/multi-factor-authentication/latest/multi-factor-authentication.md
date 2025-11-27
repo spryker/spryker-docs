@@ -8,16 +8,6 @@ redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
 ---
 
-{% info_block warningBox "Beta feature" %}
-
-The multi-factor auth module is in beta. It's not stable and *may be significantly changed in future releases*.
-
-By using this feature, you accept full responsibility for any potential issues, including breaking changes, limited support, and incomplete functionality.
-
-*We don't recommend using this in production environments*. You may have to adapt this implementation for future releases.
-
-{% endinfo_block %}
-
 Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, agents, merchant, and merchant agent users by requiring multiple methods of authentication before allowing an action.
 
 Benefits of MFA:
@@ -96,6 +86,15 @@ You can configure other actions to be protected with MFA according to your requi
 After a customer/user successfully enters a valid MFA code, there's a configurable time interval during which MFA validation isn't required for subsequent actions. This improves user experience because users sometimes need to perform multiple protected actions within a short period of time.
 
 For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#set-up-configuration).
+
+**Note:** To enhance security, the Multi-Factor Authentication system automatically invalidates all active MFA codes when a user logs in. This security measure ensures:
+
+- **Fresh authentication required**: Each login requires a new authentication code, even if previous session codes are still technically valid
+- **Prevention of code reuse**: Old codes from expired or terminated sessions cannot be reused
+- **Protection against session hijacking**: Attackers cannot use intercepted codes from previous sessions
+- **Seamless user experience**: Code invalidation happens automatically in the background without requiring additional user actions
+
+This security mechanism applies to all user types: customers, Back Office users, agents, merchants, and merchant agent users.
 
 ## Brute force protection
 

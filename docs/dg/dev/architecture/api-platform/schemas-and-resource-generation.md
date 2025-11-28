@@ -16,7 +16,7 @@ This document explains how API Platform schemas are defined and how resources ar
 
 ## Schema file structure
 
-API Platform uses YAML (or XML) files to define resource schemas. Schemas describe the structure, operations, and behavior of your API resources.
+API Platform uses YAML files to define resource schemas. Schemas describe the structure, operations, and behavior of your API resources.
 
 ### Schema location
 
@@ -92,8 +92,8 @@ resource:
   description: "Customer resource"   # OpenAPI description
 
   # State providers and processors
-  provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-  processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+  provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
+  processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerBackendProcessor"
 
   # Pagination configuration
   paginationEnabled: true
@@ -397,7 +397,7 @@ The operation names map to HTTP methods:
 ```MARKDOWN
 1. Schema Discovery
    ↓
-2. Schema Loading (YAML/XML)
+2. Schema Loading (YAML)
    ↓
 3. Schema Parsing
    ↓
@@ -417,7 +417,7 @@ Spryker automatically merges schemas from multiple layers:
 **Core layer** (lowest priority):
 
 ```yaml
-# vendor/spryker/customer/resources/api/backoffice/customer.yml
+# vendor/spryker/customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -430,7 +430,7 @@ resource:
 **Feature layer** (medium priority):
 
 ```yaml
-# src/SprykerFeature/CRM/resources/api/backoffice/customer.yml
+# src/SprykerFeature/CRM/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -441,7 +441,7 @@ resource:
 **Project layer** (highest priority):
 
 ```yaml
-# src/Pyz/GLue/Customer/resources/api/backoffice/customer.yml
+# src/Pyz/GLue/Customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -476,7 +476,7 @@ The generator creates a complete PHP class with API Platform attributes:
 <?php
 
 declare(strict_types=1);
-namespace Generated\Api\Backoffice;
+namespace Generated\Api\Backend;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\ApiProperty;
@@ -490,11 +490,11 @@ use ApiPlatform\Metadata\Delete;
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
     shortName: 'Customer',
-    provider: CustomerBackofficeProvider::class,
-    processor: CustomerBackofficeProcessor::class,
+    provider: CustomerBackendProvider::class,
+    processor: CustomerBackendProcessor::class,
     paginationItemsPerPage: 10
 )]
-final class CustomersBackofficeResource
+final class CustomersBackendResource
 {
     #[ApiProperty(writable: false)]
     public ?int $idCustomer = null;
@@ -524,7 +524,7 @@ The generator uses intelligent caching:
 docker/sdk glue api:generate --force
 
 # Check cache status
-docker/sdk glue api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backend
 ```
 
 ## Debugging schemas
@@ -536,13 +536,13 @@ docker/sdk glue api:debug customers --api-type=backoffice
 docker/sdk glue api:debug --list
 
 # Show specific resource
-docker/sdk glue api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backoffice --show-merged
+docker/sdk glue api:debug customers --api-type=backend --show-merged
 
 # Show contributing source files
-docker/sdk glue api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
 docker/sdk glue api:generate --validate-only
@@ -563,7 +563,7 @@ Error: Invalid operation type "INVALID". Must be one of: Get, Post, Put, Patch, 
 Error: Property "age" has invalid type "int". Must be one of: string, integer, number, boolean, array, object
 
 # Provider class not found
-Error: Provider class "Pyz\Glue\Customer\Api\Backoffice\Provider\MissingProvider" does not exist
+Error: Provider class "Pyz\Glue\Customer\Api\Backend\Provider\MissingProvider" does not exist
 ```
 
 ## Advanced schema features
@@ -577,7 +577,7 @@ operations:
   - type: Post
     uriTemplate: "/customers/{id}/activate"
     method: "POST"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerActivationProcessor"
+    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerActivationProcessor"
 ```
 
 ### Nested resources
@@ -617,7 +617,7 @@ resource:
 docker/sdk glue api:generate
 
 # Generate specific API type
-docker/sdk glue api:generate backoffice
+docker/sdk glue api:generate backend
 docker/sdk glue api:generate storefront
 
 # Generate with options
@@ -736,7 +736,7 @@ password:
 
 ```yaml
 # Core: Define base properties
-# src/Spryker/Customer/resources/api/backoffice/customer.yml
+# src/Spryker/Customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -744,7 +744,7 @@ resource:
       type: string
 
 # Project: Only override what's needed
-# src/Pyz/Glue/Customer/resources/api/backoffice/customer.yml
+# src/Pyz/Glue/Customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:

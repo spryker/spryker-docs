@@ -85,9 +85,9 @@ return [
 ];
 ```
 
-### For GlueBackoffice application
+### For GlueBackend application
 
-`config/GlueBackoffice/bundles.php`
+`config/GlueBackend/bundles.php`
 
 ```php
 <?php
@@ -127,7 +127,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('spryker_api_platform', [
         // Configure which API types to generate and cache warm
-        // Common values: 'backoffice', 'storefront', 'merchant-portal'
+        // Common values: 'backend', 'storefront', 'merchant-portal'
         'api_types' => [
             'storefront',
         ],
@@ -168,9 +168,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-### Configure for GlueBackoffice
+### Configure for GlueBackend
 
-`config/GlueBackoffice/packages/spryker_api_platform.php`
+`config/GlueBackend/packages/spryker_api_platform.php`
 
 ```php
 <?php
@@ -182,7 +182,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('spryker_api_platform', [
         'api_types' => [
-            'backoffice',
+            'backend',
         ],
     ]);
 };
@@ -239,12 +239,12 @@ docker/sdk glue api:generate
 # Generate resources for all configured API types in GlueStorefront
 docker/sdk GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate
 
-# Generate resources for all configured API types in GlueBackoffice
-docker/sdk GLUE_APPLICATION=GLUE_BACKOFFICE glue api:generate
+# Generate resources for all configured API types in GlueBackend
+docker/sdk GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
-# Generate resources for a specific API type in Glue (others can follow the env var examples above) 
+# Generate resources for a specific API type in Glue (others can follow the env var examples above)
 docker/sdk glue api:generate storefront
-docker/sdk glue api:generate backoffice
+docker/sdk glue api:generate backend
 
 # Force regeneration (bypass cache)
 docker/sdk glue api:generate --force
@@ -306,7 +306,7 @@ To verify your integration:
 
    ```bash
    ls -la src/Generated/Api/Storefront/
-   ls -la src/Generated/Api/Backoffice/
+   ls -la src/Generated/Api/Backend/
    ```
 
 2. **Debug available resources:**
@@ -322,7 +322,7 @@ To verify your integration:
 3. **Access API documentation:**
    - Glue: `https://glue.your-domain/`
    - GlueStorefront: `https://glue-storefront.your-domain/`
-   - GlueBackoffice: `https://glue-backoffice.your-domain/`
+   - GlueBackend: `https://glue-backend.your-domain/`
 
    The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
 

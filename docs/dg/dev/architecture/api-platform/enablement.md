@@ -30,7 +30,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 
 **Example: Customer resource for Back Office API**
 
-`src/Pyz/Glue/Customer/resources/api/backoffice/customers.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
 
 ```yaml
 # yaml-language-server: $schema=../../../../SprykerSdk/Api/resources/schemas/api-resource-schema-v1.json
@@ -38,10 +38,10 @@ Create a schema file that defines your API resource structure. Schemas should be
 resource:
     name: Customers
     shortName: Customer
-    description: "Customer resource for backoffice API"
+    description: "Customer resource for backend API"
 
-    provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+    provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
+    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerBackendProcessor"
 
     paginationEnabled: true
     paginationItemsPerPage: 10
@@ -88,7 +88,7 @@ resource:
 
 Define validation rules in a separate validation schema file:
 
-`src/Pyz/Glue/Customer/resources/api/backoffice/customers.validation.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.validation.yml`
 
 ```yaml
 post:
@@ -125,20 +125,20 @@ patch:
 
 The Provider is responsible for fetching data (GET operations). Implement the `ProviderInterface`:
 
-`src/Pyz/Glue/Customer/Api/Backoffice/Provider/CustomerBackofficeProvider.php`
+`src/Pyz/Glue/Customer/Api/Backend/Provider/CustomerBackendProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Glue\Customer\Api\Backoffice\Provider;
+namespace Pyz\Glue\Customer\Api\Backend\Provider;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\Pagination\TraversablePaginator;
 use ApiPlatform\State\ProviderInterface;
 use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
-use Generated\Api\Backoffice\CustomersBackofficeResource;
+use Generated\Api\Backend\CustomersBackendResource;
 
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider implements ProviderInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -163,7 +163,7 @@ class CustomerBackofficeProvider implements ProviderInterface
         return $this->getCustomers($context);
     }
 
-    private function getCustomer(string $customerReference): ?CustomersBackofficeResource
+    private function getCustomer(string $customerReference): ?CustomersBackendResource
     {
         $customerTransfer = $this->customerFacade->findCustomerByReference($customerReference);
 
@@ -172,7 +172,7 @@ class CustomerBackofficeProvider implements ProviderInterface
         }
 
         // Map to API resource
-        $resource = new CustomersBackofficeResource();
+        $resource = new CustomersBackendResource();
         $resource->fromArray($customerTransfer->toArray());
 
         return $resource;
@@ -188,7 +188,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 
         $resources = [];
         foreach ($customerCollection->getCustomers() as $customerTransfer) {
-            $resource = new CustomersBackofficeResource();
+            $resource = new CustomersBackendResource();
             $resource->fromArray($customerTransfer->toArray());
 
             $resources[] = $resource;
@@ -208,12 +208,12 @@ class CustomerBackofficeProvider implements ProviderInterface
 
 The Processor handles data modifications (POST, PUT, PATCH, DELETE). Implement the `ProcessorInterface`:
 
-`src/Pyz/Glue/Customer/Api/Backoffice/Processor/CustomerBackofficeProcessor.php`
+`src/Pyz/Glue/Customer/Api/Backend/Processor/CustomerBackendProcessor.php`
 
 ```php
 <?php
 
-namespace Pyz\Glue\Customer\Api\Backoffice\Processor;
+namespace Pyz\Glue\Customer\Api\Backend\Processor;
 
 use ApiPlatform\Metadata\Delete;
 use ApiPlatform\Metadata\Operation;
@@ -221,9 +221,9 @@ use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\State\ProcessorInterface;
 use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
-use Generated\Api\Backoffice\CustomersBackofficeResource;
+use Generated\Api\Backend\CustomersBackendResource;
 
-class CustomerBackofficeProcessor implements ProcessorInterface
+class CustomerBackendProcessor implements ProcessorInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -261,7 +261,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
         return null;
     }
 
-    private function mapToTransfer(CustomersBackofficeResource $resource): CustomerTransfer
+    private function mapToTransfer(CustomersBackendResource $resource): CustomerTransfer
     {
         $transfer = new CustomerTransfer();
         $transfer->fromArray($resource->toArray(), true);
@@ -269,9 +269,9 @@ class CustomerBackofficeProcessor implements ProcessorInterface
         return $transfer;
     }
 
-    private function mapToResource(CustomerTransfer $transfer): CustomersBackofficeResource
+    private function mapToResource(CustomerTransfer $transfer): CustomersBackendResource
     {
-        $resource = new CustomersBackofficeResource();
+        $resource = new CustomersBackendResource();
         $resource->fromArray($transfer->toArray());
 
         return $resource;
@@ -284,12 +284,12 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 Run the generation command to create the API resource class:
 
 ```bash
-docker/sdk glue api:generate backoffice
+docker/sdk glue api:generate backend
 ```
 
 This generates:
 
-`src/Generated/Api/Backoffice/CustomersBackofficeResource.php`
+`src/Generated/Api/Backend/CustomersBackendResource.php`
 
 The generated class includes:
 - API Platform attributes (`#[ApiResource]`, `#[ApiProperty]`)
@@ -363,9 +363,9 @@ Spryker supports multiple API types for different use cases:
 
 ### Back Office API (Glue)
 
-- **API Type:** `backoffice`
-- **Module location:** `src/Pyz/Glue/{Module}/resources/api/backoffice/`
-- **Generated namespace:** `Generated\Api\Backoffice`
+- **API Type:** `backend`
+- **Module location:** `src/Pyz/Glue/{Module}/resources/api/backend/`
+- **Generated namespace:** `Generated\Api\Backend`
 - **Use cases:** Admin panels, internal tools, ERP integrations
 
 ### Merchant Portal API
@@ -381,15 +381,15 @@ API Platform supports multi-layer schema definitions with automatic merging:
 
 ### Core layer
 
-`vendor/spryker/customer/resources/api/backoffice/customer.yml` - Base definition
+`vendor/spryker/customer/resources/api/backend/customer.yml` - Base definition
 
 ### Feature layer
 
-`src/SprykerFeature/CustomerRelationManagement/resources/api/backoffice/customer.yml` - Feature enhancements
+`src/SprykerFeature/CustomerRelationManagement/resources/api/backend/customer.yml` - Feature enhancements
 
 ### Project layer
 
-`src/Pyz/Glue/Customer/resources/api/backoffice/customer.yml` - Project customizations
+`src/Pyz/Glue/Customer/resources/api/backend/customer.yml` - Project customizations
 
 The generator automatically merges these schemas with project layer taking precedence.
 
@@ -402,13 +402,13 @@ Use the debug command to inspect resources:
 docker/sdk glue api:debug --list
 
 # Show resource details
-docker/sdk glue api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backoffice --show-merged
+docker/sdk glue api:debug customers --api-type=backend --show-merged
 
 # Show source files
-docker/sdk glue api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backend --show-sources
 ```
 
 ## Next steps

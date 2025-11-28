@@ -10,7 +10,7 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
 
-Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML or XML schemas and automatically generate fully-functional API endpoints with validation, pagination, and serialization.
+Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully-functional API endpoints with validation, pagination, and serialization.
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
@@ -18,7 +18,7 @@ This document describes the API Platform architecture and how it integrates with
 
 API Platform is a framework for building modern APIs based on web standards and best practices. In Spryker, it complements the existing Glue API infrastructure by providing:
 
-- **Schema-based resource generation**: Define resources in YAML/XML, generate PHP classes automatically
+- **Schema-based resource generation**: Define resources in YAML, generate PHP classes automatically
 - **Automatic OpenAPI documentation**: Interactive API documentation generated from schemas
 - **Built-in validation**: Symfony Validator integration with operation-specific rules
 - **Pagination support**: Standardized pagination with configurable defaults
@@ -29,7 +29,7 @@ API Platform is a framework for building modern APIs based on web standards and 
 ### Resource generation workflow
 
 ```MARKDOWN
-Schema Files (YAML/XML)
+Schema Files (YAML)
     ↓
 Schema Discovery & Validation
     ↓
@@ -46,7 +46,7 @@ API Endpoints
 
 #### 1. Schema files
 
-Resources are defined in YAML or XML files located in module directories:
+Resources are defined in YAML files located in module directories:
 
 ```MARKDOWN
 src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.yml
@@ -59,10 +59,10 @@ Example schema:
 resource:
   name: Customers
   shortName: Customer
-  description: "Customer resource for backoffice API"
+  description: "Customer resource for backend API"
 
-  provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-  processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+  provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
+  processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerBackendProcessor"
 
   paginationEnabled: true
 
@@ -87,12 +87,12 @@ resource:
 
 The generator creates PHP classes with API Platform attributes:
 
-`src/Generated/Api/Backoffice/CustomersBackofficeResource.php`
+`src/Generated/Api/Backend/CustomersBackendResource.php`
 
 ```php
 <?php
 
-namespace Generated\Api\Backoffice;
+namespace Generated\Api\Backend;
 
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\ApiProperty;
@@ -101,10 +101,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
     shortName: 'Customer',
-    provider: CustomerBackofficeProvider::class,
-    processor: CustomerBackofficeProcessor::class
+    provider: CustomerBackendProvider::class,
+    processor: CustomerBackendProcessor::class
 )]
-final class CustomersBackofficeResource
+final class CustomersBackendResource
 {
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $customerReference = null;
@@ -123,7 +123,7 @@ final class CustomersBackofficeResource
 **Provider (read operations):**
 
 ```php
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider implements ProviderInterface
 {
     public function provide(Operation $operation, array $uriVariables = [], array $context = []): object|array|null
     {
@@ -136,7 +136,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 **Processor (write operations):**
 
 ```php
-class CustomerBackofficeProcessor implements ProcessorInterface
+class CustomerBackendProcessor implements ProcessorInterface
 {
     public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = []): mixed
     {
@@ -166,11 +166,11 @@ Spryker supports multiple API types for different use cases:
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
 - **Example:** `/access-tokens`
 
-### GlueBackoffice API
+### GlueBackend API
 
-- **API Type:** `backoffice`
+- **API Type:** `backend`
 - **Application:** Zed
-- **Base URL:** `http://glue-backoffice.eu.spryker.local/`
+- **Base URL:** `http://glue-backend.eu.spryker.local/`
 - **Use cases:** Admin panels, internal tools, ERP integrations
 - **Example:** `/customers`
 
@@ -248,7 +248,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 Resources can leverage existing Spryker facades:
 
 ```php
-class CustomerBackofficeProcessor implements ProcessorInterface
+class CustomerBackendProcessor implements ProcessorInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -272,7 +272,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 docker/sdk glue api:generate
 
 # Generate specific API type
-docker/sdk glue api:generate backoffice
+docker/sdk glue api:generate backend
 
 # Validate schemas only
 docker/sdk glue api:generate --validate-only
@@ -291,13 +291,13 @@ docker/sdk glue api:generate --dry-run
 docker/sdk glue api:debug --list
 
 # Inspect specific resource
-docker/sdk glue api:debug customers --api-type=backoffice
+docker/sdk glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backoffice --show-merged
+docker/sdk glue api:debug customers --api-type=backend --show-merged
 
 # Show contributing files
-docker/sdk glue api:debug customers --api-type=backoffice --show-sources
+docker/sdk glue api:debug customers --api-type=backend --show-sources
 ```
 
 ## Features
@@ -400,7 +400,7 @@ properties:
 
 | Feature | API Platform | Glue API |
 |---------|-------------|--------------|
-| Definition | Schema-based (YAML/XML) | Code-based (PHP) |
+| Definition | Schema-based (YAML) | Code-based (PHP) |
 | Documentation | Auto-generated OpenAPI | Manual |
 | Validation | Declarative | Programmatic |
 | Standards | JSON-LD, Hydra | JSON API |

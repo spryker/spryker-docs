@@ -18,7 +18,7 @@ This document describes how to migrate existing Glue API resources to the API-Pl
 
 Migrating from Glue API to API Platform provides several benefits:
 
-- **Schema-based development**: Define resources declaratively in YAML/XML instead of PHP code
+- **Schema-based development**: Define resources declaratively in YAML instead of PHP code
 - **Automatic OpenAPI documentation**: Interactive API docs generated from schemas
 - **Reduced boilerplate**: No need for manual resource builders, mappers, and route definitions
 - **Built-in validation**: Declarative validation rules with operation-specific constraints

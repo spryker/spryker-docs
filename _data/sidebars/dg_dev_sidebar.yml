@@ -1313,6 +1313,24 @@ entries:
     - title: Performance guidelines
       url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
+      - title: Monitoring
+        url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: General performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Architecture performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+      - title: Frontend performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+      - title: Twig performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
+      - title: Session locks
+        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
+      - title: Bot control
+        url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
+      - title: Batch processing of Propel entities
+        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
+      - title: External HTTP requests
+        url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
@@ -1321,17 +1339,6 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
-
-      - title: General performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
-      - title: Batch processing of Propel entities
-        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
-      - title: External HTTP requests
-        url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
-      - title: Architecture performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
-      - title: Frontend performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html

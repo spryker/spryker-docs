@@ -20,16 +20,16 @@ This document describes how to use the Symfony Dependency Injection component in
 
 You can configure your services in one of the following files:
 
-- `config/Symfony/{APPLICATION}/services.php`
-- `config/Symfony/{APPLICATION}/services.yml`
-- `config/Symfony/{APPLICATION}/ApplicationServices.php`
-- `config/Symfony/{APPLICATION}/*Services.php`
+- `config/{APPLICATION}/services.php`
+- `config/{APPLICATION}/services.yml`
+- `config/{APPLICATION}/ApplicationServices.php`
+- `config/{APPLICATION}/*Services.php`
 
 We recommend following the Symfony standard for configuring your container setup. For details, see [Service Container](https://symfony.com/doc/current/service_container.html) in the Symfony documentation.
 
 A project-level `ApplicationServices.php` file can be used to discover and register your services automatically. Here is an example of how you can configure it:
 
-`config/Symfony/{APPLICATION}/ApplicationServices.php`
+`config/{APPLICATION}/ApplicationServices.php`
 
 ```php
 <?php
@@ -241,7 +241,7 @@ class MyService
 }
 ```
 
-Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Symfony/Yves/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
+Because we configured service discovery for the `Pyz\Yves\MyModule` namespace in `config/Yves/ApplicationServices.php` and autowiring is enabled, `SomeService` is automatically injected into `MyService`.
 
 ## Related documentation
 

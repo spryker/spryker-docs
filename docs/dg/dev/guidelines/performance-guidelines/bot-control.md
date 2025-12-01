@@ -38,7 +38,7 @@ Filter out IP ranges based on geoip databases, user agents, URLs, or any combina
 
 ### Advanced bot management services
 
-The most efficient, dynamic, and feature-rich solutions are tools like **Akamai, Cloudflare**-like services for bot control, not only to granularly control official bots (e.g., social networks and commercial LLMs), but also those unofficial - crawlers, scanners, and malicious ones.
+The most efficient, dynamic, and feature-rich solutions are tools like **Akamai, Cloudflare**-like services for bot control, not only to granularly control official bots (for example social networks and commercial LLMs), but also those unofficial - crawlers, scanners, and malicious ones.
 
 ## The problem with nginx-based solutions
 

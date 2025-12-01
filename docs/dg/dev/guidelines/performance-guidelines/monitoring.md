@@ -9,17 +9,18 @@ template: concept-topic-template
 
 ## Ensure the APM tool is active
 
-It can be NewRelic or OpenTelemetry with any supported backend (e.g. Grafana, DataDog, etc).
+It can be NewRelic or OpenTelemetry with any supported backend (for example Grafana, DataDog, etc).
 
 ### OpenTelemetry
 
-For OpenTelemetry integration, see [OpenTelemetry - Spryker Monitoring Integration](/docs/dg/dev/integrate-and-configure/integrate-opentelemetry.html).
+For OpenTelemetry integration, see [OpenTelemetry - Spryker Monitoring Integration](/docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html).
 
 ### NewRelic
 
 For NewRelic configuration:
-- [Configure services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
-- [Deploy file inheritance: common use cases](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+- [Configure services](/docs/dg/dev/integrate-and-configure/configure-services#new-relic)
+- [Deploy file inheritance: common use cases - Enabling NewRelic](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases#enabling-new-relic)
+- [Troubleshooting Performance Issues](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues)
 
 #### NewRelic instrumentation tips for Backend-Gateway
 
@@ -136,9 +137,9 @@ Add the custom `BackendGatewayMonitoringRequestTransactionEventDispatcherPlugin`
 
 ## APM is properly configured
 
-Traces/transactions are grouped by application (Yves, Zed, Glue, etc) and by URL or command name (e.g. `/place-order` or `oms:check-conditions`, etc). Spryker OpenTelemetry APM has it OOTB, NewRelic has to be configured on a project level.
+Traces/transactions are grouped by application (Yves, Zed, Glue, etc) and by URL or command name (for example `/place-order` or `oms:check-conditions`, etc). Spryker OpenTelemetry APM has it OOTB, NewRelic has to be configured on a project level.
 
-For NewRelic transactions grouping, see [New Relic transactions grouping by queue names](/docs/dg/dev/integrate-and-configure/integrate-new-relic.html).
+For NewRelic transactions grouping, see [New Relic transactions grouping by queue names](/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names).
 
 ## APM access
 

@@ -165,13 +165,13 @@ use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmingModeEventSubscriberPlugi
 
 Twig template engine Spryker uses for Yves and some other background features like PDF invoice generation and email rendering has multiple ways to load templates:
 
-- **Templates from files** - regular and most popular option, Twig templates are loaded and referenced by file name, e.g. `add-to-cart-form.twig`, etc. Cache based on a file name.
+- **Templates from files** - regular and most popular option, Twig templates are loaded and referenced by file name, for example `add-to-cart-form.twig`, etc. Cache based on a file name.
 - **Templates from strings** - in case a template content was compiled "on the fly" and retrieved from the external system or database, Twig has a standard string loader. Cache based on a string content, a hash from the content.
 - **Custom loaders** - make it possible to implement retrieval and caching logic in accordance to a project's needs. Cache implemented based on custom logic.
 
 Twig compiles (preprocesses) templates written in its language (`.twig` files) into PHP code (known as compiled templates) and stores it as a cache to improve performance, and only a template is compiled once.
 
-**The problem:** When loading a template from a string - Twig will use template content (its hash) as a cache key, which means that each time content changes due to a change by a user, or a change due to dynamic nature of a template (e.g. template compiled from other pre-processed strings) - the hash will be different and a new version of the same template will be saved under the different hash key on disk.
+**The problem:** When loading a template from a string - Twig will use template content (its hash) as a cache key, which means that each time content changes due to a change by a user, or a change due to dynamic nature of a template (for example template compiled from other pre-processed strings) - the hash will be different and a new version of the same template will be saved under the different hash key on disk.
 
 Yves containers are running on AWS EC2 virtual nodes. Spryker configuration limits disk space per EC2 node to 50 GB (as of Mar 18, 2025), even in production environments.
 

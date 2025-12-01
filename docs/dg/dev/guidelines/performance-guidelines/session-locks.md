@@ -10,7 +10,7 @@ Session Locking mechanism is a standard way of ensuring atomic operations/access
 - locks a session before each request
 - releases the lock at the end of each request, before sending content
 
-It means that during such a request, parallel requests within the same session (authenticated customer or anonymous user) may be dependent on one another, so for example, 2nd one will wait for 1st one to complete. This is done to ensure transactional operations, such as add-to-cart, quote, or discount calculations, are correct at all times.
+It means that during such a request, parallel requests within the same session (authenticated customer or anonymous user) may be dependent on one another, so for example, second one will wait for the first one to complete. This is done to ensure transactional operations, such as add-to-cart, quote, or discount calculations, are correct at all times.
 
 However, this introduces inefficiencies and slowness in modern applications when there are multiple async requests or a user actively browses the shop using multiple tabs.
 

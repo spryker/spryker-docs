@@ -49,15 +49,15 @@ A default recipe file can be split into four logical blocks:
 
 1) Build sections:
 
-    - `build`: build a pre-generated code base like transfer, cache, and schema.
-    - `build-production`: build a pre-generated code base specific to the production environment.
-    - `build-development`: build a pre-generated code base specific to the development environment.
+    - `build`: build a pre-generated code base like transfer, cache, and schema. It's executed on development and production environments first.
+    - `build-production`: build a pre-generated code base specific to the production environment. It's executed after `build`.
+    - `build-development`: build a pre-generated code base specific to the development environment. It's executed after `build`.
 
 2) Assets sections:
 
-    - `build-static`: install frontend dependencies.
-    - `build-static-production`: install the dependencies specific to the production environment.
-    - `build-static-development`: install the dependencies specific to the development environment.
+    - `build-static`: install frontend dependencies. It's executed on development and production environments first.
+    - `build-static-production`: install the dependencies specific to the production environment. It's executed after `build`.
+    - `build-static-development`: install the dependencies specific to the development environment. It's executed after `build`.
 
 3) Data sections:
 
@@ -73,7 +73,7 @@ A default recipe file can be split into four logical blocks:
     - `scheduler-suspend`: suspend the scheduler.
     - `scheduler-clean`: clean the scheduler.
 
-These sections are part of the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html) and cannot be renamed.
+These sections are part of the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html) and cannot be nor renamed, neither the order of execution changed.
 
 ## Customization of recipes
 
@@ -119,7 +119,7 @@ You can use them as a hook definition when [customizing pipelines](/docs/ca/dev/
 
 ```shell
 image:
-    tag: spryker/php:8.1
+    tag: spryker/php:8.4
     environment:
         SPRYKER_HOOK_BEFORE_DEPLOY: 'vendor/bin/install -r EU/pre-deploy -vvv'
         SPRYKER_HOOK_INSTALL: 'vendor/bin/install -r EU/production --no-ansi -vvv'

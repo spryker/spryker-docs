@@ -33,7 +33,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 `src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
 
 ```yaml
-# yaml-language-server: $schema=../../../../SprykerSdk/Api/resources/schemas/api-resource-schema-v1.json
+# yaml-language-server: $schema=../../../../../vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
 
 resource:
     name: Customers
@@ -284,7 +284,7 @@ class CustomerBackendProcessor implements ProcessorInterface
 Run the generation command to create the API resource class:
 
 ```bash
-docker/sdk glue api:generate backend
+docker/sdk cli glue  api:generate backend
 ```
 
 This generates:
@@ -399,16 +399,16 @@ Use the debug command to inspect resources:
 
 ```bash
 # List all resources
-docker/sdk glue api:debug --list
+docker/sdk cli glue  api:debug --list
 
 # Show resource details
-docker/sdk glue api:debug customers --api-type=backend
+docker/sdk cli glue  api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backend --show-merged
+docker/sdk cli glue  api:debug customers --api-type=backend --show-merged
 
 # Show source files
-docker/sdk glue api:debug customers --api-type=backend --show-sources
+docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 ```
 
 ## Next steps

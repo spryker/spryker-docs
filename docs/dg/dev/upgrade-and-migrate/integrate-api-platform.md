@@ -111,7 +111,7 @@ return [
 
 ## 3. Configure API Platform
 
-Create configuration files for the API Platform in each application layer.
+Create configuration files for the API Platform in each application layer where you want to enable the API-Platform.
 
 ### Configure for Glue
 
@@ -122,29 +122,10 @@ Create configuration files for the API Platform in each application layer.
 
 declare(strict_types=1);
 
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Config\SprykerApiPlatformConfig;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->extension('spryker_api_platform', [
-        // Configure which API types to generate and cache warm
-        // Common values: 'backend', 'storefront', 'merchant-portal'
-        'api_types' => [
-            'storefront',
-        ],
-
-        // Optional: Configure source directories to search for schema files
-        // 'source_directories' => [
-        //     'src/Spryker',
-        //     'src/SprykerFeature',
-        //     'src/Pyz',
-        // ],
-
-        // Optional: Override generated directory
-        // 'generated_dir' => 'src/Generated/Api',
-
-        // Optional: Override cache directory
-        // 'cache_dir' => '%kernel.cache_dir%/api-generator',
-    ]);
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
 };
 ```
 
@@ -157,14 +138,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 declare(strict_types=1);
 
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Config\SprykerApiPlatformConfig;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->extension('spryker_api_platform', [
-        'api_types' => [
-            'storefront',
-        ],
-    ]);
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
 };
 ```
 
@@ -177,14 +154,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 declare(strict_types=1);
 
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Config\SprykerApiPlatformConfig;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->extension('spryker_api_platform', [
-        'api_types' => [
-            'backend',
-        ],
-    ]);
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['backend']);
 };
 ```
 
@@ -203,7 +176,7 @@ declare(strict_types = 1);
 
 namespace Pyz\Glue\Router;
 
-use Spryker\Glue\Router\Plugin\Router\SymfonyRouterPlugin;
+use Spryker\Glue\Router\Plugin\Router\SymfonyFrameworkRouterPlugin;
 use Spryker\Glue\GlueApplication\Plugin\Rest\GlueRouterPlugin;
 use Spryker\Glue\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 
@@ -216,7 +189,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     {
         return [
             new GlueRouterPlugin(), // Existing Glue API router
-            new SymfonyRouterPlugin(), // Add this for API Platform routes
+            new SymfonyFrameworkRouterPlugin(), // Add this for API Platform routes
         ];
     }
 }
@@ -224,7 +197,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block infoBox "Router order matters" %}
 
-The order of router plugins matters. The `SymfonyRouterPlugin` should be added after existing router plugins to ensure proper routing priority.
+The order of router plugins matters. The `SymfonyFrameworkRouterPlugin` must be added after existing router plugins to ensure the correct routing priority. The `GlueRouterPlugin` should remain the first in the list to handle existing and not yet migrated Glue API endpoints.
+
+When migrating existing Glue API endpoints to API Platform, you need to remove endpoints from the `GlueRouterPlugin` so that the `SymfonyFrameworkRouterPlugin` is used to resolve the route. To remove routes from the `GlueRouterPlugin` update the corresponding `GlueApplicationDependencyProvider`, `GlueBackendApiApplicationDependencyProvider`, or `GlueStorefrontApiApplicationDependencyProvider` and remove the resource route plugin for the route you currently migrate.
 
 {% endinfo_block %}
 
@@ -234,26 +209,23 @@ After configuration, generate your API resources from schema files:
 
 ```bash
 # Generate resources for all configured API types in Glue
-docker/sdk glue api:generate
+docker/sdk cli glue api:generate
 
 # Generate resources for all configured API types in GlueStorefront
-docker/sdk GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate
 
 # Generate resources for all configured API types in GlueBackend
-docker/sdk GLUE_APPLICATION=GLUE_BACKEND glue api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
 # Generate resources for a specific API type in Glue (others can follow the env var examples above)
-docker/sdk glue api:generate storefront
-docker/sdk glue api:generate backend
-
-# Force regeneration (bypass cache)
-docker/sdk glue api:generate --force
+docker/sdk cli glue api:generate storefront
+docker/sdk cli glue api:generate backend
 
 # Dry run (see what would be generated)
-docker/sdk glue api:generate --dry-run
+docker/sdk cli glue api:generate --dry-run
 
 # Validate schemas only
-docker/sdk glue api:generate --validate-only
+docker/sdk cli glue api:generate --validate-only
 ```
 
 The generated resources will be created in `src/Generated/Api/{ApiType}/` directory.
@@ -313,10 +285,10 @@ To verify your integration:
 
    ```bash
    # List all API resources
-   docker/sdk glue api:debug --list
+   docker/sdk cli glue  api:debug --list
 
    # Inspect specific resource
-   docker/sdk glue api:debug access-tokens --api-type=storefront
+   docker/sdk cli glue  api:debug access-tokens --api-type=storefront
    ```
 
 3. **Access API documentation:**
@@ -325,6 +297,8 @@ To verify your integration:
    - GlueBackend: `https://glue-backend.your-domain/`
 
    The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
+
+   You can disable this interface in production environments by configuring the `api_platform.enable_docs` setting in your configuration files.
 
 ## Next steps
 

@@ -47,7 +47,7 @@ The migration follows a **gradual replacement** approach:
 
 ### Router configuration order
 
-The key to gradual migration is router plugin order. The `SymfonyRouterPlugin` must be placed **after** existing Glue router plugins:
+The key to gradual migration is router plugin order. The `SymfonyFrameworkRouterPlugin` must be placed **after** existing Glue router plugins:
 
 `src/Pyz/Glue/Router/RouterDependencyProvider.php`
 
@@ -59,7 +59,7 @@ declare(strict_types = 1);
 namespace Pyz\Glue\Router;
 
 use Spryker\Glue\GlueApplication\Plugin\Rest\GlueRouterPlugin;
-use Spryker\Glue\Router\Plugin\Router\SymfonyRouterPlugin;
+use Spryker\Glue\Router\Plugin\Router\SymfonyFrameworkRouterPlugin;
 use Spryker\Glue\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
@@ -71,7 +71,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     {
         return [
             new GlueRouterPlugin(),        // ← Existing Glue endpoints (checked first)
-            new SymfonyRouterPlugin(),     // ← API Platform endpoints (checked second)
+            new SymfonyFrameworkRouterPlugin(),     // ← API Platform endpoints (checked second)
         ];
     }
 }
@@ -79,14 +79,14 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Router order is critical" %}
 
-If `SymfonyRouterPlugin` is placed before `GlueRouterPlugin`, API Platform routes may shadow existing Glue routes and break backward compatibility. Always place it **after** existing routers.
+If `SymfonyFrameworkRouterPlugin` is placed before `GlueRouterPlugin`, API Platform routes may shadow existing Glue routes and break backward compatibility. Always place it **after** existing routers.
 
 {% endinfo_block %}
 
 With this configuration:
 - Request comes in: `GET /customers`
 - `GlueRouterPlugin` checks first: If Glue resource exists → use it
-- `SymfonyRouterPlugin` checks second: If no Glue match → try API Platform
+- `SymfonyFrameworkRouterPlugin` checks second: If no Glue match → try API Platform
 - Result: Existing endpoints continue working, new API Platform endpoints are available
 
 ## Migration process
@@ -236,7 +236,13 @@ patch:
 
 ### Step 4: Implement Provider
 
-Create the Provider to handle read operations, reusing existing business logic:
+Create the Provider to handle read operations, reusing existing business logic.
+
+{% info_block infoBox "Reuse existing business logic" %}
+
+The Provider should primarily call existing Facade methods. This ensures consistency and reduces duplication of business logic.
+
+{% endinfo_block %}
 
 `src/Pyz/Zed/Customer/Api/Backoffice/Provider/CustomerBackofficeProvider.php`
 
@@ -309,15 +315,15 @@ class CustomerBackofficeProvider implements ProviderInterface
 }
 ```
 
-{% info_block infoBox "Reuse existing business logic" %}
-
-The Provider and Processor should primarily call existing Facade methods. This ensures consistency and reduces duplication of business logic.
-
-{% endinfo_block %}
-
 ### Step 5: Implement Processor
 
-Create the Processor to handle write operations:
+Create the Processor to handle write operations.
+
+{% info_block infoBox "Reuse existing business logic" %}
+
+The Processor should primarily call existing Facade methods. This ensures consistency and reduces duplication of business logic.
+
+{% endinfo_block %}
 
 `src/Pyz/Zed/Customer/Api/Backoffice/Processor/CustomerBackofficeProcessor.php`
 
@@ -522,7 +528,7 @@ protected function getRouterPlugins(): array
 {
     return [
         // new GlueRouterPlugin(), // ← Remove - no longer needed
-        new SymfonyRouterPlugin(),
+        new SymfonyFrameworkRouterPlugin(),
     ];
 }
 ```
@@ -590,7 +596,7 @@ Response: RestCustomersAttributesTransfer
 ```bash
 Request: GET /customers/DE--1
     ↓
-SymfonyRouterPlugin
+SymfonyFrameworkRouterPlugin
     ↓
 API Platform Router
     ↓
@@ -643,7 +649,7 @@ GET /customers/DE--1
 
 **Possible causes:**
 
-1. Router order is wrong (SymfonyRouterPlugin before GlueRouterPlugin)
+1. Router order is wrong (SymfonyFrameworkRouterPlugin before GlueRouterPlugin)
 2. Cache not cleared
 3. Resource not generated
 
@@ -651,13 +657,13 @@ GET /customers/DE--1
 
 ```bash
 # Check router order in RouterDependencyProvider
-# Should be: GlueRouterPlugin, then SymfonyRouterPlugin
+# Should be: GlueRouterPlugin, then SymfonyFrameworkRouterPlugin
 
 # Clear caches
 console cache:clear
 
 # Regenerate resources
-console|glue api:generate backoffice --force
+console|glue api:generate backoffice
 
 # Verify generated file exists
 ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php

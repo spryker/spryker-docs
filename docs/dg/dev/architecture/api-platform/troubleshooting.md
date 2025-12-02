@@ -20,7 +20,7 @@ This document provides solutions to common issues when working with API Platform
 
 ### Resources not generating
 
-**Symptom:** Running `docker/sdk glue api:generate` completes but no resources are created.
+**Symptom:** Running `docker/sdk cli glue  api:generate` completes but no resources are created.
 
 **Possible causes:**
 
@@ -55,13 +55,13 @@ This document provides solutions to common issues when working with API Platform
 
 ```bash
 # Debug to see what's being discovered
-docker/sdk glue api:debug --list
+docker/sdk cli glue  api:debug --list
 
 # Check schema validation
-docker/sdk glue api:generate --validate-only
+docker/sdk cli glue  api:generate --validate-only
 
 # Force regeneration
-docker/sdk glue api:generate --force
+docker/sdk cli glue  api:generate --force
 ```
 
 ### Schema validation errors
@@ -97,31 +97,14 @@ docker/sdk glue api:generate --force
 2. Use `--validate-only` flag for detailed validation:
 
    ```bash
-   docker/sdk glue api:generate --validate-only
+   docker/sdk cli glue  api:generate --validate-only
    ```
 
 3. Inspect merged schema:
 
    ```bash
-   docker/sdk glue api:debug resource-name --show-merged
+   docker/sdk cli glue  api:debug resource-name --show-merged
    ```
-
-### Cache not invalidating
-
-**Symptom:** Changes to schemas don't appear after regeneration.
-
-**Solution:**
-
-```bash
-# Clear all caches
-docker/sdk glue cache:clear
-
-# Force resource regeneration
-docker/sdk glue api:generate --force
-
-# Rebuild container
-docker/sdk glue container:build
-```
 
 ## Runtime issues
 
@@ -207,7 +190,7 @@ Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvid
 - Missing styles/CSS
 - Broken JavaScript functionality
 - Plain HTML without formatting
-- "Failed to load resource" errors in browser docker/sdk glue
+- "Failed to load resource" errors in browser docker/sdk cli glue 
 
 **Cause:** Assets were not installed after API Platform integration.
 
@@ -255,7 +238,7 @@ The `assets:install` command must be run after integrating API Platform and when
 
 **Solution:**
 
-1. Verify `SymfonyRouterPlugin` is registered:
+1. Verify `SymfonyFrameworkRouterPlugin` is registered:
 
    ```php
    // RouterDependencyProvider
@@ -263,7 +246,7 @@ The `assets:install` command must be run after integrating API Platform and when
    {
        return [
            new GlueRouterPlugin(),
-           new SymfonyRouterPlugin(), // Must be present
+           new SymfonyFrameworkRouterPlugin(), // Must be present
        ];
    }
    ```
@@ -365,24 +348,17 @@ Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\Customer
 
 ### Slow resource generation
 
-**Symptom:** `docker/sdk glue api:generate` takes very long to complete.
+**Symptom:** `docker/sdk cli glue  api:generate` takes very long to complete.
 
 **Solution:**
 
-1. Use caching in production:
+1. Generate specific API types only:
 
    ```bash
-   # Don't use --force in production
-   docker/sdk glue api:generate
+   docker/sdk cli glue  api:generate backoffice
    ```
 
-2. Generate specific API types only:
-
-   ```bash
-   docker/sdk glue api:generate backoffice
-   ```
-
-3. Reduce number of source directories:
+2. Reduce number of source directories:
 
    ```php
    $containerConfigurator->extension('spryker_api_platform', [
@@ -401,7 +377,7 @@ Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\Customer
 1. Enable Symfony cache:
 
    ```bash
-   docker/sdk glue cache:warmup
+   docker/sdk cli glue  cache:warmup
    ```
 
 2. Use pagination for collections
@@ -415,7 +391,7 @@ Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\Customer
 See which schemas contribute to final resource:
 
 ```bash
-docker/sdk glue api:debug customers --api-type=backoffice --show-sources
+docker/sdk cli glue  api:debug customers --api-type=backoffice --show-sources
 ```
 
 Output:
@@ -445,7 +421,7 @@ Check for:
 Preview generation without writing files:
 
 ```bash
-docker/sdk glue api:generate --dry-run
+docker/sdk cli glue  api:generate --dry-run
 ```
 
 ## Getting help
@@ -473,7 +449,7 @@ If you encounter issues not covered here:
    ```bash
    php -v  # Check PHP version (8.1+)
    composer show | grep api-platform
-   docker/sdk glue debug:container | grep -i api
+   docker/sdk cli glue  debug:container | grep -i api
    ```
 
 4. **Common error patterns:**
@@ -482,10 +458,10 @@ If you encounter issues not covered here:
 |-------|--------------|----------|
 | `Class not found` | Autoloading issue | Run `composer dump-autoload` |
 | `Service not found` | DI configuration | Check `ApplicationServices.php` |
-| `Route not found` | Router not configured | Add `SymfonyRouterPlugin` |
+| `Route not found` | Router not configured | Add `SymfonyFrameworkRouterPlugin` |
 | `Validation failed` | Schema mismatch | Regenerate with `--force` |
 | `Cache is stale` | Outdated cache | Run `cache:clear` |
-| API docs UI broken/unstyled | Assets not installed | Run `docker/sdk glue/glue assets:install` |
+| API docs UI broken/unstyled | Assets not installed | Run `docker/sdk cli glue /glue assets:install` |
 
 ## Next steps
 

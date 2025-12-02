@@ -1,6 +1,6 @@
 ---
 title: API Platform
-description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation.
+description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
 last_updated: Nov 24, 2025
 template: concept-topic-template
 related:
@@ -10,7 +10,7 @@ related:
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
 
-Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully-functional API endpoints with validation, pagination, and serialization.
+Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
@@ -24,6 +24,8 @@ API Platform is a framework for building modern APIs based on web standards and 
 - **Pagination support**: Standardized pagination with configurable defaults
 - **State management**: Separate providers (read) and processors (write) for clean architecture
 
+Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
+
 ## Architecture overview
 
 ### Resource generation workflow
@@ -33,7 +35,7 @@ Schema Files (YAML)
     ↓
 Schema Discovery & Validation
     ↓
-Multi-layer Schema Merging (Core → Feature → Project)
+Multi-layer Schema Merging (Core → Feature → Project → Code Buckets)
     ↓
 Resource Class Generation
     ↓
@@ -49,11 +51,11 @@ API Endpoints
 Resources are defined in YAML files located in module directories:
 
 ```MARKDOWN
-src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.yml
+src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.resources.yml
 src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.validation.yml
 ```
 
-Example schema:
+Example resource schema `src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.resources.yml`:
 
 ```yaml
 resource:
@@ -81,6 +83,31 @@ resource:
       type: string
       identifier: true
       writable: false
+```
+
+Example validation schema `src/Spryker/{Module}/resources/api/{api-type}/{resource-name}.validation.yml`:
+
+```yaml
+post:
+  name:
+    - NotBlank:
+        message: First name is required
+    - Length:
+        min: 2
+        max: 64
+        minMessage: First name must be at least 2 characters
+        maxMessage: First name cannot exceed 64 characters
+
+patch:
+  name:
+    - Optional:
+        constraints:
+          - Length:
+              min: 2
+              max: 64
+              minMessage: First name must be at least 2 characters
+              maxMessage: First name cannot exceed 64 characters
+
 ```
 
 #### 2. Generated resources
@@ -120,6 +147,10 @@ final class CustomersBackendResource
 
 #### 3. State providers and processors
 
+Detailed information about the API-Platform Provider and Resources can be found on the public docs:
+- [API Platform Providers](https://api-platform.com/docs/core/state-providers/)
+- [API Platform Processors](https://api-platform.com/docs/core/state-processors/)
+
 **Provider (read operations):**
 
 ```php
@@ -148,23 +179,27 @@ class CustomerBackendProcessor implements ProcessorInterface
 
 ## API types
 
+Any of the [existing APIs](https://docs.spryker.com/docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis) can be extended using API Platform.
+
 Spryker supports multiple API types for different use cases:
 
 ### Glue API 
+
+This API is configured to serve the JSON:API format by default, which can be configured per project. Projects migrating their APIs can provide new APIs as well as supporting the existing ones while migrating.
 
 - **API Type:** `storefront`
 - **Application:** Glue
 - **Base URL:** `http://glue.eu.spryker.local/` - Configurable per project
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
-- **Example:** `/access-tokens`
 
 ### GlueStorefront API 
+
+Thie API is configured to serve the JSON+LD format by default, which can be configured per project.
 
 - **API Type:** `storefront`
 - **Application:** Glue
 - **Base URL:** `http://glue-storefront.eu.spryker.local/` - Configurable per project
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
-- **Example:** `/access-tokens`
 
 ### GlueBackend API
 
@@ -172,7 +207,6 @@ Spryker supports multiple API types for different use cases:
 - **Application:** Zed
 - **Base URL:** `http://glue-backend.eu.spryker.local/`
 - **Use cases:** Admin panels, internal tools, ERP integrations
-- **Example:** `/customers`
 
 ### Merchant Portal API
 
@@ -218,7 +252,7 @@ resource:
       type: string    # Project-specific
 ```
 
-**Result**: A single merged resource with all properties, project layer taking precedence.
+**Result**: A single merged resource with all properties, project code-bucket layer taking precedence.
 
 ## Integration with Spryker architecture
 
@@ -269,35 +303,32 @@ class CustomerBackendProcessor implements ProcessorInterface
 
 ```bash
 # Generate all configured API types
-docker/sdk glue api:generate
+docker/sdk cli glue  api:generate
 
 # Generate specific API type
-docker/sdk glue api:generate backend
+docker/sdk cli glue  api:generate backend
 
 # Validate schemas only
-docker/sdk glue api:generate --validate-only
-
-# Force regeneration (bypass cache)
-docker/sdk glue api:generate --force
+docker/sdk cli glue  api:generate --validate-only
 
 # Dry run
-docker/sdk glue api:generate --dry-run
+docker/sdk cli glue  api:generate --dry-run
 ```
 
 ### Debug commands
 
 ```bash
 # List all resources
-docker/sdk glue api:debug --list
+docker/sdk cli glue  api:debug --list
 
-# Inspect specific resource
-docker/sdk glue api:debug customers --api-type=backend
+# Inspect specific resource and print details about properties and operations
+docker/sdk cli glue  api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backend --show-merged
+docker/sdk cli glue  api:debug customers --api-type=backend --show-merged
 
-# Show contributing files
-docker/sdk glue api:debug customers --api-type=backend --show-sources
+# Show contributing files for a resource
+docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 ```
 
 ## Features
@@ -306,8 +337,9 @@ docker/sdk glue api:debug customers --api-type=backend --show-sources
 
 API Platform generates interactive OpenAPI documentation:
 
-- Swagger UI at the root URL `/`
-- OpenAPI JSON specification at `/docs.json`
+- Swagger UI at the root URL `/` for example `http://glue-backend.eu.spryker.local/`
+
+You can disable this interface in production environments by configuring the `api_platform.enable_docs` setting in your configuration files. 
 
 ### Built-in validation
 
@@ -364,27 +396,18 @@ Each operation can have specific validation rules and security settings.
 
 ## Performance
 
-### Caching
-
-The generator uses intelligent caching:
-
-- Detects schema file changes
-- Only regenerates modified resources
-- Production: cache is persistent
-- Development: cache auto-invalidates
-
 ### Cache warming
 
 Pre-generate resources during deployment:
 
 ```bash
-docker/sdk glue api:generate
+docker/sdk cli glue  api:generate
 ```
 
 or
 
 ```bash
-docker/sdk glue cache:warmup
+docker/sdk cli glue  cache:warmup
 ```
 
 ### Property-level access control

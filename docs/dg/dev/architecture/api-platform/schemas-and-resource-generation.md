@@ -511,41 +511,25 @@ final class CustomersBackendResource
 }
 ```
 
-### Caching mechanism
-
-The generator uses intelligent caching:
-
-1. **Cache invalidation**: Detects schema file changes
-2. **Incremental generation**: Only regenerates changed resources
-3. **Cache warming**: Pre-generates resources for production
-
-```bash
-# Force full regeneration
-docker/sdk glue api:generate --force
-
-# Check cache status
-docker/sdk glue api:debug customers --api-type=backend
-```
-
 ## Debugging schemas
 
 ### Debug commands
 
 ```bash
 # List all resources
-docker/sdk glue api:debug --list
+docker/sdk cli glue  api:debug --list
 
 # Show specific resource
-docker/sdk glue api:debug customers --api-type=backend
+docker/sdk cli glue  api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk glue api:debug customers --api-type=backend --show-merged
+docker/sdk cli glue  api:debug customers --api-type=backend --show-merged
 
 # Show contributing source files
-docker/sdk glue api:debug customers --api-type=backend --show-sources
+docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
-docker/sdk glue api:generate --validate-only
+docker/sdk cli glue  api:generate --validate-only
 ```
 
 ### Common schema errors
@@ -614,17 +598,16 @@ resource:
 
 ```bash
 # Generate all configured API types
-docker/sdk glue api:generate
+docker/sdk cli glue  api:generate
 
 # Generate specific API type
-docker/sdk glue api:generate backend
-docker/sdk glue api:generate storefront
+docker/sdk cli glue  api:generate backend
+docker/sdk cli glue  api:generate storefront
 
 # Generate with options
-docker/sdk glue api:generate --dry-run           # Preview without writing
-docker/sdk glue api:generate --validate-only     # Only validate schemas
-docker/sdk glue api:generate --force             # Bypass cache, regenerate all
-docker/sdk glue api:generate --resource=customers  # Generate single resource
+docker/sdk cli glue  api:generate --dry-run           # Preview without writing
+docker/sdk cli glue  api:generate --validate-only     # Only validate schemas
+docker/sdk cli glue  api:generate --resource=customers  # Generate single resource
 ```
 
 ### Output

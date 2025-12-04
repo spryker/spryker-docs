@@ -14,7 +14,7 @@ entries:
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:
-          - title: AI IDE assistants
+          - title: AI IDE Assistants
             url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
           - title: Spryker Engineer GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html

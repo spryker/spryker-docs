@@ -2,6 +2,8 @@
 title: Spryker K6 Performance Assistant GPT
 description: Spryker K6 Performance Assistant – Early Access Program Guide & Feedback Portal
 template: concept-topic-template
+redirect_from:
+  - /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt
 ---
 
 {% info_block warningBox %}

@@ -5,19 +5,25 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
-  - title: AI assistants
-    url: /docs/dg/dev/ai-assistants/ai-assistants.html
+  - title: AI
     nested:
-      - title: AI IDE assistants
-        url: /docs/dg/dev/ai-assistants/ai-ide-assistants.html
-      - title: Spryker Engineer GPT
-        url: /docs/dg/dev/ai-assistants/spryker-engineer-gpt.html
-      - title: Spryker K6 Performance Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt.html
-      - title: Spryker DevQA Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt.html
-      - title: Spryker Cypress E2E Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
+      - title: AI Foundation
+        nested:
+          - title: AI Foundation
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+      - title: AI assistants
+        url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+        nested:
+          - title: AI IDE assistants
+            url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
+          - title: Spryker Engineer GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
+          - title: Spryker K6 Performance Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
+          - title: Spryker DevQA Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
+          - title: Spryker Cypress E2E Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:

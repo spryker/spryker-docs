@@ -4,6 +4,7 @@ description: Overview of AI IDE coding assistants for daily work
 template: concept-topic-template
 redirect_from: 
   - /docs/dg/dev/ai-coding-assistants
+  - /docs/dg/dev/ai-assistants/ai-ide-assistants
 ---
 
 This document describes the AI IDE Assistants you can use when developing your Spryker projects. You will read about recommended AI IDE Assistants, how to set up and use them.
@@ -111,10 +112,10 @@ Here's an example of code generated with Cursor:
 
 ## AI IDE assistants 
 
-- [Spryker Engineer GPT](/docs/dg/dev/ai-assistants/spryker-engineer-gpt)
-- [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
-- [Spryker DevQA Assistant GPT](/docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
-- [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt)
+- [Spryker Engineer GPT](/docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt)
+- [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
+- [Spryker DevQA Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
+- [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt)
 
 
 ## Training

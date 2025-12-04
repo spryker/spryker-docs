@@ -135,3 +135,17 @@ Make sure the following criteria are met:
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.
+
+## New Relic performance impact for long-running CLI processes
+
+The New Relic PHP agent is optimized for short-lived, request-based execution models. When instrumentation is enabled for long-running CLI processes—such as Jenkins jobs that execute large data migrations, Redis cleanups, or bulk operations—the agent continuously accumulates transaction metrics in memory. Because long-running jobs never reach a "request end" event that naturally flushes this data, memory consumption can increase steadily during the lifetime of the process. In production environments, this may lead to out-of-memory conditions or premature job termination.
+
+To prevent this behavior, you must disable New Relic instrumentation for long-running Spryker CLI commands that Jenkins triggers.
+
+Disable New Relic for a CLI command:
+
+```bash
+NEWRELIC_ENABLED=false php vendor/bin/console ...
+```
+
+For more information, see [High memory load on long-running PHP tasks](https://docs.newrelic.com/docs/apm/agents/php-agent/troubleshooting/performance-issues-long-running-task/).

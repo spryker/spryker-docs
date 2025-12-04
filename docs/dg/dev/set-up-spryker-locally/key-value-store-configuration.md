@@ -194,7 +194,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 To resave storage data, run the command:
 
 ```bash
-SPRYKER_REDIS_IS_DEV_MODE=0 console storage:redis:re-save
+SPRYKER_REDIS_IS_DEV_MODE=0 NEW_RELIC_ENABLED=false console storage:redis:re-save
 ```
 
 With separate storage databases per store, execute the command for each store individually.

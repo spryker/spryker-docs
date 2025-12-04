@@ -430,3 +430,19 @@ This transfer represents a file or image attachment:
 - `content` (string): The content (URL or Base64-encoded data)
 - `contentType` (string): Content type format (use `AiFoundationConstants::ATTACHMENT_CONTENT_TYPE_URL` or `ATTACHMENT_CONTENT_TYPE_BASE64`)
 - `mediaType` (string): MIME type (for example, `image/png`, `application/pdf`)
+
+## Roadmap
+
+The following capabilities are planned for future releases of the AiFoundation module:
+
+### Structured response
+
+Support for requesting and parsing structured responses from AI providers. This will enable AI models to return data in predefined formats (for example, JSON schemas), making it easier to integrate AI responses directly into application workflows and business logic.
+
+### Tool call
+
+Implementation of function calling capabilities, allowing AI models to invoke specific tools or functions during the response generation. This enables more interactive and dynamic AI interactions where the model can query external systems, perform calculations, or execute custom business logic.
+
+### Chat history capabilities
+
+Support for maintaining conversation context across multiple interactions. This will enable multi-turn conversations where the AI can reference previous messages, maintain state, and provide more contextually relevant responses throughout an extended dialogue.

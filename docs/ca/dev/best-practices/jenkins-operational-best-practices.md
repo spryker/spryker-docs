@@ -136,7 +136,7 @@ With all the preparation work listed in this document, you should already notice
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.
 
-## New Relic performance impact for long-running CLI processes
+## New Relic performance impact for long-running processes
 
 The New Relic PHP agent is optimized for short-lived, request-based execution models. When instrumentation is enabled for long-running CLI processes—such as Jenkins jobs that execute large data migrations, Redis cleanups, or bulk operations—the agent continuously accumulates transaction metrics in memory. Because long-running jobs never reach a "request end" event that naturally flushes this data, memory consumption can increase steadily during the lifetime of the process. In production environments, this may lead to out-of-memory conditions or premature job termination.
 

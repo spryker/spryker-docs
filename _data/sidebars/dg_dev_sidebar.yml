@@ -11,7 +11,7 @@ entries:
         nested:
           - title: AI Foundation
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
-      - title: AI assistants
+      - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:
           - title: AI IDE assistants

@@ -32,7 +32,42 @@ For advanced agentic solutions that require complex workflows, multi-agent syste
 
 ## Configure AI providers
 
-Configure AI providers in your configuration file (for example, `config/Shared/config_default.php`). The module uses the `AI_CONFIGURATIONS` constant to define one or more AI configurations.
+Configure AI providers in a dedicated configuration file. The module uses the `AI_CONFIGURATIONS` constant to define one or more AI configurations.
+
+{% info_block infoBox "Best practice" %}
+
+Create a separate configuration file for AI settings to keep your configuration organized and maintainable.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Security" %}
+
+Store API keys as environment variables, not in configuration files. For Spryker Cloud, use the parameter store to manage sensitive credentials. For details, see [Add variables in the parameter store](/docs/ca/dev/add-variables-in-the-parameter-store.html).
+
+{% endinfo_block %}
+
+1. Create a new configuration file `config/Shared/config_ai.php`:
+
+   ```php
+   <?php
+
+   use Spryker\Shared\AiFoundation\AiFoundationConstants;
+
+   // AI provider configurations
+   $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
+       // Your AI configurations will be defined here
+   ];
+   ```
+
+2. Include the AI configuration file in your main configuration file (for example, `config/Shared/config_default.php`):
+
+   ```php
+   <?php
+
+   require 'config_ai.php';
+   ```
+
+Alternatively, you can define AI configurations directly in `config/Shared/config_default.php` if you prefer a single configuration file approach.
 
 ### Configuration structure
 
@@ -91,8 +126,8 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
     'provider_config' => [
         'key' => getenv('ANTHROPIC_API_KEY'), // required
         'model' => 'claude-sonnet-4-20250514', // required
-        'version' => '2023-06-01', // required
-        'max_tokens' => 8192, // required
+        'version' => '2023-06-01', // optional
+        'max_tokens' => 8192, // optional
         'parameters' => [], // optional
         'httpOptions' => [ // optional
             'timeout' => 60,
@@ -267,7 +302,7 @@ The Ollama data is stored in the `./data/tmp/ollama_data` directory, which you s
         'key' => getenv('AZURE_OPENAI_API_KEY'), // required
         'endpoint' => 'https://your-resource.openai.azure.com', // required
         'model' => 'your-deployment-name', // required
-        'version' => '2024-02-01', // required
+        'version' => '2024-02-01', // optional
         'parameters' => [], // optional
     ],
 ],

@@ -1,6 +1,6 @@
 ---
 title: AI assistants
-description: List of AI assistnace provided by Spryker to enhance daily workflows
+description: List of AI assistance provided by Spryker to enhance daily workflows
 template: concept-topic-template
 redirect_from: 
   - /docs/dg/dev/ai-assistants/ai-assistants
@@ -8,7 +8,7 @@ redirect_from:
 
 {% info_block warningBox %}
 
-Before using a AI-related tools, consult with your legal department.
+Before using AI-related tools, consult with your legal department.
 
 {% endinfo_block %}
 

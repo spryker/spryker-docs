@@ -138,9 +138,9 @@ When the Jenkins host crashes and requires re-provisioning, there is a risk of l
 
 ## New Relic performance impact for long-running processes
 
-The New Relic PHP agent is optimized for short-lived, request-based execution models. When instrumentation is enabled for long-running CLI processes—such as Jenkins jobs that execute large data migrations, Redis cleanups, or bulk operations—the agent continuously accumulates transaction metrics in memory. Because long-running jobs never reach a "request end" event that naturally flushes this data, memory consumption can increase steadily during the lifetime of the process. In production environments, this may lead to out-of-memory conditions or premature job termination.
+When instrumentation is enabled for long-running CLI processes—such as Jenkins jobs that execute large data migrations, Redis cleanups, or bulk operations—the agent continuously accumulates transaction metrics in memory. Because long-running jobs never reach a "request end" event that naturally flushes this data, memory consumption can increase steadily during the lifetime of the process. In production environments, this may lead to out-of-memory conditions or premature job termination.
 
-To prevent this behavior, you must disable New Relic instrumentation for long-running Spryker CLI commands that Jenkins triggers.
+To avoid out-of-memory issues, disable New Relic instrumentation for long-running Spryker CLI commands that are triggered in Jenkins.
 
 Disable New Relic for a CLI command:
 

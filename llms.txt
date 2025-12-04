@@ -1,0 +1,256 @@
+---
+layout: null
+---
+
+# Spryker Documentation
+
+## Overview
+
+Spryker Cloud Commerce OS is an enterprise e-commerce platform-as-a-service designed for B2B, B2C, and Marketplace business models. This documentation provides comprehensive guides for developers, business users, system administrators, and decision makers working with or evaluating Spryker.
+
+## What is Spryker?
+
+Spryker is a modular, cloud-native e-commerce platform built on modern architecture principles:
+
+- **Modular Architecture**: 750+ independent modules that can be installed, updated, and configured individually
+- **Layered Architecture**: Separation of presentation, business, communication, and persistence layers for scalability and flexibility
+- **Cloud-Native Platform**: Fully managed PaaS with automated scaling, CI/CD pipelines, and 24/7 monitoring
+- **Multi-Model Support**: Built for B2B, B2C, Marketplace B2B, and Marketplace B2C business models
+- **API-First Design**: Glue API enables integration with any frontend or external system
+- **Headless Commerce**: Separation of frontend and backend enables omnichannel experiences
+
+## Who is this documentation for?
+
+### Developers
+- **Backend Developers**: Implement business logic, integrate systems, extend modules
+- **Frontend Developers**: Build storefronts, customize UI/UX, implement components
+- **DevOps Engineers**: Deploy applications, manage cloud infrastructure, configure CI/CD
+- **Solution Architects**: Design system architecture, plan integrations, make technical decisions
+
+### Business Users
+- **Back Office Users**: Manage products, orders, customers, content, and business operations
+- **Marketplace Operators**: Oversee merchant management, offers, and marketplace operations
+- **Merchants**: Manage their own products, offers, and orders through the Merchant Portal
+
+### Decision Makers
+- **CTOs and Technical Leaders**: Evaluate platform capabilities, architecture, and technical fit
+- **Product Owners**: Understand feature sets and business capabilities
+- **Project Managers**: Plan implementations, understand scope and requirements
+
+## Main Documentation Sections
+
+### About Spryker
+Introduction to Spryker, product suites (B2B, B2C, Marketplace), release notes, security updates, support information, and compliance certifications.
+
+**Key topics**: Platform overview, business models, Demo Shops, release management, security audits, support SLAs
+
+### Developer Guide (DG)
+Technical documentation for developing with Spryker, covering backend development, frontend development, architecture, integrations, and deployment.
+
+**Key areas**:
+- **Backend Development**: Data manipulation, payment methods, modules, business logic
+- **Frontend Development**: Yves (storefront), Web Components, styling, JavaScript
+- **Architecture**: Application layers, dependency injection, plugins, modules
+- **Integration & Configuration**: Third-party integrations, configuration management, customization
+- **Setup & Installation**: Local development setup, Docker, system requirements
+- **Upgrading & Migration**: Version upgrades, migration guides, breaking changes
+- **Best Practices**: Coding standards, security, performance, testing
+- **AI & Automation**: AI Foundation module, machine learning integrations
+
+### Packaged Business Capabilities (PBC)
+Comprehensive catalog of all business features and capabilities available in Spryker.
+
+**Categories**:
+- **Commerce Core**: Cart and Checkout, Order Management System (OMS), Payment Service Provider (PSP)
+- **Product Management**: Product Information Management (PIM), Price Management, Product Relationships
+- **Customer Management**: Customer Relationship Management (CRM), Identity Access Management (IAM), User Management
+- **Content & Media**: Content Management System (CMS), Search, Business Intelligence
+- **B2B Features**: Request for Quote (RFQ), Multi-Factor Authentication, Dynamic Multistore
+- **Marketplace**: Merchant Management, Offer Management, Marketplace Storefront
+- **Operations**: Warehouse Management System (WMS), Carrier Management, Service Points
+- **Marketing & Sales**: Discount Management, Gift Cards, Ratings & Reviews
+- **Data & Integration**: Data Exchange (import/export), Emails, Tax Management
+- **Shopping Experience**: Shopping Lists, Wishlists, Return Management
+
+### Cloud Administration (CA)
+Documentation for managing Spryker Cloud infrastructure, deployments, monitoring, and operations.
+
+**Key topics**: Environment management, deployment pipelines, monitoring and logging, security, performance optimization, incident management
+
+### Integrations
+Documentation for integrating Spryker with third-party systems and services.
+
+**Categories**:
+- **App Composition Platform (ACP)**: Pre-built apps (Vertex, Algolia, Payone, Bazaarvoice, Stripe)
+- **Payment Providers**: Payment gateway integrations
+- **Search & Analytics**: Search engines and analytics platforms
+- **ERP & PIM Systems**: Enterprise system integrations
+- **Custom Integrations**: Building custom integrations and connectors
+- **Glue API**: RESTful API for headless commerce and system integrations
+
+## Why use Spryker?
+
+### For Enterprises
+- Scalable platform that grows with your business
+- Reduced total cost of ownership through modular architecture
+- Fast time-to-market with Demo Shops and pre-built features
+- Enterprise-grade security and compliance (TISAX, GDPR)
+- 24/7 support and monitoring
+
+### For Developers
+- Modern PHP 8+ codebase with Symfony components
+- Comprehensive API (Glue API) for headless implementations
+- Extensive documentation and code examples
+- Independent module updates without breaking changes
+- Active developer community and open-source contributions
+
+### For Digital Commerce
+- Support for complex B2B workflows (quotes, approvals, company structures)
+- Multi-merchant marketplace capabilities
+- Omnichannel commerce through API-first architecture
+- Flexible pricing (volume, customer-specific, scheduled)
+- Advanced search and merchandising
+
+## Getting Started
+
+### For Developers
+1. Review system requirements and prerequisites
+2. Set up Spryker locally using Docker
+3. Explore Demo Shops (B2B, B2C, Marketplace)
+4. Read the Development Getting Started Guide
+5. Understand the architecture and module system
+
+### For Business Users
+1. Explore the Back Office user guides
+2. Learn about available features in PBC section
+3. Review business model documentation (B2B, B2C, Marketplace)
+4. Understand the merchant onboarding process (for Marketplace)
+
+### For Evaluators
+1. Read "About Spryker" section for platform overview
+2. Review supported business models and Demo Shops
+3. Explore PBC section to understand feature coverage
+4. Check release notes and product roadmap
+5. Review security audits and compliance certifications
+
+## Technical Architecture
+
+### Application Layers
+- **Presentation Layer** (Yves): Customer-facing storefront, mobile apps, voice skills
+- **Business Layer** (Zed): Business logic, product catalog, pricing, inventory
+- **Communication Layer** (Glue API): RESTful API, storefront-backend communication
+- **Persistence Layer**: Database operations, Propel ORM, Redis/Elasticsearch
+
+### Key Technologies
+- **Backend**: PHP 8.3+, Symfony components, Propel ORM
+- **Frontend**: Twig templates, Web Components, TypeScript
+- **Infrastructure**: Docker, Kubernetes, AWS/Azure
+- **Data Stores**: PostgreSQL, Redis, Elasticsearch, RabbitMQ
+- **CI/CD**: Jenkins, GitHub Actions, deployment pipelines
+
+### Module System
+- 750+ independent, versioned modules
+- Atomic release approach (no monolithic releases)
+- Backward compatibility maintained
+- Dependency management via Composer
+- Project-level and core-level separation
+
+## Business Models
+
+### B2B Suite
+Features for business-to-business commerce: company accounts, business units, roles and permissions, approval workflows, shopping lists, quote requests, customer-specific pricing, and contract management.
+
+### B2C Suite
+Features for business-to-consumer commerce: customer accounts, wishlists, newsletter subscriptions, ratings and reviews, promotions, and seamless checkout.
+
+### Marketplace B2B
+Combines B2B features with multi-merchant marketplace capabilities: merchant management, merchant portal, product offers, merchant orders, and merchant commissions.
+
+### Marketplace B2C
+Combines B2C features with multi-merchant marketplace capabilities for consumer-focused marketplaces.
+
+## Support and Resources
+
+### Documentation Site
+https://docs.spryker.com - Official documentation portal
+
+### Sitemap
+https://docs.spryker.com/sitemap.xml - Complete sitemap of all documentation pages, useful for discovering and navigating the full documentation structure programmatically.
+
+### Support Portal
+Ticketed support system with SLA-based response times, available to Spryker customers with support agreements.
+
+### Community
+- GitHub: https://github.com/spryker https://github.com/spryker-shop/b2c-demo-shop - Open-source repositories
+- Community Contributions: Third-party modules and integrations
+
+### Release Management
+- Quarterly product releases with new features
+- Monthly security releases
+- Continuous module updates via Composer
+- Semantic versioning for all modules
+
+## Documentation Contribution
+
+This documentation is open-source and accepts contributions via pull requests to the GitHub repository. Contributors can:
+- Report documentation issues
+- Suggest improvements
+- Submit PRs for corrections and additions
+- Run documentation locally for testing
+
+## Security and Compliance
+
+### Security
+- Regular security audits (latest: SektionEins 2019, Port Zero 2020)
+- Monthly security release notes
+- Responsible disclosure program
+- HTTPS/TLS encryption
+- Multi-factor authentication support
+
+### Compliance
+- GDPR compliance guidelines
+- General Product Safety Regulation (GPSR) support
+- TISAX certification
+- Data protection and privacy controls
+
+## Key Concepts and Terminology
+
+- **PBC**: Packaged Business Capability - a functional area of the platform
+- **Module**: Smallest functionality unit in Spryker (e.g., Cart, Product, Price)
+- **Feature**: Collection of related modules providing end-to-end functionality
+- **Demo Shop**: Pre-configured shop with sample data for specific business models
+- **Zed**: Back Office application layer (administration interface)
+- **Yves**: Storefront application layer (customer-facing)
+- **Glue**: API application layer (RESTful endpoints)
+- **Merchant Portal**: Self-service interface for marketplace merchants
+- **ACP**: App Composition Platform - marketplace for pre-built integrations
+- **SCCOS**: Spryker Cloud Commerce OS - full product name
+
+## Use Cases
+
+### Complex B2B Commerce
+Multi-level company hierarchies, approval workflows, quote negotiations, contract pricing, punch-out catalogs, integration with procurement systems.
+
+### Multi-Vendor Marketplaces
+Merchant onboarding, merchant product management, offer management, split order processing, merchant settlement, commission management.
+
+### Omnichannel Retail
+Headless commerce via Glue API, mobile apps, voice commerce, click-and-collect, ship-from-store, unified inventory.
+
+### International Expansion
+Multi-store management, multi-currency support, multi-language content, region-specific pricing, tax compliance, localized payment methods.
+
+## What this documentation covers
+
+This documentation repository contains:
+- Complete developer guides for all technical aspects
+- Business user guides for Back Office and Merchant Portal
+- Feature documentation for all PBCs
+- Integration guides for third-party systems
+- Cloud administration and deployment guides
+- Migration and upgrade guides
+- API reference documentation
+- Code examples and best practices
+- Troubleshooting and FAQ sections
+
+The documentation is continuously updated with each product release and maintained by both Spryker team members and community contributors.

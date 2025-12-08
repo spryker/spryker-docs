@@ -3,16 +3,14 @@
 echo "set -e"
 set -e
 
-echo "BASE_BRANCH=\"\${GITHUB_BASE_REF:-origin/master}\""
-BASE_BRANCH="${GITHUB_BASE_REF:-origin/master}"
-echo "HEAD_BRANCH=\"\${GITHUB_HEAD_REF:-HEAD}\""
-HEAD_BRANCH="${GITHUB_HEAD_REF:-HEAD}"
+BASE_SHA="${GITHUB_BASE_SHA:-$(git merge-base origin/master HEAD)}"
+HEAD_SHA="${GITHUB_SHA:-HEAD}"
 
 echo "files_needing_update=0"
 files_needing_update=0
 
-echo "changed_md_files=\$(git diff --name-only \"\$BASE_BRANCH\"...\"\$HEAD_BRANCH\" -- | grep '\\.md\$' || true)"
-changed_md_files=$(git diff --name-only "$BASE_BRANCH"..."$HEAD_BRANCH" -- | grep '\.md$' || true)
+echo "changed_md_files=\$(git diff --name-only \"\BASE_SHA\"...\"\$HEAD_SHA\" -- | grep '\\.md\$' || true)"
+changed_md_files=$(git diff --name-only "BASE_SHA"..."$HEAD_SHA" -- | grep '\.md$' || true)
 
 echo "if [ -z \"\$changed_md_files\" ]; then"
 if [ -z "$changed_md_files" ]; then
@@ -34,14 +32,14 @@ for file in $changed_md_files; do
     continue
   fi
 
-  echo "  if git diff \"\$BASE_BRANCH\"...\"\$HEAD_BRANCH\" -- \"\$file\" | grep -q \"^[-+]last_updated:\"; then"
-  if git diff "$BASE_BRANCH"..."$HEAD_BRANCH" -- "$file" | grep -q "^[-+]last_updated:"; then
+  echo "  if git diff \"\$BASE_SHA\"...\"\$HEAD_SHA\" -- \"\$file\" | grep -q \"^[-+]last_updated:\"; then"
+  if git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep -q "^[-+]last_updated:"; then
     echo "    continue"
     continue
   fi
 
-  echo "  lines_changed=\$(git diff \"\$BASE_BRANCH\"...\"\$HEAD_BRANCH\" -- \"\$file\" | grep \"^-.*\" | grep -v \"^---\" | grep -v \"^-\$\" | wc -l)"
-  lines_changed=$(git diff "$BASE_BRANCH"..."$HEAD_BRANCH" -- "$file" | grep "^-.*" | grep -v "^---" | grep -v "^-$" | wc -l)
+  echo "  lines_changed=\$(git diff \"\$BASE_SHA\"...\"\$HEAD_SHA\" -- \"\$file\" | grep \"^-.*\" | grep -v \"^---\" | grep -v \"^-\$\" | wc -l)"
+  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep "^-.*" | grep -v "^---" | grep -v "^-$" | wc -l)
 
   echo "  if [ \"\$lines_changed\" -gt 5 ]; then"
   if [ "$lines_changed" -gt 5 ]; then

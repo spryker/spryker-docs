@@ -3,14 +3,14 @@
 echo "set -e"
 set -e
 
-BASE_SHA="${GITHUB_BASE_SHA:-$(git merge-base origin/master HEAD)}"
+BASE_SHA="${GITHUB_BASE_SHA:-HEAD^}"
 HEAD_SHA="${GITHUB_SHA:-HEAD}"
 
 echo "files_needing_update=0"
 files_needing_update=0
 
-echo "changed_md_files=\$(git diff --name-only \"\BASE_SHA\"...\"\$HEAD_SHA\" -- | grep '\\.md\$' || true)"
-changed_md_files=$(git diff --name-only "BASE_SHA"..."$HEAD_SHA" -- | grep '\.md$' || true)
+echo "changed_md_files=\$(git diff --name-only \"\$BASE_SHA\"...\"\$HEAD_SHA\" -- | grep '\\.md\$' || true)"
+changed_md_files=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" -- | grep '\.md$' || true)
 
 echo "if [ -z \"\$changed_md_files\" ]; then"
 if [ -z "$changed_md_files" ]; then

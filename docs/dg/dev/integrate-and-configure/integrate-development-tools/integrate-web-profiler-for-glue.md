@@ -11,7 +11,7 @@ related:
   - title: Integrate Web Profiler for Backend Gateway
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
   - title: Integrate Profiler Module
-    link: docs/dg/dev/integrate-and-configure/integrate-profiler-module.html
+    link: docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
 ---
 
 The *Web Profiler for Glue* provides a tool for debugging and informational purposes for Glue API applications. The tool is accessible when making requests to Glue API endpoints and provides comprehensive profiling data for API requests.
@@ -327,4 +327,4 @@ Example workflow:
 
 If the `xhprof` extension is installed and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
-For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/integrate-profiler-module.html).
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).

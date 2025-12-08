@@ -65,6 +65,6 @@ Spryker provides a lot of build-in collectors. You can locate them in `WebProfil
 
 If the `xhprof` extension is installed and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
-For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/integrate-profiler-module.html).
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 
 ![Zed Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/integrate-and-configure/Zed+profile.png)

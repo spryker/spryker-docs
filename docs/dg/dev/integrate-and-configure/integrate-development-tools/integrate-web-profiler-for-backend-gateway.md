@@ -11,7 +11,7 @@ related:
   - title: Integrate Web Profiler for Glue
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrate Profiler Module
-    link: docs/dg/dev/integrate-and-configure/integrate-profiler-module.html
+    link: docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
 ---
 
 The *Web Profiler for Backend Gateway* provides detailed profiling information for requests made from Yves to Zed through the Backend Gateway. This enables developers to debug and analyze the performance of backend gateway calls directly from the Yves Web Profiler interface.
@@ -62,4 +62,4 @@ Clicking on the profile link opens the comprehensive Web Profiler view for the B
 
 If the `xhprof` extension is installed and the Profiler module is integrated, Backend Gateway profiles also include detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
-For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/integrate-profiler-module.html).
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).

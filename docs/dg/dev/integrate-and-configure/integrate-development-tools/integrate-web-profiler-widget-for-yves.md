@@ -102,7 +102,7 @@ Clicking on a specific AJAX request in the widget opens the detailed profile vie
 - Redis
 - Zed Requests
 - External calls
-- [Profiler](/docs/dg/dev/integrate-and-configure/integrate-profiler-module.html) is `xhprof` extension is installed
+- [Profiler](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html) is `xhprof` extension is installed
 
 ![Detailed view of a Yves AJAX profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/integrate-and-configure/Yves+ajax+profile.png)
 

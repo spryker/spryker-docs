@@ -78,7 +78,7 @@ Same goes for Elasticsearch. Make sure your version of `spryker/search-elasticse
 
 If the `xhprof` extension is installed and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
-For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/integrate-profiler-module.html).
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 
 ## Web Profiler Widget for Yves AJAX
 

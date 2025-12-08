@@ -13,11 +13,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Make last_updated executable
         run: chmod +x _scripts/last_updated_checker.sh
 
       - name: Check last_updated is not older than 30 days
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: ./_scripts/last_updated_checker.sh
 
       - name: Make sidebar checker script executable

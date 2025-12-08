@@ -375,6 +375,7 @@ In the major version release–for example, 1.0.0 to 2.0.0–the deprecated meth
 ## Upgradability recommendations
 
 ### Prefer creating a new module instead of extending an existing one
+
 Imagine that you want to send orders to an external system through an API. You extend `src/Spryker/Zed/Sales/Business/SalesFacade.php` on the project level, modify the factory, and add your logic there.
 
 This new functionality does not rely on the original Sales module. It performs separate tasks and may only share an entity with the module.

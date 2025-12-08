@@ -86,7 +86,8 @@ foreach ($salesOrderItems as $salesOrderItem) {
 $this->commit();
 // Total: 1 query with all items
 ```
-For more information check - [Batch processing of Propel entities](/docs/dg/dev/backend-development/data-manipulation/batch-processing-of-propel-entities.html).
+
+For more information check - [Batch processing of Propel entities](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html).
 
 #### ORM vs PDO
 
@@ -165,6 +166,7 @@ foreach ($saveOrderTransfer->getOrderItems() as $itemTransfer) {
 $this->omsFacade->triggerEventForNewOrderItems($salesOrderItemIds);
 // Total: 1 facade call + 1 optimized database operation
 ```
+
 ### Nested Foreach Loops
 
 ❌ Bad: Multiple Nested Loops with Individual Operations
@@ -186,7 +188,9 @@ foreach ($orders as $order) {
 }
 // Total: (Orders × Items × 2) queries
 ```
+
 ✅ Good: Collect Data, Then Bulk Load
+
 ```php
 // Step 1: Collect all SKUs
 $skus = [];
@@ -225,6 +229,7 @@ foreach ($orders as $order) {
 3. **Transaction isolation**: When you need separate transactions for error handling
 
 Solution: Batch Processing
+
 ```php
 // Process in chunks of 100
 $orderIds = range(1, 1000);
@@ -297,6 +302,7 @@ foreach ($orders as $order) {
     $items = $order->getSpySalesOrderItems();
 }
 ```
+
 #### When NOT to Use `joinWithTable()`
 
 1. **Large result sets with many related records**: Can consume excessive memory if each parent has many children.
@@ -405,6 +411,7 @@ When multiple parts of your code call the same method that reads from the databa
         self::$productCache = [];
     }
 ```
+
 **Note:** Caching on the repository level is not always a good idea; the code above is just an example.
 
 #### Advanced Example: Bulk Loading with Cache

@@ -2,6 +2,8 @@
 title: Spryker Engineer GPT
 description: Spryker Engineer GPT boosts Spryker devs with AI code, best practices & feedback.
 template: concept-topic-template
+redirect_from:
+  - /docs/dg/dev/ai-assistants/spryker-engineer-gpt
 ---
 
 {% info_block warningBox %}

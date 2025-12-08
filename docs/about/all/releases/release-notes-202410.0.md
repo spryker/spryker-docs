@@ -180,7 +180,7 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 ### Documentation
 
-[AI Assistants](/docs/dg/dev/ai-assistants/ai-assistants)
+[AI Assistants](/docs/dg/dev/ai/ai-assistants/ai-assistants)
 
 ## Audit logs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 

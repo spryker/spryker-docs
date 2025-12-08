@@ -38,9 +38,9 @@ A project-level `ApplicationServices.php` file can be used to discover and regis
  * This is an example configuration that can be used inside a project to tell Symfony which services it has to make
  * available through the Dependency Injection Container. It automatically loads all services from all project modules,
  * except for the ones that are explicitly excluded in the $excludedModuleConfiguration array.
- * 
+ *
  * You can also write your custom solution as it is explained in the Symfony documentation.
- * 
+ *
  * @see https://symfony.com/doc/current/service_container.html
  */
 
@@ -66,8 +66,7 @@ return static function (ContainerConfigurator $configurator): void {
 
     /**
      * Configuration array to exclude specific modules or specific applications within modules from being loaded into the DIC.
-     * If a module is fully excluded, it will not be loaded at all. If only specific applications within a module are to be excluded,
-     * the module name is the key and the value is an array with application names as keys and exclusion patterns as values.
+     * If a module is fully excluded, it will not be loaded at all.
      */
     $excludedModuleConfiguration = [
         'DataImport' => true,
@@ -76,6 +75,13 @@ return static function (ContainerConfigurator $configurator): void {
         'PriceProductStorage' => true,
         'UrlStorage' => true,
         'DocumentationGeneratorRestApi' => true,
+        /**
+         * If only specific applications within a module are to be excluded,
+         * the module name is the key and the value is an array with application names as keys and exclusion patterns as values.
+         */
+        'ExampleModule' => [
+            'Zed' => '{SomeDirectory,AnotherDirectory,DependencyProvider.php}'
+        ],
     ];
 
     /**
@@ -113,7 +119,7 @@ return static function (ContainerConfigurator $configurator): void {
 
             /**
              * Here is the path built to the services directory of the module for the specific application.
-             * 
+             *
              * This path structure is based on the standard Spryker project structure.
              */
             $path = sprintf(
@@ -125,14 +131,22 @@ return static function (ContainerConfigurator $configurator): void {
 
             /**
              * This is the important part: Load all services from the module's application services directory into the DIC.
-             * 
+             *
              * You can also only use this line instead of the whole code in this file. But then you would have to make sure
              * that all modules you want to be available in the DIC are included manually here, which is not the preferred way.
              */
-            $services->load($namespace, $path);
+            $configurator = $services->load($namespace, $path);
+
+            /**
+             * Here is the part to exclude some classes by pattern for one of the applications.
+             */
+            if (isset($excludedModuleConfiguration[$moduleTransfer->getName()][$applicationTransfer->getName()])) {
+                $configurator->exclude($path . $excludedModuleConfiguration[$moduleTransfer->getName()][$applicationTransfer->getName()]);
+            }
         }
     }
 };
+
 
 ```
 

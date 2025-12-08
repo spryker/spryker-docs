@@ -22,11 +22,11 @@ for file in $changed_md_files; do
     continue
   fi
 
-  if git diff "$BASE_BRANCH"..."$HEAD_BRANCH" "$file" | grep -q "^[-+]last_updated:"; then
+  if git diff "$BASE_BRANCH"..."$HEAD_BRANCH" -- "$file" | grep -q "^[-+]last_updated:"; then
     continue
   fi
 
-  lines_changed=$(git diff "$BASE_BRANCH"..."$HEAD_BRANCH" "$file" | grep "^-.*" | grep -v "^---" | grep -v "^-$" | wc -l)
+  lines_changed=$(git diff "$BASE_BRANCH"..."$HEAD_BRANCH" -- "$file" | grep "^-.*" | grep -v "^---" | grep -v "^-$" | wc -l)
 
   if [ "$lines_changed" -gt 5 ]; then
     echo "Please consider updating last_updated of the $file"

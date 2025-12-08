@@ -1,7 +1,7 @@
 ---
 title: Project development guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
-last_updated: Apr 26, 2024
+last_updated: Dec 8, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/project-development-guidelines
 originalArticleId: 3608265d-c19f-4415-83c1-4584d50e48b0
@@ -102,6 +102,48 @@ For example, in code development we use Bridges instead of direct usage of Facad
 
 But you must follow a directory structure, naming conventions, and other rules that are required for the project level. For example, controllers will not work if you put them in the wrong directory.
 
+### UtilEncodingServiceInterface usage
+
+**Why It Is Implemented This Way in Core**:
+
+The core supports multiple PHP versions. At one point, json_encode and json_decode behaved differently across versions, so the core introduced a service layer to unify the behavior. This is not relevant at the project level.
+
+**Alternative Implementation**:
+
+Use `json_encode` and `json_decode` directly. They are sufficient for project-level work and do not require the abstraction layer used in the core.
+
+### Custom service implementation
+
+Sometimes you need to implement simple but important logic, such as cleaning a string from specific characters. The core approach is to create a service and use it everywhere. On the project level, you can use a simpler option.
+```php
+    public static function cleanUpString(string $string): string
+    {
+       // custom logic to cleanup strings 
+    }
+```
+
+This approach is faster and requires less setup while still being reusable across the project.
+
+**Why It Is Implemented This Way in Core**:
+Static methods are difficult to override at the project level. In Spryker core, services are used to allow extensibility and maintainability. However, this limitation **does not apply at the project level**, where a simpler static method approach can be more efficient.
+
+### Incorrect interface usage
+When you explore the core, you see interfaces almost everywhere. On the project level, you only need interfaces when you expect multiple implementations. Plugins are a good example of where interfaces are appropriate.
+
+Avoid creating unnecessary interfaces. This reduces complexity and speeds up development.
+
+**Why It Is Implemented This Way in Core**
+
+In the core, it is impossible to know in advance which models, clients, or facades may need to be overridden. Adding interfaces to existing classes can be complex and may cause backward compatibility breaks for some customers. Project-level development does not have this limitation, so interfaces are not always necessary.
+
+### Annotation usage.
+Annotations help you and static analysis tools understand the code and prevent bugs. Before PHP supported strict type hints, annotations were necessary. Modern PHP can describe parameters and return types directly.
+- Avoid creating annotations that are already defined by type hints.
+- You can configure php-cs-fixer to automatically clean up redundant annotations. [Example configuration](https://github.com/spryker-shop/b2b-demo-shop/blob/master/phpcs.xml)
+
+**Why It Is Implemented This Way in Core**
+
+Much of the core code was written before type hints were introduced. Changing it now could cause backward compatibility issues for existing customers. However, all new code should avoid creating unnecessary annotations.
 ## Tips and tricks
 
 It's an always a good idea to define a proper Git Flow in your project. For example, as a tip, we recommend to put your ticket ID in the branch name. It will help you to track the changes and to understand what is done in the branch.

@@ -11,6 +11,12 @@ entries:
         nested:
           - title: AI Foundation
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+      - title: AI Dev
+        nested:
+          - title: AI Dev Overview
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+          - title: AI Dev MCP Server
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:

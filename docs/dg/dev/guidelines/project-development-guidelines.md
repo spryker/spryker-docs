@@ -126,6 +126,7 @@ Sometimes you need to implement simple but important logic, such as cleaning a s
 This approach is faster and requires less setup while still being reusable across the project.
 
 **Why It Is Implemented This Way in Core**:
+
 Static methods are difficult to override at the project level. In Spryker core, services are used to allow extensibility and maintainability. However, this limitation **does not apply at the project level**, where a simpler static method approach can be more efficient.
 
 ### Incorrect interface usage

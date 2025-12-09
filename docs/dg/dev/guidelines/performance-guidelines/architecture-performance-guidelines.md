@@ -377,30 +377,23 @@ When multiple parts of your code call the same method that reads from the databa
 
 ```php
      /**
-     * @var array<string, ProductTransfer|null>
+     * @var array<int, EntityTransfer|null>
      */
-    private static array $productCache = [];
+    private static array $entityCache = [];
 
-    public function getProductBySku(string $sku): ?ProductTransfer
+    public function getEntityById(int $id): ?EntityTransfer
     {
         // Check cache first
-        if (isset(self::$productCache[$sku])) {
-            return self::$productCache[$sku];
+        if (isset(self::$entityCache[$id])) {
+            return self::$entityCache[$id];
         }
 
-        // Query database only if not cached
-        $productEntity = SpyProductQuery::create()
-            ->filterBySku($sku)
-            ->findOne();
-
-        $productTransfer = $productEntity
-            ? $this->mapEntityToTransfer($productEntity)
-            : null;
+        // Execute some logic, like read, calculate, etc.
 
         // Store in cache
-        self::$productCache[$sku] = $productTransfer;
+        self::$entityCache[$id] = $entityTransfer;
 
-        return $productTransfer;
+        return $entityTransfer;
     }
 
     /**
@@ -408,7 +401,7 @@ When multiple parts of your code call the same method that reads from the databa
      */
     public static function clearCache(): void
     {
-        self::$productCache = [];
+        self::$entityCache = [];
     }
 ```
 
@@ -441,7 +434,7 @@ class OrderProcessor
 ✅ Good: Bulk Load + Cache
 
 ```php
-lass ProductRepository
+Class ProductRepository
 {
     private static array $productCache = [];
 

@@ -394,7 +394,7 @@ You do not need to place this plugin inside the Sales module. You can create a n
 
 Imagine that you need to find all merchants based on a criterion such as IsActive.
 
-A common but harmful approach is to create a new method like findActiveMerchants() that manually implements all database reading, filtering, and mapping logic.
+A common but harmful approach is to create a new method like `findActiveMerchants()` that manually implements all database reading, filtering, and mapping logic.
 
 This hurts upgradability, because such code bypasses the existing core mechanisms.
 

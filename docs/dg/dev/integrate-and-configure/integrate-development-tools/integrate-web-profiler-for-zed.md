@@ -61,7 +61,7 @@ Spryker provides a lot of build-in collectors. You can locate them in `WebProfil
 
 ## Additional profiling with XHProf
 
-If the `xhprof` extension is installed and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
+If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
 For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 

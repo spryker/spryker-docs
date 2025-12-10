@@ -1,5 +1,5 @@
 ---
-title: Use the AiDev module
+title: AI Dev Overview
 description: Integrate AI development tools and MCP server into your Spryker application
 last_updated: Dec 9, 2025
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
@@ -14,7 +14,7 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% info_block warningBox "Prerequisites" %}
 
-This module requires the latest version of `docker/sdk` for proper usage. 
+This module requires `^1.71.0` version of `docker/sdk` for proper usage. 
 Make sure your development environment is up to date before installing the AiDev module.
 
 {% endinfo_block %}
@@ -37,7 +37,7 @@ The module includes:
 1. Require the package:
 
 ```bash
-composer require spryker-sdk/ai-dev
+composer require spryker-sdk/ai-dev --dev
 ```
 
 2. Generate transfers:

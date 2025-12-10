@@ -197,6 +197,12 @@ To resave storage data, run the command:
 SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
 ```
 
+If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:
+
+```bash
+SPRYKER_REDIS_IS_DEV_MODE=0 php -dnewrelic.enabled=false console storage:redis:re-save
+```
+
 With separate storage databases per store, execute the command for each store individually.
 
 ## Storage GUI installation

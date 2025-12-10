@@ -148,4 +148,10 @@ Disable New Relic for a CLI command:
 NEWRELIC_ENABLED=false php vendor/bin/console ...
 ```
 
+If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:
+
+```bash
+php -dnewrelic.enabled=false vendor/bin/console ...
+```
+
 For more information, see [High memory load on long-running PHP tasks](https://docs.newrelic.com/docs/apm/agents/php-agent/troubleshooting/performance-issues-long-running-task/).

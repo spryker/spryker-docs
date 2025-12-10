@@ -150,14 +150,16 @@ To add custom prompts:
 mkdir -p data/prompts
 ```
 
-2. Add your custom prompt markdown files to this directory:
-   
-```text
-data/prompts/
-        - custom-workflow.md
-        - how-to.md
-```
+2. Add your custom prompt markdown file `data/prompts/custom-prompt.md` to this directory with the following structure:
 
+```md
+---
+title: prompt name
+description: short description
+---
+
+prompt content ...
+```
 3. Regenerate prompts to include your custom ones:
 
 ```bash

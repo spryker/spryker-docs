@@ -8,14 +8,6 @@ template: howto-guide-template
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
 
-## About NeuronAI framework
-
-The AiFoundation module uses the [NeuronAI PHP agentic framework](https://docs.neuron-ai.dev/) under the hood. NeuronAI provides the foundational infrastructure for AI provider integrations.
-
-The Spryker AiFoundation client is designed for simple use cases where you need to send prompts to AI providers and receive responses. This covers most common AI integration scenarios in e-commerce applications.
-
-For advanced agentic solutions that require complex workflows, multi-agent systems, or custom AI behaviors, you can use the [NeuronAI framework](https://docs.neuron-ai.dev/) directly in your project code. However, note that Spryker does not officially support direct usage of NeuronAI APIs outside of the AiFoundation module. If you choose to use NeuronAI directly, you are responsible for maintenance and compatibility with future versions.
-
 ## Install the AiFoundation module
 
 1. Require the package:
@@ -446,3 +438,11 @@ Implementation of function calling capabilities, allowing AI models to invoke sp
 ### Chat history capabilities
 
 Support for maintaining conversation context across multiple interactions. This will enable multi-turn conversations where the AI can reference previous messages, maintain state, and provide more contextually relevant responses throughout an extended dialogue.
+
+## About NeuronAI framework
+
+The AiFoundation module uses the [NeuronAI PHP agentic framework](https://docs.neuron-ai.dev/) under the hood. NeuronAI provides the foundational infrastructure for AI provider integrations.
+
+The Spryker AiFoundation client is designed for simple use cases where you need to send prompts to AI providers and receive responses. This covers most common AI integration scenarios in e-commerce applications.
+
+For advanced agentic solutions that require complex workflows, multi-agent systems, or custom AI behaviors, you can use the [NeuronAI framework](https://docs.neuron-ai.dev/) directly in your project code. However, note that Spryker does not officially support direct usage of NeuronAI APIs outside of the AiFoundation module. If you choose to use NeuronAI directly, you are responsible for maintenance and compatibility with future versions.

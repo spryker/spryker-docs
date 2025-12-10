@@ -160,6 +160,7 @@ description: short description
 
 prompt content ...
 ```
+
 3. Regenerate prompts to include your custom ones:
 
 ```bash

@@ -309,24 +309,23 @@ class CustomerBackendProcessor implements ProcessorInterface
 
 ### Console commands
 
+All the following commands can be used with a specific GLUE_APPLICATION by prefixing them with `GLUE_APPLICATION=GLUE_BACKEND` environment variable. For example: `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug --list`
+
 ```bash
-# Generate all configured API types
-docker/sdk cli glue  api:generate
+# Generate resource classes for all configured API types at once. Usually used during deployment/installation.
+docker/sdk cli glue api:generate
 
-# Generate specific API type
-docker/sdk cli glue  api:generate backend
+# Generate API type specific resource classes. Usually used during development.
+docker/sdk cli glue api:generate backend
 
-# Validate schemas only
-docker/sdk cli glue  api:generate --validate-only
-
-# Dry run
-docker/sdk cli glue  api:generate --dry-run
+# Validate schemas only to see if there is any issue in the definitions
+docker/sdk cli glue api:generate --validate-only
 ```
 
 ### Debug commands
 
 ```bash
-# List all resources
+# List all resources to see which ones are defined in the schema files.
 docker/sdk cli glue  api:debug --list
 
 # Inspect specific resource and print details about properties and operations

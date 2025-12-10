@@ -1,5 +1,5 @@
 ---
-title: Configure the AiDev MCP server
+title: AI Dev MCP Server
 description: Set up and configure the Model Context Protocol server for AI assistant integration
 last_updated: Dec 9, 2025
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, configuration

@@ -36,9 +36,29 @@ composer require spryker/zed-request:^3.24.0
 
 To use Web Profiler for Backend Gateway, ensure that Web Profiler is enabled for Yves. For details on enabling Web Profiler Widget for Yves, see [Integrate Web Profiler Widget for Yves](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html).
 
-Additionally, make sure the Zed Request data collector is registered in your dependency provider:
+**src/Pyz/Yves/WebProfilerWidget/WebProfilerWidgetDependencyProvider.php**
 
-Add `\Spryker\Yves\ZedRequest\Plugin\WebProfiler\WebProfilerZedRequestDataCollectorPlugin` to `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
+```php
+<?php
+
+namespace Pyz\Yves\WebProfilerWidget;
+
+use Spryker\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider as SprykerWebProfilerDependencyProvider;
+use Spryker\Yves\ZedRequest\Plugin\WebProfiler\WebProfilerZedRequestDataCollectorPlugin;
+
+class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\WebProfilerExtension\Dependency\Plugin\WebProfilerDataCollectorPluginInterface>
+     */
+    protected function getDataCollectorPlugins(): array
+    {
+        return [
+            new WebProfilerZedRequestDataCollectorPlugin(),
+        ];
+    }
+}
+```
 
 ## Accessing Backend Gateway profiles
 
@@ -58,6 +78,6 @@ Clicking on the profile link opens the comprehensive Web Profiler view for the B
 
 ### Additional profiling with XHProf
 
-If the `xhprof` extension is installed and the Profiler module is integrated, Backend Gateway profiles also include detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
+If the `xhprof` extension is enabled and the Profiler module is integrated, Backend Gateway profiles also include detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
 
 For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).

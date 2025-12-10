@@ -54,7 +54,8 @@ spryker-feature/shipment:"dev-master as 202507.0" \
 spryker-feature/spryker-core:"dev-master as 202507.0" \
 spryker-feature/spryker-core-back-office:"dev-master as 202507.0" \
 spryker-feature/product-offer-shipment:"dev-master as 202507.0" \
-spryker-feature/product-offer-service-points:"dev-master as 202507.0"
+spryker-feature/product-offer-service-points:"dev-master as 202507.0" \
+spryker-feature/warehouse-user-management:"dev-master as 202507.0"
 ```
 
 2. Update the `@spryker/oryx-for-zed` dependency:

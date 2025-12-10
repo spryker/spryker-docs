@@ -49,6 +49,17 @@ Extend Twig from the project level as follows:
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
+Extend Twig from the project level component that exists in an alternative project level theme as follows:
+
+```twig
+{% raw %}{%{% endraw %} extends molecule('product-item-color-selector', '@Pyz:ProductGroupWidget:default') {% raw %}%}{% endraw %}
+
+{% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
+    new-theme
+    {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+```
+
 Extend Twig from the core level as follows:
 
 ```twig

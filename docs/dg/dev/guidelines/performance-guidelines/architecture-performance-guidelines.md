@@ -1,7 +1,7 @@
 ---
 title: Architecture performance guidelines
 description: Learn about the bad and best architecture practices which can affect the performance of applications in the very end servers
-last_updated: Nov 26, 2021
+last_updated: Dec 8, 2025
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
@@ -16,28 +16,87 @@ Performance shows the response of a system to carrying out certain actions for 
 
 This article explains the bad and best architecture practices that can affect applications' performance in the very end servers.
 
-## General performance challenges in architecture design
+## Bulk Operations vs Individual Operations: Performance Best Practices
 
-Below, you will find the most common architecture design mistakes and impediments that one makes to fulfill the business requirements, but that can also entail performance issues.
+Bulk operations significantly reduce the number of database queries, method calls, and iterations, leading to better performance, reduced memory usage, and faster execution times.
 
-### Duplications of slow operations
+### Database Operations
 
-Sometimes, because of business requirements, it's mandatory to have a slow operation during one transaction. This slow part of functionality might be very small and hidden behind an API, but the usage of this API can go out of control.
+**Read operation**
 
-Let's consider an example illustrating the impact of a bad architecture design with slow operations. Imagine you have a method called `caluculateDiscount()` that generates some discounts for cart items. However, each call of this method takes 100ms, which might be a proper response time for an API. Now think of another business requirement when you need to calculate the discount for 10 separated groups of items in the cart. In this case, you need to call the `caluculateDiscount()` method 10 times, leading to 1000ms (1 second), which already poses a performance problem.
+```php
+❌ Bad: N+1 Query Problem
+// Fetching orders one by one - N+1 queries
+$orderIds = [1, 2, 3, 4, 5];
+$orders = [];
 
-### Duplications of database queries
+foreach ($orderIds as $orderId) {
+    // Each iteration = 1 database query
+    $order = SpySalesOrderQuery::create()
+        ->filterByIdSalesOrder($orderId)
+        ->findOne();
+    $orders[] = $order;
+}
+// Total: 5 queries
 
-During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
+✅ Good: Single Bulk Query
 
-- Merging several queries into one query with a bigger result (unfiltered).
-- Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
+// Fetching all orders at once - 1 query
+$orderIds = [1, 2, 3, 4, 5];
 
-{% info_block warningBox %}
+$orders = SpySalesOrderQuery::create()
+    ->filterByIdSalesOrder_In($orderIds)
+    ->find();
+// Total: 1 query
+```
 
-Make sure you carefully check for memory leaks during the query optimizations, as the results will be bigger or shared in one transaction.
+**Example with Relations**
 
-{% endinfo_block %}
+```php
+// ❌ Bad: Loading items for each order separately
+foreach ($orders as $order) {
+    $items = SpySalesOrderItemQuery::create()
+        ->filterByFkSalesOrder($order->getIdSalesOrder())
+        ->find();
+}
+// Total: 1 + N queries
+
+// ✅ Good: Using joinWithTable to load everything at once
+$orders = SpySalesOrderQuery::create()
+    ->filterByIdSalesOrder_In($orderIds)
+    ->joinWithSpySalesOrderItem()
+    ->find();
+// Total: 1 query with all items hydrated
+```
+
+**Write operation**
+
+```php
+// ❌ Bad: Saving items separately
+foreach ($salesOrderItems as $salesOrderItem) {
+    // logic
+    $salesOrderItem->save();
+}
+// Total: N queries
+
+// ✅ Good: Using ActiveRecordBatchProcessorTrait to save everything at once
+foreach ($salesOrderItems as $salesOrderItem) {
+    $this->persist($salesOrderItem);
+}
+$this->commit();
+// Total: 1 query with all items
+```
+
+For more information check - [Batch processing of Propel entities](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html).
+
+#### ORM vs PDO
+
+For more information about improving data import performance, see [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html).
+
+Features affected by the ORM approach:
+
+- [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
+- [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Duplicated storage calls (storage calls in a loop)
 
@@ -81,6 +140,114 @@ Always evaluate the size of batch requests and memory usage when removing storag
 
 {% endinfo_block %}
 
+### Heavy Method Calls
+
+❌ Bad: Multiple Individual Facade Calls
+
+```php
+// Processing items one by one
+foreach ($saveOrderTransfer->getOrderItems() as $itemTransfer) {
+    // Each iteration = separate facade call + potential DB query
+    $this->omsFacade->triggerEventForOrderItem($itemTransfer->getIdSalesOrderItem());
+}
+// Total: N facade calls + N potential database operations
+```
+
+✅ Good: Single Bulk Facade Call
+
+```php
+// Collect all IDs first
+$salesOrderItemIds = [];
+foreach ($saveOrderTransfer->getOrderItems() as $itemTransfer) {
+    $salesOrderItemIds[] = $itemTransfer->getIdSalesOrderItem();
+}
+
+// Single facade call with all IDs
+$this->omsFacade->triggerEventForNewOrderItems($salesOrderItemIds);
+// Total: 1 facade call + 1 optimized database operation
+```
+
+### Nested Foreach Loops
+
+❌ Bad: Multiple Nested Loops with Individual Operations
+
+```php
+// Loading product data for each order item
+foreach ($orders as $order) {
+    foreach ($order->getItems() as $item) {
+        // Each iteration = 1 query
+        $product = SpyProductQuery::create()
+            ->filterBySku($item->getSku())
+            ->findOne();
+        
+        // Another query per item
+        $stock = SpyStockQuery::create()
+            ->filterByFkProduct($product->getIdProduct())
+            ->findOne();
+    }
+}
+// Total: (Orders × Items × 2) queries
+```
+
+✅ Good: Collect Data, Then Bulk Load
+
+```php
+// Step 1: Collect all SKUs
+$skus = [];
+foreach ($orders as $order) {
+    foreach ($order->getItems() as $item) {
+        $skus[] = $item->getSku();
+    }
+}
+
+// Step 2: Bulk load products
+$products = SpyProductQuery::create()
+    ->filterBySku_In($skus)
+    ->joinWithSpyStock()
+    ->find();
+
+// Step 3: Create lookup map
+$productMap = [];
+foreach ($products as $product) {
+    $productMap[$product->getSku()] = $product;
+}
+
+// Step 4: Use the map
+foreach ($orders as $order) {
+    foreach ($order->getItems() as $item) {
+        $product = $productMap[$item->getSku()] ?? null;
+        $stock = $product?->getSpyStocks()->getFirst();
+    }
+}
+// Total: 1 query
+```
+
+### When to Avoid Bulk Operations
+
+1. **Memory constraints**: Loading thousands of records at once may cause memory issues
+2. **Processing time limits**: Long-running bulk operations may hit execution timeouts
+3. **Transaction isolation**: When you need separate transactions for error handling
+
+Solution: Batch Processing
+
+```php
+// Process in chunks of 100
+$orderIds = range(1, 1000);
+$chunks = array_chunk($orderIds, 100);
+
+foreach ($chunks as $chunk) {
+    $orders = SpySalesOrderQuery::create()
+        ->filterByIdSalesOrder_In($chunk)
+        ->find();
+    
+    // Process this batch
+    foreach ($orders as $order) {
+        // ...
+    }
+}
+// Total: 10 queries instead of 1000
+```
+
 ### Optimistic vs. pessimistic locking
 
 Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance because of the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
@@ -106,7 +273,61 @@ During large-scale data processing operations, there can occur performance drawb
 
 Below, you will find an analysis of the Spryker architecture and solutions for the most common performance challenges we had in several projects.
 
-### Database queries in plugins
+### Propel joinWith usage
+
+Propel provides two methods for joining tables in queries: `joinTable()` and `joinWithTable()`. The key difference is that `joinWithTable()` hydrates related entities in a single query, significantly improving performance.
+
+#### Performance Difference
+
+- `joinTable()`: Adds a JOIN clause to the SQL query but does not hydrate the related objects. Results in N+1 queries if you access related data.
+- `joinWithTable()`: Adds a JOIN clause AND hydrates the related objects in a single query, avoiding additional database calls.
+
+#### Code Example
+
+```php
+// ❌ Bad: Using joinTable() - causes N+1 queries
+$orders = SpySalesOrderQuery::create()
+    ->joinSpySalesOrderItem()
+    ->find();
+foreach ($orders as $order) {
+    // This triggers additional queries for each order
+    $items = $order->getSpySalesOrderItems();
+}
+// ✅ Good: Using joinWithTable() - single query with hydration
+$orders = SpySalesOrderQuery::create()
+    ->joinWithSpySalesOrderItem()
+    ->find();
+foreach ($orders as $order) {
+    // No additional queries - items already loaded
+    $items = $order->getSpySalesOrderItems();
+}
+```
+
+#### When NOT to Use `joinWithTable()`
+
+1. **Large result sets with many related records**: Can consume excessive memory if each parent has many children.
+2. **When you don't need the related data**: If you only need data from the main table, use `joinTable()` or avoid joins entirely.
+3. **Multiple levels of deep joins**: Can create massive result sets and duplicate data.
+
+```php
+// ⚠️ Avoid: Deep joins with large datasets
+$orders = SpySalesOrderQuery::create()
+->joinWithSpySalesOrderItem()
+->joinWithSpySalesOrderAddress()
+->joinWithSpySalesOrderTotals()
+->find(); // May load too much data
+```
+
+4. **When using aggregation**: For COUNT, SUM, etc., you typically only need joinTable().
+
+```php
+// ✅ Correct: Using joinTable() for counting
+$count = SpySalesOrderQuery::create()
+->joinSpySalesOrderItem()
+->count();
+```
+
+#### Database queries in plugins
 
 Spryker widely uses plugins to reduce module dependencies and to increase flexibility to make features work together smoothly. However, this can lead to some performance issues if there are database queries in each plugin. That's why it's essential to aggregate all queries to decrease the number of database operations.
 
@@ -142,35 +363,192 @@ Plugin 4. RESULT
 Plugin n ...
 ```
 
-### ORM vs PDO
+### Internal Caching with Static Properties
 
-Spryker uses Propel ORM as a database abstraction layer which allows to stay DBMS-agnostic and use its powerful tools for persisting and accessing data in a clean and readable way. But this causes some performance costs that can be especially noticeable when working with heavy data transfer operations like Data Import and Publish and Synchronization for big data volumes.
+**Why Use Internal Caching**
+When multiple parts of your code call the same method that reads from the database, storing results in a static property eliminates redundant queries and processing within the same request lifecycle.
 
-Performance is one of the key attributes when it comes to synchronous combinations. Therefore, as a rule of thumb, any database operations must be high performant and be executed fast. If ORM cannot guarantee the high-speed database operation because of the lack of features or complexity, one should avoid using it.
+**Benefits**
+- **Reduced database load**: Avoids duplicate queries in the same request
+- **Faster execution**: Memory reads are orders of magnitude faster than database queries
+- **Lower latency**: Especially beneficial when the same data is accessed multiple times
 
-For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation because of the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
+✅ Good: Internal Caching with Static Property
 
-For data import of large files, it's also important to use bulk processing. Therefore, consider importing data into the database with chunks of 1000+ elements. The same applies to triggering events. Using bulk processing saves a lot of time for communication with the database and queues.
+```php
+     /**
+     * @var array<int, EntityTransfer|null>
+     */
+    private static array $entityCache = [];
 
-For more information about improving data import performance, see [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html).
+    public function getEntityById(int $id): ?EntityTransfer
+    {
+        // Check cache first
+        if (isset(self::$entityCache[$id])) {
+            return self::$entityCache[$id];
+        }
 
-Features affected by the ORM approach:
+        // Execute some logic, like read, calculate, etc.
 
-- [Data import](/docs/dg/dev/data-import/{{site.version}}/data-import.html)
-- [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
+        // Store in cache
+        self::$entityCache[$id] = $entityTransfer;
 
-### Database query optimization
+        return $entityTransfer;
+    }
 
-Database queries are the slowest parts of each application. They have different dependencies such as database engines, hardware, configurations, etc. Spryker prevents any database execution for popular endpoints like Home, PDP, Search. However, this preventive measure is not avoidable for some endpoints, for example, Cart or Checkout. There are several ways to make sure such endpoints are handling the database queries most effectively in terms of performance:
+    /**
+     * Clear cache if needed (e.g., after updates)
+     */
+    public static function clearCache(): void
+    {
+        self::$entityCache = [];
+    }
+```
 
-- Cache result for the duplicate queries.
-- Aggregate several queries to only one query if possible.
-- Change single inserts to bulk inserts.
-- Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
+**Note:** Caching on the repository level is not always a good idea; the code above is just an example.
 
-### Pagination
+#### Advanced Example: Bulk Loading with Cache
 
-Ensure that data fetched from the database is paginated. Failing to do so with large datasets may lead to out-of-memory errors.
+❌ Bad: Loop Without Cache
+
+```php
+class OrderProcessor
+{
+    public function processOrders(array $orders): void
+    {
+        $productRepository = new ProductRepository();
+
+        foreach ($orders as $order) {
+            foreach ($order->getItems() as $item) {
+                // Each item triggers a query, even for duplicate SKUs
+                $product = $productRepository->getProductBySku($item->getSku());
+                // Process product...
+            }
+        }
+    }
+}
+
+// If 100 items have 10 unique SKUs: 100 queries
+```
+
+✅ Good: Bulk Load + Cache
+
+```php
+Class ProductRepository
+{
+    private static array $productCache = [];
+
+    public function getProductsBySku(array $skus): array
+    {
+        $uncachedSkus = [];
+        $results = [];
+
+        // Step 1: Check which SKUs are not cached
+        foreach ($skus as $sku) {
+            if (isset(self::$productCache[$sku])) {
+                $results[$sku] = self::$productCache[$sku];
+            } else {
+                $uncachedSkus[] = $sku;
+            }
+        }
+
+        // Step 2: Bulk load uncached SKUs
+        if (!empty($uncachedSkus)) {
+            $productEntities = SpyProductQuery::create()
+                ->filterBySku_In($uncachedSkus)
+                ->find();
+
+            foreach ($productEntities as $productEntity) {
+                $productTransfer = $this->mapEntityToTransfer($productEntity);
+                $sku = $productEntity->getSku();
+
+                // Cache the result
+                self::$productCache[$sku] = $productTransfer;
+                $results[$sku] = $productTransfer;
+            }
+
+            // Cache null for missing SKUs
+            foreach ($uncachedSkus as $sku) {
+                if (!isset(self::$productCache[$sku])) {
+                    self::$productCache[$sku] = null;
+                    $results[$sku] = null;
+                }
+            }
+        }
+
+        return $results;
+    }
+
+    public function getProductBySku(string $sku): ?ProductTransfer
+    {
+        $products = $this->getProductsBySku([$sku]);
+        return $products[$sku] ?? null;
+    }
+}
+
+class OrderProcessor
+{
+    public function processOrders(array $orders): void
+    {
+        $productRepository = new ProductRepository();
+
+        // Step 1: Collect all unique SKUs
+        $allSkus = [];
+        foreach ($orders as $order) {
+            foreach ($order->getItems() as $item) {
+                $allSkus[] = $item->getSku();
+            }
+        }
+        $allSkus = array_unique($allSkus);
+
+        // Step 2: Bulk load and cache all products
+        $productRepository->getProductsBySku($allSkus);
+
+        // Step 3: Process orders using cached data
+        foreach ($orders as $order) {
+            foreach ($order->getItems() as $item) {
+                // Always served from cache
+                $product = $productRepository->getProductBySku($item->getSku());
+                // Process product...
+            }
+        }
+    }
+}
+
+// If 100 items have 10 unique SKUs: 1 query
+```
+
+#### When NOT to Use Internal Caching
+
+1. **Long-running processes (like P&S)**: Cache grows indefinitely (use chunking or periodic clearing)
+2. **High memory usage**: Large objects cached thousands of times
+3. **Stale data concerns**: When data changes frequently during request
+4. **Multi-tenant applications**: Cache may leak data between tenants (use tenant-aware keys)
+
+#### Best Practices
+
+1. **Use typed arrays**: Document what's stored in the cache
+2. **Cache null values**: Avoid repeated queries for missing data
+3. **Clear cache after writes**: Prevent stale data
+4. **Memory awareness**: Monitor cache size in production
+5. **Create E2E and unit tests**: Before you apply any optimizations, create the necessary tests. This increases system stability and reduces the risk of introducing bugs.
+6. **Use cache keys wisely**: Include tenant ID, locale, etc. if needed
+
+```php
+// ✅ Good: Tenant-aware cache key
+private static array $cache = [];
+
+public function getProduct(string $sku, int $tenantId): ?ProductTransfer
+{
+    $cacheKey = sprintf('%d:%s', $tenantId, $sku);
+
+    if (isset(self::$cache[$cacheKey])) {
+        return self::$cache[$cacheKey];
+    }
+
+    // Query and cache...
+}
+```
 
 ### Wildcards in the key-value store
 

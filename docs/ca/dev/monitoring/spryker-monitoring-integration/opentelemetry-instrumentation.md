@@ -2,7 +2,7 @@
 title: OpenTelemetry instrumentation
 description: Describing what is OpenTelemetry and how Spryker integrates it in the SCCOS
 template: howto-guide-template
-last_updated: Feb 1, 2025
+last_updated: Oct 6, 2025
 redirect_from:
   - /docs/ca/dev/monitoring/opentelemetry-instrumentation.html
 ---

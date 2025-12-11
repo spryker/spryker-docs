@@ -31,21 +31,21 @@ src/
 │               ├── storefront/
 │               │   ├── resource-name.yml
 │               │   └── resource-name.validation.yml
-│               └── backoffice/
+│               └── backend/
 │                   ├── resource-name.yml
 │                   └── resource-name.validation.yml
 ├── SprykerFeature/
 │   └── {Feature}/
 │       └── resources/
 │           └── api/
-│               └── backoffice/
+│               └── backend/
 │                   └── resource-name.yml
 └── Pyz/
     └── Glue/
         └── {Module}/
             └── resources/
                 └── api/
-                    └── backoffice/
+                    └── backend/
                         └── resource-name.yml
 ```
 
@@ -613,7 +613,7 @@ docker/sdk cli glue  api:generate --resource=customers  # Generate single resour
 ### Output
 
 ```bash
-Generating API resources for ApiType: backoffice
+Generating API resources for ApiType: backend
 
 Discovering schema files...
 Validating schemas... OK

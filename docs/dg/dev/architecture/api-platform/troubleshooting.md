@@ -28,7 +28,7 @@ This document provides solutions to common issues when working with API Platform
 
    ```bash
    ❌ src/Pyz/Glue/Customer/api/customers.yml
-   ✅ src/Pyz/Glue/Customer/resources/api/backoffice/customers.yml
+   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.yml
    ```
 
 2. **API type not configured**
@@ -38,7 +38,7 @@ This document provides solutions to common issues when working with API Platform
    ```php
    $containerConfigurator->extension('spryker_api_platform', [
        'api_types' => [
-           'backoffice',  // Must match directory name
+           'backend',  // Must match directory name
        ],
    ]);
    ```
@@ -113,7 +113,7 @@ docker/sdk cli glue  api:generate --force
 **Symptom:**
 
 ```bash
-Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvider" not found
+Error: Class "Pyz\Glue\Customer\Api\Backend\Provider\CustomerBackendProvider" not found
 ```
 
 **Possible causes:**
@@ -127,9 +127,9 @@ Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvid
 1. Verify the class exists and namespace matches:
 
    ```php
-   namespace Pyz\Glue\Customer\Api\Backoffice\Provider;
+   namespace Pyz\Glue\Customer\Api\Backend\Provider;
 
-   class CustomerBackofficeProvider implements ProviderInterface
+   class CustomerBackendProvider implements ProviderInterface
    ```
 
 2. Ensure services are auto-discovered in `ApplicationServices.php`:
@@ -138,10 +138,10 @@ Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvid
    $services->load('Pyz\\Glue\\', '../../../src/Pyz/Glue/');
    ```
 
-3. Check class name in schema matches exactly:
+3. Check class name in the resource schema file of the module matches exactly:
 
    ```yaml
-   provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
+   provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
    ```
 
 ### Validation not working
@@ -159,7 +159,7 @@ Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvid
 1. Ensure validation file exists:
 
    ```bash
-   ✅ resources/api/backoffice/customers.validation.yml
+   ✅ resources/api/backend/customers.validation.yml
    ```
 
 2. Match operation names to HTTP methods:
@@ -176,7 +176,7 @@ Error: Class "Pyz\Glue\Customer\Api\Backoffice\Provider\CustomerBackofficeProvid
              - Email
    ```
 
-3. Check generated resource class has validation attributes:
+3. Check generated resource class (for example `Generated\Api\Storefront\CustomersStorefrontResource`) has validation attributes:
 
    ```php
    #[Assert\NotBlank(groups: ['customers:create'])]
@@ -217,8 +217,8 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBack
 ```
 
 Then verify the documentation UI loads correctly by visiting the root URL:
-- Storefront: `https://glue.mysprykershop.com/`
-- Backoffice: `https://backoffice.mysprykershop.com/`
+- Storefront: `https://glue-storefront.mysprykershop.com/`
+- Backend: `https://glue-backend.mysprykershop.com/`
 
 {% info_block warningBox "Required after integration" %}
 
@@ -254,8 +254,8 @@ The `assets:install` command must be run after integrating API Platform and when
 2. Check API documentation for correct URLs:
 
    ```bash
-   Storefront: https://glue.mysprykershop.com/
-   Backoffice: https://backoffice.mysprykershop.com/
+   Storefront: https://glue-storefront.mysprykershop.com/
+   Backend: https://glue-backend.mysprykershop.com/
    ```
 
    The interactive API documentation is available at the root URL of each application.
@@ -273,7 +273,7 @@ The `assets:install` command must be run after integrating API Platform and when
 
 **Solution:**
 
-1. Enable pagination in schema:
+1. Enable pagination in the schema file of the defining module:
 
    ```yaml
    resource:
@@ -307,17 +307,17 @@ The `assets:install` command must be run after integrating API Platform and when
 **Symptom:**
 
 ```bash
-Cannot autowire service "CustomerBackofficeProvider": argument "$customerFacade"
+Cannot autowire service "CustomerBackendProvider": argument "$customerFacade"
 references class "CustomerFacadeInterface" but no such service exists.
 ```
 
 **Solution:**
 
-1. Register facade in `ApplicationServices.php`:
+1. Register facade in the respective applications `ApplicationServices.php`:
 
    ```php
-   use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
-   use Pyz\Glue\Customer\Business\CustomerFacade;
+   use Pyz\Zed\Customer\Business\CustomerFacadeInterface;
+   use Pyz\Zed\Customer\Business\CustomerFacade;
 
    $services->set(CustomerFacadeInterface::class, CustomerFacade::class);
    ```
@@ -330,43 +330,7 @@ references class "CustomerFacadeInterface" but no such service exists.
    ) {}
    ```
 
-### Circular reference detected
-
-**Symptom:**
-
-```bash
-Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\CustomerBackofficeProvider"
-```
-
-**Solution:**
-
-1. Review your dependency graph
-2. Break circular dependencies by extracting shared logic
-3. Use lazy services if needed
-
 ## Performance issues
-
-### Slow resource generation
-
-**Symptom:** `docker/sdk cli glue  api:generate` takes very long to complete.
-
-**Solution:**
-
-1. Generate specific API types only:
-
-   ```bash
-   docker/sdk cli glue  api:generate backoffice
-   ```
-
-2. Reduce number of source directories:
-
-   ```php
-   $containerConfigurator->extension('spryker_api_platform', [
-       'source_directories' => [
-           'src/Pyz',  // Only project layer
-       ],
-   ]);
-   ```
 
 ### Slow API responses
 
@@ -391,16 +355,16 @@ Circular reference detected for service "Pyz\Glue\Customer\Api\Provider\Customer
 See which schemas contribute to final resource:
 
 ```bash
-docker/sdk cli glue  api:debug customers --api-type=backoffice --show-sources
+docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 ```
 
 Output:
 
 ```bash
 Source Files (priority order):
-  ✓ vendor/spryker/customer/resources/api/backoffice/customers.yml (CORE)
-  ✓ src/SprykerFeature/CRM/resources/api/backoffice/customers.yml (FEATURE)
-  ✓ src/Pyz/Glue/Customer/resources/api/backoffice/customers.yml (PROJECT)
+  ✓ vendor/spryker/customer/resources/api/backend/customers.yml (CORE)
+  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.yml (FEATURE)
+  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.yml (PROJECT)
 ```
 
 ### Inspecting generated code
@@ -408,7 +372,7 @@ Source Files (priority order):
 View the generated resource class:
 
 ```bash
-cat src/Generated/Api/Backoffice/CustomersBackofficeResource.php
+cat src/Generated/Api/Backend/CustomersBackendResource.php
 ```
 
 Check for:

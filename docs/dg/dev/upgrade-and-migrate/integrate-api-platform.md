@@ -20,11 +20,7 @@ Before integrating API Platform, ensure you have:
 To integrate API Platform, install the following modules:
 
 ```bash
-composer require \
-  spryker/api-platform:"^1.0.0" \
-  api-platform/core:"^3.2.0" \
-  nelmio/cors-bundle:"^2.4.0" \
-  --update-with-dependencies
+composer require spryker/api-platform:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block infoBox "Module placeholder" %}
@@ -230,26 +226,26 @@ docker/sdk cli glue api:generate --validate-only
 
 The generated resources will be created in `src/Generated/Api/{ApiType}/` directory.
 
-## 6. Install assets
+## 6. Install assets for the API Platform documentation interface
 
 Install the necessary assets for API Platform to function correctly:
 
 ### For Glue application
 
 ```bash
-docker/sdk cli glue assets:install public/Glue/assets  --symlink
+docker/sdk cli glue assets:install public/Glue/assets --symlink
 ```
 
 ### For GlueStorefront
 
 ```bash
-docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue assets:install public/GlueStorefront/assets/  --symlink
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue assets:install public/GlueStorefront/assets/ --symlink
 ```
 
 ### For GlueBackend
 
 ```bash
-docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBackend/assets/  --symlink
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue assets:install public/GlueBackend/assets/ --symlink
 ```
 
 {% info_block warningBox "Required step" %}
@@ -274,14 +270,7 @@ console container:build
 
 To verify your integration:
 
-1. **Check generated resources:**
-
-   ```bash
-   ls -la src/Generated/Api/Storefront/
-   ls -la src/Generated/Api/Backend/
-   ```
-
-2. **Debug available resources:**
+1. **Debug available resources:**
 
    ```bash
    # List all API resources
@@ -291,14 +280,16 @@ To verify your integration:
    docker/sdk cli glue  api:debug access-tokens --api-type=storefront
    ```
 
-3. **Access API documentation:**
+2. **Access API documentation:**
    - Glue: `https://glue.your-domain/`
    - GlueStorefront: `https://glue-storefront.your-domain/`
    - GlueBackend: `https://glue-backend.your-domain/`
 
    The interactive OpenAPI documentation interface will be displayed at the root URL of each application.
 
-   You can disable this interface in production environments by configuring the `api_platform.enable_docs` setting in your configuration files.
+   Depending on the environment of the application (development or production), the documentation interface may be enabled or disabled by default. Currently, it is only enabled in development (docker.dev) environments.
+   
+   You can enable/disable this interface by configuring the `api_platform.enable_docs` setting in your configuration files.
 
 ## Next steps
 

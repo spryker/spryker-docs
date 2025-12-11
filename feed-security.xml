@@ -15,7 +15,7 @@ layout: none
 
     {% assign site_pages = site.pages | sort: 'page.publish_date' | reverse %}
     {% for page in site_pages %}
-      {% if page.url contains '/releases/security-releases' %}
+      {% if page.url contains '/releases/security-releases' or page.url contains '/releases/image-releases' %}
          <item>
             <title>{{ page.title | xml_escape }}</title>
             <description>{{ page.description | xml_escape }}</description>

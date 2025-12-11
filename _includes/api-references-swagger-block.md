@@ -56,8 +56,6 @@
 }
 </style>
 
-{% endraw %}
-
 {% info_block infoBox "Field descriptions" %}
 
 To view detailed descriptions of request and response fields, expand the endpoint and click on the field name in the schema.

@@ -154,7 +154,7 @@ Using the Redis KEYS command in production is strongly discouraged because it fo
 
 To avoid these pitfalls, always access Storage by using known, explicitly generated keys that Spryker synchronization data provides, and avoid interacting with raw Redis keys directly.
 
-Bad practice: Constructing Redis key patterns and scanning Storage
+❌ Bad: Constructing Redis key patterns and scanning Storage
 
 ```php
 // Do not scan Redis Storage keys
@@ -168,7 +168,7 @@ foreach ($keys as $key) {
 
 This pattern forces Redis to resolve wildcard expressions, which is slow, blocking, and not intended for runtime operations in Spryker applications.
 
-Recommended approach: Use synchronization keys or direct Storage identifiers
+✅ Good: Use synchronization keys or direct Storage identifiers
 
 ```php
 // Use the synchronization key generated during Publish and Synchronize

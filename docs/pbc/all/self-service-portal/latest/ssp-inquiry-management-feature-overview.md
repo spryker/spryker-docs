@@ -13,9 +13,10 @@ Back Office users can manage inquiries, update statuses, and communicate with cu
 
 ## Storefront functionalities
 
-- Submit an inquiry with relevant details
-- Attach supporting documents and images
-- Track the status of submitted inquiries
+- Create an inquiry with relevant details and supporting documents and images
+- View inquiry list in **Customer Account** > **Inquiries**
+- View inquiry details and track the status
+- View inquiries in **Customer Account** > **Dashboard**
 
 ## Back Office functionalities
 
@@ -23,7 +24,6 @@ Back Office users can manage inquiries, update statuses, and communicate with cu
 - Filter and search inquiries by type, status, or customer
 - Update inquiry status
 - Attach internal notes visible only to Back Office users for internal collaboration
-
 
 ## Inquiry types
 
@@ -85,8 +85,6 @@ On the Storefront, access to inquiry actions is restricted based on user permiss
 | Create inquiries             | Create inquiries and view only your own inquiries. |
 | View business unit inquiries | View inquiries submitted by company users within the business unit a user belongs to. |
 | View company inquiries       | View inquiries submitted by company users within the company a user belongs to. |
-
-
 
 
 ## Inquiry creation on Storefront

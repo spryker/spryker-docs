@@ -38,7 +38,7 @@ The environment name is derived from the combination of the project name and env
 
 {% info_block warningBox "Mandatory information" %}
 
-The maximum length of the project name is 20 symbols, due to a limitation of one of the AWS services we use.
+The maximum length of the project name is 20 characters because of a limitation in one of the AWS services.
 
 {% endinfo_block %}
 

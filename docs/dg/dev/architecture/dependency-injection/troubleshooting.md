@@ -36,7 +36,7 @@ You're trying to autowire a class from a core module that doesn't have a pre-com
 
 **Solution 1 - Register the service manually:**
 
-Add the missing service to your `config/Symfony/Zed/ApplicationServices.php`:
+Add the missing service to your `config/Zed/ApplicationServices.php`:
 
 ```php
 <?php

@@ -19,7 +19,7 @@ This document describes how to debug and inspect services registered in the Symf
 ## Prerequisites
 
 - Symfony Dependency Injection is configured in your project. For setup instructions, see [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html).
-- `FrameworkBundle` is registered in `config/Symfony/{APPLICATION}/bundles.php`
+- `FrameworkBundle` is registered in `config/{APPLICATION}/bundles.php`
 
 ## Overview
 

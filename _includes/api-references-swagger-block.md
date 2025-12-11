@@ -56,6 +56,14 @@
 }
 </style>
 
+{% endraw %}
+
+{% info_block infoBox "Field descriptions" %}
+
+To view detailed descriptions of request and response fields, expand the endpoint and click on the field name in the schema.
+
+{% endinfo_block %}
+
 {% raw %}
 <div class="schema_file"><a href="{% endraw %}{{ page.swagger_url }}{% raw %}">{% endraw %}{{ page.title }}{% raw %} API Schema File</a></div>
 <div id="swagger-ui"></div>

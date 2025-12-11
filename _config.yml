@@ -17,7 +17,7 @@ company_name: Spryker
 github_editme_path: spryker/spryker-docs/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: "G-CPJX4XMTD1"
+google_analytics: "G-NEMRFN24T7"
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
 feedback_disable: true
@@ -255,6 +255,6 @@ redirect_from:
   json: false
 
 form_endpoints:
-  feedback: 'https://formspree.io/f/xdoboyro'
+  feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSe7PX_n3IyJxq4nr-0pyt0nArWwQBwQ6CTqD04Try0vrMEEcQ/viewform?usp=pp_url&entry.1016977793=%URL%&entry.1645582234=%YES_NO%'
 
 noindex: false

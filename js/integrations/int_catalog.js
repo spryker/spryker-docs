@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const method_articles = [];
         if (partner.ACP_Doc) method_articles.push(`<a href="about_spryker_acp_apps.html" target="_blank" class="cat_article_link">Learn About ACP</a>`);
-        if (partner.Eco_Doc) method_articles.push(`<a href="what_are_spryker_eco_modules.html" target="_blank" class="cat_article_link">Learn about Eco Modules</a>`);
+        if (partner.Eco_Doc) method_articles.push(`<a href="/docs/integrations/eco-modules.html" target="_blank" class="cat_article_link">Learn about Eco Modules</a>`);
         document.getElementById('cat_art').innerHTML = method_articles.join('');
 
         document.getElementById('modal').style.display = 'flex';

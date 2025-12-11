@@ -5,19 +5,31 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
-  - title: AI assistants
-    url: /docs/dg/dev/ai-assistants/ai-assistants.html
+  - title: AI
     nested:
-      - title: AI IDE assistants
-        url: /docs/dg/dev/ai-assistants/ai-ide-assistants.html
-      - title: Spryker Engineer GPT
-        url: /docs/dg/dev/ai-assistants/spryker-engineer-gpt.html
-      - title: Spryker K6 Performance Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt.html
-      - title: Spryker DevQA Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt.html
-      - title: Spryker Cypress E2E Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
+      - title: AI Foundation
+        nested:
+          - title: AI Foundation
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+      - title: AI Dev
+        nested:
+          - title: AI Dev Overview
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+          - title: AI Dev MCP Server
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+      - title: AI Assistants
+        url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+        nested:
+          - title: AI IDE Assistants
+            url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
+          - title: Spryker Engineer GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
+          - title: Spryker K6 Performance Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
+          - title: Spryker DevQA Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
+          - title: Spryker Cypress E2E Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -975,6 +987,8 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+      - title: Web Profiler for Backend Gateway
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
 
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
@@ -1313,6 +1327,24 @@ entries:
     - title: Performance guidelines
       url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
+      - title: Monitoring
+        url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: General performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Architecture performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+      - title: Frontend performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+      - title: Twig performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
+      - title: Session locks
+        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
+      - title: Bot control
+        url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
+      - title: Batch processing of Propel entities
+        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
+      - title: External HTTP requests
+        url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
@@ -1321,15 +1353,6 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
-
-      - title: General performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
-      - title: Batch processing of Propel entities
-        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
-      - title: Architecture performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
-      - title: Frontend performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html

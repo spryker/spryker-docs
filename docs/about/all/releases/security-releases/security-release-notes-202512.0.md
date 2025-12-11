@@ -1,9 +1,9 @@
 ---
 title: Security release notes 202512.0
 description: Security updates released for version 202512.0
-last_updated: Dec 03, 2025
+last_updated: Dec 11, 2025
 template: concept-topic-template
-publish_date: "2025-12-03"
+publish_date: "2025-12-11"
 redirect_from:
 - /docs/about/all/releases/security-releases/security-release-notes-202511.0.html
 ---
@@ -106,7 +106,7 @@ composer show spryker/symfony # Verify the version
 
 ## Potential SQL Injection Instances in Codebase
 
-Spryker’s static code analysis tooling identified potential SQL injection risks caused by string-based query concatenation. These issues have been addressed and the affected code paths have been updated to use secure, parameterized query practices.
+Spryker's static code analysis tooling identified potential SQL injection risks caused by string-based query concatenation. These issues have been addressed and the affected code paths have been updated to use secure, parameterized query practices.
 
 ### Affected modules
 

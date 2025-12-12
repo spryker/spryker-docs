@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Dec 12, 2025
 related:
   - title: Install the AI Foundation module
-    link: https://docs.spryker.com/docs/dg/dev/ai/ai-foundation/ai-foundation-module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module
 
 ---
 
@@ -118,7 +118,7 @@ Each of these use cases can evolve independently while still relying on the same
 
 ## How Spryker AI Foundation fits into your architecture
 
-At a high level, Spryker AI Foundation sits inside Spryker Commerce OS and connects your channels (Storefronts, GLUE API, Backoffice) with the AI providers you choose for each use case:
+At a high level, Spryker AI Foundation sits inside Spryker Commerce OS and connects your channels (Storefronts, GLUE API, Back Office) with the AI providers you choose for each use case:
 
 ```text
 [ Storefronts ]   [ GLUE API ]   [ Back Office ]

@@ -140,6 +140,55 @@ Always evaluate the size of batch requests and memory usage when removing storag
 
 {% endinfo_block %}
 
+### Inefficient Redis Key Usage (Using REDIS KEYS)
+
+A common performance issue in project implementations occurs when you misuse the Storage Client by dynamically constructing Redis keys or performing pattern-based lookups instead of relying on the standardized Storage structure that Publish and Synchronize generates.
+Although Storage is optimized for fast, direct key access, using it with unpredictable or wildcard-style keys leads to expensive Redis operations that do not scale.
+
+This behavior creates performance bottlenecks because:
+- Wildcard key lookups (for example, querying "product:*" patterns) internally rely on Redis key scans, which block the Redis thread and slow down all Storage operations.
+- Dynamically generated key patterns bypass the optimized Storage topology and force Redis to traverse large key spaces.
+- Repeated pattern-matching calls significantly increase latency and infrastructure load, especially in high-traffic catalog or cart flows.
+
+Using the Redis KEYS command in production is strongly discouraged because it forces Redis to scan the entire key space in a single blocking operation. Because Redis is single-threaded, this blocks all other Storage interactions until the scan completes and causes unpredictable latency spikes and degraded performance under load. Even moderately sized projects can experience severe slowdowns when you use the KEYS command repeatedly or within high-traffic code paths.
+
+To avoid these pitfalls, always access Storage by using known, explicitly generated keys that Spryker synchronization data provides, and avoid interacting with raw Redis keys directly.
+
+❌ Bad: Constructing Redis key patterns and scanning Storage
+
+```php
+// Do not scan Redis Storage keys
+$keyPattern = sprintf('product_storage:*:%s', $locale);
+$keys = $this->storageClient->getKeys($keyPattern); // Slow and dangerous
+
+foreach ($keys as $key) {
+    $data[] = $this->storageClient->get($key);
+}
+```
+
+This pattern forces Redis to resolve wildcard expressions, which is slow, blocking, and not intended for runtime operations in Spryker applications.
+
+✅ Good: Use synchronization keys or direct Storage identifiers
+
+```php
+// Use the synchronization key generated during Publish and Synchronize
+$storageKeys = $this->generateKeyBatch($productIds);
+
+$productsData = $this->storageClient->getMulti($storageKeys);
+
+foreach ($productsData as $productData) {
+// Process product data
+}
+```
+
+By relying on generated synchronization keys and the `getMulti()` method, you ensure that Storage consumption is predictable and efficient and that Redis provides fast, direct key access without scanning.
+
+{% info_block warningBox %}
+
+Never rely on wildcard patterns or manually composed Redis keys. You must use deterministic synchronization keys for all Storage access in Spryker; otherwise, Storage performance degrades rapidly as the dataset grows.
+
+{% endinfo_block %}
+
 ### Heavy Method Calls
 
 ❌ Bad: Multiple Individual Facade Calls

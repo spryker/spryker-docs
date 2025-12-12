@@ -529,7 +529,7 @@ entries:
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
 
-          - title: Cart page performance configuration
+          - title: Cart performance configuration
             url: /docs/pbc/all/cart-and-checkout/cart-page-performance-configuration.html
 
       - title: Content Management System

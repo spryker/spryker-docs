@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Dec 12, 2025
 related:
   - title: Install the AI Foundation module
-    link: https://docs.spryker.com/docs/dg/dev/ai/ai-foundation/ai-foundation-module#install-the-aifoundation-module
+    link: https://docs.spryker.com/docs/dg/dev/ai/ai-foundation/ai-foundation-module
 
 ---
 
@@ -109,7 +109,7 @@ AI Foundation is not a single feature. It is the base for many AI-enabled scenar
 - **Smart search and discovery**  
   AI-enhanced search and navigation that can better understand intent, synonyms, and domain-specific language, running on your preferred cloud AI platform.
 
-- **AI-assisted backoffice workflows**  
+- **AI-assisted back office workflows**  
   Context-aware suggestions for catalog management, pricing, or data imports that make business users more productive, while keeping data in EU-based providers where required.
 
 Each of these use cases can evolve independently while still relying on the same AI Foundation underneath.
@@ -120,10 +120,8 @@ Each of these use cases can evolve independently while still relying on the same
 
 At a high level, Spryker AI Foundation sits inside Spryker Commerce OS and connects your channels (Storefronts, GLUE API, Backoffice) with the AI providers you choose for each use case:
 
-![High-level architecture diagram of Spryker AI Foundation](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ai-foundation/ai-foundation.md/ai-foundation-architecture.png)
-
 ```text
-[ Storefronts ]   [ GLUE API ]   [ Backoffice ]
+[ Storefronts ]   [ GLUE API ]   [ Back Office ]
           \          |             /
            \         |            /
             v        v           v

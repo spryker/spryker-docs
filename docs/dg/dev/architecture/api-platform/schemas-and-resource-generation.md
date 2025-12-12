@@ -316,12 +316,12 @@ patch:
 - Range:
     min: 0
     max: 100
-    notInRangeMessage: "Must be between {{ min }} and {{ max }}"
+    notInRangeMessage: "Must be between \{\{ min \}\} and \{\{ max \}\}"
 
 # Greater than
 - GreaterThan:
     value: 0
-    message: "Must be greater than {{ compared_value }}"
+    message: "Must be greater than \{\{ compared_value \}\}"
 ```
 
 #### Date constraints

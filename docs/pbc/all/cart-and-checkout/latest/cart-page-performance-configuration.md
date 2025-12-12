@@ -1,12 +1,14 @@
 ---
-title: Cart page performance configuration
+title: Cart performance configuration
 description: This guideline explains how to configure the cart, basket, and checkout pages in Spryker-based projects.
-last_updated: Oct 29, 2025
+last_updated: Dec 12, 2025
 template: concept-topic-template
 related:
   - title: Frontend performance guidelines
     link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html   
 ---
+
+## Cart page performance configuration
 
 Cart page performance is crucial for providing a smooth and efficient shopping experience for your customers. This guideline outlines best practices and configurations to help you optimize the performance of the cart, basket, and checkout pages in Spryker-based projects.
 
@@ -132,3 +134,109 @@ Update product relation widgets on the cart page to use carousel rendering to im
 
 {% endraw %}
 Verify that these widgets are present in your project Twig templates, and update them as needed.
+
+## Cart operations performance configuration
+
+To optimize the performance of cart operations such as adding, removing, or updating items in the cart, consider the following configurations:
+
+## 1. Prerequisites
+
+Ensure that you have the latest versions of the following packages installed in your Spryker project:
+
+```php
+composer require spryker/merchant:"^3.19.0" spryker/persistent-cart:"^3.14.0"
+```
+
+## 2. Configurations
+
+You can divide cart operations into two categories:
+
+- **Inside-cart operations** (add to cart, remove from cart, change item quantity, and similar actions)
+- **General cart operations** (create cart, delete cart, share cart, and similar actions)
+
+After each operation, the system executes expander plugins. Previously, the same plugin stack was used for both inside-cart and general cart operations.
+
+With the updated spryker/persistent-cart, these plugin stacks are now separated.
+
+### 2.1. Enable configuration on the project level
+
+```php
+namespace Pyz\Shared\PersistentCart;
+
+use Spryker\Shared\PersistentCart\PersistentCartConfig as SprykerPersistentCartConfig;
+
+class PersistentCartConfig extends SprykerPersistentCartConfig
+{
+    protected const bool IS_QUOTE_UPDATE_PLUGINS_INSIDE_CART_ENABLED = true;
+}
+```
+
+### 2.2. Review plugin stacks in ZED
+
+By default, the following plugin stack is defined in
+`\Pyz\Zed\PersistentCart\PersistentCartDependencyProvider::getQuoteResponseExpanderPlugins`.
+It is currently used for all operations. After the fix, it is used only for general cart operations.
+
+```php
+/**
+ * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
+*/
+protected function getQuoteResponseExpanderPlugins(): array
+{
+    return [
+        new CustomerCartQuoteResponseExpanderPlugin(), // MultiCartFeature
+        new SharedCartQuoteResponseExpanderPlugin(),   // SharedCartFeature
+    ];
+}
+
+```
+
+A new plugin stack is introduced specifically for inside-cart operations. It is empty by default. If your project uses custom plugins for inside-cart updates, you must enable them in this method:
+
+```php
+/**
+ * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
+ */
+protected function getQuoteResponseExpanderPluginsForInsideCartOperations(): array
+{
+    return [];
+}
+```
+
+Both methods expect plugins that implement the same interface, so you can easily divide the plugins between the two stacks.
+
+### 2.3. Review plugin stacks in Client
+
+By default, the following plugin stack is defined in
+`\Pyz\Client\PersistentCart\PersistentCartDependencyProvider::getQuoteUpdatePlugins`.
+It is currently used for all operations. After the fix, it is used only for general cart operations.
+
+```php
+/**
+ * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
+ */
+protected function getQuoteUpdatePlugins(): array
+{
+    return [
+        new SaveCustomerQuotesQuoteUpdatePlugin(),      // MultiCartFeature
+        new SharedCartsUpdateQuoteUpdatePlugin(),       // SharedCartFeature
+        new DefaultQuoteUpdatePlugin(),                 // MultiCartFeature
+        new PermissionUpdateQuoteUpdatePlugin(),        // SharedCartFeature
+    ];
+}
+```
+
+A new plugin stack is introduced specifically for inside-cart operations. It is empty by default. If your project requires inside-cart-specific plugins, enable them here:
+
+```php
+/**
+ * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
+ */
+protected function getQuoteUpdatePluginsForInsideCartOperations(): array
+{
+    return [];
+}
+
+```
+
+Both methods expect plugins that implement the same interface, which allows you to separate them without additional adjustments.

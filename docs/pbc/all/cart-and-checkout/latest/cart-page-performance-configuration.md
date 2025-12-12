@@ -8,7 +8,7 @@ related:
     link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html   
 ---
 
-# Cart page performance configuration
+## Cart page performance configuration
 
 Cart page performance is crucial for providing a smooth and efficient shopping experience for your customers. This guideline outlines best practices and configurations to help you optimize the performance of the cart, basket, and checkout pages in Spryker-based projects.
 
@@ -135,7 +135,7 @@ Update product relation widgets on the cart page to use carousel rendering to im
 {% endraw %}
 Verify that these widgets are present in your project Twig templates, and update them as needed.
 
-# Cart operations performance configuration
+## Cart operations performance configuration
 
 To optimize the performance of cart operations such as adding, removing, or updating items in the cart, consider the following configurations:
 
@@ -152,8 +152,8 @@ composer require spryker/merchant:"^3.19.0" \
 
 You can divide cart operations into two categories:
 
- - **Inside-cart operations** (add to cart, remove from cart, change item quantity, and similar actions)
- - **General cart operations** (create cart, delete cart, share cart, and similar actions)
+- **Inside-cart operations** (add to cart, remove from cart, change item quantity, and similar actions)
+- **General cart operations** (create cart, delete cart, share cart, and similar actions)
 
 After each operation, the system executes expander plugins. Previously, the same plugin stack was used for both inside-cart and general cart operations.
 
@@ -179,6 +179,9 @@ By default, the following plugin stack is defined in
 It is currently used for all operations. After the fix, it is used only for general cart operations.
 
 ```php
+/**
+ * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
+*/
 protected function getQuoteResponseExpanderPlugins(): array
 {
     return [
@@ -192,6 +195,9 @@ protected function getQuoteResponseExpanderPlugins(): array
 A new plugin stack is introduced specifically for inside-cart operations. It is empty by default. If your project uses custom plugins for inside-cart updates, you must enable them in this method:
 
 ```php
+/**
+ * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\QuoteResponseExpanderPluginInterface>
+ */
 protected function getQuoteResponseExpanderPluginsForInsideCartOperations(): array
 {
     return [];
@@ -207,6 +213,9 @@ By default, the following plugin stack is defined in
 It is currently used for all operations. After the fix, it is used only for general cart operations.
 
 ```php
+/**
+ * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
+ */
 protected function getQuoteUpdatePlugins(): array
 {
     return [
@@ -221,6 +230,9 @@ protected function getQuoteUpdatePlugins(): array
 A new plugin stack is introduced specifically for inside-cart operations. It is empty by default. If your project requires inside-cart-specific plugins, enable them here:
 
 ```php
+/**
+ * @return array<\Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuoteUpdatePluginInterface>
+ */
 protected function getQuoteUpdatePluginsForInsideCartOperations(): array
 {
     return [];

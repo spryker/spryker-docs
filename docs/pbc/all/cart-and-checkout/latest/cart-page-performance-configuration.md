@@ -144,8 +144,7 @@ To optimize the performance of cart operations such as adding, removing, or upda
 Ensure that you have the latest versions of the following packages installed in your Spryker project:
 
 ```php
-composer require spryker/merchant:"^3.19.0" \
-    spryker/persistent-cart:"^3.14.0" \
+composer require spryker/merchant:"^3.19.0" spryker/persistent-cart:"^3.14.0"
 ```
 
 ## 2. Configurations

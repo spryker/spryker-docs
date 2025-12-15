@@ -104,7 +104,7 @@ Do not allow users to paginate deeply through search results:
 
 Attempting to exceed the 10,000 document limit results in errors:
 
-```
+```text
 Result window is too large, from + size must be less than or equal to: [10000]
 ```
 
@@ -170,6 +170,7 @@ The way you structure search queries significantly impacts performance.
 Filters are cacheable and faster than queries because they don't calculate relevance scores:
 
 **Inefficient:**
+
 ```json
 {
   "query": {
@@ -186,6 +187,7 @@ Filters are cacheable and faster than queries because they don't calculate relev
 ```
 
 **Optimized:**
+
 ```json
 {
   "query": {
@@ -219,16 +221,19 @@ Only fetch fields you actually need using `_source` filtering:
 Leading wildcard queries (`*term`) cannot use the index and require scanning all documents:
 
 **Avoid:**
+
 ```json
 {"wildcard": {"name": "*phone"}}
 ```
 
 **Better:**
+
 ```json
 {"wildcard": {"name": "phone*"}}
 ```
 
 **Best:**
+
 ```json
 {"match": {"name": "phone"}}
 ```

@@ -1339,6 +1339,8 @@ entries:
     - title: Performance guidelines
       url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
+      - title: Keeping dependencies updated
+        url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
       - title: Monitoring
         url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
       - title: General performance guidelines
@@ -1357,6 +1359,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
+      - title: Search performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names

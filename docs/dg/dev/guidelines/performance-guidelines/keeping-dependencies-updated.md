@@ -35,7 +35,7 @@ The following sections list important module updates that include performance im
 
 ### Product search performance
 
-**spryker/product-page-search** - Recent versions (e.g., `3.38.0` - `3.40.0`) include improvements such as:
+**spryker/product-page-search** - Recent versions (for example, `3.38.0` - `3.40.0`) include improvements such as:
 - Caching logic adjustments for product images
 - Potential bulk operation support to make search document writes more efficient
 - Avoiding duplicate locale events

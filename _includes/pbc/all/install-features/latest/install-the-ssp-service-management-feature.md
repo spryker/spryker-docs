@@ -863,6 +863,7 @@ Make sure the configured data has been added to the following database tables:
 | CoordinatesServicePointSearchDataExpanderPlugin                              | Adds latitude and longitude coordinates to the service point search data.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ServicePointSearch |
 | ProductServiceAvailabilityStorageStrategyPlugin                              | Checks the availability of service products by verifying they have a service shipment type and at least one available product offer.       |               | SprykerFeature\Client\SelfServicePortal\Plugin\AvailabilityStorage           |
 | ShipmentTypeServicePointProductOfferStorageFilterPlugin                      | Filters product offers by shipment type and service point UUIDs from criteria to return matching offers.                                   |               | SprykerFeature\Client\SelfServicePortal\Plugin\ProductOfferStorage           |
+| SspServiceReschedulableOrderExpanderPlugin                                   | Expands the order items with "reschedulable" flag, that is used to show/hide reschedule button in storefront and back-office.              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1336,6 +1337,7 @@ use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales\SspServiceCa
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales\ProductClassOrderExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales\ProductClassOrderItemsPostSavePlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales\SspProductClassSalesOrderItemCollectionPreDeletePlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales\SspServiceReschedulableOrderExpanderPlugin;
 
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
@@ -1377,6 +1379,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new ProductClassOrderExpanderPlugin(),
+            new SspServiceReschedulableOrderExpanderPlugin(),
         ];
     }
 

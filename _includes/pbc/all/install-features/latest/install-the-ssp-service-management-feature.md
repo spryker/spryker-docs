@@ -34,17 +34,19 @@ Make sure the following package is listed in `composer.lock`:
 
 ## Set up configuration
 
-| CONFIGURATION                                                                 | SPECIFICATION                                                                                                                                                | NAMESPACE                                   |
-|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES            | Defines the shipment types that are supported by Click & Collect, enabling customers to choose between different delivery or pickup options.                 | SprykerShop\Yves\ClickAndCollectPageExample |
-| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES              | Specifies default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                                | SprykerShop\Yves\ClickAndCollectPageExample |
-| SelfServicePortalConfig::getDefaultMerchantReference()                        | Provides a default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal        |
-| DataImportConfig::getFullImportTypes()                                        | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                        | Pyz\Zed\DataImport                          |
-| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()                       | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                     | SprykerShop\Yves\ServicePointWidget         |
-| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()                          | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                     | SprykerShop\Yves\ShipmentTypeWidget         |
-| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                               | Defines a Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal     |
-| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING               | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                       | SprykerFeature\Shared\SelfServicePortal     |
-| SelfServicePortalConfig::getProductOfferServiceAvailabilityShipmentTypeKeys() | Returns a list of shipment type keys that are applicable for product offer service availability.                                                             | SprykerFeature\Client\SelfServicePortal     |
+| CONFIGURATION                                                                 | SPECIFICATION                                                                                                                                                | NAMESPACE                                          |
+|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| ClickAndCollectPageExampleConfig::CLICK_AND_COLLECT_SHIPMENT_TYPES            | Defines the shipment types that are supported by Click & Collect, enabling customers to choose between different delivery or pickup options.                 | SprykerShop\Yves\ClickAndCollectPageExample        |
+| ClickAndCollectPageExampleConfig::DEFAULT_PICKABLE_SERVICE_TYPES              | Specifies default service types that are considered "pickable," meaning they can be selected for in-person service or pickup.                                | SprykerShop\Yves\ClickAndCollectPageExample        |
+| SelfServicePortalConfig::getDefaultMerchantReference()                        | Provides a default merchant reference used when creating product offers from the Back Office, ensuring that offers are associated with the correct merchant. | SprykerFeature\Zed\SelfServicePortal               |
+| DataImportConfig::getFullImportTypes()                                        | Specifies the list of data import entities to be processed during a full data import, including service-related data.                                        | Pyz\Zed\DataImport                                 |
+| ServicePointWidgetConfig::getDeliveryShipmentTypeKeys()                       | Defines a list of shipment type keys that are treated as delivery types within the service point widget.                                                     | SprykerShop\Yves\ServicePointWidget                |
+| ShipmentTypeWidgetConfig::getDeliveryShipmentTypes()                          | Defines a list of shipment type keys that are treated as delivery types within the shipment type widget.                                                     | SprykerShop\Yves\ShipmentTypeWidget                |
+| SelfServicePortalConstants::GOOGLE_MAPS_API_KEY                               | Defines a Google Maps API key required for rendering maps and location-based features in the service point selector.                                         | SprykerFeature\Shared\SelfServicePortal            |
+| SelfServicePortalConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING               | Maps payment methods to their corresponding state machine processes, ensuring that service orders follow the correct payment workflow.                       | SprykerFeature\Shared\SelfServicePortal            |
+| SelfServicePortalConfig::getProductOfferServiceAvailabilityShipmentTypeKeys() | Returns a list of shipment type keys that are applicable for product offer service availability.                                                             | SprykerFeature\Client\SelfServicePortal            |
+| SelfServicePortalConfig::getDefaultSelectedShipmentTypeKey                    | This shipment type will be pre-selected in the shipment type options for the services.                                                                       | Pyz\Yves\SelfServicePortal\SelfServicePortalConfig |
+| SelfServicePortalConfig::getDeliveryLikeShipmentTypes                         | Override this method in project-level configuration to define delivery-like shipment types.                                                                  | Pyz\Yves\SelfServicePortal\SelfServicePortalConfig |
 
 **src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php**
 
@@ -227,6 +229,57 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
             self::SHIPMENT_TYPE_IN_CENTER_SERVICE,
         ];
     }
+}
+```
+
+
+**src/Pyz/SelfServicePortal/src/Pyz/Yves/SelfServicePortal/SelfServicePortalConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\SelfServicePortal;
+
+use SprykerFeature\Yves\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
+
+class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
+{
+    /**
+     * @var string
+     */
+    protected const SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
+
+    /**
+     * @var string
+     */
+    public const SHIPMENT_TYPE_DELIVERY = 'delivery';
+
+    /**
+     * @var string
+     */
+    public const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+
+    /**
+     * @return list<string>
+     */
+    public function getDeliveryLikeShipmentTypes(): array
+    {
+        return [
+            static::SHIPMENT_TYPE_DELIVERY,
+            static::SHIPMENT_TYPE_ON_SITE_SERVICE,
+        ];
+    }
+
+    /**
+     * @return string
+     */
+    public function getDefaultSelectedShipmentTypeKey(): string
+    {
+        return static::SHIPMENT_TYPE_DELIVERY;
+    }
+    
 }
 ```
 
@@ -809,6 +862,7 @@ Make sure the configured data has been added to the following database tables:
 | SspProductClassSalesOrderItemCollectionPreDeletePlugin                       | Deletes related product class entries for given sales order items.                                                                         |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales              |
 | CoordinatesServicePointSearchDataExpanderPlugin                              | Adds latitude and longitude coordinates to the service point search data.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ServicePointSearch |
 | ProductServiceAvailabilityStorageStrategyPlugin                              | Checks the availability of service products by verifying they have a service shipment type and at least one available product offer.       |               | SprykerFeature\Client\SelfServicePortal\Plugin\AvailabilityStorage           |
+| ShipmentTypeServicePointProductOfferStorageFilterPlugin                      | Filters product offers by shipment type and service point UUIDs from criteria to return matching offers.                                   |               | SprykerFeature\Client\SelfServicePortal\Plugin\ProductOfferStorage           |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1498,6 +1552,34 @@ class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDe
 }
 ```
 
+**src/Pyz/ProductOfferStorage/src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
+
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Client\ProductOfferStorage;
+
+use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
+use SprykerFeature\Client\SelfServicePortal\Plugin\ProductOfferStorage\ShipmentTypeServicePointProductOfferStorageFilterPlugin;
+
+class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
+{
+
+    /**
+     * @return list<\Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageFilterPluginInterface>
+     */
+    protected function getProductOfferStorageFilterPlugins(): array
+    {
+        return [
+            new ShipmentTypeServicePointProductOfferStorageFilterPlugin(),
+        ];
+    }
+}
+```
+
 2. Enable the project override to enable the checkout form to handle single addresses per shipment type:
 
 
@@ -1750,25 +1832,26 @@ Set up widgets as follows:
 
 1. Register the following plugins to enable widgets and plugins:
 
-| PLUGIN                                                              | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                                    |
-|---------------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| SspServiceMenuItemWidget                                            | Adds a menu item for accessing SSP services in the navigation.                          |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServiceChangeScheduledTimeLinkWidget                             | Provides a link to change the scheduled time for a specific service.                    |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| ShipmentTypeServicePointSelectorWidget                              | Displays a selector for choosing a service point based on the shipment type.            |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| ServicePointNameForItemWidget                                       | Displays the name of the service point associated with a specific cart item.            |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| ListCartItemsByShipmentTypeWidget                                   | Lists items in the cart grouped by their shipment type.                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| ServiceListWidget                                                   | Display the list of the given service products.                                         |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspAddressFormItemsByShipmentTypeWidget                             | Lists address from items grouped by their shipment type.                                |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspProductOfferPriceWidget                                          | Displays the product offer price for the products with a service type.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServiceCancelWidget                                              | Renders a cancel button for the sales order item on the order details page. |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServiceDetectorWidget                                            | Provide a method to determine if the product is a service.                              |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServicePointGeoCodeWidget                                        | Displays the coordinates of the service point.                                          |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServicePointNameForItemWidget                                    | Displays the service point name for the cart items.                                      |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspServicePointSearchWidget                                         | Displays the service point search modal window.                                         |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SspShipmentTypeServicePointSelectorWidget                           | Displays the shipment type and service point selector.                                  |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
-| SingleAddressPerShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin   | Generates a cache key for the related widget.                                           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
-| AddressFormItemsByShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin | Generates a cache key for the related widget.                                           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
-
+| PLUGIN                                                                 | SPECIFICATION                                                                | PREREQUISITES | NAMESPACE                                                    |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
+| SspServiceMenuItemWidget                                               | Adds a menu item for accessing SSP services in the navigation.               |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServiceChangeScheduledTimeLinkWidget                                | Provides a link to change the scheduled time for a specific service.         |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| ShipmentTypeServicePointSelectorWidget                                 | Displays a selector for choosing a service point based on the shipment type. |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| ServicePointNameForItemWidget                                          | Displays the name of the service point associated with a specific cart item. |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| ListCartItemsByShipmentTypeWidget                                      | Lists items in the cart grouped by their shipment type.                      |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| ServiceListWidget                                                      | Display the list of the given service products.                              |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspAddressFormItemsByShipmentTypeWidget                                | Lists address from items grouped by their shipment type.                     |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspProductOfferPriceWidget                                             | Displays the product offer price for the products with a service type.       |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServiceCancelWidget                                                 | Renders a cancel button for the sales order item on the order details page.  |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServiceDetectorWidget                                               | Provide a method to determine if the product is a service.                   |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServicePointGeoCodeWidget                                           | Displays the coordinates of the service point.                               |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServicePointNameForItemWidget                                       | Displays the service point name for the cart items.                          |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspServicePointSearchWidget                                            | Displays the service point search modal window.                              |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SspShipmentTypeServicePointSelectorWidget                              | Displays the shipment type and service point selector.                       |               | SprykerFeature\Yves\SelfServicePortal\Widget                 |
+| SingleAddressPerShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin      | Generates a cache key for the related widget.                                |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
+| AddressFormItemsByShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin    | Generates a cache key for the related widget.                                |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
+| SspServiceCancelWidgetCacheKeyGeneratorStrategyPlugin                  | Generates cache key for `SspServiceCancelWidget`.                            |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
+| SspServiceChangeScheduledTimeLinkWidgetCacheKeyGeneratorStrategyPlugin | Generates cache key for `SspServiceChangeScheduledTimeLinkWidget`.           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication |
 
 <details>
   <summary>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
@@ -1796,6 +1879,8 @@ use SprykerFeature\Yves\SelfServicePortal\Widget\SspServicePointSearchWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspShipmentTypeServicePointSelectorWidget;
 use SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication\AddressFormItemsByShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin;
 use SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication\SingleAddressPerShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication\SspServiceCancelWidgetCacheKeyGeneratorStrategyPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication\SspServiceChangeScheduledTimeLinkWidgetCacheKeyGeneratorStrategyPlugin;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
@@ -1827,6 +1912,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         return [
             new AddressFormItemsByShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin(),
             new SingleAddressPerShipmentTypeWidgetCacheKeyGeneratorStrategyPlugin(),
+            new SspServiceCancelWidgetCacheKeyGeneratorStrategyPlugin(),
+            new SspServiceChangeScheduledTimeLinkWidgetCacheKeyGeneratorStrategyPlugin(),
         ];
     }
 }

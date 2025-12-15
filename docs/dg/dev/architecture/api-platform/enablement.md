@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: Schemas and Resource Generation
     link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document describes how to create and enable API Platform resources in your Spryker project.
@@ -414,4 +416,5 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 ## Next steps
 
 - [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Deep dive into schema syntax
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

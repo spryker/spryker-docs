@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document explains how API Platform schemas are defined and how resources are generated in Spryker.
@@ -759,5 +761,6 @@ email:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Architecture overview
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Writing and running tests
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 - [API Platform Documentation](https://api-platform.com/docs/) - Official API Platform docs

@@ -12,6 +12,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: Schemas and Resource Generation
     link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document provides solutions to common issues when working with API Platform in Spryker.
@@ -433,3 +435,4 @@ If you encounter issues not covered here:
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup guide
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
 - [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema reference
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Testing guide

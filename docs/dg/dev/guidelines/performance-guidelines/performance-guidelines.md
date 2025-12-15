@@ -9,6 +9,7 @@ redirect_from:
 
 These performance guidelines originate from Spryker's years of experience across all kinds of projects, environments, and setups. They cover topics that are often missed at the project level, leading to poor performance or other related issues. The guidelines help you analyze and optimize performance of your website from different perspectives:
 
+- [Keeping dependencies updated](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html) to maintain optimal performance and security by staying current with Spryker module updates.
 - [Monitoring](/docs/dg/dev/guidelines/performance-guidelines/monitoring.html) to ensure effective application monitoring using APM tools.
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html) for general approaches to optimizing the server-side execution time.
 - [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html) to optimize performance in the very end servers.
@@ -17,7 +18,7 @@ These performance guidelines originate from Spryker's years of experience across
 - [Session locks](/docs/dg/dev/guidelines/performance-guidelines/session-locks.html) to optimize session locking mechanisms and reduce performance impact. Also see [Redis session lock](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html) for troubleshooting session lock issues.
 - [Bot control](/docs/dg/dev/guidelines/performance-guidelines/bot-control.html) to manage honest and malicious bot traffic effectively.
 - [Batch processing of Propel entities](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html) for efficient batch processing, reduced database load, and support for complex entity relationships.
-- [External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html) to manage external HTTP requests.
+- [External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html) to understand Spryker's architecture principle of reading from fast storage and learn how to manage external HTTP requests when they're necessary.
 - [Search performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html) to optimize Elasticsearch and OpenSearch performance, avoid common search anti-patterns, and implement efficient search queries.
 - [Common pitfalls in OMS design](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html) to avoid performance bottlenecks in Order Management System processes, especially ensuring heavy operations run in CLI context rather than during web requests.
 - [Order management system multi-thread](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html) to process OMS timeouts and conditions in parallel for improved order processing performance.

@@ -3874,7 +3874,7 @@ entries:
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
               - title: SSP glossary demo data
-              - url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+                url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
 
           - title: Manage in the Back Office
             nested:

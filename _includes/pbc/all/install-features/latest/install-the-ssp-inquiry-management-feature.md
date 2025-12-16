@@ -728,7 +728,7 @@ Make sure the following applies:
 
 {% endinfo_block %}
 
-## Enable Storefront API endpoints:
+## Enable Storefront API endpoints
 
 | PLUGIN                          | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                    |
 |---------------------------------|------------------------------------------------------------|---------------|--------------------------------------------------------------|

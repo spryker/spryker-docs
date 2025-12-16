@@ -31,7 +31,7 @@ The testing infrastructure supports both Backend and Storefront API types with d
 
 ### Test class hierarchy
 
-```
+```bash
 AbstractApiTestCase (base class from core)
 ├── BackendApiTestCase (for Backend API tests)
 └── StorefrontApiTestCase (for Storefront API tests)
@@ -74,11 +74,9 @@ tests/
 │   └── Glue/
 │       └── Customer/
 │           ├── BackendApi/
-│           │   ├── CustomersBackendApiTest.php
-│           │   └── BackendApiTester.php
+│           │   └── CustomersBackendApiTest.php
 │           └── StorefrontApi/
-│               ├── CustomersStorefrontApiTest.php
-│               └── StorefrontApiTester.php
+│               └── CustomersStorefrontApiTest.php
 └── _data/
     └── Api/
         ├── Backend/
@@ -89,27 +87,13 @@ tests/
 
 ### 3. Generate API resources for testing
 
-Generate test resources to your test directory:
-
-```bash
-# Generate Backend API test resources
-docker/sdk cli glue api:generate backend --output-dir=tests/_data/Api/Backend
-
-# Generate Storefront API test resources
-docker/sdk cli glue api:generate storefront --output-dir=tests/_data/Api/Storefront
-```
-
-After generation, run composer dump-autoload:
-
-```bash
-docker/sdk cli composer dump-autoload
-```
+The resources and the container are automatically generated right before the test suite runs.
 
 ## Writing Backend API tests
 
 ### Basic test structure
 
-Backend API tests extend `BackendApiTestCase` and use the `BackendApiTester` helper.
+Backend API tests extend `BackendApiTestCase` and use the `BackendApiTester` tester which gets automatically injected into your tests by Codeception.
 
 `tests/PyzTest/Glue/Customer/BackendApi/CustomersBackendApiTest.php`
 
@@ -119,7 +103,7 @@ Backend API tests extend `BackendApiTestCase` and use the `BackendApiTester` hel
 namespace PyzTest\Glue\Customer\BackendApi;
 
 use PyzTest\Glue\Customer\BackendApiTester;
-use PyzTest\Shared\ApiPlatform\Test\BackendApiTestCase;
+use SprykerTest\Shared\ApiPlatform\Test\BackendApiTestCase;
 
 /**
  * @group PyzTest
@@ -388,7 +372,7 @@ namespace PyzTest\Glue\Customer\StorefrontApi;
 use Codeception\Stub;
 use Pyz\Client\Customer\CustomerClientInterface;
 use PyzTest\Glue\Customer\StorefrontApiTester;
-use PyzTest\Shared\ApiPlatform\Test\StorefrontApiTestCase;
+use SprykerTest\Shared\ApiPlatform\Test\StorefrontApiTestCase;
 
 /**
  * @group PyzTest
@@ -697,7 +681,7 @@ public function testGivenAuthenticatedRequestWhenAccessingProtectedResourceThenD
 
 ## Running tests
 
-### Run all project API tests
+### Run all project tests (slow, not recommended)
 
 ```bash
 docker/sdk cli vendor/bin/codecept run
@@ -707,35 +691,10 @@ docker/sdk cli vendor/bin/codecept run
 
 ```bash
 # Run Backend API tests only
-docker/sdk cli vendor/bin/codecept run BackendApi
+docker/sdk cli vendor/bin/codecept run -g BackendApi
 
 # Run Storefront API tests only
-docker/sdk cli vendor/bin/codecept run StorefrontApi
-```
-
-### Run single test class
-
-```bash
-docker/sdk cli vendor/bin/codecept run BackendApi/CustomersBackendApiTest
-```
-
-### Run single test method
-
-```bash
-docker/sdk cli vendor/bin/codecept run BackendApi/CustomersBackendApiTest:testGivenValidDataWhenCreatingCustomerViaPostThenCustomerIsCreatedSuccessfully
-```
-
-### Run with different verbosity levels
-
-```bash
-# Normal output
-docker/sdk cli vendor/bin/codecept run
-
-# Verbose output
-docker/sdk cli vendor/bin/codecept run -v
-
-# Debug output with full stack traces
-docker/sdk cli vendor/bin/codecept run -vvv
+docker/sdk cli vendor/bin/codecept run -g StorefrontApi
 ```
 
 ### Run with coverage
@@ -744,56 +703,7 @@ docker/sdk cli vendor/bin/codecept run -vvv
 docker/sdk cli vendor/bin/codecept run --coverage --coverage-html
 ```
 
-### Run specific test groups
-
-```bash
-# Run only validation tests
-docker/sdk cli vendor/bin/codecept run -g ValidationTests
-
-# Run only customer tests
-docker/sdk cli vendor/bin/codecept run -g Customer
-```
-
 ## Codeception configuration
-
-### Project-level configuration
-
-Create a `codeception.yml` in your project's tests directory:
-
-`tests/codeception.yml`
-
-```yaml
-namespace: PyzTest
-
-paths:
-    tests: PyzTest
-    data: _data
-    support: _support
-    output: _output
-
-coverage:
-    enabled: true
-    include:
-        - src/Pyz/Glue/*
-
-suites:
-    BackendApi:
-        path: Glue/Customer/BackendApi
-        actor: BackendApiTester
-        modules:
-            enabled:
-                - \PyzTest\Shared\Testify\Helper\Environment
-                - \PyzTest\Glue\Testify\Helper\JsonPath
-                - \PyzTest\Glue\Customer\Helper\CustomerHelper
-
-    StorefrontApi:
-        path: Glue/Customer/StorefrontApi
-        actor: StorefrontApiTester
-        modules:
-            enabled:
-                - \PyzTest\Shared\Testify\Helper\Environment
-                - \PyzTest\Glue\Testify\Helper\JsonPath
-```
 
 ### Helper classes
 
@@ -971,13 +881,7 @@ class CustomersBackendApiTest extends BackendApiTestCase
 }
 ```
 
-2. Regenerate resources:
-
-```bash
-docker/sdk cli glue api:generate backend --output-dir=tests/_data/Api/Backend
-```
-
-3. Run composer dump-autoload:
+2. Run composer dump-autoload:
 
 ```bash
 docker/sdk cli composer dump-autoload

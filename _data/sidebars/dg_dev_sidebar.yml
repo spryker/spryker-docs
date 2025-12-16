@@ -1218,6 +1218,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Testing
+          url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
 

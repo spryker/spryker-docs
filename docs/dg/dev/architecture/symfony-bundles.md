@@ -37,9 +37,28 @@ return [
 
 ## Configuring bundles and services
 
-You can configure a bundle in your `config/Zed/ApplicationServices.php` file. For details, see the documentation of the bundle you are using.
+You can configure bundles in the same way as provided by Symfony by adding `config/Zed/packages/*.php` files to the `config/` folder. For more information, see [Configuring Bundles](https://symfony.com/doc/current/bundles/configuration.html).
 
-Additionally, you can configure bundles in the same way as provided by Symfony by adding `config/Zed/packages/*.php` files to the `config/` folder. For more information, see [Configuring Bundles](https://symfony.com/doc/current/bundles/configuration.html).
+Example of the FrameworkBundle in `config/Zed/packages/framework.php`:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $framework): void {
+    $framework->secret('spryker-zed-secret');
+
+    $framework->assets([
+            'base_path' => '/assets',
+        ]);
+
+    $framework->test('%kernel.environment%' === 'dockerdev');
+};
+
+```
 
 ## Next steps
 

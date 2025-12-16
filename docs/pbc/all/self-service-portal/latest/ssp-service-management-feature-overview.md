@@ -2,7 +2,7 @@
 title: Self-Service Portal Service Management feature overview
 description: Let customers book services for delivery or on-site at service points, with configurable products, shipment types, and review options in Storefront and Back Office.
 template: concept-topic-template
-last_updated: Dec 10, 2025
+last_updated: Dec 15, 2025
 ---
 
 

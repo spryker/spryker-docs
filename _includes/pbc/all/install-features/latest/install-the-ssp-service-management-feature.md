@@ -59,17 +59,12 @@ use SprykerShop\Yves\ClickAndCollectPageExample\ClickAndCollectPageExampleConfig
 
 class ClickAndCollectPageExampleConfig extends SprykerClickAndCollectPageExampleConfig
 {
-    /**
-     * @uses \SprykerFeature\Yves\SelfServicePortal\SelfServicePortalConfig::SHIPMENT_TYPE_ON_SITE_SERVICE
-     *
-     * @var string
-     */
-    protected const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+    protected const string SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
 
     /**
      * @var list<string>
      */
-    protected const CLICK_AND_COLLECT_SHIPMENT_TYPES = [
+    protected const array CLICK_AND_COLLECT_SHIPMENT_TYPES = [
         self::SHIPMENT_TYPE_ON_SITE_SERVICE,
         self::SHIPMENT_TYPE_DELIVERY,
     ];
@@ -77,7 +72,7 @@ class ClickAndCollectPageExampleConfig extends SprykerClickAndCollectPageExample
     /**
      * @var list<string>
      */
-    protected const DEFAULT_PICKABLE_SERVICE_TYPES = [
+    protected const array DEFAULT_PICKABLE_SERVICE_TYPES = [
         self::SHIPMENT_TYPE_IN_CENTER_SERVICE,
     ];
 }
@@ -96,14 +91,8 @@ use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig as SprykerSelfS
 
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {   
-    /**
-     * @var string
-     */
-    protected const MODULE_NAME = 'SelfServicePortal';
+    protected const string MODULE_NAME = 'SelfServicePortal';
     
-    /**
-     * @return string
-     */
     public function getDefaultMerchantReference(): string
     {
         return 'MER000001';
@@ -152,10 +141,7 @@ use SprykerShop\Yves\ServicePointWidget\ServicePointWidgetConfig as SprykerServi
 
 class ServicePointWidgetConfig extends SprykerServicePointWidgetConfig
 {
-    /**
-     * @var string
-     */
-    protected const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+    protected const string SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
 
     /**
      * @return list<string>
@@ -183,10 +169,7 @@ use SprykerShop\Yves\ShipmentTypeWidget\ShipmentTypeWidgetConfig as SprykerShipm
 
 class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
 {
-    /**
-     * @var string
-     */
-    protected const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+    protected const string SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
 
     /**
      * @return array<int, string>
@@ -215,10 +198,8 @@ use SprykerFeature\Client\SelfServicePortal\SelfServicePortalConfig as SprykerSe
 
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {
-    /**
-     * @var string
-     */
-    protected const SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
+
+    protected const string SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
 
     /**
      * @return list<string>
@@ -246,20 +227,12 @@ use SprykerFeature\Yves\SelfServicePortal\SelfServicePortalConfig as SprykerSelf
 
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 {
-    /**
-     * @var string
-     */
-    protected const SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
 
-    /**
-     * @var string
-     */
-    public const SHIPMENT_TYPE_DELIVERY = 'delivery';
+    protected const string SHIPMENT_TYPE_IN_CENTER_SERVICE = 'in-center-service';
 
-    /**
-     * @var string
-     */
-    public const SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
+    public const string SHIPMENT_TYPE_DELIVERY = 'delivery';
+
+    public const string SHIPMENT_TYPE_ON_SITE_SERVICE = 'on-site-service';
 
     /**
      * @return list<string>
@@ -272,9 +245,6 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
         ];
     }
 
-    /**
-     * @return string
-     */
     public function getDefaultSelectedShipmentTypeKey(): string
     {
         return static::SHIPMENT_TYPE_DELIVERY;
@@ -1076,10 +1046,7 @@ use Spryker\Zed\Kernel\Container;
  */
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
-    /**
-     * @var string
-     */
-    protected const COMMAND_SEPARATOR = ':';
+    protected const string COMMAND_SEPARATOR = ':';
 
     /**
      * @param \Spryker\Zed\Kernel\Container $container

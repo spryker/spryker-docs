@@ -1,5 +1,5 @@
 ---
-title: Smart Product Management Install
+title: Install Smart Product Management
 description: Learn how to integrate the ProductManagementAi module into a Spryker project.
 last_updated: Dec 17, 2025
 template: feature-integration-guide-template

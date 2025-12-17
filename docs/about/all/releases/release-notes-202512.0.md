@@ -11,12 +11,12 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## Expanded B2B commerce capabilities
 
-### Models for Asset-Based Catalogs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Self-Service Portal models for asset-based catalogs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Models is a capability that helps you manage complex equipment and quickly find compatible spare parts and service products.
+Self-Service Portal (SSP) models help operators manage complex equipment structures and help customers find compatible spare parts and service products faster in asset-based catalogs.
 
-**What are models?**
-Models let you group multiple assets into a single product family (for example, a machine type or series). For each model, you define a list of compatible spare parts or service items. When a customer browses the catalog or opens a product detail page, the catalog filters the results to show only items compatible with the selected model or asset.
+**What are SSP models?**
+SSP models let you group multiple assets into a single product family (for example, a machine type or series). For each model, a list of compatible spare parts or service items can be maintained. When a customer browses the catalog or opens a product detail page, results can be filtered to show only items compatible with the selected model or asset.
 
 **Key capabilities:**
 - Group assets that belong to the same machinery type or generation.
@@ -27,7 +27,7 @@ Models let you group multiple assets into a single product family (for example, 
 - Support transactional self-service so customers purchase the correct items faster.
 
 **Business benefits:**
-- Improve spare part identification accuracy.
+- Improve spare part identification accuracy in self-service journeys.
 - Reduce maintenance effort for asset-to-product mapping.
 - Speed up after-sales purchases with asset-specific filtering.
 - Scale after-sales revenue with automation and self-service.

@@ -4,7 +4,7 @@ description: Generate and apply product translations in the Spryker Back Office.
 last_updated: Dec 17, 2025
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
+  - /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
 ---
 
 Smart Product Management enables Back Office users to generate translations for abstract and concrete products.

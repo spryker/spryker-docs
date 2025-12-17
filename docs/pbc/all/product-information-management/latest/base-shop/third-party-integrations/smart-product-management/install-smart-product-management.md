@@ -4,7 +4,7 @@ description: Learn how to integrate the ProductManagementAi module into a Spryke
 last_updated: Dec 17, 2025
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
+  - /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
 ---
 
 AI-powered product management adds the following functionality to the Back Office:

@@ -246,12 +246,12 @@ Spryker updates its database support strategy by aligning MySQL and MariaDB vers
 
 This update refines OpenTelemetry instrumentation to improve trace accuracy and compatibility across Storefront, Backend API, and GLUE applications. It addresses naming inconsistencies and resolves limitations in locale handling for monitoring plugins.
 
-### Key capabilities
+**Key capabilities**
 - Corrected root span naming for Storefront and Backend API to ensure consistent and meaningful traces.
 - Fixed compatibility of `MonitoringRequestTransactionEventDispatcherPlugin` with GLUE applications by improving locale resolution logic.
 - Improved robustness of monitoring setup to better support multiple application contexts without relying on hard-coded application name checks.
 
-### Business benefits
+**Business benefits**
 - More accurate and consistent distributed tracing across all application types.
 - Improved observability for GLUE-based APIs.
 

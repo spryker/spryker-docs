@@ -335,11 +335,13 @@ This release introduces a Composer plugin for Demo Shops that splits broad PSR-4
 **Key capabilities:**
 - The coding standards remove the need for docblocks that duplicate already declared type information for methods and properties, which reduces noise and maintenance overhead.
 - A new console helper lets you run a CLI command in a loop for extended periods, which is useful for high-load projects and operational workflows.
+- You can override Webpack, JavaScript, and SCSS configurations for ZED at the project level.
 
 **Business benefits:**
 - You spend less developer time on non-value-adding code formatting tasks.
 - You have less need for custom scripts to safely rerun console commands.
 
 **Module releases:**
-- [Adjust sniffer rules for Spryker modules to exclude docblocks from the check](https://api.release.spryker.com/release-group/6097)
+- [Adjust sniffer rules for Spryker modules to exclude docblocks from checks](https://api.release.spryker.com/release-group/6097)
 - [Multi-process run console](/docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html)
+- [Overriding Webpack, JS, SCSS for ZED on the project level](/docs/dg/dev/frontend-development/latest/zed/overriding-webpack-js-scss-for-zed-on-the-project-level.html)

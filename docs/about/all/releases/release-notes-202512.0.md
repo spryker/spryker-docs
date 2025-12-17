@@ -13,29 +13,26 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ### Models for Asset-Based Catalogs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-We’re excited to introduce **Models**, a new capability that makes it easier for businesses and their customers to manage complex equipment and quickly find compatible spare parts and service products.
+Models is a capability that helps you manage complex equipment and quickly find compatible spare parts and service products.
 
-**What Are Models?**
-
-Models allow you to group multiple assets into a single product family (for example, a machine type or series). For each Model, you can define a list of compatible spare parts or service items. When customers browse the catalog or view a product, the catalog automatically filters to show only items that match their selected Model or Asset.
+**What are models?**
+Models let you group multiple assets into a single product family (for example, a machine type or series). For each model, you define a list of compatible spare parts or service items. When a customer browses the catalog or opens a product detail page, the catalog filters the results to show only items compatible with the selected model or asset.
 
 **Key Capabilities**
-
 - Group assets that belong to the same machinery type or generation.
-- Maintain compatibility at the Model level, not per individual asset.
-- Assign spare part lists to Models, ensuring buyers only see relevant products.
-- Filter the storefront catalog by Model, Asset, Serial Number, or Model Code.
-- Enable compatibility checks directly from the product detail page.
-- Support transactional self-service, helping customers purchase the correct items faster.
+- Maintain compatibility at the model level instead of the individual asset level.
+- Assign spare part lists to models so buyers see only relevant products.
+- Filter the storefront catalog by model, asset, serial number, or model code.
+- Run compatibility checks from the product detail page.
+- Support transactional self-service so customers purchase the correct items faster.
 
-**Benefits**
+**Business benefits**
+- Improve spare part identification accuracy.
+- Reduce maintenance effort for asset-to-product mapping.
+- Speed up after-sales purchases with asset-specific filtering.
+- Scale after-sales revenue with automation and self-service.
 
-- Higher accuracy in spare part identification.
-- Reduced maintenance effort for asset-to-product mapping.
-- Faster after-sales purchases through asset-specific filtering.
-- Scalable after-sales revenue, driven by automation and self-service.
-
-Models are now available in the Backoffice and Storefront of the Self-Service Portal.
+Models is available in the Self-Service Portal Back Office and Storefront.
 
 ### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -48,7 +45,7 @@ Merchant onboarding is simplified with a storefront entry point while keeping ma
 - Reduced manual onboarding effort and improved consistency of merchant intake.
 - Faster and more controlled merchant onboarding for marketplace operators.
 
-### Agent Assist improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span><span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Agent Assist improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
 
@@ -58,8 +55,6 @@ Order traceability for Agent Assist flows is improved so operations and support 
 **Business benefits**
 - Faster issue resolution and clearer ownership for agent-created orders.
 - Improved auditability for Agent Assist flows.
-
-
 
 ## Spryker AI: Built for Real Enterprise Commerce
 
@@ -82,7 +77,7 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 - [Use the AiFoundation module](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 
-### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span><span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 
@@ -106,16 +101,9 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 
 - Run a local MCP server for your Spryker project and extend it with custom tools and prompts.
 - Give AI assistants access to Spryker contracts and data structures to reduce guesswork and implementation errors.
-- Support OMS flow exploration by showing an order’s current state and valid transitions, or listing transitions from any given state.
+- Support OMS flow exploration by showing an order's current state and valid transitions, or listing transitions from any given state.
 - Reuse and generate prompts from the shared Prompt Library via a typed PHP API.
 - Keep console output integration friendly with quiet execution.
-
-### Business benefits
-
-- Faster onboarding and iteration with a repeatable local MCP setup.
-- More accurate AI assisted implementations by grounding assistants in real Spryker contracts, transfer structures, and OMS workflows.
-- Reduced prompt drift and fewer prompt related defects through centralized, reusable prompts.
-- Lower development friction for automation and tool integrations due to clean stdio output.
 
 ### Business benefits
 
@@ -340,7 +328,7 @@ We implemented a Composer plugin for Demo Shops that splits broad PSR-4 namespac
 - Works in both development and production modes and applies consistently across Demo Shops.
 
 **Business benefits**
-- Improved page rendering speed in Yves and Backoffice during development.
+- Improved page rendering speed in Yves and back office during development.
 - Faster container/image build times in CI and cloud environments, improving delivery throughput.
 
 **Module Releases**

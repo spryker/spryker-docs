@@ -221,7 +221,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     protected function getQueueMetricsExpanderPlugins(): array
     {
         return [
-            new RabbitMqQueueMetricsReaderPlugin(), // Provides RabbitMQ specific metrics for resource aware worker.
+            new RabbitMqQueueMetricsReaderPlugin(), // Provides RabbitMQ specific metrics for resource aware worker. Applicable only for RabbitMqAdapter.
         ];
     }
 }

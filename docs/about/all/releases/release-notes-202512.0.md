@@ -41,7 +41,7 @@ Spryker uses Dependency Inversion design pattern heavily to remove tight code co
 - [Symfony  Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
 - [Symfony Bundles in Spryker](/docs/dg/dev/architecture/symfony-bundles.html)
 
-### [Early Access] API Platform <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### API Platform <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 
 The **API Platform** integration enables you to define API resources declaratively and automatically generate fully functional, standards-compliant APIs with minimal manual effort. It reduces boilerplate, enforces consistency, and accelerates API development while maintaining production readiness.
 
@@ -115,6 +115,8 @@ Multiple enhancements improve the robustness and transparency of Publish & Synch
 
 **Documentation & Module Releases**
 
+If you already have older versions, we recommend to update
+
 - [Implement Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization)
 - [Newest Publish & Synchronize Modules](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines#use-the-newest-modules)
 - [Split heavy entities from publish and event queues](https://api.release.spryker.com/release-group/6027)
@@ -144,7 +146,8 @@ Spryker updates its database support strategy by aligning MySQL and MariaDB vers
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)
 - [System Requriements](/docs/dg/dev/system-requirements/latest/system-requirements.html)
 
-### Web Profiler enhancements (external calls + improved profiling coverage) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+### Web Profiler enhancements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 We improved the Web Profiler experience to better support performance investigations and development-time troubleshooting:
 
@@ -170,3 +173,54 @@ We improved the Web Profiler experience to better support performance investigat
 - [Added Yves ajax and ZedRequest profiles to WebProfiler](https://api.release.spryker.com/release-group/6222)
 - [Fix wrong template name in WebProfilerExternalHttpDataCollectorPlugin](https://api.release.spryker.com/release-group/6210)
 - [External Custom Requests visible in Web Profiler](https://api.release.spryker.com/release-group/6162)
+
+### Performance improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Rendering of product items and cart pages and URL resolution databse queries have been optimized..
+
+**Key capabilities**
+
+- Reduced repeated per-item loading patterns that previously caused many separate search calls (for cart, catalog listings, and PDP carousels).
+- Improved widget/template behavior to avoid N× Elasticsearch request patterns in common flows.
+- Targeted cart performance improvements for large baskets.
+- Eliminated unnecessary case-insensitive comparisons using `UPPER()` where the database collation is already case-insensitive.
+- Improved performance for URL lookups in large datasets (reduces long-running queries and CPU pressure).
+
+**Business benefits**
+
+- Faster page loads on high-traffic pages (cart, catalog, PDP).
+- Lower search infrastructure cost by cutting unnecessary requests.
+- More predictable performance for customers with large carts and catalogs.
+- Lower database CPU utilization.
+- Faster request handling for URL-heavy flows (storefront and merchant portal routing scenarios).
+
+**Documentation**
+- [Cart performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html#cart-page-performance-configuration.html)
+
+### Reliability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+**Key capabilities**
+
+- Glue API authentication was improved to avoid overloading JWT token payloads with large, mutable session-relevant data (such as fine-grained permissions).
+-
+
+**Business benefits**
+
+- Glue API: Reduced risk of header-size-related failures in integrations with extensive permissions usage.
+
+### Faster local development and CI builds through Composer optimization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+We implemented a Composer plugin for Demo Shops that splits broad PSR-4 namespaces into **layer+module specific** namespaces during autoload generation. This reduces autoload scanning overhead and improves rendering/build performance.
+
+**Key capabilities**
+
+- Converts general `Spryker\\` namespace mappings into granular mappings such as `Spryker\\Zed\\<Module>\\`, `Spryker\\Yves\\<Module>\\`, etc.
+- Works in both development and production modes and applies consistently across Demo Shops.
+
+**Business benefits**
+
+- Improved page rendering speed in Yves and Backoffice during development.
+- Faster container/image build times in CI and cloud environments, improving delivery throughput.
+
+**Module Releases**
+- [Composer Autoload Plugin](https://github.com/spryker/composer-autoload-plugin/releases/tag/0.1.0)

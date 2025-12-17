@@ -198,6 +198,7 @@ use Spryker\Shared\Event\EventConstants;
 use Spryker\Zed\Event\Communication\Plugin\Queue\EventQueueMessageProcessorPlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+use Spryker\Zed\RabbitMq\Communication\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin;
 
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
@@ -213,7 +214,16 @@ class QueueDependencyProvider extends SprykerDependencyProvider
             EventConstants::EVENT_QUEUE => new EventQueueMessageProcessorPlugin(),
         ];
     }
-
+    
+    /**
+     * @return array<\Spryker\Zed\RabbitMq\Communication\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin>
+     */
+    protected function getQueueMetricsExpanderPlugins(): array
+    {
+        return [
+            new RabbitMqQueueMetricsReaderPlugin(),
+        ];
+    }
 }
 ```
 
@@ -221,9 +231,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
+
 $config[QueueConstants::QUEUE_SERVER_ID] = (gethostname()) ?: php_uname('n');
-$config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 5000;
-$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 59;
+$config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 100; // default 1000
+$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 60; // 1min
 
 $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
     EventConstants::EVENT_QUEUE => [
@@ -231,4 +242,11 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
         QueueConfig::CONFIG_MAX_WORKER_NUMBER => 1, //Increase number of workers if higher concurrency needed.
     ],
 ];
+
+// Enables processing of queues with resource aware queue worker.
+$config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = (bool)getenv('RESOURCE_AWARE_QUEUE_WORKER_ENABLED') ?? false;
+$config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = (int)getenv('QUEUE_WORKER_FREE_MEMORY_BUFFER') ?: 750;
+$config[QueueConstants::QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT] = (int)getenv('QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT') ?: 5;
+$config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = 10; // concurrent, for all queues/stores, default 5
+$config[QueueConstants::QUEUE_WORKER_PROCESSES_COMPLETE_TIMEOUT] = 600; // 10 min, default 5 min
 ```

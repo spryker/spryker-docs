@@ -26,7 +26,7 @@ Models let you group multiple assets into a single product family (for example, 
 - Run compatibility checks from the product detail page.
 - Support transactional self-service so customers purchase the correct items faster.
 
-**Business benefits**
+**Business benefits:**
 - Improve spare part identification accuracy.
 - Reduce maintenance effort for asset-to-product mapping.
 - Speed up after-sales purchases with asset-specific filtering.
@@ -38,10 +38,10 @@ Models is available in the Self-Service Portal Back Office and Storefront.
 
 Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
 
-**Key capabilities**
+**Key capabilities:**
 - Added a storefront-led merchant self-registration flow, allowing prospective merchants to submit an application which can be reviewed and approved in Back Office before merchant entities and users are created.
 
-**Business benefits**
+**Business benefits:**
 - Reduced manual onboarding effort and improved consistency of merchant intake.
 - Faster and more controlled merchant onboarding for marketplace operators.
 
@@ -49,10 +49,10 @@ Merchant onboarding is simplified with a storefront entry point while keeping ma
 
 Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
 
-**Key capabilities**
+**Key capabilities:**
 - Back Office now records and displays the submitting agent email for orders placed via Agent Assist, improving traceability and follow-up efficiency.
 
-**Business benefits**
+**Business benefits:**
 - Faster issue resolution and clearer ownership for agent-created orders.
 - Improved auditability for Agent Assist flows.
 
@@ -113,17 +113,17 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 
 ### Reduced boilerplate via Symfony Dependency Injection support <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Spryker heavily uses the Dependency Inversion design pattern to reduce tight code coupling, improve unit testability, and provide a clear, extensible architecture. These improvements enable autowiring and reduce the need for repetitive Factory and DependencyProvider wiring. This approach streamlines development while remaining compatible with Symfony Dependency Injection conventions and tooling.
+Spryker uses the Dependency Inversion Principle to reduce tight coupling, improve unit testability, and provide a clear, extensible architecture. This approach enables autowiring and reduces the need for repetitive `Factory` and `DependencyProvider` wiring. This approach streamlines development and remains compatible with Symfony Dependency Injection conventions and tooling.
 
 **Key capabilities:**
-- Less manual dependency wiring in project code.
-- Better compatibility with Symfony bundles and Symfony Dependency Injection tooling, such as container introspection. Symfony tools like `debug:container` help you visualize all services.
+- Reduced manual dependency wiring in your project code.
+- Improved compatibility with Symfony bundles and Symfony Dependency Injection tooling, such as container introspection. Tools like `debug:container` help you visualize all services.
 - Self-explanatory, declarative configuration.
 - High performance through compiled and cached dependency injection.
 
 **Business benefits:**
-- **Code autowiring**: Reduce the boilerplate code you need to write and maintain by using Symfony Dependency Injection, which automatically connects application components.
-- **Faster feature delivery** through reduced repetitive scaffolding.
+- **Code autowiring**: Reduce the boilerplate code you write and maintain by using Symfony Dependency Injection to automatically connect application components.
+- **Faster feature delivery** by reducing repetitive scaffolding.
 - **Easier onboarding** for developers who are already familiar with Symfony conventions.
 
 **Documentation:**
@@ -133,7 +133,7 @@ Spryker heavily uses the Dependency Inversion design pattern to reduce tight cod
 
 ### API Platform <span class="inline-img">![early access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-The **API Platform** integration lets you define API resources declaratively and automatically generate fully functional, standards-compliant APIs with minimal manual effort. It reduces boilerplate, enforces consistency, and accelerates API development.
+The **API Platform** integration allows you to define API resources declaratively and automatically generate standards-compliant APIs with minimal manual effort. It reduces boilerplate, enforces consistency, and accelerates API development.
 
 ![API Platform](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202512/api-platform-2.6-api.png)
 
@@ -149,7 +149,7 @@ The **API Platform** integration lets you define API resources declaratively and
 - **Easier onboarding**: Simplify API development for new teams and partners by providing clear documentation and structured guidance.
 
 **Documentation:**
-- [API Platform](/docs/dg/dev/architecture/api-platform)
+- [API Platform](/docs/dg/dev/architecture/api-platform.html)
 
 ### API tooling and integration documentation improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -199,7 +199,8 @@ Multiple enhancements improve the robustness and transparency of Publish & Synch
 - Faster incident diagnosis for queue-related failures.
 - Reduced log noise while keeping meaningful operational insights.
 
-**Documentation and module releases**
+**Documentation and module releases:**
+
 If you are using older versions, we recommend that you update to the referenced releases.
 
 - [Implement Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html)
@@ -254,22 +255,26 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 
 Spryker updates its database support strategy to align MySQL and MariaDB versions with currently supported long-term support (LTS) releases. This change addresses the end of support for MySQL 5.7 and mitigates compatibility issues in production environments.
 
+The update also includes changes to other components, such as PHP, RabbitMQ, and Bootstrap.
+
 **Key capabilities:**
 - Aligns supported **MySQL versions with modern LTS releases**, including MySQL 8.4.
-- Continues support for **MariaDB 11.8** while ensuring up-to-date and secure LTS versions. Incremental rollouts are planned for early 2026.
+- Continues support for **MariaDB 11.8** while ensuring secure and up-to-date LTS versions. Incremental rollouts are planned for early 2026.
 - Enables **Redis compression by default** in demoshops to reduce memory footprint and improve cache efficiency.
 - Ensures **PHP 8.4 readiness** through updates across modules and supporting tooling.
 - Adds **RabbitMQ 4.1 support** to keep deployments current and benefit from performance improvements.
+- Adds **Bootstrap 5** by default in Back Office.
 
 **Business benefits:**
 - Reduces memory usage and increases throughput for Valkey and Redis.
-- Reduced security and operational risks by avoiding end-of-life database versions.
+- Reduces security and operational risks by avoiding end-of-life database versions.
 - Improved development–production parity, minimizing runtime incompatibilities.
 - Future-proofs database, PHP, and RabbitMQ support to align with vendor support timelines and enterprise requirements.
 
 **Documentation:**
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)
 - [System Requirements](/docs/dg/dev/system-requirements/latest/system-requirements.html)
+- [Upgrade Back Office to Bootstrap 5](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html)
 
 ### OpenTelemetry Instrumentation Update <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

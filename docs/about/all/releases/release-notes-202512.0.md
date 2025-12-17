@@ -15,7 +15,72 @@ Lorem Ipsum
 
 ## Spryker AI: Built for real enterprise commerce
 
-Lorem Ipsum
+## Spryker AI Built for Real Enterprise Commerce
+
+### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+
+AI Foundation is a provider-agnostic integration layer for building AI powered commerce capabilities in a consistent, maintainable way.
+
+**Key capabilities**
+- New AiFoundation module compatible with Spryker architecture and existing AI related Eco packages.
+- Multi provider support through a single interface (for example OpenAI, Azure OpenAI, AWS Bedrock, Google Gemini, Anthropic, local providers).
+- Prompt based client method that supports file attachments for richer use cases.
+
+**Business benefits**
+- Faster delivery of AI enabled commerce features through a reusable platform layer.
+- Provider freedom: adopt or switch AI providers without rewriting feature logic, and choose the best provider and model per use case without rewriting code.
+- Best fit provider per use case: use different providers and models for different needs.
+- Lower maintenance effort by centralizing AI integration patterns and configuration.
+
+**Documentation**
+- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
+- [Use the AiFoundation module](/docs/pbc/all/ai-foundation/ai-foundation)
+
+### Spryker AI Commerce: Backoffice Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Backoffice Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
+
+**Key capabilities**
+- Replace direct OpenAI integration in with AI Foundation as the unified AI layer.
+- Enable provider and model selection based on customer needs (for example different providers for cost, latency, data residency, or model capabilities).
+
+**Business benefits**
+- Protects existing customer functionality while enabling a standardized path for future AI enhancements.
+- Reduces future integration effort and maintenance overhead for AI driven product management capabilities.
+
+**Documentation**
+- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai)
+- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai)
+
+### Spryker AI Dev SDK <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+
+The AI Dev SDK improves local AI assisted development with an MCP server, Spryker aware context tools, and prompt library integration, so developers and AI assistants can work with accurate project information and reuse the same prompts across teams.
+
+### Key capabilities
+
+- Run a local MCP server for your Spryker project and extend it with custom tools and prompts.
+- Give AI assistants access to Spryker contracts and data structures to reduce guesswork and implementation errors.
+- Support OMS flow exploration by showing an order’s current state and valid transitions, or listing transitions from any given state.
+- Reuse and generate prompts from the shared Prompt Library via a typed PHP API.
+- Keep console output integration friendly with quiet execution.
+
+### Business benefits
+
+- Faster onboarding and iteration with a repeatable local MCP setup.
+- More accurate AI assisted implementations by grounding assistants in real Spryker contracts, transfer structures, and OMS workflows.
+- Reduced prompt drift and fewer prompt related defects through centralized, reusable prompts.
+- Lower development friction for automation and tool integrations due to clean stdio output.
+
+### Business benefits
+
+- Faster onboarding and iteration with a repeatable local MCP setup.
+- More accurate AI assisted implementations by grounding assistants in real Spryker contracts, transfer structures, and OMS workflows.
+- Reduced prompt drift and fewer prompt related defects through centralized, reusable prompts.
+- Lower development friction for automation and tool integrations due to clean stdio output.
+
+**Documentation**
+- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
+- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 
 ## Open architecture for the upcoming innovation
 

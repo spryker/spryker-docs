@@ -2,7 +2,7 @@
 title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC), everything you need to know for all the features in Spryker.
 template: concept-topic-template
-last_updated: Oct 20, 2023
+last_updated: December 18, 2025
 redirect_from:
   - /docs/scos/user/features/202200.0/features.html
   - /docs/scos/user/features/202212.0/features.html

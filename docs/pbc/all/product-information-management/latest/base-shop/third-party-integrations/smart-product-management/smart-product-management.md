@@ -1,11 +1,13 @@
 ---
-title: Product Management powered by OpenAI
+title: Smart Product Management
 description: Generate and apply product translations in the Spryker Back Office. Translate names and descriptions between locales with AI assistance to speed up localization.
-last_updated: Sep 16, 2025
+last_updated: Dec 17, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
 ---
 
-Product Management powered by OpenAI enables Back Office users to generate translations for abstract and concrete products.
+Smart Product Management enables Back Office users to generate translations for abstract and concrete products.
 
 It supports **Name** and **Description** fields.
 
@@ -35,7 +37,7 @@ Make sure to review the translations for accuracy.
 
 ## Install
 
-[Install Product Management powered by OpenAI](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai)
+[Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
 
 
 

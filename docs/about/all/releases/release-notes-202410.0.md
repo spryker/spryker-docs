@@ -98,7 +98,6 @@ The AI features leverage Open AI and are provided under the following conditions
 
 ### Documentation
 
-- [Product Management powered by OpenAI](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai)
 - [Visual Search powered by OpenAI](/docs/pbc/all/search/latest/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai)
 
 

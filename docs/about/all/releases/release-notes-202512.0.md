@@ -45,7 +45,7 @@ Merchant onboarding is simplified with a storefront entry point while keeping ma
 - Reduced manual onboarding effort and improved consistency of merchant intake.
 - Faster and more controlled merchant onboarding for marketplace operators.
 
-### Agent Assist improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Agent assist order traceability <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
 
@@ -55,6 +55,28 @@ Order traceability for Agent Assist flows is improved so operations and support 
 **Business benefits:**
 - Faster issue resolution and clearer ownership for agent-created orders.
 - Improved auditability for Agent Assist flows.
+
+### Merchant Portal dashboard improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Merchant day to day catalog work is simplified in Merchant Portal by adding a clearer entry point to product management directly from the dashboard.
+
+**Key capabilities**
+- Added a Products widget to the Merchant Portal dashboard to improve discoverability of product management.
+
+**Business benefits**
+- Faster access to core catalog workflows for merchants.
+- Less navigation effort for merchants managing large assortments.
+
+### Storefront merchant profile improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Storefront discovery is improved by making it easier for buyers to navigate from a merchant profile to that merchant’s products with the right catalog filters already applied.
+
+**Key capabilities**
+- Added a "Shop Merchant Products" button on the merchant profile page that opens the product catalog with an active merchant filter.
+
+**Business benefits**
+- Faster product discovery for buyers shopping by merchant.
+- Smoother path from merchant pages to relevant catalog results.
 
 ## Spryker AI: Built for Real Enterprise Commerce
 
@@ -90,7 +112,7 @@ Back Office Smart Product Management now uses AI Foundation as its AI integratio
 - Reduces future integration effort and maintenance overhead for AI driven product management capabilities.
 
 **Documentation:**
-- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html)
+- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management)
 - [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html)
 
 ### Spryker AI Dev SDK <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>

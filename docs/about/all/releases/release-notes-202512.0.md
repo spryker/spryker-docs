@@ -11,9 +11,47 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## Expanded B2B commerce capabilities
 
-Lorem Ipsum
+### Models for Asset-Based Catalogs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-## Spryker AI Built for Real Enterprise Commerce
+We’re excited to introduce **Models**, a new capability that makes it easier for businesses and their customers to manage complex equipment and quickly find compatible spare parts and service products.
+
+**What Are Models?**
+
+Models allow you to group multiple assets into a single product family (for example, a machine type or series). For each Model, you can define a list of compatible spare parts or service items. When customers browse the catalog or view a product, the catalog automatically filters to show only items that match their selected Model or Asset.
+
+**Key Capabilities**
+
+- Group assets that belong to the same machinery type or generation.
+- Maintain compatibility at the Model level, not per individual asset.
+- Assign spare part lists to Models, ensuring buyers only see relevant products.
+- Filter the storefront catalog by Model, Asset, Serial Number, or Model Code.
+- Enable compatibility checks directly from the product detail page.
+- Support transactional self-service, helping customers purchase the correct items faster.
+
+**Benefits**
+
+- Higher accuracy in spare part identification.
+- Reduced maintenance effort for asset-to-product mapping.
+- Faster after-sales purchases through asset-specific filtering.
+- Scalable after-sales revenue, driven by automation and self-service.
+
+Models are now available in the Backoffice and Storefront of the Self-Service Portal.
+
+### Agent Assist improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Changes that make Agent-led order flows easier to operate and audit.
+
+**Key capabilities**
+- Captured and displayed the submitting agent email in Back Office order details for Agent Assist orders.
+- Extended order amendment support for B2B scenarios including Agent Assist edit order, company user edits (permission-based), and reorder to a new cart.
+
+**Business benefits**
+- Better traceability and faster resolution when orders are placed on behalf of customers.
+- More operational flexibility for sales and service teams handling post-purchase changes.
+
+
+
+## Spryker AI: Built for Real Enterprise Commerce
 
 ### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 

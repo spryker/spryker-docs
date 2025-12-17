@@ -37,17 +37,27 @@ Models allow you to group multiple assets into a single product family (for exam
 
 Models are now available in the Backoffice and Storefront of the Self-Service Portal.
 
-### Agent Assist improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-Changes that make Agent-led order flows easier to operate and audit.
+Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
 
 **Key capabilities**
-- Captured and displayed the submitting agent email in Back Office order details for Agent Assist orders.
-- Extended order amendment support for B2B scenarios including Agent Assist edit order, company user edits (permission-based), and reorder to a new cart.
+- Added a storefront-led merchant self-registration flow, allowing prospective merchants to submit an application which can be reviewed and approved in Back Office before merchant entities and users are created.
 
 **Business benefits**
-- Better traceability and faster resolution when orders are placed on behalf of customers.
-- More operational flexibility for sales and service teams handling post-purchase changes.
+- Reduced manual onboarding effort and improved consistency of merchant intake.
+- Faster and more controlled merchant onboarding for marketplace operators.
+
+### Agent Assist improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span><span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
+
+**Key capabilities**
+- Back Office now records and displays the submitting agent email for orders placed via Agent Assist, improving traceability and follow-up efficiency.
+
+**Business benefits**
+- Faster issue resolution and clearer ownership for agent-created orders.
+- Improved auditability for Agent Assist flows.
 
 
 
@@ -72,7 +82,7 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 - [Use the AiFoundation module](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 
-### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span><span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 

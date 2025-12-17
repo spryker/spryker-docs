@@ -13,8 +13,6 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Lorem Ipsum
 
-## Spryker AI: Built for real enterprise commerce
-
 ## Spryker AI Built for Real Enterprise Commerce
 
 ### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
@@ -33,12 +31,12 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 - Lower maintenance effort by centralizing AI integration patterns and configuration.
 
 **Documentation**
-- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
-- [Use the AiFoundation module](/docs/pbc/all/ai-foundation/ai-foundation)
+- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
+- [Use the AiFoundation module](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 
-### Spryker AI Commerce: Backoffice Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Backoffice Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
+Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 
 **Key capabilities**
 - Replace direct OpenAI integration in with AI Foundation as the unified AI layer.
@@ -49,8 +47,8 @@ Backoffice Smart Product Management now uses AI Foundation as its AI integration
 - Reduces future integration effort and maintenance overhead for AI driven product management capabilities.
 
 **Documentation**
-- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai)
-- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai)
+- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html)
+- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html)
 
 ### Spryker AI Dev SDK <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 
@@ -79,8 +77,8 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 - Lower development friction for automation and tool integrations due to clean stdio output.
 
 **Documentation**
-- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
-- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
+- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
+- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
 
 ## Open Architecture for the upcoming Innovation
 

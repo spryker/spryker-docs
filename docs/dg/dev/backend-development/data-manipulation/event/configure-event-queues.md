@@ -257,7 +257,7 @@ This section explains the purpose and recommended tuning for the RabbitMq metric
 
 ### RabbitMqQueueMetricsReaderPlugin
 
-- Purpose: Supplies RabbitMQ-specific runtime metrics (e.g., queue depth: ready/unacknowledged counts, consumer counts, throughput indicators) to the resource-aware queue worker.
+- Purpose: Supplies RabbitMQ-specific runtime metrics (for example queue depth: ready/unacknowledged counts, consumer counts, throughput indicators) to the resource-aware queue worker.
 - Applicability: Only relevant when using the `RabbitMqAdapter`. Register the plugin via `getQueueMetricsExpanderPlugins()` in your `QueueDependencyProvider` to enable metric collection.
 - Effect: Enables metric-driven decisions by the resource-aware worker (scale up when queues grow, avoid starting new workers when memory/broker constraints are detected).
 - Recommendation: Enable this plugin if you run RabbitMQ and want automatic adaptation of worker processes to real load for current settings.
@@ -298,7 +298,7 @@ This section explains the purpose and recommended tuning for the RabbitMq metric
   - Type / unit: integer (process count)
   - Example/default: 10 (example in file), default 5
   - Purpose: Upper limit of concurrent worker processes spawned across all queues/stores.
-  - Recommendation: Start conservatively (e.g., number of CPU cores) and increase according to CPU, memory and workload characteristics.
+  - Recommendation: Start conservatively (for example number of CPU cores) and increase according to CPU, memory and workload characteristics.
 
 - `QueueConstants::QUEUE_WORKER_PROCESSES_COMPLETE_TIMEOUT`
   - Type / unit: integer (seconds)

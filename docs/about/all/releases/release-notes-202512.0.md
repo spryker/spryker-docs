@@ -78,6 +78,20 @@ Storefront discovery is improved by making it easier for buyers to navigate from
 - Faster product discovery for buyers shopping by merchant.
 - Smoother path from merchant pages to relevant catalog results.
 
+### Clearer UI in Back Office and Storefront <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Core UI patterns are made more consistent to improve scanability, reduce cognitive load, and provide clearer next steps in common workflows.
+
+**Key capabilities**
+- Introduced a global empty state component for tables with two variants:
+- Implemented a semantic status pill color system (success, warning, error, neutral) for tables and internal pages, with one-line enforcement for better scanability.
+- Replaced blocking Storefront notification banners with floating toast notifications (stacked, auto-dismiss, responsive positioning).
+
+**Business benefits**
+- Faster scanning and fewer mistakes when working with large datasets.
+- Clearer guidance when tables are empty, improving task completion.
+- Less disruptive Storefront messaging that keeps customers in context.
+
 ## Spryker AI: Built for Real Enterprise Commerce
 
 ### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>

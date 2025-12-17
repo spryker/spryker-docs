@@ -8,18 +8,18 @@ This document describes how to install the Self-Service Portal (SSP) SSP Service
 
 ## Prerequisites
 
-| FEATURE             | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
-|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Click and Collect   | 202507.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                      |
-| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                         |
+| FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                          |
+|---------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Click and Collect   | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                      |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                         |
 
 ## Install the required modules
 
 Install the required packages using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -674,9 +674,11 @@ concrete_sku,shipment_type_key
   source: data/import/common/common/product_abstract_product_abstract_type.csv
 ```
 
-## Import data
+## Demo data for EU region / DE store
 
-Import glossary and demo data:
+### Import glossary and demo data
+
+You can either import glossary keys dedicated to the Service Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
 
 ```bash
 console data:import glossary
@@ -707,7 +709,7 @@ console data:import shipment
 
 {% endinfo_block %}
 
-## Import product labels for the service products
+### Import product labels for the service products
 
 1. Prepare your data according to your requirements using our demo data:
 

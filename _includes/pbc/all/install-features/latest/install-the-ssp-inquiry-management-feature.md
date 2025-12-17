@@ -670,7 +670,7 @@ DE-INQR--3,AT,general,Spryker--8,Request for documentation,Please provide detail
 DE-INQR--4,AT,general,Spryker--8,Product catalog issue,I noticed that several products in the catalog are missing specifications and images. This makes it difficult to make informed purchasing decisions. Please update the product details.
 ```
 
-## Extend the data import configuration
+#### Extend the data import configuration
 
 **/data/import/local/full_EU.yml**
 
@@ -709,7 +709,7 @@ cms-block-email--ssp-inquiry-rejected--text,DE
 
 ### Import data
 
-Import glossary and demo data:
+### Import glossary and demo data
 
 ```bash
 console data:import glossary

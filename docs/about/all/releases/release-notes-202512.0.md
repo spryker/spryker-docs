@@ -13,8 +13,6 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Lorem Ipsum
 
-## Spryker AI: Built for real enterprise commerce
-
 ## Spryker AI Built for Real Enterprise Commerce
 
 ### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
@@ -34,11 +32,11 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 
 **Documentation**
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
-- [Use the AiFoundation module](/docs/pbc/all/ai-foundation/ai-foundation)
+- [Use the AiFoundation module](/docs/pbc/all/ai-foundation/latest/ai-foundation)
 
-### Spryker AI Commerce: Backoffice Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Backoffice Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
+Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 
 **Key capabilities**
 - Replace direct OpenAI integration in with AI Foundation as the unified AI layer.

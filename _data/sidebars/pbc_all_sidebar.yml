@@ -3261,7 +3261,7 @@ entries:
                   - title: Smart Product Management
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/smart-product-management.html
                     nested:
-                    - title: Install Product Management
+                    - title: Install Smart Product Management
                       url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html
 
               - title: Tutorials and HowTos

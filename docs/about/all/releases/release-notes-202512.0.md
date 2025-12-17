@@ -165,6 +165,7 @@ The **API Platform** integration enables you to define API resources declarative
 
 To make API development and partner onboarding easier:
 - Enhanced API documentation to be more structured and usable, with clearer terminology and guidance for integrations (including better support for exploring APIs and understanding data models).
+- Enhanced documentation of the **Spryker data model**, including products, attributes, prices, and orders.
 - Added a publicly available **Postman API collection** package, organized around practical "happy path" use cases and environments.
 
 <figure class="video_container">
@@ -178,14 +179,14 @@ To make API development and partner onboarding easier:
 - Improved documentation structure and integration guidance for solution partners.
 
 **Business benefits**
-- Faster API adoption and easier demos for headless use cases.
+- Faster API adoption and easier
 - Reduced integration effort and fewer misunderstandings for partners and new teams.
 
 **Documentation**
-
 - [Integraitons Documentation Portal](/docs/integrations/integrate-with-spryker.html)
 - [Integraitons Catalog](/docs/integrations/third-party-integrations.html)
-- [Interactive API Playground](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html)
+- [Interactive API Playground](/docs/integrations/spryker-glue-api/storefront-api/api-references/storefront-api-marketplace-b2b-demo-shop-reference.html).
+- [API Reference includes data model description](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html). Expand each resposne to learn more about each field.
 - [Postman Collections](https://github.com/spryker-community/glue-postman-collections)
 
 ### Publish & Synchronize stability and scalability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

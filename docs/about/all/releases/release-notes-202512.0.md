@@ -34,6 +34,37 @@ SSP models let you group multiple assets into a single product family (for examp
 
 Models is available in the Self-Service Portal Back Office and Storefront.
 
+### [OPTION 1 - PREFERED] Merchant Portal file-based product import is now generally available
+
+File-based product import in Merchant Portal moves from Early Access to General Availability, with reliability and UX improvements based on customer feedback.
+
+**Key capabilities**
+- Provide clear post-import results (success and errors) in the UI or as a downloadable CSV.
+- Strengthen validations and safeguards to reduce failed imports and incorrect updates.
+- Improve import consistency for production usage, including better messaging and translations where applicable.
+
+**Business benefits**
+- Faster merchant onboarding and ongoing catalog maintenance at scale.
+- Lower support effort thanks to clearer feedback and import logs.
+- Higher confidence running bulk imports in production environments.
+
+### [OPTION 2 ] Merchant Portal file-based imports for marketplace catalogs
+
+Marketplace catalog maintenance is improved with file-based import capabilities in Merchant Portal, enabling merchants to update products, prices, stock, and offers in a predictable single-line CSV format with clear validations and downloadable logs.
+
+**Key capabilities**
+- Import product data, prices, and stock together through Merchant Portal using a single-line (flat) CSV format.
+- Import product offers through a dedicated Offer import type with a dedicated CSV template.
+- Provide detailed outcome reporting after each run (success, errors) via UI or downloadable as CSV.
+- Support product abstracts and concretes only (product options and other product types, for example bundles, are not supported).
+
+**Business benefits**
+- Faster onboarding and ongoing catalog updates at scale.
+- Lower support effort through clearer feedback and troubleshooting artifacts.
+- Reduced risk of incorrect updates across merchants and warehouses.
+- Higher confidence in bulk operations due to transparent results and logs.
+
+
 ### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
@@ -127,7 +158,7 @@ Back Office Smart Product Management now uses AI Foundation as its AI integratio
 
 **Documentation:**
 - [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management)
-- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html)
+- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management)
 
 ### Spryker AI Dev SDK <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 

@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Dec 18, 2025
 ---
 
-The *asset-based catalog* in the Self-Service Portal builds a personalized spare parts and services catalog for each asset based on its assigned model. This ensures that customers only see products that are compatible with the machines they own.
+The *asset-based catalog* in the Self-Service Portal creates a personalized catalog of spare parts and services for each asset based on the asset's assigned model. This ensures users see only products that are compatible with the machines they own.
 
 For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-models-feature-overview.html).
 
@@ -13,14 +13,14 @@ For details about models, see [Self-Service Portal Models feature overview](/doc
 
 - **Model**: Groups assets that share spare-part and service compatibility rules.
 - **Asset**: A specific machine owned by a customer, identified by attributes such as serial number and business unit.
-- **Spare part product class**: A product classification that marks products as spare parts.
-- **Product list**: A curated list of spare parts or service products that are compatible with a model.
+- **Spare part product class**: A product classification that marks a product as a spare part.
+- **Product list**: A curated list of spare parts and service products that are compatible with a model.
 
-Compatibility is defined at the model level by assigning product lists to the model. Assets inherit compatibility through their model.
+You define compatibility at the model level by assigning product lists to a model. Assets inherit compatibility from their assigned model.
 
 ## How the asset-based catalog is built
 
-To build an asset-specific catalog, an operator typically follows these steps:
+To build an asset-specific catalog, you typically follow these steps:
 
 1. **Create a model and assign assets**  
    - Create a model that represents a machine family (for example, *Press Machine 1200 Series*).  
@@ -41,7 +41,7 @@ To build an asset-specific catalog, an operator typically follows these steps:
    - All assets assigned to the model now inherit compatibility with the products from these lists.
 
 5. **Use the model relations in the storefront**  
-   - When a user browses from an asset or model context, the storefront catalog is filtered to products coming from the product lists assigned to that model.
+   - When a user browses in an asset or model context, the storefront filters the catalog to products from the product lists assigned to that model.
 
 ## Storefront behavior
 
@@ -54,21 +54,21 @@ On the asset details page in the Self-Service Portal, users can:
 
 ### Catalog page
 
-When the catalog is opened from an asset or model context, it can be filtered by:
+When you open the catalog from an asset or model context, you can filter it by:
 
-- Model reference, name, or code.
-- Asset reference or name.
-- Asset serial number.
+- Model reference, name, or code
+- Asset reference or name
+- Asset serial number
 
-Only products that are compatible with the selected model or asset are shown.
+The catalog shows only products that are compatible with the selected model or asset.
 
 ### Product detail page (PDP) compatibility check
 
-On the PDP, a compatibility widget allows customers to:
+On the PDP, a compatibility widget lets you:
 
-- Select a model or asset from their fleet.
-- Check whether the current product is compatible.
-- See which assets in their fleet the product fits.
+- Select a model or asset from your fleet
+- Check whether the current product is compatible
+- See which assets in your fleet the product fits
 
 This reduces the risk of ordering incorrect spare parts or services and helps customers understand how a product relates to their installed base.
 
@@ -82,10 +82,10 @@ This reduces the risk of ordering incorrect spare parts or services and helps cu
 
 The asset-based catalog therefore connects:
 
-- The installed assets of a customer,
-- The models those assets belong to, and
-- The spare parts and services defined in product lists,
+- A customer's installed assets
+- The models those assets belong to
+- The spare parts and services defined in product lists
 
-to deliver an accurate, scalable, and self-service after-sales catalog.
+to deliver an accurate, scalable, self-service after-sales catalog.
 
 

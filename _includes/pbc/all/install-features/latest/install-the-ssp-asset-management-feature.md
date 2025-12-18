@@ -301,6 +301,7 @@ Add the `Assets` section to `navigation.xml`:
 ```
 
 Generate routers and navigation cache
+
 ```bash
 console router:cache:warm-up:backoffice
 console navigation:build-cache 
@@ -701,6 +702,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 ```
+
 ### Set up widgets
 
 | PLUGIN                        | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |

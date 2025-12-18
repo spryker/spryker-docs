@@ -38,7 +38,7 @@ For each model, a curated list of compatible spare parts and services can be mai
 Models is available in the Self-Service Portal Back Office and Storefront.
 
 **Documentation:**
-- [Self-Service Portal Models](/docs/pbc/all/self-service-portal/latest/ssp-models-feature-overview)
+- [Self-Service Portal Models](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview)
 - [Self-Service Portal Asset Based Catalog](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview)
 - [Self-Service Portal](/docs/pbc/all/self-service-portal/latest/self-service-portal)
 

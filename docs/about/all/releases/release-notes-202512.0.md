@@ -199,6 +199,12 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 
 Spryker uses the Dependency Inversion Principle to reduce tight coupling, improve unit testability, and provide a clear, extensible architecture. This approach enables autowiring and reduces the need for repetitive `Factory` and `DependencyProvider` wiring. This approach streamlines development and remains compatible with Symfony Dependency Injection conventions and tooling.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls aria-label="Symfony Dependency Injection and Architecture Overview">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202512/symfony_di.mp4" type="video/mp4">
+  </video>
+</figure>
+
 **Key capabilities:**
 - Reduced manual dependency wiring in your project code.
 - Improved compatibility with Symfony bundles and Symfony Dependency Injection tooling, such as container introspection. Tools like `debug:container` help you visualize all services.

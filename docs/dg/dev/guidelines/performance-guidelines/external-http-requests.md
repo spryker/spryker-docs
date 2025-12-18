@@ -143,7 +143,8 @@ return $this->view(['dataEndpoint' => '/api/external-data']);
 
 ```javascript
 // Frontend fetches data asynchronously
-fetch('/api/external-data')
+// This could be the Spryker endpoint, which makes secure call to 3rd party or another public endpoint
+fetch('/backend-gateway/request-external-data')
   .then(response => response.json())
   .then(data => {
     // Update UI with real data

@@ -3855,6 +3855,10 @@ entries:
             url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html
           - title: SSP Asset Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-asset-management-feature-overview.html
+          - title: SSP Models feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-model-management-feature-overview.html
+          - title: SSP asset-based catalog feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-based-catalog-feature-overview.html
           - title: SSP File Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html
 

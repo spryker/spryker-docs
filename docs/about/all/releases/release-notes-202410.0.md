@@ -72,7 +72,7 @@ The new Variants section in Merchant Portal streamlines the management of concre
 - [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)
 
 
-## [Early Access] AI Features <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## AI Features <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 AI-powered features implemented by connecting to third-party APIs:
 
@@ -98,7 +98,7 @@ The AI features leverage Open AI and are provided under the following conditions
 
 ### Documentation
 
-- [Product Management powered by OpenAI](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai)
+- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management)
 - [Visual Search powered by OpenAI](/docs/pbc/all/search/latest/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai)
 
 
@@ -155,7 +155,7 @@ The Stripe ACP app now fully supports the marketplace business model with the fo
 
 
 
-## [Early Access] Spryker GPTs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Spryker GPTs <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Spryker GPTs powered by OpenAI LLMs help developers automate crucial areas of software development: quality and performance. These GPTs increase developer efficiency without sacrificing high standards in QA and performance benchmarking:
 

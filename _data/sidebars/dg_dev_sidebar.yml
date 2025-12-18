@@ -991,6 +991,8 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
       - title: Web Profiler for Backend Gateway
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+      - title: Web Profiler for Glue
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
 
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html

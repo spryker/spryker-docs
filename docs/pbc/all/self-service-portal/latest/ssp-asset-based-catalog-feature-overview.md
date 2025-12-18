@@ -7,7 +7,7 @@ last_updated: Dec 18, 2025
 
 The *asset-based catalog* in the Self-Service Portal creates a personalized catalog of spare parts and services for each asset based on the asset's assigned model. This ensures users see only products that are compatible with the machines they own.
 
-For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-models-feature-overview.html).
+For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview).
 
 ## Key concepts
 

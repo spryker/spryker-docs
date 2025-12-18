@@ -26,6 +26,22 @@ This section describes how to set up components for selling services as products
 
 The following sections describe each step in more details.
 
+## Marketplace support for service products
+
+In marketplace scenarios, multiple merchants can offer service products that are compatible with the same model or asset. The SSP Service Management feature supports this by:
+
+- Letting each merchant create its own service offers for the same service product.
+- Associating each offer with service points, services, and shipment types.
+- Respecting model and asset compatibility defined by the asset-based catalog.
+
+On the Storefront:
+
+- The product details page (PDP) aggregates compatible service offers from different merchants.
+- For each offer, the PDP displays the configured shipment types—for example, **On-Site Service** or **Delivery**—so customers understand how the service will be provided.
+- When a customer starts from an asset or model context, only service offers compatible with that context are shown.
+
+This provides a unified self-service experience where customers can compare and purchase compatible service offerings from multiple merchants while keeping the compatibility rules defined in the asset and model layer.
+
 ### Importing product classes
 
 The product class defines the category of a product to distinguish between standard products, services, and any other product types.

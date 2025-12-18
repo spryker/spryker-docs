@@ -2,17 +2,17 @@ This document describes how to install the Self-Service Portal (SSP) Dashboard M
 
 ## Prerequisites
 
-| FEATURE         | VERSION | INSTALLATION GUIDE  |
-|--------------| ------- | ------------------ |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| FEATURE         | VERSION  | INSTALLATION GUIDE  |
+|--------------|----------| ------------------ |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -50,7 +50,11 @@ Make sure the following transfer objects have been generated:
 
 {% endinfo_block %}
 
-## Add translations
+## Demo data for EU region / DE store
+
+### Add translations
+
+You can also use the generic Self-Service Portal glossary import described in [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
 
 1. Append the glossary:
 
@@ -155,6 +159,8 @@ ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/defa
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ```
 
+### Add dashboard demo data
+
 9. Append `company_role_permission.csv`
 
 ```csv
@@ -198,9 +204,9 @@ Spryker_Buyer_With_Limit,ViewCompanySspServicePermissionPlugin,
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-## Import data
+### Import glossary and demo data
 
-Import glossary and demo data:
+Import glossary and dashboard demo data:
 
 ```bash
 console data:import glossary

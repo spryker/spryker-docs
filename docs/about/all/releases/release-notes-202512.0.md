@@ -159,6 +159,12 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 
 Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls aria-label="Smart PIM Product Translations">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202512.0.md/smart-pim-translations.m4v" type="video/mp4">
+  </video>
+</figure>
+
 **Key capabilities:**
 - Replace direct OpenAI integration in with AI Foundation as the unified AI layer.
 - Enable provider and model selection based on customer needs (for example different providers for cost, latency, data residency, or model capabilities).

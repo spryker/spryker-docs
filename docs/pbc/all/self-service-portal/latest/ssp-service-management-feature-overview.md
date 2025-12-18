@@ -2,67 +2,81 @@
 title: Self-Service Portal Service Management feature overview
 description: Let customers book services for delivery or on-site at service points, with configurable products, shipment types, and review options in Storefront and Back Office.
 template: concept-topic-template
-last_updated: Apr 10, 2025
+last_updated: Dec 15, 2025
 ---
 
 
-The *Service Management* feature enables customers to book a service, either for delivery to their address or for provision at a designated service point. For example, you can provide after-sales support, such as maintenance or repair.
+The *Service Management* feature enables customers to book a service that is either delivered to their address or provided at a designated service point. For example, you can offer after-sales support, such as maintenance or repair.
 
 
 ## Prerequisites for selling services in the catalog
 
-- Add service points and their addresses. A service point is a physical location where services are provided. For more information on service points, see [Service point](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-point).
-- Enable the Service Visit service type for service points as a unique service. For more information on services, see [Service](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service).
-- Configure a shipment method with the On-Site Service shipment type. For more information on shipment types, see [Shipment type](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type).
+- Add service points and their addresses. A service point is a physical location where services are provided. For details, see [Service point](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-point).
+- Enable the **Service Visit** service type for service points. For details, see [Service](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service).
+- Configure a shipment method with the **On-Site Service** shipment type. For details, see [Shipment type](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type).
 
 ## Selling services as products
 
 This section describes how to set up components for selling services as products:
 
-1. Set up the service product type for abstract products. This distinguishes service products from regular products in the Back Office and Storefront.
+1. Set up the service product class for concrete products. This distinguishes service products from regular products in the Back Office and Storefront.
 2. Set up allowed shipment types for concrete products. This determines if a product is eligible for a specific shipment type. For services that are sold at service points, configure the on-site service shipment type.
-3. Create one or more product offers for each service product. The offers must be associated with Service Points, Services, and Shipment Types.
+3. Create one or more product offers for each service product. The offers must be associated with service points, services, and shipment types.
 4. Optional: Set service date and time as required for checkout. This can be enabled for concrete products if scheduling is necessary.
 
-The following sections describe each step in more details.
+The following sections describe each step in more detail.
 
-### Importing product types
+## Marketplace support for service products
 
-The product type defines the category of a product to distinguish between standard products, services, and any other product types.
+In marketplace scenarios, multiple merchants can offer service products that are compatible with the same model or asset. The SSP Service Management feature supports this by:
 
-Product types are imported using the console importer:  
+- Letting each merchant create its own service offers for the same service product.
+- Associating each offer with service points, services, and shipment types.
+- Respecting model and asset compatibility defined by the asset-based catalog.
 
-**product-abstract-type.csv**
+On the Storefront:
 
-| Parameter | Required | Type   | Description                         |
-|-----------|----------|--------|-------------------------------------|
-| key       | Yes      | string | Key for the product abstract type.  |
-| name      | Yes      | string | Name of the product abstract type.  |
+- The product details page (PDP) aggregates compatible service offers from different merchants.
+- For each offer, the PDP displays the configured shipment types—for example, **On-Site Service** or **Delivery**—so customers understand how the service will be provided.
+- When a customer starts from an asset or model context, only service offers compatible with that context are shown.
+
+This provides a unified self-service experience where customers can compare and purchase compatible service offerings from multiple merchants while keeping the compatibility rules defined in the asset and model layer.
+
+### Importing product classes
+
+The product class defines the category of a product to distinguish between standard products, services, and any other product types.
+
+Import product types by using the console importer:
+
+**product_class.csv**
+
+| Parameter | Required | Type   | Description                |
+|-----------|----------|--------|----------------------------|
+| key       | Yes      | string | Key for the product class. |
+| name      | Yes      | string | Name of the product class. |
 
 
+### Adding product classes to products
 
-### Adding product type to products
-
-To add a product type to a product in the Back Office, go to **Catalog** and click the needed product.
+To add a product class to a product in the Back Office, go to **Catalog** and select the required product. Then, select a variant.
 
 Alternatively, you can import product type assignments using the console importer:
 
-**product-abstract-product-abstract-type.csv**
+**product_to_product_class.csv**
 
-| Parameter                 | Required | Type   | Description                     |
-|--------------------------|----------|--------|---------------------------------|
-| abstract_sku             | Yes      | string | Product abstract SKU            |
-| product_abstract_type_key| Yes      | string | Key for the product abstract type. |
-
+| Parameter         | Required | Type   | Description                |
+|-------------------|----------|--------|----------------------------|
+| sku               | Yes      | string | Product SKU                |
+| product_class_key | Yes      | string | Key for the product class. |
 
 
 
 ### Enabling service date and time for a product
 
 1. In the Back Office, go to **Catalog**.
-2. Click a product to enable date and time for.
-3. In the **Variants** section, click a product variant to enable date and time for.
-4. In the **General** tab, for **Enable Service Date and Time**, select **Yes**.
+2. Select the product that you want to update.
+3. In the **Variants** section, select the product variant that you want to update.
+4. In the **General** tab, select **Scheduled** product class.
 
 <!-- Alternatively, this can be imported using the standard console importer. See *Import file details: product-tbd.csv*. -->
 
@@ -70,10 +84,10 @@ Alternatively, you can import product type assignments using the console importe
 ### Defining allowed shipment types
 
 1. In the Back Office, go to **Catalog**.
-2. Click a product to select shipment types for.
-3. In the **Variants** section, click a product variant to select shipment types for.
-5. For **Allowed Shipment Types**, select one or more shipment types.
-  A product requires at least one allowed shipment type to be displayed on the Storefront.
+2. Select the product that you want to update.
+3. In the **Variants** section, select the product variant that you want to update.
+4. For **Allowed Shipment Types**, select one or more shipment types.
+   A product requires at least one allowed shipment type to be displayed on the Storefront.
 
 <!-- Alternatively, shipment types can be imported using the standard console importer. See *Import file details: product-type.csv*. -->
 
@@ -82,17 +96,17 @@ Alternatively, you can import product type assignments using the console importe
 
 1. In the Back Office, go to **Catalog** > **Offers**.
 2. Click **Create Offer**.
-3. Fill out the form using field descriptions:
+3. Fill out the form by using the following field descriptions:
 
-| OFFER PARAMETER     | DESCRIPTION |
-|---------------------|-------------|
-| Offer status        | Active or inactive. |
-| Stores              | Spryker Marketplace is a multi-store environment, and an operator can define which stores to display their offers in. |
-| Stock               | Offer's stock that's not dependent on the respective product's stock. |
-| Quantity | Always in Stock |
+| Offer parameter | Description |
+|---|---|
+| Offer status | Active or inactive. |
+| Stores | Spryker Marketplace is a multi-store environment. You can define which stores display the offer. |
+| Stock | Offer stock that is not dependent on the corresponding product stock. |
+| Quantity | Always in stock. |
 | Validity Dates      | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 | Service Point       | A service point is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, such as a warehouse or a physical store. |
-| Services            | A service represents a specific service type that is provided at a specific service point. For example, an "On-Site Service at a retail location at Julie-Wolfthorn-Straße 1, 10115", Berlin is a unique service. |
+| Services | A service represents a specific service type that is provided at a specific service point. For example, "On-Site Service at a retail location at Julie-Wolfthorn-Straße 1, 10115 Berlin" is a unique service. |
 | Shipment Types      | A shipment type is a way in which a customer receives an order after placing it. Shipment type examples: Delivery, On-Site Service, In-Store Pickup, Curbside Pickup. |
 
 
@@ -101,22 +115,22 @@ Alternatively, you can import product type assignments using the console importe
 
 Customers can review previously purchased service products in **My Account** > **Services**.
 
-On the Services View page, the following information is displayed:
-- Order Reference
+On the **Services** page, the following information is displayed:
+- Order reference
 - Service
-- Time and Date
-- Created At
+- Date and time
+- Created at
 - State
 
 
 Customers can use the search to filter purchased services by product name, SKU, or order reference.
 
-Also, customers can filter the view according to who purchased services:
+Customers can also filter the view by who purchased services:
 - My booked services
 - Booked services of a specific business unit
 - Booked services of a specific company
 
-The latter two require respective permissions. For more information on company permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html).
+The latter two options require the appropriate permissions. For more information on company permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html).
 
 
 ## Reviewing purchased services in the Back Office
@@ -128,20 +142,20 @@ Back Office users can view previously purchased service products in **Orders** >
 
 The SSP checkout flow adds the following functionality:
 
-- Customers can switch between single-address and multi-address checkout for items with the **Delivery** shipment type
-- Items delivered with the **On-Site Service** shipment type are displayed as a separate group
-- For **On-Site Service** items, customers can change the service point but not the shipment type
+- Customers can switch between single-address and multi-address checkout for items with the **Delivery** shipment type.
+- Items with the **On-Site Service** shipment type are displayed as a separate group.
+- For **On-Site Service** items, customers can change the service point but not the shipment type.
 
 ## Current constraints
 
-- Product prices for product offers can't be added in the Back Office; they can only be imported.
+- You cannot add product offer prices in the Back Office; you can import them only.
 - Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
-- Customers can't change shipment type in cart and checkout.
+- Customers cannot change the shipment type in the cart or during checkout.
 
 
 
-## Related Developer documents
+## Related developer documents
 
-| INSTALLATION GUIDES |
-| - |
+| Installation guides |
+|---|
 | [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) |

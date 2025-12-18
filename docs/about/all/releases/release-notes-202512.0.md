@@ -83,7 +83,7 @@ Merchant day to day catalog work is simplified in Merchant Portal by adding a cl
 
 ### Storefront merchant profile improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Storefront discovery is improved by making it easier for buyers to navigate from a merchant profile to that merchant’s products with the right catalog filters already applied.
+Storefront discovery is improved by making it easier for buyers to navigate from a merchant profile to that merchant's products with the right catalog filters already applied.
 
 **Key capabilities**
 - Added a "Shop Merchant Products" button on the merchant profile page that opens the product catalog with an active merchant filter.

@@ -15,6 +15,8 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Self-Service Portal (SSP) models help operators manage complex equipment structures and help customers find compatible spare parts and service products faster in asset-based catalogs.
 
+![Self-Service Assets](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202512.0.md/SSP-assets-page.png)
+
 **What are SSP models?**
  SSP models let you group multiple assets into a single product family (for example, a machine type or series). Assets in the SSP are now directly connected to the product catalog, including compatible spare parts and service offerings, making the Self-Service Portal fully transactional.
 For each model, a curated list of compatible spare parts and services can be maintained. When a customer browses the catalog or opens a product detail page, results are automatically filtered to show only items compatible with the selected model or asset, enabling accurate identification and immediate purchase.
@@ -36,12 +38,15 @@ For each model, a curated list of compatible spare parts and services can be mai
 Models is available in the Self-Service Portal Back Office and Storefront.
 
 **Documentation:**
+- [Self-Service Portal Models](/docs/pbc/all/self-service-portal/latest/ssp-models-feature-overview)
+- [Self-Service Portal Asset Based Catalog](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview)
 - [Self-Service Portal](/docs/pbc/all/self-service-portal/latest/self-service-portal)
-- [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)
 
 ### Merchant Portal file-based product import is now generally available <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 File-based product import in Merchant Portal moves from Early Access to General Availability, with reliability and UX improvements based on customer feedback.
+
+![merchant-portal-import](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202507.0.md/merchant-portal-import.png)
 
 **Key capabilities**
 - Provide clear post-import results (success and errors) in the UI or as a downloadable CSV.
@@ -62,6 +67,8 @@ File-based product import in Merchant Portal moves from Early Access to General 
 ### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
+
+![merchant-self-registration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202512.0.md/Merchant-Self-Registration.png)
 
 **Key capabilities:**
 - Added a storefront-led merchant self-registration flow, allowing prospective merchants to submit an application which can be reviewed and approved in Back Office before merchant entities and users are created.
@@ -92,6 +99,8 @@ Order traceability for Agent Assist flows is improved so operations and support 
 ### Merchant Portal dashboard improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Merchant day to day catalog work is simplified in Merchant Portal by adding a clearer entry point to product management directly from the dashboard.
+
+![merchant-portal-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/releases/release-notes-202512.0.md/merchant-portal-dashboard.png)
 
 **Key capabilities**
 - Added a Products widget to the Merchant Portal dashboard to improve discoverability of product management.

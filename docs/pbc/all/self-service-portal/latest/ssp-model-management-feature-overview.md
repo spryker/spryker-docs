@@ -5,9 +5,9 @@ template: concept-topic-template
 last_updated: Dec 18, 2025
 ---
 
-The *Models* capability in the Self-Service Portal lets you group assets into logical families (for example, machine types or generations) and maintain spare-part and service compatibility at the model level instead of per individual asset. This is the foundation for the asset-based spare parts and services catalog.
+The *Models* capability in the Self-Service Portal lets you group assets into logical families (for example, machine types or generations) and maintain spare parts and service compatibility at the model level instead of per individual asset. This capability is the foundation for the asset-based spare parts and services catalog.
 
-## What is a Model
+## What is a model
 
 A *model* represents a type, generation, or configuration of a machine or equipment line. Each model can have:
 
@@ -16,9 +16,9 @@ A *model* represents a type, generation, or configuration of a machine or equipm
 
 By centralizing compatibility rules on the model, you:
 
-- Avoid maintaining compatibility for every single asset.
-- Reduce errors in spare-part selection.
-- Keep asset catalogs in sync as fleets grow.
+- Avoid maintaining compatibility for every asset.
+- Reduce errors when selecting spare parts.
+- Keep asset catalogs in sync as your fleet grows.
 
 ## Relations between models, assets, and products
 
@@ -26,7 +26,7 @@ The core relations are:
 
 - **Model → Assets**: All assets assigned to a model share the same compatibility rules.
 - **Model → Product lists**: Each model can have one or more product lists with spare parts, consumables, and service products.
-- **Assets → Product lists (via model)**: Assets do not reference spare parts directly. They inherit the product lists through their model.
+- **Assets → Product lists (via model)**: Assets inherit product lists through their model instead of referencing spare parts directly.
 
 This results in the following structure:
 
@@ -37,28 +37,28 @@ Model
        └── Spare parts, consumables, service products
 ```
 
-## Back Office model management
+## Manage models in Back Office
 
-In the Back Office, operators can:
+In the Back Office, you can:
 
-- Create and edit models (reference, name, code, image, and other attributes).
-- Assign or remove assets from a model.
-- Assign or remove product lists that contain spare parts and services.
-- View all relations between a model, its assets, and the assigned product lists.
+- Create and edit models, including reference, name, code, image, and other attributes.
+- Assign and remove assets from a model.
+- Assign and remove product lists that contain spare parts and services.
+- View relationships between a model, its assets, and its assigned product lists.
 
-To keep data consistent:
+To keep data consistent, note the following:
 
 - A model cannot be deleted while it still has assigned assets or product lists.
 - Changes to model assignments immediately affect which products appear in the asset-based catalog.
 
 ## Storefront behavior
 
-When a customer interacts with the storefront in a model context:
+In the storefront, customers can:
 
-- The catalog can be filtered by model reference, model name, or model code.
-- The compatibility widget on the product details page can check if a product is compatible with a selected model and show which assets in the customer’s fleet the product fits.
+- Filter the catalog by model reference, model name, or model code.
+- Use the compatibility widget on the product details page to check whether a product is compatible with a selected model and which assets in their fleet it fits.
 
-Models therefore act as the bridge between:
+Models act as the bridge between:
 
 - The assets a customer owns, and
 - The spare parts and services that are compatible with those assets.
@@ -67,12 +67,12 @@ Models therefore act as the bridge between:
 
 1. An operator creates a model `PRESS-1200-SERIES` for a family of press machines.
 2. All installed press machines of this series are registered as assets and assigned to this model.
-3. The operator creates spare part products (for example, filters, seals, sensor kits) and adds them to product lists like **P1200 Hydraulic Components** or **P1200 Maintenance Kit**.
+3. The operator creates spare parts as products (for example, filters, seals, and sensor kits) and adds them to product lists such as **P1200 Hydraulic Components** or **P1200 Maintenance Kit**.
 4. These product lists are assigned to the `PRESS-1200-SERIES` model.
 
 Result:
 
-- Any asset belonging to `PRESS-1200-SERIES` automatically uses these product lists as its compatible spare-part catalog.
-- When a customer starts from such an asset or model in the storefront, they only see products from the assigned product lists.
+- Any asset belonging to `PRESS-1200-SERIES` automatically uses these product lists as its compatible spare parts catalog.
+- When a customer starts from an asset or model in the storefront, they only see products from the assigned product lists.
 
 

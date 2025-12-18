@@ -34,7 +34,7 @@ SSP models let you group multiple assets into a single product family (for examp
 
 Models is available in the Self-Service Portal Back Office and Storefront.
 
-### [OPTION 1 - PREFERED] Merchant Portal file-based product import is now generally available
+### Merchant Portal file-based product import is now generally available <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 File-based product import in Merchant Portal moves from Early Access to General Availability, with reliability and UX improvements based on customer feedback.
 
@@ -47,23 +47,6 @@ File-based product import in Merchant Portal moves from Early Access to General 
 - Faster merchant onboarding and ongoing catalog maintenance at scale.
 - Lower support effort thanks to clearer feedback and import logs.
 - Higher confidence running bulk imports in production environments.
-
-### [OPTION 2 ] Merchant Portal file-based imports for marketplace catalogs
-
-Marketplace catalog maintenance is improved with file-based import capabilities in Merchant Portal, enabling merchants to update products, prices, stock, and offers in a predictable single-line CSV format with clear validations and downloadable logs.
-
-**Key capabilities**
-- Import product data, prices, and stock together through Merchant Portal using a single-line (flat) CSV format.
-- Import product offers through a dedicated Offer import type with a dedicated CSV template.
-- Provide detailed outcome reporting after each run (success, errors) via UI or downloadable as CSV.
-- Support product abstracts and concretes only (product options and other product types, for example bundles, are not supported).
-
-**Business benefits**
-- Faster onboarding and ongoing catalog updates at scale.
-- Lower support effort through clearer feedback and troubleshooting artifacts.
-- Reduced risk of incorrect updates across merchants and warehouses.
-- Higher confidence in bulk operations due to transparent results and logs.
-
 
 ### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 

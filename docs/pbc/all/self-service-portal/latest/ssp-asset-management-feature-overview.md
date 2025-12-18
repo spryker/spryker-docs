@@ -6,9 +6,13 @@ last_updated: Dec 18, 2025
 ---
 
 
-The SSP Asset Management feature enables business users to manage assets within their organization.
+The SSP Asset Management feature lets you manage assets in your organization and use them as an entry point to an asset-based spare parts and services catalog.
 
-An *asset* is an item, equipment, or resource that holds value and is tracked by a business.
+An asset is an item, piece of equipment, or resource that holds value and that a business tracks.
+You can group assets into models. Models define which spare parts and services are compatible with each asset. For more information, see:
+
+- [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview.html)
+- [Self-Service Portal asset-based catalog feature overview](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview.html)
 
 ![assets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-assets-management-feature-overview.md/my-assets.png)
 

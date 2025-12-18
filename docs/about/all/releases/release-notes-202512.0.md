@@ -16,7 +16,8 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 Self-Service Portal (SSP) models help operators manage complex equipment structures and help customers find compatible spare parts and service products faster in asset-based catalogs.
 
 **What are SSP models?**
-SSP models let you group multiple assets into a single product family (for example, a machine type or series). For each model, a list of compatible spare parts or service items can be maintained. When a customer browses the catalog or opens a product detail page, results can be filtered to show only items compatible with the selected model or asset.
+ SSP models let you group multiple assets into a single product family (for example, a machine type or series). Assets in the SSP are now directly connected to the product catalog, including compatible spare parts and service offerings, making the Self-Service Portal fully transactional.
+For each model, a curated list of compatible spare parts and services can be maintained. When a customer browses the catalog or opens a product detail page, results are automatically filtered to show only items compatible with the selected model or asset, enabling accurate identification and immediate purchase.
 
 **Key capabilities:**
 - Group assets that belong to the same machinery type or generation.
@@ -34,6 +35,10 @@ SSP models let you group multiple assets into a single product family (for examp
 
 Models is available in the Self-Service Portal Back Office and Storefront.
 
+**Documentation:**
+- [Self-Service Portal](/docs/pbc/all/self-service-portal/latest/self-service-portal)
+- [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)
+
 ### Merchant Portal file-based product import is now generally available <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 File-based product import in Merchant Portal moves from Early Access to General Availability, with reliability and UX improvements based on customer feedback.
@@ -48,6 +53,12 @@ File-based product import in Merchant Portal moves from Early Access to General 
 - Lower support effort thanks to clearer feedback and import logs.
 - Higher confidence running bulk imports in production environments.
 
+**Documentation:**
+- [Merchant Portal Import Products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/import-products-ui)
+- [Merchant Portal Import Product Offers](/docs/pbc/all/offer-management/latest/marketplace/import-offers-ui)
+- [Install Merchant Portal Product Data Import](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature)
+- [Install Product Offer Data Import](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-data-import-feature)
+
 ### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
@@ -59,6 +70,10 @@ Merchant onboarding is simplified with a storefront entry point while keeping ma
 - Reduced manual onboarding effort and improved consistency of merchant intake.
 - Faster and more controlled merchant onboarding for marketplace operators.
 
+**Documentation:**
+- [Merchant Self-Registration](/docs/pbc/all/merchant-management/latest/marketplace/merchant-self-registration-feature-overview)
+- [Install Merchant Self-Registration](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature)
+
 ### Agent assist order traceability <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
@@ -69,6 +84,10 @@ Order traceability for Agent Assist flows is improved so operations and support 
 **Business benefits:**
 - Faster issue resolution and clearer ownership for agent-created orders.
 - Improved auditability for Agent Assist flows.
+
+**Documentation:**
+- [Agent Assist](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview#setting-up-an-agent-user)
+- [Install Agent Assist](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature#install-feature-core)
 
 ### Merchant Portal dashboard improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

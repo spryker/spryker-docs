@@ -2,15 +2,15 @@ This document describes how to install the Self-Service Portal (SSP) File Manage
 
 ## Prerequisites
 
-| FEATURE         | VERSION | INSTALLATION GUIDE                                                                                                                                          |
-|--------------| ------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| FEATURE         | VERSION  | INSTALLATION GUIDE                                                                                                                                          |
+|--------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -222,7 +222,11 @@ self_service_portal.company_file.file_search_filter_form.field.type.company_busi
 
 </details>
 
-2. Import data:
+## Demo data for EU region / DE store
+
+### Import glossary data
+
+You can either import glossary keys dedicated to the File Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
 
 ```bash
 console data:import glossary

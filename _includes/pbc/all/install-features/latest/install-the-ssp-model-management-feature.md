@@ -4,15 +4,15 @@ This document describes how to install the Self-Service Portal (SSP) Model Manag
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                |
 |---------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                       |
+| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                       |
 
 ## Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^5.0.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -344,7 +344,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-4. Import the data:
+## Demo data for EU region / DE store
+
+### Import model demo data
 
 ```bash
 console data:import:ssp-model

@@ -2,7 +2,7 @@
 title: SSP Assets Management feature overview
 description: The Asset Management feature allows customers abd Back Office users to manage assets within the organization.
 template: concept-topic-template
-last_updated: Apr 10, 2025
+last_updated: Dec 18, 2025
 ---
 
 
@@ -24,18 +24,16 @@ Assets have the following parameters:
 - Serial Number
 - Status
 - Note
-- Company
 - Business Units
 - Business Unit Owner
 
 ## Adding assets on the Storefront
 
-On the Storefront, company account users can add assets in the **My Assets** section.
+On the Storefront, company account users can add assets in the **Customer Account** > **Assets**.
 
 ![add-assets-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-assets-management-feature-overview.md/add-assets-storefront.md.png)
 
 All added assets receive a pending status by default. A company user with approve permissions need to approve the added asset to make it available. Once an asset is approved, company users can create inquiries about the asset.
-
 For more information on inquiries, see [Inquiry Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-inquiry-management-feature-overview.html)
 
 
@@ -59,7 +57,11 @@ A company user can have the following permissions related to asset management:
 
 For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
+## Related Developer documents
 
+| INSTALLATION GUIDES                                                                                                                        |
+|--------------------------------------------------------------------------------------------------------------------------------------------|
+| [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html) |
 
 
 

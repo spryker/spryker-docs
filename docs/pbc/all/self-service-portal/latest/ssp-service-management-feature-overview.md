@@ -2,7 +2,7 @@
 title: Self-Service Portal Service Management feature overview
 description: Let customers book services for delivery or on-site at service points, with configurable products, shipment types, and review options in Storefront and Back Office.
 template: concept-topic-template
-last_updated: Apr 10, 2025
+last_updated: Dec 15, 2025
 ---
 
 
@@ -19,41 +19,39 @@ The *Service Management* feature enables customers to book a service, either for
 
 This section describes how to set up components for selling services as products:
 
-1. Set up the service product type for abstract products. This distinguishes service products from regular products in the Back Office and Storefront.
+1. Set up the service product class for concrete products. This distinguishes service products from regular products in the Back Office and Storefront.
 2. Set up allowed shipment types for concrete products. This determines if a product is eligible for a specific shipment type. For services that are sold at service points, configure the on-site service shipment type.
 3. Create one or more product offers for each service product. The offers must be associated with Service Points, Services, and Shipment Types.
 4. Optional: Set service date and time as required for checkout. This can be enabled for concrete products if scheduling is necessary.
 
 The following sections describe each step in more details.
 
-### Importing product types
+### Importing product classes
 
-The product type defines the category of a product to distinguish between standard products, services, and any other product types.
+The product class defines the category of a product to distinguish between standard products, services, and any other product types.
 
 Product types are imported using the console importer:  
 
-**product-abstract-type.csv**
+**product_class.csv**
 
-| Parameter | Required | Type   | Description                         |
-|-----------|----------|--------|-------------------------------------|
-| key       | Yes      | string | Key for the product abstract type.  |
-| name      | Yes      | string | Name of the product abstract type.  |
+| Parameter | Required | Type   | Description                |
+|-----------|----------|--------|----------------------------|
+| key       | Yes      | string | Key for the product class. |
+| name      | Yes      | string | Name of the product class. |
 
 
+### Adding product classes to products
 
-### Adding product type to products
-
-To add a product type to a product in the Back Office, go to **Catalog** and click the needed product.
+To add a product class to a product in the Back Office, go to **Catalog** and click the needed product. Select a variant.
 
 Alternatively, you can import product type assignments using the console importer:
 
-**product-abstract-product-abstract-type.csv**
+**product_to_product_class.csv**
 
-| Parameter                 | Required | Type   | Description                     |
-|--------------------------|----------|--------|---------------------------------|
-| abstract_sku             | Yes      | string | Product abstract SKU            |
-| product_abstract_type_key| Yes      | string | Key for the product abstract type. |
-
+| Parameter         | Required | Type   | Description                |
+|-------------------|----------|--------|----------------------------|
+| sku               | Yes      | string | Product SKU                |
+| product_class_key | Yes      | string | Key for the product class. |
 
 
 
@@ -62,7 +60,7 @@ Alternatively, you can import product type assignments using the console importe
 1. In the Back Office, go to **Catalog**.
 2. Click a product to enable date and time for.
 3. In the **Variants** section, click a product variant to enable date and time for.
-4. In the **General** tab, for **Enable Service Date and Time**, select **Yes**.
+4. In the **General** tab, select **Scheduled** product class.
 
 <!-- Alternatively, this can be imported using the standard console importer. See *Import file details: product-tbd.csv*. -->
 
@@ -142,6 +140,6 @@ The SSP checkout flow adds the following functionality:
 
 ## Related Developer documents
 
-| INSTALLATION GUIDES |
-| - |
+| INSTALLATION GUIDES                                                                                                                            |
+|------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) |

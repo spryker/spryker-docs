@@ -205,6 +205,16 @@ Filters are cacheable and faster than queries because they don't calculate relev
 }
 ```
 
+**How to Choose: Query vs. Filter**
+
+The decision depends on whether the criteria should influence ranking (how well a document matches) or inclusion (whether it matches at least).
+
+- Use filter for Binary Logic: If the requirement is "Yes/No" (for example: Is the brand Dell? Is the price between $500 and $1000?), use a filter. These are deterministic, do not calculate a relevance score, and allow Elasticsearch to cache the results for much faster subsequent lookups.
+
+- Use query (must) for Scoring: Use the query context when you need to find "the best" match. This is typically reserved for full-text search (for example: How relevant is "laptop" to this product title?). This calculates a _score based on term frequency and similarity to determine the order of results.
+
+Rule of Thumb: If the user is filtering (selecting attributes from a sidebar), use filter. If the user is searching (typing into a search bar), use query.
+
 ### Limit the number of returned fields
 
 Only fetch fields you actually need using `_source` filtering:

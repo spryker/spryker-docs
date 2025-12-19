@@ -1,7 +1,7 @@
 ---
 title: "Performance guidelines: External HTTP requests"
 description: Learn about performance guidelines for external HTTP requests.
-last_updated: Nov 03, 2025
+last_updated: Dec 15, 2025
 template: concept-topic-template
 keywords: performance, external HTTP requests, external call, SAP, ERP, Concurrent, WebProfiler, NewRelic
 related:
@@ -15,7 +15,42 @@ related:
     link: docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html#new-relic
   - title: Web Profiler Widget
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+  - title: Architecture performance guidelines
+    link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
+
+## Spryker architecture principle: read from fast storage
+
+The [original Spryker Architecture](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html) was built with a fundamental high-level principle in mind: **frontend applications (Yves/Glue/Merchant Portal) should read only from fast storage** like Redis/ValKey and Elasticsearch/OpenSearch, **not from databases or remote APIs**.
+
+### How the architecture works
+
+When an application needs data from a database or remote service, the data import or synchronization should be performed in the background through Spryker's [Publish & Sync](https://docs.spryker.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) mechanism to:
+- **Key-Value storage** (Redis/ValKey) for structured data retrieval
+- **Search storage** (Elasticsearch/OpenSearch) for searchable product catalog and content
+
+### Benefits of this approach
+
+The main benefit is **scalability** - complete independence of web traffic from data sources' capabilities:
+- Both Key-Value and Search storages are easy and fast to scale with zero downtime
+- Frontend application performance is predictable and not affected by database or external API performance
+- The system can handle traffic spikes without overwhelming backend data sources
+
+### Real-world constraints
+
+Real-life problems sometimes prevent engineers from implementing data flows according to this principle. When you must make external calls from frontend applications, it's crucial to:
+- Understand the downsides and trade-offs
+- Ensure all connected systems can handle the same level of load as your frontend application
+- Remember: **a chain is only as strong as its weakest component**
+
+### Recommendations for deviating from the principle
+
+1. **Avoid unnecessary calls**: Read from Key-Value or Search storages instead of calling backend-gateway or APIs from Yves/Glue/Merchant Portal.
+2. **Combine multiple calls**: If external requests are required, avoid multiple sequential calls. Instead, combine them into one batch request.
+3. **Cache responses carefully**: Caching can help, but be aware of what to cache, where to store it, and how long to keep it. Key-Value storages are fast but limited in capacity and can be expensive at scale.
+4. **Ensure external system capability**: If real-time data is a must-have requirement and background sync with a small delay is not viable, ensure that:
+   - Remote APIs or dependencies can handle the same level of requests and data volume as the main Spryker application
+   - Remote APIs or dependencies can scale at the same rate as the main Spryker application
 
 ## Purpose of external HTTP calls
 
@@ -68,6 +103,71 @@ $promises = [
 
 $responses = Promise\Utils::unwrap($promises);
 ```
+
+### Asynchronous AJAX calls to avoid blocking page rendering
+
+When frontend pages depend on data from backend-gateway or other remote resources, avoid blocking the initial page render. Synchronous calls to external services can significantly delay the Time to First Byte (TTFB) and degrade user experience.
+
+#### The problem with blocking calls
+
+If a page waits for external data before rendering, users see a blank screen or loading spinner for the entire request duration. This is particularly problematic when:
+- External services are slow or temporarily unavailable
+- Multiple external calls are required sequentially
+- Network latency adds up across calls
+
+#### Solution: Asynchronous loading with proper UI design
+
+Instead of blocking page rendering, design your UI to load data asynchronously:
+
+1. **Render the page skeleton first**: Display the page structure, navigation, and static content immediately.
+2. **Use AJAX for dynamic data**: Fetch external data asynchronously after the page loads.
+3. **Provide visual feedback**: Show loading indicators, placeholders, or skeleton screens while data is being fetched.
+4. **Handle errors gracefully**: Display user-friendly error messages if external calls fail.
+
+#### Implementation example
+
+**Bad approach** - Blocking render:
+
+```php
+// Controller waits for external data before rendering
+$externalData = $this->externalClient->fetchData(); // Blocks for 2-3 seconds
+return $this->view(['data' => $externalData]);
+```
+
+**Good approach** - Asynchronous loading:
+
+```php
+// Controller renders immediately with placeholder
+return $this->view(['dataEndpoint' => '/api/external-data']);
+```
+
+```javascript
+// Frontend fetches data asynchronously
+// This could be the Spryker endpoint, which makes secure call to 3rd party or another public endpoint
+fetch('/backend-gateway/request-external-data')
+  .then(response => response.json())
+  .then(data => {
+    // Update UI with real data
+    document.getElementById('content').innerHTML = renderData(data);
+  })
+  .catch(error => {
+    // Show error message
+    document.getElementById('content').innerHTML = '<p>Unable to load data</p>';
+  });
+```
+
+#### UI patterns for asynchronous loading
+
+- **Loading indicators**: Spinners or progress bars to show data is being fetched
+- **Skeleton screens**: Gray placeholder boxes that match the content layout
+- **Placeholders**: Text like "Loading..." or "Fetching latest data..."
+- **Progressive enhancement**: Show cached or default data first, then update with fresh data
+- **Lazy loading**: Load data only when users scroll to the relevant section
+
+By implementing asynchronous AJAX calls with proper UI patterns, you ensure that:
+- Pages render quickly, improving perceived performance
+- Users can interact with the page while data loads
+- External service failures don't completely break the page
 
 ### WebProfiler Widget monitoring of external HTTP calls
 

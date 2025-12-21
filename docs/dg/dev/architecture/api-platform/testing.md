@@ -1,15 +1,17 @@
 ---
 title: API Platform Testing
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Nov 24, 2025
+last_updated: Dec 21, 2025
 template: howto-guide-template
 related:
   - title: API Platform
     link: docs/dg/dev/architecture/api-platform.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
-  - title: Schemas and Resource Generation
-    link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: Resource Schemas
+    link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: Troubleshooting
     link: docs/dg/dev/architecture/api-platform/troubleshooting.html
 ---
@@ -47,6 +49,19 @@ AbstractApiTestCase (base class from core)
 | `ApiTestKernel` | Lightweight Symfony kernel for testing |
 | `ApiTestAssertionsTrait` | API-specific assertions (from API Platform) |
 
+### Test helper classes
+
+The testing infrastructure provides specialized Codeception helpers to streamline test development:
+
+| Helper Class | Purpose |
+|--------------|---------|
+| `BootstrapHelper` | Configures application plugin providers for test environments via codeception.yml. Allows different test suites to use different factory implementations without hardcoding dependencies in test infrastructure. |
+| `ApiPlatformHelper` | Automatically cleans compiled Symfony test kernel cache after test suites complete. This ensures a clean state between test runs and prevents cache-related test failures. |
+| `ApiPlatformConfigBuilder` | Provides a fluent interface for building test-specific API Platform configurations. Useful for creating isolated test scenarios with custom settings. |
+| `ApiResourceGeneratorHelper` | Assists with testing resource generation functionality. Provides methods to generate test resources, validate generation output, and clean up generated files. |
+
+These helpers are automatically available in your test cases through the Codeception actor and provide essential functionality for testing API Platform resources effectively.
+
 ## Setting up your test environment
 
 ### 1. Configure autoloading for generated test resources
@@ -66,7 +81,42 @@ Update your project-level `composer.json` to include the test API namespace:
 }
 ```
 
-### 2. Create test directory structure
+### 2. Optional: Configure application plugin providers
+
+If your tests require application plugins to be registered (for example, service providers or middleware), configure the `BootstrapHelper` in your suite's `codeception.yml`:
+
+`tests/PyzTest/Glue/Customer/BackendApi/codeception.yml`
+
+```yaml
+modules:
+    enabled:
+        - \SprykerTest\Shared\Testify\Helper\BootstrapHelper:
+            applicationPluginProvider:
+                class: Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationFactory
+                method: getApplicationPlugins
+```
+
+For Storefront API tests, use the appropriate factory:
+
+`tests/PyzTest/Glue/Customer/StorefrontApi/codeception.yml`
+
+```yaml
+modules:
+    enabled:
+        - \SprykerTest\Shared\Testify\Helper\BootstrapHelper:
+            applicationPluginProvider:
+                class: Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationFactory
+                method: getApplicationPlugins
+```
+
+**Configuration options:**
+
+- `class`: The fully qualified class name of the factory that provides application plugins
+- `method`: The method name to call on the factory (typically `getApplicationPlugins`)
+
+If no `applicationPluginProvider` is configured, the helper returns an empty array, and tests run without additional application plugins.
+
+### 3. Create test directory structure
 
 ```bash
 tests/
@@ -74,8 +124,10 @@ tests/
 │   └── Glue/
 │       └── Customer/
 │           ├── BackendApi/
+│           │   ├── codeception.yml
 │           │   └── CustomersBackendApiTest.php
 │           └── StorefrontApi/
+│               ├── codeception.yml
 │               └── CustomersStorefrontApiTest.php
 └── _data/
     └── Api/
@@ -85,9 +137,22 @@ tests/
             └── CustomersStorefrontResource.php (generated)
 ```
 
-### 3. Generate API resources for testing
+### 4. Generate API resources for testing
 
 The resources and the container are automatically generated right before the test suite runs.
+
+#### Automatic resource generation and cleanup
+
+The test infrastructure handles resource lifecycle automatically:
+
+- **Generation**: Test-specific API resources are generated into `tests/_data/Api/{ApiType}/` before tests execute
+- **Cleanup**: The `ApiPlatformHelper` automatically cleans the compiled Symfony test kernel cache after test suites complete
+- **Isolation**: Each test suite gets a fresh cache state, preventing cross-test contamination
+
+This automation ensures that:
+- Tests always run against the latest schema definitions
+- No manual cache clearing is required between test runs
+- Test failures related to stale cache are eliminated
 
 ## Writing Backend API tests
 
@@ -705,6 +770,42 @@ docker/sdk cli vendor/bin/codecept run --coverage --coverage-html
 
 ## Codeception configuration
 
+### Suite configuration
+
+Configure your test suite's `codeception.yml` to enable the necessary helpers:
+
+`tests/PyzTest/Glue/Customer/BackendApi/codeception.yml`
+
+```yaml
+suite_namespace: PyzTest\Glue\Customer\BackendApi
+
+actor: BackendApiTester
+
+modules:
+    enabled:
+        - \SprykerTest\Shared\Testify\Helper\BootstrapHelper:
+            applicationPluginProvider:
+                class: Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationFactory
+                method: getApplicationPlugins
+
+paths:
+    tests: .
+    data: ../../../../../_data
+    support: _support
+    output: ../../../../../_output
+
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+```
+
+**Key configuration points:**
+
+- **BootstrapHelper**: Provides application plugins for the test kernel. This is optional and can be omitted if your tests do not require application-level dependencies.
+- **suite_namespace**: Must match your test suite's PHP namespace
+- **actor**: The tester class name (for example, `BackendApiTester`, `StorefrontApiTester`)
+
 ### Helper classes
 
 Create helper classes to manage test data:
@@ -955,7 +1056,8 @@ docker/sdk cli vendor/bin/codecept build
 ## Next steps
 
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating API resources
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema reference
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource schema reference
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation schema reference
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions
 - [Codeception Documentation](https://codeception.com/docs/Introduction) - Codeception framework docs
 - [API Platform Testing](https://api-platform.com/docs/symfony/testing/) - Official API Platform testing guide

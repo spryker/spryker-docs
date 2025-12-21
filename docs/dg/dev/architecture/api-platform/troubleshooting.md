@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Nov 24, 2025
+last_updated: Dec 21, 2025
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -10,8 +10,10 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
-  - title: Schemas and Resource Generation
-    link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: Resource Schemas
+    link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
 ---
@@ -434,5 +436,6 @@ If you encounter issues not covered here:
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup guide
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema reference
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource schema reference
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation schema reference
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Testing guide

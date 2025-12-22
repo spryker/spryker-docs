@@ -18,7 +18,7 @@ To start the feature integration, overview and install the necessary features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies
+composer require spryker/oauth-agent-connector:"^1.0.0" spryker/oauth-customer-connector:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -28,6 +28,7 @@ Ensure that the following module has been installed:
 | MODULE              | EXPECTED DIRECTORY                   |
 |---------------------|--------------------------------------|
 | OauthAgentConnector | vendor/spryker/oauth-agent-connector |
+| OauthCustomerConnector | vendor/spryker/oauth-customer-connector |
 
 {% endinfo_block %}
 
@@ -101,9 +102,11 @@ Activate the following plugins:
 
 | PLUGIN                                                     | SPECIFICATION                                                                                                       | PREREQUISITES | NAMESPACE                                                        |
 |------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| AgentOauthUserProviderPlugin                               | Authenticates an agent, reads the agent's data and provides it for the access token.                                      | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| AgentOauthUserProviderPlugin                               | Authenticates an agent, reads the agent's data and provides it for the access token.                                | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| CustomerImpersonationOauthUserProviderPlugin               | Enables impersonation of the customer.                                                                              | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | AgentOauthScopeProviderPlugin                              | Provides the agent scopes.                                                                                          | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | AgentCredentialsOauthGrantTypeConfigurationProviderPlugin  | Provides configuration of the`agent_credentials` grant type.                                                        | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
+| CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin  | Provides configuration of the`customer_impersonation` grant type.                                                        | None          | Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth       |
 | UpdateAgentSessionAfterCustomerAuthenticationSuccessPlugin | Updates agent's session data in storage if access is granted and an agent is logged in.                             | None          | SprykerShop\Yves\SessionAgentValidation\Plugin\CustomerPage      |
 | CustomerUpdateSessionPostImpersonationPlugin               | Updates customer's session data in storage if a given customer is valid after the session impersonation is started. | None          | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\AgentPage  |
 | UpdateAgentTokenAfterCustomerAuthenticationSuccessPlugin   | Updates agent token after customer authentication success.                                                          | None          | SprykerShop\Yves\AgentPage\Plugin\Security                       |
@@ -119,6 +122,8 @@ use Spryker\Zed\Oauth\OauthDependencyProvider as SprykerOauthDependencyProvider;
 use Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth\AgentCredentialsOauthGrantTypeConfigurationProviderPlugin;
 use Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth\AgentOauthScopeProviderPlugin;
 use Spryker\Zed\OauthAgentConnector\Communication\Plugin\Oauth\AgentOauthUserProviderPlugin;
+use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin;
+use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Oauth\CustomerImpersonationOauthUserProviderPlugin;
 
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
@@ -129,6 +134,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     {
         return [
             new AgentOauthUserProviderPlugin(),
+            new CustomerImpersonationOauthUserProviderPlugin(),
         ];
     }
 
@@ -149,6 +155,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     {
         return array_merge(parent::getGrantTypeConfigurationProviderPlugins(), [
             new AgentCredentialsOauthGrantTypeConfigurationProviderPlugin(),
+            new CustomerImpersonationOauthGrantTypeConfigurationProviderPlugin(),
         ]);
     }
 }

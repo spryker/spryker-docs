@@ -863,7 +863,7 @@ console data:import glossary
 |-------------------------------------|-------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | SspAssetsBackendResourcePlugin      | Provides the GET, POST and PATCH endpoints for SSP assets.  |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication       |
 | SspAssetSearchResultFormatterPlugin | Formats search ssp asset search result.                     |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\ResultFormatter |
-| SspAssetSearchQueryExpanderPlugin                         | Expands SSP asset search query with permissions, sorting and search criterias.                          |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query                       |
+| SspAssetSearchQueryExpanderPlugin   | Expands SSP asset search query with permissions, sorting and search criterias.                          |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query                       |
 
 **src/Pyz/Client/SelfServicePortal/SelfServicePortalDependencyProvider.php**
 

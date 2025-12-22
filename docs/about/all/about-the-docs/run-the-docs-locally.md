@@ -48,7 +48,6 @@ cd Documents/GitHub/spryker-docs
 docker compose up
 ```
 
-The first launch can take up to 15 minutes. When the build is done, you should see a message that the server is running and its local address. You can access the local copy of Spryker docs by opening `http://localhost:4000` in your browser. If you update a file in the repository, it will be automatically refreshed so you can see it on your local website.
 
 
 

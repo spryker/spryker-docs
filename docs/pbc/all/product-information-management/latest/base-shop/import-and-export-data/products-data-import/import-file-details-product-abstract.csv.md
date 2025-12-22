@@ -38,10 +38,10 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 | category_product_order |  | Integer | | Order of the product presentation inside a category. |
 | abstract_sku | &check;  | String | | SKU identifier of the abstract product. |
 | name.{ANY_LOCALE_NAME}<br>Example value: *name.en_US* | &check; | String |Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postifx can be changed, removed, and any number of columns with different locales can be added to the .csv files. | Name of the product in the specified location (US for our example). |
-| url.{ANY_LOCALE_NAME}<br>Example value: *value_1.en_US* | &check; | String | | URL page of the product image in the specified location (US for our example). |
-| attribute_key_{NUMBER}<br>Example value: *attribute_key_1*<br> | &check; (if this attribute is defined) | String | | Product attribute key for the attribute. |
-| value_{NUMBER}<br>Example value: *value_1*<br>|&check; (if this attribute is defined) | String | | Product value for the attribute. |
-| attribute_key_{NUMBER}.{ANY_LOCALE_NAME}<br>Example value: *attribute_key_1.en_US*<br> |  | String | | Product attribute key, for the first attribute, translated in the specified locale (US for our example). |
+| url.{ANY_LOCALE_NAME}<br>Example parameter: *url.en_US* | &check; | String | | URL page of the product image in the specified location (US for our example). |
+| attribute_key_{NUMBER}<br>Example parameter: *attribute_key_1*<br> | &check; (if this attribute is defined) | String | | Product attribute key for the attribute. Columns `attribute_key_{NUMBER}` and `value_{NUMBER}` should always come in pair. |
+| value_{NUMBER}<br>Example parameter: *value_1*<br>|&check; (if this attribute is defined) | String | | Product value for the attribute. |
+| attribute_key_{NUMBER}.{ANY_LOCALE_NAME}<br>Example value: *attribute_key_1.en_US*<br> |  | String | | Product attribute key, for the first attribute, translated in the specified locale (US for our example). Columns `attribute_key_{NUMBER}.{ANY_LOCALE_NAME}` and `value_{NUMBER}.{ANY_LOCALE_NAME}` should always come in pair.  |
 | value_{NUMBER}.{ANY_LOCALE_NAME}<br>Example value: *value_1.en_US*<br>| | String | | Product value for the attribute, translated in the specified locale (US for our example). |
 | color_code |  | String | | Product color code. |
 | description.{ANY_LOCALE_NAME}<br>Example value: *description.en_US*  |  | String | | Product description, translated in the specified locale (US for our example). |
@@ -52,23 +52,23 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
 | avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. Add this field if Avalara is used for tax management. |
-<!-- |is_featured |  | String |If it's empty, will be "False". <br>False = 0<br>True = 1 | Indicates if it's a featured product. |
-| icecat_pdp_url |  | String | | Icecat product catalogue URL service. |
-| icecat_license |  | String | | Icecat product catalogue license code. |
--->
-
 
 </div>  
 
 
 ## Additional information
 
-For each attribute, where N is a number starting in 1, it's mandatory to have both fields:
+For each attribute, where N is a number starting from 1, without gaps, it's mandatory to have both fields:
 
 - `attribute_key_N`
 - `value_N`
 
-The amount of attributes is not limited.
+For each attribute, where N is a number starting from 1, without gaps, it's mandatory to have both fields:
+
+- `attribute_key_N.{ANY_LOCALE_NAME}`
+- `value_N.{ANY_LOCALE_NAME}`
+
+The number of attributes is not limited.
 
 ## Import template file and content example
 

@@ -717,7 +717,9 @@ Verify inquiries in the Back Office:
 
 ### Add inquiry demo data
 
-Add to **data/import/common/common/ssp_inquiry.csv**:
+Prepare your data according to your requirements using our demo data:
+
+**data/import/common/common/ssp_inquiry.csv**
 
 ```csv
 reference,store,type,company_user_key,subject,description
@@ -772,7 +774,7 @@ cms-block-email--ssp-inquiry-rejected--html,DE
 cms-block-email--ssp-inquiry-rejected--text,DE
 ```
 
-### Import data
+### Import the data
 
 ```bash
 console data:import ssp-inquiry

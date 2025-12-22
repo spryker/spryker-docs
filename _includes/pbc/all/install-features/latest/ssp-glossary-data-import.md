@@ -1,8 +1,6 @@
 This document contains glossaries for Self-Service Portal features.
 
 **data/import/common/common/glossary.csv**
-<details>
-  <summary>glossary.csv</summary>
 
 ```csv
 service_point.validation.service_point_key_exists,A service point with the same key already exists.,en_US
@@ -1850,5 +1848,3 @@ self_service_portal.inquiry.validation.subject_required,Betreff ist erforderlich
 self_service_portal.inquiry.validation.description_required,Description is required.,en_US
 self_service_portal.inquiry.validation.description_required,Beschreibung ist erforderlich.,de_DE
 ```
-
-</details>

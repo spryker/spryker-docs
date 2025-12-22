@@ -341,30 +341,31 @@ console transfer:generate
 
 ## Set up behavior
 
-| PLUGIN                                                    | SPECIFICATION                                                                                           | PREREQUISITES | NAMESPACE                                                                                |
-|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
-| ViewCompanySspAssetPermissionPlugin                       | Grants permission to view assets of an entire company.                                                  |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                |
-| ViewBusinessUnitSspAssetPermissionPlugin                  | Grants permission to view assets within the user's business unit.                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                |
-| CreateSspAssetPermissionPlugin                            | Grants permission to create assets.                                                                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                |
-| UpdateSspAssetPermissionPlugin                            | Grants permission to update assets.                                                                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                |
-| UnassignSspAssetPermissionPlugin                          | Grants permission to unassign assets from business units.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                |
-| SelfServicePortalPageRouteProviderPlugin                  | Provides routes for the SSP asset management pages on the Storefront.                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                                      |
-| FileSizeFormatterTwigPlugin                               | Adds a Twig filter to format file sizes into a human-readable format.                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig             |
-| SspAssetPreAddToCartPlugin                                | When a product is added to cart, maps the asset reference from the request to the item transfer object. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                                    |
-| SspAssetItemExpanderPlugin                                | Expands cart items with asset data.                                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                           |
-| SspAssetOrderExpanderPlugin                               | Expands an order with asset data for all its items.                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                          |
-| SspAssetOrderItemsPostSavePlugin                          | After an order is placed, saves the relations between order items and assets.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                          |
-| SspAssetOrderItemExpanderPlugin                           | Expands individual order items with asset data.                                                         |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                          |
-| SspAssetPublisherTriggerPlugin                            | Retrieves SSP assets by offset and limit.                                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher                      |
-| SspAssetQueryExpanderPlugin                               | Expands search query with asset-specific product filtering based on SSP asset reference.                |               | SprykerFeature\Client\SelfServicePortal\Plugin\Catalog                                   |
-| SspAssetWritePublisherPlugin                              | Publishes SSP asset data by `SpySspAsset` entity events to the storage.                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search      |
-| SspAssetToModelWritePublisherPlugin                       | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the storage.                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search      |
-| SspAssetToCompanyBusinessUnitWritePublisherPlugin         | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the storage.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search      |
-| SspAssetWritePublisherPlugin                              | Publishes SSP asset data by `SpySspAsset` entity events to the search engine.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage     |
-| SearchSspAssetToModelWritePublisherPlugin                 | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the search engine.                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage     |
-| SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin   | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the search engine.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage     |
-| SspAssetListSynchronizationDataBulkRepositoryPlugin       | Retrieves SSP assets by offset and limit for synchronization to a storage.                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage        |
-| SearchSspAssetListSynchronizationDataBulkRepositoryPlugin | Retrieves SSP assets by offset and limit for synchronization to a search engine.                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\SspAsset\Search |
+| PLUGIN                                                      | SPECIFICATION                                                                                           | PREREQUISITES | NAMESPACE                                                                                 |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
+| ViewCompanySspAssetPermissionPlugin                         | Grants permission to view assets of an entire company.                                                  |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                 |
+| ViewBusinessUnitSspAssetPermissionPlugin                    | Grants permission to view assets within the user's business unit.                                       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                 |
+| CreateSspAssetPermissionPlugin                              | Grants permission to create assets.                                                                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                 |
+| UpdateSspAssetPermissionPlugin                              | Grants permission to update assets.                                                                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                 |
+| UnassignSspAssetPermissionPlugin                            | Grants permission to unassign assets from business units.                                               |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                                 |
+| SelfServicePortalPageRouteProviderPlugin                    | Provides routes for the SSP asset management pages on the Storefront.                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                                       |
+| FileSizeFormatterTwigPlugin                                 | Adds a Twig filter to format file sizes into a human-readable format.                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig                                         |
+| SspAssetPreAddToCartPlugin                                  | When a product is added to cart, maps the asset reference from the request to the item transfer object. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CartPage                                     |
+| SspAssetItemExpanderPlugin                                  | Expands cart items with asset data.                                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                            |
+| SspAssetOrderExpanderPlugin                                 | Expands an order with asset data for all its items.                                                     |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                           |
+| SspAssetOrderItemsPostSavePlugin                            | After an order is placed, saves the relations between order items and assets.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                           |
+| SspAssetOrderItemExpanderPlugin                             | Expands individual order items with asset data.                                                         |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                           |
+| SspAssetPublisherTriggerPlugin                              | Retrieves SSP assets by offset and limit.                                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher                       |
+| SspAssetQueryExpanderPlugin                                 | Expands search query with asset-specific product filtering based on SSP asset reference.                |               | SprykerFeature\Client\SelfServicePortal\Plugin\Catalog                                    |
+| SspAssetWritePublisherPlugin                                | Publishes SSP asset data by `SpySspAsset` entity events to the storage.                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
+| SspAssetToModelWritePublisherPlugin                         | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the storage.                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
+| SspAssetToCompanyBusinessUnitWritePublisherPlugin           | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the storage.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
+| SspAssetWritePublisherPlugin                                | Publishes SSP asset data by `SpySspAsset` entity events to the search engine.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
+| SearchSspAssetToModelWritePublisherPlugin                   | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the search engine.                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
+| SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin     | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the search engine.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
+| SspAssetListSynchronizationDataBulkRepositoryPlugin         | Retrieves SSP assets by offset and limit for synchronization to a storage.                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage         |
+| SearchSspAssetListSynchronizationDataBulkRepositoryPlugin   | Retrieves SSP assets by offset and limit for synchronization to a search engine.                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\SspAsset\Search |
+| SspAssetDataImportPlugin                                    | Imports a ssp asset into persistence.                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport                      |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -703,6 +704,62 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspAssetDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new SspAssetDataImportPlugin(),
+        ];
+    }
+}
+```
+
+Enable the behaviors by registering the console commands:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container)
+    {
+        $commands = [
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_SSP_ASSET),
+        ];
+
+        return $commands;
+    }
+}
+```
+
 ### Set up widgets
 
 | PLUGIN                        | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
@@ -806,7 +863,7 @@ console data:import glossary
 |-------------------------------------|-------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
 | SspAssetsBackendResourcePlugin      | Provides the GET, POST and PATCH endpoints for SSP assets.  |               | SprykerFeature\Glue\SelfServicePortal\Plugin\GlueBackendApiApplication       |
 | SspAssetSearchResultFormatterPlugin | Formats search ssp asset search result.                     |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\ResultFormatter |
-| SspAssetSearchQueryExpanderPlugin                         | Expands SSP asset search query with permissions, sorting and search criterias.                          |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query                       |
+| SspAssetSearchQueryExpanderPlugin   | Expands SSP asset search query with permissions, sorting and search criterias.                          |               | SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query                       |
 
 **src/Pyz/Client/SelfServicePortal/SelfServicePortalDependencyProvider.php**
 
@@ -881,7 +938,7 @@ Make sure that you can manage `ssp-assets` resources as a Back Office user:
 `POST https://glue-backend.mysprykershop.com/token`
 
 ```http
-POST https://glue.backend.com/token HTTP/2.0
+POST https://glue-backend.mysprykershop.com/token HTTP/2.0
 Host: glue-backend.mysprykershop.com
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
@@ -1152,7 +1209,7 @@ Make sure that you can manage `ssp-assets` resources for the company user:
 - Assets are assigned to the business unit of the company user
 - You have imported assets as described in data import section
 
-1. get the access token by sending a `POST` request to the token endpoint with the company user credentials.
+1. Get the access token by sending a `POST` request to the token endpoint with the company user credentials.
    `POST https://glue.mysprykershop.com/access-tokens`
 
 ```json
@@ -1161,7 +1218,7 @@ Make sure that you can manage `ssp-assets` resources for the company user:
         "type": "access-tokens",
         "attributes": {
             "username": {username},
-            "password": {password},
+            "password": {password}
         }
     }
 }
@@ -1342,68 +1399,6 @@ AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.n
 # SelfServicePortal
 - data_entity: ssp-asset
   source: data/import/common/common/ssp_asset.csv
-```
-
-### Register the following data import plugins
-
-| PLUGIN                   | SPECIFICATION                         | PREREQUISITES | NAMESPACE                                                            |
-|--------------------------|---------------------------------------|---------------|----------------------------------------------------------------------|
-| SspAssetDataImportPlugin | Imports a ssp asset into persistence. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport |
-
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\DataImport;
-
-use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspAssetDataImportPlugin;
-
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
-     */
-    protected function getDataImporterPlugins(): array
-    {
-        return [
-            new SspAssetDataImportPlugin(),
-        ];
-    }
-}
-```
-
-Enable the behaviors by registering the console commands:
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
-use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return list<\Symfony\Component\Console\Command\Command>
-     */
-    protected function getConsoleCommands(Container $container)
-    {
-        $commands = [
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_SSP_ASSET),
-        ];
-
-        return $commands;
-    }
-}
 ```
 
 ### Import the data

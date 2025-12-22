@@ -345,7 +345,7 @@ Create an XML configuration file for the state machine.
 | CreateSspInquiryPermissionPlugin           | Allows customer to create inquiries.                                           |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | ViewBusinessUnitSspInquiryPermissionPlugin | Allows customer to view inquiries within the same company business unit.       |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | ViewCompanySspInquiryPermissionPlugin      | Allows customer to view inquiries within the same company.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
-| SspInquiryRouteProviderPlugin              | Provides Yves routes for the SSP inquiry feature.                              |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
+| SelfServicePortalPageRouteProviderPlugin   | Provides Yves routes for the SSP inquiry feature.                              |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
 | SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication                     |
 | FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport             |
@@ -355,7 +355,6 @@ Create an XML configuration file for the state machine.
 | SspInquiryStateMachineHandlerPlugin        | State Machine handler for inquiry processing.                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\StateMachine           |
 | ApproveSspInquiryCommandPlugin             | State Machine command that handles inquiry approval.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspInquiryManagement   |
 | RejectSspInquiryCommandPlugin              | State Machine command that handles inquiry rejection.                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspInquiryManagement   |
-| SspInquiryDashboardDataExpanderPlugin      | Provides inquiry data for the dashboard.                                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -484,23 +483,12 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 namespace Pyz\Zed\SelfServicePortal;
 
 use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspInquiryDashboardDataExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement\SspInquirySspAssetManagementExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\StateMachine\ApproveSspInquiryCommandPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\StateMachine\RejectSspInquiryCommandPlugin;
 
 class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDependencyProvider
 {
-    /**
-     * @return array<int, \SprykerFeature\Zed\SelfServicePortal\Dependency\Plugin\DashboardDataExpanderPluginInterface>
-     */
-    protected function getDashboardDataExpanderPlugins(): array
-    {
-        return [
-            new SspInquiryDashboardDataExpanderPlugin(),
-        ];
-    }
-
     /**
      * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
      */

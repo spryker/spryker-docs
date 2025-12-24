@@ -9,8 +9,10 @@ entries:
     nested:
       - title: AI Foundation
         nested:
-          - title: AI Foundation
+          - title: AI Foundation Overview
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+          - title: Structured Transfer Response
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
       - title: AI Dev
         nested:
           - title: AI Dev Overview

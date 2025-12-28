@@ -41,9 +41,9 @@ Make sure the following packages are now listed in `composer.lock`:
 **config/Shared/config_default.php**
 
 ```php
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'ssp-asset-image' => [
@@ -85,8 +85,6 @@ In cloud environments, set the following environment variables:
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Zed\SelfServicePortal;
 
 use Pyz\Zed\Synchronization\SynchronizationConfig;
@@ -125,8 +123,6 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Client\RabbitMq;
 
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig;
@@ -155,8 +151,6 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Zed\Queue;
 
@@ -202,8 +196,6 @@ Make sure that, in the RabbitMQ management interface, the following queues are a
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Shared\SearchElasticsearch;
 
 use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
@@ -222,8 +214,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 **src/Pyz/Zed/SearchElasticsearch/SearchElasticsearchConfig.php**
 
 ```php
-
-declare(strict_types = 1);
+<?php
 
 namespace Pyz\Zed\SearchElasticsearch;
 
@@ -251,6 +242,42 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 }
 ```
 
+**src/Pyz/Client/SelfServicePortal/SelfServicePortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\SelfServicePortal;
+
+use SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query\SspAssetSearchQueryExpanderPlugin;
+use SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\ResultFormatter\SspAssetSearchResultFormatterPlugin;
+use SprykerFeature\Client\SelfServicePortal\SelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
+
+class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
+     */
+    protected function getSspAssetSearchResultFormatterPlugins(): array
+    {
+        return [
+            new SspAssetSearchResultFormatterPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getSspAssetSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new SspAssetSearchQueryExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
 ## Configure the event triggering for the Asset entity
 
 **src/Pyz/Zed/SelfServicePortal/Persistence/Propel/Schema/spy_ssp_asset.schema.xml**
@@ -273,43 +300,6 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 
 </database>
 ```
-
-## Configure navigation
-
-Add the `Assets` section to `navigation.xml`:
-
-**config/Zed/navigation.xml**
-
-```xml
-<?xml version="1.0"?>
-<config>
-   <ssp>
-      <label>Customer Portal</label>
-      <title>Customer Portal</title>
-      <icon>fa-id-badge</icon>
-      <pages>
-         <self-service-portal-asset>
-            <label>Assets</label>
-            <title>Assets</title>
-            <bundle>self-service-portal</bundle>
-            <controller>list-asset</controller>
-            <action>index</action>
-         </self-service-portal-asset>
-      </pages>
-   </ssp>
-</config>
-```
-
-Generate routers and navigation cache
-
-```bash
-console router:cache:warm-up:backoffice
-console navigation:build-cache 
-```
-
-{% info_block warningBox "Verification" %}
-Make sure that, in the Back Office, the **Customer portal** > **Assets** section is available.
-{% endinfo_block %}
 
 ## Set up database schema
 
@@ -339,6 +329,45 @@ Generate transfer classes:
 console transfer:generate
 ```
 
+## Configure navigation
+
+Add the `Assets` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+   <ssp>
+      <label>Customer Portal</label>
+      <title>Customer Portal</title>
+      <icon>fa-id-badge</icon>
+      <pages>
+         <self-service-portal-asset>
+            <label>Assets</label>
+            <title>Assets</title>
+            <bundle>self-service-portal</bundle>
+            <controller>list-asset</controller>
+            <action>index</action>
+         </self-service-portal-asset>
+      </pages>
+   </ssp>
+</config>
+```
+
+Generate routers and navigation cache:
+
+```bash
+console router:cache:warm-up:backoffice
+console navigation:build-cache 
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, in the Back Office, the **Customer portal** > **Assets** section is available.
+
+{% endinfo_block %}
+
 ## Set up behavior
 
 | PLUGIN                                                      | SPECIFICATION                                                                                           | PREREQUISITES | NAMESPACE                                                                                 |
@@ -358,10 +387,8 @@ console transfer:generate
 | SspAssetPublisherTriggerPlugin                              | Retrieves SSP assets by offset and limit.                                                               |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher                       |
 | SspAssetQueryExpanderPlugin                                 | Expands search query with asset-specific product filtering based on SSP asset reference.                |               | SprykerFeature\Client\SelfServicePortal\Plugin\Catalog                                    |
 | SspAssetWritePublisherPlugin                                | Publishes SSP asset data by `SpySspAsset` entity events to the storage.                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
-| SspAssetToModelWritePublisherPlugin                         | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the storage.                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
 | SspAssetToCompanyBusinessUnitWritePublisherPlugin           | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the storage.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search       |
 | SspAssetWritePublisherPlugin                                | Publishes SSP asset data by `SpySspAsset` entity events to the search engine.                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
-| SearchSspAssetToModelWritePublisherPlugin                   | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the search engine.                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
 | SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin     | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the search engine.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
 | SspAssetListSynchronizationDataBulkRepositoryPlugin         | Retrieves SSP assets by offset and limit for synchronization to a storage.                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage         |
 | SearchSspAssetListSynchronizationDataBulkRepositoryPlugin   | Retrieves SSP assets by offset and limit for synchronization to a search engine.                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\SspAsset\Search |
@@ -490,8 +517,6 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Yves\CartPage;
 
 use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
@@ -588,16 +613,12 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search\SspAssetToCompanyBusinessUnitWritePublisherPlugin as SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search\SspAssetToModelWritePublisherPlugin as SearchSspAssetToModelWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search\SspAssetWritePublisherPlugin as SearchSspAssetWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage\SspAssetToCompanyBusinessUnitWritePublisherPlugin;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage\SspAssetToModelWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage\SspAssetWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAssetPublisherTriggerPlugin;
 
@@ -625,6 +646,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new SspAssetPublisherTriggerPlugin(),
         ];
     }
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -643,7 +665,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new SearchSspAssetWritePublisherPlugin(),
-            new SearchSspAssetToModelWritePublisherPlugin(),
             new SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin(),
         ];
     }
@@ -655,8 +676,6 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Client\Catalog;
 
@@ -682,12 +701,11 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Zed\Synchronization;
 
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\SspAsset\Search\SspAssetListSynchronizationDataBulkRepositoryPlugin as SearchSspAssetListSynchronizationDataBulkRepositoryPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage\SspAssetListSynchronizationDataBulkRepositoryPlugin;
+use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
@@ -760,17 +778,20 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
+Setup search updates
+```bash
+console search:setup
+```
+
 ### Set up widgets
 
-| PLUGIN                        | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
-|-------------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
-| SspAssetListWidget            | Renders a list of assets on the **My Assets** page in the Customer Account.             |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetMenuItemWidget        | Renders the **My Assets** menu item in the Customer Account side menu.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetInfoForItemWidget     | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspItemAssetSelectorWidget    | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| AssetCompatibilityLabelWidget | Displays the compatibility label for assets.                                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetFilterNameWidget      | Displays the asset name in search result section.                                       |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetFilterWidget          | Display the asset data.                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| PLUGIN                     | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
+|----------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| SspAssetListWidget         | Renders a list of assets on the **My Assets** page in the Customer Account.             |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetMenuItemWidget     | Renders the **My Assets** menu item in the Customer Account side menu.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetInfoForItemWidget  | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspItemAssetSelectorWidget | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspListMenuItemWidget      | Renders the menu item in the Customer Account side menu.                                |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -783,9 +804,6 @@ use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetListWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetMenuItemWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetInfoForItemWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspItemAssetSelectorWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetFilterNameWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\AssetCompatibilityLabelWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetFilterWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspListMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
@@ -800,10 +818,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             SspAssetInfoForItemWidget::class,
             SspAssetListWidget::class,
             SspAssetMenuItemWidget::class,
-            SspItemAssetSelectorWidget::class
-            SspAssetFilterNameWidget::class,
-            AssetCompatibilityLabelWidget::class,
-            SspAssetFilterWidget::class,
+            SspItemAssetSelectorWidget::class,
             SspListMenuItemWidget::class,
         ];
     }
@@ -870,8 +885,6 @@ console data:import glossary
 ```php
 <?php
 
-declare(strict_types = 1);
-
 namespace Pyz\Client\SelfServicePortal;
 
 use SprykerFeature\Client\SelfServicePortal\Plugin\Elasticsearch\Query\SspAssetSearchQueryExpanderPlugin;
@@ -906,8 +919,6 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Glue\GlueBackendApiApplication;
 
@@ -1176,8 +1187,6 @@ Example of a successful response:
 
 ```php
 <?php
-
-declare(strict_types = 1);
 
 namespace Pyz\Glue\GlueApplication;
 

@@ -49,9 +49,9 @@ Make sure the following packages are now listed in `composer.lock`:
 ```php
 <?php
 
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-inquiry' => [
@@ -347,7 +347,8 @@ Create an XML configuration file for the state machine.
 | ViewCompanySspInquiryPermissionPlugin      | Allows customer to view inquiries within the same company.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | SelfServicePortalPageRouteProviderPlugin   | Provides Yves routes for the SSP inquiry feature.                              |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
 | SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication                     |
-| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
+| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig                                 |
+| SelfServicePortalTwigPlugin                | Provides Twig functionality for Self-Service Portal features.                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport             |
 | SspInquiryApprovedMailTypeBuilderPlugin    | Sends an email on inquiry approval.                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
 | SspInquiryRejectedMailTypeBuilderPlugin    | Sends an email on inquiry rejection.                                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
@@ -589,9 +590,10 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 | PLUGIN                      | SPECIFICATION                                        | PREREQUISITES | NAMESPACE                                    |
 |-----------------------------|------------------------------------------------------|---------------|----------------------------------------------|
+| SspInquiryMenuItemWidget    | Provides a customer menu item for the inquiries.     |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | CreateOrderSspInquiryWidget | Provides a button to create an inquiry for an order. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspInquiryListWidget        | Provides the inquiries table.                        |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspInquiryMenuItemWidget    | Provides a customer menu item for the inquiries.     |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspListMenuItemWidget       | Renders the menu item in the Customer Account side menu. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

@@ -392,7 +392,6 @@ Make sure that, in the Back Office, the **Customer portal** > **Assets** section
 | SearchSspAssetToCompanyBusinessUnitWritePublisherPlugin     | Publishes SSP asset data by `SpySspAssetToCompanyBusinessUnit` entity events to the search engine.      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage      |
 | SspAssetListSynchronizationDataBulkRepositoryPlugin         | Retrieves SSP assets by offset and limit for synchronization to a storage.                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\Storage         |
 | SearchSspAssetListSynchronizationDataBulkRepositoryPlugin   | Retrieves SSP assets by offset and limit for synchronization to a search engine.                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Synchronization\SspAsset\Search |
-| SspAssetDataImportPlugin                                    | Imports a ssp asset into persistence.                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport                      |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -622,8 +621,6 @@ use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage\SspAssetWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAssetPublisherTriggerPlugin;
 
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     /**
@@ -722,62 +719,6 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\DataImport;
-
-use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspAssetDataImportPlugin;
-
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
-{
-    /**
-     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
-     */
-    protected function getDataImporterPlugins(): array
-    {
-        return [
-            new SspAssetDataImportPlugin(),
-        ];
-    }
-}
-```
-
-Enable the behaviors by registering the console commands:
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
-use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return list<\Symfony\Component\Console\Command\Command>
-     */
-    protected function getConsoleCommands(Container $container)
-    {
-        $commands = [
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_SSP_ASSET),
-        ];
-
-        return $commands;
-    }
-}
-```
-
 Setup search updates
 ```bash
 console search:setup
@@ -789,7 +730,6 @@ console search:setup
 |----------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
 | SspAssetListWidget         | Renders a list of assets on the **My Assets** page in the Customer Account.             |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspAssetMenuItemWidget     | Renders the **My Assets** menu item in the Customer Account side menu.                  |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetInfoForItemWidget  | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspItemAssetSelectorWidget | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspListMenuItemWidget      | Renders the menu item in the Customer Account side menu.                                |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
@@ -802,8 +742,6 @@ namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetListWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetMenuItemWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspAssetInfoForItemWidget;
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspItemAssetSelectorWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspListMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
@@ -815,10 +753,8 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            SspAssetInfoForItemWidget::class,
             SspAssetListWidget::class,
             SspAssetMenuItemWidget::class,
-            SspItemAssetSelectorWidget::class,
             SspListMenuItemWidget::class,
         ];
     }
@@ -1409,6 +1345,69 @@ AST--4,Logistic Casa F-08,,1FUJGLDR5KL123456,https://d2s0ynfc62ej12.cloudfront.n
 - data_entity: ssp-asset
   source: data/import/common/common/ssp_asset.csv
 ```
+
+### Register the following data import plugins
+
+| PLUGIN                   | SPECIFICATION                         | PREREQUISITES | NAMESPACE                                                            |
+|--------------------------|---------------------------------------|---------------|----------------------------------------------------------------------|
+| SspAssetDataImportPlugin | Imports a ssp asset into persistence. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\SspAssetDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new SspAssetDataImportPlugin(),
+        ];
+    }
+}
+```
+
+Enable the behaviors by registering the console commands:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container)
+    {
+        $commands = [
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_SSP_ASSET),
+        ];
+
+        return $commands;
+    }
+}
+```
+
 
 ### Import the data
 

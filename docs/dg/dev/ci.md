@@ -32,7 +32,7 @@ For instructions on setting up CI in different repositories, see the following d
 
 ## Validation commands
 
-Run these commands locally to validate your code before pushing to CI.
+Run these commands locally to validate your code before merging it to the main branch.
 
 ### Security scanning
 
@@ -126,33 +126,6 @@ docker/sdk testing codecept run -c codeception.api.yml
 ```bash
 # Run functional tests
 docker/sdk testing codecept run -c codeception.ci.functional.yml
-```
-
-**Robot Framework API tests**
-
-```bash
-# Run Robot Framework API tests
-docker/sdk exec robot-framework robot [test-parameters]
-```
-
-**Cypress UI tests**
-
-```bash
-# Run Cypress tests
-docker/sdk exec cypress-tests
-```
-
-**Robot Framework UI tests**
-
-```bash
-# Run tests in parallel (Pabot)
-docker/sdk exec robot-framework pabot [test-parameters]
-
-# Run static tests
-docker/sdk exec robot-framework robot [test-parameters]
-
-# Merge results and rerun failed tests
-docker/sdk exec robot-framework rebot [merge-parameters]
 ```
 
 ## Extending CI with Project Architecture Sniffer

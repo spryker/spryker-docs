@@ -1,5 +1,20 @@
 This document describes how to install the Self-Service Portal (SSP) asset based catalog feature.
 
+{% info_block warningBox "Install all SSP features" %}
+
+For the Self-Service Portal to work correctly, you must install all SSP features. Each feature depends on the others for proper functionality.
+
+{% endinfo_block %}
+
+## Features Asset-Based Catalog depends on
+
+- [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
+- [Install the SSP Dashboard Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html)
+- [Install the SSP File Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature.html)
+- [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html)
+- [Install the SSP Model Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
+- [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
+
 ## Prerequisites
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                |
@@ -24,14 +39,6 @@ Make sure the following packages are now listed in `composer.lock`:
 | SelfServicePortal | vendor/spryker-feature/self-service-portal |
 
 {% endinfo_block %}
-
-## Install required features
-
-The Asset-Based Catalog feature depends on both Asset Management and Model Management features.
-
-[Set up SSP Asset feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
-
-[Set up SSP Model feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
 
 
 ## Configure the event triggering for the catalog entities

@@ -6,6 +6,21 @@ SSP Service Management feature is not compatible with the [Order Amendment featu
 
 This document describes how to install the Self-Service Portal (SSP) SSP Service Management feature.
 
+{% info_block warningBox "Install all SSP features" %}
+
+For the Self-Service Portal to work correctly, you must install all SSP features. Each feature depends on the others for proper functionality.
+
+{% endinfo_block %}
+
+## Features SSP Service Management depends on
+
+- [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
+- [Install the SSP Dashboard Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html)
+- [Install the SSP File Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature.html)
+- [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html)
+- [Install the SSP Model Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
+- [Install the Asset-Based Catalog feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-based-catalog-feature.html)
+
 ## Prerequisites
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                          |

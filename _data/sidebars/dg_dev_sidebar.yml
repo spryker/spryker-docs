@@ -13,6 +13,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
           - title: Structured Transfer Response
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+          - title: Tool call support
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
       - title: AI Dev
         nested:
           - title: AI Dev Overview

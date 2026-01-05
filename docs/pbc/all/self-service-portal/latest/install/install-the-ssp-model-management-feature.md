@@ -1,7 +1,7 @@
 ---
 title: Install the SSP Model Management feature
 description: Learn how to integrate SSP Model Management into a Spryker project
-last_updated: Dec 30, 2025
+last_updated: Jan 5, 2026
 template: feature-integration-guide-template
 ---
 

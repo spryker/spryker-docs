@@ -32,7 +32,7 @@ For instructions on setting up CI in different repositories, see the following d
 
 ## Validation commands
 
-Run these commands locally to validate your code before merging it to the main branch.
+Use these commands to validate your code before merging it to the main branch.
 
 ### Security scanning
 

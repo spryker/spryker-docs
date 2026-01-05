@@ -289,4 +289,5 @@ To verify your integration:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Define resource schemas
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas

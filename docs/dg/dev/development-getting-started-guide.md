@@ -75,7 +75,7 @@ Use your own project namespace
 By default, project code is stored in the `src/Pyz` directory.
 You can create your own namespace, such as `src/BestProject`, to keep your code fully separated from the Demo Shop.
 This separation simplifies applying Demo Shop updates.
-![Project Namespace](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/namespace.png)
+![Project Namespace](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/namespace-bestproject.png)
 
 More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html)
 

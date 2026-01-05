@@ -130,7 +130,7 @@ docker/sdk testing codecept run -c codeception.ci.functional.yml
 
 ## Extending CI with Project Architecture Sniffer
 
-The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer) enforces Spryker architectural standards and detects violations affecting:
+The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer) enforces Spryker architectural standards and detects violations:
 
 ```yaml
 - name: Architecture Sniffer

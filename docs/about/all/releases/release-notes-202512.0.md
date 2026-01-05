@@ -405,6 +405,11 @@ You can now use an improved Web Profiler experience to better support performanc
 - [Fix wrong template name in WebProfilerExternalHttpDataCollectorPlugin](https://api.release.spryker.com/release-group/6210)
 - [External Custom Requests visible in Web Profiler](https://api.release.spryker.com/release-group/6162)
 
+**Documentation:**
+- [Web Profiler Widget for Yves AJAX](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html)
+- [Web Profiler for Backend Gateway](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html)
+- [WebProfiler Widget monitoring of external HTTP calls](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html)
+
 ### Faster local development and CI builds through Composer optimization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 This release introduces a Composer plugin for Demo Shops that splits broad PSR-4 namespaces into **layer- and module-specific** namespaces during autoload generation. This approach reduces autoload scanning overhead and improves rendering and build performance.

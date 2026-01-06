@@ -14,6 +14,8 @@ related:
     link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
   - title: Implement a new console command
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
+  - title: Multi process run console
+    link: docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 ---
 
 The [list of console commands](/docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into four categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details about each of the commands.

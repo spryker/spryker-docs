@@ -15,6 +15,10 @@ Jenkins fulfills the role of a scheduler in the Spryker applications. It is used
 
 Unlike in cloud, in a local environment, these commands are executed by a CLI container. This difference leads to some side effects where the same code and actions work fine in the local development environment but fail when deployed to cloud.
 
+## Stable workers
+
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
+
 ## Memory management
 
 One of the most common issues encountered with Jenkins is excessive memory usage. In a local development environment, Docker containers are usually set up to use as much RAM as they need as long as they stay within the RAM limit configured in Docker. This limit often corresponds to the total RAM available on the machine. However, when deployed to cloud, the Jenkins container is deployed to its own dedicated server, which limits the available RAM based on the server's configuration. Non-production environments have different RAM configuration tiers, which can be found in our Service Description. Standard environments typically have 2 GB of RAM assigned to Jenkins. This means that the server running Jenkins has a total of 2 GB of RAM.
@@ -38,3 +42,15 @@ When configuring multiple queue workers per queue, consider [Memory management](
 ## Creating jobs in Jenkins dashboard
 
 While you can create jobs in Jenkins dashboard to quickly run console commands, remember that these jobs are removed when the Jenkins instance is reprovisioned. Jenkins can be reprovisioned during self-healing, recovering from an exception of the underlying instance or container, or during a pipeline execution. For instructions on setting up a job that doesn't get removed, see [Using cronjob schedulers](/docs/dg/dev/backend-development/cronjobs/cronjobs.html#using-cronjob-schedulers).
+
+## Stable workers alternative
+
+For Publish and Synchronize (P&S) operations, Spryker offers an enhanced alternative to Jenkins-based execution through the Stable Workers architecture. This approach addresses the memory management, resource contention, and stability challenges described above by:
+
+- Isolating P&S workloads: Dedicated worker environments prevent P&S jobs from competing for Jenkins resources
+- Enhanced resource management: Intelligent distribution of computational resources with configurable thread pools and queue priorities
+- Better error handling: Built-in retry mechanisms and improved error detection specifically for P&S operations
+
+While Jenkins continues to manage non-P&S tasks effectively, migrating P&S functionality to Stable Workers can significantly reduce the memory and CPU pressure on your Jenkins instance, improving overall system stability.
+
+For more information about implementing Stable Workers, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).

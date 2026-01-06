@@ -93,8 +93,19 @@ Blackfire groups some actions, so after each round of optimization, you will see
 4. Check other sections, like *SQL*, *Propagation*, etc. Read more about profiling with Blackfire on the [Blackfire official documentation](https://blackfire.io/docs/php/training-resources/book/04-first-profile).
 
 
-## Next steps
+## Common performance issues
 
+The following articles help you troubleshoot specific performance problems:
+
+- [Redis session lock](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html) - Handling session lock issues and optimizing session management.
+- [N+1 problem](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html) - Identifying and fixing N+1 database query problems.
+- [External calls—several calls to Zed](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html) - Optimizing multiple calls to Zed.
+- [External calls take a lot of time](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html) - Handling slow external service calls.
+- [Slow Publish and Synchronization](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html) - Improving P&S performance.
+- [Not optimized Composer on the production environment](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html) - Optimizing Composer autoloader.
+- [Technology restrictions](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html) - Understanding technology limitations and their impact on performance.
+
+## Next steps
 
 1. Check that you have the latest [performance releases](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html).
 2. Check that you implemented the [performance recommendations](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html).

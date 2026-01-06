@@ -60,7 +60,7 @@ While pickup has its roots in B2C operations, its utility in B2B contexts is gro
 
 ### Documentation
 
-[Service point management](/docs/pbc/all/service-point-management/202311.0/service-point-management.html)
+[Service point management](/docs/pbc/all/service-point-management/latest/service-point-management.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -194,7 +194,7 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 ### Technical prerequisites
 
 - [Install ACP](/docs/acp/user/app-composition-platform-installation.html)
-- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html)
+- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

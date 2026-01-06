@@ -2,7 +2,7 @@
 title: OpenTelemetry instrumentation
 description: Describing what is OpenTelemetry and how Spryker integrates it in the SCCOS
 template: howto-guide-template
-last_updated: Feb 1, 2025
+last_updated: Oct 6, 2025
 redirect_from:
   - /docs/ca/dev/monitoring/opentelemetry-instrumentation.html
 ---
@@ -11,7 +11,7 @@ This document describes how to configure and instrument application for OpenTele
 
 ## Convention
 
-The current implementation follows [OpenTelemetry Semantic Conventions 1.30.0](https://opentelemetry.io/docs/specs/semconv/).
+The current implementation follows [OpenTelemetry Semantic Conventions 1.36.0](https://github.com/open-telemetry/semantic-conventions/blob/v1.36.0/docs/README.md).
 
 ## Trace
 
@@ -220,7 +220,7 @@ sections:
 
 You can control instrumentation by configuring specific methods.
 
-`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedDirs()` defines directories to exclude from instrumentation. For example, you don't need spans from infrastructure code in traces. Several directories are excluded by default, review them in the module's vendor directory if you need to include any.  
+`\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getExcludedDirs()` defines directories to exclude from instrumentation. For example, you don't need spans from infrastructure code in traces. Several directories are excluded by default, review them in the module's vendor directory if you need to include any.
 
 ```php
 class OpentelemetryConfig extends AbstractBundleConfig
@@ -324,10 +324,7 @@ class OpentelemetryConfig extends AbstractBundleConfig
 
 ### Enable PHP extensions
 
-Hooks processing requires you to have a few PHP extensions in place. Spryker has prepared a new PHP image, so you need to install nothing, just enable them in your deploy file.
-
-Hook processing requires specific PHP extensions. There's a preconfigured PHP image, so you only need to enable the extensions in your deploy file:  
-
+Hook processing requires specific PHP extensions. Use the `spryker/php:8.3` or `spryker/php:8.4` image and enable the `otel` extension in your deploy file:
 
 ```yaml
 namespace: spryker-otel
@@ -335,12 +332,10 @@ tag: 'dev'
 
 environment: docker.dev
 image:
-    tag: spryker/php:8.3-alpine3.20-otel
+    tag: spryker/php:8.4
     php:
         enabled-extensions:
-            - opentelemetry
-            - grpc
-            - protobuf
+            - otel
 ```
 
 The blackfire extension conflicts with opentelemetry, so avoid using both simultaneously.
@@ -354,9 +349,9 @@ Sampling is a mechanism to reduce the number of spans sent with traces. It's use
 
 With the default New Relic setup, some traces may not reach New Relic's backend. However, in the OTel implementation, traces must not be missed because they contain critical event data, such as errors. This ensures that all traces are available in the backend, though some may not include detailed span data.
 
-Spryker executes a big number of methods per request, many of them repeatedly. Because OTel uses PHP functions to open and close spans, excessive span creation can introduce unnecessary load on your application. To mitigate this, there're mechanisms to reduce the number of spans sent with traces.  
+Spryker executes a big number of methods per request, many of them repeatedly. Because OTel uses PHP functions to open and close spans, excessive span creation can introduce unnecessary load on your application. To mitigate this, there're mechanisms to reduce the number of spans sent with traces.
 
-Sampling occurs three times during execution:  
+Sampling occurs three times during execution:
 
 1. Tracing sampling: Determines if the trace should be a root span only, without additional details
 2. Opening span sampling: Decides whether to open a span before execution
@@ -369,12 +364,12 @@ A detailed trace for every request or command execution is usually unnecessary. 
 
 To do this, the request is checked during initialization. For HTTP requests, if the method is not `GET`, the trace is always detailed. If the method is `GET`, a random number between `0` and `1.0` is generated and compared against a configured probability. If the number is less than the configured probability, the trace includes spans. Otherwise, only a root span is recorded.
 
-The same logic applies to console commands, but with a separate configuration value for finer control.  
+The same logic applies to console commands, but with a separate configuration value for finer control.
 
 
-### Opening span sampling  
+### Opening span sampling
 
-On start, each span is checked whether it should be started using the algorithm similar to that used for trace sampling. The differences between algorithms are as follows:  
+On start, each span is checked whether it should be started using the algorithm similar to that used for trace sampling. The differences between algorithms are as follows:
 
 - A different configuration value is used for span sampling
 - A random number is generated for each span
@@ -401,12 +396,12 @@ Spans that execute operations that communicate with other services or change the
 
 The following span types are critical by default:
 
-- RabbitMQ spans  
-- ElasticSearch spans  
-- Key-value store (Redis or Valkey) spans  
-- Guzzle spans (ignored by the sampling mechanism because they're required for Distributed Tracing)  
-- Propel `INSERT`/`DELETE`/`UPDATE` calls  
-- Hooks for classes configured in `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()`  
+- RabbitMQ spans
+- ElasticSearch spans
+- Key-value store (Redis or Valkey) spans
+- Guzzle spans (ignored by the sampling mechanism because they're required for Distributed Tracing)
+- Propel `INSERT`/`DELETE`/`UPDATE` calls
+- Hooks for classes configured in `\Spryker\Zed\Opentelemetry\OpentelemetryConfig::getCriticalClassNamePatterns()`
 
 
 #### Non-critical spans
@@ -519,7 +514,7 @@ Default behavior:
 
 Spryker automatically adjusts the trace name for web requests to reflect the route name. However, if you prefer a different naming convention or don't use the `Monitoring` module, you can define it manually using `\Spryker\Service\Opentelemetry\OpentelemetryService::setRootSpanName()` or `\Spryker\Service\Monitoring\MonitoringService::setTransactionName()`.
 
-If no name was provided and no route was resolved, a fallback name is used. This name can be configured by adding the following to the regular configuration file:  
+If no name was provided and no route was resolved, a fallback name is used. This name can be configured by adding the following to the regular configuration file:
 
 ```php
 
@@ -545,9 +540,9 @@ Tracing is resource-intensive and can slow down your application. Follow these r
   - Refer to the [sampling configuration](#sampling-configuration) section to fine-tune trace collection
 
 - Skip unnecessary traces:
-  - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.  
-  - Even if a detailed trace is skipped, a root span will still be created.  
-  - Requests that modify the application state (`POST`, `DELETE`, `PUT`, `PATCH`) are always considered critical and will be fully processed.  
+  - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.
+  - Even if a detailed trace is skipped, a root span will still be created.
+  - Requests that modify the application state (`POST`, `DELETE`, `PUT`, `PATCH`) are always considered critical and will be fully processed.
 
 
 

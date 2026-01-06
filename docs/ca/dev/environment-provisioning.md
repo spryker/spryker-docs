@@ -36,6 +36,12 @@ The environment name is derived from the combination of the project name and env
 
 ### Project name
 
+{% info_block warningBox "Mandatory information" %}
+
+The maximum length of the project name is 20 characters because of an AWS limitation.
+
+{% endinfo_block %}
+
 The *project name* is the name of the customer or the customer's preferred name for their project. The project name can't be modified once the environment is provisioned. It shouldn't contain special characters or spaces.
 
 **Recommended:** myshop

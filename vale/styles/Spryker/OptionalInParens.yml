@@ -1,0 +1,8 @@
+extends: existence
+message: "In headigns and steps, put `Optional:` in front. In tables, add a `Required` column. "
+level: error
+ignorecase: true
+nonword: true
+scope: raw
+tokens:
+  - '\(optional\)'

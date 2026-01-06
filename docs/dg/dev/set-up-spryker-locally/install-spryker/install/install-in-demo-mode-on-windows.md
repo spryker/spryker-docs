@@ -23,7 +23,7 @@ Depending on the needed WSL version, follow one of the guides:
 
 - [Install Docker prerequisites on Windows with WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
-## Clone a Demo Shop and the Docker SDK
+## Clone the Demo Shop and the Docker SDK
 
 {% info_block warningBox %}
 
@@ -34,35 +34,12 @@ Product images, product data, other images or fonts displaced in a demo shop are
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Clone *one* of the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
+4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
 
-    - B2C Demo Shop:
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202410.0 --single-branch ./b2c-demo-shop && \
-    cd b2c-demo-shop
-    ```
-
-    - B2B Demo Shop:
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202410.0 --single-branch ./b2b-demo-shop && \
-    cd b2b-demo-shop
-    ```
-
-    - B2C Marketplace Demo Shop
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202410.0 --single-branch ./b2c-demo-marketplace && \
-    cd b2c-demo-marketplace
-    ```
-
-    - B2B Marketplace Demo Shop
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202410.0 --single-branch ./b2b-demo-marketplace && \
-    cd b2b-demo-marketplace
-    ```
+ ```shell
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ cd b2b-demo-marketplace
+ ```
 
 {% info_block warningBox "Verification" %}
 

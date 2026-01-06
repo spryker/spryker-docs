@@ -5,16 +5,16 @@ template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
   - /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
-last_updated: March 11, 2024
+last_updated: Sep 23, 2025
 ---
 
-This document will help you implement Spryker's best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
-Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
+This document describes how to enhance the stability and performance of the Jenkins component in your Spryker environment.
 
+Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.
-- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/202311.0/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
+- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
 - Fine-tune the chunk size of the queues you work with.
 - Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
 - Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error "PHP Fatal error: Out of memory".
@@ -23,6 +23,11 @@ Before raising issues about Jenkins performance and stability with Spryker, make
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
 - In a standard-sized non-production environment, don't run lengthy imports and sync processes lasting more than 1-2 hours.
 - Be prepared to lose manually created jobs. Make sure that all critical jobs are persisted in your project (jenkins.php).
+
+
+## Stable workers
+
+For enhanced Publish and Synchronize (P&S) stability, consider using Spryker's Stable Workers architecture. This approach addresses many Jenkins stability challenges by providing isolated worker contexts and better resource management. This architecture includes configurable capacity providers and intelligent resource distribution to optimize P&S performance while reducing Jenkins load. For more information, see [Stable Workers](/docs/dg/dev/backend-development/cronjobs/stable-workers.html).
 
 ## Theoretical max memory demand and memory constraints
 
@@ -130,3 +135,23 @@ Make sure the following criteria are met:
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.
+
+## New Relic performance impact for long-running processes
+
+When instrumentation is enabled for long-running CLI processes—such as Jenkins jobs that execute large data migrations, Redis cleanups, or bulk operations—the agent continuously accumulates transaction metrics in memory. Because long-running jobs never reach a "request end" event that naturally flushes this data, memory consumption can increase steadily during the lifetime of the process. In production environments, this may lead to out-of-memory conditions or premature job termination.
+
+To avoid out-of-memory issues, disable New Relic instrumentation for long-running Spryker CLI commands that are triggered in Jenkins.
+
+Disable New Relic for a CLI command:
+
+```bash
+NEWRELIC_ENABLED=false php vendor/bin/console ...
+```
+
+If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:
+
+```bash
+php -dnewrelic.enabled=false vendor/bin/console ...
+```
+
+For more information, see [High memory load on long-running PHP tasks](https://docs.newrelic.com/docs/apm/agents/php-agent/troubleshooting/performance-issues-long-running-task/).

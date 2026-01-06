@@ -86,7 +86,7 @@ services:
 ...
     broker:
         engine: rabbitmq
-        version: '3.9'
+        version: '4.1'
         api:
             username: 'spryker'
             password: 'secret'

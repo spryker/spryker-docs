@@ -18,20 +18,14 @@ related:
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-{% info_block warningBox %}
-
-This is a document related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html)
-
-{% endinfo_block %}
-
-Spryker API infrastructure is implemented as a separate layer of Spryker Cloud Commerce OS, called Glue. It is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. The layer is implemented as a separate Spryker application, the same as Yves or Zed. It has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default). In addition to that, Glue has a separate programming namespace within Spryker Commerce OS, also called Glue.
+Spryker Storefront API infrastructure is implemented as a separate layer of Spryker Cloud Commerce OS, called Glue. It is responsible for providing API endpoints, processing requests, as well as for communication with other layers of the OS in order to retrieve the necessary information. The layer is implemented as a separate Spryker application, the same as Yves or Zed. It has its own bootstrapping and a separate virtual host on the Spryker web server (Nginx by default). In addition to that, Glue has a separate programming namespace within Spryker Commerce OS, also called Glue.
 
 {% info_block infoBox %}
 
 Consider studying the following documents before you begin:
 - [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker
 - [Swagger Tools Reference](https://swagger.io/) to know how to document your API
-- [REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
+- [Storefront API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
 
 {% endinfo_block %}
 
@@ -86,7 +80,7 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 | `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in *kebab-case*, hyphen-separated | string | If the controller name is *CartsResourceController.php*, this function should return *carts-resource*. |
 | `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#describe-fields-for-post-and-patch-calls). |
 
-For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/implement-a-rest-api-resource.html#route-requests-to-your-controller).
+For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#route-requests-to-your-controller).
 
 All route plugins need to be added to `GlueApplicationDependencyProvider` implemented in the `GlueApplication` Resource module on the Project Level:
 
@@ -139,7 +133,7 @@ Also, a module should contain the transfer definition in `src/Pyz/Shared/Resourc
 
 The resulting folder structure on the example of the WishlistsRestApi Resource module looks as follows:
 
-![Wishlists REST API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/wishlists-rest-api.png)
+![Wishlists Storefront API](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/wishlists-rest-api.png)
 
 #### Resource controller
 
@@ -209,7 +203,7 @@ Business errors are returned as the `RestErrorMessageTransfer` objects with the 
 
 ### Nested resources
 
-Glue API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it's necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the *GlueApplication Module* tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
+Storefront API allows creating resources with parent-child relationships or, in other words, nested resources. For example, a request to `/customers/1/addresses` returns addresses for a customer with ID 1. To enable such behavior, it's necessary to define how resources depend on each other. This is done by configuring resource route plugins. When processing an URL, the *GlueApplication Module* tries to find a correct route to a child resource. For this reason, all modules in the nesting chain should be arranged in a sequence using **ResourceWithParentPluginInterface**. Then, while handling a request to a child resource, business logic can access the parent resource identifier and process the request in the correct context.
 
 #### ResourceWithParentPluginInterface
 
@@ -371,7 +365,7 @@ When versioning is in place, clients can pass the version they require in the re
 
 ### HTTP status codes
 
-Below is a list of common HTTP statuses returned by Glue endpoints.
+Below is a list of common HTTP statuses returned by Storefront API endpoints.
 
 ### GET
 
@@ -415,7 +409,7 @@ Below is a list of common HTTP statuses returned by Glue endpoints.
 
 ### Error codes
 
-In addition to HTTP Status codes, Glue can return additional error codes to distinguish business constraint violations. Each API is assigned a specific error code range. Listed below are code ranges for APIs shipped by Spryker. For specific error codes, see API user documentation for the specific APIs.
+In addition to HTTP Status codes, Storefront API can return additional error codes to distinguish business constraint violations. Each API is assigned a specific error code range. Listed below are code ranges for APIs shipped by Spryker. For specific error codes, see API user documentation for the specific APIs.
 
 | RANGE | API |
 | --- | --- |

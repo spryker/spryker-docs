@@ -117,7 +117,7 @@ Using the [Flysystem](https://github.com/thephpleague/flysystem) abstraction lay
 
 **1. Time-based expiration (TTL):**
 
-Simplest approach—cache expires after fixed time:
+The simplest approach - cache expires after fixed time:
 
 ```php
 // Good for data that becomes stale predictably

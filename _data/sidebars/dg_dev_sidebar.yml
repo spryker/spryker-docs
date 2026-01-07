@@ -458,6 +458,18 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
 
+    - title: Composable UI
+      url: /docs/dg/dev/backend-development/composable-ui/composable-ui.html
+      nested:
+      - title: Install Composable UI
+        url: /docs/dg/dev/backend-development/composable-ui/install-composable-ui.html
+      - title: Create a Composable UI module
+        url: /docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
+      - title: Entity configuration reference
+        url: /docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
+      - title: Composable UI best practices
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
+
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:

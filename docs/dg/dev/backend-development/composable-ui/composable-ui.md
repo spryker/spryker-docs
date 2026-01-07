@@ -4,9 +4,9 @@ description: Learn about Spryker's Composable UI - a configuration-driven approa
 template: concept-topic-template
 ---
 
-Composable UI is a development layer for the Spryker Back Office that enables configuration-driven UI generation. It provides a zero-frontend approach for standard CRUD operations, letting developers define BackOffice pages through YAML configuration instead of writing custom JavaScript or markup.
+Composable UI is a development layer for the Spryker Back Office that enables configuration-driven UI generation. It provides a zero-frontend approach for standard CRUD operations, letting developers define the Back Office pages through YAML configuration instead of writing custom JavaScript or markup.
 
-## What is Composable UI?
+## Composable UI explained
 
 Composable UI is an embedded Single Page Application (SPA) called FalconUI, integrated into the existing Spryker Back Office. Each section registered by a Composable UI module is a standalone SPA page that communicates with the Glue Backend API.
 
@@ -18,7 +18,7 @@ The key components include:
 - **Angular component library**: Reuses the Merchant Portal component library to maintain a unified tech stack.
 - **ACL integration**: Built-in authorization mechanism against REST APIs.
 
-## Why use Composable UI?
+## Composable UI use cases
 
 - **Accelerate development**: Build Back Office CRUD features in hours instead of days using declarative YAML configuration—no frontend code required for standard cases.
 - **Reduce costs**: Eliminate repetitive boilerplate code with auto-generated APIs and UI components, letting your team focus on business logic.
@@ -26,9 +26,17 @@ The key components include:
 - **Ship faster**: Standard features go from concept to production without custom JavaScript or markup, significantly reducing time-to-market.
 - **Ensure consistency**: A unified REST API contract between frontend and backend improves maintainability, testability, and developer experience.
 
+## Benefits of Composable UI
+
+Composable UI offers significant advantages for teams building Back Office functionality:
+- Faster feature delivery with declarative configuration
+- Reduced maintenance overhead through auto-generated components
+- Consistent user experience across all CRUD interfaces
+- Lower complexity with standardized patterns
+
 ## Architecture overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                 Spryker Back Office (Zed)                    │
 │  ┌───────────────────────────────────────────────────────┐  │

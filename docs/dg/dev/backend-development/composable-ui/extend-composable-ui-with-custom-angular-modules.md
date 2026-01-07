@@ -35,7 +35,7 @@ Composable UI uses Falcon UI, an Angular-based SPA that renders configuration-dr
 
 ### Directory structure
 
-```
+```text
 src/SprykerFeature/FalconUi/src/SprykerFeature/Zed/FalconUi/Presentation/Application/
 ├── app/
 │   ├── core/                    # Core services and utilities

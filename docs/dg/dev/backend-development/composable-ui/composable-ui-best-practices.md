@@ -321,7 +321,7 @@ resource:
 
 Create specific rules for each operation:
 
-```
+```text
 module/entity/get-collection  # List
 module/entity/get             # View
 module/entity/post            # Create

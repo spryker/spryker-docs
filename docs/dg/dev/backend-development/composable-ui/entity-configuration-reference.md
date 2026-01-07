@@ -11,7 +11,7 @@ related:
 
 This document explains how to configure entity UI using YAML files in Composable UI modules. It includes detailed explanations, complete examples, and common patterns.
 
-## What is an entity configuration file?
+## Entity configuration file explained
 
 An entity configuration file is a YAML file that describes the entire UI for one entity (like Customer, Product, Order). You define:
 
@@ -359,11 +359,13 @@ table.customer.list:
 #### Column types and formatting
 
 **Simple text column** (default):
+
 ```yaml
 - { id: 'email', title: 'Email Address' }
 ```
 
 **Date column with formatting**:
+
 ```yaml
 - id: 'registrationDate'
   title: 'Registration Date'
@@ -394,6 +396,7 @@ table.customer.list:
 Filters let users narrow down results.
 
 **Enable filters**:
+
 ```yaml
 filters:
     enabled: true
@@ -402,6 +405,7 @@ filters:
 ```
 
 **Select filter with static options**:
+
 ```yaml
 - id: 'status'
   title: 'Status'
@@ -414,6 +418,7 @@ filters:
 ```
 
 **Select filter with options from API**:
+
 ```yaml
 - id: 'salutation'
   title: 'Salutation'
@@ -428,6 +433,7 @@ filters:
 ```
 
 **Date range filter**:
+
 ```yaml
 - id: 'createdAt'
   title: 'Created Date'
@@ -467,6 +473,7 @@ The table sends `?search=keyword` to your API. Your backend Provider should impl
 #### Row actions (what happens when you click a row)
 
 **Open edit form in drawer**:
+
 ```yaml
 rowActions:
     enabled: true
@@ -508,7 +515,7 @@ table.customer.list:
                   title: 'Registered'
                   type: 'date'
                   editable: false
-                  typeOptions: { format: 'dd.MM.y' }
+                  typeOptions: { format: 'MMMM D, YYYY' }
             filters:
                 enabled: true
                 items:
@@ -655,6 +662,7 @@ errorActions:
 #### Complete form examples
 
 **Create form**:
+
 ```yaml
 form.customer.create:
     component: DynamicFormComponent
@@ -686,6 +694,7 @@ form.customer.create:
 ```
 
 **Edit form** (note the `overrides` and `${row.field}` in URL):
+
 ```yaml
 form.customer.edit:
     component: DynamicFormComponent
@@ -723,10 +732,11 @@ form.customer.edit:
 ```
 
 **Delete form** (note the `variant: 'critical'` for red button):
+
 ```yaml
 form.customer.delete:
     component: DynamicFormComponent
-    slot: 'actions'                    # Goes in headline actions slot
+    slot: 'actions'
     inputs:
         config:
             controls:
@@ -865,6 +875,7 @@ field.customer.salutation:
 ```
 
 Your API should return:
+
 ```json
 [
     { "value": "mr", "title": "Mr." },
@@ -931,6 +942,7 @@ Validators ensure data quality before sending to API.
 | `pattern` | Regex pattern match | `pattern: '^[A-Z0-9]+$'` |
 
 **Example with multiple validators**:
+
 ```yaml
 field.customer.password:
     name: 'password'
@@ -973,6 +985,7 @@ This button opens a drawer with a headline and create form.
 #### Available action types
 
 **Open drawer** (most common for forms):
+
 ```yaml
 action:
     type: 'drawer'
@@ -985,6 +998,7 @@ action:
 ```
 
 **Navigate to URL**:
+
 ```yaml
 action:
     type: 'redirect'
@@ -992,6 +1006,7 @@ action:
 ```
 
 **Make API call**:
+
 ```yaml
 action:
     type: 'http'
@@ -1103,11 +1118,13 @@ headline.customer.edit:
 **Purpose**: Reuse components you've defined.
 
 **Basic usage**:
+
 ```yaml
 - use: field.customer.email         # References field.customer.email from components
 ```
 
 **With overrides** (for edit forms):
+
 ```yaml
 - use: field.customer.email
   overrides:
@@ -1130,6 +1147,7 @@ headline.customer.edit:
 ### Common use cases
 
 **1. Pre-fill edit form fields**:
+
 ```yaml
 controls:
     - use: field.customer.email
@@ -1138,6 +1156,7 @@ controls:
 ```
 
 **2. Build API URLs**:
+
 ```yaml
 submit:
     method: 'PATCH'
@@ -1145,13 +1164,15 @@ submit:
 ```
 
 **3. Dynamic headlines**:
+
 ```yaml
 headline.customer.edit:
     slots:
-        - content: 'Edit Customer ${row.customerReference}'  # Shows actual reference
+        - content: 'Edit Customer ${row.customerReference}'  # Shows actual customer reference
 ```
 
 **4. Conditional display**:
+
 ```yaml
 slots:
     - content: '${row.firstName} ${row.lastName}'  # Shows full name
@@ -1423,7 +1444,7 @@ headline.customer.edit:
 
 ### Date column shows timestamps instead of formatted dates
 
-**Problem**: Date column shows "2024-01-15T10:30:00Z" instead of "15.01.2024".
+**Problem**: Date column shows "2024-01-15T10:30:00Z" instead of "January 15, 2024".
 
 **Solution**: Add `type` and `typeOptions` to column:
 

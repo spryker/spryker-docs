@@ -217,12 +217,14 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Project-level template override" %}
 
-If your project has overridden the `src/Pyz/Zed/Gui/Presentation/Layout/layout.twig` template, ensure it includes the `{% block layout %}` block required for Composable UI:
+If your project has overridden the `src/Pyz/Zed/Gui/Presentation/Layout/layout.twig` template, ensure it includes the `{% raw %}{% block layout %}{% endraw %}` block required for Composable UI:
 
 ```twig
+{% raw %}
 {% block layout %}
     {# Composable UI content renders here #}
 {% endblock %}
+{% endraw %}
 ```
 
 Without this block, Composable UI pages will not render correctly. Check the core `src/Spryker/Gui/src/Spryker/Zed/Gui/Presentation/Layout/layout.twig` template for the exact implementation.

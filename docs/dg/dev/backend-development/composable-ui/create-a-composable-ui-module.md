@@ -32,7 +32,7 @@ Before creating a Composable UI module, ensure you have completed:
 
 Create the following directory structure for your module:
 
-```
+```text
 src/SprykerFeature/{YourModule}/
 ├── resources/
 │   ├── {your-module}.yml           # Feature definition
@@ -73,7 +73,7 @@ features:
 ```
 
 This file registers all Composable UI feature modules in your project. Each feature entry includes:
-- **Key** (e.g., `YourModule`): Feature name in PascalCase
+- **Key** (for example, `YourModule`): Feature name in PascalCase
 - **url**: Relative path to the feature module directory
 
 Example with multiple features:
@@ -345,6 +345,7 @@ view:
                                       configuration:
                                           - use: headline.your-entity.edit
                                           - use: form.your-entity.edit
+
 ```
 </details>
 
@@ -387,7 +388,7 @@ Create API resources for your entities following the [API Platform Enablement](/
 
 For Composable UI modules, place API resources in:
 
-```
+```text
 src/SprykerFeature/YourModule/resources/api/backend/
 ├── your_entities.resource.yml
 └── your_entities.validation.yml
@@ -449,9 +450,10 @@ class YourEntitiesBackendProvider extends AbstractBackendProvider
     }
 }
 ```
+
 </details>
 
-#### Configure search and filtering (optional)
+#### Optional: Configure search and filtering
 
 If you added search and filters to your table in Step 2, the Provider code above already includes the necessary configuration:
 
@@ -468,9 +470,9 @@ If you added search and filters to your table in Step 2, the Provider code above
 - **Pagination**: `?page=2&itemsPerPage=20`
 - **Search**: Full-text search across configured fields
 - **Filtering**: Field-based filtering with automatic null handling
-- **Date ranges**: Supports `From`/`To` suffixes (e.g., `createdAtFrom`, `createdAtTo`)
+- **Date ranges**: Supports `From`/`To` suffixes (for example, `createdAtFrom`, `createdAtTo`)
 
-### Implement Processors for write operations (optional)
+### Optional: Implement Processors for write operations
 
 If your module needs create, update, or delete operations, implement separate Processors for each operation.
 
@@ -677,7 +679,7 @@ resource:
 3. Frontend sends token in `Authorization: Bearer {token}` header
 4. API validates token before processing request
 
-### Create reference data endpoints for filters (optional)
+### Optional: Create reference data endpoints for filters
 
 If your table has filters with dynamic options from API (like salutations, statuses, categories), create reference data endpoints.
 
@@ -853,6 +855,7 @@ For detailed information about ACL configuration and best practices, see [Instal
    - Verify success notifications appear
 
 4. **Check API endpoints**:
+
    ```bash
    # List all entities
    curl -X GET http://glue-backend.your-domain.local/your-entities \

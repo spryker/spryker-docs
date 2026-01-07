@@ -52,7 +52,8 @@ entries:
         nested:
           - title: AI Foundation
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
-      - title: AI Dev
+      - title: AI Dev SDK
+        url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
           - title: AI Dev Overview
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html

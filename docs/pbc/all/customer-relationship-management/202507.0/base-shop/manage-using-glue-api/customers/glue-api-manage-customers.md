@@ -96,7 +96,7 @@ Request sample: retrieve customers
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
 
 ## Retrieve a customer
 
@@ -150,7 +150,7 @@ Request sample: Retrieve a customer
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
 
 
 ## Edit a customer
@@ -213,7 +213,7 @@ Request sample: edit a customer
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
 
 
 

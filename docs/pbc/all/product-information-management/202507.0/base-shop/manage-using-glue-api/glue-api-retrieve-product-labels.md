@@ -67,7 +67,7 @@ Request sample: retrieve a product label
 </details>
 
 
-{% include pbc/all/glue-api-guides/202507.0/product-labels-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
 ## Other management options
 

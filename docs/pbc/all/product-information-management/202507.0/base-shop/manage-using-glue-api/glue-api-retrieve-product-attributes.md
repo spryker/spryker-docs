@@ -151,7 +151,7 @@ Request sample: retrieve all product attributes
 </details>
 
 
-{% include pbc/all/glue-api-guides/202507.0/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
 
 
 ## Retrieve a product attribute
@@ -225,7 +225,7 @@ Request sample: retrieve a product attribute
 
 </details>
 
-{% include pbc/all/glue-api-guides/202507.0/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
 
 ## Possible errors
 

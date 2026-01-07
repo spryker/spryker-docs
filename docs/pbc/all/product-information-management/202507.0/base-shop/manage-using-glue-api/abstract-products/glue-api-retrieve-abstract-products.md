@@ -1942,17 +1942,17 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 {% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/202507.0/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/202507.0/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/202507.0/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/202507.0/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202507.0/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202507.0/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md -->
 
 
 ## Possible errors

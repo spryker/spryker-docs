@@ -46,7 +46,7 @@ Request sample: `POST https://glue-backend.b2c-eu.demo-spryker.com/push-notifica
 ```
 
 
-{% include pbc/all/glue-api-guides/202507.0/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md -->
 
 
 
@@ -71,7 +71,7 @@ Response sample:
 ```
 
 
-{% include pbc/all/glue-api-guides/202507.0/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
 
 
 

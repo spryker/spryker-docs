@@ -73,7 +73,7 @@ Request sample: `GET https://glue-backend.b2c-eu.demo-spryker.com/push-notificat
 
 </details>
 
-{% include pbc/all/glue-api-guides/202507.0/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
 
 
 ## Retrieve a push notification provider
@@ -118,7 +118,7 @@ Response sample:
 ```
 
 
-{% include pbc/all/glue-api-guides/202507.0/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
 
 
 

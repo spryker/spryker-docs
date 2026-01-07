@@ -59,7 +59,7 @@ Response sample: retrieve a measurement unit
 }
 ```
 
-{% include pbc/all/glue-api-guides/202507.0/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md -->
 
 
 ## Other management options

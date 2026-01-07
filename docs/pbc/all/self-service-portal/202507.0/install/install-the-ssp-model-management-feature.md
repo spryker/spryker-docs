@@ -5,4 +5,4 @@ last_updated: Aug 11, 2025
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202507.0/install-the-ssp-model-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-ssp-model-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-ssp-model-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-ssp-model-management-feature.md -->

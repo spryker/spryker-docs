@@ -109,7 +109,7 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
 
 ## Possible errors

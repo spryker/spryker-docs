@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/glue-api-checkout-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-checkout-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-checkout-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
@@ -22,7 +22,7 @@ related:
   - title: Update payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
   - title: Submit checkout data
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-checkout-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md -->

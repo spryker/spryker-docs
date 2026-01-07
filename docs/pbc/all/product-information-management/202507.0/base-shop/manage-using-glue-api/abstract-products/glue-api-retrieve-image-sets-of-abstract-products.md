@@ -86,7 +86,7 @@ Request sample: retrieve image sets of an abstract product
 
 <a name="abstract-product-sets-response-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/202507.0/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
 
 
 

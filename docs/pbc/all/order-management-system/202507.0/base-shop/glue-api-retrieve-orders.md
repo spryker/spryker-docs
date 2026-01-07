@@ -99,7 +99,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 </details>
 
-{% include pbc/all/glue-api-guides/202507.0/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
 
 ## Retrieve an order
@@ -1205,9 +1205,9 @@ To retrieve detailed information on an order, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/202507.0/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202507.0/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
 
 ## Possible errors
 

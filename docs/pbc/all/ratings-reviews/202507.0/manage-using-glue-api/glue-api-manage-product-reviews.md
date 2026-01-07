@@ -96,7 +96,7 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
 
 <a name="product-reviews-response-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/202507.0/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ## Submit a product review
 
@@ -135,7 +135,7 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-{% include /pbc/all/glue-api-guides/202507.0/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ### Response
 
@@ -157,7 +157,7 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-{% include /pbc/all/glue-api-guides/202507.0/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ## Other management options
 

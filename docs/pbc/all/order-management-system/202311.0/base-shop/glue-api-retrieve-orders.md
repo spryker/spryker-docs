@@ -292,8 +292,8 @@ To retrieve detailed information on an order, send the request:
                             "description": "Get a 10% discount on all orders above certain value depending on the currency and net/gross price. This discount is not exclusive and can be combined with other discounts.",
                             "voucherCode": null,
                             "quantity": 1
-                        }     
-                    ],                   
+                        }
+                    ],
                     "productOptions": [],
                     "amount": null
                 }
@@ -1208,12 +1208,12 @@ To retrieve detailed information on an order, send the request:
         }
     }
 }
-```    
+```
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
 
 ## Possible errors
 

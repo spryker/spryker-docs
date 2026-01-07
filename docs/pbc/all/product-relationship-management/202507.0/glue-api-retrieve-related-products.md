@@ -583,10 +583,10 @@ To get related items of an abstract product, send the request:
 
 <a name="related-product-attributes"></a>
 
-{% include /pbc/all/glue-api-guides/202507.0/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
-{% include /pbc/all/glue-api-guides/202507.0/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
 
 ## Retrieve upselling products of a registered user's cart
@@ -959,10 +959,10 @@ To get upselling items for all products in a cart of a registered customer, send
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
 
-{% include /pbc/all/glue-api-guides/202507.0/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
 
@@ -1298,9 +1298,9 @@ To retrieve upselling products of a guest cart, send the request:
 
 </details>
 
-{% include /pbc/all/glue-api-guides/202507.0/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/202507.0/concrete-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
 
 ## Possible errors

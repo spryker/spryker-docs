@@ -6,4 +6,4 @@ template: feature-integration-guide-template
 redirect_from:
 ---
 
-{% include pbc/all/install-features/202507.0/marketplace/install-the-marketplace-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md -->

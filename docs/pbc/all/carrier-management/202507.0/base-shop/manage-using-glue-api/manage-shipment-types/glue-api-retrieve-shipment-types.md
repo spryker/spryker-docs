@@ -119,7 +119,7 @@ This endpoint lets you retrieve shipment types.
 </details>
 
 
-{% include pbc/all/glue-api-guides/202507.0/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 
 
 
@@ -199,7 +199,7 @@ This endpoint lets you retrieve shipment types.
 </details>
 
 
-{% include pbc/all/glue-api-guides/202507.0/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 
 
 

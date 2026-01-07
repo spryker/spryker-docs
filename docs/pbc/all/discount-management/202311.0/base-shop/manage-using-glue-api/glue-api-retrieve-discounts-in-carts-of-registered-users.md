@@ -63,7 +63,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```    
+```
 </details>
 
 
@@ -198,7 +198,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -337,13 +337,13 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
         }
     ]
 }
-```    
+```
 </details>
 
 
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -454,7 +454,7 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -517,7 +517,7 @@ To retrieve a particular cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>

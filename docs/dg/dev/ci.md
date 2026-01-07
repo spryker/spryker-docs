@@ -22,13 +22,14 @@ Skipping CI checks leads to technical debt, integration issues, and costly refac
 
 The Spryker B2B Demo Marketplace includes a comprehensive GitHub Actions CI workflow: [.github/workflows/ci.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/.github/workflows/ci.yml).
 
+It is recommended to review all available CI workflows in the [Spryker workflows directory](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/.github/workflows) and adapt the relevant ones for the project. 
+Not all workflows may be applicable to the specific requirements, so select and configure only those that align with the project needs.
+
 For instructions on setting up CI in different repositories, see the following documents:
-- [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
-- [Customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
-- [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
-- [Configuring GitLab pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
 - [Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
-- [Configuring Bitbucket Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+- [Bitbucket Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+- [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
+- [GitLab Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
 
 ## Validation commands
 
@@ -78,18 +79,6 @@ vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
 vendor/bin/evaluator evaluate --format=compact
 ```
 
-### API documentation validation
-
-**REST API and Glue specification**
-
-```bash
-# Generate REST API documentation
-vendor/bin/console rest-api:generate:documentation
-
-# Validate OpenAPI specification
-speccy lint src/Generated/Glue/Specification/spryker_rest_api.schema.yml
-```
-
 ### Frontend validation
 
 **JavaScript and CSS checks**
@@ -130,7 +119,7 @@ docker/sdk testing codecept run -c codeception.ci.functional.yml
 
 ## Extending CI with Project Architecture Sniffer
 
-The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer) enforces Spryker architectural standards and detects violations:
+The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) enforces Spryker architectural standards and detects violations:
 
 ```yaml
 - name: Architecture Sniffer

@@ -15,7 +15,7 @@ This document helps you get started with the Spryker Cloud Commerce OS. It has b
 
 ## 1. Install Spryker
 
-Spryker Demo Shops are a good starting point for any project. They are shipped with different sets of components, which are specific to respective business models. Demo Shops are fully functional and can be used for both demonstrative purposes as well as as a boilerplate for a new project. Though each shop comes with pre-selected components, Spryker offers hundreds of additional modules which you can add late.
+Spryker Demo Shops are a good starting point for any project. They are shipped with different sets of components, which are specific to respective business models. Demo Shops are fully functional and can be used for both demonstrative purposes as well as boilerplate for a new project. Though each shop comes with pre-selected components, Spryker offers hundreds of additional modules that you can add later.
 You can choose from the following options:
 - [Marketplace B2B Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
 - [B2B Demo Shop](/docs/about/all/b2b-suite.html)
@@ -65,7 +65,7 @@ To learn about Spryker architecture, different parts of the Client, Shared, Zed,
 - [Keep project good for upgrade](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html)
 
 To find relevant documentation for your project, use the [search](/search.html).
-![search](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/search+page.png).
+![search](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/search+page.png)
 
 ## 6. Configure project
 

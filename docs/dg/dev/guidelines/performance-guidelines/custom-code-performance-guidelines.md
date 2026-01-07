@@ -140,7 +140,7 @@ Invalidate cache when underlying data changes by explicitly removing stale cache
 
 **3. Write-through cache:**
 
-Update cache simultaneously with data:
+Update cache simultaneously with data update. We recommend updating cache only after the data is saved to prevent cases of cache reflecting not saved data.
 
 ```php
 // ✅ Good: Update cache when writing data

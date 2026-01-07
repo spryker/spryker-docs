@@ -95,8 +95,8 @@ public function updateCustomerOrderStatistics(int $customerId): void
 
 **3. Filesystem cache:**
 
-Warning: it is important to remember that filesystem is NOT shared between services and containers!
-Each application (Yves, the Back Office, Glue, etc) and each container (even within the same application, for example Yves) has its own independent file system layer on top of base Docker image. However, files created during the Docker image build process are part of the base image itself and are shared across all containers and services using that image.
+Warning: it is important to remember that the filesystem is NOT shared between services and containers.
+Each application (Yves, the Back Office, Glue, etc.) and each container (even within the same application, for example, Yves) has its own independent filesystem layer on top of the base Docker image. However, files created during the Docker image build process are part of the base image itself and are shared across all containers and services using that image.
 
 Using the [Flysystem](https://github.com/thephpleague/flysystem) abstraction layer (PHP library) - it is easy to store files on a remote shared locations, such as S3 buckets or similar cloud storages.
 
@@ -182,7 +182,7 @@ public function updateProductPrice(string $sku, float $price): void
 }
 ```
 
-This example is simplified process of what Publish&Sync does, but omitting the queue system, in high-load environments this approach can also be benefitial for some entities.
+This example is a simplified version of what Publish & Sync does, but omitting the queue system. In high-load environments, this approach can also be beneficial for some entities.
 
 **Best for:**
 - Data requiring high read performance
@@ -321,6 +321,7 @@ public function importProductsAction(): Response
 // ✅ Good: Trigger background import job
 public function importProductsAction(): Response
 {
+    // Example: implement your own job scheduling logic
     $jobId = $this->scheduleImportJob('products');
 
     return new JsonResponse([
@@ -509,7 +510,7 @@ Meaning that (in this example) if there were 5 failed attempts - all the next at
 
 **4. Read-only integration for critical paths:**
 
-This technique can help optimise heavy write logic. Queueing such events usually involve appropriate UI (user interface) to support that by asynchoneously checking the status of queued command/event.
+This technique can help optimise heavy write logic. Queueing such events usually involves appropriate UI support for asynchronously checking the status of queued commands or events.
 
 ```php
 // ✅ Good: Real-time reads OK, writes are queued
@@ -743,6 +744,12 @@ public function recalculate(QuoteTransfer $quoteTransfer): void
     }
 }
 ```
+
+{% info_block infoBox "Simplified example" %}
+
+This example uses discount eligibility for illustration. In practice, discounts often depend on customer-specific data (customer groups, promo codes). Consider pre-computing data that is less customer-dependent, such as tax rates or base shipping costs, for maximum cache effectiveness.
+
+{% endinfo_block %}
 
 **3. Short-circuit expensive calculations:**
 

@@ -118,27 +118,17 @@ Exception: Low-cardinality indexes can be useful when combined with high-cardina
 
 Use database query analysis tools to verify index usage:
 
-**PostgreSQL:**
-
-```sql
-EXPLAIN ANALYZE
-SELECT * FROM spy_sales_order
-WHERE order_reference = 'DE--123';
-```
-
-Look for:
-- `Index Scan` (good) vs `Seq Scan` (bad for large tables)
-- Execution time and rows scanned
-
-**MySQL:**
-
 ```sql
 EXPLAIN
 SELECT * FROM spy_sales_order
 WHERE order_reference = 'DE--123';
 ```
 
-Check the `type` column:
+**PostgreSQL - Look for:**
+- `Index Scan` (good) vs `Seq Scan` (bad for large tables)
+- Execution time and rows scanned
+
+**MySQL - Check the `type` column:**
 - `const`, `eq_ref`, `ref`: Using indexes efficiently
 - `ALL`: Full table scan (needs optimization)
 

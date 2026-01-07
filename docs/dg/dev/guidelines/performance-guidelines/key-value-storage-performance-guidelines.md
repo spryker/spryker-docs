@@ -329,7 +329,7 @@ Track these metrics:
 
 1. **Limit operations**: Maximum 10-20 Key-Value operations per web request
 2. **Use batch operations**: MGET instead of multiple GET calls
-3. **Enable storage cache**: Use Spryker's `StorageCacheEventDispatcherPlugin`
+3. **Enable storage cache**: Use Spryker's `StorageCacheEventDispatcherPlugin` in the selected applications
 4. **Store related data together**: Reduce key count by grouping related attributes
 5. **Never use KEYS in production**: Use indexed sets or background jobs
 6. **Avoid mass SET operations**: Queue bulk updates for background processing

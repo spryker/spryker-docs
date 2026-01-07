@@ -203,7 +203,7 @@ $this->storageClient->setex("admin:report:monthly", 86400, $hugeReport);
 
 ## Avoid heavy processing in web requests
 
-Web requests must respond quickly—typically under 200-500ms (in some cases - up to 1s). Heavy processing operations should execute in background jobs to maintain user experience and system stability.
+Web requests must respond quickly - typically under 500 ms. Heavy processing operations should be executed in background jobs to maintain user experience and system stability.
 
 ### Operations that belong in background jobs
 

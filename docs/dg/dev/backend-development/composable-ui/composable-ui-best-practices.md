@@ -505,7 +505,7 @@ public function testUnauthorizedUserCannotDelete(): void
 Use schema validation for YAML configurations:
 
 ```bash
-vendor/bin/console composable-ui:validate-config
+vendor/bin/console feature:validate 
 ```
 
 ## Documentation

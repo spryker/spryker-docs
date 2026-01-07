@@ -26,7 +26,7 @@ Caching is a powerful optimization tool, but choosing the right caching strategy
 
 Different data types require different caching approaches:
 
-**1. Redis/ValKey (Key-Value storage):**
+**1. Key-Value storage (Redis or Valkey):**
 
 **Best for:**
 - Frequently accessed data needed across multiple requests

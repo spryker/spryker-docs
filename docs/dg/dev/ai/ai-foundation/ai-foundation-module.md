@@ -430,10 +430,6 @@ This transfer represents a file or image attachment:
 
 The following capabilities are planned for future releases of the AiFoundation module:
 
-### Structured response
-
-Support for requesting and parsing structured responses from AI providers. This will enable AI models to return data in predefined formats (for example, JSON schemas), making it easier to integrate AI responses directly into application workflows and business logic.
-
 ### Tool call
 
 Implementation of function calling capabilities, allowing AI models to invoke specific tools or functions during the response generation. This enables more interactive and dynamic AI interactions where the model can query external systems, perform calculations, or execute custom business logic.

@@ -63,7 +63,7 @@ public function getProductData(string $sku): array
 **Best for:**
 - Pre-computed aggregations and reports
 - Data that changes infrequently (hours to days)
-- Large datasets that would exhaust memory cache
+- Large datasets that would exhaust memory cache (for example hundreds of gigabytes and more)
 - Historical data requiring complex queries
 
 **Example use cases:**
@@ -95,8 +95,8 @@ public function updateCustomerOrderStatistics(int $customerId): void
 
 **3. Filesystem cache:**
 
-Warning: it is important to remember that filesystem is NOT shared between services and containers! 
-Each application (Yves, the Back Office, Glue, etc) and each container (even within the same application, for example Yves) has its own independent file system layer on top of base Docker image.
+Warning: it is important to remember that filesystem is NOT shared between services and containers!
+Each application (Yves, the Back Office, Glue, etc) and each container (even within the same application, for example Yves) has its own independent file system layer on top of base Docker image. However, files created during the Docker image build process are part of the base image itself and are shared across all containers and services using that image.
 
 Using the [Flysystem](https://github.com/thephpleague/flysystem) abstraction layer (PHP library) - it is easy to store files on a remote shared locations, such as S3 buckets or similar cloud storages.
 
@@ -132,6 +132,29 @@ $this->storageClient->setex("prices:{$sku}", 300, $priceData); // 5 minutes
 **2. Event-driven invalidation:**
 
 Invalidate cache when underlying data changes by explicitly removing stale cache record.
+
+```php
+// Event listener that invalidates cache on data changes
+class CustomCacheInvalidationListener
+{
+    public function handleDataUpdate(EntityTransfer $entityTransfer): void
+    {
+        // Invalidate relevant cache entries
+        // ... custom logic to build a cache key
+
+        $this->storageClient->delete($cacheKey);
+    }
+}
+
+// Register listener to trigger on entity updates
+protected function getEventListenerCollection(EventCollectionInterface $eventCollection): EventCollectionInterface
+{
+    // event name may be selected based on Propel entity based event names, check underlying Propel entity classes for exact names
+
+    $eventCollection->addListener('Entity.entity.update', new CustomCacheInvalidationListener());
+    return $eventCollection;
+}
+```
 
 **Best for:**
 - Data synchronized with database records
@@ -185,7 +208,7 @@ $this->storageClient->set("order:full:{$id}", serialize($orderWithAllRelations))
 **✅ Better: Cache specific attributes:**
 
 ```php
-// Good: Cache only needed data
+// Good: Cache only needed data for 5 minutes
 $orderSummary = [
     'id' => $order->getIdSalesOrder(),
     'total' => $order->getGrandTotal(),
@@ -309,6 +332,8 @@ public function importProductsAction(): Response
 ```
 
 ### Implementing background processing
+
+For more information about Spryker's queue system, see [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
 
 **Using Spryker's Publish & Sync:**
 
@@ -479,8 +504,8 @@ public function callExternalApi(string $endpoint, array $data): ?array
 }
 ```
 
-Note: in this example circuit braker will automatically reset it's counter based on storage Time-To-Live timer, which in this case set to 300s (5 minutes). 
-Meaning that (in this example) if there were 5 failed attempts - all the next attempts within those 5 minutes will be ignored/logged, but after that time - counter will be gone and system will try to perform external request again.
+Note: in this example circuit breaker will automatically reset its counter based on storage Time-To-Live timer, which in this case set to 300s (5 minutes). 
+Meaning that (in this example) if there were 5 failed attempts - all the next attempts within those 5 minutes will be ignored/logged, but after that time - counter will be reset and system will try to perform external request again.
 
 **4. Read-only integration for critical paths:**
 

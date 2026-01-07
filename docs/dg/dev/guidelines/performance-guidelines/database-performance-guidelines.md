@@ -435,7 +435,7 @@ For comprehensive solutions including migration to BIGINT and cleanup strategies
 4. **Limit data selection**: Use `select()` to load only needed columns and paginate results
 5. **Batch write operations**: Use [ActiveRecordBatchProcessorTrait](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html) for bulk inserts/updates
 6. **Optimize GROUP BY/ORDER BY**: Index grouped and sorted columns, filter before aggregating
-7. **Monitor and test**: Use EXPLAIN ANALYZE to verify query performance
+7. **Monitor and test**: Use EXPLAIN to verify query performance
 8. **Avoid stored procedures**: Unless thoroughly performance-tested and documented
 9. **Monitor INT overflow**: Implement alerts and cleanup for high-transaction tables
 10. **Use appropriate tools**: PDO for bulk processing, Propel for application logic

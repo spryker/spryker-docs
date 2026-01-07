@@ -108,11 +108,11 @@ Buffer optimizations described below are already implemented in recent docker-sd
 
 **Optimized buffer settings (implemented in docker-sdk):**
 
-Recent versions of docker-sdk include optimized FastCGI buffer configuration:
+Recent versions of docker-sdk include optimized FastCGI buffer configuration with the following default values. These parameters can be customized through the deploy file configuration. For more details about configuring these parameters, see [Deploy file reference - buffer configuration](https://github.com/spryker/docker-sdk/blob/master/docs/07-deploy-file/02-deploy.file.reference.v1.md?plain=1#L508).
 
-- **fastcgi_buffers**: `16 16k` (256KB total) - [implementation](https://github.com/spryker/docker-sdk/pull/547/files#diff-48456f25a9965f118a75a3f431a2df9e212f6ad5ff35c4ee452692c02c74feb1R498)
-- **fastcgi_buffer_size**: `16k` - [implementation](https://github.com/spryker/docker-sdk/pull/547/files#diff-48456f25a9965f118a75a3f431a2df9e212f6ad5ff35c4ee452692c02c74feb1R502)
-- **fastcgi_max_temp_file_size**: `1m` - [implementation](https://github.com/spryker/docker-sdk/pull/547/files#diff-48456f25a9965f118a75a3f431a2df9e212f6ad5ff35c4ee452692c02c74feb1R519)
+- **fastcgi_buffers**: `16 16k` (256KB total)
+- **fastcgi_buffer_size**: `16k`
+- **fastcgi_max_temp_file_size**: `1m`
 
 These settings provide:
 - 256KB buffer capacity (sufficient for most Spryker responses)
@@ -201,18 +201,6 @@ Look for symptoms indicating buffer exhaustion:
 - Inconsistent response times for identical requests
 - Slow responses during peak traffic
 - High disk I/O on web servers
-
-### Requesting custom nginx configuration
-
-For Spryker Cloud customers requiring custom nginx configuration:
-
-1. **Measure and document**: Provide evidence of buffer issues (response sizes, performance metrics)
-2. **Contact Spryker Cloud support**: Request configuration adjustment with justification
-3. **Alternative approaches**: Consider reducing response payload size through:
-   - Pagination of large result sets
-   - Lazy loading of secondary data
-   - Client-side rendering for complex UIs
-   - API-based data fetching instead of server-rendered HTML
 
 ### PHP configuration
 

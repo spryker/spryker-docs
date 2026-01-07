@@ -96,7 +96,7 @@ public function updateCustomerOrderStatistics(int $customerId): void
 **3. Filesystem cache:**
 
 Warning: it is important to remember that filesystem is NOT shared between services and containers! 
-Each application (Yves, the Back Office, Glue, etc) and each container (even within the same application, for example Yves) has it's own independent filesystem layer on top of base Docker image.
+Each application (Yves, the Back Office, Glue, etc) and each container (even within the same application, for example Yves) has its own independent file system layer on top of base Docker image.
 
 Using the [Flysystem](https://github.com/thephpleague/flysystem) abstraction layer (PHP library) - it is easy to store files on a remote shared locations, such as S3 buckets or similar cloud storages.
 

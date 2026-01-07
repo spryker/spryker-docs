@@ -748,7 +748,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 | PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -1554,7 +1554,7 @@ Add the following configuration:
 
 1. Disable service points to be selected for product bundles during checkout:
 
-|CONFIGURATION     | SPECIFICATION   NAMESPACE                   |
+|CONFIGURATION     | SPECIFICATION  |  NAMESPACE                  | 
 |------------------------|----------------------------------------------------------|-----------------------------|
 | ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines the list of properties in an `ItemTransfer` that are not intended for form hydration.   | Pyz\Yves\ServicePointWidget |
 | ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines the list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |

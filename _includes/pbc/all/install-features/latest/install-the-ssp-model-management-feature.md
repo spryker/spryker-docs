@@ -134,7 +134,6 @@ use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConfig;
 
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
-
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *

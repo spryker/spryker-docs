@@ -1,7 +1,7 @@
 ---
 title: Install the SSP File Management feature
 description: Learn how to integrate SSP File Management into a Spryker project
-last_updated: Jan 5, 2026
+last_updated: Jan 8, 2026
 template: feature-integration-guide-template
 ---
 

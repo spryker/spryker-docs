@@ -1,7 +1,7 @@
 ---
 title: Install the asset based catalog feature
 description: Learn how to integrate SSP aset based catalog feature
-last_updated: Jan 5, 2026
+last_updated: Jan 8, 2026
 template: feature-integration-guide-template
 ---
 

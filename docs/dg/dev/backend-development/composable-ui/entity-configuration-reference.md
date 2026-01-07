@@ -768,7 +768,7 @@ form.customer.delete:
 
 **When to use**: Define each field once, then reuse it in multiple forms.
 
-#### Why define fields separately?
+#### Benefits of separate field definitions
 
 Instead of repeating field definitions in every form, you define them once and reference them:
 

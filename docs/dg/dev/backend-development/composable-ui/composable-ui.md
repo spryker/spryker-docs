@@ -123,7 +123,7 @@ Composable UI supports the following out of the box:
 - **Learning curve**: Teams need to adapt to the configuration-driven approach.
 - **Not a replacement**: Composable UI is an additional way of delivering features, not a replacement for the existing Back Office UI.
 
-## What's next?
+## Next steps
 
 - [Install Composable UI](/docs/dg/dev/backend-development/composable-ui/install-composable-ui.html)
 - [Create a Composable UI module](/docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html)

@@ -347,6 +347,7 @@ view:
                                           - use: form.your-entity.edit
 
 ```
+
 </details>
 
 ## Step 3: Register navigation

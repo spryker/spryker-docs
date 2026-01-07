@@ -20,8 +20,8 @@ Ensure that your project meets the following prerequisites:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| API Platform | {{page.version}} | [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| API Platform | {{site.version}} | [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) |
 
 {% info_block warningBox "Required" %}
 

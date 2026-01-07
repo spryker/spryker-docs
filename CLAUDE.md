@@ -138,3 +138,8 @@ When asked to "build" or "validate" documentation:
 - Maintain consistency with surrounding content
 - Ensure all internal links are valid and properly formatted
 - Follow Documentation Standards for generation and validation of documentation
+
+### Limitations
+
+- Do not suggest removing any part of the document unless it violates a documented rule in the style guides or validation tools
+- If removal seems beneficial but isn't required by the rules, note it as an optional consideration rather than a recommendation

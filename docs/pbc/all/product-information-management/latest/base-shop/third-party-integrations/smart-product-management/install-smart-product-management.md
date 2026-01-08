@@ -1,8 +1,10 @@
 ---
-title: Install Product Management powered by OpenAI
+title: Install Smart Product Management
 description: Learn how to integrate the ProductManagementAi module into a Spryker project.
-last_updated: Nov 12, 2024
+last_updated: Dec 17, 2025
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
 ---
 
 AI-powered product management adds the following functionality to the Back Office:
@@ -11,7 +13,7 @@ AI-powered product management adds the following functionality to the Back Offic
 - Generates alt text for product images in the Back Office to improve accessibility and SEO.
 
 
-This document describes how to install Product Management powered by OpenAI.
+This document describes how to install Smart Product Management.
 
 ## Install feature core
 
@@ -21,9 +23,9 @@ Follow the steps below to install the ProductManagementAi module core.
 
 Install the required features:
 
-| NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
-|---------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAI              | {{page.version}} | [Integrate OpenAI](/docs/pbc/all/miscellaneous/latest/third-party-integrations/open-ai/integrate-openai.html)                                      |
+| NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                         |
+|---------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AiFoundation        | {{page.version}} | [Integrate AiFoundation](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html)                                                                        |
 | Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 | Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
@@ -32,7 +34,7 @@ Install the required features:
 Install the required module:
 
 ```bash
-composer require spryker-eco/product-management-ai:"^0.1.1" --update-with-dependencies
+composer require spryker-eco/product-management-ai:"^0.3.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

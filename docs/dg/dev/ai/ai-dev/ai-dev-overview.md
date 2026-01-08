@@ -32,20 +32,6 @@ The module includes:
 - **Built-in Tools**: Pre-configured tools for accessing Spryker transfers, interfaces, and OMS information
 - **Prompt Generation**: Automatic generation of context-aware prompts from documentation
 
-## Install the AiDev module
-
-1. Require the package:
-
-```bash
-composer require spryker-sdk/ai-dev --dev
-```
-
-2. Generate transfers:
-
-```bash
-console transfer:generate
-```
-
 ## Console commands
 
 The AiDev module provides two console commands:

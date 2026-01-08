@@ -31,6 +31,7 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 | Click and Collect                          | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                                                                                      |
 | Service Points                             | 202512.0 | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                             |
 | Service Points Product Offer               | 202512.0 | [Install the Service Points Product Offer feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)                                 |
+| Product Offer Service Points               | 202512.0 | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                                         |
 | Product Offer Shipment                     | 202512.0 | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)                                       |
 | Product Offer Service Points Availability  | 202512.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)               |
 | Marketplace Product Offer Cart            | 202512.0 | [Install the Marketplace Product Offer Cart feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html) |
@@ -849,7 +850,6 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     {
         return [
             new SspServiceCancellableOrderItemExpanderPlugin(),
-            new ProductClassOrderExpanderPlugin(),
         ];
     }
 

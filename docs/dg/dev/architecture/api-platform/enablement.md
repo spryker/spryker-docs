@@ -290,7 +290,7 @@ class CustomerBackendProcessor implements ProcessorInterface
 Run the generation command to create the API resource class:
 
 ```bash
-docker/sdk cli glue  api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
 ```
 
 This generates:
@@ -358,15 +358,15 @@ DELETE /customers/{customerReference}
 
 ## Creating CodeBucket-specific resources
 
-CodeBucket support enables you to create region-specific or market-specific API resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant.
+CodeBucket support enables you to create Code Bucket-specific API resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant.
 
 ### When to use CodeBucket resources
 
 Create CodeBucket variants when you need:
-- Region-specific properties (EU GDPR fields, tax rates, compliance data)
-- Market-specific validation rules (country-specific requirements)
+- Code Bucket-specific properties (EU GDPR fields, tax rates, compliance data)
+- Code Bucket-specific validation rules (country-specific requirements)
 - Country-specific business logic
-- Feature variations per region
+- Feature variations per Code Bucket
 
 ### Quick example
 
@@ -427,7 +427,7 @@ resource:
 **Generate resources:**
 
 ```bash
-docker/sdk cli glue api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
 ```
 
 This generates:
@@ -438,7 +438,7 @@ This generates:
 
 - Request to `glue.eu.spryker.local/customers` → Uses `CustomersEUBackendResource`
 - Request to `glue.de.spryker.local/customers` → Uses `CustomersBackendResource` (fallback)
-- Request to `glue.spryker.local/customers` → Uses `CustomersBackendResource`
+- Request to `glue.at.spryker.local/customers` → Uses `CustomersBackendResource` (or `CustomersATBackendResource` if variant exists)
 
 For a comprehensive guide including Provider implementation and advanced scenarios, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
@@ -507,6 +507,6 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
-- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create region-specific resources
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create Code Bucket-specific resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

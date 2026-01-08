@@ -18,16 +18,16 @@ This document explains how to create and use CodeBucket-specific API resources i
 
 ## Overview
 
-CodeBucket support enables API Platform to serve different resource variants based on the runtime `APPLICATION_CODE_BUCKET` environment constant. This allows you to maintain region-specific or market-specific API resources without requiring separate container compilations for each CodeBucket.
+CodeBucket support enables API Platform to serve different resource variants based on the runtime `APPLICATION_CODE_BUCKET` environment constant. This allows you to maintain Code Bucket-specific API resources without requiring separate container compilations for each Code Bucket.
 
 ### Use cases
 
 Use CodeBucket resources when you need:
 
-- **Region-specific properties**: EU-specific GDPR fields, tax rates, compliance data
-- **Market-specific validation**: Different validation rules per region or country
+- **Code Bucket-specific properties**: EU-specific GDPR fields, tax rates, compliance data
+- **Code Bucket-specific validation**: Different validation rules per Code Bucket or country
 - **Localized business logic**: Country-specific processing requirements
-- **Feature variations**: Enable features only in specific markets
+- **Feature variations**: Enable features only in specific Code Buckets
 
 ### Key benefits
 
@@ -61,7 +61,7 @@ Request → Symfony Routing → API Platform
 ### Runtime resolution flow
 
 ```MARKDOWN
-1. Request: GET /stores
+1. Request: GET glue-backend.eu.spryker.local/stores
    APPLICATION_CODE_BUCKET = 'EU'
 
 2. CodeBucketResourceNameCollectionFactory
@@ -139,13 +139,13 @@ The generator creates classes following: `{ResourceName}{CodeBucket}{ApiType}Res
 
 ### URL consistency
 
-All CodeBucket variants share the same URL endpoints:
+All CodeBucket variants share the same URL path, with the Code Bucket defined in the domain:
 
-- Base: `/stores` → `StoresBackendResource`
-- EU: `/stores` → `StoresEUBackendResource`
-- AT: `/stores` → `StoresATBackendResource`
+- EU: `glue-backend.eu.spryker.local/stores` → `StoresEUBackendResource`
+- AT: `glue-backend.at.spryker.local/stores` → `StoresATBackendResource`
+- DE: `glue-backend.de.spryker.local/stores` → `StoresBackendResource` (or `StoresDEBackendResource` if variant exists)
 
-The URL routing is identical across all variants. Only the properties, validations, and business logic differ.
+The URL path is identical (`/stores`), but the Code Bucket in the domain determines which resource variant is used. Only the properties, validations, and business logic differ between variants.
 
 ## Creating CodeBucket resources
 
@@ -259,7 +259,7 @@ post:
 **Step 4: Generate resources**
 
 ```bash
-docker/sdk cli glue api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
 ```
 
 This generates:
@@ -529,14 +529,13 @@ $stores = [
 
 Spryker's `Environment::defineCodeBucket()` reads this configuration and sets the constant during bootstrap.
 
-### Domain to CodeBucket mapping
+### Domain to Code Bucket mapping
 
 | Domain | APPLICATION_CODE_BUCKET |
 |--------|------------------------|
 | `glue.eu.spryker.local` | `'EU'` |
 | `glue.at.spryker.local` | `'AT'` |
 | `glue.de.spryker.local` | `'DE'` |
-| `glue.spryker.local` | Not set (uses base resources) |
 
 ## Debugging CodeBucket resources
 
@@ -585,9 +584,9 @@ curl -X GET http://glue-backend.eu.spryker.local/stores
 curl -X GET http://glue-backend.at.spryker.local/stores
 # Should return base resource (fallback)
 
-# Test base (no CodeBucket)
-curl -X GET http://glue-backend.spryker.local/stores
-# Should return base resource
+# Test DE CodeBucket
+curl -X GET http://glue-backend.de.spryker.local/stores
+# Should return base resource or DE-specific variant if available
 ```
 
 ## Best practices
@@ -626,9 +625,9 @@ Only create CodeBucket variants when there are genuine regional requirements:
 ```yaml
 # ✅ Good use cases:
 - EU GDPR compliance fields
-- Region-specific tax calculations
+- Code Bucket-specific tax calculations
 - Country-specific validation rules
-- Market-specific business logic
+- Code Bucket-specific business logic
 
 # ❌ Bad use cases:
 - Language translations (use locales instead)
@@ -687,7 +686,7 @@ For detailed testing guidance, see [API Platform Testing](/docs/dg/dev/architect
 If you get a "Resource not found" error for a specific CodeBucket:
 
 1. Verify the schema file naming: `{resource-name}-{CODE_BUCKET}.yml`
-2. Regenerate resources: `docker/sdk cli glue api:generate backend`
+2. Regenerate resources: `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend`
 3. Verify the CODE_BUCKET constant exists in the generated class
 4. Check that `APPLICATION_CODE_BUCKET` matches your schema file suffix
 

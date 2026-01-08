@@ -55,7 +55,7 @@ src/
 
 ## CodeBucket resources
 
-API Platform supports CodeBucket-specific resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant. This enables region-specific or market-specific API resources without requiring separate container compilations.
+API Platform supports CodeBucket-specific resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant. This enables Code Bucket-specific API resources without requiring separate container compilations.
 
 ### CodeBucket schema file naming
 
@@ -90,21 +90,21 @@ The generator creates classes following the pattern: `{ResourceName}{CodeBucket}
 
 ### URL consistency
 
-All CodeBucket variants share identical URL endpoints:
+All CodeBucket variants share the same URL path, with the Code Bucket defined in the domain:
 
-- Base resource: `/stores` → `StoresBackendResource`
-- EU variant: `/stores` → `StoresEUBackendResource`
-- AT variant: `/stores` → `StoresATBackendResource`
+- EU variant: `glue-backend.eu.spryker.local/stores` → `StoresEUBackendResource`
+- AT variant: `glue-backend.at.spryker.local/stores` → `StoresATBackendResource`
+- DE variant: `glue-backend.de.spryker.local/stores` → `StoresBackendResource` (or `StoresDEBackendResource` if variant exists)
 
-Only properties, validations, and business logic differ between variants.
+The URL path is identical (`/stores`), but the Code Bucket in the domain determines which resource variant is used. Only properties, validations, and business logic differ between variants.
 
 ### When to use CodeBucket resources
 
 Use CodeBucket variants when you need:
-- Region-specific properties (EU GDPR fields, tax rates)
-- Market-specific validation rules
+- Code Bucket-specific properties (EU GDPR fields, tax rates)
+- Code Bucket-specific validation rules
 - Country-specific business logic
-- Feature variations per region
+- Feature variations per Code Bucket
 
 For a comprehensive guide including implementation examples, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
@@ -473,7 +473,7 @@ docker/sdk cli glue api:debug customers --api-type=backend --show-merged
 docker/sdk cli glue api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
-docker/sdk cli glue api:generate --validate-only
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
 ```
 
 ### Common schema errors
@@ -542,16 +542,16 @@ resource:
 
 ```bash
 # Generate all configured API types
-docker/sdk cli glue api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
 # Generate specific API type
-docker/sdk cli glue api:generate backend
-docker/sdk cli glue api:generate storefront
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate storefront
 
 # Generate with options
-docker/sdk cli glue api:generate --dry-run           # Preview without writing
-docker/sdk cli glue api:generate --validate-only     # Only validate schemas
-docker/sdk cli glue api:generate --resource=customers  # Generate single resource
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --dry-run           # Preview without writing
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only     # Only validate schemas
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --resource=customers  # Generate single resource
 ```
 
 ### Output
@@ -683,7 +683,7 @@ email:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Architecture overview
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules
-- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Code Bucket-specific resources
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Writing and running tests
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

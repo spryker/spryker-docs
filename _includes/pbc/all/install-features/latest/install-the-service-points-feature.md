@@ -748,7 +748,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 | PaginatedServicePointSearchQueryExpanderPlugin                    | Adds pagination to a search query.                                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | StoreServicePointSearchQueryExpanderPlugin                        | Adds filtering by locale to a search query.                                                                   |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 | ServiceTypesServicePointSearchQueryExpanderPlugin                 | Adds filtering by service types to a search query.                                                            |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
-| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter           |
+| ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin | Excludes the service point address relation from a query if the `excludeAddressRelation` request parameter is provided. |           | Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query           |
 
 **src/Pyz/Client/ServicePointSearch/ServicePointSearchDependencyProvider.php**
 
@@ -762,7 +762,7 @@ use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\SortedServicePo
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\StoreServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\ServiceTypesServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointSearchResultFormatterPlugin;
-use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin;
+use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\ServicePointSearchDependencyProvider as SprykerServicePointSearchDependencyProvider;
 
 class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDependencyProvider

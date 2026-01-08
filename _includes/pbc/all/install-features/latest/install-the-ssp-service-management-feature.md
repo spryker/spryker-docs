@@ -27,11 +27,12 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 |--------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                               | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                         |
 | Shipment                                   | 202512.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                                  |
+| Shipment Service Points                    | 202512.0 | [Install the Shipment Service Points feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html)                                                |
 | Click and Collect                          | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                                                                                      |
 | Service Points                             | 202512.0 | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                             |
 | Service Points Product Offer               | 202512.0 | [Install the Service Points Product Offer feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)                                 |
 | Product Offer Service Points Availability  | 202512.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)               |
-| Marketplace Product Offer Cart            | 202512.0 | [Install the Marketplace Product Offer Cart feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html#install-feature-core) |
+| Marketplace Product Offer Cart            | 202512.0 | [Install the Marketplace Product Offer Cart feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html) |
 | Self-Service Portal                        | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                                                                               |
 
 ## Install the required modules
@@ -152,7 +153,6 @@ class DataImportConfig extends SprykerDataImportConfig
     public function getFullImportTypes(): array
     {
         return [
-            SelfServicePortalConfig::IMPORT_TYPE_SSP_INQUIRY,
             SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_SHIPMENT_TYPE,
         ];
     }
@@ -399,7 +399,6 @@ console data:import glossary
 | SspServiceCancellableOrderItemExpanderPlugin                                 | Expands order items with an `isCancellable` property.                                                                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Sales                                     |
 | ServiceSspAssetManagementExpanderPlugin                                      | Expands assets with a services collection.                                                                                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement                        |
 | ProductServiceClassNameTwigPlugin                                            | Adds the `serviceProductClassName` Twig global variable with the value from config.                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig                                      |
-| FileSizeFormatterTwigPlugin                                                  | Formats the file size into a human-readable format.                                                                                        |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Twig                                      |
 | SingleAddressPerShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands the checkout multi-shipping address form with single address per shipment type checkbox.                                           |               | SprykerFeature\Yves\SelfServicePortal\Plugin\CustomerPage                                           |
 | ProductClassItemExpanderPlugin                                               | Expands cart items with the related product classes.                                                                                       |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                                      |
 | ServicePointItemExpanderPlugin                                               | Expands cart items with a selected service point.                                                                                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Cart                                      |
@@ -963,30 +962,6 @@ class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDepe
 
 ```
 
-**src/Pyz/Yves/Twig/TwigDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\Twig;
-
-use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
-use SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin;
-
-class TwigDependencyProvider extends SprykerTwigDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
-     */
-    protected function getTwigPlugins(): array
-    {
-        return [
-            new FileSizeFormatterTwigPlugin(),
-        ];
-    }
-}
-```
-
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
 ```php
@@ -1301,6 +1276,7 @@ spare-parts,Spare parts
 ```csv
 shipment_type_key,store_name
 in-center-service,DE
+delivery,DE
 ```
 
 **data/import/common/DE/shipment_price.csv**
@@ -1369,8 +1345,6 @@ Spare parts,1,0,0,spare-parts,,,Spare parts,Ersatzteile,"service-001,service-002
 # ...
 
 # SelfServicePortal
-- data_entity: shipment
-  source: data/import/common/common/shipment.csv
 - data_entity: shipment-type
   source: data/import/common/common/shipment_type.csv
 - data_entity: service
@@ -1414,11 +1388,6 @@ use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDepe
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\ProductShipmentTypeDataImportPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\ProductClassDataImportPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport\ProductToProductClassDataImportPlugin;
-use Spryker\Zed\ShipmentTypeDataImport\Communication\Plugin\DataImport\ShipmentTypeDataImportPlugin; 
-use Spryker\Zed\ShipmentTypeDataImport\Communication\Plugin\DataImport\ShipmentTypeStoreDataImportPlugin;
-use Spryker\Zed\ShipmentTypeServicePointDataImport\Communication\Plugin\DataImport\ShipmentTypeServiceTypeDataImportPlugin;
-use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServiceDataImportPlugin;
-use Spryker\Zed\ShipmentTypeDataImport\Communication\Plugin\DataImport\ShipmentMethodShipmentTypeDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -1431,11 +1400,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
             new ProductShipmentTypeDataImportPlugin(),
             new ProductClassDataImportPlugin(),
             new ProductToProductClassDataImportPlugin(),
-            new ShipmentTypeDataImportPlugin(),
-            new ShipmentTypeStoreDataImportPlugin(),
-            new ShipmentTypeServiceTypeDataImportPlugin(),
-            new ServiceDataImportPlugin(),
-            new ShipmentMethodShipmentTypeDataImportPlugin(),
         ];
     }
 }
@@ -1475,11 +1439,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_SHIPMENT_TYPE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_CLASS),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . SelfServicePortalConfig::IMPORT_TYPE_PRODUCT_TO_PRODUCT_CLASS),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE_STORE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeServicePointDataImportConfig::IMPORT_TYPE_SHIPMENT_TYPE_SERVICE_TYPE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ServicePointDataImportConfig::IMPORT_TYPE_SERVICE),
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ShipmentTypeDataImportConfig::IMPORT_TYPE_SHIPMENT_METHOD_SHIPMENT_TYPE),
         ];
     }
 
@@ -1534,14 +1493,14 @@ console data:import product-to-product-class
 
 1. In the Back Office, go to **Catalog** > **Products**.
 2. Create an abstract product with a concrete product.
-- Add **In-Center Service** shipment type for the concrete product.
+- Add **In-Center Service** and **Delivery** shipment types for the concrete product.
 - Add **Service** and **Scheduled** product classes for the concrete product.
 
 5. Go to **Marketplace** > **Offers**.
 6. Generate one or more product offers for the service product you've created. Make sure the following applies on the
    offer create page:
 - The offer creation form is automatically prepopulated with information from the product
-- You can assign one or more service points to the product offer
+- You can assign a sign point to the product offer
 - The in-center service shipment type is available
 
 {% endinfo_block %}
@@ -1652,14 +1611,30 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
+Set customer permissions for inquiry management:
+
+1. In the Back Office, go to **Customers** > **Company Roles**.
+2. Click **Add Company User Role**.
+3. Select a company.
+4. Enter a name for the role.
+5. In **Unassigned Permissions**, enable the following permissions:
+    - **View company services**
+    - **View business unit services**
+6. Click **Submit**.
+7. Go to **Customers** > **Company Users**.
+8. Click **Edit** next to a user.
+9. Assign the role you've created to the user.
+
+
 1. On the Storefront, use the search to find the service product you've created.
    Make sure the product is available in the catalog.
 
 2. Click the product to open its details page. Make sure the following applies on the product details page:
 
+   - Delivery and In-Center-Service shipment types are available
+   - Select In-Center-Service shipment type
    - A service point selector is displayed
    - A service date and time selector is displayed
-   - Delivery and In-Center-Service shipment types are available
 
 3. Select a service point.
 4. Select a service date and time.

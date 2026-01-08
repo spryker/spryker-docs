@@ -469,14 +469,14 @@ console data:import glossary
 
 Enable the following plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES | NAMESPACE                                                                            |
-|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
-| ShipmentTypeProductOfferPostCreatePlugin                  | Persists the product offer shipment type to persistence.                                                                          |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from persistence. Persists missed product offer shipment types to persistence. |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer              |
-| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` with shipment type storage data.   |               | Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage |
-| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  |               | Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage                     |
-| ShipmentTypeProductOfferViewSectionPlugin                 | Expands the product offer view section with shipment types.                     |           | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
+| PLUGIN                                                    | SPECIFICATION                                                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ShipmentTypeProductOfferPostCreatePlugin                  | Persists the product offer shipment type to persistence.                                                                          |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer             |
+| ShipmentTypeProductOfferPostUpdatePlugin                  | Deletes redundant product offer shipment types from persistence. Persists missed product offer shipment types to persistence. |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer             |
+| ShipmentTypeProductOfferExpanderPlugin                    | Expands `ProductOfferTransfer` with related shipment types.                                                                   |               | Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer             |
+| ShipmentTypeProductOfferStorageExpanderPlugin             | Expands `ProductOfferStorageTransfer` with shipment type storage data.   |               | Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ProductOfferStorage |
+| ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin | Filters out shipment types without the product offer shipment type relation.                                                  |               | Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage                   |
+| ShipmentTypeProductOfferViewSectionPlugin                 | Expands the product offer view section with shipment types.                     |           | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui       |
 
 <details open
 ><summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
@@ -487,9 +487,9 @@ Enable the following plugins:
 namespace Pyz\Zed\ProductOffer;
 
 use Spryker\Zed\ProductOffer\ProductOfferDependencyProvider as SprykerProductOfferDependencyProvider;
-use Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer\ShipmentTypeProductOfferExpanderPlugin;
-use Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer\ShipmentTypeProductOfferPostCreatePlugin;
-use Spryker\Zed\ProductOfferShipmentType\Communication\Plugins\ProductOffer\ShipmentTypeProductOfferPostUpdatePlugin;
+use Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer\ShipmentTypeProductOfferExpanderPlugin;
+use Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer\ShipmentTypeProductOfferPostCreatePlugin;
+use Spryker\Zed\ProductOfferShipmentType\Communication\Plugin\ProductOffer\ShipmentTypeProductOfferPostUpdatePlugin;
 
 class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
 {
@@ -534,7 +534,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 namespace Pyz\Client\ProductOfferStorage;
 
 use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
-use Spryker\Zed\ProductOfferShipmentTypeStorage\Communication\Plugin\ProductOfferStorage\ShipmentTypeProductOfferStorageExpanderPlugin;
+use Spryker\Client\ProductOfferShipmentTypeStorage\Plugin\ProductOfferStorage\ShipmentTypeProductOfferStorageExpanderPlugin;
 
 class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
 {

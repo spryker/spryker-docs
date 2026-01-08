@@ -1262,6 +1262,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
         - title: Validation Schemas
           url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
+        - title: CodeBucket Support
+          url: /docs/dg/dev/architecture/api-platform/code-buckets.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
         - title: Testing

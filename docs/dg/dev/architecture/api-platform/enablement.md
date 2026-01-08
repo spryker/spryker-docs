@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Dec 21, 2025
+last_updated: Jan 8, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -12,6 +12,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/resource-schemas.html
   - title: Validation Schemas
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: CodeBucket Support
+    link: docs/dg/dev/architecture/api-platform/code-buckets.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
 ---
@@ -354,6 +356,92 @@ PATCH /customers/{customerReference}
 DELETE /customers/{customerReference}
 ```
 
+## Creating CodeBucket-specific resources
+
+CodeBucket support enables you to create region-specific or market-specific API resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant.
+
+### When to use CodeBucket resources
+
+Create CodeBucket variants when you need:
+- Region-specific properties (EU GDPR fields, tax rates, compliance data)
+- Market-specific validation rules (country-specific requirements)
+- Country-specific business logic
+- Feature variations per region
+
+### Quick example
+
+**Base resource:**
+
+`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+```
+
+**EU-specific variant:**
+
+`src/Pyz/Glue/Customer/resources/api/backend/customers-EU.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+
+    # EU-specific properties
+    gdprConsentDate:
+      type: string
+      description: "Date of GDPR consent"
+    dataPrivacyOfficerEmail:
+      type: string
+      description: "Data privacy officer contact"
+```
+
+**Generate resources:**
+
+```bash
+docker/sdk cli glue api:generate backend
+```
+
+This generates:
+- `CustomersBackendResource.php` (base)
+- `CustomersEUBackendResource.php` (with `CODE_BUCKET = 'EU'`)
+
+**Runtime behavior:**
+
+- Request to `glue.eu.spryker.local/customers` → Uses `CustomersEUBackendResource`
+- Request to `glue.de.spryker.local/customers` → Uses `CustomersBackendResource` (fallback)
+- Request to `glue.spryker.local/customers` → Uses `CustomersBackendResource`
+
+For a comprehensive guide including Provider implementation and advanced scenarios, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
+
 ## API types and use cases
 
 Spryker supports multiple API types for different use cases:
@@ -419,5 +507,6 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create region-specific resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

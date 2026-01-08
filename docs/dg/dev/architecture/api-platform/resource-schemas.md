@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Dec 21, 2025
+last_updated: Jan 8, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: Validation Schemas
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: CodeBucket Support
+    link: docs/dg/dev/architecture/api-platform/code-buckets.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: API Platform Testing
@@ -50,6 +52,61 @@ src/
                     └── backend/
                         └── resource-name.yml
 ```
+
+## CodeBucket resources
+
+API Platform supports CodeBucket-specific resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant. This enables region-specific or market-specific API resources without requiring separate container compilations.
+
+### CodeBucket schema file naming
+
+CodeBucket resource schemas use a hyphenated naming convention: `{resource-name}-{CODE_BUCKET}.yml`
+
+```MARKDOWN
+src/Pyz/Glue/Store/resources/api/backend/
+├── stores.yml              # Base resource
+├── stores-EU.yml           # EU-specific variant
+├── stores-AT.yml           # Austria-specific variant
+├── stores.validation.yml   # Base validation
+├── stores-EU.validation.yml # EU validation
+└── stores-AT.validation.yml # Austria validation
+```
+
+### Generated class naming
+
+The generator creates classes following the pattern: `{ResourceName}{CodeBucket}{ApiType}Resource`
+
+| Schema File | Generated Class | CODE_BUCKET Constant |
+|-------------|----------------|---------------------|
+| `stores.yml` | `StoresBackendResource` | Not present (base resource) |
+| `stores-EU.yml` | `StoresEUBackendResource` | `'EU'` |
+| `stores-AT.yml` | `StoresATBackendResource` | `'AT'` |
+
+### How CodeBucket resolution works
+
+1. **Schema naming**: Create schema files with CodeBucket suffix (example: `stores-EU.yml`)
+2. **Constant generation**: Generator adds `public const string CODE_BUCKET = 'EU';` to variant classes
+3. **Runtime resolution**: System reads `APPLICATION_CODE_BUCKET` and selects matching resource class
+4. **Graceful fallback**: If no matching variant exists, base resource is used
+
+### URL consistency
+
+All CodeBucket variants share identical URL endpoints:
+
+- Base resource: `/stores` → `StoresBackendResource`
+- EU variant: `/stores` → `StoresEUBackendResource`
+- AT variant: `/stores` → `StoresATBackendResource`
+
+Only properties, validations, and business logic differ between variants.
+
+### When to use CodeBucket resources
+
+Use CodeBucket variants when you need:
+- Region-specific properties (EU GDPR fields, tax rates)
+- Market-specific validation rules
+- Country-specific business logic
+- Feature variations per region
+
+For a comprehensive guide including implementation examples, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## Resource schema syntax
 
@@ -626,6 +683,7 @@ email:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Architecture overview
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Writing and running tests
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

@@ -59,31 +59,30 @@ API Platform supports CodeBucket-specific resource variants that are resolved at
 
 ### CodeBucket schema file naming
 
-CodeBucket resource schemas use a hyphenated naming convention: `{resource-name}-{CODE_BUCKET}.yml`
+Resource schemas follow the pattern: `{resource-name}.resource.yml`
+Validation schemas follow the pattern: `{resource-name}.validation.yml`
+
+CodeBuckets are specified inside the schema files, not in the filename.
 
 ```MARKDOWN
 src/Pyz/Glue/Store/resources/api/backend/
-├── stores.yml              # Base resource
-├── stores-EU.yml           # EU-specific variant
-├── stores-AT.yml           # Austria-specific variant
-├── stores.validation.yml   # Base validation
-├── stores-EU.validation.yml # EU validation
-└── stores-AT.validation.yml # Austria validation
+├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
+└── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
 ```
 
 ### Generated class naming
 
 The generator creates classes following the pattern: `{ResourceName}{CodeBucket}{ApiType}Resource`
 
-| Schema File | Generated Class | CODE_BUCKET Constant |
-|-------------|----------------|---------------------|
-| `stores.yml` | `StoresBackendResource` | Not present (base resource) |
-| `stores-EU.yml` | `StoresEUBackendResource` | `'EU'` |
-| `stores-AT.yml` | `StoresATBackendResource` | `'AT'` |
+| Schema File | CodeBucket (defined in file) | Generated Class | CODE_BUCKET Constant |
+|-------------|------------------------------|----------------|---------------------|
+| `stores.resource.yml` | None (base) | `StoresBackendResource` | Not present (base resource) |
+| `stores.resource.yml` | EU | `StoresEUBackendResource` | `'EU'` |
+| `stores.resource.yml` | AT | `StoresATBackendResource` | `'AT'` |
 
 ### How CodeBucket resolution works
 
-1. **Schema naming**: Create schema files with CodeBucket suffix (example: `stores-EU.yml`)
+1. **Schema definition**: Define CodeBucket variants inside schema files using `codeBucket: EU`
 2. **Constant generation**: Generator adds `public const string CODE_BUCKET = 'EU';` to variant classes
 3. **Runtime resolution**: System reads `APPLICATION_CODE_BUCKET` and selects matching resource class
 4. **Graceful fallback**: If no matching variant exists, base resource is used
@@ -461,16 +460,16 @@ final class CustomersBackendResource
 
 ```bash
 # List all resources
-docker/sdk cli glue api:debug --list
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug --list
 
 # Show specific resource
-docker/sdk cli glue api:debug customers --api-type=backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk cli glue api:debug customers --api-type=backend --show-merged
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend --show-merged
 
 # Show contributing source files
-docker/sdk cli glue api:debug customers --api-type=backend --show-sources
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
 docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only

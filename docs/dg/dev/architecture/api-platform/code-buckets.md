@@ -113,29 +113,27 @@ final class StoresBackendResource
 
 ### File naming pattern
 
-CodeBucket resource schemas follow the pattern: `{resource-name}-{CODE_BUCKET}.yml`
+Resource schemas follow the pattern: `{resource-name}.resource.yml`
+Validation schemas follow the pattern: `{resource-name}.validation.yml`
+
+CodeBuckets are specified inside the schema files, not in the filename.
 
 ```MARKDOWN
 src/Pyz/Glue/Store/resources/api/backend/
-├── stores.yml              # Base resource
-├── stores-EU.yml           # EU variant
-├── stores-AT.yml           # Austria variant
-├── stores-DE.yml           # Germany variant
-├── stores.validation.yml   # Base validation
-├── stores-EU.validation.yml # EU validation
-└── stores-AT.validation.yml # Austria validation
+├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
+└── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
 ```
 
 ### Generated class naming pattern
 
 The generator creates classes following: `{ResourceName}{CodeBucket}{ApiType}Resource`
 
-| Schema File | Generated Class |
-|-------------|----------------|
-| `stores.yml` | `StoresBackendResource` |
-| `stores-EU.yml` | `StoresEUBackendResource` |
-| `stores-AT.yml` | `StoresATBackendResource` |
-| `stores-EU.yml` (Storefront) | `StoresEUStorefrontResource` |
+| Schema File | CodeBucket (defined in file) | Generated Class |
+|-------------|------------------------------|----------------|
+| `stores.resource.yml` | None (base) | `StoresBackendResource` |
+| `stores.resource.yml` | EU | `StoresEUBackendResource` |
+| `stores.resource.yml` | AT | `StoresATBackendResource` |
+| `stores.resource.yml` (Storefront) | EU | `StoresEUStorefrontResource` |
 
 ### URL consistency
 
@@ -153,7 +151,7 @@ The URL path is identical (`/stores`), but the Code Bucket in the domain determi
 
 **Step 1: Create base resource**
 
-`src/Pyz/Glue/Store/resources/api/backend/stores.yml`
+`src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml`
 
 ```yaml
 resource:
@@ -183,15 +181,17 @@ resource:
       description: "Store timezone"
 ```
 
-**Step 2: Create CodeBucket variant**
+**Step 2: Define CodeBucket variant**
 
-`src/Pyz/Glue/Store/resources/api/backend/stores-EU.yml`
+Within the same `stores.resource.yml` file, define the EU-specific variant by specifying the CodeBucket:
 
 ```yaml
+# EU-specific store resource (defined in same file)
 resource:
   name: Stores
   shortName: Store
   description: "EU-specific store resource"
+  codeBucket: EU
 
   # Same provider and processor as base
   provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
@@ -235,7 +235,7 @@ resource:
 
 **Step 3: Create validation schemas**
 
-`src/Pyz/Glue/Store/resources/api/backend/stores-EU.validation.yml`
+Within `src/Pyz/Glue/Store/resources/api/backend/stores.validation.yml`, define CodeBucket-specific validation:
 
 ```yaml
 post:
@@ -350,9 +350,10 @@ CodeBucket resources support multi-layer schema merging just like base resources
 **Core layer** (vendor):
 
 ```yaml
-# vendor/spryker/store/resources/api/backend/stores-EU.yml
+# vendor/spryker/store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
+  codeBucket: EU
   properties:
     taxRate:
       type: number
@@ -361,9 +362,10 @@ resource:
 **Feature layer**:
 
 ```yaml
-# src/SprykerFeature/Store/resources/api/backend/stores-EU.yml
+# src/SprykerFeature/Store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
+  codeBucket: EU
   properties:
     gdprContactEmail:
       type: string
@@ -372,9 +374,10 @@ resource:
 **Project layer**:
 
 ```yaml
-# src/Pyz/Glue/Store/resources/api/backend/stores-EU.yml
+# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
+  codeBucket: EU
   properties:
     taxRate:
       required: true  # Override core
@@ -497,45 +500,6 @@ API Platform compiles a single container that contains ALL resources (base and a
 - **No overhead**: Runtime resolution uses local cache per request
 - **Scalability**: Supports hundreds of CodeBuckets without performance impact
 
-## APPLICATION_CODE_BUCKET configuration
-
-### Setting the CodeBucket value
-
-The `APPLICATION_CODE_BUCKET` constant is typically set during application bootstrap based on domain resolution:
-
-```php
-// config/Shared/stores.php
-$stores = [
-    'DE' => [
-        'contexts' => [
-            'yves' => ['glue.de.spryker.local'],
-            'glue' => ['glue.de.spryker.local'],
-        ],
-    ],
-    'AT' => [
-        'contexts' => [
-            'yves' => ['glue.at.spryker.local'],
-            'glue' => ['glue.at.spryker.local'],
-        ],
-    ],
-    'EU' => [
-        'contexts' => [
-            'yves' => ['glue.eu.spryker.local'],
-            'glue' => ['glue.eu.spryker.local'],
-        ],
-    ],
-];
-```
-
-Spryker's `Environment::defineCodeBucket()` reads this configuration and sets the constant during bootstrap.
-
-### Domain to Code Bucket mapping
-
-| Domain | APPLICATION_CODE_BUCKET |
-|--------|------------------------|
-| `glue.eu.spryker.local` | `'EU'` |
-| `glue.at.spryker.local` | `'AT'` |
-| `glue.de.spryker.local` | `'DE'` |
 
 ## Debugging CodeBucket resources
 
@@ -559,16 +523,16 @@ Use the debug command to inspect which resources are available:
 
 ```bash
 # List all resources
-docker/sdk cli glue api:debug --list
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug --list
 
 # Show specific resource
-docker/sdk cli glue api:debug stores --api-type=backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug stores --api-type=backend
 
 # Show merged schema
-docker/sdk cli glue api:debug stores --api-type=backend --show-merged
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug stores --api-type=backend --show-merged
 
 # Show all contributing source files
-docker/sdk cli glue api:debug stores --api-type=backend --show-sources
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug stores --api-type=backend --show-sources
 ```
 
 ### Verify runtime resolution
@@ -597,25 +561,30 @@ The base resource should contain all common properties that work across all Code
 
 ```yaml
 # ✅ Good - Base is complete
-# stores.yml (base)
-properties:
-  idStore:
-    type: integer
-  name:
-    type: string
-  timezone:
-    type: string
+# stores.resource.yml (base variant)
+resource:
+  name: Stores
+  properties:
+    idStore:
+      type: integer
+    name:
+      type: string
+    timezone:
+      type: string
 
-# stores-EU.yml (extends base)
-properties:
-  idStore:
-    type: integer
-  name:
-    type: string
-  timezone:
-    type: string
-  taxRate:        # EU-specific addition
-    type: number
+# stores.resource.yml (EU variant - defined in same file)
+resource:
+  name: Stores
+  codeBucket: EU
+  properties:
+    idStore:
+      type: integer
+    name:
+      type: string
+    timezone:
+      type: string
+    taxRate:        # EU-specific addition
+      type: number
 ```
 
 ### 2. Use CodeBuckets for true regional differences
@@ -685,10 +654,11 @@ For detailed testing guidance, see [API Platform Testing](/docs/dg/dev/architect
 
 If you get a "Resource not found" error for a specific CodeBucket:
 
-1. Verify the schema file naming: `{resource-name}-{CODE_BUCKET}.yml`
-2. Regenerate resources: `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend`
-3. Verify the CODE_BUCKET constant exists in the generated class
-4. Check that `APPLICATION_CODE_BUCKET` matches your schema file suffix
+1. Verify the schema file naming: `{resource-name}.resource.yml` for resources, `{resource-name}.validation.yml` for validations
+2. Verify the CodeBucket is defined inside the schema file
+3. Regenerate resources: `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend`
+4. Verify the CODE_BUCKET constant exists in the generated class
+5. Check that `APPLICATION_CODE_BUCKET` matches the CodeBucket defined in your schema file
 
 ### Wrong resource variant used
 

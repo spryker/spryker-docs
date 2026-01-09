@@ -13,4 +13,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-product-bundles-cart-feature.md -->

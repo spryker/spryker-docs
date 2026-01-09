@@ -15,4 +15,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/{{page.version}}/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/enable-the-content-widget.md -->
+{% include pbc/all/install-features/{{page.version}}/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/enable-the-content-widget.md -->

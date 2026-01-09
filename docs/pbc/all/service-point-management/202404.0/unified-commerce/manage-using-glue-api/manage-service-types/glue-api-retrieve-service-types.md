@@ -75,7 +75,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md -->
 
 
 
@@ -117,7 +117,7 @@ Request sample: https://glue-backend.mysprykershop.com/service-types/7a263a50-12
 ```
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md -->
 
 
 ## Possible errors

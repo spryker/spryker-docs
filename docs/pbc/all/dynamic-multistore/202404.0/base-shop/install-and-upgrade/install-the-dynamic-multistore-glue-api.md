@@ -6,4 +6,4 @@ template: feature-integration-guide-template
 redirect_from:
 ---
 
-{% include pbc/all/install-glue-api/202311.0/install-the-dynamic-multistore-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/install-the-dynamic-multistore-glue-api.md -->
+{% include pbc/all/install-glue-api/{{page.version}}/install-the-dynamic-multistore-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/{{page.version}}/install-the-dynamic-multistore-glue-api.md -->

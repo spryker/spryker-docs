@@ -14,4 +14,4 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
 
 ---
-{% include pbc/all/install-features/{{page.version}}/install-the-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cart-non-splittable-products-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-cart-non-splittable-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-cart-non-splittable-products-feature.md -->

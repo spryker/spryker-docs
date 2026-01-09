@@ -6,4 +6,4 @@ template: feature-integration-guide-template
 redirect_from:
 ---
 
-{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-offer-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-offer-cart-feature.md -->

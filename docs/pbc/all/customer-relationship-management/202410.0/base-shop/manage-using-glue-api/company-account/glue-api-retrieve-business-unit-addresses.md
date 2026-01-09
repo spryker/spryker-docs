@@ -86,7 +86,7 @@ Request sample: retrieve a business unit address
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-unit-addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md -->
 
 
 ## Possible errors

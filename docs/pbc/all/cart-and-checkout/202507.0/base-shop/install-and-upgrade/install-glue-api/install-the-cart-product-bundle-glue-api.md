@@ -11,4 +11,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-bundle-cart-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-bundle-cart-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-bundle-cart-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-bundle-cart-glue-api.md -->

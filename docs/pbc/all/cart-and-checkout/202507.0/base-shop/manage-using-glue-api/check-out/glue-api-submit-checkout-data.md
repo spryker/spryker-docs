@@ -301,7 +301,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md -->
 
 
 ### Response
@@ -1155,13 +1155,13 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-methods-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

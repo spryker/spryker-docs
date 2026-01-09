@@ -1113,7 +1113,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->
 
 
 ### Possible errors

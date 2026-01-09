@@ -10,7 +10,7 @@ redirect_from:
   - /docs/glue-api-prices-api-feature-integration
   - /docs/en/glue-api-prices-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-price-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-price-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-price-feature-integration.html
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
 related:
   - title: Install the Prices feature
@@ -21,4 +21,4 @@ related:
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-product-price-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-price-glue-api.md -->

@@ -583,10 +583,10 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
 ## Retrieve a CMS page
@@ -875,10 +875,10 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 ## Possible errors
 

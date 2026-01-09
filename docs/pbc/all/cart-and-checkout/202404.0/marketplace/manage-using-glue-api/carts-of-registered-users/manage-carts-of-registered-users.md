@@ -197,7 +197,7 @@ To retrieve all carts, send the request:
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```    
+```
 </details>
 
 <details>
@@ -261,7 +261,7 @@ To retrieve all carts, send the request:
         "self": "https://glue.mysprykershop.com/carts"
     }
 }
-```   
+```
 </details>
 
 
@@ -555,7 +555,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -692,7 +692,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -829,7 +829,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -1064,7 +1064,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -1200,7 +1200,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -1270,7 +1270,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -1523,7 +1523,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -2039,7 +2039,7 @@ To retrieve all carts, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -2447,7 +2447,7 @@ To retrieve all carts, send the request:
 | company-users |  isActive | Boolean | Defines if the [company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is active. |
 | company-users |  isDefault | Boolean | Defines if the [company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
@@ -2549,7 +2549,7 @@ To retrieve a registered user's cart, send the request:
         }
     }
 }
-```    
+```
 </details>
 
 
@@ -2677,7 +2677,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -2738,7 +2738,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -2800,7 +2800,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -2942,7 +2942,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -3004,7 +3004,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 
@@ -3070,7 +3070,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -3318,7 +3318,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -3716,7 +3716,7 @@ To retrieve a registered user's cart, send the request:
         }
     ]
 }
-```    
+```
 </details>
 
 <details>
@@ -4340,7 +4340,7 @@ To retrieve a registered user's cart, send the request:
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 

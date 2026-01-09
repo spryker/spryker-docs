@@ -10,4 +10,4 @@ related:
     link: docs/pbc/all/return-management/202507.0/marketplace/marketplace-return-management-feature-overview.html
 ---
 
-{% include pbc/all/install-glue-api/{{page.version}}/marketplace/install-the-marketplace-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202311.0/marketplace/install-the-marketplace-return-management-glue-api.md -->
+{% include pbc/all/install-glue-api/{{page.version}}/marketplace/install-the-marketplace-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/{{page.version}}/marketplace/install-the-marketplace-return-management-glue-api.md -->

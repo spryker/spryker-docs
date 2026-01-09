@@ -16,11 +16,11 @@ Spryker offers the following options to import and export data:
 
 ### Spryker Integration Apps
 
-{% include pbc/all/data-exchange/202311.0/spryker-integration-apps.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/spryker-integration-apps.md -->
+{% include pbc/all/data-exchange/{{page.version}}/spryker-integration-apps.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/{{page.version}}/spryker-integration-apps.md -->
 
 ### Custom integrations with custom connectors
 
-{% include pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/custom-integrations-with-custom-connectors.md -->
+{% include pbc/all/data-exchange/{{page.version}}/custom-integrations-with-custom-connectors.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/{{page.version}}/custom-integrations-with-custom-connectors.md -->
 
 ## Data Exchange API
 

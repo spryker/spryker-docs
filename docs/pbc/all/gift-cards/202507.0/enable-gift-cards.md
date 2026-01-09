@@ -17,4 +17,4 @@ related:
     link: docs/pbc/all/gift-cards/202507.0/gift-cards.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/enable-gift-cards.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/enable-gift-cards.md -->
+{% include pbc/all/install-features/{{page.version}}/enable-gift-cards.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/enable-gift-cards.md -->

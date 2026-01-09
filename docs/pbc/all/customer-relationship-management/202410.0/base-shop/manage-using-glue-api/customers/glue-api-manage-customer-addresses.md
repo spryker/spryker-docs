@@ -147,7 +147,7 @@ Request sample: add an address
 
 <a name="add-an-address-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 
 ## Edit an address
@@ -227,7 +227,7 @@ Request sample: edit an address
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Retrieve customer's addresses
 
@@ -312,7 +312,7 @@ Request sample: retrieve customer's addresses
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Retrieve an address
 
@@ -341,7 +341,7 @@ Request sample: retrieve an address
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Delete an address
 

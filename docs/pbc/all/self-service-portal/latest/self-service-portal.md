@@ -26,7 +26,7 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 
 To learn more about SSP, see the following docs:
 - [Self-Service Portal Asset Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-asset-management-feature-overview.html)
-- [Self-Service Portal asset-based catalog feature overview](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview.html)
+- [Self-Service Portal Asset-based catalog feature overview](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview.html)
 - [Self-Service Portal Dashboard Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-dashboard-management-feature-overview.html)
 - [Self-Service Portal File Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html)
 - [Self-Service Portal Inquiry Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-inquiry-management-feature-overview.html)

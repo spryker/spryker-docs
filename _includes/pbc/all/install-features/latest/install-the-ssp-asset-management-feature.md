@@ -66,7 +66,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'key' => getenv('SPRYKER_S3_SSP_ASSETS_KEY') ?: '',
         'secret' => getenv('SPRYKER_S3_SSP_ASSETS_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_ASSETS_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
+        'region' => getenv('AWS_REGION') ?: '',
         'version' => 'latest',
         'root' => '/ssp-asset-image',
         'path' => '',
@@ -90,7 +90,7 @@ In cloud environments, set the following environment variables:
 - `SPRYKER_S3_SSP_ASSETS_KEY` - AWS S3 access key for SSP assets storage
 - `SPRYKER_S3_SSP_ASSETS_SECRET` - AWS S3 secret key for SSP assets storage
 - `SPRYKER_S3_SSP_ASSETS_BUCKET` - AWS S3 bucket name for SSP assets storage
-- `AWS_REGION` - AWS region (defaults to `eu-central-1` if not set)
+- `AWS_REGION` - AWS region
 - `SPRYKER_SSP_DEFAULT_FILE_MAX_SIZE` - Maximum file size for SSP asset uploads (defaults to `10M` if not set)
 
 {% endinfo_block %}

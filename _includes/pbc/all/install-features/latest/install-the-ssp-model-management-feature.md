@@ -67,7 +67,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'key' => getenv('SPRYKER_S3_SSP_MODELS_KEY') ?: '',
         'secret' => getenv('SPRYKER_S3_SSP_MODELS_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_MODELS_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
+        'region' => getenv('AWS_REGION') ?: '',
         'version' => 'latest',
         'root' => '/ssp-model-image',
         'path' => '',
@@ -88,7 +88,7 @@ In cloud environments, set the following environment variables:
 - `SPRYKER_S3_SSP_MODELS_KEY` - AWS S3 access key for SSP model file storage
 - `SPRYKER_S3_SSP_MODELS_SECRET` - AWS S3 secret key for SSP model file storage
 - `SPRYKER_S3_SSP_MODELS_BUCKET` - AWS S3 bucket name for SSP model file storage
-- `AWS_REGION` - AWS region (defaults to `eu-central-1` if not set)
+- `AWS_REGION` - AWS region
 
 {% endinfo_block %}
 

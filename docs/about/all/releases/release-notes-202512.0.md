@@ -321,7 +321,7 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - [Product review performance](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#product-review-performance)
 - [Cart performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html#cart-page-performance-configuration)
 
-**Module releases:**
+**Module Important technical releases:**
 - [Cart page performance optimization](https://api.release.spryker.com/release-group/6107)
 - [UPPER() function optimization for URL lookups](https://api.release.spryker.com/release-group/6124)
 

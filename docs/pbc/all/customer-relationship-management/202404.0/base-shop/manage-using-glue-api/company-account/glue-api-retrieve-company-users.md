@@ -342,11 +342,11 @@ To retrieve information about a company user, send the request:
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if the company user is default for the authenticated company user. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-roles-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md -->
 
 
 

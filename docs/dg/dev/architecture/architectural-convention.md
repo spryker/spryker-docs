@@ -1,7 +1,7 @@
 ---
 title: Architectural convention
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
-last_updated: Apr 10, 2024
+last_updated: Jul 28, 2025
 template: concept-topic-template
 redirect_from:
 - /docs/dg/dev/architecture/architectural-convention-reference.html
@@ -70,7 +70,7 @@ Zed serves as the backend application layer responsible for housing all business
         │   │   └── [layout-name].twig
         │   └── [name-of-controller]
         │       └── [name-of-action].twig
-        │    
+        │
         ├── Communication
         │   ├── Controller
         │   │   ├── IndexController.php
@@ -78,7 +78,7 @@ Zed serves as the backend application layer responsible for housing all business
         │   │   └── [Name]Controller.php
         │   ├── [CustomDirectory]
         │   │   ├── [ModelName]Interface.php
-        │   │   └── [ModelName].php        
+        │   │   └── [ModelName].php
         │   ├── Exception
         │   ├── Plugin
         │   │   └── [ConsumerModule]
@@ -88,15 +88,15 @@ Zed serves as the backend application layer responsible for housing all business
         │   │   └── DataProvider
         │   │       └── [Name]FormDataProvider.php
         │   ├── Table
-        │   │   └── [Name]Table.php                
-        │   ├── navigation.xml       
+        │   │   └── [Name]Table.php
+        │   ├── navigation.xml
         │   └── [Module]CommunicationFactory.php
-        │            
+        │
         ├── Business
         │   ├── [CustomDirectory]
         │   │   ├── [ModelName]Interface.php
-        │   │   └── [ModelName].php        
-        │   ├── Exception   
+        │   │   └── [ModelName].php
+        │   ├── Exception
         │   ├── [Module]BusinessFactory.php
         │   ├── [Module]Facade.php
         │   └── [Module]FacadeInterface.php
@@ -119,19 +119,19 @@ Zed serves as the backend application layer responsible for housing all business
         ├── Dependency
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
-        │   │   └── [Module]To[Module]ClientInterface.php          
+        │   │   └── [Module]To[Module]ClientInterface.php
         │   ├── Facade
         │   │   ├── [Module]To[Module]FacadeBridge.php
         │   │   └── [Module]To[Module]FacadeInterface.php
         │   ├── QueryContainer
         │   │   ├── [Module]To[Module]QueryContainerBridge.php
-        │   │   └── [Module]To[Module]QueryContainerInterface.php      
+        │   │   └── [Module]To[Module]QueryContainerInterface.php
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
-        │   │   └── [Module]To[Module]ServiceInterface.php      
+        │   │   └── [Module]To[Module]ServiceInterface.php
         │   └── Plugin
         │       └── [PluginInterfaceName]PluginInterface.php
-        │                
+        │
         ├── [Module]Config.php
         └── [Module]DependencyProvider.php
 ```
@@ -169,14 +169,14 @@ Yves application layer provides a lightweight shop application.
         │   └── [Name]Controller.php
         ├── [CustomDirectory]
         │   ├── [ModelName]Interface.php
-        │   └── [ModelName].php                
+        │   └── [ModelName].php
         ├── Dependency
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
-        │   │   └── [Module]To[Module]ServiceInterface.php           
+        │   │   └── [Module]To[Module]ServiceInterface.php
         │   └── Plugin
         │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
@@ -204,7 +204,7 @@ Yves application layer provides a lightweight shop application.
         │       │       └── [template-name].twig
         │       └── views
         │           └── [name-of-controller]
-        │               └── [name-of-action].twig        
+        │               └── [name-of-action].twig
         ├── Widget
         │   └── [Name]Widget.php
         ├── [Module]Config.php
@@ -236,11 +236,11 @@ The Glue application layer provides data access points through APIs. It acts as 
 └── Glue
     └── [Module]
         ├── Controller
-        │   ├── IndexController.php        
-        │   └── [Name]Controller.php                
+        │   ├── IndexController.php
+        │   └── [Name]Controller.php
         ├── [CustomDirectory]
         │   ├── [ModelName]Interface.php
-        │   └── [ModelName].php        
+        │   └── [ModelName].php
         ├── Dependency
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
@@ -250,10 +250,10 @@ The Glue application layer provides data access points through APIs. It acts as 
         │   │   └── [Module]To[Module]FacadeInterface.php
         │   ├── QueryContainer
         │   │   ├── [Module]To[Module]QueryContainerBridge.php
-        │   │   └── [Module]To[Module]QueryContainerInterface.php      
+        │   │   └── [Module]To[Module]QueryContainerInterface.php
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
-        │   │   └── [Module]To[Module]ServiceInterface.php           
+        │   │   └── [Module]To[Module]ServiceInterface.php
         │   └── Plugin
         │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
@@ -295,16 +295,16 @@ Backend database access is an exception for performance streamlining.
     └── [Module]
         ├── [CustomDirectory]
         │   ├── [ModelName]Interface.php
-        │   └── [ModelName].php        
+        │   └── [ModelName].php
         ├── Dependency
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
-        │   │   └── [Module]To[Module]ServiceInterface.php           
+        │   │   └── [Module]To[Module]ServiceInterface.php
         │   └── Plugin
-        │       └── [PluginInterfaceName]PluginInterface.php            
+        │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
         │   └── [ConsumerModule]
         │       └── [PluginName]Plugin.php
@@ -341,8 +341,8 @@ A service primarily consists of reusable lightweight stateless business logic co
     └── [Module]
         ├── [CustomDirectory]
         │   ├── [ModelName]Interface.php
-        │   └── [ModelName].php        
-        ├── [Module]Config.php            
+        │   └── [ModelName].php
+        ├── [Module]Config.php
         ├── [Module]DependencyProvider.php
         ├── [Module]ServiceFactory.php
         ├── [Module]ServiceInterface.php
@@ -462,13 +462,13 @@ An application layer can have up to four logical layers with clear purpose and c
 │   └── [Module]
 │       └── Controller
 │           ├── IndexController.php
-│           └── [Name]Controller.php    
+│           └── [Name]Controller.php
 │
 └── Glue
     └── [Module]
         └── Controller
-            ├── IndexController.php        
-            └── [Name]Controller.php                      
+            ├── IndexController.php
+            └── [Name]Controller.php
 ```
 
 `Controllers` and `Actions` are application access points for any kind of HTTP communication with end-users or other applications.
@@ -545,19 +545,19 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 ```text
 [Organization]
 ├── Zed
-│   └── [Module]        
+│   └── [Module]
 │       └── [Module]DependencyProvider.php
 ├── Yves
-│   └── [Module]        
+│   └── [Module]
 │       └── [Module]DependencyProvider.php
 ├── Glue
-│   └── [Module]        
+│   └── [Module]
 │       └── [Module]DependencyProvider.php
 ├── Client
-│   └── [Module]        
+│   └── [Module]
 │       └── [Module]DependencyProvider.php
 └── Service
-    └── [Module]        
+    └── [Module]
         └── [Module]DependencyProvider.php
 ```
 
@@ -756,8 +756,8 @@ src
 │           └── [EntityName]EntityTransfer.php
 │
 ├── Orm
-│   └── Zed   
-│       └── [DomainName]   
+│   └── Zed
+│       └── [DomainName]
 │           ├── Base
 │           │   ├── [EntityName].php
 │           │   └── [EntityName]Query.php
@@ -878,7 +878,7 @@ Solutions in `Entity manager` can use raw SQL queries for performance reasons, b
 ├── Client
 │   └── [Module]
 │       ├── [Module]ClientInterface.php
-│       └── [Module]Client.php        
+│       └── [Module]Client.php
 ├── Service
 │   └── [Module]
 │       ├── [Module]Service.php
@@ -887,9 +887,9 @@ Solutions in `Entity manager` can use raw SQL queries for performance reasons, b
     └── [Module]
         ├── Business
         │   ├── [Module]Facade.php
-        │   └── [Module]FacadeInterface.php    
+        │   └── [Module]FacadeInterface.php
         └── Persistence
-            └── [Module]QueryContainer.php                   
+            └── [Module]QueryContainer.php
 ```
 
 Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern).
@@ -1137,7 +1137,7 @@ No general conventions.
 │                   ├── page-layout-[page-layout-name]
 │                   │   └── page-layout-[page-layout-name].twig
 │                   └── [template-name]
-│                       └── [template-name].twig                
+│                       └── [template-name].twig
 └── Zed
     └── [Module]
         └── Presentation
@@ -1246,31 +1246,31 @@ class ProductViewExpander implements ProductViewExpanderInterface
 │       ├── Communication
 │       │   └── [CustomDirectory]
 │       │       ├── [ModelName]Interface.php
-│       │       └── [ModelName].php   
+│       │       └── [ModelName].php
 │       └── Business
 │           └── [CustomDirectory]
 │               ├── [ModelName]Interface.php
-│               └── [ModelName].php  
+│               └── [ModelName].php
 ├── Yves
 │   └── [Module]
 │       └── [CustomDirectory]
 │           ├── [ModelName]Interface.php
-│           └── [ModelName].php   
+│           └── [ModelName].php
 ├── Glue
 │   └── [Module]
 │       └── [CustomDirectory]
 │           ├── [ModelName]Interface.php
-│           └── [ModelName].php    
+│           └── [ModelName].php
 ├── Client
 │   └── [Module]
 │       └── [CustomDirectory]
 │           ├── [ModelName]Interface.php
-│           └── [ModelName].php                
+│           └── [ModelName].php
 └── Service
     └── [Module]
         └── [CustomDirectory]
             ├── [ModelName]Interface.php
-            └── [ModelName].php    
+            └── [ModelName].php
 ```
 
 `Models` encapsulate logic and can be used across various layers in the application architecture and in the boundaries of each [layer's specific responsibilities](#layers).
@@ -1304,20 +1304,20 @@ class ProductViewExpander implements ProductViewExpanderInterface
 │       └── [Module]Config.php
 ├── Yves
 │   └── [Module]
-│       └── [Module]Config.php  
+│       └── [Module]Config.php
 ├── Glue
 │   └── [Module]
-│       └── [Module]Config.php    
+│       └── [Module]Config.php
 ├── Client
 │   └── [Module]
-│       └── [Module]Config.php   
+│       └── [Module]Config.php
 ├── Service
-│   └── [Module]      
+│   └── [Module]
 │       └── [Module]Config.php
 └── Shared
     └── [Module]
         ├── [Module]Constants.php
-        └── [Module]Config.php       
+        └── [Module]Config.php
 ```
 
 - Module configuration: module specific, environment independent configuration in `[Module]Config.php.`
@@ -1384,8 +1384,8 @@ interface OmsConstants
 [Organization]
 └── Zed
     └── [Module]
-        └── Communication              
-            └── navigation.xml   
+        └── Communication
+            └── navigation.xml
 ```
 
 Module entries of the Back Office navigation panel. The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4/).
@@ -1446,12 +1446,12 @@ The following example adds navigation elements under the existing `product` navi
 │   └── [Module]
 │       └── Plugin
 │           └── [ConsumerModule]
-│               └── [PluginName]Plugin.php    
+│               └── [PluginName]Plugin.php
 └── Client
-    └── [Module]        
+    └── [Module]
         └── Plugin
             └── [ConsumerModule]
-                └── [PluginName]Plugin.php        
+                └── [PluginName]Plugin.php
 ```
 
 `Permission Plugins` are used to put a scope on the usage of an application during a request lifecycle.
@@ -1532,6 +1532,7 @@ The schema file defines the module's tables and columns. Schema files are organi
   - The field can be `null` by default.
   - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
 - Table foreign key definitions needs to include the `phpName` attribute.
+- Each field **must** have a description of the fields value; This helps understand the data model and the internal usage of a fields value. F.e. name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
 </details>
 
@@ -1548,9 +1549,9 @@ The schema file defines the module's tables and columns. Schema files are organi
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ConfigurableBundle\Persistence" package="src.Orm.Zed.ConfigurableBundle.Persistence">
     <table name="spy_configurable_bundle_template">
         <column name="id_configurable_bundle_template" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="uuid" required="false" type="VARCHAR" size="255"/>
-        <column name="name" required="true" type="VARCHAR" size="255"/>
-        <column name="is_active" required="true" default="false" type="BOOLEAN"/>
+        <column name="uuid" required="false" type="VARCHAR" size="255" description="The UUID of the product bundle template for external reference."/>
+        <column name="name" required="true" type="VARCHAR" size="255" descrption="The display name of the product bundle template."/>
+        <column name="is_active" required="true" default="false" type="BOOLEAN" description="A boolean flag indicating if the product bundle template can be used or not./>
 
         <unique name="spy_configurable_bundle_template-uuid">
             <unique-column name="uuid"/>
@@ -1593,7 +1594,7 @@ Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.
 ```text
 [Organization]
 └── Yves
-    └── [Module]  
+    └── [Module]
         └── Plugin
             ├── Provider
             │   └── [Name]ControllerProvider.php
@@ -1619,8 +1620,8 @@ Controllers in the [Zed](#zed) application layer are autowired and don't require
 ```text
 src
 ├── Orm
-│   └── Zed   
-│       └── [DomainName]   
+│   └── Zed
+│       └── [DomainName]
 │           ├── Base
 │           │   └── [EntityName]Query.php
 │           └── [EntityName]Query.php
@@ -1675,7 +1676,7 @@ In the following example, the `SpyProductQuery` is part of the `Product` `domain
 └── Zed
     └── [Module]
         └── Persistence
-            ├── [Module]Repository.php      
+            ├── [Module]Repository.php
             └── [Module]RepositoryInterface.php
 ```
 
@@ -1729,10 +1730,10 @@ Methods can use native PHP types as input arguments or result values. Because it
                 │   ├── page-layout-[page-layout-name]
                 │   │   └── page-layout-[page-layout-name].twig
                 │   └── [template-name]
-                │       └── [template-name].twig                
+                │       └── [template-name].twig
                 └── views
                     └── [name-of-controller]
-                        └── [name-of-action].twig    
+                        └── [name-of-action].twig
 ```
 
 [Yves application layer](#yves) can have one or multiple themes that define the overall look and feel.
@@ -1760,12 +1761,13 @@ src
     └── Shared
         └── [Module]
             └── Transfer
-                └── [module_name].transfer.xml   
+                └── [module_name].transfer.xml
+                └── [module_name]_rest_api.transfer.xml
 ```
 
 `Transfer Objects` are pure data transfer objects (DTO) with getters and setters. They can be used in all [applications](#applications) and all [layers](#layers). Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
 
-For every defined table in [Peristence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
+For every defined table in [Persistence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
 
 #### Conventions
 
@@ -1778,7 +1780,24 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 
 <details><summary>For *module development* and *core module development*</summary>
 
+### General
+
 - A module can only use the `Transfer Objects` and their properties that are declared in the same module. Transfer definitions accessed through composer dependencies are considered as a violation.
+
+### Transfer schemas
+
+- Must have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+
+### RestAPI Transfer Schemas
+
+The following rules only apply to the API transfer schema definitions following the name pattern `[module_name]_rest_api.transfer.xml`.
+
+- Must have a `description` for each field; This helps understand the data model and the internal usage of a fields value. F.e. `name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
+- Should use the `example` attribute when applicable; This is used by the OpenAPI schema generator to provide possible usage examples for a field.
+- Should use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.
+- Should use the `restResponseParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the response and if it is required or not.
+
+Further reading [Document Glue API resources](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/document-storefront-api-resources.html)
 
 </details>
 
@@ -1815,7 +1834,7 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
         ├── Plugin
         │   └── [ConsumerModule]
         │       ├── [PluginName]Plugin.php
-        │       └── [RouterName]Plugin.php      
+        │       └── [RouterName]Plugin.php
         └── Widget
             └── [Name]Widget.php
 ```
@@ -1992,27 +2011,27 @@ For `project development` and `module development`, these components are recomme
 │       └── Dependency
 │           ├── Client
 │           │   ├── [Module]To[Module]ClientBridge.php
-│           │   └── [Module]To[Module]ClientInterface.php          
+│           │   └── [Module]To[Module]ClientInterface.php
 │           ├── Facade
 │           │   ├── [Module]To[Module]FacadeBridge.php
 │           │   └── [Module]To[Module]FacadeInterface.php
 │           ├── Service
 │           │   ├── [Module]To[Module]ServiceBridge.php
-│           │   └── [Module]To[Module]ServiceInterface.php    
+│           │   └── [Module]To[Module]ServiceInterface.php
 │           └── QueryContainer
 │               ├── [Module]To[Module]QueryContainerBridge.php
-│               └── [Module]To[Module]QueryContainerInterface.php    
+│               └── [Module]To[Module]QueryContainerInterface.php
 ├── Yves
-│   └── [Module]             
+│   └── [Module]
 │       └── Dependency
 │           ├── Client
 │           │   ├── [Module]To[Module]ClientBridge.php
 │           │   └── [Module]To[Module]ClientInterface.php
 │           └── Service
 │               ├── [Module]To[Module]ServiceBridge.php
-│               └── [Module]To[Module]ServiceInterface.php      
+│               └── [Module]To[Module]ServiceInterface.php
 ├── Glue
-│   └── [Module]    
+│   └── [Module]
 │       └── Dependency
 │           ├── Client
 │           │   ├── [Module]To[Module]ClientBridge.php
@@ -2022,19 +2041,19 @@ For `project development` and `module development`, these components are recomme
 │           │   └── [Module]To[Module]FacadeInterface.php
 │           ├── Service
 │           │   ├── [Module]To[Module]ServiceBridge.php
-│           │   └── [Module]To[Module]ServiceInterface.php    
+│           │   └── [Module]To[Module]ServiceInterface.php
 │           └── QueryContainer
 │               ├── [Module]To[Module]QueryContainerBridge.php
-│               └── [Module]To[Module]QueryContainerInterface.php    
+│               └── [Module]To[Module]QueryContainerInterface.php
 └── Client
-    └── [Module]      
+    └── [Module]
         └── Dependency
             ├── Client
             │   ├── [Module]To[Module]ClientBridge.php
             │   └── [Module]To[Module]ClientInterface.php
             └── Service
                 ├── [Module]To[Module]ServiceBridge.php
-                └── [Module]To[Module]ServiceInterface.php  
+                └── [Module]To[Module]ServiceInterface.php
 ```
 
 According to the Interface Segregation Principle, every module defines an interface for each external class it relies on. To decouple and encapsulate these dependencies effectively, `Bridges` are used. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be used. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
@@ -2119,17 +2138,17 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 │   ├── [Module]
 │   │   └── Plugin
 │   │       └── [ConsumerModule]
-│   │           └── [PluginName]Plugin.php    
+│   │           └── [PluginName]Plugin.php
 │   └── [ConsumerModule]Extension
 │       └── Dependency
 │           └── Plugin
 │               └── [PluginInterfaceName]PluginInterface.php
 │
 └── Client
-    ├── [Module]        
+    ├── [Module]
     │   └── Plugin
     │       └── [ConsumerModule]
-    │           └── [PluginName]Plugin.php    
+    │           └── [PluginName]Plugin.php
     └── [ConsumerModule]Extension
         └── Dependency
             └── Plugin
@@ -2199,17 +2218,17 @@ No general conventions.
 │   ├── [Module]
 │   │   └── Plugin
 │   │       └── [ConsumerModule]
-│   │           └── [PluginName]Plugin.php    
+│   │           └── [PluginName]Plugin.php
 │   └── [ConsumerModule]Extension
 │       └── Dependency
 │           └── Plugin
 │               └── [PluginInterfaceName]PluginInterface.php
 │
 └── Client
-    ├── [Module]        
+    ├── [Module]
     │   └── Plugin
     │       └── [ConsumerModule]
-    │           └── [PluginName]Plugin.php    
+    │           └── [PluginName]Plugin.php
     └── [ConsumerModule]Extension
         └── Dependency
             └── Plugin

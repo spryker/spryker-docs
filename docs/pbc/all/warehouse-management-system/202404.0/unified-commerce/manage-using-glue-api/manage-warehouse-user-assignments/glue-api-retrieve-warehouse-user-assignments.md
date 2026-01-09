@@ -301,7 +301,7 @@ For detailed information about the modules that provide the API functionality an
 
 ```json
 {
-    "data": [        
+    "data": [
         {
             "type": "warehouse-user-assignments",
             "id": "39fcc049-758b-5f96-96c4-ecd5e103a8f9",
@@ -421,10 +421,10 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouse-user-assignments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md -->
 
 ## Retrieve a warehouse user assignment
 
@@ -535,10 +535,10 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/warehouse-user-assignments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/warehouse-user-assignments-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/users-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/users-response-attributes.md -->
 
 
 ## Possible errors

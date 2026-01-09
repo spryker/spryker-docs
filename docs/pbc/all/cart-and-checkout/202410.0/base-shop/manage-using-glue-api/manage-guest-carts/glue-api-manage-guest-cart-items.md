@@ -2651,20 +2651,20 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
 
 
 
@@ -2881,20 +2881,20 @@ To add a configurable bundle to a guest cart, send the request:
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -3280,20 +3280,20 @@ Request sample: change quantity of configurable bundles in a guest cart
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
 
 ## Remove an item from a guest cart
 

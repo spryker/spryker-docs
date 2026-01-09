@@ -5,7 +5,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/sdk/dev/releases-vs-customization-types.html
 
-last_updated: May 16, 2023
+last_updated: Dec 8, 2025
 ---
 Spryker uses semantic versioning for its packages. There are 3 release types: major, minor, and patch. For more information, see [Semantic versioning - major vs. minor vs. patch release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
@@ -371,3 +371,79 @@ This does not break any customized logic. The project code continues to work jus
 #### Major release
 
 In the major version release–for example, 1.0.0 to 2.0.0–the deprecated method `FooFacade::findFooByAcme(int $id)` is completely removed. The upgrader tool will update the `spryker/acme` and `spryker/foo` packages to the latest version. Because of this, the project's code now throws an `Error` exception and breaks the application because the old method does not exist anymore. This means you need to manually fix this issue.
+
+## Upgradability recommendations
+
+### Prefer creating a new module instead of extending an existing one
+
+Imagine that you want to send orders to an external system through an API. You extend `src/Spryker/Zed/Sales/Business/SalesFacade.php` on the project level, modify the factory, and add your logic there.
+
+This new functionality does not rely on the original Sales module. It performs separate tasks and may only share an entity with the module.
+
+This approach is harmful for upgradability. Once you modify the Sales module, every update requires additional checks. There is also a risk of naming conflicts with the Spryker core.
+
+**Recommended approach:** If new functionality does not directly depend on an original module, create a new module. This keeps updates safe and predictable.
+
+### Plugin placement
+
+Assume that you want to build a plugin for the Sales module that adds additional data to the `Sales` entity, such as warehouse operating hours for an order.
+
+You do not need to place this plugin inside the Sales module. You can create a new module and place the plugin there. This avoids unnecessary checks and prevents conflicts when updating the Sales module.
+
+### Create facade methods to retrieve data
+
+Imagine that you need to find all merchants based on a criterion such as IsActive.
+
+A common but harmful approach is to create a new method like `findActiveMerchants()` that manually implements all database reading, filtering, and mapping logic.
+
+This hurts upgradability, because such code bypasses the existing core mechanisms.
+
+**Recommended approach:** Use the original facade methods that rely on FilterTransfer or CriteriaTransfer, such as (example):
+
+```php
+Spryker\Zed\Merchant\Business\MerchantFacade::get(MerchantCriteriaTransfer $merchantCriteriaTransfer)
+```
+
+This method calls the repository, which uses:
+
+```php
+Spryker\Zed\Merchant\Persistence\MerchantRepository::applyFilters()
+```
+
+Your custom filter extension may look like this:
+
+```php
+protected function applyFilters(SpyMerchantQuery $merchantQuery, MerchantCriteriaTransfer $merchantCriteriaTransfer): SpyMerchantQuery
+{
+    $merchantQuery = parent::applyFilters($merchantQuery, $merchantCriteriaTransfer);
+
+    if ($merchantCriteriaTransfer->getIsActive() !== null) {
+        $merchantQuery->filterByIsActive($merchantCriteriaTransfer->getIsActive());
+    }
+
+    return $merchantQuery;
+}
+
+```
+
+This approach gives you all required filters and keeps the implementation fully compatible with core changes.
+
+### Use parent methods when possible
+
+Similar to the filtering example, using parent::methodName() is one of the best ways to extend code. This preserves compatibility with updates and ensures that your module keeps all core improvements while adding your custom logic.
+
+### Use your own project namespace
+
+By default, project code is stored in the src/Pyz directory. You can create your own namespace, such as src/BestProject, to keep your code fully separated from the Demo Shop. This separation simplifies applying Demo Shop updates.
+
+### Maintain high test coverage
+
+Unit, functional, and end-to-end tests support system stability and greatly improve upgradability. When you can verify system behavior quickly and reliably, you can apply small, frequent updates without the risk of errors or unexpected regressions.
+
+### Apply smaller updates more frequently
+
+If you update the project regularly (for example, monthly or quarterly), you gain several advantages:
+
+- Each update becomes smaller and easier to install.
+- The team works closer to the latest code, which reduces the number of breaking changes encountered at once.
+- You receive security and performance improvements as soon as possible.

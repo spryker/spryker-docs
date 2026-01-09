@@ -1,0 +1,8 @@
+extends: existence
+message: "Don't mention 'running a command'. Specify a specific action or outcome."
+level: error
+ignorecase: true
+scope: sentence
+tokens:
+  - '\brun the following command\b'
+  - '\bby running the following command\b'

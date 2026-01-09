@@ -92,7 +92,7 @@ To retrieve information about a company, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md -->
 
 
 ## Possible errors

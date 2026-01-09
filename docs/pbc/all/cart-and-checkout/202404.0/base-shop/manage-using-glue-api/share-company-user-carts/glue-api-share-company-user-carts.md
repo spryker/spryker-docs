@@ -84,7 +84,7 @@ Response sample:
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shared-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md -->
 
 
 ## Possible errors

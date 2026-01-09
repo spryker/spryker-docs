@@ -92,7 +92,7 @@ definitions:
       environment:
         ES_JAVA_OPTS: '-Xms512m -Xmx512m'
     broker:
-      image: spryker/rabbitmq:3.7.14
+      image: spryker/rabbitmq:4.1
       environment:
         RABBITMQ_DEFAULT_USER: $RABBITMQ_DEFAULT_USER
         RABBITMQ_DEFAULT_PASS: $RABBITMQ_DEFAULT_PASS

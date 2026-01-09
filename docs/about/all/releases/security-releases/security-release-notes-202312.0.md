@@ -6,7 +6,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
 - /docs/about/all/releases/security-release-notes-202312.0.html
-
+publish_date: "2023-12-18"
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -296,7 +296,7 @@ composer show spryker-shop/company-page # Verify the version
 {% endraw %}
 ```
 
-6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:  
+6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:
 
 ```bash
 {% raw %}
@@ -371,7 +371,7 @@ composer update spryker/oauth-code-flow
 
 ## Token validation issue
 
-Glue Backend API has no expiration validation for access tokens. There was no limitation on the number of tokens that could be requested by a certain user.  
+Glue Backend API has no expiration validation for access tokens. There was no limitation on the number of tokens that could be requested by a certain user.
 
 ### Affected modules
 

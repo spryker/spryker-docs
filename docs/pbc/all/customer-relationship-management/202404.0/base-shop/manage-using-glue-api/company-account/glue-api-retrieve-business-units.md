@@ -209,12 +209,12 @@ To retrieve a business unit, send the request:
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-unit-addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md -->
 
 
 ## Possible errors

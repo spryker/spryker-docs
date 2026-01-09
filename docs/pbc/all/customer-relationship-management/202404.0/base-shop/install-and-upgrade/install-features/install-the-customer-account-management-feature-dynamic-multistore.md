@@ -6,4 +6,4 @@ template: feature-integration-guide-template
 redirect_from:
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-dynamic-multistore-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-dynamic-multistore-the-customer-account-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-dynamic-multistore-the-customer-account-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-dynamic-multistore-the-customer-account-management-feature.md -->

@@ -23,7 +23,7 @@ The Spryker Monitoring Integration focuses on the following entities to provide 
 ### Traces and spans
 
 {% info_block infoBox %}
-The supported version of OTel Semantic Conventions is 1.30.0.
+The supported version of OTel Semantic Conventions is 1.36.0.
 {% endinfo_block %}
 
 In OpenTelemetry, a *trace* represents the journey of a single request or transaction as it moves through various components of a system, capturing the end-to-end flow. A *span* is a single operation or unit of work within a trace, containing information like the operation name, start and end times, and any relevant metadata. Together, traces and spans provide a detailed view of the interactions and performance of different parts of an application, helping to diagnose issues and optimize performance.

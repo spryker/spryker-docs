@@ -12,7 +12,7 @@ redirect_from:
 This document describes how to retrieve order shipments when checking out through the Glue API. For full information about the endpoint, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html)
 
 
-This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Use this endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).  
+This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Use this endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [Submit checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).
 
 ## Installation
 
@@ -121,7 +121,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/checkout-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/checkout-request-attributes.md -->
 
 
 
@@ -352,9 +352,9 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
 ## Possible errors
 

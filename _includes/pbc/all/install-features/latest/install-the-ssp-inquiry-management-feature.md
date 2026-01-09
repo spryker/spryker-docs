@@ -965,3 +965,7 @@ Example of a successful response:
 ```
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

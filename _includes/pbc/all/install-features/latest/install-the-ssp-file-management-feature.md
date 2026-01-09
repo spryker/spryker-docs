@@ -429,3 +429,7 @@ Verify permissions on Storefront:
    Make sure the **Files** menu item is not displayed and you can't access the **Files** page.
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

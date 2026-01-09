@@ -1440,3 +1440,7 @@ Make sure the configured data has been added to the following database tables:
 - `spy_ssp_asset_storage`
 - `spy_ssp_asset_search`
   {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

@@ -392,3 +392,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

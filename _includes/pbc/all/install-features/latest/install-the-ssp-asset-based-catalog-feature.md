@@ -210,7 +210,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-
 ## Import the Model relation data
 
 Prepare your data according to your requirements using our demo data:
@@ -322,3 +321,7 @@ console data:import ssp-asset
 console data:import ssp-model-asset
 console data:import merchant-product-offer
 ```
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

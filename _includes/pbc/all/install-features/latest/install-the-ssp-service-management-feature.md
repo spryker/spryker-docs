@@ -1601,6 +1601,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```bash
 console frontend:yves:build
+```
 console frontend:zed:install-dependencies
 console frontend:zed:build
 ```
@@ -1758,3 +1759,7 @@ Make sure that you can see the `booked-services` resources for the company user 
 ```
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

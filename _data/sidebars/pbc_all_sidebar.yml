@@ -3881,6 +3881,8 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-based-catalog-feature.html
               - title: SSP glossary demo data
                 url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+              - title: SSP frontend templates
+                url: /docs/pbc/all/self-service-portal/install/ssp-frontend-templates.html
 
           - title: Manage in the Back Office
             nested:

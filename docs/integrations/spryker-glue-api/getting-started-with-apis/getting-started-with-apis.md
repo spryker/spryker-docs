@@ -29,7 +29,7 @@ Spryker's API is a dedicated application layer within the Spryker Cloud Commerce
     <div class="cst_card">
       <div class="cst_card_title">Spryker API Strategy for 2026</div>
       <div class="cst_card_desc">Spryker is evolving its API strategy by introducing **API Platform–based integration** as a **new, strategic integration layer**, while continuing to **fully support existing Glue APIs**.</div>
-      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy-2026.html">Learn more</a>
+      <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html">Learn more</a>
     </div>
   </div>
 </div>

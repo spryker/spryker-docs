@@ -1401,10 +1401,18 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
       - title: Batch processing of Propel entities
         url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
+      - title: Database performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/database-performance-guidelines.html
+      - title: Key-Value storage performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Search performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html
+      - title: Infrastructure and worker configuration guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/infrastructure-worker-configuration-guidelines.html
+      - title: Custom code performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/custom-code-performance-guidelines.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names

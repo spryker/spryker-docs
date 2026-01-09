@@ -1451,7 +1451,7 @@ Before importing the data, make sure you have imported demo data for product con
 - [Import product data](/docs/dg/dev/data-import/latest/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import)
 
 Before importing the data, make sure you have imported demo data for service point with key **sp1**:
-- [Import Service Points data](/docs/pbc/all/service-point-management/latest/install-features/install-the-service-points-feature.html)
+- [Import Service Points data](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html#import-service-points)
 
 {% endinfo_block %}
 

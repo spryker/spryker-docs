@@ -153,9 +153,9 @@ To add items to a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
 ### Response
 
@@ -175,7 +175,7 @@ To add items to a shopping list, send the request:
             "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
-}  
+}
 ```
 
 </details>
@@ -313,12 +313,12 @@ To add items to a shopping list, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
 ## Change item quantity in a shopping list
 
@@ -600,12 +600,12 @@ To change item quantity in a shopping list, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
 ## Remove an item from a shopping list
 

@@ -1,4 +1,4 @@
-version: "202410.0"
+version: "202507.0"
 
 repository: spryker/spryker-docs
 
@@ -37,7 +37,7 @@ exclude:
   - docker-compose.yml
   - Dockerfile
   - docker/
-  - vale 
+  - vale
   - Gemfile
   - Gemfile.lock
   - Rakefile
@@ -51,9 +51,7 @@ exclude:
   - redirect.html
   - rename_files.rb
   - netlify.toml
-  - README.md  
-  - docs/scos/dev/drafts-dev/
-  - docs/scos/dev/developers-corner/
+  - README.md
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -136,11 +134,22 @@ defaults:
     values:
       sidebar: "about_all_sidebar"
       role: "all"
+  -
+     scope:
+       path: "docs/integrations"
+     values:
+       product: "integrations"
+  -
+    scope:
+      path: "docs/integrations"
+    values:
+      sidebar: "integrations"
+      role: "all"
 
 versions:
-  '202311.0': '202311.0'
   '202404.0': '202404.0'
   '202410.0': '202410.0'
+  '202507.0': '202507.0'
 
 
 # versioned categories - these must match corresponding directories
@@ -196,6 +205,7 @@ sidebars:
   - pbc_all_sidebar
   - about_all_sidebar
   - dg_dev_sidebar
+  - integrations
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

@@ -17,9 +17,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
 related:
   - title: Migration guide - Currency
-    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
   - title: Migration guide - Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-environment-configuration-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-environment-configuration-module.md -->

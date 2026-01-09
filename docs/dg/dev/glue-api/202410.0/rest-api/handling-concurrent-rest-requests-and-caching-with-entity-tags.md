@@ -18,17 +18,11 @@ related:
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
-{% info_block warningBox %}
-
-This document is related to the Old Glue infrastructure. For the new one, see [Decoupled Glue API](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html)
-
-{% endinfo_block %}
-
 Some Spryker Glue API resources allow concurrent changes from multiple sources. For example, a shared cart can be changed by multiple users that act independently.
 
 To ensure resource integrity and consistency, such resources implement *Entity Tags* (ETags). An ETag is a unique identifier of the state of a specific resource at a certain point in time. It allows a server to identify if the client initiating a change has received the last state of the resource known to the server prior to sending the change request.
 
-Apart from that, ETags can also boost API performance via caching. They can be used by a client to identify when a new version of a resource needs to be requested. For example, a client can cache the state of a user's cart and request an updated version only when the associated ETag changes. Since Etags are stored in Spryker's KV Storage ([Redis](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html) by default), tag matching is performed much faster than fetching cart data.
+Apart from that, ETags can also boost API performance via caching. They can be used by a client to identify when a new version of a resource needs to be requested. For example, a client can cache the state of a user's cart and request an updated version only when the associated ETag changes. Since Etags are stored in Spryker's KV Storage ([Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html) by default), tag matching is performed much faster than fetching cart data.
 
 ## Request flow
 
@@ -100,4 +94,4 @@ The following error responses can be returned by the server when a resource supp
 | 005 | Pre-condition required.<br>The `If-Match` header is missing. |
 | 006 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/rest-api/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/integrations/{{page.version}}/spryker-glue-api/storefront-api/api-references/reference-information-storefront-application-errors.html).

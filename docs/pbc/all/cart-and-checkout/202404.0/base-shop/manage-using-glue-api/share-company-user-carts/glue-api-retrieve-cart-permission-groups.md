@@ -79,7 +79,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cart-permission-groups-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md -->
 
 
 
@@ -124,7 +124,7 @@ Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cart-permission-groups-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md -->
 
 
 ## Possible errors

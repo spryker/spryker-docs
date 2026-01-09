@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Jun 20, 2025
+last_updated: Oct 29, 2025
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -19,7 +19,7 @@ related:
   - title: Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrate automated SVG sprite extraction
-    link: docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html    
+    link: docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
 ---
 
 Spryker is a fast application by design. These guidelines explain how to optimize the server-side execution time.
@@ -118,160 +118,9 @@ There are a few options to avoid this in production environments:
 - Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
 - For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
-## Activate Twig compiler
+## Twig performance optimizations
 
-Twig files can be precompiled into PHP classes to speed the performance up. This behavior can be activated in the configuration. We highly recommend using the `FORCE_BYTECODE_INVALIDATION` option. Otherwise, Opcache may contain outdated content, as the files are modified during runtime.
-
-```php
----//---
-use Twig\Cache\FilesystemCache;
----//---
-$currentStore = Store::getInstance()->getStoreName();
-
-$config[TwigConstants::ZED_TWIG_OPTIONS] = [
-    'cache' => new FilesystemCache(
-        sprintf(
-            '%s/src/Generated/Zed/Twig/codeBucket%s',
-            APPLICATION_ROOT_DIR,
-            $currentStore,
-        ),
-        FilesystemCache::FORCE_BYTECODE_INVALIDATION,
-    ),
-];
-
-$config[TwigConstants::YVES_TWIG_OPTIONS] = [
-    'cache' => new FilesystemCache(
-        sprintf(
-            '%s/src/Generated/Yves/Twig/codeBucket%s',
-            APPLICATION_ROOT_DIR,
-            $currentStore,
-        ),
-        FilesystemCache::FORCE_BYTECODE_INVALIDATION,
-    ),
-];
-
-$config[TwigConstants::YVES_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Yves/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
-
-$config[TwigConstants::ZED_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Zed/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
-```
-
-## Activate Twig path cache
-
-Twig files can be in many places. To avoid time-consuming searches, we recommend activating the path cache (active by default). If you need to change this configuration, see `\Spryker\Yves\Twig\TwigConfig::getCacheFilePath()`.
-
-## General Twig optimizations
-
-Twig, together with [Atomic Frontend](/docs/dg/dev/frontend-development/{{site.version}}/yves/atomic-frontend/atomic-frontend.html), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there.
-For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow.
-
-Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
-
-## Twig template warmup during deployment
-
-Precompiling Twig templates can improve the performance of the first request, especially in production environments. This is helpful when scaling across multiple containers, where the first request may be slow due to on-demand compilation of all Twig templates.
-
-
-To activate the warmup, follow the steps:
-
-1. Add the following commands to your deployment script, such as `config/install/docker.yml`:
-
-```yaml
-    build-production:
-        twig-template-warmup-zed:
-            command: 'vendor/bin/console twig:template:warmer'
-
-        twig-template-warmup-yves:
-            command: 'vendor/bin/yves twig:template:warmer'
-```
-
-{% info_block warningBox "" %}
-Make sure that the command is executed after the `vendor/bin/console twig:cache:warmer` command.
-{% endinfo_block %}
-
-
-2. Register the following classes for the Zed command:
-
-**\Spryker\Zed\Console\ConsoleDependencyProvider**
-
-```php
-...
-use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
-use Spryker\Zed\Security\Communication\Plugin\Application\ConsoleSecurityApplicationPlugin;
-use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
-...
-
-    protected function getConsoleCommands(Container $container): array
-    {
-        return [
-            // other commands
-            new TwigTemplateWarmerConsole(),
-        ];
-    }
-    
-    public function getApplicationPlugins(Container $container): array
-    {
-        // other application plugins
-        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
-        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
-        $applicationPlugins[] = new TwigApplicationPlugin();
-        $applicationPlugins[] = new FormApplicationPlugin();
-
-        return $applicationPlugins;
-    }
-```
-
-3. Register the following classes for the Yves console context to allow Twig properly compile templates.
-
-**\Spryker\Yves\Console\ConsoleDependencyProvider**
-
-```php
-...
-use Spryker\Yves\Form\Plugin\Application\FormApplicationPlugin;
-use Spryker\Yves\Locale\Plugin\Application\ConsoleLocaleApplicationPlugin;
-use Spryker\Yves\Security\Plugin\Application\ConsoleSecurityApplicationPlugin;
-use Spryker\Yves\Session\Plugin\Application\ConsoleSessionApplicationPlugin;
-use Spryker\Yves\Twig\Plugin\Application\TwigApplicationPlugin;
-use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmerConsole;
-use Spryker\Yves\Twig\Plugin\Console\TwigTemplateWarmingModeEventSubscriberPlugin;
-
-...
-
-    protected function getConsoleCommands(Container $container): array
-    {
-        return [
-            // other commands
-            new TwigTemplateWarmerConsole(),
-        ];
-    }
-
-    public function getApplicationPlugins(Container $container): array
-    {
-        // other application plugins
-        $applicationPlugins[] = new ConsoleLocaleApplicationPlugin();
-        $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
-        $applicationPlugins[] = new ConsoleSessionApplicationPlugin();
-        $applicationPlugins[] = new TwigApplicationPlugin();
-        $applicationPlugins[] = new FormApplicationPlugin();
-
-        return $applicationPlugins;
-    }
-
-    protected function getEventSubscriber(Container $container): array
-    {
-        return [
-            // other event subscribers
-            new TwigTemplateWarmingModeEventSubscriberPlugin(),
-        ];
-    }
-```
+For comprehensive Twig-specific performance optimizations, including compiler activation, path cache configuration, template warmup, SVG icons handling, caching strategies, and other best practices, see [Twig performance best practices](/docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html).
 
 ## Activate Zed navigation cache
 
@@ -303,7 +152,7 @@ To configure this, update the configuration in `src/Pyz/Zed/Router/RouterConfig.
 
 Yves performs a high number of `get()` calls to Redis. If Redis is installed on the same machine, the expected time per `get()` is below 0.1 ms. However, if you run Spryker in a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior is enabled by default.
 
-If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store#use-and-configure-key-value-storage-cache).
+If you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Use Redis or Valkey as a KV Storage](/docs/dg/dev/backend-development/client/use-and-configure-redis-or-valkey-as-a-key-value-store.html#use-and-configure-key-value-storage-cache).
 
 ## ClassResolver optimizations
 
@@ -491,6 +340,48 @@ protected function getOrderItemExpanderPreSavePlugins(): array
 
 After enabling the plugin and configuring the unique column, Spryker saves order items in batches, which reduces database overhead and improves checkout performance.
 
+## Product review performance
+
+Product reviews are displayed on the catalog page, search page, and product detail page. To optimize performance when displaying product ratings, use the `ProductReviewStorageProductViewExpanderPlugin` instead of `ProductReviewSummaryProductViewBulkExpanderPlugin`.
+
+The new plugin retrieves product ratings from storage in bulk, which is more efficient than fetching reviews from a search source and calculating ratings based on reviews.
+
+### Prerequisites
+
+Update `spryker-shop/product-review-widget` to version `^1.17.0` or higher:
+
+```bash
+composer require spryker-shop/product-review-widget:"^1.17.0" --update-with-dependencies
+```
+
+### Set up the plugin
+
+Replace `ProductReviewSummaryProductViewBulkExpanderPlugin` with `ProductReviewStorageProductViewExpanderPlugin` in your dependency provider:
+
+**src/Pyz/Yves/ProductGroupWidget/ProductGroupWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductGroupWidget;
+
+use SprykerShop\Yves\ProductGroupWidget\ProductGroupWidgetDependencyProvider as SprykerShopProductGroupWidgetDependencyProvider;
+use SprykerShop\Yves\ProductReviewWidget\Plugin\ProductGroupWidget\ProductReviewStorageProductViewExpanderPlugin;
+
+class ProductGroupWidgetDependencyProvider extends SprykerShopProductGroupWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\ProductGroupWidgetExtension\Dependency\Plugin\ProductViewBulkExpanderPluginInterface>
+     */
+    protected function getProductViewBulkExpanderPlugins(): array
+    {
+        return [
+            new ProductReviewStorageProductViewExpanderPlugin(),
+        ];
+    }
+}
+```
+
 ## Reduce functionality
 
 Check if you require all features you currently use and check all applied plugins if you need them. Some plugins can probably be removed. Specifically, check the following ones:
@@ -538,6 +429,26 @@ Performance optimizations in publish and synchronization (merchant-related):
 - [spryker/merchant-product-offer-storage:^2.6.0](https://github.com/spryker/merchant-product-offer-storage/releases/tag/2.6.0)
 - [spryker/product-offer-storage:^1.8.0](https://github.com/spryker/product-offer-storage/releases/tag/1.8.0)
 - [spryker/propel:^3.45.0](https://github.com/spryker/propel/releases/tag/3.45.0)
+
+Performance optimizations in publish and synchronization (product-related):
+- [spryker/price-product:^4.48.0](https://github.com/spryker/price-product/releases/tag/4.48.0)
+- [spryker/product-page-search:^3.40.0](https://github.com/spryker/product-page-search/releases/tag/3.40.0)
+- [spryker/product-search:^5.24.1](https://github.com/spryker/product-search/releases/tag/5.24.1)
+- [spryker/product-storage:^1.47.0](https://github.com/spryker/product-storage/releases/tag/1.47.0)
+- [spryker/product-offer-storage:^1.10.0](https://github.com/spryker/product-offer-storage/releases/tag/1.10.0)
+- [spryker/price-product-offer:^1.7.1](https://github.com/spryker/price-product-offer/releases/tag/1.7.1)
+- [spryker/price-product-offer-storage:^1.5.1](https://github.com/spryker/price-product-offer-storage/releases/tag/1.5.1)
+- [spryker/price-product-storage:^4.13.0](https://github.com/spryker/price-product-storage/releases/tag/4.13.0)
+- [spryker/product-image:^3.20.1](https://github.com/spryker/product-image/releases/tag/3.20.1)
+- [spryker/product-category-storage:^2.11.0](https://github.com/spryker/product-category-storage/releases/tag/2.11.0)
+- [spryker/product-category-search:^1.2.1](https://github.com/spryker/product-category-search/releases/tag/1.2.1)
+- [spryker/propel:^3.47.0](https://github.com/spryker/propel/releases/tag/3.47.0)
+  - *Note*: If you still use destructive deployments, update the `config/install/destructive.yml` file. You can copy it from any demo shop.
+- [spryker/event-behavior:^1.32.0](https://github.com/spryker/event-behavior/releases/tag/1.32.0)
+- [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
+
+Performance optimizations in cart page and checkout for big carts (100+ items):
+- Check the [Cart page performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html) guideline.
 
 ## Performance profiling
 

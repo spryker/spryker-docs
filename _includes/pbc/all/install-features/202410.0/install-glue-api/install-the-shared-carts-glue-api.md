@@ -361,7 +361,7 @@ that you can send the following requests:
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check that you get a valid response from the following requests:  
+To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check that you get a valid response from the following requests:
 
 <details>
   <summary>POST http://glue.mysprykershop.com/carts/{{cart_uuid}}/shared-carts</summary>

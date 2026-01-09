@@ -116,7 +116,7 @@ To retrieve the product offers, send the request:
                         "currency": {
                             "code": "EUR",
                             "name": "Euro",
-                            "symbol": "€"                        
+                            "symbol": "€"
                     },
                         "volumePrices": [
                             {
@@ -257,7 +257,7 @@ To retrieve the product offers, send the request:
 | merchantReference | String   | Unique identifier of the merchant. |
 | isDefault         | Boolean  | Defines if the product offer is [default](/docs/pbc/all/offer-management/202410.0/marketplace/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
 
-{% include pbc/all/glue-api-guides/202410.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md -->
 
 For the response attributes of the other included resources, see the following:
 - [Retrieve product offer prices](/docs/pbc/all/price-management/202410.0/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)

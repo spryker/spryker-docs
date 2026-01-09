@@ -16,6 +16,7 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 - [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
 
 ## Prerequisites
+
 Before you start the installation, make sure you have installed the following features:
 
 

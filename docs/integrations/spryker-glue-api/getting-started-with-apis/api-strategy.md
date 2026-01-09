@@ -1,5 +1,5 @@
 ---
-title: Spryker API Strategy for 2026
+title: Spryker API Strategy
 description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: January 9, 2026
 template: default

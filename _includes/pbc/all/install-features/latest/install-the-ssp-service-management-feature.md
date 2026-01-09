@@ -1601,7 +1601,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```bash
 console frontend:yves:build
-```
 console frontend:zed:install-dependencies
 console frontend:zed:build
 ```

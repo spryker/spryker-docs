@@ -395,13 +395,14 @@ resource:
 
 **EU-specific variant:**
 
-`src/Pyz/Glue/Customer/resources/api/backend/customers-EU.yml`
+`src/Pyz/Glue/CustomerEU/resources/api/backend/customers.resource.yml`
 
 ```yaml
 resource:
   name: Customers
   shortName: Customer
-
+  codeBucket: EU
+  
   operations:
     - type: Get
     - type: Post

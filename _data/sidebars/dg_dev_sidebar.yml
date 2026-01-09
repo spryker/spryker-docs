@@ -64,6 +64,8 @@ entries:
         nested:
           - title: AI IDE Assistants
             url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
+          - title: Context7 MCP Server
+            url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
           - title: Spryker Engineer GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
           - title: Spryker K6 Performance Assistant GPT

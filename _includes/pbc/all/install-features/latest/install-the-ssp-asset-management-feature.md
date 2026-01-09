@@ -735,6 +735,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 Setup search updates
+
 ```bash
 console search:setup
 ```

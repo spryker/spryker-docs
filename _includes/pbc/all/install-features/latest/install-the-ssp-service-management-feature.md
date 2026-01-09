@@ -238,7 +238,6 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
 }
 ```
 
-
 **src/Pyz/Yves/SelfServicePortal/SelfServicePortalConfig.php**
 
 ```php
@@ -654,7 +653,6 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 </details>
 
 
-
 <details>
   <summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
@@ -987,7 +985,6 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 }
 ```
 
-
 **src/Pyz/Client/AvailabilityStorage/AvailabilityStorageDependencyProvider.php**
 
 ```php
@@ -1013,7 +1010,6 @@ class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDe
 ```
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
-
 
 ```php
 <?php
@@ -1043,7 +1039,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 <details>
   <summary>src/Pyz/Yves/CustomerPage/Form/CheckoutAddressCollectionForm.php</summary>
-
 
 ```php
 <?php
@@ -1456,7 +1451,7 @@ Before importing the data, make sure you have imported demo data for product con
 - [Import product data](/docs/dg/dev/data-import/latest/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import)
 
 Before importing the data, make sure you have imported demo data for service point with key **sp1**:
-- [Import Service Points data](/docs/pbc/all/service-point-management/latest/install-features/install-the-service-points-feature.html#import-service-points)
+- [Import Service Points data](/docs/pbc/all/service-point-management/latest/install-features/install-the-service-points-feature.html)
 
 {% endinfo_block %}
 
@@ -1480,13 +1475,13 @@ console data:import product-to-product-class
 
 - Make sure the glossary keys have been added to `spy_glossary_key` and `spy_glossary_translation` tables.
 - Make sure the following tables contain the imported data:
-   - `spy_product_shipment_type`
-   - `spy_sales_product_abstract_type`
-   - `spy_sales_order_item_product_abstract_type`
-   - `spy_product_abstract_type`
-   - `spy_product_abstract_to_product_abstract_type`
-   - `spy_product_label`
-   - `spy_product_label_store`
+  - `spy_product_shipment_type`
+  - `spy_sales_product_abstract_type`
+  - `spy_sales_order_item_product_abstract_type`
+  - `spy_product_abstract_type`
+  - `spy_product_abstract_to_product_abstract_type`
+  - `spy_product_label`
+  - `spy_product_label_store`
 
 {% endinfo_block %}
 

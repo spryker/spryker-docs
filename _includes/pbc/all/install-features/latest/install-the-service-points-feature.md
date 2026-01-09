@@ -102,7 +102,7 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in the database:
+Verify that the following changes have been applied to the database:
 
 | DATABASE ENTITY                     | TYPE   | EVENT   |
 |-------------------------------------|--------|---------|

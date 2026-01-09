@@ -1,4 +1,4 @@
-This document describes how to install the Self-Service Portal (SSP) asset based catalog feature.
+This document describes how you install the Self-Service Portal (SSP) asset-based catalog feature.
 
 {% info_block warningBox "Install all SSP features" %}
 
@@ -6,7 +6,7 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 
 {% endinfo_block %}
 
-## Features Asset-Based Catalog depends on
+## Features the asset-based catalog depends on
 
 - [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
 - [Install the SSP Dashboard Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html)
@@ -16,6 +16,8 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 - [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
 
 ## Prerequisites
+Before you start the installation, make sure you have installed the following features:
+
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                |
 |---------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,7 +43,7 @@ Make sure the following packages are now listed in `composer.lock`:
 {% endinfo_block %}
 
 
-## Configure the event triggering for the catalog entities
+## Configure event triggering for catalog entities
 
 **src/Pyz/Zed/SelfServicePortal/Persistence/Propel/Schema/spy_ssp_model_to_product_list.schema.xml**
 
@@ -77,7 +79,7 @@ Make sure the following packages are now listed in `composer.lock`:
 </database>
 ```
 
-## Set up database schema
+## Apply database schema changes
 
 Apply schema updates:
 
@@ -109,7 +111,7 @@ console transfer:generate
 |-----------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
 | SspModelAssetWritePublisherPlugin       | Publishes SSP model data by `SpySspModel` entity events.                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search  |
 | SspAssetToModelWritePublisherPlugin     | Publishes SSP model data by `SpySspAssetToSspModel` entity events.                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage |
-| SspAssetToModelWritePublisherPlugin     | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the search engine. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage |
+| SspAssetToModelWritePublisherPlugin     | Publishes SSP asset data by `SpySspAssetToSspModel` entity events to the search engine. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -124,8 +126,6 @@ use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDepende
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search\SspAssetToModelWritePublisherPlugin as SearchSspAssetToModelWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Storage\SspAssetToModelWritePublisherPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Publisher\SspAsset\Search\SspModelAssetWritePublisherPlugin;
-
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
@@ -166,14 +166,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ### Set up widgets
 
-| PLUGIN                        | SPECIFICATION                                                                           | PREREQUISITES | NAMESPACE                                    |
-|-------------------------------|-----------------------------------------------------------------------------------------|---------------|----------------------------------------------|
-| SspAssetInfoForItemWidget     | On the cart page, renders asset information for a cart item.                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| PLUGIN                        | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                    |
+|-------------------------------|-------------------------------------------------------------------------------------|---------------|----------------------------------------------|
+| SspAssetInfoForItemWidget     | On the cart page, renders asset information for a cart item.                        |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspItemAssetSelectorWidget    | On the product details page, renders an autocomplete form field for selecting an asset. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspCartItemAssetSelectorWidget | On the cart page, renders an autocomplete form field for selecting an asset.            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| AssetCompatibilityLabelWidget | Displays the compatibility label for assets.                                            |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetFilterNameWidget      | Displays the asset name in search result section.                                       |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspAssetFilterWidget          | Display the asset data.                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspCartItemAssetSelectorWidget | On the cart page, renders an autocomplete form field for selecting an asset.        |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| AssetCompatibilityLabelWidget | Displays the compatibility label for assets.                                        |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetFilterNameWidget      | Displays the asset name in search result section.                                   |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspAssetFilterWidget          | Display asset data.                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -265,9 +265,7 @@ MDL--2,ssp-pl-001
     source: data/import/common/common/ssp_model_product_list.csv
 ```
 
-
-## Register the following data import plugins
-
+## Register data import plugins
 
 | PLUGIN                              | SPECIFICATION                                       | PREREQUISITES | NAMESPACE                                                            |
 |-------------------------------------|-----------------------------------------------------|---------------|----------------------------------------------------------------------|

@@ -8,7 +8,7 @@ Follow the steps below to install the Product Offer Shipment feature core.
 
 ## Prerequisites
 
-To start feature integration, integrate the following required features:
+Before you start the feature integration, make sure you have integrated the following required features:
 
 | NAME          | VERSION          | INSTALLATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -271,7 +271,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getPublisherTriggerPlugins(): array
     {
         return [
-            return new ProductOfferShipmentTypePublisherTriggerPlugin(),
+            new ProductOfferShipmentTypePublisherTriggerPlugin(),
         ];
     }
 

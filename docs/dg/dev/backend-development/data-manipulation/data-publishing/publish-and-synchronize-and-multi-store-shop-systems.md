@@ -22,8 +22,8 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: Publish and synchronize Re-synchronization and re-generation
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---

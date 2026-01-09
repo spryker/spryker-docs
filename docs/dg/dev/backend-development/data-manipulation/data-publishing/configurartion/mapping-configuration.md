@@ -24,7 +24,7 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
+  - title: Publish and synchronize Re-synchronization and re-generation
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
 ---
 
@@ -53,7 +53,7 @@ kv:product_abstract:de:de_de:100
 You can query Redis using this key to retrieve the stored product data.
 
 ![redis-commander](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.md/redis-commander.png)
- 
+
 
 ## Reasons to use mappings
 
@@ -71,7 +71,7 @@ Mappings enable you to associate a resource's internal ID with an alternative, u
 
 Mappings are configured in the Propel schema and used during the P&S process.
 
- 
+
 
 ## Defining mappings
 
@@ -96,7 +96,7 @@ After rebuilding the Propel entity and re-syncing, a new record is stored in Red
 
 
 ```text
-{"id":1,"_timestamp":1599741494.2676899} 
+{"id":1,"_timestamp":1599741494.2676899}
 ```
 
 Key example:

@@ -31,6 +31,8 @@ entries:
                     include_versions:
                     - "202410.0"
                     - "202507.0"
+                  - title: Install Back Office dropdown navigation
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
@@ -1421,6 +1423,8 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Marketplace Merchant B2B Contracts and Contract Requests features overview
                 url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html
+              - title: Merchant Self-Registration feature overview
+                url: /docs/pbc/all/merchant-management/marketplace/merchant-self-registration-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1584,6 +1588,9 @@ entries:
                     - "202410.0"
                     - "202507.0"
 
+                  - title: Manage merchant registration requests
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html
+
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
                 nested:
@@ -1669,7 +1676,9 @@ entries:
           - title: Sitemap feature overview
             url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html
             include_versions:
-            - "202505.0"
+            - "202507.0"
+          - title: Crawler Control
+            url: /docs/pbc/all/miscellaneous/crawler-control.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1682,8 +1691,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
                   - title: Sitemap
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
-                    include_versions:
-                    - "202505.0"
                   - title: Push Notification
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-push-notification-feature.html
 
@@ -1873,13 +1880,11 @@ entries:
 
       - title: Multi-factor authentication
         url: /docs/pbc/all/multi-factor-authentication/multi-factor-authentication.html
-        include_versions:
-        - "202505.0"
         nested:
           - title: Install the Multi-Factor Authentication feature
             url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-feature.html
-          - title: Install customer email Multi-Factor Authentication method
-            url: /docs/pbc/all/multi-factor-authentication/install-customer-email-multi-factor-authentication-method.html
+          - title: Install email Multi-Factor Authentication method
+            url: /docs/pbc/all/multi-factor-authentication/install-email-multi-factor-authentication-method.html
           - title: Create Multi-Factor Authentication methods
             url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html
 
@@ -2055,8 +2060,6 @@ entries:
 
               - title: Order Amendment feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html
-                include_versions:
-                - "202505.0"
               - title: Reclamations feature overview
                 url: /docs/pbc/all/order-management-system/base-shop/reclamations-feature-overview.html
               - title: Refunds feature overview
@@ -2085,8 +2088,6 @@ entries:
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
                       - title: Order Amendment
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html
-                        include_versions:
-                        - "202505.0"
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Reorder
@@ -3890,6 +3891,8 @@ entries:
                       include_versions:
                       - "202410.0"
                       - "202507.0"
+                    - title: Integration of the Algolia UI Library in the Front End
+                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/algolia-widgets-integration.html
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
@@ -3934,15 +3937,21 @@ entries:
 
       - title: Self-Service Portal
         url: /docs/pbc/all/self-service-portal/self-service-portal.html
-        include_versions:
-        - "202505.0"
         nested:
           - title: Self-Service Portal Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
           - title: Self-Service Portal Inquiry Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
-          - title: Self-Service Portal Dashboard Management feature overview
+          - title: SSP Dashboard Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html
+          - title: SSP Asset Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-management-feature-overview.html
+          - title: SSP Models feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-model-management-feature-overview.html
+          - title: SSP asset-based catalog feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-based-catalog-feature-overview.html
+          - title: SSP File Management feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html
           - title: Install
             nested:
               - title: Install Self-Service Portal
@@ -3953,10 +3962,23 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-dashboard-management-feature.html
               - title: Install the SSP File Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
+              - title: Install the SSP Model Management feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-model-management-feature.html
               - title: Install the SSP Inquiry Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+              - title: SSP glossary demo data
+                url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+
+          - title: Manage in the Back Office
+            nested:
+              - title: Add SSP assets
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-add-ssp-assets.html
+              - title: Upload SSP files
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-upload-ssp-files.html
+              - title: Attach SSP files to assets and company entities
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html
 
 
 
@@ -4278,6 +4300,10 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
                       - title: Troubleshooting
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+                      - title: FAQ
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                        include_versions:
+                        - "202404.0"
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 

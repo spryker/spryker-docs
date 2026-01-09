@@ -68,8 +68,8 @@ The new Variants section in Merchant Portal streamlines the management of concre
 
 ### Documentation
 
-- [Edit marketplace concrete products](/docs/pbc/all/product-information-management/202410.0/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
-- [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/202410.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)
+- [Edit marketplace concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
+- [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)
 
 
 ## [Early Access] AI Features <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -223,8 +223,8 @@ Dynamic Multistore is an enhanced version of the multi-store capability. This fe
 
 ### Documentation
 
-- [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/dynamic-multistore-feature-overview.html)
-- [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/202410.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+- [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html)
+- [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
 
 
 
@@ -243,8 +243,8 @@ Product comparison enables customers to easily compare products on mobile and de
 
 ### Documentation
 
-- [Product Comparison feature overview](/docs/pbc/all/product-information-management/202410.0/base-shop/feature-overviews/product-comparison-feature-overview.html)
-- [Install the Product Comparison feature](/docs/pbc/all/product-information-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html)
+- [Product Comparison feature overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-comparison-feature-overview.html)
+- [Install the Product Comparison feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-comparison-feature.html)
 
 
 
@@ -265,7 +265,7 @@ Dynamic cart improves user experience by providing instant, smooth, and uninterr
 
 ### Documentation
 
-[Dynamic cart overview](/docs/pbc/all/cart-and-checkout/202410.0/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
+[Dynamic cart overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html)
 
 
 
@@ -286,8 +286,8 @@ Discounts can now be applied based on the total number of order a customer place
 
 ### Documentation
 
-[Decision rules: Attributes and operators](/docs/pbc/all/discount-management/202410.0/base-shop/manage-in-the-back-office/create-discounts.html#decision-rules-attributes-and-operators)
-[Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/202410.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)
+[Decision rules: Attributes and operators](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html#decision-rules-attributes-and-operators)
+[Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)
 
 
 

@@ -71,7 +71,7 @@ COMMIT;
 
 Do the following:
 
-1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html) for details on how to do that.
+1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html) for details on how to do that.
 
 2. Send a `PATCH` request. This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided:
 

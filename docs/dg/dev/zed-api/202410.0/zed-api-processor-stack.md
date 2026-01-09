@@ -18,18 +18,14 @@ redirect_from:
 related:
   - title: Zed API (Beta)
     link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
-  - title: Zed API configuration
-    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
   - title: Zed API resources
     link: docs/scos/dev/sdk/zed-api/zed-api-resources.html
   - title: Zed API CRUD functionality
     link: docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
-  - title: Zed API project implementation
-    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 {% info_block warningBox "Warning" %}
 
-Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/dg/dev/glue-api/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
+Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/integrations/spryker-glue-api/backend-api/backend-api.html).
 
 {% endinfo_block %}
 

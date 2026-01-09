@@ -13,7 +13,7 @@ redirect_from:
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure.html
 related:
   - title: Authentication and authorization
-    link: docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
+    link: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -78,7 +78,7 @@ Each route plugin implements `ResourceRoutePluginInterface`, which provides a se
 | `getResourceType` | 	Gets the resource type. | string | *carts* |
 | `configure` | Configures a mapping of the HTTP verbs supported by the resource to the corresponding controller methods responsible for handling them. Also, it defines which of the verbs require authentication to use. | `ResourceRouteCollectionInterface` |  |
 | `getController` | Gets the name of the resource controller responsible for handling requests to the resource. The name must be provided in *kebab-case*, hyphen-separated | string | If the controller name is *CartsResourceController.php*, this function should return *carts-resource*. |
-| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/dg/dev/glue-api/latest/glue-api-tutorials/implement-a-rest-api-resource.html#describe-fields-for-post-and-patch-calls). |
+| `getResourceAttributesClassName` | Gets the FQCN of the Resource Attributes Transfer that is used to handle request attributes for the given resource type. | string | See details in [5. Describe Fields for Post and Patch Calls](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#describe-fields-for-post-and-patch-calls). |
 
 For more details on how to implement a route plugin, see [6. Route Requests to Your Controller](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/implement-a-rest-api-resource.html#route-requests-to-your-controller).
 
@@ -213,7 +213,7 @@ The interface provides only 1 method: `getParentResourceType`. The method must r
 
 ### Resource relationships
 
-Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/pbc/all/shopping-list-and-wishlist/{latest}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/pbc/all/product-information-management/{latest}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
 
 Let us consider the following REST Response example. It contains information on a wishlist item without any resource relationships.
 

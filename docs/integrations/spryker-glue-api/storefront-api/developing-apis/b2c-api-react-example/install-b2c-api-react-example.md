@@ -30,7 +30,7 @@ The example application is provided only for display purposes and must under no 
 
 To install the app on a dedicated web server, follow these steps:
 
-1. Make sure that you have Spryker Storefront API [installed and working](/docs/pbc/all/miscellaneous/{latest}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+1. Make sure that you have Spryker Storefront API [installed and working](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 2. Make sure that the following prerequisites are installed on the [Node 8.9.3](https://nodejs.org/en/) server or newer.
 

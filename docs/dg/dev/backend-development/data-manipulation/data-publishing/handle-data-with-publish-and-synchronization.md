@@ -23,8 +23,6 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and Synchronize repeated export
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
@@ -144,7 +142,7 @@ namespace Pyz\Shared\HelloWorldStorage;
 use Spryker\Shared\Kernel\AbstractBundleConfig;
 
 class HelloWorldStorageConfig extends AbstractBundleConfig
-{   
+{
     /**
      * This event will be used for spy_hello_world_message entity creation.
      */
@@ -170,7 +168,7 @@ For P&S to work, the publishers need to catch the publish events and run the app
 
 Do the following:
 
-1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
+1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.
 
 <details>
 <summary>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
@@ -885,7 +883,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
 
  ....
 
-}    
+}
 ```
 
 ```php
@@ -921,7 +919,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
  ....
 
-}      
+}
 ```
 
 ## 8. Queue
@@ -947,7 +945,7 @@ class HelloWorldStorageConfig extends AbstractBundleConfig
     public const SYNC_STORAGE_HELLO = 'sync.storage.hello';
 
     ....
-}   
+}
 ```
 
 2. Adjust the RabbitMQ configuration with the newly introduced queue.
@@ -1028,7 +1026,7 @@ Store: DE | Environment: development
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the records have been added to the table:  
+Ensure that the records have been added to the table:
 1. Open `spy_hello_world_message_storage`.
 2. You should see a record similar to the following pear per each message:
 

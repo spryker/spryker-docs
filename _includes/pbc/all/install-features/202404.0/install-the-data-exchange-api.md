@@ -646,15 +646,15 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     /**
      * @var string
      */
-    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';	    
+    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';
 
     /**
-     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection	     
-     *	     
-     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface	     
+     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection
+     *
+     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface
      */
-    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface	    
-    {	    
+    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface
+    {
         $contextExpanderCollection->addExpander(new DynamicEntityApiSchemaContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
     }
 
@@ -718,14 +718,14 @@ use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyPr
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>	    
-     */	    
-    protected function getRouteProviderPlugins(): array	    
-    {	    
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProviderPlugins(): array
+    {
         return [
             new DynamicEntityRouteProviderPlugin(),
         ];
-    }	    
+    }
 }
 ```
 </details>

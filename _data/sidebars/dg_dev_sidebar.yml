@@ -258,7 +258,7 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
         - title: Implement Publish and Synchronization
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
-        - title: "Publish and synchronize: Re-synchronization and re-generation"
+        - title: "Publish and synchronize Re-synchronization and re-generation"
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
         - title: Publish and synchronize and multi-store shop systems
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
@@ -1563,6 +1563,8 @@ entries:
 
   - title: Glue API
     url: /docs/dg/dev/glue-api/glue-api.html
+    include_versions:
+      - "202410.0"
     nested:
     - title: Glue Spryks
       url: /docs/dg/dev/glue-api/glue-spryks.html
@@ -1614,6 +1616,8 @@ entries:
       nested:
         - title: Create storefront resources
           url: /docs/dg/dev/glue-api/routing/create-storefront-resources.html
+          include_versions:
+            - 202410.0
         - title: Create backend resources
           url: /docs/dg/dev/glue-api/routing/create-backend-resources.html
         - title: Create routes
@@ -1668,15 +1672,12 @@ entries:
 
   - title: Zed API
     url: /docs/dg/dev/zed-api/zed-api.html
+    include_versions:
+      - 202410.0
     nested:
-    - title: Project implementation - Zed API
-      url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
     - title: Integrate Zed API
       url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api.html
-      nested:
-        - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/zed-api/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
-
+    - title: "Tutorial: Using Zed API"
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
     - title: "Tutorial: Using Zed API"

@@ -360,8 +360,8 @@ Structure:
 | tableAlias                                                | spy_dynamic_entity_configuration.table_alias                                    | For details see [How to configure Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
 | isActive                                                  | spy_dynamic_entity_configuration.is_active                                      | For details see [How to configure Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
 | definition                                                | spy_dynamic_entity_configuration.definition                                     | For details see [How to configure Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
-| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [How to send request in data exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html) |
-| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [How to send request in data exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)                                                      |
+| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [How to send request in data exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html) |
+| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [How to send request in data exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)                                                      |
 | childRelations.isEditable                                 | spy_dynamic_entity_configuration_relation.is_editable                           | If set to `false` limits relation functionality to only GET requests, POST/PATCH/PUT requests are restricted.                                                                                                                                                                                   |
 | childRelations.childDynamicEntityConfiguration.tableAlias | spy_dynamic_entity_configuration_relation.fk_child_dynamic_entity_configuration | The alias of the child Data Exchange API configuration for the relation, parent configuration details are determined based on the configuration where the child relations added.                                                                                                                |
 | childRelations.relationFieldMapping                       | spy_dynamic_entity_configuration_relation_field_mapping                         | Details about how child and parent configuration of the relations are connected.                                                                                                                                                                                                                |
@@ -650,15 +650,15 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
     /**
      * @var string
      */
-    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';	    
+    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';
 
     /**
-     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection	     
-     *	     
-     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface	     
+     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection
+     *
+     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface
      */
-    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface	    
-    {	    
+    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface
+    {
         $contextExpanderCollection->addExpander(new DynamicEntityApiSchemaContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
     }
 
@@ -724,14 +724,14 @@ use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyPr
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>	    
-     */	    
-    protected function getRouteProviderPlugins(): array	    
-    {	    
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProviderPlugins(): array
+    {
         return [
             new DynamicEntityRouteProviderPlugin(),
         ];
-    }	    
+    }
 }
 ```
 
@@ -739,7 +739,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)
+Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)
 
 {% endinfo_block %}
 

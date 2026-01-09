@@ -15,6 +15,8 @@ entries:
     - title: Getting started with APIs
       url: /docs/integrations/spryker-glue-api/getting-started-with-apis/getting-started-with-apis.html
       nested:
+      - title: Spryker API Strategy for 2026
+        url: /docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy-2026.html
       - title: Differences between Storefront and Backend APIs
         url: /docs/integrations/spryker-glue-api/getting-started-with-apis/comparison-of-storefront-and-backend-apis.html
     - title: Authenticating and authorization

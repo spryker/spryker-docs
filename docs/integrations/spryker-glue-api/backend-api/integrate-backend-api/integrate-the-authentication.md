@@ -187,6 +187,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**

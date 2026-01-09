@@ -80,10 +80,10 @@ This change is **additive**, not a replacement for Glue APIs.
 
 ### API Platform Integration
 
-- **Beta:** until end of **Q1 2026**
+- **Early access:** until end of **Q1 2026**
 - **General Availability:** **Next Product Release**
 
-### During beta
+### During Early access
 
 - early adoption is possible
 - support scope is limited
@@ -207,7 +207,7 @@ To provide:
 - more OOTB media types such as application/xml, application/csv application/json+ld, etc.
 
 **When should I start using API Platform integration?**
-- Early adoption: during beta (Q1 2026)
+- Early adoption: during early access (Q1 2026)
 - Default choice: from Global Availability (Next Product Release) for new integrations
 
 ---

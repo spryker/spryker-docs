@@ -5,13 +5,55 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
+    nested:
+      - title: Development tools
+        url: /docs/dg/dev/development-tools.html
+        nested:
+          - title: XDebug
+            url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+            nested:
+              - title: Set up XDebug profiling
+                url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
+          - title: WebProfiler
+            nested:
+              - title: Web Profiler for Yves
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+              - title: Web Profiler for Glue
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
+              - title: Web Profiler for Backend Gateway
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+              - title: Web Profiler for Zed
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+          - title: Code Quality Tools
+            nested:
+              - title: PHPStan
+                url: /docs/dg/dev/sdks/sdk/development-tools/phpstan.html
+              - title: Code Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
+              - title: Architecture Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
+              - title: Project Architecture Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
+              - title: Evaluator
+                url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+          - title: AI tools
+            nested:
+              - title: AI Assistant
+                url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+              - title: AI Dev Tool
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+      - title: Continuous Integration
+        url: /docs/dg/dev/ci.html
+      - title: Post-Installation Configuration
+        url: /docs/dg/dev/post-installation-configuration.html
   - title: AI
     nested:
       - title: AI Foundation
         nested:
           - title: AI Foundation
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
-      - title: AI Dev
+      - title: AI Dev SDK
+        url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
           - title: AI Dev Overview
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
@@ -991,6 +1033,8 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
       - title: Web Profiler for Backend Gateway
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+      - title: Web Profiler for Glue
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
 
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
@@ -1355,8 +1399,18 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
       - title: Batch processing of Propel entities
         url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
+      - title: Database performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/database-performance-guidelines.html
+      - title: Key-Value storage performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
+      - title: Search performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html
+      - title: Infrastructure and worker configuration guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/infrastructure-worker-configuration-guidelines.html
+      - title: Custom code performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/custom-code-performance-guidelines.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
@@ -1365,6 +1419,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+      - title: Keeping dependencies updated
+        url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html

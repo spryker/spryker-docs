@@ -7,7 +7,7 @@ last_updated: Dec 18, 2025
 
 The *asset-based catalog* in the Self-Service Portal creates a personalized catalog of spare parts and services for each asset based on the asset's assigned model. This ensures users see only products that are compatible with the machines they own.
 
-For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-models-feature-overview.html).
+For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview).
 
 ## Key concepts
 
@@ -76,7 +76,7 @@ This reduces the risk of ordering incorrect spare parts or services and helps cu
 
 1. A customer logs into the Self-Service Portal and opens **Customer Account** > **Assets**.
 2. They select their printing machine asset and click **Search for spare parts**.
-3. The catalog opens, showing only products from the product lists assigned to that asset’s model.
+3. The catalog opens, showing only products from the product lists assigned to that asset's model.
 4. The customer filters by product attributes (for example, category or price) but always stays within the compatible spare parts set.
 5. On a spare part PDP, the compatibility widget confirms that this part is compatible with the selected asset and lists any other assets in their fleet that can use the same part.
 

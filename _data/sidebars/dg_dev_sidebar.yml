@@ -66,6 +66,8 @@ entries:
             url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
           - title: Context7 MCP Server
             url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
+          - title: Language Server for Claude
+            url: /docs/dg/dev/ai/ai-assistants/lsp-for-claude.html
           - title: Spryker Engineer GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
           - title: Spryker K6 Performance Assistant GPT

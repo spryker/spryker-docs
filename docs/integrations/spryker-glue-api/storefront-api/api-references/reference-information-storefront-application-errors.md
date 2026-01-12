@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/reference-information-glueapplication-errors.html
   - /docs/scos/dev/glue-api-guides/202404.0/reference-information-glueapplication-errors.html
   - /docs/scos/dev/glue-api-guides/202204.0/reference-information-glueapplication-errors.html
-  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/reference-information-glueapplication-errors.html
+  - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/reference-information-glueapplication-errors.html
   - /docs/dg/dev/glue-api/latest/rest-api/reference-information-glueapplication-errors.html
 ---
 

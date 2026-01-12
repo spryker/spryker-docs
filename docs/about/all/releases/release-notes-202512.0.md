@@ -1,7 +1,7 @@
 ---
 title: Release notes 202512.0
 description: Release notes for Spryker Cloud Commerce OS version 202512.0
-last_updated: December 18, 2025
+last_updated: Jan 9, 2026
 template: concept-topic-template
 ---
 
@@ -318,7 +318,12 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - Faster request handling for URL-heavy flows (storefront and merchant portal routing scenarios).
 
 **Documentation:**
+- [Product review performance](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#product-review-performance)
 - [Cart performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html#cart-page-performance-configuration)
+
+**Module Important technical releases:**
+- [Cart page performance optimization](https://api.release.spryker.com/release-group/6107)
+- [UPPER() function optimization for URL lookups](https://api.release.spryker.com/release-group/6124)
 
 ### Reliability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

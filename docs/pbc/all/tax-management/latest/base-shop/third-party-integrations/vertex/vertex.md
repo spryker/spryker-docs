@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
   - /docs/pbc/all/tax-management/202400.0/base-shop/third-party-integrations/vertex/vertex.html
-  - /docs/pbc/all/tax-management/202410.0/base-shop/third-party-integrations/vertex/vertex-faq.html
+  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex-faq.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
@@ -19,8 +19,8 @@ The Spryker-Vertex integration is part of the tax Category of Spryker's App Comp
 
 The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near-real-time tax calculations at the point of purchase while accounting for the following:
 
-- Tax rates in each state, county, and city.  
-- Laws, rules, and jurisdiction boundaries.  
+- Tax rates in each state, county, and city.
+- Laws, rules, and jurisdiction boundaries.
 - Special circumstances like tax holidays and product exemptions.
 
 For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
@@ -66,7 +66,7 @@ The Vertex app calculates taxes based on the tax rules and rates of the country 
 
 In some cases, the Vertex app can't calculate taxes and returns a 0 tax rate. For example, when a seller is located in EU, and the buyer is located in the US.
 
-So, make sure your project has a logic for such cases. For example, when a buyer selects a shipping address different from the project's default tax region or country, a warehouse address in the respective region needs to be used.  
+So, make sure your project has a logic for such cases. For example, when a buyer selects a shipping address different from the project's default tax region or country, a warehouse address in the respective region needs to be used.
 
 
 ## Product Class Code

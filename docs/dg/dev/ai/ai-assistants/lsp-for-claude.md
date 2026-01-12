@@ -50,7 +50,7 @@ Run the indexing command in your project root:
 phpactor index:build --reset
 ```
 
-For more information Phpactor, see [Phpactor documentation](https://phpactor.readthedocs.io/en/master/).
+For more information about Phpactor, see [Phpactor documentation](https://phpactor.readthedocs.io/en/master/).
 
 ## Supported operations
 
@@ -98,6 +98,7 @@ Example configuration in `.phpactor.json`:
 ```
 
 Trust project configuration in the project root:
+
 ```bash
 phpactor config:trust
 ```

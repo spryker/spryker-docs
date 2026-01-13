@@ -57,6 +57,8 @@ entries:
             url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-rabbitmq-4.1-update.html
         - title: Jenkins
           nested:
+          - title: Release notes for spryker-jenkins 20260113
+            url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins-20260113.html
           - title: Release notes for Jenkins
             url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins.html
         - title: Spryker-PHP

@@ -26,9 +26,9 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 - Updated Blackfire to version 1.92.48 (from 1.92.28)
 - Alpine 3.22: tightened build dependencies (openssl/zlib/scdoc), included an APK tools build v3.0.0_rc7 from source for compatibility, and cleaned temporary artifacts.
 
-### Security fixes by image:
+### Security fixes by image
 
 
-- [CVE-2025-47907](https://github.com/advisories/GHSA-j5pm-7495-qmr3): Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
+- [CVE-2025-47907](https://github.com/advisories/GHSA-j5pm-7495-qmr3): Cancelling a query (for example by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error.
 
 - [CVE-2025-47906](https://github.com/advisories/GHSA-gwrf-jf3h-w649): If the PATH environment variable contains paths which are executables (rather than just directories), passing certain strings to LookPath ("", ".", and ".."), can result in the binaries listed in the PATH being unexpectedly returned.

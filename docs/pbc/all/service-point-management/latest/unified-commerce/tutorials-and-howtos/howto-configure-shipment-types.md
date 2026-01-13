@@ -182,7 +182,7 @@ checked: activeShipmentType == '' and row.vars.value == 'in-center-service' ? tr
 
 ---
 
-## 4) What values should the `SHIPMENT_TYPE_*` constants have?
+## 4) Values for the `SHIPMENT_TYPE_*` constants
 
 ### Rule (important)
 
@@ -226,7 +226,7 @@ public function getProductOfferServiceAvailabilityShipmentTypeKeys(): array
 }
 ```
 
-### 5.2 Shipment type keys which applicable for shipping address validation. (service points Storefront API)
+### 5.2 Shipment type keys which applicable for shipping address validation (service points Storefront API)
 
 **File:** `src/Pyz/Shared/ShipmentTypeServicePointsRestApi/ShipmentTypeServicePointsRestApiConfig.php`
 
@@ -239,8 +239,8 @@ public function getApplicableShipmentTypeKeysForShippingAddress(): array
 
 ### 5.3 Click & Collect example configs (only if used)
 
-* `src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php`
-* `src/Pyz/Zed/ClickAndCollectExample/ClickAndCollectExampleConfig.php`
+- `src/Pyz/Yves/ClickAndCollectPageExample/ClickAndCollectPageExampleConfig.php`
+- `src/Pyz/Zed/ClickAndCollectExample/ClickAndCollectExampleConfig.php`
 
 Ensure the shipment type key matches your imported keys.
 There is a configuration to define which shipment types are used for Click & Collect.

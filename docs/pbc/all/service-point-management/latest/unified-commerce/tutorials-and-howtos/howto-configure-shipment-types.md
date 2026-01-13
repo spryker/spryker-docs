@@ -111,25 +111,31 @@ You must update **both** locations (and any duplicates) where defaults are defin
 Change:
 
 {% raw %}
+
 ```twig
 {% set defaultShipmentTypes = ['delivery'] %}
 ```
+
 {% endraw %}
 
 To:
 
 {% raw %}
+
 ```twig
 {% set defaultShipmentTypes = ['in-center-service'] %}
 ```
+
 {% endraw %}
 
 Or (if you intentionally support multiple defaults):
 
 {% raw %}
+
 ```twig
 {% set defaultShipmentTypes = ['delivery', 'in-center-service'] %}
 ```
+
 {% endraw %}
 
 #### B) Checkout address view
@@ -140,17 +146,21 @@ Or (if you intentionally support multiple defaults):
 Apply the **same change** wherever the default shipment types are set or passed into components:
 
 {% raw %}
+
 ```twig
 {% set defaultShipmentTypes = ['delivery'] %}
 ```
+
 {% endraw %}
 
 →
 
 {% raw %}
+
 ```twig
 {% set defaultShipmentTypes = ['in-center-service'] %}
 ```
+
 {% endraw %}
 
 > If the template doesn't define `defaultShipmentTypes` explicitly but passes a default list to a molecule/organism, update the passed value accordingly.
@@ -167,17 +177,21 @@ If you override the widget template:
 This line is commonly hardcoded to `delivery`:
 
 {% raw %}
+
 ```twig
 checked: activeShipmentType == '' and row.vars.value == 'delivery' ? true,
 ```
+
 {% endraw %}
 
 Change `delivery` to your chosen default key:
 
 {% raw %}
+
 ```twig
 checked: activeShipmentType == '' and row.vars.value == 'in-center-service' ? true,
 ```
+
 {% endraw %}
 
 ---

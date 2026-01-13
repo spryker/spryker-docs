@@ -4,15 +4,14 @@ description: Learn how to configure shipment types in your Spryker Commerce OS p
 last_updated: Jan 13, 2026
 template: howto-guide-template
 ---
-# How to add, configure, or disable Shipment Types
 
 ## Background
 
 A **Shipment Type** is a classification (for example, `delivery`, `in-center-service`, `on-site-service`) used to:
 
-* filter and validate available shipment methods during checkout,
-* drive Storefront UI selection (shipment type toggler / defaults),
-* support service-point and click & collect scenarios.
+- filter and validate available shipment methods during checkout,
+- drive Storefront UI selection (shipment type toggler / defaults),
+- support service-point and click & collect scenarios.
 
 Shipment types are **data-driven**: you import them and then assign them to shipment methods.
 
@@ -95,8 +94,8 @@ public function getDefaultSelectedShipmentTypeKey(): string
 
 Also review these methods (recommended):
 
-* `getShipmentTypeSortOrder()` – controls display order
-* `getDeliveryLikeShipmentTypes()` – defines which types behave “delivery-like”
+- `getShipmentTypeSortOrder()` – controls display order
+- `getDeliveryLikeShipmentTypes()` – defines which types behave "delivery-like"
 
 ---
 
@@ -249,68 +248,68 @@ And the ones that are pickup like shipment types.
 
 ## 6) Verification checklist
 
-* `GET /shipment-types` returns the new type and it is active.
-* Shipment type is assigned to the store (`shipment_type_store.csv`).
-* At least one shipment method is mapped to it (`shipment_method_shipment_type.csv`).
-* Storefront defaults (config + Twig + toggler checked logic) use the same key.
-* Checkout shows only shipment methods belonging to the selected shipment type.
+- `GET /shipment-types` returns the new type and it is active.
+- Shipment type is assigned to the store (`shipment_type_store.csv`).
+- At least one shipment method is mapped to it (`shipment_method_shipment_type.csv`).
+- Storefront defaults (config + Twig + toggler checked logic) use the same key.
+- Checkout shows only shipment methods belonging to the selected shipment type.
 
 ---
 
-# How to disable Shipment Types
+## How to disable Shipment Types
 
-## A) Disable the Shipment Type feature (code-level)
+### A) Disable the Shipment Type feature (code-level)
 
 To fully disable the shipment type feature behavior in Storefront and Zed, **unwire the following plugins**:
 
-### Yves
+#### Yves
 
 **File:** `src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php`
 Unwire:
 
-* `ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin`
-* `ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin`
-* `ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin`
+- `ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin`
+- `ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin`
+- `ShipmentTypeCheckoutAddressStepPreGroupItemsByShipmentPlugin`
 
-### Zed – Cart
+#### Zed – Cart
 
 **File:** `src/Pyz/Zed/Cart/CartDependencyProvider.php`
 Unwire:
 
-* `SspServiceShipmentTypePreReloadItemsPlugin`
+- `SspServiceShipmentTypePreReloadItemsPlugin`
 
-### Zed – Checkout
+#### Zed – Checkout
 
 **File:** `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`
 Unwire:
 
-* `ShipmentTypeCheckoutPreConditionPlugin`
+- `ShipmentTypeCheckoutPreConditionPlugin`
 
-### Zed – Shipment
+#### Zed – Shipment
 
 **File:** `src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php`
 Unwire:
 
-* `ShipmentTypeShipmentMethodFilterPlugin`
+- `ShipmentTypeShipmentMethodFilterPlugin`
 
 **After disabling**
 
-* Remove or revert shipment-type-specific Twig overrides if they are no longer needed.
-* Clear caches / deploy as per your process.
+- Remove or revert shipment-type-specific Twig overrides if they are no longer needed.
+- Clear caches / deploy as per your process.
 
 ---
 
-## B) Disable a specific Shipment Type (data-level)
+### B) Disable a specific Shipment Type (data-level)
 
 If you want to keep the feature but disable just one type:
 
-* Set `spy_shipment_type.is_active = 0`, **or**
-* Use Backend API (if enabled): `PATCH /shipment-types/{uuid}` with `"isActive": false`.
+- Set `spy_shipment_type.is_active = 0`, **or**
+- Use Backend API (if enabled): `PATCH /shipment-types/{uuid}` with `"isActive": false`.
 
 **Result:** checkout validation rejects shipment methods tied to inactive shipment types, and Storefront will not offer them.
 
 ## Common pitfalls
 
-* **Default value mismatch:** If config defaults say `in-center-service` but the toggler still checks `delivery`, the UI and quote may diverge.
-* **Store mapping missing:** shipment type exists but doesn’t show because it’s not assigned in `shipment_type_store.csv`.
-* **No method mapping:** shipment type exists but checkout has no shipment methods because `shipment_method_shipment_type.csv` wasn’t updated.
+- **Default value mismatch:** If config defaults say `in-center-service` but the toggler still checks `delivery`, the UI and quote may diverge.
+- **Store mapping missing:** shipment type exists but doesn't show because it's not assigned in `shipment_type_store.csv`.
+- **No method mapping:** shipment type exists but checkout has no shipment methods because `shipment_method_shipment_type.csv` wasn't updated.

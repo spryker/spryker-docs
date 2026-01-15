@@ -1,9 +1,12 @@
 ---
-title: Use the AiFoundation module
-description: Integrate AI providers into your Spryker application
+title: AiFoundation module Overview
+description: Integrate AI foundation providers into the Spryker application
 last_updated: Dec 4, 2025
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent
 template: howto-guide-template
+related:
+  - title: Structured Transfer Response
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
@@ -426,10 +429,6 @@ This transfer represents a file or image attachment:
 ## Roadmap
 
 The following capabilities are planned for future releases of the AiFoundation module:
-
-### Structured response
-
-Support for requesting and parsing structured responses from AI providers. This will enable AI models to return data in predefined formats (for example, JSON schemas), making it easier to integrate AI responses directly into application workflows and business logic.
 
 ### Tool call
 

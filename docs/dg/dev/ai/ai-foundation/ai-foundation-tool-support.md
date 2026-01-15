@@ -39,11 +39,11 @@ AI tools are ideal for scenarios where AI needs to interact with your applicatio
 Enable AI to fetch data from your system:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\AbstractAiToolPlugin;
-use Spryker\Client\AiFoundation\Dependency\Tools\AiToolParameter;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to get product information
-class GetProductInfoTool extends AbstractAiToolPlugin
+class GetProductInfoTool implements ToolPluginInterface
 {
     public const NAME = 'get_product_info';
 
@@ -60,7 +60,7 @@ class GetProductInfoTool extends AbstractAiToolPlugin
     public function getParameters(): array
     {
         return [
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'sku',
                 type: 'string',
                 description: 'The product SKU to retrieve information for',
@@ -69,11 +69,10 @@ class GetProductInfoTool extends AbstractAiToolPlugin
         ];
     }
 
-    public function execute(...$arguments): string
+    public function execute(...$arguments): mixed
     {
         $sku = $arguments['sku'] ?? null;
-        $product = $this->getFactory()
-            ->getProductClient()
+        $product = $this->getProductClient()
             ->getProductBySku($sku);
 
         return json_encode([
@@ -90,13 +89,18 @@ class GetProductInfoTool extends AbstractAiToolPlugin
 Provide specialized calculations:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\AbstractAiToolPlugin;
-use Spryker\Client\AiFoundation\Dependency\Tools\AiToolParameter;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to calculate shipping costs
-class CalculateShippingTool extends AbstractAiToolPlugin
+class CalculateShippingTool implements ToolPluginInterface
 {
     public const NAME = 'calculate_shipping';
+
+    public function __construct(
+        private ShippingCalculatorInterface $shippingCalculator
+    ) {
+    }
 
     public function getName(): string
     {
@@ -111,19 +115,19 @@ class CalculateShippingTool extends AbstractAiToolPlugin
     public function getParameters(): array
     {
         return [
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'weight',
                 type: 'number',
                 description: 'Package weight in kilograms',
                 isRequired: true
             ),
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'destination',
                 type: 'string',
                 description: 'Destination country code (e.g., US, DE, FR)',
                 isRequired: true
             ),
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'method',
                 type: 'string',
                 description: 'Shipping method: standard, express, or overnight',
@@ -132,14 +136,13 @@ class CalculateShippingTool extends AbstractAiToolPlugin
         ];
     }
 
-    public function execute(...$arguments): string
+    public function execute(...$arguments): mixed
     {
         $weight = $arguments['weight'] ?? 0;
         $destination = $arguments['destination'] ?? '';
         $method = $arguments['method'] ?? 'standard';
 
-        $cost = $this->getFactory()
-            ->getShippingCalculator()
+        $cost = $this->shippingCalculator
             ->calculate($weight, $destination, $method);
 
         return (string) $cost;
@@ -152,13 +155,18 @@ class CalculateShippingTool extends AbstractAiToolPlugin
 Allow AI to trigger business operations:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\AbstractAiToolPlugin;
-use Spryker\Client\AiFoundation\Dependency\Tools\AiToolParameter;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to create support tickets
-class CreateSupportTicketTool extends AbstractAiToolPlugin
+class CreateSupportTicketTool implements ToolPluginInterface
 {
     public const NAME = 'create_support_ticket';
+
+    public function __construct(
+        private SupportClientInterface $supportClient
+    ) {
+    }
 
     public function getName(): string
     {
@@ -173,19 +181,19 @@ class CreateSupportTicketTool extends AbstractAiToolPlugin
     public function getParameters(): array
     {
         return [
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'title',
                 type: 'string',
                 description: 'Brief title summarizing the issue',
                 isRequired: true
             ),
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'description',
                 type: 'string',
                 description: 'Detailed description of the issue or request',
                 isRequired: true
             ),
-            new AiToolParameter(
+            new ToolParameter(
                 name: 'priority',
                 type: 'string',
                 description: 'Priority level: high, medium, or low',
@@ -194,14 +202,13 @@ class CreateSupportTicketTool extends AbstractAiToolPlugin
         ];
     }
 
-    public function execute(...$arguments): string
+    public function execute(...$arguments): mixed
     {
         $title = $arguments['title'] ?? '';
         $description = $arguments['description'] ?? '';
         $priority = $arguments['priority'] ?? 'medium';
 
-        $ticketId = $this->getFactory()
-            ->getSupportClient()
+        $ticketId = $this->supportClient
             ->createTicket($title, $description, $priority);
 
         return sprintf('Ticket created with ID: %s', $ticketId);
@@ -211,30 +218,24 @@ class CreateSupportTicketTool extends AbstractAiToolPlugin
 
 ## Create tool sets
 
-Tool sets group related tools together. Create a tool set class that implements `AiToolSetPluginInterface`:
+Tool sets group related tools together. Create a tool set class that implements `ToolSetPluginInterface`:
 
 ```php
 <?php
 
 namespace Pyz\Client\YourModule\Plugin\AiFoundation;
 
-use Spryker\Client\AiFoundation\Dependency\Tools\AiToolSetPluginInterface;
+use Spryker\Client\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
 
-class CustomerServiceToolSet implements AiToolSetPluginInterface
+class CustomerServiceToolSet implements ToolSetPluginInterface
 {
     public const NAME = 'customer_service_tools';
 
-    /**
-     * @inheritDoc
-     */
     public function getName(): string
     {
         return static::NAME;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function getTools(): array
     {
         return [
@@ -253,7 +254,7 @@ Group tools by functional domain:
 
 ```php
 // Product-related tools
-class ProductToolSet implements AiToolSetPluginInterface
+class ProductToolSet implements ToolSetPluginInterface
 {
     public const NAME = 'product_tools';
 
@@ -273,7 +274,7 @@ class ProductToolSet implements AiToolSetPluginInterface
 }
 
 // Order-related tools
-class OrderToolSet implements AiToolSetPluginInterface
+class OrderToolSet implements ToolSetPluginInterface
 {
     public const NAME = 'order_tools';
 
@@ -310,7 +311,7 @@ use Spryker\Client\AiFoundation\AiFoundationDependencyProvider as SprykerAiFound
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\AiToolSetPluginInterface>
+     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {
@@ -352,8 +353,8 @@ class CustomerAssistant
             ->setPromptMessage(
                 (new PromptMessageTransfer())->setContent($customerMessage)
             )
-            ->addAiToolSetName(CustomerServiceToolSet::NAME)
-            ->addAiToolSetName(OrderToolSet::NAME)
+            ->addToolSetName(CustomerServiceToolSet::NAME)
+            ->addToolSetName(OrderToolSet::NAME)
             ->setMaxRetries(2);
 
         $promptResponse = $this->aiFoundationClient->prompt($promptRequest);
@@ -380,15 +381,15 @@ if ($promptResponse->getIsSuccessful() === true) {
     // Get the final AI response
     $finalMessage = $promptResponse->getMessage()->getContent();
 
-    // Access tool call information
-    foreach ($promptResponse->getToolCallMessages() as $toolCallMessage) {
-        $toolName = $toolCallMessage->getToolName();
-        $toolArguments = $toolCallMessage->getToolArguments();
-        $toolResult = $toolCallMessage->getToolResult();
+    // Access tool invocation information
+    foreach ($promptResponse->getToolInvocations() as $toolInvocation) {
+        $toolName = $toolInvocation->getName();
+        $toolArguments = $toolInvocation->getArguments();
+        $toolResult = $toolInvocation->getResult();
 
-        // Log or process tool executions
+        // Log or process tool invocations
         $this->logger->info(sprintf(
-            'AI called tool "%s" with arguments: %s. Result: %s',
+            'AI invoked tool "%s" with arguments: %s. Result: %s',
             $toolName,
             json_encode($toolArguments),
             $toolResult
@@ -403,11 +404,11 @@ The complete flow when tools are used:
 
 1. AI receives the prompt and available tools
 2. AI decides to call one or more tools
-3. AiFoundation executes the tools with provided arguments
+3. AiFoundation automatically executes the tools with provided arguments
 4. Tool results are sent back to the AI
 5. AI incorporates results and may call additional tools
 6. Process continues until AI provides final response
-7. Final response and all tool calls are returned
+7. Final response and all tool invocations are returned in `ToolInvocationTransfer` objects
 
 ## Best practices
 
@@ -435,7 +436,7 @@ Create tools with single, well-defined purposes:
 
 ```php
 // Good: Focused tool
-class GetOrderStatusTool extends AbstractAiToolPlugin
+class GetOrderStatusTool implements ToolPluginInterface
 {
     public const NAME = 'get_order_status';
 
@@ -446,7 +447,7 @@ class GetOrderStatusTool extends AbstractAiToolPlugin
 }
 
 // Avoid: Tool that does too much
-class ManageOrdersTool extends AbstractAiToolPlugin
+class ManageOrdersTool implements ToolPluginInterface
 {
     public function execute(...$arguments): mixed
     {
@@ -461,7 +462,7 @@ class ManageOrdersTool extends AbstractAiToolPlugin
 Return JSON-encoded data for complex results:
 
 ```php
-public function execute(...$arguments): string
+public function execute(...$arguments): mixed
 {
     $order = $this->getOrderDetails($arguments['order_id']);
 
@@ -480,7 +481,7 @@ public function execute(...$arguments): string
 Always validate arguments before execution:
 
 ```php
-public function execute(...$arguments): string
+public function execute(...$arguments): mixed
 {
     $orderId = $arguments['order_id'] ?? null;
 
@@ -499,7 +500,7 @@ public function execute(...$arguments): string
 Return error information in a consistent format:
 
 ```php
-public function execute(...$arguments): string
+public function execute(...$arguments): mixed
 {
     try {
         $result = $this->performOperation($arguments);

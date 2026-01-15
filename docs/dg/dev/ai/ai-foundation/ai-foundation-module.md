@@ -5,7 +5,9 @@ last_updated: Dec 4, 2025
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent
 template: howto-guide-template
 related:
-  - title: Structured Transfer Response
+  - title: Use AI tools with the AiFoundation module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+  - title: Use structured responses with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
 ---
 
@@ -402,6 +404,9 @@ This transfer contains the request data for AI interaction:
 
 - `promptMessage` (PromptMessage, required): The message to send to the AI
 - `aiConfigurationName` (string, optional): The configuration name to use. If not provided, uses `AI_CONFIGURATION_DEFAULT`
+- `structuredMessage` (object, optional): A Transfer object that defines the expected response structure for structured responses
+- `toolSetName` (string[], optional): Array of tool set names to make available to the AI. For details, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
+- `maxRetries` (int, optional): Maximum number of retry attempts for failed requests. Default is 0
 
 ### PromptMessage
 
@@ -416,6 +421,9 @@ This transfer represents a message in the conversation:
 This transfer contains the AI response:
 
 - `message` (PromptMessage): The AI's response message
+- `isSuccessful` (bool): Whether the request was successful
+- `errors` (array, optional): Array of error messages if the request failed
+- `toolInvocations` (ToolInvocation[], optional): Array of tool invocations made by the AI during response generation
 
 ### Attachment
 
@@ -426,13 +434,17 @@ This transfer represents a file or image attachment:
 - `contentType` (string): Content type format (use `AiFoundationConstants::ATTACHMENT_CONTENT_TYPE_URL` or `ATTACHMENT_CONTENT_TYPE_BASE64`)
 - `mediaType` (string): MIME type (for example, `image/png`, `application/pdf`)
 
+### ToolInvocation
+
+This transfer contains information about a tool invocation made by the AI:
+
+- `name` (string): The name of the tool that was invoked
+- `arguments` (array): The arguments passed to the tool
+- `result` (string): The result returned by the tool execution
+
 ## Roadmap
 
 The following capabilities are planned for future releases of the AiFoundation module:
-
-### Tool call
-
-Implementation of function calling capabilities, allowing AI models to invoke specific tools or functions during the response generation. This enables more interactive and dynamic AI interactions where the model can query external systems, perform calculations, or execute custom business logic.
 
 ### Chat history capabilities
 

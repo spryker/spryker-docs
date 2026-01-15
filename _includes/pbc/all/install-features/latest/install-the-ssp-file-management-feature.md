@@ -1,5 +1,20 @@
 This document describes how to install the Self-Service Portal (SSP) File Management feature.
 
+{% info_block warningBox "Install all SSP features" %}
+
+For the Self-Service Portal to work correctly, you must install all SSP features. Each feature depends on the others for proper functionality.
+
+{% endinfo_block %}
+
+## Features SSP File Management depends on
+
+- [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
+- [Install the SSP Dashboard Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html)
+- [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html)
+- [Install the SSP Model Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
+- [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
+- [Install the Asset-Based Catalog feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-based-catalog-feature.html)
+
 ## Prerequisites
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE                                                                                                                                          |
@@ -7,7 +22,7 @@ This document describes how to install the Self-Service Portal (SSP) File Manage
 | Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
-## 1) Install the required modules
+## Install the required modules
 
 ```bash
 composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
@@ -25,27 +40,70 @@ Make sure the following modules have been installed:
 
 ## Set up configuration
 
-| CONFIGURATION                            | SPECIFICATION                                                                                                                | NAMESPACE                               |
-|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| FileSystemConstants::FILESYSTEM_SERVICE  | Configures the Flysystem service for managing file uploads, specifying the adapter and storage path for files.                 | Spryker\Shared\FileSystem               |
-| SelfServicePortalConstants::STORAGE_NAME | Defines the storage name for SSP files in the Flysystem configuration, linking to the specified file system service. | SprykerFeature\Shared\SelfServicePortal |
+| CONFIGURATION                               | SPECIFICATION                                                                                                                | NAMESPACE                               |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| FileSystemConstants::FILESYSTEM_SERVICE     | Configures the Flysystem service for managing file uploads, specifying the adapter and storage path for files.                 | Spryker\Shared\FileSystem               |
+| SelfServicePortalConstants::STORAGE_NAME    | Defines the storage name for SSP files in the Flysystem configuration, linking to the specified file system service. | SprykerFeature\Shared\SelfServicePortal |
+| KernelConstants::CORE_NAMESPACES            | Defines the core namespaces.                                                                                                                                                                                                                                   | Spryker\Shared\Kerne                    |
 
 **config/Shared/config_default.php**
 
 ```php
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
+<?php
+
 use Spryker\Shared\FileSystem\FileSystemConstants;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
     'ssp-files' => [
-        'sprykerAdapterClass' => LocalFilesystemBuilderPlugin::class,
-        'root' => '/data',
-        'path' => '/data/ssp-files',
+        'sprykerAdapterClass' => Aws3v3FilesystemBuilderPlugin::class,
+        'key' => getenv('SPRYKER_S3_SSP_FILES_KEY') ?: '',
+        'secret' => getenv('SPRYKER_S3_SSP_FILES_SECRET') ?: '',
+        'bucket' => getenv('SPRYKER_S3_SSP_FILES_BUCKET') ?: '',
+        'region' => getenv('AWS_REGION') ?: '',
+        'version' => 'latest',
+        'root' => '/files',
+        'path' => '',
     ],
 ];
 
 $config[SelfServicePortalConstants::STORAGE_NAME] = 'ssp-files';
+
+$config[KernelConstants::CORE_NAMESPACES] = [
+    ...
+    'SprykerFeature',
+];
+```
+
+## Set up database schema
+
+Apply schema updates:
+
+```bash
+console propel:install
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following tables have been created in the database:
+
+- `spy_company_user_file`
+- `spy_company_business_unit_file`
+
+Make sure the following columns have been added to the `spy_file` table:
+
+- `file_reference`
+- `uuid`
+
+{% endinfo_block %}
+
+## Set up transfer objects
+
+Generate transfer classes:
+
+```bash
+console transfer:generate
 ```
 
 ## Configure navigation
@@ -74,182 +132,30 @@ Add the `Files` section to `navigation.xml`:
 </config>
 ```
 
+Generate routers and navigation cache:
+
+```bash
+console router:cache:warm-up:backoffice
+console navigation:build-cache 
+```
+
 {% info_block warningBox "Verification" %}
+
 Make sure that, in the Back Office, the **Customer portal** > **File Attachments** section is available.
-{% endinfo_block %}
-
-## Set up database schema and transfer objects
-
-Apply database changes and generate entity and transfer objects:
-
-```bash
-console propel:install
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Verify the following changes in your database:
-
-| DATABASE ENTITY                | TYPE   | EVENT   |
-|--------------------------------|--------|---------|
-| spy_company_file               | table  | created |
-| spy_company_user_file          | table  | created |
-| spy_company_business_unit_file | table  | created |
-| spy_file.file_reference        | column | created |
-| spy_file.uuid                  | column | created |
-
-Make sure the following transfer objects have been generated:
-
-| TRANSFER                                  | TYPE     | EVENT   | PATH                                                                            |
-|-------------------------------------------|----------|---------|---------------------------------------------------------------------------------|
-| FileAttachment                            | transfer | created | src/Generated/Shared/Transfer/FileAttachmentTransfer                            |
-| File                                      | transfer | created | src/Generated/Shared/Transfer/FileTransfer                                      |
-| FileStorageDataCriteria                   | transfer | created | src/Generated/Shared/Transfer/FileStorageDataCriteriaTransfer                   |
-| FileStorageDataConditions                 | transfer | created | src/Generated/Shared/Transfer/FileStorageDataConditionsTransfer                 |
-| FileStorageDataCollection                 | transfer | created | src/Generated/Shared/Transfer/FileStorageDataCollectionTransfer                 |
-| FileAttachmentCollectionRequest           | transfer | created | src/Generated/Shared/Transfer/FileAttachmentCollectionRequestTransfer           |
-| FileAttachmentCollectionResponse          | transfer | created | src/Generated/Shared/Transfer/FileAttachmentCollectionResponseTransfer          |
-| FileAttachmentCollectionDeleteCriteria    | transfer | created | src/Generated/Shared/Transfer/FileAttachmentCollectionDeleteCriteriaTransfer    |
-| FileAttachmentCriteria                    | transfer | created | src/Generated/Shared/Transfer/FileAttachmentCriteriaTransfer                    |
-| CriteriaRangeFilter                       | transfer | created | src/Generated/Shared/Transfer/CriteriaRangeFilterTransfer                       |
-| FileAttachmentConditions                  | transfer | created | src/Generated/Shared/Transfer/FileAttachmentConditionsTransfer                  |
-| FileAttachmentSearchConditions            | transfer | created | src/Generated/Shared/Transfer/FileAttachmentSearchConditionsTransfer            |
-| FileAttachmentFilter                      | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFilterTransfer                      |
-| FileAttachmentCollection                  | transfer | created | src/Generated/Shared/Transfer/FileAttachmentCollectionTransfer                  |
-| FileCriteria                              | transfer | created | src/Generated/Shared/Transfer/FileCriteriaTransfer                              |
-| FileConditions                            | transfer | created | src/Generated/Shared/Transfer/FileConditionsTransfer                            |
-| FileStorageData                           | transfer | created | src/Generated/Shared/Transfer/FileStorageDataTransfer                           |
-| Error                                     | transfer | created | src/Generated/Shared/Transfer/ErrorTransfer                                     |
-| Sort                                      | transfer | created | src/Generated/Shared/Transfer/SortTransfer                                      |
-| Pagination                                | transfer | created | src/Generated/Shared/Transfer/PaginationTransfer                                |
-| FileUploadCollection                      | transfer | created | src/Generated/Shared/Transfer/FileUploadCollectionTransfer                      |
-| FileCollection                            | transfer | created | src/Generated/Shared/Transfer/FileCollectionTransfer                            |
-| FileManagerData                           | transfer | created | src/Generated/Shared/Transfer/FileManagerDataTransfer                           |
-| FileUpload                                | transfer | created | src/Generated/Shared/Transfer/FileUploadTransfer                                |
-| FileInfo                                  | transfer | created | src/Generated/Shared/Transfer/FileInfoTransfer                                  |
-| FileLocalizedAttributes                   | transfer | created | src/Generated/Shared/Transfer/FileLocalizedAttributesTransfer                   |
-| FileAttachmentFileTableCriteria           | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileTableCriteriaTransfer           |
-| FileAttachmentFileViewDetailTableCriteria | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileViewDetailTableCriteriaTransfer |
-| CompanyBusinessUnitCriteriaFilter         | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitCriteriaFilterTransfer         |
-| CompanyCriteriaFilter                     | transfer | created | src/Generated/Shared/Transfer/CompanyCriteriaFilterTransfer                     |
-| CompanyUserCriteriaFilter                 | transfer | created | src/Generated/Shared/Transfer/CompanyUserCriteriaFilterTransfer                 |
-| Filter                                    | transfer | created | src/Generated/Shared/Transfer/FilterTransfer                                    |
-| SequenceNumberSettings                    | transfer | created | src/Generated/Shared/Transfer/SequenceNumberSettingsTransfer                    |
-| CompanyUserCollection                     | transfer | created | src/Generated/Shared/Transfer/CompanyUserCollectionTransfer                     |
-| CompanyBusinessUnitCollection             | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitCollectionTransfer             |
-| CompanyCollection                         | transfer | created | src/Generated/Shared/Transfer/CompanyCollectionTransfer                         |
-| Company                                   | transfer | created | src/Generated/Shared/Transfer/CompanyTransfer                                   |
-| CompanyUser                               | transfer | created | src/Generated/Shared/Transfer/CompanyUserTransfer                               |
-| CompanyBusinessUnit                       | transfer | created | src/Generated/Shared/Transfer/CompanyBusinessUnitTransfer                       |
-| Customer                                  | transfer | created | src/Generated/Shared/Transfer/CustomerTransfer                                  |
-| FileAttachmentFileCriteria                | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileCriteriaTransfer                |
-| FileAttachmentFileConditions              | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileConditionsTransfer              |
-| FileAttachmentFileSearchConditions        | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileSearchConditionsTransfer        |
-| FileAttachmentFileCollection              | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileCollectionTransfer              |
-| FileAttachmentFileTypeFilter              | transfer | created | src/Generated/Shared/Transfer/FileAttachmentFileTypeFilterTransfer              |
-| DashboardResponse                         | transfer | created | src/Generated/Shared/Transfer/DashboardResponseTransfer                         |
-| DashboardComponentFiles                   | transfer | created | src/Generated/Shared/Transfer/DashboardComponentFilesTransfer                   |
-| DashboardRequest                          | transfer | created | src/Generated/Shared/Transfer/DashboardRequestTransfer                          |
-
-{% endinfo_block %}
-
-## Add translations
-
-1. Append the glossary:
-
-<details>
-  <summary>Glossary</summary>
-
-```csv
-customer.account.button.filters,Filters,en_US
-customer.account.button.filters,Filter,de_DE
-permission.name.DownloadCompanyFilesPermissionPlugin,Download file(s) ,en_US
-permission.name.DownloadCompanyFilesPermissionPlugin,Datei(en) herunterladen,de_DE
-permission.name.ViewCompanyFilesPermissionPlugin,View Company Files,en_US
-permission.name.ViewCompanyFilesPermissionPlugin,Firmendateien anzeigen,de_DE
-permission.name.ViewCompanyUserFilesPermissionPlugin,View My Files,en_US
-permission.name.ViewCompanyUserFilesPermissionPlugin,Meine Dateien anzeigen,de_DE
-permission.name.ViewCompanyBusinessUnitFilesPermissionPlugin,View Business unit files,en_US
-permission.name.ViewCompanyBusinessUnitFilesPermissionPlugin,Geschäftseinheit Dateien anzeigen,de_DE
-general.fileUpload.description,Maximum of %amount% files (%format%) up to %size%,en_US
-general.fileUpload.description,Maximal %amount% Dateien (%format%) bis %size%,de_DE
-general.fileUpload.mb,MB,en_US
-general.fileUpload.mb,MB,de_DE
-self_service_portal.company_file.table.header.file_reference,File Reference,en_US
-self_service_portal.company_file.table.header.file_reference,Dateireferenz,de_DE
-self_service_portal.company_file.table.header.file_name,File Name,en_US
-self_service_portal.company_file.table.header.file_name,Dateiname,de_DE
-self_service_portal.company_file.table.header.file_type,File Type,en_US
-self_service_portal.company_file.table.header.file_type,Dateityp,de_DE
-self_service_portal.company_file.table.header.file_created_at,Date Added,en_US
-self_service_portal.company_file.table.header.file_created_at,Datum hinzugefügt,de_DE
-self_service_portal.company_file.table.header.file_size,Size,en_US
-self_service_portal.company_file.table.header.file_size,Größe,de_DE
-self_service_portal.company_file.table.header.actions,Actions,en_US
-self_service_portal.company_file.table.header.actions,Aktionen,de_DE
-self_service_portal.company_file.table.actions.download,Download,en_US
-self_service_portal.company_file.table.actions.download,Herunterladen,de_DE
-self_service_portal.company_file,My Files,en_US
-self_service_portal.company_file,Meine Dateien,de_DE
-self_service_portal.company_file.view.empty,You do not have any files yet.,en_US
-self_service_portal.company_file.view.empty,Sie haben noch keine Dateien.,de_DE
-self_service_portal.company_file.file_search_filter_form.field.type.placeholder,Select type,en_US
-self_service_portal.company_file.file_search_filter_form.field.type.placeholder,Typ auswählen,de_DE
-self_service_portal.company_file.file_search_filter_form.field.type.label,Type,en_US
-self_service_portal.company_file.file_search_filter_form.field.type.label,Typ,de_DE
-self_service_portal.company_file.file_search_filter_form.field.date_from.label,Date From,en_US
-self_service_portal.company_file.file_search_filter_form.field.date_from.label,Datum von,de_DE
-self_service_portal.company_file.file_search_filter_form.field.date_to.label,Date To,en_US
-self_service_portal.company_file.file_search_filter_form.field.date_to.label,Datum bis,de_DE
-self_service_portal.company_file.file_search_filter_form.field.access_level.placeholder,Select access level,en_US
-self_service_portal.company_file.file_search_filter_form.field.access_level.placeholder,Zugriffsebene auswählen,de_DE
-self_service_portal.company_file.file_search_filter_form.field.access_level.label,Access Level,en_US
-self_service_portal.company_file.file_search_filter_form.field.access_level.label,Zugriffsebene,de_DE
-self_service_portal.company_file.file_search_filter_form.field.search.label,Search,en_US
-self_service_portal.company_file.file_search_filter_form.field.search.label,Suche,de_DE
-self_service_portal.company_file.file_search_filter_form.field.reset_all.label,Reset All,en_US
-self_service_portal.company_file.file_search_filter_form.field.reset_all.label,Alles zurücksetzen,de_DE
-self_service_portal.company_file.file_search_filter_form.label.active_filters,Active Filters:,en_US
-self_service_portal.company_file.file_search_filter_form.label.active_filters,Aktive Filter:,de_DE
-self_service_portal.company_file.file_search_filter_form.field.type.company,Company Files,en_US
-self_service_portal.company_file.file_search_filter_form.field.type.company,Unternehmensdateien,de_DE
-self_service_portal.company_file.file_search_filter_form.field.type.company_user,My Files,en_US
-self_service_portal.company_file.file_search_filter_form.field.type.company_user,Meine Dateien,de_DE
-self_service_portal.company_file.file_search_filter_form.field.type.company_business_unit,Business unit files,en_US
-self_service_portal.company_file.file_search_filter_form.field.type.company_business_unit,Geschäftseinheitsdateien,de_DE
-```
-
-</details>
-
-## Demo data for EU region / DE store
-
-### Import glossary data
-
-You can either import glossary keys dedicated to the File Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_translation` database tables.
 
 {% endinfo_block %}
 
 ## Set up behavior
 
-| PLUGIN                                       | SPECIFICATION                                                                                                                                   | PREREQUISITES | NAMESPACE                                                                     |
-|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| DownloadCompanyFilesPermissionPlugin         | Enables downloading ˚f files.                                                                                                                   |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission                       |
-| ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.                                                                                          |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.                                                                                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.                                                                                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html). |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
-| SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.                                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
-| FileAttachmentFilePreDeletePlugin            | Ensures a company file relation is deleted when a file is removed.                                                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
-| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format.                                                                             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
+| PLUGIN                                       | SPECIFICATION                                                                                                                                   | PREREQUISITES | NAMESPACE                                                      |
+|----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------|
+| ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.                                                                                          |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.                                                                                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.                                                                                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission      |
+| DownloadCompanyFilesPermissionPlugin         | Enables downloading files.                                                                                                                      |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Permission        |
+| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html). |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router            |
+| FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format.                                                                             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig              |
+| SelfServicePortalTwigPlugin                  | Provides Twig functionality for Self-Service Portal features.                                                                                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig        |
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
@@ -262,7 +168,6 @@ use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDepe
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewFilesPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -272,7 +177,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     protected function getPermissionPlugins(): array
     {
         return [
-            new ViewFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
             new ViewCompanyFilesPermissionPlugin(),
@@ -290,11 +194,10 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 namespace Pyz\Client\Permission;
 
 use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
-use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\DownloadcompanyFilesPermissionPlugin;
+use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\DownloadCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyBusinessUnitFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyFilesPermissionPlugin;
 use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanyUserFilesPermissionPlugin;
-use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewFilesPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -304,7 +207,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
     protected function getPermissionPlugins(): array
     {
         return [
-            new ViewFilesPermissionPlugin(),
             new DownloadCompanyFilesPermissionPlugin(),
             new ViewCompanyUserFilesPermissionPlugin(),
             new ViewCompanyBusinessUnitFilesPermissionPlugin(),
@@ -334,49 +236,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
     {
         return [
             new SelfServicePortalPageRouteProviderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    protected function getGlobalWidgets(): array
-    {
-        return [
-            SspCompanyFilesMenuItemWidget::class,
-            SspFileListWidget::class,
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/FileManager/FileManagerDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\FileManager;
-
-use Spryker\Zed\FileManager\FileManagerDependencyProvider as SprykerFileManagerDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager\FileAttachmentFilePreDeletePlugin;
-
-class FileManagerDependencyProvider extends SprykerFileManagerDependencyProvider
-{
-    protected function getFilePreDeletePlugins(): array
-    {
-        return [
-            new FileAttachmentFilePreDeletePlugin(),
         ];
     }
 }
@@ -413,22 +272,11 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 namespace Pyz\Zed\SelfServicePortal;
 
-use SprykerFeature\Zed\SelfServicePortal\SprykerSelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
-use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspDashboardManagement\SspFileDashboardDataExpanderPlugin;
+use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalDependencyProvider as SprykerSelfServicePortalDependencyProvider;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\SspAssetManagement\SspFileSspAssetManagementExpanderPlugin;
 
 class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDependencyProvider
-{
-    /**
-     * @return array<int, \SprykerFeature\Zed\SelfServicePortal\Dependency\Plugin\DashboardDataExpanderPluginInterface>
-     */
-    protected function getDashboardDataExpanderPlugins(): array
-    {
-        return [
-            new SspFileDashboardDataExpanderPlugin(),
-        ];
-    }
-    
+{   
     /**
      * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
      */
@@ -441,22 +289,102 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
 }
 ```
 
+**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Twig;
+
+use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Twig\SelfServicePortalTwigPlugin;
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigPlugins(): array
+    {
+        return [
+            new SelfServicePortalTwigPlugin(),
+        ];
+    }
+}
+```
+
+### Set up widgets
+
+| PLUGIN                     | SPECIFICATION                                        | PREREQUISITES | NAMESPACE                                    |
+|----------------------------|------------------------------------------------------|---------------|----------------------------------------------|
+| SspCompanyFilesMenuItemWidget | Provides a menu item widget for the customer account side menu. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspFileListWidget          | Displays a file attachment available to a company user on the dashboard page in the customer account. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerFeature\Yves\SelfServicePortal\Widget\SspCompanyFilesMenuItemWidget;
+use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            SspCompanyFilesMenuItemWidget::class,
+            SspFileListWidget::class,
+        ];
+    }
+}
+```
+
+### Add translations
+
+[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html)
+
+Import translations:
+
+```bash
+console data:import glossary
+```
+
 {% info_block warningBox "Verification" %}
 
 Verify file upload and attachment:
 
 1. In the Back Office, go to **Customer portal** > **File Attachments**.
-2. Click **Upload**.
+2. Click **Upload file**.
 3. Drag and drop three files into the upload area.
 4. Click **Upload**.
    Make sure the File Attachments list page shows the files you've uploaded.
-5. Next to the first file you've uploaded, click **Attach**.
-6. For **Company**, enter and select the company you want to attach the file to.
-7. Click **Save**.
-8. Click **Attach** next to the second file you've uploaded.
-9. For **Company User**, enter and select the business unit you want to attach the file to.
-10. Click **Save**.
-11. Attach the third file to a company user.
+5. Next to a file attachment with reference `FILE-1`, click **Attach**.
+6. Go to the **Company user** tab.
+7. Select a company user.
+8. Click **Save**.
+   Make sure you are redirected to the view file attachments page for `FILE-1`.
+9. In the **Linked entities** section, make sure the previously selected company user is displayed.
+10. Go to **Customer portal** > **File Attachments**.
+11. Next to a file attachment with reference `FILE-2`, click **Attach**.
+12. Go to the **Business unit** tab.
+13. Select a business unit.
+14. Click **Save**.
+    Make sure you are redirected to the view file attachments page for `FILE-2`.
+15. In the **Linked entities** section, make sure the previously selected business unit is displayed.
+16. Go to **Customer portal** > **File Attachments**.
+17. Next to a file attachment with reference `FILE-3`, click **Attach**.
+18. Go to the **Company** tab.
+19. Select a company.
+20. Click **Save**.
+    Make sure you are redirected to the view file attachments page for `FILE-3`.
+21. In the **Linked entities** section, make sure that business units from the previously selected company are displayed.
 
 {% endinfo_block %}
 
@@ -478,6 +406,13 @@ Verify permission management:
 7. Go to **Customers** > **Company Users**.
 8. Click **Edit** next to a user.
 9. Assign the role you've just created to the user.
+10. Go to **Customer portal** > **File Attachments**.
+11. Next to a file attachment with reference `FILE-1`, click **Attach**.
+12. Go to the **Company user** tab.
+13. Select the company user you've assigned the role to.
+14. Click **Save**.
+   Make sure you are redirected to the view file attachments page for `FILE-1`.
+9. In the **Linked entities** section, make sure the previously selected company user is displayed.
 
 {% endinfo_block %}
 
@@ -486,10 +421,15 @@ Verify permission management:
 Verify permissions on Storefront:
 
 1. On the Storefront, log in with the company user you've assigned the role to.
-   Make sure the **My Files** menu item is displayed.
-2. Go to **Customer Account** > **My Files** page.
-   Make sure the three files you've uploaded are displayed.
+   Make sure the **Files** menu item is displayed.
+2. Go to **Customer Account** > **Files** page.
+   Make sure the file with reference FILE-1 is displayed.
+4. Click Download next to a file. Make sure a file is downloaded.
 3. Log out and log in with another company user that doesn't have the role.
-   Make sure the **My Files** menu item is not displayed and you can't access the **My Files** page.
+   Make sure the **Files** menu item is not displayed and you can't access the **Files** page.
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

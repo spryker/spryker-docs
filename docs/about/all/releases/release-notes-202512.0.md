@@ -1,7 +1,7 @@
 ---
 title: Release notes 202512.0
 description: Release notes for Spryker Cloud Commerce OS version 202512.0
-last_updated: December 18, 2025
+last_updated: Jan 9, 2026
 template: concept-topic-template
 ---
 
@@ -318,7 +318,12 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - Faster request handling for URL-heavy flows (storefront and merchant portal routing scenarios).
 
 **Documentation:**
+- [Product review performance](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#product-review-performance)
 - [Cart performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html#cart-page-performance-configuration)
+
+**Module Important technical releases:**
+- [Cart page performance optimization](https://api.release.spryker.com/release-group/6107)
+- [UPPER() function optimization for URL lookups](https://api.release.spryker.com/release-group/6124)
 
 ### Reliability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -404,6 +409,11 @@ You can now use an improved Web Profiler experience to better support performanc
 - [Added Yves ajax and ZedRequest profiles to WebProfiler](https://api.release.spryker.com/release-group/6222)
 - [Fix wrong template name in WebProfilerExternalHttpDataCollectorPlugin](https://api.release.spryker.com/release-group/6210)
 - [External Custom Requests visible in Web Profiler](https://api.release.spryker.com/release-group/6162)
+
+**Documentation:**
+- [Web Profiler Widget for Yves AJAX](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html)
+- [Web Profiler for Backend Gateway](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html)
+- [WebProfiler Widget monitoring of external HTTP calls](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html)
 
 ### Faster local development and CI builds through Composer optimization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

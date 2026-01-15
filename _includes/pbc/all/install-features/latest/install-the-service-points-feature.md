@@ -102,7 +102,7 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in the database:
+Verify that the following changes have been applied to the database:
 
 | DATABASE ENTITY                     | TYPE   | EVENT   |
 |-------------------------------------|--------|---------|
@@ -762,7 +762,7 @@ use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\SortedServicePo
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\StoreServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\ServiceTypesServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointSearchResultFormatterPlugin;
-use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin;
+use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\ServicePointSearchDependencyProvider as SprykerServicePointSearchDependencyProvider;
 
 class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDependencyProvider
@@ -1554,7 +1554,7 @@ Add the following configuration:
 
 1. Disable service points to be selected for product bundles during checkout:
 
-|CONFIGURATION     | SPECIFICATION   NAMESPACE                   |
+|CONFIGURATION     | SPECIFICATION  |  NAMESPACE                  | 
 |------------------------|----------------------------------------------------------|-----------------------------|
 | ServicePointWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines the list of properties in an `ItemTransfer` that are not intended for form hydration.   | Pyz\Yves\ServicePointWidget |
 | ProductBundleConfig::getAllowedBundleItemFieldsToCopy()                                           | Defines the list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |

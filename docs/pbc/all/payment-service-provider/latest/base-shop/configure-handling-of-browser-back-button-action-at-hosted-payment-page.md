@@ -58,7 +58,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 </state>
 ```
 
-The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history. For more information about the flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
+The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history. For more information about the flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
 
 ## Testing
 
@@ -66,21 +66,21 @@ Test the implementation by executing the following tests.
 
 ### Basic flow test
 
-1. Add products to cart  
-2. Proceed to checkout  
-3. Reach the payment step and get redirected to hosted payment page  
-4. Use the browser back button  
+1. Add products to cart
+2. Proceed to checkout
+3. Reach the payment step and get redirected to hosted payment page
+4. Use the browser back button
 
 Make sure the following applies:
-- The original order has been cancelled  
+- The original order has been cancelled
 - You can place a new order with the same items
 
 ### Stock verification test
 
-1. Add the last available item of a product to cart  
-2. Proceed to checkout  
-3. Reach the payment step and get redirected to hosted payment page  
-4. Use the browser back button  
+1. Add the last available item of a product to cart
+2. Proceed to checkout
+3. Reach the payment step and get redirected to hosted payment page
+4. Use the browser back button
 
 Make sure the following applies:
 - The item becomes available
@@ -88,11 +88,11 @@ Make sure the following applies:
 
 ### Order status test
 
-1. Log in as a customer  
-2. Add products to cart  
-3. Proceed to checkout  
-4. Reach the payment step and get redirected to hosted payment page  
-5. Use the browser back button  
+1. Log in as a customer
+2. Add products to cart
+3. Proceed to checkout
+4. Reach the payment step and get redirected to hosted payment page
+5. Use the browser back button
 
 Make sure the following applies:
 - In the Back Office, order status changes to **payment cancellation pending**
@@ -105,12 +105,12 @@ Solutions to common issues.
 
 ### Order still visible in customer account
 
-- Verify that the `exclude from customer` flag is properly set in the state machine configuration  
+- Verify that the `exclude from customer` flag is properly set in the state machine configuration
 - Check if the order state transition to `payment cancellation pending` is executed successfully
-- Verify that the state is properly configured in the OMS  
+- Verify that the state is properly configured in the OMS
 
 ### Stock issues
-  
+
 - Verify that the order cancellation workflow works properly
 - Verify stock update triggers
 

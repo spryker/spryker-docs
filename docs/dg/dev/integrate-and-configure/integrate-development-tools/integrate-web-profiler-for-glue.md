@@ -26,25 +26,17 @@ The profiler is based on *Symfony Profiler*. For details, see [Profiler document
 
 ## Prerequisites
 
-Before integrating Web Profiler for Glue, ensure that the following modules are updated to their latest versions:
+Before integrating Web Profiler for Glue, ensure that the following modules are updated to the required versions:
 
-| Module                         | Description                                   |
-|:-------------------------------|:----------------------------------------------|
-| `spryker/glue-application`     | Core Glue Application framework               |
-| `spryker/http`                 | HTTP handling for Glue applications           |
-| `spryker/redis`                | Redis integration for data collection         |
-| `spryker/search-elasticsearch` | Elasticsearch integration for data collection |
-| `spryker/web-profiler`         | Core Web Profiler module                      |
-| `spryker/zed-request`          | Zed request handling and data collection      |
-| `spryker/profiler`             | Spryker profiler                              |
-
-## Installation
-
-Install the Web Profiler module:
-
-```bash
-composer require spryker/web-profiler --dev
-```
+| Module                         | Version | Description                                   |
+|:-------------------------------|:--------|:----------------------------------------------|
+| `spryker/glue-application`     | ^1.72.0 | Core Glue Application framework               |
+| `spryker/http`                 | ^1.15.0 | HTTP handling for Glue applications           |
+| `spryker/redis`                | ^2.11.0 | Redis integration for data collection         |
+| `spryker/search-elasticsearch` | ^1.21.0 | Elasticsearch integration for data collection |
+| `spryker/web-profiler`         | ^1.7.0  | Core Web Profiler module                      |
+| `spryker/zed-request`          | ^3.25.0 | Zed request handling and data collection      |
+| `spryker/profiler`             | ^0.1.3  | Spryker profiler                              |
 
 ## Integration
 

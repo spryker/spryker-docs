@@ -1,5 +1,20 @@
 This document describes how to install the Self-Service Portal (SSP) Inquiry Management feature.
 
+{% info_block warningBox "Install all SSP features" %}
+
+For the Self-Service Portal to work correctly, you must install all SSP features. Each feature depends on the others for proper functionality.
+
+{% endinfo_block %}
+
+## Features SSP Inquiry Management depends on
+
+- [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
+- [Install the SSP Dashboard Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html)
+- [Install the SSP File Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature.html)
+- [Install the SSP Model Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
+- [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
+- [Install the Asset-Based Catalog feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-based-catalog-feature.html)
+
 ## Prerequisites
 
 
@@ -49,9 +64,9 @@ Make sure the following packages are now listed in `composer.lock`:
 ```php
 <?php
 
-use Spryker\Service\FlysystemLocalFileSystem\Plugin\Flysystem\LocalFilesystemBuilderPlugin;
 use Spryker\Shared\FileSystem\FileSystemConstants;
 use SprykerFeature\Shared\SelfServicePortal\SelfServicePortalConstants;
+use Spryker\Service\FlysystemAws3v3FileSystem\Plugin\Flysystem\Aws3v3FilesystemBuilderPlugin;
 
 $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
      'ssp-inquiry' => [
@@ -59,7 +74,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
         'key' => getenv('SPRYKER_S3_SSP_CLAIM_KEY') ?: '',
         'secret' => getenv('SPRYKER_S3_SSP_CLAIM_SECRET') ?: '',
         'bucket' => getenv('SPRYKER_S3_SSP_CLAIM_BUCKET') ?: '',
-        'region' => getenv('AWS_REGION') ?: 'eu-central-1',
+        'region' => getenv('AWS_REGION') ?: '',
         'version' => 'latest',
         'root' => '/ssp-inquiry',
         'path' => '',
@@ -84,7 +99,7 @@ In cloud environments, set the following environment variables:
 - `SPRYKER_S3_SSP_CLAIM_KEY` - AWS S3 access key for SSP inquiry file storage
 - `SPRYKER_S3_SSP_CLAIM_SECRET` - AWS S3 secret key for SSP inquiry file storage
 - `SPRYKER_S3_SSP_CLAIM_BUCKET` - AWS S3 bucket name for SSP inquiry file storage
-- `AWS_REGION` - AWS region (defaults to `eu-central-1` if not set)
+- `AWS_REGION` - AWS region
 - `SPRYKER_DEFAULT_TOTAL_FILE_MAX_SIZE` - Maximum total size for all files uploaded with a single inquiry (defaults to `100M` if not set)
 - `SPRYKER_DEFAULT_FILE_MAX_SIZE` - Maximum size for a single file uploaded with an inquiry (defaults to `20M` if not set)
 
@@ -347,7 +362,8 @@ Create an XML configuration file for the state machine.
 | ViewCompanySspInquiryPermissionPlugin      | Allows customer to view inquiries within the same company.                     |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                        |
 | SelfServicePortalPageRouteProviderPlugin   | Provides Yves routes for the SSP inquiry feature.                              |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                              |
 | SspInquiryRestrictionHandlerPlugin         | Restricts access to inquiries and inquiry details pages for non-company users. |               | SprykerFeature\Yves\SelfServicePortal\Plugin\ShopApplication                     |
-| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
+| FileSizeFormatterTwigPlugin                | Adds a Twig filter to format file sizes in a human-readable format.            |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig                                 |
+| SelfServicePortalTwigPlugin                | Provides Twig functionality for Self-Service Portal features.                   |               | SprykerFeature\Zed\SelfServicePortal\Communication\Twig                          |
 | SspInquiryDataImportPlugin                 | Introduces the `ssp-inquiry` import type.                                      |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\DataImport             |
 | SspInquiryApprovedMailTypeBuilderPlugin    | Sends an email on inquiry approval.                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
 | SspInquiryRejectedMailTypeBuilderPlugin    | Sends an email on inquiry rejection.                                           |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\Mail                   |
@@ -589,9 +605,10 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 | PLUGIN                      | SPECIFICATION                                        | PREREQUISITES | NAMESPACE                                    |
 |-----------------------------|------------------------------------------------------|---------------|----------------------------------------------|
+| SspInquiryMenuItemWidget    | Provides a customer menu item for the inquiries.     |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | CreateOrderSspInquiryWidget | Provides a button to create an inquiry for an order. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 | SspInquiryListWidget        | Provides the inquiries table.                        |               | SprykerFeature\Yves\SelfServicePortal\Widget |
-| SspInquiryMenuItemWidget    | Provides a customer menu item for the inquiries.     |               | SprykerFeature\Yves\SelfServicePortal\Widget |
+| SspListMenuItemWidget       | Renders the menu item in the Customer Account side menu. |               | SprykerFeature\Yves\SelfServicePortal\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -948,3 +965,7 @@ Example of a successful response:
 ```
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

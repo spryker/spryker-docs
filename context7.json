@@ -1,0 +1,17 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "branch": "master",
+  "projectTitle": "Spryker Documentation",
+  "description": "Comprehensive documentation for Spryker e-commerce platform.",
+  "folders": [
+    "docs/about/all/releases",
+    "docs/pbc/all",
+    "docs/dg/dev",
+    "docs/integrations/custom-building-integrations"
+  ],
+  "excludeFolders": [],
+  "excludeFiles": [],
+  "rules": [],
+  "url": "https://context7.com/spryker/spryker-docs",
+  "public_key": "pk_rRfNtbgyvwXvkDuWqqJvA"
+}

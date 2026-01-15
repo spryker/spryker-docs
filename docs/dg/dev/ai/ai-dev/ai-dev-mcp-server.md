@@ -117,6 +117,10 @@ The AiDev module provides the following built-in tools that AI assistants can us
 | `getInterfaceMethodsByNamespace` | Retrieves all method signatures, parameters, return types, and PHPDoc for a given interface FQN (Fully Qualified Name). |
 | `getOmsTransitionsByState` | Retrieves OMS state machine transitions for a specific state. Returns all transitions that start from the given state, optionally filtered by process name. |
 | `getOrderOmsTransitions` | Retrieves OMS state machine transitions for a specified order from the order's current state. Helps identify the current state and possible transitions. |
+| `executeQuery` | Executes read-only database queries (SELECT, SHOW, DESCRIBE, EXPLAIN) for accessing project data without modification capabilities. |
+| `getSprykerModules` | Lists all available Spryker modules from project and vendor directories. |
+| `getSprykerModuleMap` | Retrieves detailed module metadata including class paths, method signatures, and extension points. |
+| `searchAlgoliaDocumentation` | Enables keyword-based Spryker documentation search through Algolia integration. |
 
 AI assistants can automatically discover and use these tools when connected to the MCP server.
 

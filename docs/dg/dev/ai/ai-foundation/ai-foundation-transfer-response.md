@@ -7,6 +7,8 @@ template: howto-guide-template
 related:
   - title: AiFoundation module Overview
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+  - title: Use AI tools with the AiFoundation module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Transfer objects
     link: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---

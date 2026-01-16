@@ -54,6 +54,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
           - title: Structured Transfer Response
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+          - title: Tool call
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

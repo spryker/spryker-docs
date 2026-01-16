@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | 202507.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
-| Cart | 202507.0 | |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Product Bundles | 202512.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Cart | 202512.0 | |
 
 
 ## Set up behavior
@@ -19,6 +19,7 @@ Install the required features:
 |------------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------|
 | ProductBundleItemCountQuantityPlugin     | Returns the combined quantity of all items in the cart.          |           | Spryker\Client\ProductBundle\Plugin\Cart             |
 | SanitizeBundleItemsBeforeQuoteSavePlugin | Sanitizes quote bundle items when all items are removed from the cart. |           | Spryker\Zed\ProductBundle\Communication\Plugin\Quote |
+| BundleItemQuoteMergePersistentCartChangeExpanderPlugin | Transfers the Product Bundles from guest Quote to Customer Quote correctly during the guest quote to customer quote merge. | If AddGuestQuoteItemsToCustomerQuotePostAuthPlugin is used.          | Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin\CartsRestApi |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -211,7 +212,31 @@ You can set the threshold using the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_
 For details more details on, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
 
 
+## Glue API. Quote Merge Extension for Guest-to-Customer Cart. Single Cart behavior
 
+When single cart behavior is enabled, and AddGuestQuoteItemsToCustomerQuotePostAuthPlugin is used, add the following plugin to correctly merge bundled items:
+
+```php
+<?php
+
+namespace Pyz\Zed\CartsRestApi;
+
+use Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
+use Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin\CartsRestApi\BundleItemQuoteMergePersistentCartChangeExpanderPlugin;
+
+class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
+{
+    /**
+     * @return array<int, \Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\QuoteMergePersistentCartChangeExpanderPluginInterface>
+     */
+    protected function getQuoteMergePersistentCartChangeExpanderPlugins(): array
+    {
+        return [
+            new BundleItemQuoteMergePersistentCartChangeExpanderPlugin(),
+        ];
+    }
+}
+```
 
 
 

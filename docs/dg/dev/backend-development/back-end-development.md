@@ -34,3 +34,5 @@ This section contains overviews and instructions for back-end developing on the 
 - [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
 
 - [Factory](/docs/dg/dev/backend-development/factory/factory.html)
+
+- [Composable UI](/docs/dg/dev/backend-development/composable-ui/composable-ui.html)

@@ -43,7 +43,6 @@ Register the required bundles in your application's bundle configuration files f
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -51,7 +50,6 @@ use Symfony\Bundle\TwigBundle\TwigBundle;
 return [
     FrameworkBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
 ];
@@ -67,7 +65,6 @@ return [
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -77,7 +74,6 @@ return [
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
 ];
 ```
 
@@ -91,7 +87,6 @@ return [
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -101,7 +96,6 @@ return [
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
 ];
 ```
 
@@ -295,4 +289,5 @@ To verify your integration:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Define resource schemas
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas

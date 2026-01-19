@@ -213,16 +213,13 @@ TableFiltersFeatureModule.withFilterComponents({
 ```yaml
 table.entity.list:
     component: TableComponent
-    inputs:
-        config:
-            filters:
-                enabled: true
-                items:
-                    - id: 'myField'
-                      title: 'My Filter'
-                      type: 'custom'
-                      typeOptions:
-                          placeholder: 'Enter value...'
+    dataSource:
+        url: '/entities'
+    filters:
+        - id: 'myField'
+          title: 'My Filter'
+          type: 'custom'
+          placeholder: 'Enter value...'
 ```
 
 ## Creating a custom form control

@@ -35,4 +35,4 @@ This section contains overviews and instructions for back-end developing on the 
 
 - [Factory](/docs/dg/dev/backend-development/factory/factory.html)
 
-- [Composable UI](/docs/dg/dev/backend-development/composable-ui/composable-ui.html)
+- [Composable UI in Back Office](/docs/dg/dev/backend-development/composable-ui/composable-ui.html)

@@ -1,6 +1,6 @@
 ---
-title: Composable UI best practices
-description: Best practices and guidelines for developing Composable UI modules in Spryker.
+title: Back Office Composable UI Best Practices
+description: Best practices and guidelines for developing Composable UI modules in Spryker Back Office.
 template: howto-guide-template
 last_updated: Jan 6, 2026
 related:
@@ -18,7 +18,12 @@ This document provides best practices and guidelines for developing Composable U
 
 ### Use meaningful component IDs
 
-Use a consistent naming convention for component IDs:
+Component IDs are used internally by the Composable UI system to:
+- **Reference components** with the `use` keyword (e.g., `use: field.customer.email`)
+- **Override auto-generated components** in partial override mode
+- **Enable component reusability** across forms and views
+
+These IDs are configuration-level identifiers and are not rendered in HTML or exposed to JavaScript. Use a consistent naming convention:
 
 ```yaml
 # Good: Clear, namespaced IDs
@@ -44,23 +49,20 @@ Reuse components with `use` and `overrides` instead of duplicating configuration
 ```yaml
 # Good: Reuse base field with overrides
 form.customer.edit:
-    inputs:
-        config:
-            controls:
-                - use: field.customer.email
-                  overrides:
-                      value: '${row.email}'
+    component: DynamicFormComponent
+    fields:
+        - use: field.customer.email
+          overrides:
+              value: '${row.email}'
 
 # Avoid: Duplicating field definition
 form.customer.edit:
-    inputs:
-        config:
-            controls:
-                - name: 'email'
-                  controlType: 'input'
-                  type: 'email'
-                  label: 'Email'
-                  value: '${row.email}'
+    component: DynamicFormComponent
+    fields:
+        - name: 'email'
+          type: 'email'
+          label: 'Email'
+          value: '${row.email}'
 ```
 
 ### Keep configurations DRY
@@ -68,27 +70,35 @@ form.customer.edit:
 Extract common patterns into reusable components:
 
 ```yaml
-# Define reusable notification actions
-notification.success.created:
-    type: 'notification'
-    notifications:
-        - title: 'Record created successfully'
-          type: 'success'
+# Define field once
+field.customer.email:
+    type: email
+    label: 'Email'
+    required: true
+    validators: { email: true }
 
-notification.success.saved:
-    type: 'notification'
-    notifications:
-        - title: 'Changes saved successfully'
-          type: 'success'
-
-# Reuse in forms
+# Reuse in multiple forms with simplified syntax
 form.customer.create:
-    inputs:
-        config:
-            submit:
-                actions:
-                    - use: notification.success.created
-                    - type: 'close-drawer'
+    component: DynamicFormComponent
+    fields:
+        - use: field.customer.email
+        - use: field.customer.firstName
+    submit:
+        label: 'Create'
+        url: '/customers'
+        success: 'Customer created successfully'
+        error: 'Failed to create customer'
+
+form.customer.edit:
+    component: DynamicFormComponent
+    fields:
+        - use: field.customer.email
+        - use: field.customer.firstName
+    submit:
+        label: 'Save'
+        url: '/customers/${row.customerReference}'
+        success: 'Customer saved successfully'
+        error: 'Failed to save customer'
 ```
 
 ### Organize components logically
@@ -141,7 +151,7 @@ Follow REST conventions for resource naming:
 
 ### Design for pagination
 
-Always enable pagination for collection endpoints:
+Always enable pagination for collection endpoints, otherwise collection request will try to return all entries:
 
 ```yaml
 resource:
@@ -149,41 +159,23 @@ resource:
     paginationItemsPerPage: 10
 ```
 
-### Implement proper filtering
+### Configure searchable fields in YAML
 
-Support common filter patterns:
+Mark fields as searchable in your entity YAML configuration:
 
-```php
-protected function getFilterFieldMapping(): array
-{
-    return [
-        // API field => Transfer field
-        'status' => 'status',
-        'createdAt' => 'createdAt',
-        'category' => 'fkCategory',
-    ];
-}
+```yaml
+fields:
+    email:
+        searchable: true
+    firstName:
+        searchable: true
+    lastName:
+        searchable: true
+    customerReference:
+        searchable: true
 ```
 
-### Handle null filters gracefully
-
-The `AbstractBackendProvider` automatically skips null and empty filter values:
-
-```php
-// Filters like {"status": null} are ignored
-// Filters like {"dateRange": {}} are ignored
-```
-
-### Provide searchable fields
-
-Configure which fields are searchable:
-
-```php
-protected function getSearchableFields(): array
-{
-    return ['email', 'firstName', 'lastName', 'customerReference'];
-}
-```
+The `AbstractBackendProvider` automatically handles search functionality for all fields marked with `searchable: true`. No additional PHP code is required.
 
 ## Form design
 
@@ -193,21 +185,26 @@ Organize form fields logically:
 
 ```yaml
 form.customer.create:
-    inputs:
-        config:
-            controls:
-                # Personal information
-                - use: field.customer.salutation
-                - use: field.customer.firstName
-                - use: field.customer.lastName
-                
-                # Contact information
-                - use: field.customer.email
-                - use: field.customer.phone
-                
-                # Additional details
-                - use: field.customer.dateOfBirth
-                - use: field.customer.company
+    component: DynamicFormComponent
+    style:
+        padding: '30px'
+    fields:
+        # Personal information
+        - use: field.customer.salutation
+        - use: field.customer.firstName
+        - use: field.customer.lastName
+        
+        # Contact information
+        - use: field.customer.email
+        - use: field.customer.phone
+        
+        # Additional details
+        - use: field.customer.dateOfBirth
+        - use: field.customer.company
+    submit:
+        label: 'Create'
+        url: '/customers'
+        success: 'Customer created successfully'
 ```
 
 ### Provide clear validation messages
@@ -215,26 +212,36 @@ form.customer.create:
 Use descriptive validation messages:
 
 ```yaml
+# Simplified field definition
 field.customer.email:
-    name: 'email'
-    controlType: 'input'
-    type: 'email'
+    type: email
     label: 'Email Address'
+    required: true
     validators:
+        email:
+            message: 'Please enter a valid email address'
+
+# Or in CRUD mode fields section
+fields:
+    email:
+        type: email
         required: true
-        email: true
-    # In validation.yml
-    # - NotBlank:
-    #     message: 'Please enter an email address'
-    # - Email:
-    #     message: 'Please enter a valid email address'
+        searchable: true
 ```
 
 ### Handle form submission feedback
 
-Always provide success and error feedback:
+Always provide success and error feedback. Use the simplified syntax:
 
 ```yaml
+# Simplified syntax (recommended)
+submit:
+    label: 'Save'
+    url: '/customers/${row.customerReference}'  # method: PATCH is default for edit
+    success: 'Customer saved successfully'
+    error: 'Failed to save customer. Please check your input and try again.'
+
+# Verbose syntax (when you need custom actions)
 submit:
     label: 'Save'
     method: 'PATCH'
@@ -245,6 +252,7 @@ submit:
               - title: 'Customer saved successfully'
                 type: 'success'
         - type: 'close-drawer'
+        - type: 'refresh-table'
     errorActions:
         - type: 'notification'
           notifications:
@@ -257,15 +265,15 @@ submit:
 
 ### Choose appropriate column types
 
-Use the right column type for each data type:
+Use appropriate column type for each data type:
 
 ```yaml
 columns:
-    - { id: 'reference', title: 'Reference', type: 'text' }
+    - { id: 'reference', title: 'Reference' }
     - { id: 'status', title: 'Status', type: 'chip' }
-    - { id: 'createdAt', title: 'Created', type: 'date', typeOptions: { format: 'dd.MM.y' } }
+    - { id: 'createdAt', title: 'Created', type: 'date', format: 'dd.MM.y' }
     - { id: 'thumbnail', title: 'Image', type: 'image' }
-    - { id: 'price', title: 'Price', type: 'text' }  # Format in provider
+    - { id: 'price', title: 'Price' }  # Format in provider
 ```
 
 ### Provide useful filters
@@ -274,36 +282,28 @@ Add filters for commonly searched fields:
 
 ```yaml
 filters:
-    enabled: true
-    items:
-        - id: 'status'
-          title: 'Status'
-          type: 'select'
-          typeOptions:
-              options:
-                  - { value: 'active', title: 'Active' }
-                  - { value: 'inactive', title: 'Inactive' }
-        - id: 'createdAt'
-          title: 'Created Date'
-          type: 'date-range'
-        - id: 'category'
-          title: 'Category'
-          type: 'select-http'
-          typeOptions:
-              datasource:
-                  url: '/categories'
-                  valueField: 'id'
-                  titleField: 'name'
+    - id: 'status'
+      title: 'Status'
+      type: 'select'
+      datasource:
+          url: '/statuses'
+    - id: 'createdAt'
+      title: 'Created Date'
+      type: 'date-range'
+    - id: 'category'
+      title: 'Category'
+      type: 'select'
+      datasource:
+          url: '/categories'
 ```
 
-### Configure sensible pagination
+### Configure pagination sizes
 
-Choose appropriate page sizes:
+Pagination is enabled by default with sizes 10, 25, 50, 100. Customize only if needed:
 
 ```yaml
-pagination:
-    enabled: true
-    sizes: [10, 25, 50, 100]
+# Custom page sizes (only if default doesn't fit your needs)
+pagination: [5, 10, 25]
 ```
 
 ## Security
@@ -315,18 +315,6 @@ Set security on all API resources:
 ```yaml
 resource:
     security: "is_granted('IS_AUTHENTICATED_FULLY')"
-```
-
-### Use granular ACL rules
-
-Create specific rules for each operation:
-
-```text
-module/entity/get-collection  # List
-module/entity/get             # View
-module/entity/post            # Create
-module/entity/patch           # Update
-module/entity/delete          # Delete
 ```
 
 ### Validate input on the server
@@ -393,11 +381,6 @@ class CustomersBackendProvider extends AbstractBackendProvider
     {
         return $this->facade->getAllEntities();
     }
-    
-    protected function getSearchableFields(): array
-    {
-        return ['email', 'firstName', 'lastName'];
-    }
 }
 ```
 
@@ -454,11 +437,11 @@ columns:
     - { id: 'name', title: 'Name' }
     - { id: 'status', title: 'Status' }
 
-# Load full details in drawer
-rowActions:
-    actions:
-        - type: 'drawer'
-          # Drawer loads full entity data
+# Load full details in drawer on row click
+rowClick:
+    drawer:
+        - use: headline.entity.edit
+        - use: form.entity.edit
 ```
 
 ## Testing
@@ -517,20 +500,20 @@ Add comments to explain non-obvious configuration:
 ```yaml
 table.order.list:
     component: TableComponent
-    inputs:
-        config:
-            # Custom column configuration for order status
-            # Status values: pending, processing, shipped, delivered, cancelled
-            columns:
-                - id: 'status'
-                  title: 'Status'
-                  type: 'chip'
-                  typeOptions:
-                      # Color mapping for different statuses
-                      color:
-                          pending: 'yellow'
-                          processing: 'blue'
-                          shipped: 'purple'
-                          delivered: 'green'
-                          cancelled: 'red'
+    id: 'order-table'
+    dataSource:
+        url: '/orders'
+    # Custom column configuration for order status
+    # Status values: pending, processing, shipped, delivered, cancelled
+    columns:
+        - id: 'status'
+          title: 'Status'
+          type: 'chip'
+          # Color mapping for different statuses
+          color:
+              pending: 'yellow'
+              processing: 'blue'
+              shipped: 'purple'
+              delivered: 'green'
+              cancelled: 'red'
 ```

@@ -458,7 +458,7 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
 
-    - title: Composable UI
+    - title: Composable UI in Back Office 
       url: /docs/dg/dev/backend-development/composable-ui/composable-ui.html
       nested:
       - title: Install Composable UI

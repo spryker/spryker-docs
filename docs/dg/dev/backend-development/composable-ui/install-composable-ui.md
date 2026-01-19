@@ -42,7 +42,7 @@ API Platform integration is required before installing Composable UI. Complete t
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/kernel-feature spryker/falcon-ui --update-with-dependencies
+composer require spryker/kernel-feature spryker/falcon-ui spryker/composable-backoffice-ui --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -53,6 +53,7 @@ Make sure the following modules have been installed:
 | --- | --- |
 | KernelFeature | vendor/spryker/kernel-feature |
 | FalconUi | vendor/spryker/falcon-ui |
+| ComposableBackofficeUi | vendor/spryker/composable-backoffice-ui |
 
 {% endinfo_block %}
 
@@ -312,12 +313,6 @@ Add the Falcon UI npm scripts to your root `package.json`:
         "falcon:serve": "cd src/Spryker/FalconUi/src/Spryker/Zed/FalconUi/Presentation/Application && npm run serve"
     }
 }
-```
-
-Install the Falcon UI dependencies:
-
-```bash
-npm run falcon:install
 ```
 
 #### Build the frontend application

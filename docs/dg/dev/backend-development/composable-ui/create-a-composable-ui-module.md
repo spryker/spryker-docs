@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: Entity configuration reference
     link: docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
+  - title: Composable UI troubleshooting
+    link: docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html
 ---
 
 This document describes how to create a new Composable UI feature module with YAML-driven Back Office UI.
@@ -113,8 +115,9 @@ Create `resources/entity/{entity}.yml` for each entity.
 
 For detailed reference of all available components, fields, and configuration options, see [Entity configuration reference](/docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html).
 
-<details>
-<summary>Entity configuration example</summary>
+### Option A: Auto-generated mode (recommended)
+
+For standard CRUD operations, use the simplified auto-generated mode:
 
 ```yaml
 entity: YourEntity
@@ -122,18 +125,83 @@ entity: YourEntity
 navigation:
     title: 'Your Entities'
 
+fields:
+    reference:
+        readonly: true
+        searchable: true
+
+    name:
+        required: true
+        searchable: true
+
+    status:
+        type: select
+        required: true
+        datasource:
+            url: /statuses
+        filterable: true
+
+    description:
+        searchable: true
+
+    createdAt:
+        type: date
+        label: Created At
+        format: dd.MM.y
+        filterable: true
+
+ui:
+    list:
+        columns:
+            - reference
+            - name
+            - status
+            - description
+            - createdAt
+        rowAction: edit
+
+    create:
+        fields:
+            - name
+            - status
+            - description
+
+    edit:
+        fields:
+            - name
+            - status
+            - description
+```
+
+This automatically generates table, forms, buttons, and all UI components.
+
+### Option B: Custom mode (for advanced use cases)
+
+For full control over UI components, use custom mode:
+
+<details>
+<summary>Custom mode example</summary>
+
+```yaml
+entity: YourEntity
+
+navigation:
+    title: 'Your Entities'
+
+ui:
+    mode: custom
+
 view:
     layout:
-        use:
-            - layout.your-entity.page
+        use: layout.your-entity.page
 
     components:
         layout.your-entity.page:
+            component: LayoutComponent
             id: 'page-layout'
             virtualRoute: 'root'
-            component: LayoutComponent
             className: 'page-layout'
-            slots:
+            contains:
                 actions:
                     - use: action.your-entity.create
                 content:
@@ -141,218 +209,136 @@ view:
 
         # Field definitions
         field.your-entity.name:
-            name: 'name'
-            controlType: 'input'
-            type: 'text'
             label: 'Name'
-            validators:
-                required: true
+            required: true
 
         field.your-entity.status:
-            name: 'status'
-            controlType: 'select'
+            type: select
             label: 'Status'
-            validators:
-                required: true
+            required: true
             datasource:
-                type: 'http'
                 url: '/statuses'
 
         field.your-entity.description:
-            name: 'description'
-            controlType: 'textarea'
             label: 'Description'
 
         field.your-entity.reference:
-            name: 'reference'
-            controlType: 'input'
-            type: 'hidden'
-            label: 'reference'
+            type: hidden
 
         # Headlines
         headline.your-entity.create:
             component: HeadlineComponent
+            level: 'h3'
             style:
                 background-color: 'var(--spy-white)'
                 padding: '15px 30px'
-            slots:
-                - content: 'Create New Entity'
-            inputs:
-                level: 'h3'
+            contains:
+                content: 'Create New Entity'
 
         headline.your-entity.edit:
             component: HeadlineComponent
+            level: 'h3'
             style:
                 background-color: 'var(--spy-white)'
                 padding: '15px 30px'
-            slots:
-                - content: 'Update ${row.name} Entity'
-                - slot: 'actions'
-                  use: form.your-entity.delete
-            inputs:
-                level: 'h3'
+            contains:
+                content: 'Update ${row.name} Entity'
+                actions:
+                    - use: form.your-entity.delete
 
         # Forms
         form.your-entity.create:
             component: DynamicFormComponent
             style:
                 padding: '30px'
-            inputs:
-                config:
-                    controls:
-                        - use: field.your-entity.name
-                        - use: field.your-entity.status
-                        - use: field.your-entity.description
-                    submit:
-                        label: 'Create'
-                        method: 'POST'
-                        url: '/your-entities'
-                        actions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'The entity is created.'
-                                    type: 'success'
-                            - type: 'close-drawer'
-                            - type: 'refresh-table'
-                        errorActions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'Failed to create entity'
-                                    description: 'Please refresh the page and try again.'
-                                    type: 'error'
+            fields:
+                - use: field.your-entity.name
+                - use: field.your-entity.status
+                - use: field.your-entity.description
+            submit:
+                label: 'Create'
+                url: '/your-entities'
+                success: 'The entity is created.'
+                error: 'Failed to create entity.'
 
         form.your-entity.edit:
             component: DynamicFormComponent
             style:
                 padding: '30px'
-            inputs:
-                config:
-                    controls:
-                        - use: field.your-entity.name
-                          overrides:
-                              value: '${row.name}'
-                        - use: field.your-entity.status
-                          overrides:
-                              value: '${row.status}'
-                        - use: field.your-entity.description
-                          overrides:
-                              value: '${row.description}'
-                    submit:
-                        label: 'Save'
-                        method: 'PATCH'
-                        url: '/your-entities/${row.reference}'
-                        actions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'The entity is saved.'
-                                    type: 'success'
-                            - type: 'close-drawer'
-                            - type: 'refresh-table'
-                        errorActions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'Failed to save entity'
-                                    description: 'Please refresh the page and try again.'
-                                    type: 'error'
+            fields:
+                - use: field.your-entity.name
+                - use: field.your-entity.status
+                - use: field.your-entity.description
+            submit:
+                label: 'Save'
+                url: '/your-entities/${row.reference}'
+                success: 'The entity is saved.'
+                error: 'Failed to save entity.'
 
         form.your-entity.delete:
             component: DynamicFormComponent
             slot: 'actions'
-            inputs:
-                config:
-                    controls:
-                        - use: field.your-entity.reference
-                    submit:
-                        active: true
-                        label: 'Delete'
-                        method: 'DELETE'
-                        url: '/your-entities/${row.reference}'
-                        variant: 'critical'
-                        actions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'The entity is deleted.'
-                                    type: 'success'
-                            - type: 'close-drawer'
-                            - type: 'refresh-table'
-                        errorActions:
-                            - type: 'notification'
-                              notifications:
-                                  - title: 'Failed to delete entity'
-                                    description: 'Please refresh the page and try again.'
-                                    type: 'error'
+            fields:
+                - use: field.your-entity.reference
+            submit:
+                label: 'Delete'
+                url: '/your-entities/${row.reference}'
+                variant: 'critical'
+                success: 'The entity is deleted.'
+                error: 'Failed to delete entity.'
 
         # Action button
         action.your-entity.create:
             component: ButtonActionComponent
-            slots:
-                - content: 'Create Entity'
-            inputs:
-                action:
-                    type: 'drawer'
-                    component: 'component-builder'
-                    options:
-                        inputs:
-                            configuration:
-                                - use: headline.your-entity.create
-                                - use: form.your-entity.create
+            contains:
+                content: 'Create Entity'
+            action:
+                type: 'drawer'
+                drawer:
+                    - use: headline.your-entity.create
+                    - use: form.your-entity.create
 
         # Data table
         table.your-entity.list:
             component: TableComponent
             id: 'your-entity-table'
-            inputs:
-                config:
-                    dataSource:
-                        type: 'http'
-                        url: '/your-entities'
-                    columns:
-                        - { id: 'reference', title: 'Reference' }
-                        - { id: 'name', title: 'Name' }
-                        - { id: 'status', title: 'Status' }
-                        - { id: 'description', title: 'Description' }
-                        - id: 'createdAt'
-                          editable: false
-                          title: 'Created At'
-                          type: 'date'
-                          typeOptions: { format: 'dd.MM.y' }
-                    filters:
-                        enabled: true
-                        items:
-                            - id: 'status'
-                              title: 'Status'
-                              type: 'select'
-                              typeOptions:
-                                  multiselect: false
-                                  datasource:
-                                      type: 'http'
-                                      url: '/statuses'
-                                      valueField: 'value'
-                                      titleField: 'title'
-                            - { id: 'createdAt', title: 'Created', type: 'date-range' }
-                    pagination: { enabled: true, sizes: [10, 20, 50] }
-                    search: { enabled: true, placeholder: 'Search entities...' }
-                    rowActions:
-                        enabled: true
-                        click: drawer
-                        actions:
-                            - id: 'drawer'
-                              title: 'Edit Entity'
-                              type: 'drawer'
-                              component: 'component-builder'
-                              options:
-                                  inputs:
-                                      configuration:
-                                          - use: headline.your-entity.edit
-                                          - use: form.your-entity.edit
-
+            dataSource:
+                url: '/your-entities'
+            columns:
+                - { id: 'reference', title: 'Reference' }
+                - { id: 'name', title: 'Name' }
+                - { id: 'status', title: 'Status' }
+                - { id: 'description', title: 'Description' }
+                - id: 'createdAt'
+                  title: 'Created At'
+                  type: 'date'
+                  format: 'dd.MM.y'
+            filters:
+                - id: 'status'
+                  title: 'Status'
+                  type: 'select'
+                  datasource:
+                      url: '/statuses'
+                - { id: 'createdAt', title: 'Created', type: 'date-range' }
+            pagination: [10, 20, 50]
+            search: 'Search entities...'
+            rowClick:
+                drawer:
+                    - use: headline.your-entity.edit
+                    - use: form.your-entity.edit
 ```
 
 </details>
 
 ## Step 3: Register navigation
 
-Add your module to the Back Office navigation in `config/Zed/navigation.xml`:
+Add your module to the Back Office navigation in `config/Zed/navigation.xml`.
+
+{% info_block warningBox "Troubleshooting" %}
+
+If your module doesn't appear in navigation after completing this step, see [Module doesn't appear in navigation](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#module-doesnt-appear-in-navigation).
+
+{% endinfo_block %}
 
 ```xml
 <?xml version="1.0"?>
@@ -436,40 +422,44 @@ class YourEntitiesBackendProvider extends AbstractBackendProvider
             'createdAt' => $transfer->getCreatedAt(),
         ]);
     }
-
-    protected function getSearchableFields(): array
-    {
-        return ['name', 'description'];
-    }
-
-    protected function getFilterFieldMapping(): array
-    {
-        return [
-            'status' => 'status',        // filter[status]=active → searches status field
-            'createdAt' => 'createdAt',  // Supports date range filtering
-        ];
-    }
 }
 ```
 
 </details>
 
-#### Optional: Configure search and filtering
+#### Search and filtering configuration
 
-If you added search and filters to your table in Step 2, the Provider code above already includes the necessary configuration:
+Search and filtering are configured in your entity YAML file using field properties:
 
-**`getSearchableFields()`** - defines which fields users can search:
+**Searchable fields** - mark fields with `searchable: true`:
+```yaml
+fields:
+    name:
+        searchable: true
+    description:
+        searchable: true
+```
 - When users type in the search box, the table sends `GET /your-entities?search=keyword`
-- Provider searches in the specified fields (`name`, `description`)
+- `AbstractBackendProvider` automatically searches across all `searchable: true` fields
 
-**`getFilterFieldMapping()`** - maps frontend filter IDs to backend fields:
+**Filterable fields** - mark fields with `filterable: true`:
+```yaml
+fields:
+    status:
+        type: select
+        filterable: true
+    
+    createdAt:
+        type: date
+        filterable: true
+```
 - User selects "Active" in status filter → `GET /your-entities?filter[status]=active`
 - User selects date range → `GET /your-entities?filter[createdAtFrom]=2024-01-01&filter[createdAtTo]=2024-12-31`
-- Provider automatically applies these filters to database queries
+- `AbstractBackendProvider` automatically applies these filters to database queries
 
 **Built-in capabilities** - `AbstractBackendProvider` automatically handles:
 - **Pagination**: `?page=2&itemsPerPage=20`
-- **Search**: Full-text search across configured fields
+- **Search**: Full-text search across `searchable: true` fields
 - **Filtering**: Field-based filtering with automatic null handling
 - **Date ranges**: Supports `From`/`To` suffixes (for example, `createdAtFrom`, `createdAtTo`)
 
@@ -689,16 +679,20 @@ If your table has filters with dynamic options from API (like salutations, statu
 In your entity YAML, when you have a filter with HTTP datasource:
 
 ```yaml
+# In auto-generated mode
+fields:
+    salutation:
+        type: select
+        filterable: true
+        datasource:
+            url: /salutations      # This endpoint needs to be created
+
+# Or in custom mode
 filters:
-    items:
-        - id: 'salutation'
-          type: 'select'
-          typeOptions:
-              datasource:
-                  type: 'http'
-                  url: '/salutations'      # This endpoint needs to be created
-                  valueField: 'value'
-                  titleField: 'title'
+    - id: 'salutation'
+      type: 'select'
+      datasource:
+          url: '/salutations'
 ```
 
 #### Create reference data Provider
@@ -783,26 +777,67 @@ resource:
 
 **Key points**:
 - Reference data endpoints typically use only `GetCollection` operation (no POST/PATCH/DELETE)
-- Response format must match `valueField` and `titleField` from filter configuration
-- Provider only implements `provideCollection()`, not `provideItem()`
+- Resource properties must match the `valueField` and `titleField` specified in your filter configuration
 
 **Response example**:
 
+<details>
+<summary>JSON response</summary>
+
 ```json
-[
-    {"value": "mr", "title": "Mr."},
-    {"value": "mrs", "title": "Mrs."},
-    {"value": "ms", "title": "Ms."},
-    {"value": "dr", "title": "Dr."}
-]
+{
+    "@context": "\/contexts\/Salutation",
+    "@id": "\/salutations",
+    "@type": "Collection",
+    "totalItems": 5,
+    "member": [
+        {
+            "@id": "\/salutations\/1",
+            "@type": "Salutation",
+            "id": 1,
+            "value": "Mr",
+            "title": "Mr"
+        },
+        {
+            "@id": "\/salutations\/2",
+            "@type": "Salutation",
+            "id": 2,
+            "value": "Mrs",
+            "title": "Mrs"
+        },
+        {
+            "@id": "\/salutations\/3",
+            "@type": "Salutation",
+            "id": 3,
+            "value": "Dr",
+            "title": "Dr"
+        },
+        {
+            "@id": "\/salutations\/4",
+            "@type": "Salutation",
+            "id": 4,
+            "value": "Ms",
+            "title": "Ms"
+        },
+        {
+            "@id": "\/salutations\/5",
+            "@type": "Salutation",
+            "id": 5,
+            "value": "n\/a",
+            "title": "n\/a"
+        }
+    ]
+}
 ```
+
+</details>
 
 ## Step 5: Generate API resources
 
 Generate API resource classes from your YAML definitions:
 
 ```bash
-GLUE_APPLICATION=GLUE_BACKEND glue api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 ```
 
 This generates resource classes in `src/Generated/Api/Backend/`.
@@ -812,13 +847,13 @@ This generates resource classes in `src/Generated/Api/Backend/`.
 1. Generate transfers:
 
 ```bash
-vendor/bin/console transfer:generate
+docker/sdk cli console transfer:generate
 ```
 
 2. Build navigation cache:
 
 ```bash
-vendor/bin/console navigation:build-cache
+docker/sdk cli console navigation:build-cache
 ```
 
 3. Build the Falcon UI:
@@ -830,9 +865,15 @@ npm run falcon:install && npm run falcon:build
 4. Clear caches:
 
 ```bash
-vendor/bin/console cache:empty-all
-vendor/bin/glue cache:clear
+docker/sdk cli console cache:empty-all
+docker/sdk cli glue cache:clear
 ```
+
+{% info_block warningBox "Troubleshooting" %}
+
+If changes don't appear after rebuilding, see [Changes to YAML don't appear](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#changes-to-yaml-dont-appear).
+
+{% endinfo_block %}
 
 ## Step 7: Configure ACL permissions
 
@@ -843,17 +884,21 @@ For detailed information about ACL configuration and best practices, see [Instal
 ## Verification
 
 1. **Check navigation**: Log in to the Back Office and verify your module appears in the navigation menu.
+   - If module is not visible, see [Module doesn't appear in navigation](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#module-doesnt-appear-in-navigation)
 
 2. **Test the list page**: 
    - Navigate to your module
    - Verify the table displays with correct columns
    - Test pagination, search, and filters
+   - If table shows "No data", see [Table shows "No data" or empty](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#table-shows-no-data-or-empty)
+   - If filters/search don't work, see [Filters or search don't work](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#filters-or-search-dont-work)
 
 3. **Test CRUD operations**:
    - Create a new entity using the drawer form
    - Edit an existing entity
    - Delete an entity
    - Verify success notifications appear
+   - If forms don't submit, see [Forms don't submit or show errors](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html#forms-dont-submit-or-show-errors)
 
 4. **Check API endpoints**:
 
@@ -868,6 +913,10 @@ For detailed information about ACL configuration and best practices, see [Instal
      -H "Content-Type: application/ld+json" \
      -d '{"name":"Test Entity"}'
    ```
+
+## Troubleshooting
+
+If you encounter issues while creating or working with your Composable UI module, see [Composable UI troubleshooting](/docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html) for solutions to common problems.
 
 ## Next steps
 

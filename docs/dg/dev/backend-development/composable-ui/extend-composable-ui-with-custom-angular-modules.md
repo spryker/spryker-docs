@@ -295,10 +295,11 @@ Register with the dynamic forms system to use in YAML configuration.
 
 ```yaml
 field.product.color:
-    name: 'color'
-    controlType: 'color-picker'
+    type: 'color-picker'
     label: 'Product Color'
 ```
+
+**Note:** For custom form controls, use the registered control name as the `type` value. The system will look up the control in the dynamic forms registry.
 
 ## Extending existing components
 

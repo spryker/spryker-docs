@@ -60,6 +60,9 @@ The simplest format. Define fields and UI sections—the system generates everyt
 
 ### Complete example
 
+<details>
+<summary>Auto-generated mode example</summary>
+
 ```yaml
 entity: Customer
 
@@ -93,7 +96,6 @@ fields:
 
     dateOfBirth:
         type: date
-        label: Date of Birth
 
     createdAt:
         type: date
@@ -131,6 +133,7 @@ ui:
             - createdAt
             - salutation
 ```
+</details>
 
 ### What gets auto-generated
 
@@ -184,6 +187,11 @@ fields:
 | `date` | Date value | Date picker |
 | `select` | Dropdown selection | Select with options |
 | `hidden` | Not visible | Hidden input |
+| `number` | Numeric value | Number input |
+| `textarea` | Multi-line text | Text area |
+| `checkbox` | Boolean value | Checkbox |
+| `toggle` | On/off switch | Toggle switch |
+| `radio` | Single selection | Radio buttons |
 
 #### `ui`
 
@@ -209,6 +217,9 @@ ui:
 Start with auto-generated configuration, then override specific components.
 
 ### Complete example
+
+<details>
+<summary>Partial override example</summary>
 
 ```yaml
 entity: Customer
@@ -285,6 +296,7 @@ view:
             pagination: [25, 50, 100]
             search: 'Search by name or email...'
 ```
+</details>
 
 ### How it works
 
@@ -335,16 +347,6 @@ view:
                 content: 'Edit: ${row.customerReference}'
 ```
 
-**Custom field validation message:**
-```yaml
-view:
-    components:
-        field.customer.email:
-            validators:
-                email:
-                    message: 'Please enter a valid email'
-```
-
 ---
 
 ## Format 3: Custom mode
@@ -352,6 +354,9 @@ view:
 Full manual control over every UI component. Uses a simplified syntax.
 
 ### Complete example
+
+<details>
+<summary>Custom mode example</summary>
 
 ```yaml
 entity: Customer
@@ -544,6 +549,7 @@ view:
     components:
         # All components defined here
 ```
+</details>
 
 #### Component types
 
@@ -592,12 +598,10 @@ The `contains` keyword defines content for component **slots**. Each component t
 **Syntax:**
 ```yaml
 contains:
-    {slot-name}: 'text content'           # Simple text
-    {slot-name}:                          # Or nested components
+    content: 'text content'           # Simple text
+    action:                          # Or nested components
         - use: {component-id}
 ```
-
-**Important:** Available slots vary by component. Check the [Spryker UI Components Library](https://spy-storybook.web.app/) to see which slots each component supports.
 
 ```yaml
 # LayoutComponent - has 'actions' and 'content' slots
@@ -609,20 +613,20 @@ layout.customer.page:
         content:
             - use: table.customer.list
 
-# HeadlineComponent - has 'content' and 'actions' slots
-headline.customer.edit:
-    component: HeadlineComponent
-    contains:
-        content: 'Update ${row.customerReference} Customer'
-        actions:
-            - use: form.customer.delete
-
 # ButtonActionComponent - has 'content' slot
 action.customer.create:
     component: ButtonActionComponent
     contains:
         content: 'Create Customer'
+
+# TagComponent - has 'label' slot
+tag.customer.create:
+    component: TagComponent
+    contains:
+        label: 'Tag Customer'
 ```
+
+**Important:** Available slots vary by component. Check the [Spryker UI Components Library](https://spy-storybook.web.app/) to see which slots each component supports.
 
 #### Component references with `use`
 
@@ -704,6 +708,11 @@ overrides:
 | `date` | Date picker | Birth date, created date |
 | `select` | Dropdown with options | Status, category |
 | `hidden` | Not visible to user | IDs, references |
+| `number` | Numeric input | Age, quantity |
+| `textarea` | Multi-line text | Description, notes |
+| `checkbox` | Boolean checkbox | Subscribe, agree to terms |
+| `toggle` | On/off switch | Active, enabled |
+| `radio` | Radio button group | Gender, priority |
 
 ### Field properties
 
@@ -716,7 +725,38 @@ overrides:
 | `searchable` | boolean | Included in table search |
 | `filterable` | boolean | Adds filter to table |
 | `format` | string | Display format (e.g., `dd.MM.y`) |
-| `datasource` | object | Options source for select fields |
+| `datasource` | object | Dynamic options from API (for select fields) |
+| `options` | array | Static options (for select/radio fields) |
+
+### Select field options
+
+For select fields, you can provide options in two ways:
+
+**Static options** (defined in YAML):
+```yaml
+fields:
+    salutation:
+        type: select
+        label: 'Salutation'
+        options:
+            - { value: 'mr', title: 'Mr' }
+            - { value: 'mrs', title: 'Mrs' }
+            - { value: 'ms', title: 'Ms' }
+```
+
+**Dynamic options** (fetched from API):
+```yaml
+fields:
+    salutation:
+        type: select
+        label: 'Salutation'
+        datasource:
+            url: '/salutations'
+            valueField: 'value'   # Optional, default: 'value'
+            titleField: 'title'   # Optional, default: 'title'
+```
+
+Use `options` for small, static lists. Use `datasource` when options come from the database or need to be dynamic.
 
 ### Validators
 

@@ -149,15 +149,6 @@ Follow REST conventions for resource naming:
 | Customer | `/customers/{id}` | Single customer |
 | CustomerAddresses | `/customer-addresses` | Address collection |
 
-### Design for pagination
-
-Always enable pagination for collection endpoints, otherwise collection request will try to return all entries:
-
-```yaml
-resource:
-    paginationEnabled: true
-    paginationItemsPerPage: 10
-```
 
 ### Configure searchable fields in YAML
 
@@ -234,31 +225,11 @@ fields:
 Always provide success and error feedback. Use the simplified syntax:
 
 ```yaml
-# Simplified syntax (recommended)
 submit:
     label: 'Save'
     url: '/customers/${row.customerReference}'  # method: PATCH is default for edit
     success: 'Customer saved successfully'
     error: 'Failed to save customer. Please check your input and try again.'
-
-# Verbose syntax (when you need custom actions)
-submit:
-    label: 'Save'
-    method: 'PATCH'
-    url: '/customers/${row.customerReference}'
-    actions:
-        - type: 'notification'
-          notifications:
-              - title: 'Customer saved successfully'
-                type: 'success'
-        - type: 'close-drawer'
-        - type: 'refresh-table'
-    errorActions:
-        - type: 'notification'
-          notifications:
-              - title: 'Failed to save customer'
-                description: 'Please check your input and try again.'
-                type: 'error'
 ```
 
 ## Table design
@@ -299,11 +270,11 @@ filters:
 
 ### Configure pagination sizes
 
-Pagination is enabled by default with sizes 10, 25, 50, 100. Customize only if needed:
+Pagination is enabled by default with sizes 5,10, 25. Customize only if needed:
 
 ```yaml
 # Custom page sizes (only if default doesn't fit your needs)
-pagination: [5, 10, 25]
+pagination: [10, 50, 100]
 ```
 
 ## Security
@@ -509,11 +480,4 @@ table.order.list:
         - id: 'status'
           title: 'Status'
           type: 'chip'
-          # Color mapping for different statuses
-          color:
-              pending: 'yellow'
-              processing: 'blue'
-              shipped: 'purple'
-              delivered: 'green'
-              cancelled: 'red'
 ```

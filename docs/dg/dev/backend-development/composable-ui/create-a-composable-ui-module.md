@@ -119,6 +119,9 @@ For detailed reference of all available components, fields, and configuration op
 
 For standard CRUD operations, use the simplified auto-generated mode:
 
+<details>
+<summary>Auto-generated mode example</summary>
+
 ```yaml
 entity: YourEntity
 
@@ -172,6 +175,7 @@ ui:
             - status
             - description
 ```
+</details>
 
 This automatically generates table, forms, buttons, and all UI components.
 

@@ -175,6 +175,7 @@ ui:
             - status
             - description
 ```
+
 </details>
 
 This automatically generates table, forms, buttons, and all UI components.
@@ -436,6 +437,7 @@ class YourEntitiesBackendProvider extends AbstractBackendProvider
 Search and filtering are configured in your entity YAML file using field properties:
 
 **Searchable fields** - mark fields with `searchable: true`:
+
 ```yaml
 fields:
     name:
@@ -443,10 +445,12 @@ fields:
     description:
         searchable: true
 ```
+
 - When users type in the search box, the table sends `GET /your-entities?search=keyword`
 - `AbstractBackendProvider` automatically searches across all `searchable: true` fields
 
 **Filterable fields** - mark fields with `filterable: true`:
+
 ```yaml
 fields:
     status:
@@ -457,6 +461,7 @@ fields:
         type: date
         filterable: true
 ```
+
 - User selects "Active" in status filter → `GET /your-entities?filter[status]=active`
 - User selects date range → `GET /your-entities?filter[createdAtFrom]=2024-01-01&filter[createdAtTo]=2024-12-31`
 - `AbstractBackendProvider` automatically applies these filters to database queries

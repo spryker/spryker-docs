@@ -519,6 +519,10 @@ entries:
         url: /docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
       - title: Composable UI best practices
         url: /docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
+      - title: Composable UI troubleshooting
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html
+      - title: Extend Composable UI with custom Angular modules
+        url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
 
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html

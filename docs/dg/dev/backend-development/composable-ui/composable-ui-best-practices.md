@@ -19,7 +19,7 @@ This document provides best practices and guidelines for developing Composable U
 ### Use meaningful component IDs
 
 Component IDs are used internally by the Composable UI system to:
-- **Reference components** with the `use` keyword (e.g., `use: field.customer.email`)
+- **Reference components** with the `use` keyword, for example, `use: field.customer.email`
 - **Override auto-generated components** in partial override mode
 - **Enable component reusability** across forms and views
 

@@ -22,6 +22,7 @@ This document provides solutions for common issues when developing Composable UI
 1. **Check navigation.xml registration**:
    - Verify `config/Zed/navigation.xml` contains your module entry
    - Ensure `bundle`, `controller`, and `action` are set correctly:
+
      ```xml
      <bundle>falcon-ui</bundle>
      <controller>feature</controller>
@@ -29,11 +30,13 @@ This document provides solutions for common issues when developing Composable UI
      ```
 
 2. **Rebuild navigation cache**:
+
    ```bash
    docker/sdk cli console navigation:build-cache
    ```
 
 3. **Clear all caches**:
+
    ```bash
    docker/sdk cli console cache:empty-all
    ```
@@ -50,10 +53,12 @@ This document provides solutions for common issues when developing Composable UI
 **Solutions**:
 
 1. **Check API endpoint is accessible**:
+
    ```bash
    curl -X GET http://glue-backend.your-domain.local/your-entities \
      -H "Authorization: Bearer YOUR_TOKEN"
    ```
+
    - Should return JSON with data or empty array
    - If 404: API resource not registered correctly
    - If 401: Authentication issue
@@ -67,6 +72,7 @@ This document provides solutions for common issues when developing Composable UI
    - Check Provider's `fetchAllItems()` or `provideCollection()` returns data
 
 4. **Regenerate API resources**:
+
    ```bash
    docker/sdk cli glue api:generate backend
    docker/sdk cli console transfer:generate
@@ -88,7 +94,7 @@ This document provides solutions for common issues when developing Composable UI
 
 3. **Check API endpoint URLs**:
    - In entity YAML, verify form `submit.url` matches API resource path
-   - For edit/delete: ensure URL includes identifier (e.g., `/your-entities/${row.reference}`)
+   - For edit/delete: ensure URL includes identifier, for example, `/your-entities/${row.reference}`
 
 4. **Check browser console for errors**:
    - Open browser DevTools → Console tab
@@ -102,6 +108,7 @@ This document provides solutions for common issues when developing Composable UI
 **Solutions**:
 
 1. **Verify field configuration in entity YAML**:
+
    ```yaml
    fields:
        name:
@@ -134,6 +141,7 @@ This document provides solutions for common issues when developing Composable UI
    - Ensure all required properties are present
 
 3. **Rebuild Falcon UI**:
+
    ```bash
    npm run falcon:install && npm run falcon:build
    ```
@@ -149,12 +157,14 @@ This document provides solutions for common issues when developing Composable UI
 **Solutions**:
 
 1. **Clear all caches**:
+
    ```bash
    docker/sdk cli console cache:empty-all
    docker/sdk cli glue cache:clear
    ```
 
 2. **Rebuild Falcon UI** (for UI changes):
+
    ```bash
    npm run falcon:build
    ```
@@ -175,15 +185,18 @@ This document provides solutions for common issues when developing Composable UI
    - If you have `ui.mode: custom`, remove it or change to `ui.mode: crud`
 
 2. **Check field definitions**:
+
    ```yaml
    fields:
        email:
            type: email
            required: true
    ```
+
    - All fields referenced in `ui.list.columns` or `ui.create.fields` must be defined
 
 3. **Clear caches and rebuild**:
+
    ```bash
    docker/sdk cli console cache:empty-all
    npm run falcon:build
@@ -201,16 +214,19 @@ This document provides solutions for common issues when developing Composable UI
    - Example: `table.Customer.list` for Customer entity
 
 2. **Deep merge structure**:
+
    ```yaml
    view:
        components:
            table.customer.list:
                pagination: [10, 25, 50]  # Only overrides pagination
    ```
+
    - Only specified properties are overridden
    - Parent properties remain auto-generated
 
 3. **Clear caches after changes**:
+
    ```bash
    docker/sdk cli console cache:empty-all
    npm run falcon:build
@@ -223,10 +239,12 @@ This document provides solutions for common issues when developing Composable UI
 **Solutions**:
 
 1. **Check resource security configuration**:
+
    ```yaml
    resource:
        security: "is_granted('IS_AUTHENTICATED_FULLY')"
    ```
+
    - Ensure this is set for protected endpoints
 
 2. **Verify OAuth token generation**:
@@ -244,6 +262,7 @@ This document provides solutions for common issues when developing Composable UI
 **Solutions**:
 
 1. **Verify resource properties match filter configuration**:
+
    ```yaml
    # Filter expects these field names
    datasource:
@@ -260,6 +279,7 @@ This document provides solutions for common issues when developing Composable UI
    ```
 
 2. **Check Provider returns correct structure**:
+
    ```php
    yield SalutationsBackendResource::fromArray([
        'value' => 'mr',
@@ -267,7 +287,7 @@ This document provides solutions for common issues when developing Composable UI
    ]);
    ```
 
-## Need more help?
+## Need more help
 
 If your issue is not listed here:
 

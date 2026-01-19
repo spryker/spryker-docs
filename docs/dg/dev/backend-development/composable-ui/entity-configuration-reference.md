@@ -25,9 +25,9 @@ Composable UI supports **three configuration formats**:
 
 ### Choosing the right format
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Do you need standard CRUD?                    │
+│                    Do you need standard CRUD?                   │
 └─────────────────────────────────────────────────────────────────┘
                               │
               ┌───────────────┴───────────────┐
@@ -133,6 +133,7 @@ ui:
             - createdAt
             - salutation
 ```
+
 </details>
 
 ### What gets auto-generated
@@ -296,6 +297,7 @@ view:
             pagination: [25, 50, 100]
             search: 'Search by name or email...'
 ```
+
 </details>
 
 ### How it works
@@ -321,6 +323,7 @@ Auto-generated components have predictable IDs:
 ### Common overrides
 
 **Custom pagination:**
+
 ```yaml
 view:
     components:
@@ -329,6 +332,7 @@ view:
 ```
 
 **Custom search placeholder:**
+
 ```yaml
 view:
     components:
@@ -337,6 +341,7 @@ view:
 ```
 
 **Custom headline styling:**
+
 ```yaml
 view:
     components:
@@ -549,6 +554,7 @@ view:
     components:
         # All components defined here
 ```
+
 </details>
 
 #### Component types
@@ -596,6 +602,7 @@ form.customer.edit:
 The `contains` keyword defines content for component **slots**. Each component type has different available slots.
 
 **Syntax:**
+
 ```yaml
 contains:
     content: 'text content'           # Simple text
@@ -636,6 +643,7 @@ The `use` keyword references a component defined elsewhere in `view.components`.
 - **Overrides**: Modify specific properties when reusing
 
 **Syntax:**
+
 ```yaml
 - use: {component-id}           # Reference by component ID
   overrides:                    # Optional: override specific properties
@@ -643,7 +651,7 @@ The `use` keyword references a component defined elsewhere in `view.components`.
 ```
 
 **How it works:**
-1. Define components in `view.components` with unique IDs (e.g., `field.customer.email`, `form.customer.edit`)
+1. Define components in `view.components` with unique IDs, for example, `field.customer.email`, `form.customer.edit`
 2. Reference them using `use: {component-id}`
 3. The system replaces `use` with the full component definition at runtime
 
@@ -672,12 +680,12 @@ contains:
 ```
 
 **Component ID naming convention:**
-- `field.{entity}.{fieldName}` - Form fields (e.g., `field.customer.email`)
-- `form.{entity}.{action}` - Forms (e.g., `form.customer.create`, `form.customer.edit`)
-- `headline.{entity}.{action}` - Headlines (e.g., `headline.customer.edit`)
-- `table.{entity}.list` - Tables (e.g., `table.customer.list`)
-- `action.{entity}.{action}` - Action buttons (e.g., `action.customer.create`)
-- `layout.{entity}.page` - Page layouts (e.g., `layout.customer.page`)
+- `field.{entity}.{fieldName}` - Form fields, for example, `field.customer.email`
+- `form.{entity}.{action}` - Forms, for example, `form.customer.create`, `form.customer.edit`
+- `headline.{entity}.{action}` - Headlines, for example, `headline.customer.edit`
+- `table.{entity}.list` - Tables, for example, `table.customer.list`
+- `action.{entity}.{action}` - Action buttons, for example, `action.customer.create`
+- `layout.{entity}.page` - Page layouts, for example, `layout.customer.page`
 
 #### Variable interpolation
 
@@ -724,7 +732,7 @@ overrides:
 | `readonly` | boolean | Cannot be edited |
 | `searchable` | boolean | Included in table search |
 | `filterable` | boolean | Adds filter to table |
-| `format` | string | Display format (e.g., `dd.MM.y`) |
+| `format` | string | Display format, for example, `dd.MM.y` |
 | `datasource` | object | Dynamic options from API (for select fields) |
 | `options` | array | Static options (for select/radio fields) |
 
@@ -733,6 +741,7 @@ overrides:
 For select fields, you can provide options in two ways:
 
 **Static options** (defined in YAML):
+
 ```yaml
 fields:
     salutation:
@@ -745,6 +754,7 @@ fields:
 ```
 
 **Dynamic options** (fetched from API):
+
 ```yaml
 fields:
     salutation:

@@ -3877,8 +3877,12 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+              - title: Install the Asset-Based Catalog feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-based-catalog-feature.html
               - title: SSP glossary demo data
                 url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+              - title: SSP frontend templates
+                url: /docs/pbc/all/self-service-portal/install/ssp-frontend-templates.html
 
           - title: Manage in the Back Office
             nested:
@@ -3995,6 +3999,10 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
+                  - title: Tutorials and HowTos
+                    nested:
+                      - title: "HowTo: Configure shipment types"
+                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html

@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | 202512.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
-| Cart | 202512.0 | |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Product Bundles | 202507.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Cart | 202507.0 | |
 
 
 ## Set up behavior
@@ -212,7 +212,7 @@ You can set the threshold using the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_
 For details more details on, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
 
 
-## Glue API. Quote Merge Extension for Guest-to-Customer Cart. Single Cart behavior
+## Glue API: Quote Merge Extension for Guest-to-Customer Cart (Single Cart Behavior)
 
 When single cart behavior is enabled, and AddGuestQuoteItemsToCustomerQuotePostAuthPlugin is used, add the following plugin to correctly merge bundled items:
 

@@ -236,6 +236,3 @@ For details more details on, see [Install the Splittable Order Items feature](/d
 
 
 
-
-
-

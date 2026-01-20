@@ -1,8 +1,8 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Dec 4, 2025
-keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent
+last_updated: Jan 20, 2026
+keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation
 template: howto-guide-template
 label: early-access
 related:
@@ -10,6 +10,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Use structured responses with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+  - title: Manage conversation history with the AiFoundation module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-chat-history.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
@@ -443,13 +445,13 @@ This transfer contains information about a tool invocation made by the AI:
 - `arguments` (array): The arguments passed to the tool
 - `result` (string): The result returned by the tool execution
 
-## Roadmap
+### StructuredMessage
 
-The following capabilities are planned for future releases of the AiFoundation module:
+Define the expected structure (`structuredMessage` property) of the AI response for structured responses. This is a Spryker Transfer object that you can customize based on your requirements.
 
-### Chat history capabilities
+### Chat History
 
-Support for maintaining conversation context across multiple interactions. This will enable multi-turn conversations where the AI can reference previous messages, maintain state, and provide more contextually relevant responses throughout an extended dialogue.
+Chat history is created by `conversationId` and stored in the Redis. 
 
 ## About NeuronAI framework
 

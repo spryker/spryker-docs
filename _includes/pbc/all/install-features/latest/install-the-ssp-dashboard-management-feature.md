@@ -1,18 +1,33 @@
 This document describes how to install the Self-Service Portal (SSP) Dashboard Management feature.
 
+{% info_block warningBox "Install all SSP features" %}
+
+For the Self-Service Portal to work correctly, you must install all SSP features. Each feature depends on the others for proper functionality.
+
+{% endinfo_block %}
+
+## Features SSP Dashboard Management depends on
+
+- [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html)
+- [Install the SSP File Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature.html)
+- [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html)
+- [Install the SSP Model Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature.html)
+- [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html)
+- [Install the Asset-Based Catalog feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-based-catalog-feature.html)
+
 ## Prerequisites
 
-| FEATURE         | VERSION | INSTALLATION GUIDE  |
-|--------------| ------- | ------------------ |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202507.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| FEATURE         | VERSION  | INSTALLATION GUIDE  |
+|--------------|----------| ------------------ |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202507.1" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -50,70 +65,24 @@ Make sure the following transfer objects have been generated:
 
 {% endinfo_block %}
 
-## Add translations
+## Demo data for EU region / DE store
 
-1. Append the glossary:
+### Add translations
 
-<details>
-  <summary>Glossary</summary>
+[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html)
 
-```csv
-ssp_dashboard.index.widget.title,Dashboard,en_US
-ssp_dashboard.index.widget.title,Dashboard,de_DE
-dashboard.index.widget.title,Dashboard,en_US
-dashboard.index.widget.title,Dashboard,de_DE
-ssp_dashboard.general.view_all,View All,en_US
-ssp_dashboard.general.view_all,Alle anzeigen,de_DE
-ssp_dashboard.general.welcome,"Welcome, %name%",en_US
-ssp_dashboard.general.welcome,"Willkommen, %name%",de_DE
-ssp_dashboard.overview.title,My Overview,en_US
-ssp_dashboard.overview.title,Meine Übersicht,de_DE
-ssp_dashboard.general.ssp_assets,Assets,en_US
-ssp_dashboard.general.ssp_assets,Assets,de_DE
-dashboard.general.assets,Assets,en_US
-dashboard.general.assets,Assets,de_DE
-ssp_dashboard.general.inquiries,Pending Inquiries,en_US
-ssp_dashboard.general.inquiries,Ausstehende Ansprüche,de_DE
-ssp_dashboard.general.services,Planned Services,en_US
-ssp_dashboard.general.services,Geplante Services,de_DE
-ssp_dashboard.representatives.title,Service Representatives,en_US
-ssp_dashboard.representatives.title,Mitarbeiter des Kundendienstes,de_DE
-ssp_dashboard.general.no_data,There is no data yet,en_US
-ssp_dashboard.general.no_data,Es gibt noch keine Daten,de_DE
-ssp_dashboard.general.news,News & Events,en_US
-ssp_dashboard.general.news,Nachrichten & Veranstaltungen,de_DE
-dashboard.access.denied,Access denied.,en_US
-dashboard.access.denied,Zugriff verweigert.,de_DE
-customer.account.files,Files,en_US
-customer.account.files,Dateien,de_DE
-customer.account.no_files,There is no data yet,en_US
-customer.account.no_files,Es existieren noch keine Daten,de_DE
-customer.account.no_ssp_booked_services,You do not have booked services yet.,en_US
-customer.account.no_ssp_booked_services,Sie haben noch keine gebuchten Services.,de_DE
-customer.account.ssp_booked_services,Booked Services,en_US
-customer.account.ssp_booked_services,Gebuchte Services,de_DE
-customer.self_service_portal.service.list.product_name,Product Name,en_US
-customer.self_service_portal.service.list.product_name,Produktname,de_DE
-customer.self_service_portal.service.list.order_reference,Order Reference,en_US
-customer.self_service_portal.service.list.order_reference,Bestellreferenz,de_DE
-customer.self_service_portal.service.list.scheduled_at,Date and Time,en_US
-customer.self_service_portal.service.list.scheduled_at,Datum und Uhrzeit,de_DE
-customer.self_service_portal.service.list.status,Status,en_US
-customer.self_service_portal.service.list.status,Status,de_DE
-ssp_dashboard.general.booked_services,Booked Services,en_US
-ssp_dashboard.general.booked_services,Gebuchte Services,de_DE
-permission.name.ViewCompanySspServicePermissionPlugin,ViewCompanySspServicePermissionPlugin,en_US
-permission.name.ViewCompanySspServicePermissionPlugin,ViewCompanySspServicePermissionPlugin,de_DE
-permission.name.ViewBusinessUnitSspServicePermissionPlugin,ViewBusinessUnitSspServicePermissionPlugin,en_US
-permission.name.ViewBusinessUnitSspServicePermissionPlugin,ViewBusinessUnitSspServicePermissionPlugin,de_DE
+Import translations:
+
+```bash
+console data:import glossary
 ```
 
-</details>
+### Add dashboard demo data
 
-3. Append `cms_block.csv`:
+1. Append `cms_block.csv`:
 
 <details>
-  <summary>cms_block.csv</summary>
+  <summary>data/import/common/common/cms_block.csv</summary>
 
 ```csv
 cms-sales_rep:default,sales_rep:default,Title and Content,@CmsBlock/template/title_and_content_block.twig,1,,,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Mitarbeiter des Kundendienstes</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,<div class='contact-list box box--dark' data-qa='component contact-list'><div class='block-title spacing-bottom' data-qa='component block-title'><div class='grid grid--middle'><h5 class='block-title__title spacing-right col'>Service Representatives</h5></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Alice Johnson</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:alice.johnson@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> alice.johnson@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-123-4567' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-123-4567</a></span></span></div></div><div class='contact-list__representative'><div class='contact-list__representative-logo'><svg class='icon' data-qa='component icon' title='user'><use xlink:href='#:user'></use></svg><span class='contact-list__representative-image' style='background-image: url('');'></span></div><div class='contact-list__representative-info'><span class='contact-list__representative-name'>Michael Smith</span><span class='contact-list__representative-data'><span class='contact-list__representative-data-col'><a href='mailto:michael.smith@example.com' class='contact-list__representative-mail'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='mail'><use xlink:href='#:mail'></use></svg> michael.smith@example.com</a></span><span class='contact-list__representative-data-col'><a href='tel:+1 555-987-6543' class='contact-list__representative-phone'><svg class='icon contact-list__representative-icon' data-qa='component icon' title='phone'><use xlink:href='#:phone'></use></svg> +1 555-987-6543</a></span></span></div></div></div>,,,,
@@ -122,40 +91,40 @@ ssp-news-block-1,News Banner-1,Title and Content,@CmsBlock/template/title_and_co
 
 </details>
 
-4. Append `cms_block_store.csv`:
+2. Append **data/import/common/DE/cms_block_store.csv**
 
 ```csv
 ssp-news-block-1,DE
 cms-sales_rep:default,DE
 ```
 
-5. Append `cms_slot.csv`:
+3. Append **data/import/common/common/cms_slot.csv**:
 
 ```csv
-ssp-news,ssp-news-block-1,"SSP News.",SprykerCmsSlotBlock,@SelfServicePortal/views/dashboard/dashboard.twig,1
+ssp-news,ssp-news-block-1,SSP News.,SprykerCmsSlotBlock,@SelfServicePortal/views/dashboard/dashboard.twig,1
 ```
 
-6. Append `cms_slot_block.csv`:
+4. Append **data/import/common/common/cms_slot_block.csv**
 
 ```csv
 slt-mobile-header,blck-9,1,@ShopUi/templates/page-layout-main/page-layout-main.twig,,,,,,,
 ssp-news,ssp-news-block-1,1,@SelfServicePortal/views/dashboard/dashboard.twig,,,,,,,
 ```
 
-7. Append `cms_slot_template.csv`:
+5. Append **data/import/common/common/cms_slot_template.csv**
 
 ```csv
 SSP Dashboard,Dashboard Page.,@SelfServicePortal/views/dashboard/dashboard.twig
 ```
 
-8. Append `content_banner.csv`:
+6. Append **data/import/common/common/content_banner.csv**
 
 ```csv
 ssp-br-1,SSP Banner Name 1,SSP Banner Description 1, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ssp-br-2,SSP Banner Name 2,SSP Banner Description 2, ,,, ,,,/assets/current/default/images/400x200.png,,,/en/demo-landing-page,,,ssp-banner-image,,
 ```
 
-9. Append `company_role_permission.csv`
+7. Append **data/import/common/common/company_role_permission.csv**
 
 ```csv
 Ottom_Admin,ViewBusinessUnitSspServicePermissionPlugin,
@@ -198,12 +167,11 @@ Spryker_Buyer_With_Limit,ViewCompanySspServicePermissionPlugin,
 {% raw %}{% endblock %}{% endraw %}
 ```
 
-## Import data
+### Import the data
 
-Import glossary and demo data:
+Import dashboard demo data:
 
 ```bash
-console data:import glossary
 console data:import cms-slot-template
 console data:import content-banner
 console data:import cms-block
@@ -242,6 +210,8 @@ use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionD
 use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewDashboardPermissionPlugin;
 use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewBusinessUnitSspServicePermissionPlugin;
 use SprykerFeature\Yves\SelfServicePortal\Plugin\Permission\ViewCompanySspServicePermissionPlugin;
+use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewCompanySspInquiryPermissionPlugin;
+use SprykerFeature\Shared\SelfServicePortal\Plugin\Permission\ViewBusinessUnitSspInquiryPermissionPlugin;
 
 class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 {
@@ -375,6 +345,8 @@ namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\SelfServicePortal\Widget\DashboardMenuItemWidget;
 use SprykerFeature\Yves\SelfServicePortal\Widget\SspFileListWidget;
+use SprykerFeature\Yves\SelfServicePortal\Widget\SspServiceListWidget;
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -420,3 +392,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Make sure the **Dashboard** menu item is not displayed, and you can't access the **Dashboard** page.
 
 {% endinfo_block %}
+
+## Set up frontend templates
+
+For information about setting up frontend templates, see [Set up SSP frontend templates](/docs/pbc/all/self-service-portal/latest/install/ssp-frontend-templates.html).

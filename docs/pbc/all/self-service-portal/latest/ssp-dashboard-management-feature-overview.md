@@ -2,7 +2,7 @@
 title: Self-Service Portal Dashboard Management feature overview
 description: View key metrics, assets, inquiries, and services in a role-based dashboard for company users, accessible from the storefront's customer account menu.
 template: concept-topic-template
-last_updated: Apr 10, 2025
+last_updated: Dec 18, 2025
 ---
 
 

@@ -3262,11 +3262,11 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
-                  - title: Product Management powered by OpenAI
-                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
+                  - title: Smart Product Management
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/smart-product-management.html
                     nested:
-                    - title: Product Management powered by OpenAI
-                      url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
+                    - title: Install Smart Product Management
+                      url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html
 
               - title: Tutorials and HowTos
                 nested:
@@ -3855,6 +3855,10 @@ entries:
             url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html
           - title: SSP Asset Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-asset-management-feature-overview.html
+          - title: SSP Models feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-model-management-feature-overview.html
+          - title: SSP asset-based catalog feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-based-catalog-feature-overview.html
           - title: SSP File Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html
 
@@ -3873,6 +3877,12 @@ entries:
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
+              - title: Install the Asset-Based Catalog feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-based-catalog-feature.html
+              - title: SSP glossary demo data
+                url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+              - title: SSP frontend templates
+                url: /docs/pbc/all/self-service-portal/install/ssp-frontend-templates.html
 
           - title: Manage in the Back Office
             nested:
@@ -3989,6 +3999,10 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
+                  - title: Tutorials and HowTos
+                    nested:
+                      - title: "HowTo: Configure shipment types"
+                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html

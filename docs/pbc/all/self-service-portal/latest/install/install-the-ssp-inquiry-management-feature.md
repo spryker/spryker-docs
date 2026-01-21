@@ -1,7 +1,7 @@
 ---
 title: Install the SSP Inquiry Management feature
 description: Learn how to integrate SSP Inquiry Management into a Spryker project
-last_updated: Apr 11, 2025
+last_updated: Jan 8, 2026
 template: feature-integration-guide-template
 ---
 

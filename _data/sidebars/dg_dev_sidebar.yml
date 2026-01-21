@@ -50,8 +50,12 @@ entries:
     nested:
       - title: AI Foundation
         nested:
-          - title: AI Foundation
+          - title: AI Foundation Overview
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+          - title: Structured Transfer Response
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+          - title: Tool call
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -66,6 +70,8 @@ entries:
             url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
           - title: Context7 MCP Server
             url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
+          - title: Language Server for Claude Code CLI
+            url: /docs/dg/dev/ai/ai-assistants/lsp-for-claude.html
           - title: Spryker Engineer GPT
             url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
           - title: Spryker K6 Performance Assistant GPT

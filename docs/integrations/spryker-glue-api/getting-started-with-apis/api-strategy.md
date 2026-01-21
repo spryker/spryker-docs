@@ -8,113 +8,63 @@ layout: custom_new
 
 ## Overview
 
-Spryker is evolving its API strategy by introducing **API Platform–based integration** as a **new, strategic integration layer**, while continuing to **fully support existing Glue APIs**.
-
-This evolution is designed to:
-
-- protect existing customer implementations,
-- avoid forced migrations,
-- and enable a modern, future-ready integration approach for new Spryker features.
+Spryker is introducing **API Platform–based integration** as the strategic integration layer for new features while maintaining full support for existing Glue APIs. This additive approach protects existing implementations, avoids forced migrations, and enables a modern integration foundation for future development.
 
 {% info_block warningBox "Important" %}
 
-Existing Glue API implementations remain supported.
-There is **no forced migration** and **no End-of-Life planned** for Glue APIs.
+- Existing Glue API implementations remain supported with no End-of-Life planned
+- Migration is optional—customers decide if and when to adopt API Platform integration
+- All existing endpoints and integrations continue to work unchanged
 
 {% endinfo_block %}
 
 ---
 
-## Key Principles
+## API Platform Integration
 
-- **Stability first** – existing APIs continue to work
-- **No forced migration** – customers decide if and when to migrate
-- **Backward compatibility** – existing features remain unchanged
-- **Clear direction** – new features use a modern integration foundation
-- **Transparency** – predictable timelines and rules
-
----
-
-## What Stays the Same
-
-### Glue APIs
-
-- Glue Storefront API and Glue Backend API remain:
-  - supported
-  - maintained
-  - secured
-- Existing Glue endpoints are **not removed**
-- Existing customer integrations continue to run unchanged
-
-### Existing Projects
-
-- No migration required
-- No deadlines imposed
-- No loss of functionality
-
-{% info_block infoBox %}
-
-**If you are using Glue APIs today, nothing breaks and nothing must be changed.**
-
-{% endinfo_block %}
-
----
-
-## What Is Changing
-
-Spryker is introducing [**API Platform–based integration**](/docs/dg/dev/architecture/api-platform.html) into its infrastructure code.
-
-This new integration layer provides:
+[API Platform–based integration](/docs/dg/dev/architecture/api-platform.html) provides:
 
 - contract-first APIs
 - standardized integration patterns
-- better support for large data exchange
-- better developer experience
-- can be used in parallel with Glue APIs for Storefront and Backend integrations
+- enhanced support for large data exchange
+- improved developer experience
+- parallel use with Glue APIs for Storefront and Backend integrations
+- additional media types: application/xml, application/csv, application/json+ld
 
-This change is **additive**, not a replacement for Glue APIs.
+### Availability Timeline
+
+- **Early access:** until end of Q1 2026
+  - limited support scope
+  - native Spryker features (authentication, codebuckets, full JSON:API support) not fully integrated
+- **General Availability:** Next Product Release
 
 ---
 
-## Timeline & Lifecycle
+## Glue APIs: Continued Support
 
-### API Platform Integration
+Glue Storefront API and Glue Backend API remain supported, maintained, and secured with:
 
-- **Early access:** until end of **Q1 2026**
-- **General Availability:** **Next Product Release**
+- All existing endpoints preserved
+- Continued bugfixes and security updates
+- Compatibility maintenance
+- No removal of functionality
 
-### During Early access
+### Feature Freeze (Q1 2026 onward)
 
-- early adoption is possible
-- support scope is limited
-- native Spryker features (authentication, codebuckets, full support JSON:API) are not fully integrated yet
-
-### New Feature Development Policy
-
-From **Q1 2026 onward**:
-
-- All **new Spryker features** are created with **API Platform–based integration**
-- No new Glue endpoints are introduced for new features
-- Existing Glue endpoints remain unchanged and supported
-
-### Glue APIs After Q1 2026
-
-- Glue Storefront and Backend APIs enter **feature freeze**
-- They continue to receive:
-  - bugfixes
-  - security updates
-  - compatibility maintenance
-- **No End-of-Life is planned**
+From Q1 2026, Glue APIs enter feature freeze:
+- New Spryker features use API Platform integration exclusively
+- No new Glue endpoints for new features
+- Existing endpoints receive bugfixes, security updates, and compatibility fixes
 
 {% info_block infoBox %}
 
-Feature freeze does **not** mean deprecation.
+Feature freeze means no new functionality—not deprecation or End-of-Life.
 
 {% endinfo_block %}
 
 ---
 
-## What Changes vs What Stays the Same
+## Comparison
 
 | Topic                | Glue APIs          | API Platform Integration |
 | -------------------- | ------------------ | ------------------------ |
@@ -127,97 +77,52 @@ Feature freeze does **not** mean deprecation.
 
 ---
 
-## Migration Strategy
+## Choosing the Right Integration
 
-### No Forced Migration
+### Use Glue APIs for
 
-- Migration is **optional**
-- Customers migrate **only if and when it makes sense**
-- Glue APIs remain supported long-term
+- extending existing projects
+- maintaining current integrations
+- storefront interactions
 
-### When Migration Makes Sense
+### Use API Platform Integration for
 
-You may consider API Platform integration when:
-- building **new integrations**
-- exchanging **large datasets**
-- integrating **external systems** (ERP, PIM, OMS)
+- new integrations (recommended starting 2026)
+- backend system-to-system communication (ERP, PIM, OMS)
+- large dataset exchanges
+- new Spryker features
+- long-term scalability requirements
+- projects requiring specific formats, versioning, or API Platform features
+
+### Migration Path
+
+Migration from Glue APIs is optional. Consider migrating when:
+- building new integrations
+- exchanging large datasets
+- integrating external systems (ERP, PIM, OMS)
 - planning long-term platform evolution
-- project requirements align better with API Platform features(supported formats, versioning, etc.)
-
-### Migration Support
+- project requirements align with API Platform features (supported formats, versioning, etc.)
 
 Spryker provides:
 - documentation of behavioral differences
-- existing Glue API endpoint can be migrated to API Platform integration one-by-one
-- tools to help convert existing endpoints
-- reference implementations and examples
-
----
-
-## Developer Guidance
-
-### Use Glue APIs When
-
-- extending existing projects
-- working with storefront interactions
-- maintaining current integrations
-
-### Use API Platform Integration When
-
-- implementing new integrations
-- working with backend system-to-system communication
-- building new Spryker features
-- planning long-term scalability
-
-{% info_block infoBox %}
-
-**Recommendation**
-For new integrations starting in 2026, API Platform integration is the preferred choice.
-
-{% endinfo_block %}
+- incremental migration support (endpoint-by-endpoint)
+- conversion tools and reference implementations
 
 ---
 
 ## FAQ
 
 **Do I have to migrate my existing Glue APIs?**<br>
-No. Migration is **not required**. Existing Glue APIs remain supported and functional.
+No. Migration is optional. Existing Glue APIs remain supported.
 
 **Will Glue APIs be removed?**<br>
-No. There is **no End-of-Life planned** for Glue APIs.
+No. There is no End-of-Life planned.
 
-**What does "feature freeze" mean?**<br>
-Feature freeze means:
-- no new functionality is added
-- security updates, bugfixes, and compatibility fixes continue
-
-**Can I still build new features using Glue?**<br>
-New **Spryker core features** will not introduce new Glue endpoints after Q1 2026.
-Customers may continue to use Glue in their projects, but new platform features are exposed via API Platform integration.
+**Can I still build custom features using Glue in my project?**<br>
+Yes. You can continue using Glue APIs in your projects. However, new Spryker core features after Q1 2026 will not introduce new Glue endpoints.
 
 **Is API Platform integration mandatory?**<br>
-No. It is **recommended for new integrations**, but existing Glue usage remains valid.
+No. It is recommended for new integrations, but existing Glue usage remains valid.
 
-**Why is Spryker introducing API Platform integration?**<br>
-To provide:
-- a modern, standardized integration layer
-- better scalability for data exchange
-- clearer long-term API evolution
-- improved developer experience
-- more OOTB media types such as application/xml, application/csv application/json+ld, etc.
-
-**When should I start using API Platform integration?**
-- Early adoption: during early access (Q1 2026)
-- Default choice: from Global Availability (Next Product Release) for new integrations
-
----
-
-## Summary
-
-- Glue APIs remain **supported and stable**
-- No existing functionality is removed
-- No forced migrations
-- API Platform integration enables future growth
-- New features move forward on a modern integration foundation
-
-Spryker's API strategy ensures **continuity for existing customers** and **innovation for future development** — without disruption.
+**When should I start using API Platform integration?**<br>
+Early adoption is available during Q1 2026. For new integrations, use API Platform integration from General Availability (Next Product Release) onward.

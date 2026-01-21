@@ -27,7 +27,6 @@ Use CodeBucket resources when you need:
 - **Code Bucket-specific properties**: EU-specific GDPR fields, tax rates, compliance data
 - **Code Bucket-specific validation**: Different validation rules per Code Bucket or country
 - **Localized business logic**: Country-specific processing requirements
-- **Feature variations**: Enable features only in specific Code Buckets
 
 ### Key benefits
 
@@ -359,18 +358,6 @@ resource:
       type: number
 ```
 
-**Feature layer**:
-
-```yaml
-# src/SprykerFeature/Store/resources/api/backend/stores.resource.yml
-resource:
-  name: Stores
-  codeBucket: EU
-  properties:
-    gdprContactEmail:
-      type: string
-```
-
 **Project layer**:
 
 ```yaml
@@ -394,8 +381,6 @@ resource:
     taxRate:
       type: number
       required: true      # From project
-    gdprContactEmail:
-      type: string        # From feature
     companyVatId:
       type: string        # From project
 ```
@@ -598,7 +583,7 @@ Only create CodeBucket variants when there are genuine regional requirements:
 - Country-specific validation rules
 - Code Bucket-specific business logic
 
-# ❌ Bad use cases:
+# ❌ Bad use cases:q
 - Language translations (use locales instead)
 - Minor field variations (use base resource)
 - Temporary feature flags (use feature toggles)

@@ -29,12 +29,6 @@ API Platform integration is required before installing Composable UI. Complete t
 
 {% endinfo_block %}
 
-### System requirements
-
-- Node.js 18 or later
-- npm 9 or later
-- PHP 8.3 or later
-
 ## Install feature core
 
 ### 1) Install the required modules

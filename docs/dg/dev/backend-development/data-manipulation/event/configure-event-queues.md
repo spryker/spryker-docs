@@ -222,6 +222,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 ```php
 <?php
 $config[QueueConstants::QUEUE_SERVER_ID] = (gethostname()) ?: php_uname('n');
+// test
 $config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 5000;
 $config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 59;
 

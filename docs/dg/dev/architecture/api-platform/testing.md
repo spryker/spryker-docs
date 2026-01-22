@@ -742,7 +742,6 @@ docker/sdk cli vendor/bin/codecept run -c path/to/codeception.yml -g BackendApi
 docker/sdk cli vendor/bin/codecept run -c path/to/codeception.yml  -g StorefrontApi
 ```
 
-
 ## Codeception configuration
 
 ### Suite configuration

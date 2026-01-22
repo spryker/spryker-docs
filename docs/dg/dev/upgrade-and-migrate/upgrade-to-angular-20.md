@@ -541,6 +541,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
         }
     }
    ```
+
    5. Update inside all `deploy yaml` files `node` and `npm` version
 
    ```yaml

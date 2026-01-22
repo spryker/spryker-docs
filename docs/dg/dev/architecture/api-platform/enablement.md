@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Dec 21, 2025
+last_updated: Jan 22, 2026
 template: howto-guide-template
 related:
   - title: API Platform

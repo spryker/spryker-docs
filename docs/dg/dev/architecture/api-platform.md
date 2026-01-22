@@ -455,5 +455,5 @@ For detailed implementation guides:
 ## Next steps
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
-- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html)
+- [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html)
 - [API Platform official documentation](https://api-platform.com/docs/)

@@ -724,26 +724,6 @@ public function testGivenUnauthorizedRequestWhenAccessingProtectedResourceThen40
 }
 ```
 
-### Testing with authentication
-
-```php
-public function testGivenAuthenticatedRequestWhenAccessingProtectedResourceThenDataIsReturned(): void
-{
-    // Arrange
-    $token = $this->tester->haveAuthToken(['customer_reference' => 'CUST-123']);
-
-    // Act
-    static::createClient()->request('GET', '/customers/me', [
-        'headers' => [
-            'Authorization' => sprintf('Bearer %s', $token),
-        ],
-    ]);
-
-    // Assert
-    $this->assertResponseIsSuccessful();
-}
-```
-
 ## Running tests
 
 ### Run all project tests (slow, not recommended)
@@ -756,17 +736,12 @@ docker/sdk cli vendor/bin/codecept run
 
 ```bash
 # Run Backend API tests only
-docker/sdk cli vendor/bin/codecept run -g BackendApi
+docker/sdk cli vendor/bin/codecept run -c path/to/codeception.yml -g BackendApi
 
 # Run Storefront API tests only
-docker/sdk cli vendor/bin/codecept run -g StorefrontApi
+docker/sdk cli vendor/bin/codecept run -c path/to/codeception.yml  -g StorefrontApi
 ```
 
-### Run with coverage
-
-```bash
-docker/sdk cli vendor/bin/codecept run --coverage --coverage-html
-```
 
 ## Codeception configuration
 

@@ -55,7 +55,7 @@ If the command doesn't work, try running it with the `--with-all-dependencies` f
 // config_default.php
 
 $config[KernelAppConstants::TENANT_IDENTIFIER]
-    //..   
+    //..
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
@@ -111,11 +111,11 @@ npm i search-insights
 
 ## Test and configure Yves customizations to work with Algolia Personalization
 
-If you customized Yves templates on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
+If you customized Yves templates on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
 
 ### Run the project in a testing environment
 
-1. To be able to see event logs in the console, enable debug mode by setting `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
+1. To be able to see event logs in the console, enable debug mode by setting `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.
 2. Run the project locally or deploy to a testing environment.
 3. Open the Storefront's home page.
 4. In browser development console, go to settings.
@@ -176,7 +176,7 @@ For a full list of available events, see the [traceable-events-algolia readme fi
 
 ### Common issues and solutions
 
-This section common issues to event and solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/202410.0/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+This section common issues to event and solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
 
 #### Prerequisites
 
@@ -377,7 +377,7 @@ If a user doesn't consent to data tracking, no user data should be sent from the
 - From search results, go to a product's page
 - Add products to cart
 - Place orders
-4. Repeat step 3 as a logged-in user.  
+4. Repeat step 3 as a logged-in user.
 5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 

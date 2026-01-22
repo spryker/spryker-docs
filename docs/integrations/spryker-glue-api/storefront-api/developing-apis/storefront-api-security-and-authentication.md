@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/security-and-authentication.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/security-and-authentication.html
   - /docs/pbc/all/identity-access-management/202404.0/glue-api-security-and-authentication.html
-  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-api-security-and-authentication.html
+  - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-api-security-and-authentication.html
   - /docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 ---
 

@@ -1,15 +1,19 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Nov 24, 2025
+last_updated: Jan 22, 2026
 template: howto-guide-template
 related:
   - title: API Platform
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
-  - title: Schemas and Resource Generation
-    link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: Resource Schemas
+    link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document describes how to create and enable API Platform resources in your Spryker project.
@@ -301,7 +305,7 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-
+markdo
 `config/Glue/ApplicationServices.php`
 
 ```php
@@ -413,5 +417,7 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 ## Next steps
 
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Deep dive into schema syntax
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

@@ -1266,10 +1266,14 @@ entries:
     - title: API Platform
       url: /docs/dg/dev/architecture/api-platform.html
       nested:
-        - title: Schemas and Resource Generation
-          url: /docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+        - title: Resource Schemas
+          url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
+        - title: Validation Schemas
+          url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Testing
+          url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
 

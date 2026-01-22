@@ -1,26 +1,30 @@
 ---
-title: Schemas and Resource Generation
-description: Understanding API Platform schema definitions and the resource generation process in Spryker.
-last_updated: Nov 24, 2025
+title: Resource Schemas
+description: Understanding API Platform resource schema definitions in Spryker.
+last_updated: Jan 22, 2026
 template: concept-topic-template
 related:
   - title: API Platform
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
-This document explains how API Platform schemas are defined and how resources are generated in Spryker.
+This document explains how to define API Platform resource schemas in Spryker.
 
 ## Schema file structure
 
-API Platform uses YAML files to define resource schemas. Schemas describe the structure, operations, and behavior of your API resources.
+API Platform uses YAML files to define resource schemas. Resource schemas describe the structure, operations, and behavior of your API resources.
 
 ### Schema location
 
-Schemas must be placed in the `resources/api/{api-type}/` directory within your module:
+Resource schemas must be placed in the `resources/api/{api-type}/` directory within your module:
 
 ```MARKDOWN
 src/
@@ -29,11 +33,9 @@ src/
 │       └── resources/
 │           └── api/
 │               ├── storefront/
-│               │   ├── resource-name.yml
-│               │   └── resource-name.validation.yml
+│               │   └── resource-name.yml
 │               └── backend/
-│                   ├── resource-name.yml
-│                   └── resource-name.validation.yml
+│                   └── resource-name.yml
 ├── SprykerFeature/
 │   └── {Feature}/
 │       └── resources/
@@ -48,13 +50,6 @@ src/
                     └── backend/
                         └── resource-name.yml
 ```
-
-### Basic schema structure
-
-A complete resource schema consists of two files:
-
-1. **Resource schema** (`{resource-name}.yml`) - Defines structure and operations
-2. **Validation schema** (`{resource-name}.validation.yml`) - Defines validation rules
 
 ## Resource schema syntax
 
@@ -222,7 +217,7 @@ customerReference:
 
 #### required
 
-Makes property mandatory (use validation schema for detailed rules):
+Makes property mandatory (use validation schemas for detailed rules):
 
 ```yaml
 email:
@@ -240,146 +235,18 @@ isActive:
   default: true     # Defaults to true if not provided
 ```
 
-## Validation schema syntax
+## Operations
 
-Validation schemas define constraints for each operation type.
-
-### Basic validation
+Define which HTTP operations are available for the resource:
 
 ```yaml
-post:
-  email:
-    - NotBlank:
-        message: "Email is required"
-    - Email:
-        message: "Invalid email format"
-
-  firstName:
-    - NotBlank
-    - Length:
-        min: 2
-        max: 100
-        minMessage: "Name must be at least {{ limit }} characters"
-        maxMessage: "Name cannot exceed {{ limit }} characters"
-
-patch:
-  email:
-    - Optional:
-        constraints:
-          - NotBlank
-          - Email
-```
-
-### Available validation constraints
-
-#### String constraints
-
-```yaml
-# Required field
-- NotBlank:
-    message: "This field is required"
-
-# Email validation
-- Email:
-    message: "Invalid email format"
-
-# Length validation
-- Length:
-    min: 2
-    max: 100
-    minMessage: "Too short"
-    maxMessage: "Too long"
-
-# Regular expression
-- Regex:
-    pattern: '/^[A-Z][a-z]+$/'
-    message: "Must start with uppercase letter"
-
-# Choice from list
-- Choice:
-    choices: ["active", "inactive", "pending"]
-    message: "Invalid status"
-
-# URL validation
-- Url:
-    message: "Invalid URL"
-```
-
-#### Numeric constraints
-
-```yaml
-# Positive number
-- Positive:
-    message: "Must be positive"
-
-# Range validation
-- Range:
-    min: 0
-    max: 100
-    notInRangeMessage: "{% raw %}Must be between {{ min }} and {{ max }}{% endraw %}"
-
-# Greater than
-- GreaterThan:
-    value: 0
-    message: "{% raw %}Must be greater than {{ compared_value }}{% endraw %}"
-```
-
-#### Date constraints
-
-```yaml
-# Date format
-- Date:
-    message: "Invalid date format"
-
-# DateTime format
-- DateTime:
-    message: "Invalid datetime format"
-
-# Future date
-- GreaterThan:
-    value: "today"
-    message: "Must be a future date"
-```
-
-#### Security constraints
-
-```yaml
-# Password strength
-- NotCompromisedPassword:
-    message: "This password has been leaked in a data breach"
-
-# Complex password requirements
-- Regex:
-    pattern: '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/'
-    message: "Password must contain uppercase, lowercase, number, and special character"
-```
-
-### Operation-specific validation
-
-Define different rules for different operations:
-
-```yaml
-post:
-  password:
-    - NotBlank
-    - Length:
-        min: 12
-        max: 128
-    - Regex:
-        pattern: '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/'
-        message: "Password must contain uppercase, lowercase, and number"
-
-patch:
-  password:
-    - Optional:
-        constraints:
-          - Length:
-              min: 12
-              max: 128
-
-put:
-  password:
-    - NotBlank
+operations:
+  - type: Get                      # GET /customers/{id}
+  - type: GetCollection            # GET /customers
+  - type: Post                     # POST /customers
+  - type: Put                      # PUT /customers/{id}
+  - type: Patch                    # PATCH /customers/{id}
+  - type: Delete                   # DELETE /customers/{id}
 ```
 
 The operation names map to HTTP methods:
@@ -394,21 +261,41 @@ The operation names map to HTTP methods:
 
 ### Generation workflow
 
+The resource generation process is organized into distinct phases, each producing result objects for comprehensive error tracking and reporting:
+
 ```MARKDOWN
-1. Schema Discovery
+1. Preparation Phase
    ↓
-2. Schema Loading (YAML)
+2. Schema Parsing Phase → ParseResult
+   - Load validation schemas
+   - Parse validation rules
+   - Load resource schemas
+   - Parse resource definitions
    ↓
-3. Schema Parsing
+3. Schema Merging Phase → MergeResult
+   - Merge schemas (Core → Feature → Project)
+   - Track contributing source files
    ↓
-4. Schema Validation
+4. Validation Phase → ValidationResult
+   - Validate merged schemas
+   - Apply validation rules
    ↓
-5. Schema Merging (Core → Feature → Project)
+5. Code Generation Phase
+   - Generate PHP resource classes
+   - Write files to output directory
    ↓
-6. Resource Class Generation
-   ↓
-7. Cache Update
+6. Cache Update
 ```
+
+### Result objects
+
+Each phase produces result objects that encapsulate both successful outcomes and failures:
+
+- **ParseResult**: Contains grouped schemas and tracks failed validation files and schema files that could not be parsed
+- **MergeResult**: Contains successfully merged schemas and tracks resources that failed to merge
+- **ValidationResult**: Contains validated schemas and tracks resources that failed validation with detailed error messages
+
+This structured approach ensures that errors in one resource do not block the generation of other valid resources, and provides clear feedback about what succeeded and what failed.
 
 ### Multi-layer schema merging
 
@@ -517,19 +404,19 @@ final class CustomersBackendResource
 
 ```bash
 # List all resources
-docker/sdk cli glue  api:debug --list
+docker/sdk cli glue api:debug --list
 
 # Show specific resource
-docker/sdk cli glue  api:debug customers --api-type=backend
+docker/sdk cli glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk cli glue  api:debug customers --api-type=backend --show-merged
+docker/sdk cli glue api:debug customers --api-type=backend --show-merged
 
 # Show contributing source files
-docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
+docker/sdk cli glue api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
-docker/sdk cli glue  api:generate --validate-only
+docker/sdk cli glue api:generate --validate-only
 ```
 
 ### Common schema errors
@@ -598,16 +485,16 @@ resource:
 
 ```bash
 # Generate all configured API types
-docker/sdk cli glue  api:generate
+docker/sdk cli glue api:generate
 
 # Generate specific API type
-docker/sdk cli glue  api:generate backend
-docker/sdk cli glue  api:generate storefront
+docker/sdk cli glue api:generate backend
+docker/sdk cli glue api:generate storefront
 
 # Generate with options
-docker/sdk cli glue  api:generate --dry-run           # Preview without writing
-docker/sdk cli glue  api:generate --validate-only     # Only validate schemas
-docker/sdk cli glue  api:generate --resource=customers  # Generate single resource
+docker/sdk cli glue api:generate --dry-run           # Preview without writing
+docker/sdk cli glue api:generate --validate-only     # Only validate schemas
+docker/sdk cli glue api:generate --resource=customers  # Generate single resource
 ```
 
 ### Output
@@ -695,27 +582,7 @@ email:
   type: string
 ```
 
-### 3. Use operation-specific validation
-
-```yaml
-# ✅ Good - Different rules per operation
-post:
-  password:
-    - NotBlank
-    - Length: { min: 12 }
-
-patch:
-  password:
-    - Optional:
-        constraints:
-          - Length: { min: 12 }
-
-# ❌ Bad - Same validation everywhere
-password:
-  required: true
-```
-
-### 4. Leverage schema merging
+### 3. Leverage schema merging
 
 ```yaml
 # Core: Define base properties
@@ -735,7 +602,7 @@ resource:
       required: true  # ← Only the difference
 ```
 
-### 5. Use readable/writable correctly
+### 4. Use readable/writable correctly
 
 ```yaml
 # Read-only fields (IDs, timestamps)
@@ -758,6 +625,8 @@ email:
 ## Next steps
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Architecture overview
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Writing and running tests
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 - [API Platform Documentation](https://api-platform.com/docs/) - Official API Platform docs

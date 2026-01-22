@@ -554,30 +554,30 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
 
 ## 4) Components BREAKING CHANGES
 
-    Below is a checklist of component-related breaking changes to review when upgrading from Angular 18 to Angular 20 in a Spryker Merchant Portal (NgModule-based architecture).
+Below is a checklist of component-related breaking changes to review when upgrading from Angular 18 to Angular 20 in a Spryker Merchant Portal (NgModule-based architecture).
 
-    1. **Explicitly set `standalone: false` for NgModule-based components**
-    - **What to do:** For all `@Component()`, `@Directive()`, and `@Pipe()` declarations that are registered via `NgModule.declarations`, explicitly add `standalone: false`.
-    - **Why:** Starting with newer Angular major versions (v19+), Angular shifts toward standalone-first behavior. Without an explicit flag, components may be treated as standalone, resulting in build errors such as *“Component X is standalone and cannot be declared in an NgModule”*.
+1. **Explicitly set `standalone: false` for NgModule-based components**
+   - **What to do:** For all `@Component()`, `@Directive()`, and `@Pipe()` declarations that are registered via `NgModule.declarations`, explicitly add `standalone: false`.
+   - **Why:** Starting with newer Angular major versions (v19+), Angular shifts toward standalone-first behavior. Without an explicit flag, components may be treated as standalone, resulting in build errors such as *“Component X is standalone and cannot be declared in an NgModule”*.
 
-    2. **Ensure standalone components do not implicitly require `imports`**
-    - **What to do:** If any component unintentionally becomes standalone, verify that it does not break template features such as `*ngIf`, `*ngFor`, or `*ngSwitch` due to missing `CommonModule`.
-    - **Why:** Standalone components must explicitly declare dependencies via `imports`. In the Merchant Portal setup, it is safer to keep components NgModule-based and enforce `standalone: false`.
+2. **Ensure standalone components do not implicitly require `imports`**
+   - **What to do:** If any component unintentionally becomes standalone, verify that it does not break template features such as `*ngIf`, `*ngFor`, or `*ngSwitch` due to missing `CommonModule`.
+   - **Why:** Standalone components must explicitly declare dependencies via `imports`. In the Merchant Portal setup, it is safer to keep components NgModule-based and enforce `standalone: false`.
 
-    3. **Review `NgModule` metadata (declarations, imports, exports)**
-    - **What to do:** Verify that:
-    - All externally used components are listed in `exports`
-    - All required modules are included in `imports`
-    - No standalone components are incorrectly declared
-    - **Why:** Angular v20 applies stricter validation to module metadata, and previously tolerated misconfigurations may now fail at build time.
+3. **Review `NgModule` metadata (declarations, imports, exports)**
+   - **What to do:** Verify that:
+   - All externally used components are listed in `exports`
+   - All required modules are included in `imports`
+   - No standalone components are incorrectly declared
+   - **Why:** Angular v20 applies stricter validation to module metadata, and previously tolerated misconfigurations may now fail at build time.
 
-    4. **Validate dynamic component creation**
-    - **What to do:** For components created dynamically (for example via `createComponent`, `NgComponentOutlet`, CDK portals, or legacy `ComponentFactoryResolver` usage), ensure:
-    - A valid `Injector` or `EnvironmentInjector` is provided
-    - Required providers are available in the component context
-    - **Why:** Angular enforces stricter DI and runtime checks, and misconfigured dynamic rendering can cause runtime errors.
+4. **Validate dynamic component creation**
+   - **What to do:** For components created dynamically (for example via `createComponent`, `NgComponentOutlet`, CDK portals, or legacy `ComponentFactoryResolver` usage), ensure:
+     - A valid `Injector` or `EnvironmentInjector` is provided
+     - Required providers are available in the component context
+   - **Why:** Angular enforces stricter DI and runtime checks, and misconfigured dynamic rendering can cause runtime errors.
 
-    5. **Enforce migration to the new template control flow syntax**
-    - **What to do:** Actively migrate all templates to the new Angular control flow syntax (`@if`, `@for`, `@switch`) and avoid mixing it with legacy structural directives (`*ngIf`, `*ngFor`, `*ngSwitch`). New or modified templates must use the new syntax only.
-    - **Why:** Legacy structural directives are considered deprecated. Mixing old and new syntaxes within the same module increases cognitive load, complicates reviews, and leads to subtle and hard-to-debug template regressions. Enforcing a single, modern control flow standard improves consistency, readability, and long-term maintainability.
+5. **Enforce migration to the new template control flow syntax**
+   - **What to do:** Actively migrate all templates to the new Angular control flow syntax (`@if`, `@for`, `@switch`) and avoid mixing it with legacy structural directives (`*ngIf`, `*ngFor`, `*ngSwitch`). New or modified templates must use the new syntax only.
+   - **Why:** Legacy structural directives are considered deprecated. Mixing old and new syntaxes within the same module increases cognitive load, complicates reviews, and leads to subtle and hard-to-debug template regressions. Enforcing a single, modern control flow standard improves consistency, readability, and long-term maintainability.
 

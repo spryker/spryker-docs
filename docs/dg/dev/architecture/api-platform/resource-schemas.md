@@ -1,5 +1,5 @@
 ---
-title: Resource Schema in API Platform
+title: Resource Schemas in API Platform
 description: Understanding API Platform resource schema definitions in Spryker.
 last_updated: Jan 8, 2026
 template: concept-topic-template

@@ -4,14 +4,14 @@ description: Learn how you can upgrade to Version 20 of Angular for your Spryker
 template: module-migration-guide-template
 ---
 
-This document describes how to upgrade Angular to version 20 in your Spryker project.
+This document explains how you can upgrade Angular to version 20 in your Spryker project.
 
-Spryker's current version of Angular is 18. However, Angular 18 is deprecated, according to the [Angular Support policy and schedule](https://angular.dev/reference/releases#actively-supported-versions).
-The current stable version of Angular is 20.
+Spryker currently uses Angular version 18. According to the [Angular Support policy and schedule](https://angular.dev/reference/releases#actively-supported-versions), Angular 18 is deprecated.
+The current stable Angular version is 20.
 
-We recommend upgrading to the latest major version of Angular to get the most recent bug fixes and security updates. Additionally, the upgrade optimizes both runtime performance and tooling.
+We recommend that you upgrade to the latest major Angular version to receive the most recent bug fixes, security updates, and improvements to runtime performance and tooling.
 
-However, updating to Angular v20 results in incompatibility with older versions of Angular. Therefore, a major release is necessary for the following modules:
+Upgrading to Angular v20 introduces incompatibilities with earlier Angular versions. As a result, the following modules require a major release:
 
 - `AgentDashboardMerchantPortalGui`
 - `AgentSecurityMerchantPortalGui`
@@ -36,7 +36,7 @@ However, updating to Angular v20 results in incompatibility with older versions 
 
 *Estimated migration time: 2h*
 
-To upgrade to Angular v18, follow these steps.
+To upgrade to Angular v20, follow these steps.
 
 
 ## 1) Update modules
@@ -184,7 +184,7 @@ npm install
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+Ensure that you update both the `package-lock.json` file and the `node_modules` directory.
 
 {% endinfo_block %}
 
@@ -542,7 +542,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
     }
    ```
 
-   5. Update inside all `deploy yaml` files `node` and `npm` version
+   5. Update the `node` and `npm` versions in all deployment YAML files.
 
    ```yaml
    ...
@@ -552,7 +552,7 @@ Ensure that the `package-lock.json` file and the `node_modules` folder have been
    ...
    ```
 
-## 4) Components BREAKING CHANGES
+## 4) Component breaking changes
 
 Below is a checklist of component-related breaking changes to review when upgrading from Angular 18 to Angular 20 in a Spryker Merchant Portal (NgModule-based architecture).
 
@@ -566,9 +566,9 @@ Below is a checklist of component-related breaking changes to review when upgrad
 
 3. **Review `NgModule` metadata (declarations, imports, exports)**
    - **What to do:** Verify that:
-   - All externally used components are listed in `exports`
-   - All required modules are included in `imports`
-   - No standalone components are incorrectly declared
+     - All externally used components are listed in `exports`.
+     - All required modules are included in `imports`.
+     - No standalone components are incorrectly declared.
    - **Why:** Angular v20 applies stricter validation to module metadata, and previously tolerated misconfigurations may now fail at build time.
 
 4. **Validate dynamic component creation**

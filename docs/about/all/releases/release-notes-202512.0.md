@@ -432,6 +432,7 @@ This release introduces a Composer plugin for Demo Shops that splits broad PSR-4
 
 **Installation instructions:**
 Inside your container execute the following command, answer `yes` when asked to trust this plugin:
+
 ```bash
 composer require spryker/composer-autoload-plugin
 composer install -o

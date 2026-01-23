@@ -32,3 +32,4 @@ To learn more about SSP, see the following docs:
 - [Self-Service Portal Inquiry Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-inquiry-management-feature-overview.html)
 - [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview.html)
 - [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-service-management-feature-overview.html)
+- [Self-Service Portal Service Management architecture overview](/docs/pbc/all/self-service-portal/latest/ssp-service-management-architecture-overview.html)

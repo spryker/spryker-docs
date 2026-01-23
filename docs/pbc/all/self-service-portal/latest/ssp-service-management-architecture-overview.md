@@ -36,29 +36,29 @@ purchase compatible service options.
 
 Services can be found in the related category **Services** in the navigation bar.
 
-![Services in navigation](PLACEHOLDER_IMAGE_URL_1)
+![Services in navigation](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/storefront-service-in-navigation.png)
 
 Below is an example of the service product PDP page, where customers can choose the shipment type and the most
 affordable option.
 
-![Service product PDP](PLACEHOLDER_IMAGE_URL_2)
+![Service product PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/service-product-pdp.png)
 
 By pressing **Select location**, a modal window opens with the available offers at the service points.
 
-![Select service point modal](PLACEHOLDER_IMAGE_URL_3)
+![Select service point modal](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/select-service-point-modal.png)
 
 After adding the product to the cart, customers can check the location and preferred time to receive their service.
 
-![Cart with service](PLACEHOLDER_IMAGE_URL_4)
+![Cart with service](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/cart-with-service.png)
 
 Customers can review purchased services in **Home** > **Customer Account** > **Services** (including order reference,
 service details, date/time, and state).
 
-![Customer account services](PLACEHOLDER_IMAGE_URL_5)
+![Customer account services](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/customer-account-services.png)
 
 Back Office users can manage them under **Backoffice** > **Customer Portal** > **Booked Services**.
 
-![Back Office booked services](PLACEHOLDER_IMAGE_URL_6)
+![Back Office booked services](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/backoffice-booked-services.png)
 
 The checkout supports multi-step behavior by grouping On-Site Service items separately and allowing service point
 changes for those items (shipment type remains fixed). Current limitations include import-only offer pricing, reduced
@@ -81,18 +81,15 @@ support for some B2B features on product offers, and no shipment type changes in
 
 ### Original feature model
 
-![Original feature model](PLACEHOLDER_IMAGE_URL_7)
+![Original feature model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/original-feature-model.png)
 
 ### Self Service Portal Service feature model
 
-![SSP Service feature model](PLACEHOLDER_IMAGE_URL_8)
-
-For more details, see
-the [Miro board](https://miro.com/app/board/uXjVGX22u4U=/?moveToWidget=3458764636958627810&cot=14).
+![SSP Service feature model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/ssp-service-feature-model.png)
 
 ## Domain model
 
-![Domain model](PLACEHOLDER_IMAGE_URL_9)
+![Domain model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/domain-model.png)
 
 ## Entity connections
 
@@ -135,21 +132,21 @@ the [Miro board](https://miro.com/app/board/uXjVGX22u4U=/?moveToWidget=345876463
 
 ## ERD diagram
 
-![ERD diagram](PLACEHOLDER_IMAGE_URL_10)
+![ERD diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/erd-diagram.png)
 
 ## Sequence diagrams
 
 ### Back Office – Create Service Offer
 
-![Create Service Offer sequence diagram](PLACEHOLDER_IMAGE_URL_11)
+![Create Service Offer sequence diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/create-service-offer-sequence-diagram.png)
 
 ### Storefront – Buy Service Product
 
-![Buy Service Product sequence diagram](PLACEHOLDER_IMAGE_URL_12)
+![Buy Service Product sequence diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/buy-service-product-sequence-diagram.png)
 
 ### Back Office – Review Booked Services
 
-![Review Booked Services sequence diagram](PLACEHOLDER_IMAGE_URL_13)
+![Review Booked Services sequence diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/review-booked-services-sequence-diagram.png)
 
 ## Related documents
 

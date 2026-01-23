@@ -508,9 +508,6 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
-<<<<<<< HEAD
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create Code Bucket-specific resources
-=======
->>>>>>> 33328f1ac0fc3e4e7ac48a2f07dc0431804a1053
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

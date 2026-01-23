@@ -24,7 +24,7 @@ This document provides solutions to common issues when working with API Platform
 
 ### Resources not generating
 
-**Symptom:** Running `docker/sdk cli glue  api:generate` completes but no resources are created.
+**Symptom:** Running `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate` completes but no resources are created.
 
 **Possible causes:**
 
@@ -62,10 +62,10 @@ This document provides solutions to common issues when working with API Platform
 docker/sdk cli glue  api:debug --list
 
 # Check schema validation
-docker/sdk cli glue  api:generate --validate-only
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
 
 # Force regeneration
-docker/sdk cli glue  api:generate --force
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 ```
 
 ### Schema validation errors
@@ -101,7 +101,7 @@ docker/sdk cli glue  api:generate --force
 2. Use `--validate-only` flag for detailed validation:
 
    ```bash
-   docker/sdk cli glue  api:generate --validate-only
+   docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
    ```
 
 3. Inspect merged schema:
@@ -389,7 +389,7 @@ Check for:
 Preview generation without writing files:
 
 ```bash
-docker/sdk cli glue  api:generate --dry-run
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --dry-run
 ```
 
 ## Getting help

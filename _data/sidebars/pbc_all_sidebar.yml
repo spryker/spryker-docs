@@ -3849,6 +3849,8 @@ entries:
         nested:
           - title: SSP Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: SSP Service Management architecture overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.html
           - title: SSP Inquiry Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
           - title: SSP Dashboard Management feature overview

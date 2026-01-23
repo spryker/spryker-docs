@@ -56,7 +56,7 @@ service details, date/time, and state).
 
 ![Customer account services](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/customer-account-services.png)
 
-Back Office users can manage them under **Backoffice** > **Customer Portal** > **Booked Services**.
+Back Office users can manage them under **the Back Office** > **Customer Portal** > **Booked Services**.
 
 ![Back Office booked services](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/backoffice-booked-services.png)
 
@@ -113,7 +113,7 @@ support for some B2B features on product offers, and no shipment type changes in
 |------------|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ShT1       | Shipment type should have one or more delivery (shipping) methods. | Shipment type is a logical grouping of specific shipping methods. For example, "In store pickup" shipment type could be represented by following shipment methods: In-Store Counter pickup, Curbside pickup, Locker pickup, etc. |
 | ShT2       | Shipment type can have none or one connected service type.         | If shipment type that has connection with the service is selected on checkout, it means that user can select specific service point as a destination of corresponding shipment group.                                            |
-| ShT3       | A Shipment type can belong to one or many stores.                  | This connection makes shipment type available at specific store(s).                                                                                                                                                              |
+| ShT3       | A Shipment type can belong to one or many stores.                  | This connection makes shipment type available at specific stores.                                                                                                                                                                    |
 | ShT4       | A product can be distributed by multiple shipment types.           | Enables flexible fulfillment options for the same product.                                                                                                                                                                       |
 
 ### Product Offer connections
@@ -155,4 +155,3 @@ support for some B2B features on product offers, and no shipment type changes in
 | [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-service-management-feature-overview.html) |
 | [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html)           |
 | [Shipment feature overview](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html)                                    |
-

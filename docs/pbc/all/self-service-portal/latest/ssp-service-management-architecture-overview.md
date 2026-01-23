@@ -83,9 +83,9 @@ support for some B2B features on product offers, and no shipment type changes in
 
 ![Original feature model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/original-feature-model.png)
 
-### Self Service Portal Service feature model
+### Self Service Portal feature model
 
-![SSP Service feature model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/ssp-service-feature-model.png)
+![SSP Service feature model](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.md/ssp-feature-model.jpg)
 
 ## Domain model
 

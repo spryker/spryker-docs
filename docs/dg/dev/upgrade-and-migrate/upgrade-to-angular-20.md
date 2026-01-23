@@ -558,7 +558,7 @@ Below is a checklist of component-related breaking changes to review when upgrad
 
 1. **Explicitly set `standalone: false` for NgModule-based components**
    - **What to do:** For all `@Component()`, `@Directive()`, and `@Pipe()` declarations that are registered via `NgModule.declarations`, explicitly add `standalone: false`.
-   - **Why:** Starting with newer Angular major versions (v19+), Angular shifts toward standalone-first behavior. Without an explicit flag, components may be treated as standalone, resulting in build errors such as *“Component X is standalone and cannot be declared in an NgModule”*.
+   - **Why:** Starting with newer Angular major versions v19+, Angular shifts toward standalone-first behavior. Without an explicit flag, components may be treated as standalone, resulting in build errors.
 
 2. **Ensure standalone components do not implicitly require `imports`**
    - **What to do:** If any component unintentionally becomes standalone, verify that it does not break template features such as `*ngIf`, `*ngFor`, or `*ngSwitch` due to missing `CommonModule`.

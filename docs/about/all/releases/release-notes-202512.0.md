@@ -435,7 +435,6 @@ Inside your container execute the following command, answer `yes` when asked to 
 
 ```bash
 composer require spryker/composer-autoload-plugin
-composer install -o
 ```
 
 ### Improved developer productivity and efficiency <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

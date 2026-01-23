@@ -12,6 +12,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/resource-schemas.html
   - title: Validation Schemas
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: CodeBucket Support
+    link: docs/dg/dev/architecture/api-platform/code-buckets.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
 ---
@@ -288,7 +290,7 @@ class CustomerBackendProcessor implements ProcessorInterface
 Run the generation command to create the API resource class:
 
 ```bash
-docker/sdk cli glue  api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
 ```
 
 This generates:
@@ -353,6 +355,93 @@ PATCH /customers/{customerReference}
 # Delete customer
 DELETE /customers/{customerReference}
 ```
+
+## Creating CodeBucket-specific resources
+
+CodeBucket support enables you to create Code Bucket-specific API resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant.
+
+### When to use CodeBucket resources
+
+Create CodeBucket variants when you need:
+- Code Bucket-specific properties (EU GDPR fields, tax rates, compliance data)
+- Code Bucket-specific validation rules (country-specific requirements)
+- Country-specific business logic
+- Feature variations per Code Bucket
+
+### Quick example
+
+**Base resource:**
+
+`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+```
+
+**EU-specific variant:**
+
+`src/Pyz/Glue/CustomerEU/resources/api/backend/customers.resource.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+  codeBucket: EU
+  
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+
+    # EU-specific properties
+    gdprConsentDate:
+      type: string
+      description: "Date of GDPR consent"
+    dataPrivacyOfficerEmail:
+      type: string
+      description: "Data privacy officer contact"
+```
+
+**Generate resources:**
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
+```
+
+This generates:
+- `CustomersBackendResource.php` (base)
+- `CustomersEUBackendResource.php` (with `CODE_BUCKET = 'EU'`)
+
+**Runtime behavior:**
+
+- Request to `glue.eu.spryker.local/customers` → Uses `CustomersEUBackendResource`
+- Request to `glue.de.spryker.local/customers` → Uses `CustomersBackendResource` (fallback)
+- Request to `glue.at.spryker.local/customers` → Uses `CustomersBackendResource` (or `CustomersATBackendResource` if variant exists)
+
+For a comprehensive guide including Provider implementation and advanced scenarios, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## API types and use cases
 
@@ -419,5 +508,6 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create Code Bucket-specific resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

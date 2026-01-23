@@ -10,6 +10,8 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: Validation Schemas
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: CodeBucket Support
+    link: docs/dg/dev/architecture/api-platform/code-buckets.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: API Platform Testing
@@ -50,6 +52,60 @@ src/
                     └── backend/
                         └── resource-name.yml
 ```
+
+## CodeBucket resources
+
+API Platform supports CodeBucket-specific resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant. This enables Code Bucket-specific API resources without requiring separate container compilations.
+
+### CodeBucket schema file naming
+
+Resource schemas follow the pattern: `{resource-name}.resource.yml`
+Validation schemas follow the pattern: `{resource-name}.validation.yml`
+
+CodeBuckets are specified inside the schema files, not in the filename.
+
+```MARKDOWN
+src/Pyz/Glue/Store/resources/api/backend/
+├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
+└── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
+```
+
+### Generated class naming
+
+The generator creates classes following the pattern: `{ResourceName}{CodeBucket}{ApiType}Resource`
+
+| Schema File | CodeBucket (defined in file) | Generated Class | CODE_BUCKET Constant |
+|-------------|------------------------------|----------------|---------------------|
+| `stores.resource.yml` | None (base) | `StoresBackendResource` | Not present (base resource) |
+| `stores.resource.yml` | EU | `StoresEUBackendResource` | `'EU'` |
+| `stores.resource.yml` | AT | `StoresATBackendResource` | `'AT'` |
+
+### How CodeBucket resolution works
+
+1. **Schema definition**: Define CodeBucket variants inside schema files using `codeBucket: EU`
+2. **Constant generation**: Generator adds `public const string CODE_BUCKET = 'EU';` to variant classes
+3. **Runtime resolution**: System reads `APPLICATION_CODE_BUCKET` and selects matching resource class
+4. **Graceful fallback**: If no matching variant exists, base resource is used
+
+### URL consistency
+
+All CodeBucket variants share the same URL path, with the Code Bucket defined in the domain:
+
+- EU variant: `glue-backend.eu.spryker.local/stores` → `StoresEUBackendResource`
+- AT variant: `glue-backend.at.spryker.local/stores` → `StoresATBackendResource`
+- DE variant: `glue-backend.de.spryker.local/stores` → `StoresBackendResource` (or `StoresDEBackendResource` if variant exists)
+
+The URL path is identical (`/stores`), but the Code Bucket in the domain determines which resource variant is used. Only properties, validations, and business logic differ between variants.
+
+### When to use CodeBucket resources
+
+Use CodeBucket variants when you need:
+- Code Bucket-specific properties (EU GDPR fields, tax rates)
+- Code Bucket-specific validation rules
+- Country-specific business logic
+- Feature variations per Code Bucket
+
+For a comprehensive guide including implementation examples, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## Resource schema syntax
 
@@ -404,19 +460,19 @@ final class CustomersBackendResource
 
 ```bash
 # List all resources
-docker/sdk cli glue api:debug --list
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug --list
 
 # Show specific resource
-docker/sdk cli glue api:debug customers --api-type=backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend
 
 # Show merged schema
-docker/sdk cli glue api:debug customers --api-type=backend --show-merged
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend --show-merged
 
 # Show contributing source files
-docker/sdk cli glue api:debug customers --api-type=backend --show-sources
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug customers --api-type=backend --show-sources
 
 # Validate schemas without generating
-docker/sdk cli glue api:generate --validate-only
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
 ```
 
 ### Common schema errors
@@ -485,16 +541,16 @@ resource:
 
 ```bash
 # Generate all configured API types
-docker/sdk cli glue api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
 # Generate specific API type
-docker/sdk cli glue api:generate backend
-docker/sdk cli glue api:generate storefront
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate storefront
 
 # Generate with options
-docker/sdk cli glue api:generate --dry-run           # Preview without writing
-docker/sdk cli glue api:generate --validate-only     # Only validate schemas
-docker/sdk cli glue api:generate --resource=customers  # Generate single resource
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --dry-run           # Preview without writing
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only     # Only validate schemas
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --resource=customers  # Generate single resource
 ```
 
 ### Output
@@ -626,6 +682,7 @@ email:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Architecture overview
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Code Bucket-specific resources
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
 - [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Writing and running tests
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

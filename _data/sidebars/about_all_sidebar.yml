@@ -63,6 +63,8 @@ entries:
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260113.html
           - title: Release notes for Spryker-PHP Image
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html
+      - title: Early access program
+        url: /docs/about/all/releases/early-access-program.html
 
     - title: Security audit reports
       nested:

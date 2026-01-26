@@ -1,7 +1,7 @@
 ---
 title: Upcoming major module releases
 description: Learn what modules and when will have the next major versions release
-last_updated: Nov 7, 2025
+last_updated: Feb 1, 2026
 template: concept-topic-template
 ---
 

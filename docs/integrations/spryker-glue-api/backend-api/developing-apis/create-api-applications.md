@@ -16,7 +16,7 @@ redirect_from:
 Spryker's Backend API is a powerful tool for building custom front end applications, integrating with third-party services, and creating unique customer experiences. This guide provides a high level overview of the process for creating a new API application.
 
 
-### Key concepts
+## Key concepts
 
 - Backend API: The core of Spryker's API infrastructure.
   - Storefront API: Designed for customer facing applications–for example mobile apps, single page applications. It has access to services like search and key value storage.
@@ -25,7 +25,7 @@ Spryker's Backend API is a powerful tool for building custom front end applicati
 - Modules and Resources: Your API will be organized into modules, and each module can expose one or more resources–for example, "products," "carts," "orders".
 
 
-### The development process
+## The development process
 
 Creating a new API application in Spryker involves the following steps:
 

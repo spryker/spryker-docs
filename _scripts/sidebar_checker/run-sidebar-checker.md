@@ -23,11 +23,11 @@ bash _scripts/sidebar_checker/sidebar_checker.sh
 This prints a message in the terminal indicating which files are missing and generates the `missing-documents.yml` file with missing documents. The file is saved in the `_scripts/sidebar_checker` folder.
 
 
-## Add folders and documents to the excludelist
+## Add folders and documents to the exclude list
 
 If you need to exclude some documents or folders from the sidebar, you can add them to the `excludelist.yml` file.
  
-To add a folder or document to the excludelist, in `_scripts/sidebar_checker/excludelist.yml`, list files and folders in respective sections.
+To add a folder or document to the exclude list, in `_scripts/sidebar_checker/excludelist.yml`, list files and folders in respective sections.
 
 The order of adding does not matter; however, for the sake of consistency, *add folders and files under respective sections*:
 

@@ -11,6 +11,10 @@ redirect_from:
 related:
   - title: Web Profiler for Zed
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+  - title: Integrate Web Profiler for Backend Gateway
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+  - title: Integrate Web Profiler for Glue
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrating Formatter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
@@ -64,6 +68,42 @@ Spryker provides a lot of build-in collectors. You can locate them in `WebProfil
 Starting from version 3.17.0, the `spryker/zed-request` module allows you to collect data about all the requests to Zed sent from Yves.
 To enable the data collection, add `\Spryker\Yves\ZedRequest\Plugin\WebProfiler\WebProfilerZedRequestDataCollectorPlugin` to the stack returned by `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 
+Starting from version 3.24.0 of `spryker/zed-request`, you can also access detailed Web Profiler views for Backend Gateway requests. For more information, see [Integrate Web Profiler for Backend Gateway](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html).
+
 If you are using the key-value store (Redis or Valkey) as storage, you can track the calls to it as well. Starting from the `redis` version 2.4.0, the new data collector plugin `\Spryker\Yves\Redis\Plugin\WebProfiler\WebProfilerRedisDataCollectorPlugin` is available for that matter. To track calls to the key-value store (Redis or Valkey), add this plugin to  `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()`.
 
 Same goes for Elasticsearch. Make sure your version of `spryker/search-elasticsearch` is 1.8.0 and add `\Spryker\Yves\SearchElasticsearch\Plugin\WebProfiler\WebProfilerElasticsearchDataCollectorPlugin` to  `\Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider::getDataCollectorPlugins()` to track calls to Elasticsearch.
+
+## Additional profiling with XHProf
+
+If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
+
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
+
+## Web Profiler Widget for Yves AJAX
+
+Starting from version 1.4.3 of the `spryker-shop/web-profiler-widget` module, the Web Profiler Widget supports collecting and displaying profiles for AJAX requests made from Yves.
+
+When AJAX requests are executed on a Yves page, the Web Profiler Widget automatically captures their execution profiles. These profiles are then accessible directly within the Web Profiler toolbar at the bottom of the page.
+
+### Accessing Yves AJAX profiles
+
+AJAX request profiles appear in the Web Profiler Widget toolbar, allowing you to inspect each request individually. The widget displays a list of all captured AJAX requests with their respective response times and status codes.
+
+![Yves AJAX profiles in the Web Profiler Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/integrate-and-configure/Yves+ajax+profile+widget.png)
+
+### Viewing AJAX profile details
+
+Clicking on a specific AJAX request in the widget opens the detailed profile view, showing comprehensive information about the request including:
+
+- Request and response data
+- Performance metrics
+- ElasticSearch 
+- Redis
+- Zed Requests
+- External calls
+- [Profiler](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html) is `xhprof` extension is installed
+
+![Detailed view of a Yves AJAX profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/integrate-and-configure/Yves+ajax+profile.png)
+
+This feature enables developers to debug and optimize AJAX requests in the same way as regular page requests, providing full visibility into the execution flow of asynchronous operations.

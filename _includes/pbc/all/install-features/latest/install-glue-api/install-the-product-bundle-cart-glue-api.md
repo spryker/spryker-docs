@@ -66,7 +66,7 @@ Activate the following plugins:
 | BundledItemByQuoteResourceRelationshipPlugin| Adds the `bundled-items` resource as a relationship to the `bundle-items` resource. Uses the`QuoteTransfer` payload of the `bundle-items` resource. |None |Spryker\Glue\ProductBundleCartsRestApi\Plugin\GlueApplication|
 | GuestBundleItemByQuoteResourceRelationshipPlugin |Adds the `bundle-items` resource as a relationship if `QuoteTransfer` is provided as a payload. It should be used for the `guest-carts` parent resource. |None |Spryker\Glue\ProductBundleCartsRestApi\Plugin\GlueApplication|
 | BundleItemQuoteItemReadValidatorPlugin |Checks if `CartItemRequestTransfer` is a bundle item in `QuoteTransfer` before performing update or delete operations on it. |None |Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin|
-
+| BundleItemQuoteMergePersistentCartChangeExpanderPlugin | Transfers the Product Bundles from guest Quote to Customer Quote correctly during the guest quote to customer quote merge. | If AddGuestQuoteItemsToCustomerQuotePostAuthPlugin is used.          | Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin\CartsRestApi |
 
 <details><summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
@@ -208,6 +208,32 @@ Ensure that you can:
 - Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
 
 {% endinfo_block %}
+
+## Quote Merge Extension for Guest-to-Customer Cart (Single Cart Behavior)
+
+When single cart behavior is enabled, and AddGuestQuoteItemsToCustomerQuotePostAuthPlugin is used, add the following plugin to correctly merge bundled items:
+
+```php
+<?php
+
+namespace Pyz\Zed\CartsRestApi;
+
+use Spryker\Zed\CartsRestApi\CartsRestApiDependencyProvider as SprykerCartsRestApiDependencyProvider;
+use Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin\CartsRestApi\BundleItemQuoteMergePersistentCartChangeExpanderPlugin;
+
+class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
+{
+    /**
+     * @return array<int, \Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\QuoteMergePersistentCartChangeExpanderPluginInterface>
+     */
+    protected function getQuoteMergePersistentCartChangeExpanderPlugins(): array
+    {
+        return [
+            new BundleItemQuoteMergePersistentCartChangeExpanderPlugin(),
+        ];
+    }
+}
+```
 
 ## Install related features
 

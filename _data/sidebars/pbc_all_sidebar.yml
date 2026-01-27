@@ -2,6 +2,10 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
+
+      - title: AI Foundation
+        url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
+
       - title: Back Office
         nested:
           - title: Base shop
@@ -21,7 +25,7 @@ entries:
                   - title: Upgrade the Chart module
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-chart-module.html
                   - title: Upgrade the Back Office to Bootstrap 5
-                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html                    
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html
                   - title: Install Back Office accessibility improvements
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation
@@ -530,7 +534,7 @@ entries:
               - title: "Marketplace Cart feature: Module relations"
                 url: /docs/pbc/all/cart-and-checkout/marketplace/marketplace-cart-feature-module-relations.html
 
-          - title: Cart page performance configuration
+          - title: Cart performance configuration
             url: /docs/pbc/all/cart-and-checkout/cart-page-performance-configuration.html
 
       - title: Content Management System
@@ -884,7 +888,7 @@ entries:
                       - title: Customer Account Management + Order Management
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
                       - title: Customer Account Management + Promotions & Discounts feature
-                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature.html                     
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature.html
 
                   - title: Install Glue API
                     nested:
@@ -1394,6 +1398,8 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Marketplace Merchant B2B Contracts and Contract Requests features overview
                 url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html
+              - title: Merchant Self-Registration feature overview
+                url: /docs/pbc/all/merchant-management/marketplace/merchant-self-registration-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1446,6 +1452,8 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html
                       - title: Merchant Switcher + Wishlist
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html
+                      - title: Merchant Self-Registration
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html
 
                   - title: Install Glue API
                     nested:
@@ -1523,6 +1531,9 @@ entries:
                   - title: Import merchant commissions
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/back-office-import-merchant-commissions.html
 
+                  - title: Manage merchant registration requests
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html
+
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
                 nested:
@@ -1599,7 +1610,9 @@ entries:
           - title: Push Notification feature overview
             url: /docs/pbc/all/miscellaneous/push-notification-feature-overview.html
           - title: Sitemap feature overview
-            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html            
+            url: /docs/pbc/all/miscellaneous/sitemap-feature-overview.html
+          - title: Crawler Control
+            url: /docs/pbc/all/miscellaneous/crawler-control.html
           - title: Install and upgrade
             nested:
               - title: Install features
@@ -1609,7 +1622,7 @@ entries:
                   - title: Queue Data Import
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
                   - title: Spryker Core
-                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html                    
+                    url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-spryker-core-feature.html
                   - title: Sitemap
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/install-features/install-the-sitemap-feature.html
                   - title: Push Notification
@@ -1804,18 +1817,18 @@ entries:
           - title: Install customer email Multi-Factor Authentication method
             url: /docs/pbc/all/multi-factor-authentication/install-email-multi-factor-authentication-method.html
           - title: Install the Multi-Factor Authentication Merchant Portal feature
-            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-merchant-portal-feature.html            
+            url: /docs/pbc/all/multi-factor-authentication/install-multi-factor-authentication-merchant-portal-feature.html
           - title: Create MFA methods
-            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html          
+            url: /docs/pbc/all/multi-factor-authentication/create-multi-factor-authentication-methods.html
           - title: Manage using Glue API
-            url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html      
+            url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/manage-multi-factor-authentication-using-glue-api.html
             nested:
               - title: Retrieve MFA methods
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-retrieve-mfa-methods.html
               - title: Activate and deactivate MFA
                 url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
               - title: Authenticate through MFA
-                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html                                                  
+                url: /docs/pbc/all/multi-factor-authentication/manage-using-glue-api/glue-api-authenticate-through-mfa.html
 
       - title: Offer Management
         url: /docs/pbc/all/offer-management/offer-management.html
@@ -1986,9 +1999,9 @@ entries:
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
 
-              
+
               - title: Order Amendment feature overview
-                url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html      
+                url: /docs/pbc/all/order-management-system/base-shop/order-amendment-feature-overview.html
               - title: Unique random order reference generator
                 url: /docs/pbc/all/order-management-system/base-shop/unique-random-order-reference-generator.html
               - title: Reclamations feature overview
@@ -2018,7 +2031,7 @@ entries:
                       - title: Order Management
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html
                       - title: Order Amendment
-                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html                        
+                        url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-order-amendment-feature.html
                       - title: Reclamations
                         url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
                       - title: Reorder
@@ -2782,6 +2795,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
                       - title: Search widget for concrete products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
+                      - title: Product Readiness
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2840,7 +2855,7 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
                       - title: Category Management
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
-                                       
+
                       - title: Install the Category Management + Catalog feature
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-category-management-catalog-feature.html
                       - title: Category Management + CMS
@@ -3248,11 +3263,11 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
-                  - title: Product Management powered by OpenAI
-                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html
+                  - title: Smart Product Management
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/smart-product-management.html
                     nested:
-                    - title: Product Management powered by OpenAI
-                      url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html
+                    - title: Install Smart Product Management
+                      url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html
 
               - title: Tutorials and HowTos
                 nested:
@@ -3835,15 +3850,21 @@ entries:
         nested:
           - title: SSP Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: SSP Service Management architecture overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.html
           - title: SSP Inquiry Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
           - title: SSP Dashboard Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-dashboard-management-feature-overview.html
           - title: SSP Asset Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-asset-management-feature-overview.html
+          - title: SSP Models feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-model-management-feature-overview.html
+          - title: SSP asset-based catalog feature overview
+            url: /docs/pbc/all/self-service-portal/ssp-asset-based-catalog-feature-overview.html
           - title: SSP File Management feature overview
-            url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html                                  
-                      
+            url: /docs/pbc/all/self-service-portal/ssp-file-management-feature-overview.html
+
           - title: Install
             url: /docs/pbc/all/self-service-portal/install/install-self-service-portal.html
             nested:
@@ -3854,20 +3875,26 @@ entries:
               - title: Install the SSP File Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-file-management-feature.html
               - title: Install the SSP Model Management feature
-                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-model-management-feature.html                
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-model-management-feature.html
               - title: Install the SSP Inquiry Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-inquiry-management-feature.html
               - title: Install the SSP Service Management feature
                 url: /docs/pbc/all/self-service-portal/install/install-the-ssp-service-management-feature.html
-        
+              - title: Install the Asset-Based Catalog feature
+                url: /docs/pbc/all/self-service-portal/install/install-the-ssp-asset-based-catalog-feature.html
+              - title: SSP glossary demo data
+                url: /docs/pbc/all/self-service-portal/install/ssp-glossary-data-import.html
+              - title: SSP frontend templates
+                url: /docs/pbc/all/self-service-portal/install/ssp-frontend-templates.html
+
           - title: Manage in the Back Office
-            nested:          
+            nested:
               - title: Add SSP assets
                 url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-add-ssp-assets.html
               - title: Upload SSP files
                 url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-upload-ssp-files.html
               - title: Attach SSP files to assets and company entities
-                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html  
+                url: /docs/pbc/all/self-service-portal/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html
 
       - title: Service Point Management
         url: /docs/pbc/all/service-point-management/service-point-management.html
@@ -3975,6 +4002,10 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
+                  - title: Tutorials and HowTos
+                    nested:
+                      - title: "HowTo: Configure shipment types"
+                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html

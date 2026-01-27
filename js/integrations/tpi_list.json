@@ -10,7 +10,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_search.png",
     "method": ["ACP"],
     "commerce": "",
-    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/search/202410.0/base-shop/third-party-integrations/algolia/integrate-algolia.html#configure-modules-and-dependencies",
+    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html#configure-modules-and-dependencies",
     "Eco_Doc": "",
     "Comm_Doc": "",
     "status": "active"
@@ -25,7 +25,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_search.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/open-ai/integrate-openai.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/open-ai/integrate-openai.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -40,7 +40,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_ugc.png",
     "method": ["ACP"],
     "commerce": "",
-    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/ratings-reviews/202410.0/third-party-integrations/bazaarvoice.html",
+    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/ratings-reviews/latest/third-party-integrations/bazaarvoice.html",
     "Eco_Doc": "",
     "Comm_Doc": "",
     "status": "active"
@@ -54,8 +54,8 @@
     "category": "Payment",
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["ACP", "Eco"],
-    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html",
+    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -70,7 +70,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["ACP"],
     "commerce": "",
-    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/stripe/stripe.html",
+    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html",
     "Eco_Doc": "",
     "Comm_Doc": "",
     "status": "active"
@@ -86,7 +86,7 @@
     "method": ["Eco"],
     "commerce": "",
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/adyen/adyen.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/adyen.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -101,7 +101,7 @@
     "method": ["Eco"],
     "commerce": "",
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/unzer/unzer.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -115,7 +115,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/afterpay/afterpay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -129,7 +129,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/arvato/arvato.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -144,7 +144,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/billie.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billie.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -158,7 +158,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/billpay/billpay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/billpay/billpay.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -172,7 +172,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/braintree/braintree.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -186,7 +186,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/computop/computop.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html",
     "Comm_Doc": ""
   },
   {
@@ -199,7 +199,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/crefopay/crefopay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -213,7 +213,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/heidelpay/heidelpay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/heidelpay/heidelpay.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -227,7 +227,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/klarna/klarna.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -241,7 +241,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/payolution/payolution.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payolution/payolution.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -255,7 +255,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/powerpay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/powerpay.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -269,7 +269,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -284,7 +284,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_payment.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/202410.0/base-shop/third-party-integrations/ratepay/ratepay.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -326,7 +326,7 @@
     "category": "Tax",
     "cat_icon": "/images/integrations/cat_icon/icon_tax_euro.png",
     "method": ["ACP"],
-    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/tax-management/202410.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html#prerequisites",
+    "ACP_Doc": "https://docs.spryker.com/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html#prerequisites",
     "Eco_Doc": "",
     "Comm_Doc": "",
     "status": "active"
@@ -342,7 +342,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_tax_euro.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/tax-management/202410.0/base-shop/third-party-integrations/avalara/avalara.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/avalara.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -356,7 +356,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_bi.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/product-relationship-management/202410.0/third-party-integrations/econda/econda.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/product-relationship-management/latest/third-party-integrations/econda/econda.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -370,7 +370,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_bi.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/marketing-and-conversion/analytics/minubo/minubo.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/minubo/minubo.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -385,7 +385,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_marketing_automation.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -414,7 +414,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_personalization.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/fact-finder/fact-finder.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -429,7 +429,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_delivery.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/carrier-management/202410.0/base-shop/third-party-integrations/seven-senders/seven-senders.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/seven-senders/seven-senders.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -444,7 +444,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_oms.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/order-management-system/202410.0/base-shop/third-party-integrations/collectai.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/order-management-system/latest/base-shop/third-party-integrations/collectai.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -458,7 +458,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/common-solutions.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/common-solutions.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -472,7 +472,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -486,7 +486,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -500,7 +500,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -514,7 +514,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/plusserver.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/plusserver.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -529,7 +529,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/proclane.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/proclane.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -543,7 +543,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/shopmacher.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -557,7 +557,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/tideways.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/tideways.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -571,7 +571,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_other.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/operational-tools-monitoring-legal/vshn.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/operational-tools-monitoring-legal/vshn.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -585,7 +585,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_cms.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/content-management-system/202410.0/base-shop/third-party-integrations/e-spirit.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/e-spirit.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -599,7 +599,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_cms.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/content-management-system/202410.0/base-shop/third-party-integrations/styla.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/content-management-system/latest/base-shop/third-party-integrations/styla.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -613,7 +613,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_analytics.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/marketing-and-conversion/analytics/mindlab.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/mindlab.html",
     "Comm_Doc": "",
     "status": "off"
   },
@@ -627,7 +627,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_carrier_management.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/carrier-management/202410.0/base-shop/third-party-integrations/paazl.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/carrier-management/latest/base-shop/third-party-integrations/paazl.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -641,7 +641,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_pim.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/product-information-management/202410.0/base-shop/third-party-integrations/xentral.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/xentral.html",
     "Comm_Doc": "",
     "status": "active"
   },
@@ -655,7 +655,7 @@
     "cat_icon": "/images/integrations/cat_icon/icon_retention.png",
     "method": ["Eco"],
     "ACP_Doc": "",
-    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/202410.0/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html",
     "Comm_Doc": "",
     "status": "off"
   },

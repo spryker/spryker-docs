@@ -1528,7 +1528,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 | PLUGIN                                             | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |----------------------------------------------------|---------------|---------------|-----------|
-| ShipmentTypeShipmentMethodFilterPlugin             |               |               |           |
+| ShipmentTypeShipmentMethodFilterPlugin             |               |               | Spryker\Zed\ShipmentType\Communication\Plugin\Shipment          |
 
 **src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**
 

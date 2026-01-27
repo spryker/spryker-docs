@@ -9,14 +9,18 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html
 related:
+  - title: Integrate Web Profiler for Glue
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
+  - title: Integrate Web Profiler for Backend Gateway
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+  - title: Integrating Web Profiler Widget for Yves
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Integrating Formatter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
   - title: Integrating TS linter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
-  - title: Integrating Web Profiler Widget for Yves
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 ---
 
 The *Web Profiler* provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
@@ -56,3 +60,11 @@ You can extend *WebProfiler* with `\Spryker\Shared\WebProfilerExtension\Depende
 Individual *Data Collectors* can be added to `\Pyz\Zed\WebProfiler\WebProfilerDependencyProvider::getDataCollectorPlugins()`.
 
 Spryker provides a lot of build-in collectors. You can locate them in `WebProfiler/src/Spryker/Zed/WebProfiler/Communication/Plugin/WebProfiler/`.
+
+## Additional profiling with XHProf
+
+If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.
+
+For information on integrating the Profiler module, see [Integrate Profiler Module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
+
+![Zed Profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/integrate-and-configure/Zed+profile.png)

@@ -2,6 +2,7 @@
 title: Smart Product Management
 description: Generate and apply product translations in the Spryker Back Office. Translate names and descriptions between locales with AI assistance to speed up localization.
 last_updated: Dec 17, 2025
+label: early-access
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/product-management-powered-by-openai.html

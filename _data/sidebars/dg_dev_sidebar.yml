@@ -508,6 +508,22 @@ entries:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
 
+    - title: Composable UI in Back Office 
+      url: /docs/dg/dev/backend-development/composable-ui/composable-ui.html
+      nested:
+      - title: Install Composable UI
+        url: /docs/dg/dev/backend-development/composable-ui/install-composable-ui.html
+      - title: Create a Composable UI module
+        url: /docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
+      - title: Entity configuration reference
+        url: /docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
+      - title: Composable UI best practices
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
+      - title: Composable UI troubleshooting
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html
+      - title: Extend Composable UI with custom Angular modules
+        url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
+
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
@@ -933,6 +949,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
         - title: Upgrade to Angular 18
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
+        - title: Upgrade to Angular 20
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
 
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
@@ -1266,10 +1284,16 @@ entries:
     - title: API Platform
       url: /docs/dg/dev/architecture/api-platform.html
       nested:
-        - title: Schemas and Resource Generation
-          url: /docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+        - title: Resource Schemas
+          url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
+        - title: Validation Schemas
+          url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
+        - title: CodeBucket Support
+          url: /docs/dg/dev/architecture/api-platform/code-buckets.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Testing
+          url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
 

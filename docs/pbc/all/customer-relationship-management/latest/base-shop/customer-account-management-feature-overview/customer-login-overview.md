@@ -1,7 +1,7 @@
 ---
 title: Customer Login overview
 description: Learn more about the Spryker Customer Login with this overview guide and learn how creating a strong password policy can enhance your security.
-last_updated: Jul 15, 2021
+last_updated: Jan 27, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
 originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030
@@ -28,3 +28,7 @@ The feature's default configuration in the Spryker Demo Shop is as follows. When
 To minimize login issues for real customers, the ban is applied by the IP address, which means you can log in to the same user account from one IP address while being locked out of another IP address. All information about blocked accounts is stored in key-value store (Redis or Valkey).
 
 When registering an account or changing an old password in the Demo Shop, the password must contain a combination of alphabetic, numeric, and special characters. The alphabetic characters must also be of mixed case (for example, one lower case and one upper case), and the password length must be from 8 to 64 characters.
+
+## Security concerns
+
+In order to enable brute-force protection, follow [this security release](/docs/about/all/releases/security-releases/security-release-notes-202306.0#introduced-changes-3).

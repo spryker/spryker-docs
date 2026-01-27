@@ -1,25 +1,25 @@
 ---
-title: Enable Material UI Icons
+title: Enable Google Material Icons
 description: Learn how to enable Google Material Icons in Spryker Cloud Commerce OS Back Office to enhance its look and usability.
 last_updated: Jan 27, 2026
 template: module-migration-guide-template
 ---
 
-# Enable Material UI Icons
+# Enable Google Material Icons
 
 ## Overview
 
 This guide explains how to enable **Google Material Icons** in the Spryker Cloud Commerce OS Back Office.  
 By enabling these icons, you can modernize your admin interface and improve its overall appearance.
 
-To display a Material Icon in your templates, use the following HTML snippet:
+To display a Material Icon in your templates, use the following HTML markup:
 
 ```html
 <span class="material-symbols-outlined">search</span>
 ```
 
-- `material-symbols-outlined` — defines the icon style.  
-- `search` — specifies the icon name.
+- `material-symbols-outlined` — defines the Material Icon style.  
+- `search` — defines the name of the icon to render.
 
 You can explore all available icons on the [Google Material Icons website](https://fonts.google.com/icons).
 
@@ -74,9 +74,10 @@ Example:
 </config>
 ```
 
-> 💡 **Tip:** You can browse available icon names at [fonts.google.com/icons](https://fonts.google.com/icons).
-
-> 💡 **Tip:** Suggested icons are available in the [repository](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/config/Zed/navigation.xml).
+{% info_block infoBox "Tip" %}
+You can browse available icon names at [fonts.google.com/icons](https://fonts.google.com/icons).  
+For suggested icons, see the example configuration in the [Spryker B2B Demo Marketplace repository](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/config/Zed/navigation.xml).
+{% endinfo_block %}
 
 ---
 
@@ -92,7 +93,7 @@ docker/sdk console navigation:build-cache
 
 ### 4. Set the Default Icon Type
 
-Finally, change the default icon type to `google-material` in your configuration to enable Material Icons globally:
+Finally, set the default icon type to `google-material` in your project configuration to enable Material Icons globally:
 
 ```php
 protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
@@ -106,14 +107,12 @@ protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
 
 ## Result
 
-Once these steps are complete, your Spryker Back Office will display **Google Material Icons** throughout the sidebar navigation — giving it a clean, modern, and professional look.
+After you complete these steps, the Spryker Back Office displays **Google Material Icons** throughout the sidebar navigation, resulting in a clean, modern, and professional appearance.
 
 ---
 
 **Example:**  
-Before → Font Awesome  
-After → Google Material Icons ✨
+Before: Font Awesome icons  
+After: Google Material Icons
 
 ---
-
-*Last updated on Jan 27, 2026*

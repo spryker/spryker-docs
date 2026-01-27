@@ -31,4 +31,4 @@ When registering an account or changing an old password in the Demo Shop, the pa
 
 ## Security concerns
 
-In order to enable brute-force protection, follow [this security release](https://docs.spryker.com/docs/about/all/releases/security-releases/security-release-notes-202306.0#introduced-changes-3).
+In order to enable brute-force protection, follow [this security release](/docs/about/all/releases/security-releases/security-release-notes-202306.0#introduced-changes-3).

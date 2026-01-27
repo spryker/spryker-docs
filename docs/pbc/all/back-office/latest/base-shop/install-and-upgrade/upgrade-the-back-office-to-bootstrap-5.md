@@ -5,21 +5,66 @@ last_updated: Nov 10, 2025
 template: howto-guide-template
 ---
 
-To migrate the Back Office to Bootstrap version 5, follow these steps:
+To migrate your Back Office to Bootstrap 5, complete the following steps:
 
 1. Update the required modules:
 
+First minor releases:
+
 ```bash
-  composer update spryker/agent-gui:"^2.0.0" spryker/availability-gui:"^7.0.0" spryker/configurable-bundle-gui:"^2.0.0" spryker/content-gui:"^3.0.0" spryker/customer-user-connector-gui:"^2.0.0" spryker/file-manager-gui:"^3.0.0" spryker/gui:"^4.0.0" spryker/locale-gui:"^2.0.0" spryker/merchant-agent-gui:"^2.0.0" spryker/merchant-commission-gui:"^2.0.0" spryker/merchant-gui:"^4.0.0" spryker/merchant-product-offer-gui:"^2.0.0" spryker/merchant-relation-request-gui:"^2.0.0" spryker/merchant-sales-order-merchant-user-gui:"^2.0.0" spryker/merchant-sales-return-merchant-user-gui:"^2.0.0" spryker/multi-factor-auth:"^2.0.0" spryker/navigation-gui:"^3.0.0" spryker/payment-gui:"^2.0.0" spryker/price-product-offer-gui:"^2.0.0" spryker/price-product-schedule-gui:"^3.0.0" spryker/product-alternative-gui:"^2.0.0" spryker/product-approval-gui:"^2.0.0" spryker/product-attribute-gui:"^2.0.0" spryker/product-category-filter-gui:"^3.0.0" spryker/product-label-gui:"^4.0.0" spryker/product-list-gui:"^3.0.0" spryker/product-management:"^0.20.0" spryker/product-offer-gui:"^2.0.0" spryker/product-offer-service-point-gui:"^2.0.0" spryker/product-offer-shipment-type-gui:"^2.0.0" spryker/product-offer-validity-gui:"^2.0.0" spryker/product-relation-gui:"^2.0.0" spryker/product-set-gui:"^3.0.0" spryker/sales-order-threshold-gui:"^2.0.0" spryker/sales-reclamation-gui:"^2.0.0" spryker/sales-return-gui:"^2.0.0" spryker/search-elasticsearch-gui:"^2.0.0" spryker/security-gui:"^2.0.0" spryker/shipment-gui:"^3.0.0" spryker/spryker-feature.self-service-portal:"^16.0.0" spryker/stock-gui:"^3.0.0" spryker/storage-gui:"^2.0.0" spryker/store-gui:"^2.0.0" spryker/warehouse-user-gui:"^2.0.0" 
+composer update --ignore-platform-req=ext-grpc spryker/acl spryker/analytics-gui spryker/category-gui spryker/category-image-gui spryker/product-category spryker/cms spryker/cms-block-gui spryker/cms-content-widget spryker/cms-gui spryker/cms-slot-block-gui spryker/cms-slot-block-product-category-gui spryker/cms-slot-gui spryker/content-file-gui spryker/content-product-gui spryker/content-product-set-gui spryker/comment-gui spryker/comment-sales-connector spryker/company-business-unit-gui spryker/company-gui spryker/company-role-gui spryker/company-unit-address-gui spryker/company-unit-address-label spryker/company-user-gui spryker/customer spryker/customer-group spryker/customer-note-gui spryker/dynamic-entity-gui spryker/development spryker/gift-card-balance spryker/merchant-stock-gui spryker/merchant-profile-gui spryker/merchant-profile-merchant-portal-gui spryker/merchant-registration-request spryker/merchant-user-gui spryker/sales-merchant-commission spryker/sales-merchant-commission-merchant-portal-gui spryker/price-product spryker/price-product-merchant-relationship-merchant-portal-gui spryker/product-merchant-portal-gui spryker/merchant-sales-order-threshold-gui spryker/user-merchant-portal-gui spryker/oms spryker/sales spryker/product-search spryker/product-option spryker/discount spryker/discount-promotion spryker/shipment spryker/product-measurement-unit-gui spryker/merchant-relationship-gui spryker/price-product-merchant-relationship-gui spryker/merchant-relationship-sales-order-threshold-gui spryker/merchant-relationship-product-list-gui spryker/content-navigation-gui spryker/order-custom-reference-gui spryker/currency-gui spryker/price-product-volume-gui spryker/product-barcode-gui spryker/product-review-gui spryker/refund spryker/search spryker/sales-service-point-gui spryker/api-key-gui spryker/country spryker/country-gui spryker/glossary spryker/multi-factor-auth-merchant-portal spryker/setup spryker/storage spryker/store-context-gui spryker/dashboard spryker/user spryker/user-locale-gui spryker/state-machine spryker/tax spryker/cms-block-category-connector spryker/cms-block-product-connector spryker/collector spryker/collector-storage-connector spryker/company-gui-extension spryker/company-supplier-gui spryker/company-unit-address-gui-extension spryker/data-import-merchant-portal-gui spryker/dataset spryker/money-gui spryker/queue spryker/manual-order-entry-gui
 ```
 
-2. Update the `oryx-for-zed` dependency:
+Then major releases (remove not used features from the list):
+
+```bash
+composer require --update-with-dependencies --ignore-platform-req=ext-grpc \
+spryker/customer-user-connector-gui:"^2.0.0" \
+spryker/storage-gui:"^2.0.0" \
+spryker-feature/agent-assist:"dev-master as 202507.0" \
+spryker-feature/alternative-products:"dev-master as 202507.0" \
+spryker-feature/checkout:"dev-master as 202507.0" \
+spryker-feature/cms:"dev-master as 202507.0" \
+spryker-feature/configurable-bundle:"dev-master as 202507.0" \
+spryker-feature/file-manager:"dev-master as 202507.0" \
+spryker-feature/inventory-management:"dev-master as 202507.0" \
+spryker-feature/marketplace-agent-assist:"dev-master as 202507.0" \
+spryker-feature/marketplace-inventory-management:"dev-master as 202507.0" \
+spryker-feature/marketplace-merchant-commission:"dev-master as 202507.0" \
+spryker-feature/marketplace-order-management:"dev-master as 202507.0" \
+spryker-feature/marketplace-product-offer:"dev-master as 202507.0" \
+spryker-feature/marketplace-product-offer-prices:"dev-master as 202507.0" \
+spryker-feature/marketplace-return-management:"dev-master as 202507.0" \
+spryker-feature/marketplace-shipment:"dev-master as 202507.0" \
+spryker-feature/merchant:"dev-master as 202507.0" \
+spryker-feature/merchant-contract-requests:"dev-master as 202507.0" \
+spryker-feature/navigation:"dev-master as 202507.0" \
+spryker-feature/payments:"dev-master as 202507.0" \
+spryker-feature/product:"dev-master as 202507.0" \
+spryker-feature/product-approval-process:"dev-master as 202507.0" \
+spryker-feature/product-labels:"dev-master as 202507.0" \
+spryker-feature/product-lists:"dev-master as 202507.0" \
+spryker-feature/product-relations:"dev-master as 202507.0" \
+spryker-feature/product-sets:"dev-master as 202507.0" \
+spryker-feature/reclamations:"dev-master as 202507.0" \
+spryker-feature/return-management:"dev-master as 202507.0" \
+spryker-feature/scheduled-prices:"dev-master as 202507.0" \
+spryker-feature/search:"dev-master as 202507.0" \
+spryker-feature/shipment:"dev-master as 202507.0" \
+spryker-feature/spryker-core:"dev-master as 202507.0" \
+spryker-feature/spryker-core-back-office:"dev-master as 202507.0" \
+spryker-feature/product-offer-shipment:"dev-master as 202507.0" \
+spryker-feature/product-offer-service-points:"dev-master as 202507.0" \
+spryker-feature/warehouse-user-management:"dev-master as 202507.0"
+```
+
+2. Update the `@spryker/oryx-for-zed` dependency:
 
 ```bash
   npm install @spryker/oryx-for-zed@~3.5.0 --save-dev
 ```
 
-3. Clear the cache:
+3. Clear the application cache:
 
 ```bash
   docker/sdk console c:e
@@ -31,7 +76,7 @@ To migrate the Back Office to Bootstrap version 5, follow these steps:
   docker/sdk console t:c:w
 ```
 
-5. Build the JavaScript and CSS assets:
+5. Build the JavaScript and CSS assets to apply the Bootstrap 5 updates:
 
 ```bash
 docker/sdk cli npm run zed
@@ -39,10 +84,11 @@ docker/sdk cli npm run zed
 
 {% info_block warningBox "Verification" %}
 
-⚡️ Summary of grid class updates
-| Bootstrap 3                        | Bootstrap 5 Replacement   | Notes                     |
+⚡️ **Summary of grid class updates**
+
+| **Bootstrap 3**                    |**Bootstrap 5 replacement**| **Notes**                 |
 | ---------------------------------- | ------------------------- | ------------------------- |
-| `.col-xs-*`                        | `.col-*`                  | Replaced, “xs” dropped    |
+| `.col-xs-*`                        | `.col-*`                  | Replaced, "xs" dropped    |
 | `.col-sm-*`                        | `.col-sm-*`               | Same                      |
 | `.col-md-*`                        | `.col-md-*`               | Same                      |
 | `.col-lg-*`                        | `.col-lg-*`               | Same                      |
@@ -51,8 +97,9 @@ docker/sdk cli npm run zed
 | `.col-md-push-*`, `.col-md-pull-*` | `.order-md-*`             | Flexbox ordering          |
 | `.row-no-gutters`                  | `.g-0`                    | Simplified gutter control |
 
-⚡️ HTML attribute changes for JavaScript components
-| **Bootstrap 3 Attribute**                 | **Bootstrap 5 Equivalent**                      | **Notes / Changes**                                         |
+⚡️ **HTML attribute changes for JavaScript components**
+
+| **Bootstrap 3 attribute**                 | **Bootstrap 5 equivalent**                      | **Notes and changes**                                         |
 | ----------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
 | `data-toggle="modal"`                     | `data-bs-toggle="modal"`                        | All JS data attributes now start with `data-bs-*`           |
 | `data-target="#myModal"`                  | `data-bs-target="#myModal"`                     | Updated prefix to `data-bs-`                                |

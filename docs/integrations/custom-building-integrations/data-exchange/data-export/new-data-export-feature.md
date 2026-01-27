@@ -320,7 +320,7 @@ DE--123,2025-01-27 10:00:00,+49123456789,Berlin,customer@example.com,15000,EUR,M
 
 **How wildcard mapping works:**
 
-When you use `*` in the export key (e.g., `item_*_sku`), the mapper:
+When you use `*` in the export key (for example `item_*_sku`), the mapper:
 1. Evaluates the path `$.items.*.sku` against the OrderTransfer
 2. Iterates through each item in the `items` array
 3. Creates separate fields for each item: `item_0_sku`, `item_1_sku`, `item_2_sku`, etc.

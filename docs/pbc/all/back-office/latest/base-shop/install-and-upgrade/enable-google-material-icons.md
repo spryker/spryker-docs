@@ -25,7 +25,7 @@ You can explore all available icons on the [Google Material Icons website](https
 
 ### 1. Update the Required Module
 
-Update the `spryker/gui` module:
+Update the `spryker/gui` module to version 4.8.0 or higher:
 
 ```bash
 composer update spryker/gui:"^4.8.0"
@@ -33,7 +33,67 @@ composer update spryker/gui:"^4.8.0"
 
 ---
 
-### 2. Configure Icons in the Navigation
+### 2. Configure the Default Icon Type
+
+Create or update the `GuiConfig` class on the project level to set the default icon type to `google-material`:
+
+**src/Pyz/Zed/Gui/GuiConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\Gui;
+
+use Spryker\Zed\Gui\GuiConfig as SprykerGuiConfig;
+
+class GuiConfig extends SprykerGuiConfig
+{
+    protected const string NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
+}
+```
+
+**Available options:**
+- `'font-awesome'` — the classic icon set (default)
+- `'google-material'` — the new Material UI icons
+
+---
+
+### 3. Register the Twig Plugin
+
+Register the `NavigationIconsTypeTwigPlugin` to make the icon type available in Twig templates:
+
+**src/Pyz/Zed/Twig/TwigDependencyProvider.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\Twig;
+
+use Spryker\Zed\Gui\Communication\Plugin\Twig\NavigationIconsTypeTwigPlugin;
+use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigPlugins(): array
+    {
+        return [
+            // ...existing plugins...
+            new NavigationIconsTypeTwigPlugin(),
+        ];
+    }
+}
+```
+
+---
+
+### 4. Configure Icons in the Navigation
 
 To use Material Icons in the Back Office sidebar navigation, update the `config/Zed/navigation.xml` file.  
 Add or modify the `<icon>` elements for each navigation item with the desired Material Icon name.
@@ -77,27 +137,13 @@ For suggested icons, see the example configuration in the [Spryker B2B Demo Mark
 
 ---
 
-### 3. Rebuild the Navigation Cache
+### 5. Rebuild the Navigation Cache
 
 After updating your navigation configuration, rebuild the navigation cache with the following command:
 
 ```bash
 docker/sdk console navigation:build-cache
 ```
-
----
-
-### 4. Set the Default Icon Type
-
-Finally, set the default icon type to `google-material` in your Gui module configuration (GuiConfig.php) to enable Material Icons:
-
-```php
-protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
-```
-
-**Available options:**
-- `'font-awesome'` — the classic icon set (default)
-- `'google-material'` — the new Material UI icons
 
 ---
 

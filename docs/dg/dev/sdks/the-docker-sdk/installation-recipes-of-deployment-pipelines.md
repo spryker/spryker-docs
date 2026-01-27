@@ -1,7 +1,7 @@
 ---
 title: Installation recipes of deployment pipelines
 description: Learn all about the Spryker Installation recipes of your deployment pipelines for your spryker based projects.
-last_updated: Nov 29, 2022
+last_updated: Jan 15, 2026
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/installation-recipes-of-deployment-pipelines.html

@@ -93,7 +93,7 @@ docker/sdk console navigation:build-cache
 
 ### 4. Set the Default Icon Type
 
-Finally, set the default icon type to `google-material` in your project configuration to enable Material Icons globally:
+Finally, set the default icon type to `google-material` in your Gui module configuration (GuiConfig.php) to enable Material Icons globally:
 
 ```php
 protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';

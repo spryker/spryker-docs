@@ -192,7 +192,9 @@ and the AddressTransfer includes:
     public const PHONE = 'phone';
 
 ```
+
 You can then define in your configuration:
+
 ```yaml
 phone: $.billingAddress.phone
 ```
@@ -252,7 +254,7 @@ This configuration defines what data to export, where to put it, and how to stru
 
 ---
 
-###  Alternative: Streaming with Generator
+### Alternative: Streaming with Generator
 
 If the previous approach does not meet your requirements, implement `DataEntityGeneratorPluginInterface` instead of `DataEntityReaderPluginInterface`.
 

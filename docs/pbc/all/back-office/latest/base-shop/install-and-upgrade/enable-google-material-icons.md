@@ -1,13 +1,9 @@
 ---
-title: Enable Google Material Icons
+title: Enable Google Material Icons in Back Office
 description: Learn how to enable Google Material Icons in Spryker Cloud Commerce OS Back Office to enhance its look and usability.
 last_updated: Jan 27, 2026
 template: module-migration-guide-template
 ---
-
-# Enable Google Material Icons
-
-## Overview
 
 This guide explains how to enable **Google Material Icons** in the Spryker Cloud Commerce OS Back Office.  
 By enabling these icons, you can modernize your admin interface and improve its overall appearance.
@@ -29,7 +25,7 @@ You can explore all available icons on the [Google Material Icons website](https
 
 ### 1. Update the Required Module
 
-Run the following command to update the `spryker/gui` module:
+Update the `spryker/gui` module:
 
 ```bash
 composer update spryker/gui:"^4.8.0"
@@ -93,7 +89,7 @@ docker/sdk console navigation:build-cache
 
 ### 4. Set the Default Icon Type
 
-Finally, set the default icon type to `google-material` in your Gui module configuration (GuiConfig.php) to enable Material Icons globally:
+Finally, set the default icon type to `google-material` in your Gui module configuration (GuiConfig.php) to enable Material Icons:
 
 ```php
 protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
@@ -108,11 +104,3 @@ protected const NAVIGATION_ICONS_TYPE_DEFAULT = 'google-material';
 ## Result
 
 After you complete these steps, the Spryker Back Office displays **Google Material Icons** throughout the sidebar navigation, resulting in a clean, modern, and professional appearance.
-
----
-
-**Example:**  
-Before: Font Awesome icons  
-After: Google Material Icons
-
----

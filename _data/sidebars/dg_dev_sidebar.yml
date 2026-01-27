@@ -5,19 +5,81 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
-  - title: AI assistants
-    url: /docs/dg/dev/ai-assistants/ai-assistants.html
     nested:
-      - title: AI IDE assistants
-        url: /docs/dg/dev/ai-assistants/ai-ide-assistants.html
-      - title: Spryker Engineer GPT
-        url: /docs/dg/dev/ai-assistants/spryker-engineer-gpt.html
-      - title: Spryker K6 Performance Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-k6-performance-assistant-gpt.html
-      - title: Spryker DevQA Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-devqa-assistant-gpt.html
-      - title: Spryker Cypress E2E Assistant GPT
-        url: /docs/dg/dev/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
+      - title: Development tools
+        url: /docs/dg/dev/development-tools.html
+        nested:
+          - title: XDebug
+            url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+            nested:
+              - title: Set up XDebug profiling
+                url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
+          - title: WebProfiler
+            nested:
+              - title: Web Profiler for Yves
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+              - title: Web Profiler for Glue
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
+              - title: Web Profiler for Backend Gateway
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+              - title: Web Profiler for Zed
+                url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+          - title: Code Quality Tools
+            nested:
+              - title: PHPStan
+                url: /docs/dg/dev/sdks/sdk/development-tools/phpstan.html
+              - title: Code Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
+              - title: Architecture Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
+              - title: Project Architecture Sniffer
+                url: /docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html
+              - title: Evaluator
+                url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+          - title: AI tools
+            nested:
+              - title: AI Assistant
+                url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+              - title: AI Dev Tool
+                url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+      - title: Continuous Integration
+        url: /docs/dg/dev/ci.html
+      - title: Post-Installation Configuration
+        url: /docs/dg/dev/post-installation-configuration.html
+  - title: AI
+    nested:
+      - title: AI Foundation
+        nested:
+          - title: AI Foundation Overview
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+          - title: Structured Transfer Response
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+          - title: Tool call
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+      - title: AI Dev SDK
+        url: /docs/dg/dev/ai/ai-dev/ai-dev.html
+        nested:
+          - title: AI Dev Overview
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
+          - title: AI Dev MCP Server
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+      - title: AI Assistants
+        url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
+        nested:
+          - title: AI IDE Assistants
+            url: /docs/dg/dev/ai/ai-assistants/ai-ide-assistants.html
+          - title: Context7 MCP Server
+            url: /docs/dg/dev/ai/ai-assistants/context7-mcp-server.html
+          - title: Language Server for Claude Code CLI
+            url: /docs/dg/dev/ai/ai-assistants/lsp-for-claude.html
+          - title: Spryker Engineer GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-engineer-gpt.html
+          - title: Spryker K6 Performance Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt.html
+          - title: Spryker DevQA Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt.html
+          - title: Spryker Cypress E2E Assistant GPT
+            url: /docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -209,6 +271,8 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
+      - title: Multi process run
+        url: /docs/dg/dev/backend-development/cronjobs/multi-process-run-console.html
 
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html
@@ -443,6 +507,22 @@ entries:
       nested:
       - title: "Inject dependencies within factories: Container globals"
         url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
+
+    - title: Composable UI in Back Office 
+      url: /docs/dg/dev/backend-development/composable-ui/composable-ui.html
+      nested:
+      - title: Install Composable UI
+        url: /docs/dg/dev/backend-development/composable-ui/install-composable-ui.html
+      - title: Create a Composable UI module
+        url: /docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
+      - title: Entity configuration reference
+        url: /docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
+      - title: Composable UI best practices
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
+      - title: Composable UI troubleshooting
+        url: /docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html
+      - title: Extend Composable UI with custom Angular modules
+        url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
 
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
@@ -804,6 +884,10 @@ entries:
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
     nested:
+    - title: Upgrade to Symfony Dependency Injection
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
+    - title: How to integrate API Platform
+      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -865,6 +949,8 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
         - title: Upgrade to Angular 18
           url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-18.html
+        - title: Upgrade to Angular 20
+          url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html
 
     - title: Upgrade to Webpack v5
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
@@ -971,6 +1057,10 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+      - title: Web Profiler for Backend Gateway
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+      - title: Web Profiler for Glue
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
 
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
@@ -1177,6 +1267,35 @@ entries:
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
       - title: "Semantic Versioning: Zero-major version"
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-zero-major-version.html
+    - title: Dependency Injection
+      url: /docs/dg/dev/architecture/dependency-injection.html
+      nested:
+        - title: Implementation and Usage
+          url: /docs/dg/dev/architecture/dependency-injection/implementation-and-usage.html
+        - title: Best Practices
+          url: /docs/dg/dev/architecture/dependency-injection/best-practices.html
+        - title: Debugging the Symfony Container
+          url: /docs/dg/dev/architecture/dependency-injection/debugging-container.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/dependency-injection/troubleshooting.html
+    - title: Symfony Bundles
+      url: /docs/dg/dev/architecture/symfony-bundles.html
+
+    - title: API Platform
+      url: /docs/dg/dev/architecture/api-platform.html
+      nested:
+        - title: Resource Schemas
+          url: /docs/dg/dev/architecture/api-platform/resource-schemas.html
+        - title: Validation Schemas
+          url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
+        - title: CodeBucket Support
+          url: /docs/dg/dev/architecture/api-platform/code-buckets.html
+        - title: Enablement
+          url: /docs/dg/dev/architecture/api-platform/enablement.html
+        - title: Testing
+          url: /docs/dg/dev/architecture/api-platform/testing.html
+        - title: Troubleshooting
+          url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1296,6 +1415,34 @@ entries:
     - title: Performance guidelines
       url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
+      - title: Monitoring
+        url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: General performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Architecture performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+      - title: Frontend performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+      - title: Twig performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
+      - title: Session locks
+        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
+      - title: Bot control
+        url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
+      - title: Batch processing of Propel entities
+        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
+      - title: Database performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/database-performance-guidelines.html
+      - title: Key-Value storage performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
+      - title: External HTTP requests
+        url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
+      - title: Search performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html
+      - title: Infrastructure and worker configuration guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/infrastructure-worker-configuration-guidelines.html
+      - title: Custom code performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/custom-code-performance-guidelines.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
@@ -1304,15 +1451,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
-
-      - title: General performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
-      - title: Batch processing of Propel entities
-        url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
-      - title: Architecture performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
-      - title: Frontend performance guidelines
-        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+      - title: Keeping dependencies updated
+        url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html

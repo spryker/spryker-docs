@@ -41,35 +41,13 @@ Product images, product data, other images or fonts displaced in a demo shop are
 {% endinfo_block %}
 
 1. Open a terminal.
-2. Clone *one* of the following Demo Shops and navigate into its folder:
 
-    - B2C Demo Shop:
+2. Clone the Demo Shop and navigate into its folder:
 
-    ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202507.0 --single-branch ./b2c-demo-shop && \
-    cd b2c-demo-shop
-    ```
-
-    - B2B Demo Shop:
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202507.0 --single-branch ./b2b-demo-shop && \
-    cd b2b-demo-shop
-    ```
-
-    - B2C Marketplace Demo Shop
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202507.0 --single-branch ./b2c-demo-marketplace && \
-    cd b2c-demo-marketplace
-    ```
-
-    - B2B Marketplace Demo Shop
-
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
-    cd b2b-demo-marketplace
-    ```
+ ```shell
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ cd b2b-demo-marketplace
+ ```
 
 3. Clone the Docker SDK:
 

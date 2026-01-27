@@ -1,7 +1,7 @@
 ---
 title: Install the Cart + Product Bundle Glue API
 description: Learn how to install the the Cart + Product Bundle Glue API in a Spryker project.
-last_updated: Jun 18, 2021
+last_updated: Jan 20, 2026
 template: feature-integration-guide-template
 related:
   - title: Install the Product Bundles Glue API

@@ -13,7 +13,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-modulediscountconnector.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 related:
   - title: Upgrade the Product module

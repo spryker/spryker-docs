@@ -343,7 +343,7 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
     public function getDataImportTemplates(): array
     {
         return [
-            'CSV template Product' => 'js/static/MerchantProductDataImport/data/files/combined_product.csv',
+            'CSV template Product' => 'js/static/merchant-product-data-import/data/files/combined_product.csv',
         ];
     }
 }
@@ -359,15 +359,37 @@ class DataImportMerchantPortalGuiConfig extends SprykerDataImportMerchantPortalG
   "compilerOptions": {
     "target": "ES2022",
     "paths": {
-      "@mp/data-import-merchant-portal-gui": [
-        "vendor/spryker/spryker/Bundles/DataImportMerchantPortalGui/mp.public-api.ts"
-      ]
+      "@mp/data-import-merchant-portal-gui": ["vendor/spryker/data-import-merchant-portal-gui/mp.public-api.ts"]
     }
   }
 }
 ```
 
-2. Build the frontend:
+2. In `project.json`, add the new rule to `assets`, that will copy CSV template files into `public/MerchantPortal/assets/js/static/` folder:
+
+```json
+{
+  "targets": {
+    "build": {
+      "executor": "@angular-builders/custom-webpack:browser",
+      "options": {
+        "assets": [          
+          {
+            "glob": "*/data/files/**/*",
+            "input": "vendor/spryker",
+            "output": "/static/",
+            "ignore": ["**/.gitkeep"]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+This example will copy all files from spryker vendor folders where `data/files/` folder is located.
+
+3. Build the frontend:
 
 ```bash
 npm ci

@@ -2,7 +2,7 @@
 title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC), everything you need to know for all the features in Spryker.
 template: concept-topic-template
-last_updated: Oct 20, 2023
+last_updated: December 18, 2025
 redirect_from:
   - /docs/scos/user/features/202200.0/features.html
   - /docs/scos/user/features/202212.0/features.html
@@ -31,6 +31,7 @@ This section is in beta because not all the PBCs are covered. Marketplace functi
 
 | NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
+| [AI Foundation](/docs/pbc/all/ai-foundation/{{site.version}}/ai-foundation.html) | Provider agnostic AI layer that connects Spryker Commerce OS to leading AI providers through one common interface. | Accelerates delivery of AI features and keeps freedom to choose and change AI providers and models per use case. |
 | [Business Intelligence](/docs/pbc/all/business-intelligence/{{site.version}}/business-intelligence.html) | Analyze data to understand how your shop performs and areas for improvement. | Make informed decisions. |
 | [Carrier Management](/docs/pbc/all/carrier-management/{{site.version}}/carrier-management.html) | The Spryker Cloud Commerce OS integrates with several shipping carriers and methods and lets you define their availability, price, and tax set. During the checkout process, customers have the option to select their preferred shipment method and relevant carrier. | Ensures quick and cost-effective delivery. |
 | [Cart and Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/cart-and-checkout.html) | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |

@@ -6,6 +6,9 @@ redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
 
 last_updated: Feb 27, 2023
+related:
+  - title: "Performance guidelines: External HTTP requests"
+    link: docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
 ---
 
 Some actions, parts of website or the whole website is slow.
@@ -29,3 +32,4 @@ Blackfire:
 3. Check if this call can be done before or after this action in the background. Is it acceptable for business?
 If yes—move it.
 If no—confirm the behavior with the business stakeholders or contact the third-party system to optimize the request.
+4. Follow [Performance guidelines: External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html)

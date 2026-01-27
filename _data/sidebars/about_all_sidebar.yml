@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202512.0
+        url: /docs/about/all/releases/release-notes-202512.0.html
       - title: Release notes 202507.0
         url: /docs/about/all/releases/release-notes-202507.0.html
       - title: Release notes 202410.0
@@ -19,6 +21,8 @@ entries:
         url: /docs/about/all/releases/upcoming-major-module-releases.html
       - title: Security releases
         nested:
+        - title: Security release notes 202512.0
+          url: /docs/about/all/releases/security-releases/security-release-notes-202512.0.html
         - title: Security release notes 202509.0
           url: /docs/about/all/releases/security-releases/security-release-notes-202509.0.html
         - title: Security release notes 202506.0
@@ -45,8 +49,22 @@ entries:
         nested:
         - title: RabbitMQ
           nested:
+          - title: Release notes for spryker-rabbitmq 20260113
+            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-spryker-rabbitmq-20260113.html
           - title: Release notes for RabbitMQ 4.1 Update
             url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-rabbitmq-4.1-update.html
+        - title: Jenkins
+          nested:
+          - title: Release notes for spryker-jenkins 20260113
+            url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins-20260113.html
+        - title: Spryker-PHP
+          nested:
+          - title: Release notes for spryker-php 20260113
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260113.html
+          - title: Release notes for Spryker-PHP Image
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php.html
+      - title: Early access program
+        url: /docs/about/all/releases/early-access-program.html
 
     - title: Security audit reports
       nested:

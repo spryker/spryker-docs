@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Configurable Bundle  | 202507.0 |
-| Product Images | 202507.0 |
+| Configurable Bundle  | {{site.versionid}} |
+| Product Images | {{site.versionid}} |
 
 ### 1) Set up database schema and transfer objects
 

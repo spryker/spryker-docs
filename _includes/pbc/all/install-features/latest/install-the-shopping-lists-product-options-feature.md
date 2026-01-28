@@ -8,8 +8,8 @@ To start feature integration, review ad install the necessary features.
 
 | NAME | VERSION |
 |---|---|
-|Product Options| 202507.0 |
-|Shopping Lists| 202507.0 |
+|Product Options| {{site.versionid}} |
+|Shopping Lists| {{site.versionid}} |
 
 ### 1) Install the required modules by bsing Composer
 
@@ -138,8 +138,8 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core | 202507.0 |
-|Product Options| 202507.0 |
+|Spryker Core | {{site.versionid}} |
+|Product Options| {{site.versionid}} |
 
 ### 1) Add translations
 

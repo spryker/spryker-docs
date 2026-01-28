@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Order Management | 202507.0 |
-| Company Account | 202507.0 |
-| Spryker Core | 202507.0 |
+| Order Management | {{site.versionid}} |
+| Company Account | {{site.versionid}} |
+| Spryker Core | {{site.versionid}} |
 
 ### 1) Install the required modules
 
@@ -313,8 +313,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Customer Account Management | 202507.0 |
-| Company Account | 202507.0 |
+| Customer Account Management | {{site.versionid}} |
+| Company Account | {{site.versionid}} |
 
 
 Append glossary according to your configuration:

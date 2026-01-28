@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Order Management | 202507.0 |
-| Spryker Core | 202507.0 |
+| Order Management | {{site.versionid}} |
+| Spryker Core | {{site.versionid}} |
 
 ### 1) Install the required modules
 

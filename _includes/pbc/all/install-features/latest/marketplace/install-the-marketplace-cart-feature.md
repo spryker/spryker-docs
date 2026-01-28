@@ -10,9 +10,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart            | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Order Threshold | 202507.0 | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Order Management | 202507.0 | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Cart            | {{site.versionid}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Order Threshold | {{site.versionid}} | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Order Management | {{site.versionid}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules
 
@@ -77,10 +77,10 @@ Install the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |
-| Order Threshold      | 202507.0 |
-| Cart                 | 202507.0 |
-| Merchant Portal Core | 202507.0 |
-| Marketplace Order Management | 202507.0 |
+| Order Threshold      | {{site.versionid}} |
+| Cart                 | {{site.versionid}} |
+| Merchant Portal Core | {{site.versionid}} |
+| Marketplace Order Management | {{site.versionid}} |
 
 ### 1) Install the required modules
 

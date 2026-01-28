@@ -11,9 +11,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Discontinued Products | 202507.0 |
-| Product Labels | 202507.0 |
-| Spryker Core | 202507.0 |
+| Discontinued Products | {{site.versionid}} |
+| Product Labels | {{site.versionid}} |
+| Spryker Core | {{site.versionid}} |
 
 ### 1) Import data
 

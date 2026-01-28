@@ -443,9 +443,39 @@ This enables:
 
 ## Additional tips
 
+### Clear application cache
+
+If you encounter container compilation issues or suspect the cache is stale, clear the cache for the affected application.
+
+**Clear cache for Zed:**
+
+```bash
+docker/sdk cli vendor/bin/console cache:clear
+```
+
+**Clear cache for Glue API:**
+
+```bash
+docker/sdk cli vendor/bin/glue cache:clear
+```
+
+**Clear cache for Glue Storefront API:**
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT vendor/bin/glue cache:clear
+```
+
+**Clear cache for Glue Backend API:**
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND vendor/bin/glue cache:clear
+```
+
+These commands clear the compiled container cache and force a fresh compilation on the next request.
+
 ### Verify container cache
 
-If you suspect the container cache is stale:
+If you need to manually inspect or remove specific container cache files:
 
 ```bash
 # Clear the container cache

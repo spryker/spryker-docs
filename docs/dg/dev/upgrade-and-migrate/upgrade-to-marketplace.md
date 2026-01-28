@@ -43,11 +43,3 @@ Follow feature integration guides from the table that provides functionality for
 | [Marketplace Merchant Portal Product Option Management](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html)        | Extends the order items with related product options in the Merchant Portal.                                                            |
 | [Marketplace Merchant Portal Order Management](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html)                  | Allows merchants to manage their orders in the Merchant Portal.                                                                         |
 | [ACL](/docs/pbc/all/user-management/{{site.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                                                    | Allows managing access to HTTP endpoints and Persistence entities.                                                                      |
-
-## 3. Build and start the instance
-
-Rebuild your app in order to apply all the changes regarding database entities, data imports, search engine indexes, UI assets:
-
-```shell
-docker/sdk up
-```

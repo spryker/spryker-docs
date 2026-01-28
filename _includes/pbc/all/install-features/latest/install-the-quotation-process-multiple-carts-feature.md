@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Quotation Process | 202507.0 |
-| Multiple Carts | 202507.0 |
+| Quotation Process | {{site.versionid}} |
+| Multiple Carts | {{site.versionid}} |
 
 ### 1) Set up behavior
 

@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
-| Cart | 202507.0 |
+| Spryker Core | {{site.versionid}} |
+| Cart | {{site.versionid}} |
 
 ## Set up behavior
 

@@ -8,10 +8,10 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | 202507.0 |
-|Product| 202507.0 |
-|Order Management| 202507.0 |
-|Spryker Core| 202507.0 |
+| Cart | {{site.versionid}} |
+|Product| {{site.versionid}} |
+|Order Management| {{site.versionid}} |
+|Spryker Core| {{site.versionid}} |
 
 ### 1) Install the required modules
 
@@ -892,8 +892,8 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | 202507.0 |
-|Checkout| 202507.0 |
+| Spryker Core E-commerce | {{site.versionid}} |
+|Checkout| {{site.versionid}} |
 |   |   |
 
 ### 1) Install the required modules

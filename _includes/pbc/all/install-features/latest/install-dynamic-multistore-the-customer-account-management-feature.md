@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
-| Customer Account Management | 202507.0 |
+| Spryker Core | {{site.versionid}} |
+| Customer Account Management | {{site.versionid}} |
 
 
 ## Set up configuration

@@ -14,8 +14,8 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core | 202507.0 |
-| Prices | 202507.0 |
+| Spryker Core | {{site.versionid}} |
+| Prices | {{site.versionid}} |
 
 ### 1) Install the required modules
 
@@ -226,8 +226,8 @@ Install the following required features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core E-commerce | 202507.0 |
-| Prices | 202507.0 |
+| Spryker Core E-commerce | {{site.versionid}} |
+| Prices | {{site.versionid}} |
 
 ### 1) Install the required modules
 

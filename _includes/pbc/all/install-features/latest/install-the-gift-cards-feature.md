@@ -12,14 +12,14 @@ Install the required features:
 
 | NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | 202507.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-|Product  | 202507.0 |[Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
-|Payments  | 202507.0 |[Install the Payments feature](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-feature.html)|
-| Shipment | 202507.0 |[Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
-| Order Management | 202507.0 |[Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
-| Mailing &amp; Notifications | 202507.0 |[Install the Mailing &amp; Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)|
-| Promotions &amp; Discounts | 202507.0 |[Install the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
+| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{site.versionid}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+|Product  | {{site.versionid}} |[Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+|Payments  | {{site.versionid}} |[Install the Payments feature](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-feature.html)|
+| Shipment | {{site.versionid}} |[Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
+| Order Management | {{site.versionid}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
+| Mailing &amp; Notifications | {{site.versionid}} |[Install the Mailing &amp; Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)|
+| Promotions &amp; Discounts | {{site.versionid}} |[Install the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules
 
@@ -1160,9 +1160,9 @@ Install the required features:
 
 | NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | 202507.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{site.versionid}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Checkout | {{site.versionid}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 ### 1) Install the required modules
 

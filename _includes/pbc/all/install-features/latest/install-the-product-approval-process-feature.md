@@ -12,10 +12,10 @@ Install the required features:
 
 | NAME         | VERSION            | INSTALLATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
-| Cart         | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
-| Checkout     | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)         |
+| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | {{site.versionid}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Cart         | {{site.versionid}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
+| Checkout     | {{site.versionid}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)         |
 
 
 ### 1) Install the required modules using Сomposer

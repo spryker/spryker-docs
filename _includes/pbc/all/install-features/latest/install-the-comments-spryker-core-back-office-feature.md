@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Comments                 | 202507.0 | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| Spryker Core Back Office | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)      |
+| Comments                 | {{site.versionid}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| Spryker Core Back Office | {{site.versionid}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)      |
 
 ## 1) Install the required modules
 

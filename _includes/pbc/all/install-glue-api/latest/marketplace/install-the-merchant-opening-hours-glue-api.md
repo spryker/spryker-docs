@@ -11,7 +11,7 @@ Install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | ----------- | ------ | --------------|
-| Merchant Opening Hours | 202507.0  | [Install the Merchant Opening Hours feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html) |
+| Merchant Opening Hours | {{site.versionid}}  | [Install the Merchant Opening Hours feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html) |
 
 ### 1) Install the required modules
 

@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer Service Points Availability | 202507.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
-| Shipment                                  | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
+| Product Offer Service Points Availability | {{site.versionid}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
+| Shipment                                  | {{site.versionid}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
 
 ### 1) Install the required modules
 

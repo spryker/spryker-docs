@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product | 202507.0 |
-| Spryker Core | 202507.0 |
+| Product | {{site.versionid}} |
+| Spryker Core | {{site.versionid}} |
 
 ### 1) Install the required modules
 
@@ -263,8 +263,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product | 202507.0 |
-| Spryker Core | 202507.0 |
+| Product | {{site.versionid}} |
+| Spryker Core | {{site.versionid}} |
 
 
 ### 1) Install the required modules

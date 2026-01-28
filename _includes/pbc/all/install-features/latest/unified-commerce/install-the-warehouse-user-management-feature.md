@@ -8,14 +8,14 @@ Install the required features:
 
 | NAME                           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |--------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                   | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |
-| Spryker Core Back Office       | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
-| Inventory Management           | 202507.0 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
+| Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |
+| Spryker Core Back Office       | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
+| Inventory Management           | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
 
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/warehouse-user-management: "202507.0" --update-with-dependencies
+composer require spryker-feature/warehouse-user-management: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Comment | 202507.0 |
-| Order Management | 202507.0 |
+| Comment | {{page.version}} |
+| Order Management | {{page.version}} |
 
 ### 1) Install the required modules
 

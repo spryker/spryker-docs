@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Merchant | 202507.0 | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Shipment | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Merchant | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Shipment | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules
@@ -19,7 +19,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-shipment:"202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-shipment:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

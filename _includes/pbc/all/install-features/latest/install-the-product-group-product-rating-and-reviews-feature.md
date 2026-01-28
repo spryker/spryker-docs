@@ -11,8 +11,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Group | 202507.0 |
-| Product Rating & Reviews | 202507.0 |
+| Product Group | {{page.version}} |
+| Product Rating & Reviews | {{page.version}} |
 
 
 ### Set up behavior

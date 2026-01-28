@@ -13,9 +13,9 @@ Install the required features:
 
 | NAME                   | VERSION            | INSTALLATION GUIDE                                                                                                                                          |
 |------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Promotions & Discounts | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Product Labels         | 202507.0 | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)                   |
-| Spryker Core           | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
+| Promotions & Discounts | {{page.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Product Labels         | {{page.version}} | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)                   |
+| Spryker Core           | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
 
 ### 1) Set up behavior
 

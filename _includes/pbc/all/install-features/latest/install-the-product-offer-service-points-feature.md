@@ -12,13 +12,13 @@ Install the required features:
 
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer  | 202507.0 | [Install the Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Service Points | 202507.0 | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
+| Product Offer  | {{page.version}} | [Install the Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Service Points | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product-offer-service-points: "202507.0" --update-with-dependencies
+composer require spryker-feature/product-offer-service-points: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

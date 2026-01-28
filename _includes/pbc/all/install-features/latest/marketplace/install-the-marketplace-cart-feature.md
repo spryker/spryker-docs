@@ -10,16 +10,16 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart            | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Order Threshold | 202507.0 | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Order Management | 202507.0 | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Order Threshold | {{page.version}} | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-cart:"202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-cart:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -77,10 +77,10 @@ Install the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |
-| Order Threshold      | 202507.0 |
-| Cart                 | 202507.0 |
-| Merchant Portal Core | 202507.0 |
-| Marketplace Order Management | 202507.0 |
+| Order Threshold      | {{page.version}} |
+| Cart                 | {{page.version}} |
+| Merchant Portal Core | {{page.version}} |
+| Marketplace Order Management | {{page.version}} |
 
 ### 1) Install the required modules
 

@@ -10,7 +10,7 @@ Install the required features:
 
 | NAME | VERSION |
 |-|-|
-| Availability Notification | 202507.0 |
+| Availability Notification | {{page.version}} |
 
 ## 1) Install required modules using Composer
 

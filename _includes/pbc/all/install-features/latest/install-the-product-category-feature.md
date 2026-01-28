@@ -12,14 +12,14 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | 202507.0 | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
-| Product             | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
+| Spryker Core        | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product:"202507.0" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -667,15 +667,15 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |---------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
-| Category Management | 202507.0 | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
-| Product             | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
+| Spryker Core        | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)               |
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
 
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product:"202507.0" --update-with-dependencies
+composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | 202507.0 |
-| Cms | 202507.0 |
+| Catalog | {{page.version}} |
+| Cms | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -197,15 +197,15 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | 202507.0 |
-| Cms | 202507.0 |
+| Catalog | {{page.version}} |
+| Cms | {{page.version}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/catalog:"202507.0" spryker-feature/cms:"202507.0" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:"{{page.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

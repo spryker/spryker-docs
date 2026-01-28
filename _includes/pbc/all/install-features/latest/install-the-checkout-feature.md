@@ -20,19 +20,19 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | 202507.0 |
-| Checkout | 202507.0 |
-| Order Management | 202507.0 |
-| Prices | 202507.0 |
-| Spryker Core | 202507.0 |
-| Tax | 202507.0 |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
+| Order Management | {{page.version}} |
+| Prices | {{page.version}} |
+| Spryker Core | {{page.version}} |
+| Tax | {{page.version}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/order-threshold:"202507.0" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -525,14 +525,14 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/order-threshold:"202507.0" --update-with-dependencies
+composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

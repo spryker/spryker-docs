@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Options | 202507.0 |
-| Order Management | 202507.0 |
-| Spryker Core | 202507.0 |
+| Product Options | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up behavior
 

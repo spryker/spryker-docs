@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME                    | VERSION          |
 |-------------------------|------------------|
-| Checkout                | 202507.0 |
-| Non-splittable Products | 202507.0 |
+| Checkout                | {{page.version}} |
+| Non-splittable Products | {{page.version}} |
 
 ## Adjust concrete product quantity
 

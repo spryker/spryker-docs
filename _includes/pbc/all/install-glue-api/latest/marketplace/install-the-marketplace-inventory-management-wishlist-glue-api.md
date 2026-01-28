@@ -11,8 +11,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Wishlist | 202507.0 |[Install Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
-| Marketplace Inventory Management API | 202507.0 | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-glue-api/install-the-marketplace-inventory-management-glue-api.html) |
+| Marketplace Wishlist | {{page.version}} |[Install Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
+| Marketplace Inventory Management API | {{page.version}} | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-glue-api/install-the-marketplace-inventory-management-glue-api.html) |
 
 ### 1) Set up behavior
 

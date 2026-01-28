@@ -13,8 +13,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | 202507.0 |
-| Product | 202507.0 |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules
 

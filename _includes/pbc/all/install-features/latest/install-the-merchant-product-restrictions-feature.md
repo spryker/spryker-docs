@@ -8,16 +8,16 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
-| Product Lists | 202507.0 |
-| Merchant | 202507.0 |
+| Spryker Core | {{page.version}} |
+| Product Lists | {{page.version}} |
+| Merchant | {{page.version}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"202507.0" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

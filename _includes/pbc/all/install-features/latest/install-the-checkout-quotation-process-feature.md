@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | 202507.0 |
-| Quotation Process | 202507.0 |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### 1) Set up behavior
 
@@ -74,8 +74,8 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | 202507.0 |
-| Quotation Process | 202507.0 |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### Set up behavior
 

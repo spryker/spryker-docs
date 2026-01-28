@@ -12,13 +12,13 @@ Install the required features:
 
 | NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer Service Points Availability | 202507.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
-| Shipment                                  | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
+| Product Offer Service Points Availability | {{page.version}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
+| Shipment                                  | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product-offer-shipment-availability: "202507.0" --update-with-dependencies
+composer require spryker-feature/product-offer-shipment-availability: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -15,7 +15,6 @@ To enable a custom namespace, adjust **config/Shared/config_default.php**:
 $config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 'SprykerEco', 'Spryker', 'SprykerSdk', ];
 ```
 
-
 ## Extend Spryker functionality from a module
 
 You can extend Spryker functionality from a module using one of the following options:
@@ -29,11 +28,14 @@ You can extend Spryker functionality from a module using one of the following op
 - [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php): to extend table headers with **Categories** column.
 - [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php): to extend table content with the corresponding column
 
-2. Create a module:
+2. Create a module.
+Spryker provides a development tool in the `spryker/development` module as a console command `\Spryker\Zed\Development\Communication\Console\ModuleCreateConsole`. When module is installed and command is enabled, run the following command:
 
 ```shell
 vendor/bin/console dev:module:create your-company-name.product-category
 ```
+
+Alternatively, you can create default module structure yourself.
 
 {% info_block warningBox "Verification" %}
 Make sure the `vendor/your-company-name/product-category` folder with module data has been created.

@@ -39,7 +39,8 @@ vendor/bin/console dev:module:create your-company-name.product-category
 Make sure the `vendor/your-company-name/product-category` folder with module data has been created.
 {% endinfo_block %}
 
-Please validate created composer.json file and make sure that namespace is correct, for example if you pick YourCompanyName:
+Validate and update, where necessary, created composer.json file and make sure that namespace is correct, for example if you pick YourCompanyName:
+
 ```json
     "autoload": {
         "psr-4": {
@@ -54,6 +55,7 @@ Please validate created composer.json file and make sure that namespace is corre
 ```
 
 3. Update composer configuration on the project level update `repositories` section adding:
+
 ```json
         {
             "type": "path",
@@ -61,6 +63,7 @@ Please validate created composer.json file and make sure that namespace is corre
         }
 ```
 and run the following command to allow use of the newly created module:
+
 ```shell
 composer require your-company-name/product-category
 ```

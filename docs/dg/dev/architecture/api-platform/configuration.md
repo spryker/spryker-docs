@@ -56,6 +56,19 @@ Common environment values: `prod`, `dev`, `dockerdev`, `test`
 
 ## Configuration examples
 
+### Disable SwaggerUI in production
+
+Spryker shows the SwaggerUI only in development environments by default. This can be configured with:
+
+```php
+if ($env === 'dockerdev') {
+        $apiPlatform->enableSwagger(true);
+        $apiPlatform->enableSwaggerUi(true);
+        $apiPlatform->enableReDoc(true);
+        $apiPlatform->enableDocs(true);
+    }
+```
+
 ### Disable Doctrine integration
 
 Spryker does not use Doctrine with API Platform:

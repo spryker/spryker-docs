@@ -8,6 +8,8 @@ related:
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: API Platform Configuration
+    link: docs/dg/dev/architecture/api-platform/configuration.html
   - title: Resource Schemas
     link: docs/dg/dev/architecture/api-platform/resource-schemas.html
   - title: Validation Schemas
@@ -26,7 +28,7 @@ Before creating API resources, ensure you have:
 
 - Integrated API Platform as described in [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
 - Configured your application's bundle files
-- Configured API types in your `spryker_api_platform.php` configuration
+- Configured API types as described in [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html)
 
 ## Creating your first API resource
 

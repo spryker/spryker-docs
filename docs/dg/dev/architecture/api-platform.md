@@ -6,6 +6,8 @@ template: concept-topic-template
 related:
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: API Platform Configuration
+    link: docs/dg/dev/architecture/api-platform/configuration.html
   - title: Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
@@ -346,7 +348,7 @@ API Platform generates interactive OpenAPI documentation:
 
 - Swagger UI at the root URL `/` for example `http://glue-backend.eu.spryker.local/`
 
-You can disable this interface in production environments by configuring the `api_platform.enable_docs` setting in your configuration files. 
+You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [Disable Swagger UI](/docs/dg/dev/architecture/api-platform/configuration.html#disable-swaggerui-in-production). 
 
 ### Built-in validation
 
@@ -446,6 +448,7 @@ For detailed implementation guides:
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup and configuration
 - [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue API
+- [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) - Configure API Platform settings
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas

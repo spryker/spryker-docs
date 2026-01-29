@@ -20,7 +20,7 @@ Before integrating API Platform, ensure you have:
 To integrate API Platform, install the following modules:
 
 ```bash
-composer require spryker/api-platform:"^0.1.0" --update-with-dependencies
+composer require spryker/api-platform:"^0.5.0" --update-with-dependencies
 ```
 
 {% info_block infoBox "Module placeholder" %}
@@ -283,7 +283,7 @@ To verify your integration:
 
    Depending on the environment of the application (development or production), the documentation interface may be enabled or disabled by default. Currently, it is only enabled in development (docker.dev) environments.
    
-   You can enable/disable this interface by configuring the `api_platform.enable_docs` setting in your configuration files.
+   You can enable/disable this interface by configuring the settings in your `api_platform.php` configuration files.
 
 ## Next steps
 

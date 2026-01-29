@@ -63,7 +63,7 @@ Validate and update, where necessary, created composer.json file and make sure t
         }
 ```
 
-and run the following command to allow use of the newly created module:
+To allow use of the newly created module, execute:
 
 ```shell
 composer require your-company-name/product-category

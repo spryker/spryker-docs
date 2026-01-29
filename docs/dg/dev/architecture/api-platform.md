@@ -348,7 +348,7 @@ API Platform generates interactive OpenAPI documentation:
 
 - Swagger UI at the root URL `/` for example `http://glue-backend.eu.spryker.local/`
 
-You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html). 
+You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [Disable Swagger UI](/docs/dg/dev/architecture/api-platform/configuration.html#disable-swaggerui-in-production). 
 
 ### Built-in validation
 

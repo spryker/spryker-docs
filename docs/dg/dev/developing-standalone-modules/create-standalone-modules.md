@@ -62,6 +62,7 @@ Validate and update, where necessary, created composer.json file and make sure t
             "url": "./vendor/your-company-name/product-category"
         }
 ```
+
 and run the following command to allow use of the newly created module:
 
 ```shell

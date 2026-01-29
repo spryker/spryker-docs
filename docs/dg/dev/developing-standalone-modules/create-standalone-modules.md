@@ -69,7 +69,7 @@ To allow use of the newly created module, execute:
 composer require your-company-name/product-category
 ```
 
-5. Create a plugin to extend the product table the with a **Categories** column:
+4. Create a plugin to extend the product table the with a **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php</summary>

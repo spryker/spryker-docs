@@ -21,7 +21,7 @@ $config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 
 You can extend Spryker functionality from a module using one of the following options:
 
 - Introduce an extension point in an existing module. For an example, see [How to use a plugin from another module](/docs/dg/dev/backend-development/plugins/plugins.html).
-- Use an existing extension point in a module. For instructions, see [Extend functionality using an existing extension point](#extend-functionality using-an-existing-extension-point).
+- Use an existing extension point in a module.
 
 ### Extend functionality using an existing extension point
 
@@ -63,13 +63,16 @@ Validate and update, where necessary, created composer.json file and make sure t
         }
 ```
 
-To allow use of the newly created module, execute:
+4. Include the newly module into composer, execute inside container:
 
 ```shell
 composer require your-company-name/product-category
 ```
 
-4. Create a plugin to extend the product table the with a **Categories** column:
+Now, your module is created and is ready for further development.
+Let's add some executable code as well.
+
+5. Create a plugin to extend the product table the with a **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php</summary>
@@ -117,13 +120,13 @@ class ProductCategoryProductTableConfigurationExpanderPlugin extends AbstractPlu
 
 </details>
 
-5. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
+6. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
 
 {% info_block warningBox "Verification" %}
 In the Back Office, go to **Catalog**>**Products**. Make sure the **Categories** column is displayed in the table.
 {% endinfo_block %}
 
-6. Create a plugin to provide data for the **Categories** column:
+7. Create a plugin to provide data for the **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableDataBulkExpanderPlugin.php</summary>
@@ -192,7 +195,7 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
 
 </details>
 
-7. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
+8. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
 
 
 {% info_block warningBox "Verification" %}
@@ -200,7 +203,6 @@ In the Back Office, go to **Catalog**>**Products**. Make sure relevant data is d
 {% endinfo_block %}
 
 
-Your module is created.
 
 ## Next step
 

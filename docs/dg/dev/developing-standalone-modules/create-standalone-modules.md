@@ -1,7 +1,7 @@
 ---
 title: Create standalone modules
 description: Learn how you can create standalone modules like extending modules or enabling custom namespace within your Spryker based projects.
-last_updated: Jun 7, 2024
+last_updated: Jan 29, 2026
 template: howto-guide-template
 ---
 
@@ -32,16 +32,40 @@ You can extend Spryker functionality from a module using one of the following op
 2. Create a module:
 
 ```shell
-vendor/bin/spryker-dev-console dev:module:create your-company-name.product-category
+vendor/bin/console dev:module:create your-company-name.product-category
 ```
 
 {% info_block warningBox "Verification" %}
 Make sure the `vendor/your-company-name/product-category` folder with module data has been created.
 {% endinfo_block %}
 
+Please validate created composer.json file and make sure that namespace is correct, for example if you pick YourCompanyName:
+```json
+    "autoload": {
+        "psr-4": {
+            "YourCompanyName\\": "src/YourCompanyName/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YourCompanyNameTest\\": "tests/YourCompanyNameTest/"
+        }
+    },
+```
 
+3. Update composer configuration on the project level update `repositories` section adding:
+```json
+        {
+            "type": "path",
+            "url": "./vendor/your-company-name/product-category"
+        }
+```
+and run the following command to allow use of the newly created module:
+```shell
+composer require your-company-name/product-category
+```
 
-3. Create a plugin to extend the product table the with a **Categories** column:
+5. Create a plugin to extend the product table the with a **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php</summary>
@@ -89,13 +113,13 @@ class ProductCategoryProductTableConfigurationExpanderPlugin extends AbstractPlu
 
 </details>
 
-2. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
+5. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
 
 {% info_block warningBox "Verification" %}
 In the Back Office, go to **Catalog**>**Products**. Make sure the **Categories** column is displayed in the table.
 {% endinfo_block %}
 
-3. Create a plugin to provide data for the **Categories** column:
+6. Create a plugin to provide data for the **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableDataBulkExpanderPlugin.php</summary>
@@ -164,7 +188,7 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
 
 </details>
 
-4. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
+7. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
 
 
 {% info_block warningBox "Verification" %}

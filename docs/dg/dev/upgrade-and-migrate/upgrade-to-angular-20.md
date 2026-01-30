@@ -196,17 +196,19 @@ Ensure that you update both the `package-lock.json` file and the `node_modules` 
 
         ```ts
            export default {
-                ...,
+                displayName: 'merchant-portal',
                 preset: 'jest-preset-angular',
                 setupFilesAfterEnv: ['<rootDir>/frontend/merchant-portal/test-setup.ts'],
                 roots: ['<rootDir>/src/Pyz'],
+                testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+                moduleFileExtensions: ['ts', 'js', 'html'],
+                passWithNoTests: true,
                 globals: {
                     'ts-jest': {
                         tsconfig: '<rootDir>/frontend/merchant-portal/tsconfig.spec.json',
                         stringifyContentPathRegex: '\\.(html|svg)$',
                     },
                 },
-                ...
             } 
         ```
 
@@ -542,7 +544,7 @@ Ensure that you update both the `package-lock.json` file and the `node_modules` 
     }
    ```
 
-   5. Update the `node` and `npm` versions in all deployment YAML files.
+   5. Update the `node` and `npm` versions in all deploy YAML files.
 
    ```yaml
    ...

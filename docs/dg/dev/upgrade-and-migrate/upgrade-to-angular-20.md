@@ -587,7 +587,7 @@ Below is a checklist of component-related breaking changes to review when upgrad
 
 As a practical example of upgrading Angular to v20 in a real project, you can review the following Pull Request:
 
-https://github.com/spryker-shop/b2b-demo-marketplace/pull/857
+<https://github.com/spryker-shop/b2b-demo-marketplace/pull/857>
 
 {% info_block warningBox "Important" %}
 

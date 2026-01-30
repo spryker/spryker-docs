@@ -65,7 +65,7 @@ Validate and update, where necessary, created composer.json file and make sure t
         }
 ```
 
-4. Include the newly module into composer, execute inside container:
+4. Include the newly module into composer, execute inside docker cli container:
 
 ```shell
 composer require your-company-name/product-category

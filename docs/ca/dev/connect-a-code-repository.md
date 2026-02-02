@@ -48,8 +48,8 @@ We recommend mapping your branches to environments as follows:
 
 To connect a GitHub repository via the GitHub App, ensure that the following requirements are met:
 
-* You have the **Owner** role for the GitHub repository or the organization.
-* If you do not have the Owner role, you can request the installation during the connection process, but an organization owner **must approve** the **AWS Connector for GitHub** app installation before the connection can be used.
+- You have the **Owner** role for the GitHub repository or the organization.
+- If you do not have the Owner role, you can request the installation during the connection process, but an organization owner **must approve** the **AWS Connector for GitHub** app installation before the connection can be used.
 
 For detailed instructions and permission requirements, see [Create a connection to GitHub](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html#connections-create-github-console) in the AWS documentation.
 

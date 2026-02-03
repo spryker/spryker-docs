@@ -6,6 +6,13 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: Yves
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Enable the Zero State component for empty data
+                url: /docs/pbc/all/yves/install-and-upgrade/enable-zero-state-component-for-empty-data.html
+
       - title: Back Office
         nested:
           - title: Base shop

@@ -57,21 +57,32 @@ $config[AiFoundationConstants::CHAT_HISTORY_DEFAULT_TIMEOUT] = 43200; // 12 hour
 $config[AiFoundationConstants::CHAT_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
 ```
 
-### Custom timeout example
+### Per-AI-configuration settings
 
-Override the timeout for specific use cases:
+Configure chat history timeout and context window for specific AI configurations by adding `conversation_history` settings within `AI_CONFIGURATIONS`:
 
 ```php
 <?php
 
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-// 24-hour timeout for customer support conversations
-$config[AiFoundationConstants::CHAT_HISTORY_DEFAULT_TIMEOUT] = 86400;
-
-// Smaller context window for resource-constrained scenarios
-$config[AiFoundationConstants::CHAT_HISTORY_CONTEXT_WINDOW] = 10000;
+$config[AiFoundationConstants::AI_CONFIGURATIONS] = [
+    'customer_support' => [
+        'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+        'provider_config' => [
+            'api_key' => getenv('OPENAI_API_KEY'),
+            'model' => 'gpt-4',
+        ],
+        'system_prompt' => 'You are a helpful customer support assistant.',
+        'conversation_history' => [
+            'timeout' => 86400,        // 24 hours for customer support
+            'context_window' => 100000, // Larger context for complex support cases
+        ],
+    ],
+];
 ```
+
+Per-configuration settings take precedence over global defaults. If `conversation_history` is not specified for an AI configuration, it falls back to the global `CHAT_HISTORY_DEFAULT_TIMEOUT` and `CHAT_HISTORY_CONTEXT_WINDOW` values.
 
 {% info_block infoBox "Best practice" %}
 
@@ -129,6 +140,8 @@ Access the complete conversation history at any time:
 ```php
 <?php
 
+use Generated\Shared\Transfer\ConversationHistoryCriteriaTransfer;
+use Generated\Shared\Transfer\ConversationHistoryConditionsTransfer;
 use Spryker\Client\AiFoundation\AiFoundationClientInterface;
 
 class ConversationManager
@@ -140,89 +153,66 @@ class ConversationManager
 
     public function getConversationMessages(string $conversationId): array
     {
-        $historyTransfer = $this->aiFoundationClient->getConversationHistory($conversationId);
-        $messages = $historyTransfer->getMessages();
+        $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
+            ->setConversationHistoryConditions(
+                (new ConversationHistoryConditionsTransfer())
+                    ->setConversationIds([$conversationId])
+            );
+
+        $conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
+        $conversationHistories = $conversationHistoryCollectionTransfer->getConversationHistories();
+
+        if ($conversationHistories->count() === 0) {
+            return [];
+        }
+
+        $conversationHistoryTransfer = $conversationHistories->offsetGet(0);
+        $messages = $conversationHistoryTransfer->getMessages();
 
         $formattedMessages = [];
         foreach ($messages as $message) {
             $formattedMessages[] = [
-                'role' => $message->getRole(), // 'user', 'assistant', 'tool_call', 'tool_result'
+                'type' => $message->getType(), // 'user', 'assistant', 'tool_call', 'tool_result'
                 'content' => $message->getContent(),
             ];
         }
 
         return $formattedMessages;
     }
-    
-    public function deleteConversation(string $conversationId): bool
+
+    public function getMultipleConversations(array $conversationIds): array
     {
-        return $this->aiFoundationClient->clearConversationHistory($conversationId);
-    }
-}
-```
-
-## Multi-turn conversation example
-
-This example demonstrates a complete multi-turn conversation workflow:
-
-```php
-<?php
-
-namespace Pyz\Zed\Chat\Business;
-
-use Generated\Shared\Transfer\PromptMessageTransfer;
-use Generated\Shared\Transfer\PromptRequestTransfer;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
-
-class ChatBot
-{
-    public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
-    ) {
-    }
-
-    public function chat(string $conversationId, string $userInput): string
-    {
-        // First turn: user asks initial question
-        $firstResponse = $this->sendMessage($conversationId, 'What are the best outdoor activities in summer?');
-        echo "AI: " . $firstResponse . "\n";
-
-        // Second turn: user asks follow-up question
-        // The AI has access to the previous exchange
-        $secondResponse = $this->sendMessage($conversationId, 'Which of these activities is best for families with young children?');
-        echo "AI: " . $secondResponse . "\n";
-
-        // Third turn: another follow-up
-        // The AI still remembers the entire conversation
-        $thirdResponse = $this->sendMessage($conversationId, 'What safety precautions should we take?');
-        echo "AI: " . $thirdResponse . "\n";
-
-        return $thirdResponse;
-    }
-
-    private function sendMessage(string $conversationId, string $message): string
-    {
-        $promptRequest = (new PromptRequestTransfer())
-            ->setConversationId($conversationId)
-            ->setAiConfigurationName('openai') // or your configured AI provider
-            ->setPromptMessage(
-                (new PromptMessageTransfer())->setContent($message)
+        $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
+            ->setConversationHistoryConditions(
+                (new ConversationHistoryConditionsTransfer())
+                    ->setConversationIds($conversationIds)
             );
 
-        $response = $this->aiFoundationClient->prompt($promptRequest);
+        $conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
+        $conversationHistories = $conversationHistoryCollectionTransfer->getConversationHistories();
 
-        if ($response->getIsSuccessful() === true) {
-            return $response->getMessage()->getContent();
+        $result = [];
+        foreach ($conversationHistories as $conversationHistory) {
+            $result[$conversationHistory->getConversationId()] = [
+                'conversation_id' => $conversationHistory->getConversationId(),
+                'message_count' => $conversationHistory->getMessages()->count(),
+                'messages' => array_map(function ($message) {
+                    return [
+                        'type' => $message->getType(),
+                        'content' => $message->getContent(),
+                    ];
+                }, $conversationHistory->getMessages()->getArrayCopy()),
+            ];
         }
 
-        return 'Error: ' . implode(', ', array_map(fn($e) => $e->getMessage(), $response->getErrors()->getArrayCopy()));
+        return $result;
     }
 }
 ```
 
 ## API reference
 
-### AiFoundationClient methods
+### AiFoundationClient
 
 #### prompt()
 
@@ -242,54 +232,40 @@ public function prompt(PromptRequestTransfer $promptRequest): PromptResponseTran
 - `promptMessage` (PromptMessageTransfer, required): The message to send
 - `maxRetries` (int, optional): Number of retry attempts on failure
 
-#### getConversationHistory()
+#### getConversationHistoryCollection()
 
-Retrieves all messages in a conversation from Redis storage.
-
-```php
-/**
- * @param string $conversationId
- * @return \Generated\Shared\Transfer\ConversationHistoryTransfer
- */
-public function getConversationHistory(string $conversationId): ConversationHistoryTransfer
-```
-
-**Returns:** ConversationHistoryTransfer containing:
-- `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with roles (user, assistant, tool_call, tool_result)
-
-#### clearConversationHistory()
-
-Deletes a conversation from Redis storage.
+Retrieves conversation history collection based on criteria. Allows filtering conversations by conversation IDs.
 
 ```php
 /**
- * @param string $conversationId
- * @return bool
+ * @param \Generated\Shared\Transfer\ConversationHistoryCriteriaTransfer $conversationHistoryCriteriaTransfer
+ * @return \Generated\Shared\Transfer\ConversationHistoryCollectionTransfer
  */
-public function clearConversationHistory(string $conversationId): bool
+public function getConversationHistoryCollection(
+    ConversationHistoryCriteriaTransfer $conversationHistoryCriteriaTransfer
+): ConversationHistoryCollectionTransfer
 ```
 
-**Returns:** `true` if conversation was deleted, `false` if it did not exist or deletion failed
+**ConversationHistoryCriteriaTransfer properties:**
+- `conversationHistoryConditions` (ConversationHistoryConditionsTransfer): Filter conditions for the query
+  - `conversationIds` (string[]): List of conversation IDs to retrieve (IN operation). If empty, returns empty collection.
 
-## Configuration reference
+**Returns:** ConversationHistoryCollectionTransfer containing:
+- `conversationHistories` (ConversationHistoryTransfer[]): Array of conversation histories matching the criteria
+  - Each ConversationHistoryTransfer contains:
+    - `conversationId` (string): The conversation identifier
+    - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, and attachments
 
-### AiFoundationConstants
+## Message types
 
-| Constant | Type | Default | Description |
-| --- | --- | --- | --- |
-| `CHAT_HISTORY_DEFAULT_TIMEOUT` | int | 43200 | Conversation timeout in seconds (12 hours) |
-| `CHAT_HISTORY_CONTEXT_WINDOW` | int | 50000 | Maximum tokens stored per conversation |
-
-## Message roles
-
-Messages stored in conversation history have different roles:
+Messages stored in conversation history have different types:
 
 - `user` - Message sent by the user
 - `assistant` - Response from the AI
 - `tool_call` - A tool invocation initiated by the AI
 - `tool_result` - Result of a tool execution
 
-Tool-related roles are only present when using [AI tools](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html) with chat history.
+Tool-related types are only present when using [AI tools](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html) with chat history.
 
 ## Best practices
 
@@ -306,15 +282,10 @@ $conversationId = "support_ticket_{$ticketId}";
 $conversationId = "conv_123";
 ```
 
-### 2. Clean up expired conversations
+### 2. Configure appropriate conversation timeouts
 
-Implement a periodic cleanup process to remove stale conversations manually if needed:
-
-```php
-// Clean up old conversations
-$oldConversationId = $customerId . '_old_session';
-$this->aiFoundationClient->clearConversationHistory($oldConversationId);
-```
+Conversation history automatically expires based on the configured timeout.
+Expired conversations are automatically removed from Storage without manual intervention.
 
 ### 3. Handle large conversations
 
@@ -322,18 +293,16 @@ Monitor context window usage. If approaching limits, start a new conversation.
 
 ### 4. Secure conversation access
 
-Validate that users can only access their own conversations.
-
-### 5. Configure appropriate timeouts
-
-Adjust timeout based on conversation type:
+Validate that users can only access their own conversations by filtering conversation IDs based on user permissions:
 
 ```php
-// Short-lived support conversations: 1 hour
-$config[AiFoundationConstants::CHAT_HISTORY_DEFAULT_TIMEOUT] = 3600;
+$conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
+    ->setConversationHistoryConditions(
+        (new ConversationHistoryConditionsTransfer())
+            ->setConversationIds($userAuthorizedConversationIds) // Only user's conversations
+    );
 
-// Customer sessions: 24 hours
-$config[AiFoundationConstants::CHAT_HISTORY_DEFAULT_TIMEOUT] = 86400;
+$conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
 ```
 
 ## Limitations

@@ -451,7 +451,7 @@ Define the expected structure (`structuredMessage` property) of the AI response 
 
 ### Chat History
 
-Chat history is created by `conversationId` and stored in the Redis. 
+Chat history is created by `conversationId` and stored in the Storage. 
 
 ## About NeuronAI framework
 

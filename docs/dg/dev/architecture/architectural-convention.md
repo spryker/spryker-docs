@@ -1,7 +1,7 @@
 ---
 title: Architectural convention
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
-last_updated: Jul 28, 2025
+last_updated: Feb 04, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/dg/dev/architecture/architectural-convention-reference.html
@@ -11,7 +11,6 @@ related:
   - title: Modules and Application Layers
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
-
 
 This document provides an overview of our conventions and guidelines. The technology landscape is ever-evolving, so this document is subject to continuous refinement and improvement.
 
@@ -48,7 +47,7 @@ Spryker organizes responsibilities and functionalities over a set of [applicatio
 The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
 
 | APPLICATION LAYER | LAYERING | LAYER |
-|-|-|
+|-|-|-|
 | Glue |  flat-layered | Communication layer |
 | Client |  flat-layered | Communication layer |
 | Service |  flat-layered | Overarching Business layer |
@@ -333,7 +332,7 @@ Used components:
 
 The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
-A service primarily consists of reusable lightweight stateless business logic components. Because of its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+A service primarily consists of reusable lightweight stateless business logic components. You are not allowed to access any external data sources, and have to rely only on the data that is passed to the called method.
 
 ```text
 [Organization]
@@ -857,7 +856,7 @@ No general conventions.
 - The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.
 - `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.
 - `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Objects](#transfer-object).
--`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
+  -`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
 
 </details>
 
@@ -909,37 +908,37 @@ The facades provide functionality for other layers and modules. The functionalit
 <details><summary>For *module development* and *core module development*</summary>
 
 - Methods need to have a descriptive name that describes the use case and enables readers to easily select them. Examples:
-  - `addToCart()`
-  - `saveOrder()`
-  - `triggerEvent()`
+    - `addToCart()`
+    - `saveOrder()`
+    - `triggerEvent()`
 - The inherited `getFactory()` method needs to be used to instantiate the underlying classes.
 - Methods need to contain only the delegation to the underlying [model](#model).
 - Methods need to be `public` and stand for an outsourced function of the underlying functionality.
 - Each facade class needs to define and implement an interface that holds the `Specification` of each `public` method.
-  - The `Specification` is considered as the semantic contract of the method — all significant behavior needs to be highlighted.
+    - The `Specification` is considered as the semantic contract of the method — all significant behavior needs to be highlighted.
 - All facade class methods need to add `@api` and `{@inheritdoc}` tags to their method documentation.
 - New `QueryContainer` functionality can't be added but implemented through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
 - Single-item-flow methods need to be avoided unless one of the following reasons apply:
-  - There is only a single-entity flow ever, proven by business cases.
-  - The items need to go in first-in-first-out order, and there is no way to use a collection instead.
+    - There is only a single-entity flow ever, proven by business cases.
+    - The items need to go in first-in-first-out order, and there is no way to use a collection instead.
 - Multi-item-flow methods need to do the following:
-  - Receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern: `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
-  - Return a [Transfer Object](#transfer-object) collection with the following naming pattern: `[DomainEntity][Collection|CollectionResponse]Transfer`.
+    - Receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern: `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
+    - Return a [Transfer Object](#transfer-object) collection with the following naming pattern: `[DomainEntity][Collection|CollectionResponse]Transfer`.
 - Create-Update-Delete (CUD) directives:
-  - `Create` method needs to be defined as `create[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
-  - `Update` method needs to be defined as `update[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
-  - `Delete` method needs to be defined as `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer`.
-  - `Create` and `Update` methods need to be implemented for each business entity. `Delete` is optional and can be implemented on demand.
-  - CUD methods can't have any other arguments except the prior defined.
-  - `[DomainEntity]CollectionRequestTransfer` and `[DomainEntity]CollectionDeleteCriteriaTransfer` objects need to support transactional entity manipulation that's defaulted to true and documented in the facade function specification.
-  - `[DomainEntity]CollectionRequestTransfer` should support bulk operations.
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` should contain only arrays of attributes to filter the deletion of entities by.
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` needs to use the `IN` operation to filter the deletion of entities. Each item in the array of the filled attributes causes the deletion of one entity.
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` attributes that support deleting need to be mentioned in facade specification.
-  - `[DomainEntity]CollectionResponseTransfer` should contain a returned list of entities and an error list.
-    - If the entity manipulation function operation is fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.
-    - If the entity manipulation function operation isn't successful, and the request is transactional, the error list must contain the error that caused the transaction rollback. The error must point out the entity that caused the rollback. The entities after the error must not be manipulated. The response entity list must reflect the state of the database after the rollback.
-    - If the entity manipulation function operation isn't successful and the request isn't transactional, the error list must contain all errors. Each error must point out the related entity that caused that error. The response entity list must reflect the state of the database after the rollback.
+    - `Create` method needs to be defined as `create[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
+    - `Update` method needs to be defined as `update[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
+    - `Delete` method needs to be defined as `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer`.
+    - `Create` and `Update` methods need to be implemented for each business entity. `Delete` is optional and can be implemented on demand.
+    - CUD methods can't have any other arguments except the prior defined.
+    - `[DomainEntity]CollectionRequestTransfer` and `[DomainEntity]CollectionDeleteCriteriaTransfer` objects need to support transactional entity manipulation that's defaulted to true and documented in the facade function specification.
+    - `[DomainEntity]CollectionRequestTransfer` should support bulk operations.
+    - `[DomainEntity]CollectionDeleteCriteriaTransfer` should contain only arrays of attributes to filter the deletion of entities by.
+    - `[DomainEntity]CollectionDeleteCriteriaTransfer` needs to use the `IN` operation to filter the deletion of entities. Each item in the array of the filled attributes causes the deletion of one entity.
+    - `[DomainEntity]CollectionDeleteCriteriaTransfer` attributes that support deleting need to be mentioned in facade specification.
+    - `[DomainEntity]CollectionResponseTransfer` should contain a returned list of entities and an error list.
+        - If the entity manipulation function operation is fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.
+        - If the entity manipulation function operation isn't successful, and the request is transactional, the error list must contain the error that caused the transaction rollback. The error must point out the entity that caused the rollback. The entities after the error must not be manipulated. The response entity list must reflect the state of the database after the rollback.
+        - If the entity manipulation function operation isn't successful and the request isn't transactional, the error list must contain all errors. Each error must point out the related entity that caused that error. The response entity list must reflect the state of the database after the rollback.
 
 </details>
 
@@ -1153,7 +1152,7 @@ A `Layout` is the skeleton of a page and defines its structure.
 
 To differentiate between the recurring cases of data mapping, and to provide a clear separation of concerns, the following terms are introduced:
 - `Mappers` are lightweight transforming functions that adjust one specific data structure to another in solitude, that is without reaching out for additional data than the provided input.
-  - `Persistance Mapper` stands for `Mappers` in [Persistence layer](#persistence-layer-responsibilities), typically transforming [propel entities](#entity), [entity transfers objects](#transfer-object), or generic [transfer objects](#transfer-object).
+    - `Persistance Mapper` stands for `Mappers` in [Persistence layer](#persistence-layer-responsibilities), typically transforming [propel entities](#entity), [entity transfers objects](#transfer-object), or generic [transfer objects](#transfer-object).
 - `Expanders` source additional data into the provided input; restructuring may also happen.
 
 #### Conventions
@@ -1163,11 +1162,11 @@ No general conventions.
 <details><summary>For *module development* and *core module development*</summary>
 
 - `Mapper` methods need to be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.
-  - `Mappers` need to be free of any logic other than structuring directives.
-    - `Mappers` can't have data resolving logic, like remote calls or database lazy load, because they are used in high-batch processing scenarios.
-  - `Mappers` can have multiple source entities if they don't violate the structural-mapping-only directive.
-  - `Mappers` can't use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#facade-design-pattern).
-  - `Persistence Mappers` need to be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.
+    - `Mappers` need to be free of any logic other than structuring directives.
+        - `Mappers` can't have data resolving logic, like remote calls or database lazy load, because they are used in high-batch processing scenarios.
+    - `Mappers` can have multiple source entities if they don't violate the structural-mapping-only directive.
+    - `Mappers` can't use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#facade-design-pattern).
+    - `Persistence Mappers` need to be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.
 - `Expander` methods need to be named as `expand[With<description>]($targetEntity)`.
 - The `hydrator/hydration` keywords can't be used. Use `Mapper` or `Expander` instead.
 
@@ -1281,7 +1280,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 #### Conventions
 
 - `Model` dependencies can be [facades](#facade-design-pattern) or from the same module, either `Models`, [Repository](#repository), [Entity Manager](#entity-manager) or [Config](#module-configurations).
-  - `Models` can't directly interact with other modules' `Models`: via inheritance, shared constants, instantiation, etc.
+    - `Models` can't directly interact with other modules' `Models`: via inheritance, shared constants, instantiation, etc.
 
 <details><summary>For *module development* and *core module development*</summary>
 
@@ -1336,12 +1335,12 @@ No general conventions.
 <details><summary>For *module development* and *core module development*</summary>
 
 - `Module configuration`:
-  - Getter methods, prefixed with `get`, need to be defined to retrieve configuration values, instead of accessing values via constants directly. This enables a more flexible extension structure and an easier to control access tracking.
-    - Constants can also be defined to support the getter methods. For example, to enable cross-module referencing via `@uses`.
+    - Getter methods, prefixed with `get`, need to be defined to retrieve configuration values, instead of accessing values via constants directly. This enables a more flexible extension structure and an easier to control access tracking.
+        - Constants can also be defined to support the getter methods. For example, to enable cross-module referencing via `@uses`.
 - `Environment configuration`:
-  - Constants need to have a specification about their purpose.
-  - Constants need to contain the UPPERCASE value matching the value of the key. See the following examples.
-  - Constants need to be prefixed with {MODULE_NAME}. See the following examples.
+    - Constants need to have a specification about their purpose.
+    - Constants need to contain the UPPERCASE value matching the value of the key. See the following examples.
+    - Constants need to be prefixed with {MODULE_NAME}. See the following examples.
 - `Module configuration` constants need to be `protected`.
 - The `module configuration` relays exclusively on `static::` to support extension.
 - `Environment configuration` constants need to be `public`.
@@ -1529,8 +1528,8 @@ The schema file defines the module's tables and columns. Schema files are organi
 - The table `[org]` prefix needs to be `spy_`.
 - The schema file `[org]` prefix needs to be `spy_`.
 - The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data. For example, the `spy_order` primary key gives information about the submitted order count.
-  - The field can be `null` by default.
-  - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
+    - The field can be `null` by default.
+    - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
 - Table foreign key definitions needs to include the `phpName` attribute.
 - Each field **must** have a description of the fields value; This helps understand the data model and the internal usage of a fields value. F.e. name="price" description="The base unit of a currency f.e. for the currency EUR it is cent."`.
 
@@ -1776,7 +1775,7 @@ For every defined table in [Persistence Schema](#persistence-schema), a matching
 - The `ApiAttributes` transfer name suffix is reserved for `Storefront API modules`, that is modules with the `Api` suffix, and must not be used for other purposes to avoid collision.
 - The `BackendApiAttributes` transfer name suffix is reserved for `Backend API modules`, that is modules with `BackendApi` suffix, and must not be used for other purposes to avoid collision.
 - `EntityTransfers` must not be defined manually. It's generated automatically based on the [Peristence Schema](#persistence-schema) definitions.
-  - The `Entity` suffix is reserved for the auto-generated `EntityTransfers` and must not be used in manual transfer definitions to avoid collision.
+    - The `Entity` suffix is reserved for the auto-generated `EntityTransfers` and must not be used in manual transfer definitions to avoid collision.
 
 <details><summary>For *module development* and *core module development*</summary>
 
@@ -1848,7 +1847,7 @@ A `Widget` is a reusable part of a webpage in the [Yves](#yves) application laye
 <details><summary>For *module development* and *core module development*</summary>
 
 - A `Widget` needs to contain only lightweight, display related logic.
-  - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
+    - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
 - `Widget` module can't appear as dependency because it's against the basic concept of optional widgets.
 - Implementing a `Widget` needs to happen in a widget module.
 - When a `Widget` call is implemented, take into account that a `Widget` is always enabled optionally.
@@ -2254,8 +2253,8 @@ No general conventions.
 <details><summary>Conventions For *module development* and *core module development*</summary>
 
 - `Plugin interfaces` need to be defined in extension modules.
-  - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.
-  - `Extension modules` can't contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).
+    - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.
+    - `Extension modules` can't contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).
 - `Plugin interface` methods need to receive input items as collection for scalability reasons.
 
 </details>
@@ -2263,11 +2262,11 @@ No general conventions.
 #### Guidelines
 
 - Operations on single items in plugin stack methods is not feasible, except for the following reasons:
-  - it's strictly and inevitably a single-item flow.
-  - the items go in FIFO order and there is no other way to use a collection instead.
+    - it's strictly and inevitably a single-item flow.
+    - the items go in FIFO order and there is no other way to use a collection instead.
 - Plugin interface class specification should explain:
-  - how the [Plugins](#plugin) will be used,
-  - what are the typical use-cases of a [Plugin](#plugin).
+    - how the [Plugins](#plugin) will be used,
+    - what are the typical use-cases of a [Plugin](#plugin).
 
 #### Example
 

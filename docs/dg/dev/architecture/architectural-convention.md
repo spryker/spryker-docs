@@ -1812,7 +1812,7 @@ Further reading [Document Glue API resources](/docs/dg/dev/glue-api/latest/glue-
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="spryker:transfer-01" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-
+    
     <transfer name="ConfigurableBundleTemplate">
         <property name="idConfigurableBundleTemplate" type="int"/>
         <property name="uuid" type="string"/>
@@ -1847,7 +1847,7 @@ A `Widget` is a reusable part of a webpage in the [Yves](#yves) application laye
 <details><summary>For *module development* and *core module development*</summary>
 
 - A `Widget` needs to contain only lightweight, display related logic.
-    - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
+  - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
 - `Widget` module can't appear as dependency because it's against the basic concept of optional widgets.
 - Implementing a `Widget` needs to happen in a widget module.
 - When a `Widget` call is implemented, take into account that a `Widget` is always enabled optionally.

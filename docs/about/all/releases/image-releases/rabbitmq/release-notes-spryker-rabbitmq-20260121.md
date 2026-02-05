@@ -16,10 +16,7 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 
 **Improvements**:
 
-
 - Fixing RMQ 3.13 to RMQ 4.1 migration script -- EFS mount, erlang_cookie, migration marker & feature_flags enablement
-
-### Security Fixes
 
 
 ### Official RabbitMQ release notes page

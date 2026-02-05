@@ -18,11 +18,6 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 
 - Fixing RMQ 3.13 to RMQ 4.1 migration script -- EFS mount, erlang_cookie, migration marker & feature_flags enablement
 
-
-### Official RabbitMQ release notes page
-
-https://www.rabbitmq.com/release-information
-
 ### Version release notes
 
-https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.8
+RMQ 4.1 -- [https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5](https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5)

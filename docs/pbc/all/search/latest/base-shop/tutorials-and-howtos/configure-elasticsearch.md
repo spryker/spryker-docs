@@ -1,7 +1,7 @@
 ---
 title: Configure Elasticsearch
 description: Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
-last_updated: Dec 17, 2024
+last_updated: Feb 5, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
 originalArticleId: 6aa9f4ab-25de-46bc-b734-54bccb25cf0b
@@ -79,6 +79,12 @@ The content of the configuration files must follow the conventions listed in the
 The current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
 
 **Schema example**: For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
+
+{% endinfo_block %}
+
+{% info_block infoBox "OpenSearch compatibility" %}
+
+Spryker PaaS uses OpenSearch, an AWS-maintained fork of Elasticsearch. The configuration principles in this guide apply to both. For OpenSearch-specific features and version information, see the [OpenSearch documentation](https://opensearch.org/docs/latest/).
 
 {% endinfo_block %}
 

@@ -26,8 +26,6 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 
 https://www.rabbitmq.com/release-information
 
-!!! PLEASE INCLUDE RELEASE NOTES OF THE SPECIFIC VERSION FROM THE OFFICIAL SOURCE !!!
-
 ### Version release notes
 
-
+https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.8

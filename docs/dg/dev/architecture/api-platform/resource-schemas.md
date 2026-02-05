@@ -1,13 +1,15 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jan 22, 2026
+last_updated: Feb 5, 2026
 template: concept-topic-template
 related:
   - title: API Platform
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: Relationships
+    link: docs/dg/dev/architecture/api-platform/relationships.html
   - title: Validation Schemas
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: CodeBucket Support
@@ -312,6 +314,43 @@ The operation names map to HTTP methods:
 - `put` → PUT (replace)
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
+
+## Relationships
+
+Define relationships between resources to enable including related resources via the `?include=` query parameter.
+
+### includes section
+
+Declares what relationships this resource can include:
+
+```yaml
+includes:
+  - relationshipName: addresses
+    targetResource: CustomersAddresses
+    uriVariableMappings:
+      customerReference: customerReference
+```
+
+**Properties:**
+- `relationshipName`: Name used in `?include=` parameter
+- `targetResource`: Name of the resource to include
+- `uriVariableMappings`: Maps properties from parent to child provider
+
+### includableIn section
+
+Declares where this resource can be included:
+
+```yaml
+includableIn:
+  - resource: Customers
+    relationshipName: addresses
+    uriVariableMappings:
+      customerReference: customerReference
+```
+
+Both declarations must match for validation to pass.
+
+For detailed information about relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
 ## Resource generation process
 

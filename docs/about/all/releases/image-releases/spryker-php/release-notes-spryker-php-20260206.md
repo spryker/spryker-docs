@@ -122,7 +122,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2026-22795**: An invalid or NULL pointer dereference can happen in an application processing a malformed PKCS#12 file.
 
-- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (e.g., APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
+- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (for example, APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
 
 - **CVE-2025-14180**: Apport 2.13 through 2.20.7 does not properly handle crashes originating from a PID namespace allowing local users to create certain files as root which an attacker could leverage to perform a denial of service via resource exhaustion or possibly gain root privileges
 
@@ -186,7 +186,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-61730**: During the TLS 1.3 handshake if multiple messages are sent in records that span encryption level boundaries (for instance the Client Hello and Encrypted Extensions messages), the subsequent messages may be processed before the encryption level changes. This can cause some minor information disclosure if a network-local attacker can inject messages during the handshake.
 
-- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (e.g., APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
+- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (for example, APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
 
 ### spryker/php:8.4-alpine3.20
 
@@ -222,7 +222,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-1735**: A vulnerability in Palantir's Aries service allowed unauthenticated access to log viewing and management functionality on Apollo instances using default configuration. The defect resulted in both authentication and authorization checks being bypassed, potentially allowing any network-accessible client to view system logs and perform operations without valid credentials. No evidence of exploitation was identified during the vulnerability window.
 
-- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (e.g., APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
+- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (for example, APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
 
 ### spryker/php:8.3-alpine3.20
 
@@ -270,7 +270,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-1735**: A vulnerability in Palantir's Aries service allowed unauthenticated access to log viewing and management functionality on Apollo instances using default configuration. The defect resulted in both authentication and authorization checks being bypassed, potentially allowing any network-accessible client to view system logs and perform operations without valid credentials. No evidence of exploitation was identified during the vulnerability window.
 
-- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (e.g., APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
+- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (for example, APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
 
 ### spryker/php:8.2-alpine3.20
 
@@ -314,7 +314,7 @@ This section details security vulnerabilities that have been addressed in specif
 
 - **CVE-2025-1735**: A vulnerability in Palantir's Aries service allowed unauthenticated access to log viewing and management functionality on Apollo instances using default configuration. The defect resulted in both authentication and authorization checks being bypassed, potentially allowing any network-accessible client to view system logs and perform operations without valid credentials. No evidence of exploitation was identified during the vulnerability window.
 
-- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (e.g., APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
+- **CVE-2025-14177**: The getimagesize() function may leak uninitialized heap memory into the APPn segments (for example, APP1) when reading images in multi-chunk mode (such as via php://filter). This occurs due to a bug in php_read_stream_all_chunks() that overwrites the buffer without advancing the pointer, leaving tail bytes uninitialized. This may lead to information disclosure of sensitive heap data and affect the confidentiality of the target server.
 
 ### spryker/php:8.1-alpine3.20
 

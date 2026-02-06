@@ -1,7 +1,7 @@
 ---
 title: Twig performance best practices
 description: This guideline explains how to optimize Twig templating engine performance for Spryker applications.
-last_updated: Nov 28, 2025
+last_updated: Jan 30, 2026
 template: concept-topic-template
 related:
   - title: Integrate automated SVG sprite extraction
@@ -43,18 +43,6 @@ $config[TwigConstants::YVES_TWIG_OPTIONS] = [
         FilesystemCache::FORCE_BYTECODE_INVALIDATION,
     ),
 ];
-
-$config[TwigConstants::YVES_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Yves/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
-
-$config[TwigConstants::ZED_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Zed/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
 ```
 
 ## Activate Twig path cache

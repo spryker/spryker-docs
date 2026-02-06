@@ -156,6 +156,6 @@ The SSP checkout flow adds the following functionality:
 
 ## Related developer documents
 
-| Installation guides |
-|---|
-| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) |
+| Installation guides | Architecture |
+|---------------------|--------------|
+| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) | [Self-Service Portal Service Management architecture overview](/docs/pbc/all/self-service-portal/latest/ssp-service-management-architecture-overview.html) |

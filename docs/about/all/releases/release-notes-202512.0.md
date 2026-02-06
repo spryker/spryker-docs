@@ -430,6 +430,13 @@ This release introduces a Composer plugin for Demo Shops that splits broad PSR-4
 **Module release:**
 - [Composer Autoload Plugin](https://github.com/spryker/composer-autoload-plugin/releases/tag/0.1.0)
 
+**Installation instructions:**
+Inside your container execute the following command, answer `yes` when asked to trust this plugin:
+
+```bash
+composer require spryker/composer-autoload-plugin
+```
+
 ### Improved developer productivity and efficiency <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 **Key capabilities:**

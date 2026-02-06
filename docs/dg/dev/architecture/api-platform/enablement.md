@@ -1,15 +1,23 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Nov 24, 2025
+last_updated: Jan 22, 2026
 template: howto-guide-template
 related:
   - title: API Platform
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
-  - title: Schemas and Resource Generation
-    link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: API Platform Configuration
+    link: docs/dg/dev/architecture/api-platform/configuration.html
+  - title: Resource Schemas
+    link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: CodeBucket Support
+    link: docs/dg/dev/architecture/api-platform/code-buckets.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document describes how to create and enable API Platform resources in your Spryker project.
@@ -20,7 +28,7 @@ Before creating API resources, ensure you have:
 
 - Integrated API Platform as described in [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
 - Configured your application's bundle files
-- Configured API types in your `spryker_api_platform.php` configuration
+- Configured API types as described in [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html)
 
 ## Creating your first API resource
 
@@ -284,7 +292,7 @@ class CustomerBackendProcessor implements ProcessorInterface
 Run the generation command to create the API resource class:
 
 ```bash
-docker/sdk cli glue  api:generate backend
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
 ```
 
 This generates:
@@ -301,7 +309,7 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-
+markdo
 `config/Glue/ApplicationServices.php`
 
 ```php
@@ -349,6 +357,93 @@ PATCH /customers/{customerReference}
 # Delete customer
 DELETE /customers/{customerReference}
 ```
+
+## Creating CodeBucket-specific resources
+
+CodeBucket support enables you to create Code Bucket-specific API resource variants that are resolved at runtime based on the `APPLICATION_CODE_BUCKET` environment constant.
+
+### When to use CodeBucket resources
+
+Create CodeBucket variants when you need:
+- Code Bucket-specific properties (EU GDPR fields, tax rates, compliance data)
+- Code Bucket-specific validation rules (country-specific requirements)
+- Country-specific business logic
+- Feature variations per Code Bucket
+
+### Quick example
+
+**Base resource:**
+
+`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+```
+
+**EU-specific variant:**
+
+`src/Pyz/Glue/CustomerEU/resources/api/backend/customers.resource.yml`
+
+```yaml
+resource:
+  name: Customers
+  shortName: Customer
+  codeBucket: EU
+  
+  operations:
+    - type: Get
+    - type: Post
+
+  properties:
+    customerReference:
+      type: string
+      identifier: true
+    email:
+      type: string
+    firstName:
+      type: string
+
+    # EU-specific properties
+    gdprConsentDate:
+      type: string
+      description: "Date of GDPR consent"
+    dataPrivacyOfficerEmail:
+      type: string
+      description: "Data privacy officer contact"
+```
+
+**Generate resources:**
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate backend
+```
+
+This generates:
+- `CustomersBackendResource.php` (base)
+- `CustomersEUBackendResource.php` (with `CODE_BUCKET = 'EU'`)
+
+**Runtime behavior:**
+
+- Request to `glue.eu.spryker.local/customers` → Uses `CustomersEUBackendResource`
+- Request to `glue.de.spryker.local/customers` → Uses `CustomersBackendResource` (fallback)
+- Request to `glue.at.spryker.local/customers` → Uses `CustomersBackendResource` (or `CustomersATBackendResource` if variant exists)
+
+For a comprehensive guide including Provider implementation and advanced scenarios, see [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## API types and use cases
 
@@ -413,5 +508,8 @@ docker/sdk cli glue  api:debug customers --api-type=backend --show-sources
 
 ## Next steps
 
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Deep dive into schema syntax
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Deep dive into resource schema syntax
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Define validation rules for your resources
+- [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Create Code Bucket-specific resources
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Learn how to write tests for your API resources
 - [Troubleshooting](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues and solutions

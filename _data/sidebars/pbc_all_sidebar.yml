@@ -6,6 +6,13 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: Yves
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Enable the Zero State component for empty data
+                url: /docs/pbc/all/yves/install-and-upgrade/enable-zero-state-component-for-empty-data.html
+
       - title: Back Office
         nested:
           - title: Base shop
@@ -30,7 +37,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
-
+                  - title: Enable Google Material Icons
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
@@ -3849,6 +3857,8 @@ entries:
         nested:
           - title: SSP Service Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-service-management-feature-overview.html
+          - title: SSP Service Management architecture overview
+            url: /docs/pbc/all/self-service-portal/ssp-service-management-architecture-overview.html
           - title: SSP Inquiry Management feature overview
             url: /docs/pbc/all/self-service-portal/ssp-inquiry-management-feature-overview.html
           - title: SSP Dashboard Management feature overview

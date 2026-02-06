@@ -34,17 +34,13 @@ The chat history feature automatically persists all messages in a conversation t
 
 A unique identifier for a conversation. All messages in a conversation are stored together under this ID. You can use any string as a conversation ID, such as a customer ID, session ID, or custom identifier.
 
-### Chat history timeout
-
-Messages expire after a configurable timeout period. Default is 12 hours (43200 seconds). Expired conversations are automatically pruned from the database.
-
 ### Context window
 
-The maximum number of tokens that can be stored in a conversation. Default is 50000 tokens.
+The maximum number of tokens that can be stored in a conversation. Default is 50000 tokens. When a conversation exceeds this limit, the oldest messages are automatically pruned to maintain the window size.
 
 ## Configure chat history
 
-Configure chat history timeout and context window in your AI configuration.
+Configure the context window for chat history in your AI configuration.
 
 ### Default configuration
 
@@ -55,13 +51,12 @@ Update your `config/Shared/config_ai.php`:
 
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-$config[AiFoundationConstants::CHAT_HISTORY_DEFAULT_TIMEOUT] = 43200; // 12 hours
 $config[AiFoundationConstants::CHAT_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
 ```
 
 ### Per-AI-configuration settings
 
-Configure chat history timeout and context window for specific AI configurations by adding `conversation_history` settings within `AI_CONFIGURATIONS`:
+Configure the context window for specific AI configurations by adding `conversation_history` settings within `AI_CONFIGURATIONS`:
 
 ```php
 <?php
@@ -77,18 +72,17 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
         ],
         'system_prompt' => 'You are a helpful customer support assistant.',
         'conversation_history' => [
-            'timeout' => 86400,        // 24 hours for customer support
             'context_window' => 100000, // Larger context for complex support cases
         ],
     ],
 ];
 ```
 
-Per-configuration settings take precedence over global defaults. If `conversation_history` is not specified for an AI configuration, it falls back to the global `CHAT_HISTORY_DEFAULT_TIMEOUT` and `CHAT_HISTORY_CONTEXT_WINDOW` values.
+Per-configuration settings take precedence over global defaults. If `conversation_history` is not specified for an AI configuration, it falls back to the global `CHAT_HISTORY_CONTEXT_WINDOW` value.
 
 {% info_block infoBox "Best practice" %}
 
-Set shorter timeouts for temporary conversations and longer ones for persistent customer sessions. Adjust context window based on expected conversation length and token limits of your AI provider.
+Adjust context window based on expected conversation length and token limits of your AI provider. Large context windows provide better conversation history but require more tokens for each AI request.
 
 {% endinfo_block %}
 
@@ -286,10 +280,9 @@ $conversationId = "support_ticket_{$ticketId}";
 $conversationId = "conv_123";
 ```
 
-### 2. Configure appropriate conversation timeouts
+### 2. Manage conversation cleanup
 
-Conversation history automatically expires based on the configured timeout.
-Expired conversations are automatically removed from Storage without manual intervention.
+Implement your own cleanup strategy for old conversations if needed. Unlike Redis-backed storage with automatic expiration, database-persisted conversations remain indefinitely. Consider creating a scheduled task to delete conversations older than a certain date if storage management is important.
 
 ### 3. Handle large conversations
 
@@ -312,7 +305,7 @@ $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversat
 ## Limitations
 
 - Chat history is stored in the database and requires the `spy_ai_chat_history` table to be present
-- Messages are subject to the configured timeout and are automatically pruned from the database
+- Conversations persist indefinitely in the database; implement your own cleanup strategy if needed
 - Very large conversations may approach the context window limit, requiring new conversation IDs
 - Tool invocations and results are included in history and count toward context window
 

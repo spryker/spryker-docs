@@ -39,8 +39,8 @@ AI tools are ideal for scenarios where AI needs to interact with your applicatio
 Enable AI to fetch data from your system:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to get product information
 class GetProductInfoTool implements ToolPluginInterface
@@ -89,8 +89,8 @@ class GetProductInfoTool implements ToolPluginInterface
 Provide specialized calculations:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to calculate shipping costs
 class CalculateShippingTool implements ToolPluginInterface
@@ -155,8 +155,8 @@ class CalculateShippingTool implements ToolPluginInterface
 Allow AI to trigger business operations:
 
 ```php
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolPluginInterface;
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolParameter;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolParameter;
 
 // AI can call this tool to create support tickets
 class CreateSupportTicketTool implements ToolPluginInterface
@@ -164,7 +164,7 @@ class CreateSupportTicketTool implements ToolPluginInterface
     public const NAME = 'create_support_ticket';
 
     public function __construct(
-        private SupportClientInterface $supportClient
+        private SupportFacadeInterface $supportFacade
     ) {
     }
 
@@ -208,7 +208,7 @@ class CreateSupportTicketTool implements ToolPluginInterface
         $description = $arguments['description'] ?? '';
         $priority = $arguments['priority'] ?? 'medium';
 
-        $ticketId = $this->supportClient
+        $ticketId = $this->supportFacade
             ->createTicket($title, $description, $priority);
 
         return sprintf('Ticket created with ID: %s', $ticketId);
@@ -218,14 +218,14 @@ class CreateSupportTicketTool implements ToolPluginInterface
 
 ## Create tool sets
 
-Tool sets group related tools together. Create a tool set class that implements `ToolSetPluginInterface`:
+Tool sets group related tools together. Create a tool set class that implements `ToolSetPluginInterface`. Tool sets are Zed-layer plugins registered in the Zed `AiFoundationDependencyProvider`.
 
 ```php
 <?php
 
-namespace Pyz\Client\YourModule\Plugin\AiFoundation;
+namespace Pyz\Zed\YourModule\Communication\Plugin\AiFoundation;
 
-use Spryker\Client\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
+use Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface;
 
 class CustomerServiceToolSet implements ToolSetPluginInterface
 {
@@ -296,22 +296,22 @@ class OrderToolSet implements ToolSetPluginInterface
 
 ## Register tool sets
 
-Register tool sets in your `AiFoundationDependencyProvider`:
+Register tool sets in your Zed `AiFoundationDependencyProvider`:
 
 ```php
 <?php
 
-namespace Pyz\Client\AiFoundation;
+namespace Pyz\Zed\AiFoundation;
 
-use Pyz\Client\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
-use Pyz\Client\YourModule\Plugin\AiFoundation\ProductToolSet;
-use Pyz\Client\YourModule\Plugin\AiFoundation\OrderToolSet;
-use Spryker\Client\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\ProductToolSet;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\OrderToolSet;
+use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
 
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Tools\ToolSetPluginInterface>
      */
     protected function getAiToolSetPlugins(): array
     {
@@ -335,8 +335,8 @@ namespace Pyz\Zed\YourModule\Business\Assistant;
 
 use Generated\Shared\Transfer\PromptMessageTransfer;
 use Generated\Shared\Transfer\PromptRequestTransfer;
-use Pyz\Client\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
-use Pyz\Client\YourModule\Plugin\AiFoundation\OrderToolSet;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\OrderToolSet;
 use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class CustomerAssistant
@@ -369,6 +369,65 @@ class CustomerAssistant
 ```
 
 The AI model has access to all tools from all specified tool sets.
+
+### Example: Support ticket creation via AI
+
+Here is a complete example showing how the AI can automatically create support tickets using the CreateSupportTicketTool:
+
+```php
+<?php
+
+namespace Pyz\Zed\YourModule\Business;
+
+use Generated\Shared\Transfer\PromptMessageTransfer;
+use Generated\Shared\Transfer\PromptRequestTransfer;
+use Pyz\Zed\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
+
+class SupportTicketAssistant
+{
+    public function __construct(
+        protected AiFoundationFacadeInterface $aiFoundationFacade
+    ) {
+    }
+
+    public function processCustomerMessage(string $customerMessage): void
+    {
+        // Request AI to process the message with access to support tools
+        $promptRequest = (new PromptRequestTransfer())
+            ->setPromptMessage(
+                (new PromptMessageTransfer())->setContent($customerMessage)
+            )
+            ->addToolSetName(CustomerServiceToolSet::NAME) // Includes CreateSupportTicketTool
+            ->setMaxRetries(2);
+
+        $promptResponse = $this->aiFoundationFacade->prompt($promptRequest);
+
+        if ($promptResponse->getIsSuccessful() !== true) {
+            throw new Exception('Failed to process customer message');
+        }
+
+        // Check if the AI invoked the create support ticket tool
+        foreach ($promptResponse->getToolInvocations() as $toolInvocation) {
+            if ($toolInvocation->getName() === 'create_support_ticket') {
+                $ticketId = $toolInvocation->getResult();
+                echo sprintf('Support ticket created: %s', $ticketId);
+            }
+        }
+
+        // Send the AI response to the customer
+        $response = $promptResponse->getMessage()->getContent();
+        echo $response;
+    }
+}
+```
+
+In this example, when the customer sends a message like "I need to report a critical bug", the AI can:
+1. Understand the customer's intent
+2. Extract the ticket title, description, and priority
+3. Invoke the `create_support_ticket` tool through the facade
+4. Receive the ticket ID from the tool result
+5. Incorporate the ticket information into its response to the customer
 
 ## Handle tool call results
 

@@ -17,7 +17,7 @@ This document describes how to create and use AI tools with the AiFoundation mod
 
 AI tool support enables large language models to call custom functions during conversations. Instead of only generating text, AI models can invoke your application's functionality, retrieve data, perform calculations, or trigger business logic. This creates more powerful and interactive AI-powered features.
 
-The AI model decides when to call tools based on the conversation context, executes them with appropriate arguments, receives the results, and incorporates them into its response. The AiFoundation module handles the complete tool execution flow automatically.
+The AI model decides when to call tools based on the conversation context. The Zed facade executes tools with appropriate arguments, receives the results, and incorporates them into the response. The AiFoundation module handles the complete tool execution flow automatically.
 
 ## Prerequisites
 
@@ -337,12 +337,12 @@ use Generated\Shared\Transfer\PromptMessageTransfer;
 use Generated\Shared\Transfer\PromptRequestTransfer;
 use Pyz\Client\YourModule\Plugin\AiFoundation\CustomerServiceToolSet;
 use Pyz\Client\YourModule\Plugin\AiFoundation\OrderToolSet;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class CustomerAssistant
 {
     public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
+        protected AiFoundationFacadeInterface $aiFoundationFacade
     ) {
     }
 
@@ -357,7 +357,7 @@ class CustomerAssistant
             ->addToolSetName(OrderToolSet::NAME)
             ->setMaxRetries(2);
 
-        $promptResponse = $this->aiFoundationClient->prompt($promptRequest);
+        $promptResponse = $this->aiFoundationFacade->prompt($promptRequest);
 
         if ($promptResponse->getIsSuccessful() !== true) {
             return 'I apologize, but I encountered an error processing your request.';
@@ -375,7 +375,7 @@ The AI model has access to all tools from all specified tool sets.
 Tool calls are automatically executed and their results are included in the response:
 
 ```php
-$promptResponse = $this->aiFoundationClient->prompt($promptRequest);
+$promptResponse = $this->aiFoundationFacade->prompt($promptRequest);
 
 if ($promptResponse->getIsSuccessful() === true) {
     // Get the final AI response

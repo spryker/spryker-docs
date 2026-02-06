@@ -19,7 +19,7 @@ This document describes how to use structured responses with the AiFoundation mo
 
 Structured responses enable AI providers to return data in a predefined schema defined by Spryker Transfer objects. Instead of receiving free-form text, you can request the AI to return data that matches your Transfer object structure, making it easier to integrate AI responses directly into your application workflows and business logic.
 
-The AI provider validates the response against your Transfer schema and automatically maps the data to your Transfer object, ensuring type safety and data integrity.
+The Zed facade handles structured response validation and automatically maps the data to your Transfer object, ensuring type safety and data integrity. The client provides a simple interface to request structured responses, delegating all processing to the Zed backend.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Extract structured product information from unstructured descriptions:
 ```php
 // Request AI to extract product attributes
 $productDataTransfer = new ProductDataTransfer();
-$response = $aiFoundationClient->prompt(
+$response = $this->aiFoundationFacade->prompt(
     (new PromptRequestTransfer())
         ->setPromptMessage(
             (new PromptMessageTransfer())->setContent($rawProductDescription)
@@ -65,7 +65,7 @@ Classify customer inquiries into predefined categories:
 ```php
 // Request AI to categorize customer message
 $categoryTransfer = new CustomerIntentTransfer();
-$response = $aiFoundationClient->prompt(
+$response = $this->aiFoundationFacade->prompt(
     (new PromptRequestTransfer())
         ->setPromptMessage(
             (new PromptMessageTransfer())->setContent($customerMessage)
@@ -86,7 +86,7 @@ Generate content with structured metadata:
 ```php
 // Request AI to generate content with SEO metadata
 $contentTransfer = new ContentWithMetadataTransfer();
-$response = $aiFoundationClient->prompt(
+$response = $this->aiFoundationFacade->prompt(
     (new PromptRequestTransfer())
         ->setPromptMessage(
             (new PromptMessageTransfer())->setContent('Write a product description for ' . $productName)
@@ -153,12 +153,12 @@ namespace Pyz\Zed\YourModule\Business\Analyzer;
 use Generated\Shared\Transfer\ProductAnalysisTransfer;
 use Generated\Shared\Transfer\PromptMessageTransfer;
 use Generated\Shared\Transfer\PromptRequestTransfer;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class ProductAnalyzer
 {
     public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
+        protected AiFoundationFacadeInterface $aiFoundationFacade
     ) {
     }
 
@@ -174,7 +174,7 @@ class ProductAnalyzer
             ->setStructuredMessage(new ProductAnalysisTransfer())
             ->setMaxRetries(2);
 
-        $promptResponse = $this->aiFoundationClient->prompt($promptRequest);
+        $promptResponse = $this->aiFoundationFacade->prompt($promptRequest);
 
         if ($promptResponse->getIsSuccessful() !== true) {
             // Handle errors
@@ -199,7 +199,7 @@ The AI Foundation validates and maps the response to your Transfer object automa
 When `PromptResponseTransfer.isSuccessful` is `true`, the structured response is available:
 
 ```php
-$promptResponse = $this->aiFoundationClient->prompt($promptRequest);
+$promptResponse = $this->aiFoundationFacade->prompt($promptRequest);
 
 if ($promptResponse->getIsSuccessful() === true) {
     /** @var \Generated\Shared\Transfer\ProductAnalysisTransfer $analysis */
@@ -230,7 +230,7 @@ $promptRequest = (new PromptRequestTransfer())
     ->setMaxRetries(3); // Retry up to 3 times on failure
 ```
 
-The client automatically retries failed requests up to `maxRetries` times before returning with `isSuccessful = false`.
+The facade automatically retries failed requests up to `maxRetries` times before returning with `isSuccessful = false`.
 
 ## Transfer object property types
 

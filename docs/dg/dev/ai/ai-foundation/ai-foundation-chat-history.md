@@ -15,16 +15,18 @@ related:
 
 This document describes how to use chat history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.
 
+Chat history is persisted in the database using the `spy_ai_chat_history` table, ensuring conversations are stored durably and can be retrieved at any time.
+
 ## Overview
 
 Chat history enables you to maintain persistent conversation context across multiple interactions. Instead of sending isolated prompts, you can build conversational experiences where the AI remembers previous messages and maintains state throughout an extended dialogue.
 
-The chat history feature uses Redis-backed storage to automatically persist all messages in a conversation. When you include a conversation ID in your prompt request, all exchanges are stored and automatically included in subsequent requests to maintain context.
+The chat history feature automatically persists all messages in a conversation to the database. When you include a conversation ID in your prompt request, all exchanges are stored in the `spy_ai_chat_history` table and automatically included in subsequent requests to maintain context.
 
 ## Prerequisites
 
 - AiFoundation module installed and configured. For details, see [AiFoundation module Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html).
-- Redis service configured and running in your Spryker application
+- Database configured and migrated to include the `spy_ai_chat_history` table
 
 ## Key concepts
 
@@ -34,7 +36,7 @@ A unique identifier for a conversation. All messages in a conversation are store
 
 ### Chat history timeout
 
-Messages are automatically removed from Redis after a configurable timeout period. Default is 12 hours (43200 seconds).
+Messages expire after a configurable timeout period. Default is 12 hours (43200 seconds). Expired conversations are automatically pruned from the database.
 
 ### Context window
 
@@ -103,12 +105,12 @@ namespace Pyz\Zed\YourModule\Business;
 
 use Generated\Shared\Transfer\PromptMessageTransfer;
 use Generated\Shared\Transfer\PromptRequestTransfer;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class CustomerSupportAssistant
 {
     public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
+        protected AiFoundationFacadeInterface $aiFoundationFacade
     ) {
     }
 
@@ -122,7 +124,7 @@ class CustomerSupportAssistant
             );
 
         // The AI automatically has access to conversation history
-        $response = $this->aiFoundationClient->prompt($promptRequest);
+        $response = $this->aiFoundationFacade->prompt($promptRequest);
 
         if ($response->getIsSuccessful() === true) {
             return $response->getMessage()->getContent();
@@ -140,14 +142,16 @@ Access the complete conversation history at any time:
 ```php
 <?php
 
+namespace Pyz\Zed\YourModule\Business;
+
 use Generated\Shared\Transfer\ConversationHistoryCriteriaTransfer;
 use Generated\Shared\Transfer\ConversationHistoryConditionsTransfer;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class ConversationManager
 {
     public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
+        protected AiFoundationFacadeInterface $aiFoundationFacade
     ) {
     }
 
@@ -159,7 +163,7 @@ class ConversationManager
                     ->setConversationIds([$conversationId])
             );
 
-        $conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
+        $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
         $conversationHistories = $conversationHistoryCollectionTransfer->getConversationHistories();
 
         if ($conversationHistories->count() === 0) {
@@ -188,7 +192,7 @@ class ConversationManager
                     ->setConversationIds($conversationIds)
             );
 
-        $conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
+        $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
         $conversationHistories = $conversationHistoryCollectionTransfer->getConversationHistories();
 
         $result = [];
@@ -212,7 +216,7 @@ class ConversationManager
 
 ## API reference
 
-### AiFoundationClient
+### AiFoundationFacade
 
 #### prompt()
 
@@ -302,17 +306,16 @@ $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer(
             ->setConversationIds($userAuthorizedConversationIds) // Only user's conversations
     );
 
-$conversationHistoryCollectionTransfer = $this->aiFoundationClient->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
+$conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
 ```
 
 ## Limitations
 
-- Chat history is stored in Redis and requires Redis to be running
-- Messages are subject to the configured timeout and are automatically deleted
+- Chat history is stored in the database and requires the `spy_ai_chat_history` table to be present
+- Messages are subject to the configured timeout and are automatically pruned from the database
 - Very large conversations may approach the context window limit, requiring new conversation IDs
-- Chat history is not encrypted at rest in Redis; use standard Redis security practices
 - Tool invocations and results are included in history and count toward context window
 
 ## Debugging
 
-![Chat History in Redis Gui](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/redis-chat-history.png)
+Chat history messages are persisted in the `spy_ai_chat_history` database table. You can query the database directly to inspect stored conversations and messages for debugging purposes.

@@ -191,7 +191,7 @@ To run Ollama as a service within the Spryker Docker SDK:
                - public
    ```
 
-2. Reference the Ollama compose file in your current deploy file, i.e. `deploy.dev.yml`, under the `docker` section:
+2. Reference the Ollama compose file in your current deploy file, for example `deploy.dev.yml`, under the `docker` section:
 
    ```yaml
    docker:

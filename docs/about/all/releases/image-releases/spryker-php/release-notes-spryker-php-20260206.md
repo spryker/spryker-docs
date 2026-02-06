@@ -15,7 +15,6 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 ### Improvements
 
 - Added support for Alpine 3.23
-- Changed the default base image to Alpine 3.20
 - Upgraded Composer to 2.9.3
 - Upgraded Tideways to 5.32.0
 - Upgraded NewRelic to the latest

@@ -9,7 +9,7 @@ redirect_from:
 
 This document describes the information you need to provide for an environment to be provisioned.
 
-To initiate the environment provisioning, you need to create a support portal case. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through your Customer Success Manager.
+To initiate the environment provisioning, you need to create a case for each environment you are entitled to at the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the Spryker Support Portal yet, request it through your Spryker Customer Success Manager.
 Once you are logged in to the Spryker Support Portal, you can submit an [Infrastructure Change Request/Access Management Case](https://support.spryker.com/s/case-funnel-problem) selecting that you want to "Create a new Environment".
 
 The following sections outline the information you need to provide to initiate provisioning of your environment.

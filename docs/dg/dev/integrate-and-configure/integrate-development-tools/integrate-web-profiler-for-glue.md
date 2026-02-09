@@ -1,7 +1,7 @@
 ---
 title: Integrate Web Profiler for Glue
 description: This guide describes how to integrate and use the Web Profiler available in Glue applications for development purposes.
-last_updated: Dec 6, 2024
+last_updated: Jan 6, 2026
 template: howto-guide-template
 related:
   - title: Integrate Web Profiler for Zed

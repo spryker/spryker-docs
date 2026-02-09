@@ -12,7 +12,6 @@ related:
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
-
 This document provides an overview of our conventions and guidelines. The technology landscape is ever-evolving, so this document is subject to continuous refinement and improvement.
 
 Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker. We encourage you to contribute your insights and recommendations by submitting changes through our designated channels.
@@ -27,7 +26,7 @@ Understanding the development scenarios in which Spryker can be used is crucial 
 
 - *Project development*: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
 - *Module development*: Contributing reusable third-party modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
-- *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines in the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, or Unified Commerce. These rules also ensure the stability of the module API used by Spryker development ecosystem and community.
+- *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines in the Spryker Framework. These requirements are the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, or Unified Commerce. These rules also ensure the stability of the module API used by Spryker development ecosystem and community.
 
 ### Directive classification
 
@@ -48,7 +47,7 @@ Spryker organizes responsibilities and functionalities over a set of [applicatio
 The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
 
 | APPLICATION LAYER | LAYERING | LAYER |
-|-|-|
+|-|-|-|
 | Glue |  flat-layered | Communication layer |
 | Client |  flat-layered | Communication layer |
 | Service |  flat-layered | Overarching Business layer |
@@ -333,7 +332,7 @@ Used components:
 
 The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
-A service primarily consists of reusable lightweight stateless business logic components. Because of its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+A service primarily consists of reusable lightweight stateless business logic components. You are not allowed to access any external data sources, and have to rely only on the data that is passed to the called method.
 
 ```text
 [Organization]
@@ -857,7 +856,7 @@ No general conventions.
 - The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.
 - `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.
 - `Entity manager` methods need to return `void` or the saved object or objects as [Transfer Objects](#transfer-object).
--`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
+  -`Entity manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage isn't feasible.
 
 </details>
 
@@ -1550,8 +1549,8 @@ The schema file defines the module's tables and columns. Schema files are organi
     <table name="spy_configurable_bundle_template">
         <column name="id_configurable_bundle_template" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
         <column name="uuid" required="false" type="VARCHAR" size="255" description="The UUID of the product bundle template for external reference."/>
-        <column name="name" required="true" type="VARCHAR" size="255" descrption="The display name of the product bundle template."/>
-        <column name="is_active" required="true" default="false" type="BOOLEAN" description="A boolean flag indicating if the product bundle template can be used or not./>
+        <column name="name" required="true" type="VARCHAR" size="255" description="The display name of the product bundle template."/>
+        <column name="is_active" required="true" default="false" type="BOOLEAN" description="A boolean flag indicating if the product bundle template can be used or not."/>
 
         <unique name="spy_configurable_bundle_template-uuid">
             <unique-column name="uuid"/>
@@ -1813,7 +1812,7 @@ Further reading [Document Glue API resources](/docs/dg/dev/glue-api/latest/glue-
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="spryker:transfer-01" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-
+    
     <transfer name="ConfigurableBundleTemplate">
         <property name="idConfigurableBundleTemplate" type="int"/>
         <property name="uuid" type="string"/>

@@ -1,8 +1,8 @@
 ---
-title: Chat History
-description: Persist and manage multi-turn conversations with chat history using Redis storage
-last_updated: Jan 20, 2026
-keywords: foundation, ai, chat history, conversation, context, redis, multi-turn, dialogue
+title: Conversation History
+description: Persist and manage multi-turn conversations with conversation history using database storage
+last_updated: Feb 9, 2026
+keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue
 template: howto-guide-template
 related:
   - title: AiFoundation module Overview
@@ -13,34 +13,34 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
 ---
 
-This document describes how to use chat history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.
+This document describes how to use conversation history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.
 
-Chat history is persisted in the database using the `spy_ai_chat_history` table, ensuring conversations are stored durably and can be retrieved at any time.
+Conversation history is persisted in the database using the `spy_ai_conversation_history` table, ensuring conversations are stored durably and can be retrieved at any time.
 
 ## Overview
 
-Chat history enables you to maintain persistent conversation context across multiple interactions. Instead of sending isolated prompts, you can build conversational experiences where the AI remembers previous messages and maintains state throughout an extended dialogue.
+Conversation history enables you to maintain persistent conversation context across multiple interactions. Instead of sending isolated prompts, you can build conversational experiences where the AI remembers previous messages and maintains state throughout an extended dialogue.
 
-The chat history feature automatically persists all messages in a conversation to the database. When you include a conversation ID in your prompt request, all exchanges are stored in the `spy_ai_chat_history` table and automatically included in subsequent requests to maintain context.
+The conversation history feature automatically persists all messages in a conversation to the database. When you include a conversation reference in your prompt request, all exchanges are stored in the `spy_ai_conversation_history` table and automatically included in subsequent requests to maintain context.
 
 ## Prerequisites
 
 - AiFoundation module installed and configured. For details, see [AiFoundation module Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html).
-- Database configured and migrated to include the `spy_ai_chat_history` table
+- Database configured and migrated to include the `spy_ai_conversation_history` table
 
 ## Key concepts
 
-### Conversation ID
+### Conversation Reference
 
-A unique identifier for a conversation. All messages in a conversation are stored together under this ID. You can use any string as a conversation ID, such as a customer ID, session ID, or custom identifier.
+A unique identifier for a conversation. All messages in a conversation are stored together under this reference. You can use any string as a conversation reference, such as a customer ID, session ID, or custom identifier.
 
 ### Context window
 
 The maximum number of tokens that can be stored in a conversation. Default is 50000 tokens. When a conversation exceeds this limit, the oldest messages are automatically pruned to maintain the window size.
 
-## Configure chat history
+## Configure conversation history
 
-Configure the context window for chat history in your AI configuration.
+Configure the context window for conversation history in your AI configuration.
 
 ### Default configuration
 
@@ -51,7 +51,7 @@ Update your `config/Shared/config_ai.php`:
 
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-$config[AiFoundationConstants::CHAT_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
+$config[AiFoundationConstants::CONVERSAION_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
 ```
 
 ### Per-AI-configuration settings
@@ -78,7 +78,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
 ];
 ```
 
-Per-configuration settings take precedence over global defaults. If `conversation_history` is not specified for an AI configuration, it falls back to the global `CHAT_HISTORY_CONTEXT_WINDOW` value.
+Per-configuration settings take precedence over global defaults. If `conversation_history` is not specified for an AI configuration, it falls back to the global `CONVERSATION_HISTORY_CONTEXT_WINDOW` value.
 
 {% info_block infoBox "Best practice" %}
 
@@ -86,11 +86,11 @@ Adjust context window based on expected conversation length and token limits of 
 
 {% endinfo_block %}
 
-## Use chat history in conversations
+## Use conversation history in conversations
 
 ### Basic multi-turn conversation
 
-To enable chat history, include a `conversationId` in your `PromptRequestTransfer`. All messages are automatically persisted and included in future requests:
+To enable conversation history, include a `conversationReference` in your `PromptRequestTransfer`. All messages are automatically persisted and included in future requests:
 
 ```php
 <?php
@@ -108,11 +108,11 @@ class CustomerSupportAssistant
     ) {
     }
 
-    public function respondToCustomer(string $conversationId, string $userMessage): string
+    public function respondToCustomer(string $conversationReference, string $userMessage): string
     {
-        // Create a new prompt request with conversation ID
+        // Create a new prompt request with conversation reference
         $promptRequest = (new PromptRequestTransfer())
-            ->setConversationId($conversationId) // Enable chat history
+            ->setConversationReference($conversationReference) // Enable conversation history
             ->setPromptMessage(
                 (new PromptMessageTransfer())->setContent($userMessage)
             );
@@ -149,12 +149,12 @@ class ConversationManager
     ) {
     }
 
-    public function getConversationMessages(string $conversationId): array
+    public function getConversationMessages(string $conversationReference): array
     {
         $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
             ->setConversationHistoryConditions(
                 (new ConversationHistoryConditionsTransfer())
-                    ->setConversationIds([$conversationId])
+                    ->setConversationReferences([$conversationReference])
             );
 
         $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
@@ -178,12 +178,12 @@ class ConversationManager
         return $formattedMessages;
     }
 
-    public function getMultipleConversations(array $conversationIds): array
+    public function getMultipleConversations(array $conversationReferences): array
     {
         $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
             ->setConversationHistoryConditions(
                 (new ConversationHistoryConditionsTransfer())
-                    ->setConversationIds($conversationIds)
+                    ->setConversationReferences($conversationReferences)
             );
 
         $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
@@ -191,8 +191,8 @@ class ConversationManager
 
         $result = [];
         foreach ($conversationHistories as $conversationHistory) {
-            $result[$conversationHistory->getConversationId()] = [
-                'conversation_id' => $conversationHistory->getConversationId(),
+            $result[$conversationHistory->getConversationReference()] = [
+                'conversation_reference' => $conversationHistory->getConversationReference(),
                 'message_count' => $conversationHistory->getMessages()->count(),
                 'messages' => array_map(function ($message) {
                     return [
@@ -214,7 +214,7 @@ class ConversationManager
 
 #### prompt()
 
-Sends a message in a conversation. If `conversationId` is provided, the message is stored in chat history and previous messages are automatically included in the AI's context.
+Sends a message in a conversation. If `conversationReference` is provided, the message is stored in conversation history and previous messages are automatically included in the AI's context.
 
 ```php
 /**
@@ -224,8 +224,8 @@ Sends a message in a conversation. If `conversationId` is provided, the message 
 public function prompt(PromptRequestTransfer $promptRequest): PromptResponseTransfer
 ```
 
-**PromptRequestTransfer properties for chat history:**
-- `conversationId` (string, optional): Enable chat history by providing a unique conversation identifier
+**PromptRequestTransfer properties for conversation history:**
+- `conversationReference` (string, optional): Enable conversation history by providing a unique conversation identifier
 - `aiConfigurationName` (string, optional): Configuration name to use, defaults to `AI_CONFIGURATION_DEFAULT`
 - `promptMessage` (PromptMessageTransfer, required): The message to send
 - `maxRetries` (int, optional): Number of retry attempts on failure
@@ -246,12 +246,12 @@ public function getConversationHistoryCollection(
 
 **ConversationHistoryCriteriaTransfer properties:**
 - `conversationHistoryConditions` (ConversationHistoryConditionsTransfer): Filter conditions for the query
-  - `conversationIds` (string[]): List of conversation IDs to retrieve (IN operation). If empty, returns empty collection.
+  - `conversationReferences` (string[]): List of conversation references to retrieve (IN operation). If empty, returns empty collection.
 
 **Returns:** ConversationHistoryCollectionTransfer containing:
 - `conversationHistories` (ConversationHistoryTransfer[]): Array of conversation histories matching the criteria
   - Each ConversationHistoryTransfer contains:
-    - `conversationId` (string): The conversation identifier
+    - `conversationReference` (string): The conversation reference
     - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, and attachments
 
 ## Message types
@@ -263,21 +263,21 @@ Messages stored in conversation history have different types:
 - `tool_call` - A tool invocation initiated by the AI
 - `tool_result` - Result of a tool execution
 
-Tool-related types are only present when using [AI tools](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html) with chat history.
+Tool-related types are only present when using [AI tools](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html) with conversation history.
 
 ## Best practices
 
-### 1. Use meaningful conversation IDs
+### 1. Use meaningful conversation references
 
-Choose conversation IDs that align with your business logic:
+Choose conversation references that align with your business logic:
 
 ```php
 // Good: Clear relationship to entity
-$conversationId = "customer_chat_{$customerId}_{$timestamp}";
-$conversationId = "support_ticket_{$ticketId}";
+$conversationReference = "customer_conversation_{$customerId}_{$timestamp}";
+$conversationReference = "support_ticket_{$ticketId}";
 
 // Avoid: Generic IDs that are hard to track
-$conversationId = "conv_123";
+$conversationReference = "conv_123";
 ```
 
 ### 2. Manage conversation cleanup
@@ -290,13 +290,13 @@ Monitor context window usage. If approaching limits, start a new conversation.
 
 ### 4. Secure conversation access
 
-Validate that users can only access their own conversations by filtering conversation IDs based on user permissions:
+Validate that users can only access their own conversations by filtering conversation references based on user permissions:
 
 ```php
 $conversationHistoryCriteriaTransfer = (new ConversationHistoryCriteriaTransfer())
     ->setConversationHistoryConditions(
         (new ConversationHistoryConditionsTransfer())
-            ->setConversationIds($userAuthorizedConversationIds) // Only user's conversations
+            ->setConversationReferences($userAuthorizedConversationReferences) // Only user's conversations
     );
 
 $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversationHistoryCollection($conversationHistoryCriteriaTransfer);
@@ -304,11 +304,11 @@ $conversationHistoryCollectionTransfer = $this->aiFoundationFacade->getConversat
 
 ## Limitations
 
-- Chat history is stored in the database and requires the `spy_ai_chat_history` table to be present
+- Conversation history is stored in the database and requires the `spy_ai_conversation_history` table to be present
 - Conversations persist indefinitely in the database; implement your own cleanup strategy if needed
-- Very large conversations may approach the context window limit, requiring new conversation IDs
+- Very large conversations may approach the context window limit, requiring new conversation references
 - Tool invocations and results are included in history and count toward context window
 
 ## Debugging
 
-Chat history messages are persisted in the `spy_ai_chat_history` database table. You can query the database directly to inspect stored conversations and messages for debugging purposes.
+Conversation history messages are persisted in the `spy_ai_conversation_history` database table. You can query the database directly to inspect stored conversations and messages for debugging purposes.

@@ -1,5 +1,5 @@
 ---
-title: Cypress testing
+title: E2E Testing with Cypress
 description: Learn how to use Cypress for end-to-end testing in Spryker projects.
 last_updated: Feb 10, 2026
 template: concept-topic-template
@@ -23,6 +23,10 @@ The boilerplate includes:
 - Example test cases and patterns
 - Documentation and best practices
 - Integration guides
+
+The boilerplate does NOT include:
+- Complete test coverage - you should add and adjust example tests to fit your project
+- Correct locators - the locators in the boilerplace are based on Spryker demo shops, adjust the locators in accordance with your project
 
 ## Resources
 

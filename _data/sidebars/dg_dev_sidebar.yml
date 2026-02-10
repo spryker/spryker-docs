@@ -1467,6 +1467,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
       - title: Running tests with Robot Framework
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
+      - title: Cypress testing
+        url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

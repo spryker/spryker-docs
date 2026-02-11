@@ -29,11 +29,11 @@ Client browser ──► CDN (Akamai/Cloudflare/...) ──► Load Balancer (AL
 1. The **client browser** sends a request with `Accept-Encoding: gzip, deflate, br`, indicating supported compression encodings.
 2. The **CDN** terminates the client connection and makes an *origin pull* request to the load balancer. The `Accept-Encoding` header the CDN sends on origin pulls depends on the CDN configuration and may differ from the client's original header.
 3. The **load balancer** (AWS ALB/NLB) passes the request through to the frontend container. Load balancers do not compress responses.
-4. The **Frontend (Nginx)** container either serves a static asset or proxies the request to an application container (Yves, Zed, Glue, or others) through FastCGI. Based on the `Accept-Encoding` header received, the frontend container compresses the response before sending it back.
+4. The **Frontend (Nginx)** container either serves a static asset or proxies the request to an application container (Yves, Zed, Glue, or others) through FastCGI. Based on the `Accept-Encoding` header received, the Frontend container compresses the response before sending it back.
 
 {% info_block warningBox "The frontend container is the compression point" %}
 
-The frontend (Nginx) container configured through the `assets:` section in the deploy file is responsible for compressing both static assets and dynamic application responses. This is the only compression point within the Spryker infrastructure. Load balancers (AWS ALB/NLB) do not compress responses. If the frontend container does not compress, all responses leave the infrastructure uncompressed, increasing data transfer volume over the public network between the origin and the CDN.
+The frontend (Nginx) container configured through the `assets:` section in the deploy file is responsible for compressing both static assets and dynamic application responses. This is the only compression point within the Spryker infrastructure. Load balancers (AWS ALB/NLB) do not compress responses. If the frontend container is not configured to allow compression, all responses leave the infrastructure uncompressed even if client (browser or CDN) supports compression, increasing data transfer volume over the public network between the origin and the CDN.
 
 {% endinfo_block %}
 
@@ -148,7 +148,7 @@ To verify that the Spryker frontend container compresses responses correctly, se
 **Test Brotli compression:**
 
 ```bash
-curl -s -o /dev/null -w "Size: %{size_download} bytes\nContent-Encoding: " \
+curl -s -o /dev/null \
   -H "Accept-Encoding: br" \
   -H "Host: www.your-shop.com" \
   -D - https://your-alb-endpoint.region.elb.amazonaws.com/your-page | grep -i content-encoding

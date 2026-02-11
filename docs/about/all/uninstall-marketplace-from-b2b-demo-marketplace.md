@@ -19,7 +19,7 @@ Demo Shop.
 The B2B Demo Marketplace comes with all marketplace-specific features pre-installed, including the Merchant Portal,
 marketplace product management, and merchant-related functionality. If you want to use the B2B Demo Marketplace as a
 starting point for a standard B2B project without marketplace features, you can use the provided uninstallation scripts
-to remove all marketplace-specific components.
+to remove all marketplace-specific features.
 
 The uninstallation process consists of two main scripts:
 
@@ -32,7 +32,7 @@ The uninstallation process consists of two main scripts:
 
 Before you begin the uninstallation process, make sure you have the following:
 
-- A working B2B Demo Marketplace installation based
+- A latest working version of B2B Demo Marketplace installation based:
   on [https://github.com/spryker-shop/b2b-demo-marketplace](https://github.com/spryker-shop/b2b-demo-marketplace)
 - Docker SDK installed and configured
 - Python 3 installed on your system
@@ -64,7 +64,7 @@ chmod +x uninstall-frontend-marketplace.sh
 
 ### 3. Run the backend uninstallation script
 
-Execute the backend uninstallation script to remove all marketplace-specific backend components:
+Execute the backend uninstallation script to remove all marketplace-specific backend features:
 
 ```bash
 ./uninstall-marketplace-modules.sh
@@ -128,9 +128,25 @@ To verify that the marketplace features have been successfully removed:
 3. Check that no marketplace-related errors appear in the application logs
 4. Test the B2B storefront functionality to ensure it works correctly
 
+### 7. Remove the uninstallation scripts
+
+After successfully uninstalling the marketplace features, remove the uninstallation scripts from your project:
+
+```bash
+rm uninstall-marketplace-modules.sh
+rm uninstall-marketplace-config.json
+rm uninstall-frontend-marketplace.sh
+```
+
+{% info_block warningBox "Security recommendation" %}
+
+Always remove the uninstallation scripts after completing the uninstallation process. These scripts should never be deployed to production environments, as they can make destructive changes to your codebase and configuration.
+
+{% endinfo_block %}
+
 ## What gets removed
 
-The uninstallation scripts remove the following components:
+The uninstallation scripts remove the following features:
 
 <details>
 <summary>Marketplace features removed</summary>
@@ -239,7 +255,7 @@ docker/sdk cli console transfer:generate
 3. Run a full rebuild:
 
 ```bash
-docker/sdk clean && docker/sdk boot deploy.dev.yml && docker/sdk up
+docker/sdk prune && docker/sdk boot deploy.dev.yml && docker/sdk up
 ```
 
 ### Database errors after uninstallation

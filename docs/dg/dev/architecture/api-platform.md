@@ -30,11 +30,9 @@ API Platform is a framework for building modern APIs based on web standards and 
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
 
-{% info_block warningBox "CodeBucket support" %}
+{% info_block infoBox "CodeBucket support" %}
 
-Currently, the API-Platform integration does not support code buckets. When defining resources, use only the Core and Project layers.
-
-Code bucket support is planned for future releases.
+API Platform supports CodeBuckets for multi-tenancy scenarios. You can create CodeBucket-specific resource variants with specialized properties and validation rules. For details, see [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 {% endinfo_block %}
 
@@ -418,7 +416,8 @@ includes:
 ```
 
 Request:
-```MARKDOWN
+
+```markdown
 GET /customers/customer--35?include=addresses
 ```
 

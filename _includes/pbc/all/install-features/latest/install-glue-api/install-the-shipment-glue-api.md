@@ -9,11 +9,11 @@ Install the required features:
 
 | FEATURE                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                  |
 |----------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core     | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                             |
-| Shipment                   | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                 |
-| Glue API: Checkout         | 202507.0 | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                    |
-| Glue API: Glue Application | 202507.0 | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
-| Glue API: Order Management | 202507.0 | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
+| Glue API: Spryker Core     | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                             |
+| Shipment                   | {{site.versionid}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                 |
+| Glue API: Checkout         | {{site.versionid}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                    |
+| Glue API: Glue Application | {{site.versionid}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
+| Glue API: Order Management | {{site.versionid}} | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
 ## 1) Install the required modules
 

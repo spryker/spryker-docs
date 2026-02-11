@@ -8,10 +8,10 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
-| Customer Account Management | 202507.0 |
-| ProductImage | 202507.0 |
-| ProductsRestApi | 202507.0 |
+| Spryker Core | {{site.versionid}} |
+| Customer Account Management | {{site.versionid}} |
+| ProductImage | {{site.versionid}} |
+| ProductsRestApi | {{site.versionid}} |
 
 ## 1) Install the required modules
 

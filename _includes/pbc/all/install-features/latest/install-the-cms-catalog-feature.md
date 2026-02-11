@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | 202507.0 |
-| Cms | 202507.0 |
+| Catalog | {{site.versionid}} |
+| Cms | {{site.versionid}} |
 
 ### 1) Set up behavior
 
@@ -197,8 +197,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Catalog | 202507.0 |
-| Cms | 202507.0 |
+| Catalog | {{site.versionid}} |
+| Cms | {{site.versionid}} |
 
 ### 1) Install the required modules
 

@@ -75,8 +75,8 @@ GET /customers/customer--35?include=addresses,orders
 Declares what relationships this resource can include.
 
 **Required properties:**
-- `relationshipName`: Name used in `?include=` parameter (e.g., `addresses`)
-- `targetResource`: Name of the resource to include (e.g., `CustomersAddresses`)
+- `relationshipName`: Name used in `?include=` parameter (for example, `addresses`)
+- `targetResource`: Name of the resource to include (for example, `CustomersAddresses`)
 
 **Optional properties:**
 - `uriVariableMappings`: Maps properties from parent to child provider URI variables

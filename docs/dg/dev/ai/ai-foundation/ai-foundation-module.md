@@ -16,7 +16,7 @@ This document describes how to integrate and use the AiFoundation module to inte
 
 ## Install the AiFoundation module
 
-1. Require the package:
+1. Access the CLI using `docker/sdk cli`, then require the package:
 
    ```bash
    composer require spryker/ai-foundation
@@ -192,11 +192,12 @@ To run Ollama as a service within the Spryker Docker SDK:
                - public
    ```
 
-2. Reference the Ollama compose file in your `deploy.dev.yml`:
+2. Reference the Ollama compose file in your current deploy file, for example `deploy.dev.yml`, under the `docker` section:
 
    ```yaml
-   compose:
-       yamls: ['./ollama.yml']
+   docker:
+       compose:
+           yamls: ['./ollama.yml']
    ```
 
 3. Update your AI configuration to use the Ollama service URL:
@@ -220,8 +221,11 @@ To run Ollama as a service within the Spryker Docker SDK:
 
 5. Pull the required Ollama model:
 
+   The container name is composed of the Docker deploy file namespace and the service name.
+   Example: `spryker_b2b_marketplace_ollama_1`
+
    ```bash
-   docker/sdk cli exec -c ollama ollama pull llama3.2
+   docker exec spryker_b2b_marketplace_ollama_1 ollama pull llama3.2
    ```
 
 The Ollama data is stored in the `./data/tmp/ollama_data` directory, which you should exclude from version control (.gitignore or .dockerignore).
@@ -305,6 +309,27 @@ The Ollama data is stored in the `./data/tmp/ollama_data` directory, which you s
     ],
 ],
 ```
+
+{% info_block infoBox "Local override of LLM settings" %}
+
+To set up your local development settings and override the API key of your chosen provider:
+
+Copy your provider's configuration into a git-ignored local configuration file, such as `config/Shared/config_local.php`, and define your modifications.
+
+Example:
+
+```php
+'gemini-config' => [
+    'provider_name' => AiFoundationConstants::PROVIDER_GEMINI,
+    'provider_config' => [
+        'key' => 'my-secret-key', // required
+        'model' => 'gemini-2.0-flash', // required
+        'parameters' => [], // optional
+    ],
+],
+```
+
+{% endinfo_block %}
 
 ## Use the AiFoundation client
 

@@ -171,7 +171,7 @@ The system validates relationships during code generation:
 
 **Example error:**
 
-```
+```text
 Validation Error in customers.resource.yml:
   - includes[0].targetResource: Resource "CustomersAddresses" declares
     includableIn for "Customers" but uses different relationshipName
@@ -181,11 +181,13 @@ Validation Error in customers.resource.yml:
 ## Response format
 
 **Request:**
-```
+
+```http
 GET /customers/customer--35?include=addresses
 ```
 
 **Response:**
+
 ```json
 {
   "data": {

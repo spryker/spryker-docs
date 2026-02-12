@@ -44,22 +44,30 @@ We recommend mapping your branches to environments as follows:
 
 ### Regular GitHub
 
-1. Log into the AWS management console of the environment you want to connect a repository to.
+#### Prerequisites
+
+To connect a GitHub repository via the GitHub App, ensure that the following requirements are met:
+
+- You have the **Owner** role for the GitHub repository or the organization.
+- If you do not have the Owner role, you can request the installation during the connection process, but an organization owner **must approve** the **AWS Connector for GitHub** app installation before the connection can be used.
+
+For detailed instructions and permission requirements, see [Create a connection to GitHub](https://docs.aws.amazon.com/dtconsole/latest/userguide/connections-create-github.html#connections-create-github-console) in the AWS documentation.
+
+#### Connect your GitHub repository
+
+1. Log in to the AWS Management Console for the environment to which you want to connect a repository.
 2. Go to **CodePipeline**.
-3. One the **Pipelines** page, select the pipeline you want to connect the repository to.
-4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.  
+3. On the **Pipelines** page, select the pipeline you want to connect the repository to.
+4. On the pipeline page, click **Edit** to open the pipeline editing page. 
 5. In the **Edit: Source** pane, click **Edit stage**.  
-6. In the **Spryker_App_Src** section, click the *Edit action* button.
-  This opens the **Edit action** window.
+6. In the **Spryker_App_Src** section, click **Edit action** to open the **Edit action** window.
 
-![edit-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-action.png)
+![Edit action dialog in AWS CodePipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/edit-action.png)
 
-7. For **Action provider**, select **GitHub(via GitHub App)**.
-This adds GitHub related fields to the window.
-8. For **Connection** choose an existing connection or click **Connect to GitHub** to create a new one and authorize AWS CodePipeline to access your GitHub repository.
+7. For **Action provider**, select **GitHub (via GitHub App)**. This adds GitHub-related fields to the window.
+8. For **Connection**, choose an existing connection or click **Connect to GitHub** to create a new one and authorize AWS CodePipeline to access your GitHub repository.
 
-![connection](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/connection.png)
+![GitHub connection selection in AWS CodePipeline](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/connect-a-code-repository.md/connection.png)
 
 9. For **Repository name**, enter and select the repository you want to connect.
 10. For **Branch name**, enter and select the branch you want to connect.

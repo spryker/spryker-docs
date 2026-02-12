@@ -1453,6 +1453,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+      - title: CDN and traffic management integration
+        url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
@@ -1469,6 +1471,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
       - title: Running tests with Robot Framework
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
+      - title: E2E Testing with Cypress
+        url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

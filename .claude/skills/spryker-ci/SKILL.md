@@ -9,7 +9,7 @@ Use this skill to systematically run continuous integration tools and fix errors
 
 ## Process
 
-1. **Run SprykerCI**: Execute `vale $(find docs/ _includes/pbc/ -type f -name "*.md" ! -path "*/202311.0/*" ! -path "*/202404.0/*") --minAlertLevel=error` and `npx markdownlint-cli2 "docs/**/*.md" "_includes/pbc/**/*.md" "#node_modules"`
+1. **Run SprykerCI**:
 
 2. **Results for issues**:
    When there is issue output:
@@ -45,6 +45,14 @@ Use this skill to systematically run continuous integration tools and fix errors
 11. Run SprykerCI again to verify success
 ```
 
+## Fix guidelines
+
+### Sidebar issues
+
+When there is a page missing in the sidebar the issues shows fileName.md to be missing. TO fix this use the same path to be added and replace `md` with `html`.
+
+To get the title read the file that was mentioned rto be missing and get the title from it.
+
 ## Commands
 
 Run Vale
@@ -55,5 +63,10 @@ vale $(find docs/ _includes/pbc/ -type f -name "*.md" ! -path "*/202311.0/*" ! -
 Run Markdown Linter
 ```bash
 npx markdownlint-cli2 "docs/**/*.md" "_includes/pbc/**/*.md" "#node_modules"
+```
+
+Run Sidebar checker
+```bash
+./_scripts/sidebar_checker/sidebar_checker.sh
 ```
 

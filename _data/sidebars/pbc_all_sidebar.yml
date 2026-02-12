@@ -4009,11 +4009,12 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-                  - title: Tutorials and HowTos
-                    nested:
-                      - title: "HowTo: Configure shipment types"
-                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
-
+              
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Configure shipment types"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
+                    
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

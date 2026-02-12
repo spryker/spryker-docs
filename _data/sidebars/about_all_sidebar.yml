@@ -142,6 +142,8 @@ entries:
         url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
       - title: Marketplace B2B Suite
         url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
+      - title: Uninstall Marketplace from B2B Demo Marketplace
+        url: /docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace.html
 
     - title: About the docs
       url: /docs/about/all/about-the-docs/about-spryker-docs.html

@@ -18,7 +18,10 @@ We recommend implementing one ERP Client for each ERP system.
 
 ## General approach
 
-The template provides a foundation with essential components already wired together, allowing you to focus on business logic implementation rather than application architecture.
+Template can be downloaded from the community package [ERP Integration](https://github.com/spryker-community/erp-integration).
+
+This template provides a foundation with essential components already wired together, allowing you to focus on business logic implementation rather than application architecture.
+It's not intended to be used as a composer dependency, thus composer.json file is not a part of this repository. It has no special requirements for packages, since it requires Guzzle, Kernel and Transfer modules, which are a part of every Spryker project.
 
 Overall the implementation process looks like this:
 1. Configure ERP connection.

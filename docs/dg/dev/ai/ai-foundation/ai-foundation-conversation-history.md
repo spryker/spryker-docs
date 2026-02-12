@@ -51,7 +51,7 @@ Update your `config/Shared/config_ai.php`:
 
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-$config[AiFoundationConstants::CONVERSAION_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
+$config[AiFoundationConstants::CONVERSATION_HISTORY_CONTEXT_WINDOW] = 50000; // tokens
 ```
 
 ### Per-AI-configuration settings

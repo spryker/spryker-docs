@@ -139,7 +139,6 @@ If the namespace is not registered, its entry points will be ignored during `npm
 
 1. Register the new namespace path in the builder configuration.
 
-
 ```js
 paths: {
     core: './vendor/spryker-shop',

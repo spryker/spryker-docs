@@ -5,7 +5,7 @@ last_updated: February 12, 2026
 template: feature-integration-guide-template
 related:
   - title: Product Availability Display feature overview
-    link: docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html
 ---
 
 This document describes how to install the Product Availability Display feature.

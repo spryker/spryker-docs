@@ -5,9 +5,9 @@ last_updated: February 12, 2026
 template: concept-topic-template
 related:
   - title: Install the Buy Box feature
-    link: /docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
+    link: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
   - title: Product Availability Display feature overview
-    link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html
 ---
 
 The Buy Box feature displays multiple merchant offers for the same product on product detail pages in marketplace scenarios. When multiple merchants sell the same product, the Buy Box shows all available merchant products and offers, letting customers compare prices and availability and select which merchant to purchase from.
@@ -60,14 +60,14 @@ When the Product Availability Display feature is installed, the Buy Box shows av
 
 *Expected screenshot: Buy Box showing multiple merchant offers where some display stock quantities (for example, "5 in stock") and others show "Out of stock", demonstrating how availability varies by merchant.*
 
-For details about availability display, see [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html).
+For details about availability display, see [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html).
 
 ## Configuration
 
 The Buy Box feature can be configured at the code level. Configuration options:
 - Sorting strategy: by price or by stock availability
 
-For configuration details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
+For configuration details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
 
 ## Use cases
 
@@ -87,4 +87,4 @@ Use the Buy Box feature when:
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html) |
+| [Install the Buy Box feature](/docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html) |

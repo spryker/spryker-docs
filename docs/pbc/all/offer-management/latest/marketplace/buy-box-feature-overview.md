@@ -16,9 +16,7 @@ The Buy Box feature displays multiple merchant offers for the same product on pr
 
 The Buy Box appears on product detail pages, presenting merchant offers in a structured list.
 
-![Buy Box showing multiple merchant offers](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-multiple-offers.png)
-
-*Expected screenshot: Buy Box section on product detail page showing 3-4 merchant offers. Each offer displays merchant name (as clickable link), price, radio button for selection, and availability status (if Product Availability Display feature is installed). Header reads "Sold by".*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-multiple-offers.png" alt="Buy Box showing multiple merchant offers" width="600">
 
 ### Merchant offer information
 
@@ -32,9 +30,7 @@ Each offer in the Buy Box displays:
 
 Customers select their preferred merchant using radio buttons. Only one merchant can be selected at a time. The selected merchant's offer is added to the cart when the customer adds the product.
 
-![Merchant selection in Buy Box](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-selection.png)
-
-*Expected screenshot: Same Buy Box view with one radio button visibly selected, highlighting the selection mechanism.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-selection.png" alt="Merchant selection in Buy Box" width="600">
 
 The first offer in the list is pre-selected by default. The pre-selected offer depends on the configured sorting strategy.
 
@@ -56,9 +52,7 @@ The sorting strategy determines which offer is pre-selected by default when cust
 
 When the Product Availability Display feature is installed, the Buy Box shows availability information for each merchant offer. This lets customers compare not just prices but also stock availability across merchants.
 
-![Buy Box with availability per merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-out-of-stock.png)
-
-*Expected screenshot: Buy Box showing multiple merchant offers where some display stock quantities (for example, "5 in stock") and others show "Out of stock", demonstrating how availability varies by merchant.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-out-of-stock.png" alt="Buy Box with availability per merchant" width="600">
 
 For details about availability display, see [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html).
 

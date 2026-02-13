@@ -24,9 +24,7 @@ The feature supports two display modes:
 
 Availability information appears on product detail pages for concrete products (specific product variants).
 
-![Product detail page showing stock quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-stock-quantity.png)
-
-*Expected screenshot: Product detail page showing "12 in stock" below the product price and above the add-to-cart button.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-stock-quantity.png" alt="Product detail page showing stock quantity" width="600">
 
 When a product has available inventory, the system displays the quantity. The format is "X in stock", for example "12 in stock" or "250 in stock".
 
@@ -34,17 +32,13 @@ When a product has available inventory, the system displays the quantity. The fo
 
 Products marked as never out of stock display "Available" without showing a quantity. These products remain available regardless of inventory levels.
 
-![Product showing available status](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-available.png)
-
-*Expected screenshot: Product detail page showing "Available" instead of a quantity.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-available.png" alt="Product showing available status" width="600">
 
 ### Out of stock
 
 When a product has zero available inventory and is not marked as never out of stock, the system displays "Out of stock".
 
-![Product showing out of stock](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-out-of-stock.png)
-
-*Expected screenshot: Product detail page showing "Out of stock" with add-to-cart button disabled or removed.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-out-of-stock.png" alt="Product showing out of stock" width="600">
 
 ### Dynamic updates with variant selection
 
@@ -54,9 +48,7 @@ When customers select different product variants (color, size, etc.), the availa
 
 Availability information appears for each line item in the shopping cart.
 
-![Shopping cart showing availability](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/cart-availability.png)
-
-*Expected screenshot: Shopping cart page with multiple items, each showing availability status like "12 in stock" or "Available" next to the product name or quantity.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/cart-availability.png" alt="Shopping cart showing availability" width="600">
 
 Each cart item displays its current availability status. If stock levels change between when a customer adds items to their cart and when they proceed to checkout, the cart display reflects the current availability.
 
@@ -66,9 +58,7 @@ The system validates stock availability during checkout. If requested quantity e
 
 When products have measurement units configured, availability displays with the unit.
 
-![Product with measurement unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/availability-with-units.png)
-
-*Expected screenshot: Product detail page showing "250 kg in stock" with the measurement unit clearly visible.*
+<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/availability-with-units.png" alt="Product with measurement unit" width="600">
 
 For example: "250 kg in stock" instead of "250 in stock". The measurement unit is appended to the quantity based on the product's configured base unit.
 

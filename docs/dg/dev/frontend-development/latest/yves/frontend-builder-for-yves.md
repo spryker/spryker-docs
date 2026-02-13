@@ -123,6 +123,68 @@ Also, modules with a specific suffix namespace have higher priority over the mod
 
 `/src/Pyz/Yves/**/ShopUiDE/**` has higher priority than `/src/Pyz/Yves**/ShopUi/**` and even `/vendor/spryker-shop/**/ShopUiDE/**` has higher priority than `/src/Pyz/Yves**/ShopUi/**`.
 
+## Extending builder paths (custom namespaces)
+
+### When is this required?
+
+You need to extend builder paths when:
+
+- A custom namespace is introduced (e.g., /PATH_TO_YOUR_FOLDER)
+- SCSS or JS files under /src/<Namespace>/Yves/**/* are not compiled
+- Component extensions are placed outside /src/Pyz
+
+If the namespace is not registered, its entry points will be ignored during `npm run yves`.
+
+### Extend frontend/settings.js
+
+1. Register the new namespace path in the builder configuration.
+
+
+```js
+paths: {
+    core: './vendor/spryker-shop',
+    eco: './vendor/spryker-eco',
+    project: './src/Pyz',
+    ....
+    newNamespace: './PATH_TO_YOUR_FOLDER',
+    ....
+},
+```
+
+2. Include it in all relevant dirs arrays responsible for entry discovery:
+
+```js
+dirs: [
+    join(globalSettings.context, paths.core),
+    join(globalSettings.context, paths.eco),
+    join(globalSettings.context, paths.project),
+    ...
+    join(globalSettings.context, paths.newNamespace),
+    ...
+],
+```
+
+3. Add the namespace to the componentStyles section:
+
+```js
+componentStyles: {
+    dirs: [
+        join(globalSettings.context, paths.core),
+        join(globalSettings.context, paths.eco),
+        join(globalSettings.context, paths.project),
+        join(globalSettings.context, paths.newNamespace),
+    ],
+}
+```
+
+### Order matters
+
+The order of directories in the dirs arrays directly affects override behavior.
+
+- Paths defined later in the array have higher priority.
+- SCSS and component styles loaded later will override styles from earlier paths (if selectors have the same specificity).
+
+
 ### Javascript
 
 Besides components, the part of the webpack build is `vendor.ts` and `app.ts` files.

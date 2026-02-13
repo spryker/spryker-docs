@@ -5,9 +5,9 @@ last_updated: February 12, 2026
 template: feature-integration-guide-template
 related:
   - title: Buy Box feature overview
-    link: /docs/pbc/all/offer-management/marketplace/buy-box-feature-overview.html
+    link: /docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview.html
   - title: Product Availability Display feature overview
-    link: /docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
 ---
 
 This document describes how to install the Buy Box feature for marketplace scenarios.

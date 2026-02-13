@@ -1,13 +1,15 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Nov 24, 2025
+last_updated: Feb 5, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: API Platform Configuration
     link: docs/dg/dev/architecture/api-platform/configuration.html
+  - title: Relationships
+    link: docs/dg/dev/architecture/api-platform/relationships.html
   - title: Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection.html
 ---
@@ -28,11 +30,9 @@ API Platform is a framework for building modern APIs based on web standards and 
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
 
-{% info_block warningBox "CodeBucket support" %}
+{% info_block infoBox "CodeBucket support" %}
 
-Currently, the API-Platform integration does not support code buckets. When defining resources, use only the Core and Project layers.
-
-Code bucket support is planned for future releases.
+API Platform supports CodeBuckets for multi-tenancy scenarios. You can create CodeBucket-specific resource variants with specialized properties and validation rules. For details, see [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 {% endinfo_block %}
 
@@ -402,6 +402,28 @@ operations:
 ```
 
 Each operation can have specific validation rules and security settings.
+
+### Relationships
+
+Include related resources via the `?include=` query parameter:
+
+```yaml
+includes:
+  - relationshipName: addresses
+    targetResource: CustomersAddresses
+    uriVariableMappings:
+      customerReference: customerReference
+```
+
+Request:
+
+```markdown
+GET /customers/customer--35?include=addresses
+```
+
+Response includes both the customer and related addresses in JSON:API format. No provider code changes required - relationships work automatically through decoration.
+
+For detailed information, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
 ## Performance
 

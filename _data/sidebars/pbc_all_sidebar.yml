@@ -818,6 +818,8 @@ entries:
 
               - title: Tutorials and HowTos
                 nested:
+                  - title: Convert a dropdown with many items to a searchable select combo box in the Back Office
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/searchable-select-combo-box.html
                   - title: Create a custom content item
                     url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
                   - title: Create a visibility condition for CMS Blocks
@@ -896,6 +898,10 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
                       - title: Customer Account Management + Promotions & Discounts feature
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature.html
+                      - title: Customer Account Management + Service Points feature
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html
+                      - title: Customer Account Management + Shipment feature
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html
 
                   - title: Install Glue API
                     nested:
@@ -1055,6 +1061,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company.csv.html
                   - title: customer.csv
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer.csv.html
+                  - title: Import file details - customer.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
 
           - title: Marketplace
             nested:
@@ -1807,8 +1815,7 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                   nested:
                     - title: Configure
-
-                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
+                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/configure-loggly.html
                 - title: Proclane
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality

@@ -163,48 +163,6 @@ class RedisConfig extends AbstractBundleConfig
 }
 ```
 
-After enabling compression, we recommend resaving storage data.
-
-The command to resave storage data is available starting from `spryker/storage-redis:1.7.0`. To enable the command for resaving storage data, add the following configuration:
-
-
-```php
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisDataReSaveConsole;
-
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Symfony\Component\Console\Command\Command>
-     */
-    protected function getConsoleCommands(Container $container): array
-    {
-        $commands = [
-            //....
-            new StorageRedisDataReSaveConsole(),
-            //....
-        ];
-    }
-}
-```
-
-To resave storage data, run the command:
-
-```bash
-SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
-```
-
-If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:
-
-```bash
-SPRYKER_REDIS_IS_DEV_MODE=0 php -dnewrelic.enabled=false console storage:redis:re-save
-```
-
-With separate storage databases per store, execute the command for each store individually.
-
 ## Storage GUI installation
 
 The storage GUI lets you access original and compressed storage data in the Back Office, **Maintenance** > **Storage** menu.

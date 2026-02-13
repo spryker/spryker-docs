@@ -23,6 +23,7 @@ Install the required features:
 | Cart | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Marketplace Product | {{site.version}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html) |
 | Marketplace Product Offer | {{site.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Marketplace Inventory Management | {{site.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 | Marketplace Merchant | {{site.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ## 1) Install the required modules

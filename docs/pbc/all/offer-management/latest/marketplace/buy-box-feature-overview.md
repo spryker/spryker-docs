@@ -24,7 +24,7 @@ Each offer in the Buy Box displays:
 - Merchant name with link to merchant profile page
 - Product price from that merchant
 - Radio button for merchant selection
-- Availability status (when Product Availability Display feature is installed)
+- Availability status (when [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html) is installed)
 
 ### Merchant selection
 
@@ -42,7 +42,7 @@ The Buy Box supports URL parameters to pre-select a specific merchant offer. Whe
 
 Offers in the Buy Box can be sorted by:
 - **Price**: Lowest to highest price (default)
-- **Stock availability**: Highest to lowest stock (requires Product Availability Display feature)
+- **Stock availability**: Highest to lowest stock (requires [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html))
 
 When sorted by stock, merchants marked as never out of stock appear first, followed by merchants with the highest stock quantities.
 

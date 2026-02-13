@@ -1,7 +1,7 @@
 ---
 title: Install the Buy Box feature
 description: Learn how to install the Buy Box feature that displays multiple merchant offers with selection and sorting
-last_updated: February 12, 2026
+last_updated: February 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Buy Box feature overview
@@ -10,11 +10,11 @@ related:
     link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
 ---
 
-This document describes how to install the Buy Box feature for marketplace scenarios.
+Use this guide to install the Buy Box feature for marketplace scenarios.
 
 ## Prerequisites
 
-Install the required features:
+Install the following required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
@@ -26,9 +26,9 @@ Install the required features:
 | Marketplace Inventory Management | {{site.version}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 | Marketplace Merchant | {{site.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
-## 1) Install the required modules
+## 1. Install the required modules
 
-Install the required modules using Composer:
+Install the required modules by using Composer:
 
 ```bash
 composer require spryker-feature/buy-box:"{{site.version}}" --update-with-dependencies
@@ -44,7 +44,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up configuration
+## 2. Set up configuration
 
 Add the following configuration to your project:
 
@@ -71,15 +71,15 @@ class BuyBoxConfig extends SprykerFeatureBuyBoxConfig
 
 {% info_block infoBox "Configuration options" %}
 
-**getSortingStrategy()**: Returns the sorting strategy for buy box offers. Options:
-- `static::SORT_BY_PRICE` - Sort by lowest to highest price (default)
-- `static::SORT_BY_STOCK` - Sort by highest to lowest stock (requires Inventory Management feature)
+`getSortingStrategy()`: Returns the sorting strategy for Buy Box offers. Options:
+- `static::SORT_BY_PRICE` - Sorts by lowest to highest price (default).
+- `static::SORT_BY_STOCK` - Sorts by highest to lowest stock (requires the Marketplace Inventory Management feature).
 
 {% endinfo_block %}
 
-## 3) Set up transfer objects
+## 3. Set up transfer objects
 
-Generate transfer changes:
+Generate the transfer objects:
 
 ```bash
 console transfer:generate
@@ -87,7 +87,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in transfer objects:
+Make sure the following changes have been applied to the transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |----------|------|-------|------|
@@ -100,9 +100,9 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## 4) Set up behavior
+## 4. Set up behavior
 
-Register the following plugins:
+Register the following plugin:
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -134,7 +134,7 @@ Make sure that `BuyBoxWidget` is registered by checking that the buy box appears
 
 {% endinfo_block %}
 
-## 5) Set up templates
+## 5. Set up templates
 
 Integrate the BuyBoxWidget into the product detail page template.
 
@@ -184,27 +184,27 @@ Integrate the BuyBoxWidget into the product detail page template.
 {% endraw %}
 ```
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "Template change summary" %}
 
-This template modification:
-- Calculates `productOffersCount` from the BuyBoxWidget
-- Sets `showProductAvailability` to show availability only when no product offers exist
-- Passes the `buyBoxWidget` through the embed context to render it within the AddToCartFormWidget
-- Replaces the default merchant product widgets with the unified BuyBoxWidget display
+This template change:
+- Calculates `productOffersCount` by using the `BuyBoxWidget`.
+- Sets `showProductAvailability` so availability displays only when no product offers exist.
+- Passes `buyBoxWidget` through the embed context to render it within `AddToCartFormWidget`.
+- Replaces the default merchant product widgets with the unified `BuyBoxWidget` display.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure the buy box displays correctly on product detail pages:
-- When multiple merchant offers exist, the buy box shows all available offers
-- Each offer displays merchant information and price
-- The buy box allows selecting different merchant offers
-- When no product offers exist, availability information is shown instead
+Make sure the Buy Box displays correctly on product detail pages:
+- When multiple merchant offers exist, the Buy Box shows all available offers.
+- Each offer displays merchant information and price.
+- You can select different merchant offers.
+- When no product offers exist, availability information displays instead.
 
 {% endinfo_block %}
 
-## 6) Import glossary data
+## 6. Import glossary data
 
 Import glossary keys for buy box translations:
 
@@ -229,7 +229,7 @@ Make sure the glossary keys have been imported by checking the `spy_glossary_key
 
 {% endinfo_block %}
 
-## 7) Set up frontend
+## 7. Set up frontend
 
 Build the frontend to include the new styles and assets:
 
@@ -237,7 +237,7 @@ Build the frontend to include the new styles and assets:
 console frontend:yves:build
 ```
 
-## 8) Optional: Add stock-based sorting and availability per offer
+## 8. Optional: Add stock-based sorting and availability per offer
 
 To enable stock-based sorting and show availability per merchant offer, install the Product Availability Display feature and configure the integration.
 
@@ -292,4 +292,4 @@ public function getSortingStrategy(): string
 }
 ```
 
-This enables stock-aware Buy Box functionality with per-offer availability display and stock-based sorting.
+This enables stock-aware Buy Box functionality with per-offer availability and stock-based sorting.

@@ -1,18 +1,18 @@
 ---
 title: Install the Product Availability Display feature
 description: Learn how to install the Product Availability Display feature that shows stock quantities on product pages and in shopping carts
-last_updated: February 12, 2026
+last_updated: February 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Product Availability Display feature overview
     link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
 ---
 
-This document describes how to install the Product Availability Display feature.
+Use this guide to install the Product Availability Display feature.
 
 ## Prerequisites
 
-Install the required features:
+Install the following required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
@@ -20,7 +20,7 @@ Install the required features:
 | Product | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 | Cart | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
-## 1) Install the required modules
+## 1. Install the required modules
 
 Install the required modules using Composer:
 
@@ -41,7 +41,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## 2) Set up configuration
+## 2. Set up configuration
 
 Add the following configuration to your project:
 
@@ -73,16 +73,17 @@ class AvailabilityWidgetConfig extends SprykerShopAvailabilityWidgetConfig
 
 {% info_block infoBox "Configuration options" %}
 
-**STOCK_DISPLAY_ENABLED**: Master switch to enable or disable stock display. Default is `false`.
-**getStockDisplayMode()**: Returns the display mode. Options:
-- `STOCK_DISPLAY_MODE_INDICATOR_ONLY` - Shows "Available" or "Out of stock" without quantities
-- `STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY` - Shows exact quantities like "12 in stock"
+`STOCK_DISPLAY_ENABLED`: Enables or disables stock display. Default is `false`.
+
+`getStockDisplayMode()`: Returns the display mode. Options:
+- `STOCK_DISPLAY_MODE_INDICATOR_ONLY` - Shows "Available" or "Out of stock" without quantities.
+- `STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY` - Shows exact quantities, for example, "12 in stock."
 
 {% endinfo_block %}
 
-## 3) Set up transfer objects
+## 3. Set up transfer objects
 
-Generate transfer changes:
+Generate the transfer objects:
 
 ```bash
 console transfer:generate
@@ -90,7 +91,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in transfer objects:
+Make sure the following changes have been applied to the transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |----------|------|-------|------|
@@ -99,7 +100,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## 4) Set up behavior
+## 4. Set up behavior
 
 Register the following plugins:
 
@@ -112,6 +113,7 @@ namespace Pyz\Zed\Cart;
 
 use Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\Cart\AvailabilityItemExpanderPlugin;
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
+use Spryker\Zed\Kernel\Container;
 
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
@@ -195,9 +197,9 @@ Make sure that `ProductAvailabilityWidget` is registered by checking that the av
 
 {% endinfo_block %}
 
-## 5) Set up templates
+## 5. Set up templates
 
-Enable the ProductAvailabilityWidget in the frontend templates.
+Enable `ProductAvailabilityWidget` in the frontend templates.
 
 ### Product detail page template
 
@@ -219,8 +221,8 @@ Add the availability widget to the product detail page:
         data.product
     ]) %}
     {% if showProductAvailability %}
-        {% if productAvailabilityWidget is defined %}
-            {% widget productAvailabilityWidget only %} {% endwidget %}
+        {% if productAvailabilityWidget is not empty %}
+            {% widget productAvailabilityWidget only %}{% endwidget %}
         {% endif %}
     {% endif %}
 
@@ -265,8 +267,8 @@ Add the availability widget to product cards in the catalog:
             {% set productAvailabilityWidget = findWidget('ProductAvailabilityWidget', [
                 listItem
             ]) %}
-            {% if productAvailabilityWidget is defined %}
-                {% widget productAvailabilityWidget %} {% endwidget %}
+            {% if productAvailabilityWidget is not empty %}
+                {% widget productAvailabilityWidget %}{% endwidget %}
             {% endif %}
         {% endblock %}
         {# ... rest of the template ... #}
@@ -284,7 +286,7 @@ Make sure the availability widget displays correctly:
 
 {% endinfo_block %}
 
-## 6) Optional: Add measurement unit support
+## 6. Optional: Add measurement unit support
 
 To display stock quantities with measurement units like "250 kg in stock", install additional modules and register plugins.
 
@@ -371,7 +373,7 @@ Make sure that measurement units appear in availability displays by viewing a pr
 
 {% endinfo_block %}
 
-## 7) Import glossary data
+## 7. Import glossary data
 
 Import glossary keys for availability translations:
 
@@ -398,14 +400,13 @@ Make sure the glossary keys have been imported by checking the `spy_glossary_key
 
 {% endinfo_block %}
 
-## 8) Optional: Import measurement unit translations
+## 8. Optional: Import measurement unit translations
 
 If you enabled measurement unit support, import glossary keys for measurement unit names:
 
 **data/import/common/common/glossary.csv**
 
 ```csv
-
 measurement_units.item.name.short,pc,en_US
 measurement_units.item.name.short,Stk,de_DE
 measurement_units.standard.weight.kilo.name.short,kg,en_US
@@ -510,7 +511,7 @@ Run the data import:
 console data:import glossary
 ```
 
-## 9) Set up frontend
+## 9. Set up frontend
 
 Build the frontend to include the new styles and assets:
 

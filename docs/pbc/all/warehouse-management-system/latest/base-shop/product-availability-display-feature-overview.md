@@ -18,7 +18,7 @@ The feature supports two display modes:
 
 **Indicator only**: Shows availability status without quantities. Products display as "Available" or "Out of stock".
 
-**Indicator with quantity**: Shows availability status with exact quantities. Products display as "12 in stock" or "Out of stock".
+**Indicator with quantity**: Shows availability status with exact quantities. Products display as "19 in stock" or "Out of stock".
 
 ## Stock display on product detail page
 
@@ -26,7 +26,7 @@ Availability information appears on product detail pages for concrete products (
 
 <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/pdp-stock-quantity.png" alt="Product detail page showing stock quantity" width="600">
 
-When a product has available inventory, the system displays the quantity. The format is "X in stock", for example "12 in stock" or "250 in stock".
+When a product has available inventory, the system displays the quantity. The format is "X in stock", for example "19 in stock".
 
 ### Never-out-of-stock products
 
@@ -50,7 +50,7 @@ Availability information appears for each line item in the shopping cart.
 
 <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/cart-availability.png" alt="Shopping cart showing availability" width="600">
 
-Each cart item displays its current availability status. If stock levels change between when a customer adds items to their cart and when they proceed to checkout, the cart display reflects the current availability.
+Each cart item displays its current availability status, for example "19 in stock" or "Available". If stock levels change between when a customer adds items to their cart and when they proceed to checkout, the cart display reflects the current availability.
 
 The system validates stock availability during checkout. If requested quantity exceeds available stock, the checkout process prevents completion until the customer adjusts their order.
 
@@ -60,7 +60,7 @@ When products have measurement units configured, availability displays with the 
 
 <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/product-availability-display/availability-with-units.png" alt="Product with measurement unit" width="600">
 
-For example: "250 kg in stock" instead of "250 in stock". The measurement unit is appended to the quantity based on the product's configured base unit.
+For example: "225.5 m in stock" instead of "225.5 in stock". The measurement unit is appended to the quantity based on the product's configured base unit.
 
 ## Stock display in Buy Box
 

@@ -56,6 +56,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
           - title: Tool call
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+          - title: Conversation History
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -1451,6 +1453,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+      - title: CDN and traffic management integration
+        url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 

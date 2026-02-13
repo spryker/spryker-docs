@@ -6,6 +6,8 @@ template: concept-topic-template
 related:
   - title: General performance guidelines
     link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+  - title: CDN and traffic management integration
+    link: docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
   - title: Jenkins operational best practices
     link: docs/ca/dev/best-practices/jenkins-operational-best-practices.html
   - title: Stable Workers
@@ -118,6 +120,12 @@ These settings provide:
 - 256KB buffer capacity (sufficient for most Spryker responses)
 - Prevention of disk writes for responses up to 1MB
 - Significant performance improvement for large HTML pages
+
+{% info_block infoBox "Compression reduces buffer pressure" %}
+
+Enabling HTTP response compression in the deploy file (`assets: compression:`) is complementary to buffer tuning. When compression is active, the frontend container compresses responses before buffering, which reduces the effective size that passes through FastCGI buffers and the load balancer. For details on configuring compression, see [Deploy file reference - assets](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) and [CDN and traffic management integration](/docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html).
+
+{% endinfo_block %}
 
 **Verify your docker-sdk version:**
 

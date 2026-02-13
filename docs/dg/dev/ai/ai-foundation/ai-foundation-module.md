@@ -1,8 +1,8 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Dec 4, 2025
-keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent
+last_updated: Jan 20, 2026
+keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation
 template: howto-guide-template
 label: early-access
 related:
@@ -10,9 +10,27 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Use structured responses with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+  - title: Manage conversation history with the AiFoundation module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
+
+The AiFoundation module uses a Zed-backed architecture where the client provides a simple interface that delegates all processing to the Zed facade. This design enables centralized management of AI configurations, conversation history persistence, and tool execution.
+
+## Architecture
+
+The AiFoundation module uses a two-layer architecture:
+
+- **Client Layer**: Provides a simple `AiFoundationClientInterface` that serves as the entry point for AI interactions
+- **Zed Layer**: Contains the `AiFoundationFacade` that handles all business logic including:
+  - AI configuration resolution
+  - Vendor adapter plugin delegation
+  - Conversation history persistence and retrieval
+  - Tool execution and invocation tracking
+  - Structured response validation and mapping
+
+The client delegates all processing to the Zed facade through a request stub, ensuring centralized management of AI operations and database persistence.
 
 ## Install the AiFoundation module
 
@@ -306,7 +324,7 @@ The Ollama data is stored in the `./data/tmp/ollama_data` directory, which you s
 ],
 ```
 
-## Use the AiFoundation client
+## Use the AiFoundation facade
 
 ### Basic usage
 
@@ -317,12 +335,12 @@ namespace Pyz\Zed\YourModule\Business;
 
 use Generated\Shared\Transfer\PromptMessageTransfer;
 use Generated\Shared\Transfer\PromptRequestTransfer;
-use Spryker\Client\AiFoundation\AiFoundationClientInterface;
+use Spryker\Zed\AiFoundation\Business\AiFoundationFacadeInterface;
 
 class YourBusinessModel
 {
     public function __construct(
-        protected AiFoundationClientInterface $aiFoundationClient
+        protected AiFoundationFacadeInterface $aiFoundationFacade
     ) {
     }
 
@@ -333,7 +351,7 @@ class YourBusinessModel
                 (new PromptMessageTransfer())->setContent($userMessage)
             );
 
-        $response = $this->aiFoundationClient->prompt($promptRequest);
+        $response = $this->aiFoundationFacade->prompt($promptRequest);
 
         return $response->getMessage()->getContent();
     }
@@ -351,7 +369,7 @@ $promptRequest = (new PromptRequestTransfer())
         (new PromptMessageTransfer())->setContent('Explain Spryker modules')
     );
 
-$response = $this->aiFoundationClient->prompt($promptRequest);
+$response = $this->aiFoundationFacade->prompt($promptRequest);
 ```
 
 ### Multiple configurations example
@@ -407,6 +425,7 @@ This transfer contains the request data for AI interaction:
 - `aiConfigurationName` (string, optional): The configuration name to use. If not provided, uses `AI_CONFIGURATION_DEFAULT`
 - `structuredMessage` (object, optional): A Transfer object that defines the expected response structure for structured responses
 - `toolSetName` (string[], optional): Array of tool set names to make available to the AI. For details, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
+- `conversationReference` (string, optional): Unique identifier for multi-turn conversations. When provided, the message is persisted in conversation history and previous messages are automatically included in the request context. For details, see [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html)
 - `maxRetries` (int, optional): Maximum number of retry attempts for failed requests. Default is 0
 
 ### PromptMessage
@@ -443,13 +462,13 @@ This transfer contains information about a tool invocation made by the AI:
 - `arguments` (array): The arguments passed to the tool
 - `result` (string): The result returned by the tool execution
 
-## Roadmap
+### StructuredMessage
 
-The following capabilities are planned for future releases of the AiFoundation module:
+Define the expected structure (`structuredMessage` property) of the AI response for structured responses. This is a Spryker Transfer object that you can customize based on your requirements.
 
-### Chat history capabilities
+### Conversation History
 
-Support for maintaining conversation context across multiple interactions. This will enable multi-turn conversations where the AI can reference previous messages, maintain state, and provide more contextually relevant responses throughout an extended dialogue.
+Conversation history is created by `conversationReference` and persisted in the database using the `spy_ai_conversation_history` table. When you provide a `conversationReference` in a prompt request, all messages are automatically stored and previous messages are retrieved to maintain conversation context. For complete details, see [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html). 
 
 ## About NeuronAI framework
 

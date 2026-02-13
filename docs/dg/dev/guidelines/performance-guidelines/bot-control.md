@@ -40,6 +40,12 @@ Filter out IP ranges based on geoip databases, user agents, URLs, or any combina
 
 The most efficient, dynamic, and feature-rich solutions are tools like **Akamai, Cloudflare**-like services for bot control, not only to granularly control official bots (for example social networks and commercial LLMs), but also those unofficial - crawlers, scanners, and malicious ones.
 
+{% info_block infoBox "Bot traffic amplifies compression misconfigurations" %}
+
+When a CDN or traffic management solution is deployed in front of Spryker, unfiltered bot traffic increases the volume of origin pull requests. If HTTP response compression is not properly configured between the CDN and the Spryker frontend container, each bot request triggers a full uncompressed response over the public network. This can significantly increase data transfer volume and response latency. Configuring both bot filtering *and* proper compression headers is essential. For details, see [CDN and traffic management integration](/docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html).
+
+{% endinfo_block %}
+
 ## The problem with nginx-based solutions
 
 It requires a custom nginx configuration, which leads to the necessity of creating a custom [docker/sdk](https://github.com/spryker/docker-sdk) branch and using it in the cloud environment. But that approach **moves the responsibility** of maintaining this branch from Spryker to a partner or customer (for updates, upgrades, etc).

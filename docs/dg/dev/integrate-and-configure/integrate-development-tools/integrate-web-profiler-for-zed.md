@@ -63,6 +63,12 @@ Spryker provides a lot of build-in collectors. You can locate them in `WebProfil
 
 Additionally, you can integrate the Propel data collector (available from `spryker/propel:^3.49.0`) by adding `\\Spryker\\Zed\\Propel\\Communication\\Plugin\\WebProfiler\\WebProfilerPropelDataCollectorPlugin` to `\\Pyz\\Zed\\WebProfiler\\WebProfilerDependencyProvider::getDataCollectorPlugins()`.
 
+To enable the Propel data collector, ensure that you have set the following in `config/Shared/config_local.php`:
+
+```php
+$config[\Spryker\Shared\Propel\PropelConstants::PROPEL_DEBUG] = true;
+```
+
 ## Additional profiling with XHProf
 
 If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.

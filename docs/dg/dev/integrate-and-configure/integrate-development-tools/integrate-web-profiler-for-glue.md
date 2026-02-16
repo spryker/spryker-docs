@@ -299,6 +299,14 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
 
 </details>
 
+## Configure Propel Data Collector
+
+To enable the Propel data collector, ensure that you have set the following in `config/Shared/config_local.php`:
+
+```php
+$config[\Spryker\Shared\Propel\PropelConstants::PROPEL_DEBUG] = true;
+```
+
 ## Available data collectors
 
 The Web Profiler for Glue includes the following data collectors:

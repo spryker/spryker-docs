@@ -28,15 +28,16 @@ The profiler is based on *Symfony Profiler*. For details, see [Profiler document
 
 Before integrating Web Profiler for Glue, ensure that the following modules are updated to the required versions:
 
-| Module                         | Version | Description                                   |
-|:-------------------------------|:--------|:----------------------------------------------|
-| `spryker/glue-application`     | ^1.72.0 | Core Glue Application framework               |
-| `spryker/http`                 | ^1.15.0 | HTTP handling for Glue applications           |
-| `spryker/redis`                | ^2.11.0 | Redis integration for data collection         |
-| `spryker/search-elasticsearch` | ^1.21.0 | Elasticsearch integration for data collection |
-| `spryker/web-profiler`         | ^1.7.0  | Core Web Profiler module                      |
-| `spryker/zed-request`          | ^3.25.0 | Zed request handling and data collection      |
-| `spryker/profiler`             | ^0.1.3  | Spryker profiler                              |
+| Module                         | Version | Required | Description                                   |
+|:-------------------------------|:--------|:---------|:----------------------------------------------|
+| `spryker/glue-application`     | ^1.72.0 | Yes      | Core Glue Application framework               |
+| `spryker/http`                 | ^1.15.0 | Yes      | HTTP handling for Glue applications           |
+| `spryker/redis`                | ^2.11.0 | Yes      | Redis integration for data collection         |
+| `spryker/search-elasticsearch` | ^1.21.0 | Yes      | Elasticsearch integration for data collection |
+| `spryker/web-profiler`         | ^1.7.0  | Yes      | Core Web Profiler module                      |
+| `spryker/zed-request`          | ^3.25.0 | Yes      | Zed request handling and data collection      |
+| `spryker/profiler`             | ^0.1.3  | Yes      | Spryker profiler                              |
+| `spryker/propel`               | ^3.49.0 | No       | Propel data collection                        |
 
 ## Integration
 
@@ -238,6 +239,7 @@ use Spryker\Glue\Http\Plugin\Twig\HttpKernelTwigPlugin;
 use Spryker\Glue\Http\Plugin\Twig\RuntimeLoaderTwigPlugin;
 use Spryker\Glue\Http\Plugin\WebProfiler\WebProfilerExternalHttpDataCollectorPlugin;
 use Spryker\Glue\Profiler\Plugin\WebProfiler\WebProfilerProfilerDataCollectorPlugin;
+use Spryker\Glue\Propel\Plugin\WebProfiler\WebProfilerPropelDataCollectorPlugin;
 use Spryker\Glue\Redis\Plugin\WebProfiler\WebProfilerRedisDataCollectorPlugin;
 use Spryker\Glue\SearchElasticsearch\Plugin\WebProfiler\WebProfilerElasticsearchDataCollectorPlugin;
 use Spryker\Glue\WebProfiler\Plugin\WebProfiler\WebProfilerConfigDataCollectorPlugin;
@@ -272,6 +274,10 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
 
         if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
             $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
+        }
+
+        if (class_exists(WebProfilerPropelDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerPropelDataCollectorPlugin();
         }
 
         return $plugins;
@@ -309,6 +315,7 @@ The Web Profiler for Glue includes the following data collectors:
 | **External HTTP** | Tracks external HTTP calls | `WebProfilerExternalHttpDataCollectorPlugin` |
 | **Exception** | Captures exceptions and errors | `WebProfilerExceptionDataCollectorPlugin` |
 | **Logger** | Displays log messages | `WebProfilerLoggerDataCollectorPlugin` |
+| **Propel** | Monitors Propel database queries (available from `spryker/propel:^3.49.0`) | `WebProfilerPropelDataCollectorPlugin` |
 | **Profiler** | Provides XHProf profiling data (if `xhprof` extension is installed) | `WebProfilerProfilerDataCollectorPlugin` |
 
 ## Accessing Web Profiler

@@ -61,6 +61,8 @@ Individual *Data Collectors* can be added to `\Pyz\Zed\WebProfiler\WebProfilerD
 
 Spryker provides a lot of build-in collectors. You can locate them in `WebProfiler/src/Spryker/Zed/WebProfiler/Communication/Plugin/WebProfiler/`.
 
+Additionally, you can integrate the Propel data collector (available from `spryker/propel:^3.49.0`) by adding `\\Spryker\\Zed\\Propel\\Communication\\Plugin\\WebProfiler\\WebProfilerPropelDataCollectorPlugin` to `\\Pyz\\Zed\\WebProfiler\\WebProfilerDependencyProvider::getDataCollectorPlugins()`.
+
 ## Additional profiling with XHProf
 
 If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.

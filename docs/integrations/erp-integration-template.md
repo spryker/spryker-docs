@@ -95,7 +95,7 @@ Following Spryker best practices, configuration happens in `config_default-erp.p
 
 ```php
 $config[ErpIntegrationConstants::BASE_URI] = getenv('ERP_BASE_URI');
-$config[ErpIntegrationConstants::SOME_REQUEST_URL] = '/some-request/';
+$config[ErpIntegrationConstants::EXAMPLE_REQUEST_URL] = '/example-request/';
 ```
 
 If your integration has fixed URLs, consider putting them directly into the ErpIntegrationConfig class.
@@ -131,10 +131,10 @@ When implementing an ERP integration, follow this pattern for each request:
 Each request requires specialized transfer objects for request and response. Edit `src/Pyz/Shared/ErpIntegration/Transfer/erp_integration.transfer.xml`:
 
 ```xml
-<transfer name="SomeRequest" strict="true">
+<transfer name="ExampleRequest" strict="true">
 </transfer>
 
-<transfer name="SomeResponse" strict="true">
+<transfer name="ExampleResponse" strict="true">
     <property name="isSuccessful" type="bool" />
     <property name="messages" type="string[]" singular="message" />
 </transfer>
@@ -144,26 +144,26 @@ Execute `vendor/bin/console transfer:generate` to generate new transfer PHP clas
 
 #### 2. Create a Request model
 
-Start with a copy of model `src/Pyz/Client/ErpIntegration/Models/SomeRequest`, which doesn't require an interface since it contains a single method without a reason for extension.
+Start with a copy of model `src/Pyz/Client/ErpIntegration/Models/ExampleRequest`, which doesn't require an interface since it contains a single method without a reason for extension.
 
-Once the model is prepared, adjust the factory by creating the method `ErpIntegrationFactory::createSomeRequest`. Skip if using DI.
+Once the model is prepared, adjust the factory by creating the method `ErpIntegrationFactory::createExampleRequest`. Skip if using DI.
 
-Adjust the name of the request method `doRequest`, if necessary. Simultaneously, create a client method to call it - `ErpIntegrationClient::doSomeRequest`.
+Adjust the name of the request method `doRequest`, if necessary. Simultaneously, create a client method to call it - `ErpIntegrationClient::doExampleRequest`.
 
 If your system doesn't require a POST call, change the method called on guzzleClient.
 
 #### 3. Implement Request and Response Mapping
 
-Create a copy of `src/Pyz/Client/ErpIntegration/Models/SomeRequestMapper` and adjust:
+Create a copy of `src/Pyz/Client/ErpIntegration/Models/ExampleRequestMapper` and adjust:
 
 - `mapTransferToRequestString` - to map request transfer object onto the 3rd party service request format.
 - `mapResponseToResponseTransfer` - to map 3rd party service response format onto response transfer object.
 
 #### 4. Add a Client method
 
-First, update Factory and introduce model and mapper instantiation, follow methods `createSomeRequest` and `createSomeRequestMapper` as example.
+First, update Factory and introduce model and mapper instantiation, follow methods `createExampleRequest` and `createExampleRequestMapper` as example.
 
-Then add a client method, follow method `doSomeRequest` as example.
+Then add a client method, follow method `doExampleRequest` as example.
 
 #### 5. Connect to your business logic
 

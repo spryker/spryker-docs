@@ -38,7 +38,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 
 **Example: Customer resource for Back Office API**
 
-`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml`
 
 ```yaml
 # yaml-language-server: $schema=../../../../../vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
@@ -374,7 +374,7 @@ Create CodeBucket variants when you need:
 
 **Base resource:**
 
-`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml`
 
 ```yaml
 resource:

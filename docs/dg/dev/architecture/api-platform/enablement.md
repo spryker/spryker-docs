@@ -309,7 +309,6 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-markdo
 `config/Glue/ApplicationServices.php`
 
 ```php

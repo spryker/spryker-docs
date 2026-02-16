@@ -191,26 +191,30 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-To resave storage data, run the command. The command supports several options to control scanning, filtering, TTL handling and dry runs. The base environment variables used to run the command in non-dev mode are shown below:
+To resave storage data ith current compression setting, run the command.
 
 ```bash
-SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save [options]
+SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
 ```
+
+The command uses `SPRYKER_REDIS_IS_DEV_MODE=0` and `NEWRELIC_ENABLED=false` to reduce memory usage and help avoid memory leaks when processing high volumes of data.
 
 Description:
 
-- Re-saves storage data with current settings. Uses bulk operations with an adaptive timeout between iterations. Safe to use in production.
+- Re-saves storage data with current settings. Performs iterative scanning and applies resave operations with an adaptive timeout between iterations.
+
+The command supports several options to control scanning, filtering, TTL handling and dry runs. The base environment variables used to run the command in non-dev mode are shown below:
 
 Available options:
 
 - --cursor (-c) <number>  Optional. Defines a cursor for resuming or controlling the SCAN iterator. Default: 0.
-- --pattern (-p) <pattern> Optional. Glob-style pattern applied to keys (appended to the KV prefix). Default: "*". Example: "product:*".
+- --pattern (-p) <pattern> Optional. Glob-style pattern applied to keys (appended to the KV prefix). Default: "*". Example: "cache:*", which scans all keys matching "kv:product:*".
 - --ttl (-t) <seconds>     Optional. TTL in seconds to set for each matched key. If omitted, existing TTL is preserved (KEEPTTL) for existing keys. Warning: when provided, this TTL will be applied to all matched keys; use it only when you need to restore TTL values that were lost.
 - --dry (-d)               Flag. Dry run: scans and counts matched keys without resaving or setting TTL. Use this to estimate the workload before executing.
 
 Examples:
 
-- Resave everything (default):
+- Resave everything, keeping expiration time of each entry:
 
 ```bash
 SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
@@ -236,8 +240,8 @@ SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
 
 Notes and warnings:
 
-- The `--ttl` option overwrites TTLs for all matched keys; apply it only if you intentionally want to set the same TTL across results (for example, restoring lost TTL values). If you want to preserve existing TTLs, omit `--ttl`.
-- The command uses scanning (for example, Redis SCAN) and is implemented to run safely in production using adaptive timeouts between bulk operations; nevertheless, run with `--dry` first if you are unsure about the scope.
+- The `--ttl` option overwrites TTLs for all matched keys; apply it only if you intentionally want to set the same TTL across results, for example to restore lost TTL values. If you want to preserve existing TTLs, omit `--ttl`.
+- The command uses scanning (for example, Redis SCAN) and is implemented to run safely in production using adaptive timeouts between iterations; nevertheless, run with `--dry` first if you are unsure about the scope.
 - With separate storage databases per store, execute the command for each store individually.
 
 If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:

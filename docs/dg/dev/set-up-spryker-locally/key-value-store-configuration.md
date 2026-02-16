@@ -191,7 +191,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-To resave storage data ith current compression setting, run the command.
+When you enable compression, only newly saved data is compressed. Depending on the business logic of the project, saving each entry might take months. Running the following command will resave storage data, applying current compression settings:
 
 ```bash
 SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save

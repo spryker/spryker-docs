@@ -237,7 +237,7 @@ SPRYKER_REDIS_IS_DEV_MODE=0 NEWRELIC_ENABLED=false console storage:redis:re-save
 Notes and warnings:
 
 - The `--ttl` option overwrites TTLs for all matched keys; apply it only if you intentionally want to set the same TTL across results (for example, restoring lost TTL values). If you want to preserve existing TTLs, omit `--ttl`.
-- The command uses scanning (e.g., Redis SCAN) and is implemented to run safely in production using adaptive timeouts between bulk operations; nevertheless, run with `--dry` first if you are unsure about the scope.
+- The command uses scanning (for example, Redis SCAN) and is implemented to run safely in production using adaptive timeouts between bulk operations; nevertheless, run with `--dry` first if you are unsure about the scope.
 - With separate storage databases per store, execute the command for each store individually.
 
 If you use a Debian Docker image, you can disable instrumentation by adding the following parameter to the console command:

@@ -307,6 +307,39 @@ To enable the Propel data collector, ensure that you have set the following in `
 $config[\Spryker\Shared\Propel\PropelConstants::PROPEL_DEBUG] = true;
 ```
 
+## Using Segmented SQL Collection
+
+The Propel data collector includes a segmented SQL collection feature that allows you to isolate and analyze database queries from specific code paths. Use the static methods `startSegment()` and `endSegment()` to capture queries:
+
+```php
+use Spryker\Shared\Propel\Logger\PropelInMemoryLogger;
+
+PropelInMemoryLogger::startSegment('product-validation');
+$this->validateRequest($glueRequestTransfer);
+PropelInMemoryLogger::endSegment();
+
+PropelInMemoryLogger::startSegment('product-fetch');
+$productTransfers = $this->productRepository->findProducts($criteria);
+PropelInMemoryLogger::endSegment();
+```
+
+Segmented queries appear in the Web Profiler under the Propel panel as collapsible sections showing segment key name, query counts, and full query tables.
+
+### Best Practices
+
+- Use descriptive segment keys that identify the API operation (for example, `product-list-validation`, `cart-calculation`, `checkout-processing`)
+- Always pair `startSegment()` with `endSegment()` to prevent queries from being incorrectly categorized
+- Use try-finally blocks to ensure segments are properly closed:
+
+```php
+PropelInMemoryLogger::startSegment('my-api-operation');
+try {
+    $result = $this->performDatabaseOperations();
+} finally {
+    PropelInMemoryLogger::endSegment();
+}
+```
+
 ## Available data collectors
 
 The Web Profiler for Glue includes the following data collectors:

@@ -69,6 +69,39 @@ To enable the Propel data collector, ensure that you have set the following in `
 $config[\Spryker\Shared\Propel\PropelConstants::PROPEL_DEBUG] = true;
 ```
 
+## Using Segmented SQL Collection
+
+The Propel data collector includes a segmented SQL collection feature that allows you to isolate and analyze database queries from specific code paths. Use the static methods `startSegment()` and `endSegment()` to capture queries:
+
+```php
+use Spryker\Shared\Propel\Logger\PropelInMemoryLogger;
+
+PropelInMemoryLogger::startSegment('order-validation');
+$this->validateOrder($orderTransfer);
+PropelInMemoryLogger::endSegment();
+
+PropelInMemoryLogger::startSegment('order-save');
+$orderTransfer = $this->saveOrder($quoteTransfer);
+PropelInMemoryLogger::endSegment();
+```
+
+Segmented queries appear in the Web Profiler under the Propel panel as collapsible sections showing segment key name, query counts, and full query tables.
+
+### Best Practices
+
+- Use descriptive segment keys that clearly identify the code path (for example, `checkout-validation`, `product-import`, `order-processing`)
+- Always pair `startSegment()` with `endSegment()` to prevent queries from being incorrectly categorized
+- Use try-finally blocks to ensure segments are properly closed:
+
+```php
+PropelInMemoryLogger::startSegment('my-segment');
+try {
+    $result = $this->performDatabaseOperations();
+} finally {
+    PropelInMemoryLogger::endSegment();
+}
+```
+
 ## Additional profiling with XHProf
 
 If the `xhprof` extension is enabled and the Profiler module is integrated, the Web Profiler also includes detailed performance profiling data through XHProf. This provides function-level performance analysis and call graphs.

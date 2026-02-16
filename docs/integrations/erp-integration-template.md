@@ -52,10 +52,10 @@ The template follows Spryker architecture patterns and can be refactored to matc
   - Pyz
     - Client
       - ErpIntegration
+        - **ErpIntegrationClient.php** - Spryker Client entry point
         - Models
           - **BaseRequest.php** - base module, providing essentials for each specific request model.
-            - **[Name]Request.php** + **[Name]RequestMapper.php** - models for each type of request.
-            - **ErpIntegrationClient.php** - Spryker Client entry point
+          - **[Name]Request.php** + **[Name]RequestMapper.php** - models for each type of request.
     - Shared
       - ErpIntegration
         - **erp_integration.transfer.xml** - request/response transfer objects definition.

@@ -192,6 +192,6 @@ entries:
     - title: Using Jenkins for third-party integrations
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
     - title: Implement Punchout in Spryker
-      url: /docs/integrations/punchout-development-plan.html
+      url: /docs/integrations/custom-building-integrations/punchout-development-plan.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

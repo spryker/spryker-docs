@@ -42,7 +42,7 @@ Mount the essential Algolia widgets to build the search interface. This includes
 - **`searchBox`**: For user queries.
 - **`hits`**: To display search results. Use a custom renderer to display product information like URL, name, image, price, and rating directly from Algolia's attributes to avoid extra API calls.
 - **`refinementList`**: For category and attribute filters (for example brand).
-- **`sortBy`**: To allow users to switch between different sort strategies (for example rating, price ascending/descending). Ensure the index names are consistent with those created by the Algolia integration module.
+- **`sortBy`**: To allow users to switch between different sort strategies (for example rating, price ascending/descending). Ensure the index names are consistent with those created by the Algolia eco module.
 - **`pagination`** and **`stats`**: For navigation and displaying result counts.
 - **Advanced Filters**: Widgets like `ratingMenu` or `rangeSlider` for price can be implemented for more advanced filtering, provided the corresponding fields exist and are correctly formatted in your index.
 

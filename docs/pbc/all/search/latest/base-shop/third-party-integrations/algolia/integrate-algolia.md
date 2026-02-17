@@ -13,7 +13,7 @@ This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/ba
 Install required module and update needed dependencies:
 
 ```bash
-composer require -W --ignore-platform-req='ext-*' spryker-eco/algolia
+composer require -W spryker-eco/algolia
 ```
 
 ## Integrate Algolia

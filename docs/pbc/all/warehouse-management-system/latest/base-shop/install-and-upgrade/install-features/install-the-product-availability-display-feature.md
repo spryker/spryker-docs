@@ -45,6 +45,8 @@ Make sure the following modules have been installed:
 
 Add the following configuration to your project:
 
+### Yves configuration
+
 **src/Pyz/Yves/AvailabilityWidget/AvailabilityWidgetConfig.php**
 
 ```php
@@ -78,6 +80,37 @@ class AvailabilityWidgetConfig extends SprykerShopAvailabilityWidgetConfig
 `getStockDisplayMode()`: Returns the display mode. Options:
 - `STOCK_DISPLAY_MODE_INDICATOR_ONLY` - Shows "Available" or "Out of stock" without quantities.
 - `STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY` - Shows exact quantities, for example, "12 in stock."
+
+{% endinfo_block %}
+
+### Zed configuration
+
+**src/Pyz/Zed/AvailabilityCartConnector/AvailabilityCartConnectorConfig.php**
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\AvailabilityCartConnector;
+
+use Spryker\Zed\AvailabilityCartConnector\AvailabilityCartConnectorConfig as SprykerAvailabilityCartConnectorConfig;
+
+class AvailabilityCartConnectorConfig extends SprykerAvailabilityCartConnectorConfig
+{
+    /**
+     * @return bool
+     */
+    public function isSellableItemsCacheEnabled(): bool
+    {
+        return false;
+    }
+}
+```
+
+{% info_block infoBox "Configuration options" %}
+
+`isSellableItemsCacheEnabled()`: Controls whether the sellable items cache is enabled. Set to `false` to disable caching and ensure real-time availability checks. Default is `true`.
 
 {% endinfo_block %}
 

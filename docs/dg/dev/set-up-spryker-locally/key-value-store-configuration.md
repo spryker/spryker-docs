@@ -52,7 +52,7 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION] = [
 ];
 
 $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
-    'replication' => true',
+    'replication' => true,
 ];
 ```
 

@@ -8,6 +8,7 @@ template: howto-guide-template
 ![algolia-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/algolia-hero.png)
 
 Spryker comes with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine, but you can replace it with [Algolia](https://www.algolia.com/).
+
 Algolia stands out for its high performance. With the Algolia integration, your users can perform advanced searches for active concrete and abstract products or content in your store.
 
 <figure class="video_container">

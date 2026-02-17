@@ -5,11 +5,11 @@ last_updated: February 10, 2026
 template: howto-guide-template
 ---
 
-This document describes how to integrate Symfony Messenger module into a Spryker project.
+This document describes how to integrate the Symfony Messenger module into your Spryker project.
 
 ## Description
 
-Symfony Messenger is a powerful component that allows you to dispatch and handle messages with different transports. By integrating Symfony Messenger into your Spryker project, you can easily switch between RabbitMq and other transports like SQS, Redis and even database for handling queues. And also you can use Symfony Messenger for any other use cases when you need sync or async message processing.
+Symfony Messenger is a component that lets you dispatch and handle messages using different transports. By integrating Symfony Messenger into your Spryker project, you can switch between RabbitMQ and other transports, such as SQS, Redis, and even a database, for queue handling. You can also use Symfony Messenger for other use cases that require synchronous or asynchronous message processing.
 
 ## Install
 
@@ -32,7 +32,8 @@ Ensure that the following modules have been installed:
 
 ## Usage as a Queue Adapter
 
-Symfony Messenger can be used as a queue adapter in Spryker and can replace the existing RabbitMQ adapter.
+You can use Symfony Messenger as a queue adapter in Spryker to replace the existing RabbitMQ adapter. To use Symfony Messenger as a queue adapter, configure it and enable the required plugins.
+
 In order to use Symfony Messenger as a queue adapter, you need to configure it and enable the corresponding plugins.
 
 ### Configure
@@ -49,10 +50,11 @@ $config[SymfonyMessengerConstants::QUEUE_DSN] = 'amqp://guest:guest@localhost:56
 ];
 ```
 
-The protocol in the DSN determines the transport to be used. Out of the box, Spryker providing a RabbitMQ as the transport for Queue processing.
+The protocol in the DSN determines which transport is used. Out of the box, Spryker provides RabbitMQ as the transport for queue processing. You do not need to provide a queue name in the DSN because the application defines it when dispatching messages.
+
 Pay attention that you don't need to provide a queue name in the DSN, because it will be defined by the application when dispatching messages to the queue.
 
-2. Provide a list of queues that can be processes.
+2. Provide a list of queues that can be processed.
 
 ```php
 <?php
@@ -81,7 +83,7 @@ class SymfonyMessengerConfig extends SprykerSymfonyMessengerConfig
 }
 ```
 
-This configuration looks pretty much the same as for RabbitMQ, so you can just copy one from the `\Pyz\Client\RabbitMq\RabbitMqConfig::getQueueConfiguration()`.
+This configuration is similar to the RabbitMQ configuration, so you can copy it from `\Pyz\Client\RabbitMq\RabbitMqConfig::getQueueConfiguration()`.
 
 ### Enable Queue Adapter
 
@@ -108,7 +110,7 @@ class QueueDependencyProvider extends BaseQueueDependencyProvider
     {
         return [
             $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
-            //You can add the one from the symfony messenger module without removing the existing one, so you can switch between them when needed
+            // You can add the adapter from the Symfony Messenger module without removing the existing one so that you can switch between them when needed.
             $container->getLocator()->symfonyMessenger()->client()->createQueueAdapter(),
         ];
     }
@@ -132,15 +134,17 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT] = [
 ];
 ```
 
-After those steps Symfony Messenger will be used as a queue adapter for the queues defined in the configuration.
+After you complete these steps, Symfony Messenger is used as the queue adapter for the queues defined in the configuration.
 
 ### Additional configuration
 
-In order to provide additional configuration for the Symfony Messenger transport, you can use the following:
+To provide additional configuration for the Symfony Messenger transport, use the following approach:
 
 1. Provide transport configuration.
 
-Different transports can have different configuration options. You can specify them by key or provide a default configuration for all transports:
+Different transports can have different configuration options. You can specify options per transport key or provide a default configuration for all transports.
+
+The following example shows the default configuration for the RabbitMQ transport. You can adjust it or provide your own configuration for other transports. For available AMQP transport options, see the [AMQP transport connection options](https://github.com/symfony/amqp-messenger/blob/6.4/Transport/Connection.php#L40).
 Example below is the configuration that is used out of the box for RabbitMQ transport, but you can adjust it or provide your own for other transports.
 Available options for the AMQP transport can be found in the https://github.com/symfony/amqp-messenger/blob/6.4/Transport/Connection.php#L40.
 
@@ -191,12 +195,12 @@ To verify that the Symfony Messenger Queue Adapter integration is working correc
 
 ## Usage as a Message Consumer
 
-Usage of Symfony Messenger is not limited just to the queue adapter, you can also use it as a message consumer for any messages that are dispatched in your application.
+Symfony Messenger is not limited to queue adapter usage. You can also use it as a message consumer for messages dispatched in your application. To use Symfony Messenger as a message consumer, configure it and enable the required plugins.
 In order to use Symfony Messenger as a message consumer, you need to configure it and enable the corresponding plugins.
 
 1. Install required transport factory.
 
-Out of the box, Symfony Messenger provides the AMQP transport factory. Other factories have to be provided as a plugins that let system know that they are available.
+Out of the box, Symfony Messenger provides the AMQP transport factory. You must provide other factories as plugins so that the system recognizes them as available. To do this, implement `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportFactoryProviderPluginInterface`. A single plugin can provide multiple transport factories.
 In order to do so we need to implement `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportFactoryProviderPluginInterface`. It can provide multiple transport factories, so you can add a few with one plugin if needed.
 
 Example below will provide the `SchedulerTransportFactory` that allows to use Symfony Messenger for processing scheduled tasks in the Symfony Scheduler module, but you can provide any transport factory that you need.
@@ -248,7 +252,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 2. Configure transports for messages.
 
 Transport factories will be used in order to create transports that will handle messages. Transport names and their DSN are provided via implementation of `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportProviderPluginInterface`.
-Pay attention that transport name MUST be unique.
+Ensure that the transport name is unique.
 
 ```php
 <?php
@@ -288,7 +292,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 3. Map messages to transports and handlers.
 Messages and handlers are the things that will be processed by Symfony Messenger. In order to do so, you need to map messages to handlers and transports via `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\MessageMappingProviderPluginInterface` plugin.
 
-But first we need to have a message and handler that we want to map one to each other.
+First, create a message and a handler that you want to map to each other.
 
 Message can be any class that can be serialized and deserialized by Symfony Messenger. It can be a transfer or any other DTO.
 
@@ -311,7 +315,7 @@ class FooBarMessage
 }
 ```
 
-Handler on the other side should be a callable that will handle the message. It can be a class with `__invoke` method or any other callable.
+The handler must be a callable that processes the message. It can be a class that implements the `__invoke()` method or any other callable.
 
 ```php
 namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyMessenger;
@@ -405,7 +409,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 
 4. Send message.
 
-In order to send a message, you can use the `SymfonyMessengerClientInterface::sendMessage()` that is provided by the module. It will find the right transport for the message and send it there.
+To send a message, use `SymfonyMessengerClientInterface::sendMessage()`, which the module provides. The client resolves the appropriate transport and sends the message. If the transport is synchronous, it handles the message immediately and calls the corresponding handler. Otherwise, a worker processes the message from the transport.
 If the transport is synchronous, it will also handle the message right away and call the corresponding handler. If not, it will be handled by the worker that is processing messages from the transport.
 
 5. Register a consumer command.
@@ -448,4 +452,4 @@ console symfonymessenger:consume foo_bar_async --time-limit=100
 
 ## Additional information
 
-As Spryker's module heavily relies on Symfony Messenger, you can check its documentation for more details on how to configure and use it: https://symfony.com/doc/current/messenger.html. You can also check the code of the module itself to see how it is implemented and what features it provides out of the box.
+Because this module relies on Symfony Messenger, see the [Symfony Messenger documentation](https://symfony.com/doc/current/messenger.html) for details about configuration and usage. You can also review the module source code to understand its implementation and available features.

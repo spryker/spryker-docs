@@ -36,6 +36,7 @@ With the current implementation you can add them in the module config or provide
 ### Configure via Module Config
 
 In the example below we are adding all the jobs that we have in our project in `jenkins.php` file, but you can add only the ones that you want to be executed by the scheduler.
+
 ```php
 <?php
 
@@ -254,7 +255,9 @@ The only thing you need to do is to wire `\Spryker\Zed\SymfonyScheduler\Communic
 In addition, you can wire `\Spryker\Zed\SymfonyScheduler\Communication\Plugin\SymfonyMessenger\CompiledCronTransportGroupAwarePlugin` plugin if you want to have one transport name in the consumer for the jobs that are configured in the config.
 
 ## Run the Scheduler
+
 To run a scheduler you need to run the Symfony messenger consumer with the transport name that is configured for the job.
+
 ```shell
 vendor/bin/console symfonymessenger:consume compiled-cron-scheduler report-generation
 ```
@@ -324,6 +327,7 @@ In order to run the consumer you can use a Jenkins in order to run it or any oth
 Jenkins example:
 
 config/Zed/cronjobs/jenkins.php
+
 ```php
 <?php
 

@@ -116,6 +116,7 @@ class QueueDependencyProvider extends BaseQueueDependencyProvider
     }
 }
 ```
+
 2. Enable adapter in `config/Shared/config_default.php`:
 
 ```php
@@ -204,6 +205,7 @@ Out of the box, Symfony Messenger provides the AMQP transport factory. You must 
 In order to do so we need to implement `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\TransportFactoryProviderPluginInterface`. It can provide multiple transport factories, so you can add a few with one plugin if needed.
 
 Example below will provide the `SchedulerTransportFactory` that allows to use Symfony Messenger for processing scheduled tasks in the Symfony Scheduler module, but you can provide any transport factory that you need.
+
 ```php
 <?php
 

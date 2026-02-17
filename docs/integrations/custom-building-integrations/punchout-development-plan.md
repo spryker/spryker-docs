@@ -8,28 +8,28 @@ layout: custom_new
 
 # Introduction
 
-This document provides a comprehensive development plan for connecting Spryker projects to procurement systems using PunchOut flow.
+This document provides a comprehensive development plan for connecting your Spryker project to a procurement system using the PunchOut flow.
 
-It includes detailed technical specifications for implementing database modifications, authentication endpoints, Yves and BackOffice customizations.
+It includes technical specifications for implementing database modifications, authentication endpoints, and Yves and Back Office customizations.
 
 # Prerequisites
 
-To start, familiarize yourself with the PunchOut flow. You can find an overview and the most common protocols on the [PunchOut Commerce](https://punchoutcommerce.com/guides/punchout/) resource.
+Before you start, familiarize yourself with the PunchOut flow. You can find an overview of the most common protocols in the [PunchOut Commerce guide](https://punchoutcommerce.com/guides/punchout/).
 
 # Assumptions
 
-In order to make this plan universally usable, we base it on the following assumptions:
-1. We assume cXML implementation as described [here](https://punchoutcommerce.com/guides/punchout/cxml-punchout-setup-request/).
+This plan is based on the following assumptions:
+1. The integration uses cXML as described in the [cXML PunchOut setup request guide](https://punchoutcommerce.com/guides/punchout/cxml-punchout-setup-request/)
 2. External customer identification is based on the **email**, which is provided as the `UserEmail` attribute of the buyer. Shop owners must ensure that the customer is configured correctly in the shop, including their company, business unit, prices, product lists, discounts, and other relevant settings.
-3. The PunchOut BuyerCookie (session cookie or identifier) is used to maintain cart state during the procurement workflow.
+3. The PunchOut `BuyerCookie` (session cookie or identifier) maintains the cart state during the procurement workflow.
 
 # Development Plan
 
-The guide includes step-by-step instructions for:
-- configuring customer data,
-- updating necessary transfer definitions,
-- security headers that might require update,
-- and the checkout flow changes
+This guide includes step-by-step instructions for:
+- Configuring customer data
+- Updating transfer definitions
+- Updating security headers as required
+- Modifying the checkout flow
 
 to enable your Spryker shop to operate within a PunchOut procurement workflow.
 
@@ -54,15 +54,15 @@ to enable your Spryker shop to operate within a PunchOut procurement workflow.
 </database>
 ```
 
-You must implement at least a PunchoutFacade to validate the request data against the allowed pairs.
+Implement at least a `PunchOutFacade` to validate the request data against the configured identity and shared secret pairs.
 
-If you plan to support multiple PunchOut protocols, you might extend this table with additional parameters.
+If you plan to support multiple PunchOut protocols, extend this table with additional parameters.
 
-Implement BackOffice UI to edit this table.
+Implement a Back Office UI to manage this table.
 
 ## Update Customer
 
-Update table `spy_customer`, adding string field **login_hash**.
+Update the `spy_customer` table by adding a `login_hash` string field.
 
 **src/Pyz/Zed/PunchOut/Persistence/Propel/Schema/spy_customer.schema.xml**
 
@@ -81,7 +81,7 @@ Update table `spy_customer`, adding string field **login_hash**.
 </database>
 ```
 
-Corresponding update to the transfer object `CustomerTransfer` is also needed:
+Update the `CustomerTransfer` accordingly:
 
 **src/Pyz/Shared/PunchOut/Transfer/punchout.transfer.xml**
 
@@ -94,12 +94,12 @@ Corresponding update to the transfer object `CustomerTransfer` is also needed:
 
 ### Update Customer in the Back Office
 
-Update to the Customer edit/view UI in the Back Office
+Update the Customer edit and view UI in the Back Office to manage the new fields.
 
 ## Update quote object
 
-To enable handling of the PunchOut session, some data must be stored in the cart.
-To do so, adjust Quote transfer, representing cart.
+To handle the PunchOut session, store the required data in the cart.
+Update the `Quote` transfer that represents the cart.
 
 | Field | Comment |
 |-------|---------|
@@ -121,7 +121,7 @@ To do so, adjust Quote transfer, representing cart.
     </transfer>
 ```
 
-Add newly created fields into `\Pyz\Zed\Quote\QuoteConfig::getQuoteFieldsAllowedForSaving` to save them into session:
+Add the newly created fields to `\Pyz\Zed\Quote\QuoteConfig::getQuoteFieldsAllowedForSaving()` to persist them in the session:
 - punchoutSessionID,
 - disableCheckout,
 - allowPunchOut,
@@ -129,7 +129,7 @@ Add newly created fields into `\Pyz\Zed\Quote\QuoteConfig::getQuoteFieldsAllowed
 
 Field **punchOutFormData** is used only to transfer data on the summary step.
 
-If you know that some additional fields are required, add them as well.
+Add any additional fields required by your integration.
 
 ## Yves UI changes
 
@@ -200,13 +200,13 @@ class PunchOutSummaryStepData {
 {% endblock %}
 ```
 
-After changing Twig templates, ensure the cache is cleared using your project's standard cache clearing mechanism.
+After you change Twig templates, clear the cache using your project's standard cache-clearing mechanism.
 
 ## Handling PunchOut Start request
 
 To handle a PunchOut start request, implement a Yves controller.
 
-Since selection of the protocol may vary the scope of the implementation, we assume the bare minimum:
+Because the selected protocol can affect the implementation scope, this guide describes the minimal required setup:
 
 **src/Pyz/Shared/PunchOut/Transfer/punchout.transfer.xml**
 
@@ -277,7 +277,7 @@ class PunchoutClient extends \Spryker\Client\Kernel\AbstractClient
 
 ### Generation of the login URL.
 
-The simplest way of handling this is to use a **loginHash** as a one-time token to find a customer.
+The simplest approach is to use a `loginHash` as a one-time token to identify the customer.
 
 You can implement another Yves controller that locates the customer by this hash and logs them in by calling **\Spryker\Client\Customer\CustomerClient::setCustomer**.
 As a reference, see implementation in: **\SprykerShop\Yves\CustomerPage\Controller\AccessTokenController::executeIndexAction**.
@@ -288,7 +288,7 @@ If you detect during login that a store must be set, call **\Spryker\Client\Sess
 
 ### Security headers
 
-To allow the Spryker shop to be embedded in an iframe, you must adjust security headers as follows:
+To allow your Spryker shop to be embedded in an iframe, adjust the security headers as follows:
 
 ```shell
 X-Frame-Options: ALLOW-FROM https://example.com/
@@ -297,10 +297,10 @@ Content-Security-Policy: frame-ancestors 'self' https://example.com;
 
 To implement this, create a project-level version of the plugin: `\Spryker\Shared\Application\ServiceProvider\HeadersSecurityServiceProvider::onKernelResponse`.
 
-On punchout start, set a session flag `isPunchout` to true. Then, in the customized version of this plugin (e.g., `PunchoutHeadersSecurityServiceProvider`), produce a valid set of headers for the _iframe_.
+When the PunchOut session starts, set the `isPunchout` session flag to `true`. In the customized version of this plugin (for example, `PunchoutHeadersSecurityServiceProvider`), return a valid set of headers for the iframe.
 
 ### Cookies configuration
 
 The cookie configuration is defined in: `\Spryker\Yves\Session\SessionConfig::getSessionStorageOptions`.
 
-You must configure at least **cookie_samesite=None** to allow cookies to be set inside the iframe.
+Configure at least `cookie_samesite=None` to allow cookies to be set inside the iframe.

@@ -40,8 +40,6 @@ entries:
             nested:
               - title: AI Assistant
                 url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
-              - title: AI Dev Tool
-                url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
       - title: Continuous Integration
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
@@ -61,7 +59,7 @@ entries:
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
-          - title: AI Dev Overview
+          - title: AI Dev SDK Overview
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html

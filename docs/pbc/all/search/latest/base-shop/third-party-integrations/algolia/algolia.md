@@ -16,7 +16,7 @@ Algolia stands out for its high performance. With the Algolia integration, your 
   </video>
 </figure>
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 The demo in the video shows App Composition Platform integration, but [Algolia eco module](https://github.com/spryker-eco/algolia) is the **recommended** integration method.
 
@@ -37,15 +37,15 @@ Your users can search for active concrete products by the following attributes:
 Additionally, the Algolia integration supports searching content (CMS pages) and other manually indexed content (PDFs).
 In the Algolia Dashboard, you can configure other attributes to be searchable.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 To index documentation in files like .PDFs and .DOC, you can use the Algolia Crawler or a custom implementation to extract content and publish using the Algolia API.
 
 {% endinfo_block %}
 
-{% info_block infoBox "" %}
+{% info_block warningBox "" %}
 
-In search results, Spryker groups all concrete products belonging to the same abstract product. Depending on your configuration, it can also display results for Pages and Documents.
+In search results, Algolia integration groups all concrete products belonging to the same abstract product.
 
 {% endinfo_block %}
 

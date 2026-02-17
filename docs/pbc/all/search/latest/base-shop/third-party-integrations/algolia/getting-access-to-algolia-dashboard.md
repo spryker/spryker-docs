@@ -6,7 +6,7 @@ last_updated: Feb 20, 2026
 ---
 
 
-If you ordered Algolia through Spryker, to get access to the dashboard, create a **Request Help with Spryker Algolia Activation** case by [contacting support](https://support.spryker.com).
+If you ordered Algolia through Spryker, to get access to the dashboard, create a **Request Help with Algolia Activation** case by [contacting support](https://support.spryker.com).
 
 In the request, provide the email address of the user who you want to make the main admin of Algolia. The main admin will be able to invite other team members.
 

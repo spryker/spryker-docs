@@ -160,14 +160,3 @@ Setting any Algolia facet to **filter only** mode removes it from the list of vi
 Algolia's **Ranking and sorting** configuration determines which products are shown first when customers search your catalog.
 Learn more about custom ranking and sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
 
-## Retain Algolia configuration after a destructive deployment
-
-{% info_block errorBox "" %}
-[Destructive deployment](/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Algolia.
-
-To run a destructive deployment, follow these steps:
-1. Disconnect Algolia.
-2. Run a destructive deployment.
-3. Reconnect Algolia.
-
-{% endinfo_block %}

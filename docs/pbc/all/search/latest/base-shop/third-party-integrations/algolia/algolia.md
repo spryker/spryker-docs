@@ -57,7 +57,7 @@ For example, if your project has two locales for products, there will be 7-9 ind
 3. Primary index for locale B
 4. Sorting replicas for locale B (name ascending, name descending, rating, price ascending, price descending)
 
-Detailed explanation of the default indexes configuration:
+Detailed explanation of the default indexes configuration, produced by Algolia eco module:
 
 *Store: store1, locale: en_US, prices: NET and GROSS, currency: EUR*
 

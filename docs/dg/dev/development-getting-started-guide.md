@@ -71,13 +71,36 @@ To find relevant documentation for your project, use the [search](/search.html).
 
 ### Configure project namespace
 
-Use your own project namespace
+Use your own project namespace.
 By default, project code is stored in the `src/Pyz` directory.
 You can create your own namespace, such as `src/BestProject`, to keep your code fully separated from the Demo Shop.
 This separation simplifies applying Demo Shop updates.
-![Project Namespace](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/namespace-bestproject.png)
 
-More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html)
+1. Change the namespace in `composer.json`:
+
+```json
+{
+  "autoload": {
+    "psr-4": {
+      "BestProject\\": "src/BestProject/"
+    }
+  }
+}
+```
+
+2. Change the namespace configurations in `config/Shared/config_default.php`:
+
+```php
+$config[KernelConstants::PROJECT_NAMESPACE] = 'BestProject';
+$config[KernelConstants::PROJECT_NAMESPACES] = [
+    'BestProject',
+    'Pyz',
+];
+```
+
+3. Extend FE builder paths to include your own namespace following [Extend builder paths (custom namespaces)](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves.html#extend-builder-paths-custom-namespaces).
+
+More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability).
 
 ### Configure the local environment
 

@@ -1,5 +1,5 @@
 ---
-title: AI Dev Overview
+title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
 last_updated: Dec 9, 2025
 label: early-access

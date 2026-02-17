@@ -101,4 +101,4 @@ Ensure that you have a Spryker project with Composer installed.
 ## Next steps
 
 - [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) - Set up the connection to your AI tool
-- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) - Learn more about the AI Dev SDK features and capabilities
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) - Learn more about the AI Dev SDK features and capabilities

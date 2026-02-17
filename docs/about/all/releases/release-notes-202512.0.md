@@ -190,7 +190,7 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 - Keep console output integration friendly with quiet execution.
 
 **Documentation:**
-- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
 - [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
 
 ## Open Architecture for the upcoming Innovation

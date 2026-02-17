@@ -275,7 +275,7 @@ class PunchoutClient extends \Spryker\Client\Kernel\AbstractClient
 
 ```
 
-### Generation of the login URL.
+### Generation of the login URL
 
 The simplest approach is to use a `loginHash` as a one-time token to identify the customer.
 

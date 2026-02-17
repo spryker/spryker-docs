@@ -10,20 +10,7 @@ template: howto-guide-template
 Spryker comes with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the default search engine, but you can replace it with [Algolia](https://www.algolia.com/).
 Algolia stands out for its high performance. With the Algolia integration, your users can perform advanced searches for active concrete and abstract products or content in your store.
 
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/Algolia_ACPApp_Demo.mp4" type="video/mp4">
-  </video>
-</figure>
-
-{% info_block infoBox "" %}
-
-The demo in the video shows App Composition Platform integration, but [Algolia eco module](https://github.com/spryker-eco/algolia) is the **recommended** integration method.
-
-{% endinfo_block %}   
-
-To use Algolia as your search engine, you need an Algolia account with paid subscription. For details about integrating Algolia, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
-
+To use Algolia as your search engine, you need an Algolia account with a paid subscription. For details about integrating Algolia, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 
 ## Searchable attributes
 
@@ -45,7 +32,7 @@ To index documentation in files like .PDFs and .DOC, you can use the Algolia Cra
 
 {% info_block warningBox "" %}
 
-In search results, Algolia integration groups all concrete products belonging to the same abstract product.
+In search results, the Algolia integration groups all concrete products belonging to the same abstract product.
 
 {% endinfo_block %}
 
@@ -53,16 +40,47 @@ In search results, Algolia integration groups all concrete products belonging to
 
 For a Spryker store, the product indexes contain all active concrete products that can appear in search results (by default, they are grouped by abstract product SKU).
 Separate indexes are created for CMS pages (one per locale).
-For Documents or any other custom entities, you have to prepare search index in Algolia.
+For documents or any other custom entities, you have to prepare a search index in Algolia.
 
 There are separate indexes for each locale and sorting strategy. With Algolia, search results in your store can be sorted by:
 
 - Relevance (primary index)
 - Name (ascending and descending)
 - Rating (highest to lowest, products only)
-- Price (ascending and descending, products only)
+- Price (type, currency, ascending and descending, products only)
 
-For example, if you have two locales for products, there will be 12 indexes for your store in Algolia: one for each locale and sorting strategy.
+For example, if your project has two locales for products, there will be 7-9 indexes per locale in one store:
+
+1. Primary index for locale A
+2. Sorting replicas for locale A (name ascending, name descending, rating, price ascending, price descending)
+3. Primary index for locale B
+4. Sorting replicas for locale B (name ascending, name descending, rating, price ascending, price descending)
+
+Detailed explanation of the default indexes configuration:
+
+*Store: store1, locale: en_US, prices: NET and GROSS, currency: EUR*
+
+- product-store1-en_us
+- product-store1-en_us-asc-name
+- product-store1-en_us-desc-name
+- product-store1-en_us-asc-rating
+- product-store1-en_us-desc-rating
+- product-store1-en_us-asc-prices.eur.net
+- product-store1-en_us-desc-prices.eur.net
+- product-store1-en_us-asc-prices.eur.gross
+- product-store1-en_us-desc-prices.eur.gross
+
+*Store: store1, locale: de_DE, prices: NET and GROSS, currency: EUR*
+
+- product-store1-de_de
+- product-store1-de_de-asc-name
+- product-store1-de_de-desc-name
+- product-store1-de_de-asc-rating
+- product-store1-de_de-desc-rating
+- product-store1-de_de-asc-prices.eur.net
+- product-store1-de_de-desc-prices.eur.net
+- product-store1-de_de-asc-prices.eur.gross
+- product-store1-de_de-desc-prices.eur.gross
 
 ![algolia-indexes](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/algolia/algolia-index.png)
 
@@ -72,7 +90,7 @@ The Algolia index is always kept up to date with products and CMS pages changes.
 
 Here is an example of product data stored in Algolia:
 
-```json
+```jsonc
 {
   "sku": "017_21748906",
   "name": "Sony Cyber-shot DSC-W800",

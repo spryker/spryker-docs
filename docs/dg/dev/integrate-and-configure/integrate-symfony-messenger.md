@@ -145,7 +145,7 @@ To provide additional configuration for the Symfony Messenger transport, use the
 
 Different transports can have different configuration options. You can specify options per transport key or provide a default configuration for all transports.
 
-The following example shows the default configuration for the RabbitMQ transport. You can adjust it or provide your own configuration for other transports. For available AMQP transport options, see the [AMQP transport connection options](https://github.com/symfony/amqp-messenger/blob/6.4/Transport/Connection.php#L40).
+The following example shows the default configuration for the RabbitMQ transport. You can adjust it or provide your own configuration for other transports. For available AMQP transport options, see the https://github.com/symfony/amqp-messenger/blob/6.4/Transport/Connection.php#L40.
 Example below is the configuration that is used out of the box for RabbitMQ transport, but you can adjust it or provide your own for other transports.
 Available options for the AMQP transport can be found in the https://github.com/symfony/amqp-messenger/blob/6.4/Transport/Connection.php#L40.
 

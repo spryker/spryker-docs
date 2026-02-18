@@ -45,7 +45,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 2. Clone the Demo Shop and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{site.versionid}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

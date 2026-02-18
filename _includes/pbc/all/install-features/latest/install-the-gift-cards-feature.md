@@ -24,7 +24,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"202507.0" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1167,7 +1167,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"202507.0" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

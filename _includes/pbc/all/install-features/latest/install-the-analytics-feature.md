@@ -13,7 +13,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/analytics:"202507.0" --update-with-dependencies
+composer require spryker-feature/analytics:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

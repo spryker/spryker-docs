@@ -20,7 +20,7 @@ Before you start the feature integration, make sure you have integrated the foll
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/product-offer-shipment:"202507.0" --update-with-dependencies
+composer require spryker-feature/product-offer-shipment:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

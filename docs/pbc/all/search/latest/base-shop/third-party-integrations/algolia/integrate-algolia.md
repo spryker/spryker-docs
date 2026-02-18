@@ -777,7 +777,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 To enable CMS page search on the frontend, install `spryker-shop/cms-search-page` of version 1.5 or higher.
 
-If your project is based on an older version than `202507.0-p2`, adjust your Search CMS page templates to the latest changes from Spryker's demo shops:
+If your project is based on an older version than `{{site.versionid}}`, adjust your Search CMS page templates to the latest changes from Spryker's demo shops:
 
 - [B2C changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
 - [B2C Marketplace changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)

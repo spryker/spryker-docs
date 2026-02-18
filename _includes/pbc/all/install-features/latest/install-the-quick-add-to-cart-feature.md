@@ -17,7 +17,7 @@ To start the feature integration, overview and install the necessary features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/quick-add-to-cart:"202507.0" --update-with-dependencies
+composer require spryker-feature/quick-add-to-cart:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

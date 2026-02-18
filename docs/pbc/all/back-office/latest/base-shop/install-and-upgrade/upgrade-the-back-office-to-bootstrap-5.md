@@ -21,41 +21,41 @@ Then major releases (remove not used features from the list):
 composer require --update-with-dependencies --ignore-platform-req=ext-grpc \
 spryker/customer-user-connector-gui:"^2.0.0" \
 spryker/storage-gui:"^2.0.0" \
-spryker-feature/agent-assist:"dev-master as 202507.0" \
-spryker-feature/alternative-products:"dev-master as 202507.0" \
-spryker-feature/checkout:"dev-master as 202507.0" \
-spryker-feature/cms:"dev-master as 202507.0" \
-spryker-feature/configurable-bundle:"dev-master as 202507.0" \
-spryker-feature/file-manager:"dev-master as 202507.0" \
-spryker-feature/inventory-management:"dev-master as 202507.0" \
-spryker-feature/marketplace-agent-assist:"dev-master as 202507.0" \
-spryker-feature/marketplace-inventory-management:"dev-master as 202507.0" \
-spryker-feature/marketplace-merchant-commission:"dev-master as 202507.0" \
-spryker-feature/marketplace-order-management:"dev-master as 202507.0" \
-spryker-feature/marketplace-product-offer:"dev-master as 202507.0" \
-spryker-feature/marketplace-product-offer-prices:"dev-master as 202507.0" \
-spryker-feature/marketplace-return-management:"dev-master as 202507.0" \
-spryker-feature/marketplace-shipment:"dev-master as 202507.0" \
-spryker-feature/merchant:"dev-master as 202507.0" \
-spryker-feature/merchant-contract-requests:"dev-master as 202507.0" \
-spryker-feature/navigation:"dev-master as 202507.0" \
-spryker-feature/payments:"dev-master as 202507.0" \
-spryker-feature/product:"dev-master as 202507.0" \
-spryker-feature/product-approval-process:"dev-master as 202507.0" \
-spryker-feature/product-labels:"dev-master as 202507.0" \
-spryker-feature/product-lists:"dev-master as 202507.0" \
-spryker-feature/product-relations:"dev-master as 202507.0" \
-spryker-feature/product-sets:"dev-master as 202507.0" \
-spryker-feature/reclamations:"dev-master as 202507.0" \
-spryker-feature/return-management:"dev-master as 202507.0" \
-spryker-feature/scheduled-prices:"dev-master as 202507.0" \
-spryker-feature/search:"dev-master as 202507.0" \
-spryker-feature/shipment:"dev-master as 202507.0" \
-spryker-feature/spryker-core:"dev-master as 202507.0" \
-spryker-feature/spryker-core-back-office:"dev-master as 202507.0" \
-spryker-feature/product-offer-shipment:"dev-master as 202507.0" \
-spryker-feature/product-offer-service-points:"dev-master as 202507.0" \
-spryker-feature/warehouse-user-management:"dev-master as 202507.0"
+spryker-feature/agent-assist:"dev-master as {{site.versionid}}" \
+spryker-feature/alternative-products:"dev-master as {{site.versionid}}" \
+spryker-feature/checkout:"dev-master as {{site.versionid}}" \
+spryker-feature/cms:"dev-master as {{site.versionid}}" \
+spryker-feature/configurable-bundle:"dev-master as {{site.versionid}}" \
+spryker-feature/file-manager:"dev-master as {{site.versionid}}" \
+spryker-feature/inventory-management:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-agent-assist:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-inventory-management:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-merchant-commission:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-order-management:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-product-offer:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-product-offer-prices:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-return-management:"dev-master as {{site.versionid}}" \
+spryker-feature/marketplace-shipment:"dev-master as {{site.versionid}}" \
+spryker-feature/merchant:"dev-master as {{site.versionid}}" \
+spryker-feature/merchant-contract-requests:"dev-master as {{site.versionid}}" \
+spryker-feature/navigation:"dev-master as {{site.versionid}}" \
+spryker-feature/payments:"dev-master as {{site.versionid}}" \
+spryker-feature/product:"dev-master as {{site.versionid}}" \
+spryker-feature/product-approval-process:"dev-master as {{site.versionid}}" \
+spryker-feature/product-labels:"dev-master as {{site.versionid}}" \
+spryker-feature/product-lists:"dev-master as {{site.versionid}}" \
+spryker-feature/product-relations:"dev-master as {{site.versionid}}" \
+spryker-feature/product-sets:"dev-master as {{site.versionid}}" \
+spryker-feature/reclamations:"dev-master as {{site.versionid}}" \
+spryker-feature/return-management:"dev-master as {{site.versionid}}" \
+spryker-feature/scheduled-prices:"dev-master as {{site.versionid}}" \
+spryker-feature/search:"dev-master as {{site.versionid}}" \
+spryker-feature/shipment:"dev-master as {{site.versionid}}" \
+spryker-feature/spryker-core:"dev-master as {{site.versionid}}" \
+spryker-feature/spryker-core-back-office:"dev-master as {{site.versionid}}" \
+spryker-feature/product-offer-shipment:"dev-master as {{site.versionid}}" \
+spryker-feature/product-offer-service-points:"dev-master as {{site.versionid}}" \
+spryker-feature/warehouse-user-management:"dev-master as {{site.versionid}}"
 ```
 
 2. Update the `@spryker/oryx-for-zed` dependency:

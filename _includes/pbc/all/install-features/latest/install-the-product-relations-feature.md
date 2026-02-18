@@ -18,7 +18,7 @@ To start feature integration, overview, and install the necessary features:
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/product-relations:"202507.0" --update-with-dependencies
+composer require "spryker-feature/product-relations:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

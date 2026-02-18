@@ -20,7 +20,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-contract-requests: "202507.0" --update-with-dependencies
+composer require spryker-feature/merchant-contract-requests: "{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -414,7 +414,7 @@ Overview and install the necessary features before beginning the integration ste
 Install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-contract-requests: "202507.0" --update-with-dependencies
+composer require spryker-feature/merchant-contract-requests: "{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

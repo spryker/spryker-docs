@@ -30,7 +30,7 @@ Install the required features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/customer-account-management: "202507.0" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{site.versionid}}" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -875,7 +875,7 @@ Install the following features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/customer-account-management: "202507.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

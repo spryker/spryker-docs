@@ -20,7 +20,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/order-amendment: "202507.0" --update-with-dependencies
+composer require spryker-feature/order-amendment: "{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -2658,7 +2658,7 @@ Install the following required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/order-amendment: "202507.0" --update-with-dependencies
+composer require spryker-feature/order-amendment: "{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

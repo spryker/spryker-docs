@@ -23,7 +23,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/product-approval-process:"202507.0" --update-with-dependencies
+composer require spryker-feature/product-approval-process:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

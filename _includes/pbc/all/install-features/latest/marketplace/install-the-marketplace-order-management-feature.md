@@ -19,7 +19,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-order-management:"202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-order-management:"{{site.versionid}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

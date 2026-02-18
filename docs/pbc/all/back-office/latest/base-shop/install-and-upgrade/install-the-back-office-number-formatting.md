@@ -17,11 +17,11 @@ To add support of number formatting in the Back Office, integrate the following 
 
 | NAME   | REQUIRED | VERSION   | INTEGRATION  GUIDE    |
 |--|-----------|-------|--------------------------|
-| Spryker Core          |         &#9989;        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
-| Promotions & Discounts |    | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
-| Product Options |    | 202507.0 | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
-| Product + Order Management|   | 202507.0 | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Shipment   |   | 202507.0 | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
+| Spryker Core          |         &#9989;        | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Promotions & Discounts |    | {{site.versionid}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
+| Product Options |    | {{site.versionid}} | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
+| Product + Order Management|   | {{site.versionid}} | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
+| Shipment   |   | {{site.versionid}} | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
 
 ## 1) Install the required modules
 

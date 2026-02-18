@@ -295,6 +295,56 @@ $jobs[] = [
 ];
 ```
 
+### 8. Trigger a workflow with state machine
+
+To start a workflow, create a workflow item with initial context data and trigger the state machine for it.
+
+**Create a workflow item and trigger the state machine:**
+
+```php
+<?php
+
+use Generated\Shared\Transfer\AiWorkflowItemCollectionRequestTransfer;
+use Generated\Shared\Transfer\AiWorkflowItemTransfer;
+use Generated\Shared\Transfer\StateMachineProcessTransfer;
+use Spryker\Shared\AiFoundation\AiFoundationConstants;
+
+// 1. Create a workflow item with initial context data
+$request = (new AiWorkflowItemCollectionRequestTransfer())
+    ->setIsTransactional(true)
+    ->addAiWorkflowItem(
+        (new AiWorkflowItemTransfer())->setContextData([
+            'prompt' => 'Analyze this data.',
+            'status' => 'initialized',
+        ]),
+    );
+
+$response = $this->aiFoundationFacade->createAiWorkflowItemCollection($request);
+$workflowItem = $response->getAiWorkflowItems()->offsetGet(0);
+
+// 2. Trigger the state machine for the newly created item
+$processTransfer = (new StateMachineProcessTransfer())
+    ->setProcessName('IntelligentTask01')
+    ->setStateMachineName(AiFoundationConstants::AI_WORKFLOW_STATE_MACHINE_NAME);
+
+$this->stateMachineFacade->triggerForNewStateMachineItem($processTransfer, $workflowItem->getIdAiWorkflowItem());
+```
+
+**Trigger a manual event:**
+
+```php
+<?php
+
+use Generated\Shared\Transfer\StateMachineItemTransfer;
+
+$stateMachineItemTransfer = (new StateMachineItemTransfer())
+    ->setIdentifier($workflowItem->getIdAiWorkflowItem())
+    ->setStateMachineName(AiFoundationConstants::AI_WORKFLOW_STATE_MACHINE_NAME)
+    ->setProcessName('IntelligentTask01');
+
+$this->stateMachineFacade->triggerEvent('restart', $stateMachineItemTransfer);
+```
+
 ## Multi-agent orchestration patterns
 
 There are many possible patterns for multi-agent orchestration. The following are a couple of examples implemented using the Spryker AiWorkflow state machine.

@@ -1,12 +1,18 @@
 ---
 title: Eco modules
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Mar 21, 2025
+last_updated: Jan 1, 2026
 template: default
 layout: custom_new
 ---
 
 
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
 <div class="content_box">
 Spryker Commerce OS is known for its modular architecture, designed for flexibility and the ability to handle complex ecommerce requirements. While the core platform provides essential ecommerce functions, modern online businesses often need to connect with various specialized third-party services to create a complete solution. These external services can include payment gateways, Product Information Management systems, monitoring tools, analytics platforms, and more.
 

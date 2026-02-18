@@ -6,6 +6,11 @@ template: default
 layout: custom_new
 ---
 <div class="community-hero">
+<div class="community-hero">
+<div class="community-hero">
+<div class="community-hero">
+<div class="community-hero">
+<div class="community-hero">
   <p class="header-title">Connect, create, contribute.</p>
   <p>Spryker thrives because of its powerful technology and the people who build on it. Discover how community driven innovation can accelerate your next project.</p>
   <p>Explore developer driven tools and extensions that boost your Spryker project. Brought to you by the community, for the community.</p>

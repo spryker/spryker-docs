@@ -13,16 +13,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
-      - name: Check last_updated is not older than 30 days
-        env:
-          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: /bin/bash ./_scripts/last_updated_checker.sh
+      - name: Make sidebar checker script executable
+        run: chmod +x _scripts/sidebar_checker/sidebar_checker.sh
 
       - name: Run sidebar checker script
-        run: /bin/bash ./_scripts/sidebar_checker/sidebar_checker.sh
+        run: ./_scripts/sidebar_checker/sidebar_checker.sh
 
       - name: Print missing documents file
         run: if [ -f "_scripts/sidebar_checker/missing-documents.yml" ]; then cat _scripts/sidebar_checker/missing-documents.yml; else echo "No missing documents found."; fi

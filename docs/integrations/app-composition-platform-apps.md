@@ -1,11 +1,16 @@
 ---
 title: Spryker App Composition Platform
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: July 9, 2025
+last_updated: Feb 9, 2026
 template: default
 layout: custom_new
 ---
 
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
+<div class="content_box">
 <div class="content_box">
 
 ## What is the App Composition Platform

@@ -165,7 +165,7 @@ class RedisConfig extends AbstractBundleConfig
 
 After enabling compression, we recommend resaving storage data.
 
-The command to resave storage data is available starting from `spryker/storage-redis:1.7.0`. To enable the command for resaving storage data, add the following configuration:
+The command to resave storage data is available starting from `spryker/storage-redis:1.9.0`. To enable the command for resaving storage data, add the following configuration:
 
 
 ```php

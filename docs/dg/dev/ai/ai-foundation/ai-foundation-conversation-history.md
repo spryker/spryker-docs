@@ -11,6 +11,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: Use AI tools with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+  - title: AI workflow orchestration with state machines
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
 ---
 
 This document describes how to use conversation history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.

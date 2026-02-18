@@ -9,6 +9,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
   - title: Use AI tools with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+  - title: AI workflow orchestration with state machines
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
   - title: Transfer objects
     link: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---

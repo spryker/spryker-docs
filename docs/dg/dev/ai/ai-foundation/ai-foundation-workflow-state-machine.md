@@ -12,6 +12,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Use structured responses with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+  - title: Manage conversation history with the AiFoundation module
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
 ---
 
 This guide shows you how to build multi-step, multi-agent AI workflows using Spryker state machines. By combining state machines with the AiFoundation module, you can orchestrate complex AI processes where agents execute tasks, make decisions based on results, and trigger subsequent steps.

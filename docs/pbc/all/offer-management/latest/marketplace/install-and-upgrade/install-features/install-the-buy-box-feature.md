@@ -31,7 +31,7 @@ Install the following required features:
 Install the required modules by using Composer:
 
 ```bash
-composer require spryker-feature/buy-box:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/buy-box:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

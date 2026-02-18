@@ -293,52 +293,17 @@ $jobs[] = [
 ];
 ```
 
-## Workflow patterns
+## Multi-agent orchestration patterns
 
-### Sequential multi-step workflow
+There are many possible patterns for multi-agent orchestration. The following are a couple of examples implemented using the Spryker AiWorkflow state machine.
 
-Chain commands across multiple states:
+### Multi-agent routing workflow
 
-```text
-[gather_data]
-  → Command: fetch_info
-[analyze]
-  → Command: analyze_data
-[complete]
-```
+![Multi-agent routing workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/MultiAgentOrchestration01.png)
 
-### Cyclic workflow with retries
+### Multi-agent supervision workflow
 
-Use manual events to retry from failed states:
-
-```text
-[processing]
-  → Command: execute
-[check_result]
-  ├─ Success ──────────────────────► [complete]
-  └─ Failure → Manual event: retry → [processing]
-```
-
-### Multi-agent workflow
-
-A router agent evaluates the input and delegates to one of three specialized agents:
-
-```text
-[new]
-  → Command: RouterAgent/Decide
-[decided]
-  ├─ Condition: Router/IsTypeA ──► [agent_a_ready]
-  │                                  → Command: AgentA/Process
-  │                                [complete]
-  ├─ Condition: Router/IsTypeB ──► [agent_b_ready]
-  │                                  → Command: AgentB/Process
-  │                                [complete]
-  └─ Default ──────────────────► [agent_c_ready]
-                                   → Command: AgentC/Process
-                                 [complete]
-```
-
-The router agent stores its decision in `contextData`. Each condition reads that value and routes the workflow to the matching specialized agent.
+![Multi-agent supervision workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/SupervisorLoop01.png)
 
 ## Best practices
 

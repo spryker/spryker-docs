@@ -28,14 +28,6 @@ API Platform is a framework for building modern APIs based on web standards and 
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
 
-{% info_block warningBox "CodeBucket support" %}
-
-Currently, the API-Platform integration does not support code buckets. When defining resources, use only the Core and Project layers.
-
-Code bucket support is planned for future releases.
-
-{% endinfo_block %}
-
 ## Architecture overview
 
 ### Resource generation workflow

@@ -25,7 +25,7 @@ Install the following required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/inventory-management:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/inventory-management:"dev-master" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

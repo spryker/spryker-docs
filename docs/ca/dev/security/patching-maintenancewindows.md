@@ -24,7 +24,7 @@ The specific timeframe for each environment falls within the official maintenanc
 
 Patching is conducted in batches by environment type to minimize risk and ensure stability:
 	•	Step 1: Non-production environments
-	•	Step 2: Production environments (after a one-week gap)
+	•	Step 2: Production environments (after at least a one-week gap)
 Custom batch assignment or scheduling within a batch is not possible.
 
 **What downtime or service impact should I expect?**

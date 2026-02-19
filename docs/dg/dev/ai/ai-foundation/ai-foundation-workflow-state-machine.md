@@ -357,6 +357,34 @@ There are many possible patterns for multi-agent orchestration. The following ar
 
 ![Multi-agent supervision workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/SupervisorLoop01.png)
 
+## Monitoring
+
+You can monitor AI workflows in the Spryker Zed administration panel. The monitoring interface provides visibility into workflow execution, state transitions, and context data.
+
+### Access the workflows overview
+
+To view all AI workflow items and their current states, navigate to **AI Foundation** > **AI Workflows** in the Zed admin panel. You see a list of all workflow items with the following information:
+
+- **ID**: Unique identifier for the workflow item
+- **Process Name**: The name of the process the workflow item is executing
+- **State**: The current state of the workflow item in the state machine
+- **Created At**: The timestamp when the workflow item was created
+- **Updated At**: The timestamp when the workflow item was last updated
+
+### View workflow details
+
+To view detailed information about a specific workflow item, click the **View** button in the actions column. The detail page displays the following information:
+
+- **Current State**: Shows the workflow item ID, process name, and current state
+- **Context Data**: Displays the JSON context data that flows through the workflow, including input data and results from executed commands
+- **State History**: A table showing all states the workflow item has passed through and the timestamps when each state was entered
+- **Manual Events**: If manual events are available for the current state, you can trigger them directly from the admin panel (useful for testing or recovery scenarios)
+- **Process Graph**: A visual representation of the state machine process with the current state highlighted
+
+### Trigger manual events
+
+If a workflow is waiting for a manual event or you need to change its course, you can trigger manual events from the workflow detail page. Manual events appear as buttons under the **Manual Events** section. Only events that are valid for the current state are displayed.
+
 ## Best practices
 
 - **Keep context simple**: Store only the data that conditions need to evaluate the next step and that subsequent commands need to process

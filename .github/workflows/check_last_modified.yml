@@ -1,0 +1,22 @@
+name: Check last_updated is not older than 30 days
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check-sidebar-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Check last_updated is not older than 30 days for files with 1 changed line
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: /bin/bash ./_scripts/last_updated_checker.sh 1 30

@@ -43,6 +43,8 @@ You can check supported PHP versions in the [Docker Hub](https://hub.docker.com/
 Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html).
 Pay attention to an [architecture convention](/docs/dg/dev/architecture/architectural-convention.html) page as in addition it provides a set of rules and recommendations that applicable specifically for project development.
 
+Additionally, consider documenting your project architecture from the start using [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) practices, which ensures your architecture stays aligned with implementation and facilitates team onboarding.
+
 ## Use custom namespaces
 
 Instead of using the `Pyz` namespace, it's possible to use your own namespace for project development. For example, use the project name as a namespace.

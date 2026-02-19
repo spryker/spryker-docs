@@ -49,6 +49,18 @@ def get_versions(versioned_page_urls)
     end
 end
 
+def setup_release_tag(page, config)
+    version = config['page']['version']
+    resolved = if version.nil? || version.empty?
+        page.site.config['release_version']
+    else
+        version
+    end
+
+    page.data['release_tag'] = resolved
+    config['page']['release_tag'] = resolved
+end
+
 def can_be_versioned(page)
     product = page['product']
     role = page['role']
@@ -66,8 +78,11 @@ end
 Jekyll::Hooks.register :pages, :pre_render do |page, config|
     next page unless File.extname(page.path).match?(/md|html/)
     next page unless page.url.start_with? '/docs/'
-    next page unless can_be_versioned page
 
-    setup_current_page_version page, config
-    setup_all_page_versions page, config
+    if can_be_versioned(page)
+        setup_current_page_version page, config
+        setup_all_page_versions page, config
+    end
+
+    setup_release_tag(page, config)
 end

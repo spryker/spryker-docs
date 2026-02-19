@@ -172,7 +172,7 @@ To add a new version for the versioned categories:
 You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and links. For example, if you open a document in version `202108.0` in the editor and write there the following:
 
 ```md
-This feature requires version {{page.version}} of the Merchants feature.
+This feature requires version {{page.release_tag}} of the Merchants feature.
 For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 

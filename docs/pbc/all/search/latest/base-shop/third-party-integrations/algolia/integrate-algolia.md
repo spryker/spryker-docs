@@ -2,276 +2,109 @@
 title: Integrate Algolia
 description: Learn how to integrate Algolia Search into your Spryker-based projects.
 template: howto-guide-template
-last_updated: Sep 1, 2025
+last_updated: Feb 20, 2026
 redirect_from:
-- /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
-- /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
-- /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html
+  - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html
+  - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/disconnect-algolia.html
 ---
 
 This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
 
-
 ## Prerequisites
 
-- [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html)
+Install the required module:
 
-- In the Back Office, go to **Apps** > **Algolia**. Install or update the required packages for Algolia. Example:
+```bash
+composer require -W spryker-eco/algolia
+```
 
-![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
+## Configure Algolia credentials
+
+In `config/Shared/config_default.php` or, for local development, in `config_local.php`, add the following:
+
+```php
+use SprykerEco\Shared\Algolia\AlgoliaConstants;
+
+$config[AlgoliaConstants::IS_ACTIVE] = true;
+$config[AlgoliaConstants::APPLICATION_ID] = getenv('ALGOLIA_APPLICATION_ID');
+$config[AlgoliaConstants::ADMIN_API_KEY] = getenv('ALGOLIA_WRITE_API_KEY');
+$config[AlgoliaConstants::SEARCH_ONLY_API_KEY] = getenv('ALGOLIA_SEARCH_API_KEY');
+// Optional: use when sharing one Algolia account across multiple environments. Default is "production".
+// $config[AlgoliaConstants::TENANT_IDENTIFIER] = 'john';
+```
 
 ## Integrate Algolia
 
-To integrate Algolia, follow these steps:
+### 1. Enable the console command
 
-### 1. Update project config files
-
-
-<details>
-  <summary>config/Shared/config_default.php</summary>
+In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, register the export console command:
 
 ```php
-use Generated\Shared\Transfer\CmsPagePublishedTransfer;
-use Generated\Shared\Transfer\CmsPageUnpublishedTransfer;
-use Generated\Shared\Transfer\InitializeCmsPageExportTransfer;
-use Generated\Shared\Transfer\InitializeProductExportTransfer;
-use Generated\Shared\Transfer\ProductCreatedTransfer;
-use Generated\Shared\Transfer\ProductDeletedTransfer;
-use Generated\Shared\Transfer\ProductExportedTransfer;
-use Generated\Shared\Transfer\ProductUpdatedTransfer;
-use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
-use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
-use Spryker\Shared\KernelApp\KernelAppConstants;
-use Spryker\Shared\MessageBroker\MessageBrokerConstants;
-use Spryker\Shared\Product\ProductConstants;
-use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+<?php
 
-//...
+namespace Pyz\Zed\Console;
 
-$config[KernelAppConstants::TENANT_IDENTIFIER]
-    = $config[ProductConstants::TENANT_IDENTIFIER]
-    = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
-    = $config[MessageBrokerAwsConstants::CONSUMER_ID]
-    = $config[OauthClientConstants::TENANT_IDENTIFIER]
-    = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
-    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use SprykerEco\Zed\Algolia\Communication\Console\AlgoliaEntityExportConsole;
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    //...
-    CmsPagePublishedTransfer::class => 'cms-page-events',
-    CmsPageUnpublishedTransfer::class => 'cms-page-events',
-    ProductExportedTransfer::class => 'product-events',
-    ProductCreatedTransfer::class => 'product-events',
-    ProductUpdatedTransfer::class => 'product-events',
-    ProductDeletedTransfer::class => 'product-events',
-    InitializeProductExportTransfer::class => 'product-commands',
-    InitializeCmsPageExportTransfer::class => 'search-commands',
-    SearchEndpointAvailableTransfer::class => 'search-commands',
-    SearchEndpointRemovedTransfer::class => 'search-commands',     
-];
-
-$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    //...
-    'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
-
-$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...
-    'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'cms-page-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'search-entity-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
-```
-
-</details>
-
-### 2. Configure modules and their behavior
-
-Configure modules and add dependencies as described in the following sections.
-
-#### Configure the Catalog module
-
-<details>
-  <summary>src/Pyz/Client/Catalog/CatalogDependencyProvider.php5</summary>
-
-```php
-use Generated\Shared\Transfer\SearchContextTransfer;
-use Generated\Shared\Transfer\SearchHttpSearchContextTransfer;
-use Spryker\Client\Catalog\Plugin\SearchHttp\ResultFormatter\ProductConcreteCatalogSearchHttpResultFormatterPlugin;
-use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\QueryExpander\ProductPriceSearchHttpQueryExpanderPlugin;
-use Spryker\Client\CatalogPriceProductConnector\Plugin\Catalog\ResultFormatter\CurrencyAwareCatalogSearchHttpResultFormatterPlugin;
-use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategorySuggestionsSearchHttpResultFormatterPlugin;
-use Spryker\Client\CategoryStorage\Plugin\Catalog\ResultFormatter\CategoryTreeFilterSearchHttpResultFormatterPlugin;
-use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSuggestionsSearchHttpResultFormatterPlugin;
-use Spryker\Client\MerchantProductOfferSearch\Plugin\Catalog\MerchantReferenceSearchHttpQueryExpanderPlugin;
-use Spryker\Client\ProductLabelStorage\Plugin\Catalog\ProductLabelSearchHttpFacetConfigTransferBuilderPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\Query\ProductConcreteSearchHttpQueryPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SuggestionSearchHttpQueryPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\BasicSearchHttpQueryExpanderPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\FacetSearchHttpQueryExpanderPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\CompletionSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\FacetSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\PaginationSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\ProductSuggestionSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SortSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\SpellingSuggestionSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchResultCountPlugin;
-use Spryker\Shared\SearchHttp\SearchHttpConfig;
-
-class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
-
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
     /**
-     * @return array<string, array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>>
-     */
-    protected function getFacetConfigTransferBuilderPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_SEARCH_HTTP => [
-                new CategoryFacetConfigTransferBuilderPlugin(),
-                new PriceFacetConfigTransferBuilderPlugin(),
-                new RatingFacetConfigTransferBuilderPlugin(),
-                new ProductLabelSearchHttpFacetConfigTransferBuilderPlugin(),
-            ],
-        ];
-    }
-
-    /**
-     * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
+     * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryInterface>
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
-    protected function createCatalogSearchQueryPluginVariants(): array
+    protected function getConsoleCommands(Container $container): array
     {
-        return [
-            new SearchHttpQueryPlugin(),
+        $commands = [
+            // ... existing commands
+            new AlgoliaEntityExportConsole(),
         ];
-    }
 
-    /**
-     * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
-     *
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryInterface>
-     */
-    protected function createSuggestionQueryPluginVariants(): array
-    {
-        return [
-            new SuggestionSearchHttpQueryPlugin(),
-        ];
+        return $commands;
     }
-
-    /**
-     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
-     */
-    protected function createProductConcreteCatalogSearchResultFormatterPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_PRODUCT_CONCRETE_SEARCH_HTTP => [
-                new ProductConcreteCatalogSearchHttpResultFormatterPlugin(),
-            ],
-        ];
-    }
-
-    /**
-     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
-     */
-    protected function createSuggestionResultFormatterPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_SUGGESTION_SEARCH_HTTP => [
-                new CompletionSearchHttpResultFormatterPlugin(),
-                new CurrencyAwareCatalogSearchHttpResultFormatterPlugin(
-                    new ProductSuggestionSearchHttpResultFormatterPlugin(),
-                ),
-                new CategorySuggestionsSearchHttpResultFormatterPlugin(),
-                new CmsPageSuggestionsSearchHttpResultFormatterPlugin(),
-            ],
-        ];
-    }
-
-    /**
-     * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
-     *
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryInterface>
-     */
-    protected function createProductConcreteCatalogSearchQueryPluginVariants(): array
-    {
-        return [
-            new ProductConcreteSearchHttpQueryPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>>
-     */
-    protected function createCatalogSearchQueryExpanderPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_SEARCH_HTTP => [
-                new BasicSearchHttpQueryExpanderPlugin(),
-                new ProductPriceSearchHttpQueryExpanderPlugin(),
-                new FacetSearchHttpQueryExpanderPlugin(),
-            ],
-        ];
-    }
-
-    /**
-     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
-     */
-    protected function createCatalogSearchResultFormatterPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_SEARCH_HTTP => [
-                new PaginationSearchHttpResultFormatterPlugin(),
-                new SortSearchHttpResultFormatterPlugin(),
-                new CurrencyAwareCatalogSearchHttpResultFormatterPlugin(
-                    new ProductSearchHttpResultFormatterPlugin(),
-                ),
-                new SpellingSuggestionSearchHttpResultFormatterPlugin(),
-                new FacetSearchHttpResultFormatterPlugin(),
-                new CategoryTreeFilterSearchHttpResultFormatterPlugin(),
-            ],
-        ];
-    }
-    
-    /**
-     * @return list<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchResultCountPluginInterface>
-     */
-    protected function getSearchResultCountPlugins(): array
-    {
-        return [
-            new SearchHttpSearchResultCountPlugin(),
-        ];
-    }
-    
-    
-    /**
-     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>>
-     */
-    protected function createCatalogSearchCountQueryExpanderPluginVariants(): array
-    {
-        return [
-            SearchHttpConfig::TYPE_SEARCH_HTTP => [
-                new ProductPriceSearchHttpQueryExpanderPlugin(),
-            ],
-        ];
-    }
-
-    //...
 }
 ```
 
-</details>
+### 2. Configure entity exporter plugins
 
-#### Configure the Search module
-
-Add the following code to `src/Pyz/Client/Search/SearchDependencyProvider.php`:
+In `src/Pyz/Zed/Algolia/AlgoliaDependencyProvider.php`, register the entity exporter plugins:
 
 ```php
-use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchAdapterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchContextExpanderPlugin;
+<?php
+
+namespace Pyz\Zed\Algolia;
+
+use SprykerEco\Zed\Algolia\AlgoliaDependencyProvider as SprykerEcoAlgoliaDependencyProvider;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Algolia\CmsPageAlgoliaEntityExporterPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Algolia\ProductAlgoliaEntityExporterPlugin;
+
+class AlgoliaDependencyProvider extends SprykerEcoAlgoliaDependencyProvider
+{
+    /**
+     * @return array<\SprykerEco\Zed\Algolia\Dependency\Plugin\AlgoliaEntityExporterPluginInterface>
+     */
+    protected function getAlgoliaEntityExporterPlugins(): array
+    {
+        return [
+            new ProductAlgoliaEntityExporterPlugin(),
+            new CmsPageAlgoliaEntityExporterPlugin(),
+        ];
+    }
+}
+```
+
+### 3. Configure the search adapter plugin
+
+In `src/Pyz/Client/Search/SearchDependencyProvider.php`, register the Algolia search adapter:
+
+```php
+<?php
+
+namespace Pyz\Client\Search;
+
+use Spryker\Client\Search\SearchDependencyProvider as SprykerSearchDependencyProvider;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchAdapterPlugin;
 
 class SearchDependencyProvider extends SprykerSearchDependencyProvider
 {
@@ -281,441 +114,442 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     protected function getClientAdapterPlugins(): array
     {
         return [
-            new SearchHttpSearchAdapterPlugin(), # It is very important to put this plugin at the top of the list.
-            //...
+            new AlgoliaSearchAdapterPlugin(),
         ];
     }
-
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextExpanderPluginInterface>
-     */
-    protected function getSearchContextExpanderPlugins(): array
-    {
-        return [
-            new SearchHttpSearchContextExpanderPlugin(), # It is very important to put this plugin at the top of the list.
-            //...
-        ];
 }
 ```
 
-#### Configure the SearchHttp module
+### 4. Configure catalog search query plugins
 
+{% info_block infoBox "" %}
 
-<details>
-  <summary>src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php</summary>
+This step requires `\Pyz\Shared\Algolia\AlgoliaConfig::isSearchInFrontendEnabledForProducts()` to return `true`.
 
+The integration also depends on SearchHttp module plugins. Make sure they are enabled in `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`.
+
+{% endinfo_block %}
+
+In `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`, register the Algolia search query plugins:
 
 ```php
 <?php
 
-namespace Pyz\Client\SearchHttp;
+namespace Pyz\Client\Catalog;
 
-use Spryker\Client\Catalog\Plugin\ConfigTransferBuilder\CategoryFacetConfigTransferBuilderPlugin;
-use Spryker\Client\Catalog\Plugin\SearchHttp\CatalogSearchHttpConfigBuilderPlugin;
-use Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder\PriceFacetConfigTransferBuilderPlugin;
-use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantProductMerchantNameSearchConfigExpanderPlugin;
-use Spryker\Client\ProductLabelStorage\Plugin\ProductLabelFacetConfigTransferBuilderPlugin;
-use Spryker\Client\ProductReview\Plugin\RatingFacetConfigTransferBuilderPlugin;
-use Spryker\Client\ProductSearchConfigStorage\Plugin\Config\ProductSearchConfigExpanderPlugin;
-use Spryker\Client\SearchHttp\SearchHttpDependencyProvider as SprykerSearchHttpDependencyProvider;
+use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaProductConcreteSearchQueryPlugin;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchQueryPlugin;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSuggestionSearchQueryPlugin;
 
-class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\Catalog\Dependency\Plugin\FacetConfigTransferBuilderPluginInterface>
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      */
-    protected function getFacetConfigTransferBuilders(): array
+    protected function createCatalogSearchQueryPluginVariants(): array
     {
         return [
-            new CategoryFacetConfigTransferBuilderPlugin(),
-            new PriceFacetConfigTransferBuilderPlugin(),
-            new RatingFacetConfigTransferBuilderPlugin(),
-            new ProductLabelFacetConfigTransferBuilderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface>
-     */
-    protected function getSearchConfigBuilderPlugins(): array
-    {
-        return [
-            new CatalogSearchHttpConfigBuilderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
-     */
-    protected function getSearchConfigExpanderPlugins(): array
-    {
-        return [
-            new ProductSearchConfigExpanderPlugin(),
-        ];
-    }
-}
-```
-
-</details>
-
-
-<details>
-  <summary>src/Pyz/Zed/SearchHttp/SearchHttpConfig.php</summary>
-
-
-```php
-<?php
-
-namespace Pyz\Zed\SearchHttp;
-
-use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\SearchHttp\SearchHttpConfig as SprykerSearchHttpConfig;
-
-class SearchHttpConfig extends SprykerSearchHttpConfig
-{
-    /**
-     * @return string|null
-     */
-    public function getSearchHttpSynchronizationPoolName(): ?string
-    {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
-    }
-}
-```
-
-
-</details>
-
-
-#### Configure the Synchronization module
-
-Add the following code to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
-
-```php
-use Spryker\Zed\SearchHttp\Communication\Plugin\Synchronization\SearchHttpSynchronizationDataPlugin;
-
-class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
-     */
-    protected function getSynchronizationDataPlugins(): array
-    {
-        return [
-            //...
-            new SearchHttpSynchronizationDataPlugin(),
-        ];
-    }
-}
-```
-
-#### Configure the Queue module
-
-Add the following code to `src/Pyz/Zed/Queue/QueueDependencyProvider.php`:
-
-```php
-use Spryker\Shared\SearchHttp\SearchHttpConfig;
-
-class QueueDependencyProvider extends SprykerDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
-     */
-    protected function getProcessorMessagePlugins(Container $container): array
-    {
-        return [
-            //...
-            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
-        ];
-    }
-
-    //...
-}
-```
-
-#### Configure the RabbitMq module
-
-Add the following code to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
-
-```php
-use Spryker\Shared\SearchHttp\SearchHttpConfig;
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    /**
-     * @return array<mixed>
-     */
-    protected function getSynchronizationQueueConfiguration(): array
-    {
-        return [
-            //...
-            SearchHttpConfig::SEARCH_HTTP_CONFIG_SYNC_QUEUE,
-        ];
-    }
-}
-```
-
-#### Configure the MessageBroker module
-
-1. Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
-
-```php
-use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
-use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointAvailableMessageHandlerPlugin;
-use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemovedMessageHandlerPlugin;
-use Spryker\Zed\Cms\Communication\Plugin\MessageBroker\CmsPageMessageHandlerPlugin;
-
-class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
-{
-  /**
-    * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
-    */
-  public function getMessageHandlerPlugins(): array
-  {
-      return [
-          //...
-          new ProductExportMessageHandlerPlugin(),
-          new SearchEndpointMessageHandlerPlugin(),
-          new CmsPageMessageHandlerPlugin(),
-      ];
-  }
-}
-```
-
-2. Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
-
-```php
-class MessageBrokerConfig extends SprykerMessageBrokerConfig
-{
-    /**
-     * @return array<string>
-     */
-    public function getDefaultWorkerChannels(): array
-    {
-        return [
-            //...
-            'product-commands',
-            'search-commands',
-        ];
-    }
-}
-```
-
-#### Configure the Product module
-
-Algolia product search index synchronization is triggered by internal Spryker events. To enable product data synchronization, you need to provide a list of events that trigger sync. You can add or remove events depending on when you want products to be updated in Algolia.
-
-If your project has custom functionality where abstract or concrete products are created, updated, or deleted, add respective events to the methods to ensure updated data is sent to Algolia.
-
-Examples of such functionality:
-- Custom features in the Back Office
-- Custom data imports
-- Integration with middleware that updates product or product-related data in Spryker
-
-<details>
-  <summary>src/Pyz/Zed/Product/ProductConfig.php</summary>
-
-```php
-use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
-use Spryker\Zed\PriceProduct\Dependency\PriceProductEvents;
-use Spryker\Zed\Product\ProductConfig as SprykerProductConfig;
-use Spryker\Zed\ProductCategory\Dependency\ProductCategoryEvents;
-use Spryker\Zed\ProductImage\Dependency\ProductImageEvents;
-use Spryker\Zed\ProductReview\Dependency\ProductReviewEvents;
-
-class ProductConfig extends SprykerProductConfig
-{
-    /**
-     * @return array<string>
-     */
-    public function getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(): array
-    {
-        return array_merge(parent::getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(), [
-            ProductCategoryEvents::PRODUCT_CATEGORY_PUBLISH,
-            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_CREATE,
-            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_DELETE,
-
-            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_CREATE,
-            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_DELETE,
-
-            PriceProductEvents::PRICE_ABSTRACT_PUBLISH,
-            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
-            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
-
-            ProductReviewEvents::PRODUCT_ABSTRACT_REVIEW_PUBLISH,
-            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_CREATE,
-            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_UPDATE,
-
-            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_ABSTRACT_PUBLISH,
-
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
-        ]);
-    }
-
-    /**
-     * @return array<string>
-     */
-    public function getProductUpdateMessageBrokerPublisherSubscribedEvents(): array
-    {
-        return array_merge(parent::getProductUpdateMessageBrokerPublisherSubscribedEvents(), [
-            ProductBundleStorageConfig::PRODUCT_BUNDLE_PUBLISH,
-            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_CREATE,
-            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_UPDATE,
-
-            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_CONCRETE_PUBLISH,
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_CREATE,
-            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_UPDATE,
-
-            PriceProductEvents::PRICE_CONCRETE_PUBLISH,
-            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
-            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
-
-            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_CREATE,
-            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_UPDATE,
-        ]);
-    }
-}
-```
-
-</details>
-
-To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods. You can also use existing events:
-
-- For a single product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
-- For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
-
-
-Add the following code to `src/Pyz/Zed/Product/ProductDependencyProvider.php`:
-
-```php
-
-use Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product\MerchantProductOfferProductConcreteExpanderPlugin;
-use Spryker\Zed\PriceProduct\Communication\Plugin\Product\PriceProductConcreteMergerPlugin;
-use Spryker\Zed\ProductCategory\Communication\Plugin\Product\ProductConcreteCategoriesExpanderPlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\Product\ImageSetProductConcreteMergerPlugin;
-use Spryker\Zed\ProductReview\Communication\Plugin\Product\ProductReviewProductConcreteExpanderPlugin;
-use Spryker\Zed\ProductApproval\Communication\Plugin\Product\ApprovalStatusProductConcreteMergerPlugin;
-use Spryker\Zed\ProductLabel\Communication\Plugin\Product\ProductLabelProductConcreteExpanderPlugin;
-
-class ProductDependencyProvider extends SprykerProductDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteExpanderPluginInterface>
-     */
-    protected function getProductConcreteExpanderPlugins(): array
-    {
-        return [
-            // ...
-            new ProductReviewProductConcreteExpanderPlugin(),
-            new MerchantProductOfferProductConcreteExpanderPlugin(), # Marketplace only
-            new ProductConcreteCategoriesExpanderPlugin(),
-            new ProductLabelProductConcreteExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductConcreteMergerPluginInterface>
-     */
-    protected function getProductConcreteMergerPlugins(): array
-    {
-        return [
-            new ImageSetProductConcreteMergerPlugin(),
-            new PriceProductConcreteMergerPlugin(),
-            new ApprovalStatusProductConcreteMergerPlugin(), # Add this plugin if you are using the spryker/product-approval module
-        ];
-    }
-}
-```
-
-#### Configure the CmsPageSearch module
-
-Enable another search provider for CMS page search:
-
-<details>
-  <summary>src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php</summary>
-
-```php
-namespace Pyz\Client\CmsPageSearch;
-
-use Generated\Shared\Transfer\SearchContextTransfer;
-use Spryker\Client\CmsPageSearch\CmsPageSearchConfig;
-use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSearchHttpResultFormatterPlugin;
-use Spryker\Client\CmsPageSearch\Plugin\Search\SearchHttp\ResultFormatter\CmsPageSortSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\BasicSearchHttpQueryExpanderPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\QueryExpander\FacetSearchHttpQueryExpanderPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\FacetSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Catalog\ResultFormatter\PaginationSearchHttpResultFormatterPlugin;
-use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchResultCountPlugin;
-# Elasticsearch related plugins, optional, useful for transition period
-use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\Query\CmsPageSearchQueryPlugin;
-use Spryker\Client\CmsPageSearch\Plugin\Elasticsearch\SearchResultCount\SearchElasticSearchResultCountPlugin;
-
-class CmsPageSearchDependencyProvider extends \Spryker\Client\CmsPageSearch\CmsPageSearchDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function getCmsPageHttpSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new BasicSearchHttpQueryExpanderPlugin(),
-            new FacetSearchHttpQueryExpanderPlugin(),
-        ];
-    }
-    
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
-     */
-    protected function getCmsPageHttpSearchResultFormatterPlugins(): array
-    {
-        return [
-            new PaginationSearchHttpResultFormatterPlugin(),
-            new CmsPageSortSearchHttpResultFormatterPlugin(),
-            new CmsPageSearchHttpResultFormatterPlugin(),
-            new FacetSearchHttpResultFormatterPlugin(),
+            new AlgoliaSearchQueryPlugin(),
         ];
     }
 
     /**
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      */
-    protected function getCmsPageSearchQueryPlugins(): array
+    protected function createSuggestionQueryPluginVariants(): array
     {
         return [
-            new SearchHttpQueryPlugin(
-                (new SearchContextTransfer())
-                    ->setSourceIdentifier(CmsPageSearchConfig::SOURCE_IDENTIFIER_CMS_PAGE),
-            ),
-            new CmsPageSearchQueryPlugin(), # Optional, useful for transition period
+            new AlgoliaSuggestionSearchQueryPlugin(),
         ];
     }
 
     /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchResultCountPluginInterface>
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      */
-    protected function getCmsPageSearchResultCountPlugins(): array
+    protected function createProductConcreteCatalogSearchQueryPluginVariants(): array
     {
         return [
-            CmsPageSearchConfig::SEARCH_STRATEGY_SEARCH_HTTP => new SearchHttpSearchResultCountPlugin(),
-            CmsPageSearchConfig::SEARCH_STRATEGY_ELASTICSEARCH => new SearchElasticSearchResultCountPlugin(), # Optional, useful for transition period
+            new AlgoliaProductConcreteSearchQueryPlugin(),
         ];
     }
 }
 ```
 
-</details>
+### 5. Configure the CMS page search query plugin
+
+{% info_block infoBox "" %}
+
+This step is optional. It requires `\Pyz\Shared\Algolia\AlgoliaConfig::isSearchInFrontendEnabledForCmsPages()` to return `true`.
+
+The integration also depends on SearchHttp module plugins. Make sure they are enabled in `src/Pyz/Client/SearchHttp/SearchHttpDependencyProvider.php` and `src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php`.
+
+{% endinfo_block %}
+
+In `src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php`, register the Algolia search query plugin for CMS pages:
+
+```php
+<?php
+
+namespace Pyz\Client\CmsPageSearch;
+
+use Generated\Shared\Transfer\SearchContextTransfer;
+use Spryker\Client\CmsPageSearch\CmsPageSearchConfig;
+use Spryker\Client\CmsPageSearch\CmsPageSearchDependencyProvider as SprykerCmsPageSearchDependencyProvider;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchQueryPlugin;
+
+class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
+     */
+    protected function getCmsPageSearchQueryPlugins(): array
+    {
+        return [
+            new AlgoliaSearchQueryPlugin(
+                (new SearchContextTransfer())
+                    ->setSourceIdentifier(CmsPageSearchConfig::SOURCE_IDENTIFIER_CMS_PAGE),
+            ),
+        ];
+    }
+}
+```
+
+### 6. Generate transfers
+
+```bash
+vendor/bin/console transfer:generate
+```
+
+### 7. Verify the installation
+
+```bash
+vendor/bin/console | grep algolia
+vendor/bin/console algolia:entity-export
+```
+
+### 8. Export data to Algolia
+
+```bash
+vendor/bin/console algolia:entity-export --all
+
+# Or export specific entity types:
+vendor/bin/console algolia:entity-export product
+vendor/bin/console algolia:entity-export cms-page
+```
+
+For scheduling and additional options, see [Full indexing](#full-indexing).
+
+### 9. Verify data in the Algolia Dashboard
+
+1. Log in to Algolia.
+2. In the **Search** section, check the created indexes and the data inside.
+3. Run searches from the Algolia Dashboard.
+4. Configure index settings like [facets](https://www.algolia.com/doc/guides/managing-results/refine-results/faceting/) and [searchable attributes](https://www.algolia.com/doc/guides/managing-results/must-do/searchable-attributes/) as needed.
+
+### 10. Configure real-time synchronization
+
+In `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`, register the Algolia publisher plugins:
+
+```php
+<?php
+
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\AlgoliaCmsPageDeletePublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\AlgoliaCmsPagePublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\AlgoliaCmsPageVersionPublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductAbstractPublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductConcreteDeletePublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductConcretePublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    protected function getPublisherPlugins(): array
+    {
+        return [
+            new AlgoliaProductConcretePublisherPlugin(),
+            new AlgoliaProductAbstractPublisherPlugin(),
+            new AlgoliaProductConcreteDeletePublisherPlugin(),
+            new AlgoliaCmsPagePublisherPlugin(),
+            new AlgoliaCmsPageVersionPublisherPlugin(),
+            new AlgoliaCmsPageDeletePublisherPlugin(),
+        ];
+    }
+}
+```
+
+For details on each plugin and its subscribed events, see [Real-time synchronization](#real-time-synchronization).
+
+### 11. Enable search in the frontend and API
+
+{% info_block warningBox "" %}
+
+Make sure you have data in the Algolia indices before enabling search in the frontend. Otherwise, search returns no results.
+
+{% endinfo_block %}
+
+In `src/Pyz/Client/Algolia/AlgoliaConfig.php`, enable product and CMS page search:
+
+```php
+<?php
+
+namespace Pyz\Client\Algolia;
+
+use SprykerEco\Client\Algolia\AlgoliaConfig as SprykerEcoAlgoliaConfig;
+
+class AlgoliaConfig extends SprykerEcoAlgoliaConfig
+{
+    public function isSearchInFrontendEnabledForProducts(): bool
+    {
+        return true;
+    }
+
+    public function isSearchInFrontendEnabledForCmsPages(): bool
+    {
+        return true;
+    }
+}
+```
+
+## Real-time synchronization
+
+### Product publisher plugins
+
+Product publisher plugins are located in `SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\`.
+
+#### AlgoliaProductConcretePublisherPlugin
+
+Publishes product concrete (variant) data to Algolia when products are created or updated.
+
+**Subscribed events:**
+- Product creation and update events
+- Product localized attribute changes
+- Product image changes
+- Product bundle changes (if `ProductBundleStorage` is installed)
+- Product price changes (if `PriceProduct` is installed)
+- Product search data changes (if `ProductSearch` is installed)
+
+#### AlgoliaProductAbstractPublisherPlugin
+
+Publishes all concrete products of a product abstract when abstract-level data changes.
+
+**Subscribed events:**
+- Product abstract updates
+- Category assignments
+- Product labels
+- Reviews
+- Images
+- Price changes (if `PriceProduct` is installed and enabled in the configuration)
+
+#### AlgoliaProductConcreteDeletePublisherPlugin
+
+Removes deleted products from Algolia indices.
+
+**Subscribed events:**
+- `PRODUCT_CONCRETE_UNPUBLISH`
+- `ENTITY_SPY_PRODUCT_DELETE`
+
+### CMS page publisher plugins
+
+CMS page publisher plugins are located in `SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\`.
+
+#### AlgoliaCmsPagePublisherPlugin
+
+Publishes CMS page data to Algolia when pages are created or updated.
+
+**Subscribed events:**
+- `ENTITY_SPY_CMS_PAGE_UPDATE`
+
+**Behavior:**
+- Fetches full CMS page data including the latest version.
+- Checks if the page is active and searchable before publishing.
+- Extracts locale-specific CMS content.
+- Removes pages from all relevant indices if the page is inactive or not searchable.
+
+#### AlgoliaCmsPageVersionPublisherPlugin
+
+Publishes CMS pages when new versions are created or published.
+
+**Subscribed events:**
+- `CMS_VERSION_PUBLISH`
+- `ENTITY_SPY_CMS_VERSION_CREATE`
+
+## Full indexing
+
+To export entities to Algolia, run the following commands:
+
+```bash
+# Export all products
+vendor/bin/console algolia:entity:export product
+
+# Export all CMS pages for a specific store
+vendor/bin/console algolia:entity:export cms-page --store=DE
+
+# Export for a specific locale
+vendor/bin/console algolia:entity:export product --locale=en_US
+
+# Export with a custom chunk size
+vendor/bin/console algolia:entity:export product --chunk-size=200
+```
+
+### Schedule automatic exports
+
+For periodic full re-indexing, add cron jobs to `config/Zed/cronjobs/jenkins.php`:
+
+```php
+/* Algolia - Weekly full export */
+$jobs[] = [
+    'name' => 'algolia-export-products',
+    'command' => $logger . '$PHP_BIN vendor/bin/console algolia:entity:export product',
+    'schedule' => '0 2 * * 0',
+    'enable' => true,
+];
+
+$jobs[] = [
+    'name' => 'algolia-export-cms-pages',
+    'command' => $logger . '$PHP_BIN vendor/bin/console algolia:entity:export cms-page',
+    'schedule' => '30 2 * * 0',
+    'enable' => true,
+];
+```
+
+- `0 2 * * 0`: runs at 2:00 AM every Sunday.
+- `30 2 * * 0`: runs at 2:30 AM every Sunday.
+
+{% info_block infoBox "" %}
+
+Cron jobs complement the real-time publisher plugins. The publisher plugins handle incremental updates, while the cron jobs ensure full data consistency by performing periodic complete exports.
+
+{% endinfo_block %}
+
+## Configuration
+
+### Available configuration methods
+
+**Product events:**
+- `getProductConcreteSubscribedEvents()`: product variant events.
+- `getProductAbstractSubscribedEvents()`: product abstract events.
+- `getProductConcreteUnpublishSubscribedEvents()`: delete events.
+
+**CMS page events:**
+- `getCmsPageUpdateSubscribedEvents()`: page update events.
+- `getCmsPageVersionPublishSubscribedEvents()`: version publish events.
+
+**Search:**
+- `isSearchInFrontendEnabledForProducts()`: enables product search in the frontend.
+- `isSearchInFrontendEnabledForCmsPages()`: enables CMS page search in the frontend.
+
+**Insights, analytics, and personalization:**
+- `getIsPersonalizationEnabled()`: enables or disables Algolia Personalization. This feature requires a premium Algolia plan.
+- `getProjectMappingFacets()`: maps facet names for Algolia Insights event tracking.
+
+### Default event subscriptions
+
+All publisher plugins get their subscribed events from `AlgoliaConfig`. The configuration automatically includes events from optional modules if they are installed:
+
+**Products:**
+- All product abstract and product concrete events.
+- `ProductBundle`: bundle events (if the module is installed).
+- `PriceProduct`: price events (if the module is installed).
+- `ProductLabel`: label events (if the module is installed).
+- `ProductReview`: review events (if the module is installed).
+
+**CMS pages:**
+- CMS: all CMS page and version events.
+
+### Customize event subscriptions
+
+To customize events, extend `AlgoliaConfig` in your project:
+
+```php
+<?php
+
+namespace Pyz\Zed\Algolia;
+
+use SprykerEco\Zed\Algolia\AlgoliaConfig as SprykerEcoAlgoliaConfig;
+
+class AlgoliaConfig extends SprykerEcoAlgoliaConfig
+{
+    public function getProductConcreteSubscribedEvents(): array
+    {
+        // Override all events
+        return [
+            'Product.product_concrete.publish',
+            'Entity.spy_product.update',
+        ];
+    }
+
+    public function getCmsPageUpdateSubscribedEvents(): array
+    {
+        // Extend parent events
+        $events = parent::getCmsPageUpdateSubscribedEvents();
+        $events[] = 'YourCustom.custom_event';
+
+        return $events;
+    }
+
+    public function getDefaultExportChunkSize(): int
+    {
+        return 500;
+    }
+}
+```
+
+## Custom entity index mapping
+
+The Algolia module supports searching custom entities that are already indexed in Algolia but are not natively supported by the module—like products or CMS pages. This lets you integrate any custom entity search without creating new plugins or modules.
+
+Use entity-to-index mapping when you want to search custom entities—like documents, manufacturers, or locations—that are already indexed in Algolia, without creating custom publisher plugins for read-only search.
+
+See details in the ["Using Algolia search with custom indexes"](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html) guide.
 
 
-#### Configure the Publisher module
+## Integrate frontend
 
-<details>
-  <summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+To enable CMS page search on the frontend, update `spryker-shop/cms-search-page` to version 1.5 or higher.
+
+If your project is based on an older version than `202507.0-p2`, adjust your Search CMS page templates to the latest changes from Spryker's demo shops:
+
+- [B2C changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
+- [B2C Marketplace changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
+- [B2B changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
+- [B2B Marketplace changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
+
+## Verify the integration
+
+{% info_block warningBox "" %}
+
+Verify the following:
+- Product and CMS page data are synchronized from your Spryker site to Algolia.
+- The frontend displays results from Algolia:
+  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list)
+  - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
+- In Algolia Dashboard, select the index for product or CMS page for the relevant store and locale. Check the number and order of records for the same search term on your Spryker site.
+- In Algolia API logs for the selected index, make sure there is a user-agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); Spryker Eco Algolia module"`.
+
+{% endinfo_block %}
+
+## Migrate from the ACP Algolia app
+
+If you are migrating from the MessageBroker-based [Algolia ACP App](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html):
+
+{% info_block infoBox "" %}
+
+The data synchronization logic remains the same. To avoid re-synchronizing all data to Algolia, set `TENANT_IDENTIFIER` to match the ACP tenant ID:
+
+```php
+$config[AlgoliaConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER'); // tenant-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx
+```
+
+{% endinfo_block %}
+
+### 1. Remove old ACP plugins and configuration
+
+**1a. Update `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`**
+
+Remove the following imports and their usages:
 
 ```php
 use Spryker\Zed\Cms\Communication\Plugin\Publisher\CmsPageUpdateMessageBrokerPublisherPlugin;
@@ -725,133 +559,249 @@ use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteCreatedMes
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteDeletedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteExportedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteUpdatedMessageBrokerPublisherPlugin;
-use Spryker\Zed\ProductCategory\Communication\Plugin\Publisher\ProductCategoryProductUpdatedEventTriggerPlugin;
-use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
+```
 
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+Also remove the methods that register them—such as `getProductMessageBrokerPlugins()` and `getCmsPageMessageBrokerPlugins()`—and their calls from `getPublisherPlugins()`.
+
+{% info_block infoBox "" %}
+
+Keep `ProductCategoryProductUpdatedEventTriggerPlugin` and `ProductLabelProductUpdatedEventTriggerPlugin`. These are not ACP-specific and must remain. Re-register them under the new Algolia plugins method in step 2.
+
+{% endinfo_block %}
+
+**1b. Update `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`**
+
+Remove the following imports and plugin instantiations:
+
+```php
+use Spryker\Zed\Cms\Communication\Plugin\MessageBroker\CmsPageMessageHandlerPlugin;
+use Spryker\Zed\Product\Communication\Plugin\MessageBroker\ProductExportMessageHandlerPlugin;
+use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointMessageHandlerPlugin;
+```
+
+**1c. Update `config/Shared/config_default.php`**
+
+Disable product publishing via MessageBroker:
+
+```php
+// Before:
+$config[ProductConstants::PUBLISHING_TO_MESSAGE_BROKER_ENABLED] = $config[MessageBrokerConstants::IS_ENABLED];
+
+// After:
+$config[ProductConstants::PUBLISHING_TO_MESSAGE_BROKER_ENABLED] = false;
+```
+
+At the end of the file, add the Algolia configuration:
+
+```php
+use SprykerEco\Shared\Algolia\AlgoliaConstants;
+
+$config[AlgoliaConstants::APPLICATION_ID] = getenv('ALGOLIA_APPLICATION_ID');
+$config[AlgoliaConstants::ADMIN_API_KEY] = getenv('ALGOLIA_WRITE_API_KEY');
+$config[AlgoliaConstants::SEARCH_ONLY_API_KEY] = getenv('ALGOLIA_SEARCH_API_KEY');
+$config[AlgoliaConstants::IS_ACTIVE] = $config[AlgoliaConstants::APPLICATION_ID] && $config[AlgoliaConstants::ADMIN_API_KEY] && $config[AlgoliaConstants::SEARCH_ONLY_API_KEY];
+$config[AlgoliaConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER');
+```
+
+**1d. Update `src/Pyz/Client/Search/SearchDependencyProvider.php`**
+
+Replace `SearchHttpSearchAdapterPlugin` with `AlgoliaSearchAdapterPlugin` and remove `SearchHttpSearchContextExpanderPlugin`:
+
+```php
+// Remove:
+use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchAdapterPlugin;
+use Spryker\Client\SearchHttp\Plugin\Search\SearchHttpSearchContextExpanderPlugin;
+
+// Add:
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchAdapterPlugin;
+```
+
+In `getClientAdapterPlugins()`, replace `new SearchHttpSearchAdapterPlugin()` with `new AlgoliaSearchAdapterPlugin()`.
+
+In `getSearchContextExpanderPlugins()`, remove `new SearchHttpSearchContextExpanderPlugin()`.
+
+**1e. Update `src/Pyz/Client/Catalog/CatalogDependencyProvider.php`**
+
+Replace SearchHttp query plugins with Algolia equivalents:
+
+```php
+// Remove:
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\ProductConcreteSearchHttpQueryPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SuggestionSearchHttpQueryPlugin;
+
+// Add:
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaProductConcreteSearchQueryPlugin;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchQueryPlugin;
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSuggestionSearchQueryPlugin;
+```
+
+Replace plugin instantiations:
+- In `createCatalogSearchQueryPluginVariants()`: replace `SearchHttpQueryPlugin` with `AlgoliaSearchQueryPlugin`.
+- In `createSuggestionQueryPluginVariants()`: replace `SuggestionSearchHttpQueryPlugin` with `AlgoliaSuggestionSearchQueryPlugin`.
+- In `createProductConcreteCatalogSearchQueryPluginVariants()`: replace `ProductConcreteSearchHttpQueryPlugin` with `AlgoliaProductConcreteSearchQueryPlugin`.
+
+**1f. Update `src/Pyz/Client/CmsPageSearch/CmsPageSearchDependencyProvider.php`**
+
+```php
+// Remove:
+use Spryker\Client\SearchHttp\Plugin\Catalog\Query\SearchHttpQueryPlugin;
+
+// Add:
+use SprykerEco\Client\Algolia\Plugin\Search\AlgoliaSearchQueryPlugin;
+```
+
+In `getCmsPageSearchQueryPlugins()`, replace `new SearchHttpQueryPlugin(...)` with `new AlgoliaSearchQueryPlugin(...)`.
+
+### 2. Add new Algolia integration
+
+**2a. Register the console export command**
+
+In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`:
+
+```php
+use SprykerEco\Zed\Algolia\Communication\Console\AlgoliaEntityExportConsole;
+
+// In getConsoleCommands():
+new AlgoliaEntityExportConsole(),
+```
+
+**2b. Create `src/Pyz/Zed/Algolia/AlgoliaDependencyProvider.php`**
+
+```php
+<?php
+
+namespace Pyz\Zed\Algolia;
+
+use SprykerEco\Zed\Algolia\AlgoliaDependencyProvider as SprykerEcoAlgoliaDependencyProvider;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Algolia\CmsPageAlgoliaEntityExporterPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Algolia\ProductAlgoliaEntityExporterPlugin;
+
+class AlgoliaDependencyProvider extends SprykerEcoAlgoliaDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\SprykerEco\Zed\Algolia\Dependency\Plugin\AlgoliaEntityExporterPluginInterface>
      */
-    protected function getPublisherPlugins(): array
-    {
-        return array_merge(
-            //...
-            $this->getProductMessageBrokerPlugins(),
-            $this->getCmsPageMessageBrokerPlugins(),
-        );
-    }
-
-    /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-     */
-    protected function getProductMessageBrokerPlugins(): array
+    protected function getAlgoliaEntityExporterPlugins(): array
     {
         return [
-            new ProductConcreteExportedMessageBrokerPublisherPlugin(),
-            new ProductConcreteCreatedMessageBrokerPublisherPlugin(),
-            new ProductConcreteUpdatedMessageBrokerPublisherPlugin(),
-            new ProductConcreteDeletedMessageBrokerPublisherPlugin(),
-            new ProductAbstractUpdatedMessageBrokerPublisherPlugin(),
-            new ProductCategoryProductUpdatedEventTriggerPlugin(),
-            new ProductLabelProductUpdatedEventTriggerPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-     */
-    protected function getCmsPageMessageBrokerPlugins(): array
-    {
-        return [
-            new CmsPageVersionPublishedMessageBrokerPublisherPlugin(),
-            new CmsPageUpdateMessageBrokerPublisherPlugin(),
+            new ProductAlgoliaEntityExporterPlugin(),
+            new CmsPageAlgoliaEntityExporterPlugin(),
         ];
     }
 }
 ```
 
-</details>
+**2c. Register real-time publisher plugins**
 
-### 3. Integrate frontend
+In `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`, add a new `getAlgoliaPlugins()` method and call it from `getPublisherPlugins()`:
 
-To enable CMS page search on the frontend, install `spryker-shop/cms-search-page` of version 1.5 or higher.
+```php
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\AlgoliaCmsPagePublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\CmsPage\AlgoliaCmsPageVersionPublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductAbstractPublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductConcreteDeletePublisherPlugin;
+use SprykerEco\Zed\Algolia\Communication\Plugin\Publisher\Product\AlgoliaProductConcretePublisherPlugin;
 
-If your project is based on an older version than `202507.0-p2`, adjust your Search CMS page templates to the latest changes from Spryker's demo shops:
+// ...
 
-- [B2C changes](https://github.com/spryker-shop/b2c-demo-shop/pull/793/files)
-- [B2C Marketplace changes](https://github.com/spryker-shop/b2c-demo-marketplace/pull/668/files)
-- [B2B changes](https://github.com/spryker-shop/b2b-demo-shop/pull/832/files)
-- [B2B Marketplace changes](https://github.com/spryker-shop/b2b-demo-marketplace/pull/732/files)
+protected function getAlgoliaPlugins(): array
+{
+    return [
+        new AlgoliaCmsPagePublisherPlugin(),
+        new AlgoliaCmsPageVersionPublisherPlugin(),
+        new AlgoliaProductAbstractPublisherPlugin(),
+        new AlgoliaProductConcretePublisherPlugin(),
+        new AlgoliaProductConcreteDeletePublisherPlugin(),
+        new ProductCategoryProductUpdatedEventTriggerPlugin(),
+        new ProductLabelProductUpdatedEventTriggerPlugin(),
+    ];
+}
+```
 
-{% info_block warningBox "Verification" %}
+**2d. Enable frontend search**
 
-Verify the following:
-- At `https://backoffice.mysprykershop.com/storage-gui/maintenance/key?key=kv%3Asearch_http_config`, the Spryker ACP URLs and API keys you've provided in the Algolia App settings are displayed.
-- Product and CMS page data is synchronized from your Spryker instance to Algolia.
-- When you select products or CMS pages for searching in the Algolia App Settings, the frontend displays results from Algolia:
-  - On Yves: `/search/suggestion?q=ca` (search box suggestions widget), `/search?q=` (catalog page), `/search/cms?q=` (CMS pages list)
-  - Via Glue API: `/catalog-search?q=`, `/catalog-search-suggestions?q=sams`, `/cms-pages?q=`
-- Algolia is used for search. In Algolia Dashboard, select the index for product or CMS page for the relevant store and locale. Check the number and order of records for the same search term.
-- In Algolia API logs for the selected index, make sure there's a user-agent header similar to `"Algolia for PHP (3.4.1); PHP (8.3.13); Guzzle (7); spryker-integration (2.11.0)"`.
+Create `src/Pyz/Client/Algolia/AlgoliaConfig.php`:
 
-{% endinfo_block %}
+```php
+<?php
 
+namespace Pyz\Client\Algolia;
 
-## Additional information on Algolia integration
+use SprykerEco\Client\Algolia\AlgoliaConfig as SprykerEcoAlgoliaConfig;
 
-When integrating Algolia, keep in mind some specifics of the SearchHttp plugin setup and differences in the default facets.
+class AlgoliaConfig extends SprykerEcoAlgoliaConfig
+{
+    public function isSearchInFrontendEnabledForProducts(): bool
+    {
+        return true;
+    }
 
-The `SearchHttp` query is built using `QueryExpanderPlugin` classes. Their order is defined in the `CatalogDependencyProvider::createCatalogSearchQueryExpanderPluginVariants()` method.
+    public function isSearchInFrontendEnabledForCmsPages(): bool
+    {
+        return true;
+    }
+}
+```
 
-You can customize the order of these plugins at the project level. By default, all module-specific query builder plugins are executed before parsing `GET` query parameters, so any `GET` query parameters may overwrite previously set search query parameters.
+**2e. Generate transfers**
 
-## Next steps
+```bash
+vendor/bin/console transfer:generate
+```
 
-[Configure the Algolia app](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.
+### 3. Export data and verify
 
+- No data schema migration is needed—the data structure is the same as the ACP app.
+- To reuse existing Algolia indices and avoid re-indexing, set `TENANT_IDENTIFIER` to match the ACP tenant ID.
 
+Use the following command for the full export to re-populate Algolia indices (if needed):
 
+```bash
+vendor/bin/console algolia:entity-export --all
+```
+  
+- Test a product update in the Back Office and verify the change appears in Algolia.
+- Test a CMS page publish in the Back Office and verify the change appears in Algolia.
 
+## Troubleshooting
 
+### No entity types are available in console algolia:entity-export
 
+**Problem:** `No entity exporters are registered`
 
+**Solution:**
+1. Make sure plugins are registered in `AlgoliaDependencyProvider::getAlgoliaEntityExporterPlugins()`.
+2. Check that the dependency provider is in the `Pyz` namespace if extended.
 
+### Transfer not found
 
+**Problem:** `Class 'Generated\Shared\Transfer\AlgoliaExportCriteriaTransfer' not found`
 
+**Solution:**
 
+```bash
+vendor/bin/console transfer:generate
+```
 
+### Events are not triggering
 
+**Problem:** Changes are not appearing in Algolia.
 
+**Solution:**
+1. Check that `AlgoliaConfig::getIsActive()` returns `true`.
+2. Verify publisher plugins are registered in `PublisherDependencyProvider`.
+3. Check that queue workers are running:
 
+   ```bash
+   vendor/bin/console queue:task:start publish
+   ```
 
+### Search requests are failing
 
+**Problem:** Search queries return errors or no results.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Solution:**
+1. Verify that Algolia credentials in the configuration are correct.
+2. Make sure indices exist in the Algolia Dashboard.
+3. If you are not using an Algolia premium plan, disable personalization by setting `getIsPersonalizationEnabled()` to return `false`.

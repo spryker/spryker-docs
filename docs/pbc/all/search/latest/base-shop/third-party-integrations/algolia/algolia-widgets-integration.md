@@ -1,11 +1,14 @@
 ---
 title: Integration of the Algolia UI Library in the Front End
 description: A how-to guide for integrating the Algolia UI Library into the Spryker front end, covering architectural considerations, component customization, and key feature implementation.
-last_updated: Sep 1, 2025
+last_updated: Feb 20, 2026
 template: howto-guide-template
 ---
 
-This guide provides technical instructions for integrating the Algolia UI Library into the Spryker front end for the Algolia ACP App. It focuses on architectural approach, component customization, and implementation of core features. The key challenge is that the Algolia UI Library is not natively aligned with the Spryker front-end architecture, so your implementation will function as an independent set of components that consume data directly from the Algolia API.
+This guide provides technical instructions for integrating the Algolia UI Library into the Spryker front end for the [Algolia eco module](https://github.com/spryker-eco/algolia).
+It focuses on architectural approach, component customization, and implementation of core features.
+The key challenge is that the Algolia UI Library is not natively aligned with the Spryker front-end architecture,
+so your implementation will function as an independent set of components that consume data directly from the Algolia API.
 
 The purpose of this guide is to walk you through building a modern search experience within your Spryker shop. By following these steps, you will be able to implement a flexible and powerful search interface with features like advanced filtering, sorting, and search suggestions, while managing performance and maintaining visual consistency with your existing design.
 
@@ -19,7 +22,7 @@ The purpose of this guide is to walk you through building a modern search experi
 
 Before you begin, ensure you have met the following requirements:
 
-- The **Algolia ACP App** is installed and configured.
+- The **[Algolia eco module](https://github.com/spryker-eco/algolia)** is installed and configured.
 - Product data is successfully **synced to your Algolia indices** for each locale and sorting strategy.
 - You have a clear understanding of your indexed product attributes (for example SKU, Name, Description).
 - You have chosen which **InstantSearch flavor** to use: vanilla JS, React InstantSearch, or Vue InstantSearch.
@@ -39,7 +42,7 @@ Mount the essential Algolia widgets to build the search interface. This includes
 - **`searchBox`**: For user queries.
 - **`hits`**: To display search results. Use a custom renderer to display product information like URL, name, image, price, and rating directly from Algolia's attributes to avoid extra API calls.
 - **`refinementList`**: For category and attribute filters (for example brand).
-- **`sortBy`**: To allow users to switch between different sort strategies (for example rating, price ascending/descending). Ensure the index names are consistent with those created by the ACP app.
+- **`sortBy`**: To allow users to switch between different sort strategies (for example rating, price ascending/descending). Ensure the index names are consistent with those created by the Algolia eco module.
 - **`pagination`** and **`stats`**: For navigation and displaying result counts.
 - **Advanced Filters**: Widgets like `ratingMenu` or `rangeSlider` for price can be implemented for more advanced filtering, provided the corresponding fields exist and are correctly formatted in your index.
 

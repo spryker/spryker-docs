@@ -2,10 +2,11 @@
 title: Getting access to Algolia dashboard
 description: Learn how you can submit a ticket to get access to your Algolia dashboard for your Spryker based shop.
 template: concept-topic-template
+last_updated: Feb 20, 2026
 ---
 
 
-If you ordered Algolia through Spryker, to get access to the dashboard, create a **Request Help with Spryker ACP / Algolia / Request Activation** case by [contacting support](https://support.spryker.com).
+If you ordered Algolia through Spryker, to get access to the dashboard, create a **Request Help with Algolia Activation** case by [contacting support](https://support.spryker.com).
 
 In the request, provide the email address of the user who you want to make the main admin of Algolia. The main admin will be able to invite other team members.
 

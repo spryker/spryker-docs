@@ -137,7 +137,7 @@ markdownlint-cli2 path/to/file.md
     - grammar and sentence structure
     - tone of voice
     - writing style, markup and markdown
-    - `last_updated` date 
+    - `last_updated` date should be updated to the date of the last modification of any file in this PR.
     - sidebar links
 
 4. Finalize

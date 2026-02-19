@@ -2,7 +2,7 @@
 title: Install the Back Office number formatting
 description: Learn how to install and upgrade the Back Office number formatting in Spryker Cloud Commerce OS
 template: howto-guide-template
-last_updated: Aug 30, 2022
+last_updated: Feb 19, 2026
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
   - /docs/pbc/all/back-office/202311.0/howto-add-support-of-number-formatting-in-the-back-office.html

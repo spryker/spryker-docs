@@ -1,7 +1,7 @@
 ---
 title: Integrate the authorization scopes
 description: This document describes how to use scopes in Authorization for Backend API application into a Spryker project.
-last_updated: September 30, 2022
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/authorization-scopes-integration.html

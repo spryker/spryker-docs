@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on MacOS and Linux"
 description: A quickstart guide to get you up and running installing Spryker in a local environment on MacOS and Linux.
-last_updated: Feb 3, 2022
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html

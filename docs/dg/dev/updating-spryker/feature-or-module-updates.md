@@ -1,7 +1,7 @@
 ---
 title: Feature or module updates
 description: Learn how to update modules or features and to choose at which level to take updates within your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/updating-spryker/feature-or-module-updates.html

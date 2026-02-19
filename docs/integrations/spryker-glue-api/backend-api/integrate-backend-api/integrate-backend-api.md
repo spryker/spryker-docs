@@ -1,7 +1,7 @@
 ---
 title: Integrate Backend API
 description: Integrate the Backend API application into a Spryker project.
-last_updated: September 30, 2022
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html

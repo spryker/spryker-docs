@@ -1,6 +1,6 @@
 ---
 title: Install the Merchant Self-Registration feature
-last_updated: Nov 21, 2025
+last_updated: Feb 19, 2026
 description: Learn how to install the Merchant Self-Registration feature in your Spryker Marketplace project.
 template: feature-integration-guide-template
 ---

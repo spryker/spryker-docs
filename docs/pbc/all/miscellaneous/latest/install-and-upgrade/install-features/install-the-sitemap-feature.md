@@ -1,7 +1,7 @@
 ---
 title: Install the Sitemap feature
 description: Learn the prerequisites and how to enable and integrate Sitemap feature into a Spryker based project.
-last_updated: March 4, 2025
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from: 
   - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html

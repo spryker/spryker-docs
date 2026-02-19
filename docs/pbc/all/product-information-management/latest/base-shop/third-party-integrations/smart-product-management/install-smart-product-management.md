@@ -1,7 +1,7 @@
 ---
 title: Install Smart Product Management
 description: Learn how to integrate the ProductManagementAi module into a Spryker project.
-last_updated: Dec 17, 2025
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/product-information-management/base-shop/third-party-integrations/product-management-powered-by-openai/install-product-management-powered-by-openai.html

@@ -2,7 +2,7 @@
 title: Install the Multi-Factor Authentication Merchant Portal feature
 description: This document describes how to install the Multi-Factor Authentication Merchant Portal (MFA MP) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Aug 22, 2025
+last_updated: Feb 19, 2026
 ---
 
 This document describes how to install the Multi-Factor Authentication (MFA) feature for the Merchant Portal.

@@ -2,7 +2,7 @@
 title: Install Back Office dropdown navigation
 description: Learn how to install and upgrade the Back Office dropdown navigation in Spryker Cloud Commerce OS
 template: howto-guide-template
-last_updated: Jun 04, 2025
+last_updated: Feb 19, 2026
 ---
 
 This document explains how to enable settable dropdown navigation in the Back Office.

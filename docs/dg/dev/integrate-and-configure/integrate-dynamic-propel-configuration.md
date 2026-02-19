@@ -1,7 +1,7 @@
 ---
 title: Integrate dynamic Propel configuration
 description: Learn about dynamic propel configuration and how to integrate it into your project.
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dynamic-propel-configuration
 originalArticleId: 8fd4016c-928a-4abc-968e-0f1518cc96da

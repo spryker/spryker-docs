@@ -1,7 +1,7 @@
 ---
 title: Set up Fulfillment App
 description: Learn how to install and configure Fulfillment App within your Spryker Unified Commerce projects.
-last_updated: Nov 23, 2023
+last_updated: Feb 19, 2026
 template: howto-guide-template
 ---
 

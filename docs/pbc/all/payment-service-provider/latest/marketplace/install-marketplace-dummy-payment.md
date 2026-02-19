@@ -1,6 +1,6 @@
 ---
 title: Install Marketplace Dummy Payment
-last_updated: Oct 05, 2021
+last_updated: Feb 19, 2026
 description: This document describes the process how to integrate the Marketplace Dummy Payment into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:

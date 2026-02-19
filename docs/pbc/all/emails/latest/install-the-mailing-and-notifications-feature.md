@@ -1,7 +1,7 @@
 ---
 title: Install the Mailing and Notifications feature
 description: The guide describes the process of installing the mailing provider in your project.
-last_updated: Nov 21, 2022
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/mailing-and-notifications-feature-integration.html

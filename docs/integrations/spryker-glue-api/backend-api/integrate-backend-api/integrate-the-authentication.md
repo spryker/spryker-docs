@@ -1,7 +1,7 @@
 ---
 title: Integrate the authentication
 description: Create an authentication token for the Backend API application in a Spryker project.
-last_updated: Jan 10, 2024
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html

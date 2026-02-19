@@ -1,7 +1,7 @@
 ---
 title: Integrate the API Key authorization
 description: Learn about Integration of the API Key authorization mechanism into a Spryker based project.
-last_updated: October 10, 2023
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html

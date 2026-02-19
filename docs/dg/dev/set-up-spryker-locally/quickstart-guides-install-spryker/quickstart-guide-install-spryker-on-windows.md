@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on Windows"
 description: A quickstart guide to get you up and running installing Spryker in a local environment on Windows.
-last_updated: Feb 03, 2023
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html

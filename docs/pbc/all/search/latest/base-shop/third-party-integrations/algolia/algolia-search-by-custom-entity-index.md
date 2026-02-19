@@ -5,7 +5,7 @@ last_updated: Feb 20, 2026
 template: howto-guide-template
 ---
 
-The Algolia integration supports searching custom entities that are already indexed in Algolia but are not natively supported by the Spryker eco module—like products or CMS pages.
+The Algolia Eco module supports searching custom entities that are already indexed in Algolia but are not natively supported by the Spryker eco module—like products or CMS pages.
 This is useful for read-only search scenarios where data indexing is managed externally: documents, manufacturers, locations, events, or any other custom business entity.
 
 By following this guide, you will be able to do the following:
@@ -14,7 +14,8 @@ By following this guide, you will be able to do the following:
 
 {% info_block infoBox "" %}
 
-This feature does not index data, publish events, or manage index lifecycle. You need to populate Algolia indices separately—for example, using the Algolia Crawler or the Algolia API.
+With this feature and configuration in `AlgoliaConfig::getEntityToIndexMappings()`, the module does not index data, publish events, or manage index lifecycle.
+You need to populate Algolia indices separately—for example, using the Algolia Crawler or the Algolia API.
 
 {% endinfo_block %}
 
@@ -24,7 +25,7 @@ This feature does not index data, publish events, or manage index lifecycle. You
 - You have integrated Algolia search in your Spryker project. For details, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - You have an Algolia index created for your custom entity—for example, Docs—and populated with relevant data, for example, using the Algolia Crawler.
 
-It also helps to have the following knowledge:
+It also helps to have the following [knowledge](https://www.algolia.com/doc):
 - How Algolia indices are structured.
 - The data schema of your entity in Algolia.
 - Spryker's `SearchContext` and query plugin concepts.

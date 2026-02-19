@@ -12,7 +12,7 @@ This document provides a comprehensive development plan for connecting Spryker p
 
 ## Overview
 
-In order to connect a project to an ERP system faster, we provide a template module structure for implementing third party calls.
+To connect a project to an ERP system faster, we provide a template module structure for implementing third-party calls.
 
 We recommend implementing one ERP Client for each ERP system.
 
@@ -21,7 +21,7 @@ We recommend implementing one ERP Client for each ERP system.
 Template can be downloaded from the community package [ERP Integration](https://github.com/spryker-community/erp-integration).
 
 This template provides a foundation with essential components already wired together, allowing you to focus on business logic implementation rather than application architecture.
-It's not intended to be used as a composer dependency, thus composer.json file is not a part of this repository. It has no special requirements for packages, since it requires Guzzle, Kernel and Transfer modules, which are a part of every Spryker project.
+It's not intended to be used as a composer dependency, thus composer.json file is not a part of this repository. It has no special requirements for packages, since it requires the Guzzle, Kernel, and Transfer modules, which are a part of every Spryker project.
 
 Overall the implementation process looks like this:
 1. Configure ERP connection.
@@ -68,7 +68,7 @@ First, decide how to name your new module with an ERP integration. This document
 
 {% info_block infoBox %}
 
-If you plan to develop a reusable standalone module, follow [How to Create standalone modules](/docs/dg/dev/developing-standalone-modules/create-standalone-modules.html).
+If you plan to develop a reusable standalone module, follow [Create standalone modules](/docs/dg/dev/developing-standalone-modules/create-standalone-modules.html).
 
 {% endinfo_block %}
 
@@ -89,7 +89,7 @@ The class `src/Pyz/Client/ErpIntegration/Models/BaseRequest` provides a request 
 
 - `BaseRequest::DEFAULT_REQUEST_TIMEOUT_SECONDS` - with the default timeout for requests.
 - `BaseRequest::getRequestOptions` - request parameters, including authentication, referrer. See [Guzzle documentation](https://docs.guzzlephp.org/en/stable/request-options.html) for a full list of options.
-- `BaseRequest::buildRequestHeaders` - request headers, like content type, accept, and anything ERP system party specific.
+- `BaseRequest::buildRequestHeaders` - request headers, like content type, accept, and any ERP-specific custom headers.
 
 Following Spryker best practices, configuration happens in `config_default-erp.php`, including environment-specific files:
 
@@ -100,7 +100,9 @@ $config[ErpIntegrationConstants::EXAMPLE_REQUEST_URL] = '/example-request/';
 
 If your integration has fixed URLs, consider putting them directly into the ErpIntegrationConfig class.
 
-In most cases, Preproduction and Production ERP systems have different setup, and this has to be reflected in the definition of the environment variable **ERP_BASE_URI** in the Parameter Store. Follow [this guideline](/docs/ca/dev/add-variables-in-the-parameter-store.html) to define environment-specific variables for your project.
+In most cases, Preproduction and Production ERP systems have different setup, and this has to be reflected in the definition of the environment variable **ERP_BASE_URI** in the Parameter Store. Follow [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) to define environment-specific variables for your project.
+
+For local development, we recommend defining variables in **config_local.php** and avoid committing them into the VCS.
 
 If the connection requires authentication, make sure to put credentials into environment variables as well.
 
@@ -146,7 +148,7 @@ Execute `vendor/bin/console transfer:generate` to generate new transfer PHP clas
 
 Start with a copy of model `src/Pyz/Client/ErpIntegration/Models/ExampleRequest`, which doesn't require an interface since it contains a single method without a reason for extension.
 
-Once the model is prepared, adjust the factory by creating the method `ErpIntegrationFactory::createExampleRequest`. Skip if using DI.
+Once the model is prepared, adjust the factory by creating the method `ErpIntegrationFactory::createExampleRequest`. Skip if using Symfony DI.
 
 Adjust the name of the request method `doRequest`, if necessary. Simultaneously, create a client method to call it - `ErpIntegrationClient::doExampleRequest`.
 
@@ -161,7 +163,7 @@ Create a copy of `src/Pyz/Client/ErpIntegration/Models/ExampleRequestMapper` and
 
 #### 4. Add a Client method
 
-First, update Factory and introduce model and mapper instantiation, follow methods `createExampleRequest` and `createExampleRequestMapper` as example.
+First, update Factory and introduce model and mapper instantiation, follow methods `createExampleRequest` and `createExampleRequestMapper` as example. Skip if using Symfony DI.
 
 Then add a client method, follow method `doExampleRequest` as example.
 
@@ -175,12 +177,12 @@ Based on our experience, we collected a set of the most common places to integra
 
 ### Provide live product prices into the cart
 
-Implement a plugin interface `\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface` and add your plugin into `\Spryker\Zed\Cart\CartDependencyProvider::getExpanderPlugins` .
+Implement a plugin interface `\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface` and add your plugin into `\Pyz\Zed\Cart\CartDependencyProvider::getExpanderPlugins`.
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Cart\ErpCartItemExpanderPlugin`.
 
 ### Provide live availability check in cart
 
-Implement a plugin interface `\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface` and add your plugin into `\Spryker\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins` .
+Implement a plugin interface `\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface` and add your plugin into `\Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Cart\ErpCartValidationPlugin`.
 
@@ -188,21 +190,21 @@ See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\C
 
 General documentation can be found here - [Shipment method plugins](/docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
 
-For price, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodPricePluginInterface` and add your plugin into  `\Spryker\Zed\Shipment\ShipmentDependencyProvider::getPricePlugins`.
+For price, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodPricePluginInterface` and add your plugin into `\Pyz\Zed\Shipment\ShipmentDependencyProvider::getPricePlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Shipment\ErpShipmentMethodPricePlugin`.
 
-For availability, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodAvailabilityPluginInterface` and add your plugin into `\Spryker\Zed\Shipment\ShipmentDependencyProvider::getAvailabilityPlugins`.
+For availability, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodAvailabilityPluginInterface` and add your plugin into `\Pyz\Zed\Shipment\ShipmentDependencyProvider::getAvailabilityPlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Shipment\ErpShipmentMethodAvailabilityPlugin`.
 
-For delivery time, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodDeliveryTimePluginInterface` and add your plugin into `\Spryker\Zed\Shipment\ShipmentDependencyProvider::getDeliveryTimePlugins`.
+For delivery time, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodDeliveryTimePluginInterface` and add your plugin into `\Pyz\Zed\Shipment\ShipmentDependencyProvider::getDeliveryTimePlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Shipment\ErpShipmentMethodDeliveryTimePlugin`.
 
 ### Monitor connection status, aka Health check
 
-Implement a plugin interface `\Spryker\Shared\HealthCheckExtension\Dependency\Plugin\HealthCheckPluginInterface` and add your plugin into `\Spryker\Yves\HealthCheck\HealthCheckDependencyProvider::getHealthCheckPlugins`.
+Implement a plugin interface `\Spryker\Shared\HealthCheckExtension\Dependency\Plugin\HealthCheckPluginInterface` and add your plugin into `\Pyz\Yves\HealthCheck\HealthCheckDependencyProvider::getHealthCheckPlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\HealthCheck\ErpHealthCheckPlugin`.
 
@@ -220,15 +222,15 @@ See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\C
 
 Spryker provides a variety of plugin stacks to use during order placement.
 
-We highly discourage including in any of them an ERP calls, since it slows down order placement.
+Do not include ERP calls in any of these plugins, since they slow down order placement.
 
 When you need to make an ERP call related to the order, put it into the OMS command.
 
-Implement a plugin interface `\Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByOrderInterface` and add your plugin into `\Spryker\Zed\Oms\OmsDependencyProvider::getCommandPlugins`.
+Implement a plugin interface `\Spryker\Zed\Oms\Dependency\Plugin\Command\CommandByOrderInterface` and add your plugin into `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`.
 
 See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\Oms\Command\ErpOrderExportCommandByOrderPlugin`.
 
 ### Providing a webhook for ERP system
 
-Implement a [BackendAPI resource](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources.html) and call required Client method inside it.
-
+Implement a [BackendAPI resource](/docs/integrations/spryker-glue-api/backend-api/developing-apis/create-backend-resources) and call required Client method inside it.
+By default, Spryker supports only JSON format.

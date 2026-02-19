@@ -11,6 +11,7 @@ files_needing_update=0
 echo "Lookging for files with at least $lines_changed_limit line(s) changed and last_updated older than $lines_changed_day_limit days "
 echo ""
 
+git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
 changed_md_files=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" -- | grep '\.md$' || true)
 
 if [ -z "$changed_md_files" ]; then

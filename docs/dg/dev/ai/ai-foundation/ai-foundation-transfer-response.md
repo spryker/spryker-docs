@@ -1,7 +1,7 @@
 ---
 title: Use structured responses with the AiFoundation module
 description: Request and receive structured data from AI providers using Spryker Transfer objects
-last_updated: Dec 24, 2025
+last_updated: Feb 19, 2026
 keywords: foundation, ai, structured response, transfer, schema, json, openai, anthropic, prompt, validation
 template: howto-guide-template
 related:

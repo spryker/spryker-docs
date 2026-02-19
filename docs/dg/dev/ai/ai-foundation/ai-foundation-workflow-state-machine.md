@@ -1,7 +1,7 @@
 ---
 title: AI workflow orchestration with state machines
 description: Learn how to orchestrate multi-step, multi-agent AI workflows using Spryker state machines
-last_updated: Feb 18, 2026
+last_updated: Feb 19, 2026
 keywords: ai, workflow, state-machine, orchestration, multi-agent, process, command, condition, structured-response
 template: howto-guide-template
 label: early-access

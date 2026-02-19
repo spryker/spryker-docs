@@ -148,7 +148,7 @@ class AlgoliaConfig extends SprykerEcoAlgoliaConfig
 
 ### 3. Create a search query plugin
 
-Create a query plugin for your custom entity. The `SOURCE_IDENTIFIER` constant must match the `sourceIdentifier` value you defined in the mapping configuration.
+Create a query plugin for your custom entity. The `SOURCE_IDENTIFIER` constant must match the `sourceIdentifier` value you defined in the mapping configuration, in the example it's 'document'.
 
 ```php
 <?php
@@ -351,6 +351,69 @@ class SearchController extends AbstractController
             'searchTerm' => $searchTerm,
             'results' => $searchResults,
         ], [], '@DocumentSearch/views/search/index.twig');
+    }
+}
+```
+
+### 6. Enable suggestions in the search autocomplete widget
+
+```php
+use Spryker\Client\Kernel\AbstractPlugin;
+use Spryker\Client\SearchExtension\Dependency\Plugin\GroupedResultFormatterPluginInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface;
+
+class DocsSuggestionsSearchHttpResultFormatterPlugin extends AbstractPlugin  implements ResultFormatterPluginInterface, GroupedResultFormatterPluginInterface
+{
+    public function getGroupName(): string
+    {
+        return 'suggestionByType';
+    }
+
+    public function getName(): string
+    {
+        return 'document'; // Entity Name
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\SuggestionsSearchHttpResponseTransfer $searchResult
+     * @param array<string, mixed> $requestParameters
+     *
+     * @return array<int, mixed>
+     */
+    public function formatResult($searchResult, array $requestParameters = [])
+    {
+        return $searchResult->getMatchedItemsBySourceIdentifiers()['document'] ?? [];
+    }
+}
+```
+
+Enable the plugin in `CatalogDependencyProvider`:
+
+```php
+// src/Pyz/Client/Catalog/CatalogDependencyProvider.php
+
+namespace Pyz\Client\Catalog;
+
+use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
+{
+    /**
+     * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
+     */
+    protected function createSuggestionResultFormatterPluginVariants(): array
+    {
+        return [
+            \Spryker\Shared\SearchHttp::TYPE_SUGGESTION_SEARCH_HTTP => [
+                new CompletionSearchHttpResultFormatterPlugin(),
+                new CurrencyAwareCatalogSearchHttpResultFormatterPlugin(
+                    new ProductSuggestionSearchHttpResultFormatterPlugin(),
+                ),
+                new CategorySuggestionsSearchHttpResultFormatterPlugin(),
+                new CmsPageSuggestionsSearchHttpResultFormatterPlugin(),
+                new DocsSuggestionsSearchHttpResultFormatterPlugin(), // New plugin for Docs suggestions
+            ],
+        ];
     }
 }
 ```

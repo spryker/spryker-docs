@@ -1252,6 +1252,8 @@ entries:
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
+    - title: Architecture as Code
+      url: /docs/dg/dev/architecture/architecture-as-code.html
     - title: "Key-value storage: Redis and Valkey"
       url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html
     - title: Module API

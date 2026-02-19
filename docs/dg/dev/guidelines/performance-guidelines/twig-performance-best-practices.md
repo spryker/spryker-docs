@@ -16,8 +16,13 @@ It is important to follow best practices related to Twig performance optimisatio
 
 Twig files can be precompiled into PHP classes to speed the performance up. This behavior can be activated in the configuration. We highly recommend using the `FORCE_BYTECODE_INVALIDATION` option. Otherwise, Opcache may contain outdated content, as the files are modified during runtime.
 
+**config/Shared/config_default.php**
+
 ```php
+
+...
 use Twig\Cache\FilesystemCache;
+...
 
 $currentStore = Store::getInstance()->getStoreName();
 

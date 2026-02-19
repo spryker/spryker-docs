@@ -56,6 +56,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
           - title: Conversation History
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+          - title: Workflow orchestration with state machines
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

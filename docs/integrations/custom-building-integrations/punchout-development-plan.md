@@ -1,9 +1,9 @@
 ---
 title: PunchOut development plan
 description: Enable projects to connect to procurement systems following PunchOut protocol.
+keywords: punchout, Punch Out, cxml, procurement, procurement systems, guide
 last_updated: Feb 19, 2026
 template: default
-layout: custom_new
 ---
 
 ## Introduction
@@ -54,7 +54,7 @@ to enable your Spryker shop to operate within a PunchOut procurement workflow.
 </database>
 ```
 
-Implement at least a `PunchOutFacade` to validate the request data against the configured identity and shared secret pairs.
+Implement a `PunchOutFacade` to validate the request data against the configured identity and shared secret pairs.
 
 If you plan to support multiple PunchOut protocols, extend this table with additional parameters.
 
@@ -87,8 +87,8 @@ Update the `CustomerTransfer` accordingly:
 
 ```xml
     <transfer name="Customer">
-        <property name="loginHash" type="string"/>
-        <property name="loginHashValidity" type="TIMESTAMP"/>
+        <property name="loginHash" type="string" description="Hash to be used as a one-time login code to start PunchOut."/>
+        <property name="loginHashValidity" type="int" description="Timestamp until when loginHash can be used to start PunchOut." />
     </transfer>
 ```
 
@@ -101,23 +101,15 @@ Update the Customer edit and view UI in the Back Office to manage the new fields
 To handle the PunchOut session, store the required data in the cart.
 Update the `Quote` transfer that represents the cart.
 
-| Field | Comment |
-|-------|---------|
-| punchoutSessionID | Store BuyerCookie or related PunchOut session identifier |
-| hideCartSelector | Flag to hide cart selector to prevent PunchOut logic disruption |
-| disableCheckout | Flag to disable native checkout, replacing it with `return` button |
-| allowPunchOut | Flag indicating if PunchOut session is in progress for this cart |
-| punchOutFormData | Used to carry over form data to the checkout form |
-
 **src/Pyz/Shared/PunchOut/Transfer/punchout.transfer.xml**
 
 ```xml
     <transfer name="Quote">
-        <property name="punchoutSessionID" type="string"/>
-        <property name="disableCheckout" type="int"/>
-        <property name="allowPunchOut" type="int"/>
-        <property name="punchOutSubmitUrl" type="string"/>
-        <property name="punchOutFormData" type="string"/>
+        <property name="punchoutSessionID" type="string" description="Store BuyerCookie or related PunchOut session identifier"/>
+        <property name="disableCheckout" type="int" description="Flag to disable native checkout, replacing it with `return` button"/>
+        <property name="allowPunchOut" type="int" description="Flag indicating if PunchOut session is in progress for this cart"/>
+        <property name="punchOutSubmitUrl" type="string" description="URL to submit PunchOut data to"/>
+        <property name="punchOutFormData" type="string" description="Used to carry over form data to the checkout form"/>
     </transfer>
 ```
 
@@ -137,7 +129,8 @@ To enable a safe PunchOut flow, introduce a `Return To Procurement System` butto
 
 #### Introduce Return To Procurement System button
 
-To generate the PunchOut form data, implement a plugin with interface `\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPreConditionPluginInterface`
+To generate the PunchOut form data, implement a plugin with interface `\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\CheckoutStepPreConditionPluginInterface`:
+
 **\Pyz\Yves\PunchOut\Plugin\PunchOutCheckoutStepPreConditionPlugin**
 
 ```php
@@ -152,7 +145,6 @@ class PunchOutCheckoutStepPreConditionPlugin extends AbstractPlugin implements C
 
         return $quoteTransfer;
     }
-
 ...
 ```
 
@@ -188,7 +180,7 @@ class PunchOutSummaryStepData {
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', '@Spryker:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block submit {% raw %}%}{% endraw %}
-    {% raw %}{%{% endraw %} if data.cart.disableCheckout {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} if not data.cart.disableCheckout {% raw %}%}{% endraw %}
         {{ parent() }}
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} if data.cart.allowPunchOut {% raw %}%}{% endraw %}
@@ -213,22 +205,19 @@ Because the selected protocol can affect the implementation scope, this guide de
 
 ```xml
     <transfer name="PunchoutLoginRequest">
-        <property name="requestUrl" type="string"/>
-        <property name="requestBody" type="string"/>
+        <property name="requestUrl" type="string" description="URL of the requested party, used to validate if request comes from allowed system."/>
+        <property name="requestBody" type="string" description="Request content to initiate PunchOut process, i.e. PunchOutSetupRequest for cXML."/>
     </transfer>
 
     <transfer name="PunchoutLoginResponse">
         <property name="isSuccessful" type="bool"/>
-        <property name="loginURL" type="string"/>
+        <property name="loginResponse" type="string" description="Formatted response to be sent to the procurement system, i.e. PunchOutSetupResponse for cXML with a proper login URL."/>
     </transfer>
-
-
 ```
 
 **src/Pyz/Yves/PunchOut/Controller/PunchOutController.php**
 
 ```php
-...
 ...
 use Spryker\Shared\Log\LoggerTrait;
 ...
@@ -240,7 +229,7 @@ class PunchOutController extends AbstractController
     {
         $punchoutLoginRequestTransfer = new PunchoutLoginRequestTransfer();
         $punchoutLoginRequestTransfer->setRequestUrl($request->getUri());
-        $punchoutLoginRequestTransfer->setRequestBody($request->getBody());
+        $punchoutLoginRequestTransfer->setRequestBody($request->getContent());
         $this->getLogger()->info('PunchOut login request', $punchoutLoginRequestTransfer->toArray());
 
         $punchoutLoginResponseTransfer = $this->getFactory()->getPunchoutClient()
@@ -252,17 +241,15 @@ class PunchOutController extends AbstractController
             return new Response('', 403);
         }
 
-        return $this->createResponse($punchoutLoginResponseTransfer->getLoginURL());
+        return new Response($punchoutLoginResponseTransfer->getLoginResponse());
     }
 }
-
 ```
 
-**src/Pyz/Client/PunchOut/PunchoutClient.php**
+**src/Pyz/Client/PunchOut/PunchOutClient.php**
 
 ```php
-
-class PunchoutClient extends \Spryker\Client\Kernel\AbstractClient
+class PunchOutClient extends \Spryker\Client\Kernel\AbstractClient
 {
     public function processLoginRequest(PunchoutLoginRequestTransfer $punchoutLoginRequestTransfer): PunchoutLoginResponseTransfer
     {
@@ -273,7 +260,6 @@ class PunchoutClient extends \Spryker\Client\Kernel\AbstractClient
         // - Generation of login URL
     }
 }
-
 ```
 
 #### Generation of the login URL
@@ -281,7 +267,7 @@ class PunchoutClient extends \Spryker\Client\Kernel\AbstractClient
 The simplest approach is to use a `loginHash` as a one-time token to identify the customer.
 
 You can implement another Yves controller that locates the customer by this hash and logs them in by calling **\Spryker\Client\Customer\CustomerClient::setCustomer**.
-As a reference, see implementation in: **\SprykerShop\Yves\CustomerPage\Controller\AccessTokenController::executeIndexAction**.
+For reference of the token-based customer login, see implementation in: **\SprykerShop\Yves\CustomerPage\Controller\AccessTokenController::executeIndexAction**.
 
 If you detect during login that a store must be set, call **\Spryker\Client\Session\SessionClient::set('current_store', <calculated store>);** to change the store and issue a redirect so the changes will take effect.
 
@@ -296,9 +282,12 @@ X-Frame-Options: ALLOW-FROM https://example.com/
 Content-Security-Policy: frame-ancestors 'self' https://example.com;
 ```
 
-To implement this, create a project-level version of the plugin: `\Spryker\Shared\Application\ServiceProvider\HeadersSecurityServiceProvider::onKernelResponse`.
+To implement this, implement a plugin with interface `\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface`,
+which sets mentioned headers to support embedding into an iframe.
 
-When the PunchOut session starts, set the `isPunchout` session flag to `true`. In the customized version of this plugin (for example, `PunchoutHeadersSecurityServiceProvider`), return a valid set of headers for the iframe.
+Include this plugin into stack **\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins**.
+
+If you still use the deprecated plugin `\Spryker\Yves\Application\Communication\Plugin\EventDispatcher\HeadersSecurityEventDispatcherPlugin`, you must override it instead.
 
 #### Cookies configuration
 

@@ -10,10 +10,10 @@ Install the required features:
 
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
-|Spryker Core| {{site.versionid}} |[Glue Application](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)|
-|Product Relation| {{site.versionid}} | [Install the Product Relations feature](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-feature.html)|
-|Cart| {{site.versionid}} | [Cart API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
-| Product| {{site.versionid}} |[Products API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
+|Spryker Core| {{page.release_tag}} |[Glue Application](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)|
+|Product Relation| {{page.release_tag}} | [Install the Product Relations feature](/docs/pbc/all/product-relationship-management/latest/install-and-upgrade/install-the-product-relations-feature.html)|
+|Cart| {{page.release_tag}} | [Cart API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
+| Product| {{page.release_tag}} |[Products API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
 
 ### 1) Install the required modules
 

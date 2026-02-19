@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME                | VERSION           | INSTALLATION GUIDE                                                                                                                                                          |
 |---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points Cart | {{site.versionid}} | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
-| Checkout            | {{site.versionid}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                                               |
+| Service Points Cart | {{page.release_tag}} | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
+| Checkout            | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                                               |
 
 ## 1) Install the required modules
 

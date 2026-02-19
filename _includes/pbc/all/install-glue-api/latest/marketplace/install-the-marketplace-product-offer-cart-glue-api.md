@@ -10,9 +10,9 @@ Install the required features:
 
 | NAME                  | VERSION | INSTALLATION GUIDE |
 | --------------------- | ------- | ------------------|
-| Cart API                         | {{site.versionid}}  | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
-| Marketplace Product Offer API    | {{site.versionid}}  | [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html) |
-| Marketplace Inventory Management | {{site.versionid}}  | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
+| Cart API                         | {{page.release_tag}}  | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
+| Marketplace Product Offer API    | {{page.release_tag}}  | [Install the Marketplace Product Offer Glue API](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html) |
+| Marketplace Inventory Management | {{page.release_tag}}  | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
 ### 1) Set up behavior
 

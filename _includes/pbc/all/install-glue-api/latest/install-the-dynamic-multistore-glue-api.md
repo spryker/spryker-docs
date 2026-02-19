@@ -6,7 +6,7 @@ Install the required features:
 
 | NAME | VERSION |  
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
 
 
 ## Set up behavior

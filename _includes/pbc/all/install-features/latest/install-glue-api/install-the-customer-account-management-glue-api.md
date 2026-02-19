@@ -18,11 +18,11 @@ Install the required features:
 
 | FEATURE  | VERSION    | INSTALLATION GUIDE   |
 | ------------- | ---------- | ------------- |
-| Glue API: Spryker Core                | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Glue API: Glue Application            | {{site.versionid}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Glue API: Shipment              | {{site.versionid}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) |
-| Glue API: Checkout              | {{site.versionid}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
-| Customer Account Management | {{site.versionid}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Glue API: Spryker Core                | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Glue API: Glue Application            | {{page.release_tag}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Glue API: Shipment              | {{page.release_tag}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) |
+| Glue API: Checkout              | {{page.release_tag}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
+| Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 
 ## 1) Install the required modules

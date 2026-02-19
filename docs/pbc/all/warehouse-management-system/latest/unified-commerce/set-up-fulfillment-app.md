@@ -13,9 +13,9 @@ To enable the support of Fulfillment App in your project, install the following 
 
 | NAME  | VERSION          | INSTALLATION GUIDE |
 |----------|------------------|--------------------|
-| Warehouse picking               | {{site.versionid}} | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
-| Warehouse User Management               | {{site.versionid}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
-| Warehouse picking + Product               | {{site.versionid}} | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
+| Warehouse picking               | {{page.release_tag}} | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
+| Warehouse User Management               | {{page.release_tag}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
+| Warehouse picking + Product               | {{page.release_tag}} | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
 
 ## Install Fulfillment App
 

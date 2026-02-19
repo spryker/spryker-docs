@@ -8,18 +8,18 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{site.versionid}} |
-| Cart | {{site.versionid}} |
-|Company Account  | {{site.versionid}} |
-|Prices  | {{site.versionid}} |
-| Agent Assist | {{site.versionid}} |
+|Spryker Core  | {{page.release_tag}} |
+| Cart | {{page.release_tag}} |
+|Company Account  | {{page.release_tag}} |
+|Prices  | {{page.release_tag}} |
+| Agent Assist | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -409,18 +409,18 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{site.versionid}} |
-| Cart | {{site.versionid}} |
-| Company Account | {{site.versionid}} |
-|Prices  | {{site.versionid}} |
-|Agent Assist  | {{site.versionid}} |
+|Spryker Core  | {{page.release_tag}} |
+| Cart | {{page.release_tag}} |
+| Company Account | {{page.release_tag}} |
+|Prices  | {{page.release_tag}} |
+|Agent Assist  | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

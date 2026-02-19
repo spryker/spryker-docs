@@ -12,9 +12,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
-| Marketplace Product | {{site.versionid}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)  |
-| Marketplace Product Offer | {{site.versionid}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)   |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Marketplace Product | {{page.release_tag}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)  |
+| Marketplace Product Offer | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)   |
 
 ### Set up behavior
 
@@ -73,8 +73,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product | {{site.versionid}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)  |
-| Marketplace Product Offer | {{site.versionid}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)   |
+| Marketplace Product | {{page.release_tag}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)  |
+| Marketplace Product Offer | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)   |
 
 ### Set up behavior
 

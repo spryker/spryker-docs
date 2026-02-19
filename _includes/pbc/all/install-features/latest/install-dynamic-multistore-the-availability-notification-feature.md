@@ -6,8 +6,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
-| Availability Notification | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| Availability Notification | {{page.release_tag}} |
 
 
 ## Set up configuration

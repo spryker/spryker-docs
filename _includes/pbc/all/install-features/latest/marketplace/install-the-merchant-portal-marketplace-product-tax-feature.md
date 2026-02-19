@@ -11,16 +11,16 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product | {{site.versionid}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html) |
-| Marketplace Merchant Portal Core | {{site.versionid}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Tax | {{site.versionid}} | [Install the Tax feature](https://github.com/spryker-feature/tax) |
+| Marketplace Product | {{page.release_tag}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html) |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Tax | {{page.release_tag}} | [Install the Tax feature](https://github.com/spryker-feature/tax) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/tax-merchant-portal-gui:"{{site.versionid}}" --update-with-dependencies
+composer require spryker/tax-merchant-portal-gui:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

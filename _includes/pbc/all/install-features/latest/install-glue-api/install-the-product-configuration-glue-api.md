@@ -12,13 +12,13 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                                        |
 |-----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core API      | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)         |
-| Product API           | {{site.versionid}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)                  |
-| Cart API              | {{site.versionid}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                  |
-| Wishlist API          | {{site.versionid}} | [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)                              |
-| Shopping List API     | {{site.versionid}} | [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)     |
-| Order Management API  | {{site.versionid}} | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
-| Product Configuration | {{site.versionid}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                   |
+| Spryker Core API      | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)         |
+| Product API           | {{page.release_tag}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)                  |
+| Cart API              | {{page.release_tag}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                  |
+| Wishlist API          | {{page.release_tag}} | [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)                              |
+| Shopping List API     | {{page.release_tag}} | [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)     |
+| Order Management API  | {{page.release_tag}} | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
+| Product Configuration | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                   |
 
 ## 1) Install the required modules
 

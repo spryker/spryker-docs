@@ -8,18 +8,18 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Cart| {{site.versionid}} |
-|Persistent Cart | {{site.versionid}} |
-|Multiple Carts| {{site.versionid}} |
-|Company Account| {{site.versionid}} |
-|Spryker Core| {{site.versionid}} |
+|Cart| {{page.release_tag}} |
+|Persistent Cart | {{page.release_tag}} |
+|Multiple Carts| {{page.release_tag}} |
+|Company Account| {{page.release_tag}} |
+|Spryker Core| {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -560,17 +560,17 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Cart| {{site.versionid}} |
-|Persistent Cart| {{site.versionid}} |
-|Multiple Carts| {{site.versionid}} |
-|Spryker Core| {{site.versionid}} |
+|Cart| {{page.release_tag}} |
+|Persistent Cart| {{page.release_tag}} |
+|Multiple Carts| {{page.release_tag}} |
+|Spryker Core| {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

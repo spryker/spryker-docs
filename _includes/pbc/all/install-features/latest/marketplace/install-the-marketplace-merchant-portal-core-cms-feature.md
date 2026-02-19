@@ -6,9 +6,9 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| CMS      | {{site.versionid}} | [Install the Spryker CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
-| Marketplace Merchant Portal Core | {{site.versionid}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Spryker Core         | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| CMS      | {{page.release_tag}} | [Install the Spryker CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ## 1) Create merchant restore password email templates
 

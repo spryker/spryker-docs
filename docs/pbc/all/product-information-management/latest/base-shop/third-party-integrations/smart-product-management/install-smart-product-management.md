@@ -25,9 +25,9 @@ Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AiFoundation        | {{page.version}} | [Integrate AiFoundation](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html)                                                                        |
-| Product             | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
-| Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| AiFoundation        | {{page.release_tag}} | [Integrate AiFoundation](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html)                                                                        |
+| Product             | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                         |
+| Category Management | {{page.release_tag}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ### 1) Install the required modules
 

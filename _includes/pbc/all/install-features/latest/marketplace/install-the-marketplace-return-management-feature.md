@@ -13,14 +13,14 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core                 | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Return Management            | {{site.versionid}} | [Install the Return Management feature](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
-| Marketplace Order Management | {{site.versionid}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Spryker Core                 | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Return Management            | {{page.release_tag}} | [Install the Return Management feature](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
+| Marketplace Order Management | {{page.release_tag}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install required modules using Composer
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -958,7 +958,7 @@ Follow the steps below to install the Marketplace return management feature fron
 ### 1) Install required modules using Сomposer
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

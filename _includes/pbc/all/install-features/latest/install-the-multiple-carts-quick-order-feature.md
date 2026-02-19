@@ -8,9 +8,9 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{site.versionid}} |
-| Quick Add To Cart | {{site.versionid}} |
-| Spryker Core | {{site.versionid}} |
+| Multiple Carts | {{page.release_tag}} |
+| Quick Add To Cart | {{page.release_tag}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Set up behavior
 
@@ -58,9 +58,9 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{site.versionid}} |
-| Quick Add To Cart | {{site.versionid}} |
-| Spryker Core | {{site.versionid}} |
+| Multiple Carts | {{page.release_tag}} |
+| Quick Add To Cart | {{page.release_tag}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Set up widgets
 

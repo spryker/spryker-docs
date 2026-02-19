@@ -22,13 +22,13 @@ Install the required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core     | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Order Management | {{site.versionid}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                |
+| Spryker Core     | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Order Management | {{page.release_tag}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/shipment:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/shipment:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1790,13 +1790,13 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
-| Product      | {{site.versionid}} | [Isntall the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
+| Product      | {{page.release_tag}} | [Isntall the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/shipment:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/shipment:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

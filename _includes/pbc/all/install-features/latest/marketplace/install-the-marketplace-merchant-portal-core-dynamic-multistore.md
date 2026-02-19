@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION |
 | -------------------- | ------- |
-| Spryker Core | {{site.versionid}} |
-| Marketplace Merchant Portal Core | {{site.versionid}} |  
+| Spryker Core | {{page.release_tag}} |
+| Marketplace Merchant Portal Core | {{page.release_tag}} |  
 
 ### 1) Set up behavior
 

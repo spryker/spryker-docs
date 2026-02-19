@@ -8,16 +8,16 @@ Install the required features:
 
 | NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                          |
 |------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core | {{site.versionid}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)   |
-| Marketplace Merchant Portal Product Offer Management    | {{site.versionid}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                        |
-| Marketplace Product Offer + Service Points | {{site.versionid}} | [Install the Marketplace Product Offer + Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html)             |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)   |
+| Marketplace Merchant Portal Product Offer Management    | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html)                        |
+| Marketplace Product Offer + Service Points | {{page.release_tag}} | [Install the Marketplace Product Offer + Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html)             |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/product-offer-service-point-merchant-portal-gui:"{{site.versionid}}" --update-with-dependencies
+composer require spryker/product-offer-service-point-merchant-portal-gui:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

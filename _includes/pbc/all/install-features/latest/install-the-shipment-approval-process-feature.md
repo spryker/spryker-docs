@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{site.versionid}} |
-| Approval Process | {{site.versionid}} |
+| Shipment | {{page.release_tag}} |
+| Approval Process | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
@@ -136,7 +136,7 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| CheckoutPage | {{site.versionid}} |
+| CheckoutPage | {{page.release_tag}} |
 
 ### 1) Set up behavior
 

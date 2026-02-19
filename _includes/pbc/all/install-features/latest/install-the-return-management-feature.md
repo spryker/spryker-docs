@@ -8,15 +8,15 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
-| Order Management | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| Order Management | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/return-management:"{{site.versionid}}" spryker/barcode:"^1.1.1" --update-with-dependencies
+composer require spryker-feature/return-management:"{{page.release_tag}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -778,14 +778,14 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/return-management:"{{site.versionid}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/return-management:"{{page.release_tag}}" spryker-shop/barcode-widget:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

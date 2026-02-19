@@ -13,8 +13,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-|Alternative Products| {{site.versionid}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
-|Inventory Management| {{site.versionid}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
+|Alternative Products| {{page.release_tag}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
+|Inventory Management| {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
 
 ### 1) Set up behavior
 

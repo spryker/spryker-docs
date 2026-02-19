@@ -8,11 +8,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Search | {{site.versionid}} |  |
-| Catalog | {{site.versionid}} |  |
-| Product | {{site.versionid}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
-| Catalog + Price | {{site.versionid}} |  |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Search | {{page.release_tag}} |  |
+| Catalog | {{page.release_tag}} |  |
+| Product | {{page.release_tag}} | [Install the Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Catalog + Price | {{page.release_tag}} |  |
 
 ### 1) Install the required modules
 

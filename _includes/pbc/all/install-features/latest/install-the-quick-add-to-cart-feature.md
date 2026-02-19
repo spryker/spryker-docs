@@ -7,17 +7,17 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | {{site.versionid}} |
-| Cart| {{site.versionid}} |
-| Product | {{site.versionid}} |
-| Checkout | {{site.versionid}} |
+| Spryker Core E-commerce | {{page.release_tag}} |
+| Cart| {{page.release_tag}} |
+| Product | {{page.release_tag}} |
+| Checkout | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/quick-add-to-cart:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/quick-add-to-cart:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -131,10 +131,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core| {{site.versionid}} |
-|Cart| {{site.versionid}} |
-|Product| {{site.versionid}} |
-|Checkout| {{site.versionid}} |
+|Spryker Core| {{page.release_tag}} |
+|Cart| {{page.release_tag}} |
+|Product| {{page.release_tag}} |
+|Checkout| {{page.release_tag}} |
 
 ### 1) Install the required modules
 

@@ -16,14 +16,14 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/company-account:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/company-account:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -694,16 +694,16 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
-| Customer Account Management | {{site.versionid}} |
-| Company Account | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| Customer Account Management | {{page.release_tag}} |
+| Company Account | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/company-account: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/company-account: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

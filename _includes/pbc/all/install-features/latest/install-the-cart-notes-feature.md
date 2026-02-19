@@ -13,12 +13,12 @@ To start feature integration, integrate the required feature:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                            |
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management | {{site.versionid}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Order Management | {{page.release_tag}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/cart-notes:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/cart-notes:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 Make sure the following modules have been installed:

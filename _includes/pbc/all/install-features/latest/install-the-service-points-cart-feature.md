@@ -8,15 +8,15 @@ Install the required features:
 
 | NAME                    | VERSION           | INSTALLATION GUIDE                                                                                                                                                                               |
 |-------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points          | {{site.versionid}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                    |
-| Cart                    | {{site.versionid}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html) |
+| Service Points          | {{page.release_tag}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                    |
+| Cart                    | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html) |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/service-points-cart: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/service-points-cart: "{{page.release_tag}}" --update-with-dependencies
 composer require spryker/service-point-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
 

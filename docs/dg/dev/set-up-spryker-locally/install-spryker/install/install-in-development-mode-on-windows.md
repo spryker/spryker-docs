@@ -43,7 +43,7 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
 4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops):
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{site.versionid}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

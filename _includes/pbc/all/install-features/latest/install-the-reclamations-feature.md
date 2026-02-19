@@ -8,15 +8,15 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Order Management | {{site.versionid}} |
-| Spryker Core | {{site.versionid}} |
+| Order Management | {{page.release_tag}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/reclamations: "{{site.versionid}}" --update-with-dependencies`
+composer require spryker-feature/reclamations: "{{page.release_tag}}" --update-with-dependencies`
 ```
 
 {% info_block warningBox "Verification" %}

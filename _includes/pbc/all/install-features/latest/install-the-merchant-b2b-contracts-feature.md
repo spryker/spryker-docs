@@ -10,17 +10,17 @@ Install the required features:
 
 | NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |---------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account           | {{site.versionid}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Mailing and Notifications | {{site.versionid}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                                                      |
-| Merchant                  | {{site.versionid}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
-| Spryker Core              | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account           | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Mailing and Notifications | {{page.release_tag}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                                                      |
+| Merchant                  | {{page.release_tag}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
+| Spryker Core              | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-contracts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/merchant-contracts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -369,16 +369,16 @@ Install the required features:
 
 | NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |-----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account | {{site.versionid}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Merchant        | {{site.versionid}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
-| Spryker Core    | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Merchant        | {{page.release_tag}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
+| Spryker Core    | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-contracts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/merchant-contracts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

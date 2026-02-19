@@ -14,15 +14,15 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core | {{site.versionid}} |
-| Prices | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| Prices | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/prices: "^{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -226,15 +226,15 @@ Install the following required features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core E-commerce | {{site.versionid}} |
-| Prices | {{site.versionid}} |
+| Spryker Core E-commerce | {{page.release_tag}} |
+| Prices | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/prices: "^{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

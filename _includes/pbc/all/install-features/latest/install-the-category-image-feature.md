@@ -13,13 +13,13 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Category | {{site.versionid}} | |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Category | {{page.release_tag}} | |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/category-image:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -440,13 +440,13 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Category | {{site.versionid}} | |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Category | {{page.release_tag}} | |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/category-image:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

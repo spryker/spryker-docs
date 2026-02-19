@@ -11,8 +11,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE  |
 | -------------------- | ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{site.versionid}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
-| Marketplace Merchant | {{site.versionid}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 

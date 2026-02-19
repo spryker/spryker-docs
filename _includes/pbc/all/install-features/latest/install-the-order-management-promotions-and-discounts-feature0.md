@@ -10,9 +10,9 @@ Install the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                |
 |------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Promotions & Discounts | {{site.versionid}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Order Management       | {{site.versionid}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)           |
-| Spryker Core           | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
+| Promotions & Discounts | {{page.release_tag}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Order Management       | {{page.release_tag}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)           |
+| Spryker Core           | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
 
 ### 1) Install the required modules
 

@@ -23,7 +23,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Backend API Application | {{page.version}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
+| Backend API Application | {{page.release_tag}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ### 1) Install the required modules
 

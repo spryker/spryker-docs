@@ -9,15 +9,15 @@ Install the required features:
 
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Shipment       | {{site.versionid}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)  |
-| Service Points | {{site.versionid}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html) |
+| Shipment       | {{page.release_tag}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)  |
+| Service Points | {{page.release_tag}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html) |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shipment-service-points: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/shipment-service-points: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

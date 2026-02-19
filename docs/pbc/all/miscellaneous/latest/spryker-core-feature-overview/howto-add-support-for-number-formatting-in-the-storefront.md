@@ -15,7 +15,7 @@ To add support for number formatting in the Storefront, integrate the required f
 
 | NAME                                   | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                           | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Spryker Core                           | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
 
 ## 1) Install the required modules
 

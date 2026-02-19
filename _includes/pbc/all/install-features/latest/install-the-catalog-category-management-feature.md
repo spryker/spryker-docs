@@ -12,9 +12,9 @@ To start feature integration, integrate the required features
 
 | NAME                | VERSION | INSTALLATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Catalog             | {{site.versionid}} |  |
-| Category Management | {{site.versionid}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Spryker Core        | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Catalog             | {{page.release_tag}} |  |
+| Category Management | {{page.release_tag}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
 ### 1) Set up behavior
 

@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| CMS          | {{site.versionid}} | [Install the CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| CMS          | {{page.release_tag}} | [Install the CMS feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
 ## 1) Install the required modules
 

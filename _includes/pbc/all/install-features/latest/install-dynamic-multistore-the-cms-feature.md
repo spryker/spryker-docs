@@ -2,8 +2,8 @@ This document describes how to install the [Dynamic Multistore](/docs/pbc/all/dy
 
 | NAME | VERSION |  
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
-| CMS | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| CMS | {{page.release_tag}} |
 
 ## Troubleshooting
 

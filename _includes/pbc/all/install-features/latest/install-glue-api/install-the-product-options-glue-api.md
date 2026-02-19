@@ -8,8 +8,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Product Options | {{site.versionid}} | Feature |
-| Spryker Core | {{site.versionid}} | [Feature API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Product Options | {{page.release_tag}} | Feature |
+| Spryker Core | {{page.release_tag}} | [Feature API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
 ### 1) Install the required modules
 

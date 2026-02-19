@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | -------------- | --------- | -------------|
-| Order Threshold | {{site.versionid}} | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Order Management | {{site.versionid}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Order Threshold | {{page.release_tag}} | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Order Management | {{page.release_tag}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### Install the required modules using Composer
 

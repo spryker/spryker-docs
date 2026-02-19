@@ -10,11 +10,11 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                | VERSION          | INSTALLATION GUIDE  |
 |---------------------|------------------|--------------------|
-| Spryker Core API    | {{site.versionid}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)       |
-| Cart API            | {{site.versionid}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                       |
-| Company Account API | {{site.versionid}} | [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |
-| Agent Assist API    | {{site.versionid}} | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)       |
-| Quotation Process   | {{site.versionid}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |
+| Spryker Core API    | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)       |
+| Cart API            | {{page.release_tag}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                       |
+| Company Account API | {{page.release_tag}} | [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |
+| Agent Assist API    | {{page.release_tag}} | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)       |
+| Quotation Process   | {{page.release_tag}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/latest/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |
 
 
 ### 1) Install the required modules

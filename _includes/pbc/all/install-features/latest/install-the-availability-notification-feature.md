@@ -13,15 +13,15 @@ Install the required features:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.versionid}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
-| Inventory Management      | {{site.versionid}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.versionid}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
-| Spryker Core              | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
+| Mailing and Notifications | {{page.release_tag}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
+| Inventory Management      | {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product                   | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
+| Spryker Core              | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{site.versionid}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -343,15 +343,15 @@ To start feature integration, integrate the required feature:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.versionid}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
-| Inventory Management      | {{site.versionid}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.versionid}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
-| Spryker Core              | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
+| Mailing and Notifications | {{page.release_tag}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                            |
+| Inventory Management      | {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product                   | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
+| Spryker Core              | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
 ### 1) Install the required modules
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{site.versionid}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -25,12 +25,12 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.versionid}}" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.release_tag}}" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -868,14 +868,14 @@ Install the following features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/customer-account-management: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/customer-account-management: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

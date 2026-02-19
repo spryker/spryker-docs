@@ -12,15 +12,15 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Prices | {{site.versionid}} |[Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
-| Marketplace Product Offer | {{site.versionid}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Prices | {{page.release_tag}} |[Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Marketplace Product Offer | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/marketplace-product-offer-prices:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product-offer-prices:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -12,15 +12,15 @@ Before you start the feature integration, make sure you have integrated the foll
 
 | NAME          | VERSION          | INSTALLATION GUIDE                                                                                                                                         |
 |---------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer | {{site.versionid}} | [Install the Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Shipment      | {{site.versionid}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                   |
+| Product Offer | {{page.release_tag}} | [Install the Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
+| Shipment      | {{page.release_tag}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                   |
 
 ## 1) Install the required modules
 
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/product-offer-shipment:"{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/product-offer-shipment:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

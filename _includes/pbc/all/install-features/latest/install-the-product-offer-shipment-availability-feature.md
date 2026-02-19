@@ -12,13 +12,13 @@ Install the required features:
 
 | NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer Service Points Availability | {{site.versionid}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
-| Shipment                                  | {{site.versionid}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
+| Product Offer Service Points Availability | {{page.release_tag}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
+| Shipment                                  | {{page.release_tag}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/product-offer-shipment-availability: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/product-offer-shipment-availability: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

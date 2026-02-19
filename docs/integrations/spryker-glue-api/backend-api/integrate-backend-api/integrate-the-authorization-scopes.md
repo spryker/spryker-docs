@@ -22,7 +22,7 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INSTALLATION GUIDE                                                                                                                                                                 |
 | -------------- | ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Backend API Authentication | {{page.version}} | [Backend API Authentication itegration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) |
+| Backend API Authentication | {{page.release_tag}} | [Backend API Authentication itegration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authentication.html) |
 
 ### 1) Set up transfer objects
 

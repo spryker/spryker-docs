@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | {{site.versionid}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 
@@ -550,7 +550,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{site.versionid}} | [Spryker Core](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Spryker Core](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 
 

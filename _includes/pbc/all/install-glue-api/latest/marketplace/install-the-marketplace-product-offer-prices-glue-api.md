@@ -10,7 +10,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer Prices | {{site.versionid}} | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
+| Marketplace Product Offer Prices | {{page.release_tag}} | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 
 ### 1) Install the required modules
 

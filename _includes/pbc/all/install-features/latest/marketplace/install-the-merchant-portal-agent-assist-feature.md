@@ -7,12 +7,12 @@ Install the required features:
 
 | NAME                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{site.versionid}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/marketplace-agent-assist:"{{site.versionid}}" spryker/agent-dashboard-merchant-portal-gui:"1.0.0" spryker/agent-security-blocker-merchant-portal-gui:"1.1.0" spryker/agent-security-merchant-portal-gui:"1.1.0" --update-with-dependencies
+composer require spryker-feature/marketplace-agent-assist:"{{page.release_tag}}" spryker/agent-dashboard-merchant-portal-gui:"1.0.0" spryker/agent-security-blocker-merchant-portal-gui:"1.1.0" spryker/agent-security-merchant-portal-gui:"1.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

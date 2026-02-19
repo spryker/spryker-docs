@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-|Quick Add To Cart  | {{site.versionid}} |
-|Discontinued Products  | {{site.versionid}} |
+|Quick Add To Cart  | {{page.release_tag}} |
+|Discontinued Products  | {{page.release_tag}} |
 
 ### 1) Set up behavior
 

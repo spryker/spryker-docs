@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-|Alternative Products| {{site.versionid}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
-|Product Labels| {{site.versionid}} | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)|
+|Alternative Products| {{page.release_tag}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
+|Product Labels| {{page.release_tag}} | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)|
 
 ### 1) Install the required modules
 

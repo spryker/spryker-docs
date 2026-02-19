@@ -10,15 +10,15 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{site.versionid}} |
-| ProductRelations | {{site.versionid}} |
+| Spryker Core | {{page.release_tag}} |
+| ProductRelations | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/product-relations:"{{site.versionid}}" --update-with-dependencies
+composer require "spryker-feature/product-relations:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

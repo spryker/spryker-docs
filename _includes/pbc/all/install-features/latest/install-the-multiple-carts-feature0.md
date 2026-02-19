@@ -15,14 +15,14 @@ Follow the steps below to install the Multiple Carts feature core.
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart         | {{site.versionid}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart         | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
 
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -522,13 +522,13 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.versionid}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart         | {{site.versionid}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart         | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{site.versionid}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

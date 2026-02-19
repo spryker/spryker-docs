@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME | VERSION | CMS |
 | --- | --- | ---  |
-| Category Management | {{site.versionid}} | {{site.versionid}} |
+| Category Management | {{page.release_tag}} | {{page.release_tag}} |
 
 ## 1) Install the required modules
 

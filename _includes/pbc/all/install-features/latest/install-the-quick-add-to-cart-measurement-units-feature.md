@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{site.versionid}} |
-|Measurement units| {{site.versionid}} |
+|Quick Order| {{page.release_tag}} |
+|Measurement units| {{page.release_tag}} |
 
 ### 1) Set up behavior
 

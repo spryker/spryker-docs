@@ -2,7 +2,7 @@
 title: Install the Multi-Factor Authentication Merchant Portal feature
 description: This document describes how to install the Multi-Factor Authentication Merchant Portal (MFA MP) feature in your Spryker project.
 template: feature-integration-guide-template
-last_updated: Aug 22, 2025
+last_updated: Feb 19, 2026
 ---
 
 This document describes how to install the Multi-Factor Authentication (MFA) feature for the Merchant Portal.
@@ -11,9 +11,9 @@ This document describes how to install the Multi-Factor Authentication (MFA) fea
 
 | FEATURE                          | VERSION          | INSTALLATION  GUIDE                                                                                                                                                                                                                     |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core | 202507.0 | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
-| Merchant Portal Agent Assist     | 202507.0 | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
-| Multi-Factor Authentication      | 202507.0 | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html) |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
+| Merchant Portal Agent Assist     | {{page.release_tag}} | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
+| Multi-Factor Authentication      | {{page.release_tag}} | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html) |
 
 ## 1) Install the required modules
 

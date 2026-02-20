@@ -12,15 +12,15 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ----- | ---------- |
-| Spryker Core         | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | 202507.0 | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core         | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-category:"202507.0"  --update-with-dependencies
+composer require spryker-feature/merchant-category:"{{page.release_tag}}"  --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -312,8 +312,8 @@ Integrate the required features before beginning the integration step.
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | -------- | ------ | -------------- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Merchant     | 202507.0 | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Merchant     | {{page.release_tag}} | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
 
 ### 1) Set up behavior
 

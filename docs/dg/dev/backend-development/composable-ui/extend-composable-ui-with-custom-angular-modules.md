@@ -7,7 +7,14 @@ related:
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
   - title: Entity configuration reference
     link: docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
+last_updated: Feb 20, 2026
 ---
+
+{% info_block warningBox "Beta" %}
+
+Composable UI is currently in beta and intended for internal use. This functionality is under active development, and there is no backward compatibility guarantee at this time. We do not recommend using it in production projects until it reaches a stable release.
+
+{% endinfo_block %}
 
 This document describes how to extend Composable UI with custom Angular components when the standard configuration-driven approach doesn't meet your requirements.
 

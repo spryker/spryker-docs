@@ -8,6 +8,8 @@ related:
     link: docs/dg/dev/architecture/api-platform.html
   - title: How to integrate API Platform
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+  - title: API Platform Configuration
+    link: docs/dg/dev/architecture/api-platform/configuration.html
   - title: Resource Schemas
     link: docs/dg/dev/architecture/api-platform/resource-schemas.html
   - title: Validation Schemas
@@ -26,7 +28,7 @@ Before creating API resources, ensure you have:
 
 - Integrated API Platform as described in [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
 - Configured your application's bundle files
-- Configured API types in your `spryker_api_platform.php` configuration
+- Configured API types as described in [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html)
 
 ## Creating your first API resource
 
@@ -36,7 +38,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 
 **Example: Customer resource for Back Office API**
 
-`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml`
 
 ```yaml
 # yaml-language-server: $schema=../../../../../vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
@@ -307,7 +309,6 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-markdo
 `config/Glue/ApplicationServices.php`
 
 ```php
@@ -372,7 +373,7 @@ Create CodeBucket variants when you need:
 
 **Base resource:**
 
-`src/Pyz/Glue/Customer/resources/api/backend/customers.yml`
+`src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml`
 
 ```yaml
 resource:

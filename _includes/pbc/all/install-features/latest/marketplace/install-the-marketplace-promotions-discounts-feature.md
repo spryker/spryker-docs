@@ -12,16 +12,16 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core                 | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Order Management | 202507.0 | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
-| Promotions & Discounts       | 202507.0 | [Install the Promotions & Discounts feature](https://github.com/spryker-feature/promotions-discounts) |
+| Spryker Core                 | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Order Management | {{page.release_tag}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Promotions & Discounts       | {{page.release_tag}} | [Install the Promotions & Discounts feature](https://github.com/spryker-feature/promotions-discounts) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-promotions-discounts:"202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-promotions-discounts:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

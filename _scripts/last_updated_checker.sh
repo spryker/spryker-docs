@@ -25,12 +25,14 @@ for file in $changed_md_files; do
     continue
   fi
 
-  if ! grep -q "^last_updated:" "$file"; then
+  front_matter=$(awk 'BEGIN{found=0} /^---$/{found++; if(found==2) exit; next} found==1{print}' "$file")
+
+  if ! echo "$front_matter" | grep -q "^last_updated:"; then
     continue
   fi
 
   if git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep -q "^\+last_updated:"; then
-    date_string=$( git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep "^\+last_updated:" | sed 's/\+last_updated: //')
+    date_string=$( git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | grep "^\+last_updated:" | head -1 | sed 's/\+last_updated: //')
     date_seconds=$(date -d "$date_string" +%s)
 
     if [ $((current_seconds - date_seconds)) -lt $((lines_changed_day_limit * 86400)) ]; then
@@ -40,8 +42,8 @@ for file in $changed_md_files; do
     files_needing_update=1
     continue
   else
-    if cat "$file" | grep -q "^last_updated:"; then
-      date_string=$( cat "$file" | grep "^last_updated:" | sed 's/last_updated: //')
+    if echo "$front_matter" | grep -q "^last_updated:"; then
+      date_string=$( echo "$front_matter" | grep "^last_updated:" | sed 's/last_updated: //')
       date_seconds=$(date -d "$date_string" +%s)
 
       if [ $((current_seconds - date_seconds)) -lt $((lines_changed_day_limit * 86400)) ]; then

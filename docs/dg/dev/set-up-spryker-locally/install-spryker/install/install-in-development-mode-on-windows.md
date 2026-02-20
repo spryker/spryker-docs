@@ -1,7 +1,7 @@
 ---
 title: Install in Development mode on Windows
 description: Learn how to install and configure Spryker in Development mode on Windows in a local environment.
-last_updated: Oct 21, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-development-mode-on-windows
 originalArticleId: 14368b32-4d9e-4451-9a46-ecab32966d88
@@ -43,7 +43,7 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
 4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops):
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

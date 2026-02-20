@@ -1,7 +1,7 @@
 ---
 title: Integrate Authorization Enabler
 description: Learn how to enable and integrate the Authorization Enabler for your Spryker based projects.
-last_updated: Sep 2, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
 originalArticleId: 809afa43-2beb-47d6-acaa-ae58efa62470
@@ -20,7 +20,7 @@ To start the integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{page.version}}  |
+| Spryker Core | {{page.release_tag}}  |
 
 ## 1) Install the required modules
 

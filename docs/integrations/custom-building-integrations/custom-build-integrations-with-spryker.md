@@ -39,6 +39,18 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
     <div class="cst_card_desc">Learn how to use Jenkins for automating data exchange tasks in Spryker, including importing, exporting, and triggering scheduled operations with third-party systems.</div>
     <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html"> Find out more </a>
   </div>
+
+  <div class="cst_card">
+    <div class="cst_card_title">Connect ERP with Spryker</div>
+    <div class="cst_card_desc">Learn how to integrate your ERP system into Spryker, using  well crafted template, as well as common integration places.</div>
+    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/erp-integration-template.html"> Find out more </a>
+  </div>
+
+  <div class="cst_card">
+    <div class="cst_card_title">Implement PunchOut on your project</div>
+    <div class="cst_card_desc">Learn how to implement PunchOut flow support and enable serving procurement system requests.</div>
+    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/punchout-development-plan.html"> Find out more </a>
+  </div>
  </div>
 
 

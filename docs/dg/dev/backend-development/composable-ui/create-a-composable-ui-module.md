@@ -2,7 +2,7 @@
 title: Create a Composable UI module
 description: Step-by-step guide to creating a new Composable UI feature module with YAML-driven Back Office UI.
 template: howto-guide-template
-last_updated: Jan 6, 2026
+last_updated: Feb 20, 2026
 related:
   - title: Composable UI overview
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
@@ -13,6 +13,12 @@ related:
   - title: Composable UI troubleshooting
     link: docs/dg/dev/backend-development/composable-ui/composable-ui-troubleshooting.html
 ---
+
+{% info_block warningBox "Beta" %}
+
+Composable UI is currently in beta and intended for internal use. This functionality is under active development, and there is no backward compatibility guarantee at this time. We do not recommend using it in production projects until it reaches a stable release.
+
+{% endinfo_block %}
 
 This document describes how to create a new Composable UI feature module with YAML-driven Back Office UI.
 

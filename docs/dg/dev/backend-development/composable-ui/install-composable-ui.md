@@ -2,7 +2,7 @@
 title: How to integrate Composable UI
 description: Integrate Composable UI to enable YAML-driven Back Office interface with auto-generated CRUD operations.
 template: howto-guide-template
-last_updated: Jan 6, 2026
+last_updated: Feb 20, 2026
 related:
   - title: Composable UI overview
     link: docs/dg/dev/backend-development/composable-ui/composable-ui.html
@@ -11,6 +11,12 @@ related:
   - title: Create a Composable UI module
     link: docs/dg/dev/backend-development/composable-ui/create-a-composable-ui-module.html
 ---
+
+{% info_block warningBox "Beta" %}
+
+Composable UI is currently in beta and intended for internal use. This functionality is under active development, and there is no backward compatibility guarantee at this time. We do not recommend using it in production projects until it reaches a stable release.
+
+{% endinfo_block %}
 
 This document describes how to integrate Composable UI into your Spryker project to enable configuration-driven Back Office UI with auto-generated CRUD operations.
 

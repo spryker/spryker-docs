@@ -27,14 +27,14 @@ To start the integration, overview and install the necessary feature:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^{{page.release_tag}}" --update-with-dependencies
 ```
 
 ### 2) Set up behavior

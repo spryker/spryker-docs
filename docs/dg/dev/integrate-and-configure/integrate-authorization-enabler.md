@@ -20,7 +20,7 @@ To start the integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{page.version}}  |
+| Spryker Core | {{page.release_tag}}  |
 
 ## 1) Install the required modules
 

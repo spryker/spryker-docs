@@ -1,4 +1,5 @@
 version: "202507.0"
+release_version: "202507.0"
 
 repository: spryker/spryker-docs
 

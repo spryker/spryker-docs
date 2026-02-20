@@ -191,7 +191,7 @@ entries:
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
     - title: Implementing ERP Integration
       url: /docs/integrations/custom-building-integrations/erp-integration-template.html
-    - title: Implement Punchout in Spryker
+    - title: Implement PunchOut on your project
       url: /docs/integrations/custom-building-integrations/punchout-development-plan.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

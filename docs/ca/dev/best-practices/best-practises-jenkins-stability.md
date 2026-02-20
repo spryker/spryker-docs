@@ -4,7 +4,7 @@ description: Follow best practices for Jenkins in Spryker Cloud Commerce OS, foc
 template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
-last_updated: Jun 10, 2023
+last_updated: Feb 20, 2026
 ---
 
 Jenkins fulfills the role of a scheduler in the Spryker applications. It is used to run repetitive console commands and jobs. In Spryker Cloud Commerce OS, the Jenkins instance runs the commands configured directly in its container. This means that, when you run a command like the following one, it's executed within the Jenkins container, utilizing its resources:
@@ -27,13 +27,15 @@ Considering some overhead for the operating system, Docker, and Jenkins itself, 
 
 We recommend profiling your application to understand how much RAM your Jenkins jobs require. A good way to do this is by utilizing XDebug Profiling in your local development environment. Jobs that may have unexpected memory demands are the `queue:worker:start` commands. These commands are responsible for spawning the `queue:task:start` commands, which consume messages from RabbitMQ. Depending on the complexity and configured chunk size of these messages, these jobs can easily consume multiple GBs of RAM.
 
+Starting with `202512.0`, Spryker includes a **resource-aware queue worker** that addresses memory management for queue processing at the application level. It monitors free system memory before spawning each child process, detects memory leaks in its own process, and uses a fixed-size process pool to keep memory consumption predictable. For details on enabling and configuring it, see [Optimizing Jenkins execution with the resource-aware queue worker](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
+
 ## Jenkins executors configuration
 
 Jenkins executors let you orchestrate Jenkins jobs and introduce parallel processing. By default, Jenkins instances have two executors configured, similar to local environment setups. You can adjust the executor count and run many console commands in parallel. While this may speed up processing in your application, it increases the importance of understanding the memory utilization profile of your application. For stable job execution, you need to ensure that no parallelized jobs collectively consume more memory than the amount available to the Jenkins container. Also, it's a common practice to set the number of executors equal to the number of CPUs available to Jenkins. Standard environments are equipped with two vCPUs. Configuring more than the standard two executors risks jobs "fighting" for CPU cycles. This severely limits the performance of all jobs running in parallel and potentially introduces instability to the container itself.
 
 We recommend sticking to the default executor count or the concurrent job limit recommended in the Spryker Service Description for your package. This ensures the stability of Jenkins and prevents instability and crashes.
 
-If it seems like your project needs more executors because of your job or store count, consider configuring all stores's sync jobs to be processed by one executor. For instructions, see [Reduce Jenkins execution without P&S and data importers refactoring](/docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html).
+If it seems like your project needs more executors because of your job or store count, consider using a single resource-aware worker to process all stores with one executor. For instructions, see [Optimizing Jenkins execution with the resource-aware queue worker](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
 
 ## Queue worker configuration
 

@@ -1,7 +1,7 @@
 ---
 title: Infrastructure and worker configuration guidelines
 description: Learn how to optimize nginx configuration and worker orchestration for Spryker applications, including buffer tuning and multi-store worker strategies.
-last_updated: Dec 16, 2025
+last_updated: Feb 20, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -12,7 +12,7 @@ related:
     link: docs/ca/dev/best-practices/jenkins-operational-best-practices.html
   - title: Stable Workers
     link: docs/dg/dev/backend-development/cronjobs/stable-workers.html
-  - title: Optimizing Jenkins execution
+  - title: Optimizing Jenkins execution with the resource-aware queue worker
     link: docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
 ---
 
@@ -275,43 +275,53 @@ Stable Workers is a Spryker feature that requires configuration and deployment. 
 - Frequent Jenkins stability issues
 - Need for better resource isolation
 
-### Solution 2: Unified worker processing
+### Solution 2: Resource-aware queue worker
 
-Alternative Worker (single Worker for all stores) process queues for all stores with a single worker:
+Starting with `202512.0`, Spryker ships a **resource-aware queue worker** that processes queues for all stores with a single worker while monitoring system resources:
 
 **Configuration approach:**
 
 ```php
+// config/Shared/config_default.php
+use Spryker\Shared\Queue\QueueConstants;
+
+$config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = true;
+$config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = 10;
+$config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = 750;
+```
+
+```php
 // config/Zed/cronjobs/jenkins.php
 $jobs[] = [
-    'name' => 'queue-worker-all-stores',
-    'command' => '$PHP_BIN vendor/bin/console queue:worker:start',
+    'name' => 'queue-worker',
+    'command' => '$PHP_BIN vendor/bin/console queue:worker:start -vvv',
     'schedule' => '* * * * *',
     'enable' => true,
-    'stores' => ['DE'], // Default store name
+    'stores' => ['DE'], // Use any one store as entry point
 ];
 ```
 
 **How it works:**
 
-- Single worker processes messages from all store queues
-- Spryker automatically routes messages to correct store context
-- Reduces parallel execution and resource contention
+- Single worker manages a fixed-size process pool for all store queues
+- Monitors free system memory before spawning each child process
+- Detects memory leaks and exits gracefully for automatic restart
+- Dynamically prioritizes queues based on message volume
 
 **Benefits:**
 
-- **Reduced memory usage**: 1 worker instead of N workers
+- **Resource awareness**: Prevents OOM by monitoring free memory before each spawn
+- **Reduced memory usage**: 1 worker with bounded process pool instead of N independent workers
 - **Fewer executor slots**: Frees Jenkins resources for other jobs
-- **Simplified monitoring**: Single worker to track
-- **Better queue processing**: No store-specific delays
+- **Memory leak protection**: Automatic detection and graceful exit
+- **Comprehensive statistics**: Operational visibility into cycles, processes, and errors
 
 **Considerations:**
 
-- Requires messages to be store-independent or properly tagged
-- May need queue prioritization for critical stores
-- Monitor processing lag per store
+- Requires RabbitMQ and the `RabbitMqQueueMetricsReaderPlugin`
+- Tune the process pool size and memory buffer for your environment
 
-For implementation details, see [Optimizing Jenkins execution](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
+For full configuration reference and architecture details, see [Optimizing Jenkins execution with the resource-aware queue worker](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
 
 ## Best practices summary
 

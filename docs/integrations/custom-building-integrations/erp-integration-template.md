@@ -1,9 +1,9 @@
 ---
 title: Implementing ERP Integration
 description: Easy starting point for projects to connect to ERP systems.
-last_updated: Feb 19, 2026
+keywords: erp, integration, third party, guide, oms, webhook
+last_updated: Feb 20, 2026
 template: default
-layout: custom_new
 ---
 
 ## Introduction

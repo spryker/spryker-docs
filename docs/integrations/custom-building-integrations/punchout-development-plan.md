@@ -1,8 +1,8 @@
 ---
-title: PunchOut development plan
+title: Implement PunchOut on your project
 description: Enable projects to connect to procurement systems following PunchOut protocol.
-keywords: punchout, Punch Out, cxml, procurement, procurement systems, guide
-last_updated: Feb 19, 2026
+keywords: punchout, Punch Out, punchout, cxml, oci, procurement, procurement systems, guide
+last_updated: Feb 20, 2026
 template: default
 ---
 

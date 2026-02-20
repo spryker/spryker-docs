@@ -23,12 +23,12 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/inventory-management:"202507.0" --update-with-dependencies
+composer require spryker-feature/inventory-management:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -639,7 +639,7 @@ To start integration, integrate the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                 |
 |------------------------|------------------|-------------------------------------------------------------------|
-| Inventory Management   | 202507.0 | [Inventory Mamagement feature integration](#install-feature-core) |
+| Inventory Management   | {{page.release_tag}} | [Inventory Mamagement feature integration](#install-feature-core) |
 
 ### 1) Install the required modules
 

@@ -1,7 +1,7 @@
 ---
 title: Install Amazon QuickSight
 description: Learn how to integrate the Amazon QuickSight into your project
-last_updated: Jan 20, 2025
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 ---
 
@@ -17,8 +17,8 @@ Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                              |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Analytics                | 202507.0 | [Install the Analytics feature](/docs/pbc/all/business-intelligence/latest/install-the-analytics-feature.html)                           |
-| Spryker Core Back Office | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Analytics                | {{page.release_tag}} | [Install the Analytics feature](/docs/pbc/all/business-intelligence/latest/install-the-analytics-feature.html)                           |
+| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ### 1) Install the required modules
 
@@ -588,7 +588,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Enable Javascript and CSS changes
 

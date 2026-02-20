@@ -8,18 +8,18 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | 202507.0 |
-| Merchant | 202507.0 |
-| Merchant Contracts | 202507.0 |
-| Prices | 202507.0 |
-| Product | 202507.0 |
+| Spryker Core | {{page.release_tag}} |
+| Merchant | {{page.release_tag}} |
+| Merchant Contracts | {{page.release_tag}} |
+| Prices | {{page.release_tag}} |
+| Product | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"202507.0" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"{{page.release_tag}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

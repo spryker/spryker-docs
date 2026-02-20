@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Jan 02, 2026
+last_updated: Feb 19, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent
 template: howto-guide-template
 related:
@@ -9,6 +9,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
   - title: Use structured responses with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+  - title: AI workflow orchestration with state machines
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
 ---
 
 This document describes how to create and use AI tools with the AiFoundation module to extend AI capabilities by providing custom functions that AI models can invoke during conversations.

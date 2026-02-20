@@ -1,7 +1,7 @@
 ---
 title: Custom build integrations with Spryker
 description: Learn how to create custom integrations with Spryker to connect third-party systems, services, or tools seamlessly, leveraging modular architecture and API capabilities for tailored business solutions.
-last_updated: July 9, 2025
+last_updated: Feb 20, 2026
 template: default
 layout: custom_new
 ---
@@ -41,7 +41,7 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
   </div>
 
   <div class="cst_card">
-    <div class="cst_card_title">Connect ERP with Spryker</div>
+    <div class="cst_card_title">Implementing ERP Integration</div>
     <div class="cst_card_desc">Learn how to integrate your ERP system into Spryker, using  well crafted template, as well as common integration places.</div>
     <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/erp-integration-template.html"> Find out more </a>
   </div>

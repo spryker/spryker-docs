@@ -1,13 +1,15 @@
 ---
 title: Architecture
 description: Explore Spryker's architectural principles, detailing the technical foundation for a scalable, modular ecommerce platform tailored to complex digital ecosystems.
-last_updated: Jun 16, 2021
+last_updated: Feb 20, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-the-architecture-guide
 originalArticleId: 926005b6-d8c9-4d6a-851a-f3a4f551d0d3
 redirect_from:
   - /docs/scos/dev/architecture/architecture.html
 related:
+  - title: Architecture as Code
+    link: /docs/dg/dev/architecture/architecture-as-code.html
   - title: Conceptual overview
     link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts

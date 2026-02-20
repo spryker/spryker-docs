@@ -13,7 +13,10 @@ related:
 
 ## Overview
 
-The new data export system simplifies exporting entities from Spryker to external systems. It provides a declarative YAML-based configuration combined with PHP plugins for flexibility, making it easy to integrate with third-party systems, analytics platforms, and data warehouses.
+The new data export system simplifies exporting entities from Spryker to external systems. 
+It provides a declarative YAML-based configuration combined with PHP plugins for flexibility, making it easy to integrate with third-party systems, analytics platforms, and data warehouses.
+It allows you to use existing repository method and data transfer objects to export data from Spryker.
+You need to define the mapping between the data entities and the fields in the export file.
 
 ## How to export an entity
 
@@ -30,7 +33,9 @@ defaults:
             from: "3 week ago 00:00:00"
             to: 'now'
     connection:
-        # your connection params
+        type: file-system # connection plugin that implements \Spryker\Service\DataExportExtension\Dependency\Plugin\DataExportConnectionPluginInterface. Connection to a place where files are exported. 
+        params:
+            # check connection plugin documentation for params
 
 actions:
     - data_entity: order
@@ -167,7 +172,7 @@ The repository prepares the query with necessary joins, applies filters from the
 
 ---
 
-### Field configuration explanation
+## Field configuration explanation
 
 The fields configuration defines how data from your Transfer objects is mapped to fields in the export output.
 Each entry specifies:
@@ -330,9 +335,34 @@ This is useful when you need to export arrays as flat structure for CSV files or
 
 ---
 
-### Alternative: Streaming with Generator
+### Alternative: Custom streaming with Generator
 
-If the previous approach does not meet your requirements, implement `DataEntityGeneratorPluginInterface` instead of `DataEntityReaderPluginInterface`.
+By default, the data export system uses `DataEntityReaderPluginInterface` to retrieve data in batches. The system internally wraps your plugin's `getDataBatch()` method with a generator that handles pagination automatically:
+
+```php
+        do {
+            $dataExportConfigurationTransfer->setOffset($offset);
+            $dataExportBatchTransfer = $dataEntityReaderPlugin->getDataBatch($dataExportConfigurationTransfer); // your plugin's getDataBatch() method
+            $dataExportBatchTransfer->setOffset($offset)->setLimit($limit);
+
+            yield $dataExportBatchTransfer;
+
+            $offset += count($dataExportBatchTransfer->getData());
+        } while (count($dataExportBatchTransfer->getData()) === $limit);
+```
+
+**When to implement a custom generator**
+
+If you need more control over the data streaming process (for example, custom pagination logic, direct database cursor streaming, or memory-optimized iteration), implement `DataEntityGeneratorPluginInterface` instead of `DataEntityReaderPluginInterface`.
+
+With `DataEntityGeneratorPluginInterface`, you have full control over the generator implementation and can yield data items or batches directly without the default pagination wrapper.
+
+```php
+        // system will use your generator directly
+        return $this->dataExportPluginProvider
+            ->getDataEntityPluginForInterface($dataEntityName, DataEntityGeneratorPluginInterface::class)
+            ->getBatchGenerator($dataExportConfigurationTransfer);
+```
 
 ```php
 <?php

@@ -18,7 +18,7 @@ Spryker ships the architecture/ folder with a complete Architecture as Code stru
 
 {% info_block warningBox "Warning" %}
 
-If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the architecture folder into your project.
+If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
 
 {% endinfo_block %}
 
@@ -57,12 +57,7 @@ Architecture as Code solves these problems:
 
 Spryker projects vary dramatically in complexity—from simple B2C shops to complex B2B marketplaces with extensive integrations and order management systems. arc42 is flexible enough to cover architecture of any complexity and scales as your Spryker implementation grows. You can start simple with minimal sections and expand as your architecture requires more detail.
 
-The template includes 12 sections covering all architectural aspects:
-
-- Section 4 (Solution Designs) provides RFC-style exploration templates
-- Section 9 (Architecture Decisions) uses ADRs to document decisions with context and consequences
-
-This workflow—explore with Solution Designs, then document decisions with ADRs—ensures thoughtful architecture evolution.
+The template includes 12 sections (described below) covering all architectural aspects. Section 4 (Solution Designs) provides RFC-style exploration templates. Section 9 (Architecture Decisions) uses ADRs to document decisions with context and consequences. This workflow—explore with Solution Designs, then document decisions with ADRs—ensures thoughtful architecture evolution.
 
 ### C4 Model
 
@@ -70,13 +65,7 @@ This workflow—explore with Solution Designs, then document decisions with ADRs
 
 **Why C4 fits Spryker architecture:**
 
-Spryker architecture unfolds naturally through C4 layers:
-
-- Start with the system context
-- Zoom into containers (Yves, Zed, Client, databases, services)
-- Dive deeper into layers and components as needed
-
-This progressive detail matches how Spryker complexity reveals itself. You can show the entire Spryker feature set using this unfolding approach.
+Spryker architecture unfolds naturally through C4 layers—start with the system context, zoom into containers (Yves, Zed, Client, databases, services), then dive deeper into layers and components as needed. This progressive detail matches how Spryker complexity reveals itself. The entire Spryker feature set can be shown using this unfolding approach.
 
 **Flexibility advantage:**
 
@@ -98,7 +87,7 @@ You control the depth. Start at C1 (context) and continue only as deep as your d
 
 ## What Comes Out of the Box
 
-**Design principle:** This structure is optimized for AI assistance. We provide templates with clear structure and minimal context, plus examples of the most common diagram types (C4, data flow, integration, sequence) and documentation patterns (ADRs, Solution Designs). AI tools work most efficiently when they see the methodology (like arc42), understand the structure, and have examples to follow. This approach enables you to generate architecture documentation much faster with AI assistance.
+We provide templates with clear structure and minimal context, plus examples of the most common diagram types (C4, data flow, integration, sequence) and documentation patterns (ADRs, Solution Designs). AI tools work most efficiently when they see the methodology (like arc42), understand the structure, and have examples to follow. This approach enables you to generate architecture documentation much faster with AI assistance.
 
 Templates provide examples and structural guidance—you should adapt content to your project's context. You do not need to implement all sections immediately; remove or keep unused sections based on your documentation strategy.
 
@@ -107,7 +96,6 @@ Templates provide examples and structural guidance—you should adapt content to
 ```text
 architecture/
 ├── 01-introduction-and-goals.md           # Requirements, quality goals, stakeholders
-│                                          # Includes: Volume planning table, migration requirements
 ├── 02-constraints.md                      # Technical, organizational constraints
 ├── 03-system-scope-and-context.md         # System boundaries, external interfaces
 │                                          # Includes: External systems and integration tables
@@ -139,19 +127,8 @@ architecture/
 │   │   ├── publish-sync.mmd               # Publish and Sync process
 │   │   └── punchout-greenwing-integration.mmd  # PunchOut example
 │   └── erd/                               # Entity-relationship diagrams (PlantUML)
-├── README.md                              # Quick start and overview
-└── ARCHITECTURE.md                        # This guide
+└── README.md                              # Quick start and overview
 ```
-
-**Universal Color Scheme:**
-
-All diagrams use colors optimized for both light and dark modes:
-
-- Orange `#E67E22` - Communication layer
-- Blue `#2980B9` - Backend services, APIs
-- Green `#27AE60` - Web apps, external systems
-- Purple `#9B59B6` - Storage (databases, caches)
-- Gray `#95A5A6` - Infrastructure
 
 ### Diagram Organization and Best Practices
 
@@ -185,6 +162,16 @@ Store diagram code in `/diagrams/` folder and reference via links:
 **Choosing Your Approach**
 
 This template uses **Approach 2** for scalability and maintainability, but projects can mix both—use external files for core views, inline for one-off diagrams.
+
+**Universal Color Scheme:**
+
+All diagrams use colors optimized for both light and dark modes:
+
+- Orange `#E67E22` - Communication layer
+- Blue `#2980B9` - Backend services, APIs
+- Green `#27AE60` - Web apps, external systems
+- Purple `#9B59B6` - Storage (databases, caches)
+- Gray `#95A5A6` - Infrastructure
 
 ### Templates and Guidelines
 

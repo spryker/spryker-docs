@@ -1,7 +1,7 @@
 ---
 title: How to upgrade to Symfony Dependency Injection
 description: This document describes how to upgrade your application to use Symfony's Dependency Injection component.
-last_updated: Nov 5, 2025
+last_updated: Feb 23, 2026
 template: howto-guide-template
 ---
 

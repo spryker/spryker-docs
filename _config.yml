@@ -1,5 +1,5 @@
 version: "latest"
-release_version: "202512.0"
+release_version: "202602.0"
 
 repository: spryker/spryker-docs
 
@@ -150,6 +150,7 @@ defaults:
 
 versions:
   '202410.0': '202410.0'
+  '202602.0': '202602.0'
   'latest': 'latest'
 
 

@@ -281,8 +281,9 @@ Starting with `202512.0`, Spryker ships a **resource-aware queue worker** that p
 
 **Configuration approach:**
 
+**config/Shared/config_default.php**
+
 ```php
-// config/Shared/config_default.php
 use Spryker\Shared\Queue\QueueConstants;
 
 $config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = true;
@@ -290,14 +291,16 @@ $config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = 10;
 $config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = 750;
 ```
 
+
+**config/Zed/cronjobs/jenkins.php**
+
 ```php
-// config/Zed/cronjobs/jenkins.php
 $jobs[] = [
     'name' => 'queue-worker',
     'command' => '$PHP_BIN vendor/bin/console queue:worker:start -vvv',
     'schedule' => '* * * * *',
     'enable' => true,
-    'stores' => ['DE'], // Use any one store as entry point
+    'stores' => ['DE'], // Use any one store/region as entry point
 ];
 ```
 

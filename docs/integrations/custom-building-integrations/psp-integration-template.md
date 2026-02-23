@@ -50,14 +50,17 @@ Your agency develops Spryker projects for multiple clients who use the same paym
 Before you begin evaluating or implementing this template, ensure you have the following:
 
 ### Technical environment
+
 - Spryker Commerce OS
 
 ### Project requirements
+
 - Selected payment provider
 - Defined payment methods to support
 - Defined payment flow (authorization timing, capture timing, refund requirements)
 
 ### Payment provider access
+
 - API credentials for sandbox environment
 - Access to PSP technical documentation
 
@@ -137,7 +140,7 @@ Review the Prerequisites and Implementation workflow sections to determine if yo
 
 ### Access template and documentation
 
-- **GitHub repository**: https://github.com/spryker-community/payment-template
+- **GitHub repository**: [https://github.com/spryker-community/payment-template](https://github.com/spryker-community/payment-template)
 - **[README.md](https://github.com/spryker-community/payment-template/blob/main/README.md)**: Overview with quick start instructions for all integration workflows
 - **[IMPLEMENTATION.md](https://github.com/spryker-community/payment-template/blob/main/IMPLEMENTATION.md)**: Detailed checklist for developers with file locations and implementation guidance
 - **[INTEGRATION.md](https://github.com/spryker-community/payment-template/blob/main/INTEGRATION.md)**: Guide for installing a completed module into a Spryker project

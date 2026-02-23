@@ -8,9 +8,9 @@ layout: custom_new
 
 ## Overview
 
-The Payment Service Provider (PSP) Integration Template is a GitHub repository that provides the architectural foundation for building custom payment provider integrations in Spryker Commerce OS. The template contains the complete module structure, database schema, Order Management System (OMS) configuration, and integration points required for a PSP module, with clearly marked locations where you implement provider-specific logic.
+The Payment Service Provider (PSP) Integration Template is a GitHub repository that provides an architectural foundation for building custom payment provider integrations in Spryker Commerce OS. The template contains the complete module structure, database schema, Order Management System (OMS) configuration, and integration points required for a PSP module. It clearly marks the locations where you implement provider-specific logic.
 
-Use this template when you need to integrate a payment provider that does not have an existing Spryker Eco module. The template eliminates the need to design module architecture and integration patterns, allowing your development team to focus on implementing the PSP-specific API communication and business logic.
+Use this template when you need to integrate a payment provider without an existing Spryker Eco module. The template eliminates the need to design the module architecture and integration patterns. This allows you to focus on implementing PSP-specific API communication and business logic.
 
 **What you achieve**: A PSP integration that follows Spryker conventions, integrates with checkout and OMS workflows, and can be deployed either as a project-specific implementation or as a reusable module across multiple projects.
 
@@ -52,13 +52,13 @@ The template supports two integration approaches depending on your requirements:
 
 ### Option 1: Direct project integration
 
-Use this approach when you need a PSP integration for a single project. Your development team clones the template, runs the automated renaming script to copy files directly into your project's namespace, then implements the PSP-specific logic. This is the fastest path from template to working integration.
+Use this approach when you need a PSP integration for a single project. You clone the template and run the automated renaming script to copy files directly into your project's namespace. Then, you implement the PSP-specific logic. This is the fastest path from template to working integration.
 
 **Outcome**: PSP module exists within your project codebase. You do not create a separate package or repository.
 
 ### Option 2: Reusable module development
 
-Use this approach when you are building a module that will be used across multiple projects. Your team creates a standalone Composer package under your organization's namespace (for example, `Acme\Adyen`), implements the PSP logic, and publishes the package to a repository. Multiple projects can then install the module via Composer.
+Use this approach when you are building a module that will be used across multiple projects. You create a standalone Composer package under your organization's namespace (for example, `Acme\\Adyen`), implement the PSP logic, and publish the package to a repository. Multiple projects can then install the module via Composer.
 
 **Outcome**: Standalone PSP module package that can be installed in multiple Spryker projects.
 
@@ -66,13 +66,13 @@ Use this approach when you are building a module that will be used across multip
 
 ### Step 1: Obtain and rename
 
-Your development team clones the template repository and uses the included automated renaming script. The script converts all occurrences of "PaymentTemplate" to your PSP name throughout files, classes, namespaces, and database schema.
+You clone the template repository and use the included automated renaming script. The script replaces all occurrences of `PaymentTemplate` with your PSP name in files, classes, namespaces, and the database schema.
 
 Refer to the Quick Start section in [README.md](https://github.com/spryker-community/payment-template/blob/main/README.md) for detailed instructions on all available options for obtaining and renaming the template, including GitHub template workflow and manual clone workflow.
 
 ### Step 2: Implement PSP logic
 
-Your team implements the PSP-specific integration code by working through TODO comments in the template. The included [IMPLEMENTATION.md](https://github.com/spryker-community/payment-template/blob/main/IMPLEMENTATION.md) guide provides a complete checklist with specific file locations and implementation requirements for:
+You implement the PSP-specific integration code by working through TODO comments in the template. The included [IMPLEMENTATION.md](https://github.com/spryker-community/payment-template/blob/main/IMPLEMENTATION.md) guide provides a complete checklist with specific file locations and implementation requirements for:
 
 - API communication (authorization, capture, cancel operations)
 - Request and response mapping between Spryker and PSP formats
@@ -81,15 +81,15 @@ Your team implements the PSP-specific integration code by working through TODO c
 - Payment forms customization
 - OMS command and condition implementation
 
-**Estimated scope**: The template provides module structure and integration points. Your team implements PSP-specific API calls, business logic, error handling, and testing.
+**Estimated scope**: The template provides module structure and integration points. You implement PSP-specific API calls, business logic, error handling, and testing.
 
 ### Step 3: Configure and test
 
-Your team configures API credentials, sets up webhook endpoints in the PSP dashboard, and tests the integration in the PSP sandbox environment. This includes testing payment authorization, capture, cancellation, webhook delivery, and OMS state transitions.
+You configure the API credentials, set up webhook endpoints in the PSP dashboard, and test the integration in the PSP sandbox environment. This includes testing payment authorization, capture, cancellation, webhook delivery, and OMS state transitions.
 
 ### Step 4: Deploy
 
-After successful sandbox testing, your team updates configuration to production API credentials and webhook URLs, runs database migrations in production, and monitors initial payment transactions.
+After successful sandbox testing, you update the configuration with production API credentials and webhook URLs, run database migrations in the production environment, and monitor the initial payment transactions.
 
 ## Trade-offs and considerations
 
@@ -103,10 +103,10 @@ After successful sandbox testing, your team updates configuration to production 
 
 ### Considerations before adopting
 
-- Your development team is responsible for all PSP-specific implementation, testing, and ongoing maintenance
+- You are responsible for all PSP-specific implementation, testing, and ongoing maintenance
 - Template assumes standard authorize-capture-cancel payment flow (customization required for non-standard flows)
 - Requires development resources with knowledge of both Spryker module architecture and your PSP's API
-- No vendor support or guaranteed updates (community-maintained template)
+- No vendor support or guaranteed updates are provided (community-maintained template)
 
 ### Alternative approaches
 
@@ -118,7 +118,7 @@ After successful sandbox testing, your team updates configuration to production 
 
 ### Evaluate fit for your project
 
-Review the prerequisites and implementation scope sections to determine if your team has the required resources and expertise. Compare the template's standard payment flow against your PSP's requirements to identify any customization needs.
+Review the prerequisites and implementation scope sections to determine if you have the required resources and expertise. Compare the template's standard payment flow with your PSP's requirements to identify customization needs.
 
 ### Access template and documentation
 

@@ -60,8 +60,9 @@ Key features:
 
 Register the `RabbitMqQueueMetricsReaderPlugin` in your `QueueDependencyProvider` to supply queue metrics (message counts, batch sizes) to the worker:
 
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+
 ```php
-// src/Pyz/Zed/Queue/QueueDependencyProvider.php
 
 use Spryker\Client\RabbitMq\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin;
 
@@ -103,7 +104,7 @@ $jobs[] = [
     'command' => '$PHP_BIN vendor/bin/console queue:worker:start',
     'schedule' => '* * * * *',
     'enable' => true,
-    'stores' => ['DE'], // Use any one store as the entry point
+    'stores' => ['DE'], // Use any one store/region as the entry point
 ];
 ```
 
@@ -147,6 +148,8 @@ All configuration constants are defined in `Spryker\Shared\Queue\QueueConstants`
 | `QUEUE_PROCESSING_LIMIT_OF_PROCESSES_PER_QUEUE`       | integer           | `10`    | Maximum number of concurrent processes per individual queue.                                                                              |
 
 ### Example configuration
+
+**config/Shared/config_default.php**
 
 ```php
 use Spryker\Shared\Queue\QueueConstants;

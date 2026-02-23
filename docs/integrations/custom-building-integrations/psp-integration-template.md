@@ -25,7 +25,7 @@ keywords:
 
 The Payment Service Provider (PSP) Integration Template is a GitHub repository that provides an architectural foundation for building custom payment provider integrations in Spryker Commerce OS. The template contains the complete module structure, database schema, Order Management System (OMS) configuration, and integration points required for a PSP module. It clearly marks the locations where you implement provider-specific logic.
 
-Use this template when you need to integrate a payment provider without an existing Spryker Eco module. For example, if you need to integrate Mollie, Klarna, Square, or a regional payment gateway that lacks official Spryker support. The template eliminates the need to design the module architecture and integration patterns. This allows you to focus on implementing PSP-specific API communication and business logic.
+Use this template when you need to integrate a payment provider without an existing Spryker Eco module — for example, Mollie, Klarna, Worldline, or a regional payment gateway that lacks official Spryker support. The template eliminates the need to design the module architecture and integration patterns. This allows you to focus on implementing PSP-specific API communication and business logic.
 
 **What you achieve**: A PSP integration that follows Spryker conventions, integrates with checkout and OMS workflows, and can be deployed either as a project-specific implementation or as a reusable module across multiple projects.
 
@@ -33,7 +33,7 @@ Use this template when you need to integrate a payment provider without an exist
 
 ### Your payment provider does not have an existing Spryker Eco module
 
-You have selected a payment provider that does not have a ready-made integration available in the Spryker Eco marketplace. Common scenarios include regional payment providers (Mollie, Klarna, iDEAL), specialized B2B payment solutions, or payment providers with country-specific payment methods.
+You have selected a payment provider that does not have a ready-made integration available in the Spryker Eco marketplace. Common scenarios include regional payment providers (Mollie, Buckaroo, MultiSafepay), specialized B2B payment solutions, or payment providers with country-specific payment methods.
 
 **Important**: If an Eco module already exists for your payment provider (such as Stripe, Adyen, or PayPal), use that module instead of this template. Existing modules provide a working integration structure that you can reference and build upon.
 
@@ -125,7 +125,7 @@ After successful sandbox testing, you update the configuration with production A
 
 ### Alternative approaches
 
-- **Wait for official Eco module**: If your PSP has significant market share (like Stripe, Adyen, or Square), Spryker or a partner may develop an official module
+- **Wait for official Eco module**: If your PSP has significant market share (like Crefopay, Stripe, or Adyen), Spryker or a partner may develop an official module
 - **Hire Spryker partner agency**: Contract an agency to build and maintain a custom integration
 - **Build from scratch**: Develop a custom module architecture if your PSP requires integration patterns not covered by the template
 
@@ -133,7 +133,7 @@ After successful sandbox testing, you update the configuration with production A
 
 ### Evaluate fit for your project
 
-Review the prerequisites and implementation scope sections to determine if you have the required resources and expertise. Compare the template's standard payment flow with your PSP's requirements to identify customization needs.
+Review the Prerequisites and Implementation workflow sections to determine if you have the required resources and expertise. Compare the template's standard payment flow with your PSP's requirements to identify customization needs.
 
 ### Access template and documentation
 

@@ -100,7 +100,7 @@ Replace per-store `queue:worker:start` jobs with a single job:
 // config/Zed/cronjobs/jenkins.php
 $jobs[] = [
     'name' => 'queue-worker',
-    'command' => '$PHP_BIN vendor/bin/console queue:worker:start -vvv',
+    'command' => '$PHP_BIN vendor/bin/console queue:worker:start',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => ['DE'], // Use any one store as the entry point

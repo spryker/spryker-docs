@@ -27,7 +27,7 @@ Considering some overhead for the operating system, Docker, and Jenkins itself, 
 
 We recommend profiling your application to understand how much RAM your Jenkins jobs require. A good way to do this is by utilizing XDebug Profiling in your local development environment. Jobs that may have unexpected memory demands are the `queue:worker:start` commands. These commands are responsible for spawning the `queue:task:start` commands, which consume messages from RabbitMQ. Depending on the complexity and configured chunk size of these messages, these jobs can easily consume multiple GBs of RAM.
 
-Starting with `202512.0`, Spryker includes a **resource-aware queue worker** that addresses memory management for queue processing at the application level. It monitors free system memory before spawning each child process, detects memory leaks in its own process, and uses a fixed-size process pool to keep memory consumption predictable. For details on enabling and configuring it, see [Optimizing Jenkins execution with the resource-aware queue worker](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
+**Starting with `202512.0`, Spryker includes a resource-aware queue worker that addresses memory management for queue processing at the application level.** It monitors free system memory before spawning each child process, detects memory leaks in its own process, and uses a fixed-size process pool to keep memory consumption predictable. For details on enabling and configuring it, see [Optimizing Jenkins execution with the resource-aware queue worker](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
 
 ## Jenkins executors configuration
 

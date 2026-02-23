@@ -21,6 +21,8 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/spryker-core-back-office-feature-overview.html
               - title: Back Office Translations overview
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
+              - title: Backoffice Configuration Framework
+                url: /docs/pbc/all/back-office/base-shop/backoffice-configuration-framework.html
               - title: Install and upgrade
                 nested:
                   - title: Install the Spryker Core Back Office feature
@@ -4009,12 +4011,12 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-              
+
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Configure shipment types"
                     url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
-                    
+
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

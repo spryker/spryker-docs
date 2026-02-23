@@ -352,6 +352,7 @@ Add the Downloads block to the product detail template.
 Pass the `attachments` variable to the product detail template:
 
 {% raw %}
+
 ```twig
 {% include molecule('product-detail', 'ProductDetailPage') with {
     ...
@@ -361,6 +362,7 @@ Pass the `attachments` variable to the product detail template:
     },
 } only %}
 ```
+
 {% endraw %}
 
 **src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail/product-detail.twig**
@@ -368,6 +370,7 @@ Pass the `attachments` variable to the product detail template:
 Add the Downloads section to the product detail template:
 
 {% raw %}
+
 ```twig
 {% if data.attachments is not empty %}
     <div class="product-detail__attachments">
@@ -384,6 +387,7 @@ Add the Downloads section to the product detail template:
     </div>
 {% endif %}
 ```
+
 {% endraw %}
 
 {% info_block warningBox "Verification" %}

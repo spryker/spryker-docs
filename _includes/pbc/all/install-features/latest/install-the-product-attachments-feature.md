@@ -372,20 +372,97 @@ Add the Downloads section to the product detail template:
 {% raw %}
 
 ```twig
-{% if data.attachments is not empty %}
-    <div class="product-detail__attachments">
-        <h5>{{ 'product.attachments.downloads' | trans }}</h5>
-        <ul>
-            {% for attachment in data.attachments %}
-                <li>
-                    <a href="{{ attachment.attachmentUrl }}" target="_blank" rel="noopener noreferrer">
-                        {{ attachment.label }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-{% endif %}
+{% extends model('component') %}
+
+{% define config = {
+    name: 'product-detail',
+    tag: 'section'
+} %}
+
+{% define data = {
+    description: '',
+    attributes: [],
+    attachments: [],
+} %}
+
+{% block class %}
+    {{parent()}} grid grid--gap grid--justify
+{% endblock %}
+
+{% block attachmentCol %}
+    <a href="{{ currentAttachment.url }}" target="_blank" rel="noopener noreferrer" class="link">{{ currentAttachment.label }}</a>
+{% endblock %}
+
+{% block body %}
+    {% if data.description or data.attachments is not empty %}
+        <div class="col col--sm-12 col--lg-6">
+            {% if data.description %}
+                <h2 class="{{ config.name }}__title title title--h4 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-description'>{{ 'product.attribute.long_description' | trans }}</h2>
+                <div itemprop="description" class="{{ config.name }}__description js-pdp-section__target-description is-hidden-sm-md {{ data.attachments is not empty ? "#{config.name}__description--with-attachments" : '' }}">
+                    {{ data.description | raw }}
+                </div>
+            {% endif %}
+
+            {% if data.attachments is not empty %}
+                <h2 class="{{ config.name }}__title title title--h3 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-attachments'>{{ 'product.attachments.downloads' | trans }}</h2>
+
+                {% set columns = [
+                    {
+                        id: 'name',
+                        title: 'product.attachments.name.col' | trans,
+                    },
+                    {
+                        id: 'actions',
+                        type: 'actions',
+                        title: 'product.attachments.download.col' | trans,
+                        modifiers: ['align-center'],
+                    },
+                ] %}
+
+                {% set rows = [] %}
+                {% for attachment in data.attachments %}
+                    {% set currentAttachment = attachment %}
+                    {% set rows = rows | merge([{
+                        name: block('attachmentCol'),
+                        actions: [{
+                            iconModifier: 'big',
+                            url: attachment.url,
+                            title: 'self_service_portal.company_file.table.actions.download',
+                            icon: 'download',
+                            target: '_blank',
+                        }],
+                    }]) %}
+                {% endfor %}
+
+                {% include molecule('advanced-table', 'SelfServicePortal') with {
+                    class: 'js-pdp-section__target-attachments is-hidden-sm-md',
+                    data: {
+                        columns: columns,
+                        rows: rows,
+                    },
+                    qa: 'attachments-table',
+                } only %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if data.attributes | length %}
+        <div class="col col--sm-12 col--lg-5">
+            <h2 class="{{ config.name }}__title title title--h4 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-details'>{{ 'page.product.details' | trans }}</h2>
+            <div class="grid {{ config.name }}__detail-list js-pdp-section__target-details is-hidden-sm-md">
+                {% for name, value in data.attributes %}
+                    {% if name %}
+                        <div class="col col--sm-6 {{ config.name }}__detail-list-item" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+                            <div class="{{ config.name }}__detail-list-key" itemprop="name">{{ ('product.attribute.' ~ name) | trans }}</div>
+                            <div class="{{ config.name }}__detail-list-value" itemprop="value">{{ value | join(', ') }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
 ```
 
 {% endraw %}

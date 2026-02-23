@@ -1,5 +1,5 @@
 ---
-title: Payment Service Provider Integration Template
+title: PSP Integration Template
 description: Payment provider integration template for Spryker. Complete module scaffold with OMS workflows and documentation for custom PSP development.
 last_updated: Feb 24, 2026
 template: default

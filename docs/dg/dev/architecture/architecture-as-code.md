@@ -17,7 +17,7 @@ Well-documented project architecture enables faster internal and external onboar
 
 Spryker ships the architecture/ folder with a complete Architecture as Code structure with its demoshop codebase. You can refer to `architecture/README.md` that describes how to work with it. Below, you find all the general information about the structure and principles. We go into the details of each aspect to help you understand and extend this architecture documentation in your project.
 
-{% info_block warningBox "Warning" %}
+{% info_block infoBox "Existing projects" %}
 
 If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
 

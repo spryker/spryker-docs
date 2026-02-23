@@ -1,5 +1,5 @@
-version: "202507.0"
-release_version: "202507.0"
+version: "202602.0"
+release_version: "202602.0"
 
 repository: spryker/spryker-docs
 
@@ -151,6 +151,7 @@ versions:
   '202404.0': '202404.0'
   '202410.0': '202410.0'
   '202507.0': '202507.0'
+  '202602.0': '202602.0'
 
 
 # versioned categories - these must match corresponding directories

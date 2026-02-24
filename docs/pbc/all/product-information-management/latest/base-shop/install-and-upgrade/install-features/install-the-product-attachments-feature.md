@@ -366,7 +366,7 @@ Pass the `attachments` variable to the product detail template:
 ```
 {% endraw %}
 
-3. Adjust your code in the `{% block body %}`.
+3. Adjust your code in the `block body`.
    
 {% raw %}
 ```twig

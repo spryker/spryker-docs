@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Nov 24, 2025
+last_updated: Jan 29, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -193,7 +193,7 @@ Any of the [existing APIs](https://docs.spryker.com/docs/integrations/spryker-gl
 
 Spryker supports multiple API types for different use cases:
 
-### Glue API 
+### Glue API
 
 This API is configured to serve the JSON:API format by default, which can be configured per project. Projects migrating their APIs can provide new APIs as well as supporting the existing ones while migrating.
 
@@ -202,7 +202,7 @@ This API is configured to serve the JSON:API format by default, which can be con
 - **Base URL:** `http://glue.eu.spryker.local/` - Configurable per project
 - **Use cases:** Customer-facing APIs, mobile apps, PWAs
 
-### GlueStorefront API 
+### GlueStorefront API
 
 Thie API is configured to serve the JSON+LD format by default, which can be configured per project.
 
@@ -348,7 +348,7 @@ API Platform generates interactive OpenAPI documentation:
 
 - Swagger UI at the root URL `/` for example `http://glue-backend.eu.spryker.local/`
 
-You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [Disable Swagger UI](/docs/dg/dev/architecture/api-platform/configuration.html#disable-swaggerui-in-production). 
+You can disable this interface in production environments by configuring the settings in your `api_platform.php` configuration file. For details, see [Disable Swagger UI](/docs/dg/dev/architecture/api-platform/configuration.html#disable-swaggerui-in-production).
 
 ### Built-in validation
 

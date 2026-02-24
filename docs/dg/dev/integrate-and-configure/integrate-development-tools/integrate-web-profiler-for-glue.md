@@ -1,17 +1,17 @@
 ---
 title: Integrate Web Profiler for Glue
 description: This guide describes how to integrate and use the Web Profiler available in Glue applications for development purposes.
-last_updated: Jan 6, 2026
+last_updated: Feb 24, 2026
 template: howto-guide-template
 related:
   - title: Integrate Web Profiler for Zed
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrate Web Profiler Widget for Yves
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Integrate Web Profiler for Backend Gateway
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
   - title: Integrate Profiler Module
-    link: docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
+    link: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
 ---
 
 The *Web Profiler for Glue* provides a tool for debugging and informational purposes for Glue API applications. The tool is accessible when making requests to Glue API endpoints and provides comprehensive profiling data for API requests.

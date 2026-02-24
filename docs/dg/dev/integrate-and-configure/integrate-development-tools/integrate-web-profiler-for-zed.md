@@ -1,7 +1,7 @@
 ---
 title: Integrate Web Profiler for Zed
 description: This guide describes how to integrate and use the Web Profiler toolbar available in Zed for development purposes.
-last_updated: Jun 16, 2021
+last_updated: Feb 24, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/web-profiler
 originalArticleId: 9f24bafe-1bae-49f7-bd22-505a61629807
@@ -10,17 +10,17 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html
 related:
   - title: Integrate Web Profiler for Glue
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrate Web Profiler for Backend Gateway
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
   - title: Integrating Web Profiler Widget for Yves
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Integrating Formatter
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
   - title: Integrating TS linter
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
 ---
 
 The *Web Profiler* provides a toolbar for debugging and informational purposes. The toolbar is located at the bottom of a loaded page.
@@ -86,21 +86,6 @@ PropelInMemoryLogger::endSegment();
 ```
 
 Segmented queries appear in the Web Profiler under the Propel panel as collapsible sections showing segment key name, query counts, and full query tables.
-
-### Best Practices
-
-- Use descriptive segment keys that clearly identify the code path (for example, `checkout-validation`, `product-import`, `order-processing`)
-- Always pair `startSegment()` with `endSegment()` to prevent queries from being incorrectly categorized
-- Use try-finally blocks to ensure segments are properly closed:
-
-```php
-PropelInMemoryLogger::startSegment('my-segment');
-try {
-    $result = $this->performDatabaseOperations();
-} finally {
-    PropelInMemoryLogger::endSegment();
-}
-```
 
 ## Additional profiling with XHProf
 

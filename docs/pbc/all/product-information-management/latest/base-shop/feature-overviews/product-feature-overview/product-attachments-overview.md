@@ -1,6 +1,6 @@
 ---
 title: Product Attachments overview
-description: Learn how the Product Attachments feature enables Back Office users to manage product-related downloadable resources and display them on the product detail page.
+description: Product Attachments feature enables Back Office users to manage product-related downloadable resources and display them on the product detail page. Attachments, ProductAttachment, Downloads Section, Product Media.
 last_updated: Feb 20, 2026
 template: concept-topic-template
 ---

@@ -2,37 +2,10 @@
 
 This file contains important instructions for working with the Spryker documentation repository.
 
-## Validation Workflow
+## Project Structure
 
-### Finding Changed Files
-
-When working on a branch, find all changed markdown files compared to master:
-
-```bash
-git diff master..HEAD --name-only | grep '.md'
-```
-
-### Running Validation Tools
-
-Run both validation tools on changed files:
-
-**Vale (prose linting):**
-```bash
-vale --minAlertLevel=error path/to/file.md 
-```
-
-**Markdownlint (markdown syntax):**
-```bash
-markdownlint-cli2 path/to/file.md
-```
-
-**Installation:** If vale or markdownlint-cli2 are not installed, install them according to the OS requirements.
-
-### Validation Policy
-
-- **ONLY address ERRORS**, not warnings or suggestions
-- Provide specific fixes for each error found
-- Validate all changed files before completing work
+- Documentation pages are in `docs` folder
+- Sidebar of documentation is in `_data/sidebars` folder
 
 ## Documentation Standards
 
@@ -120,20 +93,62 @@ Present all suggestions in a numbered list. Each item must have:
    **Summary:** Changed passive voice to active voice for clarity.
 ```
 
-## Workflow Automation
+### Last updated date
 
-When asked to "build" or "validate" documentation:
-1. Find all changed markdown files
-2. Run vale on each file
-3. Run markdownlint-cli2 on each file
-4. Report only errors (not warnings)
-5. Suggest specific fixes for each error
-6. Check internal links format and fix if needed
-7. Validate with Documentation Standards
+After editing a file, the field `last_updated` must be always updated to the current date.
+
+### Sidebar Links
+
+After adding a new file, the sidebar link must be added to reflect the new file location.
+After removing a file, the sidebar link must be removed.
+After renaming a file, the sidebar link must be renamed to reflect the new file location.
+After moving a file, the sidebar link must be updated to reflect the new file location.
+
+## Validation Workflow
+
+Use the following workflow to validate documentation changes.
+
+1. Find Changed Files
+
+When working on a branch, find all changed markdown files compared to master:
+
+```bash
+git diff master..HEAD --name-only | grep '.md'
+```
+
+2. Run Validation Tools
+
+Run both validation tools on changed files:
+
+**Vale (prose linting):**
+```bash
+vale --minAlertLevel=error path/to/file.md 
+```
+
+**Markdownlint (markdown syntax):**
+```bash
+markdownlint-cli2 path/to/file.md
+```
+
+**Installation:** If vale or markdownlint-cli2 are not installed, install them according to the OS requirements.
+
+3. Validate with Documentation Standards
+    - internal links format
+    - grammar and sentence structure
+    - tone of voice
+    - writing style, markup and markdown
+    - `last_updated` date
+    - sidebar links
+
+4. Finalize
+
+- **ONLY address ERRORS**, not warnings or suggestions
+- Provide specific fixes for each error found
+- Re-run validation tools to ensure all errors are resolved
 
 ### Best Practices
 
-- Always validate documentation changes before committing
+- Always validate documentation changes after making changes
 - Fix validation errors immediately
 - Maintain consistency with surrounding content
 - Ensure all internal links are valid and properly formatted

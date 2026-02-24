@@ -1,11 +1,11 @@
 ---
-title: Customize Algolia
+title: Customize Algolia Integration
 description: Learn how to customize Algolia in your Spryker shop.
-last_updated: Sep 1, 2025
+last_updated: Feb 20, 2026
 template: howto-guide-template
 ---
 
-The default Algolia app configuration is similar to Spryker's default search configuration. You may want to customize this configuration to better suit your needs.
+The default Algolia integration configuration is similar to Spryker's default ElasticSearch configuration. You may want to customize this configuration to better suit your needs.
 
 ## Searchable product attributes
 
@@ -102,7 +102,7 @@ Algolia uses facets to categorize and group data.
 #### Facet display
 
 All configured index facets are displayed in the filter list on Yves or via the Glue API `/catalog-search`.
-The Algolia app supports the `renderingContent` feature, which can be found in an index's "Configuration > Facet display" section.
+The Algolia integration supports the `renderingContent` feature, which can be found in an index's "Configuration > Facet display" section.
 Here, you can configure the order of facets and add only those relevant to end users.
 
 In the **Merchandising** > **Filter Preferences** section of the Back Office, you can define the filter types to be displayed on the Catalog and Search pages: single-select, multi-select, or range.
@@ -136,9 +136,9 @@ or if you have a limited number of facet values.
 By default, facet aggregation is calculated after search results for a given query are processed by deduplication or grouping.
 Disabling this option changes how facet aggregation is calculated for the field. We do not recommend disabling it.
 
-### Filter preferences with the Algolia app
+### Filter preferences with Algolia
 
-When using the Algolia app, Algolia's facet configuration is used instead of Spryker's.
+When using the Algolia integration, Algolia's facet configuration is used instead of Spryker's.
 
 In Algolia, you can configure the list of filters in **Configuration** > **Facet display**.
 
@@ -160,14 +160,3 @@ Setting any Algolia facet to **filter only** mode removes it from the list of vi
 Algolia's **Ranking and sorting** configuration determines which products are shown first when customers search your catalog.
 Learn more about custom ranking and sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
 
-## Retain Algolia configuration after a destructive deployment
-
-{% info_block errorBox "" %}
-[Destructive deployment](/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Algolia.
-
-To run a destructive deployment, follow these steps:
-1. Disconnect Algolia.
-2. Run a destructive deployment.
-3. Reconnect Algolia.
-
-{% endinfo_block %}

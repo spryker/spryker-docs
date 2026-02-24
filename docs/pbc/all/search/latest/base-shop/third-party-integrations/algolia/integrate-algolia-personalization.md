@@ -1,7 +1,7 @@
 ---
 title: Integrate Algolia Personalization
 description: Find out how you can enable Algolia personalization in your Spryker shop
-last_updated: Nov 24, 2024
+last_updated: Feb 20, 2026
 template: howto-guide-template
 ---
 
@@ -22,15 +22,14 @@ By default, Spryker supports Algolia Personalization only for Yves. To integrate
 ## Prerequisites
 
 1. [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
-2. [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html)
-3. Add products to your Algolia search indexes
+2. Add products to your Algolia search indexes
 
 ## Install and update Spryker packages
 
 1. Install a Spryker package for tracing events:
 
 ```bash
-composer require --with-dependencies spryker-shop/traceable-event-widget:^1.0.2
+composer require --with-dependencies spryker-shop/traceable-event-widget:^1.1.0
 ```
 
 If the command doesn't work, try running it with the `--with-all-dependencies` flag.
@@ -49,17 +48,7 @@ If the command doesn't work, try running it with the `--with-all-dependencies` f
 
 ### Enable features
 
-1. Update the project config:
-
-```php
-// config_default.php
-
-$config[KernelAppConstants::TENANT_IDENTIFIER]
-    //..
-    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
-```
-
-2. Enable a widget that triggers events for user actions and sends them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
+1. Enable a widget that triggers events for user actions and sends them to [Algolia Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/):
 
 ```php
 // src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
@@ -76,7 +65,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-3. Enable the plugin that generates an anonymous token for guest users in the session:
+2. Enable the plugin that generates an anonymous token for guest users in the session:
 
 ```php
 // src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php
@@ -93,7 +82,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-4. Build JavaScript assets for Yves using one of the following commands:
+3. Build JavaScript assets for Yves using one of the following commands:
 
 ```bash
 npm ci && npm run yves
@@ -103,7 +92,7 @@ npm ci && npm run yves
 console frontend:project:install-dependencies && console frontend:yves:build
 ```
 
-5. Install the `search-insights` dependency:
+4. Install the `search-insights` dependency:
 
 ```bash
 npm i search-insights
@@ -111,7 +100,7 @@ npm i search-insights
 
 ## Test and configure Yves customizations to work with Algolia Personalization
 
-If you customized Yves templates on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or trigger with incorrect data.
+If you customized Yves templates at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or may trigger with incorrect data.
 
 ### Run the project in a testing environment
 
@@ -176,7 +165,7 @@ For a full list of available events, see the [traceable-events-algolia readme fi
 
 ### Common issues and solutions
 
-This section common issues to event and solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+This section covers common issues with events and their solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
 
 #### Prerequisites
 
@@ -366,19 +355,14 @@ If a user doesn't consent to data tracking, no user data should be sent from the
 
 ## Verify the installation
 
-1. Deploy to a testing environment.
-2. In the Back Office, go to **Apps** and verify that Algolia is connected and configured.
-3. If you've previously been using the Algolia App, in the Back Office, disconnect and connect it again with the same Algolia credentials.
-  This action updates your project config to be able to send events to Algolia.
-
-3. On the Storefront, do the following as a guest user:
+1. On the Storefront, do the following as a guest user:
 - Search products
 - Filter search results
 - From search results, go to a product's page
 - Add products to cart
 - Place orders
-4. Repeat step 3 as a logged-in user.
-5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
+2. Repeat step 3 as a logged-in user.
+3. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 
 

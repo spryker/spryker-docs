@@ -105,27 +105,28 @@ npm run mp:test
 
 ### Extending CI with Project Architecture Sniffer
 
-The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) enforces Spryker architectural standards and detects violations:
+The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) enforces Spryker architectural standards and detects violations.
+
+Add the following step to your GitHub Actions workflow file (`.github/workflows/ci.yml`):
 
 ```yaml
 - name: Architecture Sniffer
   run: vendor/bin/phpmd src/Pyz/ text vendor/spryker/project-architecture-sniffer/src/ruleset.xml --minimumpriority 3
 ```
 
-Comprehensive CI validation is essential for maintaining a stable, upgradable, and high-quality Spryker project.
-
 ## Automated testing
 
 ### Functional and Unit tests
 
+Run functional tests in the CI environment:
+
 ```bash
-# Run functional tests in the CI environment
 docker/sdk testing codecept run -c codeception.ci.functional.yml
 ```
 
 Functional tests are recommended for all Spryker projects to cover custom business logic in facades, clients, services, plugins, and others. 
 They can also be used as a form of unit testing to ensure the code behaves as expected. 
-For detailed information on how to build functional tests, see [Testing Guidelines](/docs/dg/dev/guidelines/testing-guidelines/testing-guidelines).
+For detailed information on how to build functional tests, see [Testing Guidelines](/docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html).
 
 ### End-to-end tests
 
@@ -133,12 +134,13 @@ For detailed information on how to build functional tests, see [Testing Guidelin
 
 Cypress is the **recommended and preferred approach** for end-to-end (E2E) testing in Spryker projects.
 The Spryker Cypress boilerplate provides a modern, comprehensive testing framework for UI testing with superior debugging capabilities and developer experience.
-For detailed information on setting up and running Cypress tests, see [Cypress Testing](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing).
+For detailed information on setting up and running Cypress tests, see [Cypress Testing](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html).
 
 **API tests (Glue RestApi) with Codecept**
 
+Run API tests in the CI environment:
+
 ```bash
-# Run API tests in the CI environment
 docker/sdk testing codecept run -c codeception.api.yml
 ```
 
@@ -146,10 +148,11 @@ API tests are based on the PHP Codecept framework and test endpoints with groups
 These tests validate the REST API responses, data integrity, and endpoint behavior.
 This approach can still be used as is, since it is based on PHP and does not require adding new frameworks or stacks to the project.
 
-**Acceptance tests (Presentation) with Codecept**
+**Presentation Acceptance tests with Codecept**
+
+Run acceptance tests in the CI environment:
 
 ```bash
-# Run acceptance tests in the CI environment
 docker/sdk testing codecept run -c codeception.acceptance.yml
 ```
 

@@ -343,41 +343,37 @@ Pass the `attachments` variable to the product detail template:
 
 **src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail/product-detail.twig**
 
-Add the Downloads section to the product detail template:
+1. Add default attachments to data.
 
 {% raw %}
 
 ```twig
-{% extends model('component') %}
-
-{% define config = {
-    name: 'product-detail',
-    tag: 'section'
-} %}
-
 {% define data = {
-    description: '',
-    attributes: [],
-    attachments: [], {# Add default attachments to data #}
+    ...
+    attachments: [],
 } %}
+```
+{% endraw %}
 
-{% block class %}
-    {{parent()}} grid grid--gap grid--justify
-{% endblock %}
+2. Create attachment column block.
 
-{# Add block attachmentCol #}
+{% raw %}
+```twig
 {% block attachmentCol %}
     <a href="{{ currentAttachment.url }}" target="_blank" rel="noopener noreferrer" class="link">{{ currentAttachment.label }}</a>
 {% endblock %}
 
-{% block body %}
-    {% if data.description or data.attachments is not empty %} {# --- Wrap attachments and description in condition --- #}
+```
+{% endraw %}
+
+3. Adjust your code in the `{% block body %}`.
+   
+{% raw %}
+```twig
+{% if data.description or data.attachments is not empty %} {# Wrap attachments and description in condition #}
         <div class="col col--sm-12 col--lg-6">
             {% if data.description %}
-                <h2 class="{{ config.name }}__title title title--h4 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-description'>{{ 'product.attribute.long_description' | trans }}</h2>
-                <div itemprop="description" class="{{ config.name }}__description js-pdp-section__target-description is-hidden-sm-md {{ data.attachments is not empty ? "#{config.name}__description--with-attachments" : '' }}">
-                    {{ data.description | raw }}
-                </div>
+                {# Put your description here #}
             {% endif %}
 
             {# --- Add attachments block under the description --- #}
@@ -425,26 +421,7 @@ Add the Downloads section to the product detail template:
 
         </div>
     {% endif %}
-
-    {% if data.attributes | length %}
-        <div class="col col--sm-12 col--lg-5">
-            <h2 class="{{ config.name }}__title title title--h4 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-details'>{{ 'page.product.details' | trans }}</h2>
-            <div class="grid {{ config.name }}__detail-list js-pdp-section__target-details is-hidden-sm-md">
-                {% for name, value in data.attributes %}
-                    {% if name %}
-                        <div class="col col--sm-6 {{ config.name }}__detail-list-item" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
-                            <div class="{{ config.name }}__detail-list-key" itemprop="name">{{ ('product.attribute.' ~ name) | trans }}</div>
-                            <div class="{{ config.name }}__detail-list-value" itemprop="value">{{ value | join(', ') }}</div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-{% endblock %}
-
 ```
-
 {% endraw %}
 
 {% info_block warningBox "Verification" %}

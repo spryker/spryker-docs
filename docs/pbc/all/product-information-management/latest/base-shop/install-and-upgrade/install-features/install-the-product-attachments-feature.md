@@ -9,22 +9,22 @@ This document describes how to install the [Product Attachments feature](/docs/p
 
 ## Prerequisites
 
-Install the required features:
+### Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-## 1) Install the required modules
 
-Install the required modules using Composer:
+Minimum required versions of the packages:
 
-```bash
-composer require spryker/product-attachment:"^1.1.0" spryker/product-attachment-storage:"^1.0.2" --update-with-dependencies
-```
+| PACKAGE | MINIMUM VERSION |
+| --- | --- |
+| spryker/product-attachment | 1.1.0 |
+| spryker/product-attachment-storage | 1.0.2 |
 
-## 2) Set up Zed configuration
+## 1) Set up Zed configuration
 
 **src/Pyz/Zed/ProductAttachmentStorage/ProductAttachmentStorageConfig.php**
 
@@ -45,13 +45,13 @@ class ProductAttachmentStorageConfig extends SprykerProductAttachmentStorageConf
 }
 ```
 
-## 3) Set up transfer objects
+## 2) Set up transfer objects
 
 ```bash
 console transfer:generate
 ```
 
-## 4) Set up behavior
+## 3) Set up behavior
 
 Register the following plugins:
 
@@ -319,7 +319,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-## 5) Set up Yves templates
+## 4) Set up Yves templates
 
 Add the Downloads block to the product detail template.
 
@@ -457,7 +457,7 @@ Make sure that the **Downloads** section is displayed on the PDP for products th
 
 {% endinfo_block %}
 
-## 6) Import glossary
+## 5) Import glossary
 
 1. Add glossary keys for the Downloads section label in `glossary.csv`:
 

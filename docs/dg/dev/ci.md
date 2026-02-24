@@ -20,10 +20,11 @@ Skipping CI checks leads to technical debt, integration issues, and costly refac
 
 ## Reference CI implementation
 
-{% info_block warningBox "Warning" %}
 The Spryker B2B Demo Marketplace includes a comprehensive GitHub Actions CI workflow: [.github/workflows/ci.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/.github/workflows/ci.yml).
+
+{% info_block warningBox "Warning" %}
 This CI configuration is specific to the demo shop only and may not be applicable to the project. 
-However, you can use it as an example and adapt it to the project using the recommendations described below.
+However, it can be used as an example following recommendations described below.
 {% endinfo_block %}
 
 It is recommended to review all available CI workflows in the [Spryker workflows directory](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/.github/workflows) and adapt the relevant ones for the project. 

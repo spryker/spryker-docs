@@ -353,22 +353,25 @@ Pass the `attachments` variable to the product detail template:
     attachments: [],
 } %}
 ```
+
 {% endraw %}
 
 2. Create attachment column block.
 
 {% raw %}
+
 ```twig
 {% block attachmentCol %}
     <a href="{{ currentAttachment.url }}" target="_blank" rel="noopener noreferrer" class="link">{{ currentAttachment.label }}</a>
 {% endblock %}
-
 ```
+
 {% endraw %}
 
 3. Adjust your code in the `block body`.
    
 {% raw %}
+
 ```twig
 {% if data.description or data.attachments is not empty %} {# Wrap attachments and description in condition #}
         <div class="col col--sm-12 col--lg-6">
@@ -422,6 +425,7 @@ Pass the `attachments` variable to the product detail template:
         </div>
     {% endif %}
 ```
+
 {% endraw %}
 
 {% info_block warningBox "Verification" %}

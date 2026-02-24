@@ -37,7 +37,7 @@ Architecture as Code solves these problems:
 - **Version controlled** - Store in Git alongside implementation. Track every change with full history.
 - **AI-ready** - Markdown and diagrams-as-code enable AI assistance, automated validation, and intelligent analysis.
 - **Standard formats** - Use industry standards (arc42, C4, ADRs, Mermaid) that external teams understand immediately.
-- **Collaborative** - Review through pull requests. No special tools required—only a text editor.
+- **Collaborative** - Review through pull requests. No special tools required — only a text editor.
 - **Living documentation** - Update during development, not after. Documentation evolves with your system.
 
 ## Core Principles
@@ -56,9 +56,9 @@ Architecture as Code solves these problems:
 
 **Why arc42 fits Spryker projects:**
 
-Spryker projects vary dramatically in complexity—from simple B2C shops to complex B2B marketplaces with extensive integrations and order management systems. arc42 is flexible enough to cover architecture of any complexity and scales as your Spryker implementation grows. You can start simple with minimal sections and expand as your architecture requires more detail.
+Spryker projects vary dramatically in complexity — from simple B2C shops to complex B2B marketplaces with extensive integrations and order management systems. arc42 is flexible enough to cover architecture of any complexity and scales as your Spryker implementation grows. You can start simple with minimal sections and expand as your architecture requires more detail.
 
-The template includes 12 sections (described below) covering all architectural aspects. Section 4 (Solution Designs) provides RFC-style exploration templates. Section 9 (Architecture Decisions) uses ADRs to document decisions with context and consequences. This workflow—explore with Solution Designs, then document decisions with ADRs—ensures thoughtful architecture evolution.
+The template includes 12 sections (described below) covering all architectural aspects. Section 4 (Solution Designs) provides RFC-style exploration templates. Section 9 (Architecture Decisions) uses ADRs to document decisions with context and consequences. This workflow — explore with Solution Designs, then document decisions with ADRs — ensures thoughtful architecture evolution.
 
 ### C4 Model
 
@@ -66,11 +66,11 @@ The template includes 12 sections (described below) covering all architectural a
 
 **Why C4 fits Spryker architecture:**
 
-Spryker architecture unfolds naturally through C4 layers—start with the system context, zoom into containers (Yves, Zed, Client, databases, services), then dive deeper into layers and components as needed. This progressive detail matches how Spryker complexity reveals itself. The entire Spryker feature set can be shown using this unfolding approach.
+Spryker architecture unfolds naturally through C4 layers — start with the system context, zoom into containers (Yves, Zed, Client, databases, services), then dive deeper into layers and components as needed. This progressive detail matches how Spryker complexity reveals itself. The entire Spryker feature set can be shown using this unfolding approach.
 
 **Flexibility advantage:**
 
-You control the depth. Start at C1 (context) and continue only as deep as your documentation needs require. Given limited architect time, this flexibility is essential—stop at the level appropriate for your stakeholders and complexity.
+You control the depth. Start at C1 (context) and continue only as deep as your documentation needs require. Given limited architect time, this flexibility is essential — stop at the level appropriate for your stakeholders and complexity.
 
 ### Mermaid and PlantUML
 
@@ -90,7 +90,7 @@ You control the depth. Start at C1 (context) and continue only as deep as your d
 
 We provide templates with clear structure and minimal context, plus examples of the most common diagram types (C4, data flow, integration, sequence) and documentation patterns (ADRs, Solution Designs). AI tools work most efficiently when they see the methodology (like arc42), understand the structure, and have examples to follow. This approach enables you to generate architecture documentation much faster with AI assistance.
 
-Templates provide examples and structural guidance—you should adapt content to your project's context. You do not need to implement all sections immediately; remove or keep unused sections based on your documentation strategy.
+Templates provide examples and structural guidance — you should adapt content to your project's context. You do not need to implement all sections immediately; remove or keep unused sections based on your documentation strategy.
 
 ### Folder Structure
 
@@ -162,7 +162,7 @@ Store diagram code in `/diagrams/` folder and reference via links:
 
 **Choosing Your Approach**
 
-This template uses **Approach 2** for scalability and maintainability, but projects can mix both—use external files for core views, inline for one-off diagrams.
+This template uses **Approach 2** for scalability and maintainability, but projects can mix both — use external files for core views, inline for one-off diagrams.
 
 **Universal Color Scheme:**
 
@@ -233,7 +233,7 @@ A: Use Solution Design for exploration. Use ADR for documenting the final decisi
 
 **Q: Can I use different diagram notations?**
 
-A: Yes. The choice is yours—we do not limit you to Mermaid or PlantUML. Ensure your notation follows the core principles: viewable by people, understandable by AI tools, and ideally diagrams-as-code (text-based format in version control).
+A: Yes. The choice is yours — we do not limit you to Mermaid or PlantUML. Ensure your notation follows the core principles: viewable by people, understandable by AI tools, and ideally diagrams-as-code (text-based format in version control).
 
 **Q: Will diagrams-as-code replace whiteboards and visual editing tools?**
 

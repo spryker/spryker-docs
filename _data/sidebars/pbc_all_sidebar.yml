@@ -2808,6 +2808,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
                       - title: Product Readiness
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2889,6 +2891,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles

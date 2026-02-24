@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration
 description: Continuous Integration configuration and validation commands for Spryker projects to ensure code quality, stability, and upgradability.
-last_updated: December 15, 2025
+last_updated: February 24, 2026
 template: concept-topic-template
 keywords: CI, continuous integration, automated testing, code quality, GitHub Actions, project stability, upgradability, validation, static analysis, architecture sniffer, codeception, phpstan
 ---
@@ -20,7 +20,11 @@ Skipping CI checks leads to technical debt, integration issues, and costly refac
 
 ## Reference CI implementation
 
+{% info_block warningBox "Warning" %}
 The Spryker B2B Demo Marketplace includes a comprehensive GitHub Actions CI workflow: [.github/workflows/ci.yml](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/.github/workflows/ci.yml).
+This CI configuration is specific to the demo shop only and may not be applicable to the project. 
+However, you can use it as an example and adapt it to the project using the recommendations described below.
+{% endinfo_block %}
 
 It is recommended to review all available CI workflows in the [Spryker workflows directory](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/.github/workflows) and adapt the relevant ones for the project. 
 Not all workflows may be applicable to the specific requirements, so select and configure only those that align with the project needs.
@@ -33,7 +37,7 @@ For instructions on setting up CI in different repositories, see the following d
 
 ## Validation commands
 
-Use these commands to validate your code before merging it to the main branch.
+Use these commands to validate the code before merging it to the main branch.
 
 ### Security scanning
 
@@ -98,26 +102,7 @@ npm run mp:stylelint
 npm run mp:test
 ```
 
-### Automated testing
-
-**Acceptance and API tests**
-
-```bash
-# Run acceptance tests
-docker/sdk testing codecept run -c codeception.acceptance.yml
-
-# Run API tests
-docker/sdk testing codecept run -c codeception.api.yml
-```
-
-**Functional tests**
-
-```bash
-# Run functional tests
-docker/sdk testing codecept run -c codeception.ci.functional.yml
-```
-
-## Extending CI with Project Architecture Sniffer
+### Extending CI with Project Architecture Sniffer
 
 The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/project-architecture-sniffer.html) enforces Spryker architectural standards and detects violations:
 
@@ -127,3 +112,46 @@ The [Project Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/proje
 ```
 
 Comprehensive CI validation is essential for maintaining a stable, upgradable, and high-quality Spryker project.
+
+## Automated testing
+
+### Functional and Unit tests
+
+```bash
+# Run functional tests in the CI environment
+docker/sdk testing codecept run -c codeception.ci.functional.yml
+```
+
+Functional tests are recommended for all Spryker projects to cover custom business logic in facades, clients, services, plugins, and others. 
+They can also be used as a form of unit testing to ensure the code behaves as expected. 
+For detailed information on how to build functional tests, see [Testing Guidelines](/docs/dg/dev/guidelines/testing-guidelines/testing-guidelines).
+
+### End-to-end tests
+
+**Cypress (Recommended)**
+
+Cypress is the **recommended and preferred approach** for end-to-end (E2E) testing in Spryker projects.
+The Spryker Cypress boilerplate provides a modern, comprehensive testing framework for UI testing with superior debugging capabilities and developer experience.
+For detailed information on setting up and running Cypress tests, see [Cypress Testing](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing).
+
+**API tests (Glue RestApi) with Codecept**
+
+```bash
+# Run API tests in the CI environment
+docker/sdk testing codecept run -c codeception.api.yml
+```
+
+API tests are based on the PHP Codecept framework and test endpoints with groups `@Glue` and `@EndToEnd`.
+These tests validate the REST API responses, data integrity, and endpoint behavior.
+This approach can still be used as is, since it is based on PHP and does not require adding new frameworks or stacks to the project.
+
+**Acceptance tests (Presentation) with Codecept**
+
+```bash
+# Run acceptance tests in the CI environment
+docker/sdk testing codecept run -c codeception.acceptance.yml
+```
+
+Acceptance tests are based on the PHP Codecept framework and test the presentation layer of the application with groups `@Presentation`.
+These tests validate user interactions, page rendering, and business logic flows from the user's perspective.
+

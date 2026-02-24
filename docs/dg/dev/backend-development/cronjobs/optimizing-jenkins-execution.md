@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: Feb 20, 2026
+last_updated: Feb 24, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -29,7 +29,7 @@ This document explains the problem it solves, how to enable and configure it, ho
 
 The default Spryker system requires a `queue:worker:start` command to be continuously running for each store to process queues. In multi-store setups, this creates several challenges:
 
-- **Jenkins executor exhaustion**: By default, Jenkins has two executors. With multiple stores, workers compete for executor slots, causing delays.
+- **Jenkins executor exhaustion**: By default, Jenkins has two executors. With multiple stores, workers compete for executor slots, causing delays in content publishing.
 - **Unpredictable memory consumption**: Multiple workers processing heavy messages simultaneously can spike memory usage, causing crashes or out-of-memory (OOM) conditions.
 - **No resource awareness**: The default worker spawns child processes based on message presence, without considering available system resources.
 - **Per-store overhead**: Even stores with empty queues occupy an executor slot for scanning.
@@ -53,8 +53,39 @@ Key features:
 
 ### Prerequisites
 
-- Spryker `202512.0` or later.
-- RabbitMQ as the queue adapter.
+- `spryker/queue` >= 1.22.0
+- `spryker/rabbit-mq` >= 2.21.1
+- `spryker/queue-extension` >= 1.1.0
+- RabbitMQ as the queue adapter. To verify this, check the following two configuration points in your project:
+  1. In `config/Shared/config_default.php`, the default queue adapter must be set to `RabbitMqAdapter`:
+
+     ```php
+     use Spryker\Client\RabbitMq\Model\RabbitMqAdapter;
+     use Spryker\Shared\Queue\QueueConfig;
+     use Spryker\Shared\Queue\QueueConstants;
+
+     $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT] = [
+         QueueConfig::CONFIG_QUEUE_ADAPTER => RabbitMqAdapter::class,
+         QueueConfig::CONFIG_MAX_WORKER_NUMBER => 1,
+     ];
+     ```
+
+  2. In `src/Pyz/Client/Queue/QueueDependencyProvider.php`, the `createQueueAdapters()` method must return the RabbitMQ adapter:
+
+     ```php
+     protected function createQueueAdapters(Container $container): array
+     {
+         return [
+             $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
+         ];
+     }
+     ```
+
+To verify the installed versions:
+
+```bash
+composer show spryker/queue spryker/rabbit-mq spryker/queue-extension
+```
 
 ### Step 1: Register the metrics plugin
 
@@ -64,12 +95,12 @@ Register the `RabbitMqQueueMetricsReaderPlugin` in your `QueueDependencyProvider
 
 ```php
 
-use Spryker\Client\RabbitMq\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin;
+use Spryker\Zed\RabbitMq\Communication\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin;
 
 class QueueDependencyProvider extends SprykerQueueDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\QueueExtension\Dependency\Plugin\QueueMetricsReaderPluginInterface>
+     * @return array<\Spryker\Zed\QueueExtension\Dependency\Plugin\QueueMetricsReaderPluginInterface>
      */
     protected function getQueueMetricsReaderPlugins(): array
     {

@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: Feb 23, 2026
+last_updated: Feb 24, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -56,7 +56,30 @@ Key features:
 - `spryker/queue` >= 1.22.0
 - `spryker/rabbit-mq` >= 2.21.1
 - `spryker/queue-extension` >= 1.1.0
-- RabbitMQ as the queue adapter.
+- RabbitMQ as the queue adapter. To verify this, check the following two configuration points in your project:
+  1. In `config/Shared/config_default.php`, the default queue adapter must be set to `RabbitMqAdapter`:
+
+     ```php
+     use Spryker\Client\RabbitMq\Model\RabbitMqAdapter;
+     use Spryker\Shared\Queue\QueueConfig;
+     use Spryker\Shared\Queue\QueueConstants;
+
+     $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION_DEFAULT] = [
+         QueueConfig::CONFIG_QUEUE_ADAPTER => RabbitMqAdapter::class,
+         QueueConfig::CONFIG_MAX_WORKER_NUMBER => 1,
+     ];
+     ```
+
+  2. In `src/Pyz/Client/Queue/QueueDependencyProvider.php`, the `createQueueAdapters()` method must return the RabbitMQ adapter:
+
+     ```php
+     protected function createQueueAdapters(Container $container): array
+     {
+         return [
+             $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
+         ];
+     }
+     ```
 
 To verify the installed versions:
 

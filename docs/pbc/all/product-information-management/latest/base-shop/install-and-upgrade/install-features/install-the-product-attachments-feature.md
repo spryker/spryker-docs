@@ -9,7 +9,7 @@ This document describes how to install the [Product Attachments feature](/docs/p
 
 ## Prerequisites
 
-### Install the required features:
+### Install the required features
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |

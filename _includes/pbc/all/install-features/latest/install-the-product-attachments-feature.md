@@ -1,10 +1,6 @@
 This document describes how to install the [Product Attachments feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html).
 
-## Install feature core
-
-Follow the steps below to install the Product Attachments feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -13,7 +9,7 @@ Install the required features:
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 Install the required modules using Composer:
 
@@ -21,20 +17,7 @@ Install the required modules using Composer:
 composer require spryker/product-attachment:"^1.1.0" spryker/product-attachment-storage:"^1.0.2" --update-with-dependencies
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure the following modules have been installed:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| ProductAttachment | vendor/spryker/product-attachment |
-| ProductAttachmentStorage | vendor/spryker/product-attachment-storage |
-
-{% endinfo_block %}
-
-### 2) Set up configuration
-
-Add the following configuration:
+## 2) Set up Zed configuration
 
 **src/Pyz/Zed/ProductAttachmentStorage/ProductAttachmentStorageConfig.php**
 
@@ -55,27 +38,13 @@ class ProductAttachmentStorageConfig extends SprykerProductAttachmentStorageConf
 }
 ```
 
-### 3) Set up transfer objects
-
-Generate transfer objects:
+## 3) Set up transfer objects
 
 ```bash
 console transfer:generate
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure the following changes have been applied in transfer objects:
-
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| ProductAttachmentTransfer | class | created | src/Generated/Shared/Transfer/ProductAttachmentTransfer |
-| ProductAttachmentCollectionTransfer | class | created | src/Generated/Shared/Transfer/ProductAttachmentCollectionTransfer |
-| ProductViewTransfer.attachments | column | extended | src/Generated/Shared/Transfer/ProductViewTransfer |
-
-{% endinfo_block %}
-
-### 4) Set up behavior
+## 4) Set up behavior
 
 Register the following plugins:
 
@@ -294,8 +263,6 @@ use Spryker\Zed\ProductAttachment\ProductAttachmentConfig;
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
      * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
@@ -343,7 +310,7 @@ Make sure that product attachments are available in the product view transfer af
 
 {% endinfo_block %}
 
-### 5) Set up Yves templates
+## 5) Set up Yves templates
 
 Add the Downloads block to the product detail template.
 
@@ -473,7 +440,7 @@ Make sure that the **Downloads** section is displayed on the PDP for products th
 
 {% endinfo_block %}
 
-### 6) Import glossary
+## 6) Import glossary
 
 1. Add glossary keys for the Downloads section label:
 
@@ -488,13 +455,7 @@ product.attachments.downloads,Downloads,de_DE
 console data:import glossary
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
-
-{% endinfo_block %}
-
-### 7) Import product attachments data
+## 7) Import product attachments data
 
 1. Prepare your data according to the following format:
 

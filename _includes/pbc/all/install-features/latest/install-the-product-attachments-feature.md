@@ -90,7 +90,15 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you create or update an abstract product in the Back Office, the attachments are saved and updated correctly.
+Make sure that when you create or update an abstract product in the Back Office, the attachments are saved and updated correctly:
+
+1. In the Back Office, go to **Catalog > Products**.
+2. Click **Edit** next to a product.
+3. Go to the **Media** tab.
+4. In the **Product Attachments** section, add, edit, or remove attachments.
+5. Click **Save**.
+
+Make sure the records in the `spy_product_attachment` and `spy_product_attachment_product_abstract` database tables are created or updated accordingly.
 
 {% endinfo_block %}
 
@@ -304,12 +312,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that product attachments are available in the product view transfer after retrieving product data from storage.
-
-{% endinfo_block %}
-
 ## 5) Set up Yves templates
 
 Add the Downloads block to the product detail template.
@@ -349,19 +351,20 @@ Add the Downloads section to the product detail template:
 {% define data = {
     description: '',
     attributes: [],
-    attachments: [],
+    attachments: [], {# Add default attachments to data #}
 } %}
 
 {% block class %}
     {{parent()}} grid grid--gap grid--justify
 {% endblock %}
 
+{# Add block attachmentCol #}
 {% block attachmentCol %}
     <a href="{{ currentAttachment.url }}" target="_blank" rel="noopener noreferrer" class="link">{{ currentAttachment.label }}</a>
 {% endblock %}
 
 {% block body %}
-    {% if data.description or data.attachments is not empty %}
+    {% if data.description or data.attachments is not empty %} {# --- Wrap attachments and description in condition --- #}
         <div class="col col--sm-12 col--lg-6">
             {% if data.description %}
                 <h2 class="{{ config.name }}__title title title--h4 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-description'>{{ 'product.attribute.long_description' | trans }}</h2>
@@ -370,6 +373,7 @@ Add the Downloads section to the product detail template:
                 </div>
             {% endif %}
 
+            {# --- Add attachments block under the description --- #}
             {% if data.attachments is not empty %}
                 <h2 class="{{ config.name }}__title title title--h3 title--mobile-toggler-section js-pdp-section__trigger" data-toggle-target='.js-pdp-section__target-attachments'>{{ 'product.attachments.downloads' | trans }}</h2>
 
@@ -410,6 +414,8 @@ Add the Downloads section to the product detail template:
                     qa: 'attachments-table',
                 } only %}
             {% endif %}
+            {# --- End of the attachments block --- #}
+
         </div>
     {% endif %}
 
@@ -436,13 +442,17 @@ Add the Downloads section to the product detail template:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the **Downloads** section is displayed on the PDP for products that have attachments configured, and that it is hidden for products without attachments.
+Make sure that the **Downloads** section is displayed on the PDP for products that have attachments configured, and that it is hidden for products without attachments:
+
+1. In the Storefront, find a product that has attachments configured.
+2. Open the product detail page (PDP).
+3. Scroll to the **Downloads** section and verify that the configured attachments are listed there.
 
 {% endinfo_block %}
 
 ## 6) Import glossary
 
-1. Add glossary keys for the Downloads section label:
+1. Add glossary keys for the Downloads section label in `glossary.csv`:
 
 ```csv
 product.attachments.downloads,Downloads,en_US
@@ -458,6 +468,7 @@ console data:import glossary
 ## 7) Import product attachments data
 
 1. Prepare your data according to the following format:
+File: data/import/common/common/product_attachment.csv
 
 ```csv
 abstract_sku,label,locale,attachment_url,sort_order
@@ -474,7 +485,15 @@ abstract_sku,label,locale,attachment_url,sort_order
 | attachment_url | ✓ | string | `https://example.com/manual.pdf` | External URL of the attachment resource. |
 | sort_order | ✓ | integer | 1 | Display order. Lower values are displayed first. |
 
-2. Import data:
+2. Update `data/import/local/full_EU.yml` and `data/import/local/full_US.yml` with
+
+```yaml
+actions:
+    - data_entity: product-attachment
+      source: data/import/common/common/product_attachment.csv
+```
+
+3. Import data:
 
 ```bash
 console data:import product-attachment

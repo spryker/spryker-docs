@@ -221,7 +221,7 @@ A: No. Fill in what is relevant for your project. Some sections may remain minim
 
 **Q: Can I add custom sections?**
 
-A: First, check all 12 arc42 sections—the standard format covers most architectural concerns. If no existing section fits your content, you can add a custom section. Ensure the section purpose is clear and describe it in the README.md file.
+A: First, check all 12 arc42 sections — the standard format covers most architectural concerns. If no existing section fits your content, you can add a custom section. Ensure the section purpose is clear and describe it in the README.md file.
 
 **Q: How detailed should diagrams be?**
 
@@ -237,7 +237,7 @@ A: Yes. The choice is yours—we do not limit you to Mermaid or PlantUML. Ensure
 
 **Q: Will diagrams-as-code replace whiteboards and visual editing tools?**
 
-A: No. The art of creating and drawing diagrams—whether on whiteboards, visual tools, or pen and paper—remains valuable. Diagrams-as-code is for documenting what you have drawn and decided. Use whatever tools help you think and collaborate, then capture the final result as code for version control and documentation.
+A: No. The art of creating and drawing diagrams — whether on whiteboards, visual tools, or pen and paper — remains valuable. Diagrams-as-code is for documenting what you have drawn and decided. Use whatever tools help you think and collaborate, then capture the final result as code for version control and documentation.
 
 **Q: Can I use images as diagrams instead of diagrams-as-code?**
 

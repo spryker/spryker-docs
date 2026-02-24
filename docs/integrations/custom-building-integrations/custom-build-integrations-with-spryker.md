@@ -51,6 +51,12 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
     <div class="cst_card_desc">Learn how to implement PunchOut flow support and enable serving procurement system requests.</div>
     <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/punchout-development-plan.html"> Find out more </a>
   </div>
+
+  <div class="cst_card">
+    <div class="cst_card_title">Implement PSP integration</div>
+    <div class="cst_card_desc">Build custom payment provider integrations using a GitHub template with pre-configured module structure, OMS workflows, and checkout integration.</div>
+    <a class="cst_card_button" href="/docs/integrations/custom-building-integrations/psp-integration-template.html"> Find out more </a>
+  </div>
  </div>
 
 

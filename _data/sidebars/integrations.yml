@@ -193,5 +193,7 @@ entries:
       url: /docs/integrations/custom-building-integrations/erp-integration-template.html
     - title: Implement PunchOut on your project
       url: /docs/integrations/custom-building-integrations/punchout-development-plan.html
+    - title: Using PSP Integration Template
+      url: /docs/integrations/custom-building-integrations/psp-integration-template.html
   - title: Community contributions
     url: /docs/integrations/community-contributions.html

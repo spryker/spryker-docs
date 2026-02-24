@@ -1,7 +1,7 @@
 ---
 title: Infrastructure and worker configuration guidelines
 description: Learn how to optimize nginx configuration and worker orchestration for Spryker applications, including buffer tuning and multi-store worker strategies.
-last_updated: Feb 20, 2026
+last_updated: Feb 23, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -297,7 +297,7 @@ $config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = 750;
 ```php
 $jobs[] = [
     'name' => 'queue-worker',
-    'command' => '$PHP_BIN vendor/bin/console queue:worker:start -vvv',
+    'command' => '$PHP_BIN vendor/bin/console queue:worker:start',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => ['DE'], // Use any one store/region as entry point

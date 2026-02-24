@@ -23,6 +23,23 @@ Lorem Ipsum
 Lorem Ipsum
 
 
+### OMS New Visual User Experience
+
+Spryker transforms the community-driven OMS visualizer into a fully validated and productized capability.
+
+![Screenshot of the OMS visualizer showing order state machine transitions](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/2026-OMS-visualizer.png)
+
+**Key capabilities**
+- Provides a streamlined visualization of complex Order State Machines (OMS).
+
+**Business benefits**
+- Enables faster OMS iteration cycles and improves clarity when you develop or validate OMS processes.
+- Reduces the time you spend debugging OMS flows by providing better visibility and tooling support.
+
+**Documentation:**
+
+
+
 ## Efficient and Flexible Cloud Foundation
 
 ### Lorem Ipsum

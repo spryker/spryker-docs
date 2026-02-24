@@ -23,7 +23,7 @@ Lorem Ipsum
 Lorem Ipsum
 
 
-### OMS New Visual User Experience
+### OMS New Visual User Experience <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Spryker transforms the community-driven OMS visualizer into a fully validated and productized capability.
 
@@ -37,7 +37,7 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 - Reduces the time you spend debugging OMS flows by providing better visibility and tooling support.
 
 **Documentation:**
-
+- [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
 
 
 ## Efficient and Flexible Cloud Foundation

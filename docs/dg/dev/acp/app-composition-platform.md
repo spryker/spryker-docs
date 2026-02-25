@@ -17,6 +17,12 @@ related:
       link: docs/dg/dev/acp/acp-security-tips.html
 ---
 
+{% info_block warningBox "Warning" %}
+
+Spryker App Composition Platform has been discontinued.
+
+{% endinfo_block %}
+
 App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](https://spryker.com/app-composition-platform/#/).
 
 ACP supports the following integrations:

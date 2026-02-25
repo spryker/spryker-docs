@@ -254,6 +254,25 @@ We introduced Symfony Messenger and Symfony Scheduler as modern, flexible altern
 - [Symfony Messenger](/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html)
 - [Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html)
 
+### Secure handling of customer data in quote requests <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+This update improves the quote request storage mechanism to ensure that the system does not unnecessarily persist sensitive customer data in version records.
+
+Previously, the `spy_quote_request_version` table stored the complete quote JSON, which could include full company customer data, including encrypted passwords. Although the passwords were encrypted, storing them outside the dedicated customer table increased the risk of exposure and did not follow the principle of data minimization.
+
+**Key capabilities**
+- Removes unnecessary storage of sensitive customer data, such as encrypted passwords, from the `spy_quote_request_version` table.
+- Ensures that customer credentials remain stored exclusively in the `spy_customer` table.
+- Improves secure data handling in quote request versioning flows that the Storefront trigger.
+
+**Business benefits**
+- Reduces the risk of confidential data exposure.
+- Strengthens compliance with secure data handling and data minimization principles.
+- Improves overall database hygiene and reduces the attack surface.
+
+**Documentation:**
+- [Quote Request](https://api.release.spryker.com/release-group/6300)
+
 ### Platform & Tooling Upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 We have updated critical application and service components to long-term supported versions to ensure continued stability, performance, and compatibility.
@@ -266,6 +285,7 @@ We have updated critical application and service components to long-term support
 **Business benefits**
 - Faster CI pipelines and reduced waiting times for static analysis.
 - Continued alignment with PHP ecosystem and Angular support lifecycles.
+  - Resolved a vulnerability in `@angular/common` affecting Spryker applications. The issue (CVE-2025-66035) allowed potential XSRF token leakage via protocol-relative URLs in Angular HTTP clients, potentially exposing CSRF tokens to attacker-controlled domains.
 - Improved quality assurance and development tooling performance across projects.
 
 **Documentation:**
@@ -273,14 +293,16 @@ We have updated critical application and service components to long-term support
 - [Release unlocking the new PHPUnit version](https://api.release.spryker.com/release-group/6334)
 - Spryker is fully compatible with PHPStan 2.x, update it at your own schedule.
 
-### Performance & Stability Fixes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Quality, Performance & Stability Fixes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 **Key capabilities**
 - Improved Stock Data Import performance by removing usage of `\ProductAbstractCheckExistenceStep` and `ProductConcreteCheckExistenceStep` to eliminate unnecessary full database loads.
 - Multiple other bugfixes and improvements.
+- Add guidance to the public Spryker documentation on how to adopt the Cypress boilerplate.
 
 **Documentation:**
 - See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to update all packages.
+- [E2E Testing with Cypress](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html)
 
 ## Efficient and Flexible Cloud Foundation
 

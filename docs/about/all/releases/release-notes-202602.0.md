@@ -277,7 +277,7 @@ We have updated critical application and service components to long-term support
 
 This release resolves several performance bottlenecks and technical inconsistencies identified in escalations and customer projects.
 
-#### Key capabilities:
+**Key capabilities**
 - Improved Stock Data Import performance by removing the usage of `\ProductAbstractCheckExistenceStep` and `\ProductConcreteCheckExistenceStep`, which eliminates unnecessary full database loads.
 - Preserved correct HTTP error codes by returning 4xx responses for expected application errors, such as invalid cart operations, instead of 500.
 - Optimized customer session validation by removing resource-intensive password hash checks.
@@ -287,13 +287,13 @@ This release resolves several performance bottlenecks and technical inconsistenc
 - Restored Back Office form validation translations and eliminated redundant SQL execution in category rules.
 - Improved cart behavior in the Glue API by merging guest carts with product bundles on login and introducing SKU-level quantity restriction plugins.
 
-#### Business benefits:
+**Business benefits**
 - Improved backend performance and reduced database and CPU load.
 - Delivered more reliable and predictable product search, filtering, and category navigation for end users.
 - Enabled more stable imports and storefront builds with safer customizations and improved dependency management.
 - Improved Back Office and cart usability to reduce operational overhead and user friction.
 
-#### Documentation:
+**Documentation:**
 - See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to update all packages.
 
 ## Efficient and Flexible Cloud Foundation

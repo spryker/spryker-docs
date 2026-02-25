@@ -99,6 +99,8 @@ $apiPlatform->collection()
         ->itemsPerPageParameterName('itemsPerPage');
 ```
 
+These global defaults apply to all resources. Individual resources can override pagination behavior using per-resource options such as `paginationEnabled`, `paginationItemsPerPage`, `paginationMaximumItemsPerPage`, `paginationClientEnabled`, and `paginationClientItemsPerPage` in their YAML schema files. See [Resource Schemas — Pagination](/docs/dg/dev/architecture/api-platform/resource-schemas.html#pagination) for details.
+
 ### Configure supported formats
 
 ```php

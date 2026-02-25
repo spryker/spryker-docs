@@ -315,6 +315,106 @@ The operation names map to HTTP methods:
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
 
+## Pagination
+
+API Platform provides built-in pagination for collection endpoints (`GetCollection`). You can configure pagination behavior per resource using YAML schema options.
+
+### Pagination options
+
+| Option | Type | Description |
+|--------|------|-------------|
+| `paginationEnabled` | `boolean` | Enables or disables pagination for this resource. When `false`, `GetCollection` returns all results without pagination. Default: inherits from global configuration. |
+| `paginationItemsPerPage` | `integer` | Number of items returned per page. Overrides the global default. |
+| `paginationMaximumItemsPerPage` | `integer` | Maximum number of items a client can request per page via `itemsPerPage` query parameter. Prevents clients from requesting excessively large pages. |
+| `paginationClientEnabled` | `boolean` | Allows clients to enable or disable pagination via the `pagination` query parameter (for example, `?pagination=false`). |
+| `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `itemsPerPage` query parameter (for example, `?itemsPerPage=50`). |
+
+### Minimal pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+
+  operations:
+    - type: GetCollection
+```
+
+### Full pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 20
+  paginationMaximumItemsPerPage: 100
+  paginationClientEnabled: true
+  paginationClientItemsPerPage: true
+
+  operations:
+    - type: GetCollection
+    - type: Get
+```
+
+With this configuration, clients can use the following query parameters:
+
+```bash
+# Default pagination (20 items per page)
+GET /products
+
+# Navigate to page 3
+GET /products?page=3
+
+# Request 50 items per page (up to maximum of 100)
+GET /products?itemsPerPage=50
+
+# Disable pagination to get all results
+GET /products?pagination=false
+```
+
+### Generated output
+
+The pagination options are rendered as named parameters in the `#[ApiResource]` attribute:
+
+```php
+#[ApiResource(
+    operations: [new GetCollection(), new Get()],
+    shortName: 'products',
+    provider: ProductsBackendProvider::class,
+    paginationItemsPerPage: 20,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
+)]
+```
+
+### Provider requirements
+
+For pagination to work, your Provider must return a `TraversablePaginator` instance for collection operations:
+
+```php
+use ApiPlatform\State\Pagination\TraversablePaginator;
+
+return new TraversablePaginator(
+    new \ArrayObject($resources),
+    $currentPage,
+    $itemsPerPage,
+    $totalItems
+);
+```
+
+If `paginationEnabled` is `true` but the Provider returns a plain array, API Platform wraps the result in a `PartialPaginatorInterface`, which may not include total count or page metadata.
+
+### Global pagination defaults
+
+Global pagination defaults can be configured in the application configuration file. Per-resource settings override the global defaults. See [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) for details.
+
 ## Relationships
 
 Define relationships between resources to enable including related resources via the `?include=` query parameter.
@@ -474,7 +574,11 @@ use ApiPlatform\Metadata\Delete;
     shortName: 'Customer',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class,
-    paginationItemsPerPage: 10
+    paginationItemsPerPage: 10,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
 )]
 final class CustomersBackendResource
 {
@@ -488,6 +592,8 @@ final class CustomersBackendResource
 
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $customerReference = null;
+
+    public ?bool $isActive = true;
 
     // Getters, setters, toArray(), fromArray() methods...
 }

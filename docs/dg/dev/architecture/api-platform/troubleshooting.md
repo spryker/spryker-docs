@@ -304,6 +304,42 @@ The `assets:install` command must be run after integrating API Platform and when
    GET /customers?page=2&itemsPerPage=20
    ```
 
+### Client cannot change items per page
+
+**Symptom:** The `itemsPerPage` query parameter is ignored.
+
+**Solution:**
+
+Enable client-side items-per-page control and set a maximum limit in the resource schema:
+
+```yaml
+resource:
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+  paginationClientItemsPerPage: true
+  paginationMaximumItemsPerPage: 100
+```
+
+Without `paginationClientItemsPerPage: true`, the `itemsPerPage` query parameter has no effect. The `paginationMaximumItemsPerPage` option prevents clients from requesting excessively large pages.
+
+### Client cannot disable pagination
+
+**Symptom:** The `pagination=false` query parameter is ignored and results are still paginated.
+
+**Solution:**
+
+Enable client-side pagination control in the resource schema:
+
+```yaml
+resource:
+  paginationEnabled: true
+  paginationClientEnabled: true
+```
+
+Without `paginationClientEnabled: true`, the `pagination` query parameter has no effect.
+
+For a full reference of all pagination options, see [Resource Schemas — Pagination](/docs/dg/dev/architecture/api-platform/resource-schemas.html#pagination).
+
 ## Dependency Injection issues
 
 ### Services not autowired

@@ -1,7 +1,7 @@
 ---
 title: API Platform Testing
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Feb 25, 2025
+last_updated: Feb 25, 2026
 template: howto-guide-template
 related:
   - title: API Platform

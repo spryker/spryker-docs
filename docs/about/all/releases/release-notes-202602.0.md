@@ -116,6 +116,21 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 * Higher perceived product quality and consistency for enterprise users.
 * Reduced support noise caused by unclear errors and untranslated validation messages.
 
+## Search, Cart, and Buying Flow Improvements
+
+Addresses issues that can break expectations in common buying journeys and search refinement.
+
+### Key capabilities:
+* Fixed product search filter behavior where facet values not displayed in the filter list could cause subsequent filtering to drop previously active filters.
+* Fixed category suggestions not appearing when product white-list (product lists) is enabled, restoring expected discovery behavior.
+* Fixed B2C cart merge during login for **virtual bundle products** when merging guest and customer carts via REST APIs.
+* Prevented repeated Add-to-Cart requests from bypassing maximum product quantity limits in B2B carts (max_order_quantity enforcement).
+
+### Business benefits:
+* More reliable search refinement and discovery, especially in B2B product list scenarios.
+* Fewer cart inconsistencies during login, improving conversion and reducing support cases.
+* Stronger guardrails against quantity-limit bypass, protecting compliance and business rules.
+
 ## Connected, and AI-Enabled Platform
 
 ### Spryker AI Foundation: Operable, Structured, and Extensible AI Runtime <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

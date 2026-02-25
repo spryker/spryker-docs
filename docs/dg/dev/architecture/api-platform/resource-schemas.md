@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Feb 5, 2026
+last_updated: Feb 25, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -534,35 +534,65 @@ Error: Provider class "Pyz\Glue\Customer\Api\Backend\Provider\MissingProvider" d
 
 ## Advanced schema features
 
-### Custom operations
+### Custom URL paths
 
-Define custom operations beyond standard CRUD:
+Operations support `uriTemplate` and `uriVariables` to define custom URL paths, including sub-resource URLs like `/customers/{customerReference}/addresses`.
 
-```yaml
-operations:
-  - type: Post
-    uriTemplate: "/customers/{id}/activate"
-    method: "POST"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerActivationProcessor"
-```
+#### Sub-resource with full CRUD
 
-### Nested resources
-
-Define relationships between resources:
+Define a child resource with nested URLs by adding `uriTemplate` and `uriVariables` to each operation:
 
 ```yaml
-properties:
-  addresses:
-    type: array
-    description: "Customer addresses"
-    items:
-      type: object
-      properties:
-        street:
-          type: string
-        city:
-          type: string
+# customers-addresses.resource.yml
+resource:
+  name: CustomersAddresses
+  shortName: customers-addresses
+
+  operations:
+    - type: GetCollection
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+
+    - type: Get
+      uriTemplate: '/customers/{customerReference}/addresses/{uuid}'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+        uuid:
+          fromClass: CustomersAddressesStorefrontResource
+
+    - type: Post
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
 ```
+
+**`uriVariables` properties:**
+- `fromClass`: The generated resource class the variable originates from
+- `toProperty`: The property on the current resource that links to the parent resource
+
+#### Action-style sub-resource
+
+For single-action endpoints nested under a parent resource:
+
+```yaml
+# customers-confirm-registration.resource.yml
+resource:
+  name: CustomersConfirmRegistration
+  shortName: customers-confirm-registration
+
+  operations:
+    - type: Post
+      uriTemplate: /customers/{customerReference}/confirm-registration
+```
+
+For more details on `uriTemplate`, `uriVariables`, and sub-resource patterns, see the [API Platform sub-resources documentation](https://api-platform.com/docs/core/subresources/).
 
 ### Security expressions
 

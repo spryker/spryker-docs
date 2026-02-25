@@ -133,12 +133,11 @@ Adds foundational capabilities for advanced agent workflows and improves Backoff
 * Backoffice Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create/edit pages:
   * Actions to **Translate content** and **Improve content**
   * Review-before-apply workflow to avoid accidental overwrites
-  * Localized UI text (EN/DE)
 * Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
   * Validates provider credentials before calling external AI services
   * Shows user-facing error messages instead of silent empty responses
   * Logs operator-friendly errors without exposing secrets
-  * Optional UI safeguard: disables AI actions with an explanatory tooltip when AI is not configured
+  * UI safeguard disables AI actions with an explanatory tooltip when AI is not configured
 
 #### Business benefits:
 * Higher adoption and trust in AI features due to clear error states and safer interaction patterns.

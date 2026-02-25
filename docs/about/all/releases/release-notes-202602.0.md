@@ -352,7 +352,7 @@ A set of practical, reusable guidelines to reduce delivery risk, prevent recurri
   - Guidance on recognizing issues via response time, query patterns, and logs.
 - **How to start a Spryker project**
   - Step-by-step setup guidance covering project structure, CI/CD basics, team practices, and quality tooling.
-  - Focus on “must-do” principles to avoid rework and long-term quality degradation.
+  - Focus on "must-do" principles to avoid rework and long-term quality degradation.
 
 **Business benefits**
 - Faster onboarding for partners and new project teams through standardized, actionable guidance.
@@ -407,7 +407,7 @@ Delivers a production-ready template repository for building payment service pro
 **Key capabilities**
 - Covers all mandatory integration touchpoints with the SCCOS that must be considered when integrating a payment provider (business logic, configurations, OMS, frontend forms)  and payment lifecycle handling, with practical implementation examples.
 - Support for core payment flows: **Authorize → Capture → Cancel**.
-- Two payment method templates (e.g., Credit Card, Invoice) including:
+- Two payment method templates (for example Credit Card, Invoice) including:
   - OMS state machines for synchronous and asynchronous authorization.
 - Webhook infrastructure:
   - Payload logging

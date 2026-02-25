@@ -103,18 +103,18 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
-#### Key capabilities:
-* Redesigned the Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
-* Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
-* Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
-* Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
-* Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
+**Key capabilities**
+- Redesigned the Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
+- Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
+- Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
+- Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
+- Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
 
-#### Business benefits:
-* Faster task completion and reduced confusion in Back Office operations.
-* Better first-time experience for B2B customers on key storefront pages.
-* Higher perceived product quality and consistency for enterprise users.
-* Reduced support noise caused by unclear errors and untranslated validation messages.
+**Business benefits**
+- Faster task completion and reduced confusion in Back Office operations.
+- Better first-time experience for B2B customers on key storefront pages.
+- Higher perceived product quality and consistency for enterprise users.
+- Reduced support noise caused by unclear errors and untranslated validation messages.
 
 ## Connected, and AI-Enabled Platform
 
@@ -143,7 +143,7 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 
 ### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements
 
-Adds foundational capabilities for advanced agent workflows and improves Backoffice Smart PIM with safer, more reliable AI-assisted product description support.
+Adds foundational capabilities for advanced agent workflows and improves the Back Office Smart PIM with safer, more reliable AI-assisted product description support.
 
 **Key capabilities**
 - **Conversation history*- support to maintain context across interactions, enabling better multi-step workflows.

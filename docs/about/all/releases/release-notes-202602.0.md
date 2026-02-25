@@ -99,22 +99,22 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 - Faster evaluations by showing realistic catalog and merchandising scenarios out of the box.
 - Less manual demo preparation for partners and solution teams.
 
-### ICP UX Improvements for Back Office and Storefront <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### UX & Design Improvements for Storefront & Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
-**Key capabilities**
-- Redesigned Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
-- Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
-- Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
-- Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
-- Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
+#### Key capabilities:
+* Redesigned the Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
+* Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
+* Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
+* Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
+* Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
 
-**Business benefits**
-- Faster task completion and reduced confusion in Back Office operations.
-- Better first-time experience for B2B customers on key storefront pages.
-- Higher perceived product quality and consistency for enterprise users.
-- Reduced support noise caused by unclear errors and untranslated validation messages.
+#### Business benefits:
+* Faster task completion and reduced confusion in Back Office operations.
+* Better first-time experience for B2B customers on key storefront pages.
+* Higher perceived product quality and consistency for enterprise users.
+* Reduced support noise caused by unclear errors and untranslated validation messages.
 
 ## Connected, and AI-Enabled Platform
 

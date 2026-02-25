@@ -25,7 +25,7 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 - Supporting buyers' decisions by providing more detailed product information.
 - Removes approval bottlenecks and shortens the path from product view to first transaction.
 
-#### Documentation:
+**Documentation:**
 
 ### Product & Merchant Offer Availability Display <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -44,7 +44,7 @@ Introduces native, configurable product and merchant offer availability display 
 - Businesses no longer need custom implementations for basic stock visibility.
 - Transparent stock visibility increases direct orders and reduces operational overhead.
 
-#### Documentation:
+**Documentation:**
 - [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
 - [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
@@ -84,7 +84,7 @@ Reduces project set up time for customers and partners who want B2B Commerce onl
 - Lower implementation cost and reduced efforts.
 - Clearer positioning and smoother kick-off experience.
 
-#### Documentation:
+**Documentation:**
 - [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
 
 ### New Industrial Homepage Sample Data <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -136,7 +136,7 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 - Improved governance and compliance readiness through a queryable audit trail of AI interactions (for example, EU AI Act aligned traceability).
 - Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
 
-#### Documentation:
+**Documentation:**
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
 - [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
 - [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
@@ -163,7 +163,7 @@ Adds foundational capabilities for advanced agent workflows and improves Backoff
 - Foundation for advanced B2B agent scenarios through context continuity and orchestrated workflows.
 - Improved governance and auditability through workflow execution traceability.
 
-#### Documentation:
+**Documentation:**
 - [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history)
 - [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration)
 
@@ -193,9 +193,10 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 - Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
 - Lower token usage and faster tool responses due to simplified module discovery outputs.
 
-#### Documentation:
+**Documentation:**
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
+
 ### API Platform improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 This release enhances API Platform capabilities to improve your developer experience and reduce manual configuration overhead.

@@ -25,7 +25,7 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 - Supporting buyers' decisions by providing more detailed product information.
 - Removes approval bottlenecks and shortens the path from product view to first transaction.
 
-**Documentation:**
+**Documentation**
 - [Product Attachments overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html)
 - [Install the Product Attachments feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html)
 
@@ -46,7 +46,7 @@ Introduces native, configurable product and merchant offer availability display 
 - Businesses no longer need custom implementations for basic stock visibility.
 - Transparent stock visibility increases direct orders and reduces operational overhead.
 
-**Documentation:**
+**Documentation**
 - [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
 - [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
@@ -86,7 +86,7 @@ Reduces project set up time for customers and partners who want B2B Commerce onl
 - Lower implementation cost and reduced efforts.
 - Clearer positioning and smoother kick-off experience.
 
-**Documentation:**
+**Documentation**
 - [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
 
 ### New Industrial Homepage Sample Data <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -122,16 +122,16 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 
 Enables standardized B2B PunchOut integrations via cXML support.
 
-#### Key capabilities:
-* Support for **cXML (Commerce XML)** as an additional data exchange format in the Spryker API Platform.
-* Documentation and guidance for implementing PunchOut integrations with external eProcurement systems.
+**Key capabilities**
+- Support for **cXML (Commerce XML)*- as an additional data exchange format in the Spryker API Platform.
+- Documentation and guidance for implementing PunchOut integrations with external eProcurement systems.
 
-#### Business benefits:
-* Enterprise-ready B2B integration  API Compatibility with leading procurement platforms.
-* Simplified implementation of PunchOut scenarios for customers and partners.
-* Stronger positioning in complex B2B commerce environments.
+**Business benefits**
+- Enterprise-ready B2B integration  API Compatibility with leading procurement platforms.
+- Simplified implementation of PunchOut scenarios for customers and partners.
+- Stronger positioning in complex B2B commerce environments.
 
-**Documentation:**
+**Documentation**
 - [PunchOut Development Plan](/docs/integrations/custom-building-integrations/punchout-development-plan)
 
 ## Connected, and AI-Enabled Platform
@@ -154,7 +154,7 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 - Improved governance and compliance readiness through a queryable audit trail of AI interactions (for example, EU AI Act aligned traceability).
 - Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
 
-**Documentation:**
+**Documentation**
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
 - [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
 - [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
@@ -181,7 +181,7 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 - Foundation for advanced B2B agent scenarios through context continuity and orchestrated workflows.
 - Improved governance and auditability through workflow execution traceability.
 
-**Documentation:**
+**Documentation**
 - [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management.html)
 - [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
 - [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html)
@@ -213,7 +213,7 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 - Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
 - Lower token usage and faster tool responses due to simplified module discovery outputs.
 
-**Documentation:**
+**Documentation**
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 
@@ -234,7 +234,7 @@ This release enhances API Platform capabilities to improve your developer experi
 - Improve consistency in your API implementations.
 - Accelerate onboarding and increase developer productivity.
 
-**Documentation:**
+**Documentation**
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html)
 - [Code Buckets](/docs/dg/dev/architecture/api-platform/code-buckets.html)
 - [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html)
@@ -253,7 +253,7 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 - Enables faster OMS iteration cycles and improves clarity when you develop or validate OMS processes.
 - Reduces the time you spend debugging OMS flows by providing better visibility and tooling support.
 
-**Documentation:**
+**Documentation**
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
 
 ### Messaging and scheduling modernization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -270,7 +270,7 @@ We introduced Symfony Messenger and Symfony Scheduler as modern, flexible altern
 - Gain greater flexibility in queue transport configuration.
 - Align scheduling with the Symfony ecosystem using a modern approach.
 
-**Documentation:**
+**Documentation**
 - [Symfony Messenger](/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html)
 - [Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html)
 
@@ -290,7 +290,7 @@ Previously, the `spy_quote_request_version` table stored the complete quote JSON
 - Strengthens compliance with secure data handling and data minimization principles.
 - Improves overall database hygiene and reduces the attack surface.
 
-**Documentation:**
+**Documentation**
 - [Quote Request](https://api.release.spryker.com/release-group/6300)
 
 ### Platform & Tooling Upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -308,7 +308,7 @@ We have updated critical application and service components to long-term support
   - Resolved a vulnerability in `@angular/common` affecting Spryker applications. The issue (CVE-2025-66035) allowed potential XSRF token leakage via protocol-relative URLs in Angular HTTP clients, potentially exposing CSRF tokens to attacker-controlled domains.
 - Improved quality assurance and development tooling performance across projects.
 
-**Documentation:**
+**Documentation**
 - [Upgrade to Angular 20](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-20.html)
 - [Release unlocking the new PHPUnit version](https://api.release.spryker.com/release-group/6334)
 - Spryker is fully compatible with PHPStan 2.x, update it at your own schedule.
@@ -334,7 +334,7 @@ This release resolves several performance bottlenecks and technical inconsistenc
 - Improved Back Office and cart usability to reduce operational overhead and user friction.
 - Add guidance to the public Spryker documentation on how to adopt the Cypress boilerplate.
 
-**Documentation:**
+**Documentation**
 - See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to update all packages.
 - [E2E Testing with Cypress](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html)
 
@@ -342,105 +342,106 @@ This release resolves several performance bottlenecks and technical inconsistenc
 
 A set of practical, reusable guidelines to reduce delivery risk, prevent recurring implementation pitfalls, and standardize engineering practices across Spryker projects.
 
-#### Key capabilities:
-* **APM monitoring and troubleshooting using New Relic**
-  * Standardized end-to-end troubleshooting workflow (metrics → transactions → DB queries → traces).
-  * Clear mapping of New Relic entities to Spryker applications (Yves, Zed, Glue, Merchant Portal).
-  * Practical examples for diagnosing common performance issues.
-* **Performance best practices: common challenges and optimisation strategies**
-  * Documented top recurring performance pitfalls from real projects (symptoms, root cause patterns, proven optimizations).
-  * Guidance on recognizing issues via response time, query patterns, and logs.
-* **How to start a Spryker project**
-  * Step-by-step setup guidance covering project structure, CI/CD basics, team practices, and quality tooling.
-  * Focus on “must-do” principles to avoid rework and long-term quality degradation.
+**Key capabilities**
+- **APM monitoring and troubleshooting using New Relic**
+  - Standardized end-to-end troubleshooting workflow (metrics → transactions → DB queries → traces).
+  - Clear mapping of New Relic entities to Spryker applications (Yves, Zed, Glue, Merchant Portal).
+  - Practical examples for diagnosing common performance issues.
+- **Performance best practices: common challenges and optimisation strategies**
+  - Documented top recurring performance pitfalls from real projects (symptoms, root cause patterns, proven optimizations).
+  - Guidance on recognizing issues via response time, query patterns, and logs.
+- **How to start a Spryker project**
+  - Step-by-step setup guidance covering project structure, CI/CD basics, team practices, and quality tooling.
+  - Focus on “must-do” principles to avoid rework and long-term quality degradation.
 
-#### Business benefits:
-* Faster onboarding for partners and new project teams through standardized, actionable guidance.
-* Reduced escalation rate by addressing known recurring delivery and performance pitfalls early.
-* Improved project consistency and upgradeability through repeatable architecture and documentation patterns.
-* Better diagnosability and prevention of performance degradation with a shared troubleshooting methodology.
+**Business benefits**
+- Faster onboarding for partners and new project teams through standardized, actionable guidance.
+- Reduced escalation rate by addressing known recurring delivery and performance pitfalls early.
+- Improved project consistency and upgradeability through repeatable architecture and documentation patterns.
+- Better diagnosability and prevention of performance degradation with a shared troubleshooting methodology.
 
 ### Architecture as Code for Spryker projects
 
 Live, version-controlled architecture documentation using industry standards that scales with your codebase. Enables team collaboration, decision traceability, and onboarding without custom tooling or specialized training.
 
-#### Key capabilities:
-* Ready to use architecture templates for living, version-controlled architecture documentation that evolves with code with arc42 (12-sections) and C4 Model (4-level visualization).
-* Traceable architectural decision templates through Solution Designs (RFC-style exploration) and ADRs
-* Diagram as Code - Mermaid & PlantUML with real examples for automated validation, generation, and AI analysis
-#### Business benefits:
+**Key capabilities**
+- Ready to use architecture templates for living, version-controlled architecture documentation that evolves with code with arc42 (12-sections) and C4 Model (4-level visualization).
+- Traceable architectural decision templates through Solution Designs (RFC-style exploration) and ADRs
+- Diagram as Code - Mermaid & PlantUML with real examples for automated validation, generation, and AI analysis
+
+**Business benefits**
 - Faster onboarding - with globally-recognized standards and all needed architecture documentation in one place - your code
   - Better decision making - RFC-style exploration and full decision history eliminate tribal knowledge
   - Alignment with business - Capture project requirements, trade-offs before implementation, ensuring delivery matches intent. Evolve further with architecture decision records  and Solution designs
   - AI-ready format - Markdown and code-based diagrams enable intelligent automation and documentation generation
 
-**Documentation:**
+**Documentation**
 - [ERP Integration Template](/docs/dg/dev/architecture/architecture-as-code.html)
 
 ### ERP Integration Template
 
 Provides a standardized foundation for building ERP integrations without starting from scratch.
 
-#### Key capabilities:
-* Reusable module structure (Client and Shared layers) with transfer object definitions.
-* Pre-built base classes (`BaseRequest`, `BaseRequestBuilder`) for:
-  * Request handling and timeout configuration
-  * Headers and authentication
-  * Logging and error management
-* Request/response mapper pattern for ERP-specific format transformations.
-* Guzzle client configuration guidance with environment-specific credentials and connection setup.
+**Key capabilities**
+- Reusable module structure (Client and Shared layers) with transfer object definitions.
+- Pre-built base classes (`BaseRequest`, `BaseRequestBuilder`) for:
+  - Request handling and timeout configuration
+  - Headers and authentication
+  - Logging and error management
+- Request/response mapper pattern for ERP-specific format transformations.
+- Guzzle client configuration guidance with environment-specific credentials and connection setup.
 
-#### Business benefits:
-* Faster ERP integration development with reduced boilerplate.
-* Consistent architecture across projects and ERP systems.
-* Lower risk of integration defects due to standardized logging and error handling.
-* Improved maintainability and onboarding for new ERP integrations.
+**Business benefits**
+- Faster ERP integration development with reduced boilerplate.
+- Consistent architecture across projects and ERP systems.
+- Lower risk of integration defects due to standardized logging and error handling.
+- Improved maintainability and onboarding for new ERP integrations.
 
-**Documentation:**
+**Documentation**
 - [ERP Integration Template](/docs/integrations/custom-building-integrations/erp-integration-template.html)
 
 ### Payment Integration Template (PSP Template)
 
 Delivers a production-ready template repository for building payment service provider (PSP) integrations.
 
-#### Key capabilities:
-* Covers all mandatory integration touchpoints with the SCCOS that must be considered when integrating a payment provider (business logic, configurations, OMS, frontend forms)  and payment lifecycle handling, with practical implementation examples.
-* Support for core payment flows: **Authorize → Capture → Cancel**.
-* Two payment method templates (e.g., Credit Card, Invoice) including:
-  * OMS state machines for synchronous and asynchronous authorization.
-* Webhook infrastructure:
-  * Payload logging
-  * Signature validation
-  * Route provider setup
-* Data import configuration with payment method CSV templates and glossary translations (EN, DE).
-* Automated module renaming and setup guidance to accelerate project adoption.
-* Comprehensive integration checklist to ensure no required system part is missed during implementation.
+**Key capabilities**
+- Covers all mandatory integration touchpoints with the SCCOS that must be considered when integrating a payment provider (business logic, configurations, OMS, frontend forms)  and payment lifecycle handling, with practical implementation examples.
+- Support for core payment flows: **Authorize → Capture → Cancel**.
+- Two payment method templates (e.g., Credit Card, Invoice) including:
+  - OMS state machines for synchronous and asynchronous authorization.
+- Webhook infrastructure:
+  - Payload logging
+  - Signature validation
+  - Route provider setup
+- Data import configuration with payment method CSV templates and glossary translations (EN, DE).
+- Automated module renaming and setup guidance to accelerate project adoption.
+- Comprehensive integration checklist to ensure no required system part is missed during implementation.
 
-#### Business benefits:
-* Reduced development time for new PSP integrations
-* Consistent payment architecture and OMS alignment across projects.
-* Improved reliability through standardized webhook and lifecycle handling.
-* Clear separation of module developer and project integrator responsibilities.
+**Business benefits**
+- Reduced development time for new PSP integrations
+- Consistent payment architecture and OMS alignment across projects.
+- Improved reliability through standardized webhook and lifecycle handling.
+- Clear separation of module developer and project integrator responsibilities.
 
-**Documentation:**
+**Documentation**
 - [PSP Integration Template](/docs/integrations/custom-building-integrations/psp-integration-template.html)
 
 ### New Algolia Eco-Module Integration
 
 Replaces the legacy Algolia App model with a code-visible eco-module.
 
-#### Key capabilities:
-* New Algolia integration as a standard Spryker eco-module.
-* Full code visibility and extensibility for customers and partners.
-* Support for current Algolia Search license–related features.
-* Updated documentation for integration and customization.
+**Key capabilities**
+- New Algolia integration as a standard Spryker eco-module.
+- Full code visibility and extensibility for customers and partners.
+- Support for current Algolia Search license–related features.
+- Updated documentation for integration and customization.
 
-#### Business benefits:
-* Increased flexibility and customization options.
-* Reduced dependency on black-box App Spryker support and evolution implementations.
-* Better alignment with project-level architecture and extension patterns.
+**Business benefits**
+- Increased flexibility and customization options.
+- Reduced dependency on black-box App Spryker support and evolution implementations.
+- Better alignment with project-level architecture and extension patterns.
 
-**Documentation:**
+**Documentation**
 - [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 
 ## Efficient and Flexible Cloud Foundation
@@ -469,6 +470,6 @@ This update completes the rollout of RabbitMQ 4.1 across all platform environmen
 - Enhanced scalability for event-driven workloads.
 - Reduced operational risk through alignment with the latest supported messaging version.
 
-**Documentation:**
+**Documentation**
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)
 - [System Requirements](/docs/dg/dev/system-requirements/latest/system-requirements.html)

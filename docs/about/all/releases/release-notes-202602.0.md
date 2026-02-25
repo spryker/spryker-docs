@@ -39,6 +39,14 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 **Documentation:**
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
 
+### Performance & Stability Fixes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+**Key capabilities**
+- Improved Stock Data Import performance by removing usage of `\ProductAbstractCheckExistenceStep` and `ProductConcreteCheckExistenceStep` to eliminate unnecessary full database loads.
+- Multiple other bugfixes and improvements.
+
+**Documentation:**
+- See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to upodate all packages.
 
 ## Efficient and Flexible Cloud Foundation
 

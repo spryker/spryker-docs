@@ -275,11 +275,25 @@ We have updated critical application and service components to long-term support
 
 ### Performance & Stability Fixes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-**Key capabilities**
-- Improved Stock Data Import performance by removing usage of `\ProductAbstractCheckExistenceStep` and `ProductConcreteCheckExistenceStep` to eliminate unnecessary full database loads.
-- Multiple other bugfixes and improvements.
+This release resolves several performance bottlenecks and technical inconsistencies identified in escalations and customer projects.
 
-**Documentation:**
+#### Key capabilities:
+- Improved Stock Data Import performance by removing the usage of `\ProductAbstractCheckExistenceStep` and `\ProductConcreteCheckExistenceStep`, which eliminates unnecessary full database loads.
+- Preserved correct HTTP error codes by returning 4xx responses for expected application errors, such as invalid cart operations, instead of 500.
+- Optimized customer session validation by removing resource-intensive password hash checks.
+- Stabilized OpenTelemetry monitoring and New Relic instrumentation to prevent memory issues and improve trace grouping for Zed and Gateway traffic.
+- Fixed concrete product publishing and product filter handling, including whitelist-aware category suggestions and hidden facets, to restore complete and consistent search results.
+- Corrected the Data Import CSV reader configuration so that offset and limit options work as expected for partial imports.
+- Restored Back Office form validation translations and eliminated redundant SQL execution in category rules.
+- Improved cart behavior in the Glue API by merging guest carts with product bundles on login and introducing SKU-level quantity restriction plugins.
+
+#### Business benefits:
+- Improved backend performance and reduced database and CPU load.
+- Delivered more reliable and predictable product search, filtering, and category navigation for end users.
+- Enabled more stable imports and storefront builds with safer customizations and improved dependency management.
+- Improved Back Office and cart usability to reduce operational overhead and user friction.
+
+#### Documentation:
 - See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to update all packages.
 
 ## Efficient and Flexible Cloud Foundation

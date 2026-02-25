@@ -5,6 +5,15 @@ entries:
 
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
+        nested:
+          - title: AI Conversation History
+            url: /docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html
+          - title: AI Structured Responses
+            url: /docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses.html
+          - title: AI Tool Support
+            url: /docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support.html
+          - title: AI Workflow Orchestration
+            url: /docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration.html
 
       - title: Yves
         nested:
@@ -4020,12 +4029,12 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-              
+
               - title: Tutorials and HowTos
                 nested:
                   - title: "HowTo: Configure shipment types"
                     url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
-                    
+
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

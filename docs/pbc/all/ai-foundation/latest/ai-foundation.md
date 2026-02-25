@@ -2,11 +2,19 @@
 title: AI Foundation
 description: Provider-agnostic AI connectivity layer for commerce
 template: concept-topic-template
-last_updated: Dec 12, 2025
+last_updated: Feb 23, 2026
 label: early-access
 related:
   - title: Install the AI Foundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module
+  - title: AI Conversation History
+    link: /docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html
+  - title: AI Tool Support
+    link: /docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support.html
+  - title: AI Structured Responses
+    link: /docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses.html
+  - title: AI Workflow Orchestration
+    link: /docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration.html
 
 ---
 
@@ -97,6 +105,44 @@ Spryker AI Foundation addresses these challenges by introducing one common layer
 
 ---
 
+## Key features
+
+Spryker AI Foundation provides the following core capabilities that can be used independently or combined to build powerful AI experiences:
+
+### Conversation History
+
+Maintain context across multiple customer interactions. AI remembers previous exchanges, builds on earlier discussions, and provides contextually relevant responses throughout extended dialogues.
+
+**When to use:** Multi-turn shopping assistance, technical support, complex B2B procurement, any scenario where customers interact over multiple sessions.
+
+[Learn more about Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html)
+
+### AI Tool Support
+
+Enable AI to execute business operations and retrieve real-time data. AI can check inventory, create support tickets, calculate shipping costs, add items to carts, and invoke any custom business logic you define.
+
+**When to use:** AI needs to interact with your systems to provide accurate data or complete operations such as order status checks, inventory lookups, and automated task execution.
+
+[Learn more about AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support.html)
+
+### Structured Responses
+
+Receive validated, type-safe data from AI in predefined formats. Instead of free-form text, AI returns data in consistent schemas that integrate directly into your databases, APIs, and business workflows.
+
+**When to use:** AI output must feed into systems requiring specific data fields, such as product data extraction, inquiry classification, content generation with metadata, and form and document generation.
+
+[Learn more about Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses.html)
+
+### AI Workflow Orchestration
+
+Build multi-step processes where different AI agents collaborate to complete complex operations. Design workflows with decision points, branching logic, and specialized agents for each stage.
+
+**When to use:** Business processes with multiple stages or decision points, such as product onboarding pipelines, customer inquiry routing, content approval workflows, and order processing and fulfillment.
+
+[Learn more about AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration.html)
+
+---
+
 ## Typical use cases built on Spryker AI Foundation
 
 AI Foundation is not a single feature. It is the base for many AI-enabled scenarios, for example:
@@ -143,3 +189,5 @@ At a high level, Spryker AI Foundation sits inside Spryker Commerce OS and conne
                 - Mistral AI
                 - Others, based on project needs
 ```
+
+## Documentation

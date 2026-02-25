@@ -102,7 +102,7 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 
 ## Connected, and AI-Enabled Platform
 
-### Spryker AI Foundation: Operable, Structured, and Extensible AI Runtime 1 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Foundation: Operable, Structured, and Extensible AI Runtime <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Enhances the AI Foundation runtime layer to make AI executions easier to operate at scale, safer to integrate into product code, and more extensible for evolving use cases.
 
@@ -148,6 +148,31 @@ Adds foundational capabilities for advanced agent workflows and improves Backoff
 
 #### Documentation:
 
+### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+Expands MCP tooling to make Spryker context retrieval, module discovery, documentation grounding, and demo data manipulation faster and more reliable for AI-assisted development.
+
+#### Key capabilities:
+* Added `getSprykerModuleMap` MCP tool to return **comprehensive module information**, including:
+  * Paths and core API components (Facade, Client, Service, Config)
+  * Available plugin interfaces and extension points
+* Added `getSprykerModules` MCP tool to return a **simplified flat list** of unique module names for efficient discovery and reduced token usage.
+* Added a **Spryker documentation** MCP tool supporting:
+  * Docs web URL
+  * GitHub tree URL for the markdown source
+  * GitHub API URL for raw markdown retrieval
+* Added **read-only database access** tooling for agents to retrieve required information without manual user intervention (SQL query input).
+* Added MCP tools to accelerate **import/demo data workflows**:
+  * CSV structure analysis (without loading full content)
+  * CSV transform operations (update/replace/append)
+  * Row deletion by filter criteria
+  * ODS-to-CSV export per sheet (supporting Google Sheets → Spryker import pipelines)
+
+#### Business benefits:
+* Faster and more accurate AI-assisted development through Spryker-aware context (module APIs, extension points, docs grounding).
+* Reduced onboarding time and fewer integration mistakes for developers and agents.
+* Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
+* Lower token usage and faster tool responses due to simplified module discovery outputs.
 
 ### OMS New Visual User Experience <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

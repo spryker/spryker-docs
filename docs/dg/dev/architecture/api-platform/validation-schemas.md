@@ -34,7 +34,7 @@ src/
             └── resources/
                 └── api/
                     └── backend/
-                        ├── customers.yml            # Resource schema
+                        ├── customers.resource.yml            # Resource schema
                         └── customers.validation.yml # Validation schema
 ```
 

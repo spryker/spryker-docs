@@ -31,8 +31,8 @@ This document provides solutions to common issues when working with API Platform
 1. **Schema file location is incorrect**
 
    ```bash
-   ❌ src/Pyz/Glue/Customer/api/customers.yml
-   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.yml
+   ❌ src/Pyz/Glue/Customer/api/customers.resource.yml
+   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml
    ```
 
 2. **API type not configured**
@@ -366,9 +366,9 @@ Output:
 
 ```bash
 Source Files (priority order):
-  ✓ vendor/spryker/customer/resources/api/backend/customers.yml (CORE)
-  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.yml (FEATURE)
-  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.yml (PROJECT)
+  ✓ vendor/spryker/customer/resources/api/backend/customers.resource.yml (CORE)
+  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.resource.yml (FEATURE)
+  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml (PROJECT)
 ```
 
 ### Inspecting generated code

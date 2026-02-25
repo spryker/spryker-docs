@@ -37,22 +37,22 @@ src/
 │       └── resources/
 │           └── api/
 │               ├── storefront/
-│               │   └── resource-name.yml
+│               │   └── resource-name.resource.yml
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 ├── SprykerFeature/
 │   └── {Feature}/
 │       └── resources/
 │           └── api/
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 └── Pyz/
     └── Glue/
         └── {Module}/
             └── resources/
                 └── api/
                     └── backend/
-                        └── resource-name.yml
+                        └── resource-name.resource.yml
 ```
 
 ## CodeBucket resources
@@ -399,7 +399,7 @@ Spryker automatically merges schemas from multiple layers:
 **Core layer** (lowest priority):
 
 ```yaml
-# vendor/spryker/customer/resources/api/backend/customer.yml
+# vendor/spryker/customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -412,7 +412,7 @@ resource:
 **Feature layer** (medium priority):
 
 ```yaml
-# src/SprykerFeature/CRM/resources/api/backend/customer.yml
+# src/SprykerFeature/CRM/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -423,7 +423,7 @@ resource:
 **Project layer** (highest priority):
 
 ```yaml
-# src/Pyz/GLue/Customer/resources/api/backend/customer.yml
+# src/Pyz/GLue/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -681,7 +681,7 @@ email:
 
 ```yaml
 # Core: Define base properties
-# src/Spryker/Customer/resources/api/backend/customer.yml
+# src/Spryker/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -689,7 +689,7 @@ resource:
       type: string
 
 # Project: Only override what's needed
-# src/Pyz/Glue/Customer/resources/api/backend/customer.yml
+# src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:

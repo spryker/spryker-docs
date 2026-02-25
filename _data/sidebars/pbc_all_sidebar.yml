@@ -1858,6 +1858,8 @@ entries:
 
           - title: Marketplace
             nested:
+              - title: Buy Box feature overview
+                url: /docs/pbc/all/offer-management/marketplace/buy-box-feature-overview.html
               - title: Marketplace Product Offer feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
               - title: Marketplace Merchant Portal Product Offer Management feature overview
@@ -1866,6 +1868,8 @@ entries:
                 nested:
                   - title: Install features
                     nested:
+                      - title: Buy Box
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal
@@ -2811,6 +2815,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
                       - title: Product Readiness
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2892,6 +2898,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles
@@ -3805,12 +3813,8 @@ entries:
                   nested:
                     - title: Integrate Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
-                    - title: Configure Algolia
-                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
                     - title: Customize Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
-                    - title: Disconnect Algolia
-                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia Dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
                     - title: Integrate Algolia Personalization
@@ -4016,11 +4020,12 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-                  - title: Tutorials and HowTos
-                    nested:
-                      - title: "HowTo: Configure shipment types"
-                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
-
+              
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Configure shipment types"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
+                    
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -4337,6 +4342,8 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/base-shop/inventory-management-feature-overview.html
               - title: Availability Notification feature overview
                 url: /docs/pbc/all/warehouse-management-system/base-shop/availability-notification-feature-overview.html
+              - title: Product Availability Display feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -4347,6 +4354,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature-dynamic-multistore.html
                       - title: Inventory Management
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                      - title: Product Availability Display
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
                       - title: Inventory Management + Alternative Products
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
                       - title: Availability Notification Glue API

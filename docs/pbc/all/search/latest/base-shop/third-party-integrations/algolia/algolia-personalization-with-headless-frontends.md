@@ -1,7 +1,7 @@
 ---
 title: Algolia Personalization with headless frontends
 description: Find out how you can enable Algolia personalization in your Spryker shop based on headless approach (custom frontend or mobile application).
-last_updated: Nov 24, 2024
+last_updated: Feb 20, 2026
 template: howto-guide-template
 ---
 

@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| 202507.0 |
-|Shopping Lists| 202507.0 |
+|Quick Order| {{page.release_tag}} |
+|Shopping Lists| {{page.release_tag}} |
 
 ### 1) Set up widgets
 

@@ -1,7 +1,7 @@
 ---
 title: How to upgrade to Symfony Dependency Injection
 description: This document describes how to upgrade your application to use Symfony's Dependency Injection component.
-last_updated: Nov 5, 2025
+last_updated: Feb 23, 2026
 template: howto-guide-template
 ---
 
@@ -119,15 +119,14 @@ For details about configuring bundles, see [Symfony Bundles](/docs/dg/dev/archit
 To compile the container, you have two options:
 
 - On every request to the application, the Kernel checks if a compiled container already exists. If not, or if the cache is outdated, it generates a new one.
+- The container is also compiled on the first run of any console command.
 - Run the following command to build the cache. The application then immediately uses the freshly compiled container.
 
-For CI and production environment you should run the command manually:
+When you need to compile the container in development mode you can run the command manually:
 
 ```bash
 console container:build
 ```
-
-While in development mode you don't need to manually build the container, as it will be built automatically on demand.
 
 ## Next steps
 

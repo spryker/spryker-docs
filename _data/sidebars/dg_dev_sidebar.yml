@@ -40,8 +40,6 @@ entries:
             nested:
               - title: AI Assistant
                 url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
-              - title: AI Dev Tool
-                url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
       - title: Continuous Integration
         url: /docs/dg/dev/ci.html
       - title: Post-Installation Configuration
@@ -56,10 +54,14 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
           - title: Tool call
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+          - title: Conversation History
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+          - title: Workflow orchestration with state machines
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
-          - title: AI Dev Overview
+          - title: AI Dev SDK Overview
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
@@ -267,8 +269,6 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
       - title: Optimizing Jenkins execution
         url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
-      - title: Reduce Jenkins execution without P&S and data importers refactoring
-        url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
       - title: Multi process run
@@ -1258,6 +1258,8 @@ entries:
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
+    - title: Architecture as Code
+      url: /docs/dg/dev/architecture/architecture-as-code.html
     - title: "Key-value storage: Redis and Valkey"
       url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html
     - title: Module API
@@ -1459,6 +1461,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+      - title: CDN and traffic management integration
+        url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
@@ -1475,6 +1479,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
       - title: Running tests with Robot Framework
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
+      - title: E2E Testing with Cypress
+        url: /docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

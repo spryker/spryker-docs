@@ -122,6 +122,10 @@ The AiDev module provides the following built-in tools that AI assistants can us
 | `getSprykerModules` | Lists all available Spryker modules from project and vendor directories. |
 | `getSprykerModuleMap` | Retrieves detailed module metadata including class paths, method signatures, and extension points. |
 | `searchAlgoliaDocumentation` | Enables keyword-based Spryker documentation search through Algolia integration. |
+| `analyzeCsvFile` | Analyzes CSV file structure without loading full content. Returns headers, row count, and sample rows. Supports optional column analysis with unique values and null counts. |
+| `transformCsv` | Transforms and modifies CSV files with three operation modes: APPEND (add new rows), REPLACE (overwrite target), and UPDATE (modify existing rows in-place). Supports column mappings, row filters, value transformations, default values, and automatic backup creation. |
+| `deleteCsvRows` | Deletes rows from CSV files based on filter criteria with multiple operators (equals, not_equals, in, not_in, contains, not_contains, starts_with, ends_with, empty, not_empty). Includes safety checks and automatic backup creation. |
+| `splitOdsToCsv` | Splits ODS (OpenDocument Spreadsheet) files into separate CSV files per sheet. Skips empty sheets and returns details about created files. Useful for converting Google Sheets exports to Spryker-compatible CSVs. |
 
 AI assistants can automatically discover and use these tools when connected to the MCP server.
 

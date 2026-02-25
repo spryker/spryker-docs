@@ -1,7 +1,7 @@
 ---
 title: Integrate the API Key authorization
 description: Learn about Integration of the API Key authorization mechanism into a Spryker based project.
-last_updated: October 10, 2023
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
@@ -20,8 +20,8 @@ Install the required features:
 
 | NAME                        | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                                              |
 |-----------------------------| ----------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                              |
-| Backend API Application | {{page.version}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
+| Spryker Core                | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                                                                                              |
+| Backend API Application | {{page.release_tag}} | [Integrate Backend API](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ### 1) Install the required modules
 

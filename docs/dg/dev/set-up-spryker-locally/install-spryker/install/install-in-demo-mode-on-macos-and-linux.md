@@ -1,7 +1,7 @@
 ---
 title: Install in Demo mode on MacOS and Linux
 description: Learn how you can install Spryker in Demo mode on MacOS and Linux in a local environment.
-last_updated: Jul 5, 2022
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-macos-and-linux
 originalArticleId: 3b78ae4c-d2a3-4dfa-87e1-7d0c4096ee22
@@ -39,7 +39,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 2. Clone the Demo Shop and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

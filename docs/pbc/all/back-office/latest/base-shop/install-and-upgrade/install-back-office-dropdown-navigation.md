@@ -2,7 +2,7 @@
 title: Install Back Office dropdown navigation
 description: Learn how to install and upgrade the Back Office dropdown navigation in Spryker Cloud Commerce OS
 template: howto-guide-template
-last_updated: Jun 04, 2025
+last_updated: Feb 19, 2026
 ---
 
 This document explains how to enable settable dropdown navigation in the Back Office.
@@ -13,7 +13,7 @@ Install the following features:
 
 | NAME         | REQUIRED   | VERSION          | INTEGRATION  GUIDE                                                                                                                                          |
 |--------------|------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | &#9989;    | 202410.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | &#9989;    | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Update the required modules
 

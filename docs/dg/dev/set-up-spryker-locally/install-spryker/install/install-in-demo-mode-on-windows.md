@@ -1,7 +1,7 @@
 ---
 title: Install in Demo mode on Windows
 description: Learn how you can install and configure Spryker in Demo mode on Windows in a local environment.
-last_updated: Oct 21, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-in-demo-mode-on-windows
 originalArticleId: 57e6858b-6419-47b3-9d61-8b1d6213e4aa
@@ -37,7 +37,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

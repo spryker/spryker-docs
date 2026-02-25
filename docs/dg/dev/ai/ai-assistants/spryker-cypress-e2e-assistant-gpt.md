@@ -13,7 +13,7 @@ Before using AI tools, consult with your legal department.
 {% endinfo_block %}
 
 
-The Spryker Cypress E2E Assistant, powered by GPT technology, is designed to help developers and QA engineers implement, configure, and optimize Cypress for end-to-end (E2E) testing in Spryker projects. The assistant leverages a knowledge base containing the Spryker Cypress Boilerplate repository and other assets to provide accurate, example-driven guidance, ensuring best practices and optimized testing workflows.
+The Spryker Cypress E2E Assistant, powered by GPT technology, is designed to help developers and QA engineers implement, configure, and optimize Cypress for end-to-end (E2E) testing in Spryker projects. The assistant leverages a knowledge base containing the Spryker [Cypress Boilerplate](https://github.com/spryker-projects/cypress-boilerplate) repository and other assets to provide accurate, example-driven guidance, ensuring best practices and optimized testing workflows.
 
 ## Use case
 

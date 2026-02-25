@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 5, 2026
+last_updated: Feb 25, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -29,12 +29,6 @@ API Platform is a framework for building modern APIs based on web standards and 
 - **State management**: Separate providers (read) and processors (write) for clean architecture
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
-
-{% info_block infoBox "CodeBucket support" %}
-
-API Platform supports CodeBuckets for multi-tenancy scenarios. You can create CodeBucket-specific resource variants with specialized properties and validation rules. For details, see [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html).
-
-{% endinfo_block %}
 
 ## Architecture overview
 

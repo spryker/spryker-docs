@@ -9,8 +9,8 @@ Install the required features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core | 202507.0 |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Category Management | 202507.0 | |
+| Spryker Core | {{page.release_tag}} |[Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Category Management | {{page.release_tag}} | |
 
 
 ## 1) Install the required modules

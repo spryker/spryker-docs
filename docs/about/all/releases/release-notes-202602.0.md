@@ -26,6 +26,8 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 - Removes approval bottlenecks and shortens the path from product view to first transaction.
 
 **Documentation:**
+- [Product Attachments overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html)
+- [Install the Product Attachments feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html)
 
 ### Product & Merchant Offer Availability Display <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -164,8 +166,10 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 - Improved governance and auditability through workflow execution traceability.
 
 **Documentation:**
-- [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history)
-- [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration)
+- [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management.html)
+- [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
+- [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html)
+- [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration.html)
 
 ### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

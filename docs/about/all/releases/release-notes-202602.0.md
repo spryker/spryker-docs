@@ -236,6 +236,24 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 **Documentation:**
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
 
+### Messaging and scheduling modernization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+We introduced Symfony Messenger and Symfony Scheduler as modern, flexible alternatives to the current RabbitMQ adapter and scheduling mechanisms in Jenkins.
+
+**Key capabilities**
+- Feature toggle that lets you switch between RabbitMQ and Messenger without breaking comppatibility.
+- Migration path and supporting documentation to help you transition.
+- Messanger becomes the default queue adapter.
+- Scheduler allows you to control the job schedule from within your application.
+
+**Business benefits**
+- Gain greater flexibility in queue transport configuration.
+- Align scheduling with the Symfony ecosystem using a modern approach.
+
+**Documentation:**
+- [Symfony Messenger](/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html)
+- [Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html)
+
 ### Platform & Tooling Upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 We have updated critical application and service components to long-term supported versions to ensure continued stability, performance, and compatibility.
@@ -281,11 +299,11 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 
 This update completes the rollout of RabbitMQ 4.1 across all platform environments.
 
-### Key capabilities:
+**Key capabilities**
 - Upgrade to RabbitMQ 4.1 for improved messaging infrastructure.
 - Platform-wide rollout to ensure consistency across environments.
 
-### Business benefits:
+**Business benefits**
 - Improved stability and performance of asynchronous processing.
 - Enhanced scalability for event-driven workloads.
 - Reduced operational risk through alignment with the latest supported messaging version.

@@ -15,15 +15,15 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Introduces out-of-the-box Product Attachments capability commonly required in industrial B2B purchasing.
 
-#### Key capabilities:
-* **Product attachments** support:
-  * Back Office management of product-related documents (for example, datasheets, certificates, manuals).
-* Provide external links to product attachments via data import.
-  * Display and download/view attachments on the Product Detail Page.
+**Key capabilities**
+- **Product attachments*- support:
+  - Back Office management of product-related documents (for example, datasheets, certificates, manuals).
+- Provide external links to product attachments via data import.
+  - Display and download/view attachments on the Product Detail Page.
 
-#### Business benefits:
-* Supporting buyers' decisions by providing more detailed product information.
-* Removes approval bottlenecks and shortens the path from product view to first transaction.
+**Business benefits**
+- Supporting buyers' decisions by providing more detailed product information.
+- Removes approval bottlenecks and shortens the path from product view to first transaction.
 
 #### Documentation:
 
@@ -31,90 +31,90 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 
 Introduces native, configurable product and merchant offer availability display for B2B Commerce and Marketplace scenarios, reducing customization and increasing buyer confidence at the point of decision.
 
-#### Key capabilities:
-* Native availability display on PDP and Cart
-* Configurable display logic:
-  * Availability indicator only (e.g., Available / Out of Stock)
-  * Exact stock quantity combined with indicator
-  * Configurations option for the sort order of the Merchant Offers within B2B Marketplace
-* Built on existing Spryker stock data structures
+**Key capabilities**
+- Native availability display on PDP and Cart
+- Configurable display logic:
+  - Availability indicator only (e.g., Available / Out of Stock)
+  - Exact stock quantity combined with indicator
+  - Configurations option for the sort order of the Merchant Offers within B2B Marketplace
+- Built on existing Spryker stock data structures
 
-#### Business benefits:
-* Buyers see reliable availability information at the point of decision.
-* Businesses no longer need custom implementations for basic stock visibility.
-* Transparent stock visibility increases direct orders and reduces operational overhead.
+**Business benefits**
+- Buyers see reliable availability information at the point of decision.
+- Businesses no longer need custom implementations for basic stock visibility.
+- Transparent stock visibility increases direct orders and reduces operational overhead.
 
 #### Documentation:
-* [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
-* [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
+- [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
+- [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
 ### Backoffice Configuration Framework <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 
 Introduces a structured, extensible framework to expose business-relevant configuration directly in the Spryker Back Office without code changes or redeployments.
 
-#### Key capabilities:
-* Structured Business Configuration via UI
-  * Developers define configuration options in YAML once.
-  * The framework automatically renders validated Back Office UI pages.
-* Runtime Configuration Without Deployment
-  * Configuration changes are applied at runtime, no code change, no pull request, no deployment required.
-* Support for Out-of-the-Box and Custom Features. The framework works for:
-  * Standard Spryker features
-  * Project-specific customizations
-* Built-in Validation & Guardrails
-  * Business users can only adjust explicitly defined and validated options, preventing misconfiguration.
+**Key capabilities**
+- Structured Business Configuration via UI
+  - Developers define configuration options in YAML once.
+  - The framework automatically renders validated Back Office UI pages.
+- Runtime Configuration Without Deployment
+  - Configuration changes are applied at runtime, no code change, no pull request, no deployment required.
+- Support for Out-of-the-Box and Custom Features. The framework works for:
+  - Standard Spryker features
+  - Project-specific customizations
+- Built-in Validation & Guardrails
+  - Business users can only adjust explicitly defined and validated options, preventing misconfiguration.
 
-#### Business benefits:
-* Faster Time to Change
-  * Business teams adjust approved behaviors instantly, no development sprint required.
-* Lower Total Cost of Change
-  * Reduces repetitive engineering effort for configuration updates and eliminates custom UI builds per feature.
-* Faster Experimentation
-  * Test different configuration setups (e.g., display logic, marketplace sorting) without waiting for release cycles.
+**Business benefits**
+- Faster Time to Change
+  - Business teams adjust approved behaviors instantly, no development sprint required.
+- Lower Total Cost of Change
+  - Reduces repetitive engineering effort for configuration updates and eliminates custom UI builds per feature.
+- Faster Experimentation
+  - Test different configuration setups (e.g., display logic, marketplace sorting) without waiting for release cycles.
 
 ### B2B-only Mode Enablement
 
 Reduces project set up time for customers and partners who want B2B Commerce only, without marketplace complexity.
 
-#### Key capabilities:
-* Added a **guideline and deployment script** to start the unified demo shop in a standardized **B2B Commerce–only mode**, reducing required manual cleanup and configuration.
+**Key capabilities**
+- Added a **guideline and deployment script*- to start the unified demo shop in a standardized **B2B Commerce–only mode**, reducing required manual cleanup and configuration.
 
-#### Business benefits:
-* Faster project initialization for B2B-only projects.
-* Lower implementation cost and reduced efforts.
-* Clearer positioning and smoother kick-off experience.
+**Business benefits**
+- Faster project initialization for B2B-only projects.
+- Lower implementation cost and reduced efforts.
+- Clearer positioning and smoother kick-off experience.
 
 #### Documentation:
-* [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
+- [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
 
 ### New Industrial Homepage Sample Data <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 The new sample data allows you to explore more realistic B2B Commerce journeys and capabilities without needing to import your own data.
 
-#### Key capabilities:
-* Updated homepage content to industrial goods and services across key blocks (banners, featured categories, featured products, top sellers).
+**Key capabilities**
+- Updated homepage content to industrial goods and services across key blocks (banners, featured categories, featured products, top sellers).
 
-#### Business benefits:
-* More realistic demos that reflect real industrial buying journeys.
-* Faster evaluations by showing realistic catalog and merchandising scenarios out of the box.
-* Less manual demo preparation for partners and solution teams.
+**Business benefits**
+- More realistic demos that reflect real industrial buying journeys.
+- Faster evaluations by showing realistic catalog and merchandising scenarios out of the box.
+- Less manual demo preparation for partners and solution teams.
 
 ### ICP UX Improvements for Back Office and Storefront <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
-#### Key capabilities:
-* Redesigned Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
-* Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
-* Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
-* Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
-* Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
+**Key capabilities**
+- Redesigned Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
+- Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
+- Updated navigation to Google Material Icons for visual consistency with the Merchant Portal.
+- Replaced full-width banner of toast notifications with stacked, auto-dismissing toast notifications for lightweight, non-disruptive feedback.
+- Fixed Back Office form validation errors showing untranslated message keys (restored translation rendering).
 
-#### Business benefits:
-* Faster task completion and reduced confusion in Back Office operations.
-* Better first-time experience for B2B customers on key storefront pages.
-* Higher perceived product quality and consistency for enterprise users.
-* Reduced support noise caused by unclear errors and untranslated validation messages.
+**Business benefits**
+- Faster task completion and reduced confusion in Back Office operations.
+- Better first-time experience for B2B customers on key storefront pages.
+- Higher perceived product quality and consistency for enterprise users.
+- Reduced support noise caused by unclear errors and untranslated validation messages.
 
 ## Connected, and AI-Enabled Platform
 
@@ -122,80 +122,80 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 
 Enhances the AI Foundation runtime layer to make AI executions easier to operate at scale, safer to integrate into product code, and more extensible for evolving use cases.
 
-#### Key capabilities:
-* Prompt responses now return **token usage** and **applied AI configuration details** (for example, provider/vendor, model, configuration name, and relevant parameters) for improved transparency and troubleshooting.
-* Added **structured response support** aligned with **Spryker Transfers**, enabling validated, contract-based AI outputs rather than fragile free-text parsing.
-* Introduced a supported **tool call extension mechanism** for AI Foundation, enabling standardized enrichment of tool call inputs/outputs without project-specific integration workarounds.
-* **Persistent AI interaction audit logging**: AI interactions can now be stored in the database, capturing prompt, response, token usage, model and configuration details, timing, and metadata to enable traceability, troubleshooting, and compliance reporting.
+**Key capabilities**
+- Prompt responses now return **token usage*- and **applied AI configuration details*- (for example, provider/vendor, model, configuration name, and relevant parameters) for improved transparency and troubleshooting.
+- Added **structured response support*- aligned with **Spryker Transfers**, enabling validated, contract-based AI outputs rather than fragile free-text parsing.
+- Introduced a supported **tool call extension mechanism*- for AI Foundation, enabling standardized enrichment of tool call inputs/outputs without project-specific integration workarounds.
+- **Persistent AI interaction audit logging**: AI interactions can now be stored in the database, capturing prompt, response, token usage, model and configuration details, timing, and metadata to enable traceability, troubleshooting, and compliance reporting.
 
-#### Business benefits:
-* Improved cost and performance control through token visibility and configuration traceability.
-* Faster debugging and higher reproducibility across environments by knowing exactly which model/config produced an output.
-* More reliable production integrations through typed, validated AI outputs (reduced downstream breakage from phrasing changes).
-* Lower long-term maintenance and support effort via a standardized extension mechanism for evolving AI use cases.
-* Improved governance and compliance readiness through a queryable audit trail of AI interactions (for example, EU AI Act aligned traceability).
-* Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
+**Business benefits**
+- Improved cost and performance control through token visibility and configuration traceability.
+- Faster debugging and higher reproducibility across environments by knowing exactly which model/config produced an output.
+- More reliable production integrations through typed, validated AI outputs (reduced downstream breakage from phrasing changes).
+- Lower long-term maintenance and support effort via a standardized extension mechanism for evolving AI use cases.
+- Improved governance and compliance readiness through a queryable audit trail of AI interactions (for example, EU AI Act aligned traceability).
+- Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
 
 #### Documentation:
-* [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
-* [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
-* [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
+- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
+- [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
+- [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
 
 ### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements
 
 Adds foundational capabilities for advanced agent workflows and improves Backoffice Smart PIM with safer, more reliable AI-assisted product description support.
 
-#### Key capabilities:
-* **Conversation history** support to maintain context across interactions, enabling better multi-step workflows.
-* Introduced a **workflow orchestration layer** for predictable multi-step AI executions, including structured transitions, error handling, and auditability.
-* Backoffice Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create/edit pages:
-  * Actions to **Translate content** and **Improve content**
-  * Review-before-apply workflow to avoid accidental overwrites
-* Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
-  * Validates provider credentials before calling external AI services
-  * Shows user-facing error messages instead of silent empty responses
-  * Logs operator-friendly errors without exposing secrets
-  * UI safeguard disables AI actions with an explanatory tooltip when AI is not configured
+**Key capabilities**
+- **Conversation history*- support to maintain context across interactions, enabling better multi-step workflows.
+- Introduced a **workflow orchestration layer*- for predictable multi-step AI executions, including structured transitions, error handling, and auditability.
+- Backoffice Smart PIM: **AI assistance for product descriptions*- directly within abstract and concrete product create/edit pages:
+  - Actions to **Translate content*- and **Improve content**
+  - Review-before-apply workflow to avoid accidental overwrites
+- Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
+  - Validates provider credentials before calling external AI services
+  - Shows user-facing error messages instead of silent empty responses
+  - Logs operator-friendly errors without exposing secrets
+  - UI safeguard disables AI actions with an explanatory tooltip when AI is not configured
 
-#### Business benefits:
-* Higher adoption and trust in AI features due to clear error states and safer interaction patterns.
-* Faster catalog enrichment through translation and content improvement with less manual effort and fewer review loops.
-* Foundation for advanced B2B agent scenarios through context continuity and orchestrated workflows.
-* Improved governance and auditability through workflow execution traceability.
+**Business benefits**
+- Higher adoption and trust in AI features due to clear error states and safer interaction patterns.
+- Faster catalog enrichment through translation and content improvement with less manual effort and fewer review loops.
+- Foundation for advanced B2B agent scenarios through context continuity and orchestrated workflows.
+- Improved governance and auditability through workflow execution traceability.
 
 #### Documentation:
-* [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history)
-* [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration)
+- [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history)
+- [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration)
 
 ### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Expands MCP tooling to make Spryker context retrieval, module discovery, documentation grounding, and demo data manipulation faster and more reliable for AI-assisted development.
 
-#### Key capabilities:
-* Added `getSprykerModuleMap` MCP tool to return **comprehensive module information**, including:
-  * Paths and core API components (Facade, Client, Service, Config)
-  * Available plugin interfaces and extension points
-* Added `getSprykerModules` MCP tool to return a **simplified flat list** of unique module names for efficient discovery and reduced token usage.
-* Added a **Spryker documentation** MCP tool supporting:
-  * Docs web URL
-  * GitHub tree URL for the markdown source
-  * GitHub API URL for raw markdown retrieval
-* Added **read-only database access** tooling for agents to retrieve required information without manual user intervention (SQL query input).
-* Added MCP tools to accelerate **import/demo data workflows**:
-  * CSV structure analysis (without loading full content)
-  * CSV transform operations (update/replace/append)
-  * Row deletion by filter criteria
-  * ODS-to-CSV export per sheet (supporting Google Sheets → Spryker import pipelines)
+**Key capabilities**
+- Added `getSprykerModuleMap` MCP tool to return **comprehensive module information**, including:
+  - Paths and core API components (Facade, Client, Service, Config)
+  - Available plugin interfaces and extension points
+- Added `getSprykerModules` MCP tool to return a **simplified flat list*- of unique module names for efficient discovery and reduced token usage.
+- Added a **Spryker documentation*- MCP tool supporting:
+  - Docs web URL
+  - GitHub tree URL for the markdown source
+  - GitHub API URL for raw markdown retrieval
+- Added **read-only database access*- tooling for agents to retrieve required information without manual user intervention (SQL query input).
+- Added MCP tools to accelerate **import/demo data workflows**:
+  - CSV structure analysis (without loading full content)
+  - CSV transform operations (update/replace/append)
+  - Row deletion by filter criteria
+  - ODS-to-CSV export per sheet (supporting Google Sheets → Spryker import pipelines)
 
-#### Business benefits:
-* Faster and more accurate AI-assisted development through Spryker-aware context (module APIs, extension points, docs grounding).
-* Reduced onboarding time and fewer integration mistakes for developers and agents.
-* Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
-* Lower token usage and faster tool responses due to simplified module discovery outputs.
+**Business benefits**
+- Faster and more accurate AI-assisted development through Spryker-aware context (module APIs, extension points, docs grounding).
+- Reduced onboarding time and fewer integration mistakes for developers and agents.
+- Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
+- Lower token usage and faster tool responses due to simplified module discovery outputs.
 
 #### Documentation:
-* [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
-* [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
+- [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 ### API Platform improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 This release enhances API Platform capabilities to improve your developer experience and reduce manual configuration overhead.
@@ -281,13 +281,13 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 This update completes the rollout of RabbitMQ 4.1 across all platform environments.
 
 ### Key capabilities:
-* Upgrade to RabbitMQ 4.1 for improved messaging infrastructure.
-* Platform-wide rollout to ensure consistency across environments.
+- Upgrade to RabbitMQ 4.1 for improved messaging infrastructure.
+- Platform-wide rollout to ensure consistency across environments.
 
 ### Business benefits:
-* Improved stability and performance of asynchronous processing.
-* Enhanced scalability for event-driven workloads.
-* Reduced operational risk through alignment with the latest supported messaging version.
+- Improved stability and performance of asynchronous processing.
+- Enhanced scalability for event-driven workloads.
+- Reduced operational risk through alignment with the latest supported messaging version.
 
 **Documentation:**
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)

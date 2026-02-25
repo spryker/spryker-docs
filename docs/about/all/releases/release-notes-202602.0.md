@@ -34,7 +34,7 @@ Introduces native, configurable product and merchant offer availability display 
 **Key capabilities**
 - Native availability display on PDP and Cart
 - Configurable display logic:
-  - Availability indicator only (e.g., Available / Out of Stock)
+  - Availability indicator only (for example Available / Out of Stock)
   - Exact stock quantity combined with indicator
   - Configurations option for the sort order of the Merchant Offers within B2B Marketplace
 - Built on existing Spryker stock data structures
@@ -70,7 +70,7 @@ Introduces a structured, extensible framework to expose business-relevant config
 - Lower Total Cost of Change
   - Reduces repetitive engineering effort for configuration updates and eliminates custom UI builds per feature.
 - Faster Experimentation
-  - Test different configuration setups (e.g., display logic, marketplace sorting) without waiting for release cycles.
+  - Test different configuration setups (for example display logic, marketplace sorting) without waiting for release cycles.
 
 ### B2B-only Mode Enablement
 
@@ -295,7 +295,7 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 **Business benefits**
 - Provides a structured migration path to Single Sign-On (SSO) to help you simplify access management.
 
-###  RabbitMQ 4.1 rollout <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### RabbitMQ 4.1 rollout <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 This update completes the rollout of RabbitMQ 4.1 across all platform environments.
 

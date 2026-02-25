@@ -7,7 +7,7 @@ template: concept-topic-template
 
 Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.
 
-For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
+For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide).
 
 ## B2B Business-Ready Commerce Experiences
 
@@ -45,6 +45,8 @@ Introduces native, configurable product and merchant offer availability display 
 * Transparent stock visibility increases direct orders and reduces operational overhead.
 
 #### Documentation:
+* [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
+* [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
 ### Backoffice Configuration Framework <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 
@@ -70,8 +72,6 @@ Introduces a structured, extensible framework to expose business-relevant config
 * Faster Experimentation
   * Test different configuration setups (e.g., display logic, marketplace sorting) without waiting for release cycles.
 
-#### Documentation:
-
 ### B2B-only Mode Enablement
 
 Reduces project set up time for customers and partners who want B2B Commerce only, without marketplace complexity.
@@ -85,6 +85,7 @@ Reduces project set up time for customers and partners who want B2B Commerce onl
 * Clearer positioning and smoother kick-off experience.
 
 #### Documentation:
+* [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
 
 ### New Industrial Homepage Sample Data <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -97,8 +98,6 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 * More realistic demos that reflect real industrial buying journeys.
 * Faster evaluations by showing realistic catalog and merchandising scenarios out of the box.
 * Less manual demo preparation for partners and solution teams.
-
-#### Documentation:
 
 ## Connected, and AI-Enabled Platform
 
@@ -121,7 +120,9 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 * Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
 
 #### Documentation:
-* [AI Foundation Developer Guide](https://docs.spryker.com/docs/scos/dev/ai-foundation/overview.html)
+* [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
+* [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
+* [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
 
 ### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements
 
@@ -146,6 +147,8 @@ Adds foundational capabilities for advanced agent workflows and improves Backoff
 * Improved governance and auditability through workflow execution traceability.
 
 #### Documentation:
+* [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history)
+* [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration)
 
 ### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -172,6 +175,10 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 * Reduced onboarding time and fewer integration mistakes for developers and agents.
 * Improved productivity for solution teams by standardizing CSV/ODS workflows and reducing failed import cycles.
 * Lower token usage and faster tool responses due to simplified module discovery outputs.
+
+#### Documentation:
+* [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
+* [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 
 ### OMS New Visual User Experience <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

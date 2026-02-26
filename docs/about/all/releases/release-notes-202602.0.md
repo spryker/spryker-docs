@@ -376,7 +376,7 @@ Live, version-controlled architecture documentation using industry standards tha
   - AI-ready format - Markdown and code-based diagrams enable intelligent automation and documentation generation
 
 **Documentation**
-- [ERP Integration Template](/docs/dg/dev/architecture/architecture-as-code.html)
+- [Architecture as a Code](/docs/dg/dev/architecture/architecture-as-code.html)
 
 ### ERP Integration Template
 

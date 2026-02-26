@@ -453,6 +453,14 @@ Replaces the legacy Algolia App model with a code-visible eco-module.
 
 The Cloud Self-Service Portal is now available on a new platform that improves usability and accelerates value delivery.
 
+{% include carousel.html
+   images="
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub1.png||::
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub2.png||::
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub3.png||"
+   id="ux-improvements-carousel"
+%}
+
 **Key capabilities**
 - Spryker has moved the Cloud Self-Service Portal to a new platform to provide a better user experience and faster value delivery.
 - In the new portal, you can access centralized Single Sign-On (SSO) management.

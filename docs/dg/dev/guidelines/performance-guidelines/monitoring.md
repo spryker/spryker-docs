@@ -1,7 +1,7 @@
 ---
 title: Monitoring
 description: This guideline explains the importance of effective monitoring for production e-commerce applications and how to properly configure APM tools.
-last_updated: Nov 28, 2025
+last_updated: Feb 26, 2026
 template: concept-topic-template
 ---
 
@@ -140,6 +140,10 @@ Add the custom `BackendGatewayMonitoringRequestTransactionEventDispatcherPlugin`
 Traces/transactions are grouped by application (Yves, Zed, Glue, etc) and by URL or command name (for example `/place-order` or `oms:check-conditions`, etc). Spryker OpenTelemetry APM has it OOTB, NewRelic has to be configured on a project level.
 
 For NewRelic transactions grouping, see [New Relic transactions grouping by queue names](/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names).
+
+## APM-based troubleshooting
+
+For a step-by-step guide on using New Relic APM to troubleshoot performance issues in Spryker applications, see [APM — New Relic based troubleshooting](/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html).
 
 ## APM access
 

@@ -59,7 +59,7 @@ Architecture documentation about Spryker applications can be found here:
 
 New Relic uses its own concept of "Applications" referred to as **Entities**. These act as logical containers for transactions and traces, and in the Spryker setup they effectively serve as aliases for Spryker application names.
 
-Spryker integrates with New Relic through the community module **spryker-eco/new-relic**: [GitHub - spryker-eco/new-relic](https://github.com/spryker-eco/new-relic) ("eco" stands for "ecosystem"; see also [Eco modules](/docs/dg/dev/backend-development/plugins/plugins.html)).
+Spryker integrates with New Relic through the community module **spryker-eco/new-relic**: [GitHub - spryker-eco/new-relic](https://github.com/spryker-eco/new-relic) ("eco" stands for "ecosystem"; see also [Eco modules](/docs/integrations/eco-modules.html)).
 
 This module provides several useful features out of the box:
 
@@ -100,7 +100,7 @@ With proper integration, as described in the above-mentioned documentation artic
 
 ## 2. Review high-level metrics (1–7 day window)
 
-As described in the [The approach](#the-approach) section, each New Relic Entity (application) has a set of the most important metrics that are shown for each transaction, and some of them for an Entity as a whole.
+As described in [The approach](#the-approach) section, each New Relic Entity (application) has a set of the most important metrics that are shown for each transaction, and some of them for an Entity as a whole.
 
 These metrics let you quickly get an idea of application performance state and assess how good or bad it is, and whether or not deeper investigation or intervention is required.
 
@@ -189,7 +189,7 @@ The next step is to go deeper into actual Spans (the components of a Trace) to u
 
 ### When there are no outliers
 
-Sometimes, when examining a slow example trace, you may notice there are no single outlier—all components (spans) are more or less taking the same time to execute.
+Sometimes, when examining a slow example trace, you may notice there is no single outlier—all components (spans) are more or less taking the same time to execute.
 
 **What it means (most likely):**
 
@@ -237,7 +237,7 @@ After fixing the top bottlenecks:
 
 ## Useful New Relic query
 
-Almost on each page in New Relic, there is a tab at the bottom called "Query your data" which allows to execute New Relic queries (NR query language similar to SQL) against a selected account and application.
+Almost on each page in New Relic, there is a tab at the bottom called "Query your data" which lets you execute New Relic queries (NR query language similar to SQL) against a selected account and application.
 
 ![New Relic Query your data tab](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-query-your-data.png)
 

@@ -240,7 +240,7 @@ curl -s -H "Authorization: Bearer <your-jwt-token>" \
 
 If you add security expressions to resource schemas but forget to register the SecurityBundle, the application throws an error at compile time:
 
-```
+```text
 InvalidArgumentException: The SecurityBundle is not registered but security expressions
 were found in the following resources: [customers, orders]. Register the SecurityBundle
 in config/{Application}/bundles.php.

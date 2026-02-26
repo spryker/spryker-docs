@@ -150,7 +150,7 @@ Always keep the `src/Generated/Api/{ApiType}` path in the list. Removing it disa
 
 ### Directory structure example
 
-```
+```text
 src/
 ├── Generated/
 │   └── Api/

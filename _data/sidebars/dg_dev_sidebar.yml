@@ -1610,6 +1610,8 @@ entries:
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
       nested:
+      - title: Blackfire profiling
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/blackfire-profiling.html
       - title: External calls take a lot of time
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
       - title: External calls—several calls to Zed

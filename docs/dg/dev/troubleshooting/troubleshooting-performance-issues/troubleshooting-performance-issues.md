@@ -45,26 +45,7 @@ To profile with New Relic, do the following:
 
 ### Blackfire
 
-To profile with Blacfire, do the following:
-
-1. Install and configure [Blackfire](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire).
-2. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
-3. Review the profiling:
-- Check the **Recommendations** section. It shows some possible solutions.
-![blacfire-recommendations](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations.png)
-- Check **Callgraph**.
-![blacfire-callgraph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations-callgraph.png)
-The left part shows time (excl., incl., calls), and the right part show the exact graph:
-![callgraph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/callgraph.png)
-
-{% info_block infoBox "Info" %}
-
-Blackfire groups some actions, so after each round of optimization, you will see more details in the report.
-
-{% endinfo_block %}
-
-4. Check other sections, like *SQL*, *Propagation*, etc. Read more about profiling with Blackfire on the [Blackfire official documentation](https://blackfire.io/docs/php/training-resources/book/04-first-profile).
-
+For a guide on profiling with Blackfire, including Callgraph analysis and recommendations, see [Blackfire profiling](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/blackfire-profiling.html).
 
 ## Common performance issues
 

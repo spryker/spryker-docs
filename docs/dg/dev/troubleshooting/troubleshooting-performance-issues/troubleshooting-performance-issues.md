@@ -5,7 +5,7 @@ template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
 
-last_updated: Feb 22, 2023
+last_updated: Feb 26, 2026
 related:
   - title: Performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
@@ -104,6 +104,10 @@ The following articles help you troubleshoot specific performance problems:
 - [Slow Publish and Synchronization](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html) - Improving P&S performance.
 - [Not optimized Composer on the production environment](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html) - Optimizing Composer autoloader.
 - [Technology restrictions](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html) - Understanding technology limitations and their impact on performance.
+
+## APM-based troubleshooting
+
+For a comprehensive guide on using New Relic APM to systematically identify and resolve performance bottlenecks, see [APM — New Relic based troubleshooting](/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html).
 
 ## Next steps
 

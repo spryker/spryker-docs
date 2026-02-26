@@ -1431,6 +1431,8 @@ entries:
       nested:
       - title: Monitoring
         url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: APM — New Relic based troubleshooting
+        url: /docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

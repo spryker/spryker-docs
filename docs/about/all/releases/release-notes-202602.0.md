@@ -19,7 +19,7 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 - **Product attachments** support:
   - Back Office management of product-related documents (for example, datasheets, certificates, manuals).
 - Provide external links to product attachments via data import.
-  - Display and download/view attachments on the Product Detail Page.
+  - Display and download or view attachments on the product details page.
 
 **Business benefits**
 - Supporting buyers' decisions by providing more detailed product information.
@@ -34,11 +34,11 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 Introduces native, configurable product and merchant offer availability display for B2B Commerce and Marketplace scenarios, reducing customization and increasing buyer confidence at the point of decision.
 
 **Key capabilities**
-- Native availability display on PDP and Cart
+- Native availability display on the product details page (PDP) and in the cart
 - Configurable display logic:
   - Availability indicator only (for example Available / Out of Stock)
   - Exact stock quantity combined with indicator
-  - Configurations option for the sort order of the Merchant Offers within B2B Marketplace
+  - Configuration option for the sort order of merchant offers in the B2B Marketplace
 - Built on existing Spryker stock data structures
 
 **Business benefits**
@@ -76,7 +76,7 @@ Introduces a structured, extensible framework to expose business-relevant config
 
 ### B2B-only Mode Enablement
 
-Reduces project set up time for customers and partners who want B2B Commerce only, without marketplace complexity.
+Reduces project setup time for customers and partners who want B2B Commerce only, without Marketplace complexity.
 
 **Key capabilities**
 - Added a **guideline and deployment script** to start the unified demo shop in a standardized **B2B Commerce–only mode**, reducing required manual cleanup and configuration.
@@ -163,7 +163,7 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 **Key capabilities**
 - **Conversation history** support to maintain context across interactions, enabling better multi-step workflows.
 - Introduced a **workflow orchestration layer** for predictable multi-step AI executions, including structured transitions, error handling, and auditability.
-- Backoffice Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create/edit pages:
+- Back Office Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create and edit pages:
   - Actions to **Translate content** and **Improve content**
   - Review-before-apply workflow to avoid accidental overwrites
 - Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
@@ -258,10 +258,10 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 We introduced Symfony Messenger and Symfony Scheduler as modern, flexible alternatives to the current RabbitMQ adapter and scheduling mechanisms in Jenkins.
 
 **Key capabilities**
-- Feature toggle that lets you switch between RabbitMQ and Messenger without breaking comppatibility.
+- Feature toggle that lets you switch between RabbitMQ and Messenger without breaking compatibility.
 - Migration path and supporting documentation to help you transition.
-- Messanger becomes the default queue adapter.
-- Scheduler allows you to control the job schedule from within your application.
+- Messenger becomes the default queue adapter.
+- Scheduler lets you control the job schedule from within your application.
 
 **Business benefits**
 - Gain greater flexibility in queue transport configuration.
@@ -280,7 +280,7 @@ Previously, the `spy_quote_request_version` table stored the complete quote JSON
 **Key capabilities**
 - Removes unnecessary storage of sensitive customer data, such as encrypted passwords, from the `spy_quote_request_version` table.
 - Ensures that customer credentials remain stored exclusively in the `spy_customer` table.
-- Improves secure data handling in quote request versioning flows that the Storefront trigger.
+- Improves secure data handling in quote request versioning flows that the Storefront triggers.
 
 **Business benefits**
 - Reduces the risk of confidential data exposure.
@@ -344,7 +344,7 @@ A set of practical, reusable guidelines to reduce delivery risk, prevent recurri
   - Standardized end-to-end troubleshooting workflow (metrics → transactions → DB queries → traces).
   - Clear mapping of New Relic entities to Spryker applications (Yves, Zed, Glue, Merchant Portal).
   - Practical examples for diagnosing common performance issues.
-- **Performance best practices: common challenges and optimisation strategies**
+- **Performance best practices: common challenges and optimization strategies**
   - Documented top recurring performance pitfalls from real projects (symptoms, root cause patterns, proven optimizations).
   - Guidance on recognizing issues via response time, query patterns, and logs.
 - **How to start a Spryker project**
@@ -362,9 +362,9 @@ A set of practical, reusable guidelines to reduce delivery risk, prevent recurri
 Live, version-controlled architecture documentation using industry standards that scales with your codebase. Enables team collaboration, decision traceability, and onboarding without custom tooling or specialized training.
 
 **Key capabilities**
-- Ready to use architecture templates for living, version-controlled architecture documentation that evolves with code with arc42 (12-sections) and C4 Model (4-level visualization).
-- Traceable architectural decision templates through Solution Designs (RFC-style exploration) and ADRs
-- Diagram as Code - Mermaid & PlantUML with real examples for automated validation, generation, and AI analysis
+- Ready-to-use architecture templates for living, version-controlled architecture documentation that evolves with your code, based on arc42 (12 sections) and the C4 model (4-level visualization).
+- Traceable architectural decision templates through Solution Designs (RFC-style exploration) and ADRs.
+- Diagrams as code using Mermaid and PlantUML, with real examples for automated validation, generation, and AI analysis.
 
 **Business benefits**
 - Faster onboarding - with globally-recognized standards and all needed architecture documentation in one place - your code

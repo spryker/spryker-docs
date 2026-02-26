@@ -104,6 +104,15 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
+{% include carousel.html
+   images="
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Menu Icons.png||::
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Empty_status_page.png||::
+   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Toast_notifications.png||
+   "
+   id="ux-improvements-carousel"
+%}
+
 **Key capabilities**
 - Redesigned the Back Office 404 page with clear recovery actions and consistent styling, removing technical error output for a smoother user experience.
 - Improved empty states for Addresses, Orders, and Returns pages in storefront to guide users with clear next steps and better first-time usability.
@@ -116,6 +125,7 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 - Better first-time experience for B2B customers on key storefront pages.
 - Higher perceived product quality and consistency for enterprise users.
 - Reduced support noise caused by unclear errors and untranslated validation messages.
+
 
 ### PunchOut: cXML Compatibility in Spryker API
 

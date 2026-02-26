@@ -261,6 +261,7 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 
 **Documentation**
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
+- Documentation for the productized version is coming soon.
 
 ### Messaging and scheduling modernization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

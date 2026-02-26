@@ -25,24 +25,24 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 
 | FEATURE                                    | VERSION  | INSTALLATION GUIDE                                                                                                                                                                                                        |
 |--------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                               | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                         |
-| Shipment                                   | 202512.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                                  |
-| Shipment Service Points                    | 202512.0 | [Install the Shipment Service Points feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html)                                                |
-| Click and Collect                          | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                                                                                      |
-| Service Points                             | 202512.0 | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                             |
-| Service Points Product Offer               | 202512.0 | [Install the Service Points Product Offer feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)                                 |
-| Product Offer Service Points               | 202512.0 | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                                         |
-| Product Offer Shipment                     | 202512.0 | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)                                       |
-| Product Offer Service Points Availability  | 202512.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)               |
-| Marketplace Product Offer Cart            | 202512.0 | [Install the Marketplace Product Offer Cart feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html) |
-| Self-Service Portal                        | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                                                                               |
+| Spryker Core                               | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                         |
+| Shipment                                   | {{page.release_tag}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                                  |
+| Shipment Service Points                    | {{page.release_tag}} | [Install the Shipment Service Points feature](/docs/pbc/all/carrier-management/latest/unified-commerce/install-features/install-the-shipment-service-points-feature.html)                                                |
+| Click and Collect                          | {{page.release_tag}} | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                                                                                      |
+| Service Points                             | {{page.release_tag}} | [Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)                                                             |
+| Service Points Product Offer               | {{page.release_tag}} | [Install the Service Points Product Offer feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-product-offer-feature.html)                                 |
+| Product Offer Service Points               | {{page.release_tag}} | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                                         |
+| Product Offer Shipment                     | {{page.release_tag}} | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)                                       |
+| Product Offer Service Points Availability  | {{page.release_tag}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html)               |
+| Marketplace Product Offer Cart            | {{page.release_tag}} | [Install the Marketplace Product Offer Cart feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-cart-feature.html) |
+| Self-Service Portal                        | {{page.release_tag}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                                                                               |
 
 ## Install the required modules
 
 Install the required packages using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

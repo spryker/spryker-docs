@@ -6,6 +6,13 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: Yves
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Enable the Zero State component for empty data
+                url: /docs/pbc/all/yves/install-and-upgrade/enable-zero-state-component-for-empty-data.html
+
       - title: Back Office
         nested:
           - title: Base shop
@@ -14,6 +21,8 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/spryker-core-back-office-feature-overview.html
               - title: Back Office Translations overview
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
+              - title: Backoffice Configuration Framework
+                url: /docs/pbc/all/back-office/base-shop/backoffice-configuration-framework.html
               - title: Install and upgrade
                 nested:
                   - title: Install the Spryker Core Back Office feature
@@ -30,7 +39,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
-
+                  - title: Enable Google Material Icons
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
 
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
@@ -810,6 +820,8 @@ entries:
 
               - title: Tutorials and HowTos
                 nested:
+                  - title: Convert a dropdown with many items to a searchable select combo box in the Back Office
+                    url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/searchable-select-combo-box.html
                   - title: Create a custom content item
                     url: /docs/pbc/all/content-management-system/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
                   - title: Create a visibility condition for CMS Blocks
@@ -888,6 +900,10 @@ entries:
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html
                       - title: Customer Account Management + Promotions & Discounts feature
                         url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature.html
+                      - title: Customer Account Management + Service Points feature
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html
+                      - title: Customer Account Management + Shipment feature
+                        url: /docs/pbc/all/customer-relationship-management/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html
 
                   - title: Install Glue API
                     nested:
@@ -1047,6 +1063,8 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company.csv.html
                   - title: customer.csv
                     url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer.csv.html
+                  - title: Import file details - customer.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
 
           - title: Marketplace
             nested:
@@ -1799,8 +1817,7 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
                   nested:
                     - title: Configure
-
-                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/loggly.html
+                      url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/loggly/configure-loggly.html
                 - title: Proclane
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/proclane.html
                 - title: Data Virtuality
@@ -1843,6 +1860,8 @@ entries:
 
           - title: Marketplace
             nested:
+              - title: Buy Box feature overview
+                url: /docs/pbc/all/offer-management/marketplace/buy-box-feature-overview.html
               - title: Marketplace Product Offer feature overview
                 url: /docs/pbc/all/offer-management/marketplace/marketplace-product-offer-feature-overview.html
               - title: Marketplace Merchant Portal Product Offer Management feature overview
@@ -1851,6 +1870,8 @@ entries:
                 nested:
                   - title: Install features
                     nested:
+                      - title: Buy Box
+                        url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management - Merchant Portal
                         url: /docs/pbc/all/offer-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html
                       - title: Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management - Merchant Portal
@@ -2796,6 +2817,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
                       - title: Product Readiness
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html
 
                   - title: Alternative Products
                     url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/alternative-products-feature-overview.html
@@ -2877,6 +2900,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
                       - title: Product Approval Process
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
+                      - title: Product Attachments
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles
@@ -3790,12 +3815,8 @@ entries:
                   nested:
                     - title: Integrate Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
-                    - title: Configure Algolia
-                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/configure-algolia.html
                     - title: Customize Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
-                    - title: Disconnect Algolia
-                      url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
                     - title: Getting access to Algolia Dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
                     - title: Integrate Algolia Personalization
@@ -4001,10 +4022,11 @@ entries:
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
                       - title: Update services
                         url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
-                  - title: Tutorials and HowTos
-                    nested:
-                      - title: "HowTo: Configure shipment types"
-                        url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
+
+              - title: Tutorials and HowTos
+                nested:
+                  - title: "HowTo: Configure shipment types"
+                    url: /docs/pbc/all/service-point-management/unified-commerce/tutorials-and-howtos/howto-configure-shipment-types.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
@@ -4322,6 +4344,8 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/base-shop/inventory-management-feature-overview.html
               - title: Availability Notification feature overview
                 url: /docs/pbc/all/warehouse-management-system/base-shop/availability-notification-feature-overview.html
+              - title: Product Availability Display feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/product-availability-display-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -4332,6 +4356,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature-dynamic-multistore.html
                       - title: Inventory Management
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                      - title: Product Availability Display
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
                       - title: Inventory Management + Alternative Products
                         url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
                       - title: Availability Notification Glue API

@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202602.0
+        url: /docs/about/all/releases/release-notes-202602.0.html
       - title: Release notes 202512.0
         url: /docs/about/all/releases/release-notes-202512.0.html
       - title: Release notes 202507.0
@@ -59,6 +61,8 @@ entries:
             url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins-20260113.html
         - title: Spryker-PHP
           nested:
+          - title: Release notes for spryker-php 20260206
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260206.html
           - title: Release notes for spryker-php 20260113
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260113.html
           - title: Release notes for Spryker-PHP Image
@@ -140,6 +144,8 @@ entries:
         url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
       - title: Marketplace B2B Suite
         url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
+      - title: Uninstall Marketplace from B2B Demo Marketplace
+        url: /docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace.html
 
     - title: About the docs
       url: /docs/about/all/about-the-docs/about-spryker-docs.html

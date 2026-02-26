@@ -9,7 +9,14 @@ related:
     link: docs/dg/dev/backend-development/composable-ui/entity-configuration-reference.html
   - title: Composable UI best practices
     link: docs/dg/dev/backend-development/composable-ui/composable-ui-best-practices.html
+last_updated: Feb 20, 2026
 ---
+
+{% info_block warningBox "Beta" %}
+
+Composable UI is currently in beta and intended for internal use. This functionality is under active development, and there is no backward compatibility guarantee at this time. We do not recommend using it in production projects until it reaches a stable release.
+
+{% endinfo_block %}
 
 This document provides solutions for common issues when developing Composable UI modules.
 

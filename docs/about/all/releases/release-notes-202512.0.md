@@ -190,7 +190,7 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 - Keep console output integration friendly with quiet execution.
 
 **Documentation:**
-- [AI Dev Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html)
 - [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html)
 
 ## Open Architecture for the upcoming Innovation
@@ -429,6 +429,13 @@ This release introduces a Composer plugin for Demo Shops that splits broad PSR-4
 
 **Module release:**
 - [Composer Autoload Plugin](https://github.com/spryker/composer-autoload-plugin/releases/tag/0.1.0)
+
+**Installation instructions:**
+Inside your container execute the following command, answer `yes` when asked to trust this plugin:
+
+```bash
+composer require spryker/composer-autoload-plugin
+```
 
 ### Improved developer productivity and efficiency <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

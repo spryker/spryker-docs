@@ -2,7 +2,14 @@
 title: Composable UI overview
 description: Learn about Spryker's Composable UI - a configuration-driven approach to building Back Office functionality with zero frontend code for standard CRUD operations.
 template: concept-topic-template
+last_updated: Feb 20, 2026
 ---
+
+{% info_block warningBox "Beta" %}
+
+Composable UI is currently in beta and intended for internal use. This functionality is under active development, and there is no backward compatibility guarantee at this time. We do not recommend using it in production projects until it reaches a stable release.
+
+{% endinfo_block %}
 
 Composable UI is a development layer for the Spryker Back Office that enables configuration-driven UI generation. It provides a zero-frontend approach for standard CRUD operations, letting developers define the Back Office pages through YAML configuration instead of writing custom JavaScript or markup.
 

@@ -196,17 +196,19 @@ Ensure that you update both the `package-lock.json` file and the `node_modules` 
 
         ```ts
            export default {
-                ...,
+                displayName: 'merchant-portal',
                 preset: 'jest-preset-angular',
                 setupFilesAfterEnv: ['<rootDir>/frontend/merchant-portal/test-setup.ts'],
                 roots: ['<rootDir>/src/Pyz'],
+                testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+                moduleFileExtensions: ['ts', 'js', 'html'],
+                passWithNoTests: true,
                 globals: {
                     'ts-jest': {
                         tsconfig: '<rootDir>/frontend/merchant-portal/tsconfig.spec.json',
                         stringifyContentPathRegex: '\\.(html|svg)$',
                     },
                 },
-                ...
             } 
         ```
 
@@ -542,7 +544,7 @@ Ensure that you update both the `package-lock.json` file and the `node_modules` 
     }
    ```
 
-   5. Update the `node` and `npm` versions in all deployment YAML files.
+   5. Update the `node` and `npm` versions in all deploy YAML files.
 
    ```yaml
    ...
@@ -581,3 +583,20 @@ Below is a checklist of component-related breaking changes to review when upgrad
    - **What to do:** Actively migrate all templates to the new Angular control flow syntax (`@if`, `@for`, `@switch`) and avoid mixing it with legacy structural directives (`*ngIf`, `*ngFor`, `*ngSwitch`). New or modified templates must use the new syntax only.
    - **Why:** Legacy structural directives are considered deprecated. Mixing old and new syntaxes within the same module increases cognitive load, complicates reviews, and leads to subtle and hard-to-debug template regressions. Enforcing a single, modern control flow standard improves consistency, readability, and long-term maintainability.
 
+## Reference Pull Request
+
+As a practical example of upgrading Angular to v20 in a real project, you can review the following Pull Request:
+
+<https://github.com/spryker-shop/b2b-demo-marketplace/pull/857>
+
+{% info_block warningBox "Important" %}
+
+This Pull Request contains **additional changes that are not required for the Angular upgrade**, including:
+- Stylelint configuration updates
+- Prettier configuration changes
+- Other formatting and linting-related adjustments
+
+When using this Pull Request as a reference, **do not blindly apply all changes**.  
+Focus only on the Angular-related modifications. The Stylelint and Prettier updates are optional and can be safely ignored for the purpose of upgrading Angular to v20.
+
+{% endinfo_block %}

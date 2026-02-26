@@ -2,7 +2,7 @@
 title: Install the Back Office number formatting
 description: Learn how to install and upgrade the Back Office number formatting in Spryker Cloud Commerce OS
 template: howto-guide-template
-last_updated: Aug 30, 2022
+last_updated: Feb 19, 2026
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
   - /docs/pbc/all/back-office/202311.0/howto-add-support-of-number-formatting-in-the-back-office.html
@@ -17,11 +17,11 @@ To add support of number formatting in the Back Office, integrate the following 
 
 | NAME   | REQUIRED | VERSION   | INTEGRATION  GUIDE    |
 |--|-----------|-------|--------------------------|
-| Spryker Core          |         &#9989;        | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
-| Promotions & Discounts |    | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
-| Product Options |    | 202507.0 | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
-| Product + Order Management|   | 202507.0 | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Shipment   |   | 202507.0 | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
+| Spryker Core          |         &#9989;        | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Promotions & Discounts |    | {{page.release_tag}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
+| Product Options |    | {{page.release_tag}} | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html)                           |
+| Product + Order Management|   | {{page.release_tag}} | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
+| Shipment   |   | {{page.release_tag}} | [Shipment integration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
 
 ## 1) Install the required modules
 

@@ -13,6 +13,7 @@ entries:
       - title: Get access
         url: /docs/ca/devscu/get-access-to-spryker-code-upgrader.html
       - title: Connect your project
+        url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html
         nested:
           - title: Connect a GitHub managed project
             url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html

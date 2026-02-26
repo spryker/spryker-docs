@@ -1,7 +1,7 @@
 ---
 title: API Platform Testing
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Dec 21, 2025
+last_updated: Feb 25, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -418,6 +418,81 @@ public function testGivenNonExistentCustomerWhenDeletingViaDeleteThen404IsReturn
 
     // Assert
     $this->assertResponseStatusCodeSame(404);
+}
+```
+
+### Testing relationships
+
+The relationships feature enables resources to include related resources via the `?include=` query parameter. For details on configuring relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
+
+#### Testing include parameter
+
+```php
+public function testGivenCustomerWithAddressesWhenRequestingWithIncludeThenAddressesAreIncluded(): void
+{
+    // Arrange
+    $customerTransfer = $this->tester->haveCustomer();
+    $this->tester->haveAddress(['customerReference' => $customerTransfer->getCustomerReference()]);
+    $this->tester->haveAddress(['customerReference' => $customerTransfer->getCustomerReference()]);
+
+    // Act
+    $response = static::createClient()->request(
+        'GET',
+        sprintf('/customers/%s?include=addresses', $customerTransfer->getCustomerReference())
+    );
+
+    // Assert
+    $this->assertResponseIsSuccessful();
+    $data = $response->toArray();
+
+    // Assert relationships section exists
+    $this->assertArrayHasKey('relationships', $data['data']);
+    $this->assertArrayHasKey('addresses', $data['data']['relationships']);
+
+    // Assert included section contains addresses
+    $this->assertArrayHasKey('included', $data);
+    $this->assertCount(2, $data['included']);
+}
+```
+
+#### Testing JSON:API structure
+
+```php
+public function testGivenIncludedResourcesWhenRetrievingThenJsonApiStructureIsValid(): void
+{
+    // Arrange
+    $customerTransfer = $this->tester->haveCustomer();
+    $this->tester->haveAddress(['customerReference' => $customerTransfer->getCustomerReference()]);
+
+    // Act
+    $response = static::createClient()->request(
+        'GET',
+        sprintf('/customers/%s?include=addresses', $customerTransfer->getCustomerReference())
+    );
+
+    // Assert
+    $data = $response->toArray();
+
+    // Verify main resource structure
+    $this->assertArrayHasKey('data', $data);
+    $this->assertArrayHasKey('type', $data['data']);
+    $this->assertArrayHasKey('id', $data['data']);
+    $this->assertArrayHasKey('attributes', $data['data']);
+    $this->assertArrayHasKey('relationships', $data['data']);
+
+    // Verify included resources structure
+    foreach ($data['included'] as $includedResource) {
+        $this->assertArrayHasKey('type', $includedResource);
+        $this->assertArrayHasKey('id', $includedResource);
+        $this->assertArrayHasKey('attributes', $includedResource);
+    }
+
+    // Verify relationship linkage
+    $relationshipData = $data['data']['relationships']['addresses']['data'];
+    foreach ($relationshipData as $linkage) {
+        $this->assertArrayHasKey('type', $linkage);
+        $this->assertArrayHasKey('id', $linkage);
+    }
 }
 ```
 

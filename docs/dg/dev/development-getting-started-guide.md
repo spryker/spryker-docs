@@ -1,7 +1,7 @@
 ---
 title: Development getting started guide
 description: This is a step-by-step checklist that you can follow through all the stages of working with Spryker.
-last_updated: July 11, 2022
+last_updated: Feb 20, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
@@ -59,6 +59,7 @@ A couple of plugins for PhpStorm from the community are recommended:
 
 To learn about Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 - [Architecture](/docs/dg/dev/architecture/architecture.html).
+- [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) - document your project architecture using industry standards.
 - [Guidelines](/docs/dg/dev/guidelines/guidelines.html).
 - [Backend development](/docs/dg/dev/backend-development/back-end-development.html)
 - [Frontend development](/docs/dg/dev/frontend-development/latest/frontend-development.html)
@@ -71,13 +72,36 @@ To find relevant documentation for your project, use the [search](/search.html).
 
 ### Configure project namespace
 
-Use your own project namespace
+Use your own project namespace.
 By default, project code is stored in the `src/Pyz` directory.
 You can create your own namespace, such as `src/BestProject`, to keep your code fully separated from the Demo Shop.
 This separation simplifies applying Demo Shop updates.
-![Project Namespace](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/namespace-bestproject.png)
 
-More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html)
+1. Change the namespace in `composer.json`:
+
+```json
+{
+  "autoload": {
+    "psr-4": {
+      "BestProject\\": "src/BestProject/"
+    }
+  }
+}
+```
+
+2. Change the namespace configurations in `config/Shared/config_default.php`:
+
+```php
+$config[KernelConstants::PROJECT_NAMESPACE] = 'BestProject';
+$config[KernelConstants::PROJECT_NAMESPACES] = [
+    'BestProject',
+    'Pyz',
+];
+```
+
+3. Extend FE builder paths to include your own namespace following [Extend builder paths (custom namespaces)](/docs/dg/dev/frontend-development/latest/yves/frontend-builder-for-yves.html#extend-builder-paths-custom-namespaces).
+
+More information about [upgradability](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability).
 
 ### Configure the local environment
 

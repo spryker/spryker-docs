@@ -52,6 +52,22 @@ $config[SymfonyMessengerConstants::QUEUE_DSN] = 'amqp://guest:guest@localhost:56
 ];
 ```
 
+Or you can build it with RabbitMQ connection details:
+
+```php
+foreach ($rabbitConnections as $key => $connection) {
+    ...
+    $config[SymfonyMessengerConstants::QUEUE_DSN] = sprintf(
+        'amqp://%s:%s@%s:%s/%s',
+        $config[RabbitMqEnv::RABBITMQ_CONNECTIONS][$key][RabbitMqEnv::RABBITMQ_USERNAME],
+        $config[RabbitMqEnv::RABBITMQ_CONNECTIONS][$key][RabbitMqEnv::RABBITMQ_PASSWORD],
+        $config[RabbitMqEnv::RABBITMQ_CONNECTIONS][$key][RabbitMqEnv::RABBITMQ_HOST],
+        $config[RabbitMqEnv::RABBITMQ_CONNECTIONS][$key][RabbitMqEnv::RABBITMQ_PORT],
+        $config[RabbitMqEnv::RABBITMQ_CONNECTIONS][$key][RabbitMqEnv::RABBITMQ_VIRTUAL_HOST],
+    );
+}
+```
+
 The protocol in the DSN determines which transport is used. Out of the box, Spryker provides RabbitMQ as the transport for queue processing. You do not need to provide a queue name in the DSN because the application defines it when dispatching messages.
 
 2. Provide a list of queues that can be processed.
@@ -228,6 +244,9 @@ class SchedulerTransportFactoryProviderPlugin extends AbstractPlugin implements 
 
 Wire it in the dependency provider of Symfony Messenger module:
 
+
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerDependencyProvider.php**
+
 ```php
 <?php
 
@@ -268,6 +287,8 @@ class FooBarAsyncTransportProviderPlugin extends AbstractPlugin implements Avail
 ```
 
 Wire it in the dependency provider of Symfony Messenger module:
+
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerDependencyProvider.php**
 
 ```php
 <?php
@@ -330,22 +351,11 @@ And we need to map them to each other and to the transport that will handle them
 ```php
 <?php
 
-/**
- * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
- */
-
-namespace Spryker\Zed\FooBar\Communication\Plugin\SymfonyMessenger;
+namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyMessenger;
 
 use Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\MessageMappingProviderPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
-/**
- * @method \Spryker\Zed\SymfonyScheduler\Business\SymfonySchedulerFacadeInterface getFacade()
- * @method \Spryker\Zed\SymfonyScheduler\Communication\SymfonySchedulerCommunicationFactory getFactory()
- * @method \Spryker\Zed\SymfonyScheduler\Business\SymfonySchedulerBusinessFactory getBusinessFactory()
- * @method \Spryker\Zed\SymfonyScheduler\SymfonySchedulerConfig getConfig()
- */
 class FooBarMappingProviderPlugin extends AbstractPlugin implements MessageMappingProviderPluginInterface
 {
     public function getMessageToHandlerMap(): array

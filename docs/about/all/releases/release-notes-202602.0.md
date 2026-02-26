@@ -122,7 +122,7 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 - Reduced support noise caused by unclear errors and untranslated validation messages.
 
 
-### PunchOut: cXML Compatibility in Spryker API
+### PunchOut: cXML Compatibility in Spryker API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 Enables standardized B2B PunchOut integrations via cXML support.
 
@@ -340,7 +340,7 @@ This release resolves several performance bottlenecks and technical inconsistenc
 - See [Spryker Releases](https://api.release.spryker.com/release-history) or use `composer` to update all packages.
 - [E2E Testing with Cypress](/docs/dg/dev/guidelines/testing-guidelines/cypress-testing.html)
 
-### Architecture Guidelines
+### Architecture Guidelines <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 A set of practical, reusable guidelines to reduce delivery risk, prevent recurring implementation pitfalls, and standardize engineering practices across Spryker projects.
 
@@ -367,7 +367,7 @@ A set of practical, reusable guidelines to reduce delivery risk, prevent recurri
 - [Perfromance best practices](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
 - [Updated how to start Spryker project](/docs/dg/dev/development-getting-started-guide.html)
 
-### Architecture as Code for Spryker projects
+### Architecture as Code for Spryker projects <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Live, version-controlled architecture documentation using industry standards that scales with your codebase. Enables team collaboration, decision traceability, and onboarding without custom tooling or specialized training.
 
@@ -385,7 +385,7 @@ Live, version-controlled architecture documentation using industry standards tha
 **Documentation**
 - [Architecture as a Code](/docs/dg/dev/architecture/architecture-as-code.html)
 
-### ERP Integration Template
+### ERP Integration Template <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Provides a standardized foundation for building ERP integrations without starting from scratch.
 
@@ -407,7 +407,7 @@ Provides a standardized foundation for building ERP integrations without startin
 **Documentation**
 - [ERP Integration Template](/docs/integrations/custom-building-integrations/erp-integration-template.html)
 
-### Payment Integration Template (PSP Template)
+### Payment Integration Template (PSP Template) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Delivers a production-ready template repository for building payment service provider (PSP) integrations.
 
@@ -433,7 +433,7 @@ Delivers a production-ready template repository for building payment service pro
 **Documentation**
 - [PSP Integration Template](/docs/integrations/custom-building-integrations/psp-integration-template.html)
 
-### New Algolia Eco-Module Integration
+### New Algolia Eco-Module Integration <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Replaces the legacy Algolia App model with a code-visible eco-module.
 

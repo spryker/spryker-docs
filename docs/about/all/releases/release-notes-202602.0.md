@@ -484,3 +484,20 @@ This update completes the rollout of RabbitMQ 4.1 across all platform environmen
 **Documentation**
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)
 - [System Requirements](/docs/dg/dev/system-requirements/latest/system-requirements.html)
+
+### Security RSS feed: Docker image updates <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+
+This update integrates Docker image security release notes into the official Spryker security RSS feed, ensuring timely notifications for infrastructure updates.
+
+**Key capabilities**
+- RSS Feed Integration: Docker image security releases are now automatically published to the security RSS stream (/feed-security.xml)
+- Automated Visibility: Real-time visibility of image-related security patches alongside standard application news.
+
+**Business benefits**
+- Improved Security Posture: Ensures DevOps and Security teams are immediately alerted to infrastructure-level vulnerabilities and patches.
+- Streamlined Compliance: Easier tracking and auditing of container image versions through a centralized, standardized feed.
+- Proactive Maintenance: Reduces the window of exposure by eliminating the need to manually check for image updates.
+
+**Documentation**
+- [Spryker Security RSS Feed](/feed-security.xml)
+- [Release notes](/docs/about/all/releases/product-and-code-releases.html)

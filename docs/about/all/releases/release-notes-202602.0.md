@@ -362,6 +362,11 @@ A set of practical, reusable guidelines to reduce delivery risk, prevent recurri
 - Improved project consistency and upgradeability through repeatable architecture and documentation patterns.
 - Better diagnosability and prevention of performance degradation with a shared troubleshooting methodology.
 
+**Documentation**
+- [APM — New Relic based troubleshooting](/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html)
+- [Perfromance best practices](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
+- [Updated how to start Spryker project](/docs/dg/dev/development-getting-started-guide.html)
+
 ### Architecture as Code for Spryker projects
 
 Live, version-controlled architecture documentation using industry standards that scales with your codebase. Enables team collaboration, decision traceability, and onboarding without custom tooling or specialized training.

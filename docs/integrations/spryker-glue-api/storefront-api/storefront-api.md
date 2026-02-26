@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
   - /api/definition-api.htm
   - /docs/scos/dev/glue-api-guides/202204.0/glue-rest-api.html
-  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-rest-api
+  - /docs/dg/dev/glue-api/latest/old-glue-infrastructure/glue-rest-api
   - /docs/dg/dev/glue-api/latest/glue-api.html
   - /docs/dg/dev/glue-api/latest/rest-api/glue-rest-api.html
 ---

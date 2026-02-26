@@ -20,7 +20,7 @@ Before integrating API Platform, ensure you have:
 To integrate API Platform, install the following modules:
 
 ```bash
-composer require spryker/api-platform:"^0.1.0" --update-with-dependencies
+composer require spryker/api-platform:"^0.5.0" --update-with-dependencies
 ```
 
 {% info_block infoBox "Module placeholder" %}
@@ -43,7 +43,6 @@ Register the required bundles in your application's bundle configuration files f
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -51,7 +50,6 @@ use Symfony\Bundle\TwigBundle\TwigBundle;
 return [
     FrameworkBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
 ];
@@ -67,7 +65,6 @@ return [
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -77,7 +74,6 @@ return [
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
 ];
 ```
 
@@ -91,7 +87,6 @@ return [
 declare(strict_types = 1);
 
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Nelmio\CorsBundle\NelmioCorsBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -101,7 +96,6 @@ return [
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
-    NelmioCorsBundle::class => ['all' => true],
 ];
 ```
 
@@ -289,10 +283,11 @@ To verify your integration:
 
    Depending on the environment of the application (development or production), the documentation interface may be enabled or disabled by default. Currently, it is only enabled in development (docker.dev) environments.
    
-   You can enable/disable this interface by configuring the `api_platform.enable_docs` setting in your configuration files.
+   You can enable/disable this interface by configuring the settings in your `api_platform.php` configuration files.
 
 ## Next steps
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Define resource schemas
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas

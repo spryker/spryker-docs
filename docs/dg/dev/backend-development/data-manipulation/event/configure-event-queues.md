@@ -198,6 +198,7 @@ use Spryker\Shared\Event\EventConstants;
 use Spryker\Zed\Event\Communication\Plugin\Queue\EventQueueMessageProcessorPlugin;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
+use Spryker\Zed\RabbitMq\Communication\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin;
 
 class QueueDependencyProvider extends SprykerDependencyProvider
 {
@@ -213,7 +214,16 @@ class QueueDependencyProvider extends SprykerDependencyProvider
             EventConstants::EVENT_QUEUE => new EventQueueMessageProcessorPlugin(),
         ];
     }
-
+    
+    /**
+     * @return array<\Spryker\Zed\RabbitMq\Communication\Plugin\Queue\RabbitMqQueueMetricsReaderPlugin>
+     */
+    protected function getQueueMetricsExpanderPlugins(): array
+    {
+        return [
+            new RabbitMqQueueMetricsReaderPlugin(), // Provides RabbitMQ-specific metrics for the resource-aware queue worker. Applicable only for RabbitMqAdapter.
+        ];
+    }
 }
 ```
 
@@ -221,9 +231,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ```php
 <?php
+
 $config[QueueConstants::QUEUE_SERVER_ID] = (gethostname()) ?: php_uname('n');
-$config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 5000;
-$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 59;
+$config[QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS] = 1000; // default 1000
+$config[QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS] = 60; // 1min
 
 $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
     EventConstants::EVENT_QUEUE => [
@@ -231,4 +242,73 @@ $config[QueueConstants::QUEUE_ADAPTER_CONFIGURATION] = [
         QueueConfig::CONFIG_MAX_WORKER_NUMBER => 1, //Increase number of workers if higher concurrency needed.
     ],
 ];
+
+// Enables processing of queues with resource aware queue worker.
+$config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = (bool)getenv('RESOURCE_AWARE_QUEUE_WORKER_ENABLED') ?? false;
+$config[QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER] = (int)getenv('QUEUE_WORKER_FREE_MEMORY_BUFFER') ?: 750;
+$config[QueueConstants::QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT] = (int)getenv('QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT') ?: 5;
+$config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = 10; // concurrent, for all queues/stores, default 5
+$config[QueueConstants::QUEUE_WORKER_PROCESSES_COMPLETE_TIMEOUT] = 600; // 10 min, default 5 min
 ```
+
+## Metrics and resource-aware worker configuration
+
+This section explains the purpose and recommended tuning for the RabbitMq metrics plugin and the resource-aware queue worker configuration options referenced above.
+
+### RabbitMqQueueMetricsReaderPlugin
+
+- Purpose: Supplies RabbitMQ-specific runtime metrics (for example queue depth: ready/unacknowledged counts, consumer counts, throughput indicators) to the resource-aware queue worker.
+- Applicability: Only relevant when using the `RabbitMqAdapter`. Register the plugin via `getQueueMetricsExpanderPlugins()` in your `QueueDependencyProvider` to enable metric collection.
+- Effect: Enables metric-driven decisions by the resource-aware worker (scale up when queues grow, avoid starting new workers when memory/broker constraints are detected).
+- Recommendation: Enable this plugin if you run RabbitMQ and want automatic adaptation of worker processes to real load for current settings.
+
+### Configuration keys
+
+- `QueueConstants::QUEUE_WORKER_INTERVAL_MILLISECONDS`
+  - Type / unit: integer (milliseconds)
+  - Example/default: 1000 (example in file), default 1000
+  - Purpose: Polling interval for the scheduler loop that evaluates metrics and makes scaling/dispatch decisions.
+  - Recommendation: Use 1000ms for most systems; lower (100–500ms) for latency-sensitive environments with available CPU; increase to reduce scheduler overhead.
+
+- `QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS`
+  - Type / unit: integer (seconds)
+  - Example/default: 60
+  - Purpose: Time window used when evaluating worker saturation and queue backlog thresholds (decides when tasks are considered long-running or when queues are accumulating work).
+  - Recommendation: 60s is a sensible default. Increase for long-running jobs, decrease for short, quick tasks.
+
+- `QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED`
+  - Type / unit: boolean
+  - Example/default: `(bool)getenv('RESOURCE_AWARE_QUEUE_WORKER_ENABLED') ?? false`
+  - Purpose: Toggle resource-aware behavior. When enabled, workers use external metrics and thresholds to decide how many processes to run and when to throttle.
+  - Recommendation: Enable when RabbitMQ + metrics plugin are available and you want dynamic scaling; disable for simple/static setups.
+
+- `QueueConstants::QUEUE_WORKER_FREE_MEMORY_BUFFER`
+  - Type / unit: integer (megabytes)
+  - Example/default: `(int)getenv('QUEUE_WORKER_FREE_MEMORY_BUFFER') ?: 750`
+  - Purpose: Memory safety buffer in MB. Prevents launching new workers if available free memory falls below this value.
+  - Recommendation: Tune based on host RAM and per-worker memory usage. For small hosts (4GB) use 512–1024MB; for larger hosts adjust proportionally.
+
+- `QueueConstants::QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT`
+  - Type / unit: integer (seconds)
+  - Example/default: `(int)getenv('QUEUE_WORKER_MEMORY_READ_PROCESS_TIMEOUT') ?: 5`
+  - Purpose: Interval/timeout used when sampling worker process memory usage for resource-aware decisions.
+  - Recommendation: 5s is a good balance between responsiveness and sampling overhead; increase if sampling is costly.
+
+- `QueueConstants::QUEUE_WORKER_MAX_PROCESSES`
+  - Type / unit: integer (process count)
+  - Example/default: 10 (example in file), default 5
+  - Purpose: Upper limit of concurrent worker processes spawned across all queues/stores.
+  - Recommendation: Start conservatively (for example number of CPU cores) and increase according to CPU, memory and workload characteristics.
+
+- `QueueConstants::QUEUE_WORKER_PROCESSES_COMPLETE_TIMEOUT`
+  - Type / unit: integer (seconds)
+  - Example/default: 600 (10 minutes)
+  - Purpose: Grace period to wait for worker processes to finish current tasks before termination/recycling.
+  - Recommendation: Set to accommodate the longest expected job runtime plus margin; shorter timeouts make recycling more aggressive.
+
+### Quick tuning tips
+
+1. When enabling `RESOURCE_AWARE_QUEUE_WORKER_ENABLED`, also register `RabbitMqQueueMetricsReaderPlugin` so the worker receives broker metrics.
+2. Tune `QUEUE_WORKER_MAX_PROCESSES` against CPU cores and available memory to avoid resource exhaustion.
+3. Use environment variables for per-environment tuning (staging vs production).
+4. Lower `QUEUE_WORKER_INTERVAL_MILLISECONDS` for faster reaction at the cost of higher CPU; increase `QUEUE_WORKER_FREE_MEMORY_BUFFER` to protect systems with limited RAM.

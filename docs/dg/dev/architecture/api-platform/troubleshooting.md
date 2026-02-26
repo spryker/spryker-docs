@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Nov 24, 2025
+last_updated: Dec 21, 2025
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -10,8 +10,12 @@ related:
     link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
-  - title: Schemas and Resource Generation
-    link: docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html
+  - title: Resource Schemas
+    link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Validation Schemas
+    link: docs/dg/dev/architecture/api-platform/validation-schemas.html
+  - title: API Platform Testing
+    link: docs/dg/dev/architecture/api-platform/testing.html
 ---
 
 This document provides solutions to common issues when working with API Platform in Spryker.
@@ -20,7 +24,7 @@ This document provides solutions to common issues when working with API Platform
 
 ### Resources not generating
 
-**Symptom:** Running `docker/sdk cli glue  api:generate` completes but no resources are created.
+**Symptom:** Running `docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate` completes but no resources are created.
 
 **Possible causes:**
 
@@ -58,10 +62,10 @@ This document provides solutions to common issues when working with API Platform
 docker/sdk cli glue  api:debug --list
 
 # Check schema validation
-docker/sdk cli glue  api:generate --validate-only
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
 
 # Force regeneration
-docker/sdk cli glue  api:generate --force
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 ```
 
 ### Schema validation errors
@@ -97,7 +101,7 @@ docker/sdk cli glue  api:generate --force
 2. Use `--validate-only` flag for detailed validation:
 
    ```bash
-   docker/sdk cli glue  api:generate --validate-only
+   docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
    ```
 
 3. Inspect merged schema:
@@ -385,7 +389,7 @@ Check for:
 Preview generation without writing files:
 
 ```bash
-docker/sdk cli glue  api:generate --dry-run
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --dry-run
 ```
 
 ## Getting help
@@ -432,4 +436,6 @@ If you encounter issues not covered here:
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup guide
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating resources
-- [Schemas and Resource Generation](/docs/dg/dev/architecture/api-platform/schemas-and-resource-generation.html) - Schema reference
+- [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource schema reference
+- [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation schema reference
+- [API Platform Testing](/docs/dg/dev/architecture/api-platform/testing.html) - Testing guide

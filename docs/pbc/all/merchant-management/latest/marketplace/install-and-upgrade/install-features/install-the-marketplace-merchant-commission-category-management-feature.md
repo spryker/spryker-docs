@@ -5,4 +5,4 @@ description: Integrate the Category Management + Marketplace Merchant Commission
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202410.0/marketplace/install-the-category-management-marketplace-merchant-commission.md %} <!-- To edit, see /_includes/pbc/all/install-features/202410.0/marketplace/install-the-category-management-marketplace-merchant-commission.md -->
+{% include pbc/all/install-features/latest/marketplace/install-the-category-management-marketplace-merchant-commission.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/marketplace/install-the-category-management-marketplace-merchant-commission.md -->

@@ -377,15 +377,58 @@ image:
 
 ### assets:
 
-Defines the setting of *Assets*.
+Defines the configuration of the *frontend (nginx) container*. Despite its name, this section configures the nginx reverse proxy that handles all incoming HTTP requests to the application, not only static assets. The frontend container does the following:
 
-* `assets: image:`—defines a docker image for a front-end container. If not specified, the default value applies:
-`assets: image: nginx:alpine`.
+- Proxies dynamic requests to application containers (Yves, Zed, Glue, and others) through FastCGI.
+- Serves pre-built static assets (JS, CSS, images, fonts).
+- Applies HTTP response compression to both static files and dynamic responses from applications.
+
+{% info_block warningBox "Compression affects all responses" %}
+
+The `compression` configuration under `assets` controls nginx compression for *all HTTP responses* passing through the frontend container. This includes dynamically generated HTML pages, API responses, and other content served by application containers, not only static assets. When compression is misconfigured or disabled, all responses leave the infrastructure uncompressed, which can significantly increase data transfer volume and response latency, especially when a CDN or traffic management solution like Akamai or Cloudflare is used in front of the application. For more details, see [CDN and traffic management integration](/docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html).
+
+{% endinfo_block %}
+
+* `assets: image:`—defines a Docker image for the frontend container. If not specified, the default value applies:
+`assets: image: nginx:alpine`. To enable Brotli compression support, use an image that includes the Brotli nginx module, for example: `spryker/nginx-brotli:latest`.
 * `assets: mode:`—defines a mode for running a static build section from the install recipe. Possible values are `production` and `development`. This variable is optional with the default value of `development`.
-* `assets: compression:`—defines an engine for static compressions. Possible values are `gzip` and `brotli`.
-* `assets: compression: engine: static:`—defines a comression mode. Allowed values are `only`, `true`, and `false`.
-* `assets: compression: engine: level:`—defines a compression level. Allowed range is from `1` to `9`.
-* `assets: compression: engine: types:`—defines additional MIME types to be compressed.
+* `assets: compression:`—defines compression engines for HTTP responses. Supported engines are `gzip` and `brotli`. You can configure both engines simultaneously. The frontend container negotiates the encoding with the client based on the `Accept-Encoding` request header and responds with the best mutually supported encoding.
+
+**Compression engine parameters:**
+
+* `assets: compression: {engine}: static:`—controls compression behavior for the engine. Allowed values are as follows:
+  * `true` (default)—compresses responses on the fly *and* serves pre-compressed static files (`.gz` or `.br`) when available. This is the recommended setting for most deployments because it ensures both static assets and dynamic responses (HTML, JSON, XML) are compressed.
+  * `only`—serves only pre-compressed static files. On-the-fly compression is disabled. Dynamic responses from applications (HTML pages, API responses) are *not* compressed. Use this only when you want to avoid CPU overhead from on-the-fly compression and you are certain that a downstream service (such as a CDN) handles compression of dynamic content.
+  * `false`—disables the compression engine entirely. No compression is applied for this engine.
+* `assets: compression: {engine}: level:`—defines a compression level. Allowed range is from `1` (fastest, least compression) to `9` (slowest, best compression). The default is `5`.
+* `assets: compression: {engine}: types:`—defines additional MIME types to be compressed beyond the defaults. Default types include `text/html`, `text/plain`, `text/css`, `text/javascript`, `application/javascript`, `application/json`, `application/xml`, `image/svg+xml`, and others.
+
+**Content negotiation:**
+
+When a client (browser, CDN, or other HTTP client) sends a request with an `Accept-Encoding` header, the frontend container selects the best available compression:
+
+1. If the client sends `Accept-Encoding: br` and Brotli is enabled, the response is Brotli-compressed.
+2. If the client sends `Accept-Encoding: gzip` and gzip is enabled, the response is gzip-compressed.
+3. If the client does not send `Accept-Encoding` or requests an unsupported encoding, the response is sent uncompressed.
+
+The frontend container adds `Vary: Accept-Encoding` to compressed responses so that intermediary caches (CDNs, proxies) correctly cache different representations.
+
+**Example configuration:**
+
+```yaml
+assets:
+    image: spryker/nginx-brotli:latest
+    mode: production
+    compression:
+        gzip:
+            static: true
+            level: 5
+        brotli:
+            static: true
+            level: 5
+```
+
+This configuration enables both gzip and Brotli for all responses, including dynamically generated HTML and API responses. With both engines enabled, the frontend container automatically selects the best encoding based on the client's `Accept-Encoding` header.
 
 ***
 

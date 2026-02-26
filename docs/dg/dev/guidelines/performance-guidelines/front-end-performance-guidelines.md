@@ -14,6 +14,8 @@ related:
     link: docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - title: Architecture performance guidelines
     link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+  - title: CDN and traffic management integration
+    link: docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
 ---
 
 This document describes general and Spryker-specific frontend performance guidelines.
@@ -25,6 +27,7 @@ Server configuration:
 - HTTP/2
 - Cookie-free domain for assets: CSS, JS, Fonts, Images.
 - Brotli encoding for textual assets: CSS, JS, SVG. Use gzip as a fallback.
+- Brotli and gzip compression for dynamic responses: HTML pages, JSON API responses, and XML. In typical e-commerce deployments, dynamically generated HTML accounts for the majority of response data volume. Make sure on-the-fly compression is enabled in the deploy file (`compression: {engine}: static: true`). For details, see [CDN and traffic management integration](/docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html).
 - Expires and ETag response headers.
 - Production build mode. To build production, run `npm run yves:production` and `npm run zed:production`.
 

@@ -144,20 +144,17 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 - Prompt responses now return **token usage** and **applied AI configuration details** (for example, provider/vendor, model, configuration name, and relevant parameters) for improved transparency and troubleshooting.
 - Added **structured response support** aligned with **Spryker Transfers**, enabling validated, contract-based AI outputs rather than fragile free-text parsing.
 - Introduced a supported **tool call extension mechanism** for AI Foundation, enabling standardized enrichment of tool call inputs/outputs without project-specific integration workarounds.
-- **Persistent AI interaction audit logging**: AI interactions can now be stored in the database, capturing prompt, response, token usage, model and configuration details, timing, and metadata to enable traceability, troubleshooting, and compliance reporting.
 
 **Business benefits**
 - Improved cost and performance control through token visibility and configuration traceability.
-- Faster debugging and higher reproducibility across environments by knowing exactly which model/config produced an output.
 - More reliable production integrations through typed, validated AI outputs (reduced downstream breakage from phrasing changes).
 - Lower long-term maintenance and support effort via a standardized extension mechanism for evolving AI use cases.
-- Improved governance and compliance readiness through a queryable audit trail of AI interactions (for example, EU AI Act aligned traceability).
-- Faster incident resolution and higher confidence iteration through end to end traceability, session reconstruction, and prompt lineage analysis.
 
 **Documentation**
-- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation)
-- [AI Structured Responses](/docs/pbc/all/ai-foundation/latest/ai-foundation-structured-responses)
-- [AI Tool Support](/docs/pbc/all/ai-foundation/latest/ai-foundation-tool-support)
+- [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
+- [Install the AI Foundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-module.html)
+- [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
+- [Use structured responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html)
 
 ### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements
 
@@ -184,8 +181,8 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 **Documentation**
 - [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management.html)
 - [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
-- [Conversation History](/docs/pbc/all/ai-foundation/latest/ai-foundation-conversation-history.html)
-- [AI Workflow Orchestration](/docs/pbc/all/ai-foundation/latest/ai-foundation-workflow-orchestration.html)
+- [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html)
+- [AI workflow orchestration with state machines](/docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html)
 
 ### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

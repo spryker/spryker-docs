@@ -16,7 +16,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 Introduces out-of-the-box Product Attachments capability commonly required in industrial B2B purchasing.
 
 **Key capabilities**
-- **Product attachments*- support:
+- **Product attachments** support:
   - Back Office management of product-related documents (for example, datasheets, certificates, manuals).
 - Provide external links to product attachments via data import.
   - Display and download/view attachments on the Product Detail Page.
@@ -79,7 +79,7 @@ Introduces a structured, extensible framework to expose business-relevant config
 Reduces project set up time for customers and partners who want B2B Commerce only, without marketplace complexity.
 
 **Key capabilities**
-- Added a **guideline and deployment script*- to start the unified demo shop in a standardized **B2B Commerce–only mode**, reducing required manual cleanup and configuration.
+- Added a **guideline and deployment script** to start the unified demo shop in a standardized **B2B Commerce–only mode**, reducing required manual cleanup and configuration.
 
 **Business benefits**
 - Faster project initialization for B2B-only projects.
@@ -123,7 +123,7 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 Enables standardized B2B PunchOut integrations via cXML support.
 
 **Key capabilities**
-- Support for **cXML (Commerce XML)*- as an additional data exchange format in the Spryker API Platform.
+- Support for **cXML (Commerce XML)** as an additional data exchange format in the Spryker API Platform.
 - Documentation and guidance for implementing PunchOut integrations with external eProcurement systems.
 
 **Business benefits**
@@ -141,9 +141,9 @@ Enables standardized B2B PunchOut integrations via cXML support.
 Enhances the AI Foundation runtime layer to make AI executions easier to operate at scale, safer to integrate into product code, and more extensible for evolving use cases.
 
 **Key capabilities**
-- Prompt responses now return **token usage*- and **applied AI configuration details*- (for example, provider/vendor, model, configuration name, and relevant parameters) for improved transparency and troubleshooting.
-- Added **structured response support*- aligned with **Spryker Transfers**, enabling validated, contract-based AI outputs rather than fragile free-text parsing.
-- Introduced a supported **tool call extension mechanism*- for AI Foundation, enabling standardized enrichment of tool call inputs/outputs without project-specific integration workarounds.
+- Prompt responses now return **token usage** and **applied AI configuration details** (for example, provider/vendor, model, configuration name, and relevant parameters) for improved transparency and troubleshooting.
+- Added **structured response support** aligned with **Spryker Transfers**, enabling validated, contract-based AI outputs rather than fragile free-text parsing.
+- Introduced a supported **tool call extension mechanism** for AI Foundation, enabling standardized enrichment of tool call inputs/outputs without project-specific integration workarounds.
 - **Persistent AI interaction audit logging**: AI interactions can now be stored in the database, capturing prompt, response, token usage, model and configuration details, timing, and metadata to enable traceability, troubleshooting, and compliance reporting.
 
 **Business benefits**
@@ -164,10 +164,10 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 Adds foundational capabilities for advanced agent workflows and improves the Back Office Smart PIM with safer, more reliable AI-assisted product description support.
 
 **Key capabilities**
-- **Conversation history*- support to maintain context across interactions, enabling better multi-step workflows.
-- Introduced a **workflow orchestration layer*- for predictable multi-step AI executions, including structured transitions, error handling, and auditability.
-- Backoffice Smart PIM: **AI assistance for product descriptions*- directly within abstract and concrete product create/edit pages:
-  - Actions to **Translate content*- and **Improve content**
+- **Conversation history** support to maintain context across interactions, enabling better multi-step workflows.
+- Introduced a **workflow orchestration layer** for predictable multi-step AI executions, including structured transitions, error handling, and auditability.
+- Backoffice Smart PIM: **AI assistance for product descriptions** directly within abstract and concrete product create/edit pages:
+  - Actions to **Translate content** and **Improve content**
   - Review-before-apply workflow to avoid accidental overwrites
 - Backoffice Smart PIM: **Clear user feedback when AI is not configured or unavailable**:
   - Validates provider credentials before calling external AI services
@@ -195,12 +195,12 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 - Added `getSprykerModuleMap` MCP tool to return **comprehensive module information**, including:
   - Paths and core API components (Facade, Client, Service, Config)
   - Available plugin interfaces and extension points
-- Added `getSprykerModules` MCP tool to return a **simplified flat list*- of unique module names for efficient discovery and reduced token usage.
-- Added a **Spryker documentation*- MCP tool supporting:
+- Added `getSprykerModules` MCP tool to return a **simplified flat list** of unique module names for efficient discovery and reduced token usage.
+- Added a **Spryker documentation** MCP tool supporting:
   - Docs web URL
   - GitHub tree URL for the markdown source
   - GitHub API URL for raw markdown retrieval
-- Added **read-only database access*- tooling for agents to retrieve required information without manual user intervention (SQL query input).
+- Added **read-only database access** tooling for agents to retrieve required information without manual user intervention (SQL query input).
 - Added MCP tools to accelerate **import/demo data workflows**:
   - CSV structure analysis (without loading full content)
   - CSV transform operations (update/replace/append)

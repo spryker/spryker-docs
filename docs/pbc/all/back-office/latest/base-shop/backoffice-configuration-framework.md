@@ -1,12 +1,12 @@
 ---
-title: Backoffice Configuration Framework
+title: Back Office Configuration Framework
 description: A scalable, standardized way to expose business-relevant configuration options directly in the Backoffice, without requiring code changes or redeployment.
 template: concept-topic-template
 last_updated: Feb 23, 2026
 label: early-access
 ---
 
-The Backoffice Configuration Framework is a structured approach to exposing business-relevant configuration options directly in the Spryker Back Office. Instead of defining configuration in code or YAML files that require redeployment, businesses can manage defined behaviors through structured UI pages. Developers define configuration options once in YAML, and the framework automatically renders them as configurable Back Office interfaces.
+The Back Office Configuration Framework is a structured approach to exposing business-relevant configuration options directly in the Spryker Back Office. Instead of defining configuration in code or YAML files that require redeployment, businesses can manage defined behaviors through structured UI pages. Developers define configuration options once in YAML, and the framework automatically renders them as configurable Back Office interfaces.
 
 ---
 
@@ -19,7 +19,7 @@ Managing configuration in traditional commerce platforms creates friction betwee
 - YAML and code-level configuration is inaccessible to non-technical stakeholders and prone to error.
 - Each configuration change introduces risk, slows down operations, and increases the total cost of change.
 
-The Backoffice Configuration Framework addresses these challenges by creating a clear, controlled boundary between what developers define and what business users can adjust.
+The Back Office Configuration Framework addresses these challenges by creating a clear, controlled boundary between what developers define and what business users can adjust.
 
 ---
 
@@ -91,13 +91,13 @@ Selected business-relevant configuration moves from code level to UI level witho
 
 ### First out of the box implementation: B2B Product Availability Display
 
-The initial release of the Backoffice Configuration Framework ships with a configuration UI for B2B Product Availability Display. This first implementation demonstrates the framework in a real-world use case, allowing business users to configure how product availability information is presented to B2B buyers directly from the Back Office.
+The initial release of the Back Office Configuration Framework ships with a configuration UI for B2B Product Availability Display. This first implementation demonstrates the framework in a real-world use case, allowing business users to configure how product availability information is presented to B2B buyers directly from the Back Office.
 
 ---
 
 ## How it works
 
-The Backoffice Configuration Framework follows a developer-first definition approach with a business-user-facing runtime experience:
+The Back Office Configuration Framework follows a developer-first definition approach with a business-user-facing runtime experience:
 
 1. **Developer defines configuration options in YAML**
    The developer declares the available configuration options, their data types, validation rules, and default values in a structured YAML definition.
@@ -119,18 +119,18 @@ The Backoffice Configuration Framework follows a developer-first definition appr
 
 **Traditional approach:** Configuration values are hardcoded or set in PHP configuration files. Changing a value requires a code change, review, and deployment.
 
-**Backoffice Configuration Framework:** Configuration values are managed in the Back Office UI. Changes take effect immediately, within the boundaries defined by the developer.
+**Back Office Configuration Framework:** Configuration values are managed in the Back Office UI. Changes take effect immediately, within the boundaries defined by the developer.
 
 ### YAML-based configuration
 
 **Traditional approach:** Configuration is declared in YAML files that are part of the codebase. Changing a value requires editing a file, committing the change, and triggering a deployment.
 
-**Backoffice Configuration Framework:** YAML is still used, but only by developers to define what options are available. Business users interact with the resulting UI, not with YAML directly.
+**Back Office Configuration Framework:** YAML is still used, but only by developers to define what options are available. Business users interact with the resulting UI, not with YAML directly.
 
 ### Custom configuration UIs
 
 **Traditional approach:** Each feature that requires business-user configuration needs a custom-built UI, resulting in inconsistent experiences and duplicated development effort.
 
-**Backoffice Configuration Framework:** All configurable features share the same framework-generated UI infrastructure, reducing development effort and ensuring a consistent experience.
+**Back Office Configuration Framework:** All configurable features share the same framework-generated UI infrastructure, reducing development effort and ensuring a consistent experience.
 
 

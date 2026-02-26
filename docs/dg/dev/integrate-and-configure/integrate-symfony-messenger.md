@@ -54,6 +54,8 @@ $config[SymfonyMessengerConstants::QUEUE_DSN] = 'amqp://guest:guest@localhost:56
 
 Or you can build it with RabbitMQ connection details:
 
+***config/Shared/config_default.php***
+
 ```php
 foreach ($rabbitConnections as $key => $connection) {
     ...
@@ -71,6 +73,8 @@ foreach ($rabbitConnections as $key => $connection) {
 The protocol in the DSN determines which transport is used. Out of the box, Spryker provides RabbitMQ as the transport for queue processing. You do not need to provide a queue name in the DSN because the application defines it when dispatching messages.
 
 2. Provide a list of queues that can be processed.
+
+***src/Pyz/Client/SymfonyMessenger/SymfonyMessengerConfig.php***
 
 ```php
 <?php
@@ -105,6 +109,8 @@ To enable the Symfony Messenger queue adapter, register the required plugins:
 
 1. Add the Symfony Messenger transport plugin to `src/Pyz/Zed/Queue/QueueDependencyProvider.php`:
 
+***src/Pyz/Zed/Queue/QueueDependencyProvider.php***
+
 ```php
 <?php
 
@@ -132,6 +138,8 @@ class QueueDependencyProvider extends BaseQueueDependencyProvider
 ```
 
 2. Enable adapter in `config/Shared/config_default.php`:
+
+***config/Shared/config_default.php***
 
 ```php
 <?php
@@ -161,6 +169,8 @@ You can specify transport options per queue or provide a default configuration f
 
 The following example shows the default configuration for all queues.
 Example below is a default configuration for the AMQP transport, which is used for queue processing in Symfony Messenger. You can adjust it according to your needs.
+
+***src/Pyz/Client/SymfonyMessenger/SymfonyMessengerConfig.php***
 
 ```php
 <?php
@@ -378,6 +388,8 @@ class FooBarMappingProviderPlugin extends AbstractPlugin implements MessageMappi
 
 Wire it in the dependency provider of Symfony Messenger module:
 
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerDependencyProvider.php**
+
 ```php
 <?php
 
@@ -401,6 +413,8 @@ To send a message, use `SymfonyMessengerClientInterface::sendMessage()`, which t
 5. Register a consumer command.
 
 Asynchronous messages are processed by a worker that consumes messages from the transport. To run the worker, you need to register a console command that will start it.
+
+***src/Pyz/Zed/Console/ConsoleDependencyProvider.php***
 
 ```php
 <?php

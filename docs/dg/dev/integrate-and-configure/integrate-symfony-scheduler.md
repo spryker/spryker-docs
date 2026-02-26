@@ -95,6 +95,9 @@ You don't need to map messages and handlers separately in the SymfonyMessenger m
 
 namespace Pyz\Zed\FooBar\Communication\Plugin\SymfonyScheduler;
 
+use Symfony\Component\Scheduler\RecurringMessage;
+use Symfony\Component\Scheduler\Schedule;
+
 class FooBarSchedulerHandlerProviderPlugin implements SchedulerHandlerProviderPluginInterface
 {
     public function getHandlers(): array
@@ -121,15 +124,10 @@ class FooBarSchedulerHandlerProviderPlugin implements SchedulerHandlerProviderPl
 
 If you define your jobs with the first option (via config) or with separate plugin, you need to wire plugins in the Symfony Scheduler Dependency Provider by adding the following code:
 
+***src/Pyz/Zed/SymfonyScheduler/SymfonySchedulerDependencyProvider.php***
+
 ```php
 <?php
-
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
-declare(strict_types = 1);
 
 namespace Pyz\Zed\SymfonyScheduler;
 
@@ -228,7 +226,6 @@ Jenkins example:
 ```php
 <?php
 
-declare(strict_types = 1);
 $jobs[] = [
         'name' => 'consume-queue',
         'command' => $logger . '$PHP_BIN vendor/bin/console symfonymessenger:consume queue-worker-start --time-limit=3600',

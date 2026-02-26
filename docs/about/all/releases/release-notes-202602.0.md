@@ -165,7 +165,7 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 - [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
 - [Use structured responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html)
 
-### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements
+### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Adds foundational capabilities for advanced agent workflows and improves the Back Office Smart PIM with safer, more reliable AI-assisted product description support.
 

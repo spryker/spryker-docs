@@ -1,7 +1,7 @@
 ---
 title: Early Access Program
 description: An introduction to the Spryker product and atomic code releases and how Spryker releases new updates and features.
-last_updated: Mar 4, 2024
+last_updated: Feb 26, 2026
 template: concept-topic-template
 ---
 
@@ -15,7 +15,7 @@ You can start participating by using the capability and providing feedback.
 
 ### Provide feedback
 
-You can provide feedback through surveys, interviews, and [Feedback Exchange Portal](https://portal.productboard.com/spryker/2-feedback-exchange).
+You can provide feedback through surveys, interviews, and [Feedback Exchange Portal](https://forms.gle/YoKXZsvdS6z5smcm6).
 
 ### Iteration and improvement
 

@@ -18,8 +18,8 @@ Format:
 {% if include.id %}
 {% assign carousel_id = include.id %}
 {% else %}
-{% increment carousel_counter %}
-{% assign carousel_id = "carousel-" | append: carousel_counter %}
+{% capture carousel_num %}{% increment carousel_counter %}{% endcapture %}
+{% assign carousel_id = "carousel-" | append: carousel_num %}
 {% endif %}
 {% assign carousel_js_id = carousel_id | replace: "-", "_" %}
 {% assign images_array = include.images | split: "::" %}

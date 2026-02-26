@@ -105,11 +105,7 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
 {% include carousel.html
-   images="
-   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Menu Icons.png||::
-   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Empty_status_page.png||::
-   https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Toast_notifications.png||
-   "
+   images="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Menu Icons.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Empty_status_page.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Toast_notifications.png||"
    id="ux-improvements-carousel"
 %}
 

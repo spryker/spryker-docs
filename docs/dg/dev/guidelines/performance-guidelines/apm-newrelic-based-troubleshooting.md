@@ -95,9 +95,11 @@ Minor adjustments are necessary on a project level to get the full benefit from 
 With proper integration, as described in the above-mentioned documentation articles, New Relic "Entities" within an account look like this:
 
 Main New Relic screen after login. Highlighted with red: Account selector and "Services - APM" list of New Relic entities:
+
 ![Main New Relic screen after login with account selector and Services - APM list](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-main-screen.png)
 
 New Relic "APM & Services" list and APM account selector:
+
 ![APM and Services list and APM account selector](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-apm-services-list.png)
 
 ## 2. Review high-level metrics (1–7 day window)
@@ -116,12 +118,15 @@ These metrics let you quickly get an idea of application performance state and a
 | Top 5 slowest DB queries | Databases > Sort by "Most time consuming" | DB bottlenecks. |
 
 New Relic Summary page with Apdex, response time, throughput, and error rate:
+
 ![New Relic Summary page with Apdex, response time, throughput, error rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-summary-page.png)
 
 Transactions page sorted by "Most time consuming" — look for the top 5:
+
 ![Transactions page sorted by Most time consuming](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-transactions-page.png)
 
 Databases tab sorted by "Most time consuming". For the Yves app it is mostly Redis/ValKey, for the Back Office or Gateway — RDS SQL queries:
+
 ![Databases tab sorted by Most time consuming](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-databases-tab.png)
 
 ### Web transactions vs CLI
@@ -133,6 +138,7 @@ Check Web transactions vs Non-web (CLI) separately—CLI includes schedulers, co
 {% endinfo_block %}
 
 The Web/non-web toggle is at the top of almost every page:
+
 ![Web and non-web toggle at the top of almost every page](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-web-nonweb-toggle.png)
 
 ### Thresholds - How to decide what to analyze
@@ -149,6 +155,7 @@ There is no single "golden rule" here in terms of exact numbers, but there is an
     - **"Highest error rate"**—transactions that have the highest % of errors out of all registered requests. Ideally, there should be no errors (uncaught exceptions), but in real life application, there are always some errors happening; the problem is—how many?
 
 The "Sort by" dropdown lets you switch between those sorting modes:
+
 ![The Sort by dropdown to switch between sorting modes](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-sort-by-dropdown.png)
 
 2. **Review the top indicators**—for each transaction (from the candidates defined in the previous step), click on each one and check:
@@ -158,6 +165,7 @@ The "Sort by" dropdown lets you switch between those sorting modes:
     4. Average error rate and [Apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/).
 
 Transaction statistics — high-level performance indicators. The same data can be collected by executing a New Relic query provided in the [Useful New Relic query](#useful-new-relic-query) section below for multiple transactions:
+
 ![Transaction statistics - high-level performance indicators](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-transaction-statistics.png)
 
 3. Now, depending on business needs, priorities, and time available, you may decide which transactions are the most critically affected in terms of poor performance. That approach of reviewing summaries helps to save time on avoiding analyses where it is not necessary and concentrate on problems that are really impactful (if any). You can translate those metrics to more human language as:
@@ -192,9 +200,11 @@ The next step is to go deeper into actual Spans (the components of a Trace) to u
 | High DB ratio, few queries | 50% DB time, <20 SQL queries | Heavy unoptimized queries, lack of "cached" information in the key-value storage. |
 
 Slow external request — in this case, a query to the OpenSearch search engine. The two most popular reasons are heavy custom queries or undersized infrastructure for the workload/traffic:
+
 ![Slow external request trace](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-slow-external-request.png)
 
 Example of quick operations processed in a loop many times. Such a case may also be about DB queries, HTTP requests, or any heavy logic:
+
 ![Example of quick operations processed in a loop many times](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-loop-operations.png)
 
 ### When there are no outliers
@@ -218,6 +228,7 @@ When the error rate is elevated:
 4. Correlate with deploy events (known from AWS, communication with a development team, or other sources).
 
 The error inbox and "Group by" dropdown help you understand what kind of errors happen most often and where:
+
 ![The error inbox and Group by dropdown](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-errors-inbox.png)
 
 **A few useful tips:**
@@ -237,6 +248,7 @@ Clicking on each error title from the "Error Inbox" screen leads to the detailed
 - Occurrences over the period—how often it repeats.
 
 Detailed example of a captured exception with detailed information:
+
 ![Detailed example of the captured exception with detailed information](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-error-detail.png)
 
 ## 5. Iterate (Iceberg analogy)
@@ -250,9 +262,11 @@ After fixing the top bottlenecks:
 ## Useful New Relic query
 
 Almost on each page in New Relic, there is a tab at the bottom called "Query your data" which lets you execute New Relic queries (NR query language similar to SQL) against a selected account and application:
+
 ![New Relic Query your data tab](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-query-your-data.png)
 
 New Relic query and results table. The "Chart type" selector lets you view results as a table, graph, JSON, or CSV:
+
 ![New Relic Query results table with Chart type selector](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting/newrelic-query-results.png)
 
 The following NRQL query provides a full metrics snapshot for transactions:

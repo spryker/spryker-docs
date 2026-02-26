@@ -139,7 +139,7 @@ This steps will replace the existing RabbitMQ adapter with the Symfony Messenger
 
 To provide additional configuration for the Symfony Messenger transport, use the following approach:
 
-#### Provide queue transport configuration.
+#### Provide queue transport configuration
 
 You can specify transport options per queue or provide a default configuration for all queues.
 
@@ -247,7 +247,7 @@ class SymfonyMessengerDependencyProvider extends SprykerSymfonyMessengerDependen
 }
 ```
 
-2. Configure transports for messages.
+2. Configure transports for messages
 
 Transport factories will be used in order to create transport instances that will handle messages. Transport names and their DSN are provided via implementation of `\Spryker\Shared\SymfonyMessengerExtension\Dependency\Plugin\AvailableTransportProviderPluginInterface`.
 

@@ -71,11 +71,17 @@ How New Relic groups incoming traces into Entities depends on the configuration 
 
 **New Relic default configuration (eco module is not present or not configured):**
 
+<div class="width-100">
+
 | NR Entity | Description |
 | --- | --- |
 | {project-name}-{env-name}-newrelic-app | Default Entity name coming from PHP's NR configuration |
 
+</div>
+
 **Spryker/New Relic configuration (eco module installed and wired-in):**
+
+<div class="width-100">
 
 | NR Entity | Description |
 | --- | --- |
@@ -84,6 +90,8 @@ How New Relic groups incoming traces into Entities depends on the configuration 
 | GLUE-{store-name} ({env-name}) | Glue, for example GLUE-US (docker.production) |
 | ZED-{store-name} ({env-name}) | Zed / Backoffice |
 | MERCHANT_PORTAL-{store-name} ({env_name}) | Merchant Portal |
+
+</div>
 
 ### How to integrate New Relic
 

@@ -11,6 +11,9 @@ The Product Attachments feature lets you add external links to product-related r
 
 In the Back Office, the **Images** tab in the product management form is renamed to **Media**. The **Media** tab includes a new **Attachments** section.
 
+![Product Attachments in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-attachments-overview.md/product_attachments_backoffice_pim.png)
+*Back Office: Media tab with the Attachments section for an abstract product*
+
 ### Adding attachments
 
 For each attachment, you can configure the following fields:
@@ -50,9 +53,14 @@ Data import supports bulk creation and assignment of attachments, allowing you t
 
 This is especially useful for large B2B catalogs with extensive technical documentation.
 
-### Display on the Storefront Product Detail Page (PDP)
+## Display on the Storefront Product Detail Page (PDP)
 
-#### Downloads section
+The Downloads section on the PDP presents all applicable attachments to the customer.
+
+![Product Attachments in Storefront PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-attachments-overview.md/product_attachments_storefront_pdp.png)
+*Storefront: Downloads section on the product details page showing attachments*
+
+### Downloads section
 
 If at least one attachment exists, the PDP displays a **Downloads** section. Each attachment includes:
 - A localized label (clickable).

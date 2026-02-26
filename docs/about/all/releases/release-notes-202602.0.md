@@ -15,6 +15,10 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Introduces out-of-the-box Product Attachments capability commonly required in industrial B2B purchasing.
 
+{% include carousel.html
+images="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/product_attachments_storefront_pdp.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/product_attachments_backoffice_pim.png||"
+%}
+
 **Key capabilities**
 - Back Office management of product-related documents (for example, datasheets, certificates, manuals).
 - Provide external links to product attachments via data import.

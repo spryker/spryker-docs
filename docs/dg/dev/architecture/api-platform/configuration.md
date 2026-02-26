@@ -1,7 +1,7 @@
 ---
 title: API Platform Configuration
 description: Configure API Platform in Spryker using PHP-based configuration files with environment-specific settings.
-last_updated: Jan 27, 2026
+last_updated: Feb 26, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -10,6 +10,10 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: Resource Schemas
     link: docs/dg/dev/architecture/api-platform/resource-schemas.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
 ---
 
 Spryker uses [API Platform's configuration options](https://api-platform.com/docs/core/configuration/#symfony-configuration) with Spryker-specific adaptations for PHP-based configuration and environment control.
@@ -80,13 +84,34 @@ $apiPlatform->doctrineMongodbOdm()->enabled(false);
 
 ### Configure resource mapping paths
 
-Specify where generated API resources are located:
+Specify where API Platform discovers resource classes. By default, only the generated resource directory is configured:
 
 ```php
 $apiPlatform->mapping()->paths([
     '%kernel.project_dir%/src/Generated/Api/Backend'
 ]);
 ```
+
+### Add custom resource paths
+
+To use native API Platform resources alongside generated resources, add your directories to the mapping paths:
+
+```php
+$apiPlatform->mapping()->paths([
+    '%kernel.project_dir%/src/Generated/Api/Backend',
+    '%kernel.project_dir%/src/Pyz/Glue/*/Api/Backend/Resource',
+]);
+```
+
+API Platform scans all configured paths for PHP classes with `#[ApiResource]` attributes. Generated and hand-written resources coexist without conflict.
+
+{% info_block warningBox "Keep the generated path" %}
+
+Always keep the `src/Generated/Api/{ApiType}` path in the list. Removing it disables all YAML-generated resources.
+
+{% endinfo_block %}
+
+For a complete guide on creating native resources, see [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html).
 
 ### Set pagination defaults
 
@@ -108,6 +133,10 @@ $apiPlatform->formats('jsonapi', ['mime_types' => ['application/vnd.api+json']])
 $apiPlatform->formats('jsonld', ['mime_types' => ['application/ld+json']]);
 $apiPlatform->formats('xml', ['mime_types' => ['application/xml']]);
 ```
+
+### Configure security
+
+Security is configured in a separate `security.php` file. For details, see [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html).
 
 ## Complete configuration reference
 

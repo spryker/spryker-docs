@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Feb 25, 2026
+last_updated: Feb 26, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -18,6 +18,10 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 ---
 
 This document explains how to define API Platform resource schemas in Spryker.
@@ -702,13 +706,71 @@ For more details on `uriTemplate`, `uriVariables`, and sub-resource patterns, se
 
 ### Security expressions
 
-Add fine-grained security:
+Security expressions protect resources and operations using [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html). They require the SecurityBundle to be configured. See [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) for setup instructions.
+
+Three types of security expressions are supported:
+
+| Expression | Evaluated | Use case |
+|-----------|-----------|----------|
+| `security` | Before the request is processed | Check user roles or authentication status |
+| `securityPostDenormalize` | After the request body is deserialized | Check authorization based on submitted data |
+| `securityPostValidation` | After validation passes | Check authorization based on validated data |
+
+#### Resource-level security
+
+Applies to all operations on the resource:
 
 ```yaml
 resource:
-  security: "is_granted('ROLE_ADMIN')"
+  name: Customers
+  shortName: customers
+  security: "is_granted('ROLE_USER')"
+```
+
+#### Operation-level security
+
+Applies to a specific operation, overriding resource-level security:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers
+
+  operations:
+    - type: Post
+      # No security — public registration
+
+    - type: Get
+      security: "is_granted('ROLE_USER')"
+
+    - type: Patch
+      security: "is_granted('ROLE_USER')"
+```
+
+#### Post-denormalize security
+
+Evaluated after the request body has been deserialized. The `object` variable contains the resource instance:
+
+```yaml
+resource:
+  name: Orders
+  shortName: orders
+  security: "is_granted('ROLE_USER')"
   securityPostDenormalize: "is_granted('EDIT', object)"
 ```
+
+#### Post-validation security
+
+Evaluated after validation has passed:
+
+```yaml
+resource:
+  name: Payments
+  shortName: payments
+  securityPostValidation: "is_granted('PROCESS', object)"
+```
+
+For detailed information about the authentication flow, role mapping, and accessing the authenticated user in providers, see [Security](/docs/dg/dev/architecture/api-platform/security.html).
 
 ## Generation commands
 

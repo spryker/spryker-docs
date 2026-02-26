@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 25, 2026
+last_updated: Feb 26, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -12,6 +12,10 @@ related:
     link: docs/dg/dev/architecture/api-platform/relationships.html
   - title: Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 ---
 
 Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
@@ -463,16 +467,21 @@ Both can coexist in the same application. For further migration guidance, see [H
 For detailed implementation guides:
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup and configuration
+- [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) - Authentication and authorization setup
 - [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue API
 - [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) - Configure API Platform settings
+- [Security](/docs/dg/dev/architecture/api-platform/security.html) - Authentication and authorization
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
+- [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 
 ## Next steps
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
+- [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html)
+- [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html)
 - [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html)
 - [API Platform official documentation](https://api-platform.com/docs/)

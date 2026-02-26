@@ -466,7 +466,7 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 **Business benefits**
 - Provides a structured migration path to Single Sign-On (SSO) to help you simplify access management.
 
-**Portal access  
+**Portal access** 
 - [Customer Portal](https://portal.spryker.com/)
 
 ### RabbitMQ 4.1 rollout <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

@@ -39,8 +39,8 @@ To profile with New Relic, do the following:
 1. [Install and configure New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
 2. Make sure New Relic is properly configured for your environment. For setup and configuration details, see [Monitoring](/docs/dg/dev/guidelines/performance-guidelines/monitoring.html).
 3. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. Note the following:
-  - It takes [some time for New Relic to show the profiling](https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/troubleshooting/not-seeing-data/#:~:text=Solution,to%20automatically%20identify%20common%20issues.).
-  - If the request does not meet the criteria, it does not appear in New Relic. Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
+- It takes [some time for New Relic to show the profiling](https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/troubleshooting/not-seeing-data/#:~:text=Solution,to%20automatically%20identify%20common%20issues.).
+- If the request does not meet the criteria, it does not appear in New Relic. Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
 4. Review the profiling. For a step-by-step guide on navigating New Relic APM, analyzing transactions, traces, databases, and errors, see [APM — New Relic based troubleshooting](/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html).
 
 ### Blackfire

@@ -22,9 +22,9 @@ To profile with Blackfire, do the following:
 
 1. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
 2. Review the profiling:
-  - Check the **Recommendations** section. It shows some possible solutions.
+- Check the **Recommendations** section. It shows some possible solutions.
 ![blacfire-recommendations](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations.png)
-  - Check **Callgraph**.
+- Check **Callgraph**.
 ![blacfire-callgraph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/recommendations-callgraph.png)
 The left part shows time (excl., incl., calls), and the right part shows the exact graph:
 ![callgraph](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/callgraph.png)

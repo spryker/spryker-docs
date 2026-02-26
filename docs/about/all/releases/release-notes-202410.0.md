@@ -9,7 +9,7 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
-## Marketplace Commissions <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Marketplace Commissions {% include badge.html type="feature" %}
 
 Commissions are a key way for operators to monetize their marketplaces. Spryker Commission Engine makes defining, calculating, and managing commissions streamlined and transparent for operators and merchants. The engine integrates seamlessly with third-party ERP systems and payment service providers like Stripe.
 
@@ -32,7 +32,7 @@ Commissions are a key way for operators to monetize their marketplaces. Spryker 
 [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html)
 
 
-## Business intelligence powered by Amazon QuickSight <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Business intelligence powered by Amazon QuickSight {% include badge.html type="feature" %}
 
 Amazon QuickSight is a business analytics tool integrated directly into the Back Office. This feature enables users to visualize data, create customizable dashboards, and perform deep analytics on sales, product performance, customer behaviors, and marketplace KPIs. By leveraging analytics, you can unlock new monetization opportunities and make more informed business decisions.
 
@@ -53,7 +53,7 @@ Amazon QuickSight is a business analytics tool integrated directly into the Back
 
 
 
-## Variants section in the Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Variants section in the Merchant Portal {% include badge.html type="feature" %}
 
 The new Variants section in Merchant Portal streamlines the management of concrete products. You can now view, sort, filter, and bulk-edit concrete products belonging to different abstract products.
 
@@ -72,7 +72,7 @@ The new Variants section in Merchant Portal streamlines the management of concre
 - [Install the Merchant Portal - Marketplace Product feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html)
 
 
-## AI Features <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## AI Features {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
 AI-powered features implemented by connecting to third-party APIs:
 
@@ -102,7 +102,7 @@ The AI features leverage Open AI and are provided under the following conditions
 - [Visual Search powered by OpenAI](/docs/pbc/all/search/latest/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai)
 
 
-## Payone ACP app update <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Payone ACP app update {% include badge.html type="feature" %}
 
 The Payone app now supports more payment methods. On top of credit card and Paypal, we have added the following payment methods:
 
@@ -125,7 +125,7 @@ The Payone app now supports more payment methods. On top of credit card and Payp
 
 
 
-## Stripe ACP app for Marketplace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe ACP app for Marketplace {% include badge.html type="feature" %}
 
 The Stripe ACP app now fully supports the marketplace business model with the following options:
 
@@ -155,7 +155,7 @@ The Stripe ACP app now fully supports the marketplace business model with the fo
 
 
 
-## Spryker GPTs <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Spryker GPTs {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
 Spryker GPTs powered by OpenAI LLMs help developers automate crucial areas of software development: quality and performance. These GPTs increase developer efficiency without sacrificing high standards in QA and performance benchmarking:
 
@@ -182,7 +182,7 @@ These GPTs leverage Open AI and are provided under the following conditions:
 
 [AI Assistants](/docs/dg/dev/ai/ai-assistants/ai-assistants)
 
-## Audit logs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Audit logs {% include badge.html type="feature" %}
 
 Audit logs improve security monitoring and transparency by letting you track all security actions performed by users in all applications: Storefront, Back Office, Merchant Portal, and Glue API. Audit logs cover login related activities, including agent assist impersonation sessions.
 
@@ -206,7 +206,7 @@ Audit logs improve security monitoring and transparency by letting you track all
 
 
 
-## Dynamic Multistore <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Dynamic Multistore {% include badge.html type="feature" %}
 
 Previously in early access, Dynamic Multistore is integrated into the core product in this release.
 
@@ -229,7 +229,7 @@ Dynamic Multistore is an enhanced version of the multi-store capability. This fe
 
 
 
-## Product Comparison <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Product Comparison {% include badge.html type="feature" %}
 
 Product comparison enables customers to easily compare products on mobile and desktop devices. Customers can make more informed purchase decisions by viewing side-by-side comparisons of key product specifications and attributes.
 
@@ -248,7 +248,7 @@ Product comparison enables customers to easily compare products on mobile and de
 
 
 
-## Dynamic Cart <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Dynamic Cart {% include badge.html type="feature" %}
 
 Dynamic cart improves user experience by providing instant, smooth, and uninterrupted feedback to cart changes. Based on AJAX, dynamic cart is updated without a reload for actions like adjusting item quantity, removing an item, or redeeming a discount code. Cart and shopping list widgets in the header also show changes without a page reload.
 
@@ -270,7 +270,7 @@ Dynamic cart improves user experience by providing instant, smooth, and uninterr
 
 
 
-## Discount condition: number of orders <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Discount condition: number of orders {% include badge.html type="improvement" %}
 
 Discounts can now be applied based on the total number of order a customer placed. Using the `customer-order-count` discount condition, you can define how many orders a customer should have placed to qualify for the discount.
 
@@ -291,7 +291,7 @@ Discounts can now be applied based on the total number of order a customer place
 
 
 
-## Category tree improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Category tree improvements {% include badge.html type="improvement" %}
 
 
 This update introduces the following UX improvements to the Category Tree in the Storefront:
@@ -308,7 +308,7 @@ Customers make faster buying decisions based on better navigation and more focus
 
 
 
-## Multi-value product attributes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Multi-value product attributes {% include badge.html type="improvement" %}
 
 
 This feature enables product attributes to have multiple values. For example, a "Charging" attribute could have the following values:
@@ -336,7 +336,7 @@ Such attributes are displayed with all of their values across the platform, incl
 
 
 
-## View Merchant page in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## View Merchant page in the Back Office {% include badge.html type="improvement" %}
 
 Back Office users can now view all relevant merchant information at a glance without entering the edit mode. Merchant details are consolidated into one comprehensive page, streamlining the process of accessing and reviewing merchant data.
 
@@ -348,7 +348,7 @@ Back Office users can now view all relevant merchant information at a glance wit
 - Eliminates accidental changes when viewing merchant information.
 
 
-## Back Office accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Back Office accessibility improvements {% include badge.html type="improvement" %}
 
 Back Office is now more accessible to everyone, enabling all types of users to interact and navigate the system. We have implemented the following accessibility improvements:
 
@@ -359,7 +359,7 @@ Back Office is now more accessible to everyone, enabling all types of users to i
 
 
 
-## Improved management of user roles in the Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Improved management of user roles in the Back Office {% include badge.html type="improvement" %}
 
 Back Office areas and actions are now predefined. When managing access of user roles, you can select areas and actions instead of manually entering them.
 
@@ -370,7 +370,7 @@ Back Office areas and actions are now predefined. When managing access of user r
 
 
 
-## Publish and Synchronize configuration and optimization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Publish and Synchronize configuration and optimization {% include badge.html type="improvement" %}
 
 Publish and Sync (P\&S) process has been improved as follows:
 
@@ -396,7 +396,7 @@ Publish and Sync (P\&S) process has been improved as follows:
 - [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 
 
-## Tech update <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Tech update {% include badge.html type="improvement" %}
 
 The following components have been updated to ensure compatibility with the latest technologies and optimize performance:
 
@@ -420,7 +420,7 @@ The following components have been updated to ensure compatibility with the late
 
 
 
-## Stripe metadata <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Stripe metadata {% include badge.html type="improvement" %}
 
 Spryker projects running the Stripe ACP app can now send custom metadata to Stripe.
 
@@ -431,7 +431,7 @@ Spryker projects running the Stripe ACP app can now send custom metadata to Stri
 
 
 
-## Developer guides <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Developer guides {% include badge.html type="improvement" %}
 
 The following updated and new developer guides have been released:
 
@@ -441,7 +441,7 @@ The following updated and new developer guides have been released:
 
 
 
-## Community Contributions <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Community Contributions {% include badge.html type="improvement" %}
 
 This release introduces performance optimizations, bug fixes, and feature improvements contributed by the external community. These improvements address issues like memory consumption in product publishing, slow page searches, and various bug fixes.
 

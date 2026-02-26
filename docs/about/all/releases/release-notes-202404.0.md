@@ -10,7 +10,7 @@ Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This d
 For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 
-## Stripe app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe app {% include badge.html type="feature" %}
 
 The Stripe app is a new ACP app in the payment category. The initial version of the Stripe app offers a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
 
@@ -33,7 +33,7 @@ Currently, Stripe app supports B2C and B2B modes. We are working on enabling Str
 - [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 
-## Agent Assist in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Agent Assist in Merchant Portal {% include badge.html type="feature" %}
 
 The Agent Assist in Merchant Portal feature enables marketplace operators to impersonate merchant users. The merchant support team, logged in as agents, can act on behalf of merchants within the Merchant Portal.
 
@@ -50,7 +50,7 @@ Excellence in merchant care: Provide your merchants with comprehensive support, 
 [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/latest/marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
-## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Merchant B2B Contracts & Contract Requests {% include badge.html type="feature" %}
 
 In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. The Merchant B2B Contracts & Contract Requests feature introduces the initiation and management of relation requests, making it easier to connect both parties and to create buyer-merchant relations in B2B marketplaces and shops. These relations enable merchants and marketplace operators to specify buyer-specific products, prices, and order thresholds.
 
@@ -69,7 +69,7 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 - [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)
 
 
-## Managed Security Operations Center <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Managed Security Operations Center {% include badge.html type="improvement" %}
 
 The managed Security Operations Center (SOC) provides continuous monitoring, detection, and response to cybersecurity threats in your cloud environments. By leveraging advanced technologies, coupled with the expertise of skilled security professionals, our managed SOC offers comprehensive protection to safeguard your projects.
 
@@ -90,7 +90,7 @@ The managed Security Operations Center (SOC) provides continuous monitoring, det
 Available for cloud environments.
 
 
-## Merchant Portal UI/UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Merchant Portal UI/UX improvements {% include badge.html type="improvement" %}
 
 We introduced the following Merchant Portal improvements:
 - Color adjustments
@@ -104,7 +104,7 @@ The sidebar's state, whether expanded or collapsed, is now saved.
 - Better readability
 - Better navigation
 
-## Vertex improvement <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Vertex improvement {% include badge.html type="improvement" %}
 
 Store owners and marketplace operators can now effortlessly manage refunds and ensure accurate tax reporting through the updated Vertex app. Additionally, users can continue to use the app seamlessly even during periods of downtime.
 
@@ -121,7 +121,7 @@ Store owners and marketplace operators can now effortlessly manage refunds and e
 
 [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
 
-## Spryker Code Upgrader: UX Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Spryker Code Upgrader: UX Improvements {% include badge.html type="improvement" %}
 
 
 Based on your input in the UX research, we restructured the layout of Pull Requests (PRs) created by Spryker Code Upgrader. Out of all supported platforms, you will get the best experience on GitHub. The information is now structured in the order of importance. Each PR is connected to the Release Catalog. If a release requires a manual integration, the catalog provides clear steps to integrate it. Also, PRs contain information on how much of a release is automatically integrated by the Upgrader, as well as potential conflicts or issues.
@@ -142,7 +142,7 @@ Slimmer layout of PRs enables engineers to review and merge upgrade PRs faster.
 [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html)
 
 
-## Data Exchange API <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Data Exchange API {% include badge.html type="improvement" %}
 
 Traditionally, developing APIs required technical expertise and time-consuming coding processes. We removed complexities from the infrastructure of our innovative dynamic Data Exchange API, making creating APIs effortless. With this tool, you can quickly build, customize, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.
 
@@ -165,7 +165,7 @@ In this release, we added the support of CRUD for combined entities allowing to 
 - [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
-## Symfony 6.4 LTS support <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Symfony 6.4 LTS support {% include badge.html type="improvement" %}
 
 Spryker now supports Symfony 6.4, a long-term support (LTS) version. LTS versions of frameworks provide sustained reliability and security for your applications. Symfony 6.4 provides various enhancements, such as a new Profiler feature, developer experience improvements, including better handling of server params and enhanced HTTP client functionality.
 
@@ -190,7 +190,7 @@ The latest Symfony framework LTS version provides enhanced stability, security, 
 Upgrade spryker/symfony modules to the latest version by following [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html) or running [Spryker Code Upgrader](https://docs.spryker.com/docs/ca/devscu/spryker-code-upgrader.html).
 
 
-## Improved Search in Spryker Docs <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Improved Search in Spryker Docs {% include badge.html type="improvement" %}
 
 We implemented a new Algolia-based search on the Spryker Docs portal. Key highlights of the new search:
 

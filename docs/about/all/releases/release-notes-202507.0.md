@@ -11,7 +11,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 
 
-## Self-Service Portal <span class="inline-img">![new-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/new-product-label.png)</span>
+## Self-Service Portal {% include badge.html type="new-product" %}
 
 Self-Service Portal is a comprehensive digital solution that empowers customers to manage their own experience. It unifies traditional commerce and after-sales interactions within a single, intuitive self-service platform.
 
@@ -43,7 +43,7 @@ Self-Service Portal is a comprehensive digital solution that empowers customers 
 
 
 
-## Order Amendment <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Order Amendment {% include badge.html type="feature" %}
 
 The Order Amendment feature enhances the shopping experience by enabling customers to add, update, and remove items from existing orders after placement. This brings flexibility and control to the post-purchase process:
 - Flexible price recalculation: Choose between retaining original prices, applying current catalog prices, or defining a custom strategy to suit your business logic.
@@ -77,7 +77,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 
 
 
-## Bulk product import in Merchant Portal <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Bulk product import in Merchant Portal {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
 The Product Import feature in the Merchant Portal enables you to bulk upload products using a universal CSV format, streamlining workflows, reducing manual effort, and accelerating time-to-market.
 
@@ -105,7 +105,7 @@ The Product Import feature in the Merchant Portal enables you to bulk upload pro
 
 
 
-## Marketplace Discounts <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Marketplace Discounts {% include badge.html type="improvement" %}
 
 The Marketplace Discounts enhancements introduce advanced targeting capabilities for Marketplace Operators, enabling promotions specific to individual merchants or product offers:
 
@@ -130,7 +130,7 @@ The Marketplace Discounts enhancements introduce advanced targeting capabilities
 
 
 
-## Discount conditions for customer-related criteria <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Discount conditions for customer-related criteria {% include badge.html type="improvement" %}
 
 The latest discount condition enhancements introduce more precise control over customer-related promotion scenarios, enabling restrictions and targeting directly based on customer identity or behavior:
 
@@ -153,7 +153,7 @@ The latest discount condition enhancements introduce more precise control over c
 [Install the Customer Account Management + Promotions & Discounts feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-promotions-and-discounts-feature)
 
 
-## Back Office UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Back Office UX improvements {% include badge.html type="improvement" %}
 
 These updates make it easier to work with large data sets in the Back Office, especially across key areas like orders, products, and marketplace operations:
 
@@ -174,7 +174,7 @@ These updates make it easier to work with large data sets in the Back Office, es
 
 
 
-## Spryker Monitoring Integration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Spryker Monitoring Integration {% include badge.html type="feature" %}
 
 Spryker Monitoring Integration integrates Spryker's monitoring data into your APM platform based on the Spryker's implementation of the OpenTelemetry framework. It enables you to unite Spryker's insights with your monitoring ecosystem, ensuring full visibility across eCommerce workflows, faster issue detection, and alignment with your monitoring best practices.
 
@@ -193,7 +193,7 @@ Spryker Monitoring Integration integrates Spryker's monitoring data into your AP
 
 
 
-## Configurable data exporter <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Configurable data exporter {% include badge.html type="feature" %}
 
 Configurable Data Exporter provides structured access to your operational data, built for flexibility, performance, and security. Export curated datasets on a scheduled basis to your own cloud storage without affecting production systems. Secure RDS-to-S3 transfers enable integration into your analytics stack, data lake, or ETL pipeline — whether for BI, ML, or advanced audits — all without added operational risk.
 
@@ -211,7 +211,7 @@ Configurable Data Exporter provides structured access to your operational data, 
 [Set up data export to S3](/docs/ca/dev/set-up-data-export-to-s3.html)
 
 
-## Algolia as a global search <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Algolia as a global search {% include badge.html type="improvement" %}
 
 The Algolia ACP app is expanded to support search through content within CMS pages and PDF documents, on top of existing product catalog search. This upgrade significantly enriches the search experience, delivering more relevant and complete results.
 
@@ -232,7 +232,7 @@ The Algolia ACP app is expanded to support search through content within CMS pag
 
 
 
-## Vertex Tax ID validator <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Vertex Tax ID validator {% include badge.html type="feature" %}
 
 Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App. This release features direct, out-of-the-box integration of the Vertex Validator API into checkout. With Vertex Validator and Vertex ACP App, you can validate business tax IDs for syntax, validity, and location, reducing operational costs from incorrect invoices and ensuring accurate application of VAT.
 
@@ -254,7 +254,7 @@ Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App
 
 
 
-## Multi-Factor Authentication <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Multi-Factor Authentication {% include badge.html type="improvement" %}
 
 Multi-Factor Authentication (MFA) adds an additional layer of protection by requiring users to verify their identity through multiple methods, such as a password and a one-time code sent to their email.
 
@@ -285,7 +285,7 @@ Improves the overall security of your project, as well as the security of each c
 
 
 
-## SEO Sitemap <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## SEO Sitemap {% include badge.html type="improvement" %}
 
 The Sitemap feature generates XML sitemaps that improve SEO by helping search engines efficiently index your Storefront content. Generated sitemaps include products, categories, product sets, CMS pages, and merchant pages by default. You can configure other entities to be included on the project level.
 
@@ -305,7 +305,7 @@ Improved SEO
 
 
 
-## Add to cart from images (AI-powered) <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Add to cart from images (AI-powered) {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
 This feature enables customers to add products to cart by uploading images on the Quick Order page.
 
@@ -333,7 +333,7 @@ Customers need own OpenAI accounts to use this feature.
 
 
 
-## Accessibility improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Accessibility improvements {% include badge.html type="improvement" %}
 
 
 Accessibility ensures inclusive experiences for all users in Back Office and B2B Storefront, enhancing usability and helping customers in compliance with the 2025 EU Accessibility Act:
@@ -363,7 +363,7 @@ B2B Strorefront has a 100% Lighthouse score in Google Chrome:
 
 
 
-## Performance optimizations in cart and checkout <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Performance optimizations in cart and checkout {% include badge.html type="improvement" %}
 
 This release delivers major performance improvements to checkout, order placement, and large cart processing—ensuring a smooth and responsive experience during peak traffic and high order volumes:
 
@@ -385,7 +385,7 @@ Smooth, efficient processing of large carts and orders, enhancing the checkout e
 
 
 
-## Valkey key-value store <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Valkey key-value store {% include badge.html type="improvement" %}
 
 Spryker is migrating its cache solution from Redis to Valkey, a high-performance, open-source in-memory data store, supported by AWS ElasticCache. This integration significantly enhances data processing capabilities, offering improved speed, scalability, and security.
 
@@ -403,7 +403,7 @@ Spryker is migrating its cache solution from Redis to Valkey, a high-performance
 
 
 
-## Cache performance improvement: Data Compression <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Cache performance improvement: Data Compression {% include badge.html type="feature" %}
 
 Spryker is introducing seamless and efficient data compression in Valkey key-value store to enhance overall system performance and reduce latency. By minimizing the size of stored and transferred data without compromising speed, this feature optimizes data-intensive operations, leading to faster access times and more efficient use of network and storage resources. With intelligent compression levels tailored for performance, Spryker enables businesses to scale more effectively while maintaining rapid user experiences.
 
@@ -428,7 +428,7 @@ Spryker is introducing seamless and efficient data compression in Valkey key-val
 
 
 
-## Cloud self-service: Storage and access management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Cloud self-service: Storage and access management {% include badge.html type="feature" %}
 
 Cloud Self Service is a new automated system for handling common customer support requests. This feature leverages internal tooling to process requests for IAM user creation, VPN and SSH access, and S3 bucket creation automatically, streamlining the support process and empowering customers with faster resolutions.
 
@@ -444,7 +444,7 @@ Cloud Self Service is a new automated system for handling common customer suppor
 
 
 
-## Cloud security improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Cloud security improvements {% include badge.html type="improvement" %}
 
 This release introduces both internal and customer-facing enhancements, including Multi-Factor Authentication (MFA) and improved password policy, now enabled by default for all new and existing cloud users. All IAM users are now required to activate MFA and use more complex passwords by default. These measures significantly reduce the risk of credential exposure and prevent unauthorized access to your cloud environments.
 
@@ -463,7 +463,7 @@ This release introduces both internal and customer-facing enhancements, includin
 
 
 
-## Stable Workers <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+## Stable Workers {% include badge.html type="early-access" %}
 
 
 Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S now uses a new Stable Worker Architecture.
@@ -490,7 +490,7 @@ The new architecture provides isolated worker contexts, automatic retries, and b
 
 
 
-## Support for GitHub Enterprise <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Support for GitHub Enterprise {% include badge.html type="feature" %}
 
 Spryker now offers native integration for GitHub Enterprise Server (GHES). This enhancement lets you directly connect your self-hosted GHES repositories with the Spryker platform, eliminating the previous requirement to mirror repositories.
 
@@ -504,7 +504,7 @@ Spryker now offers native integration for GitHub Enterprise Server (GHES). This 
 
 
 
-## Improved autoscaling <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## Improved autoscaling {% include badge.html type="improvement" %}
 
 Spryker Cloud Autoscaling has been enhanced with a faster reaction to traffic spikes. The measured improvement is up to five times faster to scale out from the time an event is observed. Aggressive scale out and scale-in better address temporary traffic surges–for example, during sales events–and improve the reliability of your shop.
 

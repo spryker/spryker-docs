@@ -1,7 +1,7 @@
 ---
 title: Early Access Program
 description: An introduction to the Spryker product and atomic code releases and how Spryker releases new updates and features.
-last_updated: Mar 4, 2024
+last_updated: Feb 26, 2026
 template: concept-topic-template
 ---
 

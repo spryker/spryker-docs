@@ -37,38 +37,11 @@ The ones that we prefer are [New Relic](https://docs.newrelic.com/docs/new-relic
 To profile with New Relic, do the following:
 
 1. [Install and configure New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
-
-2. Check if the necessary profiling exists. If it does not exist, reproduce the problem in the necessary environment or request it to be reproduced by the customer.
-Note the following:
-- It takes [some time for the New Relic to show the profiling](https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/troubleshooting/not-seeing-data/#:~:text=Solution,to%20automatically%20identify%20common%20issues.).
-- If the request is not meeting the criteria, it will not appear in New Relic.
-Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
-
-3. Review the profiling.
-For example, if the problem is with "place-order" with 25 product items, do the following:
-
-1. Check if you have profiling for the necessary action in New Relic:
-
-1. Go to **Transactions**.
-  ![transactions](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions.png)
-2. Select the necessary time period on the top right side.
-  ![transactions-time](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transaction-time.png)
-3. Select the necessary transaction type—for example, **Web**.
-  ![trasaction-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transaction-type.png)
-4. In **Sort By**, select how you want to sort the items—for example, **Most time consuming**.
-  ![transaction-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-filter.png)
-5. Check if you have the necessary action "place-order" in the resulting list. Click **See transaction table** if needed.
-  ![transaction-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-list.png)
-
-{% info_block infoBox "Issues with transaction grouping" %}
-
-If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
-
-{% endinfo_block %}
-
-2. Repeat for other sections, like *Databases*, *External services*, etc.
-
-For more details, see the [official New Relic website](https://newrelic.com/blog/how-to-relic/a-quick-guide-to-getting-started-with-new-relic).
+2. Make sure New Relic is properly configured for your environment. For setup and configuration details, see [Monitoring](/docs/dg/dev/guidelines/performance-guidelines/monitoring.html).
+3. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. Note the following:
+  - It takes [some time for New Relic to show the profiling](https://docs.newrelic.com/docs/new-relic-solutions/solve-common-issues/troubleshooting/not-seeing-data/#:~:text=Solution,to%20automatically%20identify%20common%20issues.).
+  - If the request does not meet the criteria, it does not appear in New Relic. Read more on the [official New Relic website](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/troubleshooting-not-seeing-transaction-traces/).
+4. Review the profiling. For a step-by-step guide on navigating New Relic APM, analyzing transactions, traces, databases, and errors, see [APM — New Relic based troubleshooting](/docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html).
 
 ### Blackfire
 

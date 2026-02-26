@@ -106,7 +106,6 @@ Improves clarity, consistency, and perceived quality across core pages and navig
 
 {% include carousel.html
    images="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Menu Icons.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Empty_status_page.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/Toast_notifications.png||"
-   id="ux-improvements-carousel"
 %}
 
 **Key capabilities**
@@ -458,7 +457,6 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
    https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub1.png||::
    https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub2.png||::
    https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/cloud-hub3.png||"
-   id="ux-improvements-carousel"
 %}
 
 **Key capabilities**

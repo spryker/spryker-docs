@@ -6,7 +6,6 @@ Usage:
    url2|alt2|caption2::
    url3|alt3|caption3::
    "
-   id="unique-carousel-id"
 %}
 
 Format:
@@ -14,8 +13,14 @@ Format:
 - Use | to separate url, alt, and caption within each image
 - Leave alt or caption empty: url1||::url2||::url3||
 - Each image URL can be on its own line for readability
+- ID is auto-generated, no need to specify it
 {% endcomment %}
-{% assign carousel_id = include.id | default: "carousel" %}
+{% if include.id %}
+{% assign carousel_id = include.id %}
+{% else %}
+{% increment carousel_counter %}
+{% assign carousel_id = "carousel-" | append: carousel_counter %}
+{% endif %}
 {% assign carousel_js_id = carousel_id | replace: "-", "_" %}
 {% assign images_array = include.images | split: "::" %}
 <div class="docs-carousel" id="{{ carousel_id }}" style="position: relative; max-width: 800px; margin: 2rem auto;">

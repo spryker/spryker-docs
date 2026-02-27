@@ -1,7 +1,7 @@
 ---
 title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
-last_updated: Nov 7, 2023
+last_updated: Feb 26, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html

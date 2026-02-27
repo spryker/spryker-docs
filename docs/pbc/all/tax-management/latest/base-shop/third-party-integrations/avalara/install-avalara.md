@@ -1,7 +1,7 @@
 ---
 title: Install Avalara
 description: Install Sprykers third party Avalara to automatically calculate taxes within your Spryker based projects.
-last_updated: Jun 29, 2023
+last_updated: Feb 27, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration
 originalArticleId: 3531e0eb-65ae-4c97-8703-78ceaae45c2a
@@ -24,12 +24,12 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-|Cart | master | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-|Product  | master | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
-|Tax  | master | |
-| Inventory Management | master | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-|Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)|
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+|Cart | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+|Product  | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+|Tax  | {{page.release_tag}} | |
+| Inventory Management | {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+|Glue API: Checkout  | {{page.release_tag}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)|
 
 ## 1) Install the required modules
 

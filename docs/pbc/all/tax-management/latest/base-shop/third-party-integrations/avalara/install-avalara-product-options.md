@@ -1,7 +1,7 @@
 ---
 title: Install Avalara + Product Options
 description: Learn how to install Avalara + Product options within your Spryker Cloud Commerce OS Project.
-last_updated: Aug 3, 2023
+last_updated: Feb 27, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-product-options-feature-integration
 originalArticleId: baa66b26-825e-404a-a8e4-1b48cb00cd67
@@ -22,10 +22,10 @@ Follow the steps below to install the feature core.
 
 Install the necessary features:
 
-|NAME | VERSION | INSTALLATION GUIDE |
-|--- | --- | --- |
-| Product Options | master |  |
-| Avalara Tax | master | [Install Avalara](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
+|NAME | VERSION              | INSTALLATION GUIDE |
+|--- |----------------------| --- |
+| Product Options | {{page.release_tag}} |  |
+| Avalara Tax | 0.2.0                | [Install Avalara](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
 
 ### Install the required modules using Composer
 

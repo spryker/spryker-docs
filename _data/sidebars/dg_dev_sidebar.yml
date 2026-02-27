@@ -269,8 +269,6 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
       - title: Optimizing Jenkins execution
         url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
-      - title: Reduce Jenkins execution without P&S and data importers refactoring
-        url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
       - title: Multi process run
@@ -890,6 +888,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: How to integrate API Platform
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    - title: How to migrate to API Platform
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -969,6 +969,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
     - title: Upgrade to PHP 8.3
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-83.html
+    - title: Upgrade to PHP 8.4
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-84.html
     - title: Upgrade to PHPUnit 11
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-phpunit-11.html
     - title: Upgrade to Symfony 5
@@ -1088,6 +1090,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Custom location for static assets
       url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
+    - title: Customizing HTTP headers in AJAX requests
+      url: /docs/dg/dev/integrate-and-configure/customizing-http-headers-in-ajax-requests.html
     - title: Database connections
       url: /docs/dg/dev/integrate-and-configure/configure-database-connections.html
     - title: Dynamic Yves-Zed tokens
@@ -1122,6 +1126,10 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
+    - title: Symfony Messenger
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html
+    - title: Symfony Scheduler
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
 
 
   - title: SDKs
@@ -1254,6 +1262,8 @@ entries:
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
+    - title: Architecture as Code
+      url: /docs/dg/dev/architecture/architecture-as-code.html
     - title: "Key-value storage: Redis and Valkey"
       url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html
     - title: Module API
@@ -1292,6 +1302,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/validation-schemas.html
         - title: CodeBucket Support
           url: /docs/dg/dev/architecture/api-platform/code-buckets.html
+        - title: Relationship Support
+          url: /docs/dg/dev/architecture/api-platform/relationships.html
         - title: Enablement
           url: /docs/dg/dev/architecture/api-platform/enablement.html
         - title: Testing
@@ -1419,6 +1431,8 @@ entries:
       nested:
       - title: Monitoring
         url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: APM — New Relic based troubleshooting
+        url: /docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
@@ -1596,6 +1610,8 @@ entries:
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
       nested:
+      - title: Blackfire profiling
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/blackfire-profiling.html
       - title: External calls take a lot of time
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
       - title: External calls—several calls to Zed

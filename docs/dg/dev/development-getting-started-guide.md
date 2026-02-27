@@ -1,7 +1,7 @@
 ---
 title: Development getting started guide
 description: This is a step-by-step checklist that you can follow through all the stages of working with Spryker.
-last_updated: July 11, 2022
+last_updated: Feb 20, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
@@ -59,6 +59,7 @@ A couple of plugins for PhpStorm from the community are recommended:
 
 To learn about Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 - [Architecture](/docs/dg/dev/architecture/architecture.html).
+- [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) - document your project architecture using industry standards.
 - [Guidelines](/docs/dg/dev/guidelines/guidelines.html).
 - [Backend development](/docs/dg/dev/backend-development/back-end-development.html)
 - [Frontend development](/docs/dg/dev/frontend-development/latest/frontend-development.html)

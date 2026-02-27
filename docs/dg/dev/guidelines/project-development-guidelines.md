@@ -1,7 +1,7 @@
 ---
 title: Project development guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
-last_updated: Dec 8, 2025
+last_updated: Feb 20, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/project-development-guidelines
 originalArticleId: 3608265d-c19f-4415-83c1-4584d50e48b0
@@ -42,6 +42,8 @@ You can check supported PHP versions in the [Docker Hub](https://hub.docker.com/
 
 Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html).
 Pay attention to an [architecture convention](/docs/dg/dev/architecture/architectural-convention.html) page as in addition it provides a set of rules and recommendations that applicable specifically for project development.
+
+Additionally, consider documenting your project architecture from the start using [Architecture as Code](/docs/dg/dev/architecture/architecture-as-code.html) practices, which ensures your architecture stays aligned with implementation and facilitates team onboarding.
 
 ## Use custom namespaces
 

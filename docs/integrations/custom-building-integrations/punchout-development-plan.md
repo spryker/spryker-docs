@@ -1,8 +1,8 @@
 ---
-title: PunchOut development plan
+title: Implement PunchOut on your project
 description: Enable projects to connect to procurement systems following PunchOut protocol.
-keywords: punchout, Punch Out, cxml, procurement, procurement systems, guide
-last_updated: Feb 19, 2026
+keywords: punchout, Punch Out, punchout, cxml, oci, procurement, procurement systems, guide
+last_updated: Feb 25, 2026
 template: default
 ---
 
@@ -200,6 +200,10 @@ After you change Twig templates, clear the cache using your project's standard c
 To handle a PunchOut start request, implement a Yves controller.
 
 Because the selected protocol can affect the implementation scope, this guide describes the minimal required setup:
+
+{% info_block infoBox "cXML support" %}
+As a part of the [API Platform](https://docs.spryker.com/docs/dg/dev/architecture/api-platform) from the version [0.5.4](https://github.com/spryker/api-platform/releases/tag/0.5.4) we provide support for the cXML format.
+{% endinfo_block %}
 
 **src/Pyz/Shared/PunchOut/Transfer/punchout.transfer.xml**
 

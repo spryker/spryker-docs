@@ -1,17 +1,17 @@
 ---
 title: Integrate Web Profiler for Glue
 description: This guide describes how to integrate and use the Web Profiler available in Glue applications for development purposes.
-last_updated: Jan 6, 2026
+last_updated: Feb 24, 2026
 template: howto-guide-template
 related:
   - title: Integrate Web Profiler for Zed
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrate Web Profiler Widget for Yves
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
   - title: Integrate Web Profiler for Backend Gateway
-    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
   - title: Integrate Profiler Module
-    link: docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
+    link: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
 ---
 
 The *Web Profiler for Glue* provides a tool for debugging and informational purposes for Glue API applications. The tool is accessible when making requests to Glue API endpoints and provides comprehensive profiling data for API requests.
@@ -28,15 +28,16 @@ The profiler is based on *Symfony Profiler*. For details, see [Profiler document
 
 Before integrating Web Profiler for Glue, ensure that the following modules are updated to the required versions:
 
-| Module                         | Version | Description                                   |
-|:-------------------------------|:--------|:----------------------------------------------|
-| `spryker/glue-application`     | ^1.72.0 | Core Glue Application framework               |
-| `spryker/http`                 | ^1.15.0 | HTTP handling for Glue applications           |
-| `spryker/redis`                | ^2.11.0 | Redis integration for data collection         |
-| `spryker/search-elasticsearch` | ^1.21.0 | Elasticsearch integration for data collection |
-| `spryker/web-profiler`         | ^1.7.0  | Core Web Profiler module                      |
-| `spryker/zed-request`          | ^3.25.0 | Zed request handling and data collection      |
-| `spryker/profiler`             | ^0.1.3  | Spryker profiler                              |
+| Module                         | Version | Required | Description                                   |
+|:-------------------------------|:--------|:---------|:----------------------------------------------|
+| `spryker/glue-application`     | ^1.72.0 | Yes      | Core Glue Application framework               |
+| `spryker/http`                 | ^1.15.0 | Yes      | HTTP handling for Glue applications           |
+| `spryker/redis`                | ^2.11.0 | Yes      | Redis integration for data collection         |
+| `spryker/search-elasticsearch` | ^1.21.0 | Yes      | Elasticsearch integration for data collection |
+| `spryker/web-profiler`         | ^1.7.0  | Yes      | Core Web Profiler module                      |
+| `spryker/zed-request`          | ^3.25.0 | Yes      | Zed request handling and data collection      |
+| `spryker/profiler`             | ^0.1.3  | Yes      | Spryker profiler                              |
+| `spryker/propel`               | ^3.49.0 | No       | Propel data collection                        |
 
 ## Integration
 
@@ -238,6 +239,7 @@ use Spryker\Glue\Http\Plugin\Twig\HttpKernelTwigPlugin;
 use Spryker\Glue\Http\Plugin\Twig\RuntimeLoaderTwigPlugin;
 use Spryker\Glue\Http\Plugin\WebProfiler\WebProfilerExternalHttpDataCollectorPlugin;
 use Spryker\Glue\Profiler\Plugin\WebProfiler\WebProfilerProfilerDataCollectorPlugin;
+use Spryker\Glue\Propel\Plugin\WebProfiler\WebProfilerPropelDataCollectorPlugin;
 use Spryker\Glue\Redis\Plugin\WebProfiler\WebProfilerRedisDataCollectorPlugin;
 use Spryker\Glue\SearchElasticsearch\Plugin\WebProfiler\WebProfilerElasticsearchDataCollectorPlugin;
 use Spryker\Glue\WebProfiler\Plugin\WebProfiler\WebProfilerConfigDataCollectorPlugin;
@@ -274,6 +276,10 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
             $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
         }
 
+        if (class_exists(WebProfilerPropelDataCollectorPlugin::class)) {
+            $plugins[] = new WebProfilerPropelDataCollectorPlugin();
+        }
+
         return $plugins;
     }
 
@@ -293,6 +299,47 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
 
 </details>
 
+## Configure Propel Data Collector
+
+To enable the Propel data collector, ensure that you have set the following in `config/Shared/config_local.php`:
+
+```php
+$config[\Spryker\Shared\Propel\PropelConstants::PROPEL_DEBUG] = true;
+```
+
+## Using Segmented SQL Collection
+
+The Propel data collector includes a segmented SQL collection feature that allows you to isolate and analyze database queries from specific code paths. Use the static methods `startSegment()` and `endSegment()` to capture queries:
+
+```php
+use Spryker\Shared\Propel\Logger\PropelInMemoryLogger;
+
+PropelInMemoryLogger::startSegment('product-validation');
+$this->validateRequest($glueRequestTransfer);
+PropelInMemoryLogger::endSegment();
+
+PropelInMemoryLogger::startSegment('product-fetch');
+$productTransfers = $this->productRepository->findProducts($criteria);
+PropelInMemoryLogger::endSegment();
+```
+
+Segmented queries appear in the Web Profiler under the Propel panel as collapsible sections showing segment key name, query counts, and full query tables.
+
+### Best Practices
+
+- Use descriptive segment keys that identify the API operation (for example, `product-list-validation`, `cart-calculation`, `checkout-processing`)
+- Always pair `startSegment()` with `endSegment()` to prevent queries from being incorrectly categorized
+- Use try-finally blocks to ensure segments are properly closed:
+
+```php
+PropelInMemoryLogger::startSegment('my-api-operation');
+try {
+    $result = $this->performDatabaseOperations();
+} finally {
+    PropelInMemoryLogger::endSegment();
+}
+```
+
 ## Available data collectors
 
 The Web Profiler for Glue includes the following data collectors:
@@ -309,6 +356,7 @@ The Web Profiler for Glue includes the following data collectors:
 | **External HTTP** | Tracks external HTTP calls | `WebProfilerExternalHttpDataCollectorPlugin` |
 | **Exception** | Captures exceptions and errors | `WebProfilerExceptionDataCollectorPlugin` |
 | **Logger** | Displays log messages | `WebProfilerLoggerDataCollectorPlugin` |
+| **Propel** | Monitors Propel database queries (available from `spryker/propel:^3.49.0`) | `WebProfilerPropelDataCollectorPlugin` |
 | **Profiler** | Provides XHProf profiling data (if `xhprof` extension is installed) | `WebProfilerProfilerDataCollectorPlugin` |
 
 ## Accessing Web Profiler

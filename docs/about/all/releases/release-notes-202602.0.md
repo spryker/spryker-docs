@@ -11,9 +11,13 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## B2B Business-Ready Commerce Experiences
 
-### Product Attachments <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Product Attachments {% include badge.html type="feature" %}
 
 Introduces out-of-the-box Product Attachments capability commonly required in industrial B2B purchasing.
+
+{% include carousel.html
+images="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/product_attachments_storefront_pdp.png||::https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202602/product_attachments_backoffice_pim.png||"
+%}
 
 **Key capabilities**
 - Back Office management of product-related documents (for example, datasheets, certificates, manuals).
@@ -28,7 +32,7 @@ Introduces out-of-the-box Product Attachments capability commonly required in in
 - [Product Attachments overview](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html)
 - [Install the Product Attachments feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html)
 
-### Product & Merchant Offer Availability Display <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Product & Merchant Offer Availability Display {% include badge.html type="feature" %}
 
 Introduces native, configurable product and merchant offer availability display for B2B Commerce and Marketplace scenarios, reducing customization and increasing buyer confidence at the point of decision.
 
@@ -49,7 +53,7 @@ Introduces native, configurable product and merchant offer availability display 
 - [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview)
 - [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview)
 
-### Backoffice Configuration Framework <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+### Backoffice Configuration Framework {% include badge.html type="feature,early-access" %}
 
 Introduces a structured, extensible framework to expose business-relevant configuration directly in the Spryker Back Office without code changes or redeployments.
 
@@ -88,7 +92,7 @@ Reduces project setup time for customers and partners who want B2B Commerce only
 **Documentation**
 - [Uninstall the Marketplace from B2B Demo Marketplace](/docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace)
 
-### New Industrial Homepage Sample Data <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### New Industrial Homepage Sample Data {% include badge.html type="improvement" %}
 
 The new sample data allows you to explore more realistic B2B Commerce journeys and capabilities without needing to import your own data.
 
@@ -100,7 +104,7 @@ The new sample data allows you to explore more realistic B2B Commerce journeys a
 - Faster evaluations by showing realistic catalog and merchandising scenarios out of the box.
 - Less manual demo preparation for partners and solution teams.
 
-### UX & Design Improvements for Storefront & Back Office <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### UX & Design Improvements for Storefront & Back Office {% include badge.html type="improvement" %}
 
 Improves clarity, consistency, and perceived quality across core pages and navigation.
 
@@ -140,7 +144,7 @@ Enables standardized B2B PunchOut integrations via cXML support.
 
 ## Connected, and AI-Enabled Platform
 
-### Spryker AI Foundation: Operable, Structured, and Extensible AI Runtime <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Foundation: Operable, Structured, and Extensible AI Runtime {% include badge.html type="early-access,improvement" %}
 
 Enhances the AI Foundation runtime layer to make AI executions easier to operate at scale, safer to integrate into product code, and more extensible for evolving use cases.
 
@@ -160,7 +164,7 @@ Enhances the AI Foundation runtime layer to make AI executions easier to operate
 - [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
 - [Use structured responses with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html)
 
-### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Agent Foundations and Smart PIM Improvements {% include badge.html type="early-access,improvement" %}
 
 Adds foundational capabilities for advanced agent workflows and improves the Back Office Smart PIM with safer, more reliable AI-assisted product description support.
 
@@ -188,7 +192,7 @@ Adds foundational capabilities for advanced agent workflows and improves the Bac
 - [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html)
 - [AI workflow orchestration with state machines](/docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html)
 
-### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Dev SDK: Additional MCP Tools for Spryker-Aware AI Development {% include badge.html type="early-access,improvement" %}
 
 Expands MCP tooling to make Spryker context retrieval, module discovery, documentation grounding, and demo data manipulation faster and more reliable for AI-assisted development.
 
@@ -218,7 +222,7 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 
-### API Platform improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### API Platform improvements {% include badge.html type="improvement" %}
 
 This release enhances API Platform capabilities to improve your developer experience and reduce manual configuration overhead.
 
@@ -241,7 +245,7 @@ This release enhances API Platform capabilities to improve your developer experi
 - [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html)
 - [API Test Examples](/docs/dg/dev/architecture/api-platform/testing.html)
 
-### OMS New Visual User Experience <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### OMS New Visual User Experience {% include badge.html type="improvement" %}
 
 Spryker transforms the community-driven OMS visualizer into a fully validated and productized capability.
 
@@ -258,7 +262,7 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
 - Documentation for the productized version is coming soon.
 
-### Messaging and scheduling modernization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Messaging and scheduling modernization {% include badge.html type="improvement" %}
 
 We introduced Symfony Messenger and Symfony Scheduler as modern, flexible alternatives to the current RabbitMQ adapter and scheduling mechanisms in Jenkins.
 
@@ -276,7 +280,7 @@ We introduced Symfony Messenger and Symfony Scheduler as modern, flexible altern
 - [Symfony Messenger](/docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html)
 - [Symfony Scheduler](/docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html)
 
-### Secure handling of customer data in quote requests <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Secure handling of customer data in quote requests {% include badge.html type="improvement" %}
 
 This update improves the quote request storage mechanism to ensure that the system does not unnecessarily persist sensitive customer data in version records.
 
@@ -295,7 +299,7 @@ Previously, the `spy_quote_request_version` table stored the complete quote JSON
 **Documentation**
 - [Quote Request](https://api.release.spryker.com/release-group/6300)
 
-### Platform & Tooling Upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Platform & Tooling Upgrades {% include badge.html type="improvement" %}
 
 We have updated critical application and service components to long-term supported versions to ensure continued stability, performance, and compatibility.
 
@@ -315,7 +319,7 @@ We have updated critical application and service components to long-term support
 - [Release unlocking the new PHPUnit version](https://api.release.spryker.com/release-group/6334)
 - Spryker is fully compatible with PHPStan 2.x, update it at your own schedule.
 
-### Quality, Performance & Stability Fixes <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Quality, Performance & Stability Fixes {% include badge.html type="improvement" %}
 
 This release resolves several performance bottlenecks and technical inconsistencies identified in customer projects.
 
@@ -453,7 +457,7 @@ Replaces the legacy Algolia App model with a code-visible eco-module.
 
 ## Efficient and Flexible Cloud Foundation
 
-### Cloud Self-Service Portal update <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Cloud Self-Service Portal update {% include badge.html type="improvement" %}
 
 The Cloud Self-Service Portal is now available on a new platform that improves usability and accelerates value delivery.
 
@@ -474,7 +478,7 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 **Portal access** 
 - [Customer Portal](https://portal.spryker.com/)
 
-### RabbitMQ 4.1 rollout <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### RabbitMQ 4.1 rollout {% include badge.html type="improvement" %}
 
 This update completes the rollout of RabbitMQ 4.1 across all platform environments.
 
@@ -491,7 +495,7 @@ This update completes the rollout of RabbitMQ 4.1 across all platform environmen
 - [Docker SDK service configuration](/docs/dg/dev/integrate-and-configure/configure-services.html)
 - [System Requirements](/docs/dg/dev/system-requirements/latest/system-requirements.html)
 
-### Security RSS feed: Docker image updates <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Security RSS feed: Docker image updates {% include badge.html type="improvement" %}
 
 This update integrates Docker image security release notes into the official Spryker security RSS feed, ensuring timely notifications for infrastructure updates.
 

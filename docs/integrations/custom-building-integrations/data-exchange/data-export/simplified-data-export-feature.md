@@ -1,10 +1,9 @@
 ---
-title: New data export
+title: Simplified Data Export
 description: This document describes how to export data from a Spryker shop to an external
   system for your third-party integrations.
-last_updated: October 20, 2025
+last_updated: February 27, 2026
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/new-data-export-feature
 originalArticleId: 0a32b993-f10c-4f6c-20db-247a62cd22e7
 related:
   - title: Orders data export
@@ -18,9 +17,17 @@ It provides a declarative YAML-based configuration combined with PHP plugins for
 It allows you to use existing repository method and data transfer objects to export data from Spryker.
 You need to define the mapping between the data entities and the fields in the export file.
 
+## Installation
+
+This feature requires `spryker/data-export` version 0.1.6 or later. Make sure your `composer.json` includes the following:
+
+```bash
+composer require spryker/data-export:"^0.1.6"
+```
+
 ## How to export an entity
 
-The new export system greatly simplifies the process. For example, creating an `OrderDataExport` requires only:
+Simplified Data Export greatly simplifies the process. For example, creating an `OrderDataExport` requires only:
 
 ### 1. Add YML Configuration
 

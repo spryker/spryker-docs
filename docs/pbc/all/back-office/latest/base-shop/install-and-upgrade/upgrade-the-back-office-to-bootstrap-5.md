@@ -59,7 +59,8 @@ spryker-feature/warehouse-user-management:"{{page.release_tag}}"
 ```
 
 {% info_block infoBox "" %}
-Bootstrap 5 support was added originally in the release 202512.0.
+Bootstrap 5 support was added originally in the release 202507.0
+All essential components were released in [spryker/gui:3.59.0](https://github.com/spryker/gui/releases/tag/3.59.0).
 {% endinfo_block %}
 
 2. Update the `@spryker/oryx-for-zed` dependency:

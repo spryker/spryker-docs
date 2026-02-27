@@ -58,6 +58,10 @@ spryker-feature/product-offer-service-points:"{{page.release_tag}}" \
 spryker-feature/warehouse-user-management:"{{page.release_tag}}"
 ```
 
+{% info_block infoBox "" %}
+Bootstrap 5 support was added originally in the release 202512.0.
+{% endinfo_block %}
+
 2. Update the `@spryker/oryx-for-zed` dependency:
 
 ```bash

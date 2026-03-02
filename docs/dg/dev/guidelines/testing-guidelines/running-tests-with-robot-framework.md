@@ -1,7 +1,7 @@
 ---
 title: Running tests with Robot Framework
 description: Learn how to run tests with the Robot Framework in the command line for your Spryker based projects.
-last_updated: May 26, 2023
+last_updated: March 02, 2026
 template: howto-guide-template
 related:
   - title: Running tests with the Docker SDK
@@ -9,6 +9,8 @@ related:
 ---
 
 This document describes how to run tests with Robot Framework.
+
+Robot Framework tests are used by Spryker for internal testing of the core Spryker features. You should remove the mentions of `robotframework-suite-test` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests will work on your project, if you keep running them.
 
 ## Running tests
 

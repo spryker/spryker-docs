@@ -1,7 +1,7 @@
 ---
 title: E2E Testing with Cypress
 description: Learn how to use Cypress for end-to-end testing in Spryker projects.
-last_updated: Feb 10, 2026
+last_updated: March 02, 2026
 template: concept-topic-template
 related:
   - title: Running tests with Robot Framework
@@ -27,6 +27,10 @@ The boilerplate includes:
 The boilerplate does NOT include:
 - Complete test coverage - you should add and adjust example tests to fit your project
 - Correct locators - the locators in the boilerplace are based on Spryker demo shops, adjust the locators in accordance with your project
+
+## Internal Cypress tests
+
+Cypress tests are used by Spryker for internal testing of the core Spryker features as well. You should remove the mentions of `cypress-tests` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests will work on your project, if you keep them. Spryker recommends you use the [boilerplate](https://github.com/spryker-projects/cypress-boilerplate/wiki) instead.
 
 ## Resources
 

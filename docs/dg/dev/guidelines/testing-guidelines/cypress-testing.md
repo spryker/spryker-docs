@@ -1,7 +1,7 @@
 ---
 title: E2E Testing with Cypress
 description: Learn how to use Cypress for end-to-end testing in Spryker projects.
-last_updated: Feb 10, 2026
+last_updated: March 02, 2026
 template: concept-topic-template
 related:
   - title: Running tests with Robot Framework

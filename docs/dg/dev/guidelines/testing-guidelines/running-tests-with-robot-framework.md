@@ -1,7 +1,7 @@
 ---
 title: Running tests with Robot Framework
 description: Learn how to run tests with the Robot Framework in the command line for your Spryker based projects.
-last_updated: May 26, 2023
+last_updated: March 02, 2026
 template: howto-guide-template
 related:
   - title: Running tests with the Docker SDK

@@ -51,11 +51,16 @@ The following sections list important module updates that include performance im
 - Includes configurable session locker
 - See [Redis session lock](/docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html) for setup instructions
 
-### Merchant Portal performance
+### Merchant Portal and Back Office performance with ACL rules
 
-- [spryker/category:^5.18.2](https://github.com/spryker/category/releases/tag/5.18.2)
-- [spryker/acl:^3.22.0](https://github.com/spryker/acl/releases/tag/3.22.0)
-- [spryker/acl-entity:^1.13.0](https://github.com/spryker/acl-entity/releases/tag/1.13.0)
+- [spryker/acl:^3.26.0](https://github.com/spryker/acl/releases/tag/3.26.0)
+- [spryker/acl-entity:^1.16.0](https://github.com/spryker/acl-entity/releases/tag/1.16.0)
+- [spryker/gui:^4.11.0](https://github.com/spryker/gui/releases/tag/4.11.0)
+- [spryker/merchant-profile:^1.9.0](https://github.com/spryker/merchant-profile/releases/tag/1.9.0)
+- [spryker/merchant-user:^1.9.0](https://github.com/spryker/merchant-user/releases/tag/1.9.0)
+- [spryker/multi-factor-auth-merchant-portal:^2.1.0](https://github.com/spryker/multi-factor-auth-merchant-portal/releases/tag/2.1.0)
+- [spryker/product-attribute:^1.18.0](https://github.com/spryker/product-attribute/releases/tag/1.18.0)
+- [spryker/zed-navigation:^1.15.0](https://github.com/spryker/zed-navigation/releases/tag/1.15.0)
 
 ### Order placement performance
 

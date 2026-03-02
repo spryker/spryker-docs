@@ -10,7 +10,7 @@ related:
 
 This document describes how to run tests with Robot Framework.
 
-Robot Framework tests are used by Spryker for internal testing of the core Spryker features. You should remove the mentions of `robotframework-suite-test` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests would work on a customized project, if you decide to keep them.
+Robot Framework tests are used by Spryker for internal testing of the core Spryker features. You should remove the mentions of `robotframework-suite-test` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests will work on your project, if you keep running them.
 
 ## Running tests
 

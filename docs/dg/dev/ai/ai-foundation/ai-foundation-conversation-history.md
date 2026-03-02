@@ -1,8 +1,8 @@
 ---
 title: Conversation History
 description: Persist and manage multi-turn conversations with conversation history using database storage
-last_updated: Feb 19, 2026
-keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue
+last_updated: Mar 2, 2026
+keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue, audit, logging, tracking
 template: howto-guide-template
 related:
   - title: AiFoundation module Overview
@@ -13,6 +13,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: AI workflow orchestration with state machines
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+  - title: AI Interaction Audit Logs
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to use conversation history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.

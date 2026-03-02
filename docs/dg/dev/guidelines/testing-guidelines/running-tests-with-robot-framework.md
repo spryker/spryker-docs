@@ -10,6 +10,8 @@ related:
 
 This document describes how to run tests with Robot Framework.
 
+Please note, that Robot Framework tests are used by Spryker for internal testing of the core Spryker features. You should remove the mentions of `robotframework-suite-test` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests would work on a customized project, if you decide to keep them.
+
 ## Running tests
 
 Robot Framework test cases are executed from the command line. By default, the end result of the tests is an output file in the XML format, an HTML report, and a log file. After the execution, you can combine and otherwise post-process the output files with the Robot tool.

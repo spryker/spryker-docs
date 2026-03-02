@@ -28,6 +28,10 @@ The boilerplate does NOT include:
 - Complete test coverage - you should add and adjust example tests to fit your project
 - Correct locators - the locators in the boilerplace are based on Spryker demo shops, adjust the locators in accordance with your project
 
+## Internal Cypress tests
+
+Please note, that Cypress tests are used by Spryker for internal testing of the core Spryker features as well. You should remove the mentions of `cypress-tests` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests would work on a customized project, if you decide to keep them. Spryker recommends you use the boilerplate instead.
+
 ## Resources
 
 - **Repository**: [spryker-projects/cypress-boilerplate](https://github.com/spryker-projects/cypress-boilerplate)

@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: Dec 15, 2025
+last_updated: Mar 02, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines

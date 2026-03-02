@@ -30,7 +30,7 @@ The boilerplate does NOT include:
 
 ## Internal Cypress tests
 
-Please note, that Cypress tests are used by Spryker for internal testing of the core Spryker features as well. You should remove the mentions of `cypress-tests` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests would work on a customized project, if you decide to keep them. Spryker recommends you use the boilerplate instead.
+Cypress tests are used by Spryker for internal testing of the core Spryker features as well. You should remove the mentions of `cypress-tests` from `composer.json`. You can re-use and customize these tests for your project, however, Spryker does not guarantee these tests would work on a customized project, if you decide to keep them. Spryker recommends you use the boilerplate instead.
 
 ## Resources
 

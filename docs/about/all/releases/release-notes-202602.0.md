@@ -245,7 +245,7 @@ This release enhances API Platform capabilities to improve your developer experi
 - [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html)
 - [API Test Examples](/docs/dg/dev/architecture/api-platform/testing.html)
 
-### OMS New Visual User Experience {% include badge.html type="improvement" %}
+### OMS New Visual User Experience {% include badge.html type="improvement,early-access" %}
 
 Spryker transforms the community-driven OMS visualizer into a fully validated and productized capability.
 

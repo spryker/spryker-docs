@@ -1,7 +1,7 @@
 ---
 title: AI workflow orchestration with state machines
 description: Learn how to orchestrate multi-step, multi-agent AI workflows using Spryker state machines
-last_updated: Feb 19, 2026
+last_updated: Mar 3, 2026
 keywords: ai, workflow, state-machine, orchestration, multi-agent, process, command, condition, structured-response
 template: howto-guide-template
 label: early-access
@@ -357,19 +357,43 @@ There are many possible patterns for multi-agent orchestration. The following ar
 
 ![Multi-agent supervision workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/SupervisorLoop01.png)
 
+## Navigation configuration
+
+To enable navigation to the AI Workflows in the Zed admin panel, add navigation items to your `config/Zed/navigation.xml` file.
+
+### Add navigation XML
+
+Update `config/Zed/navigation.xml` to include the AI Workflows menu:
+
+```xml
+<config>
+    <ai-foundation>
+        <label>AI Foundation</label>
+        <title>AI Foundation</title>
+        <icon>robot</icon>
+        <pages>
+            <ai-workflow>
+                <label>AI Workflows</label>
+                <title>AI Workflows</title>
+                <bundle>ai-foundation</bundle>
+                <controller>ai-workflow</controller>
+                <action>index</action>
+            </ai-workflow>
+        </pages>
+    </ai-foundation>
+</config>
+```
+
+This navigation configuration:
+
+- Adds an **AI Foundation** menu item in the Zed admin panel
+- Includes an **AI Workflows** submenu to access the workflows monitoring interface
+- Sets the icon and labels for improved user experience
+- Defines URLs to route to the workflows overview and detail pages
+
 ## Monitoring
 
 You can monitor AI workflows in the Spryker Zed administration panel. The monitoring interface provides visibility into workflow execution, state transitions, and context data.
-
-### Access the workflows overview
-
-To view all AI workflow items and their current states, navigate to **AI Foundation** > **AI Workflows** in the Zed admin panel. You see a list of all workflow items with the following information:
-
-- **ID**: Unique identifier for the workflow item
-- **Process Name**: The name of the process the workflow item is executing
-- **State**: The current state of the workflow item in the state machine
-- **Created At**: The timestamp when the workflow item was created
-- **Updated At**: The timestamp when the workflow item was last updated
 
 ### View workflow details
 

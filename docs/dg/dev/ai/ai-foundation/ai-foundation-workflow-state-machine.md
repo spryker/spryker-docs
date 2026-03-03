@@ -1,7 +1,7 @@
 ---
 title: AI workflow orchestration with state machines
 description: Learn how to orchestrate multi-step, multi-agent AI workflows using Spryker state machines
-last_updated: Feb 19, 2026
+last_updated: Mar 3, 2026
 keywords: ai, workflow, state-machine, orchestration, multi-agent, process, command, condition, structured-response
 template: howto-guide-template
 label: early-access
@@ -356,6 +356,60 @@ There are many possible patterns for multi-agent orchestration. The following ar
 ### Multi-agent supervision workflow
 
 ![Multi-agent supervision workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/SupervisorLoop01.png)
+
+## Navigation configuration
+
+To enable navigation to the AI Workflows in the Zed admin panel, add navigation items to your `config/Zed/navigation.xml` file.
+
+### Add navigation XML
+
+Update `config/Zed/navigation.xml` to include the AI Workflows menu:
+
+```xml
+<config>
+    <ai-foundation>
+        <label>AI Foundation</label>
+        <title>AI Foundation</title>
+        <icon>robot</icon>
+        <pages>
+            <ai-workflow>
+                <label>AI Workflows</label>
+                <title>AI Workflows</title>
+                <bundle>ai-foundation</bundle>
+                <controller>ai-workflow</controller>
+                <action>index</action>
+            </ai-workflow>
+        </pages>
+    </ai-foundation>
+</config>
+```
+
+This navigation configuration:
+
+- Adds an **AI Foundation** menu item in the Zed admin panel
+- Includes an **AI Workflows** submenu to access the workflows monitoring interface
+- Sets the icon and labels for improved user experience
+- Defines URLs to route to the workflows overview and detail pages
+
+![AiWorkflow details](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/AiWorkflow.png)
+
+## Monitoring
+
+You can monitor AI workflows in the Spryker Zed administration panel. The monitoring interface provides visibility into workflow execution, state transitions, and context data.
+
+### View workflow details
+
+To view detailed information about a specific workflow item, click the **View** button in the actions column. The detail page displays the following information:
+
+- **Current State**: Shows the workflow item ID, process name, and current state
+- **Context Data**: Displays the JSON context data that flows through the workflow, including input data and results from executed commands
+- **State History**: A table showing all states the workflow item has passed through and the timestamps when each state was entered
+- **Manual Events**: If manual events are available for the current state, you can trigger them directly from the admin panel (useful for testing or recovery scenarios)
+- **Process Graph**: A visual representation of the state machine process with the current state highlighted
+
+### Trigger manual events
+
+If a workflow is waiting for a manual event or you need to change its course, you can trigger manual events from the workflow detail page. Manual events appear as buttons under the **Manual Events** section. Only events that are valid for the current state are displayed.
 
 ## Best practices
 

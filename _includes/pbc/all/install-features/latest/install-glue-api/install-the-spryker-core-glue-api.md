@@ -8,7 +8,7 @@ Install the required features:
 
 | NAME | TYPE | VERSION |
 | --- | --- | --- |
-| Spryker Core | Feature | 202507.0 |
+| Spryker Core | Feature | {{page.release_tag}} |
 
 ## 1) Install the required modules
 

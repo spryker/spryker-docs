@@ -1,7 +1,7 @@
 ---
 title: Install the Sitemap feature
 description: Learn the prerequisites and how to enable and integrate Sitemap feature into a Spryker based project.
-last_updated: March 4, 2025
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from: 
   - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html
@@ -18,7 +18,7 @@ Install the required features:
 
 | NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                               |
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core          | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
+| Spryker Core          | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 
 
 ## 1) Install modules

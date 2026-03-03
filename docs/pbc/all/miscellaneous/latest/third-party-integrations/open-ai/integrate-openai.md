@@ -1,7 +1,7 @@
 ---
 title: Integrate OpenAI
 description: Learn how to integrate the OpenAi module into a Spryker project.
-last_updated: Nov 12, 2024
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 ---
 
@@ -15,7 +15,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Install the required modules
 

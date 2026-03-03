@@ -1,7 +1,7 @@
 ---
 title: Install Visual Search powered by OpenAI
 description: Learn how to integrate the ImageSearchAi module into a Spryker project.
-last_updated: Nov 12, 2024
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 ---
 
@@ -18,8 +18,8 @@ Install the required features:
 
 | NAME    | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |---------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| OpenAi  | {{page.version}} | [Integrate OpenAi](/docs/pbc/all/miscellaneous/latest/third-party-integrations/open-ai/integrate-openai.html) |
-| Catalog | {{page.version}} |                                                                                                                                                                 |
+| OpenAi  | {{page.release_tag}} | [Integrate OpenAi](/docs/pbc/all/miscellaneous/latest/third-party-integrations/open-ai/integrate-openai.html) |
+| Catalog | {{page.release_tag}} |                                                                                                                                                                 |
 
 ### 1) Install the required modules
 

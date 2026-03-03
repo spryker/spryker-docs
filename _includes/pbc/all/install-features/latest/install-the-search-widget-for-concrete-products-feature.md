@@ -8,9 +8,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME |       REQUIRED |   VERSION |
 | --- | --- | --- |
-| Cart |       v        | 202507.0 |
-| Product | v       | 202507.0 |
-| Non-splittable Products |              | 202507.0 |
+| Cart |       v        | {{page.release_tag}} |
+| Product | v       | {{page.release_tag}} |
+| Non-splittable Products |              | {{page.release_tag}} |
 
 ### 1) Check the installed modules
 

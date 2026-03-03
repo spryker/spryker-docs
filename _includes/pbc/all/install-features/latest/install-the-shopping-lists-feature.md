@@ -10,12 +10,12 @@ Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account             | 202507.0 | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Customer Account Management | 202507.0 | [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Spryker Core                | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Cart                        | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
-| Prices                      | 202507.0 | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Company Account             | {{page.release_tag}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Customer Account Management | {{page.release_tag}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Cart                        | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
+| Prices                      | {{page.release_tag}} | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
+| Product                     | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 
 ### 1) Install the required modules
@@ -23,7 +23,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shopping-lists:"202507.0" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1007,18 +1007,18 @@ Install the following required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Company Account             | 202507.0 | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Multiple Carts              | 202507.0 | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)                                                           |
-| Product                     | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
-| Customer Account Management | 202507.0 | [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account             | {{page.release_tag}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Multiple Carts              | {{page.release_tag}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)                                                           |
+| Product                     | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Customer Account Management | {{page.release_tag}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shopping-lists:"202507.0" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

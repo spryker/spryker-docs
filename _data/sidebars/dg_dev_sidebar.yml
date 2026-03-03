@@ -269,8 +269,6 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
       - title: Optimizing Jenkins execution
         url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
-      - title: Reduce Jenkins execution without P&S and data importers refactoring
-        url: /docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html
       - title: Stable Workers
         url: /docs/dg/dev/backend-development/cronjobs/stable-workers.html
       - title: Multi process run
@@ -1254,6 +1252,8 @@ entries:
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Architectural Convention
       url: /docs/dg/dev/architecture/architectural-convention.html
+    - title: Architecture as Code
+      url: /docs/dg/dev/architecture/architecture-as-code.html
     - title: "Key-value storage: Redis and Valkey"
       url: /docs/dg/dev/architecture/key-value-storage-redis-and-valkey.html
     - title: Module API

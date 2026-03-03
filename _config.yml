@@ -1,4 +1,5 @@
 version: "latest"
+release_version: "202512.0"
 
 repository: spryker/spryker-docs
 

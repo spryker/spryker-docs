@@ -1,7 +1,7 @@
 ---
 title: Install the Mailing and Notifications feature
 description: The guide describes the process of installing the mailing provider in your project.
-last_updated: Nov 21, 2022
+last_updated: Feb 19, 2026
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/mailing-and-notifications-feature-integration.html
@@ -25,7 +25,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 

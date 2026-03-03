@@ -8,16 +8,16 @@ Install the required features:
 
 | NAME                         | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                              |
 |------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Merchant Portal Core | 202507.0 | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                       |
-| Marketplace Merchant Portal Product Offer Management    | 202507.0 | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
-| Product Offer Shipment | 202507.0 | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)                                  |
+| Marketplace Merchant Portal Core | {{page.release_tag}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                       |
+| Marketplace Merchant Portal Product Offer Management    | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
+| Product Offer Shipment | {{page.release_tag}} | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html)                                  |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/product-offer-shipment-type-merchant-portal-gui:"202507.0" --update-with-dependencies
+composer require spryker/product-offer-shipment-type-merchant-portal-gui:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

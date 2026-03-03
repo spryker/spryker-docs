@@ -13,15 +13,15 @@ To start feature integration, review and install the necessary features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Company Account | 202507.0 |[Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)|
-| Shared Carts | 202507.0 |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
-| Checkout | 202507.0 |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | 202507.0 |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Company Account | {{page.release_tag}} |[Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)|
+| Shared Carts | {{page.release_tag}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
+| Checkout | {{page.release_tag}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
+| Spryker Core | {{page.release_tag}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/approval-process:"202507.0" --update-with-dependencies
+composer require spryker-feature/approval-process:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -403,18 +403,18 @@ To start feature integration, review and install the necessary features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Company Account | 202507.0 |[Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)|
-| Shared Carts | 202507.0 |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
-| Checkout | 202507.0 |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | 202507.0 |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Cart | 202507.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Company Account | {{page.release_tag}} |[Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)|
+| Shared Carts | {{page.release_tag}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
+| Checkout | {{page.release_tag}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
+| Spryker Core | {{page.release_tag}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Cart | {{page.release_tag}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/approval-process: "202507.0" --update-with-dependencies
+composer require spryker-feature/approval-process: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

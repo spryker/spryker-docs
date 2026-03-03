@@ -13,22 +13,22 @@ Install the required features:
 
 | NAME                 | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |----------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                 |
-| Product              | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                           |
-| Cart                 | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                 |
-| Order Management     | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)         |
-| Checkout             | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                         |
-| Prices               | 202507.0 | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
-| Inventory Management | 202507.0 | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Wishlist             | 202507.0 ||
-| ShoppingList         | 202507.0 | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)             |
+| Spryker Core         | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                 |
+| Product              | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                           |
+| Cart                 | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                 |
+| Order Management     | {{page.release_tag}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)         |
+| Checkout             | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)                         |
+| Prices               | {{page.release_tag}} | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
+| Inventory Management | {{page.release_tag}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Wishlist             | {{page.release_tag}} ||
+| ShoppingList         | {{page.release_tag}} | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)             |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/configurable-product":"202507.0" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1454,15 +1454,15 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/configurable-product":"202507.0" --update-with-dependencies
+composer require "spryker-feature/configurable-product":"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1824,8 +1824,8 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
 
 ### 1) Install the required modules
 

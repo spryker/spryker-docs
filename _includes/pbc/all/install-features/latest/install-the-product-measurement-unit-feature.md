@@ -8,17 +8,17 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | 202507.0 |
-|Product| 202507.0 |
-|Order Management| 202507.0 |
-|Spryker Core| 202507.0 |
+| Cart | {{page.release_tag}} |
+|Product| {{page.release_tag}} |
+|Order Management| {{page.release_tag}} |
+|Spryker Core| {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/measurement-units:"202507.0" --update-with-dependencies
+composer require spryker-feature/measurement-units:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -892,8 +892,8 @@ Install the following required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | 202507.0 |
-|Checkout| 202507.0 |
+| Spryker Core E-commerce | {{page.release_tag}} |
+|Checkout| {{page.release_tag}} |
 |   |   |
 
 ### 1) Install the required modules
@@ -901,7 +901,7 @@ Install the following required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/measurement-units: "202507.0" --update-with-dependencies
+composer require spryker-feature/measurement-units: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

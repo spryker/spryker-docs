@@ -1,6 +1,6 @@
 ---
 title: Install the Merchant Self-Registration feature
-last_updated: Nov 21, 2025
+last_updated: Feb 19, 2026
 description: Learn how to install the Merchant Self-Registration feature in your Spryker Marketplace project.
 template: feature-integration-guide-template
 ---
@@ -17,8 +17,8 @@ Install the following required features:
 
 | NAME                 | VERSION   | INSTALLATION GUIDE |
 |----------------------|-----------|---------------------|
-| Spryker Core         | 202507.0  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | 202507.0  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core         | {{page.release_tag}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.release_tag}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 

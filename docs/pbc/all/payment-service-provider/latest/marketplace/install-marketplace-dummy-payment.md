@@ -1,6 +1,6 @@
 ---
 title: Install Marketplace Dummy Payment
-last_updated: Oct 05, 2021
+last_updated: Feb 19, 2026
 description: This document describes the process how to integrate the Marketplace Dummy Payment into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
@@ -19,11 +19,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Payments | {{page.version}}   | [Install the Payments feature](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-feature.html) |
-| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Marketplace Order Management | {{page.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
+| Spryker Core | {{page.release_tag}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Payments | {{page.release_tag}}   | [Install the Payments feature](/docs/pbc/all/payment-service-provider/latest/base-shop/install-and-upgrade/install-the-payments-feature.html) |
+| Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Marketplace Merchant | {{page.release_tag}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Order Management | {{page.release_tag}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 
 ### 1) Install required modules using Сomposer

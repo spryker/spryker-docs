@@ -1,7 +1,7 @@
 ---
 title: Set up Fulfillment App
 description: Learn how to install and configure Fulfillment App within your Spryker Unified Commerce projects.
-last_updated: Nov 23, 2023
+last_updated: Feb 19, 2026
 template: howto-guide-template
 ---
 
@@ -13,9 +13,9 @@ To enable the support of Fulfillment App in your project, install the following 
 
 | NAME  | VERSION          | INSTALLATION GUIDE |
 |----------|------------------|--------------------|
-| Warehouse picking               | 202507.0 | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
-| Warehouse User Management               | 202507.0 | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
-| Warehouse picking + Product               | 202507.0 | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
+| Warehouse picking               | {{page.release_tag}} | [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)                     |
+| Warehouse User Management               | {{page.release_tag}} | [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html)                     |
+| Warehouse picking + Product               | {{page.release_tag}} | [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html)                     |
 
 ## Install Fulfillment App
 

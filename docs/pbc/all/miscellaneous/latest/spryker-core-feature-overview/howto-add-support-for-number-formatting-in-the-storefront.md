@@ -2,7 +2,7 @@
 title: "HowTo: Add support for number formatting in the Storefront"
 description: Learn how to add support for numbers formatting in the Spryker Storefront User Interface.
 template: howto-guide-template
-last_updated: Nov 04, 2022
+last_updated: Feb 19, 2026
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-for-number-formatting-in-the-storefront.html
 ---
@@ -15,7 +15,7 @@ To add support for number formatting in the Storefront, integrate the required f
 
 | NAME                                   | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                           | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Spryker Core                           | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
 
 ## 1) Install the required modules
 

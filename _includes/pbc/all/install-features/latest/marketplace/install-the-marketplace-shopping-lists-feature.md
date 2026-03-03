@@ -10,15 +10,15 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | 202507.0 | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
-| Shopping Lists | 202507.0 | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
+| Marketplace Product Offer | {{page.release_tag}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
+| Shopping Lists | {{page.release_tag}} | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists:"202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-shopping-lists:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -507,5 +507,5 @@ Make sure that the following plugins were registered:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | -|
-| Shopping Lists | 202507.0 | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
-| Install the Marketplace Shopping Lists Glue API | 202507.0 |  <!---[Install the Marketplace Shopping Lists Glue API](/docs/marketplace/dev/feature-integration-guides/glue/latest/marketplace-shopping-lists-feature-integration.html)-->  |
+| Shopping Lists | {{page.release_tag}} | [Install the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
+| Install the Marketplace Shopping Lists Glue API | {{page.release_tag}} |  <!---[Install the Marketplace Shopping Lists Glue API](/docs/marketplace/dev/feature-integration-guides/glue/latest/marketplace-shopping-lists-feature-integration.html)-->  |

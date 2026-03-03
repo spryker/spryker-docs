@@ -6,13 +6,13 @@ Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
-| Spryker Core Back Office | 202507.0 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Spryker Core             | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
+| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/acl:"202507.0" --update-with-dependencies
+composer require spryker-feature/acl:"{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

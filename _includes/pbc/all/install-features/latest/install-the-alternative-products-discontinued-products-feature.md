@@ -13,8 +13,8 @@ Install the required features:
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Alternative Products | 202507.0 | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
-| Discontinued Products | 202507.0 |  |
+| Alternative Products | {{page.release_tag}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
+| Discontinued Products | {{page.release_tag}} |  |
 
 ### 1) Set up behavior
 

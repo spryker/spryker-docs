@@ -8,8 +8,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Promotions & Discounts | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Spryker Cart | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Promotions & Discounts | {{page.release_tag}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Spryker Cart | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ## 1) Install the required modules
 

@@ -7,9 +7,9 @@ Install the required features:
 
 | Name | Version | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Multiple Carts | 202507.0 | [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
-| Cart | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Multiple Carts | {{page.release_tag}} | [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html) |
+| Cart | {{page.release_tag}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ## 1) Install the required modules
 

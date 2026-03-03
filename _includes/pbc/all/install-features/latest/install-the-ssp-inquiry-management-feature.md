@@ -20,15 +20,15 @@ For the Self-Service Portal to work correctly, you must install all SSP features
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE  |
 |--------------|----------| ------------------ |
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | {{page.release_tag}} | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
 
 ## Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/self-service-portal:"^202512.0" --update-with-dependencies
+composer require spryker-feature/self-service-portal:"^{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

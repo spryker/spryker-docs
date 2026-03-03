@@ -12,15 +12,15 @@ Install the required features:
 
 | NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer Service Points     | 202507.0 | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)            |
-| Marketplace Inventory Management | 202507.0 | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
+| Product Offer Service Points     | {{page.release_tag}} | [Install the Product Offer Service Points feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)            |
+| Marketplace Inventory Management | {{page.release_tag}} | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
 ### 1) Install the required modules
 
 1. Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/product-offer-service-points-availability: "202507.0" --update-with-dependencies
+composer require spryker-feature/product-offer-service-points-availability: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

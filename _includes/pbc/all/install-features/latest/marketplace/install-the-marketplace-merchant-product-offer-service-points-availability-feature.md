@@ -8,15 +8,15 @@ Install the required features:
 
 | NAME                                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                      |
 |-------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Product Offer Service Points Availability | 202507.0 | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
-| Merchant                                  | 202507.0 | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)                                      |
+| Product Offer Service Points Availability | {{page.release_tag}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/offer-management/latest/unified-commerce/install-features/install-the-product-offer-service-points-availability-feature.html) |
+| Merchant                                  | {{page.release_tag}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)                                      |
 
 ## 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-product-offer-service-points-availability: "202507.0" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-product-offer-service-points-availability: "{{page.release_tag}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

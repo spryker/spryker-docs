@@ -2,7 +2,7 @@
 title: App Composition Platform
 description: The Spryker App Composition Platform (ACP) offers a composable approach, empowering businesses to tailor software solutions through an app-based system. It promotes flexibility by allowing seamless integration of various apps and services, fitting unique requirements across industries.
 template: concept-topic-template
-last_updated: Dec 15, 2023
+last_updated: Feb 25, 2026
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
     - /docs/acp/user/intro-to-acp/acp-overview.html
@@ -16,6 +16,12 @@ related:
     - title: ACP security tips
       link: docs/dg/dev/acp/acp-security-tips.html
 ---
+
+{% info_block warningBox "Warning" %}
+
+Spryker App Composition Platform has been discontinued.
+
+{% endinfo_block %}
 
 App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](https://spryker.com/app-composition-platform/#/).
 

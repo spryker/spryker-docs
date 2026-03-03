@@ -1,7 +1,7 @@
 ---
 title: Install Avalara + Shipment
 description: Learn how to install Avalara + shipment within your Spryker Cloud Commerce OS Project.
-last_updated: Jun 18, 2021
+last_updated: Feb 27, 2026
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-shipment-feature-integration
 originalArticleId: a93d12c8-c40a-4cbb-b866-755ad29f2852
@@ -26,10 +26,10 @@ Follow the steps below to install the feature core.
 
 Install the necessary features:
 
-| NAME | VERSION | INSTALLATION GUIDE |
-| --- | --- | --- |
-| Shipment | master | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
+| NAME | VERSION              | INSTALLATION GUIDE |
+| --- |----------------------| --- |
+| Shipment | {{page.release_tag}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Avalara Tax | 0.2.0                | [Avalara Tax integration](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
 
 ### Install the required modules
 

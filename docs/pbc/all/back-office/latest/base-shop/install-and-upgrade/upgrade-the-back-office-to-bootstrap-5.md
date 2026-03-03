@@ -21,42 +21,50 @@ Then major releases (remove not used features from the list):
 composer require --update-with-dependencies --ignore-platform-req=ext-grpc \
 spryker/customer-user-connector-gui:"^2.0.0" \
 spryker/storage-gui:"^2.0.0" \
-spryker-feature/agent-assist:"dev-master as {{page.release_tag}}" \
-spryker-feature/alternative-products:"dev-master as {{page.release_tag}}" \
-spryker-feature/checkout:"dev-master as {{page.release_tag}}" \
-spryker-feature/cms:"dev-master as {{page.release_tag}}" \
-spryker-feature/configurable-bundle:"dev-master as {{page.release_tag}}" \
-spryker-feature/file-manager:"dev-master as {{page.release_tag}}" \
-spryker-feature/inventory-management:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-agent-assist:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-inventory-management:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-merchant-commission:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-order-management:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-product-offer:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-product-offer-prices:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-return-management:"dev-master as {{page.release_tag}}" \
-spryker-feature/marketplace-shipment:"dev-master as {{page.release_tag}}" \
-spryker-feature/merchant:"dev-master as {{page.release_tag}}" \
-spryker-feature/merchant-contract-requests:"dev-master as {{page.release_tag}}" \
-spryker-feature/navigation:"dev-master as {{page.release_tag}}" \
-spryker-feature/payments:"dev-master as {{page.release_tag}}" \
-spryker-feature/product:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-approval-process:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-labels:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-lists:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-relations:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-sets:"dev-master as {{page.release_tag}}" \
-spryker-feature/reclamations:"dev-master as {{page.release_tag}}" \
-spryker-feature/return-management:"dev-master as {{page.release_tag}}" \
-spryker-feature/scheduled-prices:"dev-master as {{page.release_tag}}" \
-spryker-feature/search:"dev-master as {{page.release_tag}}" \
-spryker-feature/shipment:"dev-master as {{page.release_tag}}" \
-spryker-feature/spryker-core:"dev-master as {{page.release_tag}}" \
-spryker-feature/spryker-core-back-office:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-offer-shipment:"dev-master as {{page.release_tag}}" \
-spryker-feature/product-offer-service-points:"dev-master as {{page.release_tag}}" \
-spryker-feature/warehouse-user-management:"dev-master as {{page.release_tag}}"
+spryker-feature/agent-assist:"{{page.release_tag}}" \
+spryker-feature/alternative-products:"{{page.release_tag}}" \
+spryker-feature/checkout:"{{page.release_tag}}" \
+spryker-feature/cms:"{{page.release_tag}}" \
+spryker-feature/configurable-bundle:"{{page.release_tag}}" \
+spryker-feature/file-manager:"{{page.release_tag}}" \
+spryker-feature/inventory-management:"{{page.release_tag}}" \
+spryker-feature/marketplace-agent-assist:"{{page.release_tag}}" \
+spryker-feature/marketplace-inventory-management:"{{page.release_tag}}" \
+spryker-feature/marketplace-merchant-commission:"{{page.release_tag}}" \
+spryker-feature/marketplace-order-management:"{{page.release_tag}}" \
+spryker-feature/marketplace-product-offer:"{{page.release_tag}}" \
+spryker-feature/marketplace-product-offer-prices:"{{page.release_tag}}" \
+spryker-feature/marketplace-return-management:"{{page.release_tag}}" \
+spryker-feature/marketplace-shipment:"{{page.release_tag}}" \
+spryker-feature/merchant:"{{page.release_tag}}" \
+spryker-feature/merchant-contract-requests:"{{page.release_tag}}" \
+spryker-feature/navigation:"{{page.release_tag}}" \
+spryker-feature/payments:"{{page.release_tag}}" \
+spryker-feature/product:"{{page.release_tag}}" \
+spryker-feature/product-approval-process:"{{page.release_tag}}" \
+spryker-feature/product-labels:"{{page.release_tag}}" \
+spryker-feature/product-lists:"{{page.release_tag}}" \
+spryker-feature/product-relations:"{{page.release_tag}}" \
+spryker-feature/product-sets:"{{page.release_tag}}" \
+spryker-feature/reclamations:"{{page.release_tag}}" \
+spryker-feature/return-management:"{{page.release_tag}}" \
+spryker-feature/scheduled-prices:"{{page.release_tag}}" \
+spryker-feature/search:"{{page.release_tag}}" \
+spryker-feature/shipment:"{{page.release_tag}}" \
+spryker-feature/spryker-core:"{{page.release_tag}}" \
+spryker-feature/spryker-core-back-office:"{{page.release_tag}}" \
+spryker-feature/product-offer-shipment:"{{page.release_tag}}" \
+spryker-feature/product-offer-service-points:"{{page.release_tag}}" \
+spryker-feature/warehouse-user-management:"{{page.release_tag}}"
 ```
+
+{% info_block infoBox "" %}
+Bootstrap 5 support was added originally in the release 202507.0
+
+All essential components were released in [spryker/gui:3.59.0](https://github.com/spryker/gui/releases/tag/3.59.0).
+
+In 202512.0 Bootstrap 5 is enabled by default in the Back Office.
+{% endinfo_block %}
 
 2. Update the `@spryker/oryx-for-zed` dependency:
 

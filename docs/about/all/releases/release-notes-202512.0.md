@@ -1,7 +1,7 @@
 ---
 title: Release notes 202512.0
 description: Release notes for Spryker Cloud Commerce OS version 202512.0
-last_updated: Jan 9, 2026
+last_updated: Feb 26, 2026
 template: concept-topic-template
 ---
 
@@ -11,7 +11,7 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## Expanded B2B commerce capabilities
 
-### Self-Service Portal models for asset-based catalogs <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Self-Service Portal models for asset-based catalogs {% include badge.html type="feature" %}
 
 Self-Service Portal (SSP) models help operators manage complex equipment structures and help customers find compatible spare parts and service products faster in asset-based catalogs.
 
@@ -42,7 +42,7 @@ Models is available in the Self-Service Portal Back Office and Storefront.
 - [Self-Service Portal Asset Based Catalog](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview)
 - [Self-Service Portal](/docs/pbc/all/self-service-portal/latest/self-service-portal)
 
-### Merchant Portal file-based product import is now generally available <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Merchant Portal file-based product import is now generally available {% include badge.html type="feature" %} {% include badge.html type="improvement" %}
 
 File-based product import in Merchant Portal moves from Early Access to General Availability, with reliability and UX improvements based on customer feedback.
 
@@ -64,7 +64,7 @@ File-based product import in Merchant Portal moves from Early Access to General 
 - [Install Merchant Portal Product Data Import](/docs/pbc/all/product-information-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-product-data-import-feature)
 - [Install Product Offer Data Import](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-data-import-feature)
 
-### Merchant Self-Registration <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Merchant Self-Registration {% include badge.html type="feature" %}
 
 Merchant onboarding is simplified with a storefront entry point while keeping marketplace quality and compliance under control through Back Office review and approval.
 
@@ -81,7 +81,7 @@ Merchant onboarding is simplified with a storefront entry point while keeping ma
 - [Merchant Self-Registration](/docs/pbc/all/merchant-management/latest/marketplace/merchant-self-registration-feature-overview)
 - [Install Merchant Self-Registration](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature)
 
-### Agent assist order traceability <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Agent assist order traceability {% include badge.html type="feature" %} {% include badge.html type="improvement" %}
 
 Order traceability for Agent Assist flows is improved so operations and support teams can quickly see who submitted an order on behalf of a customer.
 
@@ -96,7 +96,7 @@ Order traceability for Agent Assist flows is improved so operations and support 
 - [Agent Assist](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview#setting-up-an-agent-user)
 - [Install Agent Assist](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature#install-feature-core)
 
-### Merchant Portal dashboard improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Merchant Portal dashboard improvements {% include badge.html type="feature" %} {% include badge.html type="improvement" %}
 
 Merchant day to day catalog work is simplified in Merchant Portal by adding a clearer entry point to product management directly from the dashboard.
 
@@ -109,7 +109,7 @@ Merchant day to day catalog work is simplified in Merchant Portal by adding a cl
 - Faster access to core catalog workflows for merchants.
 - Less navigation effort for merchants managing large assortments.
 
-### Storefront merchant profile improvements <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Storefront merchant profile improvements {% include badge.html type="feature" %} {% include badge.html type="improvement" %}
 
 Storefront discovery is improved by making it easier for buyers to navigate from a merchant profile to that merchant's products with the right catalog filters already applied.
 
@@ -120,7 +120,7 @@ Storefront discovery is improved by making it easier for buyers to navigate from
 - Faster product discovery for buyers shopping by merchant.
 - Smoother path from merchant pages to relevant catalog results.
 
-### Clearer UI in Back Office and Storefront <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Clearer UI in Back Office and Storefront {% include badge.html type="improvement" %}
 
 Core UI patterns are made more consistent to improve scanability, reduce cognitive load, and provide clearer next steps in common workflows.
 
@@ -136,7 +136,7 @@ Core UI patterns are made more consistent to improve scanability, reduce cogniti
 
 ## Spryker AI: Built for Real Enterprise Commerce
 
-### AI Foundation <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+### AI Foundation {% include badge.html type="early-access" %}
 
 AI Foundation is a provider-agnostic integration layer for building AI powered commerce capabilities in a consistent, maintainable way.
 
@@ -155,7 +155,7 @@ AI Foundation is a provider-agnostic integration layer for building AI powered c
 - [AI Foundation](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 - [Use the AiFoundation module](/docs/pbc/all/ai-foundation/latest/ai-foundation.html)
 
-### Spryker AI Commerce: Back Office Smart Product Management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span> <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Spryker AI Commerce: Back Office Smart Product Management {% include badge.html type="feature" %} {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
 
 Back Office Smart Product Management now uses AI Foundation as its AI integration layer, replacing the previous direct OpenAI coupling. This gives customers provider and model choice while keeping existing Smart Product Management AI capabilities working.
 
@@ -177,7 +177,7 @@ Back Office Smart Product Management now uses AI Foundation as its AI integratio
 - [Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/smart-product-management)
 - [Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management)
 
-### Spryker AI Dev SDK <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
+### Spryker AI Dev SDK {% include badge.html type="early-access" %}
 
 The AI Dev SDK improves local AI assisted development with an MCP server, Spryker aware context tools, and prompt library integration, so developers and AI assistants can work with accurate project information and reuse the same prompts across teams.
 
@@ -195,7 +195,7 @@ The AI Dev SDK improves local AI assisted development with an MCP server, Spryke
 
 ## Open Architecture for the upcoming Innovation
 
-### Reduced boilerplate via Symfony Dependency Injection support <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### Reduced boilerplate via Symfony Dependency Injection support {% include badge.html type="feature" %}
 
 Spryker uses the Dependency Inversion Principle to reduce tight coupling, improve unit testability, and provide a clear, extensible architecture. This approach enables autowiring and reduces the need for repetitive `Factory` and `DependencyProvider` wiring. This approach streamlines development and remains compatible with Symfony Dependency Injection conventions and tooling.
 
@@ -221,7 +221,7 @@ Spryker uses the Dependency Inversion Principle to reduce tight coupling, improv
 - [Symfony Dependency Injection](/docs/dg/dev/architecture/dependency-injection.html)
 - [Symfony Bundles in Spryker](/docs/dg/dev/architecture/symfony-bundles.html)
 
-### API Platform <span class="inline-img">![early access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+### API Platform {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
 
 The **API Platform** integration allows you to define API resources declaratively and automatically generate standards-compliant APIs with minimal manual effort. It reduces boilerplate, enforces consistency, and accelerates API development.
 
@@ -241,7 +241,7 @@ The **API Platform** integration allows you to define API resources declarativel
 **Documentation:**
 - [API Platform](/docs/dg/dev/architecture/api-platform.html)
 
-### API tooling and integration documentation improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### API tooling and integration documentation improvements {% include badge.html type="improvement" %}
 
 To make API development and partner onboarding easier, the following improvements are introduced:
 - Enhanced the API documentation to be more structured and usable, with clearer terminology and guidance for integrations, including better support for exploring APIs and understanding data models.
@@ -269,7 +269,7 @@ To make API development and partner onboarding easier, the following improvement
 - [API reference with data model descriptions](/docs/integrations/spryker-glue-api/backend-api/api-references/backend-api-marketplace-b2b-demo-shop-reference.html). Expand each resposne to learn more about each field.
 - [Postman Collections](https://github.com/spryker-community/glue-postman-collections)
 
-### Publish & Synchronize stability and scalability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Publish & Synchronize stability and scalability improvements {% include badge.html type="improvement" %}
 
 Multiple enhancements improve the robustness and transparency of Publish & Synchronize processing, especially when you operate in high-volume environments.
 
@@ -299,7 +299,7 @@ If you are using older versions, we recommend that you update to the referenced 
 - [Split heavy entities from publish and event queues](https://api.release.spryker.com/release-group/6027)
 - [Batch processing of Propel entities](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html)
 
-### Performance improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Performance improvements {% include badge.html type="improvement" %}
 
 Rendering of product items, cart pages, and URL resolution database queries has been optimized.
 
@@ -325,7 +325,7 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - [Cart page performance optimization](https://api.release.spryker.com/release-group/6107)
 - [UPPER() function optimization for URL lookups](https://api.release.spryker.com/release-group/6124)
 
-### Reliability improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Reliability improvements {% include badge.html type="improvement" %}
 
 **Key capabilities:**
 - **Glue API**
@@ -346,7 +346,7 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - [Search: Improved error handling](https://api.release.spryker.com/release-group/6147)
 - [OMS: Improved concurrency handling](https://api.release.spryker.com/release-group/5963)
 
-### Infrastructure and runtime upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Infrastructure and runtime upgrades {% include badge.html type="improvement" %}
 
 Spryker updates its database support strategy to align MySQL and MariaDB versions with currently supported long-term support (LTS) releases. This change addresses the end of support for MySQL 5.7 and mitigates compatibility issues in production environments.
 
@@ -371,7 +371,7 @@ The update also includes changes to other components, such as PHP, RabbitMQ, and
 - [System Requirements](/docs/dg/dev/system-requirements/latest/system-requirements.html)
 - [Upgrade Back Office to Bootstrap 5](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/upgrade-the-back-office-to-bootstrap-5.html)
 
-### OpenTelemetry Instrumentation Update <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### OpenTelemetry Instrumentation Update {% include badge.html type="improvement" %}
 
 This update improves OpenTelemetry instrumentation to increase trace accuracy and compatibility across Storefront, Backend API, and GLUE applications. You benefit from resolved naming inconsistencies and improved locale handling for monitoring plugins.
 
@@ -387,7 +387,7 @@ This update improves OpenTelemetry instrumentation to increase trace accuracy an
 **Documentation:**
 - [OpenTelemetry instrumentation](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation.html)
 
-### Web Profiler enhancements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Web Profiler enhancements {% include badge.html type="improvement" %}
 
 You can now use an improved Web Profiler experience to better support performance investigations and troubleshooting during development:
 - Fixed an incorrect template path used by `WebProfilerExternalHttpDataCollectorPlugin`.
@@ -415,7 +415,7 @@ You can now use an improved Web Profiler experience to better support performanc
 - [Web Profiler for Backend Gateway](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html)
 - [WebProfiler Widget monitoring of external HTTP calls](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html)
 
-### Faster local development and CI builds through Composer optimization <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Faster local development and CI builds through Composer optimization {% include badge.html type="improvement" %}
 
 This release introduces a Composer plugin for Demo Shops that splits broad PSR-4 namespaces into **layer- and module-specific** namespaces during autoload generation. This approach reduces autoload scanning overhead and improves rendering and build performance.
 
@@ -437,7 +437,7 @@ Inside your container execute the following command, answer `yes` when asked to 
 composer require spryker/composer-autoload-plugin
 ```
 
-### Improved developer productivity and efficiency <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Improved developer productivity and efficiency {% include badge.html type="improvement" %}
 
 **Key capabilities:**
 - The coding standards remove the need for docblocks that duplicate already declared type information for methods and properties, which reduces noise and maintenance overhead.

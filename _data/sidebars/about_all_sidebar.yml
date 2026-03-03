@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202602.0
+        url: /docs/about/all/releases/release-notes-202602.0.html
       - title: Release notes 202512.0
         url: /docs/about/all/releases/release-notes-202512.0.html
       - title: Release notes 202507.0

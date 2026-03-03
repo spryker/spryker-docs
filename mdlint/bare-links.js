@@ -5,9 +5,30 @@ module.exports = {
   function: function (params, onError) {
     const bareLinkRegex = /\bhttps?:\/\/[^\s<>"'`)]*/g;
 
+    // Build a set of line numbers that fall inside Liquid {% %} blocks
+    const liquidLines = new Set();
+    let insideLiquid = false;
+    params.lines.forEach((line, index) => {
+      const trimmed = line.trim();
+      if (!insideLiquid && trimmed.startsWith("{%")) {
+        insideLiquid = true;
+      }
+      if (insideLiquid) {
+        liquidLines.add(index + 1); // line numbers are 1-based
+        if (trimmed.includes("%}")) {
+          insideLiquid = false;
+        }
+      }
+    });
+
     params.tokens.forEach((token) => {
       // Only inspect inline text tokens
       if (token.type === "inline" && token.children) {
+        // Skip tokens whose line falls inside a Liquid block
+        if (liquidLines.has(token.lineNumber)) {
+          return;
+        }
+
         let insideLink = false;
         let insideImage = false;
 

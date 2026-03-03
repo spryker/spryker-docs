@@ -391,6 +391,8 @@ This navigation configuration:
 - Sets the icon and labels for improved user experience
 - Defines URLs to route to the workflows overview and detail pages
 
+![AiWorkflow details](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-foundation/AiWorkflow.png)
+
 ## Monitoring
 
 You can monitor AI workflows in the Spryker Zed administration panel. The monitoring interface provides visibility into workflow execution, state transitions, and context data.

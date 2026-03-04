@@ -962,6 +962,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
     - title: Upgrade Node.js to v18 and npm to v9
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Upgrade Node.js version
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html
     - title: Migrate from Yarn to npm
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
 

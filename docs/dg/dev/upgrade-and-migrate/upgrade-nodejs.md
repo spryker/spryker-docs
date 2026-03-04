@@ -1,27 +1,30 @@
 ---
 title: Upgrade Node.js
 last_updated: March 4, 2026
-description: Learn how to upgrade Node.js to any version for your Spryker projects.
+description: Learn how to upgrade Node.js to any version in your Spryker project.
 template: concept-topic-template
 
 ---
 
-This document provides instructions for upgrading Node.js to any version in your Spryker project.
+This guide explains how to upgrade Node.js in your Spryker project to a target version of your choice.
 
-*Estimated migration time: 10 minutes*
+**Estimated migration time:** 10 minutes
 
 ## Prerequisites
 
-Before you begin:
-- Determine the target Node.js version you want to upgrade to.
-- Check the [Node.js release schedule](https://github.com/nodejs/release#release-schedule) to ensure the version is supported.
-- Review your project dependencies to ensure compatibility with the target Node.js version.
+Before you begin, complete the following:
 
-## 1) Update configuration files
+- Determine the target Node.js version.
+- Check the [Node.js release schedule](https://github.com/nodejs/release#release-schedule) to ensure that the version is supported.
+- Review your project dependencies to ensure compatibility with the target version.
+
+## 1. Update configuration files
 
 ### Update deploy configuration files
 
-In all `deploy.*.yml` files (for example, `deploy.yml`, `deploy.dev.yml`, and `deploy.ci.yml`), update the Node.js version:
+Update the Node.js version in your deploy configuration files.
+
+In each `deploy.*.yml` file (for example, `deploy.yml`, `deploy.dev.yml`, and `deploy.ci.yml`), update the `node.version` value:
 
 ```yaml
 image:
@@ -30,15 +33,11 @@ image:
         version: 18
 ```
 
-Replace `18` with your target Node.js version.
+Replace `18` with the target Node.js version (for example, `20`).
 
-{% info_block infoBox "Note" %}
+### Update the package.json file
 
-To ensure the CI jobs run successfully, update the Node.js version in all `deploy.*.yml` files used by the frontend.
-
-{% endinfo_block %}
-
-### Update package.json
+Update the Node.js version specified in the `engines` section of `package.json`.
 
 In `package.json`, update the Node.js version in the `engines` section:
 
@@ -51,21 +50,21 @@ In `package.json`, update the Node.js version in the `engines` section:
 }
 ```
 
-Replace `18.0.0` with your target Node.js version.
+Replace `18.0.0` with the target Node.js version (for example, `20.0.0`).
 
-## 2) Optional: Update local Node.js installation
+## 2. Optional: Update local Node.js installation
 
-If you use Node.js locally outside of Docker, download and install the required version from the [official Node.js website](https://nodejs.org/en/download/) for your operating system.
+If you use Node.js locally outside Docker, download and install the required version for your operating system from the [official Node.js website](https://nodejs.org/en/download/). Ensure that the installed version matches the version defined in your project configuration.
 
-After installation, verify the Node.js version:
+After installation, verify the installed Node.js version:
 
 ```bash
 node -v
 ```
 
-## 3) Optional: Update GitHub Actions
+## 3. Optional: Update the GitHub Actions workflow
 
-If your project uses GitHub Actions CI, update `.github/workflows/ci.yml`:
+If your project uses GitHub Actions, update the `.github/workflows/ci.yml` file:
 
 ```yaml
 - uses: actions/setup-node@v3
@@ -73,26 +72,27 @@ If your project uses GitHub Actions CI, update `.github/workflows/ci.yml`:
     node-version: '18'
 ```
 
-Replace `18` with your target Node.js version.
+Replace `18` with the target Node.js version.
 
-## 4) Build the project
+## 4. Build the project
 
-1. Apply the Docker changes:
+1. Restart your Docker environment with the updated configuration:
 
 ```bash
 docker/sdk boot deploy.dev.yml
 docker/sdk up
 ```
 
-2. Regenerate `package-lock.json`:
+2. Regenerate the `package-lock.json` file:
 
 ```bash
 docker/sdk cli npm install
 ```
 
-3. Build the project with the new Node.js version:
+3. Build the project:
 
 ```bash
-rm -rf node_modules && docker/sdk cli rm -rf node_modules
+rm -rf node_modules
+docker/sdk cli rm -rf node_modules
 docker/sdk up --build --assets --data
 ```

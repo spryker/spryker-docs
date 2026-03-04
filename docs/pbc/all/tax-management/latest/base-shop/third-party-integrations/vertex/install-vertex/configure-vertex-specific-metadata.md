@@ -9,13 +9,9 @@ related:
 
 ---
 
-After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
+After you have [integrated Vertex module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) for tax calculation, you can Configure Vertex-specific metadata.
 
 Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
-
-The following diagram shows the data flow of the tax calculation request from the Spryker Cart to the Vertex API.
-
-![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
 
 To integrate Vertex, follow these steps.
 
@@ -80,7 +76,7 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 
 ## 2. Implement Vertex-specific metadata extender plugins
 
-You need to introduce several types of expander plugins. As a starting point, you use the examples provided in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins in this module are for development purposes. The data in the `TaxMetaData` fields needs to be collected from the project database or other sources, like an external ERP.
+You need to introduce several types of expander plugins. As a starting point, you use the examples provided the module. The plugins in this module are for development purposes. The data in the `TaxMetaData` fields needs to be collected from the project database or other sources, like an external ERP.
 
 ### Configure the Customer Class Code Expander plugins
 
@@ -93,9 +89,9 @@ namespace Pyz\Zed\{YourDesiredModule}\Communication\Plugin\Order;
 
 use Generated\Shared\Transfer\OrderTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface;
+use SprykerEco\Zed\Vertex\Dependency\Plugin\OrderVertexExpanderPluginInterface;
 
-class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implements OrderTaxAppExpanderPluginInterface
+class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implements OrderVertexExpanderPluginInterface
 {
     /**
      * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
@@ -120,9 +116,9 @@ namespace Spryker\Zed\{YourDesiredModule}\Communication\Plugin\Quote;
 
 use Generated\Shared\Transfer\CalculableObjectTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface;
+use SprykerEco\Zed\Vertex\Dependency\Plugin\CalculableObjectVertexExpanderPluginInterface;
 
-class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
+class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implements CalculableObjectVertexExpanderPluginInterface
 {
     /**
      * @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
@@ -149,7 +145,7 @@ Configure the following plugins using the provided example.
 
 ```php
 // ...
-class OrderCustomerWithVertexExemptionCertificateExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
+class OrderCustomerWithVertexExemptionCertificateExpanderPlugin extends AbstractPlugin implements CalculableObjectVertexExpanderPluginInterface
 {
     /**
      * @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
@@ -176,7 +172,7 @@ Configure the following plugins using the provided example.
 
 ```php
 // ...
-class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
+class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements CalculableObjectVertexExpanderPluginInterface
 {
     /**
      * @param \Generated\Shared\Transfer\CalculableObjectTransfer $calculableObjectTransfer
@@ -206,7 +202,7 @@ Configure the flexible files extension using the following example:
 
 ```php
 
-class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
+class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements CalculableObjectVertexExpanderPluginInterface
 {
     // ...
 
@@ -237,13 +233,13 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-## 3. Configure the Tax App dependency provider
+## 3. Configure the Vertex dependency provider
 
-After the Tax App dependency provider configuration, the plugin stack should look similar to the following:
+After the Vertex dependency provider configuration, the plugin stack should look similar to the following:
 
 ```php
 
-namespace Pyz\Zed\TaxApp;
+namespace Pyz\Zed\Vertex;
 
 // The following plugins are for Marketplace only.
 use Spryker\Zed\MerchantProfile\Communication\Plugin\TaxApp\MerchantProfileAddressCalculableObjectTaxAppExpanderPlugin;
@@ -251,15 +247,15 @@ use Spryker\Zed\MerchantProfile\Communication\Plugin\TaxApp\MerchantProfileAddre
 use Spryker\Zed\ProductOfferAvailability\Communication\Plugin\TaxApp\ProductOfferAvailabilityCalculableObjectTaxAppExpanderPlugin;
 use Spryker\Zed\ProductOfferAvailability\Communication\Plugin\TaxApp\ProductOfferAvailabilityOrderTaxAppExpanderPlugin;
 
-class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
+class VertexDependencyProvider extends SprykerTaxAppDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface>
+     * @return array<\SprykerEco\Zed\Vertex\Dependency\Plugin\CalculableObjectVertexExpanderPluginInterface|\Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface>
      */
-    protected function getCalculableObjectTaxAppExpanderPlugins(): array
+    protected function getCalculableObjectVertexExpanderPlugins(): array
     {
         return [       
-            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
+            # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker-eco/vertex` module.
 
             // The following plugins are for Marketplace only.
             # This plugin is expanding CalculableObjectTransfer object with merchant address information.
@@ -270,12 +266,12 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface>
+     * @return array<\SprykerEco\Zed\Vertex\Dependency\Plugin\OrderVertexExpanderPluginInterface|\Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface>
      */
-    protected function getOrderTaxAppExpanderPlugins(): array
+    protected function getOrderVertexExpanderPlugins(): array
     {
         return [
-            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
+            # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker-eco/vertex` module.
 
             // The following plugins are for Marketplace only.
             # This plugin is expanding OrderTransfer object with merchant address information.
@@ -323,11 +319,11 @@ To change this default behavior, you can configure the country for both sellers 
 
 ```php
 
-namespace Pyz\Zed\TaxApp;
+namespace Pyz\Zed\Vertex;
 
-use Spryker\Zed\TaxApp\TaxAppConfig as SprykerTaxAppConfig;
+use Spryker\Zed\Vertex\VertexConfig as SprykerVertexConfig;
 
-class TaxAppConfig extends SprykerTaxAppConfig
+class VertexConfig extends SprykerVertexConfig
 {
 
     public function getSellerCountryCode(): string

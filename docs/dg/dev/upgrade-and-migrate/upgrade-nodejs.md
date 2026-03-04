@@ -53,7 +53,7 @@ In `package.json`, update the Node.js version in the `engines` section:
 
 Replace `18.0.0` with your target Node.js version.
 
-## 2) Update local Node.js installation (optional)
+## 2) Optional: Update local Node.js installation
 
 If you use Node.js locally outside of Docker, download and install the required version from the [official Node.js website](https://nodejs.org/en/download/) for your operating system.
 
@@ -63,7 +63,7 @@ After installation, verify the Node.js version:
 node -v
 ```
 
-## 3) Update GitHub Actions (optional)
+## 3) Optional: Update GitHub Actions
 
 If your project uses GitHub Actions CI, update `.github/workflows/ci.yml`:
 

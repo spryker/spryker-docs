@@ -888,6 +888,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: How to integrate API Platform
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    - title: How to integrate API Platform Security
+      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
     - title: Migrate from Auth to SecurityGui module
@@ -1306,6 +1308,10 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
+        - title: Sparse fieldsets
+          url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+        - title: Native API Platform Resources
+          url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

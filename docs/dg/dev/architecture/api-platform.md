@@ -16,6 +16,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/security.html
   - title: Native API Platform Resources
     link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+  - title: Sparse Fieldsets
+    link: docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
 ---
 
 Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
@@ -423,6 +425,18 @@ Response includes both the customer and related addresses in JSON:API format. No
 
 For detailed information, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
+### Sparse fieldsets
+
+Request only the attributes you need using the `fields` query parameter:
+
+```markdown
+GET /stores?fields[stores]=name,locale
+```
+
+This returns only `name` and `locale` in the response attributes, reducing payload size. Sparse fieldsets work with relationships too — filter attributes on both the main resource and included resources.
+
+For detailed information, see [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html).
+
 ## Performance
 
 ### Cache warming
@@ -476,6 +490,7 @@ For detailed implementation guides:
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
 - [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
+- [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html) - Request only needed attributes
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 
 ## Next steps

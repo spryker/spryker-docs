@@ -33,7 +33,10 @@ Use this skill to systematically run continuous integration tools and fix errors
 ## Example Workflow
 
 ```
-1. Run SprykerCI
+1. Run SprykerCI see commands to run in the Commands section
+   1.a Vale linter
+   1.b Markdown linter
+   1.c Sidebar checker
 2. Present Issue #1:
    - What: [what has failed]
    - Why: [explanation]
@@ -49,9 +52,9 @@ Use this skill to systematically run continuous integration tools and fix errors
 
 ### Sidebar issues
 
-When there is a page missing in the sidebar the issues shows fileName.md to be missing. TO fix this use the same path to be added and replace `md` with `html`.
+When there is a page missing in the sidebar the issues shows fileName.md to be missing. To fix this use the same path to be added and replace `md` with `html`.
 
-To get the title read the file that was mentioned rto be missing and get the title from it.
+To get the title read the file that was mentioned to be missing, get the title from it and present it to the user for verification.
 
 ## Commands
 

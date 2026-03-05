@@ -1,11 +1,11 @@
 ---
 title: Vertex
 description: Spryker's third party Vertex technology partner, and how tax calculations can enhance your Spryker based project.
-last_updated: May 17, 2024
+last_updated: Mar 5, 2026
 template: concept-topic-template
 related:
-  - title: Install Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+  - title: Integrate Vertex
+    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
@@ -25,12 +25,12 @@ For more information about how Vertex calculates taxes, see the [Vertex O Series
 
 The Spryker Vertex module offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
 
-- *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in the App Composition catalog to connect your Spryker project to Vertex.
+- *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in `config/Shared/config_default.php` to connect your Spryker project to Vertex.
 - *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
-- *Discounts Support*: The Vertex App uses both the discount and the amount paid by the customer, sending this information to Vertex for tax calculation and estimation.
-- *Manage tax exemptions*: Configure your project to exclude tax-exempt customers using the Vertex App.
-- *View invoice reports in Vertex dashboard*: The Vertex App allows customers to send invoice reports for paid orders from Spryker to Vertex. Customers can opt out of sending invoices to Spryker if they choose.
-- *Support for refunds*: When order items are returned, refunded, or a paid order is canceled, the Vertex App updates the tax report in Vertex for accurate reporting and compliance.
+- *Discounts Support*: The Vertex module uses both the discount and the amount paid by the customer, sending this information to Vertex for tax calculation and estimation.
+- *Manage tax exemptions*: Configure your project to exclude tax-exempt customers using the Vertex module.
+- *View invoice reports in Vertex dashboard*: The Vertex module allows customers to send invoice reports for paid orders from Spryker to Vertex. Customers can opt out of sending invoices to Spryker if they choose.
+- *Support for refunds*: When order items are returned, refunded, or a paid order is canceled, the Vertex module updates the tax report in Vertex for accurate reporting and compliance.
 - *Failover Solution*: Store owners and marketplace operators can manage refunds and ensure accurate tax reporting even during downtime.
 - *Supported Product Types*: The integration currently supports tax calculation only for items/products created using Spryker Product capabilities.
 - *Application of custom tax rules to products*: You can implement custom tax rules to accommodate unique product categorizations or specific tax regulations that apply to your business. The Vertex Integration provides a means for taxes to be calculated using these rules.
@@ -41,16 +41,9 @@ The Spryker Vertex module offers the following features that are worth consideri
 2. Tax Calculation in Regions where taxes are included in the price. For example, in the EU.
 3. Marketplace: Every line item sent from Spryker to Vertex includes the customer's shipping address and the merchant's warehouse address, which Vertex uses for tax calculation.
 4. Support for Delivery Terms: Vertex allows customers to set delivery terms within their dashboard, which are used in tax calculation. This is especially important for cross-border transactions when the seller wants to use the customer's location to determine the applicable tax rate.
-5. Inclusion of Shipping Tax in the Total Tax Calculated: Spryker sends the selected shipping method to Vertex. The `delivery-method-key` set in Spryker is used for this purpose. Projects must ensure this is mapped correctly inside the Vertex App by following the steps below:
+5. Inclusion of Shipping Tax in the Total Tax Calculated: Spryker sends the selected shipping method to Vertex. The `delivery-method-key` set in Spryker is used for this purpose. Projects must ensure this is mapped correctly inside the Vertex dashboard by following the steps below:
    - In Vertex you create a Taxability Driver with the same value from Spryker
    - In Vertex you create a Taxability Mapping for the driver to one of Vertex's defined Delivery Charges
-
-
-[//]: # (The following diagram demonstrates the flow of the Vertex app integration:)
-
-[//]: # ()
-[//]: # (![vertex-app-flow]&#40;https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-app-flow.png&#41;)
-
 
 
 ## How Vertex calculates taxes for different countries
@@ -64,11 +57,11 @@ So, make sure your project has a logic for such cases. For example, when a buyer
 
 ## Product Class Code
 
-The Product Class Code is used to represent groups or categories of products or services with identical taxability. By default, Spryker Product SKU is sent as `LineItems[].product.value` and `LineItems.lineItemId`. The Vertex App doesn't create any Vertex Tax Categories.
+The Product Class Code is used to represent groups or categories of products or services with identical taxability. By default, Spryker Product SKU is sent as `LineItems[].product.value` and `LineItems.lineItemId`. The Vertex module does not create any Vertex Tax Categories.
 
 ### Item Flexible Fields
 
-Item Flexible Fields are optional fields provided by a project. They are needed for the customization of tax calculation. Flexible Fields are supported by the Vertex app, and whether or not to use them is a business decision.
+Item Flexible Fields are optional fields provided by a project. They are needed for the customization of tax calculation. Flexible Fields are supported by the Vertex module, and whether or not to use them is a business decision.
 
 ## Freight tax for shipment
 
@@ -82,4 +75,4 @@ The Spryker OMS transition command is used as an execution point to send a full 
 
 ## Next steps
 
-[Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html))
+[Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html)

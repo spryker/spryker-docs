@@ -222,14 +222,14 @@ protected function getFallbackOrderCalculationPlugins(): array
 }
 ```
 In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins, which are replaced by `VertexCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
-The code snipped above is an example fo such configuration based on the Spryker default tax calculation plugins.
+The code snippet above is an example of such configuration based on the Spryker default tax calculation plugins.
 Tax calculation plugins moved:
 - from `getQuoteCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxRateAverageAggregatorPlugin`
 - from `getOrderCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxAmountAfterCancellationCalculatorPlugin`
 
 {% info_block infoBox "Fallback behavior" %}
 
-There are three different failure scenarios where `TaxAppCalculationPlugin` might need to use a fallback logic:
+There are three different failure scenarios where `VertexCalculationPlugin` might need to use a fallback logic:
 
 1. Vertex isn't connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
 2. Vertex is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
@@ -274,7 +274,7 @@ protected function getOrderVertexExpanderPlugins(): array
 }
 ```
 
-### 7. Configure the Shop Application dependency provider
+## 7. Configure the Shop Application dependency provider
 
 Add the following code to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
 
@@ -321,7 +321,7 @@ Here is an example with `CartSummaryHideTaxAmountWidget`:
 {% endraw %}
 ```
 
-### 8. Optional: Sending tax invoices to Vertex and handling refunds
+## 8. Optional: Sending tax invoices to Vertex and handling refunds
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 
@@ -432,4 +432,4 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 ## Next step
 
-[Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/configure-vertex-specific-metadata.html)
+[Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)

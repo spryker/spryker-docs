@@ -1,7 +1,7 @@
 ---
 title: Connect Vertex
-description: Find out how you can confiure Sprykers third party Vertex in to your Spryker Based project.
-last_updated: Jan 8 2025
+description: Find out how you can configure Spryker's third-party Vertex integration into your Spryker-based project.
+last_updated: Mar 5, 2026
 template: howto-guide-template
 ---
 

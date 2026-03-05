@@ -1,7 +1,7 @@
 ---
 title: Configure Vertex-specific metadata
 description: Find out how you can configure Vertex-specific metadata
-last_updated: May 17, 2024
+last_updated: Mar 5, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -313,7 +313,7 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ## 5. Optional: Configure custom seller and buyer countries
 
-If a user doesn't choose a country during the checkout Address step, the system automatically usse the first country listed in the selected Spryker store. The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
+If a user doesn't choose a country during the checkout Address step, the system automatically uses the first country listed in the selected Spryker store. The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
 
 To change this default behavior, you can configure the country for both sellers and buyers. These configured countries will be the default values for tax calculations. You can use the following configuration methods to do this:
 
@@ -321,7 +321,7 @@ To change this default behavior, you can configure the country for both sellers 
 
 namespace Pyz\Zed\Vertex;
 
-use Spryker\Zed\Vertex\VertexConfig as SprykerVertexConfig;
+use SprykerEco\Zed\Vertex\VertexConfig as SprykerVertexConfig;
 
 class VertexConfig extends SprykerVertexConfig
 {
@@ -339,7 +339,7 @@ class VertexConfig extends SprykerVertexConfig
 
 ```
 
-### 6. Add translations
+## 6. Add translations
 
 1. Append the glossary according to your configuration:
 

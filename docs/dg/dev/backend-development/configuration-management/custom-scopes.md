@@ -14,7 +14,7 @@ The Configuration feature ships with two built-in scopes: `global` and `store`. 
 
 Custom scopes integrate into the existing hierarchy. Values resolve from the most specific scope upward until a value is found, falling back to `default_value` from the YAML schema.
 
-```
+```text
 customer_group (most specific)
   -> store
     -> global (least specific)
@@ -44,10 +44,11 @@ Create a project-level Shared Config that extends the core one:
 namespace Pyz\Shared\Configuration;
 
 use Spryker\Shared\Configuration\ConfigurationConfig as SprykerConfigurationConfig;
+use Spryker\Shared\Store\StoreConstants;
 
 class ConfigurationConfig extends SprykerConfigurationConfig
 {
-    protected const string SCOPE_LOCALE = 'locale';
+    public const string SCOPE_LOCALE = 'locale';
 
     public function getAvailableScopes(): array
     {
@@ -59,7 +60,7 @@ class ConfigurationConfig extends SprykerConfigurationConfig
     public function getScopeHierarchy(): array
     {
         return array_merge(parent::getScopeHierarchy(), [
-            static::SCOPE_LOCALE => 'store',
+            static::SCOPE_LOCALE => StoreConstants::SCOPE_STORE,
         ]);
     }
 }
@@ -69,14 +70,14 @@ class ConfigurationConfig extends SprykerConfigurationConfig
 
 Built-in hierarchy:
 
-```
+```text
 global (parent: null)       -- root, no identifier needed
 store  (parent: global)     -- requires identifier, e.g. "DE"
 ```
 
 After adding `locale`:
 
-```
+```text
 global (parent: null)
 store  (parent: global)
 locale (parent: store)      -- requires identifier, e.g. "de_DE"
@@ -303,16 +304,349 @@ When `getModuleConfig('catalog:display:labels:currency_symbol', '$')` is called 
 
 The first non-null value wins.
 
-## Verification Checklist
+## Advanced Use Cases
 
-After adding a custom scope:
+Custom scopes enable dynamic configuration scenarios beyond static identifiers like `store` or `locale`. This section covers two common advanced patterns: calculated scopes and A/B testing.
 
-- [ ] `Pyz\Shared\Configuration\ConfigurationConfig::getAvailableScopes()` includes the new scope
-- [ ] `Pyz\Shared\Configuration\ConfigurationConfig::getScopeHierarchy()` maps the new scope to its parent
-- [ ] Scope identifier provider plugin is created and registered in `Pyz\Zed\Configuration\ConfigurationDependencyProvider`
-- [ ] YAML schemas reference the new scope in `scopes` arrays where needed
-- [ ] `docker/sdk cli console configuration:sync` ran successfully
-- [ ] Backoffice Configuration Management page shows the new scope in the scope switcher
-- [ ] Values saved at the new scope are returned by `getModuleConfig()`
-- [ ] Values fall back to parent scope when not set at the new scope
-- [ ] (Optional) Request expander plugins registered in both Zed and Client dependency providers
+### Calculated Scopes
+
+Calculated scopes determine their identifier at runtime based on request context. Unlike static scopes where identifiers are predefined (such as store codes), calculated scopes derive their value from dynamic data like user attributes, request headers, or external services.
+
+#### Example: Region-Based Configuration by IP Address
+
+You can create a `region` scope that determines the user's geographic region from their IP address. This enables region-specific configurations without requiring users to explicitly select their region.
+
+**Step 1: Define the region scope in Shared Configuration:**
+
+```php
+// src/Pyz/Shared/Configuration/ConfigurationConfig.php
+namespace Pyz\Shared\Configuration;
+
+use Spryker\Shared\Configuration\ConfigurationConfig as SprykerConfigurationConfig;
+
+class ConfigurationConfig extends SprykerConfigurationConfig
+{
+    public const string SCOPE_REGION = 'region';
+
+    public function getAvailableScopes(): array
+    {
+        return array_merge(parent::getAvailableScopes(), [
+            static::SCOPE_REGION,
+        ]);
+    }
+
+    public function getScopeHierarchy(): array
+    {
+        return array_merge(parent::getScopeHierarchy(), [
+            static::SCOPE_REGION => static::SCOPE_STORE, // Region inherits from global
+        ]);
+    }
+}
+```
+
+**Step 2: Create an identifier provider with region definitions:**
+
+```php
+// src/Pyz/Zed/Region/Communication/Plugin/Configuration/RegionConfigurationScopeIdentifierProviderPlugin.php
+namespace Pyz\Zed\Region\Communication\Plugin\Configuration;
+
+use Spryker\Zed\ConfigurationExtension\Dependency\Plugin\ConfigurationScopeIdentifierProviderPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+class RegionConfigurationScopeIdentifierProviderPlugin extends AbstractPlugin implements ConfigurationScopeIdentifierProviderPluginInterface
+{
+    public function getScope(): string
+    {
+        return 'region';
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getIdentifiers(): array
+    {
+        // Define available regions for the backoffice scope switcher
+        return [
+            'eu-west',
+            'eu-east',
+            'us-west',
+            'us-east',
+            'apac',
+        ];
+    }
+}
+```
+
+**Step 3: Create a request expander that calculates the region from IP:**
+
+```php
+// src/Pyz/Client/Region/Plugin/Configuration/RegionConfigurationValueRequestExpanderPlugin.php
+namespace Pyz\Client\Region\Plugin\Configuration;
+
+use Generated\Shared\Transfer\ConfigurationScopeTransfer;
+use Generated\Shared\Transfer\ConfigurationValueRequestTransfer;
+use Spryker\Client\ConfigurationExtension\Dependency\Plugin\ConfigurationValueRequestExpanderPluginInterface;
+use Spryker\Client\Kernel\AbstractPlugin;
+
+/**
+ * @method \Pyz\Client\Region\RegionClientInterface getClient()
+ */
+class RegionConfigurationValueRequestExpanderPlugin extends AbstractPlugin implements ConfigurationValueRequestExpanderPluginInterface
+{
+    public function expand(
+        ConfigurationValueRequestTransfer $configurationValueRequestTransfer,
+    ): ConfigurationValueRequestTransfer {
+        foreach ($configurationValueRequestTransfer->getScopes() as $scope) {
+            if ($scope->getKey() === 'region') {
+                return $configurationValueRequestTransfer;
+            }
+        }
+
+        // Calculate region from the current request's IP address
+        $regionIdentifier = $this->getClient()->getRegionByCurrentIp();
+
+        $configurationValueRequestTransfer->addScope(
+            (new ConfigurationScopeTransfer())
+                ->setKey('region')
+                ->setIdentifier($regionIdentifier),
+        );
+
+        return $configurationValueRequestTransfer;
+    }
+}
+```
+
+**Step 4: Implement the region detection logic in the client:**
+
+```php
+// src/Pyz/Client/Region/RegionClient.php
+namespace Pyz\Client\Region;
+
+use Spryker\Client\Kernel\AbstractClient;
+
+/**
+ * @method \Pyz\Client\Region\RegionFactory getFactory()
+ */
+class RegionClient extends AbstractClient implements RegionClientInterface
+{
+    public function getRegionByCurrentIp(): string
+    {
+        return $this->getFactory()
+            ->createRegionResolver()
+            ->resolveRegionByIp($this->getFactory()->getRequestStack()->getCurrentRequest()?->getClientIp());
+    }
+}
+```
+
+With this setup, configuration values automatically resolve based on the user's geographic region. For example, you can configure different shipping options, payment methods, or promotional content for users in different regions.
+
+### A/B Testing with Custom Scopes
+
+Custom scopes provide a mechanism for A/B testing by assigning users to experiment variants. This approach enables you to test different configuration values and measure their impact on user behavior.
+
+#### Example: Experiment Scope for A/B Testing
+
+**Step 1: Define the experiment scope:**
+
+```php
+// src/Pyz/Shared/Configuration/ConfigurationConfig.php
+namespace Pyz\Shared\Configuration;
+
+use Spryker\Shared\Configuration\ConfigurationConfig as SprykerConfigurationConfig;
+
+class ConfigurationConfig extends SprykerConfigurationConfig
+{
+    public const string SCOPE_EXPERIMENT = 'experiment';
+
+    public function getAvailableScopes(): array
+    {
+        return array_merge(parent::getAvailableScopes(), [
+            static::SCOPE_EXPERIMENT,
+        ]);
+    }
+
+    public function getScopeHierarchy(): array
+    {
+        return array_merge(parent::getScopeHierarchy(), [
+            // Experiment is the most specific scope, inheriting from store
+            static::SCOPE_EXPERIMENT => static::SCOPE_STORE,
+        ]);
+    }
+}
+```
+
+**Step 2: Create an identifier provider for experiment variants:**
+
+```php
+// src/Pyz/Zed/Experiment/Communication/Plugin/Configuration/ExperimentConfigurationScopeIdentifierProviderPlugin.php
+namespace Pyz\Zed\Experiment\Communication\Plugin\Configuration;
+
+use Spryker\Zed\ConfigurationExtension\Dependency\Plugin\ConfigurationScopeIdentifierProviderPluginInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+/**
+ * @method \Pyz\Zed\Experiment\Business\ExperimentFacadeInterface getFacade()
+ */
+class ExperimentConfigurationScopeIdentifierProviderPlugin extends AbstractPlugin implements ConfigurationScopeIdentifierProviderPluginInterface
+{
+    public function getScope(): string
+    {
+        return 'experiment';
+    }
+
+    /**
+     * @return array<string>
+     */
+    public function getIdentifiers(): array
+    {
+        // Return all active experiment variants from the database
+        // This allows configuring values for each variant in the backoffice
+        return $this->getFacade()->getActiveExperimentVariantIdentifiers();
+    }
+}
+```
+
+**Step 3: Create a request expander that assigns users to variants:**
+
+```php
+// src/Pyz/Client/Experiment/Plugin/Configuration/ExperimentConfigurationValueRequestExpanderPlugin.php
+namespace Pyz\Client\Experiment\Plugin\Configuration;
+
+use Generated\Shared\Transfer\ConfigurationScopeTransfer;
+use Generated\Shared\Transfer\ConfigurationValueRequestTransfer;
+use Spryker\Client\ConfigurationExtension\Dependency\Plugin\ConfigurationValueRequestExpanderPluginInterface;
+use Spryker\Client\Kernel\AbstractPlugin;
+
+/**
+ * @method \Pyz\Client\Experiment\ExperimentClientInterface getClient()
+ */
+class ExperimentConfigurationValueRequestExpanderPlugin extends AbstractPlugin implements ConfigurationValueRequestExpanderPluginInterface
+{
+    public function expand(
+        ConfigurationValueRequestTransfer $configurationValueRequestTransfer,
+    ): ConfigurationValueRequestTransfer {
+        foreach ($configurationValueRequestTransfer->getScopes() as $scope) {
+            if ($scope->getKey() === 'experiment') {
+                return $configurationValueRequestTransfer;
+            }
+        }
+
+        // Get the experiment variant for the current user
+        // This can be based on session, customer ID, or random assignment
+        $experimentVariant = $this->getClient()->getCurrentUserExperimentVariant(
+            $configurationValueRequestTransfer->getKey(),
+        );
+
+        if ($experimentVariant === null) {
+            // User is not part of any experiment, skip adding the scope
+            // Value resolution falls back to the parent scope (store)
+            return $configurationValueRequestTransfer;
+        }
+
+        $configurationValueRequestTransfer->addScope(
+            (new ConfigurationScopeTransfer())
+                ->setKey('experiment')
+                ->setIdentifier($experimentVariant),
+        );
+
+        return $configurationValueRequestTransfer;
+    }
+}
+```
+
+**Step 4: Implement the experiment assignment logic:**
+
+```php
+// src/Pyz/Client/Experiment/ExperimentClient.php
+namespace Pyz\Client\Experiment;
+
+use Spryker\Client\Kernel\AbstractClient;
+
+/**
+ * @method \Pyz\Client\Experiment\ExperimentFactory getFactory()
+ */
+class ExperimentClient extends AbstractClient implements ExperimentClientInterface
+{
+    /**
+     * Returns the experiment variant identifier for the current user.
+     * Returns null if the user is not enrolled in any experiment.
+     */
+    public function getCurrentUserExperimentVariant(string $settingKey): ?string
+    {
+        return $this->getFactory()
+            ->createExperimentAssigner()
+            ->getVariantForUser(
+                $this->getFactory()->getSessionClient()->getId(),
+                $settingKey,
+            );
+    }
+}
+```
+
+#### Using A/B Testing in YAML Schemas
+
+Define settings that support experiment variants:
+
+```yaml
+features:
+  - key: checkout
+    name: Checkout
+    tabs:
+      - key: layout
+        name: Layout
+        groups:
+          - key: buttons
+            name: Buttons
+            scopes: [global, store, experiment]
+            settings:
+              - key: checkout_button_color
+                name: Checkout Button Color
+                type: string
+                default_value: "blue"
+                scopes: [global, store, experiment]
+                storefront: true
+              - key: checkout_button_text
+                name: Checkout Button Text
+                type: string
+                default_value: "Complete Purchase"
+                scopes: [global, store, experiment]
+                storefront: true
+```
+
+In the backoffice, you can then configure different values for each experiment variant:
+- `experiment:control` — `checkout_button_color: blue`, `checkout_button_text: Complete Purchase`
+- `experiment:variant_a` — `checkout_button_color: green`, `checkout_button_text: Buy Now`
+- `experiment:variant_b` — `checkout_button_color: orange`, `checkout_button_text: Place Order`
+
+#### Best Practices for A/B Testing Scopes
+
+| Practice                   | Description                                                                                                       |
+|----------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Consistent assignment      | Ensure users see the same variant throughout their session by persisting the assignment in session or database.   |
+| Graceful fallback          | When a user is not part of an experiment, the value resolution automatically falls back to the parent scope.      |
+| Setting-level experiments  | Pass the setting key to the assigner to run different experiments on different settings.                          |
+| Analytics integration      | Track which variant each user sees to measure the impact of configuration changes.                                |
+
+### Combining Multiple Custom Scopes
+
+You can combine calculated scopes with static scopes to create sophisticated targeting. For example:
+
+```text
+experiment (most specific)
+  -> region
+    -> store
+      -> global (least specific)
+```
+
+This hierarchy enables scenarios like:
+- Default value for all users (global)
+- Store-specific override (store)
+- Region-specific customization based on IP (region)
+- A/B test variant for users in the experiment (experiment)
+
+When a user in the `us-west` region is assigned to `variant_a` of an experiment in the `US` store, the resolution order is:
+1. `experiment:variant_a` — check experiment-specific value
+2. `region:us-west` — check region-specific value
+3. `store:US` — check store-specific value
+4. `global` — check global value
+5. `default_value` — use schema default

@@ -12,7 +12,7 @@ related:
 
 ## What It Does
 
-Provides a centralized, schema-driven system for managing application settings across scopes (global, store). Settings are declared in YAML files, managed via the Backoffice UI, and consumed in any layer (Zed, Yves, Glue) through module Config classes.
+Provides a centralized, schema-driven system for managing application settings across scopes (global, store). Settings are declared in YAML files, managed via the Back Office UI, and consumed in any layer (Zed, Yves, Glue) through module Config classes.
 
 ## Quick Start
 
@@ -61,10 +61,12 @@ use Spryker\Yves\Kernel\AbstractBundleConfig;
 class MyModuleConfig extends AbstractBundleConfig
 {
     protected const int DEFAULT_ITEMS_PER_PAGE = 24;
+    
+    protected const string CONFIGURATION_KEY_MY_MODULE_GENERAL_DISPLAY_ITEMS_PER_PAGE = 'my_module:general:display:items_per_page';
 
     public function getItemsPerPage(): int
     {
-        return $this->getModuleConfig('my_module:general:display:items_per_page', static::DEFAULT_ITEMS_PER_PAGE);
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_MY_MODULE_GENERAL_DISPLAY_ITEMS_PER_PAGE, static::DEFAULT_ITEMS_PER_PAGE);
     }
 }
 ```
@@ -106,14 +108,20 @@ class AvailabilityWidgetConfig extends AbstractBundleConfig
 {
     protected const bool STOCK_DISPLAY_ENABLED = false;
 
+    public const string STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY = 'indicator_and_quantity';
+
+    protected const string CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_DISPLAY_STOCK_AVAILABILITY = 'catalog:inventory:stock_options:display_stock_availability';
+
+    protected const string CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_STOCK_INFO_OPTIONS = 'catalog:inventory:stock_options:stock_info_options';
+
     public function isStockDisplayEnabled(): bool
     {
-        return $this->getModuleConfig('catalog:inventory:stock_options:display_stock_availability', static::STOCK_DISPLAY_ENABLED);
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_DISPLAY_STOCK_AVAILABILITY, static::STOCK_DISPLAY_ENABLED);
     }
 
     public function getStockDisplayMode(): string
     {
-        return $this->getModuleConfig('catalog:inventory:stock_options:stock_info_options', static::STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY);
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_STOCK_INFO_OPTIONS, static::STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY);
     }
 }
 ```
@@ -125,9 +133,11 @@ class BuyBoxConfig extends AbstractBundleConfig
 {
     public const string SORT_BY_PRICE = 'price';
 
+    protected const string CONFIGURATION_KEY_MARKETPLACE_PDP_BUY_BOX_OFFER_SORT_RULE = 'marketplace:pdp:buy_box:offer_sort_rule';
+
     public function getSortingStrategy(): string
     {
-        return $this->getModuleConfig('marketplace:pdp:buy_box:offer_sort_rule', static::SORT_BY_PRICE);
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_MARKETPLACE_PDP_BUY_BOX_OFFER_SORT_RULE, static::SORT_BY_PRICE);
     }
 }
 ```
@@ -141,8 +151,10 @@ use Generated\Shared\Transfer\ConfigurationScopeTransfer;
 
 public function getItemsPerPage(string $storeName): int
 {
+    protected const string CONFIGURATION_KEY_MY_MODULE_GENERAL_DISPLAY_ITEMS_PER_PAGE = 'my_module:general:display:items_per_page';
+
     return $this->getModuleConfig(
-        'my_module:general:display:items_per_page',
+        static::CONFIGURATION_KEY_MY_MODULE_GENERAL_DISPLAY_ITEMS_PER_PAGE,
         static::DEFAULT_ITEMS_PER_PAGE,
         [
             (new ConfigurationScopeTransfer())
@@ -162,7 +174,7 @@ When integrating Configuration into an existing module:
 3. Replace hardcoded access in the module's Config class with `getModuleConfig()` calls
 4. Keep the original constant as `$default` for backward compatibility
 5. Run `configuration:sync`
-6. Values are now manageable via the Backoffice Configuration Management page
+6. Values are now manageable via the Back Office Configuration Management page
 
 ## YAML Schema Declaration Reference
 
@@ -178,7 +190,7 @@ The schema file is located at `vendor/spryker/configuration/resources/configurat
 
 ### Hierarchy
 
-```
+```text
 features[]
   tabs[]
     groups[]
@@ -229,7 +241,7 @@ tabs:
 |---------------|---------|----------|---------|--------------------|------------------------------------------------------|
 | `key`         | string  | Yes      | --      | `^[a-z][a-z0-9_]*$` | Unique within feature. Part of compound setting key. |
 | `name`        | string  | Yes      | --      | 1-255 chars        | Tab label in backoffice.                             |
-| `icon`        | string  | No       | `null`  | max 100 chars      | Icon class (e.g., `settings`, `cable`, `trending_up`). |
+| `icon`        | string  | No       | `null`  | max 100 chars      | Icon class (for example `settings`, `cable`, `trending_up`). |
 | `description` | string  | No       | `null`  | max 1000 chars     | Tab description text.                                |
 | `order`       | integer | No       | `0`     | --                 | Sort order for rendering. Lower values first.        |
 | `enabled`     | boolean | No       | `true`  | --                 | When `false`, tab and all children are hidden.       |
@@ -358,7 +370,7 @@ Built-in scopes (enabled out of the box):
 | Scope    | Description                            | Requires Identifier |
 |----------|----------------------------------------|---------------------|
 | `global` | Application-wide default               | No                  |
-| `store`  | Store-specific override (e.g., DE, AT) | Yes                 |
+| `store`  | Store-specific override (for example DE, AT) | Yes                 |
 
 Default hierarchy: `store -> global -> default_value`. Values resolve from most specific to least specific.
 
@@ -505,4 +517,4 @@ Settings are managed at **Backoffice > Configuration**. The page provides:
 | Value returns `null` despite being saved | Key mismatch | Compound key format is `feature:tab:group:setting`. Verify all four segments match the YAML schema. |
 | Secret value empty in Yves | Expected behavior | Secrets are never published to storage. Access only via Zed. |
 | Changes not visible after YAML edit | Schema not synced | Run `configuration:sync` after YAML changes. |
-| Store-specific value not applied | Missing scope context | Pass `ConfigurationScopeTransfer` in third argument or register request expander plugins. See [custom-scopes.md](custom-scopes.md). |
+| Store-specific value not applied | Missing scope context | Pass `ConfigurationScopeTransfer` in third argument or register request expander plugins. See [Adding Custom Scopes](/docs/dg/dev/backend-development/configuration-management/custom-scopes.html). |

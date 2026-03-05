@@ -6,7 +6,7 @@ template: howto-guide-template
 
 related:
   - title: Configuration Management feature
-    link: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
+    link: /docs/dg/dev/backend-development/configuration-management.html
 ---
 
 This document describes how to install the Configuration Management feature.
@@ -405,7 +405,7 @@ class ConfigurationDependencyProvider extends SprykerConfigurationDependencyProv
 
 1. Navigate to the Configuration Management page in the Back Office.
 2. Switch the scope selector to a specific store.
-3. Verify that the scope identifier resolves to the store name (e.g., `DE`, `AT`).
+3. Verify that the scope identifier resolves to the store name (for example `DE`, `AT`).
 
 {% endinfo_block %}
 

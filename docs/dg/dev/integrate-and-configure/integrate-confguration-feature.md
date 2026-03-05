@@ -1,12 +1,12 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: March 04, 2026
+last_updated: March 05, 2026
 template: howto-guide-template
 
 related:
   - title: Configuration Management feature
-    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
+    link: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
 ---
 
 This document describes how to install the Configuration Management feature.

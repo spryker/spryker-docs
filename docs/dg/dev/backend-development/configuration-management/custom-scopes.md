@@ -1,11 +1,11 @@
 ---
 title: Adding Custom Scopes to Configuration Management
 description: Learn how to add custom scopes to Configuration Management features
-last_updated: March 04, 2026
+last_updated: March 05, 2026
 template: concept-topic-template
 related:
   - title: Configuration Management feature
-    link: docs/dg/dev/backend-development/configuration-management.html
+    link: /docs/dg/dev/backend-development/configuration-management.html
 ---
 
 ## Overview

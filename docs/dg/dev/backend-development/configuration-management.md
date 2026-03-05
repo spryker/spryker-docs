@@ -1,13 +1,13 @@
 ---
 title: Configuration Management feature
 description: Learn on how to use and Configuration Management feature in Spryker project.
-last_updated: March 04, 2026
+last_updated: March 05, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
-    link: docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    link: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
   - title: Adding Custom Scopes to Configuration Management
-    link: docs/dg/dev/backend-development/configuration-management/custom-scopes.html
+    link: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
 ---
 
 ## What It Does
@@ -19,7 +19,7 @@ Provides a centralized, schema-driven system for managing application settings a
 ### 1. Declare settings in a YAML schema
 
 ```yaml
-# src/Spryker/MyModule/resources/configuration/my-module.configuration.yml
+# /data/configuration/my-module.configuration.yml
 features:
   - key: my_module
     name: My Module
@@ -158,7 +158,7 @@ public function getItemsPerPage(string $storeName): int
 When integrating Configuration into an existing module:
 
 1. Identify hardcoded values or constants that should be configurable
-2. Declare them in a YAML schema in `resources/configuration/`
+2. Declare them in a YAML schema in `data/configuration/`
 3. Replace hardcoded access in the module's Config class with `getModuleConfig()` calls
 4. Keep the original constant as `$default` for backward compatibility
 5. Run `configuration:sync`
@@ -171,10 +171,10 @@ When integrating Configuration into an existing module:
 YAML schema files support IDE autocompletion via JSON Schema. Add this header to your file:
 
 ```yaml
-# yaml-language-server: $schema=./configuration.schema.json
+# yaml-language-server: $schema=../../vendor/spryker/configuration/resources/configuration/configuration.schema.json
 ```
 
-The schema file is located at `src/Spryker/Configuration/resources/configuration/configuration.schema.json`.
+The schema file is located at `vendor/spryker/configuration/resources/configuration/configuration.schema.json`.
 
 ### Hierarchy
 
@@ -362,7 +362,7 @@ Built-in scopes (enabled out of the box):
 
 Default hierarchy: `store -> global -> default_value`. Values resolve from most specific to least specific.
 
-For adding custom scopes, see [custom-scopes.md](custom-scopes.md).
+For adding custom scopes, see [Adding Custom Scopes](/docs/dg/dev/backend-development/configuration-management/custom-scopes.html).
 
 ---
 
@@ -475,10 +475,10 @@ One of `any` or `all` must be provided.
 
 ## Schema File Locations
 
-| Location                     | Purpose                              | Loaded By           |
-|------------------------------|--------------------------------------|---------------------|
-| `resources/configuration/`   | Core module schemas                  | `configuration:sync` |
-| `data/configuration/`        | Project-level schema overrides       | `configuration:sync` |
+| Location                                   | Purpose                              | Loaded By           |
+|--------------------------------------------|--------------------------------------|---------------------|
+| `{Module Folder}/resources/configuration/` | Core module schemas                  | `configuration:sync` |
+| `data/configuration/`                      | Project-level schema overrides       | `configuration:sync` |
 
 Project schemas override core schemas at the setting level. Settings with the same compound key are completely replaced.
 
@@ -486,7 +486,7 @@ Project schemas override core schemas at the setting level. Settings with the sa
 
 ## Backoffice Management
 
-Settings are managed at **Backoffice > Configuration Management**. The page provides:
+Settings are managed at **Backoffice > Configuration**. The page provides:
 
 - Feature sidebar navigation
 - Tabbed layout per feature

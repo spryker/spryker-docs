@@ -525,10 +525,10 @@ entries:
         url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
 
     - title: Configuration Management
-      url: docs/dg/dev/backend-development/configuration-management.md
+      url: /docs/dg/dev/backend-development/configuration-management.html
       nested:
       - title: Adding Custom Scopes
-        url: docs/dg/dev/backend-development/configuration-management/custom-scopes.md
+        url: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
 
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
@@ -1139,7 +1139,7 @@ entries:
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
-      url: docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
 
 
   - title: SDKs

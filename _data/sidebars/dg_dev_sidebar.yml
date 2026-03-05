@@ -964,6 +964,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
     - title: Upgrade Node.js to v18 and npm to v9
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Upgrade Node.js version
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html
     - title: Migrate from Yarn to npm
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
 
@@ -1128,6 +1130,10 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-automated-svg-sprite-extraction.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
+    - title: Symfony Messenger
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html
+    - title: Symfony Scheduler
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
 
 
   - title: SDKs
@@ -1433,6 +1439,8 @@ entries:
       nested:
       - title: Monitoring
         url: /docs/dg/dev/guidelines/performance-guidelines/monitoring.html
+      - title: APM — New Relic based troubleshooting
+        url: /docs/dg/dev/guidelines/performance-guidelines/apm-newrelic-based-troubleshooting.html
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
@@ -1610,6 +1618,8 @@ entries:
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
       nested:
+      - title: Blackfire profiling
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/blackfire-profiling.html
       - title: External calls take a lot of time
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
       - title: External calls—several calls to Zed

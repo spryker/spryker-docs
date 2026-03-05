@@ -1,7 +1,7 @@
 ---
 title: Data export
 description: Learn how to configure and extend Spryker's data export functionality for reporting, analytics, and system integration.
-last_updated: July 9, 2025
+last_updated: February 27, 2026
 template: default
 ---
 
@@ -17,5 +17,5 @@ For installation and configuration, see the following docs:
 
 - [How to install](/docs/integrations/custom-building-integrations/data-exchange/data-export/install-the-sales-data-export-feature.html)
 - [Order usage example](/docs/integrations/custom-building-integrations/data-exchange/data-export/orders-data-export.html)  
-
+- [Simplified Data Export](/docs/integrations/custom-building-integrations/data-exchange/data-export/simplified-data-export-feature.html)
 

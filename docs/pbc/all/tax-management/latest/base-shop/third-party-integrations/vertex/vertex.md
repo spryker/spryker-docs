@@ -15,9 +15,7 @@ redirect_from:
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
 
-The Spryker-Vertex integration is part of the tax Category of Spryker's App Composition Platform. This integration is built with support for both the default Storefront as well as Spryker's GLUE APIs. For more information about Vertex, see the [Vertex website](https://www.vertexinc.com/).
-
-The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near-real-time tax calculations at the point of purchase while accounting for the following:
+The Spryker Vertex module, based on the *Vertex O Series*, performs automatic, near-real-time tax calculations at the point of purchase while accounting for the following:
 
 - Tax rates in each state, county, and city.
 - Laws, rules, and jurisdiction boundaries.
@@ -25,7 +23,7 @@ The Spryker Vertex app, based on the *Vertex O Series*, performs automatic, near
 
 For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
-The Spryker Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
+The Spryker Vertex module offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
 
 - *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in the App Composition catalog to connect your Spryker project to Vertex.
 - *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
@@ -36,12 +34,6 @@ The Spryker Vertex app offers the following features that are worth considering 
 - *Failover Solution*: Store owners and marketplace operators can manage refunds and ensure accurate tax reporting even during downtime.
 - *Supported Product Types*: The integration currently supports tax calculation only for items/products created using Spryker Product capabilities.
 - *Application of custom tax rules to products*: You can implement custom tax rules to accommodate unique product categorizations or specific tax regulations that apply to your business. The Vertex Integration provides a means for taxes to be calculated using these rules.
-
-<figure class="video_container">
-    <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/Vertex+Demo.mp4" type="video/mp4">
-  </video>
-</figure>
 
 ## Supported Use Cases and Business Models
 
@@ -54,17 +46,18 @@ The Spryker Vertex app offers the following features that are worth considering 
    - In Vertex you create a Taxability Mapping for the driver to one of Vertex's defined Delivery Charges
 
 
-The following diagram demonstrates the flow of the Vertex app integration:
+[//]: # (The following diagram demonstrates the flow of the Vertex app integration:)
 
-![vertex-app-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-app-flow.png)
+[//]: # ()
+[//]: # (![vertex-app-flow]&#40;https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-app-flow.png&#41;)
 
 
 
 ## How Vertex calculates taxes for different countries
 
-The Vertex app calculates taxes based on the tax rules and rates of the country where the product is shipped. The Vertex app uses the shipping address to determine the tax rate.
+The Vertex module calculates taxes based on the tax rules and rates of the country where the product is shipped. The Vertex app uses the shipping address to determine the tax rate.
 
-In some cases, the Vertex app can't calculate taxes and returns a 0 tax rate. For example, when a seller is located in EU, and the buyer is located in the US.
+In some cases, the Vertex module can't calculate taxes and returns a 0 tax rate. For example, when a seller is located in EU, and the buyer is located in the US.
 
 So, make sure your project has a logic for such cases. For example, when a buyer selects a shipping address different from the project's default tax region or country, a warehouse address in the respective region needs to be used.
 
@@ -89,4 +82,4 @@ The Spryker OMS transition command is used as an execution point to send a full 
 
 ## Next steps
 
-[Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
+[Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html))

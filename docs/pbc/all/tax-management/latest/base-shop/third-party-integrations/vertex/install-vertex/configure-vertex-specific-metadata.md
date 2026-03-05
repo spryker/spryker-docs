@@ -1,6 +1,6 @@
 ---
-title: Integrate the Vertex app
-description: Find out how you can integrate the Vertex app into your Spryker shop
+title: Configure Vertex-specific metadata
+description: Find out how you can configure Vertex-specific metadata
 last_updated: May 17, 2024
 template: howto-guide-template
 related:
@@ -407,8 +407,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 ## Next step
 
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)
-
+[Verify Vertex connection](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html)
 
 
 

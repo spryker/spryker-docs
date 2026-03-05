@@ -25,11 +25,11 @@ customer_group (most specific)
 
 Adding a custom scope requires changes in three areas:
 
-| Area | What | Why |
-|------|------|-----|
-| Shared Config | Register scope in hierarchy | Value resolution knows the parent chain |
-| Zed Plugin | Provide scope identifiers | Backoffice scope switcher lists available identifiers |
-| Zed + Client Plugin (optional) | Expand read requests with scope context | `getModuleConfig()` calls automatically include scope |
+| Area                                     | What | Why |
+|------------------------------------------|------|-----|
+| Shared Config                            | Register scope in hierarchy | Value resolution knows the parent chain |
+| Zed Plugin                               | Provide scope identifiers | Backoffice scope switcher lists available identifiers |
+| Optional: Zed + Client Plugin | Expand read requests with scope context | `getModuleConfig()` calls automatically include scope |
 
 ## Step-by-Step Guide
 
@@ -170,7 +170,7 @@ features:
 
 Run `docker/sdk cli console configuration:sync` after changes.
 
-### Step 5 (Optional): Create Request Expander Plugins
+### Optional Step 5: Create Request Expander Plugins
 
 Without an expander, callers must explicitly pass scope context as `ConfigurationScopeTransfer` objects:
 
@@ -256,7 +256,7 @@ class LocaleConfigurationValueRequestExpanderPlugin extends AbstractPlugin imple
 }
 ```
 
-### Step 6 (Optional): Register Request Expander Plugins
+### Optional Step 5.1: Register Request Expander Plugins
 
 **Zed:**
 

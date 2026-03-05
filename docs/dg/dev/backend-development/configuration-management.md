@@ -498,7 +498,7 @@ Project schemas override core schemas at the setting level. Settings with the sa
 
 ## Backoffice Management
 
-Settings are managed at **Backoffice > Configuration**. The page provides:
+Settings are managed at **The Back office > Configuration**. The page provides:
 
 - Feature sidebar navigation
 - Tabbed layout per feature

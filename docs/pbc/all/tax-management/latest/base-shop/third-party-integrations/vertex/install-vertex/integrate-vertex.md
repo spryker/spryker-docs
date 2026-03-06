@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Mar 4, 2026
+last_updated: Mar 5, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -114,7 +114,7 @@ The following methods must be overridden in `src/Pyz/Zed/Vertex/VertexConfig.php
 
 ## 4. Set up the database schema
 
-Run the following command to install the database schema:
+Install the database schema:
 
 ```bash
 vendor/bin/console propel:install
@@ -122,7 +122,7 @@ vendor/bin/console propel:install
 
 ## 5. Generate transfer objects
 
-Run the following command to generate transfer objects for the module:
+Generate transfer objects for the module:
 
 ```bash
 vendor/bin/console transfer:generate
@@ -221,6 +221,7 @@ protected function getFallbackOrderCalculationPlugins(): array
     ];
 }
 ```
+
 In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins, which are replaced by `VertexCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
 The code snippet above is an example of such configuration based on the Spryker default tax calculation plugins.
 Tax calculation plugins moved:

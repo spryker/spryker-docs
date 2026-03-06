@@ -1,7 +1,7 @@
 ---
 title: Install the ContentProductWidget module
 description: Learn how to install and integrate the ContentProductWidget module that renders Abstract Product List content items on the Storefront.
-last_updated: Mar 6, 2025
+last_updated: Mar 6, 2026
 template: howto-guide-template
 ---
 

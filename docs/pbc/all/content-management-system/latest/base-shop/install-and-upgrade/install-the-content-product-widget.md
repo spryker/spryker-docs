@@ -86,7 +86,7 @@ After you register the plugin, you can render Abstract Product List content item
 
 {% endinfo_block %}
 
-## 4) (Optional) Configure templates
+## 4) Optional: Configure templates
 
 By default, the ContentProductWidget module ships with two templates:
 
@@ -99,7 +99,7 @@ To use a default template, pass its identifier as the second argument of the Twi
 
 To add custom templates, extend the project-level Twig function provider for `ContentProductWidget`, and add your own identifiers and paths. For details, see [Create CMS templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
-## 5) (Optional) Extend product data with categories
+## 5) Optional: Extend product data with categories
 
 You can extend the product data that `ContentProductWidget` uses with additional information, such as product categories. To do this, register collection expander plugins in the project-level `ContentProductWidgetDependencyProvider`.
 

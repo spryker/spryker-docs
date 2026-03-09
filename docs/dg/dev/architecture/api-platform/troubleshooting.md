@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Mar 5, 2026
+last_updated: Mar 9, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -332,7 +332,7 @@ Enable client-side pagination control in the resource schema:
 
 ```yaml
 resource:
-  paginationEnabled: true
+  ...
   paginationClientEnabled: true
 ```
 

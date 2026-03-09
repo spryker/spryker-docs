@@ -188,9 +188,30 @@ Native resources bypass the Spryker generation pipeline, which means the followi
 |---------|-----------|-------------|
 | Multi-layer schema merging (Core, Feature, Project) | No | Manage inheritance manually |
 | Validation auto-discovery from `.validation.yml` | No | Use `#[Assert\*]` attributes directly on properties |
-| CodeBucket support | No | Use conditional logic in providers |
+| CodeBucket support | Partial | Add the `CODE_BUCKET` constant manually (see below) |
 | `api:debug` command output | No | Use `console debug:router` instead |
 | `api:generate` management | No | Manage files manually |
+
+### CodeBucket support in native resources
+
+Generated resources automatically include a `CODE_BUCKET` constant when a CodeBucket is configured in the schema. For native resources, add this constant manually to enable the same CodeBucket resolution mechanism:
+
+```php
+#[ApiResource(
+    operations: [
+        new GetCollection(),
+        new Get(),
+    ],
+    shortName: 'catalog-search',
+    provider: CatalogSearchBackendProvider::class,
+)]
+class CatalogSearchEUBackendResource extends CatalogSearchBackendResource
+{
+    public const string CODE_BUCKET = 'EU';
+}
+```
+
+The API Platform CodeBucket resolver uses the same logic for both generated and native resources: it checks for the `CODE_BUCKET` constant on the class and matches it against the current `APPLICATION_CODE_BUCKET` value. For more details, see [Code Buckets](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## Validation on native resources
 

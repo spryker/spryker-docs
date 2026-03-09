@@ -333,6 +333,8 @@ API Platform provides built-in pagination for collection endpoints (`GetCollecti
 | `paginationClientEnabled` | `boolean` | Allows clients to enable or disable pagination via the `pagination` query parameter (for example, `?pagination=false`). |
 | `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `itemsPerPage` query parameter (for example, `?itemsPerPage=50`). |
 
+The global default for `paginationItemsPerPage` is defined in the project's `api_platform.php` configuration file. To override it for a specific resource, set `paginationItemsPerPage` in the resource schema.
+
 ### Minimal pagination example
 
 ```yaml

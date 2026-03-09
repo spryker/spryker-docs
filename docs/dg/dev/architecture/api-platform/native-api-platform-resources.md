@@ -1,7 +1,7 @@
 ---
 title: Native API Platform Resources
 description: How to use native API Platform resource definitions alongside or instead of Spryker's YAML-based generation.
-last_updated: Feb 26, 2026
+last_updated: Mar 9, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -59,7 +59,7 @@ use Pyz\Glue\Catalog\Api\Backend\Provider\CatalogSearchBackendProvider;
     paginationEnabled: true,
     paginationItemsPerPage: 20,
 )]
-final class CatalogSearchBackendResource
+class CatalogSearchBackendResource
 {
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $sku = null;
@@ -100,15 +100,15 @@ class CatalogSearchBackendProvider implements ProviderInterface
 
 ## Configuring custom resource paths
 
-API Platform discovers resource classes from directories listed in the `mapping.paths` configuration. By default, Spryker configures only the generated resource directory:
+API Platform discovers resource classes from directories listed in the `mapping.paths` configuration.
+To make API Platform discover your native resources, add your directory to this list.
 
 ```php
 $apiPlatform->mapping()->paths([
     '%kernel.project_dir%/src/Generated/Api/Backend',
+    '%kernel.project_dir%/src/Pyz/Glue/Catalog/Api/Backend/Resource',
 ]);
 ```
-
-To make API Platform discover your native resources, add your directory to this list.
 
 ### Adding a custom path
 
@@ -171,7 +171,7 @@ Both the generated and native resources are discovered and served by API Platfor
 
 ## Coexistence with generated resources
 
-Native resources and YAML-generated resources coexist without conflict. API Platform treats all discovered `#[ApiResource]` classes equally, regardless of whether they were generated or hand-written.
+Native resources and YAML-generated resources coexist without conflict. API Platform treats all discovered `#[ApiResource]` classes equally, regardless of whether they were generated or manually created.
 
 Key points:
 
@@ -189,7 +189,7 @@ Native resources bypass the Spryker generation pipeline, which means the followi
 | Multi-layer schema merging (Core, Feature, Project) | No | Manage inheritance manually |
 | Validation auto-discovery from `.validation.yml` | No | Use `#[Assert\*]` attributes directly on properties |
 | CodeBucket support | No | Use conditional logic in providers |
-| `api:debug` command output | No | Use `debug:router` instead |
+| `api:debug` command output | No | Use `console debug:router` instead |
 | `api:generate` management | No | Manage files manually |
 
 ## Validation on native resources
@@ -200,7 +200,7 @@ Without the YAML validation pipeline, add Symfony Validator constraints directly
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource(/* ... */)]
-final class CatalogSearchBackendResource
+class CatalogSearchBackendResource
 {
     #[ApiProperty(identifier: true)]
     public ?string $sku = null;

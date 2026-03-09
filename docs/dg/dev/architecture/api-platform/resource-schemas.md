@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Feb 26, 2026
+last_updated: Mar 9, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -502,8 +502,9 @@ Spryker automatically merges schemas from multiple layers:
 
 **Core layer** (lowest priority):
 
+**vendor/spryker/customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# vendor/spryker/customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -515,8 +516,9 @@ resource:
 
 **Feature layer** (medium priority):
 
+**src/SprykerFeature/CRM/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# src/SprykerFeature/CRM/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -526,8 +528,9 @@ resource:
 
 **Project layer** (highest priority):
 
+**src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# src/Pyz/GLue/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -652,8 +655,9 @@ Operations support `uriTemplate` and `uriVariables` to define custom URL paths, 
 
 Define a child resource with nested URLs by adding `uriTemplate` and `uriVariables` to each operation:
 
+**customers-addresses.resource.yml**
+
 ```yaml
-# customers-addresses.resource.yml
 resource:
   name: CustomersAddresses
   shortName: customers-addresses
@@ -691,8 +695,9 @@ resource:
 
 For single-action endpoints nested under a parent resource:
 
+**customers-confirm-registration.resource.yml**
+
 ```yaml
-# customers-confirm-registration.resource.yml
 resource:
   name: CustomersConfirmRegistration
   shortName: customers-confirm-registration
@@ -877,17 +882,23 @@ email:
 
 ### 3. Leverage schema merging
 
+Core — define base properties:
+
+**src/Spryker/Customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# Core: Define base properties
-# src/Spryker/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
     email:
       type: string
+```
 
-# Project: Only override what's needed
-# src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml
+Project — only override what is needed:
+
+**src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml**
+
+```yaml
 resource:
   name: Customers
   properties:

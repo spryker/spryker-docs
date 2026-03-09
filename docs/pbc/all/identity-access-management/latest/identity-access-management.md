@@ -73,7 +73,7 @@ The last visited page URL is tracked on every eligible GET request and stored in
 
 If the user was on a create or edit page before the session expired, they are redirected back to that page, but any unsaved data is lost.
 
-Post-login redirect does not apply to agent users in Storefront and Merchant Portal. Redirect across multiple browsers or devices is not supported — the redirect applies only to the browser in which the original session was active.
+Post-login redirect does not apply to agent users in Storefront and Merchant Portal. Redirect across multiple browsers or devices is not supported. The redirect applies only to the browser in which the original session was active.
 
 ## Glue API authentication
 

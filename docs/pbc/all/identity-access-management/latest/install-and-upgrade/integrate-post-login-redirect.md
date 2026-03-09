@@ -5,8 +5,6 @@ last_updated: Mar 9, 2026
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate post-login redirect into a Spryker project.
-
 When a user's session times out, they are redirected to the login page. Without post-login redirect, after re-authentication, users land on the homepage and lose their context. With post-login redirect enabled, users are automatically sent back to the exact page they were on before the session expired — preserving their workflow across Back Office, Merchant Portal, and Storefront.
 
 ## Limitations
@@ -20,6 +18,7 @@ When a user's session times out, they are redirected to the login page. Without 
 The last visited page URL is tracked on every eligible response and stored using a configurable storage strategy. By default, the URL is stored in a browser cookie named `last-visited-page` with the following properties: HttpOnly, SameSite=Lax, and Secure when the request is HTTPS.
 
 A page is eligible for tracking if the request meets all of the following conditions:
+
 - The HTTP method is GET.
 - The request is not an AJAX request.
 - The `Accept` header includes `text/html` or is not set.
@@ -71,7 +70,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Verification" %}
 
-Log into the Back Office and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
+Log in to the Back Office and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
 
 {% endinfo_block %}
 
@@ -104,8 +103,6 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
     }
 }
 ```
-
----
 
 ### Merchant Portal
 
@@ -142,7 +139,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Verification" %}
 
-Log into the Merchant Portal and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
+Log in to the Merchant Portal and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
 
 {% endinfo_block %}
 
@@ -175,8 +172,6 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
     }
 }
 ```
-
----
 
 ### Storefront
 
@@ -244,7 +239,7 @@ class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Log into the Storefront and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
+Log in to the Storefront and navigate to any page. Log out, then log back in. Make sure you are redirected to the page you visited before logging out.
 
 {% endinfo_block %}
 
@@ -258,7 +253,7 @@ To replace the cookie storage with a custom implementation, do the following for
 
 Create a class implementing the storage interface of the relevant module:
 
-| PORTAL | INTERFACE |
+| APPLICATION | INTERFACE |
 | --- | --- |
 | Back Office | `Spryker\Zed\SecurityGui\Communication\Storage\LastVisitedPageStorageInterface` |
 | Merchant Portal | `Spryker\Zed\SecurityMerchantPortalGui\Communication\Storage\LastVisitedPageStorageInterface` |

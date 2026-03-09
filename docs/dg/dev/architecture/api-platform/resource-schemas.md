@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Feb 5, 2026
+last_updated: Feb 26, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -18,6 +18,10 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 ---
 
 This document explains how to define API Platform resource schemas in Spryker.
@@ -37,22 +41,22 @@ src/
 │       └── resources/
 │           └── api/
 │               ├── storefront/
-│               │   └── resource-name.yml
+│               │   └── resource-name.resource.yml
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 ├── SprykerFeature/
 │   └── {Feature}/
 │       └── resources/
 │           └── api/
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 └── Pyz/
     └── Glue/
         └── {Module}/
             └── resources/
                 └── api/
                     └── backend/
-                        └── resource-name.yml
+                        └── resource-name.resource.yml
 ```
 
 ## CodeBucket resources
@@ -315,6 +319,106 @@ The operation names map to HTTP methods:
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
 
+## Pagination
+
+API Platform provides built-in pagination for collection endpoints (`GetCollection`). You can configure pagination behavior per resource using YAML schema options.
+
+### Pagination options
+
+| Option | Type | Description |
+|--------|------|-------------|
+| `paginationEnabled` | `boolean` | Enables or disables pagination for this resource. When `false`, `GetCollection` returns all results without pagination. Default: inherits from global configuration. |
+| `paginationItemsPerPage` | `integer` | Number of items returned per page. Overrides the global default. |
+| `paginationMaximumItemsPerPage` | `integer` | Maximum number of items a client can request per page via `itemsPerPage` query parameter. Prevents clients from requesting excessively large pages. |
+| `paginationClientEnabled` | `boolean` | Allows clients to enable or disable pagination via the `pagination` query parameter (for example, `?pagination=false`). |
+| `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `itemsPerPage` query parameter (for example, `?itemsPerPage=50`). |
+
+### Minimal pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+
+  operations:
+    - type: GetCollection
+```
+
+### Full pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 20
+  paginationMaximumItemsPerPage: 100
+  paginationClientEnabled: true
+  paginationClientItemsPerPage: true
+
+  operations:
+    - type: GetCollection
+    - type: Get
+```
+
+With this configuration, clients can use the following query parameters:
+
+```bash
+# Default pagination (20 items per page)
+GET /products
+
+# Navigate to page 3
+GET /products?page=3
+
+# Request 50 items per page (up to maximum of 100)
+GET /products?itemsPerPage=50
+
+# Disable pagination to get all results
+GET /products?pagination=false
+```
+
+### Generated output
+
+The pagination options are rendered as named parameters in the `#[ApiResource]` attribute:
+
+```php
+#[ApiResource(
+    operations: [new GetCollection(), new Get()],
+    shortName: 'products',
+    provider: ProductsBackendProvider::class,
+    paginationItemsPerPage: 20,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
+)]
+```
+
+### Provider requirements
+
+For pagination to work, your Provider must return a `TraversablePaginator` instance for collection operations:
+
+```php
+use ApiPlatform\State\Pagination\TraversablePaginator;
+
+return new TraversablePaginator(
+    new \ArrayObject($resources),
+    $currentPage,
+    $itemsPerPage,
+    $totalItems
+);
+```
+
+If `paginationEnabled` is `true` but the Provider returns a plain array, API Platform wraps the result in a `PartialPaginatorInterface`, which may not include total count or page metadata.
+
+### Global pagination defaults
+
+Global pagination defaults can be configured in the application configuration file. Per-resource settings override the global defaults. See [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) for details.
+
 ## Relationships
 
 Define relationships between resources to enable including related resources via the `?include=` query parameter.
@@ -399,7 +503,7 @@ Spryker automatically merges schemas from multiple layers:
 **Core layer** (lowest priority):
 
 ```yaml
-# vendor/spryker/customer/resources/api/backend/customer.yml
+# vendor/spryker/customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -412,7 +516,7 @@ resource:
 **Feature layer** (medium priority):
 
 ```yaml
-# src/SprykerFeature/CRM/resources/api/backend/customer.yml
+# src/SprykerFeature/CRM/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -423,7 +527,7 @@ resource:
 **Project layer** (highest priority):
 
 ```yaml
-# src/Pyz/GLue/Customer/resources/api/backend/customer.yml
+# src/Pyz/GLue/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -474,7 +578,11 @@ use ApiPlatform\Metadata\Delete;
     shortName: 'Customer',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class,
-    paginationItemsPerPage: 10
+    paginationItemsPerPage: 10,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
 )]
 final class CustomersBackendResource
 {
@@ -488,6 +596,8 @@ final class CustomersBackendResource
 
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $customerReference = null;
+
+    public ?bool $isActive = true;
 
     // Getters, setters, toArray(), fromArray() methods...
 }
@@ -534,45 +644,133 @@ Error: Provider class "Pyz\Glue\Customer\Api\Backend\Provider\MissingProvider" d
 
 ## Advanced schema features
 
-### Custom operations
+### Custom URL paths
 
-Define custom operations beyond standard CRUD:
+Operations support `uriTemplate` and `uriVariables` to define custom URL paths, including sub-resource URLs like `/customers/{customerReference}/addresses`.
 
-```yaml
-operations:
-  - type: Post
-    uriTemplate: "/customers/{id}/activate"
-    method: "POST"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerActivationProcessor"
-```
+#### Sub-resource with full CRUD
 
-### Nested resources
-
-Define relationships between resources:
+Define a child resource with nested URLs by adding `uriTemplate` and `uriVariables` to each operation:
 
 ```yaml
-properties:
-  addresses:
-    type: array
-    description: "Customer addresses"
-    items:
-      type: object
-      properties:
-        street:
-          type: string
-        city:
-          type: string
+# customers-addresses.resource.yml
+resource:
+  name: CustomersAddresses
+  shortName: customers-addresses
+
+  operations:
+    - type: GetCollection
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+
+    - type: Get
+      uriTemplate: '/customers/{customerReference}/addresses/{uuid}'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+        uuid:
+          fromClass: CustomersAddressesStorefrontResource
+
+    - type: Post
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
 ```
+
+**`uriVariables` properties:**
+- `fromClass`: The generated resource class the variable originates from
+- `toProperty`: The property on the current resource that links to the parent resource
+
+#### Action-style sub-resource
+
+For single-action endpoints nested under a parent resource:
+
+```yaml
+# customers-confirm-registration.resource.yml
+resource:
+  name: CustomersConfirmRegistration
+  shortName: customers-confirm-registration
+
+  operations:
+    - type: Post
+      uriTemplate: /customers/{customerReference}/confirm-registration
+```
+
+For more details on `uriTemplate`, `uriVariables`, and sub-resource patterns, see the [API Platform sub-resources documentation](https://api-platform.com/docs/core/subresources/).
 
 ### Security expressions
 
-Add fine-grained security:
+Security expressions protect resources and operations using [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html). They require the SecurityBundle to be configured. See [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) for setup instructions.
+
+Three types of security expressions are supported:
+
+| Expression | Evaluated | Use case |
+|-----------|-----------|----------|
+| `security` | Before the request is processed | Check user roles or authentication status |
+| `securityPostDenormalize` | After the request body is deserialized | Check authorization based on submitted data |
+| `securityPostValidation` | After validation passes | Check authorization based on validated data |
+
+#### Resource-level security
+
+Applies to all operations on the resource:
 
 ```yaml
 resource:
-  security: "is_granted('ROLE_ADMIN')"
+  name: Customers
+  shortName: customers
+  security: "is_granted('ROLE_USER')"
+```
+
+#### Operation-level security
+
+Applies to a specific operation, overriding resource-level security:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers
+
+  operations:
+    - type: Post
+      # No security — public registration
+
+    - type: Get
+      security: "is_granted('ROLE_USER')"
+
+    - type: Patch
+      security: "is_granted('ROLE_USER')"
+```
+
+#### Post-denormalize security
+
+Evaluated after the request body has been deserialized. The `object` variable contains the resource instance:
+
+```yaml
+resource:
+  name: Orders
+  shortName: orders
+  security: "is_granted('ROLE_USER')"
   securityPostDenormalize: "is_granted('EDIT', object)"
 ```
+
+#### Post-validation security
+
+Evaluated after validation has passed:
+
+```yaml
+resource:
+  name: Payments
+  shortName: payments
+  securityPostValidation: "is_granted('PROCESS', object)"
+```
+
+For detailed information about the authentication flow, role mapping, and accessing the authenticated user in providers, see [Security](/docs/dg/dev/architecture/api-platform/security.html).
 
 ## Generation commands
 
@@ -681,7 +879,7 @@ email:
 
 ```yaml
 # Core: Define base properties
-# src/Spryker/Customer/resources/api/backend/customer.yml
+# src/Spryker/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:
@@ -689,7 +887,7 @@ resource:
       type: string
 
 # Project: Only override what's needed
-# src/Pyz/Glue/Customer/resources/api/backend/customer.yml
+# src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml
 resource:
   name: Customers
   properties:

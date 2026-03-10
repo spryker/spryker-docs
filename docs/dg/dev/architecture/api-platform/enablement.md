@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Jan 22, 2026
+last_updated: Mar 5, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -475,15 +475,15 @@ API Platform supports multi-layer schema definitions with automatic merging:
 
 ### Core layer
 
-`vendor/spryker/customer/resources/api/backend/customer.yml` - Base definition
+`vendor/spryker/customer/resources/api/backend/customer.resource.yml` - Base definition
 
 ### Feature layer
 
-`src/SprykerFeature/CustomerRelationManagement/resources/api/backend/customer.yml` - Feature enhancements
+`src/SprykerFeature/CustomerRelationManagement/resources/api/backend/customer.resource.yml` - Feature enhancements
 
 ### Project layer
 
-`src/Pyz/Glue/Customer/resources/api/backend/customer.yml` - Project customizations
+`src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml` - Project customizations
 
 The generator automatically merges these schemas with project layer taking precedence.
 

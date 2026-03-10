@@ -1,7 +1,7 @@
 ---
 title: AI workflow orchestration with state machines
 description: Learn how to orchestrate multi-step, multi-agent AI workflows using Spryker state machines
-last_updated: Mar 3, 2026
+last_updated: Mar 10, 2026
 keywords: ai, workflow, state-machine, orchestration, multi-agent, process, command, condition, structured-response
 template: howto-guide-template
 label: early-access
@@ -14,6 +14,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: Manage conversation history with the AiFoundation module
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+  - title: AI Interaction Audit Logs
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This guide shows you how to build multi-step, multi-agent AI workflows using Spryker state machines. By combining state machines with the AiFoundation module, you can orchestrate complex AI processes where agents execute tasks, make decisions based on results, and trigger subsequent steps.

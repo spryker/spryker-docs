@@ -58,6 +58,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
           - title: Workflow orchestration with state machines
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+          - title: AI Interaction Audit Logs
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -888,6 +890,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: How to integrate API Platform
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    - title: How to integrate API Platform Security
+      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
     - title: Migrate from Auth to SecurityGui module
@@ -962,6 +966,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
     - title: Upgrade Node.js to v18 and npm to v9
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Upgrade Node.js version
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html
     - title: Migrate from Yarn to npm
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
 
@@ -1310,6 +1316,10 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
+        - title: Sparse fieldsets
+          url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+        - title: Native API Platform Resources
+          url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

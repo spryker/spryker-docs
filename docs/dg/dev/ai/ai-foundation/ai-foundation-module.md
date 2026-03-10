@@ -1,8 +1,8 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Feb 19, 2026
-keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation
+last_updated: Mar 2, 2026
+keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
 related:
@@ -14,6 +14,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
   - title: AI workflow orchestration with state machines
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+  - title: AI Interaction Audit Logs
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.

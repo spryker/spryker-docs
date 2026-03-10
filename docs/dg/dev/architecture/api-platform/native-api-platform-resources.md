@@ -1,7 +1,7 @@
 ---
 title: Native API Platform Resources
 description: How to use native API Platform resource definitions alongside or instead of Spryker's YAML-based generation.
-last_updated: Mar 9, 2026
+last_updated: Mar 10, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -175,7 +175,7 @@ Native resources and YAML-generated resources coexist without conflict. API Plat
 
 Key points:
 
-- **No naming conflicts**: Ensure `shortName` values are unique across all resources in the same API type.
+- **shortName conflicts**: There is no CI validation for duplicate `shortName` values. When a native resource uses the same `shortName` as a generated resource, the resource from the last path listed in `mapping.paths` takes precedence and fully overwrites the earlier one. Because project paths are typically listed after the generated resource path, a project resource with a matching `shortName` replaces the generated resource entirely.
 - **Same provider/processor pattern**: Native resources use the same `ProviderInterface` and `ProcessorInterface` as generated resources.
 - **Same serialization**: Native resources use the same JSON:API (or other configured) format.
 - **Same security model**: Native resources can use the same `security` expressions. See [Security](/docs/dg/dev/architecture/api-platform/security.html).

@@ -372,7 +372,7 @@ Update `config/Zed/navigation.xml` to include the Workflows menu:
     <ai-foundation>
         <label>Intelligence</label>
         <title>Intelligence</title>
-        <icon>robot</icon>
+        <icon>network_intel_node</icon>
         <pages>
             <ai-workflow>
                 <label>Workflows</label>

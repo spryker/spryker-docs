@@ -76,6 +76,8 @@ Make sure that the following changes in transfer objects have been applied:
 | PriceProductScheduleRedirectTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduleRedirectTransfer |
 | SpyPriceProductScheduleEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyPriceProductScheduleEntityTransfer |
 | SpyPriceProductScheduleListEntityTransfer | class | created | src/Generated/Shared/Transfer/SpyPriceProductScheduleListEntityTransfer |
+| PriceProductScheduledApplyRequestTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduledApplyRequestTransfer |
+| PriceProductScheduledApplyResponseTransfer | class | created | src/Generated/Shared/Transfer/PriceProductScheduledApplyResponseTransfer |
 
 {% endinfo_block %}
 
@@ -191,7 +193,7 @@ Make sure that the configured data has been added to the `spy_price_product_sche
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|  PriceProductScheduleApplyConsole | <ul><li>Applies scheduled prices for the current store.</li><li>Persists a price product store for the applied scheduled product price.</li><li>Disables irrelevant product price schedules for the applied scheduled products price.</li><li>Reverts product prices from the fallback price type for scheduled product prices that are finished.</li></ul> | None |  Spryker\Zed\PriceProductSchedule\Communication\Console |
+|  PriceProductScheduleApplyConsole | <ul><li>Applies scheduled prices for the current store.</li><li>Persists a price product store for the applied scheduled product price.</li><li>Disables irrelevant product price schedules for the applied scheduled products price.</li><li>Reverts product prices from the fallback price type for scheduled product prices that are finished.</li><li>Supports `--process-all` option to process all available scheduled prices using a memory-efficient generator with batch pagination.</li><li>Supports `--batch-size` option to control the number of scheduled prices processed per batch.</li></ul> | None |  Spryker\Zed\PriceProductSchedule\Communication\Console |
 |  PriceProductScheduleCleanupConsole | Deletes scheduled prices that have ended for the number of days provided as a parameter starting from the current date. | None |  Spryker\Zed\PriceProductSchedule\Communication\Console |
 | ScheduledPriceProductConcreteFormEditTabsExpanderPlugin | Expands product concrete **Edit Product** page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement|
 | ScheduledPriceProductAbstractFormEditTabsExpanderPlugin | Expands product abstract **Edit Product** page with the **Scheduled Prices** tab. | None |  Spryker\Zed\PriceProductScheduleGui\Communication\Plugin\ProductManagement |
@@ -319,6 +321,24 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 ```bash
 console price-product-schedule:apply
+```
+
+To process all available scheduled prices with batch pagination, use the `--process-all` option.
+
+```bash
+console price-product-schedule:apply --process-all
+```
+
+To control the number of scheduled prices processed per batch, use the `--batch-size` option:
+
+```bash
+console price-product-schedule:apply --process-all --batch-size=100
+```
+
+To apply scheduled prices for a specific store only, use the `--store` option:
+
+```bash
+console price-product-schedule:apply --process-all --store=DE
 ```
 
 {% info_block warningBox "Verification" %}

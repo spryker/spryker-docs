@@ -359,22 +359,22 @@ There are many possible patterns for multi-agent orchestration. The following ar
 
 ## Navigation configuration
 
-To enable navigation to the AI Workflows in the Zed admin panel, add navigation items to your `config/Zed/navigation.xml` file.
+To enable navigation to the Workflows in the Zed admin panel, add navigation items to your `config/Zed/navigation.xml` file.
 
 ### Add navigation XML
 
-Update `config/Zed/navigation.xml` to include the AI Workflows menu:
+Update `config/Zed/navigation.xml` to include the Workflows menu:
 
 ```xml
 <config>
     <ai-foundation>
-        <label>AI Foundation</label>
-        <title>AI Foundation</title>
+        <label>Intelligence</label>
+        <title>Intelligence</title>
         <icon>robot</icon>
         <pages>
             <ai-workflow>
-                <label>AI Workflows</label>
-                <title>AI Workflows</title>
+                <label>Workflows</label>
+                <title>Workflows</title>
                 <bundle>ai-foundation</bundle>
                 <controller>ai-workflow</controller>
                 <action>index</action>
@@ -386,8 +386,8 @@ Update `config/Zed/navigation.xml` to include the AI Workflows menu:
 
 This navigation configuration:
 
-- Adds an **AI Foundation** menu item in the Zed admin panel
-- Includes an **AI Workflows** submenu to access the workflows monitoring interface
+- Adds an **Intelligence** menu item in the Zed admin panel
+- Includes a **Workflows** submenu to access the workflows monitoring interface
 - Sets the icon and labels for improved user experience
 - Defines URLs to route to the workflows overview and detail pages
 

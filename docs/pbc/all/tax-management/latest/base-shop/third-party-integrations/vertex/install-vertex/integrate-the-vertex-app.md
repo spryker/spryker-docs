@@ -15,6 +15,25 @@ Spryker doesn't have the same data model as Vertex, which is necessary for accur
 
 The following diagram shows the data flow of the tax calculation request from the Spryker Cart to the Vertex API.
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant WebServer
+    participant App
+    participant Database
+
+    User->>Browser: Enter URL / click link
+    Browser->>WebServer: HTTP GET /page
+    WebServer->>App: Forward request
+    App->>Database: Query data
+    Database-->>App: Return data
+    App-->>WebServer: Render HTML
+    WebServer-->>Browser: HTTP 200 OK
+    Browser-->>User: Display page
+```
+
+
 ![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
 
 To integrate Vertex, follow these steps.

@@ -5,13 +5,13 @@ last_updated: Mar 6, 2026
 template: howto-guide-template
 ---
 
-The **ContentProductWidget** module renders [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content items as product lists or sliders on the Storefront. 
+The **ContentProductWidget** module renders [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content items as product lists or sliders on the Storefront.
 
 To integrate the ContentProductWidget module, follow these steps:
 
 ## 1) Install the module
 
-Install the `spryker-shop/content-product-widget` module using Composer:
+Install the `spryker-shop/content-product-widget` module with Composer:
 
 ```bash
 composer require spryker-shop/content-product-widget --update-with-dependencies
@@ -29,8 +29,7 @@ Make sure the following module is installed in `vendor/spryker-shop`:
 
 ## 2) Register the Twig plugin
 
-Register the Twig plugin to make the `content_product_abstract_list` function available in Yves and CMS blocks.
-
+Register the Twig plugin to make the `content_product_abstract_list` Twig function available in Yves and CMS blocks.
 **src/Pyz/Yves/Twig/TwigDependencyProvider.php**
 
 ```php
@@ -58,7 +57,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 ## 3) Use the Twig function
 
-After you register the plugin, you can render Abstract Product List content items by using the `content_product_abstract_list` function.
+After you register the plugin, you can render Abstract Product List content items by using the `content_product_abstract_list` Twig function.
 
 ### 3.1 Function signature
 
@@ -101,7 +100,7 @@ To add custom templates, extend the project-level Twig function provider for `Co
 
 ## 5) Optional: Extend product data with categories
 
-You can extend the product data that `ContentProductWidget` uses with additional information, such as product categories and product reviews. To do this, register collection expander plugins in the project-level `ContentProductWidgetDependencyProvider`.
+You can extend the product data used by `ContentProductWidget` with additional information, such as product categories and reviews. To do this, register collection expander plugins in the project-level `ContentProductWidgetDependencyProvider`.
 
 The following example registers `ProductCategoryContentProductAbstractCollectionExpanderPlugin` and `ProductReviewContentProductAbstractCollectionExpanderPlugin`, which enrich the abstract product collection with category and review data:
 
@@ -131,7 +130,7 @@ class ContentProductWidgetDependencyProvider extends SprykerContentProductWidget
 }
 ```
 
-These plugins extend the abstract product collection with category and review information so that you can display categories and product reviews in your `ContentProductWidget` templates.
+These plugins extend the abstract product collection with category and review information so that you can display categories and reviews in your `ContentProductWidget` templates.
 
 ## 6) Next steps
 

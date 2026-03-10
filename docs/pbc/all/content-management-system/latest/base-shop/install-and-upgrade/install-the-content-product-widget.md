@@ -101,9 +101,9 @@ To add custom templates, extend the project-level Twig function provider for `Co
 
 ## 5) Optional: Extend product data with categories
 
-You can extend the product data that `ContentProductWidget` uses with additional information, such as product categories. To do this, register collection expander plugins in the project-level `ContentProductWidgetDependencyProvider`.
+You can extend the product data that `ContentProductWidget` uses with additional information, such as product categories and product reviews. To do this, register collection expander plugins in the project-level `ContentProductWidgetDependencyProvider`.
 
-The following example registers `ProductCategoryContentProductAbstractCollectionExpanderPlugin`, which enriches the abstract product collection with category data:
+The following example registers `ProductCategoryContentProductAbstractCollectionExpanderPlugin` and `ProductReviewContentProductAbstractCollectionExpanderPlugin`, which enrich the abstract product collection with category and review data:
 
 **src/Pyz/Yves/ContentProductWidget/ContentProductWidgetDependencyProvider.php**
 
@@ -114,6 +114,7 @@ namespace Pyz\Yves\ContentProductWidget;
 
 use SprykerShop\Yves\ContentProductWidget\ContentProductWidgetDependencyProvider as SprykerContentProductWidgetDependencyProvider;
 use SprykerShop\Yves\ProductCategoryWidget\Plugin\ContentProductWidget\ProductCategoryContentProductAbstractCollectionExpanderPlugin;
+use SprykerShop\Yves\ProductReviewWidget\Plugin\ContentProductWidget\ProductReviewContentProductAbstractCollectionExpanderPlugin;
 
 class ContentProductWidgetDependencyProvider extends SprykerContentProductWidgetDependencyProvider
 {
@@ -124,12 +125,13 @@ class ContentProductWidgetDependencyProvider extends SprykerContentProductWidget
     {
         return [
             new ProductCategoryContentProductAbstractCollectionExpanderPlugin(),
+            new ProductReviewContentProductAbstractCollectionExpanderPlugin(),
         ];
     }
 }
 ```
 
-This plugin extends the abstract product collection with category information so that you can display categories in your `ContentProductWidget` templates.
+These plugins extend the abstract product collection with category and review information so that you can display categories and product reviews in your `ContentProductWidget` templates.
 
 ## 6) Next steps
 

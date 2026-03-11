@@ -62,9 +62,6 @@ The login process looks like this:
 
 If a user logs in with an SSO but does not have a Back Office account, the user is not logged in. To be able to log in, a user must have a Back Office account registered using the email address used for their account with the SSO service. Usually, this strategy is used when not all the users that have access to the SSO service need access to the Back Office.
 
-
-![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
-
 ## Glue API authentication
 
 For details about Glue API authentication, see [Glue API authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html)

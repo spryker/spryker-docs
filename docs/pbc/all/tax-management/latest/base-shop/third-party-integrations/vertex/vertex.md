@@ -12,11 +12,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202400.0/base-shop/third-party-integrations/vertex/vertex.html
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex-faq.html
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)

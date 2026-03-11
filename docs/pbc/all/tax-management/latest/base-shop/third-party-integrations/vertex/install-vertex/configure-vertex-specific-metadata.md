@@ -8,11 +8,7 @@ related:
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
 redirect_from:
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
-  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
-  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html
-  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/connect-vertex.html
-  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/connect-vertex.html
 
 ---
 

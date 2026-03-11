@@ -11,6 +11,12 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
   - /docs/pbc/all/tax-management/202400.0/base-shop/third-party-integrations/vertex/vertex.html
   - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex-faq.html
+  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
@@ -45,6 +51,9 @@ The Spryker Vertex module offers the following features that are worth consideri
    - In Vertex you create a Taxability Driver with the same value from Spryker
    - In Vertex you create a Taxability Mapping for the driver to one of Vertex's defined Delivery Charges
 
+The following diagram demonstrates the flow of the Vertex integration:
+
+![vertex-flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-flow.png)
 
 ## How Vertex calculates taxes for different countries
 

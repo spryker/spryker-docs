@@ -15,6 +15,21 @@ redirect_from:
     - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202404.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202404.0/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+    - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/connect-vertex.html
+    - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/connect-vertex.html
+    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+    - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+    - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+
 
 ---
 This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.

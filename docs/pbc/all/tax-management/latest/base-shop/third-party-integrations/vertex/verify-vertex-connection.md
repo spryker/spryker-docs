@@ -1,17 +1,17 @@
 ---
-title: Connect Vertex
-description: Find out how you can configure Spryker's third-party Vertex integration into your Spryker-based project.
+title: Verify Vertex Connection
+description: Find out how you can verify Spryker's third-party Vertex integration into your Spryker-based project.
 last_updated: Mar 5, 2026
 template: howto-guide-template
 ---
 
-This document describes how to connect a Spryker project to Vertex.
+This document describes how to verify Vertex integration.
 
 ## Prerequisites
 
 - [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html).
 - Create an account with [Vertex](https://www.vertexinc.com/). If you need support getting a Vertex account, contact [support](https://support.spryker.com/) or your Customer Success Manager.
-- Optional: For Vertex Validator integration, create an account with [Vertex Validator](https://www.vertexinc.com/). If you need help getting a Vertex Validator account, contact [support](https://support.spryker.com/) or your Customer Success Manager.
+- Optional: For Vertex Validator integration, create an account with [Vertex Validator](https://www.vertexinc.com/).
 
 ## Verify Vertex connection
 

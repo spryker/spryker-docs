@@ -6,12 +6,23 @@ template: howto-guide-template
 related:
   - title: Vertex
     link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+redirect_from:
+  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html
+  - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/connect-vertex.html
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/connect-vertex.html
 
 ---
 
 After you have [integrated Vertex module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) for tax calculation, you can Configure Vertex-specific metadata.
 
 Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
+
+The following diagram shows the data flow of the tax calculation request from the Spryker Cart to the Vertex API.
+
+![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/vertex-tax-calculation-requests.png)
 
 To integrate Vertex, follow these steps.
 

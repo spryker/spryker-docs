@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Mar 9, 2026
+last_updated: Mar 11, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -715,13 +715,32 @@ For more details on `uriTemplate`, `uriVariables`, and sub-resource patterns, se
 
 Security expressions protect resources and operations using [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html). They require the SecurityBundle to be configured. See [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) for setup instructions.
 
+{% info_block infoBox "Where roles come from" %}
+
+Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased and prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`.
+
+Scopes are provided by scope provider plugins registered in `OauthDependencyProvider::getScopeProviderPlugins()`. The following table lists the out-of-the-box scope provider plugins and the scopes they provide:
+
+| Plugin | Scopes |
+|--------|--------|
+| `CustomerOauthScopeProviderPlugin` | `customer` |
+| `CompanyUserOauthScopeProviderPlugin` | `company_user` |
+| `AgentOauthScopeProviderPlugin` | `agent` |
+| `CustomerImpersonationOauthScopeProviderPlugin` | `customer_impersonation`, `customer` |
+| `UserOauthScopeProviderPlugin` | `user`, plus UserType sub-plugins |
+| `WarehouseOauthScopeProviderPlugin` | `warehouse` |
+
+For details on how the mapping works, see [Security — Roles and OAuth scope mapping](/docs/dg/dev/architecture/api-platform/security.html). For instructions on setting up scopes, see [Integrate the authorization scopes](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html).
+
+{% endinfo_block %}
+
 Three types of security expressions are supported:
 
-| Expression | Evaluated | Use case |
-|-----------|-----------|----------|
-| `security` | Before the request is processed | Check user roles or authentication status |
-| `securityPostDenormalize` | After the request body is deserialized | Check authorization based on submitted data |
-| `securityPostValidation` | After validation passes | Check authorization based on validated data |
+| Expression | Evaluated | Use case | When to use |
+|-----------|-----------|----------|-------------|
+| `security` | Before the request is processed | Check user roles or authentication status | For role or authentication checks that do not depend on the request body. |
+| `securityPostDenormalize` | After the request body is deserialized | Check authorization based on submitted data | When authorization depends on the deserialized resource `object`, for example, to verify the user owns the resource being modified. |
+| `securityPostValidation` | After validation passes | Check authorization based on validated data | When authorization depends on validated data, for example, to verify a value is within the user's authorized limit after validation confirms the data is structurally correct. |
 
 #### Resource-level security
 
@@ -766,6 +785,14 @@ resource:
   securityPostDenormalize: "is_granted('EDIT', object)"
 ```
 
+{% info_block infoBox "Custom voter attributes" %}
+
+`EDIT` in the example is a **custom voter attribute** — it is an application-defined string, not a built-in Symfony or Spryker constant. For `is_granted('EDIT', object)` to work, you must register a custom Symfony [Voter](https://symfony.com/doc/current/security/voters.html) that supports the `EDIT` attribute and implements the authorization logic, for example, checking that the authenticated user owns the resource.
+
+Use `securityPostDenormalize` when the authorization decision depends on the **submitted request data** (the deserialized `object`), such as verifying resource ownership.
+
+{% endinfo_block %}
+
 #### Post-validation security
 
 Evaluated after validation has passed:
@@ -776,6 +803,14 @@ resource:
   shortName: payments
   securityPostValidation: "is_granted('PROCESS', object)"
 ```
+
+{% info_block infoBox "Custom voter attributes" %}
+
+`PROCESS` in the example is a **custom voter attribute** — it is an application-defined string, not a built-in Symfony or Spryker constant. For `is_granted('PROCESS', object)` to work, you must register a custom Symfony [Voter](https://symfony.com/doc/current/security/voters.html) that supports the `PROCESS` attribute.
+
+Use `securityPostValidation` when the authorization decision depends on **validated data**, for example, to verify a payment amount is within the user's authorized limit after validation confirms the data is structurally correct.
+
+{% endinfo_block %}
 
 For detailed information about the authentication flow, role mapping, and accessing the authenticated user in providers, see [Security](/docs/dg/dev/architecture/api-platform/security.html).
 

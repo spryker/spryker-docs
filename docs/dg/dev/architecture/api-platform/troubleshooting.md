@@ -332,7 +332,6 @@ Enable client-side pagination control in the resource schema:
 
 ```yaml
 resource:
-  ...
   paginationClientEnabled: true
 ```
 

@@ -12,7 +12,7 @@ related:
 
 ## What It Does
 
-Provides a centralized, schema-driven system for managing application settings across scopes (global, store). Settings are declared in YAML files, managed via the Back Office UI, and consumed in any layer (Zed, Yves, Glue) through module Config classes.
+Provides a centralized, schema-driven system for managing application settings across scopes (for example global, store, custom-scope). Settings are declared in YAML files, managed via the Back Office UI, to be consumed in different layers (Zed, Yves, Glue) through module Config classes.
 
 ## Quick Start
 
@@ -97,7 +97,7 @@ protected function getModuleConfig(
 - **Yves / Glue**: Reads from key-value storage via `ConfigurationClient` (fast, cached)
 - **Zed**: Reads from database via `ConfigurationFacade` (supports secrets, full scope resolution)
 
-**Graceful degradation:** If the Configuration module is not installed, `getModuleConfig()` silently returns `$default`.
+**Backward Compatible:** If the Configuration module is not installed, `getModuleConfig()` silently returns `$default`.
 
 ### Real-World Examples
 
@@ -183,10 +183,10 @@ When integrating Configuration into an existing module:
 YAML schema files support IDE autocompletion via JSON Schema. Add this header to your file:
 
 ```yaml
-# yaml-language-server: $schema=../../vendor/spryker/configuration/resources/configuration/configuration.schema.json
+# yaml-language-server: $schema=../../vendor/spryker/configuration/resources/configuration/configuration-schema-v1.json
 ```
 
-The schema file is located at `vendor/spryker/configuration/resources/configuration/configuration.schema.json`.
+The schema file is located at `vendor/spryker/configuration/resources/configuration/configuration-schema-v1.json`.
 
 ### Hierarchy
 
@@ -197,7 +197,7 @@ features[]
       settings[]
 ```
 
-Each setting gets a compound key: `{featureKey}:{tabKey}:{groupKey}:{settingKey}` used for all lookups.
+Each setting gets a compound key: `{featureKey}:{tabKey}:{groupKey}:{settingKey}` used for persistence and lookups.
 
 ---
 

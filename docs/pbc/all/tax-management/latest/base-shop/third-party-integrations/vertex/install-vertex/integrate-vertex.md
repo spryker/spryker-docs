@@ -52,7 +52,7 @@ $config[VertexConstants::CLIENT_ID] = getenv('VERTEX_CLIENT_ID');
 $config[VertexConstants::CLIENT_SECRET] = getenv('VERTEX_CLIENT_SECRET');
 $config[VertexConstants::SECURITY_URI] = getenv('VERTEX_SECURITY_URI');
 $config[VertexConstants::TRANSACTION_CALLS_URI] = getenv('VERTEX_TRANSACTION_CALLS_URI');
-// Optional: Tax ID Validator (requires Taxamo)
+// Optional: Tax ID Validator (requires Vertex Validator, previously known as Taxamo, see https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments)
 $config[VertexConstants::TAXAMO_API_URL] = getenv('TAXAMO_API_URL');
 $config[VertexConstants::TAXAMO_TOKEN] = getenv('TAXAMO_TOKEN');
 
@@ -72,12 +72,12 @@ $config[VertexConstants::VENDOR_CODE] = '';
 
 ### Optional configuration constants
 
-| Constant | Description |
-|----------|-------------|
-| `TAXAMO_API_URL` | Taxamo API URL for tax ID validation. |
-| `TAXAMO_TOKEN` | Taxamo API authentication token. |
-| `VENDOR_CODE` | Vendor code for Vertex tax calculations. |
-| `DEFAULT_TAXPAYER_COMPANY_CODE` | Default taxpayer company code. |
+| Constant | Description                                                                                                                                |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| `TAXAMO_API_URL` | Vertex Validator API URL for tax ID validation. [Details](https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments). |
+| `TAXAMO_TOKEN` | Vertex Validator API authentication token.                                                                                                 |
+| `VENDOR_CODE` | Vendor code for Vertex tax calculations.                                                                                                   |
+| `DEFAULT_TAXPAYER_COMPANY_CODE` | Default taxpayer company code.                                                                                                             |
 
 ## 3. Override feature flags
 
@@ -111,13 +111,13 @@ class VertexConfig extends SprykerEcoVertexConfig
 
 The following methods must be overridden in `src/Pyz/Zed/Vertex/VertexConfig.php` to enable the respective features:
 
-| Method | Default | Description |
-|--------|---------|-------------|
-| `isTaxIdValidatorEnabled()` | `false` | Enables tax ID validation via Taxamo. Requires `TAXAMO_API_URL` and `TAXAMO_TOKEN` to be set. |
-| `isTaxAssistEnabled()` | `false` | Enables the tax assist feature. |
-| `isInvoicingEnabled()` | `false` | Enables invoicing functionality. Requires OMS plugins to be registered. See [Register OMS plugins](#register-oms-plugins). |
-| `getSellerCountryCode()` | `''` | Overrides the default seller country code (2-letter ISO code, for example, `US`). Defaults to the first country of the store. |
-| `getCustomerCountryCode()` | `''` | Overrides the customer country code used when no shipping address is provided. |
+| Method | Default | Description                                                                                                                                                                       |
+|--------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `isTaxIdValidatorEnabled()` | `false` | Enables tax ID validation via [Vertex Validator](https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments). Requires `TAXAMO_API_URL` and `TAXAMO_TOKEN` to be set.                                                                                     |
+| `isTaxAssistEnabled()` | `false` | Enables the tax assist feature. Return Assisted Parameters in the response that will provide more details about the calculation. The logs can be checked in the Vertex Dashboard. |
+| `isInvoicingEnabled()` | `false` | Enables invoicing functionality. Requires OMS plugins to be registered. See [Register OMS plugins](#register-oms-plugins).                                                        |
+| `getSellerCountryCode()` | `''` | Overrides the default seller country code (2-letter ISO code, for example, `US`). Defaults to the first country of the store.                                                     |
+| `getCustomerCountryCode()` | `''` | Overrides the default customer country code (applied only when no customer billing address is provided).  Defaults to the first country of the store.                             |
 
 ## 4. Set up the database schema
 

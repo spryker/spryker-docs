@@ -9,6 +9,8 @@ redirect_from:
 
 To integrate Vertex Validator, take the following steps.
 
+Registers the `POST /tax-id-validate` Glue REST API endpoint that validates a customer's Tax Identification Number (VAT ID) against a given country code via the Vertex Taxamo service. This is useful for B2B storefronts where customers must provide a valid VAT ID during checkout or address management to qualify for tax-exempt or reverse-charge transactions within the EU.
+
 ## 1. Install required modules
 
 ```bash

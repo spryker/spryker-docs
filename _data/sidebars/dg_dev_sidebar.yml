@@ -526,6 +526,12 @@ entries:
       - title: Extend Composable UI with custom Angular modules
         url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
 
+    - title: Configuration Management
+      url: /docs/dg/dev/backend-development/configuration-management.html
+      nested:
+      - title: Adding Custom Scopes
+        url: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
+
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
@@ -1136,6 +1142,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
+    - title: Configuration Management feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
 
 
   - title: SDKs
@@ -1479,6 +1487,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: CDN and traffic management integration
         url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
+      - title: Yves widget performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 

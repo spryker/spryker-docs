@@ -9,8 +9,6 @@ Yves renders widgets on almost every page request. In high-traffic environments,
 
 ## Install the optimization
 
-Run the following command to install the required packages:
-
 ```bash
 composer update \
   spryker/navigation-storage:"^1.12.0" \

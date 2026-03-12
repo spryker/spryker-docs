@@ -1,7 +1,7 @@
 ---
 title: Native API Platform Resources
 description: How to use native API Platform resource definitions alongside or instead of Spryker's YAML-based generation.
-last_updated: Feb 26, 2026
+last_updated: Mar 10, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -59,7 +59,7 @@ use Pyz\Glue\Catalog\Api\Backend\Provider\CatalogSearchBackendProvider;
     paginationEnabled: true,
     paginationItemsPerPage: 20,
 )]
-final class CatalogSearchBackendResource
+class CatalogSearchBackendResource
 {
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $sku = null;
@@ -100,15 +100,15 @@ class CatalogSearchBackendProvider implements ProviderInterface
 
 ## Configuring custom resource paths
 
-API Platform discovers resource classes from directories listed in the `mapping.paths` configuration. By default, Spryker configures only the generated resource directory:
+API Platform discovers resource classes from directories listed in the `mapping.paths` configuration.
+To make API Platform discover your native resources, add your directory to this list.
 
 ```php
 $apiPlatform->mapping()->paths([
     '%kernel.project_dir%/src/Generated/Api/Backend',
+    '%kernel.project_dir%/src/Pyz/Glue/Catalog/Api/Backend/Resource',
 ]);
 ```
-
-To make API Platform discover your native resources, add your directory to this list.
 
 ### Adding a custom path
 
@@ -171,11 +171,11 @@ Both the generated and native resources are discovered and served by API Platfor
 
 ## Coexistence with generated resources
 
-Native resources and YAML-generated resources coexist without conflict. API Platform treats all discovered `#[ApiResource]` classes equally, regardless of whether they were generated or hand-written.
+Native resources and YAML-generated resources coexist without conflict. API Platform treats all discovered `#[ApiResource]` classes equally, regardless of whether they were generated or manually created.
 
 Key points:
 
-- **No naming conflicts**: Ensure `shortName` values are unique across all resources in the same API type.
+- **shortName conflicts**: There is no CI validation for duplicate `shortName` values. When a native resource uses the same `shortName` as a generated resource, the resource from the last path listed in `mapping.paths` takes precedence and fully overwrites the earlier one. Because project paths are typically listed after the generated resource path, a project resource with a matching `shortName` replaces the generated resource entirely.
 - **Same provider/processor pattern**: Native resources use the same `ProviderInterface` and `ProcessorInterface` as generated resources.
 - **Same serialization**: Native resources use the same JSON:API (or other configured) format.
 - **Same security model**: Native resources can use the same `security` expressions. See [Security](/docs/dg/dev/architecture/api-platform/security.html).
@@ -188,9 +188,30 @@ Native resources bypass the Spryker generation pipeline, which means the followi
 |---------|-----------|-------------|
 | Multi-layer schema merging (Core, Feature, Project) | No | Manage inheritance manually |
 | Validation auto-discovery from `.validation.yml` | No | Use `#[Assert\*]` attributes directly on properties |
-| CodeBucket support | No | Use conditional logic in providers |
-| `api:debug` command output | No | Use `debug:router` instead |
+| CodeBucket support | Partial | Add the `CODE_BUCKET` constant manually (see below) |
+| `api:debug` command output | No | Use `console debug:router` instead |
 | `api:generate` management | No | Manage files manually |
+
+### CodeBucket support in native resources
+
+Generated resources automatically include a `CODE_BUCKET` constant when a CodeBucket is configured in the schema. For native resources, add this constant manually to enable the same CodeBucket resolution mechanism:
+
+```php
+#[ApiResource(
+    operations: [
+        new GetCollection(),
+        new Get(),
+    ],
+    shortName: 'catalog-search',
+    provider: CatalogSearchBackendProvider::class,
+)]
+class CatalogSearchEUBackendResource extends CatalogSearchBackendResource
+{
+    public const string CODE_BUCKET = 'EU';
+}
+```
+
+The API Platform CodeBucket resolver uses the same logic for both generated and native resources: it checks for the `CODE_BUCKET` constant on the class and matches it against the current `APPLICATION_CODE_BUCKET` value. For more details, see [Code Buckets](/docs/dg/dev/architecture/api-platform/code-buckets.html).
 
 ## Validation on native resources
 
@@ -200,7 +221,7 @@ Without the YAML validation pipeline, add Symfony Validator constraints directly
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource(/* ... */)]
-final class CatalogSearchBackendResource
+class CatalogSearchBackendResource
 {
     #[ApiProperty(identifier: true)]
     public ?string $sku = null;

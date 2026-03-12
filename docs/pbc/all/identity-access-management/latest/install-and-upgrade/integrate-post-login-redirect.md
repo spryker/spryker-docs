@@ -1,7 +1,7 @@
 ---
 title: Integrate post-login redirect
 description: Learn how to redirect users back to their last visited page after re-authentication in Back Office, Merchant Portal, and Storefront.
-last_updated: Mar 9, 2026
+last_updated: Mar 12, 2026
 template: feature-integration-guide-template
 ---
 
@@ -32,6 +32,26 @@ Install the following required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+
+## Set up configuration
+
+Add the following constants to your existing SSL configuration chain in the environment config file. The cookie's `Secure` flag is controlled by these values.
+
+**`config/Shared/config_default.php`:**
+
+```php
+<?php
+
+use Spryker\Shared\SecurityGui\SecurityGuiConstants;
+use Spryker\Shared\SecurityMerchantPortalGui\SecurityMerchantPortalGuiConstants;
+use SprykerShop\Shared\CustomerPage\CustomerPageConstants;
+
+// Add to the existing SSL constants chain:
+    = $config[CustomerPageConstants::YVES_IS_SSL_ENABLED]
+    = $config[SecurityGuiConstants::ZED_IS_SSL_ENABLED]
+    = $config[SecurityMerchantPortalGuiConstants::ZED_IS_SSL_ENABLED]
+    = false; // or true for HTTPS environments
+```
 
 ## Set up behavior
 
@@ -326,4 +346,91 @@ class SecurityGuiCommunicationFactory extends SprykerSecurityGuiCommunicationFac
 }
 ```
 
-Apply the same pattern in `SecurityMerchantPortalGuiCommunicationFactory` for Merchant Portal and in `CustomerPageFactory` for Storefront.
+**Merchant Portal — `src/Pyz/Zed/SecurityMerchantPortalGui/Communication/SecurityMerchantPortalGuiCommunicationFactory.php`:**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityMerchantPortalGui\Communication;
+
+use Pyz\Zed\SecurityMerchantPortalGui\Communication\Storage\CustomLastVisitedPageStorage;
+use Pyz\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiConfig;
+use Spryker\Shared\Kernel\StrategyResolver;
+use Spryker\Shared\Kernel\StrategyResolverInterface;
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\SecurityMerchantPortalGuiCommunicationFactory as SprykerSecurityMerchantPortalGuiCommunicationFactory;
+
+class SecurityMerchantPortalGuiCommunicationFactory extends SprykerSecurityMerchantPortalGuiCommunicationFactory
+{
+    /**
+     * @return \Spryker\Shared\Kernel\StrategyResolverInterface<\Spryker\Zed\SecurityMerchantPortalGui\Communication\Storage\LastVisitedPageStorageInterface>
+     */
+    public function createLastVisitedPageStorageResolver(): StrategyResolverInterface
+    {
+        return new StrategyResolver(
+            [SecurityMerchantPortalGuiConfig::STORAGE_TYPE_CUSTOM => new CustomLastVisitedPageStorage()],
+            SecurityMerchantPortalGuiConfig::STORAGE_TYPE_CUSTOM,
+        );
+    }
+}
+```
+
+**Storefront — `src/Pyz/Yves/CustomerPage/CustomerPageFactory.php`:**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerPage;
+
+use Pyz\Yves\CustomerPage\Storage\CustomLastVisitedPageStorage;
+use SprykerShop\Yves\CustomerPage\CustomerPageConfig;
+use SprykerShop\Yves\CustomerPage\CustomerPageFactory as SprykerShopCustomerPageFactory;
+use Spryker\Shared\Kernel\StrategyResolver;
+use Spryker\Shared\Kernel\StrategyResolverInterface;
+
+class CustomerPageFactory extends SprykerShopCustomerPageFactory
+{
+    /**
+     * @return \Spryker\Shared\Kernel\StrategyResolverInterface<\SprykerShop\Yves\CustomerPage\Storage\LastVisitedPageStorageInterface>
+     */
+    public function createLastVisitedPageStorageResolver(): StrategyResolverInterface
+    {
+        return new StrategyResolver(
+            [CustomerPageConfig::STORAGE_TYPE_CUSTOM => new CustomLastVisitedPageStorage()],
+            CustomerPageConfig::STORAGE_TYPE_CUSTOM,
+        );
+    }
+}
+```
+
+## Configure cookie and redirect eligibility settings
+
+You can adjust cookie properties and redirect eligibility criteria at the project level by overriding config methods.
+
+### Cookie properties
+
+Override the following methods in the config class of each application:
+
+| APPLICATION | CONFIG CLASS | METHODS |
+| --- | --- | --- |
+| Back Office | `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php` | `getLastVisitedPageCookieName()`, `getLastVisitedPageCookiePath()`, `getLastVisitedPageCookieExpires()`, `getLastVisitedPageCookieSameSite()`, `isLastVisitedPageCookieSecure()` |
+| Merchant Portal | `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php` | `getLastVisitedPageCookieName()`, `getLastVisitedPageCookiePath()`, `getLastVisitedPageCookieExpires()`, `getLastVisitedPageCookieSameSite()`, `isLastVisitedPageCookieSecure()` |
+| Storefront | `src/Pyz/Yves/CustomerPage/CustomerPageConfig.php` | `getLastVisitedPageCookieName()`, `getLastVisitedPageCookiePath()`, `getLastVisitedPageCookieExpires()`, `getLastVisitedPageCookieSameSite()`, `isLastVisitedPageCookieSecure()` |
+
+The `isLastVisitedPageCookieSecure()` method reads from an environment constant. Set it to `true` in your environment config for HTTPS deployments:
+
+| APPLICATION | CONSTANT |
+| --- | --- |
+| Back Office | `Spryker\Shared\SecurityGui\SecurityGuiConstants::ZED_IS_SSL_ENABLED` |
+| Merchant Portal | `Spryker\Shared\SecurityMerchantPortalGui\SecurityMerchantPortalGuiConstants::ZED_IS_SSL_ENABLED` |
+| Storefront | `SprykerShop\Shared\CustomerPage\CustomerPageConstants::YVES_IS_SSL_ENABLED` |
+
+### Redirect eligibility criteria
+
+The `Http` module controls which requests are eligible for redirect tracking. Override the following methods in `src/Pyz/Service/Http/HttpConfig.php`:
+
+| METHOD | DEFAULT | DESCRIPTION |
+| --- | --- | --- |
+| `getInternalPathPrefix()` | `/_` | Path prefix for internal framework paths excluded from tracking. |
+| `getAuthenticationPathPattern()` | `#^/([^/]+/[^/]+/)?(login\|logout)(/\|$)#` | Regex pattern matching login and logout paths excluded from tracking. |
+| `getSupportedAcceptHeaderValues()` | `['text/html']` | Accept header values that mark a request as eligible for tracking. |
+| `getHttpHeaderAccept()` | `Accept` | The HTTP header name used to read accepted content types. |

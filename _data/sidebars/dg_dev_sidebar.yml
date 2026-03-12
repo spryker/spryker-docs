@@ -1487,6 +1487,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: CDN and traffic management integration
         url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
+      - title: Yves widget performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 

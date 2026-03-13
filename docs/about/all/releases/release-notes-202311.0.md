@@ -192,7 +192,7 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 ### Technical prerequisites
 
 - [Install ACP](/docs/acp/user/app-composition-platform-installation.html)
-- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
+- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app {% include badge.html type="improvement" %}
 

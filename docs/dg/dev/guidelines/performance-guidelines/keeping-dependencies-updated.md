@@ -109,6 +109,13 @@ The following sections list important module updates that include performance im
 - [spryker/event-behavior:^1.32.0](https://github.com/spryker/event-behavior/releases/tag/1.32.0)
 - [spryker/synchronization-behavior:^1.13.0](https://github.com/spryker/synchronization-behavior/releases/tag/1.13.0)
 
+### Publish and synchronization (Category tree build logic)
+
+- [spryker/category:"^5.23.0"](https://github.com/spryker/category/releases/tag/5.23.0)
+- [spryker/category-storage:"^2.12.0"](https://github.com/spryker/category-storage/releases/tag/2.12.0)
+- [spryker/propel-orm:"^1.22.0"](https://github.com/spryker/propel-orm/releases/tag/1.22.0)
+- [spryker/util-sanitize:"^2.3.1"](https://github.com/spryker/util-sanitize/releases/tag/2.3.1)
+
 ### Cart page and checkout for large carts (100+ items)
 
 For comprehensive guidance on optimizing cart performance, see [Cart page performance configuration](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html).

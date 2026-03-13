@@ -607,7 +607,7 @@ Install the required features:
 }
 ```
 
-2. Install dependencies and build the Backoffice frontend:
+2. Install dependencies and build the Back Office frontend:
 
 ```bash
 npm install
@@ -616,7 +616,7 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the Backoffice frontend build completes without errors. The output must not contain `Module not found` messages. Verify that the following assets are generated:
+Make sure the Back Office frontend build completes without errors. The output must not contain `Module not found` messages. Verify that the following assets are generated:
 
 - `public/Zed/assets/css/spryker-zed-gui-commons.css`
 - `public/Zed/assets/css/spryker-zed-productmanagement-main.css`

@@ -1,7 +1,7 @@
 ---
 title: Adding Custom Scopes to Configuration Management
 description: Learn how to add custom scopes to Configuration Management features
-last_updated: March 05, 2026
+last_updated: Mar 13, 2026
 template: concept-topic-template
 related:
   - title: Configuration Management feature
@@ -85,7 +85,7 @@ locale (parent: store)      -- requires identifier, e.g. "de_DE"
 
 ### Step 2: Create a Scope Identifier Provider Plugin
 
-The backoffice uses this plugin to list available identifiers in the scope switcher dropdown.
+The Back Office uses this plugin to list available identifiers in the scope switcher dropdown.
 
 ```php
 // src/Pyz/Zed/Locale/Communication/Plugin/Configuration/LocaleConfigurationScopeIdentifierProviderPlugin.php
@@ -613,7 +613,7 @@ features:
                 storefront: true
 ```
 
-In the backoffice, you can then configure different values for each experiment variant:
+In the Back Office, you can then configure different values for each experiment variant:
 - `experiment:control` — `checkout_button_color: blue`, `checkout_button_text: Complete Purchase`
 - `experiment:variant_a` — `checkout_button_color: green`, `checkout_button_text: Buy Now`
 - `experiment:variant_b` — `checkout_button_color: orange`, `checkout_button_text: Place Order`

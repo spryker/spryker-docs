@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn on how to use and Configuration Management feature in Spryker project.
-last_updated: March 05, 2026
+last_updated: Mar 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -380,7 +380,7 @@ For adding custom scopes, see [Adding Custom Scopes](/docs/dg/dev/backend-develo
 
 ### Constraints
 
-Validated server-side when saving values through the backoffice.
+Validated server-side when saving values through the Back Office.
 
 ```yaml
 constraints:
@@ -420,7 +420,7 @@ constraints:
 
 ### Dependencies
 
-Control conditional visibility of settings in the backoffice UI. A setting with dependencies is only shown when at least one dependency rule matches (OR logic between rules). Each rule uses a `when` clause with `any` (OR) or `all` (AND) condition grouping.
+Control conditional visibility of settings in the Back Office UI. A setting with dependencies is only shown when at least one dependency rule matches (OR logic between rules). Each rule uses a `when` clause with `any` (OR) or `all` (AND) condition grouping.
 
 ```yaml
 settings:

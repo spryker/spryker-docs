@@ -1,7 +1,7 @@
 ---
 title: Install Amazon QuickSight
 description: Learn how to integrate the Amazon QuickSight into your project
-last_updated: Feb 19, 2026
+last_updated: Mar 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -590,23 +590,37 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Enable Javascript and CSS changes
+### 1) Install npm dependencies and enable Javascript and CSS changes
 
-1. Update `package.json`:
+1. In `package.json`, add the `amazon-quicksight-embedding-sdk` npm package to `dependencies` and add the vendor workspace:
 
 **package.json**
 
 ```json
 {
+    "dependencies": {
+        "amazon-quicksight-embedding-sdk": "2.10.0"
+    },
     "workspaces": [
         "vendor/spryker-eco/*/assets/Zed"
-    ],
+    ]
 }
 ```
 
-2. Enable Javascript and CSS changes:
+2. Install dependencies and build the Backoffice frontend:
 
 ```bash
 npm install
 console frontend:zed:build
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the Backoffice frontend build completes without errors. The output must not contain `Module not found` messages. Verify that the following assets are generated:
+
+- `public/Zed/assets/css/spryker-zed-gui-commons.css`
+- `public/Zed/assets/css/spryker-zed-productmanagement-main.css`
+
+If assets are missing after deployment, verify that `amazon-quicksight-embedding-sdk` is present in `package.json` and rerun the build.
+
+{% endinfo_block %}

@@ -15,16 +15,16 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
 related:
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html    
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_label_store.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
+This document describes the `product_label_store.csv` file to configure [Product Label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-[product_label.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/import-file-details-product-label.csv.html).
+[product_label.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label.csv.html).
 
 
 ## Import file parameters

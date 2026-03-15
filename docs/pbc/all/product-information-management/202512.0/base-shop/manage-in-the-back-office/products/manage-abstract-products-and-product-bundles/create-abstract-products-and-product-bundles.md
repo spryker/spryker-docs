@@ -17,27 +17,27 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html  
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/marketplace/user/back-office-user-guides/202204.0/catalog/products/abstract-products/creating-abstract-products.html
 related:
   - title: Creating Product Variants
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
   - title: Editing Product Variants
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - title: Managing Products
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-products.html
   - title: Discontinuing Products
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
   - title: Adding Product Alternatives
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 ---
 
-This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-bundles-feature-overview.html).
+This doc describes how to create [abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html).
 
 ## Prerequisites
 
-To be able to create [product variants](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
+To be able to create [product variants](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 Each section contains reference information. Make sure to look up the necessary information as you go through the process.
 
@@ -65,7 +65,7 @@ Each section contains reference information. Make sure to look up the necessary 
 | SKU PREFIX          | Unique product identifier that will be used to track unique information related to the product.                                                                                                                                                                                                                                                                                                                                                                                       |
 | NAME                | Name that will be displayed for the product on the Storefront.                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | DESCRIPTION         | Description that will be displayed for the product on the Storefront.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| NEW FROM <br>NEW TO | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul>. |
+| NEW FROM <br>NEW TO | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul>. |
 
 ## Define prices
 
@@ -82,11 +82,11 @@ On the **Price & Tax** tab, do the following:
 
 | ATTRIBUTE                | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/latest/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>.                  |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>.                  |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price            | Default price is the price a customer pays for the product.                                                                                                                                                                                                                                                                                                                                                                      |
 | ORIGINAL price           | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change.                                                                                                                                                                                                                                             |
-| TAX SET                  | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-rates.html).                                                                                                                                                                                                      |
+| TAX SET                  | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html).                                                                                                                                                                                                      |
 
 #### Default and original prices on the Storefront
 
@@ -107,7 +107,7 @@ The default prices are displayed in the online store as a current price, while t
 
 - To be able to add product variants after creating an abstract product, add at least one super attribute.
 
-{% endinfo_block %}  
+{% endinfo_block %}
 
 On the **Variants** tab, depending on the product type, do one of the following:
 
@@ -115,7 +115,7 @@ On the **Variants** tab, depending on the product type, do one of the following:
 - Abstract product: Define product variants as follows:
     1. Select one or more super attributes to create product variants from.
     2. In the field next to the super attribute you've selected, select one or more product attribute values.
-    3. Repeat the previous step until you select at least one value for each selected super attribute.  
+    3. Repeat the previous step until you select at least one value for each selected super attribute.
     4. Click **Next >** and follow [Define meta information](#optional-define-meta-information).
 
 <figure class="video_container">
@@ -132,7 +132,7 @@ The reference information in this section is relevant only for abstract products
 
 {% endinfo_block %}
 
-In the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
+In the **Variants** tab, you can see all the existing [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 
@@ -172,6 +172,6 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 
 ## Next steps
 
-- [Add volume prices](/docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)
-- [Add scheduled prices](/docs/pbc/all/price-management/latest/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
-- [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)
+- [Add volume prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)
+- [Add scheduled prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
+- [Edit abstract products and product bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)

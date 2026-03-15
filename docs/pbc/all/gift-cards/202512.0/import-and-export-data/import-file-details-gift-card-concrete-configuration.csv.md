@@ -14,10 +14,10 @@ redirect_from:
    - /docs/pbc/all/gift-cards/202204.0/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `gift_card_concrete_configuration.csv` file to configure [Gift Card](/docs/pbc/all/gift-cards/latest/gift-cards.html) Concrete Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. In this file, you can configure the amount of money that will be loaded in the Gift Card.
+This document describes the `gift_card_concrete_configuration.csv` file to configure [Gift Card](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html) Concrete Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. In this file, you can configure the amount of money that will be loaded in the Gift Card.
 
 To import the file, run
 
@@ -36,7 +36,7 @@ data:import:gift-card-concrete-configuration
 
 ## Import file dependencies
 
-This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
+This file has the following dependency: [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 

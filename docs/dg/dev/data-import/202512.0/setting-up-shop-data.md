@@ -11,7 +11,7 @@ redirect_from:
 
 To import data into a shop, you need to do the following:
 
-1. [Enable the existing data importers](/docs/dg/dev/data-import/latest/data-importers-implementation.html) or [create your own](/docs/dg/dev/data-import/latest/creating-data-importers.html).
+1. [Enable the existing data importers](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html) or [create your own](/docs/dg/dev/data-import/{{page.version}}/creating-data-importers.html).
 2. Populate the CSV files with import data. For import file details, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html).
-3. [Define the correct order of import](/docs/dg/dev/data-import/latest/execution-order-of-data-importers.html).
-4. Run either [individual data importers, or in bulk](/docs/dg/dev/data-import/latest/importing-data-with-a-configuration-file.html#console-commands-to-run-import).
+3. [Define the correct order of import](/docs/dg/dev/data-import/{{page.version}}/execution-order-of-data-importers.html).
+4. Run either [individual data importers, or in bulk](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import).

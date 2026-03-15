@@ -10,9 +10,9 @@ redirect_from:
 
 related:
   - title: Data Transformer Data Configurators
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
   - title: Data Transformer Filters
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
 ---
 
 This document explains the Data Transformer Collate service in the Components Library.
@@ -30,7 +30,7 @@ In general, the meaning of the word `collate` is to collect, arrange and assembl
             data: {
                 col1: '2020-09-24T15:20:08+02:00',
                 col2: 'col 2',
-            },                                                     
+            },
             transform: {
                 type: 'collate',
                 configurator: {
@@ -48,7 +48,7 @@ In general, the meaning of the word `collate` is to collect, arrange and assembl
                 },
                 transformerByPropName: {
                     col1: 'date',
-                },  
+                },
             },
         },
     }"
@@ -63,9 +63,9 @@ These services are registered via `CollateDataTransformer.withFilters()`.
 
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-- [Equals](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html)—filters values that are strictly equal.
-- [Range](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html)—filters values that are within a number range.
-- [Text](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html)—filters values that match a string.
+- [Equals](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html)—filters values that are strictly equal.
+- [Range](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html)—filters values that are within a number range.
+- [Text](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html)—filters values that match a string.
 
 ## Collate Data Configurators
 
@@ -74,7 +74,7 @@ These services are registered via `CollateDataTransformer.withConfigurators()`.
 
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-- [Table](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html)—integrates Table into Collate to re-populate data when the table updates.
 
 ## Service registration
 
@@ -109,18 +109,18 @@ Below you can find interfaces for the Data Transformer Collate:
 
 ### DataTransformerConfiguratorConfig
 
-- `configurator`—the object with the Data Transformer configurator type and additional properties.  
+- `configurator`—the object with the Data Transformer configurator type and additional properties.
 - `filter`—the object based on a specific data property (`filterId`) that defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.
-- `search`—defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.  
-- `transformerByPropName`—the object with data properties list that needs to be transformed.  
+- `search`—defines the properties on which the initial data object is filtered via `DataTransformerFilterConfig`.
+- `transformerByPropName`—the object with data properties list that needs to be transformed.
 
 ### DataTransformerConfiguratorConfig
 
-`type`—the declared name of the module whose data needs to be transformed.  
+`type`—the declared name of the module whose data needs to be transformed.
 
 ### DataTransformerFilterConfig
 
-- `type`—the name of a filter, for example, `range`.  
+- `type`—the name of a filter, for example, `range`.
 - `propNames`—the array with the property names to which the filter is applied.
 
 ```ts

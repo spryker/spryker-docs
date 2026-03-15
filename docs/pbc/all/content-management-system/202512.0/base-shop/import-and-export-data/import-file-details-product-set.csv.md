@@ -15,14 +15,14 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-product-set.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_set.csv` file to configure [Product Set](/docs/pbc/all/content-management-system/latest/base-shop/product-sets-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_set.csv` file to configure [Product Set](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/product-sets-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 
 ## Import file parameters

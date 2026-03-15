@@ -7,18 +7,18 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product.csv.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
-This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html) information in your Spryker shop.
+This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-feature-overview.html) information in your Spryker shop.
 
 ## Import file dependencies
 
 
-- [merchant.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 ## Import file parameters
 

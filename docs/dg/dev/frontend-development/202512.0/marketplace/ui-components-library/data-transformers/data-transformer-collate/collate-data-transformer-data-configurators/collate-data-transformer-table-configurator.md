@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Data Transformer Data Configurators
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
 ---
 
 This document explains the Table Configurator service in the Components Library.
@@ -25,13 +25,13 @@ Check out an example usage of the Data Transformer Collate Configurator Table in
 <spy-table
     [config]="{
         datasource: {
-            ...,                                                   
+            ...,
             transform: {
                 type: 'collate',
                 configurator: {
                     type: 'table',
                 },
-                ...,  
+                ...,
             },
         },
     }"

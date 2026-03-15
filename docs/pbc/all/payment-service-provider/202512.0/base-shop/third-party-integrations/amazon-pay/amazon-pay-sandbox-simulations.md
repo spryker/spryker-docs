@@ -11,13 +11,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Configuring Amazon Pay
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/configure-amazon-pay.html
   - title: Amazon Pay - State Machine
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/amazon-pay-state-machine.html
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/amazon-pay/obtain-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
  In order to reproduce some edge cases like declined payment or pending capture Amazon provides two solutions. First is special methods marked with red star on payment widget.
@@ -55,7 +55,7 @@ And one setting is spryker related only. It is a level of logging of Handling or
 $config[AmazonpayConstants::ERROR_REPORT_LEVEL]
 ```
 
-The value `ERRORS_ONLY` is recommended for production so that all errors can be investigated and fixed then.  
+The value `ERRORS_ONLY` is recommended for production so that all errors can be investigated and fixed then.
 
 ## Localization
 

@@ -7,17 +7,17 @@ originalLink: https://documentation.spryker.com/2021080/docs/klarna-payment-work
 originalArticleId: 3c541e8f-7983-4f74-acce-a34aebb26c36
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/klarna/klarna-payment-workflow.html
-  - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna-payment-workflow.html  
+  - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna-payment-workflow.html
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/klarna/klarna-payment-workflow.html
 related:
   - title: Klarna - Invoice Pay in 14 days
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
   - title: Klarna
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna.html
   - title: Klarna - Part Payment Flexible
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
   - title: Klarna state machine commands and conditions
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 Both `Part Payment` and `Invoice` payment methods have the same request flow. It basically consists of the following steps:

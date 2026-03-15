@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202001.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/pbc/all/search/latest/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
+    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -20,8 +20,8 @@ In your development, this endpoint can help you to:
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
-- [Install the Catalog Glue API](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
-- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
+- [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
 
 ## Search by products
 
@@ -7299,9 +7299,9 @@ To search by products, send the request:
 
 For details of the included resources, see:
 
-- [Retrieving abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
-- [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
-- [Retrieving product offers](/docs/pbc/all/offer-management/latest/marketplace/glue-api-retrieve-product-offers.html)
+- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
+- [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Possible errors
 

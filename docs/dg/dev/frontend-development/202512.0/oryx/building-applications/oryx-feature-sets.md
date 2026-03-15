@@ -11,7 +11,7 @@ redirect_from:
 
 
 
-A *feature set* is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/dg/dev/frontend-development/latest/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
+A *feature set* is a group of related features that can be added to an Oryx application with a single reference. Feature sets simplify the process of setting up an application by reducing the amount of [boilerplate code](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html) required to configure and initialize the application.
 
 There are two types of feature sets: domain and application feature sets.
 
@@ -27,7 +27,7 @@ Application feature sets can be seen as *demo apps*, because one such set lets y
 
 ### Available application feature sets
 
-Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](/docs/dg/dev/frontend-development/latest/oryx/building-applications/oryx-presets.html). The following feature sets are available:
+Oryx includes predefined feature sets that cover common use cases for web applications. The application feature sets are provided in the [presets package](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-presets.html). The following feature sets are available:
 
 - b2cFeatures: features commonly used in B2C applications.
 - fulfillmentFeatures: features used in PWAs, used for picking products for fulfillment.
@@ -89,7 +89,7 @@ export const loginPage = {
 };
 ```
 
-To better understand the data structure, see [Compositions](/docs/dg/dev/frontend-development/latest/oryx/building-pages/oryx-compositions.html).
+To better understand the data structure, see [Compositions](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
 By utilizing the static experience data provided in Oryx presets, you can easily set up the overall structure and layout of your application, including common sections like the header and footer, without having to write the code from scratch.
 
@@ -106,7 +106,7 @@ import { appBuilder } from "@spryker-oryx/core";
 import {
   customFeature1,
   customFeature2,
-} from "/docs/scos/dev/front-end-development/latest/oryx/my-features";
+} from "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-features";
 
 const customFeatures = [customFeature1, customFeature2];
 

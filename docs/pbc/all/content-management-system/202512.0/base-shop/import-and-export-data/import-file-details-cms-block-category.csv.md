@@ -12,14 +12,14 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-cms-block-category.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `cms_block_category.csv` file to configure CMS Block Category information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_block_category_position.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html).
+This file has the following dependency: [cms_block_category_position.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html).
 
 ## Import file parameters
 

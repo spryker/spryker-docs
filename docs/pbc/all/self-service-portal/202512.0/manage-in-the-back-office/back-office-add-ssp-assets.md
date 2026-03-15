@@ -9,8 +9,8 @@ This document describes how to add assets managed by companies.
 
 ## Prerequisites
 
-- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html) to add the asset to
-- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-units/create-company-units) to add the asset to
+- Optional: [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html) to add the asset to
+- Optional: [Create a business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/create-company-units) to add the asset to
 
 
 ## Add an asset
@@ -26,11 +26,11 @@ This document describes how to add assets managed by companies.
     - **In Review**: The asset is being reviewed by a company user with admin permissions
     - **Approved**: The asset is approved and ready to be used
     - **Deactivated**: The asset can't be used
-  
+
 6. Optional: For **NOTE**, enter any useful information about the asset.
 7. Optional: For **COMPANY**, enter and select one or more companies to add the asset to.
 8. Optional: For **BUSINESS UNIT**, enter and select one or more business units to add the asset to.
 9. Optional: For **BUSINESS UNIT OWNER**, select business unit that owns the asset.
 10. Optional: To upload an image for the asset, click UPLOAD and select the image from your computer.
 11. Click **Save**.
- This opens the view asset page with a success message displayed.  
+ This opens the view asset page with a success message displayed.

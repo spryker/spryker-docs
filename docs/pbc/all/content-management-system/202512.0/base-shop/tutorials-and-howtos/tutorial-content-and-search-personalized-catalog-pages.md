@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
 related:
   - title: CMS Pages overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
 
 {% info_block infoBox %}
@@ -54,7 +54,7 @@ The session ID is used just to show that products change when a new customer vis
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-2. In the Back Office, [Create a CMS page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/create-cms-pages.html). Select the template you've just created. For page URL, enter `/my-offers`.
+2. In the Back Office, [Create a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html). Select the template you've just created. For page URL, enter `/my-offers`.
 3. Publish the page.
 
 Now, you need to test the CMS page:
@@ -474,7 +474,7 @@ The `render()` method takes a path for the route name as a parameter. It creates
 		{% raw %}{{{% endraw %} render(path('personalized-product-index', {'limit': 12})) {% raw %}}}{% endraw %}
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
-```		
+```
 
 To check the results, go to `https://mysprykershop.com/my-offers`.
 

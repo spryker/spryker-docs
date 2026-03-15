@@ -4,8 +4,8 @@ This document describes how to install the Self-Service Portal (SSP) Model Manag
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                |
 |---------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                       |
+| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)                                       |
 
 ## Install the required modules
 
@@ -84,9 +84,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
      *
      * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
-    protected function getProcessorMessagePlugins(Container $container): array 
+    protected function getProcessorMessagePlugins(Container $container): array
     {
-        return [  
+        return [
             SelfServicePortalConfig::QUEUE_NAME_SYNC_STORAGE_SSP_MODEL => new SynchronizationStorageQueueMessageProcessorPlugin(),
         ];
     }
@@ -412,7 +412,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new SspModelPublisherTriggerPlugin(),
         ];
     }
-   
+
     /**
      * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -423,7 +423,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new SspModelToProductListWritePublisherPlugin(),
         ];
     }
-    
+
      /**
      * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -475,7 +475,7 @@ use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductListGui\Ssp
 
 class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyProvider
 {
- 
+
     /**
      * @return array<\Spryker\Zed\ProductListGuiExtension\Dependency\Plugin\ProductListUsedByTableExpanderPluginInterface>
      */

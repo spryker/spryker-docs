@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/create-warehouses.html
 related:
   - title: Inventory Management feature overview
-    link: docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 The document describes how to create warehouses in the Back Office.
@@ -60,8 +60,8 @@ If you clear all checkboxes for stores assigned to a specific warehouse, this wa
 
 ## Next steps
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html).
 
-Additionally, you can [edit a warehouse](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-warehouses.html). For more details, see the [Editing warehouse details]
+Additionally, you can [edit a warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html). For more details, see the [Editing warehouse details]
 
-To learn how to manage stock per specific warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+To learn how to manage stock per specific warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).

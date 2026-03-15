@@ -3,7 +3,7 @@ title: Install the Sitemap feature
 description: Learn the prerequisites and how to enable and integrate Sitemap feature into a Spryker based project.
 last_updated: March 4, 2025
 template: howto-guide-template
-redirect_from: 
+redirect_from:
   - /docs/dg/dev/integrate-and-configure/integrate-sitemap-generation.html
   - /docs/pbc/all/miscellaneous/202505.0/install-and-upgrade/install-features/install-the-sitemap-feature.html
 ---
@@ -18,7 +18,7 @@ Install the required features:
 
 | NAME                  | VERSION          | INSTALLATION GUIDE                                                                                                                                               |
 |-----------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core          | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
+| Spryker Core          | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)     |
 
 
 ## 1) Install modules
@@ -178,7 +178,7 @@ class SitemapConfig extends SprykerSitemapConfig
 ### 2.5) Configure Sitemap URL limit
 
 
-The sitemap URL limit determines the number of URLs that can be included in a single sitemap file. This ensures that the sitemap file doesn't exceed the maximum allowed size and remains manageable.  
+The sitemap URL limit determines the number of URLs that can be included in a single sitemap file. This ensures that the sitemap file doesn't exceed the maximum allowed size and remains manageable.
 
 The default limit is 50,000 URLs per sitemap file, which is the maximum allowed by the Sitemaps Protocol. You can decrease this limit by extending the `SitemapConfig` class and overriding the `getSitemapUrlLimit()` method.
 
@@ -201,7 +201,7 @@ class SitemapConfig extends SprykerSitemapConfig
 
 ### 2.6) Configure Sitemap file path
 
-By default, the sitemap file is stored with a structured path that includes the store name. This ensures sitemaps are organized per store, preventing conflicts in multi-store environments. You can change this behavior to fit your project's requirements.  
+By default, the sitemap file is stored with a structured path that includes the store name. This ensures sitemaps are organized per store, preventing conflicts in multi-store environments. You can change this behavior to fit your project's requirements.
 
 The following example overrides the default configuration by redefining `getFilePath()`.
 
@@ -209,7 +209,7 @@ The following example overrides the default configuration by redefining `getFile
 
 ```php
 <?php
-namespace Pyz\Shared\Sitemap;  
+namespace Pyz\Shared\Sitemap;
 
 use Spryker\Shared\Sitemap\SitemapConfig as SprykerSitemapConfig;
 

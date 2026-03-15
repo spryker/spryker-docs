@@ -10,25 +10,25 @@ redirect_from:
 
 related:
   - title: Table Feature extension
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Editable
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-editable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - title: Table Feature Row Actions
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
   - title: Table Feature Search
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document explains the Table Feature Pagination component in the Components Library.
@@ -42,8 +42,8 @@ Check out an example usage of the Table Feature Pagination in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled`—enables the feature via config.  
-- `sizes`—an array of numbers of table rows that needs to be displayed per page.  
+- `enabled`—enables the feature via config.
+- `sizes`—an array of numbers of table rows that needs to be displayed per page.
 
 ```html
 <spy-table
@@ -53,7 +53,7 @@ Component configuration:
         pagination: {
             enabled: true,
             sizes: [10, 50, 100],
-        },                                                                                           
+        },
     }"
 >
 </spy-table>

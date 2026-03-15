@@ -18,7 +18,7 @@ This document describes how to set up an environment for developing in the Oryx 
 
 ## Install Oryx with the boilerplate project
 
-1. Clone the boilerplate project and install dependencies.  
+1. Clone the boilerplate project and install dependencies.
 
 ```shell
 git clone https://github.com/spryker/composable-frontend && \
@@ -27,7 +27,7 @@ npm i
 ```
 
 
-2. Optional: To install [Fulfillment App](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html) instead of Composable Storefront, checkout the `fulfillment` branch from the boilerplate:
+2. Optional: To install [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html) instead of Composable Storefront, checkout the `fulfillment` branch from the boilerplate:
 
 ```shell
 git checkout fulfillment
@@ -48,7 +48,7 @@ npm run dev
 
 The application gets available at `localhost:3000`.
 
-For more information about the boilerplate project, see the [boilerplate guide](/docs/dg/dev/frontend-development/latest/oryx/getting-started/oryx-boilerplate.html).
+For more information about the boilerplate project, see the [boilerplate guide](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html).
 
 ## Builders and bundlers for Oryx
 
@@ -56,4 +56,4 @@ The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Ory
 
 ## Packages
 
-Oryx [packages](/docs/dg/dev/frontend-development/latest/oryx/getting-started/oryx-packages.html) are distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).
+Oryx [packages](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-packages.html) are distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).

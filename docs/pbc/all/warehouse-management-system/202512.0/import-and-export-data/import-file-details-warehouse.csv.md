@@ -12,10 +12,10 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/import-file-details-warehouse.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
 
 ## Import file parameters
@@ -53,6 +53,6 @@ data:import:stock
 
 ## Next steps
 
-- ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html)
-- ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html)
-- ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
+- ["Import file details: warehouse_address.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html)
+- ["Import file details: warehouse_store.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html)
+- ["Import file details: product_stock.csv"](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)

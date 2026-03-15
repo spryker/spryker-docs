@@ -8,9 +8,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/viewing-returns-of-an-order.html
 related:
   - title: Creating returns
-    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/create-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/latest/return-management.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 This document describes how to view returns of an order in the Back Office.
@@ -26,7 +26,7 @@ Review the [reference information](#reference-information-viewing-returns-of-an-
 1. On the **Orders** page, next to the order you want to view the returns of, click **View**.
     This opens the **Order Overview** page.
 2. In the **RETURNS** pane, next to the return you want to view, click **View**.
-    This opens the **Overview of Return: [Return ID]** page. To learn what you can do with returns, see [Managing returns](/docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html).
+    This opens the **Overview of Return: [Return ID]** page. To learn what you can do with returns, see [Managing returns](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html).
 
 ## Reference information: Viewing returns of an order
 

@@ -13,7 +13,7 @@ This document describes how to install Self-Service Portal (SSP).
 
 | FEATURE                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
-| Spryker Core  | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core  | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 
 ## Set up the configuration
@@ -106,9 +106,9 @@ Integrate the following related features:
 
 | FEATURE                                          | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                              |
 |--------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Self-Service Portal (SSP) Asset Management       |                                  | [Self-Service Portal (SSP) Asset Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature)         |
-| Self-Service Portal (SSP) Dashboard Management   |                                  | [Self-Service Portal (SSP) Dashboard Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature) |
-| Self-Service Portal (SSP) File Management        |                                  | [Self-Service Portal (SSP) File Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-file-management-feature)           |
-| Self-Service Portal (SSP) Inquiry Management     |                                  | [Self-Service Portal (SSP) Inquiry Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature)     |
-| Self-Service Portal (SSP) SSP Service Management |                                  | [Self-Service Portal (SSP) SSP Inquiry Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature) |
-| Self-Service Portal (SSP) SSP Model Management |                                  | [Self-Service Portal (SSP) SSP Model Management](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-model-management-feature) |
+| Self-Service Portal (SSP) Asset Management       |                                  | [Self-Service Portal (SSP) Asset Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-asset-management-feature)         |
+| Self-Service Portal (SSP) Dashboard Management   |                                  | [Self-Service Portal (SSP) Dashboard Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-dashboard-management-feature) |
+| Self-Service Portal (SSP) File Management        |                                  | [Self-Service Portal (SSP) File Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-file-management-feature)           |
+| Self-Service Portal (SSP) Inquiry Management     |                                  | [Self-Service Portal (SSP) Inquiry Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-inquiry-management-feature)     |
+| Self-Service Portal (SSP) SSP Service Management |                                  | [Self-Service Portal (SSP) SSP Inquiry Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-service-management-feature) |
+| Self-Service Portal (SSP) SSP Model Management |                                  | [Self-Service Portal (SSP) SSP Model Management](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-model-management-feature) |

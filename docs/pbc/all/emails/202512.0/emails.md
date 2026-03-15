@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/mailing-notifications-feature-overview
   - /docs/scos/user/features/202200.0/mailing-and-notifications-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html
-  - /docs/pbc/all/emails/202204.0/emails.html  
+  - /docs/pbc/all/emails/202204.0/emails.html
 ---
 
 The *Emails* capability lets you manage newsletters and notifications.
@@ -35,16 +35,16 @@ Automated Emails regarding order status, shipping, or transactions are just a fe
 
 The following links provide additional information about the Mail module, plugins, and procedures:
 
-- `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/latest/howto-create-and-register-a-mailtypeplugin.html)
-- `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-provider.html)
-- The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/latest/tutorial-sending-an-email.html).
+- `MailTypePlugin` creation and registration—[HowTo: Create and register a `MailTypePlugin`](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html)
+- `MailProviderPlugin` general overview and the registration procedure—[HowTo: Create and register a mail provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)
+- The tutorial that helps understand the procedure for sending an email—[Tutorial: Sending a mail](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html).
 
 
 ## Related Developer documents
 
  | TUTORIALS AND HOWTOS |
 |---------|
-| [HowTo: Create and Register a MailTypePlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mailtypeplugin.html) |
-| [HowTo: Create and Register a Mail Provider](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-provider.html)  |
-| [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/latest/howto-create-and-register-a-mail-type-builder-plugin.html) |
-| [Tutorial: Sending an email](/docs/pbc/all/emails/latest/tutorial-sending-an-email.html)  |
+| [HowTo: Create and Register a MailTypePlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html) |
+| [HowTo: Create and Register a Mail Provider](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-provider.html)  |
+| [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mail-type-builder-plugin.html) |
+| [Tutorial: Sending an email](/docs/pbc/all/emails/{{page.version}}/tutorial-sending-an-email.html)  |

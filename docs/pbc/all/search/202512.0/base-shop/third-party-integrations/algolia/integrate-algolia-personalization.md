@@ -15,14 +15,14 @@ This document describes how to integrate Algolia Personalization. This integrati
 
 {% info_block infoBox "Third-party frontends" %}
 
-By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html).
+By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html).
 
 {% endinfo_block %}
 
 ## Prerequisites
 
-1. [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
-2. [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html)
+1. [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+2. [Configure Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html)
 3. Add products to your Algolia search indexes
 
 ## Install and update Spryker packages
@@ -55,7 +55,7 @@ If the command doesn't work, try running it with the `--with-all-dependencies` f
 // config_default.php
 
 $config[KernelAppConstants::TENANT_IDENTIFIER]
-    //..   
+    //..
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 ```
 
@@ -115,7 +115,7 @@ If you customized Yves templates on the [project level](https://docs.spryker.com
 
 ### Run the project in a testing environment
 
-1. To be able to see event logs in the console, enable debug mode by setting `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.  
+1. To be able to see event logs in the console, enable debug mode by setting `TraceableEventWidgetConfig::isDebugEnabled()` to `true`.
 2. Run the project locally or deploy to a testing environment.
 3. Open the Storefront's home page.
 4. In browser development console, go to settings.
@@ -377,7 +377,7 @@ If a user doesn't consent to data tracking, no user data should be sent from the
 - From search results, go to a product's page
 - Add products to cart
 - Place orders
-4. Repeat step 3 as a logged-in user.  
+4. Repeat step 3 as a logged-in user.
 5. In the [Algolia Dashboard](https://dashboard.algolia.com/users/sign_in), go to **Data Sources**>**Events**.
   Make sure the events you've triggered are displayed.
 

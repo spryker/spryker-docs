@@ -1,5 +1,5 @@
 ---
-title: Install email Multi-Factor Authentication method 
+title: Install email Multi-Factor Authentication method
 description: Learn how to install and configure email multi-factor authentication in Spryker for all user types.
 template: howto-guide-template
 last_updated: Aug 22, 2025
@@ -7,11 +7,11 @@ last_updated: Aug 22, 2025
 
 Email Multi-Factor Authentication (MFA) is a security mechanism that verifies identity using an authentication code sent to an email address. This document describes how to install and configure email MFA.
 
-For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
+For more information about MFA, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 ## Prerequisites
 
-[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
 ## 1) Set up transfer objects
 
@@ -126,7 +126,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
             new CustomerEmailMultiFactorAuthPlugin(),
         ];
     }
-} 
+}
 ```
 
 
@@ -215,14 +215,14 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
             new UserEmailMultiFactorAuthPlugin(),
         ];
     }
-    
+
     protected function getUserSendStrategyPlugins(): array
     {
         return [
             new UserEmailCodeSenderStrategyPlugin(),
         ];
     }
-} 
+}
 ```
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
@@ -296,7 +296,7 @@ class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependency
             new AgentUserEmailMultiFactorAuthPlugin(),
         ];
     }
-} 
+}
 ```
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
@@ -496,7 +496,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
+Make sure you can authenticate with MFA using Glue API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/{{page.version}}/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
 

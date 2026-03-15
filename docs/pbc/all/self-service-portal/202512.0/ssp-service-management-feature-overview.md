@@ -11,9 +11,9 @@ The *Service Management* feature enables customers to book a service that is eit
 
 ## Prerequisites for selling services in the catalog
 
-- Add service points and their addresses. A service point is a physical location where services are provided. For details, see [Service point](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service-point).
-- Enable the **Service Visit** service type for service points. For details, see [Service](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html#service).
-- Configure a shipment method with the **On-Site Service** shipment type. For details, see [Shipment type](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html#shipment-type).
+- Add service points and their addresses. A service point is a physical location where services are provided. For details, see [Service point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html#service-point).
+- Enable the **Service Visit** service type for service points. For details, see [Service](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html#service).
+- Configure a shipment method with the **On-Site Service** shipment type. For details, see [Shipment type](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html#shipment-type).
 
 ## Selling services as products
 
@@ -130,7 +130,7 @@ Customers can also filter the view by who purchased services:
 - Booked services of a specific business unit
 - Booked services of a specific company
 
-The latter two options require the appropriate permissions. For more information on company permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html).
+The latter two options require the appropriate permissions. For more information on company permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html).
 
 
 ## Reviewing purchased services in the Back Office
@@ -149,7 +149,7 @@ The SSP checkout flow adds the following functionality:
 ## Current constraints
 
 - You cannot add product offer prices in the Back Office; you can import them only.
-- Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
+- Some B2B features, such as Merchant Relations, are not supported by product offers. For more information, see [Product Offer constraints](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html#current-constraints).
 - Customers cannot change the shipment type in the cart or during checkout.
 
 
@@ -158,4 +158,4 @@ The SSP checkout flow adds the following functionality:
 
 | Installation guides |
 |---|
-| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-service-management-feature.html) |
+| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-service-management-feature.html) |

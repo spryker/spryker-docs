@@ -8,16 +8,16 @@ redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Dependable
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-dependable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
   - title: Datasource Http
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-Datasource Trigger Change is an Angular service in the components library that extracts the value from an event trigger element and checks if it meets a certain criteria. If the value is valid, it emits an object containing the value.  
+Datasource Trigger Change is an Angular service in the components library that extracts the value from an event trigger element and checks if it meets a certain criteria. If the value is valid, it emits an object containing the value.
 
 ## Usage
 
@@ -29,7 +29,7 @@ Service configuration:
 |event |  An event type triggered by element. |
 |debounce |  Delays the emission of values of the next datasource; by default, delays by `300ms`. |
 |minCharacters |  Emits the trigger element value if the length is greater than or equal to the `minCharacters` property. The default value is `2`. |
-|datasource |  the next datasource that runs based on the dependent element value, like [http](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/datasources/datasource-http.html). |
+|datasource |  the next datasource that runs based on the dependent element value, like [http](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html). |
 
 
 Usage example:

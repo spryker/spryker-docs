@@ -5,7 +5,7 @@ description: This document describes how to manage marketplace concrete product 
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage attributes of the marketplace concrete products in the Merchant Portal.
@@ -61,6 +61,6 @@ To remove an attribute from a concrete product:
 
 ## Next steps
 
-- [Manage concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
-- [Manage concrete product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
-- [Manage concrete product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html)
+- [Manage concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
+- [Manage concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html)
+- [Manage concrete product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products-image-sets.html)

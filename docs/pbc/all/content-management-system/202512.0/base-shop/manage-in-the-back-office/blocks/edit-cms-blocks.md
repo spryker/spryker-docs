@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
 related:
   - title: CMS blocks overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to edit CMS blocks in the Back Office.
@@ -36,20 +36,20 @@ This opens the **Edit CMS Block** page.
 4. Select a **TEMPLATE**.
 5. Enter a **NAME**.
 6. Select a **VALID FROM** date.
-7. Select a **VALID TO** date.  
+7. Select a **VALID TO** date.
 8. For **PRODUCTS**, do the following:
     - Next to the products you want to deassign, click **x**.
     - Enter and select products you want to assign.
 9. Click **Save**.
     This refreshes the page with a success message displayed.
-10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
+10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 ## Reference information: Edit a CMS block
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
 | STORE RELATION | Stores in which the block is displayed. | Irrelevant. |
-| TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
-| NAME | The name is used when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
+| TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
+| NAME | The name is used when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to which the block is assigned. The block is displayed on the products' details pages. | Irrelevant. |

@@ -8,20 +8,20 @@ originalArticleId: bff2c63c-1239-4c76-9c74-40fa3c9eb19d
 redirect_from:
   - /docs/scos/dev/data-import/202200.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
-  - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-concrete.csv.html  
+  - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 
 ## Import file parameters
@@ -40,7 +40,7 @@ This file has the following dependency: [product_abstract.csv](/docs/pbc/all/pro
 | description.{ANY_LOCALE_NAME}<br>Example value: *description.en_US*  |  | String | | Product description, translated in the specified locale (US for our example). |
 | is_searchable.{ANY_LOCALE_NAME}<br>Example value: *is_searchable.en_US*|  | Integer |  | Indicates if the product is searchable in the specified locale (US for our example). |
 | bundled |  | String | | Products SKUs separated by comas, that are part of the bundle. |
-| is_quantity_splittable |  | Boolean |If it's empty, will be *False*.<br>False = 0<br>True = 1 | Defines if the product is [splittable](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/non-splittable-products-feature-overview.html) or not. |
+| is_quantity_splittable |  | Boolean |If it's empty, will be *False*.<br>False = 0<br>True = 1 | Defines if the product is [splittable](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) or not. |
 
 <!--
 | old_sku |  | String | | Old SKU identifier. |

@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ----- | ---------- |
-| Spryker Core         | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | 202507.0 | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Spryker Core         | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | 202507.0 | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 ### 1) Install the required modules
 
@@ -42,9 +42,9 @@ Adjust the schema definition so that entity changes trigger the events:
 
 ```xml
 <?xml version="1.0"?><database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"          namespace="Orm\Zed\MerchantCategory\Persistence"          package="src.Orm.Zed.MerchantCategory.Persistence">
-    <table name="spy_merchant_category">       
-        <behavior name="event">           
-             <parameter name="spy_merchant_category_all" column="*"/>  
+    <table name="spy_merchant_category">
+        <behavior name="event">
+             <parameter name="spy_merchant_category_all" column="*"/>
         </behavior>
     </table>
 </database>
@@ -312,7 +312,7 @@ Integrate the required features before beginning the integration step.
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | -------- | ------ | -------------- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Merchant     | 202507.0 | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
 
 ### 1) Set up behavior

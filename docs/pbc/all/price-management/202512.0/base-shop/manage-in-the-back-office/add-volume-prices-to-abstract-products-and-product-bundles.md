@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/adding-volume-prices-to-abstract-products
   - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
-  - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html  
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html
   - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
 ---
@@ -21,13 +21,13 @@ This document describes how to add volume prices to abstract products.
 
 ## Prerequisites
 
-- Define default or original gross prices for the stores you want to define volume prices for. To learn how to do that, see [Edit prices of an abstract product or product bundle](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle).
+- Define default or original gross prices for the stores you want to define volume prices for. To learn how to do that, see [Edit prices of an abstract product or product bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle).
 
 - Review the [reference information](#reference-information-add-volume-prices-to-abstract-products) before you start, or look up the necessary information as you go through the process.
 
 ## Add volume prices to an abstract product
 
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.  
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
     This opens the **Product** page.
 2. Next to the product you want to add volume prices for, click **Edit**.
 3. On the **Edit Product Abstract: {SKU}** page, click the **Price & Tax** tab.

@@ -5,4 +5,4 @@ last_updated: Dec 15, 2025
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/latest/ssp-glossary-data-import.md %} 
+{% include pbc/all/install-features/{{page.version}}/ssp-glossary-data-import.md %}

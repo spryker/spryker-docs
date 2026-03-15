@@ -29,13 +29,13 @@ This feature supports data from Spryker projects and third-party systems. When y
 
 ![QuickSight-datasets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/qs-data-sets.png)
 
-For more details on data sources, see [Supported data sources](https://docs.aws.amazon.com/quicksight/latest/user/supported-data-sources.html).
+For more details on data sources, see [Supported data sources](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/supported-data-sources.html).
 
 ### Extending project data for analytics
 
 Datasets represent the data from your project that's available for analytics. By default, only the data that is secure and can be useful for analytics is available in datasets from respective database tables. For example, the Customer dataset doesn't include customer names or passwords.
 
-You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
+You can extend the data available to datasets on the project level. For more details, see [Install Amazon QuickSight](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/install-amazon-quicksight.html).
 
 
 ### SPICE data
@@ -50,7 +50,7 @@ You can check your SPICE storage capacity in the Back Office > **Analytics** > *
 
 ![sprice-storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/sprice-storage.png)
 
-For more details on SPICE data, see [Importing data into SPICE](https://docs.aws.amazon.com/quicksight/latest/user/spice.html).
+For more details on SPICE data, see [Importing data into SPICE](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/spice.html).
 
 ### Refreshing data
 
@@ -61,7 +61,7 @@ You can refresh data manually or automatically by setting up a schedule per data
 
 ![refresh-dataset](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/business-intelligence/amazon-quicksight-third-party-integration/amazon-quicksight.md/refresh-dataset.png)
 
-For instructions on refreshing data, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
+For instructions on refreshing data, see [Refresh analytics datasets](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/back-office-refresh-analytics-datasets.html).
 
 
 ## Analyses and dashboards
@@ -101,7 +101,7 @@ When working with analytics, users can have the following roles:
 - Author: can view, create, and edit assets.
 - Reader: can view dashboards.
 
-The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+The analytics roles are derived from Amazon QuickSight and are separate from the [Back Office user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
 
 The number of users with different roles depends on your contract.
 
@@ -240,8 +240,8 @@ When you need to share analytics data with users outside of Back Office, you can
 
 For instructions, see the following docs:
 
-- [Exporting data from visuals](https://docs.aws.amazon.com/quicksight/latest/user/exporting-data.html)
-- [Exporting Amazon QuickSight analyses or dashboards as PDFs](https://docs.aws.amazon.com/quicksight/latest/user/export-dashboard-to-pdf.html)
+- [Exporting data from visuals](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/exporting-data.html)
+- [Exporting Amazon QuickSight analyses or dashboards as PDFs](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/export-dashboard-to-pdf.html)
 
 
 
@@ -255,10 +255,10 @@ Sometimes you might want to start from scratch and get a fresh analytics account
 - Resetting Analytics returns all default assets, such as dashboards, analyses, and datasets, to their original state, erasing any changes you've made.
 - The user performing the reset becomes the owner of the default assets, and all other users lose access to them.
 - Custom assets created by other users remain under their ownership.
-- Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/latest/user/duplicate-a-data-set.html).
+- Custom analyses will lose access to the default datasets. If the default datasets are used in custom analyses, duplicate the datasets and configure the analyses to use the copies. For instructions, see [Duplicating datasets](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/duplicate-a-data-set.html).
 
 {% endinfo_block %}
 
 ## Next step
 
-[Best practices: working with analytics](/docs/pbc/all/business-intelligence/latest/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)
+[Best practices: working with analytics](/docs/pbc/all/business-intelligence/{{page.version}}/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html)

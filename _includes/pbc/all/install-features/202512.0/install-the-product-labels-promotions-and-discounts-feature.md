@@ -13,9 +13,9 @@ Install the required features:
 
 | NAME                   | VERSION            | INSTALLATION GUIDE                                                                                                                                          |
 |------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Promotions & Discounts | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Product Labels         | 202507.0 | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)                   |
-| Spryker Core           | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
+| Promotions & Discounts | 202507.0 | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
+| Product Labels         | 202507.0 | [Install the Discontinued Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)                   |
+| Spryker Core           | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                       |
 
 ### 1) Set up behavior
 
@@ -64,7 +64,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
+1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) and define its condition as a query string with a *product-label* field.
 2. Add a product with the defined product label to the cart.
 3. Verify that the discount is applied to the cart.
 

@@ -12,20 +12,20 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
+This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
 
 ## Import file dependencies
 
-[File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html).
+[File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html).
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/pbc/all/warehouse-management-system/latest/base-shop/import-and-export-data/import-file-details-warehouse.csv.html) file. |
+| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-warehouse.csv.html) file. |
 | address1 | &check; | String |  | Warehouse address—first line. |
 | address2 |  | String |  | Warehouse address—second line. |
 | address3 |  | String |  | Warehouse address—third line. |

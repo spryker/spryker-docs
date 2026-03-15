@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
 related:
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/latest/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create a user with restricted access to the  Back Office.
@@ -31,7 +31,7 @@ To restrict or allow access to an area or action of the Back Office, you need th
 
 Bundle and controller are responsible for allowing and restricting access to areas, while action is responsible for allowing or restricting actions.
 
-There are several ways you can extract these values in. For more information about this, see the [Users and Rights overview](/docs/pbc/all/user-management/latest/base-shop/user-and-rights-overview.html#users-and-customers). The easiest way is to look it up in the URL. To look up the values for restricting access to adding product attributes, do the following:
+There are several ways you can extract these values in. For more information about this, see the [Users and Rights overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/user-and-rights-overview.html#users-and-customers). The easiest way is to look it up in the URL. To look up the values for restricting access to adding product attributes, do the following:
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 2. Click **Create Product Attribute**.
@@ -99,7 +99,7 @@ To create the user group, do the following:
 6. Enter a **LAST NAME**.
 7. For **ASSIGNED GROUPS**, select the group you've created in [2. Creating a user group](#creating-a-user-group).
 8. If you want this user to be an agent, select **THIS USER IS AN AGENT**.
-    Agent users can perform actions on customers' behalf. For more information about agent users, see [Agent Assist feature overview](/docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html)
+    Agent users can perform actions on customers' behalf. For more information about agent users, see [Agent Assist feature overview](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html)
 9. Select an **INTERFACE LANGUAGE**.
     The Back Office interface will be in this language for the user.
 10. Click **Create**.

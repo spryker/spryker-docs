@@ -19,7 +19,7 @@ This document describes how to edit discounts in the Back Office.
 
 ## Prerequisites
 
-If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
 
 Review the [reference information](#reference-information-edit-general-settings-of-a-discount) before you start, or look up the necessary information as you go through the process.
 
@@ -67,7 +67,7 @@ To edit a discount, do the following:
 2. For **APPLY WHEN**, update the query using the query builder or by entering a plain query.
 3. Update **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).**.
 4. Click **Save**.
-  This refreshes the page with a success message displayed.  
+  This refreshes the page with a success message displayed.
 
 ## Voucher discount: Generate voucher codes
 
@@ -161,12 +161,12 @@ Example: The discount is applied if 4 or more items with an Intel Core processor
 
 ## Reference information: Generate voucher codes
 
-| ATTRIBUTE | DESCRIPTION |  
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| QUANTITY | The number of vouchers to generate. |  
-| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, in **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
-| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
-| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
+| QUANTITY | The number of vouchers to generate. |
+| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, in **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |
+| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |
 
 {% info_block infoBox "Voucher code collections" %}
 
@@ -211,4 +211,4 @@ This section contains additional information for defining decision rules.
 
 ## Next steps
 
-[Edit discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html)
+[Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)

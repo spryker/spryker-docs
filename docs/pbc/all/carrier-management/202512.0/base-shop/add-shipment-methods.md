@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202204.0/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
 related:
   - title: "Reference information: Shipment method plugins"
-    link: docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
 
 This document shows how to add a new shipment method without integrating it with the shipment provider system.
@@ -62,7 +62,7 @@ When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding shipment methods, see [Add delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-delivery-methods.html) and [Edit delivery methods](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/edit-delivery-methods.html).
+For more detailed information about adding shipment methods, see [Add delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) and [Edit delivery methods](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-delivery-methods.html).
 
 {% endinfo_block %}
 
@@ -78,7 +78,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/pbc/all/carrier-management/latest/base-shop/manage-in-the-back-office/add-carrier-companies.html).
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-in-the-back-office/add-carrier-companies.html).
 
 {% endinfo_block %}
 

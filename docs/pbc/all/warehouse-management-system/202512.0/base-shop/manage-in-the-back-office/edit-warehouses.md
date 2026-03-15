@@ -17,7 +17,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/edit-warehouses.html
 related:
   - title: Inventory Management feature overview
-    link: docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/inventory-management-feature-overview.html
 ---
 
 This document describes how to edit warehouses in the Back Office.
@@ -55,4 +55,4 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 
 ## Next steps
 
-To learn how to edit stock per warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+To learn how to edit stock per warehouse, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).

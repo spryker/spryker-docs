@@ -10,9 +10,9 @@ redirect_from:
 
 related:
   - title: Angular Services
-    link: docs/dg/dev/frontend-development/latest/marketplace/angular-services.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-services.html
   - title: Web Components
-    link: docs/dg/dev/frontend-development/latest/marketplace/web-components.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/web-components.html
 ---
 
 This document describes what Angular Components are, how to create and use them.
@@ -47,35 +47,35 @@ To define output, you have to use `@Output` angular decorator, which marks a cla
 
 ### Hooks for the component
 
-`constructor`  
+`constructor`
 It is invoked when Angular creates a component or directive by calling new on the class.
 
-`ngOnChanges`  
+`ngOnChanges`
 Every time an input property of the component is changed, this method is called.
 
-`ngOnInit`  
+`ngOnInit`
 Invoked when the given component has been initialized.
 This hook is only called once after the first `ngOnChanges`.
 
-`ngDoCheck`  
+`ngDoCheck`
 Invoked when the change detector of the given component is invoked. It lets you implement your own change detection algorithm for the given component.
 
-`ngOnDestroy`  
+`ngOnDestroy`
 This method is invoked just before Angular destroys the component.
 Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks.
 
 ### Hooks for the component's children
 
-`ngAfterContentInit`  
+`ngAfterContentInit`
 Invoked after Angular performs any content projection into the component's view (see the previous lecture on Content Projection for more info). To get more info about content query, see the official documentation [ContentChildren](https://angular.io/api/core/ContentChildren), [ContentChild](https://angular.io/api/core/ContentChild).
 
-`ngAfterContentChecked`  
+`ngAfterContentChecked`
 Invoked each time the content of the given component has been checked by Angular's change detection mechanism.
 
-`ngAfterViewInit`  
+`ngAfterViewInit`
 Invoked when the component's view has been fully initialized. To get more info about the content query see official documentation [ViewChildren](https://angular.io/api/core/ViewChildren), [ViewChild](https://angular.io/api/core/ViewChild).
 
-`ngAfterViewChecked`  
+`ngAfterViewChecked`
 Invoked each time the view of the given component has been checked by Angular's change detection mechanism.
 
 ## Component metadata
@@ -86,25 +86,25 @@ In addition to containing or pointing to the template, the `@Component` metadata
 
 ### Main properties
 
-`selector`  
+`selector`
 It is the CSS selector that identifies the component in a template. It corresponds to the HTML tag that is included in the parent component. You can create your own HTML tag. However, the same has to be included in the parent component.
 
-`template`  
+`template`
 It is an inline-defined template for the view. The template defines some markup. The markup could typically include some headings or paragraphs that are displayed in the UI.
 
-`templateUrl`  
+`templateUrl`
 It is the URL for the external file containing the template for the view.
 
-`styles`  
+`styles`
 These are inline-defined styles to be applied to the component's view.
 
-`styleUrls`  
+`styleUrls`
 List of URLs to the stylesheets to be applied to the component's view.
 
-`providers`  
+`providers`
 It is an array where certain services for the component can be registered.
 
-`animations`  
+`animations`
 Animations for the components can be listed.
 
 You can find a full list of component metadata properties in the [official documentation](https://angular.io/api/core/Component).

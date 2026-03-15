@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) Glue API.
+This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) Glue API.
 
 ## Prerequisites
 
@@ -9,11 +9,11 @@ Install the required features:
 
 | FEATURE                    | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                  |
 |----------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core     | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                             |
-| Shipment                   | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                 |
-| Glue API: Checkout         | 202507.0 | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                    |
-| Glue API: Glue Application | 202507.0 | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
-| Glue API: Order Management | 202507.0 | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
+| Glue API: Spryker Core     | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                             |
+| Shipment                   | 202507.0 | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                 |
+| Glue API: Checkout         | 202507.0 | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)                                                    |
+| Glue API: Glue Application | 202507.0 | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                         |
+| Glue API: Order Management | 202507.0 | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
 ## 1) Install the required modules
 
@@ -481,4 +481,4 @@ To verify the plugins are activated, send the `POST https://glue.mysprykershop.c
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                               |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
+| Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |

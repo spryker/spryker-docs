@@ -7,18 +7,18 @@ redirect_from:
 - /docs/pbc/all/offer-management/202311.0/marketplace/import-and-export-data/file-details-combined-merchant-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/pbc/all/offer-management/latest/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
-    link: docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 {% info_block infoBox "" %}
 
-To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/dg/dev/data-import/latest/importing-data-with-a-configuration-file.html).
+To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
@@ -26,7 +26,7 @@ To learn more about bulk importing with the help of the configuration file, see 
 ## Import file dependencies
 
 - [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
-- `stores.php` configuration file of the demo shop PHP project  
+- `stores.php` configuration file of the demo shop PHP project
 
 ## Import file parameters
 
@@ -40,7 +40,7 @@ To learn more about bulk importing with the help of the configuration file, see 
 | merchant_product_offer.is_active             |               | Integer  |                   | 1—is active<br> 0—is not active                             | Defines whether the offer is active or not.                  |
 | merchant_product_offer.approval_status       | &check;             | String   |                   | Can be:<ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | Defines the [status of the offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html#offer-approval-status) in the system. |
 | merchant_product_offer_store.store_name      |               | String   |                   |                                                              | Name of the store where the offer belongs.                   |
-| product_offer_stock.stock_name               |               | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/pbc/all/warehouse-management-system/latest/marketplace/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
+| product_offer_stock.stock_name               |               | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
 | product_offer_stock.quantity                 |               | Integer  |                   |                                                              | Number of product offers that are in stock.                  |
 | product_offer_stock.is_never_out_of_stock    |               | Integer  |                   | 1—option is enabled<br> 0—option is disabled.               | Allows the offer to be never out of stock. |
 | price_product_offer.price_type               |               | String   |                   | Can be DEFAULT or ORIGINAL.                                  | Price type of the product offer.                             |

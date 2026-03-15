@@ -5,7 +5,7 @@ last_updated: Dec 12, 2025
 template: concept-topic-template
 related:
   - title: Frontend performance guidelines
-    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html   
+    link: docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 
 ## Cart page performance configuration
@@ -31,7 +31,7 @@ composer require spryker/cart:"^7.16.0" \
     spryker-shop/product-relation-widget:"^1.4.0" \
     spryker-shop/product-replacement-for-widget:"^1.6.0" \
     spryker-shop/shop-application:"^1.16.0" \
-    spryker-shop/shop-ui:"^1.100.0 
+    spryker-shop/shop-ui:"^1.100.0
 ```
 
 ## 2. Configurations
@@ -89,7 +89,7 @@ If you use the Merchant feature, enable widget caching to reduce server load and
 
 ### 2.3 Configure Product Relations feature
 
-If your cart page displays [product relations](/docs/pbc/all/product-relationship-management/latest/product-relationship-management.html) (for example, related products or upsells), ensure that the Product Relations feature is properly configured to optimize performance.
+If your cart page displays [product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) (for example, related products or upsells), ensure that the Product Relations feature is properly configured to optimize performance.
 
 Limit the number of product relations loaded on the cart page in the `ProductRelationStorageConfig` class:
 
@@ -124,7 +124,7 @@ Update product relation widgets on the cart page to use carousel rendering to im
 
 - SimilarProductsWidget:
 
-```twig 
+```twig
         {% widget 'SimilarProductsWidget' args [data.product] with {
             data: {
                 isNewCarouselRenderingEnabled: true,

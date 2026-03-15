@@ -7,7 +7,7 @@ last_updated: Dec 18, 2025
 
 The *asset-based catalog* in the Self-Service Portal creates a personalized catalog of spare parts and services for each asset based on the asset's assigned model. This ensures users see only products that are compatible with the machines they own.
 
-For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview).
+For details about models, see [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-model-management-feature-overview).
 
 ## Key concepts
 
@@ -22,25 +22,25 @@ You define compatibility at the model level by assigning product lists to a mode
 
 To build an asset-specific catalog, you typically follow these steps:
 
-1. **Create a model and assign assets**  
-   - Create a model that represents a machine family (for example, *Press Machine 1200 Series*).  
+1. **Create a model and assign assets**
+   - Create a model that represents a machine family (for example, *Press Machine 1200 Series*).
    - Assign all assets belonging to this machinery type to the model.
 
-2. **Create spare part and service products**  
-   - In the Product Back Office, create products that represent spare parts and services.  
+2. **Create spare part and service products**
+   - In the Product Back Office, create products that represent spare parts and services.
    - For spare parts, use the dedicated *spare part* product class to distinguish them from regular products.
 
-3. **Add products to product lists**  
-   - Group compatible spare parts and services into product lists, for example:  
-     - *P1200 Hydraulic Components*  
-     - *Electrical Sensor Kit for Series 1200*  
+3. **Add products to product lists**
+   - Group compatible spare parts and services into product lists, for example:
+     - *P1200 Hydraulic Components*
+     - *Electrical Sensor Kit for Series 1200*
      - *Maintenance Kit Type A*
 
-4. **Assign product lists to models**  
-   - Assign one or more product lists to each model.  
+4. **Assign product lists to models**
+   - Assign one or more product lists to each model.
    - All assets assigned to the model now inherit compatibility with the products from these lists.
 
-5. **Use the model relations in the storefront**  
+5. **Use the model relations in the storefront**
    - When a user browses in an asset or model context, the storefront filters the catalog to products from the product lists assigned to that model.
 
 ## Storefront behavior

@@ -13,7 +13,7 @@ This document describes how to install the Multi-Factor Authentication (MFA) fea
 |----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Marketplace Merchant Portal Core | 202507.0 | [Install the Marketplace Merchant Portal Core](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html)                 |
 | Merchant Portal Agent Assist     | 202507.0 | [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)                                      |
-| Multi-Factor Authentication      | 202507.0 | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html) |
+| Multi-Factor Authentication      | 202507.0 | [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html) |
 
 ## 1) Install the required modules
 
@@ -56,7 +56,7 @@ class MultiFactorAuthConfig extends SprykerMultiFactorAuthConfig
      * [
      *    'routeName' => ['formName'],
      * ]
-     * 
+     *
      * @api
      *
      * @return array<string, array<string>>
@@ -92,7 +92,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
         'action' => '*',
         'type' => 'allow',
     ],
-    
+
 ];
 ```
 
@@ -386,7 +386,7 @@ use Spryker\Zed\MultiFactorAuth\MultiFactorAuthDependencyProvider as SprykerMult
 use Spryker\Zed\MultiFactorAuthMerchantPortal\Communication\Plugin\Expander\MerchantPortalMultiFactorAuthPluginExpanderPlugin;
 
 class MultiFactorAuthDependencyProvider extends SprykerMultiFactorAuthDependencyProvider
-{   
+{
     protected function getMultiFactorAuthPluginExpanderPlugins(): array
     {
         return [
@@ -512,7 +512,7 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-1. Integrate one of the [supported MFA methods](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication#multi-factor-authentication-methods).
+1. Integrate one of the [supported MFA methods](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication#multi-factor-authentication-methods).
 2. Log into Merchant Portal or Agent Merchant Portal.
 Make sure the following applies:
 - The **Set up Multi-Factor Authentication** menu item is displayed in the navigation

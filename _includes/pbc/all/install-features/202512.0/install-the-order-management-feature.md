@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Order Management](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature.
+This document describes how to install the [Order Management](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html) feature.
 
 {% info_block warningBox "Included features" %}
 
@@ -27,9 +27,9 @@ Install the required features:
 
 | NAME                      | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |---------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core              | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
-| Mailing and Notifications | 202507.0 | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/latest/install-the-mailing-and-notifications-feature.html)                          |
-| Order Management          | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Spryker Core              | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
+| Mailing and Notifications | 202507.0 | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                          |
+| Order Management          | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | Persistent Cart           | 202507.0 |                                                                                                                                                                                         |
 
 ### 1) Install the required modules
@@ -369,7 +369,7 @@ class OmsConfig extends SprykerOmsConfig
     /**
      * Specification:
      * - Uses fallback prefix in concatenation with the normalized state name, in case the display property is not defined for the state.
-     *    
+     *
      * @return string
      */
     public function getFallbackDisplayNamePrefix(): string
@@ -1219,7 +1219,7 @@ Request example: `GET https://glue-backend.mysprykershop.com/picking-lists/{% ra
 
 <details>
   <summary>Response body example</summary>
-  
+
 ```json
 {
     "data": {
@@ -1380,10 +1380,10 @@ Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE |
 |-----------------------------|------------------| - |
-| Spryker Core                | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
-| Cart | 202507.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | 202507.0 |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Customer Account Management | 202507.0 | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
+| Cart | 202507.0 |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Checkout | 202507.0 |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Customer Account Management | 202507.0 | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ### 1) Install the required modules
 
@@ -1595,12 +1595,12 @@ Integrate the following related features:
 
 | FEATURE                                                            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                                         |
 |--------------------------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Install the Comments + Order Management feature                    |                                  | [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                                                      |
-| Install the Order Management Glue API                              |                                  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)                                                                  |
-| Install the Company Account + Order Management feature             |                                  | [Install the Company Account + Order Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html)                         |
-| Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                                           |
-| Install the Customer Account Management + Order Management feature |                                  | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
-| Install the Packaging Units feature                                |                                  | [Install the Packaging Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                                               |
-| Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                                           |
-| Install the Product Options + Order Management feature             |                                  | [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html)                           |
-| Install the Promotions & Discounts + Order Management feature      |                                  | [Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/latest/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)                       |
+| Install the Comments + Order Management feature                    |                                  | [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html)                                                      |
+| Install the Order Management Glue API                              |                                  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)                                                                  |
+| Install the Company Account + Order Management feature             |                                  | [Install the Company Account + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html)                         |
+| Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                                           |
+| Install the Customer Account Management + Order Management feature |                                  | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
+| Install the Packaging Units feature                                |                                  | [Install the Packaging Units feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html)                                                               |
+| Install the Product + Order Management feature                     |                                  | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html)                                           |
+| Install the Product Options + Order Management feature             |                                  | [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html)                           |
+| Install the Promotions & Discounts + Order Management feature      |                                  | [Install the Promotions & Discounts + Order Management feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-order-managemet-feature.html)                       |

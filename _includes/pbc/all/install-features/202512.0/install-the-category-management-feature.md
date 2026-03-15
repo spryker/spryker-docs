@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Category Management](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html) feature.
+This document describes how to install the [Category Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Install the required feature:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                   |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -1229,7 +1229,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                   |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -1259,23 +1259,23 @@ Register the following global widgets:
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
-<?php   
+<?php
 
-namespace Pyz\Yves\ShopApplication;   
+namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;   
+use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{     
-	/**      
-	* @return string[]      
-	*/     
-	protected function getGlobalWidgets(): array     
-	{         
-		return [             
-			CategoryImageStorageWidget::class,         
-		];     
+{
+	/**
+	* @return string[]
+	*/
+	protected function getGlobalWidgets(): array
+	{
+		return [
+			CategoryImageStorageWidget::class,
+		];
 	}
 }
 ```
@@ -1334,6 +1334,6 @@ Integrate the following related features:
 
 | FEATURE                       | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                     |
 |-------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GLUE: Category Management     |                                  | [Install the Category Management Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html)                 |
-| Catalog + Category Management |                                  | [Install the Catalog + Category Management feature](/docs/pbc/all/search/latest/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
-| CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)              |
+| GLUE: Category Management     |                                  | [Install the Category Management Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html)                 |
+| Catalog + Category Management |                                  | [Install the Catalog + Category Management feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
+| CMS + Category Management     |                                  | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html)              |

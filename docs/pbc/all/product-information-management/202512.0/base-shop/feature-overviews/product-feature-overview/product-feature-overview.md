@@ -10,10 +10,10 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions
   - /docs/product-ttl
-  - /docs/scos/user/features/202311.0/product-feature-overview/product-feature-overview.html  
+  - /docs/scos/user/features/202311.0/product-feature-overview/product-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-feature-overview/product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
-  - /docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
+  - /docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/concrete-sku-product-filter-feature-overview.html
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -54,7 +54,7 @@ In this example, a T-shirt, which is an abstract product, is available in sizes 
 
 ### Product information inheritance
 
-Information about a concrete product on the Storefront is a combination of the information of the concrete product and its abstract product.  
+Information about a concrete product on the Storefront is a combination of the information of the concrete product and its abstract product.
 
 The information of a concrete product always overwrites the information of its abstract product. For example, if the abstract product name is *VGA cable*, and the concrete product name is *VGA cable(1.5m)*, the latter is displayed.
 If some information is not specified for a concrete product, it inherits the information from its abstract product. For example, if no price is specified for a concrete product, the price of its abstract product is displayed.

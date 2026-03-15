@@ -7,21 +7,21 @@ redirect_from:
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant.csv.html
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 redirect_from:
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant.csv.html
 ---
 
-This document describes the `merchant.csv` file to configure [merchant](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.
+This document describes the `merchant.csv` file to configure [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) information in your Spryker shop.
 
 ## Import file dependencies
 
 
-- [merchant_profile.csv](/docs/pbc/all/merchant-management/latest/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html).
+- [merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html).
 
 
 ## Import file parameters

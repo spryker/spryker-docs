@@ -5,7 +5,7 @@ last_updated: Nov 10, 2025
 template: concept-topic-template
 related:
   - title: Sitemap feature overview
-    link: /docs/pbc/all/miscellaneous/latest/sitemap-feature-overview.html
+    link: /docs/pbc/all/miscellaneous/page.version/sitemap-feature-overview.html
 ---
 
 Crawler control is needed to manage how automated bots (like search engine crawlers) access your website. Without control, bots can cause issues, waste resources, or index content incorrectly.

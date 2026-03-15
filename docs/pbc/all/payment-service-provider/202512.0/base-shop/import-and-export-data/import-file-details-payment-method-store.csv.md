@@ -20,7 +20,7 @@ redirect_from:
   -  /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.
@@ -28,14 +28,14 @@ This document describes the `payment_method_store.csv` file to configure Payment
 
 ## Import file dependencies
 
-- [payment_method.csv](/docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method.csv.html)
+- [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html)
 - *stores.php* configuration file of the demo shop PHP project
 
 ## Import file parameters
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |-|-|-|-|-|
-| payment_method_key | &check; | String | Value should be imported from the [payment_method.csv](/docs/pbc/all/payment-service-provider/latest/base-shop/import-and-export-data/import-file-details-payment-method.csv.html) file. | Identifier of the payment method. |
+| payment_method_key | &check; | String | Value should be imported from the [payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html) file. | Identifier of the payment method. |
 | store | &check; | String | Value must be within an existing store name, set in the *store.php* configuration file of the demo shop PHP project. | Name of the store. |
 
 

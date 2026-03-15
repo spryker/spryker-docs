@@ -10,11 +10,11 @@ redirect_from:
 
 related:
   - title: Data Transformer Collate Filter Equals
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
   - title: Data Transformer Collate Filter Range
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
   - title: Data Transformer Collate Filter Text
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
 ---
 
 This document explains the Data Transformer Filters service in the Components Library.
@@ -30,7 +30,7 @@ Data Transformer Filters are used in the Datasource service.
 <spy-table
     [config]="{
         datasource: {
-            ...,                                                   
+            ...,
             transform: {
                 type: 'collate',
                 configurator: {
@@ -48,7 +48,7 @@ Data Transformer Filters are used in the Datasource service.
                 },
                 transformerByPropName: {
                     col1: 'date',
-                },  
+                },
             },
         },
     }"
@@ -137,6 +137,6 @@ interface DataTransformerFilter {
 
 There are a few common Data Transformer Filters that are available in UI library as separate packages:
 
-- [Equals](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html)—filters values that are strictly equal.
-- [Range](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html)—filters values that are within a number range.
-- [Text](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html)—filters values that match a string.
+- [Equals](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html)—filters values that are strictly equal.
+- [Range](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html)—filters values that are within a number range.
+- [Text](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html)—filters values that match a string.

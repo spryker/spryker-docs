@@ -18,7 +18,7 @@ Spryker comes with [Elasticsearch](https://www.elastic.co/elasticsearch/) as the
   </video>
 </figure>
 
-To use Algolia as your search engine, you need an Algolia account. For details about integrating Algolia, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
+To use Algolia as your search engine, you need an Algolia account. For details about integrating Algolia, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 
 
 ## Searchable attributes
@@ -134,5 +134,5 @@ Here is an example of product data stored in Algolia:
 
 ## Next step
 
-- [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
-- [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html)
+- [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+- [Configure Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html)

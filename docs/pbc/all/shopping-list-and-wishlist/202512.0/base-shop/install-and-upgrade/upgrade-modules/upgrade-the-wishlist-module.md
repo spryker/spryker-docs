@@ -30,14 +30,14 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-wishlist.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-wishlist.html
   - /module_migration_guides/mg-wishlist.htm
-  - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-wishlist.html  
+  - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-wishlist.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/upgrade-the-wishlist-module.html
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html
 related:
   - title: Upgrade the Cart
-    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
   - title: Upgrade the Price
-    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-wishlist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-wishlist-module.md -->

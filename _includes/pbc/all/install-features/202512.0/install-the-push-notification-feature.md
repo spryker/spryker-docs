@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Push Notification feature](/docs/pbc/all/miscellaneous/latest/push-notification-feature-overview.html).
+This document describes how to install the [Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html).
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 
@@ -311,7 +311,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
      * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface|\Spryker\Zed\InstallerExtension\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins(): array
-    {   
+    {
         return [
             new PushNotificationWebPushPhpProviderInstallerPlugin(),
         ];
@@ -706,7 +706,7 @@ docker/sdk console send-push-notifications
 ```
 
   The notification is displayed with content from the `spy_push_notification.payload` database field.
-  
+
 13. Change the `spy_push_notification_subscription.expired_at` subscription expiration date to the previous year's date.
 14. Remove the outdated subscriptions:
 

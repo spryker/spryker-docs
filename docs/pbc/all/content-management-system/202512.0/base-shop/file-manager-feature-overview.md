@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/user/features/202001.0/file-manager-feature-overview/file-uploader.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/file-manager-feature-walkthrough.html
-  - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html  
+  - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/file-uploader.html
-  - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
+  - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html
   - /docs/pbc/all/content-management-system/202311.0/file-manager-feature-overview.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/file-manager-feature-overview.html
 ---
@@ -114,14 +114,14 @@ See [Integrating custom location for static assets](/docs/dg/dev/integrate-and-c
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage file tree](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-tree.html)   |
-| [Manage file list](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-list.html) |
-| [Add and edit MIME types](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html) |
+| [Manage file tree](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-file-tree.html)   |
+| [Manage file list](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-file-list.html) |
+| [Add and edit MIME types](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html) |
 
 ## Related Developer documents
 
 | UPGRADE GUIDES| DATA IMPORT	|
 | - | - |
-| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | ["Import file details: mime_type.csv"](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-mime-type.csv.html) |
-| [Upgrade the FileManagerStorage module](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html) | |
-| [Upgrade the FileManagerWidget module](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html) | |
+| [Upgrade the FileManager module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanager-module.html) | ["Import file details: mime_type.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-mime-type.csv.html) |
+| [Upgrade the FileManagerStorage module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerstorage-module.html) | |
+| [Upgrade the FileManagerWidget module](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-filemanagerwidget-module.html) | |

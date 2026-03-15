@@ -10,21 +10,21 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html
-  - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-abstract.csv.html  
+  - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-abstract.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-- [category.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
-- [glossary.csv](/docs/pbc/all/miscellaneous/latest/import-and-export-data/import-file-details-glossary.csv.html)
-- [tax.csv](/docs/pbc/all/tax-management/latest/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
+- [category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
+- [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
+- [tax.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 
 
@@ -51,14 +51,14 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 | meta_description.{ANY_LOCALE_NAME}<br>Example value: *meta_description.en_US* || String | | Meta description of the product in the specified locale (US for our example). |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. Add this field if Avalara is used for tax management. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. Add this field if Avalara is used for tax management. |
 <!-- |is_featured |  | String |If it's empty, will be "False". <br>False = 0<br>True = 1 | Indicates if it's a featured product. |
 | icecat_pdp_url |  | String | | Icecat product catalogue URL service. |
 | icecat_license |  | String | | Icecat product catalogue license code. |
 -->
 
 
-</div>  
+</div>
 
 
 ## Additional information

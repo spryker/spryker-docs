@@ -7,11 +7,11 @@ redirect_from:
   - /docs/marketplace/dev/howtos/how-to-create-gui-table.html
 related:
   - title: How to extend an existing Gui table
-    link: docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/extend-gui-tables.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/extend-gui-tables.html
   - title: How to create a new Gui table column type
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-column-type.html
   - title: How to create a new Gui table filter type
-    link: docs/pbc/all/merchant-management/latest/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
 ---
 
 This document describes how to create a new Gui table in Merchant Portal.
@@ -19,7 +19,7 @@ With this step by step instructions you will create a new Gui table with filters
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 ## 1) Add GuiTable services to dependencies
 
@@ -306,7 +306,7 @@ class ProductsController extends AbstractController
 
 Create a corresponding Twig template, pass configuration to frontend component.
 
-To learn more about table components, see [Table Design](/docs/dg/dev/frontend-development/latest/marketplace/table-design/table-design.html).
+To learn more about table components, see [Table Design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html).
 
 ## 7) Data source
 

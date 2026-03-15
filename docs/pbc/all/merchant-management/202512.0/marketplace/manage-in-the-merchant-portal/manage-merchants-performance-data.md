@@ -22,7 +22,7 @@ Each section contains reference information. Make sure to review it before you s
 
 To manage the existing products in the system, click **Manage Products**. This will take you to the **Products** page of the Merchant Portal.
 
-For detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
+For detailed instructions on how to create a new product in the Merchant Portal, see [Manage products in the Merchant Portal](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html).
 
 ### Reference information: Managing products in Dashboard
 

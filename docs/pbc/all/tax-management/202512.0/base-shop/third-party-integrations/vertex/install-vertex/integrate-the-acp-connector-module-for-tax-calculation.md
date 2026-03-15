@@ -6,11 +6,11 @@ last_updated: Jan 10, 2024
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html
 
 ---
 
-To [install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
+To [install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
 
 To integrate the connector module for the Vertex app, follow these steps.
 
@@ -177,7 +177,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
             new TaxAmountAfterCancellationCalculatorPlugin(),
         ];
     }
-    
+
 //...
 ```
 
@@ -397,9 +397,9 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
 
         return $container;
     }
-    
+
 //...
-    
+
     # This configuration is necessary for Refund functionality
     /**
      * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsEventTriggeredListenerPlugin>
@@ -410,7 +410,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
             new OrderRefundedEventListenerPlugin(),
         ];
     }
-    
+
 //...
 ```
 
@@ -425,4 +425,4 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 ## Next step
 
-[Integrate the Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)
+[Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)

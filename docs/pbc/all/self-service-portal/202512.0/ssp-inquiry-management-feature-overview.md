@@ -112,7 +112,7 @@ From here, click **View** to open the inquiry details page. If the inquiry has a
 
 In the **Status** section, view the inquiry's current status and update it based on available transitions in the Inquiry State Machine. To check all status changes, click the **Show history** button.
 
-You can see all inquire state machine states in **Administration** > **State Machine**.  
+You can see all inquire state machine states in **Administration** > **State Machine**.
 
 Customer support can create inquiries on behalf of customers using the [Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html).
 
@@ -122,6 +122,6 @@ Customer support can create inquiries on behalf of customers using the [Agent As
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html) |
+| [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-inquiry-management-feature.html) |
 
 

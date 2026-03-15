@@ -10,19 +10,19 @@ redirect_from:
 
 related:
   - title: Data Transformers
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformers.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Data Transformer Array-map
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
   - title: Data Transformer Chain
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
   - title: Data Transformer Date-parse
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
   - title: Data Transformer Date-serialize
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
   - title: Data Transformer Object-map
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
   - title: Data Transformer Pluck
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
 ---
 
 This document explains the Data Transformer Lens service in the Components Library.
@@ -35,7 +35,7 @@ In the following example `datasource` will return an object with the transformed
 
 Service configuration:
 
-- `path`—the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.  
+- `path`—the name of the object property, from which the value needs to be transformed. The `path` may contain nested properties separated by dots, just like in a Javascript language.
 - `transformer`—a Data Transformer that is set up with a configuration object.
 
 ```html

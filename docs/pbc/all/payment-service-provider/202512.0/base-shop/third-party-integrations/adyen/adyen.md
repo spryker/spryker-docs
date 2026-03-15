@@ -10,13 +10,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/adyen.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html
   - title: Integrating Adyen
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
 ---
 
 ## Partner Information
@@ -27,10 +27,10 @@ Adyen is a global payment company that allows businesses to accept e-commerce, m
 
 ## Related Developer guides
 
-- [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html)
-- [Integrating Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html)
-- [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html)
-- [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html)
+- [Installing and configuring Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html)
+- [Integrating Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen.html)
+- [Integrating Adyen payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html)
+- [Enabling filtering of payment methods for Ayden](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html)
 
 ## Copyright and Disclaimer
 

@@ -5,13 +5,13 @@ last_updated: Nov 12, 2024
 template: concept-topic-template
 related:
    - title: Install Dynamic Multistore
-     link: docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
+     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
    - title: Import minimum set of data for store
-     link: docs/pbc/all/dynamic-multistore/latest/base-shop/import-stores.html
+     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/import-stores.html
    - title: Install the Dynamic Multistore Glue API
-     link: docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
+     link: docs/pbc/all/dynamic-multistore/page.version/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
    - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature
-     link: docs/pbc/all/dynamic-multistore/latest/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html    
+     link: docs/pbc/all/dynamic-multistore/page.version/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html
 ---
 
 *Dynamic Multistore* (DMS) lets you create and manage multiple stores within the same region in the Back Office. It streamlines the setup and maintenance of distinct stores tailored to various customer segments, regions, or product categories.
@@ -94,7 +94,7 @@ The following image shows the ability to call API endpoints with the exemplary "
 
 You can add a new store using data import or in the Back Office. Adding a store in the Back Office is easier and faster, but you have to add each store across all environments.
 
-Using data import, you can configure a new store once and deploy it across all environments. For instructions on importing stores, see [Import data](/docs/pbc/all/dynamic-multistore/latest/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data).
+Using data import, you can configure a new store once and deploy it across all environments. For instructions on importing stores, see [Import data](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data).
 
 When you add a new store, to enable store-related entities for customers, you need to assign them to the store. Some of the store related entities:
 - Products
@@ -102,7 +102,7 @@ When you add a new store, to enable store-related entities for customers, you ne
 - CMS entities
 - Prices
 
-To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see [Import stores](/docs/pbc/all/dynamic-multistore/latest/base-shop/import-stores.html).
+To avoid manually assigning entities in the Back Office, you can assign them using data import. For more details, see [Import stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html).
 
 ## Differences in modes
 

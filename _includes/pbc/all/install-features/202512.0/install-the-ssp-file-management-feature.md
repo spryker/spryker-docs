@@ -4,8 +4,8 @@ This document describes how to install the Self-Service Portal (SSP) File Manage
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)          |
 
 ## 1) Install the required modules
 
@@ -226,7 +226,7 @@ self_service_portal.company_file.file_search_filter_form.field.type.company_busi
 
 ### Import glossary data
 
-You can either import glossary keys dedicated to the File Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
+You can either import glossary keys dedicated to the File Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/{{page.version}}/install/ssp-glossary-data-import.html).
 
 ```bash
 console data:import glossary
@@ -246,7 +246,7 @@ Make sure the data has been added to the `spy_glossary_key` and `spy_glossary_tr
 | ViewCompanyUserFilesPermissionPlugin         | Enables company users to view the files they uploaded.                                                                                          |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyBusinessUnitFilesPermissionPlugin | Allows access to files uploaded within a business unit.                                                                                         |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
 | ViewCompanyFilesPermissionPlugin             | Allows access to all files within a company.                                                                                                    |               | SprykerFeature\Shared\SelfServicePortal\Plugin\Permission                     |
-| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/latest/ssp-file-management-feature-overview.html). |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
+| SelfServicePortalPageRouteProviderPlugin     | Provides Yves routes for the [SSP file management feature](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-file-management-feature-overview.html). |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Router                           |
 | SspCompanyFilesMenuItemWidget                | Provides a menu item widget for the customer account side menu.                                                                                 |               | SprykerFeature\Yves\SelfServicePortal\Widget                                  |
 | FileAttachmentFilePreDeletePlugin            | Ensures a company file relation is deleted when a file is removed.                                                                              |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\FileManager         |
 | FileSizeFormatterTwigPlugin                  | Adds a Twig filter to format file sizes in a human-readable format.                                                                             |               | SprykerFeature\Yves\SelfServicePortal\Plugin\Twig\FileSizeFormatterTwigPlugin |
@@ -428,7 +428,7 @@ class SelfServicePortalDependencyProvider extends SprykerSelfServicePortalDepend
             new SspFileDashboardDataExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\SprykerFeature\Zed\SspAssetManagement\Dependency\Plugin\SspAssetManagementExpanderPluginInterface>
      */

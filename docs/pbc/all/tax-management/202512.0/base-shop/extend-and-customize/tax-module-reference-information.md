@@ -5,7 +5,7 @@ description: The Tax module is responsible for handling tax rates that can apply
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/reference-information-tax-module.html
-  - /docs/scos/dev/feature-walkthroughs/202311.0/tax-feature-walkthrough/reference-information-tax-module.html  
+  - /docs/scos/dev/feature-walkthroughs/202311.0/tax-feature-walkthrough/reference-information-tax-module.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/tax-feature-walkthrough/reference-information-tax-module.html
   - /docs/pbc/all/tax-management/202311.0/extend-and-customize/tax-module-reference-information.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/extend-and-customize/tax-module-reference-information.html
@@ -151,4 +151,4 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 ## Migration guide
 
-If you're migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/latest/base-shop/install-and-upgrade/upgrade-the-tax-module.html).
+If you're migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Upgrade the Tax module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html).

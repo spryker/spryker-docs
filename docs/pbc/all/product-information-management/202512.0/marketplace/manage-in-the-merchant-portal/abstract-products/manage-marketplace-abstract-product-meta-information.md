@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/manageing-marketplace-abstract-product-meta-information.html
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage marketplace abstract product meta information in the Merchant Portal.
@@ -28,7 +28,7 @@ To add meta information for a product:
 - Meta title
 - Meta keywords—separate keywords with comma.
 - Meta description
-4. Click **Save**.  
+4. Click **Save**.
 
 ## Editing abstract product meta information
 
@@ -41,7 +41,7 @@ To modify meta information for a product:
     - Meta keywords—separate keywords with comma.
     - Meta description
 
-4. Click **Save**.  
+4. Click **Save**.
 
 ## Reference information: SEO pane
 
@@ -53,7 +53,7 @@ To modify meta information for a product:
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
-- [Manage abstract product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
-- [Manage abstract product attributes](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
+- [Manage abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)

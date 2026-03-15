@@ -5,11 +5,11 @@ template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/best-practices-promote-products-with-discounts.html
-  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/best-practices-promote-products-with-discounts.html 
-  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html 
+  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
 related:
   - title: Promotions & Discounts feature overview
-    link: docs/pbc/all/discount-management/latest/base-shop/promotions-discounts-feature-overview.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/promotions-discounts-feature-overview.html
 ---
 
 This document explains how to use discounts to promote products using a concrete example.

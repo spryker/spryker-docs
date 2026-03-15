@@ -8,10 +8,10 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
 related:
   - title: Navigation feature overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
 ---
 
-To duplicate a [navigation element](/docs/pbc/all/content-management-system/latest/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
+To duplicate a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 2. On the **Overview of Navigation Elements** page, next to the navigation element you want to duplicate, click **Duplicate**.

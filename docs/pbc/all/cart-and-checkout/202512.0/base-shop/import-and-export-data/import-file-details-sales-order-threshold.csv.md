@@ -11,10 +11,10 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.
+This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -39,8 +39,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-- [currency.csv](/docs/pbc/all/price-management/latest/base-shop/import-and-export-data/import-file-details-currency.csv.html)
-- [glossary.csv](/docs/pbc/all/miscellaneous/latest/import-and-export-data/import-file-details-glossary.csv.html)
+- [currency.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-currency.csv.html)
+- [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
 - *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

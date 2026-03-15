@@ -5,8 +5,8 @@ This document describes how to install the Self-Service Portal (SSP) Inquiry Man
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE  |
 |--------------|----------| ------------------ |
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)          |
 
 ## Install the required modules
 
@@ -656,7 +656,7 @@ Verify inquiries in the Back Office:
 
 ### Add translations
 
-[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html)
+[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/ssp-glossary-data-import.html)
 
 ### Add inquiry demo data
 
@@ -753,7 +753,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
-    {    
+    {
         return [
             new SspInquiriesResourceRoutePlugin(),
         ];

@@ -12,8 +12,8 @@ redirect_from:
   - /docs/en/reorder-feature-overview
   - /docs/scos/user/features/202200.0/reorder-feature-overview.html
   - /docs/scos/user/features/202311.0/reorder-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/reorder-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202311.0/reorder-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202200.0/reorder-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202311.0/reorder-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/reorder-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/reorder-feature-overview.html
 ---
@@ -28,4 +28,4 @@ One of the biggest factors that influences customer loyalty and persuades them t
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | [CustomerReorderWidget migration guide](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html) | [CustomerReorderWidget migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html)  |

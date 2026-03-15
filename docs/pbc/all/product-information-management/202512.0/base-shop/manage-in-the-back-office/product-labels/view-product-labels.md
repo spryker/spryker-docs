@@ -14,11 +14,11 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
 related:
   - title: Create product labels
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
   - title: Edit product labels
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
   - title: Product Labels feature overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
 
 To view a product label, do the following:
@@ -39,7 +39,7 @@ The following table describes the attributes you see, select, or enter while vie
 | Priority | Defines the order in which labels appear on a product card and product details page. The product label with the lowest number has the highest priority. |
 | Status |  Defines if the label is displayed on the Storefront.  |
 | Valid from and Valid to | Inclusively defines the time period when the product label is displayed on the Storefront. If no dates are selected, the label is always displayed. |
-| Is Dynamic | Defines if this label is [dynamic](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html#dynamic-product-label). |
+| Is Dynamic | Defines if this label is [dynamic](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html#dynamic-product-label). |
 | Is Exclusive | Defines if this product label is exclusive. If an exclusive product label is applied to a product, all the other non-exclusive labels assigned to the product are not displayed on the product card. |
 | Stores | Stores in which a product label is displayed on the Storefront. |
 | **Name** in the **TRANSLATIONS** pane | Locale specific names that are displayed on the Storefront in respective stores. If you don't specify a locale specific name, the **NAME** from the **GENERAL** pane will be displayed. |

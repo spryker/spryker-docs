@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/importing-data-with-the-queue-data-importer.html
 related:
   - title: Queue Data Import feature integration
-    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-queue-data-import-feature.html
 ---
 
 Queue data import allows you to import data via message queues. It increases data import performance by using performance-related abilities and properties of message queues, like:
@@ -32,7 +32,7 @@ Regular data import is done as a single-step process: data is read from a data s
 Queue data import is designed to be done in two separate steps.
 
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
-2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/dg/dev/data-import/latest/replacing-a-default-data-importer-with-a-queue-data-importer.html).
+2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/dg/dev/data-import/{{page.version}}/replacing-a-default-data-importer-with-a-queue-data-importer.html).
 
 ## Importing data from CSV to queue
 

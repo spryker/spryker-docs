@@ -14,21 +14,21 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/pages/manage-cms-pages.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
-  
+
 related:
   - title: CMS Page overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: Editing CMS Pages
-    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
   - title: View CMS pages and history
-    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
 ---
 
 This document describes how to preview CMS pages from the Back Office. This lets you see a page from a particular customer's point of view or preview a draft page.
 
 ## Prerequisites
 
-1. [Assign a customer to your user](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
+1. [Assign a customer to your user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html).
 2. On the Storefront, log in with the customer account you've assigned to your user.
 3. Log into the Back Office with the account you've assigned the customer to.
 

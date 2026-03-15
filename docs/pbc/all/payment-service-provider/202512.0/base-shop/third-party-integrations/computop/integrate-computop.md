@@ -21,7 +21,7 @@ This article provides step-by-step instructions on integrating the Computop modu
 
 ## Prerequisites
 
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
 
 ## Integrating Computop into your project
 
@@ -149,7 +149,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     protected function extendConditionPlugins(Container $container): Container
     {
         $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
-			...            
+			...
 
             // ----- Computop
             $conditionCollection->add(new IsPaymentConfirmedPlugin(), 'Computop/IsPaymentConfirmed');
@@ -284,7 +284,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     protected function getCheckoutPostHooks(Container $container): Container
     {
         return [
-    		...        
+    		...
 
             new ComputopPostCheckPlugin(),
         ];
@@ -321,7 +321,7 @@ use SprykerEco\Yves\Computop\Plugin\SofortSubFormPlugin;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
-{    
+{
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -1576,11 +1576,11 @@ namespace Pyz\Yves\ShopApplication;
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-### CRIF configuration  
+### CRIF configuration
 
-To configure [CRIF](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html), do the following:
+To configure [CRIF](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-crif-payment-method-for-computop.html), do the following:
 
-1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
+1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:
 
 **src/Pyz/Zed/Payment/PaymentDependencyProvider.php**
 
@@ -1781,7 +1781,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the Computop module, make sure you [installed and configured it](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
+To integrate the Computop module, make sure you [installed and configured it](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/install-and-configure-computop.html).
 
 ## Test mode
 

@@ -10,16 +10,16 @@ redirect_from:
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/latest/base-shop/manage-using-glue-api/glue-api-manage-returns.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/latest/return-management.html
+    link: docs/pbc/all/return-management/page.version/return-management.html
 ---
 
 This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/latest/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Retrieve return reasons
 

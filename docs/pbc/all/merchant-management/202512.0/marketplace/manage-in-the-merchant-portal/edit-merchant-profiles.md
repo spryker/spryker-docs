@@ -8,9 +8,9 @@ redirect_from:
   - /docs/pbc/all/merchant-management/202311.0/marketplace/edit-merchant-profiles.html
 related:
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - title: Merchant users overview
-    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
 ---
 
 This document describes how to edit merchant's profile details in the Merchant Portal.
@@ -71,7 +71,7 @@ To edit the merchant's online profile, in the **Online Profile** tab, edit the n
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 

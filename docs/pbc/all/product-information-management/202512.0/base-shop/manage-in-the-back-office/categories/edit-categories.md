@@ -8,11 +8,11 @@ originalArticleId: 93beba2a-596a-46ca-8933-c88ad105d1c7
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/category/managing-categories.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/managing-categories.html
-  - /docs/scos/user/back-office-user-guides/202311.0/catalog/category/managing-categories.html  
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/category/managing-categories.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/edit-categories.html
 related:
   - title: Category Management feature overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 This doc describes how to edit categories in the Back Office.
@@ -33,7 +33,7 @@ This doc describes how to edit categories in the Back Office.
     - Next to the parent categories you want to deassign this category from, click **x**.
 5. For **STORES**, do any of the following:
     - Select one or more stores.
-    - Next to the stores you want to remove this category from, click **x**.  
+    - Next to the stores you want to remove this category from, click **x**.
 6. Select a **TEMPLATE**.
 7. Select or clear the following checkboxes:
     - ACTIVE

@@ -10,25 +10,25 @@ redirect_from:
 
 related:
   - title: Table Feature extension
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Pagination
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
   - title: Table Feature Row Actions
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
   - title: Table Feature Search
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document describes the *Table Feature Editable* component in the Components Library.
@@ -41,9 +41,9 @@ Check out an example usage of the Table Feature Editable in the `@spryker/table`
 
 Component configuration:
 
-- `columns`—an array with the config for every editable column.  
-- `create`—an object with the config for the added rows.  
-- `update`—an object with the config for the existing rows.  
+- `columns`—an array with the config for every editable column.
+- `create`—an object with the config for the added rows.
+- `update`—an object with the config for the existing rows.
 - `disableRowKey`—disables the row that contains the mentioned column `id` (see the following example).
 
 ```html
@@ -56,7 +56,7 @@ Component configuration:
             create: { ... },
             update: { ... },
             disableRowKey: 'col',
-        },                                                                                           
+        },
     }"
 >
 </spy-table>
@@ -64,24 +64,24 @@ Component configuration:
 
 Take a closer look at all the options available.
 
-- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/dg/dev/frontend-development/latest/marketplace/table-design/table-design.html#interfaces) document:  
-  - `id`—a cell `id`.  
-  - `type`—a cell `type`.  
-  - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/dg/dev/frontend-development/latest/marketplace/table-design/table-column-type-extension/table-column-type-extension.html):  
-    - `value`—sets the default value to the newly added row's cell.  
+- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html#interfaces) document:
+  - `id`—a cell `id`.
+  - `type`—a cell `type`.
+  - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html):
+    - `value`—sets the default value to the newly added row's cell.
 
-- `create`:  
+- `create`:
   - `addButon`—this object holds the `Add button` configuration such as `title`, `icon`, and `size`.
   - `cancelButon`—an object with the `Cancel button` configuration like `title` and `icon`.
-  - `disableForCols`—an array with the cell `ids` to be disabled.  
-  - `formInputName`—creates an `input[type=hidden]` element with the specific name.  
-  - `initialData`—initials data for cells and objects with errors for rows and cells.  
+  - `disableForCols`—an array with the cell `ids` to be disabled.
+  - `formInputName`—creates an `input[type=hidden]` element with the specific name.
+  - `initialData`—initials data for cells and objects with errors for rows and cells.
 
 - `update`:
-  - `url`—a request url.  
-  - `saveButon`—an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).  
-  - `cancelButon`—an object with the `Cancel button` configuration such as `title` and `icon` (displayed in the `update` popup).  
-  - `disableForCols`—an array with the cell `ids` to be disabled.  
+  - `url`—a request url.
+  - `saveButon`—an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).
+  - `cancelButon`—an object with the `Cancel button` configuration such as `title` and `icon` (displayed in the `update` popup).
+  - `disableForCols`—an array with the cell `ids` to be disabled.
 
 ```html
 <spy-table
@@ -132,7 +132,7 @@ Take a closer look at all the options available.
                 disableForCols: ['col2'],
             },
             disableRowKey: 'col1',
-        },                                                                                           
+        },
     }"
 >
 </spy-table>
@@ -156,7 +156,7 @@ declare module '@spryker/table' {
             editable: () =>
                 import('@spryker/table.feature.editable').then(
                     (m) => m.TableEditableFeatureModule,
-                ),   
+                ),
         }),
     ],
 })

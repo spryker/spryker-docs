@@ -13,10 +13,10 @@ redirect_from:
   - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/integrate-avalara-tax-shipment.html
 related:
   - title: Tax feature overview
-    link: docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 ---
 
-To enable the Avalara + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.  
+To enable the Avalara + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.
 
 ## Install feature core
 
@@ -28,8 +28,8 @@ Install the necessary features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Shipment | master | [Install the Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/install-avalara.html) |
+| Shipment | master | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Avalara Tax | master | [Avalara Tax integration](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html) |
 
 ### Install the required modules
 
@@ -152,4 +152,4 @@ Make sure that the data has been imported to `spy_shipment_method`.
 
 ## Next steps
 
-[Apply Avalara tax codes](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html)
+[Apply Avalara tax codes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html)

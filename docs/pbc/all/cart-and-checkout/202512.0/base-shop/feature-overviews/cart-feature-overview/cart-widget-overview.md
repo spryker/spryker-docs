@@ -7,7 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/cart-widget-overvie
 originalArticleId: 0c78b70a-a43b-487d-8aa7-1f7deee0cc4a
 redirect_from:
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-widget-overview.html
-  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202311.0/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/cart-feature-overview/cart-widget-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
 ---
@@ -19,7 +19,7 @@ For customers' convenience and ease of use, the shopping cart widget is placed i
 For each shopping cart, the following details are provided:
 - Shopping cart name
 - Number of items added to cart
-- Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html))
+- Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html))
 - Price mode
 - Cart total
 - View all carts, which opens the **Shopping cart** menu in the customer account

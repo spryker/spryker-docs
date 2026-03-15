@@ -239,7 +239,7 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
  public function getMessageHandlerPlugins(): array
  {
      return [
-         //...,           
+         //...,
          new AssetMessageHandlerPlugin(),
          new ProductReviewAddReviewsMessageHandlerPlugin(),
      ];
@@ -335,7 +335,7 @@ use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 use Spryker\Shared\AssetStorage\AssetStorageConfig;
 
 class RabbitMqConfig extends SprykerRabbitMqConfig
-{  
+{
   protected function getSynchronizationQueueConfiguration(): array
   {
       return [
@@ -438,7 +438,7 @@ attribute_key_7 = upcs, value_7 = 12345678
 2. Add the following data to `data/import/common/common/product_concrete.csv`:
 
 ```csv
-Add UPCs into columns, for example 
+Add UPCs into columns, for example
 attribute_key_2 = upcs, value_2 = 12345678
 update UPC for an abstract product with the same abstract_sku
 ```
@@ -459,4 +459,4 @@ upcs,select,yes,yes,,UPCs,UPCs,,
 
 ## Next steps
 
-[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/configure-bazaarvoice.html) for your store.
+[Configure the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{page.version}}/third-party-integrations/configure-bazaarvoice.html) for your store.

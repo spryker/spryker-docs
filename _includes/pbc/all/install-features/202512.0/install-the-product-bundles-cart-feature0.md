@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME | EXPECTED DIRECTORY | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Product Bundles | 202507.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Product Bundles | 202507.0 | [Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html)|
 | Cart | 202507.0 | |
 
 
@@ -168,7 +168,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 {% info_block warningBox "Verification" %}
 
 Add a product bundle to the cart and increase its quantity to a larger number—for example, 1,000 items. Then, decrease the quantity.
-Make sure that increase and decrease operations are performed without a significant delay and do not fail, with an exception.  
+Make sure that increase and decrease operations are performed without a significant delay and do not fail, with an exception.
 
 Perform this verification both as an anonymous and logged-in user.
 Make sure that bundled products have an images that are displayed correctly in the cart.
@@ -181,4 +181,4 @@ To create an order successfully with a large number of product bundles in the ca
 This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.
 The lower the threshold, the fewer number of separate shipments are created in an order, which decreases the potential probability of insufficient memory errors during the order creation process.
 
-For details, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).
+For details, see [Install the Splittable Order Items feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html).

@@ -11,7 +11,7 @@ template: back-office-user-guide-template
   This displays the selected files.
 4. Click **Upload**.
   This shows a success message and displays the files in the list.
-  
+
 ## Next steps
 
-[Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html)
+[Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/{{page.version}}/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html)

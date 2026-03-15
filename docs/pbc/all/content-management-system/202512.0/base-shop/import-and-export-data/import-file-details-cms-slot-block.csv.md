@@ -7,23 +7,23 @@ originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-sl
 originalArticleId: 848a3e6c-edad-4c9b-b7af-0b0c847b258f
 redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html
-  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html  
-  - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-slot-block.csv.html  
-  - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html  
+  - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html
+  - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-slot-block.csv.html
+  - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-slot-block.csv.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-cms-slot-block.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `cms_slot_block.csv` file to configure [CMS Slot Block](/docs/pbc/all/content-management-system/latest/base-shop/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.
+This document describes the `cms_slot_block.csv` file to configure [CMS Slot Block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
 
 
-- [cms_slot.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-slot.csv.html)
-- [cms_block.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
+- [cms_slot.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-slot.csv.html)
+- [cms_block.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html)
 
 
 

@@ -13,9 +13,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 related:
   - title: Upgrade the NavigationsRestApi module
-    link: docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
   - title: Retrieving category trees
-    link: docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
 ---
 
 The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
@@ -24,7 +24,7 @@ A navigation element with its child nodes forms a navigation tree. You can only 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html).
 
 ## Retrieving a navigation tree
 
@@ -1113,7 +1113,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
-{% include pbc/all/glue-api-guides/latest/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
 
 
 ### Possible errors

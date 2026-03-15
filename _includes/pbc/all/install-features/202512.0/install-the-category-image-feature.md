@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Category Image feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/alternative-products-feature-overview.html).
+This document describes how to install the [Category Image feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html).
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | 202507.0 | |
 
 ### 1) Install the required modules
@@ -440,7 +440,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | 202507.0 | |
 
 ### 1) Install the required modules
@@ -470,23 +470,23 @@ Register the following global widgets:
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
-<?php  
+<?php
 
-namespace Pyz\Yves\ShopApplication;  
+namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;  
+use SprykerShop\Yves\CategoryImageStorageWidget\Widget\CategoryImageStorageWidget;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{    
-    /**     
-    * @return string[]     
-    */    
-    protected function getGlobalWidgets(): array    
-    {        
-        return [            
-            CategoryImageStorageWidget::class,        
-        ];    
+{
+    /**
+    * @return string[]
+    */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            CategoryImageStorageWidget::class,
+        ];
     }
 }
 ```

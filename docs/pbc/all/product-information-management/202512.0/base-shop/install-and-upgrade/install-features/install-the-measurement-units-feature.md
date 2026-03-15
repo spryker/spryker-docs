@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
 related:
   - title: Install the Measurement Units Glue API
-    link: docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
 ---
 
 This document describes how to install the Measurement Units feature.
@@ -627,7 +627,7 @@ Do this step even if your project has only one store.
 
 <details>
   <summary>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv</summary>
-  
+
 ```yaml
 sales_unit_key,store_name
 sales_unit_1,DE

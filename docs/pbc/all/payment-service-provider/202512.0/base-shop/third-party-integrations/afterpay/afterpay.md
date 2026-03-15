@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/afterpay/afterpay.html
 related:
   - title: Afterpay - Installation and Configuration
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/install-and-configure-afterpay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/afterpay/install-and-configure-afterpay.html
 ---
 
 ## Partner Information
@@ -41,8 +41,8 @@ Unlike other pay-after-delivery providers we keep you informed of your customers
 
 ## Related Developer guides
 
-- [Installing and configuring Afterpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/install-and-configure-afterpay.html)
-- [Integrating Afterpay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/integrate-afterpay.html)
+- [Installing and configuring Afterpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/install-and-configure-afterpay.html)
+- [Integrating Afterpay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/integrate-afterpay.html)
 
 ---
 

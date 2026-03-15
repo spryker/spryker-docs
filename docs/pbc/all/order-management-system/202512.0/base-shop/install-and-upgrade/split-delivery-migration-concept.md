@@ -22,7 +22,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/split-delivery-migration-concept.html
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3
     link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
   - title: Silex Replacement migration concept
@@ -70,13 +70,13 @@ The following table lists the modules affected by the Split Delivery update:
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/sales` | 11.0.0 | [Upgrade the Sales module](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html#upgrading-from-version-10-to-version-1100) |
+| `spryker/sales` | 11.0.0 | [Upgrade the Sales module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html#upgrading-from-version-10-to-version-1100) |
 | `spryker/shipment` | 7.0.0 | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html#upgrading-from-version-6-to-version-7) |
 | `spryker-shop/checkout-page` | 3.0.0 | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html#upgrading-from-version-2-to-version-3) |
 | `spryker-shop/customer-page` | 2.0.0 | [Upgrade the CustomerPage module](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerpage-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/checkout-rest-api` | 2.0.0 | [Upgrade the CheckoutRestApi module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html#upgrading-from-version-1-to-version-200) |
-| `spryker/manual-order-entry-gui` | 0.8.0 | [Migration Guide - ManualOrderEntryGui](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html#upgrading-from-version-07-to-version-080) |
+| `spryker/manual-order-entry-gui` | 0.8.0 | [Migration Guide - ManualOrderEntryGui](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html#upgrading-from-version-07-to-version-080) |
 | `spryker/shipment-cart-connector` | 2.0.0 | [Upgrade the ShipmentCartConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html#upgrading-from-version-10-to-version-200) |
 | `spryker/shipment-checkout-connector` | 2.0.0 | [Upgrade the ShipmentCheckoutConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html#upgrading-from-version-10-to-version-200) |
 | `spryker/shipment-discount-connector` | 4.0.0 | [Upgrade the ShipmentDiscountConnector module](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html#upgrading-from-version-30-version-to-400) |
-| `spryker/orders-rest-api` | 4.0.0 | [Upgrade the OrdersRestApi module](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
+| `spryker/orders-rest-api` | 4.0.0 | [Upgrade the OrdersRestApi module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |

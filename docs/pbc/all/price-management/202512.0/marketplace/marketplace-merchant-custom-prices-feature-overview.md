@@ -7,16 +7,16 @@ redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-custom-prices-feature-overview.html
 related:
   - title: Managing marketplace abstract product prices
-    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
   - title: Managing marketplace concrete product prices
-    link: docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html
 ---
 
 The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to define custom prices for the marketplace products within specific business units of B2B customers via the Merchant Portal.
 
 {% info_block infoBox "Prerequisite" %}
 
-Marketplace operators need to define a relationship between the business units of the B2B customer and the merchants before merchants are able to define custom prices for these business unit users. For information on how to define a contract relationship between your marketplace B2B customers and the merchants, see [Merchant B2B contracts feature overview](/docs/pbc/all/merchant-management/latest/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html). Once this relationship is established, merchants can see the existing contracts.
+Marketplace operators need to define a relationship between the business units of the B2B customer and the merchants before merchants are able to define custom prices for these business unit users. For information on how to define a contract relationship between your marketplace B2B customers and the merchants, see [Merchant B2B contracts feature overview](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html). Once this relationship is established, merchants can see the existing contracts.
 
 {% endinfo_block %}
 
@@ -37,12 +37,12 @@ Customers see custom prices for products based on their merchant relationship, o
 
 | MERCHANT PORTAL USER GUIDES  |
 | -------------------- |
-| [Managing marketplace abstract product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html) |
-| [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html) |
+| [Managing marketplace abstract product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html) |
+| [Managing marketplace concrete product prices](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-prices.html) |
 
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES|
 |---------|
-| [Marketplace Merchant Custom Install the Prices feature](/docs/pbc/all/price-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-custom-prices-feature.html) |
+| [Marketplace Merchant Custom Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-custom-prices-feature.html) |

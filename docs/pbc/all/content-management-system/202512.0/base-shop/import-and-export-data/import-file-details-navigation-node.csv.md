@@ -15,18 +15,18 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
+This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.
 
 
 ## Import file dependencies
 
 
 
-- [navigation.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-navigation.csv.html)
-- [glossary.csv](/docs/pbc/all/miscellaneous/latest/import-and-export-data/import-file-details-glossary.csv.html)
+- [navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html)
+- [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
 
 ## Import file parameters
 

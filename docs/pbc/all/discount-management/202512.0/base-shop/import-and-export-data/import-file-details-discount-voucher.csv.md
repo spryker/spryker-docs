@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
-  - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html  
-  - /docs/pbc/all/discount-management/202311.0/import-and-export-data/file-details-discount-voucher.csv.html  
+  - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
+  - /docs/pbc/all/discount-management/202311.0/import-and-export-data/file-details-discount-voucher.csv.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/import-and-export-data/file-details-discount-voucher.csv.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `discount_voucher.csv` file to configure Discount Voucher information in your Spryker Demo Shop.
@@ -48,7 +48,7 @@ data:import:discount-voucher
 
 ## Import file dependencies
 
-This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/latest/base-shop/import-and-export-data/import-file-details-discount.csv.html).
+This file has the following dependency: [discount.csv](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html).
 
 ## Additional information
 

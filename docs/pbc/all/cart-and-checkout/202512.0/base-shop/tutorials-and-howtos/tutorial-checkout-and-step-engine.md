@@ -12,7 +12,7 @@ related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
   - title: "Step engine: Workflow overview"
-    link: docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 {% info_block infoBox %}
@@ -91,7 +91,7 @@ This tutorial shows how to add a voucher step to the existing out-of-the-box Spr
 
         	return $routeCollection;
     	}
-	}    
+	}
 	```
 
 3. In YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider`, update the `getRouteProvider` method to use the new Route Provider instead of the core one.
@@ -207,7 +207,7 @@ class VoucherStep extends AbstractBaseStep implements StepWithBreadcrumbInterfac
 	{
 		return !$this->requireInput($dataTransfer);
 	}
-}    
+}
 ```
 
 {% endinfo_block %}
@@ -314,7 +314,7 @@ class CheckoutController extends SprykerShopCheckoutController
 	{
 		return 'Hello Voucher Step';
 	}
-}  
+}
 ```
 
 The step is now created:

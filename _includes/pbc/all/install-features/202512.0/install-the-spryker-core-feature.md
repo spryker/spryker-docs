@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Spryker Core feature](/docs/pbc/all/miscellaneous/latest/spryker-core-feature-overview/spryker-core-feature-overview.html).
+This document describes how to install the [Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html).
 
 {% info_block infoBox "Included features" %}
 
@@ -1190,7 +1190,7 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
 {% info_block warningBox "Verification" %}
 
 Make sure that, when a customer or agent submits a login form, the request URL includes a locale code. Examples of default values:
-- Customer: `/de/login_check`  
+- Customer: `/de/login_check`
 - Agent: `/de/agent/login_check`
 
 {% endinfo_block %}

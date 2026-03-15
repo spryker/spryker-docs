@@ -9,7 +9,7 @@ This document describes how to manage merchant registration requests in the Back
 
 ## Prerequisites
 
-To manage merchant registration requests, verify that the [Merchant Self-Registration feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html) is installed.
+To manage merchant registration requests, verify that the [Merchant Self-Registration feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html) is installed.
 
 ## View merchant registration requests
 
@@ -109,8 +109,8 @@ The system performs the following actions:
 
 After approving a registration request, you need to:
 
-1. [Edit the merchant](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html) to update its status to *Active* and approval status to *Approved*.
-2. [Edit the user](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/edit-users.html) - activate the merchant user account and set a password
+1. [Edit the merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html) to update its status to *Active* and approval status to *Approved*.
+2. [Edit the user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html) - activate the merchant user account and set a password
 3. Notify the merchant user about their account so they can log in to the Merchant Portal.
 
 {% endinfo_block %}
@@ -124,7 +124,7 @@ To reject a merchant registration request, do the following:
 1. In the Back Office, go to **Marketplace** > **Merchant Registrations**.
 2. In the **Actions** column, click **View** for the request you want to reject.
 3. Optional: Add an internal comment explaining why the request is being rejected.
-4. In the top-right corner, click **Decline Merchant**.  
+4. In the top-right corner, click **Decline Merchant**.
    This opens the **Reject Request** confirmation page.
 5. Review the confirmation message: "Reject this request if you do not want to create a merchant account."
 6. Click **Reject Request** to confirm.

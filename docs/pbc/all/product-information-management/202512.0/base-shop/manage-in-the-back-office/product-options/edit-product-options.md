@@ -11,11 +11,11 @@ redirect_from:
   - /docs/managing-product-options
   - /docs/en/managing-product-options
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/managing-product-options.html
-  - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-options/managing-product-options.html  
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-options/managing-product-options.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
 related:
   - title: Product Options feature overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html
 ---
 
 To edit product options in the Back Office, follow the steps below.
@@ -52,7 +52,7 @@ Review the [reference information](#reference-information-edit-general-settings-
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | GROUP NAME TRANSLATION KEY | Glossary key of the product option group. |
-| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/latest/base-shop/manage-in-the-back-office/create-tax-sets.html). |
+| TAX SET | Tax set to apply to the product options. To create one, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html). |
 | OPTION NAME TRANSLATION KEY | Glossary key of a product option. |
 | SKU | Unique identifier of a product option. |
 | PRICES | Gross and net values per currency per locale. When a price is set to 0, the options is *free of charge*.  |

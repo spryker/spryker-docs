@@ -11,11 +11,11 @@ redirect_from:
   - /docs/managing-attributes
   - /docs/en/managing-attributes
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/managing-product-attributes.html
-  - /docs/scos/user/back-office-user-guides/202311.0/catalog/attributes/managing-product-attributes.html  
+  - /docs/scos/user/back-office-user-guides/202311.0/catalog/attributes/managing-product-attributes.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
 related:
   - title: Product Attributes
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 
 This doc describes how to edit product attributes.
@@ -53,9 +53,9 @@ This opens the **Edit Product Attributes** page.
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| ATTRIBUTE KEY | Name that you use when [assigning the attribute to products](/docs/pbc/all/product-information-management/latest/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). |
+| ATTRIBUTE KEY | Name that you use when [assigning the attribute to products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html). |
 | INPUT TYPE | Defines the data format of the attribute's values. |
-| SUPER ATTRIBUTE | Defines if the attribute is a [super attribute](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
+| SUPER ATTRIBUTE | Defines if the attribute is a [super attribute](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
 | PREDEFINED VALUES | Values that you select from when assigning the attribute to products. For example, if the attribute is `color`, the values can be `red`, `green`, `black`, etc. |
 | ALLOW INPUT ANY VALUE OTHER THAN PREDEFINED ONES | Defines if, when creating or updating products, you can enter custom values that are not defined in **PREDEFINED VALUES**. |
 | TRANSLATION | Translations for attribute keys and values per locale. These translations are displayed on the Storefront.  |

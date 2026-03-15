@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato.html
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-store-order.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/arvato/arvato-store-order.html
 ---
 
 ## Partner Information
@@ -21,9 +21,9 @@ related:
 
 ## Related Developer guides
 
-- [Installing and configuring Arvato](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/install-and-configure-arvato.html)
-- [Arvato - Risk Check](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-risk-check.html)
-- [Arvato - Store Order](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/arvato/arvato-store-order.html)  
+- [Installing and configuring Arvato](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/install-and-configure-arvato.html)
+- [Arvato - Risk Check](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-risk-check.html)
+- [Arvato - Store Order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/arvato/arvato-store-order.html)
 
 
 ---

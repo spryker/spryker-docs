@@ -10,9 +10,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-unit-addresses/edit-company-unit-addresses.html
 related:
   - title: Managing Companies
-    link: docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/manage-companies.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html
   - title: Company user roles and permissions overview
-    link: docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to edit company roles in the Back Office.
@@ -37,7 +37,7 @@ Review the [reference information](#edit-a-company-role) before you start, or lo
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| COMPANY | A company this role belongs to. To define a role's company, [create](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html) it from scratch. |
+| COMPANY | A company this role belongs to. To define a role's company, [create](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html) it from scratch. |
 | NAME | Unique identifier of the role.  |
 | IS DEFAULT | Defines if this role is used by default for all the new company users created. If the selected **COMPANY** already has a default role, by selecting this option you change the default role to this one. |
 | ASSIGNED PERMISSIONS | Permissions that are assigned to this role. The permissions are defined on a code level. |

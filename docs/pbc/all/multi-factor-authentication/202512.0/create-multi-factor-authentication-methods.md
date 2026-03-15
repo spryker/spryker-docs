@@ -5,11 +5,11 @@ template: howto-guide-template
 last_updated: Apr 7, 2025
 related:
   - title: Multi-Factor Authentication Feature overview
-    link: docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html
+    link: docs/pbc/all/multi-factor-authentication/page.version/multi-factor-authentication.html
   - title: Install the Multi-Factor Authentication feature
-    link: docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html
+    link: docs/pbc/all/multi-factor-authentication/page.version/install-multi-factor-authentication-feature.html
   - title: Install Customer Email Multi-Factor Authentication method
-    link: docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html
+    link: docs/pbc/all/multi-factor-authentication/page.version/install-email-multi-factor-authentication-method.html
 
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/create-multi-factor-authentication-methods.html
@@ -17,7 +17,7 @@ redirect_from:
 
 This document describes how to create and implement Multi-Factor Authentication (MFA) methods.
 
-To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
+To lean more about MFA methods, see [Multi-Factor Authentication feature overview](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 An MFA method consists of two components:
 
@@ -26,7 +26,7 @@ An MFA method consists of two components:
 
 ## Prerequisites
 
-[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html)
+[Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html)
 
 ## 1) Create an MFA type plugin
 
@@ -54,19 +54,19 @@ class YourMfaTypePlugin extends AbstractPlugin implements MultiFactorAuthPluginI
      * @var string
      */
     protected const YOUR_MULTI_FACTOR_AUTH_TYPE = 'your-multi-factor-auth-type';
-    
+
     /**
      * {@inheritDoc}
      *
      * @api
-     * 
+     *
      * @var string
      */
     public function getName(): string
     {
         return static::YOUR_MULTI_FACTOR_AUTH_TYPE;
     }
-    
+
     /**
      * {@inheritDoc}
      *

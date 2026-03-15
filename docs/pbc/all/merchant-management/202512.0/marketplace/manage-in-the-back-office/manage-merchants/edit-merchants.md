@@ -7,9 +7,9 @@ redirect_from:
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
 related:
   - title: Managing merchant users
-    link: docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
   - title: Marketplace Merchant feature overview
-    link: docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 This document describes how to edit merchants in the Back Office.
@@ -85,7 +85,7 @@ In this tab, all the fields are optional.
 - **LATITUDE**
 - **LONGITUDE**
 
-6. Click **Save**.  
+6. Click **Save**.
     This opens the **Overview of Merchants** page with a success message displayed.
 
 | ATTRIBUTE | DESCRIPTION |
@@ -102,7 +102,7 @@ In this tab, all the fields are optional.
 | NUMBER | Building number. |
 | ZIP CODE | Zip code. |
 | CITY | City. |
-| ADDITION TO ADDRESS | Additional address information that might be useful for customers. |  
+| ADDITION TO ADDRESS | Additional address information that might be useful for customers. |
 | LATITUDE | Defines the merchant's location. |
 | LONGITUDE | Defines the merchant's location. |
 
@@ -117,18 +117,18 @@ In this tab, all the fields are optional.
 - **TERMS AND CONDITIONS**
 - **DATA PRIVACY**
 - **IMPRINT**
-3. Click **Save**.  
-    This opens the **Overview of Merchants** page with a success message displayed.  
+3. Click **Save**.
+    This opens the **Overview of Merchants** page with a success message displayed.
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | CANCELLATION POLICY | Cancellation policy. |
-| TERMS AND CONDITIONS | Terms and conditions. |  
+| TERMS AND CONDITIONS | Terms and conditions. |
 | DATA PRIVACY | Data privacy statement. |
 | IMPRINT | Imprint information. |
 
 ## Edit merchant users
 
 For instructions on managing merchant users, see the following documents:
-- [Create merchant users](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html)
-- [Edit merchant users](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html)
+- [Create merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html)
+- [Edit merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html)

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/shopping-list-widget-overview
   - /docs/en/shopping-list-widget-overview
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-list-widget-overview.html
-  - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-list-widget-overview.html  
+  - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-list-widget-overview.html
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html
 ---
 
@@ -21,7 +21,7 @@ For customers' convenience and ease of use, the shopping list widget is placed i
 
 - Shopping list name.
 - First and last name of the person who created the shopping list.
-- Level of access for shopping list: full access (green) or read only (grey). To learn more about shopping list sharing and access levels, see [Multiple and Shared Shopping Lists overview](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
+- Level of access for shopping list: full access (green) or read only (grey). To learn more about shopping list sharing and access levels, see [Multiple and Shared Shopping Lists overview](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
 - The number of items in the shopping list.
 - The **Create New List** button, which adds a new list in the **Shopping List** section.
 - The **All Shopping Lists** button, which leads to the **Shopping Lists** page with all the shopping lists available for the customer.

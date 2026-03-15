@@ -1,13 +1,13 @@
 ---
 title: "Glue API: Retrieve product offers of concrete products"
-description: Learn how to retrieve details about product offers of concrete products via Spryker Glue API for your Marketplace Projects. 
+description: Learn how to retrieve details about product offers of concrete products via Spryker Glue API for your Marketplace Projects.
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
 related:
   - title: "Glue API: Retrieve concrete products"
-    link: docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
 ---
 
 

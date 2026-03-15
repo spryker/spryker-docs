@@ -11,13 +11,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
 related:
   - title: Klarna
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna.html
   - title: Klarna payment workflow
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-payment-workflow.html
   - title: Klarna - Part Payment Flexible
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-part-payment-flexible.html
   - title: Klarna state machine commands and conditions
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Payment Workflow Scenarios
@@ -68,4 +68,4 @@ You can copy over configuration to your config from the Klarna modules `config.d
 
 ## Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives a summary of them.

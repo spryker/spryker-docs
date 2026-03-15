@@ -27,13 +27,13 @@ You can configure more entities to be included on the project level.
 
 ## Dynamic Multistore
 
-Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/dynamic-multistore.html) enabled.
+Sitemaps can be generated for shops with [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/dynamic-multistore.html) enabled.
 
 ## Caching interval
 
 To optimize performance, sitemaps are cached, and the cached version is used by search engines. The cached version is updated every 24 hours, and you can configure this time interval.
 
-For instructions on configuring the interval, see [Install the Sitemap feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-sitemap-feature.html).
+For instructions on configuring the interval, see [Install the Sitemap feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-sitemap-feature.html).
 
 ## Domain verification
 
@@ -49,7 +49,7 @@ Performance is limited when the number of entities exceeds 100,000 for a single 
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-sitemap-feature.html) |
+| [Install the Sitemap feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-sitemap-feature.html) |
 
 
 

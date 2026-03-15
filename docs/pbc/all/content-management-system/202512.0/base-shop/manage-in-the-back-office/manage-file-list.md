@@ -11,16 +11,16 @@ redirect_from:
   - /docs/managing-file-list
   - /docs/en/managing-file-list
   - /docs/scos/user/back-office-user-guides/202200.0/content/file-manager/managing-file-list.html
-  - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-list.html  
+  - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-list.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/manage-file-list.html
-  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-file-list.html  
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-file-list.html
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-file-tree.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-file-tree.html
   - title: Add and edit MIME types
-    link: docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/file-manager-feature-overview.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.
@@ -42,7 +42,7 @@ To view a file:
 
 {% info_block infoBox "Info" %}
 
-You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/content-management-system/latest/base-shop/file-manager-feature-overview.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
+You can maintain multiple versions of any file. See [Versions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html#versions) for more information. [Editing files](#editing-files) below explains how to add multiple versions of a file.
 
 {% endinfo_block %}
 

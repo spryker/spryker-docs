@@ -14,7 +14,7 @@ This document outlines the steps to connect and configure the Stripe app in the 
 
 ## Prerequisites
 
-- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 - Obtain Stripe account ID in [Stripe Dashboard](https://dashboard.stripe.com). For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
 - (Only for the shops with the B2C business model) Contact your Spryker account manager with the request to connect your Stripe account to Spryker's account.
 
@@ -31,9 +31,9 @@ This document outlines the steps to connect and configure the Stripe app in the 
 
 {% info_block infobox %}
 
-If you're configuring Stripe for Marketplace, see [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
+If you're configuring Stripe for Marketplace, see [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
 
-{% endinfo_block %}  
+{% endinfo_block %}
 
 6. For **STRIPE ACCOUNT ID**, enter the account ID you've obtained in the [prerequisites](#prerequisites).
 7. For **Environment**, select if you want to use the app in test or live mode. For details on the Stripe test mode, see [Test mode](https://stripe.com/docs/test-mode).
@@ -58,4 +58,4 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).

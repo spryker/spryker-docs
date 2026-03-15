@@ -10,16 +10,16 @@ redirect_from:
   - /2021080/docs/en/episerver-api-requests
   - /docs/episerver-api-requests
   - /docs/en/episerver-api-requests
-  - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html  
+  - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/episerver-api.html
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/episerver/episerver-api.html
 related:
   - title: Episerver - Integration into a project
-    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/integrate-episerver.html
   - title: Episerver - Installation and Configuration
-    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/install-and-configure-episerver.html
   - title: Episerver - Order referenced commands
-    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
 ---
 
 `\SprykerEco\Zed\Episerver\Business\Api\Adapter\EpiserverApiAdapter` contains all needed data for sending it to Episerver for events.

@@ -21,12 +21,12 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
   - /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
   - /docs/pbc/all/cart-and-checkout/202311.0/extend-and-customize/checkout-steps.html
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/checkout-steps.html  
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/checkout-steps.html
 related:
   - title: Multi-Step Checkout
-    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
   - title: Checkout process review and implementation
-    link: docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/checkout-process-review-and-implementation.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/extend-and-customize/checkout-process-review-and-implementation.html
 ---
 
 The checkout process consists of the following steps:

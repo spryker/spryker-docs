@@ -5,11 +5,11 @@ last_updated: Nov 1, 2024
 template: howto-guide-template
 ---
 
-To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
 
 ## Prerequisites
 
-[Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+[Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 ## Install and update modules
 
@@ -340,8 +340,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ### Enable merchant commissions for marketplace payments
 
-To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 
-[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)
+[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)

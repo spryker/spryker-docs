@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
 ---
 
-Merchant Portal comes with the pre-configured [Persistence ACL](/docs/pbc/all/user-management/latest/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html) feature to secure sensitive data.
+Merchant Portal comes with the pre-configured [Persistence ACL](/docs/pbc/all/user-management/{{page.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html) feature to secure sensitive data.
 
 By default, the feature creates and assigns a set of ACL roles to merchant users to restrict access to other merchant data in the system.
 
@@ -46,7 +46,7 @@ As the diagram shows, the configuration is represented by three main composite o
 - `SalesOrder`
 
 They all inherit from `Merchant`, which is also a composite object.
-Each merchant has its own data segment. Thanks to this, the merchant users have access exclusively to the data of their merchant.  
+Each merchant has its own data segment. Thanks to this, the merchant users have access exclusively to the data of their merchant.
 You can also check some entities that are configured as publicly readable:
 - `\Orm\Zed\Locale\Persistence\SpyLocale`
 - `\Orm\Zed\Country\Persistence\SpyCountry`

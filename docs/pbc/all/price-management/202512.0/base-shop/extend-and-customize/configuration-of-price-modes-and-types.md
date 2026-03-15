@@ -21,7 +21,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
 related:
   - title: Multiple currencies per store configuration
-    link: docs/pbc/all/price-management/latest/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
+    link: docs/pbc/all/price-management/page.version/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 ---
 
 The following price modes are used to identify pricing type:
@@ -61,7 +61,7 @@ $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
 
 ## Set up a price mode switcher
 
-1. Upgrade the Price module to version 5 or higher. For instructions, see [Upgrade the Price module](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+1. Upgrade the Price module to version 5 or higher. For instructions, see [Upgrade the Price module](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 2. Add `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
    This renders a drop-down list with the price mode selection.

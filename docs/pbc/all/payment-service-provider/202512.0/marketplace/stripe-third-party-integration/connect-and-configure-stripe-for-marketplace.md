@@ -9,7 +9,7 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 ## Prerequisites
 
-- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 - Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
   - Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
   - Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
@@ -24,7 +24,7 @@ This document describes how to connect and configure the Stripe app in the Back 
    This displays a success message with the app's status as **Connection pending**.
 4. Click **Configure**.
   This opens the **Configure** pane.
-5. For **Business Model**, select **Marketplace**.  
+5. For **Business Model**, select **Marketplace**.
 6. For **STRIPE ACCOUNT ID**, enter the account ID you've obtained in the [prerequisites](#prerequisites).
 7. For **STRIPE PUBLISHABLE KEY**, enter the key you've obtained in the [prerequisites](#prerequisites).
 8. For **STRIPE SECRET KEY**, enter the key you've obtained in the [prerequisites](#prerequisites).
@@ -50,5 +50,5 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-1. Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
-2. Inform merchants about Stripe being available. To be able to use Stripe, merchants need to onboard. For instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
+1. Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+2. Inform merchants about Stripe being available. To be able to use Stripe, merchants need to onboard. For instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).

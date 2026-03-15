@@ -9,7 +9,7 @@ To start feature integration, overview, and install the necessary features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Product Options | 202507.0 | Feature |
-| Spryker Core | 202507.0 | [Feature API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Spryker Core | 202507.0 | [Feature API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
 ### 1) Install the required modules
 

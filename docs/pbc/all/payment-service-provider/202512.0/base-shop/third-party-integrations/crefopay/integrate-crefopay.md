@@ -16,26 +16,26 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/integrating-crefopay.html
 related:
   - title: CrefoPay
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay.html
   - title: Installing and configuring CrefoPay
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html
   - title: CrefoPay payment methods
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
   - title: CrefoPay—Enabling B2B payments
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
   - title: CrefoPay callbacks
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-callbacks.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-callbacks.html
   - title: CrefoPay notifications
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
 ---
 
 This document shows how to integrate the CrefoPay system into your project.
 
 ## Prerequisites
 
-Before integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html).
+Before integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/install-and-configure-crefopay.html).
 
 ## Integrating CrefoPay into your project
 
@@ -838,6 +838,6 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 If an additional validation for input fields that are filled by a customer is needed, we recommend creating a plugin that implements `\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface`.
 The plugin must be added to the `Pyz\Zed\Checkout\CheckoutDependencyProvider::getCheckoutPreConditions()` method.
 
-For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/latest/base-shop/extend-and-customize/checkout-process-review-and-implementation.html).
+For more details, see [Checkout process review and implementation](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/extend-and-customize/checkout-process-review-and-implementation.html).
 
 {% endinfo_block %}

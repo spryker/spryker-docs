@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Building the project
-    link: docs/dg/dev/frontend-development/latest/marketplace/set-up-the-merchant-portal.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.
@@ -19,7 +19,7 @@ This document provides details about how to set up the Spryker Merchant Portal.
 
 To start using Merchant Portal, install Spryker Demo Shop:
 
-1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).  
+1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).
 2. [Install the project](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 
@@ -31,7 +31,7 @@ To build Merchant Portal, install or update the following tools:
 
 ## Overview
 
-The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are the following:  
+The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are the following:
 - Minimum Node.js version is v18.
 - Minimum npm version is v9.
 

@@ -10,10 +10,10 @@ Install the required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core     | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                              |
-| Order Management | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)  |
-| Reorder          | 202507.0 | [Install the Reorder feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)                          |
-| Prices           | 202507.0 | [Install the Prices feature](/docs/pbc/all/price-management/latest/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                             |
+| Spryker Core     | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                              |
+| Order Management | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)  |
+| Reorder          | 202507.0 | [Install the Reorder feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-reorder-feature.html)                          |
+| Prices           | 202507.0 | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                             |
 
 ### 1) Install the required modules
 
@@ -221,7 +221,7 @@ class ProductBundleConfig extends SprykerProductBundleConfig
               <target>deleted item unreserved</target>
               <event>unreserve deleted items</event>
             </transition>
-  
+
             <transition happy="true">
               <source>deleted item unreserved</source>
               <target>grace period started</target>
@@ -892,7 +892,7 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new OriginalSalesOrderItemPriceCartPreReorderPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderItemHydratorPluginInterface>
      */
@@ -1134,7 +1134,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
             new CancelOrderAmendmentQuoteDeleteAfterPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteCollectionFilterPluginInterface>
      */
@@ -1566,7 +1566,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new OrderAmendmentCartPreCheckPlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -1671,8 +1671,8 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 {% info_block warningBox "Verification" %}
 
-1. Place an order with a product.  
-2. Increase the price of the product from the order.  
+1. Place an order with a product.
+2. Increase the price of the product from the order.
 3. Start the order amendment process for the order you've placed.
   Make sure the product still has the original price.
 4. Go to the order details page and click the product to go to the product details page.
@@ -1833,7 +1833,7 @@ class CartReorderDependencyProvider extends SprykerCartReorderDependencyProvider
             new QuoteRequestVersionCartReorderValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\CartReorderExtension\Dependency\Plugin\CartReorderPreAddToCartPluginInterface>
      */
@@ -2379,7 +2379,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new SalesOrderAmendmentQuoteCheckoutDoSaveOrderPlugin(), #Order Amendment Feature
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -2458,7 +2458,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -2650,8 +2650,8 @@ Install the following required features:
 
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                      |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core     | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
-| Order Management | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Spryker Core     | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                             |
+| Order Management | 202507.0 | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ### 1) Install the required modules
 
@@ -2695,7 +2695,7 @@ class SalesOrderAmendmentWidgetConfig extends SprykerSalesOrderAmendmentWidgetCo
      * @var string|null
      */
     protected const ORDER_AMENDMENT_CART_REORDER_STRATEGY = 'replace';
-    
+
     /**
      * @var bool
      */
@@ -2846,7 +2846,7 @@ Make sure the following widgets have been registered:
 
 - Make sure that after clicking the edit order button the specified reorder strategy for order amendment is applied (the current cart items are replaced by the amended order items in case the `replace` strategy is applied, new cart is created in case the `new` strategy is applied).
 
-- Ensure that clicking the "Edit Order" button applies the specified reorder strategy for order amendment:  
+- Ensure that clicking the "Edit Order" button applies the specified reorder strategy for order amendment:
   - `replace` strategy: current cart items are replaced with amended order items
   - `new` strategy: a new cart is created
 - If the `IS_ORDER_AMENDMENT_CONFIRMATION_ENABLED` configuration is set to `true`, make sure that the order amendment confirmation popup window is displayed.

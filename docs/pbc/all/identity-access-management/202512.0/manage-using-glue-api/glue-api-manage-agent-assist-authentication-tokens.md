@@ -9,13 +9,13 @@ redirect_from:
 - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/latest/base-shop/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
-    link: docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Search by customers as an agent assist
-    link: docs/pbc/all/user-management/latest/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.
@@ -24,9 +24,9 @@ This endpoint allows to refresh an agent assist access token or revoke a refresh
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-- [Install the Agent Assist Glue API](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
-- [Install the Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
-- [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+- [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
+- [Install the Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
+- [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
 ## Refresh an agent assist authentication token
 
@@ -55,7 +55,7 @@ Request sample: refresh an agent assist authentication token
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) . |
 
 ### Response
 
@@ -105,7 +105,7 @@ To revoke an agent assist refresh token, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
+| X-Agent-Authorization | string | &check; | Only required when revoking all the refresh token of an agent assist. String containing digits, letters, and symbols that authorize the agent assist. [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
 | REQUEST | USAGE |

@@ -5,11 +5,11 @@ last_updated: May 17, 2024
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html
 
 ---
 
-After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
+After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
 
 Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
 
@@ -258,7 +258,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
      */
     protected function getCalculableObjectTaxAppExpanderPlugins(): array
     {
-        return [       
+        return [
             # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
 
             // The following plugins are for Marketplace only.
@@ -411,7 +411,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 ## Next step
 
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)
+[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
 
 
 

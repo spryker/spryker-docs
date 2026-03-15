@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Cache
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
 ---
 
 This document explains the Cache Strategy Static service in the Components Library.
@@ -23,8 +23,8 @@ Check out an example usage of the Cache Strategy Static.
 
 Service configuration:
 
-- `type`—a cache type.  
-- `expiresIn`—represents a duration as a string. Each component is separated by a space.  
+- `type`—a cache type.
+- `expiresIn`—represents a duration as a string. Each component is separated by a space.
 
 ```html
 <spy-select

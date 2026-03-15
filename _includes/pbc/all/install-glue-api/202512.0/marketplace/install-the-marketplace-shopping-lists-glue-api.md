@@ -10,8 +10,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | 202507.0 |  [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Shopping Lists | 202507.0 | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html) |
+| Spryker Core | 202507.0 |  [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Shopping Lists | 202507.0 | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html) |
 
 ### 1) Install the required modules
 
@@ -125,7 +125,7 @@ Request sample:
         "type": "shopping-list-items",
         "attributes": {
             "productOfferReference": "offer360",
-            "quantity": 1,            
+            "quantity": 1,
             "sku": "204_29851280"
         }
     }
@@ -252,4 +252,4 @@ Response sample:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Shopping Lists | 202507.0 | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |
+| Marketplace Shopping Lists | 202507.0 | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |

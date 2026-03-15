@@ -11,14 +11,14 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:
   - title: Measurement Units feature overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/measurement-units-feature-overview.html
 ---
 
-The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
+The Measurement Units API together with the [Measurement Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) feature allows selling products in any measurement units configured in your shop.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve a measurement unit
 
@@ -59,18 +59,18 @@ Response sample: retrieve a measurement unit
 }
 ```
 
-{% include pbc/all/glue-api-guides/latest/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/latest/product-measurement-units-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md -->
 
 
 ## Other management options
 
 You can use the measurement units resource as follows:
 
-- Retrieve information about a concrete product, including all the measurement units defined for it—[Retrieve Concrete Products](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
-- Retrieve sales unit of a product—[Retrieve Sales Units](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
-- Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage carts of registered users](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
-- Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage guest carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
-- Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/pbc/all/customer-relationship-management/latest/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html).
+- Retrieve information about a concrete product, including all the measurement units defined for it—[Retrieve Concrete Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).
+- Retrieve sales unit of a product—[Retrieve Sales Units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
+- Add items to carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
+- Add items to guest carts and retrieve information about them with the amount of cart items defined in product measurement units—[Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html).
+- Retrieve information about items in an order with the amount of order items defined in product measurement units—[Retrieving an Order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html).
 
 ## Possible errors
 

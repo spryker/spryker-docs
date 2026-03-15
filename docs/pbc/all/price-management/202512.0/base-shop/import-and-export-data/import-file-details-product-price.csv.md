@@ -10,10 +10,10 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This article contains content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/latest/base-shop/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This article contains content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -41,8 +41,8 @@ data:import:product-price
 
 
 
-- [product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 - *stores.php* configuration file of the Demo Shop PHP project
 
 ## Import template file and content example

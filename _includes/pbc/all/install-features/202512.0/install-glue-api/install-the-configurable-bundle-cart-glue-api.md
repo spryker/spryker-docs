@@ -11,9 +11,9 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Configurable Bundle | 202507.0 | [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
-|Cart | 202507.0 | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
+| Spryker Core | 202507.0 | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Configurable Bundle | 202507.0 | [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
+|Cart | 202507.0 | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) |
 
 ## 1) Install the required modules
 
@@ -177,12 +177,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 1. Create a guest cart with a configurable bundle.
 
-2. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.  
+2. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/guest-carts/:uuid?include=guest-cart-items`.
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
 3. Create a cart with a configurable bundle.
 
-4. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.  
+4. Retrieve the guest cart with the items included by sending the request: `https://glue.mysprykershop.com/carts/:uuid?include=items`.
     Make sure that the endpoint returns the sections: `data.attributes.items.configuredBundle` and `data.attributes.items.configuredBundleItem`.
 
 {% endinfo_block %}
@@ -194,5 +194,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue API: Configurable Bundle Feature | ✓ | [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
-| Glue API: Configurable Bundle + Product Feature | ✓ |  [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |
+| Glue API: Configurable Bundle Feature | ✓ | [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
+| Glue API: Configurable Bundle + Product Feature | ✓ |  [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |

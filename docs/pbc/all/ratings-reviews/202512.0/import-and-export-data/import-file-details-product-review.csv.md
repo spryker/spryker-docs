@@ -13,14 +13,14 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/import-file-details-product-review.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_review.csv` file to configure [Product Review](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) information in your Spryker Demo Shop.
+This document describes the `product_review.csv` file to configure [Product Review](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
 
 
 ## Import file parameters

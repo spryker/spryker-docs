@@ -4,8 +4,8 @@ This document describes how to install the Self-Service Portal (SSP) Asset Manag
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE  |
 |--------------|----------| ------------------ |
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)          |
 
 ## Install the required modules
 
@@ -171,9 +171,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
      *
      * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
-    protected function getProcessorMessagePlugins(Container $container): array 
+    protected function getProcessorMessagePlugins(Container $container): array
     {
-        return [  
+        return [
             SelfServicePortalConfig::QUEUE_NAME_SYNC_STORAGE_SSP_ASSET => new SynchronizationStorageQueueMessageProcessorPlugin(),
             SelfServicePortalConfig::QUEUE_NAME_SYNC_SEARCH_SSP_ASSET => new SynchronizationSearchQueueMessageProcessorPlugin(),
         ];
@@ -304,7 +304,7 @@ Generate routers and navigation cache
 
 ```bash
 console router:cache:warm-up:backoffice
-console navigation:build-cache 
+console navigation:build-cache
 ```
 
 {% info_block warningBox "Verification" %}
@@ -430,7 +430,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-Enable new permission plugins 
+Enable new permission plugins
 
 ```bash
 console setup:init-db
@@ -559,7 +559,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new SspAssetOrderExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsPostSavePluginInterface>
      */
@@ -569,7 +569,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
             new SspAssetOrderItemsPostSavePlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface>
      */
@@ -755,7 +755,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### Add translations
 
-[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html)
+[Here you can find how to import translations for Self-Service Portal feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/ssp-glossary-data-import.html)
 
 Import translations:
 
@@ -1134,7 +1134,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
-    {    
+    {
         return [
             new SspAssetsResourceRoutePlugin(),
         ];

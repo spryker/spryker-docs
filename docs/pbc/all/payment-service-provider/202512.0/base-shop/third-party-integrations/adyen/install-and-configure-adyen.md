@@ -11,11 +11,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/installing-and-configuring-adyen.html
 related:
   - title: Integrating Adyen
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
@@ -30,15 +30,15 @@ The `SprykerEco.Adyen` module includes integration with:
 - OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
 
 The `SprykerEco.Adyen` module provides the following payment methods:
-- [Credit Card](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card)
-- [Direct Debit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#direct-debit-sepa-direct-debit)
-- [Klarna Invoice](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#klarna-invoice)
-- [Prepayment](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#prepayment-bank-transfer-iban)
-- [Sofort](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#sofort)
-- [PayPal](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#paypal)
-- [iDeal](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#ideal)
-- [AliPay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#alipay)
-- [WeChatPay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#wechatpay)
+- [Credit Card](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#credit-card)
+- [Direct Debit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#direct-debit-sepa-direct-debit)
+- [Klarna Invoice](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#klarna-invoice)
+- [Prepayment](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#prepayment-bank-transfer-iban)
+- [Sofort](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#sofort)
+- [PayPal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#paypal)
+- [iDeal](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#ideal)
+- [AliPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#alipay)
+- [WeChatPay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/integrate-adyen-payment-methods.html#wechatpay)
 
 ## Installation
 

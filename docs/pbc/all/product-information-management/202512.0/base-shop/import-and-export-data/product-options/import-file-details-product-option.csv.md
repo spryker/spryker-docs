@@ -14,14 +14,14 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_option.csv` file to configure [product option](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-options-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_option.csv` file to configure [product option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Dependencies
 
-[product_abstract.csv](/docs/pbc/all/product-information-management/latest/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
+[product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html)
 
 ## Import file parameters
 
@@ -35,7 +35,7 @@ This document describes the `product_option.csv` file to configure [product opt
 | option_name_translation_key |  | String | | Translation key of the name of the option in different locales. |
 | option_name.{ANY_LOCALE_NAME}<br>Example value: *option_name.en_US |  | String || Name of the option in the specified locale (US for our example).  |
 | sku | | String | | SKU identifier of the product option. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 ## Import template file and content example
 

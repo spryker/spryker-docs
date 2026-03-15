@@ -1,6 +1,6 @@
 {% info_block warningBox %}
 
-SSP Service Management feature is not compatible with the [Order Amendment feature](/docs/pbc/all/order-management-system/latest/base-shop/order-amendment-feature-overview.html). Orders that include services booked through the SSP can't be amended.
+SSP Service Management feature is not compatible with the [Order Amendment feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-amendment-feature-overview.html). Orders that include services booked through the SSP can't be amended.
 
 {% endinfo_block %}
 
@@ -10,9 +10,9 @@ This document describes how to install the Self-Service Portal (SSP) SSP Service
 
 | FEATURE             | VERSION  | INSTALLATION GUIDE                                                                                                                                          |
 |---------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Click and Collect   | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/latest/unified-commerce/enable-click-collect.html)                                      |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)                                                         |
+| Spryker Core        | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Click and Collect   | 202512.0 | [Enable Click and Collect](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/enable-click-collect.html)                                      |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)                                                         |
 
 ## Install the required modules
 
@@ -68,7 +68,7 @@ class ClickAndCollectPageExampleConfig extends SprykerClickAndCollectPageExample
         self::SHIPMENT_TYPE_ON_SITE_SERVICE,
         self::SHIPMENT_TYPE_DELIVERY,
     ];
-    
+
     /**
      * @var list<string>
      */
@@ -90,9 +90,9 @@ namespace Pyz\Zed\SelfServicePortal;
 use SprykerFeature\Zed\SelfServicePortal\SelfServicePortalConfig as SprykerSelfServicePortalConfig;
 
 class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
-{   
+{
     protected const string MODULE_NAME = 'SelfServicePortal';
-    
+
     public function getDefaultMerchantReference(): string
     {
         return 'MER000001';
@@ -249,7 +249,7 @@ class SelfServicePortalConfig extends SprykerSelfServicePortalConfig
     {
         return static::SHIPMENT_TYPE_DELIVERY;
     }
-    
+
 }
 ```
 
@@ -678,7 +678,7 @@ concrete_sku,shipment_type_key
 
 ### Import glossary and demo data
 
-You can either import glossary keys dedicated to the Service Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
+You can either import glossary keys dedicated to the Service Management feature as described here, or reuse the shared Self-Service Portal glossary import from [SSP glossary data import](/docs/pbc/all/self-service-portal/{{page.version}}/install/ssp-glossary-data-import.html).
 
 ```bash
 console data:import glossary
@@ -987,7 +987,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new ServicePointItemExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -1171,7 +1171,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ProductClassProductConcreteTransferMapperPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormExpanderPluginInterface>
      */
@@ -1736,7 +1736,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
-    {    
+    {
         return [
             new SspServicesResourceRoutePlugin(),
         ];

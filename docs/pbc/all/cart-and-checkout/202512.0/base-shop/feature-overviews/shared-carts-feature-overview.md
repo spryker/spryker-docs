@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-overview
 originalArticleId: 85a7c630-a6ef-465f-80fd-176d1c5e0937
 redirect_from:
-  - /docs/scos/user/features/202311.0/shared-carts-feature-overview.html  
+  - /docs/scos/user/features/202311.0/shared-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shared-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/shared-carts-feature-overview.html
@@ -133,7 +133,7 @@ If the shared cart has been dismissed individually by a user, this user can't se
 
 ## Current constraints
 
-With the current functionality, the shopping cart cannot be shared outside of the [business unit](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/business-units-overview.html) to which the owner belongs to.
+With the current functionality, the shopping cart cannot be shared outside of the [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to which the owner belongs to.
 
 ## Shared Cart on the Storefront
 
@@ -145,13 +145,13 @@ On the storefront, company users can share a cart with other users within the sa
     <video width="100%" height="auto" controls>
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/shared-carts-feature-overview.md/share-a-shopping-cart.mp4" type="video/mp4">
   </video>
-</figure>  
+</figure>
 
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html)  |
-| [Install the Shared Carts Glue API](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html) | [Retrieve cart permission groups](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html) |
-| | [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html) |
+|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html)  |
+| [Install the Shared Carts Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html) | [Retrieve cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html) |
+| | [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-manage-shared-company-user-carts.html) |

@@ -10,11 +10,11 @@ redirect_from:
 
 related:
   - title: Table Filter extension
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
   - title: Table Filter Select
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-select.html
   - title: Table Filter Tree Select
-    link: docs/dg/dev/frontend-development/latest/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Date Range component in the Components Library.
@@ -27,8 +27,8 @@ Check out an example usage of the Table Filter Date Range in the `@spryker/table
 
 Component configuration:
 
-- `enabled`—enables the filter via config.  
-- `items`—an array with config for each filter date-range.  
+- `enabled`—enables the filter via config.
+- `items`—an array with config for each filter date-range.
 
 ```html
 <spy-table
@@ -48,7 +48,7 @@ Component configuration:
                     },
                 },
             ],
-        },                                                                                           
+        },
     }"
 >
 </spy-table>

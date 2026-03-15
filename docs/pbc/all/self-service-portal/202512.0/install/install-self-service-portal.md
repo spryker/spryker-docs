@@ -5,4 +5,4 @@ last_updated: Apr 11, 2025
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/latest/install-self-service-portal.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/install-self-service-portal.md -->
+{% include pbc/all/install-features/{{page.version}}/install-self-service-portal.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-self-service-portal.md -->

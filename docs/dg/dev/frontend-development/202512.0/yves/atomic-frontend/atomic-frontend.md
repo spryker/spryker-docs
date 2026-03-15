@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
 related:
   - title: Customizing Spryker Frontend
-    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-frontend.html
   - title: Integrating JQuery into Atomic Frontend
-    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
-    link: docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
 
 To provide each customer with the features they require, Spryker Commerce OS has been split into modules. Each customer can have a unique set of modules, and even module versions, specific to their business requirements. This fact combined with the possibility for customers to develop functionality on their own poses a big challenge for frontend developers. To ease the task, Spryker Frontend implements a design methodology called *atomic design*. Because of this, the UI layer of Spryker is called *Atomic Frontend*.
@@ -89,7 +89,7 @@ Typescript is a superset of Javascript that lets you reinforce the object-orient
 
 {% info_block infoBox %}
 
-If necessary, you can develop in pure Javascript. For details, see [How to Customize Spryker Frontend](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html).
+If necessary, you can develop in pure Javascript. For details, see [How to Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-frontend.html).
 
 {% endinfo_block %}
 
@@ -524,9 +524,9 @@ export default register(
 
 The following documents can help you in developing Spryker Atomic Frontend step-by-step:
 
-- [Tutorial: Customize Spryker Frontend](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/customizing-spryker-frontend.html)
-- [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/creating-components.html)
-- [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html)
-- [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/extending-components.html)
-- [Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html)
-- [Tutorial: Frontend - Use a Component](/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/using-components.html)
+- [Tutorial: Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-frontend.html)
+- [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
+- [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
+- [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html)
+- [Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html)
+- [Tutorial: Frontend - Use a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/using-components.html)

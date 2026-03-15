@@ -15,10 +15,10 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202204.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `shipment.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `shipment.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run
 
@@ -36,7 +36,7 @@ data:import:shipment
 | name|  &check; | String | | The name of the shipment method. |
 | carrier |  &check; | String |  | The name of the shipment carrier. |
 | taxSetName |  &check; | String | | 	The name of the tax set. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/latest/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 

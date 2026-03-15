@@ -21,5 +21,5 @@ When setting up Amazon QuickSight for the first time, Back Office users get acce
 
 If you need to remove an author user, consider transferring their assets to another author user. Deleting an author user deletes all of their assets. For instructions on sharing assets, see the following docs:
 
-- [Sharing Amazon QuickSight analyses](https://docs.aws.amazon.com/quicksight/latest/user/sharing-analyses.html)
-- [Sharing datasets](https://docs.aws.amazon.com/quicksight/latest/user/sharing-data-sets.html)
+- [Sharing Amazon QuickSight analyses](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/sharing-analyses.html)
+- [Sharing datasets](https://docs.aws.amazon.com/quicksight/{{page.version}}/user/sharing-data-sets.html)

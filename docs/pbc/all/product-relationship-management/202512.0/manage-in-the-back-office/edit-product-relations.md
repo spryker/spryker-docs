@@ -5,11 +5,11 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Create product relations
-    link: docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/create-product-relations.html
+    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/create-product-relations.html
   - title: View product relations
-    link: docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/view-product-relations.html
+    link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/view-product-relations.html
   - title: Product Relations feature overview
-    link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
+    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/edit-product-relations.html
 ---
@@ -18,7 +18,7 @@ This document describes how to edit product relations in the Back Office.
 
 ## Prerequisites
 
-1. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/latest/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
+1. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html).
 2. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
     This opens the **Product Relations** page.
 3. Next to the product relation you want to edit, click **Edit**.

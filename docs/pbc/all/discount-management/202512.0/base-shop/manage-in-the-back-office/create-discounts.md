@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/create-discounts.html
   - /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/create-discounts.html
-  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/create-discounts.html  
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/create-discounts.html
   - /docs/pbc/all/discount-management/202505.0/base-shop/manage-in-the-back-office/create-discounts.html
 ---
 
@@ -22,7 +22,7 @@ This document describes how to create discounts in the Back Office.
 
 ## Prerequisites
 
-If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html).
 
 There is a [reference information](#reference-information-define-general-settings-of-the-discount) for each section. Review it before you start, or look up the necessary information as you go through the process.
 
@@ -164,12 +164,12 @@ Example: The discount is applied if 4 or more items with an  Intel Core processo
 
 ## Reference information: Generate voucher codes
 
-| ATTRIBUTE | DESCRIPTION |  
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| QUANTITY | The number of vouchers to generate. |  
-| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
-| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters are appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
-| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
+| QUANTITY | The number of vouchers to generate. |
+| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, they are by default appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |
+| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters are appended to the end of it. If you are generating more than one code, you must select **3** or more. |
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |
 
 {% info_block infoBox "Voucher code collections" %}
 
@@ -196,7 +196,7 @@ This section describes complex decision rule attributes:
 |attribute.*|String, number|   Depends on your product attributes setup. |
 |customer-group|String|    Any value, use a customer group name for an exact match. |
 | customer-order-count | Number |   Any value. Checked against the number of placed orders in a customer account. |
-| product-offer-reference | String | Unique identifier of a [product offer](/docs/pbc/all/offer-management/latest/marketplace/marketplace-product-offer-feature-overview.html). Marketplace only. |
+| product-offer-reference | String | Unique identifier of a [product offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html). Marketplace only. |
 
 
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
@@ -214,7 +214,7 @@ This section describes complex decision rule attributes:
 
 ## Next steps
 
-[Edit discounts](/docs/pbc/all/discount-management/latest/base-shop/manage-in-the-back-office/edit-discounts.html)
+[Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)
 
 
 

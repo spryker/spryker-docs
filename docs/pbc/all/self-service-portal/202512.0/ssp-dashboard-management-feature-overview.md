@@ -35,4 +35,4 @@ For the customer service representative block, you can assign a representative p
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-dashboard-management-feature.html) |
+| [Install the SSP Service Management feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-dashboard-management-feature.html) |

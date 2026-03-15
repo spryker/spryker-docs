@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Data Transformer Collate Configurator Table
-    link: docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html
 ---
 
 This document explains the Data Transformer Data Configurators service in the Components Library.
@@ -25,7 +25,7 @@ Data Transformer Data Configurators are used in the Datasource service.
 <spy-table
     [config]="{
         datasource: {
-            ...,                                                
+            ...,
             transform: {
                 type: 'collate',
                 configurator: {
@@ -115,4 +115,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [Table](/docs/dg/dev/frontend-development/latest/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html)—integrates Table into Collate to re-populate data when the table updates.

@@ -4,8 +4,8 @@ This document describes how to install the Self-Service Portal (SSP) Dashboard M
 
 | FEATURE         | VERSION  | INSTALLATION GUIDE  |
 |--------------|----------| ------------------ |
-| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
-| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/latest/install/install-self-service-portal)          |
+| Spryker Core | 202512.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
+| Self-Service Portal | 202512.0 | [Install Self-Service Portal](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-self-service-portal)          |
 
 ## Install the required modules
 
@@ -54,7 +54,7 @@ Make sure the following transfer objects have been generated:
 
 ### Add translations
 
-You can also use the generic Self-Service Portal glossary import described in [SSP glossary data import](/docs/pbc/all/self-service-portal/latest/install/ssp-glossary-data-import.html).
+You can also use the generic Self-Service Portal glossary import described in [SSP glossary data import](/docs/pbc/all/self-service-portal/{{page.version}}/install/ssp-glossary-data-import.html).
 
 1. Append the glossary:
 

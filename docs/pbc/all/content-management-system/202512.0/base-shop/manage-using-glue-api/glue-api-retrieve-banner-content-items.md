@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 related:
   - title: Content Items feature overview
-    link: docs/pbc/all/content-management-system/latest/base-shop/content-items-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about banner content items.
@@ -19,7 +19,7 @@ This endpoint allows retrieving information about banner content items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/latest/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
 
 ## Retrieve a banner content item
 

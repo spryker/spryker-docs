@@ -5,10 +5,10 @@ description: This document describes how to create a marketplace concrete produc
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/pbc/all/product-information-management/latest/marketplace/marketplace-product-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
 ---
 
-This document describes how to create marketplace concrete products for existing abstract product. You can also create concrete products when [creating abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html).
+This document describes how to create marketplace concrete products for existing abstract product. You can also create concrete products when [creating abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html).
 
 To create a concrete product, follow the steps:
 
@@ -25,4 +25,4 @@ This closes the drawer with a success message displayed. The created product is 
 
 ## Next steps
 
-[Manage concrete product](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)
+[Manage concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/edit-marketplace-concrete-products.html)

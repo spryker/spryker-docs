@@ -21,13 +21,13 @@ Make sure to review [reference information](#reference-information-create-abstra
 4. Optional: Enter a **DESCRIPTION**.
 5. In the **Add more products** section, click **Add to list** next to the products you want to add to the list.
     The products appear in the **Default** tab.
-6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.  
+6. Optional: To reorder the added products, click **Move Up** or **Move Down** next to the needed products.
 7. Optional: Repeat steps 5-6 on one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
-- Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/multi-language-setup.html) selected.
+- Locale-specific products overwrite the default products when the Abstract Product List is rendered on a Storefront page with the [locale](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) selected.
 - If no products are selected for a locale, the default products are displayed on a Storefront page with the locale selected.
 
 {% endinfo_block %}

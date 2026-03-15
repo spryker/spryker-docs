@@ -1,4 +1,4 @@
-This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/latest/base-shop/availability-notification-feature-overview.html) feature.
+This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html) + the [Availability Notification](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/availability-notification-feature-overview.html) feature.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ $config[AvailabilityNotificationConstants::REGION_TO_YVES_HOST_MAPPING] = [
 ];
 ```
 
-{% info_block warningBox "Verification" %}  
+{% info_block warningBox "Verification" %}
 
 To verify the email links are correct, make sure that the following configuration is correct:
 

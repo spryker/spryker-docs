@@ -9,7 +9,7 @@ redirect_from:
 - /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html
 ---
 
-This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
+This document explains how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
 
 
 ## Prerequisites
@@ -67,7 +67,7 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     InitializeProductExportTransfer::class => 'product-commands',
     InitializeCmsPageExportTransfer::class => 'search-commands',
     SearchEndpointAvailableTransfer::class => 'search-commands',
-    SearchEndpointRemovedTransfer::class => 'search-commands',     
+    SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -235,7 +235,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchResultCountPluginInterface>
      */
@@ -245,8 +245,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpSearchResultCountPlugin(),
         ];
     }
-    
-    
+
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>>
      */
@@ -668,7 +668,7 @@ class CmsPageSearchDependencyProvider extends \Spryker\Client\CmsPageSearch\CmsP
             new FacetSearchHttpQueryExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
      */
@@ -808,7 +808,7 @@ You can customize the order of these plugins at the project level. By default, a
 
 ## Next steps
 
-[Configure the Algolia app](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.
+[Configure the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.
 
 
 

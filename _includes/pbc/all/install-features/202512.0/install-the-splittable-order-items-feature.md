@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Splittable Order Items](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/splittable-order-items-overview.html) feature.
+This document describes how to install the [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) feature.
 
 ## Install feature core
 
@@ -12,10 +12,10 @@ Install the required features:
 
 | NAME         | EXPECTED DIRECTORY | INSTALLATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
-| Cart         | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
-| Checkout     | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)         |
+| Spryker Core | 202507.0 | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | 202507.0 | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Cart         | 202507.0 | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                 |
+| Checkout     | 202507.0 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)         |
 
 ### Install feature
 
@@ -78,16 +78,16 @@ protected function getExpanderPlugins(Container $container)
 use Spryker\Zed\Sales\Communication\Plugin\SalesExtension\SingleQuantityBasedItemTransformerStrategyPlugin;
 ...
 use Spryker\Zed\SalesQuantity\Communication\Plugin\SalesExtension\NonSplittableItemTransformerStrategyPlugin;
-...   
+...
     /**
      * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\ItemTransformerStrategyPluginInterface[]
      */
     public function getItemTransformerStrategyPlugins(): array
     {
         return [
-        ...    
+        ...
 			new NonSplittableItemTransformerStrategyPlugin(),
-        ...    
+        ...
         ];
     }
 ```
@@ -122,7 +122,7 @@ If order item quantity equals or is higher than the threshold, the item is consi
 Using `null` deactivates the threshold.
 
 The threshold does not affect order items with `isQuantitySplittable` set to `false`.
-Such items are considered non-splittable regardless of the threshold.  
+Such items are considered non-splittable regardless of the threshold.
 
 
 6. Add plugins to Zed `DiscountDependencyProvider`:

@@ -37,7 +37,7 @@ Make sure to review the translations for accuracy.
 
 ## Install
 
-[Install Smart Product Management](/docs/pbc/all/product-information-management/latest/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
+[Install Smart Product Management](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/smart-product-management/install-smart-product-management.html)
 
 
 

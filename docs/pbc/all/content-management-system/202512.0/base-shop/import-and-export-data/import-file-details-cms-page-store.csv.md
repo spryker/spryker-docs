@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-cms-page-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/dg/dev/data-import/latest/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `cms_page_store.csv` file to configure CMS Page Store information in your Spryker Demo Shop.
@@ -20,7 +20,7 @@ This document describes the `cms_page_store.csv` file to configure CMS Page Stor
 ## Import file dependencies
 
 
-- [cms_page.csv](/docs/pbc/all/content-management-system/latest/base-shop/import-and-export-data/import-file-details-cms-page.csv.html)
+- [cms_page.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-page.csv.html)
 - *stores.php* configuration file of the demo shop PHP project
 
 

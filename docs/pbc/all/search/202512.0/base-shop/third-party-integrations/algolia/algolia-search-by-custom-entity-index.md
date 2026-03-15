@@ -4,7 +4,7 @@ description: Learn how to enable Algolia search for custom entities, such as Doc
 template: howto-guide-template
 related:
   - title: "Additional configuration: Use Algolia for other entities"
-    link: docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html#additional-configuration-use-algolia-for-other-entities
+    link: docs/pbc/all/search/page.version/base-shop/third-party-integrations/algolia/configure-algolia.html#additional-configuration-use-algolia-for-other-entities
 ---
 
 This guide explains how to enable Algolia search for custom entities, such as docs, in your Spryker application by mapping them to a custom Algolia index.
@@ -15,7 +15,7 @@ By following this guide, you will be able to do the following:
 
 ## Prerequisites
 
-- [Configure Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html) in your Spryker project.
+- [Configure Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) in your Spryker project.
 - You have an Algolia index created for your custom entity–for example, Docs–and populated with relevant data, for example, using the Algolia Crawler.
 - You have access to Spryker Back Office and the Algolia Dashboard.
 
@@ -30,11 +30,11 @@ By following this guide, you will be able to do the following:
     - **Locales**: `en_US` (or `*` for all locales)
     - **Algolia Index Name**: `documents_en` (the name of your Algolia index for Docs in English)
 5. Save your changes.
-6. Implement a custom controller or page in your Spryker project to retrieve search results from Algolia using the Spryker `Search` module and [ACP Algolia App](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia).
+6. Implement a custom controller or page in your Spryker project to retrieve search results from Algolia using the Spryker `Search` module and [ACP Algolia App](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia).
 
 <details>
   <summary>Example</summary>
-  
+
 ```php
 // src/Pyz/Yves/DocsPage/Controller/SearchController.php
 
@@ -59,16 +59,16 @@ class SearchController extends AbstractController
 
         $searchQuery = new SearchHttpQueryPlugin($searchContext);
         $searchQuery->setSearchString($searchString);
-        
+
         $searchQueryExpanders = [
             new BasicSearchHttpQueryExpanderPlugin(), // Adds pagination and sorting from the URL query
             new FacetSearchHttpQueryExpanderPlugin(), // Adds facets from the URL query, excluding reserved parameters for sorting, pagination, and query. For example: color=red, size=42
         ];
-        
+
         // Add $container->getLocator()->search()->client() in the DocsPageDependencyProvider module to use it.
-        $searchClient = $this->getFactory()->getSearchClient();        
+        $searchClient = $this->getFactory()->getSearchClient();
         $searchClient->expandQuery($searchQuery, $searchQueryExpanders, $request->query->all());
-        
+
         $resultFormatters = [
             new class extends AbstractPlugin implements \Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface {
                 public function getName(): string
@@ -91,11 +91,11 @@ class SearchController extends AbstractController
             new FacetSearchHttpResultFormatterPlugin(), // Extracts facets list from the response
             // Add additional expanders here
         ];
-        
+
         $searchResponse = $searchClient->search($searchRequest, $resultFormatters, $request->query->all());
-        
+
         // $searchResponse['hits'] contains the items from Algolia in the format as they are stored in Algolia index, or empty array if no results found.
-        
+
         return $this->view(['results' => $searchResponse['hits'], $searchResponse['pagination'], $searchResults['facets']], [], 'docs/search/results.twig');
     }
 }

@@ -45,7 +45,7 @@ The login process with MFA looks as follows:
 - If multiple MFA methods are enabled, the authentication code is sent via the platform selected by the user
 - If only one MFA method is enabled, the authentication code is sent via that method's platform
 
-5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.  
+5. Code validation: After the authentication code is sent, the system presents a code validation form to the user. The user enters the received authentication code in the form.
   If the code is correct, authentication is successful. If incorrect, the user needs to double-check the code and try entering again.
 
 
@@ -78,14 +78,14 @@ Protected actions:
   - Create, update, or delete API keys
 - Merchant and merchant agent user: Update user password
 
-You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
+You can configure other actions to be protected with MFA according to your requirements. For instructions on integrating MFA into forms and actions, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature#configure-protected-routes-and-forms-for-customers).
 
 
 ## MFA grace period
 
 After a customer/user successfully enters a valid MFA code, there's a configurable time interval during which MFA validation isn't required for subsequent actions. This improves user experience because users sometimes need to perform multiple protected actions within a short period of time.
 
-For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature#set-up-configuration).
+For details on configuring the grace period, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature#set-up-configuration).
 
 **Note:** To enhance security, the Multi-Factor Authentication system automatically invalidates all active MFA codes when a user logs in. This security measure ensures:
 
@@ -105,13 +105,13 @@ If a customer/user reaches the configured number of failed attempts to enter the
 - The page is refreshed, and the customer/user must start the authentication process from the beginning
 - All previously generated codes become invalid
 
-For instructions on configuring brute force protection, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/latest/install-multi-factor-authentication-feature.html#configure-brute-force-protection-limit-for-customers).
+For instructions on configuring brute force protection, see [Install the Multi-Factor Authentication feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-multi-factor-authentication-feature.html#configure-brute-force-protection-limit-for-customers).
 
 ## Multi-Factor Authentication methods
 
-The feature is shipped with the email authentication method. For instructions on installing this method, see [Install email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html).
+The feature is shipped with the email authentication method. For instructions on installing this method, see [Install email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/{{page.version}}/install-email-multi-factor-authentication-method.html).
 
-You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-authentication/latest/create-multi-factor-authentication-methods.html).
+You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-authentication/{{page.version}}/create-multi-factor-authentication-methods.html).
 
 
 

@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Product Relations feature overview
-    link: docs/pbc/all/product-relationship-management/latest/product-relationship-management.html
+    link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
 ---
@@ -101,4 +101,4 @@ The result looks as follows on the Storefront.
   </video>
 </figure>
 
-You've set up related products for just one product: *Sony SmartWatch 3*. All the other Sony smartwatches don't have related products on their pages. To show related products on the pages of all the other smartwatches, repeat the process for each of them.  
+You've set up related products for just one product: *Sony SmartWatch 3*. All the other Sony smartwatches don't have related products on their pages. To show related products on the pages of all the other smartwatches, repeat the process for each of them.

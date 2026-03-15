@@ -9,16 +9,16 @@ This document describes how to connect a Spryker project to Vertex.
 
 ## Prerequisites
 
-- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
+- [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - Create an account with [Vertex](https://www.vertexinc.com/). If you need support getting a Vertex account, contact [support](https://support.spryker.com/) or your Customer Success Manager.
 - Optional: For Vertex Validator integration, create an account with [Vertex Validator](https://www.vertexinc.com/). If you need help getting a Vertex Validator account, contact [support](https://support.spryker.com/) or your Customer Success Manager.
 
 ## Connect Vertex
 
 1. In the Back Office, go to **Apps**.
-2. On the **App Composition Platform Catalog** page, click **Vertex**.  
+2. On the **App Composition Platform Catalog** page, click **Vertex**.
    This opens the Vertex app details page.
-3. In the top right corner of the Vertex app details page, click **Connect app**.  
+3. In the top right corner of the Vertex app details page, click **Connect app**.
    The notification saying that the application connection is pending is displayed.
 4. In the top right corner of the Vertex app details page, click **Configure**.
 5. To activate the app, for **Activate**, select **Active**.
@@ -118,4 +118,4 @@ To run a destructive deployment, follow the steps:
 
 ## Next steps
 
-- [Troubleshooting Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html)
+- [Troubleshooting Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html)

@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-compositions.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-pages/oryx-compositions.html
+  - /docs/dg/dev/frontend-development/202507.0/oryx/building-pages/oryx-compositions.html
 
 ---
 

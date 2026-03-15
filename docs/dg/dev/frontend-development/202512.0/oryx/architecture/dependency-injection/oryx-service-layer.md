@@ -6,6 +6,7 @@ last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/dependency-injection/oryx-service-layer.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/dependency-injection/oryx-service-layer.html
+  - /docs/dg/dev/frontend-development/202507.0/oryx/architecture/dependency-injection/oryx-service-layer.html
 
 ---
 

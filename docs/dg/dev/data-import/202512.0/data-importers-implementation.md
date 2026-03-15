@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202404.0/data-importers-overview-and-implementation.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
   - /docs/scos/dev/data-import/202204.0/data-importers-overview-and-implementation.html
+  - /docs/dg/dev/data-import/202507.0/data-importers-implementation.html
 ---
 
 Currently, there are the following importers in Spryker Commerce OS:

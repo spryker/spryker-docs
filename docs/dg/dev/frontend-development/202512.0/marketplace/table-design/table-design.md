@@ -7,6 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-design.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-design.html
+  - /docs/dg/dev/frontend-development/202507.0/marketplace/table-design/table-design.html
 
 ---
 

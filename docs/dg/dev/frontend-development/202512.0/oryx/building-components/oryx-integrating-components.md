@@ -5,6 +5,7 @@ last_updated: Sept 20, 2023
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-integrating-components.html
+- /docs/dg/dev/frontend-development/202507.0/oryx/building-components/oryx-integrating-components.html
 
 ---
 

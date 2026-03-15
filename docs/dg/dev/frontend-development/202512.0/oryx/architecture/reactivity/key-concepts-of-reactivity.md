@@ -6,6 +6,7 @@ last_updated: Apr 3, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/reactivity/key-concepts-of-reactivity.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
+  - /docs/dg/dev/frontend-development/202507.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
 
 ---
 

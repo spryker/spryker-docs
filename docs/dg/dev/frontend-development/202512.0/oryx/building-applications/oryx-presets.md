@@ -6,6 +6,7 @@ last_updated: Apr 4, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-presets.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/oryx-presets.html
+  - /docs/dg/dev/frontend-development/202507.0/oryx/building-applications/oryx-presets.html
 
 ---
 

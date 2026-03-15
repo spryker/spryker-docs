@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-create-a-new-module-with-application.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-an-angular-module-with-application.html
+  - /docs/dg/dev/frontend-development/202507.0/create-angular-modules.html
 
 ---
 

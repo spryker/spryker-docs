@@ -8,6 +8,7 @@ originalArticleId: e149b582-49ef-4816-beb7-c29fa41581cf
 redirect_from:
   - /docs/scos/dev/data-import/202404.0/creating-a-data-importer.html
   - /docs/scos/dev/data-import/202204.0/creating-a-data-importer.html
+  - /docs/dg/dev/data-import/202507.0/creating-data-importers.html
 ---
 
 The following article describes how to build your data importer for a specific type. All steps in this article are built on the real-life example for importing product images.

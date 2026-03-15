@@ -1,7 +1,7 @@
 # depth 0
 [[redirects]]
 from = "/latest/*"
-to = "/202507.0/:splat"
+to = "/202512.0/:splat"
 status = 301
 force = true
 
@@ -14,7 +14,7 @@ force = true
 # depth 1
 [[redirects]]
 from = "/:a/latest/*"
-to = "/:a/202507.0/:splat"
+to = "/:a/202512.0/:splat"
 status = 301
 force = true
 
@@ -27,7 +27,7 @@ force = true
 # depth 2
 [[redirects]]
 from = "/:a/:b/latest/*"
-to = "/:a/:b/202507.0/:splat"
+to = "/:a/:b/202512.0/:splat"
 status = 301
 force = true
 
@@ -40,7 +40,7 @@ force = true
 # depth 3
 [[redirects]]
 from = "/:a/:b/:c/latest/*"
-to = "/:a/:b/:c/202507.0/:splat"
+to = "/:a/:b/:c/202512.0/:splat"
 status = 301
 force = true
 
@@ -53,7 +53,7 @@ force = true
 # depth 4
 [[redirects]]
 from = "/:a/:b/:c/:d/latest/*"
-to = "/:a/:b/:c/:d/202507.0/:splat"
+to = "/:a/:b/:c/:d/202512.0/:splat"
 status = 301
 force = true
 

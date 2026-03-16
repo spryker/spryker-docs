@@ -184,13 +184,13 @@ Key points:
 
 Native resources bypass the Spryker generation pipeline, which means the following features are not available:
 
-| Feature | Available | Alternative |
-|---------|-----------|-------------|
-| Multi-layer schema merging (Core, Feature, Project) | No | Manage inheritance manually |
+| Feature | Available | Alternative                                         |
+|---------|-----------|-----------------------------------------------------|
+| Multi-layer schema merging (Core, Feature, Project) | No | Manage inheritance manually                         |
 | Validation auto-discovery from `.validation.yml` | No | Use `#[Assert\*]` attributes directly on properties |
 | CodeBucket support | Partial | Add the `CODE_BUCKET` constant manually (see below) |
-| `api:debug` command output | No | Use `console debug:router` instead |
-| `api:generate` management | No | Manage files manually |
+| `api:debug` command output | No | Use `glue debug:router` instead                     |
+| `api:generate` management | No | Manage files manually                               |
 
 ### CodeBucket support in native resources
 

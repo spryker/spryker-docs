@@ -37,13 +37,6 @@ At their core, integrations follow these design principles:
   </div>
 
   <div class="cst_card">
-    <div class="cst_card_image"><img src="/images/integrations/int_acp.png" alt="Icon for Spryker App Composition Platform"></div>
-    <div class="cst_card_title">Spryker ACP</div>
-    <div class="cst_card_desc">The Spryker App Composition Platform is a low code, cloud native solution that enables seamless integration of third-party applications into your Spryker project. </div>
-    <a class="cst_card_button" href="app-composition-platform-apps"> Find out more </a>
-  </div>
-
-  <div class="cst_card">
     <div class="cst_card_image"><img src="/images/integrations/int_custom_build.png" alt="Icon for Spryker Custom Building Integrations"></div>
     <div class="cst_card_title">Custom build</div>
     <div class="cst_card_desc">For more tailored or business specific needs, you can build custom integrations directly in your project code.</div>

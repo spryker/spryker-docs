@@ -4222,24 +4222,18 @@ entries:
                   - title: Vertex
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     nested:
-                      - title: Install
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+                      - title: Integrate Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
                         nested:
-                          - title: Integrate the connector module
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
-                          - title: Integrate Vertex
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                          - title: Configure Vertex-specific metadata
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
-                      - title: Connect
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
-                      - title: Troubleshooting
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-                      - title: Disconnect
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+                      - title: Verify Vertex connection
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/verify-vertex-connection.html
 
           - title: Marketplace
             nested:

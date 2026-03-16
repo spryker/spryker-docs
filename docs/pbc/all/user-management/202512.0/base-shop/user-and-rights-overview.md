@@ -6,13 +6,14 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
 originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
-- /2021080/docs/user-and-rights-overview
-- /2021080/docs/en/user-and-rights-overview
-- /docs/user-and-rights-overview
-- /docs/en/user-and-rights-overview
-- /docs/scos/dev/feature-walkthroughs/202311.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
-- /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
-- /docs/pbc/all/user-management/202204.0/base-shop/user-and-rights-overview.html
+  - /docs/pbc/all/user-management/202507.0/base-shop/user-and-rights-overview.html
+  - /2021080/docs/user-and-rights-overview
+  - /2021080/docs/en/user-and-rights-overview
+  - /docs/user-and-rights-overview
+  - /docs/en/user-and-rights-overview
+  - /docs/scos/dev/feature-walkthroughs/202311.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/user-and-rights-overview.html
 ---
 
 User and rights management is implemented in the following three bundles:

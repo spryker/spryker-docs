@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
 originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/customer-account-management-feature-overview/customer-login-overview.html 
   - /2021080/docs/customer-login-overview
   - /2021080/docs/en/customer-login-overview
   - /docs/customer-login-overview

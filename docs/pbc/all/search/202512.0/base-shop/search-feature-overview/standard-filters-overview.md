@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-overview
 originalArticleId: 0b675c4c-6163-4402-82a5-8a9198260fda
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/search-feature-overview/standard-filters-overview.html 
   - /docs/scos/user/features/201811.0/search-feature-overview/standard-filters-overview.html
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/standard-filters-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html

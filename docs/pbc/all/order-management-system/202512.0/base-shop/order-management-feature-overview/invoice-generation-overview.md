@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/invoice-generation-overview
 originalArticleId: 34bc81a9-6809-4998-8ccb-956963c063a0
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/invoice-generation-overview.html 
   - /2021080/docs/invoice-generation-overview
   - /2021080/docs/en/invoice-generation-overview
   - /docs/invoice-generation-overview

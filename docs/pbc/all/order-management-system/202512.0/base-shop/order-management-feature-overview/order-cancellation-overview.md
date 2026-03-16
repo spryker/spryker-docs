@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-cancellation-overview
 originalArticleId: 454fec27-cd49-4939-ba51-4a6b9c80468b
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/order-cancellation-overview.html 
   - /2021080/docs/order-cancellation-overview
   - /2021080/docs/en/order-cancellation-overview
   - /docs/order-cancellation-overview

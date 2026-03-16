@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/oms-matrix
 originalArticleId: 756b7c08-cc99-41f8-83f6-09e6eba4780b
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html 
   - /2021080/docs/oms-matrix
   - /2021080/docs/en/oms-matrix
   - /docs/oms-matrix

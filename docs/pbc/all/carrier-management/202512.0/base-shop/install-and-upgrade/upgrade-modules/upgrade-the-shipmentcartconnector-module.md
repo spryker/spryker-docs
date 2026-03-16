@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-cart-connector
 originalArticleId: be561deb-56c5-42d3-982f-d0c6f756f313
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcartconnector-module.html 
   - /2021080/docs/mg-shipment-cart-connector
   - /2021080/docs/en/mg-shipment-cart-connector
   - /docs/mg-shipment-cart-connector

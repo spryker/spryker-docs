@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-overview
 originalArticleId: b0ed4278-e037-4644-a602-ae16f40a4d9c
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-bundles-feature-overview.html 
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-bundles-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/product-bundles-feature-walkthrough.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-bundles-feature-overview.html

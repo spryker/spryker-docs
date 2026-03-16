@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/the-back-office-overview
 originalArticleId: 33ffb1b7-d9b5-457a-90a1-170e36479d5b
 redirect_from:
+  - /docs/pbc/all/back-office/202507.0/base-shop/spryker-core-back-office-feature-overview.html 
   - /2021080/docs/the-back-office-overview
   - /2021080/docs/en/the-back-office-overview
   - /docs/the-back-office-overview

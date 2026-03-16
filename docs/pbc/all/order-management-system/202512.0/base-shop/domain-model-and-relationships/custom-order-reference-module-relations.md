@@ -6,6 +6,7 @@ template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-module-relations
 originalArticleId: 4edd02ad-f7db-4db0-b231-a6fbad0c100b
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html 
   - /2021080/docs/custom-order-reference-module-relations
   - /2021080/docs/en/custom-order-reference-module-relations
   - /docs/custom-order-reference-module-relations

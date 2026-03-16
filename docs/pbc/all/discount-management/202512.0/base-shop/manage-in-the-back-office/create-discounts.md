@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
 originalArticleId: 5d9e5e07-5260-4f0a-8118-aaa324af6fbc
 redirect_from:
+  - /docs/pbc/all/discount-management/202507.0/base-shop/manage-in-the-back-office/create-discounts.html 
   - /2021080/docs/creating-a-voucher
   - /2021080/docs/en/creating-a-voucher
   - /docs/creating-a-voucher

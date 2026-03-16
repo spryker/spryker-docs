@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-checkout-connector
 originalArticleId: dfb849a9-6f08-4091-ab6d-87f097eb7811
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html 
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shipmentcheckoutconnector.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentcheckoutconnector-module.html
 ---

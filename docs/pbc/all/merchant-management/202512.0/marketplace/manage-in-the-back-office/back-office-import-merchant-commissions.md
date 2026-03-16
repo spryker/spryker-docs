@@ -4,6 +4,7 @@ description: Learn how to import merchant commissions in the Spryker Back Office
 last_updated: Jun 16, 2024
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/manage-in-the-back-office/back-office-import-merchant-commissions.html 
   - /docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant_commission_merchant.csv.html
 ---
 

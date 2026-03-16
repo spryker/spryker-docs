@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-on-behalf-overview
 originalArticleId: 1963b84f-b12b-4148-97e4-d10d7366905e
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/company-account-feature-overview/business-on-behalf-overview.html 
   - /2021080/docs/business-on-behalf-overview
   - /2021080/docs/en/business-on-behalf-overview
   - /docs/business-on-behalf-overview

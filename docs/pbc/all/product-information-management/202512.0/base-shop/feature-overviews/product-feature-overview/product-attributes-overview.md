@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-attributes-overview
 originalArticleId: 7421d5b0-37d2-4902-a531-ac67a2424fb7
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html 
   - /docs/scos/user/features/202001.0/product-feature-overview/product-attributes-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-attributes-overview.html
   - /docs/scos/user/features/202311.0/product-feature-overview/product-attributes-overview.html

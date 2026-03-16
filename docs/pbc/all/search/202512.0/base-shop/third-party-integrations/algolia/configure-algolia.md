@@ -4,6 +4,7 @@ description: Learn how to configure and integrate Spryker's third-party Algolia 
 last_updated: Sep 1, 2025
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/third-party-integrations/algolia/configure-algolia.html 
   - /docs/pbc/all/search/202311.0/third-party-integrations/configure-algolia.html
   - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/configure-algolia.html
 ---

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-overview
 originalArticleId: 08d3b38d-a625-4df2-9c67-b6c559a400e8
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/alternative-products-feature-overview.html 
   - /2021080/docs/alternative-products-overview
   - /2021080/docs/en/alternative-products-overview
   - /docs/alternative-products-overview

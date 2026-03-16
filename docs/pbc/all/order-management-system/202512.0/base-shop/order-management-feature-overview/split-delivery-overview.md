@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-overview
 originalArticleId: 0d0d041f-19c0-44e7-968e-30fd35ae62dd
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/split-delivery-overview.html 
   - /2021080/docs/split-delivery-overview
   - /2021080/docs/en/split-delivery-overview
   - /docs/split-delivery-overview

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/magnolia-cms
 originalArticleId: 78c3fa55-94b6-483a-aa34-ff04a39e5505
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/third-party-integrations/magnolia.html 
   - /2021080/docs/magnolia-cms
   - /2021080/docs/en/magnolia-cms
   - /docs/magnolia-cms

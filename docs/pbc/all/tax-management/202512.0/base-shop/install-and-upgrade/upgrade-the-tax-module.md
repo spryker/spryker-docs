@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-tax
 originalArticleId: 05ed776e-6fbb-49ce-ba7f-4fc0b4404e20
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/install-and-upgrade/upgrade-the-tax-module.html 
   - /2021080/docs/mg-tax
   - /2021080/docs/en/mg-tax
   - /docs/mg-tax

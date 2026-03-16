@@ -4,6 +4,7 @@ last_updated: Aug 13, 2021
 description: This document explains how to choose and implement the most suitable warehouse management workflow using the Inventory Management feature.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202507.0/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html 
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
 ---

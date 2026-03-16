@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup
 originalArticleId: cf160490-ae8e-45c1-80a6-bcd667498ae0
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/datapayload-conversion/multi-language-setup.html 
   - /2021080/docs/multi-language-setup
   - /2021080/docs/en/multi-language-setup
   - /docs/multi-language-setup

@@ -4,6 +4,7 @@ last_updated: Aug 13, 2021
 description: Reference information for the Navigation module that renders navigation menus on Spryker Cloud Commerce OS frontend. 
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/extend-and-customize/navigation-module-reference-information.html 
   - /docs/pbc/all/content-management-system/202311.0/extend-and-customize/navigation-module-reference-information.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/extend-and-customize/navigation-module-reference-information.html
 ---

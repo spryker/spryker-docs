@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-overview
 originalArticleId: 33b65d5e-fd6c-4017-92ed-7229883beeb0
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/category-management-feature-overview.html 
   - /2021080/docs/category-management-feature-overview
   - /2021080/docs/en/category-management-feature-overview
   - /docs/category-management-feature-overview

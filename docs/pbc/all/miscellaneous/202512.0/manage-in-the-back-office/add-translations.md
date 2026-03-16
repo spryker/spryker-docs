@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-glossary
 originalArticleId: a485b9af-b90b-4847-904c-3f87891de5c9
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202507.0/manage-in-the-back-office/add-translations.html 
   - /2021080/docs/managing-glossary
   - /2021080/docs/en/managing-glossary
   - /docs/managing-glossary

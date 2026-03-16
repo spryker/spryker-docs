@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-label-discount-connector
 originalArticleId: 53c98a8a-e504-4443-9f44-1a7723b614ba
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabeldiscountconnector-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productlabeldiscountconnector.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productlabeldiscountconnector.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productlabeldiscountconnector.html

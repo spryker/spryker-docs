@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/discontinued-product-overview
 originalArticleId: 25617203-917b-417c-b7a9-4f418fa14e35
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html 
   - /2021080/docs/discontinued-product-overview
   - /2021080/docs/en/discontinued-product-overview
   - /docs/discontinued-product-overview

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cart-variant
 originalArticleId: 159a6b1b-591c-4e98-9487-57895c64fe6a
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html 
   - /2021080/docs/mg-cart-variant
   - /2021080/docs/en/mg-cart-variant
   - /docs/mg-cart-variant

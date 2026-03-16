@@ -4,6 +4,7 @@ description: Learn how to import file details for abstract products using the pr
 last_updated: July 22, 2022
 template: data-import-template
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html 
   - /docs/pbc/all/tax-management/202311.0/import-and-export-data/import-file-details-product-abstract.csv.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html

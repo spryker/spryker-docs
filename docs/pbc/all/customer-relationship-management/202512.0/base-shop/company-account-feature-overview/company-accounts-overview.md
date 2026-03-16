@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-accounts-overview
 originalArticleId: 843043bb-7eeb-4023-8296-1c564b95f682
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/company-account-feature-overview/company-accounts-overview.html 
   - /2021080/docs/company-accounts-overview
   - /2021080/docs/en/company-accounts-overview
   - /docs/company-accounts-overview

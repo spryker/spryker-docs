@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-overview
 originalArticleId: 0509e00d-9839-4136-81dd-10ff197cda0d
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html 
   - /2021080/docs/cms-pages-in-search-results-overview
   - /2021080/docs/en/cms-pages-in-search-results-overview
   - /docs/cms-pages-in-search-results-overview

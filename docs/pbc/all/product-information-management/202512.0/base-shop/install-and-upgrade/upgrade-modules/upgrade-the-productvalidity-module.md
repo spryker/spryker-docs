@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-validity
 originalArticleId: a904c5cc-ebe1-4dcf-9f6b-d3988b5262c9
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productvalidity.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productvalidity.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productvalidity.html

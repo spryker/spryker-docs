@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
 originalArticleId: d465e11a-6ed9-4729-bce8-e6c82d961d37
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html 
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html

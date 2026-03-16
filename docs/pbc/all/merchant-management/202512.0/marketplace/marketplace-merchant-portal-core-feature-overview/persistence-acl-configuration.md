@@ -4,6 +4,7 @@ last_updated: Oct 20, 2021
 description: Learn how you can configure Persistence ACL within your Spryker Marketplace B2B project.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html 
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
 ---
 

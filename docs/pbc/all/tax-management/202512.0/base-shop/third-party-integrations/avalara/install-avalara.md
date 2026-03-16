@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-integration
 originalArticleId: 3531e0eb-65ae-4c97-8703-78ceaae45c2a
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/avalara/install-avalara.html
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara.html
   - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html

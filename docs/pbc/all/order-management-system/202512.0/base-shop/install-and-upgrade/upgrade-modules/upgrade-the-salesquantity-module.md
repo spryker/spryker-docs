@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-sales-quantity
 originalArticleId: f62cc4d4-f994-4e3a-8924-6788236a1640
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salesquantity-module.html 
   - /2021080/docs/mg-sales-quantity
   - /2021080/docs/en/mg-sales-quantity
   - /docs/mg-sales-quantity

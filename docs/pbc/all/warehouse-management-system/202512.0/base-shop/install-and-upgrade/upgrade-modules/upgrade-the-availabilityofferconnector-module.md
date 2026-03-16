@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability-offer-connector
 originalArticleId: c60e70ad-a7d9-4bc7-a318-c1b173302b36
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html 
   - /2021080/docs/mg-availability-offer-connector
   - /2021080/docs/en/mg-availability-offer-connector
   - /docs/mg-availability-offer-connector

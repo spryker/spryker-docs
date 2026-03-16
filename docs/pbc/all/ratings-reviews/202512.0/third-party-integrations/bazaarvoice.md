@@ -4,6 +4,7 @@ description: Find out how you can integrate and use Spryker third party integrat
 template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+   - /docs/pbc/all/ratings-reviews/202507.0/third-party-integrations/bazaarvoice.html
    - docs/aop/user/apps/bazaarvoice.html
    - docs/acp/user/apps/bazaarvoice.html
    - docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html

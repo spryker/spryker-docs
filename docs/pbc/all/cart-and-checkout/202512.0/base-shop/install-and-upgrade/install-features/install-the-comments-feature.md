@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/comments-feature-integration
 originalArticleId: 08a2a07b-89d3-4783-a003-bda959521b4a
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html 
   - /2021080/docs/comments-feature-integration
   - /2021080/docs/en/comments-feature-integration
   - /docs/comments-feature-integration

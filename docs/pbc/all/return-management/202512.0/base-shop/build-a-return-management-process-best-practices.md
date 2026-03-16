@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/building-a-return-management-process-best-practices
 originalArticleId: 4082625a-ef83-4e10-b517-716042ef8282
 redirect_from:
+  - /docs/pbc/all/return-management/202507.0/base-shop/build-a-return-management-process-best-practices.html 
   - /2021080/docs/building-a-return-management-process-best-practices
   - /2021080/docs/en/building-a-return-management-process-best-practices
   - /docs/building-a-return-management-process-best-practices

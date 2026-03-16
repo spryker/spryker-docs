@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-blocks-overview
 originalArticleId: 2b07c846-32ed-42b7-bf71-9c9ecc4f54ba
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/cms-feature-overview/cms-blocks-overview.html 
   - /docs/scos/user/features/202108.0/cms-feature-overview/cms-blocks-overview.html
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-blocks-overview.html
   - /docs/scos/user/features/202311.0/cms-feature-overview/cms-blocks-overview.html

@@ -4,6 +4,7 @@ description: Learn about Sprykers third party Avalara and how you can integrate 
 last_updated: Jun 18, 2021
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/avalara/avalara.html 
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/avalara/avalara.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/avalara.html

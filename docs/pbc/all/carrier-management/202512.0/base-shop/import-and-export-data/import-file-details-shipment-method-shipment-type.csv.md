@@ -4,6 +4,7 @@ description: This document describes the shipment_method_shipment_type.csv file 
 template: data-import-template
 last_updated: May 23, 2023
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html 
   - /docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/file-details-shipment-method-shipment-type.csv.html
   - /docs/pbc/all/carrier-management/202311.0/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html
 ---

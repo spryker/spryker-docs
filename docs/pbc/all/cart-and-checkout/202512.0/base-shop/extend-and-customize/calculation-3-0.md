@@ -4,6 +4,7 @@ last_updated: Aug 12, 2021
 description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The document describes its workflow.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/extend-and-customize/calculation-3-0.html 
   - /docs/scos/dev/feature-walkthroughs/202311.0/cart-feature-walkthrough/calculation-3-0.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/calculation-3-0.html
 ---

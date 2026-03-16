@@ -4,6 +4,7 @@ description: Learn how to extend the merchant portal dashboards in the merchant 
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/tutorials-and-howtos/extend-merchant-portal-dashboard.html 
   - /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 ---
 

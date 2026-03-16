@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-step-checkout
 originalArticleId: 05845681-637c-46cd-84f7-d548a089d2a6
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html 
   - /docs/scos/user/features/201811.0/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/scos/user/features/202311.0/checkout-feature-overview/multi-step-checkout-overview.html

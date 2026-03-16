@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/email-as-a-cms-block-overview
 originalArticleId: a986b331-c2dd-4a91-be52-fabd837fd493
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html 
   - /2021080/docs/email-as-a-cms-block-overview
   - /2021080/docs/en/email-as-a-cms-block-overview
   - /docs/email-as-a-cms-block-overview

@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sending-an-email
 originalArticleId: cdce91fc-fc1b-40f5-9442-b88f5036c86c
 redirect_from:
+  - /docs/pbc/all/emails/202507.0/tutorial-sending-an-email.html 
   - /2021080/docs/sending-an-email
   - /2021080/docs/en/sending-an-email
   - /docs/sending-an-email

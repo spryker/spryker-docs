@@ -3,6 +3,8 @@ title: Product Readiness overview
 description: Understand how Product Readiness checks help you identify missing or incorrect product data and configuration issues before products go live.
 last_updated: Nov 13, 2025
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-feature-overview/product-readiness-overview.html 
 ---
 
 The Product Readiness feature provides diagnostic checks that evaluate the completeness and configuration quality of your products. It consolidates the critical prerequisites for making products available for sale and gives you immediate insight into what still needs attention. By surfacing potential data gaps and misconfigurations early, Product Readiness shortens the time required to prepare products for your storefront.

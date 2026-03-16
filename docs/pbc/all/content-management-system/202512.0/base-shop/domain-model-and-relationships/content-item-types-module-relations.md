@@ -6,6 +6,7 @@ template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-item-types-module-relations
 originalArticleId: dc32fefa-b80c-4924-8ee3-1da9be159722
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/domain-model-and-relationships/content-item-types-module-relations.html 
   - /2021080/docs/content-item-types-module-relations
   - /2021080/docs/en/content-item-types-module-relations
   - /docs/content-item-types-module-relations

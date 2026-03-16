@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-content-201907
 originalArticleId: 7bca5584-2d31-4d9c-a66c-a168ffd83975
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html 
   - /2021080/docs/mg-content-201907
   - /2021080/docs/en/mg-content-201907
   - /docs/mg-content-201907

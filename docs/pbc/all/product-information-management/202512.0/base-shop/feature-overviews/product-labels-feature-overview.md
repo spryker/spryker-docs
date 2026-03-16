@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-overview
 originalArticleId: 06d2dfdf-7ad0-41dc-98b7-5521b0c5879f
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-labels-feature-overview.html 
   - /2021080/docs/product-labels-feature-overview
   - /2021080/docs/en/product-labels-feature-overview
   - /docs/product-labels-feature-overview

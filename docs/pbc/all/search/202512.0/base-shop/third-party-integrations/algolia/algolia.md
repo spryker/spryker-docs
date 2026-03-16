@@ -4,6 +4,8 @@ description: Algolia empowers Builders with Search and Recommendation services t
 last_updated: Sep 1, 2025
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/third-party-integrations/algolia/algolia
+  - /docs/pbc/all/search/202507.0/base-shop/third-party-integrations/algolia/algolia.html
   - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
   - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia.html
 ---

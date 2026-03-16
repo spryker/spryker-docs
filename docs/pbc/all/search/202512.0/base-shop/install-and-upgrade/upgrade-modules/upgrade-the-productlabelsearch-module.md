@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelsearch
 originalArticleId: 9fca0eb4-da0d-471a-a805-66f3fbd32879
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelsearch-module.html 
   - /2021080/docs/migration-guide-productlabelsearch
   - /2021080/docs/en/migration-guide-productlabelsearch
   - /docs/migration-guide-productlabelsearch

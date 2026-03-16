@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-overview
 originalArticleId: 31ff5f0d-f1c1-4a6e-91aa-52a9b5205bea
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-lists-feature-overview.html 
   - /2021080/docs/product-lists-feature-overview
   - /2021080/docs/en/product-lists-feature-overview
   - /docs/product-lists-feature-overview

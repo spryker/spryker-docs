@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cmsstorage
 originalArticleId: abc4e5f2-4f3c-488d-a713-aa722bea4358
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html 
   - /2021080/docs/mg-cmsstorage
   - /2021080/docs/en/mg-cmsstorage
   - /docs/mg-cmsstorage

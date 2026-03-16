@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-cmsblockwidget
 originalArticleId: 0e61cf4b-5360-404d-93f0-312f32e022c8
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockwidget-module.html 
   - /2021080/docs/migration-guide-cmsblockwidget
   - /2021080/docs/en/migration-guide-cmsblockwidget
   - /docs/migration-guide-cmsblockwidget

@@ -4,6 +4,7 @@ last_updated: Apr 4, 2023
 description: This section describes how to manage abstract and concrete products in the merchant portal for your Spryker Marketplace projects.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html 
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/products.html
 ---
 

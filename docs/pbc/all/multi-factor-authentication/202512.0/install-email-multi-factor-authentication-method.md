@@ -2,6 +2,8 @@
 title: Install email Multi-Factor Authentication method
 description: Learn how to install and configure email multi-factor authentication in Spryker for all user types.
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202507.0/install-email-multi-factor-authentication-method.html 
 last_updated: Aug 22, 2025
 ---
 

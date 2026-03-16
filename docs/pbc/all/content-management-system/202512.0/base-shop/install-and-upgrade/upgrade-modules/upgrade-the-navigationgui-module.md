@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-navigation-gui
 originalArticleId: 16ab6db2-ee08-4363-9223-8733a25a1f06
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html 
   - /2021080/docs/mg-navigation-gui
   - /2021080/docs/en/mg-navigation-gui
   - /docs/mg-navigation-gui

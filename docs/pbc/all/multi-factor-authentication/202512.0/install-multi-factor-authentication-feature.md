@@ -4,6 +4,8 @@ description: This document describes how to install the Multi-Factor Authenticat
 template: feature-integration-guide-template
 last_updated: Aug 22, 2025
 redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202507.0/install-multi-factor-authentication-feature.html 
+  - /docs/pbc/all/multi-factor-authentication/202507.0/install-multi-factor-authentication-feature 
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
 

@@ -4,6 +4,7 @@ description: Find out how you can integrate the Vertex Validator into your Spryk
 last_updated: Jun 4, 2025
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html 
   - /docs/pbc/all/tax-management/202410.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
 ---
 

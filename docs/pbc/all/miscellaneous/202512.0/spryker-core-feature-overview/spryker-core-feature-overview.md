@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core
 originalArticleId: 422423d0-beff-4da2-9ab7-4940262da733
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202507.0/spryker-core-feature-overview/spryker-core-feature-overview.html 
   - /2021080/docs/spryker-core
   - /2021080/docs/en/spryker-core
   - /docs/spryker-core

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-refund
 originalArticleId: 30c8c793-2247-4074-8e0e-9418ee1b0ba5
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-refund-module.html 
   - /2021080/docs/mg-refund
   - /2021080/docs/en/mg-refund
   - /docs/mg-refund

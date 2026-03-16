@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-search
 originalArticleId: 2af7d4ac-4e84-42ff-aba5-95dae82c6856
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html 
   - /2021080/docs/mg-search
   - /2021080/docs/en/mg-search
   - /docs/mg-search

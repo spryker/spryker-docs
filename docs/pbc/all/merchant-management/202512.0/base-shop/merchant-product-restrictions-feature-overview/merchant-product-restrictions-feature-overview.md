@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-overview
 originalArticleId: 9d02b7ac-0e20-47bf-8f5b-656279a8278d
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html 
   - /2021080/docs/merchant-product-restrictions-feature-overview
   - /2021080/docs/en/merchant-product-restrictions-feature-overview
   - /docs/merchant-product-restrictions-feature-overview

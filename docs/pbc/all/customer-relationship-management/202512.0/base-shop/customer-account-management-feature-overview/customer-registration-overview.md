@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-registration-overview
 originalArticleId: b13eea5d-0524-4858-a94a-c993b12606ea
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/customer-account-management-feature-overview/customer-registration-overview.html 
   - /2021080/docs/customer-registration-overview
   - /2021080/docs/en/customer-registration-overview
   - /docs/customer-registration-overview

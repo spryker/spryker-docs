@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv
 originalArticleId: c9d15906-3b02-44fd-9bde-eb6883f5f320
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html 
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-tax.csv.html
   - /docs/pbc/all/tax-management/202311.0/import-and-export-data/import-file-details-tax-sets.csv.html

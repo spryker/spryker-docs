@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price-product-schedule-gui
 originalArticleId: 859d0238-d7e4-4f94-ac71-7c1543547364
 redirect_from:
+  - /docs/pbc/all/price-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html 
   - /2021080/docs/mg-price-product-schedule-gui
   - /2021080/docs/en/mg-price-product-schedule-gui
   - /docs/mg-price-product-schedule-gui

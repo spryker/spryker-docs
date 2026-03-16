@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-companyuser
 originalArticleId: 6353be44-e8fb-4d67-918e-c590edb16b31
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html 
   - /2021080/docs/mg-companyuser
   - /2021080/docs/en/mg-companyuser
   - /docs/mg-companyuser

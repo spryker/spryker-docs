@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productrelation
 originalArticleId: 7e947ff1-adde-438d-8814-d1b41072f63f
 redirect_from:
+  - /docs/pbc/all/product-relationship-management/202507.0/install-and-upgrade/upgrade-the-productrelation-module.html 
   - /2021080/docs/migration-guide-productrelation
   - /2021080/docs/en/migration-guide-productrelation
   - /docs/migration-guide-productrelation

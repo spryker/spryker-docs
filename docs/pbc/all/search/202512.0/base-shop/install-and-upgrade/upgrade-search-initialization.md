@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-initialization-improvement
 originalArticleId: 2b3938fa-d016-429f-b317-2951e909eca4
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-search-initialization.html 
   - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
 

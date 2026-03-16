@@ -4,7 +4,8 @@ description: Learn how to apply Avalara tax codes to calculate taxes within your
 last_updated: Aug 3, 2023
 template: concept-topic-template
 redirect_from:
-- /docs/pbc/all/tax-management/202311.0/base-shop/avalara/apply-avalara-tax-codes.html
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/avalara/apply-avalara-tax-codes.html
+  - /docs/pbc/all/tax-management/202311.0/base-shop/avalara/apply-avalara-tax-codes.html
 ---
 
 [Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) are processed in the background to define taxes for order items, and are not displayed on the Storefront or in the Back Office. Taxes are calculated during the checkout, and, by default, the taxes are shown at the final checkout step.

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview
 originalArticleId: c997afab-ce1d-4a05-a627-b6511d74ec86
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/measurement-units-feature-overview.html 
   - /2021080/docs/measurement-units-feature-overview
   - /2021080/docs/en/measurement-units-feature-overview
   - /docs/measurement-units-feature-overview

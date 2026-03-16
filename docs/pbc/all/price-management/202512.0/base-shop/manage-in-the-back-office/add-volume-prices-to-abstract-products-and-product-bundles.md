@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-volume-prices-to-abstract-products
 originalArticleId: 5e6dac98-955a-4e8c-abad-ce2b0dd6bacf
 redirect_from:
+  - /docs/pbc/all/price-management/202507.0/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html 
   - /2021080/docs/adding-volume-prices-to-abstract-products
   - /2021080/docs/en/adding-volume-prices-to-abstract-products
   - /docs/adding-volume-prices-to-abstract-products

@@ -3,6 +3,8 @@ title: Connect Vertex
 description: Find out how you can confiure Sprykers third party Vertex in to your Spryker Based project.
 last_updated: Jan 8 2025
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/connect-vertex.html 
 ---
 
 This document describes how to connect a Spryker project to Vertex.

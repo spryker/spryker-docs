@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-availability-gui
 originalArticleId: 72ac3792-f41b-4d99-b2de-67366a06a9b0
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html 
   - /2021080/docs/mg-availability-gui
   - /2021080/docs/en/mg-availability-gui
   - /docs/mg-availability-gui

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-integration
 originalArticleId: 88dbe1af-1473-45f0-9f49-864c9d153f52
 redirect_from:
+  - /docs/pbc/all/gift-cards/202507.0/install-and-upgrade/install-the-gift-cards-feature.html 
   - /2021080/docs/gift-cards-feature-integration
   - /2021080/docs/en/gift-cards-feature-integration
   - /docs/gift-cards-feature-integration

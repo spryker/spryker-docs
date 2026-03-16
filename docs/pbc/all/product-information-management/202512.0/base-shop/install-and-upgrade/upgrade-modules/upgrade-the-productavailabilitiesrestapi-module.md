@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/productavailabilitiesrestapi-migration-guide
 originalArticleId: 192ef615-640f-48af-aaf3-1b2891dc6570
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/201903.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-productavailabilitiesrestapi.html

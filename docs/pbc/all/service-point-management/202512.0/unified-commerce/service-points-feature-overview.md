@@ -3,6 +3,8 @@ title: Service Points feature overview
 description: General overview of the Spryker Service Points feature enhancing your Spryker Unified Commerce based projects.
 template: concept-topic-template
 last_updated: Jan 19, 2024
+redirect_from:
+  - /docs/pbc/all/service-point-management/202507.0/unified-commerce/service-points-feature-overview.html
 ---
 
 The *Service Points* feature lets you create and manage service points, service types, and associated services.

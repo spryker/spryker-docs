@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/reorder-feature-overview
 originalArticleId: ad6a726f-9327-4502-8670-d8e25e9c7340
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/reorder-feature-overview.html 
   - /2021080/docs/reorder-feature-overview
   - /2021080/docs/en/reorder-feature-overview
   - /docs/reorder-feature-overview

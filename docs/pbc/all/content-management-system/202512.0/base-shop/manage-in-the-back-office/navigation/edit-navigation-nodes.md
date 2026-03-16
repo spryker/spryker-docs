@@ -4,7 +4,8 @@ description: Learn how to edit navigation nodes in the Spryker Cloud Commerce OS
 last_updated: Dec 2, 2022
 template: back-office-user-guide-template
 redirect_from:
-- /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html
 ---
 
 To edit a navigation node, follow the steps:

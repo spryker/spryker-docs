@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-contentstorage-201907
 originalArticleId: 3f552bca-14e4-4f4a-bb05-c65354188543
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html 
   - /2021080/docs/mg-contentstorage-201907
   - /2021080/docs/en/mg-contentstorage-201907
   - /docs/mg-contentstorage-201907

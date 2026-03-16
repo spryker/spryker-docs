@@ -4,6 +4,7 @@ description: Learn how to import shipment information using the shipment csv fil
 last_updated: Aug 2, 2022
 template: data-import-template
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html 
   - /docs/pbc/all/tax-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment.csv.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/import-and-export-data/import-file-details-shipment.csv.html

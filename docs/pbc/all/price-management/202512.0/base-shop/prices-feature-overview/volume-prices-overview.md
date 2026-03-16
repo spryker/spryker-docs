@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/volume-prices-overview
 originalArticleId: f02ffa98-7d76-4d7d-8dbb-b96f46754627
 redirect_from:
+  - /docs/pbc/all/price-management/202507.0/base-shop/prices-feature-overview/volume-prices-overview.html 
   - /2021080/docs/volume-prices-overview
   - /2021080/docs/en/volume-prices-overview
   - /docs/volume-prices-overview

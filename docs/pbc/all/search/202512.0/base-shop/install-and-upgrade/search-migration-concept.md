@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-migration-concept
 originalArticleId: 9338954f-a18a-4214-8566-5100e8462ca7
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/search-migration-concept.html 
   - /2021080/docs/search-migration-concept
   - /2021080/docs/en/search-migration-concept
   - /docs/search-migration-concept

@@ -4,6 +4,7 @@ description: Learn how you can import data for product packaging units using the
 template: data-import-template
 last_updated: Aug 10, 2024
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html 
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
   - /docs/pbc/all/product-information-management/202404.0/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/tutorials-and-howtos/howto-import-packaging-units.html

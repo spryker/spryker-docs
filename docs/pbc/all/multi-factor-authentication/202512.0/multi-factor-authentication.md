@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Aug 22, 2025
 keywords: mfa
 redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202507.0/multi-factor-authentication.html 
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
 ---
 

@@ -5,6 +5,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalogsearchrestapi-migration-guide
 originalArticleId: ba726860-285f-40b4-bfc4-4f7ca8c41ea3
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalogsearchrestapi-module.html 
   - /2021080/docs/catalogsearchrestapi-migration-guide
   - /2021080/docs/en/catalogsearchrestapi-migration-guide
   - /docs/catalogsearchrestapi-migration-guide

@@ -4,6 +4,7 @@ description: Learn how you can create a new GUI module within your Spryker marke
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/tutorials-and-howtos/create-gui-modules.html 
   - /docs/marketplace/dev/howtos/how-to-create-gui-module.html
 ---
 

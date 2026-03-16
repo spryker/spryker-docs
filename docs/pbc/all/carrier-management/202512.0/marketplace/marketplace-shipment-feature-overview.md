@@ -4,6 +4,7 @@ description: This document contains concept information for the Marketplace Ship
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/marketplace/marketplace-shipment-feature-overview.html 
   - /docs/marketplace/user/features/202311.0/marketplace-shipment-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-shipment-feature-walkthrough.html
 ---

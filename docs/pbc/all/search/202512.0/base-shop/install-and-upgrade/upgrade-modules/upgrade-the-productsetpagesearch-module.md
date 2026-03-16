@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productsetpagesearch
 originalArticleId: 21dee07e-945c-4458-a466-047ed864eb6c
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html 
   - /2021080/docs/migration-guide-productsetpagesearch
   - /2021080/docs/en/migration-guide-productsetpagesearch
   - /docs/migration-guide-productsetpagesearch

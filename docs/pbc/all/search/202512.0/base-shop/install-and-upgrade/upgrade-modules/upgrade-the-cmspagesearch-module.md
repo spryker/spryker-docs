@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cmspagesearch
 originalArticleId: c549427a-a784-47d9-938d-984b9b52fc23
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html 
   - /2021080/docs/mg-cmspagesearch
   - /2021080/docs/en/mg-cmspagesearch
   - /docs/mg-cmspagesearch

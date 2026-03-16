@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-sales-split
 originalArticleId: 69221dd7-e110-4c2f-9dee-d8d8e1abac8f
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-salessplit-module.html 
   - /2021080/docs/mg-sales-split
   - /2021080/docs/en/mg-sales-split
   - /docs/mg-sales-split

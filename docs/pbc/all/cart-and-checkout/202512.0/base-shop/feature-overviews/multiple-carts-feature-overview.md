@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-feature-overview
 originalArticleId: d5aad6be-5c2c-4e27-806e-7091a6db3d0d
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/feature-overviews/multiple-carts-feature-overview.html 
   - /docs/scos/user/features/202311.0/multiple-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/multiple-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/multiple-carts-feature-overview.html

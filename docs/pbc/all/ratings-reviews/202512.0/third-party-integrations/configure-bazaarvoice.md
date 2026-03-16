@@ -4,6 +4,7 @@ description: Find out how you can configure Spryker third party integration Baza
 template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/ratings-reviews/202507.0/third-party-integrations/configure-bazaarvoice.html 
   - /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
   - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/configure-bazaarvoice.html
 ---

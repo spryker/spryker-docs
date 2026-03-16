@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-checkoutpage
 originalArticleId: ad6a8508-ee6a-43d5-a92a-b876ee64ea17
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html 
   - /2021080/docs/migration-guide-checkoutpage
   - /2021080/docs/en/migration-guide-checkoutpage
   - /docs/migration-guide-checkoutpage

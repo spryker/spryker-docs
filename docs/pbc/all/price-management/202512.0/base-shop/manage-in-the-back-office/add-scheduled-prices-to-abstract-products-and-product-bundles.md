@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-scheduled-prices-to-abstract-products
 originalArticleId: 133e924e-f8f0-46b4-9cc0-29216ed21455
 redirect_from:
+  - /docs/pbc/all/price-management/202507.0/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html 
   - /2021080/docs/adding-scheduled-prices-to-abstract-products
   - /2021080/docs/en/adding-scheduled-prices-to-abstract-products
   - /docs/adding-scheduled-prices-to-abstract-products

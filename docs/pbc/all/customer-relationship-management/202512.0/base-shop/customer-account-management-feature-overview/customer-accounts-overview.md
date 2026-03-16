@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview
 originalArticleId: 94150bcb-e1c5-4290-b661-71af9fc3cbb3
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/customer-account-management-feature-overview/customer-accounts-overview.html 
   - /docs/order-history-reference-information
   - /docs/en/order-history-reference-information
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-accounts-overview.html

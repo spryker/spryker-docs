@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview
 originalArticleId: 2fc8c00f-628b-485d-b00b-61bbb0b32973
 redirect_from:
+  - /docs/pbc/all/request-for-quote/202507.0/request-for-quote.html 
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html

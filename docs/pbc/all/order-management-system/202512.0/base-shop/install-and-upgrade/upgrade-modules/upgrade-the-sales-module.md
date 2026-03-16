@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-sales
 originalArticleId: 9cf868be-faa9-44e7-890f-a6911748bcc8
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html 
   - /2021080/docs/mg-sales
   - /2021080/docs/en/mg-sales
   - /docs/mg-sales

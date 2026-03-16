@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/timed-product-availability-overview
 originalArticleId: 1091da1e-29b2-46b4-96d1-6f283264230b
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html 
   - /2021080/docs/timed-product-availability-overview
   - /2021080/docs/en/timed-product-availability-overview
   - /docs/timed-product-availability-overview

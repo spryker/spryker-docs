@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cookbook-2
 originalArticleId: fd0561bd-b4a9-45b4-80aa-a4b9911eb86e
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html 
   - /2021080/docs/state-machine-cookbook-2
   - /2021080/docs/en/state-machine-cookbook-2
   - /docs/state-machine-cookbook-2

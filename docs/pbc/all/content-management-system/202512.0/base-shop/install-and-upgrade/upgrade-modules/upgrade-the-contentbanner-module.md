@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-contentbanner-201907
 originalArticleId: e8134885-8e77-45c6-ab17-bc937581a4c4
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html 
   - /2021080/docs/mg-contentbanner-201907
   - /2021080/docs/en/mg-contentbanner-201907
   - /docs/mg-contentbanner-201907

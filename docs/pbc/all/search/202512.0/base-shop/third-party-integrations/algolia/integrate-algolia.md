@@ -4,6 +4,7 @@ description: Learn how to integrate Algolia Search into your Spryker-based proje
 template: howto-guide-template
 last_updated: Sep 1, 2025
 redirect_from:
+- /docs/pbc/all/search/202507.0/base-shop/third-party-integrations/algolia/integrate-algolia.html
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html

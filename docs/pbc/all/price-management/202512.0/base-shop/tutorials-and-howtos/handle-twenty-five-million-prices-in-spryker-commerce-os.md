@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 originalArticleId: f6f42291-bbf4-4fd1-b506-131fafcd0257
 redirect_from:
+  - /docs/pbc/all/price-management/202507.0/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html 
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html

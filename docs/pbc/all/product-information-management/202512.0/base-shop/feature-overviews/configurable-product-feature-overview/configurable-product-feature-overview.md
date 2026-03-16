@@ -9,12 +9,13 @@ redirect_from:
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/202311.0/configurable-product-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202108.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
-  - /docs/scos/dev/feature-walkthroughs/202311.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202311.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
   - /docs/pbc/all/product-information-management/202311.0/configurable-product-feature-overview/configurable-product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.

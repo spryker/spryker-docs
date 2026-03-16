@@ -4,6 +4,7 @@ last_updated: Apr 23, 2021
 description: Learn all about Spryker Merchant Categories and how you can easily organise merchants to allow customers to easily find their products according to the categories.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/merchant-category-feature-overview.html 
   - /docs/marketplace/user/features/202311.0/merchant-category-feature-overview.html
 ---
 

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/quick-add-to-cart-feature-overview
 originalArticleId: 9608a908-5dc9-49dc-bcc4-a24066c0bf76
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html 
   - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
   - /docs/scos/user/features/202311.0/quick-add-to-cart-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html

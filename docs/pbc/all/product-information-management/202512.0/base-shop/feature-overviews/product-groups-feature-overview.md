@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-groups-feature-overview
 originalArticleId: 7daa66de-975d-443b-935e-3819c2163c51
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-groups-feature-overview.html 
   - /2021080/docs/product-groups-feature-overview
   - /2021080/docs/en/product-groups-feature-overview
   - /docs/product-groups-feature-overview

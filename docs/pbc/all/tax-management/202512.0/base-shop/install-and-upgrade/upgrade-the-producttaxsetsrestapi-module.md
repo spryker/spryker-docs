@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/producttaxsetsrestapi-migration-guide
 originalArticleId: fca03d8b-8277-49a2-9893-20db2baad42e
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html 
   - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-producttaxsetsrestapi.html
   - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-producttaxsetsrestapi.html
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-producttaxsetsrestapi.html

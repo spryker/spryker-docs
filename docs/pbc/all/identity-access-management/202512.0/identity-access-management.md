@@ -4,6 +4,7 @@ description: Learn all about the Spryker Identity Access Management capability a
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/identity-access-management/202507.0/identity-access-management.html 
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html

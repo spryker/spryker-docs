@@ -4,6 +4,7 @@ description: Learn all about the Spryker Marketplace Inventory Management featur
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202507.0/marketplace/marketplace-inventory-management-feature-overview.html 
   - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
 ---
 

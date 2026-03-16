@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-category-connector
 originalArticleId: 9f3a79f2-a237-4bbe-a6fd-7d2be2479bf3
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html 
   - /2021080/docs/mg-cms-block-category-connector
   - /2021080/docs/en/mg-cms-block-category-connector
   - /docs/mg-cms-block-category-connector

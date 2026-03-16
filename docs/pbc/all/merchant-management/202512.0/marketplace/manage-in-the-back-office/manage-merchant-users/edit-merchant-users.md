@@ -4,6 +4,7 @@ last_updated: Jan 24, 2024
 description: Learn how to edit merchant users in the Spryker Marketplace Back Office for your Spryker B2B projects.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html 
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchant-users.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/manage-in-the-back-office/manage-merchant-users.html
 ---

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-configurablebundle
 originalArticleId: 1f6b6d4b-cc99-46eb-9078-2589782c2476
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html 
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundle.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundle.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundle.html

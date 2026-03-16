@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-cmsblockstorage
 originalArticleId: 524d14d3-1a4a-4050-a087-e5f3ceb61534
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockstorage-module.html 
   - /2021080/docs/migration-guide-cmsblockstorage
   - /2021080/docs/en/migration-guide-cmsblockstorage
   - /docs/migration-guide-cmsblockstorage

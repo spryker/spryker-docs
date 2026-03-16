@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/splittable-order-items-overview
 originalArticleId: 9f4bfeca-f799-42ba-ac91-0c8052aa6970
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/splittable-order-items-overview.html 
   - /2021080/docs/splittable-order-items-overview
   - /2021080/docs/en/splittable-order-items-overview
   - /docs/splittable-order-items-overview

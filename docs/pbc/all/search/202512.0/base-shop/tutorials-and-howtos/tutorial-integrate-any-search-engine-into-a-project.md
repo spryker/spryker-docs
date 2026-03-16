@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-integrating-any-search-engine
 originalArticleId: 1e7707ed-2b13-41d8-bdb8-c6013ac4587b
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/tutorials-and-howtos/tutorial-integrate-any-search-engine-into-a-project.html 
   - /2021080/docs/tutorial-integrating-any-search-engine
   - /2021080/docs/en/tutorial-integrating-any-search-engine
   - /docs/tutorial-integrating-any-search-engine

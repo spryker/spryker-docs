@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-calculation
 originalArticleId: a8b72f36-be06-4e41-9aee-139194663b53
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html 
   - /2021080/docs/mg-calculation
   - /2021080/docs/en/mg-calculation
   - /docs/mg-calculation

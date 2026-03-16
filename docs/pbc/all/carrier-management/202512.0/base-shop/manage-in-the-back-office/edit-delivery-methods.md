@@ -4,6 +4,7 @@ description: Learn how to edit the delivery methods that have been configured in
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/manage-in-the-back-office/edit-delivery-methods.html 
   - /docs/scos/user/back-office-user-guides/202108.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/edit-delivery-methods.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/edit-delivery-methods.html

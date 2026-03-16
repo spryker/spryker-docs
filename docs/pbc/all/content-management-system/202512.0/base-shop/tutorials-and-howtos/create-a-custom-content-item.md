@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-custom-content-item
 originalArticleId: 82c46d06-3f67-4bad-8142-b83624c79197
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/tutorials-and-howtos/create-a-custom-content-item.html 
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-a-custom-content-item.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-create-a-custom-content-item.html

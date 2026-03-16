@@ -4,6 +4,7 @@ last_updated: Aug 13, 2021
 description: This document describes how new customers can be created and managed and how to enable specific features related to customers.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html

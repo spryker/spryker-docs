@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-navigationsrestapi
 originalArticleId: 7038210a-5f64-4293-9900-311f002dc5c7
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html 
   - /2021080/docs/migration-guide-navigationsrestapi
   - /2021080/docs/en/migration-guide-navigationsrestapi
   - /docs/migration-guide-navigationsrestapi

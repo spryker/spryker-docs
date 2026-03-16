@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/comments-feature-overview
 originalArticleId: ba9714ca-0500-40fc-b573-c352bc04bff2
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/feature-overviews/comments-feature-overview.html 
   - /docs/scos/user/features/202311.0/comments-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/comments-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/comments-feature-overview.html

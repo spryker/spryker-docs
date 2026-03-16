@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-packaging-unit
 originalArticleId: af8adbc0-1cfd-4134-ab20-402f2e5cf9a5
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productpackagingunit.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productpackagingunit.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productpackagingunit.html

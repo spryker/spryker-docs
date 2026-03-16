@@ -4,6 +4,7 @@ description: Learn how to add content items to CMS pages in the Spryker Cloud Co
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html

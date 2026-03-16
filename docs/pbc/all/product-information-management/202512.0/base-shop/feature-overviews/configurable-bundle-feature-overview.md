@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/configurable-bundle-feature-overview
 originalArticleId: 292959d4-d71c-4c5d-846f-9685bcf04834
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/configurable-bundle-feature-overview.html 
   - /2021080/docs/configurable-bundle-feature-overview
   - /2021080/docs/en/configurable-bundle-feature-overview
   - /docs/configurable-bundle-feature-overview

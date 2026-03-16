@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-overview
 originalArticleId: b5a82fe5-ecba-45ef-aa6b-1a7487fdf94c
 redirect_from:
+  - /docs/pbc/all/user-management/202507.0/base-shop/agent-assist-feature-overview.html 
   - /docs/scos/user/features/202108.0/agent-assist-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/agent-assist-feature-walkthrough.html
   - /docs/scos/user/features/202204.0/agent-assist-feature-overview.html

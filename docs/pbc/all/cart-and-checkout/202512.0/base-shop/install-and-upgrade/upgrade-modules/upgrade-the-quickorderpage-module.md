@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order-page
 originalArticleId: 5fe55c2a-84de-48bc-8eef-ff87bff2f3cb
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html 
   - /2021080/docs/mg-quick-order-page
   - /2021080/docs/en/mg-quick-order-page
   - /docs/mg-quick-order-page

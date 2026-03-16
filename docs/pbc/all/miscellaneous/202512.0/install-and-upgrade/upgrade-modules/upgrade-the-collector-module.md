@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-collector
 originalArticleId: 975dcda9-cfad-4a74-834b-c88c25a83771
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202507.0/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html 
   - docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
   - docs/scos/dev/module-migration-guides/201903.0/migration-guide-collector.html
   - docs/scos/dev/module-migration-guides/201907.0/migration-guide-collector.html

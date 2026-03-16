@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-measurement-unit
 originalArticleId: e9b40324-941f-424a-b1d6-d765054bea42
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productmeasurementunit.html

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/censhare-pim
 originalArticleId: 319e7b1f-4eb9-44ad-80cc-4ec191cc8e48
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/third-party-integrations/censhare-pim.html 
   - /2021080/docs/censhare-pim
   - /2021080/docs/en/censhare-pim
   - /docs/censhare-pim

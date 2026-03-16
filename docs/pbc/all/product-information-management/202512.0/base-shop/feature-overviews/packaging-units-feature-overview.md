@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/packaging-units-feature-overview
 originalArticleId: b3cef9d8-452a-4d29-8258-4e91ee51e6bd
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/packaging-units-feature-overview.html 
   - /2021080/docs/packaging-units-feature-overview
   - /2021080/docs/en/packaging-units-feature-overview
   - /docs/packaging-units-feature-overview

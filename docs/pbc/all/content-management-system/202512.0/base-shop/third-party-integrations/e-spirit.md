@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/e-spirit
 originalArticleId: 487dfa6d-a059-4660-956c-bbce54f4f85b
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/third-party-integrations/e-spirit.html 
   - /2021080/docs/e-spirit
   - /2021080/docs/en/e-spirit
   - /docs/e-spirit

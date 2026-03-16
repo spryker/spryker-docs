@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-persistent-cart
 originalArticleId: 60def6a2-692d-4f3c-86a6-61b3a07b88fc
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html 
   - /2021080/docs/mg-persistent-cart
   - /2021080/docs/en/mg-persistent-cart
   - /docs/mg-persistent-cart

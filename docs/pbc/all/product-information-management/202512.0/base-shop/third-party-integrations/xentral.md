@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/xentral
 originalArticleId: 93da3b17-8b61-4638-82b0-f9fa1c051635
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/third-party-integrations/xentral.html 
   - /2021080/docs/xentral
   - /2021080/docs/en/xentral
   - /docs/xentral

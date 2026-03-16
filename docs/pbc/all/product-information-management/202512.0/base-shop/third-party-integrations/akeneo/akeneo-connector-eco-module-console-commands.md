@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo-console-commands
 originalArticleId: a332d6b7-14fa-4d8b-849b-f503d3de13ac
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html 
   - /2021080/docs/akeneo-console-commands
   - /2021080/docs/en/akeneo-console-commands
   - /docs/akeneo-console-commands

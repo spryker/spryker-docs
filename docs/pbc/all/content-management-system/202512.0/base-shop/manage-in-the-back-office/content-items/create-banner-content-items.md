@@ -4,6 +4,7 @@ description: Learn how to create and manage banner content items in the Spryker 
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/references/reference-information-content-item-widgets-types.html
   - /docs/scos/user/back-office-user-guides/202311.0/content/content-items/creating-content-items.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html

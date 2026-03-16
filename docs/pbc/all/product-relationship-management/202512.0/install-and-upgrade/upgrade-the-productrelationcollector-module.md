@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-relation-collector
 originalArticleId: 2b97c2a3-14c3-41f1-8a7f-743019bf6bb6
 redirect_from:
+  - /docs/pbc/all/product-relationship-management/202507.0/install-and-upgrade/upgrade-the-productrelationcollector-module.html 
   - /2021080/docs/mg-product-relation-collector
   - /2021080/docs/en/mg-product-relation-collector
   - /docs/mg-product-relation-collector

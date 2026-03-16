@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-categorypagesearch
 originalArticleId: c643878d-608b-4954-b1bf-b704198fc0b8
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html 
   - /2021080/docs/migration-guide-categorypagesearch
   - /2021080/docs/en/migration-guide-categorypagesearch
   - /docs/migration-guide-categorypagesearch

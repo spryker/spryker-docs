@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
 originalArticleId: 0bcb6d05-e12f-4cee-8daf-553edff0a43d
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/company-account-feature-overview/customer-login-by-token-overview.html 
   - /2021080/docs/customer-login-by-token-overview
   - /2021080/docs/en/customer-login-by-token-overview
   - /docs/customer-login-by-token-overview

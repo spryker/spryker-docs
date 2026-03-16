@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/styla
 originalArticleId: ffc0974c-d2e9-4a03-a4a3-093d72a647a1
 redirect_from:
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/third-party-integrations/styla.html 
   - /2021080/docs/styla
   - /2021080/docs/en/styla
   - /docs/styla

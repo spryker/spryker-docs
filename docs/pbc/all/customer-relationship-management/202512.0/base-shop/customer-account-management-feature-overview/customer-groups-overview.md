@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-groups-overview
 originalArticleId: 046cf042-1c53-4c82-8498-21ec52d2e51f
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/customer-account-management-feature-overview/customer-groups-overview.html 
   - /2021080/docs/customer-groups-overview
   - /2021080/docs/en/customer-groups-overview
   - /docs/customer-groups-overview

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment-discount-connector
 originalArticleId: 6f3f796a-c580-4935-ba29-0b9076b09027
 redirect_from:
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.html 
   - /2021080/docs/mg-shipment-discount-connector
   - /2021080/docs/en/mg-shipment-discount-connector
   - /docs/mg-shipment-discount-connector

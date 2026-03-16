@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-order-reference-overview
 originalArticleId: f2b2d82f-8854-446d-b8e9-63df552a5038
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/order-management-feature-overview/custom-order-reference-overview.html 
   - /2021080/docs/custom-order-reference-overview
   - /2021080/docs/en/custom-order-reference-overview
   - /docs/custom-order-reference-overview

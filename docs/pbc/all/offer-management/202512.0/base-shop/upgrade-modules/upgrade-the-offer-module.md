@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-offer
 originalArticleId: 1ffe0839-2ca7-4606-b192-73089d72c4e7
 redirect_from:
+  - /docs/pbc/all/offer-management/202507.0/base-shop/upgrade-modules/upgrade-the-offer-module.html 
   - /2021080/docs/mg-offer
   - /2021080/docs/en/mg-offer
   - /docs/mg-offer

@@ -3,6 +3,8 @@ title: "Back Office: Create users"
 description: Learn how to create new users directly in the Back Office for you Spryker Marketplace shop.
 last_updated: Jan 14, 2024
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/user-management/202507.0/marketplace/back-office-create-users.html 
 ---
 
 This document describes how to create users in the Back Office for Marketplace.

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productreviewsearch
 originalArticleId: b8c887b4-96de-4269-b503-eb8b11980671
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html 
   - /2021080/docs/migration-guide-productreviewsearch
   - /2021080/docs/en/migration-guide-productreviewsearch
   - /docs/migration-guide-productreviewsearch

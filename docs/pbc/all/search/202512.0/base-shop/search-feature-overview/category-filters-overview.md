@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-filters-overview
 originalArticleId: 086380e2-881f-48f1-b23a-88c4380b66c8
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/search-feature-overview/category-filters-overview.html 
   - /2021080/docs/category-filters-overview
   - /2021080/docs/en/category-filters-overview
   - /docs/category-filters-overview

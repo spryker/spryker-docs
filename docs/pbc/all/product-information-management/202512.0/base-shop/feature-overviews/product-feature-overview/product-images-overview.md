@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-images-overview
 originalArticleId: 04873187-c654-4119-a80e-e8b607521c79
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-feature-overview/product-images-overview.html 
   - /2021080/docs/product-images-overview
   - /2021080/docs/en/product-images-overview
   - /docs/product-images-overview

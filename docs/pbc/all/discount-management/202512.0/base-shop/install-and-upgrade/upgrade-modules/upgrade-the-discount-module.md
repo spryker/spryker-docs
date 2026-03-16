@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount
 originalArticleId: 0ac48edb-ebcb-4442-b97c-61159da5cafd
 redirect_from:
+  - /docs/pbc/all/discount-management/202507.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discount.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discount.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discount.html

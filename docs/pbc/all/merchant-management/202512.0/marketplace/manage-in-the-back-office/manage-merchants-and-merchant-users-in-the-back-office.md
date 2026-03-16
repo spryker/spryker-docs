@@ -4,6 +4,7 @@ description: This section explains how to create merchant records and manage mer
 last_updated: Jan 17, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html 
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/merchants.html
 ---
 

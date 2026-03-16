@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-barcode-feature-overview
 originalArticleId: 6d6d1bee-375f-4767-a866-a7d6f28eeaa1
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/feature-overviews/product-barcode-feature-overview.html 
   - /2021080/docs/product-barcode-feature-overview
   - /2021080/docs/en/product-barcode-feature-overview
   - /docs/product-barcode-feature-overview

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/reclamations-feature-overview
 originalArticleId: 9b753eb0-0fd3-476f-8f2d-da9687683900
 redirect_from:
+  - /docs/pbc/all/order-management-system/202507.0/base-shop/reclamations-feature-overview.html 
   - /2021080/docs/reclamations-feature-overview
   - /2021080/docs/en/reclamations-feature-overview
   - /docs/reclamations-feature-overview

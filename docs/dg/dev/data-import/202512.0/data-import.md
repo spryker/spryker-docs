@@ -4,13 +4,14 @@ description:  Learn how to import data from other systems into your Spryker Clou
 last_updated: Sep 7, 2022
 template: concept-topic-template
 redirect_from:
-    - /docs/scos/dev/data-import/202404.0/data-import.html
-    - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/products/products.html
-    - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/commerce-setup.html
-    - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
-    - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/merchandising-setup.html
-    - /docs/scos/dev/data-import/202204.0/data-import-categories/about-data-import-categories.html
-    - /docs/scos/dev/data-import/202204.0/data-import.html
+  - /docs/dg/dev/data-import/202507.0/data-import.html
+  - /docs/scos/dev/data-import/202404.0/data-import.html
+  - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/products/products.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/commerce-setup.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/merchandising-setup.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/about-data-import-categories.html
+  - /docs/scos/dev/data-import/202204.0/data-import.html
 ---
 
 - [Importing data with a configuration file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)

@@ -405,7 +405,7 @@ ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php
 Generate the storefront resource class from the schema:
 
 ```bash
-glue api:generate backoffice
+glue api:generate storefront
 ```
 
 ### Step 7: Test the API Platform endpoint

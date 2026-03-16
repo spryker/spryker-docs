@@ -19,7 +19,7 @@ related:
 
 {% info_block warningBox "Warning" %}
 
-The Spryker App Composition Platform is being sunset. No additional activations or changes are allowed. Please contact your Spryker representative if you require additional information.
+The Spryker App Composition Platform is being sunset. No additional activations or changes are allowed. Contact your Spryker representative if you require additional information.
 
 {% endinfo_block %}
 

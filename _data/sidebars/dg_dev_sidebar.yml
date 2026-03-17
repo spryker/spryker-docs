@@ -168,7 +168,7 @@ entries:
       - title: Session locking issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
       - title: Session locking issues
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-bacloffice.html
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-backoffice.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html

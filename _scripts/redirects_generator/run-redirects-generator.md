@@ -1,54 +1,51 @@
 This document explains how redirects generator works and how to run it.
 
-Redirects generator consists of two scripts: redirect from generator and redirects generator.
+## Redirects generator 2
 
-## Redirect from generator
+The redirects generator 2 is used during version upgrades. When docs are moved from an older version to a newer one, this script adds the old versioned paths as `redirect_from` entries in the new version's front matter.
 
-The redirect from generator checks if docs have the `redirect_from` parameter in the front matter. If one or more documents don't have this parameter, the script adds it to them.
+Unlike the original redirects generator, this script does not require editing variables inside the file. It accepts the target version and a list of old paths as inputs.
 
-### Run redirect from generator
+For each incoming path, the script:
+1. Strips the `.html` extension and prepends `./` to form a relative `.md` path.
+2. Extracts the version string (for example, `202307.0`) from the path.
+3. Replaces that version with the `last_version` argument to locate the corresponding file in the newer version.
+4. If the file exists, appends the old path under `redirect_from:` in its front matter. If `redirect_from:` is missing, it is added after the `template:` line.
 
-1. In `_scripts/redirects_generator/redirect_from_generator.sh`, define the document or the folder with documents to generate the parameter for:
-```sh
-...
-folder_path="{RELATIVE_PATH_TO_DOC_OR_FOLDER}"
-```
-  If the specified folder has subfolders, the script with recursively update the docs in them.
+### Run the redirects generator 2
 
-2. In a terminal, run the script:
+1. Prepare a file with the paths that need redirects, one per line. Paths should be relative URL paths like `/docs/pbc/all/example/202307.0/page.html`. You can generate this list from broken-link check output:
+
 ```shell
-bash _scripts/redirects_generator/redirect_from_generator.sh
+cat needed_redirects.txt | grep ' -> ' | cut -d '>' -f 2 > paths.txt
 ```
-  This returns the list of docs the parameter has been added to.
 
-## Redirects generator
+2. Run the script, passing the target version as the first argument and the paths file as the second:
 
-The redirects generator appends the current path of one or more docs to their front matter. This is usually useful when you need to move a bunch of docs to another location. You need to run the script *before* you move the docs.
-
-### Run the redirects generator
-
-1. In `_scripts/redirects_generator/redirects_generator.sh`, define the absolute path to the repo on your machine:
-```text
-...
-root_directory="{ABSOLUTE_PATH_TO_REPO}"
-...
-```
-    It's needed to generate the redirects relative to the path of the repo.
-
-2. In `_scripts/redirects_generator/redirects_generator.sh`, define the the folder with documents to generate redirects for:
-```
-...
-folder_path="{RELATIVE_PATH_TO_DOC_OR_FOLDER}"
-...
-```  
-
-  If the specified folder has subfolders, the script with recursively update the docs in them.
-
-3. In a terminal, run the script:
 ```shell
-bash _scripts/redirects_generator/redirects_generator.sh
+bash _scripts/redirects_generator/redirects_generator.2.sh {LAST_VERSION} paths.txt
 ```
 
-This returns the list of docs the paths have been added to.
+  Replace `{LAST_VERSION}` with the version you are upgrading to, for example `202404.0`.
 
-4. In the updated docs, move the path to the `redirect_from` parameter in the front matter.
+  Alternatively, pipe paths directly from stdin:
+
+```shell
+cat paths.txt | bash _scripts/redirects_generator/redirects_generator.2.sh {LAST_VERSION}
+```
+
+3. The script prints the path of each file it updates:
+
+```
+redirect_from added to: ./docs/pbc/all/example/202404.0/page.md
+```
+
+  Files that already have a `redirect_from:` section are updated silently—the new entry is appended without a message.
+
+4. Review the updated front matter in the modified files to confirm the entries look correct before committing.
+
+### Notes
+
+- The script only updates a file if the corresponding `.md` file already exists in the new version. Paths with no matching file are silently skipped.
+- The script does not move or rename files. The new-version files must already be in place before running it.
+- If a path contains no recognizable version string (pattern `20XXXXXX.X`), the substitution will not produce a valid path and the file will be skipped.

@@ -11,7 +11,7 @@ Issues such as an incorrect folder structure, incorrect file names, or missing n
 
 ## Solution
 
-- Verify the asset folder structure: `src/Pyz/Zed/\{ModuleName}/assets/Zed/{js, sass, ...}`
+- Verify the asset folder structure: `src/Pyz/Zed/{ModuleName}/assets/Zed/{js, sass, ...}`
 - Check the JavaScript file names. The frontend builder looks for files that end with `.entry.js`.
 - Ensure that the [`@spryker/oryx-for-zed`](https://www.npmjs.com/package/@spryker/oryx-for-zed) package is up to date. This can help identify issues during the asset build step.
 

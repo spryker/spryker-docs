@@ -13,7 +13,7 @@ Issues such as an incorrect folder structure, incorrect file names, or missing n
 
 - Verify the asset folder structure: 
 ```code
-src/Pyz/Zed/{%ModuleName%}/assets/Zed/{js, sass, ...}
+src/Pyz/Zed/{{ ModuleName }}/assets/Zed/{js, sass, ...}
 ```
 
 - Check the JavaScript file names. The frontend builder looks for files that end with `.entry.js`.

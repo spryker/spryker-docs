@@ -420,7 +420,7 @@ new OpentelemetryLogProcessorPlugin(),
 
 The OpenTelemetry log processor only enriches log records. For the enriched logs to be ingested and visible in SMI, the SMI log pipeline must be enabled for your environment by the Spryker Cloud team.
 
-Please create a support ticket for that.
+Create a support ticket for that.
 
 ## Sampling
 

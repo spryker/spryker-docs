@@ -11,6 +11,12 @@ This document describes how to integrate and configure the Symfony Messenger mod
 
 Symfony Messenger is a component that lets you dispatch and handle messages using different transports. By integrating Symfony Messenger into your Spryker project, you can switch between RabbitMQ and other transports, such as SQS, Redis, and even a database, for queue handling. You can also use Symfony Messenger for other use cases that require synchronous or asynchronous message processing.
 
+{% info_block warningBox "Check if you have it installed" %}
+
+Symfony Messenger module working only with Dynamic Multistore mode, so make sure that your project is using it before proceeding with the installation and configuration.
+
+{% endinfo_block %}
+
 ## Install
 
 {% info_block warningBox "Check if you have it installed" %}

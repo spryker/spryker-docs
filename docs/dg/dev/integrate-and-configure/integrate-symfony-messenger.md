@@ -1,7 +1,7 @@
 ---
 title: Integrate Symfony Messenger
 description: Learn how to integrate and configure Symfony Messenger module in a Spryker project.
-last_updated: February 10, 2026
+last_updated: Mar 17, 2026
 template: howto-guide-template
 ---
 

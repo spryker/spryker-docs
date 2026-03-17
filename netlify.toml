@@ -7,7 +7,7 @@ force = true
 
 [[redirects]]
 from = "/latest"
-to = "/202507.0"
+to = "/202512.0"
 status = 301
 force = true
 
@@ -20,7 +20,7 @@ force = true
 
 [[redirects]]
 from = "/:a/latest"
-to = "/:a/202507.0"
+to = "/:a/202512.0"
 status = 301
 force = true
 
@@ -33,7 +33,7 @@ force = true
 
 [[redirects]]
 from = "/:a/:b/latest"
-to = "/:a/:b/202507.0"
+to = "/:a/:b/202512.0"
 status = 301
 force = true
 
@@ -46,7 +46,7 @@ force = true
 
 [[redirects]]
 from = "/:a/:b/:c/latest"
-to = "/:a/:b/:c/202507.0"
+to = "/:a/:b/:c/202512.0"
 status = 301
 force = true
 
@@ -59,6 +59,6 @@ force = true
 
 [[redirects]]
 from = "/:a/:b/:c/:d/latest"
-to = "/:a/:b/:c/:d/202507.0"
+to = "/:a/:b/:c/:d/202512.0"
 status = 301
 force = true

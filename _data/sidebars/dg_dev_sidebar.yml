@@ -167,8 +167,6 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
       - title: Session locking issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
-      - title: Missing Frontend Dependencies When Building Back Office Assets
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-backoffice.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
@@ -1628,6 +1626,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: Database tables take up too much space or have ID overflow
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/database-tables-take-up-too-much-space-or-have-id-overflow.html
+      - title: Missing Frontend Dependencies When Building Back Office Assets
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-backoffice.html
 
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html

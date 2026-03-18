@@ -1,4 +1,4 @@
-1. Create a branch from master at the day after release.
+1. Create a branch from master at the day after release. Examples below assume that the previous release version is **202512.0**. Adjust all commands accordingly, when applying.
 
 2. `find ./{docs,_includes} -type d -name 'latest' -execdir mv {} 202512.0 \;`
 

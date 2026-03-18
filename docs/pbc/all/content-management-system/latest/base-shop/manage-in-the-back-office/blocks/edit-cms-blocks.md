@@ -56,7 +56,7 @@ This opens the **Edit CMS Block** page.
 
 
 {% info_block infoBox "Using Twig blocks in templates" %}
-If you plan to include **{% raw %}{% if %}{% endraw %}** or any other construction into your template, you might notice that editor breaks the result.
+If you plan to include {% raw %}{% if %}{% endraw %} or any other construction into your template, you might notice that editor breaks the result.
 
 Use the following approach to keep functional template, as well as continue use of the editor:
 

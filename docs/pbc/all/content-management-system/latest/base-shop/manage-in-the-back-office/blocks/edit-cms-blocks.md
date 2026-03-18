@@ -61,7 +61,7 @@ If you plan to include {% raw %}{% if %}{% endraw %} or any other construction i
 Use the following approach to keep functional template, as well as continue use of the editor:
 
 ```html
-&lt;!--{% raw %}{% if ... %}{% endraw %}--&gt;
+<!--{% raw %}{% if ... %}{% endraw %}-->
 ```
 
 {% endinfo_block %}

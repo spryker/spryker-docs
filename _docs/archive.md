@@ -2,11 +2,13 @@
 
 2. `find ./{docs,_includes} -type d -name 'latest' -execdir mv {} 202512.0 \;`
 
-3. Search for `/latest/` in all files `./docs/**/202512.0/**` and reaplce with `/{{page.version}}/`
+3. Search for `/latest/` in all files `./docs/**/202512.0/**` and replace with `/{{page.version}}/`
 
 4. Search for
 - `(link: .*)/202512.0/(.*)` and replace with `$1/page.version/$2`
 - `(link: .*)/\{\{page.version\}\}/(.*)` and replace with `$1/page.version/$2`
+
+**These are regex!** Ensure to use regex search and substitution.
 
 5. Merge archive into branch.
 

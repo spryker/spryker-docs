@@ -13,7 +13,7 @@ For additional support with this content, [contact our support](https://support.
 
 ## Information disclosure via phpinfo() method
 
-Instances of phpinfo() were identified in the codebase, which could potentially expose sensitive configuration details and environment variables to unauthorized parties. Such an instance was found to be part of the default BackOffice setup.
+Instances of phpinfo() were identified in the codebase, which could potentially expose sensitive configuration details and environment variables to unauthorized parties. Such an instance was found to be part of the default Back Office setup.
 
 ### Affected modules
 

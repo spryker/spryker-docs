@@ -59,7 +59,11 @@ This opens the **Edit CMS Block** page.
 If you plan to include {% raw %}{% if %}{% endraw %} or any other construction into your template, you might notice that editor breaks the result.
 
 Use the following approach to keep functional template, as well as continue use of the editor:
+
+```html
 &lt;!--{% raw %}{% if ... %}{% endraw %}--&gt;
+```
+
 {% endinfo_block %}
 
 

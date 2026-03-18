@@ -344,6 +344,7 @@ Don't use `newrelic` or `blackfire` extensions simultaneously with the `opentele
 
 ### SMI Logs integration
 
+SMI Log integration is not using Opentelemetery's log provider, so there is no need to gather additional logs. Instead, Spryker enriches existing logs with trace and span IDs, so you can easily correlate logs and traces in SMI.
 The OpenTelemetry log processor plugin adds trace and span IDs to log records, enabling correlation between logs and traces in SMI. To set up the integration, follow these steps:
 
 #### Step 1 — Update `spryker/opentelemetry` to version 1.20.0
@@ -362,7 +363,28 @@ composer show spryker/opentelemetry | grep versions
 
 ---
 
-#### Step 2 — Register the plugin in the Zed log dependency provider
+#### Step 2 — Make sure that you are using Log module
+
+The OpenTelemetry log processor plugin is designed to work with Spryker's Log module. If you haven't installed it yet, add it to your project:
+
+```bash
+composer require spryker/log:"^3.0.0"
+```
+or 
+
+```bash
+composer require spryker/log:"^3.17.0"
+```
+
+if you want to use [Audit Log](/docs/dg/dev/backend-development/audit-logs/audit-logs.html) feature.
+
+{% info_block warningBox "Check how you collect logs" %}
+
+Only log records processed by the Log module will be enriched with trace and span IDs. Any non log output that goes directly to the standard output or error won't have trace and span IDs, so it won't be correlated in the SMI.
+
+{% endinfo_block %}
+
+#### Step 3 — Register the plugin in the Zed log dependency provider
 
 Open `src/Pyz/Zed/Log/LogDependencyProvider.php` and add the import and plugin registration in all three processor methods.
 
@@ -380,7 +402,7 @@ new OpentelemetryLogProcessorPlugin(),
 
 ---
 
-#### Step 3 — Register the plugin in the Yves log dependency provider
+#### Step 4 — Register the plugin in the Yves log dependency provider
 
 Open `src/Pyz/Yves/Log/LogDependencyProvider.php` and add the import and plugin registration.
 
@@ -398,7 +420,7 @@ new OpentelemetryLogProcessorPlugin(),
 
 ---
 
-#### Step 4 — Register the plugin in the Glue log dependency provider
+#### Step 5 — Register the plugin in the Glue log dependency provider
 
 Open `src/Pyz/Glue/Log/LogDependencyProvider.php` and add the import and plugin registration.
 
@@ -416,7 +438,7 @@ new OpentelemetryLogProcessorPlugin(),
 
 ---
 
-#### Step 5 — Create a support ticket to enable SMI logs
+#### Step 6 — Create a support ticket to enable SMI logs
 
 The OpenTelemetry log processor only enriches log records. For the enriched logs to be ingested and visible in SMI, the SMI log pipeline must be enabled for your environment by the Spryker Cloud team.
 

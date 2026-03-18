@@ -1,7 +1,7 @@
 ---
 title: Edit CMS blocks
 description: The guide provides procedures on how to view, update, activate and deactivate CMS blocks in the editor from the Back Office.
-last_updated: May 12, 2022
+last_updated: Mar 18, 2026
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-cms-blocks
 originalArticleId: 797e2d78-86eb-454d-afa1-481ee80ae7af
@@ -53,3 +53,17 @@ This opens the **Edit CMS Block** page.
 | NAME | The name is used when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to which the block is assigned. The block is displayed on the products' details pages. | Irrelevant. |
+
+
+{% info_block infoBox "Using Twig blocks in templates" %}
+If you plan to include {% raw %}{% if %}{% endraw %} or any other construction into your template, you might notice that editor breaks the result.
+
+Use the following approach to keep functional template, as well as continue use of the editor:
+
+```html
+<!--{% raw %}{% if ... %}{% endraw %}-->
+```
+
+{% endinfo_block %}
+
+

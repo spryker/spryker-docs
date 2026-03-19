@@ -370,6 +370,7 @@ The OpenTelemetry log processor plugin is designed to work with Spryker's Log mo
 ```bash
 composer require spryker/log:"^3.0.0"
 ```
+
 or 
 
 ```bash

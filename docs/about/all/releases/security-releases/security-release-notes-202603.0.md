@@ -17,8 +17,8 @@ Instances of phpinfo() were identified in the codebase, which could potentially 
 
 ### Affected modules
 
-- `spryker/setup`: 4.0.0 -  4.7.0
-- `spryker/maintenance`: 3.0.0 -  3.5.0
+- `spryker/setup`: < 4.8.0
+- `spryker/maintenance`: < 3.6.0
 
 ### Fix the vulnerability
 

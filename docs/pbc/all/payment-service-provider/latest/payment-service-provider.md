@@ -1,7 +1,7 @@
 ---
 title: Payment Service Provider
 description: Learn about the different types of payment methods that you can configure for your store using the Spryker Payment Service Provider module.
-last_updated: Apr 23, 2023
+last_updated: Mar 20, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/payment-service-providers/psp.html
@@ -14,16 +14,20 @@ The capability consists of a base shop and the marketplace addon. The base shop 
 
 Spryker offers the following Payment Service Providers (PSP) integrations:
 
-| NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
-| --- | --- | --- |
-| Spryker Pay | Yes | No |
-| Adyen | No | No |
-| After Pay | No | No |
-| Braintree | No | No |
-| Crefo Pay | No | No |
-| Computop | No | No |
-| Easycredit | No | No |
-| Optile | No | No |
-| [Payone](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html) | No | Yes |
-| Ratepay | No | No |
-| [Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html) | Yes | No |
+| NAME                                                                                                                                                       | MARKETPLACE COMPATIBLE |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
+| Spryker Pay                                                                                                                                                | Yes |
+| [Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/adyen.html)                                                 | No |
+| [After Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html)                                       | No |
+| [Braintree](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree.html)                                     | No |
+| [Crefo Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html)                                       | No |
+| [Computop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html)                                        | No |
+| [Easycredit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)        | No |
+| Optile                                                                                                                                                     | No |
+| [Payone](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html) | No |
+| [Ratepay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html)                                           | No |
+| [Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html)                                                 | Yes |
+
+## Custom PSP integrations
+
+If your payment provider does not have an existing Spryker integration, you can use the [PSP Integration Template](/docs/integrations/custom-building-integrations/psp-integration-template.html) to develop a custom PSP connection. The template provides a complete module structure, database schema, Order Management System (OMS) configuration, and integration points required for a PSP module. This allows you to focus on implementing provider-specific API communication and business logic rather than building the module architecture from scratch.

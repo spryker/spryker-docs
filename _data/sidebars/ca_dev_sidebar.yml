@@ -138,6 +138,9 @@ entries:
             url: /docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html
       - title: Set up data export to S3
         url: /docs/ca/dev/set-up-data-export-to-s3.html
+        nested:
+          - title: Database structure reference
+            url: /docs/ca/dev/data-export-to-s3-database-structure-reference.html
       - title: Troubleshooting
         url: /docs/ca/dev/troubleshooting/troubleshooting.html
         nested:

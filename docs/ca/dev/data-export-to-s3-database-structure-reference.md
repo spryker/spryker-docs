@@ -14,9 +14,9 @@ If you know exactly which tables contain the data you need, you can request an e
 Spryker stores business data across multiple relational tables that together form logical domain aggregates. For example, an order is not stored in a single table but spread across tables for addresses, items, payments, shipments, and more.
 
 This guide organizes tables by business domain to help you:
-- Discover which tables are related to a specific domain
-- Ensure you don't miss important data when exporting a complete domain
-- Identify project-specific tables that extend standard Spryker tables
+- Discover which tables are related to a specific domain.
+- Ensure you don't miss important data when exporting a complete domain.
+- Identify project-specific tables that extend standard Spryker tables.
 
 The tables are grouped into two categories:
 
@@ -194,6 +194,12 @@ Tables containing product data, including abstract and concrete products, attrib
 ### Customer
 
 Tables containing customer data, including addresses, groups, notes, and company associations.
+
+{% info_block infoBox "Info" %}
+
+Tables known to contain sensitive information, such as `spy_user`, `spy_customer` tables, are automatically excluded to prevent security breaches.
+
+{% endinfo_block %}
 
 <details>
 <summary>View Customer tables</summary>

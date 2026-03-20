@@ -196,7 +196,7 @@ Tables containing customer data, including addresses, groups, notes, and company
 
 {% info_block infoBox "Info" %}
 
-Tables known to contain sensitive information, such as `spy_user`, `spy_customer` tables, are automatically excluded to prevent security breaches.
+For security reasons `spy_customer` table will be automatically excluded from exports to prevent security breaches.
 
 {% endinfo_block %}
 
@@ -205,7 +205,6 @@ Tables known to contain sensitive information, such as `spy_user`, `spy_customer
 
 | Table |
 |-------|
-| spy_customer |
 | spy_customer_address |
 | spy_customer_data_change_request |
 | spy_customer_group |

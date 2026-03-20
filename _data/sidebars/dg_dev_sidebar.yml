@@ -379,7 +379,6 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
 
       - title: Payment methods
-        url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/payment-methods.html
         nested:
         - title: Direct Debit payment
           url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html

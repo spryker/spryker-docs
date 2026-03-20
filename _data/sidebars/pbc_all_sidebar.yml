@@ -672,6 +672,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
                   - title: Navigation module
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-navigation-module.html
+                  - title: ContentProductWidget module
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-content-product-widget.html
 
               - title: Import and export data
                 url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
@@ -1298,6 +1300,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
               - title: Upgrade the OauthCompanyUser module
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
+              - title: Integrate post-login redirect
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/integrate-post-login-redirect.html
 
           - title: Manage using Glue API
             nested:

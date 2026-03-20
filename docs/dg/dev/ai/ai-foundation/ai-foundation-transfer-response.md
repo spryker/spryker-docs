@@ -1,8 +1,8 @@
 ---
 title: Use structured responses with the AiFoundation module
 description: Request and receive structured data from AI providers using Spryker Transfer objects
-last_updated: Feb 19, 2026
-keywords: foundation, ai, structured response, transfer, schema, json, openai, anthropic, prompt, validation
+last_updated: Mar 2, 2026
+keywords: foundation, ai, structured response, transfer, schema, json, openai, anthropic, prompt, validation, audit, logging
 template: howto-guide-template
 related:
   - title: AiFoundation module Overview
@@ -11,6 +11,8 @@ related:
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: AI workflow orchestration with state machines
     link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+  - title: AI Interaction Audit Logs
+    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
   - title: Transfer objects
     link: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---

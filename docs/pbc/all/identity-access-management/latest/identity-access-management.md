@@ -1,7 +1,7 @@
 ---
 title: Identity Access Management
 description: Learn all about the Spryker Identity Access Management capability and how to create and manage accounts within your Spryker project.
-last_updated: Oct 2, 2022
+last_updated: Mar 12, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
@@ -62,8 +62,15 @@ The login process looks like this:
 
 If a user logs in with an SSO but does not have a Back Office account, the user is not logged in. To be able to log in, a user must have a Back Office account registered using the email address used for their account with the SSO service. Usually, this strategy is used when not all the users that have access to the SSO service need access to the Back Office.
 
+## Post-login redirect
 
-![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
+When a user's session times out, they are redirected to the login page. Without post-login redirect, after re-authentication, users land on the homepage and lose their context. With post-login redirect enabled, users are automatically sent back to the exact page they were on before the session expired — preserving their workflow across Back Office, Merchant Portal, and Storefront.
+
+The last visited page URL is tracked on every eligible GET request and stored in a browser cookie named `last-visited-page`. AJAX requests, login and logout pages, and internal framework paths are excluded from tracking.
+
+If the user was on a create or edit page before the session expired, they are redirected back to that page, but any unsaved data is lost.
+
+Post-login redirect does not apply to agent users in Storefront and Merchant Portal. Redirect across multiple browsers or devices is not supported. The redirect applies only to the browser in which the original session was active.
 
 ## Glue API authentication
 
@@ -83,7 +90,8 @@ Each of the identity managers is an ECO module that must be developed separately
 | - | - |
 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
 | [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
-| [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
+| [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) | [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
+| [Integrate post-login redirect](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/integrate-post-login-redirect.html) | |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html) |
 | | [Authenticate as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) |

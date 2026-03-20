@@ -1,7 +1,7 @@
 ---
 title: How to integrate API Platform
 description: This document describes how to integrate API Platform into your Spryker application.
-last_updated: Nov 24, 2025
+last_updated: Feb 26, 2026
 template: howto-guide-template
 ---
 
@@ -45,10 +45,12 @@ declare(strict_types = 1);
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 
 return [
     FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
     TwigBundle::class => ['all' => true],
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
@@ -67,13 +69,15 @@ declare(strict_types = 1);
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 
 return [
     FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
-    TwigBundle::class => ['all' => true],
 ];
 ```
 
@@ -89,15 +93,23 @@ declare(strict_types = 1);
 use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
 use Spryker\ApiPlatform\SprykerApiPlatformBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
 
 return [
     FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
     ApiPlatformBundle::class => ['all' => true],
     SprykerApiPlatformBundle::class => ['all' => true],
-    TwigBundle::class => ['all' => true],
 ];
 ```
+
+{% info_block infoBox "SecurityBundle" %}
+
+The `SecurityBundle` enables authentication and authorization for API Platform resources using Bearer token (JWT) validation and security expressions. For detailed setup including firewall configuration, see [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html).
+
+{% endinfo_block %}
 
 ## 3. Configure API Platform
 
@@ -288,6 +300,8 @@ To verify your integration:
 ## Next steps
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
+- [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) - Authentication and authorization setup
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
+- [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes

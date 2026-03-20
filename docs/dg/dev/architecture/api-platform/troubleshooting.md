@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Dec 21, 2025
+last_updated: Mar 9, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -31,8 +31,8 @@ This document provides solutions to common issues when working with API Platform
 1. **Schema file location is incorrect**
 
    ```bash
-   ❌ src/Pyz/Glue/Customer/api/customers.yml
-   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.yml
+   ❌ src/Pyz/Glue/Customer/api/customers.resource.yml
+   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml
    ```
 
 2. **API type not configured**
@@ -304,6 +304,41 @@ The `assets:install` command must be run after integrating API Platform and when
    GET /customers?page=2&itemsPerPage=20
    ```
 
+### Client cannot change items per page
+
+**Symptom:** The `itemsPerPage` query parameter is ignored.
+
+**Solution:**
+
+Enable client-side items-per-page control and set a maximum limit in the resource schema:
+
+```yaml
+resource:
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+  paginationClientItemsPerPage: true
+  paginationMaximumItemsPerPage: 100
+```
+
+Without `paginationClientItemsPerPage: true`, the `itemsPerPage` query parameter has no effect. The `paginationMaximumItemsPerPage` option prevents clients from requesting excessively large pages.
+
+### Client cannot disable pagination
+
+**Symptom:** The `pagination=false` query parameter is ignored and results are still paginated.
+
+**Solution:**
+
+Enable client-side pagination control in the resource schema:
+
+```yaml
+resource:
+  paginationClientEnabled: true
+```
+
+Without `paginationClientEnabled: true`, the `pagination` query parameter has no effect.
+
+For a full reference of all pagination options, see [Resource Schemas — Pagination](/docs/dg/dev/architecture/api-platform/resource-schemas.html#pagination).
+
 ## Dependency Injection issues
 
 ### Services not autowired
@@ -366,9 +401,9 @@ Output:
 
 ```bash
 Source Files (priority order):
-  ✓ vendor/spryker/customer/resources/api/backend/customers.yml (CORE)
-  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.yml (FEATURE)
-  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.yml (PROJECT)
+  ✓ vendor/spryker/customer/resources/api/backend/customers.resource.yml (CORE)
+  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.resource.yml (FEATURE)
+  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml (PROJECT)
 ```
 
 ### Inspecting generated code

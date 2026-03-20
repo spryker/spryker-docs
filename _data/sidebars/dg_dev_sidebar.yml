@@ -58,6 +58,8 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
           - title: Workflow orchestration with state machines
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+          - title: AI Interaction Audit Logs
+            url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -524,6 +526,12 @@ entries:
       - title: Extend Composable UI with custom Angular modules
         url: /docs/dg/dev/backend-development/composable-ui/extend-composable-ui-with-custom-angular-modules.html
 
+    - title: Configuration Management
+      url: /docs/dg/dev/backend-development/configuration-management.html
+      nested:
+      - title: Adding Custom Scopes
+        url: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
+
   - title: Frontend development
     url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
@@ -888,6 +896,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
     - title: How to integrate API Platform
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    - title: How to integrate API Platform Security
+      url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
     - title: Migrate from Auth to SecurityGui module
@@ -962,6 +972,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
     - title: Upgrade Node.js to v18 and npm to v9
       url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+    - title: Upgrade Node.js version
+      url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html
     - title: Migrate from Yarn to npm
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
 
@@ -1130,6 +1142,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-messenger.html
     - title: Symfony Scheduler
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
+    - title: Configuration Management feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
 
 
   - title: SDKs
@@ -1310,6 +1324,10 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/testing.html
         - title: Troubleshooting
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
+        - title: Sparse fieldsets
+          url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+        - title: Native API Platform Resources
+          url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1469,6 +1487,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: CDN and traffic management integration
         url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
+      - title: Yves widget performance best practices
+        url: /docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 

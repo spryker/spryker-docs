@@ -4,6 +4,8 @@ description: API documentation for dynamic-entity-availability-abstracts.
 last_updated: July 9, 2025
 template: default
 layout: custom_new
+redirect_from:
+  - /docs/integrations/app-composition-platform-apps.html
 ---
 
 <div class="content_box">Integrating third-party services into a Spryker project is a crucial part of extending and customizing your commerce solution to meet unique business needs. Whether you're connecting payment providers, logistics systems, marketing tools, or customer support platforms, Spryker offers a flexible and scalable architecture designed to support smooth integrations. This article describes the various methods available for integrating external systems with Spryker, from using APIs and middleware to leveraging Spryker's modular architecture.</div>
@@ -34,13 +36,6 @@ At their core, integrations follow these design principles:
     <div class="cst_card_title">ECO modules</div>
     <div class="cst_card_desc">Spryker Eco Modules are prebuilt, reusable integration packages that connect Spryker with popular third-party services and tools. They help teams save development time and ensure reliable integrations.</div>
     <a class="cst_card_button" href="eco-modules"> Find out more </a>
-  </div>
-
-  <div class="cst_card">
-    <div class="cst_card_image"><img src="/images/integrations/int_acp.png" alt="Icon for Spryker App Composition Platform"></div>
-    <div class="cst_card_title">Spryker ACP</div>
-    <div class="cst_card_desc">The Spryker App Composition Platform is a low code, cloud native solution that enables seamless integration of third-party applications into your Spryker project. </div>
-    <a class="cst_card_button" href="app-composition-platform-apps"> Find out more </a>
   </div>
 
   <div class="cst_card">

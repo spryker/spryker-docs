@@ -98,7 +98,6 @@ Tables containing order state machine data, including states, transitions, timeo
 | spy_oms_product_reservation_last_exported_version |
 | spy_oms_product_reservation_store |
 | spy_oms_state_machine_lock |
-| spy_oms_transition_log |
 
 </details>
 

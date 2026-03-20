@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/use-api-key-authorization.html
   - /docs/scos/dev/glue-api-guides/202212.0/use-api-key-authorization.html
   - /docs/scos/dev/glue-api-guides/202404.0/use-api-key-authorization.html
-  - /docs/dg/dev/glue-api/202507.0/use-api-key-authorization.html
+  - /docs/dg/dev/glue-api/latest/use-api-key-authorization.html
 
 ---
 

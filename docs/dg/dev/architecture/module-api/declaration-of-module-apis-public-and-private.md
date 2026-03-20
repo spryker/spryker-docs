@@ -22,7 +22,7 @@ According to [Semantic Versioning](http://semver.org/), we release a major versi
 ## Public API
 
 The Spryker architectural framework is fundamentally built upon the "Design by Contract" principle, a methodology that ensures stability and predictability in a complex, modular system. Central to this principle is the `@api` annotation. This annotation is not merely a documentation tag; it serves as an explicit marker of a "semantic contract" between different parts of the system. When a method or class is marked with @api, it signals a commitment to backward compatibility, assuring developers that its signature and behavior will remain stable across minor and patch versions of the module.
-Spryker's architectural conventions explicitly mandate this practice for key interaction points. Each facade class needs to define and implement an interface that holds the Specification of each public method. The Specification is considered as the semantic contract of the method.
+Spryker's architectural conventions explicitly mandate this practice for key interaction points. Each facade class needs to define and implement an interface that holds the Specification of each public method. The Specification is considered as the semantic contract of the method. 
 All facade class methods need to add `@api` and `{@inheritdoc}` tags to their method documentation. This directly establishes the `@api` tag as the formal indicator of this crucial semantic contract.
 But not only things that marked with `@api` are part of the public API. There are several other cases that are also part of the public API.
 

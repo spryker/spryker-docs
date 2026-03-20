@@ -228,7 +228,7 @@ foreach ($orders as $order) {
         $product = SpyProductQuery::create()
             ->filterBySku($item->getSku())
             ->findOne();
-
+        
         // Another query per item
         $stock = SpyStockQuery::create()
             ->filterByFkProduct($product->getIdProduct())
@@ -288,7 +288,7 @@ foreach ($chunks as $chunk) {
     $orders = SpySalesOrderQuery::create()
         ->filterByIdSalesOrder_In($chunk)
         ->find();
-
+    
     // Process this batch
     foreach ($orders as $order) {
         // ...

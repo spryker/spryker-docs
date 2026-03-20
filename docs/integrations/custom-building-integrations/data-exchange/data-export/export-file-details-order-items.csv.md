@@ -6,7 +6,7 @@ last_updated: July 9, 2025
 template: data-export-template
 related:
 - title: Install the Sales Data Export feature
-  link: docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
+  link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 
 {% include integrations/export-file-details-order-items.csv-body.md %}

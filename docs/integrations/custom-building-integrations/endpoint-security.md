@@ -12,7 +12,7 @@ template: default
 
 Spryker offers built-in support for Basic Auth on both REST and Glue APIs. You can configure it to restrict access to sensitive endpoints or entire services.
 
-<a class="fl_cont" href="/docs/pbc/all/identity-access-management/202507.0/configure-basic-htaccess-authentication.html">
+<a class="fl_cont" href="/docs/pbc/all/identity-access-management/latest/configure-basic-htaccess-authentication.html">
   <div class="fl_icon">
     <i class="icon-article"></i>
   </div>

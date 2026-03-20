@@ -54,7 +54,6 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
     }
 }
 ```
-
 </details>
 
 `AuthorizationClient::authorize()` runs the plugin.

@@ -49,7 +49,6 @@ class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements Dyna
 2. To register the plugin, add it to the `DynamicEntityDependencyProvider` in the module.
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php**
-
 ```php
 <?php
 

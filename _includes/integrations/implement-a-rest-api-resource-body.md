@@ -206,7 +206,7 @@ In the following example, the `RestWishlistsAttributesTransfer` transfer object 
     </transfers>
 ```
 
-Generate the respective transfer objects:
+To generate the respective transfer objects, run the following command:
 
 ```bash
 vendor/bin/console transfer:generate
@@ -241,12 +241,9 @@ To map the controller actions to the verbs they implement, implement the functio
 
 To map the actions, you can use such methods as `addPost`, `addDelete`, `addPatch`, and `addGet`, which are supported by `ResourceRouteCollectionInterface`. Each function has three parameters:
 
-| Key        | Description                                                                                                                   | Required |
-|------------|-------------------------------------------------------------------------------------------------------------------------------|----------|
-| `action`   | Specifies the action name to map the verb to the Resource controller method                                                   | v        |
-| `protected`| Specifies whether authentication is required to access the resource. If not specified, authentication is required            |          |
-| `context`  | An array of additional parameters passed to the action for extra configuration                                                |          |
-
+* `action`: Specifies the action name to map the verb to the Resource controller method.
+* `protected` (optional): Specifies whether authentication is required to access the resource. If this parameter is not specified, then the verb requires authentication.
+* `context` (optional): An array of additional parameters that can be passed to the action. Use this parameter to perform additional configuration of your actions.
 
 In the following example, the plugin maps `GET`, `POST`, `DELETE` and `PATCH` to the controller actions created in step 4. All the verbs except `GET` require authentication. This means that unauthenticated users can read the resource but can not create, modify, or delete items.
 

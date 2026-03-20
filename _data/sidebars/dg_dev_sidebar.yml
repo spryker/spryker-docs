@@ -991,6 +991,8 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
       - title: Web Profiler for Backend Gateway
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+      - title: Web Profiler for Glue
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
 
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
@@ -1357,6 +1359,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines-batch-processing-propel-entities.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
+      - title: Search performance guidelines
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-performance-guidelines.html
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
@@ -1365,6 +1369,8 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+      - title: Keeping dependencies updated
+        url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html

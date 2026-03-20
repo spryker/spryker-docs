@@ -7,10 +7,10 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/document-glue-api-resources.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/document-glue-api-resources.html
-  - /docs/dg/dev/glue-api/202507.0/glue-api-tutorials/document-glue-api-resources.html
+  - /docs/dg/dev/glue-api/latest/glue-api-tutorials/document-glue-api-resources.html
 related:
   - title: Glue API installation and configuration
-    link: docs/pbc/all/miscellaneous/202507.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
 To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue lets you generate it automatically with the help of the `DocumentationGeneratorRestApi` module, which extracts information on your Storefront API endpoints directly from their implementation. It also can provide additional information on endpoints, such as their purpose, usage details, and request parameters—for example, in headers, paths, queries, or cookies.

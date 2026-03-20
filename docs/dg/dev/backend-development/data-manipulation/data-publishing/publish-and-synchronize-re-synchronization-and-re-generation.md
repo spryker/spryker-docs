@@ -7,7 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchro
 originalArticleId: f1d13f30-7763-4804-8674-e87edf95653f
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
-  - /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export
+  - /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
 related:
   - title: Publish and Synchronization
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html

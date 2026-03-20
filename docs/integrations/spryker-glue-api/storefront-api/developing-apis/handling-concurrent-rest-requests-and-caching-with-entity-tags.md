@@ -10,10 +10,10 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
   - /docs/scos/dev/glue-api-guides/202204.0/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-  - /docs/dg/dev/glue-api/202507.0/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+  - /docs/dg/dev/glue-api/latest/rest-api/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
 related:
 - title: Shared Cart feature overview
-  link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/shared-carts-feature-overview.html
+  link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
 
 ---
 

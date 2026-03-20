@@ -109,7 +109,7 @@ The result should be 0 records.
 
 - `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/rest-api/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-infrastructure.html).
 
 {% endinfo_block %}
 
@@ -361,7 +361,7 @@ that you can send the following requests:
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check that you get a valid response from the following requests:
+To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check that you get a valid response from the following requests:  
 
 <details>
   <summary>POST http://glue.mysprykershop.com/carts/{{cart_uuid}}/shared-carts</summary>

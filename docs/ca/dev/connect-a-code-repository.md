@@ -48,8 +48,8 @@ We recommend mapping your branches to environments as follows:
 2. Go to **CodePipeline**.
 3. One the **Pipelines** page, select the pipeline you want to connect the repository to.
 4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.
-5. In the **Edit: Source** pane, click **Edit stage**.
+  This opens the pipeline editing page.  
+5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
   This opens the **Edit action** window.
 
@@ -77,13 +77,13 @@ Your GitHub repository is now connected.
 2. Go to **CodePipeline**.
 3. On the **Pipelines** page, select the pipeline you want to connect the repository to.
 4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.
-5. In the **Edit: Source** pane, click **Edit stage**.
+  This opens the pipeline editing page.  
+5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **GitHub Enterprise Server**.
 8. For **Connection** choose an existing connection or click **Connect to GitHub Enterprise Server** and follow the authorization proccess to create a connection.
-  Next steps assume you've selected a connection.
+  Next steps assume you've selected a connection. 
 9. For **Repository name**, enter and select the repository you want to connect.
 10. For **Branch name**, enter and select the branch you want to connect.
 11. Click **Done**.
@@ -96,7 +96,7 @@ Your GitHub Enterprise Server repository is now connected.
 
 ### Optional: Disable automatic pipeline triggers
 
-By default, pipelines are automatically triggered on every push event using predefined triggers and filters.
+By default, pipelines are automatically triggered on every push event using predefined triggers and filters.  
 To manage the rollout manually or prevent a specific pipeline from starting, do the following:
 
 1. On the page of the pipeline, click **Edit**.
@@ -125,8 +125,8 @@ Ensure that your Bitbucket account has **Admin** permissions in the code reposit
 2. Go to **CodePipeline**.
 3. On the **Pipelines** page, select the pipeline you want to connect the repository to.
 4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.
-5. In the **Edit: Source** pane, click **Edit stage**.
+  This opens the pipeline editing page.  
+5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the **Edit action** button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **Bitbucket**.
@@ -154,8 +154,8 @@ Ensure that your GitLab account has **Admin** permissions in the code repository
 2. Go to **CodePipeline**.
 3. On the **Pipelines** page, select the pipeline you want to connect the repository to.
 4. On the page of the pipeline, click **Edit**.
-  This opens the pipeline editing page.
-5. In the **Edit: Source** pane, click **Edit stage**.
+  This opens the pipeline editing page.  
+5. In the **Edit: Source** pane, click **Edit stage**.  
 6. In the **Spryker_App_Src** section, click the *Edit action* button.
   This opens the **Edit action** window.
 7. For **Action provider**, select **GitLab**.

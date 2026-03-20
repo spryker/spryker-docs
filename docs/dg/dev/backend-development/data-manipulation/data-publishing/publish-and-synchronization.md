@@ -22,8 +22,8 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and synchronize Re-synchronization and re-generation
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
+  - title: Publish and Synchronize repeated export
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
@@ -47,7 +47,7 @@ Benefits of P&S:
 
 - Incremental exports; full re-exports are not needed.
 
-- Safe fallback: the SQL database always holds the source of truth. You can re-sync at any time.
+- Safe fallback: the SQL database always holds the source of truth. You can re-sync at any time.  
 
 - Store- and locale-specific data support.
 
@@ -65,7 +65,7 @@ P&S process schema:
 - - - - -▶ (dashed): Asynchronous event, queue, or deferred processing
 {% endraw %}
 
-### 1. Publish
+### 1. Publish 
 
 You can start the publish process using automated or manual event triggering.
 
@@ -235,7 +235,7 @@ Direct synchronization provides faster results, and is particularly useful for t
 
 ## P&S process example
 
-The following walkthrough shows how the P&S mechanism moves product-abstract data from the Spryker backend to Redis and Elasticsearch. The example is based on `SpyProductAbstract` sync in the B2B Marketplace Demo Shop.
+The following walkthrough shows how the P&S mechanism moves product-abstract data from the Spryker backend to Redis and Elasticsearch. The example is based on `SpyProductAbstract` sync in the B2B Marketplace Demo Shop. 
 
 ### 1. Publish
 
@@ -255,9 +255,9 @@ RabbitMQ now contains several events that relate to the product abstract and its
 ##### Storage events
 
 
-1. Queue: `publish.product_abstract` receives a storage event.
+1. Queue: `publish.product_abstract` receives a storage event. 
 
-2. Listener: `ProductAbstractStoragePublishListener` (registered in `ProductStorageEventSubscriber.php`) consumes the event.
+2. Listener: `ProductAbstractStoragePublishListener` (registered in `ProductStorageEventSubscriber.php`) consumes the event. 
 This message contains only metadata. The actual payload is constructed later by the storage or search listeners.
 
 
@@ -285,15 +285,15 @@ Event example:
 ```
 
 
-3. The listener does the following processing:
+3. The listener does the following processing: 
    1. Creates a `SpyProductAbstractStorage` entity
    2. Populates the entity with the data that will be used on the frontend
-   3. Saves the data to the `spy_product_abstract_storage` table, one row per store and locale
+   3. Saves the data to the `spy_product_abstract_storage` table, one row per store and locale 
 
 ![async-sync-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/async-sync-processing.png)
 
 
-4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue.
+4. Follow-up event: The listener sends a new message to the `sync.storage.product` queue. 
 
 
 Message example:
@@ -321,17 +321,17 @@ Message example:
 
 </details>
 
-5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`.
+5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processStorageMessages()`. 
 
-6. Result: All storage messages are written to Redis.
+6. Result: All storage messages are written to Redis. 
 
 
 ##### Search event
 
 
-1. Queue: `publish.page_product_abstract` receives a search event.
+1. Queue: `publish.page_product_abstract` receives a search event. 
 
-2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message.
+2. Listener: `ProductPageProductAbstractPublishListener` (registered in `ProductPageSearchEventSubscriber.php`) consumes the message. 
 
 
 Message example:
@@ -357,18 +357,18 @@ Message example:
 }
 ```
 
-3. The listener does the following processing:
+3. The listener does the following processing: 
     1. Creates a `SpyProductAbstractPageSearch` entity
     2. Populates the entity with data
-    3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale
+    3. Saves the entity to the `spy_product_abstract_page_search` table, one row per store and locale 
 
 ![search-event-processing](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.md/search-event-processing.png)
 
-4. Follow-up event: The listener sends a new message to the `sync.search.product` queue.
+4. Follow-up event: The listener sends a new message to the `sync.search.product` queue. 
 
-5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processSearchMessages()`.
+5. Worker: Jenkins launches `vendor/bin/console queue:worker:start`, which invokes `SynchronizationFacade::processSearchMessages()`. 
 
-6. Result: All search messages are indexed in Elasticsearch.
+6. Result: All search messages are indexed in Elasticsearch. 
 
 By following this workflow, Spryker makes all product changes made in the Back Office available in Redis and Elasticsearch with minimal delay, even across multiple stores and locales.
 
@@ -401,9 +401,9 @@ In other implementations, P&S enables businesses to centralize sensitive custome
 
 When designing a solution that incorporates P&S, consider the following:
 
-- Eventual consistency of data in storefronts and client applications
+- Eventual consistency of data in storefronts and client applications  
 
-- Horizontal scalability of the publish process (supported natively) and the synchronization process (may require custom development)
+- Horizontal scalability of the publish process (supported natively) and the synchronization process (may require custom development)  
 
 - Data object limitations, including payload sizes and system constraints
 

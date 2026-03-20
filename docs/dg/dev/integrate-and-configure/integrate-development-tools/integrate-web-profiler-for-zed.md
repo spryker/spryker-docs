@@ -9,6 +9,8 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html
 related:
+  - title: Integrate Web Profiler for Glue
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrate Web Profiler for Backend Gateway
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
   - title: Integrating Web Profiler Widget for Yves

@@ -1,5 +1,5 @@
-version: "202507.0"
-release_version: "202507.0"
+version: "202512.0"
+release_version: "202512.0"
 
 repository: spryker/spryker-docs
 
@@ -53,6 +53,7 @@ exclude:
   - rename_files.rb
   - netlify.toml
   - README.md
+  - _docs/
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -151,6 +152,7 @@ versions:
   '202404.0': '202404.0'
   '202410.0': '202410.0'
   '202507.0': '202507.0'
+  '202512.0': '202512.0'
 
 
 # versioned categories - these must match corresponding directories

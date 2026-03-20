@@ -23,8 +23,8 @@ related:
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and synchronize and multi-store shop systems
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-  - title: Publish and synchronize Re-synchronization and re-generation
-    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-re-synchronization-and-re-generation.html
+  - title: Publish and Synchronize repeated export
+    link: docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/dg/dev/backend-development/data-manipulation/data-publishing/configurartion/mapping-configuration.html
 ---
@@ -368,8 +368,8 @@ class StorePublisherTriggerPlugin extends AbstractPlugin implements PublisherTri
 
 ### 4.2 Create a Synchronization plugin
 
-A Synchronization plugin is used to synchronize data to the frontend.
-It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables.
+A Synchronization plugin is used to synchronize data to the frontend. 
+It is a plugin that implements the `\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface` interface and contains the `getData` method. The method accepts an offset, limit, and an array of IDs and returns an array of `SynchronizationDataTransfer` objects. Those objects will be used to synchronize data to the frontend as they contain data from _storage or _search tables. 
 
 ```php
 

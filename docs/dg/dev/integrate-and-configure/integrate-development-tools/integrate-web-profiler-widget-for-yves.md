@@ -13,6 +13,8 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrate Web Profiler for Backend Gateway
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-backend-gateway.html
+  - title: Integrate Web Profiler for Glue
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrating Formatter
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
   - title: Integrating SCSS linter
@@ -96,7 +98,7 @@ Clicking on a specific AJAX request in the widget opens the detailed profile vie
 
 - Request and response data
 - Performance metrics
-- ElasticSearch
+- ElasticSearch 
 - Redis
 - Zed Requests
 - External calls

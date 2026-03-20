@@ -22,9 +22,6 @@ find docs/ -d -name "$1"  -print0 |
         done
     done
 
-
-exit
-
 tmpfile=$(mktemp /tmp/abc-script.XXXXXX)
 
 echo "Collect all {% include ... %} tags"

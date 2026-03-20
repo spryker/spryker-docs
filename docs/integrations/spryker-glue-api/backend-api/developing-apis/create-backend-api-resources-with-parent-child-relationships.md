@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
   - /docs/scos/dev/glue-api-guides/202204.0/create-glue-api-resources-with-parent-child-relationships.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-glue-api-resources-with-parent-child-relationships.html
-  - /docs/dg/dev/glue-api/202507.0/create-backend-api-resources-with-parent-child-relationships.html
+  - /docs/dg/dev/glue-api/latest/create-backend-api-resources-with-parent-child-relationships.html
 
 ---
 

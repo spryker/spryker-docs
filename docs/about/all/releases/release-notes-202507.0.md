@@ -77,7 +77,7 @@ The Order Amendment feature enhances the shopping experience by enabling custome
 
 
 
-## [Early Access] Bulk product import in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Bulk product import in Merchant Portal <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The Product Import feature in the Merchant Portal enables you to bulk upload products using a universal CSV format, streamlining workflows, reducing manual effort, and accelerating time-to-market.
 
@@ -305,7 +305,7 @@ Improved SEO
 
 
 
-## [Early Access] Add to cart from images (AI-powered) <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Add to cart from images (AI-powered) <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span> <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 This feature enables customers to add products to cart by uploading images on the Quick Order page.
 
@@ -463,7 +463,7 @@ This release introduces both internal and customer-facing enhancements, includin
 
 
 
-## [Early Access] Stable Workers
+## Stable Workers <span class="inline-img">![early-access](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/early-access.png)</span>
 
 
 Introducing a significant enhancement to Publish and Synchronize (P&S) focused on increasing its job processing stability. While Jenkins continues to manage non-P&S tasks, P&S now uses a new Stable Worker Architecture.

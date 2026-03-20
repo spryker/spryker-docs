@@ -33,7 +33,7 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
   - Recommended: `/home/jdoe/workspace/project`.
 
 - Product images, product data, other images or fonts displaced in a demo shop are examples, and you may need to purchase your own licenses to use any of them.
-
+  
 {% endinfo_block %}
 
 1. Open Ubuntu.
@@ -43,7 +43,7 @@ This document describes how to install Spryker in [Development Mode](/docs/dg/de
 4. Clone the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops):
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

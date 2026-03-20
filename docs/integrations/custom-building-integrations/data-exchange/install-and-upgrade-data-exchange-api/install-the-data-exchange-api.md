@@ -7,4 +7,4 @@ last_updated: July 9, 2025
 template: default
 ---
 
-{% include pbc/all/install-features/202507.0/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api.md -->
+{% include pbc/all/install-features/202512.0/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api.md -->

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
   - /docs/marketplace/dev/setup/installation.html
   - /docs/marketplace/dev/back-end/marketplace-infrastructure-setup.html
-  - /docs/marketplace/dev/setup/202212.0/spryker-marketplace-setup.html
+  - /docs/marketplace/dev/setup/202212.0/spryker-marketplace-setup.html  
   - /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html
 related:
   - title: Database access credentials
@@ -45,7 +45,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 2. Clone the Demo Shop and navigate into its folder:
 
  ```shell
- git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
+ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
  cd b2b-demo-marketplace
  ```
 

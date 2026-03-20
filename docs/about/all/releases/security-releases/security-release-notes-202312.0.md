@@ -296,7 +296,7 @@ composer show spryker-shop/company-page # Verify the version
 {% endraw %}
 ```
 
-6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:
+6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:  
 
 ```bash
 {% raw %}
@@ -371,7 +371,7 @@ composer update spryker/oauth-code-flow
 
 ## Token validation issue
 
-Glue Backend API has no expiration validation for access tokens. There was no limitation on the number of tokens that could be requested by a certain user.
+Glue Backend API has no expiration validation for access tokens. There was no limitation on the number of tokens that could be requested by a certain user.  
 
 ### Affected modules
 

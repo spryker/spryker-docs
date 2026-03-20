@@ -17,7 +17,7 @@ To apply validation rules to an API, follow these steps:
 1. Copy the default validation schema to the project level and to each API module that you want to be validated.
   For example, to provide validation for the `StoresRestAPI` module, copy the schema to `src/Pyz/Glue/StoresRestAPI/Validation`.
 
-2. Rename the file to the name of the API you are providing validation for.
+2. Rename the file to the name of the API you are providing validation for.  
   For `StoresRestAPI`, the name is `STORES.validation.yaml`.
 
 3. Specify validation for the endpoints provided by the API.
@@ -33,7 +33,6 @@ vendor/bin/console rest-api:build-request-validation-cache
 
 By default, a validation cache is generated for the current store. To generate it for a specific store, use the `APPLICATION_STORE` variable.
 See the following example:
-
 ```bash
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```
@@ -132,7 +131,6 @@ vendor/bin/console rest-api:build-request-validation-cache
 
 By default, a validation cache is generated for the current store. To generate it for a specific store, use the `APPLICATION_STORE` variable.
 See the following example:
-
 ```bash
 APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
 ```

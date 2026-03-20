@@ -39,7 +39,7 @@ class EntityManager {
         // Save all collected entities in a single batch
         $this->commit();
     }
-
+    
     public function removeItems(array $itemTransfers): void {
 
         $items = // Load or create all entities at once from database
@@ -112,14 +112,14 @@ class SalesEntityManager extends AbstractEntityManager implements SalesEntityMan
         foreach ($salesOrderItemsData as $orderItemData) {
             // Find or create the sales order item
             $salesOrderItem = $this->findOrCreateSalesOrderItem($orderItemData);
-
+    
             // Update item attributes
             $this->updateSalesOrderItemAttributes($salesOrderItem, $orderItemData);
-
+    
             // Collect for batch processing
             $this->persist($salesOrderItem);
         }
-
+    
         // Commit all collected items in a single batch operation
     $this->commit();
     }

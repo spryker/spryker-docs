@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
   - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
   - /docs/scos/dev/glue-api-guides/202404.0/backend-and-storefront-api-module-differences.html
-  - /docs/dg/dev/glue-api/202507.0/backend-and-storefront-api-module-differences.html
+  - /docs/dg/dev/glue-api/latest/backend-and-storefront-api-module-differences.html
 
 ---
 

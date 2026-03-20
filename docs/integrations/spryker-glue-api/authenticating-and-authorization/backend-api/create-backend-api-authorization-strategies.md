@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/create-glue-api-authorization-strategies.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-glue-api-authorization-strategies.html
   - /docs/integrations/spryker-glue-api/authenticating-and-authorization/create-glue-api-authorization-strategies.html
-  - /docs/dg/dev/glue-api/202507.0/create-backend-api-authorization-strategies.html
+  - /docs/dg/dev/glue-api/latest/create-backend-api-authorization-strategies.html
 ---
 
 {% include integrations/create-glue-api-authorization-strategies-body.md %}

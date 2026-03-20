@@ -60,7 +60,7 @@ Response sample:
 The response contains all the columns from the `spy_country` table that are configured in `spy_dynamic_entity_definition.definition`. Each column is represented using the `fieldVisibleName` as the key, providing a comprehensive view of the table's data in the API response. By default, the API `GET` request returns up to 20 records.
 
 
-Filtering enables targeted data retrieval, refining the response to match the specified criteria. To apply filtering to the results based on specific fields, include the appropriate filter parameter in the request:
+Filtering enables targeted data retrieval, refining the response to match the specified criteria. To apply filtering to the results based on specific fields, include the appropriate filter parameter in the request:  
 
 ```bash
 GET /dynamic-entity/countries?filter[country.iso2_code]=AA HTTP/1.1

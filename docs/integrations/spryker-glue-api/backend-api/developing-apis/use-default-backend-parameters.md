@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-ootb-glue-parameters.html
   - /docs/scos/dev/glue-api-guides/202204.0/use-default-glue-parameters.html
   - /docs/scos/dev/glue-api-guides/202404.0/use-default-glue-parameters.html
-  - /docs/dg/dev/glue-api/202507.0/use-default-storefront-parameters.html
+  - /docs/dg/dev/glue-api/latest/use-default-storefront-parameters.html
 ---
 
 {% include integrations/use-default-glue-parameters-body.md %}

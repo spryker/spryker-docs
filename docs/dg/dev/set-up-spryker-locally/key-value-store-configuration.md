@@ -113,9 +113,9 @@ $config[SessionConstants::ZED_SESSION_PREDIS_CLIENT_OPTION] = [
 
 ## Advanced configuration for Redis compression
 
-The standard Redis client configuration uses environment variables defined as constants in `config/Shared/config_default.php`.
+The standard Redis client configuration uses environment variables defined as constants in `config/Shared/config_default.php`.  
 
-Compression is supported starting from `spryker/redis:2.9.1`.
+Compression is supported starting from `spryker/redis:2.9.1`.  
 
 By default, Redis compression is disabled:
 

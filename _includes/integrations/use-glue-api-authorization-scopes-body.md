@@ -77,7 +77,7 @@ vendor/bin/console oauth:scope-collection-file:generate
 
 * Ensure that when accessing `https://glue-backend.mysprykershop.com/module/bar` without an access token, you receive the `403` response with the message `Unauthorized request`.
 
-- Ensure that you can authenticate as a user:
+* Ensure that you can authenticate as a user:
    1. Send the request:
 
     ```yaml

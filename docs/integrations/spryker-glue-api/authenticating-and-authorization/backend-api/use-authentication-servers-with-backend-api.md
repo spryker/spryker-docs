@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
   - /docs/scos/dev/glue-api-guides/202204.0/use-authentication-servers-with-glue-api.html
   - /docs/scos/dev/glue-api-guides/202404.0/use-authentication-servers-with-glue-api.html
-  - /docs/dg/dev/glue-api/202507.0/use-authentication-servers-with-glue-api.html
+  - /docs/dg/dev/glue-api/latest/use-authentication-servers-with-glue-api.html
 
 ---
 

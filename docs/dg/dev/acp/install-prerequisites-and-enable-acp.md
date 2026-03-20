@@ -244,7 +244,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ValidationMiddlewarePlugin(),
         ];
     }
-
+    
     /**
      * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\FilterMessageChannelPluginInterface>
      */
@@ -315,7 +315,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
             //...
         ];
     }
-
+    
     /**
      * @return list<string>
      */

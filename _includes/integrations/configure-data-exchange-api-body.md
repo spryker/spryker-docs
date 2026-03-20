@@ -139,15 +139,15 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 
 {% info_block infoBox %}
 
-- We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
+* We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.
 
-- For the fields with numerable values, an integer data type is a non-decimal number between -2147483648 and 2147483647 in 32-bit systems and, in 64-bit systems, between -9223372036854775808 and 9223372036854775807. If you need or anticipate values outside of this range, you can set the value as a string type.
+* For the fields with numerable values, an integer data type is a non-decimal number between -2147483648 and 2147483647 in 32-bit systems and, in 64-bit systems, between -9223372036854775808 and 9223372036854775807. If you need or anticipate values outside of this range, you can set the value as a string type.
 
-- The Data Exchange API supports the following types for the configured fields:
-  - boolean
-  - integer
-  - string
-  - decimal
+* The Data Exchange API supports the following types for the configured fields:
+  * boolean
+  * integer
+  * string
+  * decimal
 
 {% endinfo_block %}
 
@@ -182,7 +182,7 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html) to discover how to request your API endpoint.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
 Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
@@ -200,4 +200,4 @@ In case you've added new endpoints, the documentation will be automatically upda
 
 ## Next steps
 
-[Send request in Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)
+[Send request in Data Exchange API](/docs/pbc/all/data-exchange/latest/sending-requests-with-data-exchange-api.html)

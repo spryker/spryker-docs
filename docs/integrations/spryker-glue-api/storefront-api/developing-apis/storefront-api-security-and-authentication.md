@@ -12,9 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/security-and-authentication.html
   - /docs/pbc/all/identity-access-management/202404.0/glue-api-security-and-authentication.html
   - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-api-security-and-authentication.html
-related:
-  - title: Authentication and Authorization
-    link: /docs/integrations/spryker-glue-api/storefront-api/developing-apis/storefront-api-security-and-authentication.html
+  - /docs/dg/dev/glue-api/latest/rest-api/glue-api-authentication-and-authorization.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -132,7 +130,7 @@ class MyResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePlugi
 
 All data related to API authentication functionality is stored in the following tables:
 
-|TABLE| PURPOSE|
+|TABLE|	PURPOSE|
 | --- | --- |
 | spy_oauth_access_token| Stores all issued tokens.<br>The table is not used for token verification, it's added for audit purposes only.  |
 |  spy_oauth_client|Contains a list of clients that are currently using OAuth, one record for each frontend customer. The `is_confidental` field identifies whether a specific client must provide a password.  |
@@ -140,7 +138,7 @@ All data related to API authentication functionality is stored in the following 
 
 The `OAuth` and `OAuthExtension` modules also provides the following extension points:
 
-|EXTENSION POINT | METHOD | INTERFACE |
+|EXTENSION POINT	| METHOD | INTERFACE |
 | --- | --- | --- |
 |User provider plugins|`getUserProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface`|
 |Scope provider plugins|`getScopeProviderPlugins()`|`\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface`|

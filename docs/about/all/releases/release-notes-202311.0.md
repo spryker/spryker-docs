@@ -81,12 +81,9 @@ The key features of the Data Exchange API include the following:
 - Reduce time-to-market, speeding up faster integration
 - Cost savings, especially on maintenance
 
-
 ### Documentation
 
-- [Data Exchange API](/docs/pbc/all/data-exchange/latest/data-exchange.html#data-importers-and-data-exporters)
-- [Configure Data Exchange API endpoints](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/configure-data-exchange-api.html)
-- [How to send a request in Data Exchange API](/docs/integrations/spryker-glue-api/backend-api/data-exchange-api/sending-requests-to-data-exchange-api.html)
+- [Data Exchange API](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html)
 
 ### Technical prerequisites
 

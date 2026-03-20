@@ -8,6 +8,8 @@ related:
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
   - title: Integrate Web Profiler Widget for Yves
     link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+  - title: Integrate Web Profiler for Glue
+    link: docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-glue.html
   - title: Integrate Profiler Module
     link: docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
 ---

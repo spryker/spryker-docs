@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/create-and-change-glue-api-conventions.html
   - /docs/scos/dev/glue-api-guides/202204.0/create-and-change-glue-api-conventions.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-and-change-glue-api-conventions.html
-  - /docs/dg/dev/glue-api/202507.0/create-and-change-glue-api-conventions.html
+  - /docs/dg/dev/glue-api/latest/create-and-change-glue-api-conventions.html
 
 ---
 

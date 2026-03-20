@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-glue-api-authorization-scopes.html
   - /docs/scos/dev/glue-api-guides/202204.0/use-glue-api-authorization-scopes.html
   - /docs/scos/dev/glue-api-guides/202404.0/use-glue-api-authorization-scopes.html
-  - /docs/dg/dev/glue-api/202507.0/use-glue-api-authorization-scopes.html
+  - /docs/dg/dev/glue-api/latest/use-glue-api-authorization-scopes.html
 
 ---
 

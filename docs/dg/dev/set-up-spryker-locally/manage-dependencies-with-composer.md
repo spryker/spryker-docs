@@ -154,7 +154,7 @@ For more information on using the composer replace command see  [Composer websit
 "replace": {
 "spryker/[the name of the module you are replacing] ":"*"
 },
-"description": "[add_decription_of_what_you_are_replacing]"
+"description": "[add_decription_of_what_you_are_replacing]"			
 }
 
 ```

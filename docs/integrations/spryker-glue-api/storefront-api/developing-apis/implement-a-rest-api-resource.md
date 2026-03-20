@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/implement-a-rest-api-resource.html
-  - /docs/dg/dev/glue-api/202507.0/glue-api-tutorials/implement-a-rest-api-resource.html
+  - /docs/dg/dev/glue-api/latest/glue-api-tutorials/implement-a-rest-api-resource.html
 ---
 
 {% include integrations/implement-a-rest-api-resource-body.md %}

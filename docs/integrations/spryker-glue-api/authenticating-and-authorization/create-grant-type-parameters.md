@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-create-grant-type-parameters.html
   - /docs/scos/dev/glue-api-guides/202204.0/create-grant-type-parameters.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-grant-type-parameters.html
-  - /docs/dg/dev/glue-api/202507.0/create-grant-type-parameters.html
+  - /docs/dg/dev/glue-api/latest/create-grant-type-parameters.html
 
 ---
 

@@ -7,10 +7,10 @@ The following diagram demonstrates the Backend API request flow that highlights 
 
 A convention has a say in every step of the request flow:
 
-- Resolving the convention happens first. Any data in `GlueRequestTransfer` can affect the resolution of the convention. For example, projects can pull attributes from a certain location in the content.
-- At the request building step, you can extract and pre-format the data from the raw request data.
-- A convention can add validation steps that are necessary for its flow, both before and after the routing.
-- Formatting response can be used to wrap the response attributes in the convention-determined wrapper.
+* Resolving the convention happens first. Any data in `GlueRequestTransfer` can affect the resolution of the convention. For example, projects can pull attributes from a certain location in the content.
+* At the request building step, you can extract and pre-format the data from the raw request data.
+* A convention can add validation steps that are necessary for its flow, both before and after the routing.
+* Formatting response can be used to wrap the response attributes in the convention-determined wrapper.
 
 ## Create a new convention
 
@@ -121,7 +121,6 @@ class CustomConventionPlugin extends AbstractPlugin implements ConventionPluginI
 ```
 
 ## Use a convention
-
 To use the newly created convention, you must add it to the `GlueApplicationDependencyProvider::getConventionPlugins()`.
 
 ```php

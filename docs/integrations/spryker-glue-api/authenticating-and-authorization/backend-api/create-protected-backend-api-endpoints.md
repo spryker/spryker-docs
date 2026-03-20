@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html
   - /docs/scos/dev/glue-api-guides/202204.0/create-protected-glue-api-endpoints.html
   - /docs/scos/dev/glue-api-guides/202404.0/create-protected-glue-api-endpoints.html
-  - /docs/dg/dev/glue-api/202507.0/create-protected-glue-api-endpoints.html
+  - /docs/dg/dev/glue-api/latest/create-protected-glue-api-endpoints.html
 
 ---
 

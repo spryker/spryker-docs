@@ -1,7 +1,7 @@
 ---
 title: How to migrate to API Platform
 description: This document describes how to migrate existing Glue API resources to API Platform.
-last_updated: Nov 24, 2025
+last_updated: Feb 16, 2026
 template: howto-guide-template
 related:
   - title: How to integrate API Platform
@@ -405,7 +405,7 @@ ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php
 Generate the storefront resource class from the schema:
 
 ```bash
-glue api:generate backoffice
+glue api:generate storefront
 ```
 
 ### Step 7: Test the API Platform endpoint

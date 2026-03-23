@@ -1,7 +1,7 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Mar 16, 2026
+last_updated: Mar 2, 2026
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
@@ -430,7 +430,6 @@ This transfer contains the request data for AI interaction:
 - `structuredMessage` (object, optional): A Transfer object that defines the expected response structure for structured responses
 - `toolSetName` (string[], optional): Array of tool set names to make available to the AI. For details, see [Use AI tools with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html)
 - `conversationReference` (string, optional): Unique identifier for multi-turn conversations. When provided, the message is persisted in conversation history and previous messages are automatically included in the request context. For details, see [Manage conversation history with the AiFoundation module](/docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html)
-- `systemPromptContext` (string, optional): Additional context appended to the configured system prompt for this request only. Not persisted to conversation history
 - `maxRetries` (int, optional): Maximum number of retry attempts for failed requests. Default is 0
 
 ### PromptMessage

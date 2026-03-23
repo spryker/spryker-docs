@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Mar 16, 2026
+last_updated: Mar 2, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:
@@ -432,123 +432,6 @@ In this example, when the customer sends a message like "I need to report a crit
 3. Invoke the `create_support_ticket` tool through the facade
 4. Receive the ticket ID from the tool result
 5. Incorporate the ticket information into its response to the customer
-
-## Extend tool call execution with plugins
-
-Use pre and post tool call plugins to extend or customize tool execution behavior.
-
-### Create a pre tool call plugin
-
-Pre tool call plugins allow you to intercept and validate tool calls before execution:
-
-```php
-<?php
-
-namespace Pyz\Zed\YourModule\Communication\Plugin\AiFoundation;
-
-use Generated\Shared\Transfer\AiToolCallTransfer;
-use Spryker\Zed\AiFoundation\Dependency\Plugin\PreToolCallPluginInterface;
-
-class SecurityValidationPreToolCallPlugin implements PreToolCallPluginInterface
-{
-    /**
-     * Validates tool call for security compliance
-     * Return false to block execution
-     */
-    public function isApplicable(AiToolCallTransfer $aiToolCall): bool
-    {
-        return true; // Apply to all tool calls
-    }
-
-    public function execute(AiToolCallTransfer $aiToolCall): AiToolCallTransfer
-    {
-        $toolName = $aiToolCall->getToolName();
-        $arguments = $aiToolCall->getToolArguments();
-
-        // Example: Block tool calls with suspicious arguments
-        if (isset($arguments['code']) && strpos($arguments['code'], 'exec') !== false) {
-            $aiToolCall->setIsExecutionAllowed(false);
-        }
-
-        return $aiToolCall;
-    }
-}
-```
-
-### Create a post tool call plugin
-
-Post tool call plugins allow you to process or audit tool results:
-
-```php
-<?php
-
-namespace Pyz\Zed\YourModule\Communication\Plugin\AiFoundation;
-
-use Generated\Shared\Transfer\AiToolCallTransfer;
-use Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface;
-
-class ToolCallAuditPostToolCallPlugin implements PostToolCallPluginInterface
-{
-    public function __construct(
-        protected ToolCallLoggerInterface $toolCallLogger
-    ) {
-    }
-
-    public function isApplicable(AiToolCallTransfer $aiToolCall): bool
-    {
-        return true;
-    }
-
-    public function execute(AiToolCallTransfer $aiToolCall): AiToolCallTransfer
-    {
-        // Log tool execution for audit trail
-        $this->toolCallLogger->log(
-            $aiToolCall->getToolName(),
-            $aiToolCall->getToolArguments(),
-            $aiToolCall->getToolResult()
-        );
-
-        return $aiToolCall;
-    }
-}
-```
-
-### Register tool call plugins
-
-Register pre and post tool call plugins in your Zed `AiFoundationDependencyProvider`:
-
-```php
-<?php
-
-namespace Pyz\Zed\AiFoundation;
-
-use Pyz\Zed\YourModule\Communication\Plugin\AiFoundation\SecurityValidationPreToolCallPlugin;
-use Pyz\Zed\YourModule\Communication\Plugin\AiFoundation\ToolCallAuditPostToolCallPlugin;
-use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
-
-class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PreToolCallPluginInterface>
-     */
-    protected function getPreToolCallPlugins(): array
-    {
-        return [
-            new SecurityValidationPreToolCallPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
-     */
-    protected function getPostToolCallPlugins(): array
-    {
-        return [
-            new ToolCallAuditPostToolCallPlugin(),
-        ];
-    }
-}
-```
 
 ## Handle tool call results
 

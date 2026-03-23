@@ -1,7 +1,7 @@
 ---
 title: How to integrate API Platform Security
 description: This document describes how to set up authentication and authorization for API Platform in your Spryker application.
-last_updated: Feb 26, 2026
+last_updated: Mar 9, 2026
 template: howto-guide-template
 related:
   - title: Security
@@ -27,7 +27,7 @@ Add `SecurityBundle` to the `bundles.php` file for each Glue application where y
 
 ### For Glue application
 
-`config/Glue/bundles.php`
+**config/Glue/bundles.php**
 
 ```php
 <?php
@@ -51,7 +51,7 @@ return [
 
 ### For GlueStorefront application
 
-`config/GlueStorefront/bundles.php`
+**config/GlueStorefront/bundles.php**
 
 ```php
 <?php
@@ -75,7 +75,7 @@ return [
 
 ### For GlueBackend application
 
-`config/GlueBackend/bundles.php`
+**config/GlueBackend/bundles.php**
 
 ```php
 <?php
@@ -109,7 +109,7 @@ Create a `security.php` configuration file for each Glue application. This file 
 
 ### For Glue application
 
-`config/Glue/packages/security.php`
+**config/Glue/packages/security.php**
 
 ```php
 <?php
@@ -139,13 +139,13 @@ return static function (SecurityConfig $security): void {
 
 ### For GlueStorefront application
 
-`config/GlueStorefront/packages/security.php`
+**config/GlueStorefront/packages/security.php**
 
 Use the same configuration as above.
 
 ### For GlueBackend application
 
-`config/GlueBackend/packages/security.php`
+**config/GlueBackend/packages/security.php**
 
 Use the same configuration as above.
 

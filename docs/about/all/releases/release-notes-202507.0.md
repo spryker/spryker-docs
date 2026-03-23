@@ -250,7 +250,7 @@ Simplify B2B invoicing and tax compliance checks with the updated Vertex ACP App
 ### Technical prerequisites
 
 - [Install prerequisites and enable ACP](/docs/dg/dev/acp/install-prerequisites-and-enable-acp)
-- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
+- [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html)
 
 
 

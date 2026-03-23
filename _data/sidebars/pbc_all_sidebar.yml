@@ -672,6 +672,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
                   - title: Navigation module
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-navigation-module.html
+                  - title: ContentProductWidget module
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-content-product-widget.html
 
               - title: Import and export data
                 url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
@@ -1298,6 +1300,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
               - title: Upgrade the OauthCompanyUser module
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
+              - title: Integrate post-login redirect
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/integrate-post-login-redirect.html
 
           - title: Manage using Glue API
             nested:
@@ -4220,24 +4224,18 @@ entries:
                   - title: Vertex
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     nested:
-                      - title: Install
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+                      - title: Integrate Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
                         nested:
-                          - title: Integrate the connector module
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
-                          - title: Integrate Vertex
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                          - title: Configure Vertex-specific metadata
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
-                      - title: Connect
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
-                      - title: Troubleshooting
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-                      - title: Disconnect
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+                      - title: Verify Vertex connection
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/verify-vertex-connection.html
 
           - title: Marketplace
             nested:

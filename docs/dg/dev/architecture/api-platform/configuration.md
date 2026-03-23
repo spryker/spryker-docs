@@ -1,7 +1,7 @@
 ---
 title: API Platform Configuration
 description: Configure API Platform in Spryker using PHP-based configuration files with environment-specific settings.
-last_updated: Feb 26, 2026
+last_updated: Mar 9, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -103,7 +103,7 @@ $apiPlatform->mapping()->paths([
 ]);
 ```
 
-API Platform scans all configured paths for PHP classes with `#[ApiResource]` attributes. Generated and hand-written resources coexist without conflict.
+API Platform scans all configured paths for PHP classes with `#[ApiResource]` attributes. Generated and manually created resources coexist without conflict.
 
 {% info_block warningBox "Keep the generated path" %}
 

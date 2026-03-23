@@ -61,7 +61,7 @@ Remove the customer field from the `getQuoteFieldsAllowedForSaving` function
     {
         return array_merge(parent::getQuoteFieldsAllowedForSaving(), [
             ...
-            QuoteTransfer::CUSTOMER, // <-- should be removed from the list.
+            QuoteTransfer::CUSTOMER, // <-- should be removed from the list, since it contains hashed passwords.
             ...
         ]);
     }

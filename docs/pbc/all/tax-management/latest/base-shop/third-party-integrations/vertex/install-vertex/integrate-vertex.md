@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Mar 20, 2026
+last_updated: Mar 25, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -438,6 +438,7 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 {% endinfo_block %}
 
-## Next step
+## Next steps
 
-[Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

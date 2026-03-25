@@ -4231,6 +4231,8 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
+                          - title: Migrate from the ACP Vertex app
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html

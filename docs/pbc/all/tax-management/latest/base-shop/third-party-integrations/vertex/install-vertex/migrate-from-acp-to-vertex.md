@@ -137,7 +137,7 @@ new VertexTaxValidateIdResourceRoutePlugin(),
 
 ### 2f. Update OMS state machine XML
 
-Update your OMS process XML files—for example, `config/Zed/oms/DummyPayment01.xml`—to reference the new command name:
+Update your OMS process XML files — for example, `config/Zed/oms/DummyPayment01.xml` — to reference the new command name:
 
 ```xml
 <!-- Before: -->

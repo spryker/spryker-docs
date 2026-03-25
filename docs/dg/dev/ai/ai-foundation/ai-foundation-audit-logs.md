@@ -87,6 +87,7 @@ namespace Pyz\Zed\AiFoundation;
 
 use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
 use Spryker\Zed\AiFoundation\Communication\Plugin\AuditLogPostPromptPlugin;
+use Spryker\Zed\AiFoundation\Communication\Plugin\AuditLogPostToolCallPlugin;
 use Spryker\Zed\AiFoundation\Communication\Plugin\Log\AiInteractionHandlerPlugin;
 
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
@@ -98,6 +99,16 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     {
         return [
             new AuditLogPostPromptPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
+     */
+    protected function getPostToolCallPlugins(): array
+    {
+        return [
+            new AuditLogPostToolCallPlugin(),
         ];
     }
 

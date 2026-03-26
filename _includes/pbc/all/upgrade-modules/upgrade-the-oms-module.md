@@ -37,7 +37,7 @@ console transfer:generate
 
 ### Optional: Install the State Machine Visualizer
 
-Starting from OMS version 11.52.0, you can optionally install the [State Machine Visualizer](/docs/pbc/all/order-management-system/latest/base-shop/state-machine-visualizer.html) — a modern, interactive replacement for the legacy static process graph view in the Back Office. It is built on javascript and provides zoom, pan, state search, and state highlighting. Installing it does not affect existing OMS functionality.
+Starting from OMS version 11.52.0, you can optionally install the State Machine Visualizer — a modern, interactive replacement for the legacy static process graph view in the Back Office. It is built on javascript and provides zoom, pan, state search, and state highlighting. Installing it does not affect existing OMS functionality.
 To to install the StateMachineVisualizer, do the following:
 
 1. Install the **StateMachineVisualizer** module and update existing to the new version:

@@ -1,7 +1,7 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Mar 2, 2026
+last_updated: Mar 26, 2026
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
@@ -112,10 +112,14 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
             'key' => getenv('OPENAI_API_KEY'),
             'model' => 'gpt-4o',
         ],
-        'system_prompt' => 'You are a helpful assistant.',
+        // Resolved at runtime from Configuration Management
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . 'ai_commerce:backoffice_assistant:general:system_prompt',
     ],
 ];
 ```
+
+Any string value prefixed with `configuration::` (`AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX`) is resolved at runtime via the [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html) module. 
+This lets admin users update AI settings—model, API key, system prompt—from the Back Office without a code deployment.
 
 ## Provider configuration examples
 

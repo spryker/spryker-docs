@@ -1,6 +1,6 @@
 ---
 title: Ratings and Reviews
-last_updated: Jul 29, 2022
+last_updated: Mar 26, 2026
 description: Everything you need to know about the Ratings and Reviews feature within Spryker Cloud Commerce OS.
 template: concept-topic-template
 redirect_from:
@@ -18,6 +18,10 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/product-rating-reviews-feature-walkthrough.html
   - /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
   - /docs/pbc/all/ratings-reviews/202204.0/ratings-and-reviews.html
+  - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/bazaarvoice
+  - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/integrate-bazaarvoice
+  - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/configure-bazaarvoice
+  - /docs/pbc/all/ratings-reviews/latest/third-party-integrations/disconnect-bazaarvoice
 ---
 
 Drive sales by including user reviews and ratings. Reviews and ratings are a proven sign of trust; they allow brands to receive valuable and moderate feedback in the Administration Interface. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings.
@@ -36,10 +40,9 @@ For more details about managing ratings and reviews, check the video:
 
 ## Ratings & Reviews capabilities available in Spryker
 
-| NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
-| --- | --- | --- |
-| Spryker | No | No |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/bazaarvoice.html) | No | Yes |
+| NAME | MARKETPLACE COMPATIBLE |
+| --- | --- |
+| Spryker | No |
 
 ## Current constraints
 
@@ -50,12 +53,9 @@ The feature has the following functional constraints, which are going to be reso
 
 ## Related Business User documents
 
-| BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
-| - | - |
-| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/latest/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/bazaarvoice.html)|
-| [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/integrate-bazaarvoice.html) | |
-| [Configure Bazaarvoice](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/configure-bazaarvoice.html) | |
-| [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/latest/third-party-integrations/disconnect-bazaarvoice.html) | |
+| BACK OFFICE USER GUIDES |
+| - |
+| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/latest/manage-product-reviews-in-the-back-office.html) |
 
 
 ## Related Developer documents

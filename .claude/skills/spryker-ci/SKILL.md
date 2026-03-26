@@ -50,6 +50,69 @@ Use this skill to systematically run continuous integration tools and fix errors
 
 ## Fix guidelines
 
+### Code block file references
+
+When a code block shows the contents of a file, the file path must be displayed as bold text above the code block, separated by an empty line.
+It must NOT be placed as a comment inside the code block, or use non-bold file path display style, or miss an empty line after the file path before the code block.
+
+**Wrong:**
+````markdown
+```php
+// config_default.php
+
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Correct:**
+````markdown
+**config_default.php**
+
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Wrong:**
+````markdown
+`config_default.php`
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Correct:**
+````markdown
+**config_default.php**
+
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Wrong:**
+````markdown
+**`config_default.php**
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Correct:**
+````markdown
+**config_default.php**
+
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+```
+````
+
+**Detection:** Look for code blocks where the first line is a comment containing only a file path (e.g., `// filename.ext`, `# filename.ext`, `<!-- filename.ext -->`). Extract the file path, move it above the code block as `**<file path>**`, add an empty line, and remove the comment line from inside the code block.
+
+**Detection:** Look for code blocks with a preceding line containing a file path not surrounded by **. Extract the file path, and replace the line with `**<file path>**`, ensure a single empty line between it and the code block.
+
+**Reporting:** If the section doesn't have a filename mentioned in it or before it, report as a warning.
+
 ### Sidebar issues
 
 When there is a page missing in the sidebar the issues shows fileName.md to be missing. To fix this use the same path to be added and replace `md` with `html`.

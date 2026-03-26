@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Mar 5, 2026
+last_updated: Mar 9, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -309,7 +309,7 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-`config/Glue/ApplicationServices.php`
+**config/Glue/ApplicationServices.php**
 
 ```php
 <?php

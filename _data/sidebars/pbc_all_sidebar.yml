@@ -1300,6 +1300,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
               - title: Upgrade the OauthCompanyUser module
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
+              - title: Integrate post-login redirect
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/integrate-post-login-redirect.html
 
           - title: Manage using Glue API
             nested:
@@ -2020,6 +2022,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
+                  - title: Order details page performance
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-details-page-performance-overview.html
 
 
               - title: Order Amendment feature overview
@@ -3575,17 +3579,6 @@ entries:
               - title: "HowTo: Configure product reviews"
                 url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
 
-          - title: Third-party integrations
-            nested:
-              - title: Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
-              - title: Integrate Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
-              - title: Configure Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
-              - title: Disconnect Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
-
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:
@@ -4229,6 +4222,8 @@ entries:
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
+                          - title: Migrate from the ACP Vertex app
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html
 
                       - title: Project configuration for Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html

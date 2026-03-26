@@ -6,8 +6,6 @@ entries:
     url: /docs/integrations/integrate-with-spryker.html
   - title: About Eco modules
     url: /docs/integrations/eco-modules.html
-  - title: ACP apps
-    url: /docs/integrations/app-composition-platform-apps.html
   - title: Integrations catalog
     url: /docs/integrations/third-party-integrations.html
   - title: Spryker APIs

@@ -1,7 +1,7 @@
 ---
 title: Sparse fieldsets
 description: Use sparse fieldsets to request only specific resource attributes from API Platform endpoints.
-last_updated: Feb 27, 2026
+last_updated: Mar 9, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -97,12 +97,7 @@ Response:
 
 ### Combine with pagination
 
-Sparse fieldsets work with paginated collections:
-
-```text
-GET /customers?fields[customers]=email&page=1&itemsPerPage=5
-Accept: application/vnd.api+json
-```
+Sparse fieldsets work with paginated collections. Add `fields[]` parameters alongside pagination parameters like `page` and `itemsPerPage`.
 
 ## How it works
 

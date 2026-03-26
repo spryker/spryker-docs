@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature
-last_updated: Mar 2, 2026
+last_updated: Mar 11, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring
 template: howto-guide-template
 label: early-access
@@ -20,11 +20,42 @@ This document describes how to use audit logging with the AiFoundation module to
 
 The audit logging feature provides comprehensive tracking of all AI interactions, including prompts, responses, token usage, inference time, and metadata. This enables monitoring, compliance, cost tracking, and debugging of AI operations.
 
-{% info_block infoBox "Coming Soon" %}
+## Back Office: Audit Logs page
 
-A dashboard for viewing and analyzing audit logs and log rotation for automatic retention management will be added in following releases.
+After [enabling audit logging](#enable-audit-logging), you can view and analyze AI interaction logs in the Back Office at **Intelligence > Audit Logs**.
 
-{% endinfo_block %}
+The Audit Logs page provides:
+
+- **Summary statistics cards**: Total requests, total tokens consumed, success rate, and average inference time for the filtered dataset.
+- **Filterable data table**: Filter logs by configuration name, status (success/failed), conversation reference, and date range.
+- **Detail drawer**: Click a row's prompt to view complete prompt and response text, token breakdown, metadata, and error details.
+
+### Navigation setup
+
+The AiFoundation module registers its navigation under the **Intelligence** menu. To include the Audit Logs entry in your project navigation, add the following to `config/Zed/navigation.xml`:
+
+```xml
+<ai-foundation>
+    <label>Intelligence</label>
+    <title>Intelligence</title>
+    <icon>network_intel_node</icon>
+    <pages>
+        <ai-interaction-log>
+            <label>Audit Logs</label>
+            <title>Audit Logs</title>
+            <bundle>ai-foundation</bundle>
+            <controller>ai-interaction-log</controller>
+            <action>index</action>
+        </ai-interaction-log>
+    </pages>
+</ai-foundation>
+```
+
+After updating the navigation XML, rebuild the navigation cache:
+
+```bash
+console navigation:cache:remove
+```
 
 ## Overview
 
@@ -56,6 +87,7 @@ namespace Pyz\Zed\AiFoundation;
 
 use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
 use Spryker\Zed\AiFoundation\Communication\Plugin\AuditLogPostPromptPlugin;
+use Spryker\Zed\AiFoundation\Communication\Plugin\AuditLogPostToolCallPlugin;
 use Spryker\Zed\AiFoundation\Communication\Plugin\Log\AiInteractionHandlerPlugin;
 
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
@@ -67,6 +99,16 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     {
         return [
             new AuditLogPostPromptPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\AiFoundation\Dependency\Plugin\PostToolCallPluginInterface>
+     */
+    protected function getPostToolCallPlugins(): array
+    {
+        return [
+            new AuditLogPostToolCallPlugin(),
         ];
     }
 

@@ -1,7 +1,7 @@
 ---
 title: Integrate Vertex
 description: Find out how you can integrate Vertex into your Spryker shop
-last_updated: Mar 5, 2026
+last_updated: Mar 25, 2026
 template: howto-guide-template
 related:
   - title: Vertex
@@ -62,22 +62,22 @@ $config[VertexConstants::VENDOR_CODE] = '';
 
 ### Required configuration constants
 
-| Constant | Description |
-|----------|-------------|
-| `IS_ACTIVE` | Enables or disables Vertex tax calculation. |
-| `CLIENT_ID` | OAuth client ID for the Vertex API. |
-| `CLIENT_SECRET` | OAuth client secret for the Vertex API. |
-| `SECURITY_URI` | Vertex OAuth security endpoint. |
-| `TRANSACTION_CALLS_URI` | Vertex transaction calls endpoint. |
+| Constant | Description | Where to get the value |
+|----------|-------------|------------------------|
+| `IS_ACTIVE` | Enables or disables Vertex tax calculation. | Set to `true` to enable. |
+| `CLIENT_ID` | OAuth client ID for the Vertex API. | Obtain from your Vertex account. For details, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html). |
+| `CLIENT_SECRET` | OAuth client secret for the Vertex API. | Obtain from your Vertex account. For details, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html). |
+| `SECURITY_URI` | Vertex OAuth security endpoint. | Obtain from your Vertex platform. For details, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html). |
+| `TRANSACTION_CALLS_URI` | Vertex transaction calls endpoint. | Obtain from your Vertex platform. For details, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html). |
 
 ### Optional configuration constants
 
-| Constant | Description                                                                                                                                |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `TAXAMO_API_URL` | Vertex Validator API URL for tax ID validation. [Details](https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments). |
-| `TAXAMO_TOKEN` | Vertex Validator API authentication token.                                                                                                 |
-| `VENDOR_CODE` | Vendor code for Vertex tax calculations.                                                                                                   |
-| `DEFAULT_TAXPAYER_COMPANY_CODE` | Default taxpayer company code.                                                                                                             |
+| Constant | Description | Where to get the value |
+|----------|-------------|------------------------|
+| `TAXAMO_API_URL` | Vertex Validator API URL for tax ID validation. | Obtain from your Vertex Validator environment. For details, see [Standalone Vertex Validator](https://developer.vertexinc.com/vertex-e-commerce/docs/stand-alone-deployments). |
+| `TAXAMO_TOKEN` | Vertex Validator API authentication token. | Obtain from your Vertex Validator account. For details, see [Accessing the APIs](https://developer.vertexinc.com/vertex-marketplaces/docs/getting-started-1). |
+| `VENDOR_CODE` | Vendor code for Vertex tax calculations. | Set in your Vertex account. |
+| `DEFAULT_TAXPAYER_COMPANY_CODE` | Default taxpayer company code. | The company code you set in your Vertex account. |
 
 ## 3. Override feature flags
 
@@ -438,6 +438,7 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 {% endinfo_block %}
 
-## Next step
+## Next steps
 
-[Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

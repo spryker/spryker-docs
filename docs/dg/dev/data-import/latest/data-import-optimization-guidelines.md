@@ -1,7 +1,7 @@
 ---
 title: Data import optimization guidelines
 description: This article defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
-last_updated: Jun 16, 2021
+last_updated: Mar 30, 2026
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/dataimporter-speed-optimization
 originalArticleId: a2e441c4-b1e9-43d4-8641-b4d2ff1e26f9
@@ -16,6 +16,32 @@ This article will define the best practices for Spryker modules that need to wor
 ## Rules for data importers
 
 `DataImport` module is responsible for reading data from different formats like CSV, JSON, etc and import them into a database with proper Spryker data structure. Usually importing of data is a time-consuming process and we need to follow some best practices to increase the performance. Here you will find some of them:
+
+### Progress bar
+
+The `--progress-bar` flag lets you monitor data import in real time using the [Symfony Console Progress Bar](https://symfony.com/doc/current/components/console/helpers/progressbar.html) component. While the import runs, the progress bar displays the current memory usage and processing speed, so you can identify bottlenecks without adding custom logging.
+
+**Prerequisites**
+
+Update the `spryker/data-import` package to version 1.32.0 or later:
+
+```bash
+composer update spryker/data-import:"^1.32.0"
+```
+
+**Usage**
+
+Add the `--progress-bar` flag to any data import command:
+
+```bash
+console data:import combined-product-abstract --progress-bar
+```
+
+{% info_block warningBox "Performance note" %}
+
+The `--progress-bar` flag enables debug mode, which adds overhead to the import process. Use it for diagnostics and testing, not for production data imports.
+
+{% endinfo_block %}
 
 ### Single vs batch operation
 

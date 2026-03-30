@@ -14,15 +14,15 @@ related:
     link: docs/dg/dev/guidelines/serializer-guidelines.html
 ---
 
-API Platform uses the [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) for converting between PHP objects and JSON:API responses. The Serializer is registered as a Symfony service and integrates directly with API Platform's serialization pipeline.
+API Platform uses the [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) for converting between PHP objects back and forth. The Serializer is registered as a Symfony service and integrates directly with API Platform's serialization pipeline.
 
 ## How it works
 
 When a request hits an API Platform endpoint:
 
-1. **Request deserialization** — the incoming JSON payload is deserialized into the resource object using the Serializer.
-2. **Provider/Processor** — your provider or processor works with the resource object.
-3. **Response serialization** — the resource object is serialized back into the JSON:API response format.
+1. **Request deserialization** — the incoming payload is deserialized into the resource object using the Serializer. (API Platform)
+2. **Provider/Processor** — your provider or processor works with the resource object, converts to array and or Transfer objects, and vice versa.
+3. **Response serialization** — the resource object is serialized back into the expected response format. (API Platform)
 
 API Platform handles this automatically. You interact with the Serializer only when you need to customize serialization behavior.
 

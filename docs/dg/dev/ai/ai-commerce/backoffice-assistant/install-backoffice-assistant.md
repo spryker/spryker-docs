@@ -48,7 +48,7 @@ $openAiConfiguration = [
     'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
         'key' => getenv('OPEN_AI_API_TOKEN') ?: '',
-        'model' => 'gpt-4o-mini',
+        'model' => 'gpt-4o-mini', // fastest non-reasoning model
     ],
 ];
 
@@ -58,19 +58,19 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
     AiCommerceConstants::AI_CONFIGURATION_GENERAL_PURPOSE => array_merge($openAiConfiguration, [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_GENERAL_PURPOSE_SYSTEM_PROMPT,
         'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1',
+            'model' => 'gpt-4.1', // fast non-reasoning model
         ]),
     ]),
     AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT => array_merge($openAiConfiguration, [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_ORDER_MANAGEMENT_SYSTEM_PROMPT,
         'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1',
+            'model' => 'gpt-4.1', // fast non-reasoning model
         ]),
     ]),
     AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT => array_merge($openAiConfiguration, [
         'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_DISCOUNT_MANAGEMENT_SYSTEM_PROMPT,
         'provider_config' => array_merge($openAiConfiguration['provider_config'], [
-            'model' => 'gpt-4.1',
+            'model' => 'gpt-4.1', // fast non-reasoning model
         ]),
     ]),
 ];

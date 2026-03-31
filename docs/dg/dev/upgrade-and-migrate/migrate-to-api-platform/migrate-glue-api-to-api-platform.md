@@ -191,11 +191,13 @@ You can migrate modules in any order. We recommend starting with simpler read-on
 After migrating a module, verify the migration:
 
 1. Clear the application cache:
+
    ```bash
    docker/sdk cli console cache:clear
    ```
 
 2. Regenerate API Platform resources:
+
    ```bash
    docker/sdk cli "GLUE_APPLICATION=storefront console api:generate"
    ```

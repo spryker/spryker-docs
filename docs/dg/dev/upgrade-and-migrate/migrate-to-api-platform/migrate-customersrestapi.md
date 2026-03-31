@@ -143,6 +143,7 @@ The following modules previously registered relationship plugins against `Custom
 ## Verification
 
 1. Test customer registration:
+
    ```bash
    curl -X POST https://glue-storefront.mysprykershop.com/customers \
      -H "Content-Type: application/vnd.api+json" \
@@ -150,6 +151,7 @@ The following modules previously registered relationship plugins against `Custom
    ```
 
 2. Test getting a customer (authenticated):
+
    ```bash
    curl -X GET https://glue-storefront.mysprykershop.com/customers/{customerReference} \
      -H "Authorization: Bearer {access_token}" \
@@ -157,6 +159,7 @@ The following modules previously registered relationship plugins against `Custom
    ```
 
 3. Test customer addresses with include:
+
    ```bash
    curl -X GET https://glue-storefront.mysprykershop.com/customers/{customerReference}?include=addresses \
      -H "Authorization: Bearer {access_token}" \

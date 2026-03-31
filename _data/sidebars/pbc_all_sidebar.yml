@@ -7,7 +7,10 @@ entries:
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
       - title: AI Commerce
+        url: /docs/pbc/all/ai-commerce/ai-commerce.html
         nested:
+          - title: Install AI Commerce
+            url: /docs/pbc/all/ai-commerce/install-ai-commerce.html
           - title: Visual Add to Cart
             url: /docs/pbc/all/ai-commerce/visual-add-to-cart/visual-add-to-cart.html
             nested:

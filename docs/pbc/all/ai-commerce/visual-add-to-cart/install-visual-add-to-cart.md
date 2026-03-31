@@ -1,7 +1,7 @@
 ---
 title: Install Visual Add to Cart
 description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image on the Quick Order page to automatically populate the order form.
-last_updated: Mar 30, 2026
+last_updated: Mar 31, 2026
 template: feature-integration-guide-template
 ---
 
@@ -17,19 +17,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
-| AiFoundation | {{page.release_tag}} | |
+| AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/pbc/all/ai-commerce/install-ai-commerce.html) |
 | Quick Order Page | {{page.release_tag}} | |
 | Catalog | {{page.release_tag}} | |
 
-### 1) Install the required modules
-
-Install the required module:
-
-```bash
-composer require spryker-feature/ai-commerce:"^0.1.0" --update-with-dependencies
-```
-
-### 2) Add translations
+### 1) Add translations
 
 Append the glossary according to your configuration:
 `data/import/common/common/glossary.csv`
@@ -53,7 +45,7 @@ ai-commerce.quick-order-image-to-cart.image-order.errors.product-not-found,Produ
 ai-commerce.quick-order-image-to-cart.image-order.errors.product-not-found,Produkt "%name%" konnte im Katalog nicht gefunden werden.,de_DE
 ```
 
-### 3) Set up behavior
+### 2) Set up behavior
 
 Register the following plugin to integrate the feature into the Quick Order page:
 
@@ -91,6 +83,41 @@ On the Storefront Quick Order page, make sure the image upload component is disp
 
 {% endinfo_block %}
 
+### 3) Configure AiFoundation for Visual Add to Cart
+
+For a base AiFoundation setup, see [Configure AiFoundation](/docs/pbc/all/ai-commerce/install-ai-commerce.html#2-configure-aifoundation).
+
+Using a dedicated AI configuration for Visual Add to Cart is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by the image recognition flow independently from other AI features in your project.
+
+To use a dedicated AI model configuration for Visual Add to Cart instead of the default one, follow these steps:
+
+1. In `config/Shared/config_ai.php`, add a named configuration entry using `AiCommerceConstants::VISUAL_ADD_TO_CART_CONFIGURATION_NAME` as the key:
+
+```php
+$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\SprykerFeature\Shared\AiCommerce\AiCommerceConstants::VISUAL_ADD_TO_CART_CONFIGURATION_NAME] = $openAiConfiguration;
+```
+
+2. Return the configuration name from `AiCommerceConfig`:
+
+**src/Pyz/Yves/AiCommerce/AiCommerceConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\AiCommerce;
+
+use SprykerFeature\Shared\AiCommerce\AiCommerceConstants;
+use SprykerFeature\Yves\AiCommerce\AiCommerceConfig as SprykerAiCommerceConfig;
+
+class AiCommerceConfig extends SprykerAiCommerceConfig
+{
+    public function getQuickOrderImageToCartAiConfigurationName(): ?string
+    {
+        return AiCommerceConstants::VISUAL_ADD_TO_CART_CONFIGURATION_NAME;
+    }
+}
+```
+
 ### 4) Enable the feature
 
 Enable the feature in the Back Office:
@@ -105,31 +132,6 @@ On the Storefront Quick Order page, make sure the image upload button is visible
 
 {% endinfo_block %}
 
-### 5) Configure AiFoundation
-
-Add the AI provider configuration:
-
-`config/Shared/config_ai.php`
-
-```php
-$openAiConfiguration = [
-    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
-    'provider_config' => [
-        'key' => getenv('OPEN_AI_API_TOKEN') ?: '', // provide your OpenAi api key
-        'model' => 'gpt-4o-mini',
-    ],
-];
-$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS] = [
-    \Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATION_DEFAULT => $openAiConfiguration,
-];
-```
-
-`config/Shared/config_default.php`
-
-```php
-require 'config_ai.php';
-```
-
 ## Integrate the feature frontend
 
 ### 1) Update the Quick Order form template
@@ -140,9 +142,10 @@ Do this step only if you have overridden `quick-order-form.twig` in `QuickOrderP
 
 {% endinfo_block %}
 
-In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside {% raw %}`{% block fields %}`:{% endraw %}
+In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside `{% raw %}{% block fields %}{% endraw %}`:
 
 ```twig
+{% raw %}
 {% include molecule('quick-order-file-upload', 'QuickOrderPage') with {
     data: {
         uploadOrderForm: data.uploadOrderForm,
@@ -163,11 +166,12 @@ In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-f
         {{ form_widget(pluginForm) }}
     {% endif %}
 {% endfor %}
+{% endraw %}
 ```
 
 {% info_block warningBox "Warning" %}
 
-If the `{% for pluginForm in embed.pluginForms %}` loop is placed before or outside the `quick-order-file-upload` include, the Visual Add to Cart upload component will not render on the Quick Order page.
+If the `{% raw %}{% for pluginForm in embed.pluginForms %}{% endraw %}` loop is placed before or outside the `quick-order-file-upload` include, the Visual Add to Cart upload component will not render on the Quick Order page.
 
 {% endinfo_block %}
 

@@ -6,6 +6,12 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: AI Commerce
+        url: /docs/pbc/all/ai-commerce/latest/ai-commerce.html
+        nested:
+          - title: Visual Add to Cart
+            url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
+
       - title: Yves
         nested:
           - title: Install and upgrade
@@ -3825,6 +3831,7 @@ entries:
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
+
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

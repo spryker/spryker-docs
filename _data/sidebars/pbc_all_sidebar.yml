@@ -11,6 +11,8 @@ entries:
         nested:
           - title: Visual Add to Cart
             url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/pbc/all/ai-commerce/latest/backoffice-assistant.html
 
       - title: Yves
         nested:

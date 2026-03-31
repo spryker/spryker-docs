@@ -17,7 +17,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |------|---------|-------------------|
-| AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/pbc/all/ai-commerce/install-ai-commerce.html) |
+| AI Commerce | {{page.release_tag}} | [Install AI Commerce](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html) |
 | Quick Order Page | {{page.release_tag}} | |
 | Catalog | {{page.release_tag}} | |
 
@@ -85,7 +85,7 @@ On the Storefront Quick Order page, make sure the image upload component is disp
 
 ### 3) Configure AiFoundation for Visual Add to Cart
 
-For a base AiFoundation setup, see [Configure AiFoundation](/docs/pbc/all/ai-commerce/install-ai-commerce.html#2-configure-aifoundation).
+For a base AiFoundation setup, see [Configure AiFoundation](/docs/dg/dev/ai/ai-commerce/install-ai-commerce.html#2-configure-aifoundation).
 
 Using a dedicated AI configuration for Visual Add to Cart is recommended because each named configuration is tracked separately in the AiFoundation audit log. This lets you isolate and review all AI calls made by the image recognition flow independently from other AI features in your project.
 

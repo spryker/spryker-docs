@@ -7,15 +7,10 @@ entries:
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
       - title: AI Commerce
-        url: /docs/pbc/all/ai-commerce/ai-commerce.html
+        url: /docs/pbc/all/ai-commerce/latest/ai-commerce.html
         nested:
-          - title: Install AI Commerce
-            url: /docs/pbc/all/ai-commerce/install-ai-commerce.html
           - title: Visual Add to Cart
-            url: /docs/pbc/all/ai-commerce/visual-add-to-cart/visual-add-to-cart.html
-            nested:
-              - title: Install Visual Add to Cart
-                url: /docs/pbc/all/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html
+            url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
 
       - title: Yves
         nested:

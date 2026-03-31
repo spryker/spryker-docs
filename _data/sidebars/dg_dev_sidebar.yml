@@ -900,6 +900,11 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
+    - title: Migrate Glue REST API to API Platform
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-glue-api-to-api-platform.html
+      nested:
+      - title: Migrate CustomersRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3

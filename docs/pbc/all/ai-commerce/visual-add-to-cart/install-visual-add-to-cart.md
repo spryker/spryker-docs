@@ -140,7 +140,7 @@ Do this step only if you have overridden `quick-order-form.twig` in `QuickOrderP
 
 {% endinfo_block %}
 
-In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside `{% block fields %}`:
+In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside {% raw %}`{% block fields %}`:{% endraw %}
 
 ```twig
 {% include molecule('quick-order-file-upload', 'QuickOrderPage') with {

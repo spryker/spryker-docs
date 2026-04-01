@@ -387,12 +387,14 @@ When `type: file` is used, a `file_upload` block must be present on the setting.
 The stored value is always a public URL returned by the Flysystem service after upload. To render the image in a Twig template, read it with `configurationValue()` and use it as an `src` attribute:
 
 {% raw %}
+
 ```twig
 {% set logoUrl = configurationValue('theme:logos:logos:yves_logo_url', '') %}
 {% if logoUrl is not empty %}
     <img src="{{ logoUrl | e('html_attr') }}" alt="Logo" />
 {% endif %}
 ```
+
 {% endraw %}
 
 For Flysystem service setup (S3 in production, local fallback in development and CI), see [Install the Basic Shop Theme feature](/docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html).
@@ -590,12 +592,15 @@ The Configuration module exposes three Twig functions that let templates read co
 Returns a single value for the given compound key. Falls back to `default` if the key has no saved value.
 
 {% raw %}
+
 ```twig
 {{ configurationValue('theme:backoffice:colors:bo_main_color', '#1ebea0') }}
 ```
+
 {% endraw %}
 
 {% raw %}
+
 ```twig
 <style>
     :root {
@@ -603,6 +608,7 @@ Returns a single value for the given compound key. Falls back to `default` if th
     }
 </style>
 ```
+
 {% endraw %}
 
 ### `configurationValues`
@@ -610,6 +616,7 @@ Returns a single value for the given compound key. Falls back to `default` if th
 Returns an associative array keyed by compound key. Useful when a template needs several values at once.
 
 {% raw %}
+
 ```twig
 {% set colors = configurationValues([
     'theme:backoffice:colors:bo_main_color',
@@ -617,6 +624,7 @@ Returns an associative array keyed by compound key. Useful when a template needs
 ]) %}
 <style>:root { --bo-main-color: {{ colors['theme:backoffice:colors:bo_main_color'] | e('css') }}; }</style>
 ```
+
 {% endraw %}
 
 {% info_block infoBox "Scope context" %}

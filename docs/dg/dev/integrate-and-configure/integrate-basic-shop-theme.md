@@ -249,32 +249,7 @@ $config[FlysystemConstants::FLYSYSTEM_OPTIONS] = [
 
 {% endinfo_block %}
 
-### 5) Import glossary translations
-
-Import the glossary translations for file upload error messages:
-
-**data/import/common/common/glossary.csv**
-
-Add the following entries:
-
-```csv
-configuration.file_upload.error.save_failed,An error occurred while saving the file.,en_US
-configuration.file_upload.error.save_failed,Beim Speichern der Datei ist ein Fehler aufgetreten.,de_DE
-```
-
-Run the glossary import:
-
-```bash
-console data:import:glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Run `console data:import:glossary` and verify that it completes without errors.
-
-{% endinfo_block %}
-
-### 6) Clear caches
+### 5) Clear caches
 
 Clear the Twig cache and application cache to apply the new Twig functions:
 
@@ -338,6 +313,7 @@ The following theme settings are registered by the feature's YAML schema. Use th
 Inject a theme color as a CSS custom property in a Back Office layout:
 
 {% raw %}
+
 ```twig
 <style>
     :root {
@@ -345,15 +321,18 @@ Inject a theme color as a CSS custom property in a Back Office layout:
     }
 </style>
 ```
+
 {% endraw %}
 
 Read multiple values at once:
 
 {% raw %}
+
 ```twig
 {% set themeValues = configurationValues([
     'theme:backoffice:colors:bo_main_color',
     'theme:logos:logos:backoffice_logo_url',
 ]) %}
 ```
+
 {% endraw %}

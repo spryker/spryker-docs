@@ -247,8 +247,6 @@ Sync the Back Office Assistant configuration to the database:
 
 ```bash
 console configuration:sync
-console cache:empty-all
-console twig:cache:warmer
 ```
 
 ### 6) Enable the feature
@@ -290,6 +288,12 @@ In `src/Pyz/Zed/Gui/Presentation/Layout/layout.twig`, include the chat widget pa
     {{ parent() }}
 {% endblock %}
 {% endraw %}
+```
+
+```bash
+console cache:empty-all
+console twig:cache:warmer
+console router:cache:warm-up:backoffice
 ```
 
 ### 2) Install frontend dependencies

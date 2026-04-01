@@ -48,7 +48,7 @@ entries:
                   - title: Enable Google Material Icons
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
                   - title: Update the INSPINIA theme in Back Office
-                    url: /docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/update-inpinia-theme-version-at-back-office.md
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/update-inpinia-theme-version-at-back-office.html
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
 

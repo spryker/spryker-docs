@@ -1,13 +1,15 @@
 ---
 title: Configuration Management feature
-description: Learn on how to use and Configuration Management feature in Spryker project.
-last_updated: Mar 13, 2026
+description: Learn how to use the Configuration Management feature in a Spryker project.
+last_updated: Apr 1, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
     link: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
   - title: Adding Custom Scopes to Configuration Management
     link: /docs/dg/dev/backend-development/configuration-management/custom-scopes.html
+  - title: Basic Shop Theme feature overview
+    link: /docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html
 ---
 
 ## What It Does
@@ -318,6 +320,7 @@ settings:
 | `storefront`    | boolean   | No       | `false`      | --                   | When `true`, value is published to key-value storage for Yves/Glue. |
 | `constraints`   | array     | No       | `[]`         | --                   | Validation rules. See [Constraints](#constraints).   |
 | `dependencies`  | array     | No       | `[]`         | --                   | Conditional rules. See [Dependencies](#dependencies). |
+| `file_upload`   | object    | No       | `null`       | Required when `type: file` | File upload configuration. See [File upload fields](#file-upload-fields). |
 
 #### Setting Types
 
@@ -333,6 +336,66 @@ settings:
 | `select`      | Single choice from list              | Dropdown         | Yes                |
 | `multiselect` | Multiple choices from list           | Multi-select     | Yes                |
 | `radio`       | Single choice from list              | Radio buttons    | Yes                |
+| `file`        | File upload (stored as public URL)   | File upload widget | No, but requires `file_upload` block |
+
+#### File upload fields
+
+Use `type: file` for settings that accept a file upload (for example, logo images). The Back Office renders a file upload widget. After a successful upload, the public URL of the uploaded file is stored as the setting value. All file validation and storage are handled server-side using a configured Flysystem filesystem service.
+
+When `type: file` is used, a `file_upload` block must be present on the setting. It configures the Flysystem service, allowed file types, size limit, and recommended display dimensions.
+
+```yaml
+- key: bo_logo_url
+  name: Back Office Logo
+  type: file
+  file_upload:
+    storage_name: 'backoffice-media'
+    allowed_mime_types:
+      - 'image/png'
+      - 'image/jpeg'
+      - 'image/gif'
+      - 'image/webp'
+      - 'image/svg+xml'
+    allowed_extensions:
+      - '.png'
+      - '.jpg'
+      - '.jpeg'
+      - '.gif'
+      - '.webp'
+      - '.svg'
+    max_file_size: '10M'
+    recommended_width_px: 290
+    recommended_height_px: 77
+  default_value: ''
+  scopes: [global, store]
+  enabled: true
+  secret: false
+  storefront: false
+```
+
+##### `file_upload` properties
+
+| Property                | Type     | Required | Description                                                                 |
+|-------------------------|----------|----------|-----------------------------------------------------------------------------|
+| `storage_name`          | string   | Yes      | Flysystem filesystem service name. Must be configured in `FileSystemConstants::FILESYSTEM_SERVICE`. |
+| `allowed_mime_types`    | string[] | No       | List of permitted MIME types. Upload is rejected if the file MIME type is not in the list. |
+| `allowed_extensions`    | string[] | No       | List of permitted file extensions including the leading dot (for example `.png`). |
+| `max_file_size`         | string   | No       | Maximum allowed file size (for example `10M`, `2048K`). Rejected if exceeded.   |
+| `recommended_width_px`  | integer  | No       | Recommended display width in pixels. Shown as a hint in the Back Office UI. |
+| `recommended_height_px` | integer  | No       | Recommended display height in pixels. Shown as a hint in the Back Office UI. |
+
+The stored value is always a public URL returned by the Flysystem service after upload. To render the image in a Twig template, read it with `configurationValue()` and use it as an `src` attribute:
+
+{% raw %}
+```twig
+{% set logoUrl = configurationValue('theme:logos:logos:yves_logo_url', '') %}
+{% if logoUrl is not empty %}
+    <img src="{{ logoUrl | e('html_attr') }}" alt="Logo" />
+{% endif %}
+```
+{% endraw %}
+
+For Flysystem service setup (S3 in production, local fallback in development and CI), see [Install the Basic Shop Theme feature](/docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html).
 
 #### Options
 
@@ -507,6 +570,60 @@ Settings are managed at **The Back office > Configuration**. The page provides:
 - Inline validation with constraint error messages
 - "Revert to default" to delete scope-specific overrides
 - Batch save with per-field error reporting
+
+## Twig Integration
+
+The Configuration module exposes three Twig functions that let templates read configuration values directly without going through a PHP Config class. They are available through the following existing plugins — no additional registration is required:
+
+| Context | Plugin |
+|---------|--------|
+| Storefront (Yves) | `ShopUiTwigExtension` |
+| Back Office and Merchant Portal (Zed) | `\Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin` |
+
+| Function | Description |
+|----------|-------------|
+| `configurationValue(key, default)` | Returns a single configuration value by compound key. |
+| `configurationValues(keys)` | Returns an associative array of values for a list of compound keys. |
+
+### `configurationValue`
+
+Returns a single value for the given compound key. Falls back to `default` if the key has no saved value.
+
+{% raw %}
+```twig
+{{ configurationValue('theme:backoffice:colors:bo_main_color', '#1ebea0') }}
+```
+{% endraw %}
+
+{% raw %}
+```twig
+<style>
+    :root {
+        --bo-main-color: {{ configurationValue('theme:backoffice:colors:bo_main_color', '#1ebea0') | e('css') }};
+    }
+</style>
+```
+{% endraw %}
+
+### `configurationValues`
+
+Returns an associative array keyed by compound key. Useful when a template needs several values at once.
+
+{% raw %}
+```twig
+{% set colors = configurationValues([
+    'theme:backoffice:colors:bo_main_color',
+    'theme:logos:logos:backoffice_logo_url',
+]) %}
+<style>:root { --bo-main-color: {{ colors['theme:backoffice:colors:bo_main_color'] | e('css') }}; }</style>
+```
+{% endraw %}
+
+{% info_block infoBox "Scope context" %}
+
+Twig functions read values in the current request's scope context. Store-specific values are resolved automatically when a store scope is active.
+
+{% endinfo_block %}
 
 ## Common Issues
 

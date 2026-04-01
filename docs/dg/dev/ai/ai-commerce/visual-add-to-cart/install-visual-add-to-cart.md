@@ -134,15 +134,44 @@ On the Storefront Quick Order page, make sure the image upload button is visible
 
 ## Integrate the feature frontend
 
-### 1) Update the Quick Order form template
+### 1) Update the Quick Order page templates
 
 {% info_block infoBox "Info" %}
 
-Do this step only if you have overridden `quick-order-form.twig` in `QuickOrderPage` module at the project level. If you have not overridden this template, skip to [2) Apply the frontend changes](#2-apply-the-frontend-changes).
+Do this step only if you have overridden `quick-order-form.twig`, `quick-order.twig` in `QuickOrderPage` module at the project level. If you have not overridden this template, skip to [2) Apply the frontend changes](#2-apply-the-frontend-changes).
 
 {% endinfo_block %}
 
 In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside `{% raw %}{% block fields %}{% endraw %}`:
+
+Add `pluginForms: [],` to the `data` variable definition:
+```twig
+{% raw %}
+{% define data = {
+    form: required,
+    products: [],
+    prices: [],
+    additionalColumns: [],
+    fileTemplateExtensions: [],
+    textOrderForm: required,
+    uploadOrderForm: required,
+    pluginForms: [],
+} %}
+{% endraw %}
+```
+
+Add `pluginForms: data.pluginForms,` to the `embed` variable definition in `{% raw %}embed molecule('form'){% endraw %}`:
+```twig
+{% raw %}
+ {% embed molecule('form') with {
+        ...
+        embed: {
+            ...
+            pluginForms: data.pluginForms,
+        }
+    } only %}
+{% endraw %}
+```
 
 ```twig
 {% raw %}
@@ -166,6 +195,40 @@ In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-f
         {{ form_widget(pluginForm) }}
     {% endif %}
 {% endfor %}
+{% endraw %}
+```
+
+add the following code to the `src/Pyz/Yves/QuickOrderPage/Theme/default/views/quick-order/quick-order.twig` file:
+```twig
+{% raw %}
+{% define data = {
+    forms: {
+        quickOrderForm: _view.quickOrderForm,
+        textOrderForm: _view.textOrderForm,
+        uploadOrderForm: _view.uploadOrderForm,
+    },
+    pluginForms: _view.pluginForms | default([]),
+    additionalColumns: _view.additionalColumns,
+    products: _view.products,
+    prices: _view.prices,
+    fileTemplateExtensions: _view.fileTemplateExtensions,
+    title: 'quick-order.page-title' | trans,
+} %}
+
+{% block content %}
+    {% include molecule('quick-order-form', 'QuickOrderPage') with {
+        data: {
+            form: data.forms.quickOrderForm,
+            products: data.products,
+            prices: data.prices,
+            fileTemplateExtensions: data.fileTemplateExtensions,
+            additionalColumns: data.additionalColumns,
+            textOrderForm: data.forms.textOrderForm,
+            uploadOrderForm: data.forms.uploadOrderForm,
+            pluginForms: data.pluginForms,
+        },
+    } only %}
+{% endblock %}
 {% endraw %}
 ```
 

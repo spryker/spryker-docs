@@ -364,14 +364,6 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new MerchantProductAbstractGeneralTabContentProviderPlugin(),
         ];
     }
-    
-    /**
-     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormTabContentProviderPluginInterface>
-     */
-    protected function getProductAbstractFormTabContentProviderPlugins(): array
-    {
-        return [];
-    }
 }
 ```
 

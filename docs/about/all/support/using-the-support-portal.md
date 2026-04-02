@@ -1,6 +1,6 @@
 ---
 title: Using the Support Hub
-description: How to navigate Spryker's Support Hub on the Spryker Portal to create, track, and manage support cases efficiently for seamless issue resolution
+description: How to navigate Spryker's Support Hub on the Spryker Portal to create, track, and manage support ticket efficiently for seamless issue resolution
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
@@ -14,25 +14,25 @@ related:
     link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 ---
 
-This document describes how to use the support portal to create and manage your cases.
+This document describes how to use the support portal to create and manage your tickets.
 
 ## Prerequisites
 
 - Log in at the [Spryker Portal](https://portal.spryker.com).  If you don't have access, request one using [this form](https://portal.spryker.com/request-access).
 - Go the the Support Hub, using the squares menu in the top right.
 
-## Create new ticket
+## Create a new ticket
 
 To create a new ticket, click **Create a ticket** and follow the wizard.
 
 When creating a ticket, please use the recommendations in [Share secrets with the Spryker Support team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
 
-The following are the top-level categories of cases and their description.
+The following are the top-level categories of tickets and their description.
 
 ### Report a Problem or Incident
 
-Problems can be reports suspecting a bug or issues with the hosting services. To speed up the resolution of such cases, make sure to follow [Getting the most out of Spryker support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html) before you submit your request.
+Problems can be reports suspecting a bug or issues with the hosting services. To speed up the resolution of such tickets, make sure to follow [Getting the most out of Spryker support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html) before you submit your request.
 
 ### Ask a Question
 
@@ -68,7 +68,7 @@ Let us know about events or time periods in which you expect a higher than usual
 
 ### Emergencies
 
-Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
+Emergencies are reserved for problems that have significant business impact now or very soon. Emergency tickets regularly start an [escalation](/docs/about/all/support/support-ticket-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
 ### Info on Change Requests
 
@@ -80,18 +80,18 @@ Because of contractual reasons, only customers can request new environments or a
 
 {% endinfo_block %}
 
-## Manage cases
+## Manage tickets
 
-Clicking on **Our Cases** opens the list of cases you've opened. To take a look at the details of a particular case, click on the case number. On the page of a case, you can take a look at the communication history, view the status of the case and associated Jira ticket, or ask to reevaluate the assigned priority.
+Clicking on **View tickets** opens the list of tickets your organisation has opened. To view the details of a particular ticket, click on the "Details" button. Here you can take a look at the communication history, view the status of the ticket and associated Jira ticket, and inspect the assigned priority.
 
-### Case receipts and notifications
+### Ticket receipts and notifications
 
-When creating a case, or when there are meaningful updates to your case, like a status change or new comments, you will receive email notifications. Notifications are sent to the email address associated with the Support Portal account that was used to create a case; optionally notifications are also sent to the email address specified as "Additional Contact to notify" in the Case Assistant.
+When creating a ticket, or when there are meaningful updates to your ticket, like a status change or new comments, you will receive email notifications. Notifications are sent to the email address associated with the Spryker Portal account that was used to create a ticket.
 
-If you are managing multiple projects or have a high volume of cases and communication with us, knowing the structure of our notifications and receipts can help you prepare forwarding or labelling rules in your email client:
+If you are managing multiple projects or have a high volume of tickets and communication with us, knowing the structure of our notifications and receipts can help you prepare forwarding or labelling rules in your email client:
 
 
-- Case confirmation emails are sent when you create a case or when its status is updated. Subject pattern:
+- Ticket confirmation emails are sent when you create a ticket or when its status is updated. Subject pattern:
 
 ```bash
 Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
@@ -103,19 +103,19 @@ Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STA
 Change Request Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
 ```
 
-- ETA update notification emails are sent when the ETA on your case is updated. Subject pattern:
+- ETA update notification emails are sent when the ETA on your ticket is updated. Subject pattern:
 
 ```bash
 Case ETA Update - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME}} - ETA: {ETA}. {TRACKING ID}
 ```
 
-- Emergency case emails are sent when you declare an emergency or your emergency case's status is updated. Subject pattern:
+- Emergency ticket emails are sent when you declare an emergency or your emergency ticket's status is updated. Subject pattern:
 
 ```bash
 Emergency {STATUS} - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} {TRACKING ID}
 ```
 
-- Case comment notification emails are sent when there is a new comment in your case. Subject pattern:
+- Ticket comment notification emails are sent when there is a new comment in your ticket. Subject pattern:
 
 ```bash
 Case Comment Notification - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS} {Tracking ID}

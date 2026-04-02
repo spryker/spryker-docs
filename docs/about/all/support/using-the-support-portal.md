@@ -14,7 +14,7 @@ related:
     link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 ---
 
-This document describes how to use the support portal to create and manage your tickets.
+This document describes how to use the support hub to create and manage your tickets.
 
 ## Prerequisites
 

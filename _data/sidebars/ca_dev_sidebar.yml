@@ -18,6 +18,16 @@ entries:
           - title: Connect to services via SSH
             url: /docs/ca/dev/access/connect-to-services-via-ssh.html
 
+      - title: CloudHub
+        url: /docs/ca/dev/cloud-hub/cloud-hub.html
+        nested:
+          - title: User management (IAM)
+            url: /docs/ca/dev/cloud-hub/user-management.html
+          - title: Storage management (S3)
+            url: /docs/ca/dev/cloud-hub/storage-management.html
+          - title: Maintenance
+            url: /docs/ca/dev/cloud-hub/maintenance.html
+
       - title: Connecting the Docker SDK
         url: /docs/ca/dev/connecting-the-docker-sdk.html
       - title: Connect a code repository

@@ -903,8 +903,28 @@ entries:
     - title: Migrate Glue REST API to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-glue-api-to-api-platform.html
       nested:
+      - title: Migrate AuthRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-authrestapi.html
+      - title: Migrate CartsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartsrestapi.html
+      - title: Migrate CartCodesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartcodesrestapi.html
+      - title: Migrate CategoriesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-categoriesrestapi.html
       - title: Migrate CustomersRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html
+      - title: Migrate OrdersRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-ordersrestapi.html
+      - title: Migrate ProductAvailabilitiesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productavailabilitiesrestapi.html
+      - title: Migrate ProductImageSetsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productimagesetsrestapi.html
+      - title: Migrate ProductLabelsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productlabelsrestapi.html
+      - title: Migrate ProductPricesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productpricesrestapi.html
+      - title: Migrate ProductsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productsrestapi.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3

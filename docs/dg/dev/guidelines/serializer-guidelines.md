@@ -1,7 +1,7 @@
 ---
 title: Serializer guidelines
 description: Guidelines for using the Spryker Serializer module to serialize, deserialize, normalize, and denormalize data.
-last_updated: Mar 29, 2026
+last_updated: Mar 31, 2026
 template: concept-topic-template
 related:
   - title: API Platform

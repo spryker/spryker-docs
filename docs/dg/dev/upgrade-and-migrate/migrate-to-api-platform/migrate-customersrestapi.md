@@ -5,9 +5,9 @@ last_updated: Mar 31, 2026
 template: howto-guide-template
 related:
   - title: Migrate Glue REST API to API Platform
-    link: docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-glue-api-to-api-platform.html
+    link: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-glue-api-to-api-platform.html
   - title: How to integrate API Platform
-    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    link: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
 ---
 
 This document describes how to migrate the `CustomersRestApi` Glue module to the API Platform `Customer` module.
@@ -76,35 +76,41 @@ In the same file, remove the following relationship plugin registrations from `g
 
 {% info_block warningBox "Relationships" %}
 
-These relationships are now resolved automatically by API Platform through the `include` query parameter. Consumers can request `?include=addresses` on customer endpoints to get address data included in the response.
+`CustomersToAddressesRelationshipPlugin` is now handled by the `Customer` module through the `include` query parameter. Consumers can request `?include=addresses` on customer endpoints to get address data included in the response.
+
+`AddressByCheckoutDataResourceRelationshipPlugin` is removed because checkout data relationships are now handled by the `Checkout` module's API Platform integration.
 
 {% endinfo_block %}
 
 ## 4. Update Checkout Zed dependency provider
 
-The `AddressQuoteMapperPlugin` and `CustomerQuoteMapperPlugin` have been moved from `CustomersRestApi` to the core `Customer` module. Update the namespace in your checkout dependency provider.
+In `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`, add the following customer plugins.
 
-`src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`
-
-**Replace:**
-
-```php
-use Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi\AddressQuoteMapperPlugin;
-use Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi\CustomerQuoteMapperPlugin;
-```
-
-**With:**
+In `getQuoteMapperPlugins()`, add:
 
 ```php
 use Spryker\Zed\Customer\Communication\Plugin\Checkout\AddressQuoteMapperPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerQuoteMapperPlugin;
 ```
 
-Register these in the `getQuoteMapperPlugins()` method if not already present.
+```php
+new CustomerQuoteMapperPlugin(),
+new AddressQuoteMapperPlugin(),
+```
 
-## 5. Update Checkout Glue dependency provider
+In `getCheckoutDataValidatorPlugins()` and `getCheckoutDataValidatorPluginsForOrderAmendment()`, add:
 
-If you have a `BillingAddressCheckoutRequestAttributesValidatorPlugin` from `CustomersRestApi`, replace it with the new API Platform equivalent.
+```php
+use Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi\CustomerAddressCheckoutDataValidatorPlugin;
+```
+
+```php
+new CustomerAddressCheckoutDataValidatorPlugin(),
+```
+
+## 5. Create Checkout Glue dependency provider
+
+Create `src/Pyz/Glue/Checkout/CheckoutDependencyProvider.php`. The `BillingAddressCheckoutRequestAttributesValidatorPlugin` from `CustomersRestApi` has been replaced by `BillingAddressCheckoutValidatorPlugin` from the `Checkout` module.
 
 `src/Pyz/Glue/Checkout/CheckoutDependencyProvider.php`
 
@@ -126,44 +132,17 @@ Register `BillingAddressCheckoutValidatorPlugin` in `getCheckoutValidatorPlugins
 
 ```bash
 docker/sdk cli console transfer:generate
-docker/sdk cli "GLUE_APPLICATION=storefront console api:generate"
-docker/sdk cli console cache:clear
+docker/sdk cli glue api:generate
+docker/sdk cli glue cache:clear
 ```
 
 ## 7. Modules providing relationships to customers
 
 The following modules previously registered relationship plugins against `CustomersRestApi` resources. After migration, these relationships are handled by API Platform automatically through the `include` parameter:
 
-| Old relationship plugin | Old module | Now provided by |
+| Old relationship plugin | Old module | Status |
 |---|---|---|
-| `CustomersToAddressesRelationshipPlugin` | `CustomersRestApi` | `Customer` module (customers-addresses resource) |
-| `WishlistRelationshipByResourceIdPlugin` | `WishlistsRestApi` | Not yet migrated — remains on legacy Glue |
-| `CustomerByCompanyUserResourceRelationshipPlugin` | `CustomersRestApi` | `CompanyUser` module (includes customer data) |
+| `CustomersToAddressesRelationshipPlugin` | `CustomersRestApi` | Removed. Now provided by the `Customer` module through the `include` parameter. |
+| `CustomerByCompanyUserResourceRelationshipPlugin` | `CustomersRestApi` | Remains on legacy Glue until `CompanyUser` is migrated. Do not remove yet. |
+| `CustomerByQuoteRequestResourceRelationshipPlugin` | `CustomersRestApi` | Remains on legacy Glue until `QuoteRequest` is migrated. Do not remove yet. |
 
-## Verification
-
-1. Test customer registration:
-
-   ```bash
-   curl -X POST https://glue-storefront.mysprykershop.com/customers \
-     -H "Content-Type: application/vnd.api+json" \
-     -d '{"data":{"type":"customers","attributes":{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"Change123!","confirmPassword":"Change123!","acceptedTerms":true}}}'
-   ```
-
-2. Test getting a customer (authenticated):
-
-   ```bash
-   curl -X GET https://glue-storefront.mysprykershop.com/customers/{customerReference} \
-     -H "Authorization: Bearer {access_token}" \
-     -H "Accept: application/vnd.api+json"
-   ```
-
-3. Test customer addresses with include:
-
-   ```bash
-   curl -X GET https://glue-storefront.mysprykershop.com/customers/{customerReference}?include=addresses \
-     -H "Authorization: Bearer {access_token}" \
-     -H "Accept: application/vnd.api+json"
-   ```
-
-4. Verify that password reset, password change, and registration confirmation endpoints work as expected.

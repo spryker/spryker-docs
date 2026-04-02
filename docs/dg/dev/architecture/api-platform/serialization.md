@@ -1,7 +1,7 @@
 ---
 title: Serialization
 description: How API Platform uses the Spryker Serializer module for request and response serialization.
-last_updated: Mar 29, 2026
+last_updated: Mar 31, 2026
 template: concept-topic-template
 related:
   - title: API Platform

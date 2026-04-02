@@ -18,6 +18,99 @@ related:
 
 This document describes how to write and run tests for your API Platform resources in your project.
 
+## Provider testing
+
+Provider tests call the provider directly without making HTTP requests. This is the preferred approach for Storefront API providers because it is fast, isolated, and does not require a running kernel.
+
+### Setup
+
+Enable `ApiProcessorProviderHelper` in your suite's `codeception.yml`:
+
+```yaml
+modules:
+    enabled:
+        - \SprykerTest\ApiPlatform\Helper\ApiProcessorProviderHelper
+```
+
+### ApiContext
+
+`ApiContext` builds the context array passed to `provide()`. It carries the Symfony `Request` and any request attributes the provider reads.
+
+| Method | Purpose |
+|--------|---------|
+| `getContext(array $seedData = [])` | Creates a fresh context (always includes a default `Request`) |
+| `withCustomer(CustomerTransfer)` | Sets the authenticated customer on the request |
+| `withRouteParams(array)` | Sets `_route_params` on the request attributes |
+| `toArray()` | Returns the context array to pass to `provide()` |
+
+### Writing provider tests
+
+1. Call `$this->tester->getProvider(MyProvider::class)` to resolve the provider with mocked dependencies.
+2. Stub dependencies with `Codeception\Stub::makeEmpty()` and register them via `$this->tester->mockService(Interface::class, $stub)`.
+3. Build the context with `$this->tester->getContext()->withCustomer(...)`.
+4. Pass `uriVariables` as a plain array directly as the second argument to `provide()`.
+5. Assert on the returned resource object(s).
+
+```php
+class CustomersStorefrontProviderTest extends StorefrontApiTestCase
+{
+    protected StorefrontApiTester $tester;
+
+    public function testGivenNotAuthenticatedCustomerWhenProcessingGetThenExceptionIsThrown(): void
+    {
+        $this->expectException(GlueApiException::class);
+
+        $provider = $this->tester->getProvider(CustomersStorefrontProvider::class);
+
+        $provider->provide($this->tester->getGetOperation());
+    }
+
+    public function testGivenCustomerInRequestWhenProcessingGetThenCustomerIsReturned(): void
+    {
+        // Arrange
+        $customerTransfer = $this->tester->haveCustomer();
+
+        $customerClient = Stub::makeEmpty(CustomerClientInterface::class, [
+            'findCustomerByReference' => (new CustomerResponseTransfer())
+                ->setCustomerTransfer($customerTransfer)
+                ->setHasCustomer(true),
+        ]);
+
+        $this->tester->mockService(CustomerClientInterface::class, $customerClient);
+
+        $context = $this->tester->getContext()
+            ->withCustomer($customerTransfer);
+
+        $provider = $this->tester->getProvider(CustomersStorefrontProvider::class);
+
+        // Act
+        /** @var \Generated\Api\Storefront\CustomersStorefrontResource $resource */
+        $resource = $provider->provide(
+            $this->tester->getGetOperation(),
+            ['customerReference' => $customerTransfer->getCustomerReference()],
+            $context->toArray(),
+        );
+
+        // Assert
+        $this->assertSame($customerTransfer->getCustomerReference(), $resource->getCustomerReference());
+    }
+}
+```
+
+### Available operation factories
+
+`$this->tester` exposes a factory method for every HTTP operation type:
+
+```php
+$this->tester->getGetOperation()
+$this->tester->getGetCollectionOperation()
+$this->tester->getPostOperation()
+$this->tester->getPatchOperation()
+$this->tester->getDeleteOperation()
+```
+
+---
+
 ## Overview
 
 API Platform provides a comprehensive testing infrastructure built on top of:

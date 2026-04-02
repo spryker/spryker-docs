@@ -5,11 +5,11 @@ last_updated: Mar 31, 2026
 template: howto-guide-template
 related:
   - title: How to integrate API Platform
-    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
+    link: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: How to integrate API Platform Security
-    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
+    link: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
   - title: How to migrate to API Platform
-    link: docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
+    link: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
 ---
 
 This document guides you through migrating storefront Glue REST API endpoints to API Platform. The migration replaces legacy `*RestApi` Glue modules with API Platform resources defined in core Spryker modules.
@@ -29,108 +29,7 @@ Before starting, make sure you have completed:
 
 ## Cross-cutting changes
 
-The following changes apply to every migration and must be done once, before migrating individual modules.
-
-### 1. Update GlueStorefrontApiApplication dependency provider
-
-Remove the legacy resource plugins that have been replaced by API Platform auto-discovery.
-
-`src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php`
-
-Remove from `getResourcePlugins()`:
-
-| Plugin to remove | Namespace |
-|---|---|
-| `OauthApiTokenResource` | `Spryker\Glue\OauthApi\Plugin\GlueApplication` |
-| `StoresResource` | `Spryker\Glue\StoresApi\Plugin\GlueStorefrontApiApplication` |
-
-### 2. Register Authentication dependency provider
-
-Create a new project-level `AuthenticationDependencyProvider` to wire the customer identity expander needed by the API Platform OAuth flow.
-
-`src/Pyz/Glue/Authentication/AuthenticationDependencyProvider.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Glue\Authentication;
-
-use Spryker\Glue\Authentication\AuthenticationDependencyProvider as SprykerAuthenticationDependencyProvider;
-use Spryker\Glue\CompanyUserStorage\Plugin\Authentication\CompanyUserIdentityExpanderPlugin;
-
-class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Glue\AuthenticationExtension\Dependency\Plugin\CustomerIdentityExpanderPluginInterface>
-     */
-    protected function getCustomerIdentityExpanderPlugins(): array
-    {
-        return [
-            new CompanyUserIdentityExpanderPlugin(),
-        ];
-    }
-}
-```
-
-### 3. Register guest cart conversion on authentication
-
-Wire the guest-to-customer cart conversion plugin into the OAuth post-authentication flow.
-
-`src/Pyz/Zed/Oauth/OauthDependencyProvider.php`
-
-Add to `getPostAuthenticationPlugins()`:
-
-```php
-use Spryker\Zed\Cart\Communication\Plugin\Oauth\ConvertGuestCartOauthPostAuthenticationPlugin;
-
-/**
- * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\PostAuthenticationPluginInterface>
- */
-protected function getPostAuthenticationPlugins(): array
-{
-    return [
-        new ConvertGuestCartOauthPostAuthenticationPlugin(),
-    ];
-}
-```
-
-### 4. Remove obsolete project-level configs
-
-Delete the following files if they exist in your project. They contained overrides for legacy Glue behavior that is no longer needed:
-
-| File to delete | Reason |
-|---|---|
-| `src/Pyz/Glue/OauthApi/OauthApiConfig.php` | The `isConventionalResponseCodeEnabled()` override is no longer needed; API Platform handles response codes natively. |
-| `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php` | The `CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` override is no longer needed; customer access is handled by API Platform security. |
-
-### 5. Add Navigation config (if using NavigationsRestApi)
-
-If you use the navigations endpoint, create a project-level config for the new API Platform resource.
-
-`src/Pyz/Glue/Navigation/NavigationConfig.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Glue\Navigation;
-
-use Spryker\Glue\Navigation\NavigationConfig as SprykerNavigationConfig;
-
-class NavigationConfig extends SprykerNavigationConfig
-{
-    protected function getNavigationTypeToUrlResourceIdFieldMapping(): array
-    {
-        return [
-            'category' => 'fkResourceCategorynode',
-            'cms_page' => 'fkResourcePage',
-        ];
-    }
-}
-```
+There are no changes required before starting the module migration. Begin with any module from the per-module migration guides below.
 
 ## Per-module migration guides
 
@@ -145,27 +44,27 @@ You can migrate modules in any order. We recommend starting with simpler read-on
 | Module to migrate | Replaces legacy module | Guide |
 |---|---|---|
 | Customer | CustomersRestApi | [Migrate CustomersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html) |
-| Cart | CartsRestApi | Coming soon |
-| CartCode | CartCodesRestApi | Coming soon |
+| Cart | CartsRestApi | [Migrate CartsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartsrestapi.html) |
+| CartCode | CartCodesRestApi | [Migrate CartCodesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartcodesrestapi.html) |
 | Checkout | CheckoutRestApi | Coming soon |
-| Sales | OrdersRestApi | Coming soon |
-| Product | ProductsRestApi | Coming soon |
-| PriceProduct | ProductPricesRestApi | Coming soon |
-| ProductImage | ProductImageSetsRestApi | Coming soon |
-| Availability | ProductAvailabilitiesRestApi | Coming soon |
-| ProductLabel | ProductLabelsRestApi | Coming soon |
+| Sales | OrdersRestApi | [Migrate OrdersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-ordersrestapi.html) |
+| Product | ProductsRestApi | [Migrate ProductsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productsrestapi.html) |
+| PriceProduct | ProductPricesRestApi | [Migrate ProductPricesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productpricesrestapi.html) |
+| ProductImage | ProductImageSetsRestApi | [Migrate ProductImageSetsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productimagesetsrestapi.html) |
+| Availability | ProductAvailabilitiesRestApi | [Migrate ProductAvailabilitiesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productavailabilitiesrestapi.html) |
+| ProductLabel | ProductLabelsRestApi | [Migrate ProductLabelsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productlabelsrestapi.html) |
 | ProductReview | ProductReviewsRestApi | Coming soon |
 | ProductOption | ProductOptionsRestApi | Coming soon |
 | ProductBundle | ProductBundlesRestApi | Coming soon |
 | ProductAttribute | ProductAttributesRestApi | Coming soon |
 | ProductMeasurementUnit | ProductMeasurementUnitsRestApi | Coming soon |
 | Catalog | CatalogSearchRestApi | Coming soon |
-| Category | CategoriesRestApi | Coming soon |
+| Category | CategoriesRestApi | [Migrate CategoriesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-categoriesrestapi.html) |
 | Navigation | NavigationsRestApi | Coming soon |
 | Merchant | MerchantsRestApi | Coming soon |
 | MerchantOpeningHours | MerchantOpeningHoursRestApi | Coming soon |
 | MerchantProductOffer | MerchantProductOffersRestApi | Coming soon |
-| Authentication | AuthRestApi | Coming soon |
+| Authentication | AuthRestApi | [Migrate AuthRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-authrestapi.html) |
 | Agent | AgentAuthRestApi | Coming soon |
 | Company | CompaniesRestApi | Coming soon |
 | CompanyUser | CompanyUsersRestApi, CompanyUserAuthRestApi | Coming soon |
@@ -186,40 +85,30 @@ You can migrate modules in any order. We recommend starting with simpler read-on
 | PriceProductOffer | ProductOfferPricesRestApi | Coming soon |
 | SalesOrderAmendment | OrderAmendmentsRestApi | Coming soon |
 
-## Verification
+## After each module migration
 
-After migrating a module, verify the migration:
+After migrating each module, regenerate transfers, API resources, and clear the cache:
 
-1. Clear the application cache:
-
-   ```bash
-   docker/sdk cli console cache:clear
-   ```
-
-2. Regenerate API Platform resources:
-
-   ```bash
-   docker/sdk cli "GLUE_APPLICATION=storefront console api:generate"
-   ```
-
-3. Test the migrated endpoints using the interactive API documentation at the storefront Glue root URL.
-
-4. Verify that unmigrated endpoints still work through the legacy Glue router.
+```bash
+docker/sdk cli console transfer:generate
+docker/sdk cli glue api:generate
+docker/sdk cli glue cache:clear
+```
 
 ## Final cleanup
 
-Once all modules have been migrated, you can remove the legacy Glue router from the router chain:
+Once all modules have been migrated, perform the following cleanup steps.
 
-`src/Pyz/Glue/Router/RouterDependencyProvider.php`
+### Remove legacy Glue router
 
-```php
-protected function getRouterPlugins(): array
-{
-    return [
-        // GlueRouterPlugin is no longer needed
-        new SymfonyFrameworkRouterPlugin(),
-    ];
-}
-```
+In `src/Pyz/Glue/Router/RouterDependencyProvider.php`, remove `new GlueRouterPlugin()` from `getRouterPlugins()`.
 
-After removing the legacy router, you can also remove unused `*RestApi` composer dependencies and clean up empty Glue module directories.
+### Delete obsolete project-level overrides
+
+Delete the following file once the specified modules have been migrated:
+
+| File to delete | Required modules migrated first |
+|---|---|
+| `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php` | `CartsRestApi`, `ProductPricesRestApi`, `CheckoutRestApi`, `WishlistsRestApi` |
+
+After the cleanup, you can also remove unused `*RestApi` composer dependencies and clean up empty Glue module directories.

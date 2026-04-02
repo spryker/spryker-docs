@@ -18,7 +18,7 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-- Log in at the [Spryker Portal](https://portal.spryker.com).  If you don't have access, request one using [this form](https://portal.spryker.com/request-access).
+- Log in at the [Spryker Portal](https://portal.spryker.com). If you don't have access to the Spryker Portal, please request it using [this form](https://portal.spryker.com/request-access).
 - Go the the Support Hub, using the squares menu in the top right.
 
 ## Create a new ticket

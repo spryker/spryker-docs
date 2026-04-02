@@ -1,6 +1,6 @@
 ---
-title: Using the Support Portal
-description: How to navigate Spryker's Support Portal to create, track, and manage support cases efficiently for seamless issue resolution
+title: Using the Support Hub
+description: How to navigate Spryker's Support Hub on the Spryker Portal to create, track, and manage support cases efficiently for seamless issue resolution
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
@@ -18,14 +18,15 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-- You should have a customer account provisioned for you. If you don't, request one using this [form](https://support.spryker.com/s/portal-access-request).
-- Log in at the [support portal](https://support.spryker.com).
+- Log in at the [Spryker Portal](https://portal.spryker.com).  If you don't have access, request one using [this form](https://portal.spryker.com/request-access).
+- Go the the Support Hub, using the squares menu in the top right.
 
-## Create new cases
+## Create new ticket
 
-To create new cases, click **Create a case** and select the needed case type. Alternatively, click on the case type on the landing page. When creating cases, use the recommendations in [Share secrets with the Spryker Support team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
+To create a new ticket, click **Create a ticket** and follow the wizard.
 
-Case Assistant guides you through the process of creating your requests by asking questions making sure they are routed properly.
+When creating a ticket, please use the recommendations in [Share secrets with the Spryker Support team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
+
 
 The following are the top-level categories of cases and their description.
 

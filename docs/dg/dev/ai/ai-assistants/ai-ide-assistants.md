@@ -116,8 +116,3 @@ Here's an example of code generated with Cursor:
 - [Spryker K6 Performance Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-k6-performance-assistant-gpt): Assists with generating K6 performance test scripts from provided API endpoints
 - [Spryker DevQA Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-devqa-assistant-gpt): Assists in DevQA tasks by providing comprehensive QA checklists and insights into feature and module mappings and dependencies
 - [Spryker Cypress E2E Assistant GPT](/docs/dg/dev/ai/ai-assistants/spryker-cypress-e2e-assistant-gpt)
-
-
-## Training
-
-This document provides a basic introduction to AI assistants. For a more detailed guide, check out the [AI assistants training course](https://spryker.sana.ai/s/pfsZ5F2hSheE/file:8m9CXXP3TjCD).

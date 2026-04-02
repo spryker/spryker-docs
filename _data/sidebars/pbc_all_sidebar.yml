@@ -6,6 +6,12 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: AI Commerce
+        url: /docs/pbc/all/ai-commerce/latest/ai-commerce.html
+        nested:
+          - title: Visual Add to Cart
+            url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
+
       - title: Yves
         nested:
           - title: Install and upgrade
@@ -41,7 +47,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
                   - title: Enable Google Material Icons
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
-
+                  - title: Update the INSPINIA theme in Back Office
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/update-inpinia-theme-version-at-back-office.html
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
 
@@ -3825,6 +3832,7 @@ entries:
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
+
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

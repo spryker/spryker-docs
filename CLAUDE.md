@@ -104,6 +104,18 @@ After removing a file, the sidebar link must be removed.
 After renaming a file, the sidebar link must be renamed to reflect the new file location.
 After moving a file, the sidebar link must be updated to reflect the new file location.
 
+### Twig examples
+Always wrap Twig code in `{% raw %}` and `{% endraw %}` tags.
+Examples:
+```twig
+{% raw %}
+{% if condition %}
+    <p>This is a Twig block.</p>
+{% endif %}
+{% endraw %}
+```
+
+`{% raw %}{% if condition %}{% endraw %}`
 ## Validation Workflow
 
 Use the following workflow to validate documentation changes.

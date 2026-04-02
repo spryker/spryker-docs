@@ -60,6 +60,17 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+      - title: AI Commerce
+        nested:
+          - title: AI Commerce overview
+            url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
+          - title: Install AI Commerce
+            url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Visual Add to Cart
+            url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html
+            nested:
+              - title: Install Visual Add to Cart
+                url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -1626,6 +1637,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: Database tables take up too much space or have ID overflow
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/database-tables-take-up-too-much-space-or-have-id-overflow.html
+      - title: Missing Frontend Dependencies When Building Back Office Assets
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-backoffice.html
 
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html

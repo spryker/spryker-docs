@@ -16,6 +16,18 @@ This document describes how to install the [Product Attribute Visibility feature
 | Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
+### Install the required packages
+
+| PACKAGE | VERSION |
+| --- | --- |
+| spryker-feature/product-experience-management | ^1.0.0 |
+| spryker/product-attribute-extension | ^1.1.0 |
+| spryker/product-attribute-gui-extension | ^1.0.0 |
+
+```bash
+composer require spryker-feature/product-experience-management:"^1.0.0" spryker/product-attribute-extension:"^1.1.0" spryker/product-attribute-gui-extension:"^1.0.0" --update-with-dependencies
+```
+
 ## 1) Set up configuration
 
 Set up RabbitMQ and Symfony Messenger configuration for the publish and sync queues.
@@ -136,10 +148,23 @@ Make sure the following transfer objects have been generated:
 | TRANSFER | TYPE | EVENT |
 | --- | --- | --- |
 | ProductAttributeStorage | class | created |
+| ProductAttributeStorage.key | property | created |
+| ProductAttributeStorage.inputType | property | created |
+| ProductAttributeStorage.isSuper | property | created |
+| ProductAttributeStorage.visibilityTypes | property | created |
 | ProductManagementAttribute.visibility | property | created |
 | ProductManagementAttribute.visibilityTypes | property | created |
-| ProductAttributeTableCriteria.visibilityTypes | property | created |
+| ProductManagementAttributeCollection | class | created |
+| ProductManagementAttributeCriteria | class | created |
 | ProductManagementAttributeConditions.productManagementAttributeIds | property | created |
+| ProductAttributeTableCriteria | class | created |
+| ProductAttributeTableCriteria.visibilityTypes | property | created |
+| ProductAttributeTableCriteria.withColumns | property | created |
+| ProductAttributeTableCriteria.queryConditions | property | created |
+| ProductAttributeTableCriteria.conditionCombineOperator | property | created |
+| ProductAttributeTableQueryCondition | class | created |
+| ProductAttributeQueryCriteria | class | created |
+| ProductAttributeQueryCriteria.withColumns | property | created |
 
 {% endinfo_block %}
 
@@ -306,7 +331,7 @@ use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductA
 class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDependencyProvider
 {
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableConfigExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableConfigExpanderPluginInterface>
      */
     protected function getAttributeTableConfigExpanderPlugins(): array
     {
@@ -316,7 +341,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableHeaderExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableHeaderExpanderPluginInterface>
      */
     protected function getAttributeTableHeaderExpanderPlugins(): array
     {
@@ -326,7 +351,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableDataExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableDataExpanderPluginInterface>
      */
     protected function getAttributeTableDataExpanderPlugins(): array
     {
@@ -336,7 +361,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableCriteriaExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableCriteriaExpanderPluginInterface>
      */
     protected function getAttributeTableCriteriaExpanderPlugins(): array
     {
@@ -346,7 +371,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormExpanderPluginInterface>
      */
     protected function getAttributeFormExpanderPlugins(): array
     {
@@ -356,7 +381,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormDataProviderExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormDataProviderExpanderPluginInterface>
      */
     protected function getAttributeFormDataProviderExpanderPlugins(): array
     {
@@ -366,7 +391,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormTransferMapperExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeFormTransferMapperExpanderPluginInterface>
      */
     protected function getAttributeFormTransferMapperExpanderPlugins(): array
     {
@@ -376,7 +401,7 @@ class ProductAttributeGuiDependencyProvider extends SprykerProductAttributeGuiDe
     }
 
     /**
-     * @return list<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableFilterFormExpanderPluginInterface>
+     * @return array<\Spryker\Zed\ProductAttributeGuiExtension\Dependency\Plugin\AttributeTableFilterFormExpanderPluginInterface>
      */
     protected function getAttributeTableFilterFormExpanderPlugins(): array
     {

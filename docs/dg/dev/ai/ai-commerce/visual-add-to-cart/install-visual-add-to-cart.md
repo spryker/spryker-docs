@@ -157,6 +157,7 @@ Do this step only if you have overridden `quick-order-form.twig`, `quick-order.t
 In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside `{% raw %}{% block fields %}{% endraw %}`:
 
 Add `pluginForms: [],` to the `data` variable definition:
+
 ```twig
 {% raw %}
 {% define data = {
@@ -173,6 +174,7 @@ Add `pluginForms: [],` to the `data` variable definition:
 ```
 
 Add `pluginForms: data.pluginForms,` to the `embed` variable definition in `{% raw %}embed molecule('form'){% endraw %}`:
+
 ```twig
 {% raw %}
  {% embed molecule('form') with {
@@ -186,6 +188,7 @@ Add `pluginForms: data.pluginForms,` to the `embed` variable definition in `{% r
 ```
 
 Add the plugin forms including.
+
 ```twig
 {% raw %}
 {% include molecule('quick-order-file-upload', 'QuickOrderPage') with {
@@ -212,6 +215,7 @@ Add the plugin forms including.
 ```
 
 Add styles to the `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.scss`:
+
 ```scss
     .plugins-quick-order-form {
         background-color: #f6f6f6;
@@ -222,6 +226,7 @@ Add styles to the `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecule
 ```
 
 add the following code to the `src/Pyz/Yves/QuickOrderPage/Theme/default/views/quick-order/quick-order.twig` file:
+
 ```twig
 {% raw %}
 {% define data = {

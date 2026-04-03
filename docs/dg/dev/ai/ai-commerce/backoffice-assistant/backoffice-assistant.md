@@ -23,7 +23,7 @@ Back Office Assistant ships with four built-in agents:
 
 | AGENT | PLUGIN | DESCRIPTION |
 |-------|--------|-------------|
-| General Purpose | `GeneralPurposeAgentPlugin` | Answers general Spryker Back Office questions and provides navigation guidance. |
+| General Purpose | `GeneralAgentPlugin` | Answers general Spryker Back Office questions and provides navigation guidance. |
 | Order Management | `OrderManagementAgentPlugin` | Provides read-only access to order data and OMS state information for diagnosing order issues. |
 | Discount Management | `DiscountManagementAgentPlugin` | Creates and updates discounts through the Back Office API. |
 | Form Fill | `FormFillAgentPlugin` | Fills Back Office forms using natural language instructions. |

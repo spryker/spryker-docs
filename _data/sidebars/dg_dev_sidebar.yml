@@ -71,6 +71,11 @@ entries:
             nested:
               - title: Install Visual Add to Cart
                 url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html
+            nested:
+              - title: Install Back Office Assistant
+                url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

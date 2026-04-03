@@ -26,6 +26,7 @@ For the base `AiFoundation` setup, see [Install AI Commerce](/docs/dg/dev/ai/ai-
 | FEATURE | DESCRIPTION |
 |---------|-------------|
 | [Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html) | Lets buyers upload a product image on the Quick Order page. AI recognizes products and quantities in the image and pre-fills the quick order form with matching SKUs. |
+| [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions, navigate the Back Office, diagnose order issues, and create or update discounts. |
 
 ## Installation
 

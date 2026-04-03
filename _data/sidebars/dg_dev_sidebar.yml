@@ -71,6 +71,11 @@ entries:
             nested:
               - title: Install Visual Add to Cart
                 url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html
+            nested:
+              - title: Install Back Office Assistant
+                url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -1500,6 +1505,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
       - title: Yves widget performance best practices
         url: /docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html
+      - title: Split publish queues for performance
+        url: /docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 

@@ -12,11 +12,12 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront, reducing 
 | FEATURE | DESCRIPTION |
 |---------|-------------|
 | [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html) | Lets buyers upload a product image on the Quick Order page. AI recognizes the products in the image and pre-fills the order form with matching SKUs and quantities — enabling rapid bulk ordering without manual entry. |
+| [Back Office Assistant](/docs/pbc/all/ai-commerce/latest/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions to navigate the Back Office, diagnose order issues, and create or update discounts. |
 
 ## Who benefits
 
 | ROLE | BENEFIT |
 |------|---------|
 | B2B buyers | Faster reordering from photos of shelves, product lists, or packaging. |
-| Store operators | Reduced support requests caused by manual order entry errors. |
+| Store operators | Reduced support requests caused by manual order entry errors. Faster Back Office workflows through conversational AI assistance. |
 | Developers | AI provider-agnostic integration — swap or configure models per feature via configuration. |

@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: Technical overview of the Back Office Assistant feature — architecture, agents, AiFoundation integration, and configuration options.
-last_updated: Apr 3, 2026
+last_updated: Mar 31, 2026
 template: concept-topic-template
 ---
 

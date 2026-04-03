@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: An AI-powered chat widget embedded in the Spryker Back Office that lets admin users manage orders, create discounts, and get navigation help through natural language.
-last_updated: Apr 3, 2026
+last_updated: Mar 31, 2026
 template: concept-topic-template
 ---
 

@@ -12,8 +12,7 @@ The **User management (IAM Users)** panel in [CloudHub](/docs/ca/dev/cloud-hub/c
 - **Identity provisioning:** Create IAM users for specific environments to ensure precise access control.
 - **Secure connectivity:** Enable or disable VPN access for individual users to secure communications with protected network resources.
 - **Authentication configuration:** Manage SSH public keys for users, enabling secure, key-based authentication for terminal and remote access.
-- **Access lifecycle management:** Track the status of user accounts, including creation timestamps and current provisioning states.
-- **Account maintenance:** Modify existing user configurations or remove access when it is no longer required.
+- **User lifecycle management:** Modify existing user configurations or remove user when it is no longer required.
 
 ## Credential delivery for new users
 

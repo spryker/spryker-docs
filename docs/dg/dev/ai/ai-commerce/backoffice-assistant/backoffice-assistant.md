@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: Technical overview of the Back Office Assistant feature — architecture, agents, AiFoundation integration, and configuration options.
-last_updated: Mar 31, 2026
+last_updated: Apr 3, 2026
 template: concept-topic-template
 ---
 
@@ -19,13 +19,14 @@ Streaming responses are delivered to the browser using Server-Sent Events (SSE),
 
 ## Agents
 
-Back Office Assistant ships with three built-in agents:
+Back Office Assistant ships with four built-in agents:
 
 | AGENT | PLUGIN | DESCRIPTION |
 |-------|--------|-------------|
 | General Purpose | `GeneralPurposeAgentPlugin` | Answers general Spryker Back Office questions and provides navigation guidance. |
 | Order Management | `OrderManagementAgentPlugin` | Provides read-only access to order data and OMS state information for diagnosing order issues. |
 | Discount Management | `DiscountManagementAgentPlugin` | Creates and updates discounts through the Back Office API. |
+| Form Fill | `FormFillAgentPlugin` | Fills Back Office forms using natural language instructions. |
 
 Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`.
 
@@ -39,6 +40,7 @@ Each agent uses a set of tools registered in `AiFoundationDependencyProvider::ge
 | `OrderManagementToolSetPlugin` | Provides tools for fetching order lists and OMS process information. |
 | `OrderDetailsToolSetPlugin` | Provides tools for fetching detailed order data by reference or ID. |
 | `DiscountManagementToolSetPlugin` | Provides tools for reading, creating, and updating discounts. |
+| `FormFillToolSetPlugin` | Provides tools for filling Back Office form fields with values derived from natural language instructions. |
 
 ## SSE streaming
 
@@ -61,6 +63,7 @@ The following configuration keys are used:
 | `AiCommerceConstants::AI_CONFIGURATION_GENERAL_PURPOSE` | Configuration for the General Purpose agent. |
 | `AiCommerceConstants::AI_CONFIGURATION_ORDER_MANAGEMENT` | Configuration for the Order Management agent. |
 | `AiCommerceConstants::AI_CONFIGURATION_DISCOUNT_MANAGEMENT` | Configuration for the Discount Management agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_FORM_FILL` | Configuration for the Form Fill agent. |
 
 ## System prompts
 
@@ -75,6 +78,7 @@ The feature and individual agents can be enabled or disabled from the Back Offic
 | `is_enabled` | `false` | Enables or disables the Back Office Assistant chat widget. |
 | `is_order_management_agent_enabled` | `true` | Enables or disables the Order Management Agent. |
 | `is_discount_management_agent_enabled` | `true` | Enables or disables the Discount Management Agent. |
+| `is_form_fill_agent_enabled` | `true` | Enables or disables the Form Fill Agent. |
 
 ## Install
 

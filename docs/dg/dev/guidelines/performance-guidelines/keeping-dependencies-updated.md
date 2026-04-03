@@ -121,6 +121,7 @@ The following sections list important module updates that include performance im
 - [spryker/util-sanitize:"^2.3.1"](https://github.com/spryker/util-sanitize/releases/tag/2.3.1)
 
 ### Data import (memory usage)
+
 - [spryker/acl-entity:"^1.17.0"](https://github.com/spryker/acl-entity/releases/tag/1.17.0)
 - [spryker/data-import:"^1.33.0"](https://github.com/spryker/data-import/releases/tag/1.33.0)
 - [spryker/merchant-relationship-product-list-data-import:"^0.1.3"](https://github.com/spryker/merchant-relationship-product-list-data-import/releases/tag/0.1.3)

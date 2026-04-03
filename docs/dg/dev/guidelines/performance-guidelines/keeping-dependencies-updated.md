@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: Mar 02, 2026
+last_updated: Apr 03, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -62,6 +62,10 @@ The following sections list important module updates that include performance im
 - [spryker/product-attribute:^1.18.0](https://github.com/spryker/product-attribute/releases/tag/1.18.0)
 - [spryker/zed-navigation:^1.15.0](https://github.com/spryker/zed-navigation/releases/tag/1.15.0)
 
+### Back Office performance on category list page
+
+- [spryker/product-category:"^4.32.0"](https://github.com/spryker/zed-navigation/releases/tag/4.32.0)
+
 ### Order placement performance
 
 - [spryker/calculation:^4.14.0](https://github.com/spryker/calculation/releases/tag/4.14.0)
@@ -115,6 +119,12 @@ The following sections list important module updates that include performance im
 - [spryker/category-storage:"^2.12.0"](https://github.com/spryker/category-storage/releases/tag/2.12.0)
 - [spryker/propel-orm:"^1.22.0"](https://github.com/spryker/propel-orm/releases/tag/1.22.0)
 - [spryker/util-sanitize:"^2.3.1"](https://github.com/spryker/util-sanitize/releases/tag/2.3.1)
+
+### Data import (memory usage)
+- [spryker/acl-entity:"^1.17.0"](https://github.com/spryker/acl-entity/releases/tag/1.17.0)
+- [spryker/data-import:"^1.33.0"](https://github.com/spryker/data-import/releases/tag/1.33.0)
+- [spryker/merchant-relationship-product-list-data-import:"^0.1.3"](https://github.com/spryker/merchant-relationship-product-list-data-import/releases/tag/0.1.3)
+- [spryker/price-product-merchant-relationship-data-import:"^0.2.5"](https://github.com/spryker/price-product-merchant-relationship-data-import/releases/tag/0.2.5)
 
 ### Cart page and checkout for large carts (100+ items)
 

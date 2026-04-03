@@ -1,7 +1,7 @@
 ---
 title: Install Visual Add to Cart
 description: Learn how to install the Visual Add to Cart feature that lets buyers upload a product image on the Quick Order page to automatically populate the order form.
-last_updated: Mar 31, 2026
+last_updated: Jun 16, 2026
 template: feature-integration-guide-template
 ---
 
@@ -26,7 +26,9 @@ Install the required features:
 ### 1) Add translations
 
 Append the glossary according to your configuration:
-`data/import/common/common/glossary.csv`
+
+<details>
+    <summary>data/import/common/common/glossary.csv</summary>
 
 ```csv
 ai-commerce.quick-order-image-to-cart.image-upload.title,Quick order with AI,en_US
@@ -56,6 +58,8 @@ ai-commerce.quick-order-image-to-cart.image-order.errors.ai-response-invalid,Die
 ai-commerce.quick-order-image-to-cart.image-order.errors.file-too-large,The uploaded image exceeds the maximum allowed file size.,en_US
 ai-commerce.quick-order-image-to-cart.image-order.errors.file-too-large,Das hochgeladene Bild überschreitet die maximal zulässige Dateigröße.,de_DE
 ```
+
+</details>
 
 ### 2) Set up behavior
 
@@ -157,6 +161,7 @@ Do this step only if you have overridden `quick-order-form.twig`, `quick-order.t
 In `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.twig`, make sure the plugin forms loop is placed after the `quick-order-file-upload` molecule include inside `{% raw %}{% block fields %}{% endraw %}`:
 
 Add `pluginForms: [],` to the `data` variable definition:
+
 ```twig
 {% raw %}
 {% define data = {
@@ -173,6 +178,7 @@ Add `pluginForms: [],` to the `data` variable definition:
 ```
 
 Add `pluginForms: data.pluginForms,` to the `embed` variable definition in `{% raw %}embed molecule('form'){% endraw %}`:
+
 ```twig
 {% raw %}
  {% embed molecule('form') with {
@@ -186,6 +192,7 @@ Add `pluginForms: data.pluginForms,` to the `embed` variable definition in `{% r
 ```
 
 Add the plugin forms including.
+
 ```twig
 {% raw %}
 {% include molecule('quick-order-file-upload', 'QuickOrderPage') with {
@@ -212,6 +219,7 @@ Add the plugin forms including.
 ```
 
 Add styles to the `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecules/quick-order-form/quick-order-form.scss`:
+
 ```scss
     .plugins-quick-order-form {
         background-color: #f6f6f6;
@@ -222,6 +230,7 @@ Add styles to the `src/Pyz/Yves/QuickOrderPage/Theme/default/components/molecule
 ```
 
 add the following code to the `src/Pyz/Yves/QuickOrderPage/Theme/default/views/quick-order/quick-order.twig` file:
+
 ```twig
 {% raw %}
 {% define data = {

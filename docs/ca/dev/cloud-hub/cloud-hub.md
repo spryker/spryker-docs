@@ -22,5 +22,5 @@ CloudHub provides feedback on all infrastructure actions through the **Processin
 | Status | Description |
 | :--- | :--- |
 | **In Progress** | The infrastructure change is currently being deployed or updated by the automation engine. |
-| **Error** | The action could not be completed. CloudHub provides specific error details—for example, "S3 bucket name already exists"—to assist with troubleshooting or support escalation. |
+| **Error** | The action could not be completed. CloudHub provides specific error details. There are two types of error user might face:<br>&bull; **System errors**: In this case, we create a HubSpot ticket for our operations team to handle the problem. The user will receive a ticket number to track progress.<br>&bull; **Validation errors**: Issues like "S3 bucket name already exists" which must be fixed by the user. |
 | **Active/Success** | The resource is fully provisioned, validated, and ready for use in the designated environment. |

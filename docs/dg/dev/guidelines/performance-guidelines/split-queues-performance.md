@@ -226,7 +226,7 @@ public function getQueueName(): string
 
 ### 4. Create the new queues in the broker
 
-After completing all configuration changes, run the following command to create the new queues in your message broker:
+After completing all configuration changes, execute the following command to create the new queues in your message broker:
 
 ```bash
 vendor/bin/console queue:setup

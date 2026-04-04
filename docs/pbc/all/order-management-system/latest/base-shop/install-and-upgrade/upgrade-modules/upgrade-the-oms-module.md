@@ -1,7 +1,7 @@
 ---
 title: Upgrade the OMS module
 description: Use the guide to upgrade to a newer version of the Spryker Cloud Commerce OS Order Management System module from an older version.
-last_updated: Jun 16, 2021
+last_updated: Mar 28, 2026
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-oms
 originalArticleId: 1f2d5a9b-1907-4cb4-bf1f-1867cc835dcd

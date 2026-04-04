@@ -2,7 +2,7 @@
 title: Back Office Configuration Framework
 description: A scalable, standardized way to expose business-relevant configuration options directly in the Backoffice, without requiring code changes or redeployment.
 template: concept-topic-template
-last_updated: Feb 23, 2026
+last_updated: Mar 31, 2026
 label: early-access
 ---
 
@@ -89,9 +89,17 @@ The framework supports configuration for existing Spryker out of the box feature
 
 Selected business-relevant configuration moves from code level to UI level without exposing low-level technical complexity. The developer controls which options are available, what values are valid, and how they are presented. The business user controls what value is set, within those defined parameters.
 
-### First out of the box implementation: B2B Product Availability Display
+### Out of the box implementations
 
-The initial release of the Back Office Configuration Framework ships with a configuration UI for B2B Product Availability Display. This first implementation demonstrates the framework in a real-world use case, allowing business users to configure how product availability information is presented to B2B buyers directly from the Back Office.
+The Back Office Configuration Framework ships with the following out of the box implementations.
+
+**B2B Product Availability Display**
+
+The initial release ships with a configuration UI for B2B Product Availability Display. This implementation demonstrates the framework in a real-world use case, allowing business users to configure how product availability information is presented to B2B buyers directly from the Back Office.
+
+**Basic Shop Theme**
+
+The second out of the box implementation provides a configuration UI for shop branding. Business Admins can set theme colors, logo URLs, and custom CSS for the Storefront, Back Office, and Merchant Portal without code changes or redeployment. For details, see [Basic Shop Theme feature overview](/docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html).
 
 ---
 

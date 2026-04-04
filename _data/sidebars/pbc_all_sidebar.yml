@@ -2822,6 +2822,8 @@ entries:
                     nested:
                       - title: Product Attributes
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html
                       - title: Discontinued Products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
                       - title: Product Images
@@ -2917,6 +2919,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
                       - title: Product Attachments
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles

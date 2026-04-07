@@ -133,6 +133,40 @@ class SymfonyMessengerConfig extends SprykerSymfonyMessengerConfig
 }
 ```
 
+### Optional: Extend visibility types
+
+By default, the feature provides three visibility types: `PDP`, `PLP`, and `Cart`. To add project-specific visibility types, extend `ProductExperienceManagementConfig` at the project level and override the `getAvailableVisibilityTypes()` method.
+
+**src/Pyz/Shared/ProductExperienceManagement/ProductExperienceManagementConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Shared\ProductExperienceManagement;
+
+use SprykerFeature\Shared\ProductExperienceManagement\ProductExperienceManagementConfig as SprykerProductExperienceManagementConfig;
+
+class ProductExperienceManagementConfig extends SprykerProductExperienceManagementConfig
+{
+    /**
+     * @var string
+     */
+    public const string VISIBILITY_TYPE_WISHLIST = 'Wishlist';
+
+    /**
+     * @return array<string>
+     */
+    public function getAvailableVisibilityTypes(): array
+    {
+        return array_merge(parent::getAvailableVisibilityTypes(), [
+            static::VISIBILITY_TYPE_WISHLIST,
+        ]);
+    }
+}
+```
+
+After adding a custom visibility type, implement the corresponding widget or template logic in your Yves layer to render the attribute on the relevant page.
+
 ## 2) Set up the database schema and transfer objects
 
 1. Create the following schema file to enable event-driven publishing for product management attributes:

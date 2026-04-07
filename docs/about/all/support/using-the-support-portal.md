@@ -1,7 +1,7 @@
 ---
 title: Using the Support Hub
 description: How to navigate Spryker's Support Hub on the Spryker Portal to create, track, and manage support ticket efficiently for seamless issue resolution
-last_updated: Apr 2, 2026
+last_updated: Apr 3, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
 originalArticleId: b215730b-98ee-4661-8281-c45104e51044
@@ -18,7 +18,7 @@ This document describes how to use the support hub to create and manage your tic
 
 ## Prerequisites
 
-- Log in at the [Spryker Portal](https://portal.spryker.com). If you don't have access to the Spryker Portal, request access using [this form](https://portal.spryker.com/request-access).
+- Log in at the [Spryker Portal](https://portal.spryker.com). If you don't have access to the Spryker Portal, request it using [this form](https://portal.spryker.com/request-access).
 - Go the the Support Hub, using the squares menu in the top right.
 
 ## Create a new ticket
@@ -68,7 +68,7 @@ Let us know about events or time periods in which you expect a higher than usual
 
 ### Emergencies
 
-Emergencies are reserved for problems that have significant business impact now or very soon. Emergency tickets regularly start an [escalation](/docs/about/all/support/support-ticket-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
+Emergencies are reserved for problems that have significant business impact now or very soon. Emergency tickets regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
 ### Info on Change Requests
 

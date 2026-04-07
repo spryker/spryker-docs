@@ -192,8 +192,15 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductPageDataLoaderPlugin                            | Expands ProductPageLoadTransfer object with merchant data.                                     |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductAbstractStorageExpanderPlugin                   | Expands product abstract storage data with merchant references.                                |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage   |
 | MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
+| MerchantProductProductAbstractAfterUpdatePlugin                | Updates the merchant product abstract entity when a product abstract is updated.               | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
+| MerchantProductProductAbstractExpanderPlugin                   | Expands product abstract transfer with merchant product data.                                  | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
 | ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractFormExpanderPlugin                      | Expands the product abstract form with merchant product fields.                                | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractFormDataProviderExpanderPlugin          | Expands the product abstract form data provider with merchant product data.                    | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractFormOptionsExpanderPlugin               | Expands product abstract form options with merchant product options.                           | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractFormOptionsResolverExpanderPlugin       | Resolves product abstract form options for merchant products.                                  | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractGeneralTabContentProviderPlugin         | Provides content for the merchant product general tab in the product abstract form.            | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductConcretePageMapExpanderPlugin            | Expands `PageMap` transfer object with `merchant_reference`.                                   |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
@@ -203,6 +210,8 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Zed\Product;
 
+use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractAfterUpdatePlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractExpanderPlugin;
 use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProductAbstractPostCreatePlugin;
 
 class ProductDependencyProvider extends SprykerProductDependencyProvider
@@ -214,6 +223,26 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     {
         return [
             new MerchantProductProductAbstractPostCreatePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractAfterUpdatePluginInterface>
+     */
+    protected function getProductAbstractAfterUpdatePlugins(): array
+    {
+        return [
+            new MerchantProductProductAbstractAfterUpdatePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractExpanderPluginInterface>
+     */
+    protected function getProductAbstractExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductProductAbstractExpanderPlugin(),
         ];
     }
 }
@@ -232,11 +261,16 @@ Make sure that you can create a new product in the Merchant Portal and observe i
 
 namespace Pyz\Zed\ProductManagement;
 
-use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractEditViewExpanderPlugin;
-use Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement\ProductApprovalProductAbstractEditViewExpanderPlugin;
 use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractFormDataProviderExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractFormExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractFormOptionsExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractFormOptionsResolverExpanderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractGeneralTabContentProviderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractEditViewExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductTableQueryCriteriaExpanderPlugin;
+use Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement\ProductApprovalProductAbstractEditViewExpanderPlugin;
 
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
@@ -278,6 +312,56 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
         return [
             new ProductApprovalProductAbstractEditViewExpanderPlugin(),
             new MerchantProductProductAbstractEditViewExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractFormExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormDataProviderExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormDataProviderExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractFormDataProviderExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormOptionsExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormOptionsExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractFormOptionsExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormOptionsResolverExpanderPluginInterface>
+     */
+    protected function getProductAbstractFormOptionsResolverExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractFormOptionsResolverExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormTabContentProviderWithPriorityPluginInterface>
+     */
+    protected function getProductAbstractFormTabContentProviderWithPriorityPlugins(): array
+    {
+        return [
+            new MerchantProductAbstractGeneralTabContentProviderPlugin(),
         ];
     }
 }
@@ -630,6 +714,14 @@ class ProductManagementConfig extends SprykerProductManagementConfig
      * @var list<string>
      */
     protected const PRODUCT_TABLE_FILTER_FORM_EXTERNAL_FIELD_NAMES = ['id-merchant'];
+
+    /**
+     * @return bool
+     */
+    public function isTabContentProviderEnabled(): bool
+    {
+        return true;
+    }
 }
 ```
 

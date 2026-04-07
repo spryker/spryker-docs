@@ -1115,6 +1115,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
       url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    - title: Basic Shop Theme feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 
 
   - title: SDKs

@@ -2,7 +2,7 @@
 title: Install the Product Attribute Visibility feature
 description: Learn how to integrate the Product Attribute Visibility feature into a Spryker project.
 template: feature-integration-guide-template
-last_updated: Mar 31, 2026
+last_updated: Apr 7, 2026
 ---
 
 This document describes how to install the [Product Attribute Visibility feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html).
@@ -21,11 +21,19 @@ This document describes how to install the [Product Attribute Visibility feature
 | PACKAGE | VERSION |
 | --- | --- |
 | spryker-feature/product-experience-management | ^1.0.0 |
+| spryker/product-attribute | ^1.19.0 |
 | spryker/product-attribute-extension | ^1.1.0 |
+| spryker/product-attribute-gui | ^2.2.0 |
 | spryker/product-attribute-gui-extension | ^1.0.0 |
+| spryker/product-management | ^0.20.8 |
+| spryker-shop/cart-page | ^3.58.0 |
+| spryker-shop/catalog-page | ^1.36.0 |
+| spryker-shop/product-detail-page | ^3.31.0 |
+| spryker-shop/product-widget | ^1.6.0 |
+| spryker-shop/shop-ui | ^1.106.0 |
 
 ```bash
-composer require spryker-feature/product-experience-management:"^1.0.0" spryker/product-attribute-extension:"^1.1.0" spryker/product-attribute-gui-extension:"^1.0.0" --update-with-dependencies
+composer require spryker/product-attribute-gui-extension:"^1.0.0" spryker-feature/product-experience-management:"^1.0.0" spryker/product-attribute:"^1.19.0" spryker/product-attribute-extension:"^1.1.0" spryker/product-attribute-gui:"^2.2.0" spryker/product-management:"^0.20.8" spryker-shop/cart-page:"^3.58.0" spryker-shop/catalog-page:"^1.36.0" spryker-shop/product-detail-page:"^3.31.0" spryker-shop/product-widget:"^1.6.0" spryker-shop/shop-ui:"^1.106.0" --update-with-dependencies
 ```
 
 ## 1) Set up configuration

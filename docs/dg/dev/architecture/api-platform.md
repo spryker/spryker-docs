@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 26, 2026
+last_updated: Apr 7, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -18,6 +18,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
   - title: Sparse Fieldsets
     link: docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+  - title: Error Handling
+    link: docs/dg/dev/architecture/api-platform/error-handling.html
 ---
 
 Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
@@ -157,19 +159,33 @@ final class CustomersBackendResource
 
 #### 3. State providers and processors
 
-Detailed information about the API-Platform Provider and Resources can be found on the public docs:
+Spryker provides abstract base classes that simplify Provider and Processor implementation by routing operations to dedicated methods and providing built-in context helpers.
+
+Detailed information about the API-Platform Provider and Processor concepts can be found on the public docs:
 - [API Platform Providers](https://api-platform.com/docs/core/state-providers/)
 - [API Platform Processors](https://api-platform.com/docs/core/state-processors/)
 
 **Provider (read operations):**
 
 ```php
-class CustomerBackendProvider implements ProviderInterface
+class CustomerBackendProvider extends AbstractProvider
 {
-    public function provide(Operation $operation, array $uriVariables = [], array $context = []): object|array|null
+    public function __construct(
+        private CustomerFacadeInterface $customerFacade,
+    ) {}
+
+    protected function provideItem(): ?object
     {
-        // Fetch and return data from your business layer
-        return $customerResource;
+        // GET /customers/{id} — fetch single resource
+        return $this->mapToResource(
+            $this->customerFacade->findCustomerByReference($this->getUriVariables()['customerReference']),
+        );
+    }
+
+    protected function provideCollection(): iterable
+    {
+        // GET /customers — fetch paginated collection
+        return $this->customerFacade->getCustomerCollection($this->getPagination());
     }
 }
 ```
@@ -177,12 +193,34 @@ class CustomerBackendProvider implements ProviderInterface
 **Processor (write operations):**
 
 ```php
-class CustomerBackendProcessor implements ProcessorInterface
+class CustomerBackendProcessor extends AbstractProcessor
 {
-    public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = []): mixed
+    public function __construct(
+        private CustomerFacadeInterface $customerFacade,
+    ) {}
+
+    protected function processPost(): mixed
     {
-        // Persist changes through your business layer
-        return $updatedResource;
+        // POST /customers — create resource
+        return $this->mapToResource(
+            $this->customerFacade->createCustomer($this->mapToTransfer($this->data)),
+        );
+    }
+
+    protected function processPatch(): mixed
+    {
+        // PATCH /customers/{id} — update resource
+        return $this->mapToResource(
+            $this->customerFacade->updateCustomer($this->mapToTransfer($this->data)),
+        );
+    }
+
+    protected function processDelete(): mixed
+    {
+        // DELETE /customers/{id} — delete resource
+        $this->customerFacade->deleteCustomer($this->getUriVariables()['customerReference']);
+
+        return null;
     }
 }
 ```
@@ -204,7 +242,7 @@ This API is configured to serve the JSON:API format by default, which can be con
 
 ### GlueStorefront API 
 
-Thie API is configured to serve the JSON+LD format by default, which can be configured per project.
+This API is configured to serve the JSON:API format by default, which can be configured per project.
 
 - **API Type:** `storefront`
 - **Application:** Glue
@@ -214,7 +252,7 @@ Thie API is configured to serve the JSON+LD format by default, which can be conf
 ### GlueBackend API
 
 - **API Type:** `backend`
-- **Application:** Zed
+- **Application:** Glue
 - **Base URL:** `http://glue-backend.eu.spryker.local/`
 - **Use cases:** Admin panels, internal tools, ERP integrations
 
@@ -268,40 +306,42 @@ resource:
 
 ### Dependency Injection
 
-API Platform fully integrates with Symfony Dependency Injection:
+API Platform fully integrates with Symfony Dependency Injection. Providers and Processors referenced in resource schema YAML files are automatically discovered and registered as public, autowired services. No manual service registration is needed for standard cases.
+
+If you need custom service configuration (non-standard constructor arguments, decorators, etc.), you can still register services manually in your `ApplicationServices.php`:
 
 ```php
-// config/Zed/ApplicationServices.php
-$services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
+// config/Glue/ApplicationServices.php
+$services->load('Pyz\\Glue\\', '../../../src/Pyz/Glue/');
 ```
 
-Providers and Processors are automatically discovered and can use constructor injection:
+Providers and Processors can use constructor injection to access Zed facades and other services:
 
 ```php
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider extends AbstractProvider
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
-        private CustomerRepositoryInterface $customerRepository,
     ) {}
 }
 ```
 
 ### Facade integration
 
-Resources can leverage existing Spryker facades:
+Glue layer Providers and Processors access business logic through Zed facades:
 
 ```php
-class CustomerBackendProcessor implements ProcessorInterface
+class CustomerBackendProcessor extends AbstractProcessor
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
     ) {}
 
-    public function process(mixed $data, Operation $operation, ...): mixed
+    protected function processPost(): mixed
     {
-        $customerTransfer = $this->mapToTransfer($data);
+        $customerTransfer = $this->mapToTransfer($this->data);
         $response = $this->customerFacade->createCustomer($customerTransfer);
+
         return $this->mapToResource($response->getCustomerTransfer());
     }
 }
@@ -425,6 +465,20 @@ Response includes both the customer and related addresses in JSON:API format. No
 
 For detailed information, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
+### Error handling
+
+All exceptions are automatically converted to JSON:API error responses with domain-specific error codes. Providers and Processors throw `GlueApiException` with an HTTP status code, a numeric error code, and a message. Validation errors return status `422` with detailed field-level violations.
+
+For detailed information, see [Error Handling](/docs/dg/dev/architecture/api-platform/error-handling.html).
+
+### ETag support
+
+ETag response headers are automatically added when a Provider stores an etag value in the response context. This enables client-side caching and conditional requests.
+
+### Pagination links
+
+Collection responses with pagination automatically include `first`, `last`, `prev`, and `next` links in the JSON:API response. No additional configuration is needed — the links are generated based on the current page, items per page, and total item count returned by the Provider.
+
 ### Sparse fieldsets
 
 Request only the attributes you need using the `fields` query parameter:
@@ -469,7 +523,7 @@ properties:
 | Definition | Schema-based (YAML) | Code-based (PHP) |
 | Documentation | Auto-generated OpenAPI | Manual |
 | Validation | Declarative | Programmatic |
-| Standards | JSON-LD, Hydra | JSON API |
+| Standards | JSON:API, JSON-LD, Hydra | JSON API |
 | Learning curve | Lower | Higher |
 | Flexibility | High | Very high |
 | Use cases | Standard CRUD | Complex business logic |
@@ -491,6 +545,7 @@ For detailed implementation guides:
 - [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
 - [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html) - Request only needed attributes
+- [Error Handling](/docs/dg/dev/architecture/api-platform/error-handling.html) - Domain errors, validation, and error codes
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 
 ## Next steps

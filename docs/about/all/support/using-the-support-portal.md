@@ -18,14 +18,14 @@ This document describes how to use the support hub to create and manage your tic
 
 ## Prerequisites
 
-- Log in at the [Spryker Portal](https://portal.spryker.com). If you don't have access to the Spryker Portal, please request it using [this form](https://portal.spryker.com/request-access).
+- Log in at the [Spryker Portal](https://portal.spryker.com). If you don't have access to the Spryker Portal, request access using [this form](https://portal.spryker.com/request-access).
 - Go the the Support Hub, using the squares menu in the top right.
 
 ## Create a new ticket
 
 To create a new ticket, click **Create a ticket** and follow the wizard.
 
-When creating a ticket, please use the recommendations in [Share secrets with the Spryker Support team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
+When creating a ticket, use the recommendations in [Share secrets with the Spryker Support team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
 
 The following are the top-level categories of tickets and their description.

@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Mar 9, 2026
+last_updated: Apr 7, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -18,6 +18,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/code-buckets.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
+  - title: Error Handling
+    link: docs/dg/dev/architecture/api-platform/error-handling.html
 ---
 
 This document describes how to create and enable API Platform resources in your Spryker project.
@@ -131,7 +133,7 @@ patch:
 
 ### 3. Implement the Provider
 
-The Provider is responsible for fetching data (GET operations). Implement the `ProviderInterface`:
+The Provider is responsible for fetching data (GET operations). Extend `AbstractProvider` and override the methods for the operations you support:
 
 `src/Pyz/Glue/Customer/Api/Backend/Provider/CustomerBackendProvider.php`
 
@@ -140,81 +142,79 @@ The Provider is responsible for fetching data (GET operations). Implement the `P
 
 namespace Pyz\Glue\Customer\Api\Backend\Provider;
 
-use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\Pagination\TraversablePaginator;
-use ApiPlatform\State\ProviderInterface;
-use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
 use Generated\Api\Backend\CustomersBackendResource;
+use Generated\Shared\Transfer\CustomerTransfer;
+use Spryker\ApiPlatform\State\Provider\AbstractProvider;
+use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 
-class CustomerBackendProvider implements ProviderInterface
+class CustomerBackendProvider extends AbstractProvider
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
     ) {
     }
 
-    /**
-     * @param \ApiPlatform\Metadata\Operation $operation
-     * @param array<string, mixed> $uriVariables
-     * @param array<string, mixed> $context
-     *
-     * @return object|array<object>|null
-     */
-    public function provide(Operation $operation, array $uriVariables = [], array $context = []): object|array|null
+    protected function provideItem(): ?object
     {
-        // Single resource (GET /customers/{id})
-        if (isset($uriVariables['customerReference'])) {
-            return $this->getCustomer($uriVariables['customerReference']);
-        }
-
-        // Collection (GET /customers)
-        return $this->getCustomers($context);
-    }
-
-    private function getCustomer(string $customerReference): ?CustomersBackendResource
-    {
+        $customerReference = $this->getUriVariables()['customerReference'];
         $customerTransfer = $this->customerFacade->findCustomerByReference($customerReference);
 
         if ($customerTransfer === null) {
             return null;
         }
 
-        // Map to API resource
+        return $this->mapToResource($customerTransfer);
+    }
+
+    /**
+     * @return \ApiPlatform\State\Pagination\TraversablePaginator<\Generated\Api\Backend\CustomersBackendResource>
+     */
+    protected function provideCollection(): TraversablePaginator
+    {
+        $pagination = $this->getPagination();
+        $customerCollection = $this->customerFacade->getCustomerCollection(
+            $pagination['page'],
+            $pagination['itemsPerPage'],
+        );
+
+        $resources = [];
+        foreach ($customerCollection->getCustomers() as $customerTransfer) {
+            $resources[] = $this->mapToResource($customerTransfer);
+        }
+
+        return new TraversablePaginator(
+            new \ArrayObject($resources),
+            $pagination['page'],
+            $pagination['itemsPerPage'],
+            $customerCollection->getTotalCount(),
+        );
+    }
+
+    private function mapToResource(CustomerTransfer $customerTransfer): CustomersBackendResource
+    {
         $resource = new CustomersBackendResource();
         $resource->fromArray($customerTransfer->toArray());
 
         return $resource;
     }
-
-    private function getCustomers(array $context): TraversablePaginator
-    {
-        $filters = $context['filters'] ?? [];
-        $page = (int) ($filters['page'] ?? 1);
-        $itemsPerPage = (int) ($filters['itemsPerPage'] ?? 10);
-
-        $customerCollection = $this->customerFacade->getCustomerCollection($page, $itemsPerPage);
-
-        $resources = [];
-        foreach ($customerCollection->getCustomers() as $customerTransfer) {
-            $resource = new CustomersBackendResource();
-            $resource->fromArray($customerTransfer->toArray());
-
-            $resources[] = $resource;
-        }
-
-        return new TraversablePaginator(
-            new \ArrayObject($resources),
-            $page,
-            $itemsPerPage,
-            $customerCollection->getTotalCount()
-        );
-    }
 }
 ```
 
+`AbstractProvider` automatically routes `Get` operations to `provideItem()` and `GetCollection` operations to `provideCollection()`. It also provides built-in helpers:
+
+| Method | Purpose |
+|--------|---------|
+| `getUriVariables()` | Access URI variables (for example, `customerReference` from `/customers/{customerReference}`) |
+| `getPagination()` | Extract `page` and `itemsPerPage` from query parameters |
+| `getLocale()` | Get the current locale from the request |
+| `getStore()` | Get the current store from the request |
+| `getRequest()` | Access the full Symfony Request object |
+| `getOperation()` | Access the current API Platform Operation |
+
 ### 4. Implement the Processor
 
-The Processor handles data modifications (POST, PUT, PATCH, DELETE). Implement the `ProcessorInterface`:
+The Processor handles data modifications (POST, PUT, PATCH, DELETE). Extend `AbstractProcessor` and override the methods for the operations you support:
 
 `src/Pyz/Glue/Customer/Api/Backend/Processor/CustomerBackendProcessor.php`
 
@@ -223,48 +223,38 @@ The Processor handles data modifications (POST, PUT, PATCH, DELETE). Implement t
 
 namespace Pyz\Glue\Customer\Api\Backend\Processor;
 
-use ApiPlatform\Metadata\Delete;
-use ApiPlatform\Metadata\Operation;
-use ApiPlatform\Metadata\Patch;
-use ApiPlatform\Metadata\Post;
-use ApiPlatform\State\ProcessorInterface;
-use Pyz\Glue\Customer\Business\CustomerFacadeInterface;
 use Generated\Api\Backend\CustomersBackendResource;
+use Generated\Shared\Transfer\CustomerTransfer;
+use Spryker\ApiPlatform\State\Processor\AbstractProcessor;
+use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 
-class CustomerBackendProcessor implements ProcessorInterface
+class CustomerBackendProcessor extends AbstractProcessor
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
     ) {
     }
 
-    /**
-     * @param mixed $data
-     * @param \ApiPlatform\Metadata\Operation $operation
-     * @param array<string, mixed> $uriVariables
-     * @param array<string, mixed> $context
-     *
-     * @return mixed
-     */
-    public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = []): mixed
+    protected function processPost(): mixed
     {
-        if ($operation instanceof Delete) {
-            $this->customerFacade->deleteCustomer($uriVariables['customerReference']);
-            return null;
-        }
+        $customerTransfer = $this->mapToTransfer($this->data);
+        $savedCustomer = $this->customerFacade->createCustomer($customerTransfer);
 
-        if ($operation instanceof Post) {
-            $customerTransfer = $this->mapToTransfer($data);
-            $savedCustomer = $this->customerFacade->createCustomer($customerTransfer);
-            return $this->mapToResource($savedCustomer);
-        }
+        return $this->mapToResource($savedCustomer);
+    }
 
-        if ($operation instanceof Patch) {
-            $customerTransfer = $this->mapToTransfer($data);
-            $customerTransfer->setCustomerReference($uriVariables['customerReference']);
-            $updatedCustomer = $this->customerFacade->updateCustomer($customerTransfer);
-            return $this->mapToResource($updatedCustomer);
-        }
+    protected function processPatch(): mixed
+    {
+        $customerTransfer = $this->mapToTransfer($this->data);
+        $customerTransfer->setCustomerReference($this->getUriVariables()['customerReference']);
+        $updatedCustomer = $this->customerFacade->updateCustomer($customerTransfer);
+
+        return $this->mapToResource($updatedCustomer);
+    }
+
+    protected function processDelete(): mixed
+    {
+        $this->customerFacade->deleteCustomer($this->getUriVariables()['customerReference']);
 
         return null;
     }
@@ -287,6 +277,8 @@ class CustomerBackendProcessor implements ProcessorInterface
 }
 ```
 
+`AbstractProcessor` automatically routes operations to the correct method based on the HTTP method. The deserialized request body is available as `$this->data`. The same context helpers as `AbstractProvider` are available (`getUriVariables()`, `getLocale()`, `getStore()`, etc.).
+
 ### 5. Generate the resource
 
 Run the generation command to create the API resource class:
@@ -306,16 +298,20 @@ The generated class includes:
 - Getters and setters
 - `toArray()` and `fromArray()` methods
 
-### 6. Register services in the Dependency Injection container
+### 6. Service registration (automatic)
 
-Make your Provider and Processor available through dependency injection:
-**config/Glue/ApplicationServices.php**
+Provider and Processor classes referenced in your resource schema YAML are **automatically discovered and registered** as public, autowired services in the Symfony Dependency Injection container. No manual service registration is needed for standard cases.
+
+The auto-discovery system:
+- Reads provider and processor class names from your `*.resource.yml` schema files
+- Registers them with `autowire: true`, `autoconfigure: true`, and `public: true`
+- Applies the appropriate API Platform tags (`api_platform.state_provider`, `api_platform.state_processor`)
+- Also discovers and registers support classes (mappers, resolvers) from `Api/` directories
+
+If you need custom service configuration (non-standard constructor arguments, service decoration, etc.), you can still register services manually in `ApplicationServices.php`:
 
 ```php
-<?php
-
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
+// config/Glue/ApplicationServices.php
 return static function (ContainerConfigurator $configurator): void {
     $services = $configurator->services()
         ->defaults()
@@ -323,8 +319,9 @@ return static function (ContainerConfigurator $configurator): void {
         ->public()
         ->autoconfigure();
 
-    // Auto-discover services from your project modules
-    $services->load('Pyz\\Glue\\', '../../../src/Pyz/Glue/');
+    // Only needed for services that require custom configuration
+    $services->set(MyCustomProvider::class)
+        ->arg('$customArgument', 'value');
 };
 ```
 

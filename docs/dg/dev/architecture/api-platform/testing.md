@@ -1,7 +1,7 @@
 ---
 title: API Platform Testing
 description: Learn how to write and run tests for your API Platform resources in Spryker.
-last_updated: Feb 25, 2026
+last_updated: Apr 7, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -14,6 +14,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: Troubleshooting
     link: docs/dg/dev/architecture/api-platform/troubleshooting.html
+  - title: Error Handling
+    link: docs/dg/dev/architecture/api-platform/error-handling.html
 ---
 
 This document describes how to write and run tests for your API Platform resources in your project.
@@ -49,7 +51,7 @@ modules:
 2. Stub dependencies with `Codeception\Stub::makeEmpty()` and register them via `$this->tester->mockService(Interface::class, $stub)`.
 3. Build the context with `$this->tester->getContext()->withCustomer(...)`.
 4. Pass `uriVariables` as a plain array directly as the second argument to `provide()`.
-5. Assert on the returned resource object(s).
+5. Assert on the returned resource objects.
 
 ```php
 class CustomersStorefrontProviderTest extends StorefrontApiTestCase
@@ -109,6 +111,26 @@ $this->tester->getPatchOperation()
 $this->tester->getDeleteOperation()
 ```
 
+### Service mocking
+
+Use `mockService()` to inject mock services into the container before resolving providers or processors:
+
+```php
+$customerClient = Stub::makeEmpty(CustomerClientInterface::class, [
+    'findCustomerByReference' => (new CustomerResponseTransfer())
+        ->setCustomerTransfer($customerTransfer)
+        ->setHasCustomer(true),
+]);
+
+$this->tester->mockService(CustomerClientInterface::class, $customerClient);
+```
+
+For the `AbstractApiTestCase`-based test cases, use `setService()` instead:
+
+```php
+$this->setService(CustomerClientInterface::class, $customerClientMock);
+```
+
 ---
 
 ## Overview
@@ -129,8 +151,14 @@ The testing infrastructure supports both Backend and Storefront API types with d
 ```bash
 AbstractApiTestCase (base class from core)
 ├── BackendApiTestCase (for Backend API tests)
+│   ├── AbstractBackendProviderTestCase (for Provider unit tests)
+│   └── AbstractBackendProcessorTestCase (for Processor unit tests)
 └── StorefrontApiTestCase (for Storefront API tests)
+    ├── AbstractStorefrontProviderTestCase (for Provider unit tests)
+    └── AbstractStorefrontProcessorTestCase (for Processor unit tests)
 ```
+
+Use the specific Provider/Processor test cases when testing Providers or Processors in isolation. Use `BackendApiTestCase` or `StorefrontApiTestCase` directly for integration tests that make HTTP requests.
 
 ### Key components
 
@@ -139,8 +167,13 @@ AbstractApiTestCase (base class from core)
 | `AbstractApiTestCase` | Base class providing API Platform integration |
 | `BackendApiTestCase` | Pre-configured for Backend API testing |
 | `StorefrontApiTestCase` | Pre-configured for Storefront API testing |
+| `AbstractBackendProviderTestCase` | Base for Backend Provider unit tests |
+| `AbstractBackendProcessorTestCase` | Base for Backend Processor unit tests |
+| `AbstractStorefrontProviderTestCase` | Base for Storefront Provider unit tests |
+| `AbstractStorefrontProcessorTestCase` | Base for Storefront Processor unit tests |
 | `ApiTestKernel` | Lightweight Symfony kernel for testing |
 | `ApiTestAssertionsTrait` | API-specific assertions (from API Platform) |
+| `OperationFactory` | Factory for creating API Platform operation objects in tests |
 
 ### Test helper classes
 
@@ -148,6 +181,7 @@ The testing infrastructure provides specialized Codeception helpers to streamlin
 
 | Helper Class | Purpose |
 |--------------|---------|
+| `ApiProcessorProviderHelper` | Codeception helper for Provider/Processor unit tests. Provides `getProvider()`, `getProcessor()`, `mockService()`, `getContext()`, and operation factory methods. |
 | `BootstrapHelper` | Configures application plugin providers for test environments via codeception.yml. Allows different test suites to use different factory implementations without hardcoding dependencies in test infrastructure. |
 | `ApiPlatformHelper` | Automatically cleans compiled Symfony test kernel cache after test suites complete. This ensures a clean state between test runs and prevents cache-related test failures. |
 | `ApiPlatformConfigBuilder` | Provides a fluent interface for building test-specific API Platform configurations. Useful for creating isolated test scenarios with custom settings. |

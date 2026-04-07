@@ -135,7 +135,24 @@ class SymfonyMessengerConfig extends SprykerSymfonyMessengerConfig
 
 ## 2) Set up the database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+1. Create the following schema file to enable event-driven publishing for product management attributes:
+
+**src/Pyz/Zed/ProductAttribute/Persistence/Propel/Schema/spy_product_management_attribute.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductAttribute\Persistence" package="src.Orm.Zed.ProductAttribute.Persistence">
+
+    <table name="spy_product_management_attribute">
+        <behavior name="event">
+            <parameter name="spy_product_management_attribute_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -481,7 +498,7 @@ If you have overridden the default Twig templates at the project level, add the 
 {% raw %}
 
 ```twig
-{% widget 'ProductAttributeVisibilityPdpWidget' args [data.product.idProductAbstract, data.product.idProductConcrete] only %}
+{% widget 'ProductAttributeVisibilityPdpWidget' args [data.product.idProductAbstract, data.product.idProductConcrete | default(null),] only %}
 {% nowidget %}
 {% endwidget %}
 ```
@@ -498,6 +515,31 @@ If you have overridden the default Twig templates at the project level, add the 
 {% widget 'ProductAttributeVisibilityPlpWidget' args [data.products, data.product.idProductAbstract] only %}
 {% nowidget %}
 {% endwidget %}
+```
+
+{% endraw %}
+
+If you have overridden `Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig` at the project level, update the `CatalogPageProductWidget` call to pass `data.products` as an additional argument:
+
+**src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig**
+
+{% raw %}
+
+```twig
+{% widget 'CatalogPageProductWidget' args [product, data.viewMode, data.products] with {
+```
+
+{% endraw %}
+
+If you have overridden `Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig` or `Yves/ShopUi/Theme/default/components/molecules/product-item-list/product-item-list.twig` at the project level, add the following block to each template in the location where the widget should be rendered:
+
+**src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-item/product-item.twig**
+**src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-item-list/product-item-list.twig**
+
+{% raw %}
+
+```twig
+{% block productAttributeVisibility %}{% endblock %}
 ```
 
 {% endraw %}

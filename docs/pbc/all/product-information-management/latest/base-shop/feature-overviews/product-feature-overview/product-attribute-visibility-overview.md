@@ -51,9 +51,13 @@ On the PDP, visible attributes are displayed in a grid layout with attribute nam
 
 On the PLP, visible attributes are displayed as compact badges next to each product. This helps customers quickly compare key attributes without opening individual product pages.
 
+![PLP product attribute visibility](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-attribute-visibility-overview.md/plp.jpeg)
+
 ### Cart
 
 In the shopping cart, visible attributes are displayed as badges for each cart item. This helps customers verify product details before completing the purchase.
+
+![Cart product attribute visibility](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-attribute-visibility-overview.md/cart.jpeg)
 
 ## Data import
 

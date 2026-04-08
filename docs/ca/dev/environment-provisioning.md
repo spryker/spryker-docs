@@ -1,7 +1,7 @@
 ---
 title: Environment provisioning
 description: This document explains core concepts that are important to understand before filing an environment provisioning request.
-last_updated: Feb 06, 2026
+last_updated: Apr 08, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
@@ -20,6 +20,41 @@ The following sections outline the information you need to provide to initiate p
 - All the sections that aren't prefixed with *Optional* are mandatory for a provisioning request to be processed.
 
 {% endinfo_block %}
+
+## Required variables for environment provisioning
+
+Provide the following variables in your provisioning request:
+
+| Parameters | Required | Default value | Description |
+| --- | --- | --- | --- |
+| **Required variables** |  |  |  |
+| project name | Yes | No default | [Project name](/docs/ca/dev/environment-provisioning.html#project-name) |
+| environment type | Yes | No default | [Environment type](/docs/ca/dev/environment-provisioning.html#environment-type) |
+| repository | Yes | No default | [Repository](/docs/ca/dev/environment-provisioning.html#repository) |
+| deploy file | Yes | No default | [Deploy file](/docs/ca/dev/environment-provisioning.html#deploy-file) |
+| **Optional and conditional variables** |  |  |  |
+| environment name | No | Derived as `project name-environment type` | [Optional: Environment name](/docs/ca/dev/environment-provisioning.html#optional-environment-name) |
+| github repository url | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
+| github repository branch | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
+| github token | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
+| gitlab or bitbucket access granted | No | Empty | [GitLab or Bitbucket repositories](/docs/ca/dev/environment-provisioning.html#gitlab-or-bitbucket-repositories) |
+| domain name | No | `project name-environment type.cloud.spryker.toys` (non-public) | [Domain name](/docs/ca/dev/environment-provisioning.html#domain-name) |
+| aws console user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| vpn user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| ssh user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| ssh public keys | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| sftp user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| sftp public keys | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
+| sftp enabled | No | `false` | [Optional: SFTP](/docs/ca/dev/environment-provisioning.html#optional-sftp) |
+| site-to-site vpn enabled | No | `false` | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn customer gateway ip | Conditional | No default | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn customer ip ranges | Conditional | No default | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn device name | No | Empty | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn bgp asn | No | Empty | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn dynamic bgp routes | No | Empty | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| site-to-site vpn tunnel parameters | No | Empty | [Optional: Site to Site VPN](/docs/ca/dev/environment-provisioning.html#optional-site-to-site-vpn) |
+| custom vpc cidr | No | Auto-assigned from default CIDR ranges | [Optional: Default network settings](/docs/ca/dev/environment-provisioning.html#optional-default-network-settings) |
+| clone from environment | No | Empty | [Optional: Clone environment](/docs/ca/dev/environment-provisioning.html#optional-clone-environment) |
 
 ## Environment
 

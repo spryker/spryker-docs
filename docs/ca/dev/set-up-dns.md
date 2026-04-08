@@ -108,15 +108,15 @@ Do **not** change your domain's `NS` records to delegate the full DNS zone to Sp
 
 ### Adding the endpoint to deploy.yml does not make it active
 
-No. Adding the endpoint in code only starts the setup flow. The endpoint becomes active only after the DNS setup is complete and deployment is triggered.
+Adding the endpoint in code only starts the setup flow. The endpoint becomes active only after the DNS setup is complete and deployment is triggered.
 
 ### The deploy.yml file must match the one shared for DNS setup
 
-No. The `deploy.yml` file used in the Normal or Destructive deployment pipeline must match the one provided to Spryker during the DNS setup process. Otherwise, the deployed configuration may not match the DNS configuration prepared by Spryker.
+The `deploy.yml` file used in the Normal or Destructive deployment pipeline must match the one provided to Spryker during the DNS setup process. Otherwise, the deployed configuration may not match the DNS configuration prepared by Spryker.
 
 ### Old and new domains cannot be active at the same time for Jenkins or RabbitMQ
 
-No. These services support only one active endpoint configuration at a time.
+These services support only one active endpoint configuration at a time.
 
 ### Biggest risk: premature deployment or mismatched deploy.yml
 

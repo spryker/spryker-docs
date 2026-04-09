@@ -28,15 +28,29 @@ This process can take up to a full week because it includes both DNS propagation
 
 The DNS setup usually follows these steps:
 
-1. Add the endpoint you want to use to the appropriate `deploy.yml` file.
-2. Create a support case and provide the `deploy.yml` file that contains the endpoint configuration.
+1. Add the endpoint you want to use to the appropriate `deploy.yml` file. For example, add a new endpoint under the desired application in your `deploy.yml`:
+
+    ```yaml
+    groups:
+        EU:
+            region: EU
+            applications:
+                yves:
+                    application: yves
+                    endpoints:
+                        www.example.com:
+                            store: DE
+    ```
+
+2. Create a support case and provide the `deploy.yml` file that contains the endpoint configuration. For example: "We have added the endpoint `www.example.com` to our `deploy.yml` and would like to set up DNS for it."
 3. Ensure that this is the same `deploy.yml` file that will later be used for the Normal or Destructive deployment pipeline.
-4. Spryker prepares the endpoint configuration and sends you the DNS records required for TLS verification.
+4. Spryker prepares the endpoint configuration and sends you the DNS records required for TLS verification. For example, you may receive a `CNAME` record like `_acme-challenge.www.example.com` pointing to a validation target.
 5. Add the provided TLS verification records in your DNS management.
 6. After the records are in place and have propagated, notify Spryker Support.
 7. Spryker completes the infrastructure configuration.
-8. Spryker sends you the final DNS target values, usually `CNAME` records, that must be added in your DNS management.
+8. Spryker sends you the final DNS target values, usually `CNAME` records, that must be added in your DNS management. For example: `www.example.com CNAME xxx.elb.amazonaws.com`. Root domains are treated differently — see [Root domain configuration](#root-domain-configuration).
 9. After the DNS records are added and propagated, your application becomes accessible through the new domain.
+10. Trigger the Normal or Destructive deployment pipeline using the same `deploy.yml` file that was provided to Spryker.
 
 ## Important: Configuration changes are staged
 

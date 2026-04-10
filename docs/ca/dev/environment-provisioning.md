@@ -33,12 +33,12 @@ Provide the following variables in your provisioning request:
 | repository | Yes | No default | [Repository](/docs/ca/dev/environment-provisioning.html#repository) |
 | deploy file | Yes | No default | [Deploy file](/docs/ca/dev/environment-provisioning.html#deploy-file) |
 | **Optional and conditional variables** |  |  |  |
-| environment name | No | Derived as `project name-environment type` | [Optional: Environment name](/docs/ca/dev/environment-provisioning.html#optional-environment-name) |
+| environment name | No | Derived as `{project name}-{environment type}` | [Optional: Environment name](/docs/ca/dev/environment-provisioning.html#optional-environment-name) |
 | github repository url | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
 | github repository branch | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
 | github token | Conditional | No default | [GitHub repository](/docs/ca/dev/environment-provisioning.html#github-repository) |
 | gitlab or bitbucket access granted | No | Empty | [GitLab or Bitbucket repositories](/docs/ca/dev/environment-provisioning.html#gitlab-or-bitbucket-repositories) |
-| domain name | No | `project name-environment type.cloud.spryker.toys` (non-public) | [Domain name](/docs/ca/dev/environment-provisioning.html#domain-name) |
+| domain name | No | `{project name}-{environment type}.cloud.spryker.toys` (non-public) | [Domain name](/docs/ca/dev/environment-provisioning.html#domain-name) |
 | aws console user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
 | vpn user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |
 | ssh user emails | No | Empty | [User access](/docs/ca/dev/environment-provisioning.html#user-access) |

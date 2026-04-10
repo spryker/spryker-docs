@@ -254,13 +254,11 @@ In `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/search-form/search-fo
 ```twig
 {% raw %}
 {% if data.byImage and widgetGlobalExists('ImageSearchAiWidget') %}
-    <div class="{{ config.name }}__button {{ config.name }}-search">
-        {% widget 'ImageSearchAiWidget' with {
-            data: {
-                dataSearchId: attributes['data-search-id'],
-            },
-        } only %}{% endwidget %}
-    </div>
+    {% widget 'ImageSearchAiWidget' with {
+        data: {
+            dataSearchId: attributes['data-search-id'],
+        },
+    } only %}{% endwidget %}
 {% endif %}
 {% endraw %}
 ```
@@ -269,7 +267,7 @@ In `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/search-form/search-fo
 
 {% info_block infoBox "Info" %}
 
-Do this step only if you have overridden `header.twig` in the `ShopUi` module at the project level. If you have not overridden this template, skip to [4) Apply the frontend changes](#4-apply-the-frontend-changes).
+Do this step only if you have overridden `header.twig` in the `ShopUi` module at the project level. If you have not overridden this template, skip to [6) Apply the frontend changes](#6-apply-the-frontend-changes).
 
 {% endinfo_block %}
 
@@ -286,7 +284,92 @@ In `src/Pyz/Yves/ShopUi/Theme/default/components/organisms/header/header.twig`, 
 {% endraw %}
 ```
 
-### 4) Apply the frontend changes
+### 4) Add the project-level component files
+
+Create the following project-level files to register and style the `search-by-image` component.
+
+**src/Pyz/Yves/AiCommerce/Theme/default/components/molecules/search-by-image/index.ts**
+
+```ts
+import './search-by-image';
+import register from 'ShopUi/app/registry';
+
+export default register(
+    'search-by-image',
+    () =>
+        import(
+            /* webpackMode: "lazy" */
+            /* webpackChunkName: "search-by-image" */
+            'AiCommerce/components/molecules/search-by-image/search-by-image'
+        ),
+);
+```
+
+**src/Pyz/Yves/AiCommerce/Theme/default/components/molecules/search-by-image/search-by-image.scss**
+
+```scss
+@include ai-commerce-search-by-image {
+    position: absolute;
+    right: rem(40);
+    top: 50%;
+    translate: 0 -50%;
+    z-index: $setting-zi-search-suggestions + 2;
+
+    @include helper-breakpoint(lg) {
+        right: rem(10);
+    }
+
+    &__popup-trigger {
+        @include helper-effect-transition(rotate);
+        border: none;
+        width: rem(32);
+        height: rem(32);
+        background: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            rotate: 90deg;
+        }
+    }
+}
+```
+
+**src/Pyz/Yves/AiCommerce/Theme/default/components/molecules/search-by-image/search-by-image.twig**
+
+```twig
+{% raw %}
+{% extends molecule('search-by-image', '@SprykerFeature:AiCommerce') %}
+
+{% block triggerFileButton %}
+    {% set triggerButtonClassname = "search-by-image__popup-trigger search-by-image__popup-trigger--#{data.dataSearchId}" %}
+    {{ parent() }}
+{% endblock %}
+
+{% block triggerPhotoButton %}
+    {% set triggerButtonClassname = "search-by-image__popup-trigger search-by-image__popup-trigger--#{data.dataSearchId}" %}
+    {{ parent() }}
+{% endblock %}
+{% endraw %}
+```
+
+### 5) Update TypeScript configuration
+
+In `tsconfig.yves.json`, add the `AiCommerce/*` path alias to the `compilerOptions.paths` section:
+
+```json
+"AiCommerce/*": ["./vendor/spryker-feature/ai-commerce/src/SprykerFeature/Yves/AiCommerce/Theme/default/*"]
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the `AiCommerce/*` entry is added alongside the other module path aliases in the `paths` object.
+
+{% endinfo_block %}
+
+### 6) Apply the frontend changes
 
 Apply the frontend changes:
 

@@ -5,8 +5,6 @@ last_updated: Apr 08 2026
 template: feature-integration-guide-template
 ---
 
-# Install the Product Experience Management feature
-
 ## Prerequisites
 
 Install the required features:
@@ -225,7 +223,7 @@ new ImportJobRunConsole(),
 
 {% info_block warningBox "Verification" %}
 
-Run the following command and verify it completes without errors:
+Execute the following and verify it completes without errors:
 
 ```bash
 console import:job:run

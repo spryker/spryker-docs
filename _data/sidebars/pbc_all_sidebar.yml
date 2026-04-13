@@ -13,6 +13,8 @@ entries:
             url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
           - title: Back Office Assistant
             url: /docs/pbc/all/ai-commerce/latest/backoffice-assistant.html
+          - title: Search by Image
+            url: /docs/pbc/all/ai-commerce/latest/search-by-image.html
 
       - title: Yves
         nested:

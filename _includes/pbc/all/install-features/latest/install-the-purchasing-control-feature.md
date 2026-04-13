@@ -257,7 +257,7 @@ Add the Purchasing Control section to the Back Office navigation:
 </config>
 ```
 
-Run the following command to rebuild the navigation cache:
+Rebuild the navigation cache:
 
 ```bash
 console navigation:build-cache

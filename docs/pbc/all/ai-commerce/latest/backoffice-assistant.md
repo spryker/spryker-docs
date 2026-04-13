@@ -16,6 +16,7 @@ Back Office Assistant is an AI-powered chat widget embedded in the Spryker Back 
 | Navigation guidance | Answers questions about where to find features and provides clickable navigation links. |
 | Order management | Looks up orders by reference or ID, explains OMS states, and helps diagnose stuck orders. Read-only — does not modify orders. |
 | Discount management | Creates and updates discounts through a conversational interface. |
+| Form fill | Populates Back Office form fields using natural language instructions. |
 
 ## Use Back Office Assistant
 
@@ -32,6 +33,7 @@ Back Office Assistant is an AI-powered chat widget embedded in the Spryker Back 
 - *"Where do I configure tax rates?"*
 - *"What is the current state of order DE--1001?"*
 - *"Create a 10% discount for all orders over 50 EUR, valid for the next 30 days."*
+- *"Fill in the product form with name 'Premium Widget', SKU 'PW-001', and price 99.99."*
 
 ## Enable Back Office Assistant
 

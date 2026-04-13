@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Mar 31, 2026
+last_updated: Apr 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -73,6 +73,12 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
             'model' => 'gpt-4.1', // fast non-reasoning model
         ]),
     ]),
+    AiCommerceConstants::AI_CONFIGURATION_FORM_FILL => array_merge($openAiConfiguration, [
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_FORM_FILL_SYSTEM_PROMPT,
+        'provider_config' => array_merge($openAiConfiguration['provider_config'], [
+            'model' => 'gpt-4.1', // fast non-reasoning model
+        ]),
+    ]),
 ];
 ```
 
@@ -84,9 +90,10 @@ Register the following plugins to integrate the Back Office Assistant agents:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
-| `GeneralPurposeAgentPlugin` | Registers the General Purpose agent that answers Back Office navigation and how-to questions. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
+| `GeneralAgentPlugin` | Registers the General Purpose agent that answers Back Office navigation and how-to questions. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 | `OrderManagementAgentPlugin` | Registers the Order Management agent that provides read-only access to order and OMS data. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 | `DiscountManagementAgentPlugin` | Registers the Discount Management agent that can create and update discounts. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
+| `FormFillAgentPlugin` | Registers the Form Fill agent that fills Back Office forms using natural language instructions. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent` |
 
 **src/Pyz/Zed/AiCommerce/AiCommerceDependencyProvider.php**
 
@@ -97,7 +104,8 @@ namespace Pyz\Zed\AiCommerce;
 
 use SprykerFeature\Zed\AiCommerce\AiCommerceDependencyProvider as SprykerFeatureAiCommerceDependencyProvider;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\DiscountManagementAgentPlugin;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\GeneralPurposeAgentPlugin;
+use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\FormFillAgentPlugin;
+use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\GeneralAgentPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\Agent\OrderManagementAgentPlugin;
 
 class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyProvider
@@ -108,9 +116,10 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
     protected function getBackofficeAssistantAgentPlugins(): array
     {
         return [
-            new GeneralPurposeAgentPlugin(),
+            new GeneralAgentPlugin(),
             new OrderManagementAgentPlugin(),
             new DiscountManagementAgentPlugin(),
+            new FormFillAgentPlugin(),
         ];
     }
 }
@@ -127,6 +136,7 @@ Register the following plugins in `AiFoundationDependencyProvider`:
 | `OrderManagementToolSetPlugin` | Registers tools for fetching order lists and OMS process information. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 | `OrderDetailsToolSetPlugin` | Registers tools for fetching detailed order data by reference or ID. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 | `DiscountManagementToolSetPlugin` | Registers tools for reading, creating, and updating discounts. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
+| `FormFillToolSetPlugin` | Registers tools for filling Back Office form fields. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 
 **src/Pyz/Zed/AiFoundation/AiFoundationDependencyProvider.php**
 
@@ -142,6 +152,7 @@ use Spryker\Zed\AiFoundation\Communication\Plugin\Log\AiInteractionHandlerPlugin
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\BackofficeAssistantSsePostToolCallPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\BackofficeAssistantSsePreToolCallPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\DiscountManagementToolSetPlugin;
+use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\FormFillToolSetPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\NavigationToolSetPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\OrderDetailsToolSetPlugin;
 use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\OrderManagementToolSetPlugin;
@@ -199,6 +210,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
             new OrderManagementToolSetPlugin(),
             new OrderDetailsToolSetPlugin(),
             new DiscountManagementToolSetPlugin(),
+            new FormFillToolSetPlugin(),
         ];
     }
 }
@@ -284,7 +296,9 @@ In `src/Pyz/Zed/Gui/Presentation/Layout/layout.twig`, include the chat widget pa
 {% extends '@Spryker:Gui/Layout/layout.twig' %}
 
 {% block footer_js %}
-    {% include '@AiCommerce/Partials/chat-widget.twig' %}
+    {% if isBackofficeAssistantConnected is defined and isBackofficeAssistantConnected %}
+        {% include '@AiCommerce/Partials/chat-widget.twig' %}
+    {% endif %}
     {{ parent() }}
 {% endblock %}
 {% endraw %}

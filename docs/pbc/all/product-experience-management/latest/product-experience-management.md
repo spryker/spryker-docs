@@ -13,12 +13,12 @@ The following terms are used throughout the PEM feature:
 
 | TERM | DEFINITION |
 | --- | --- |
-| Import job | A reusable definition that specifies the product type (for example, *simple-product*) and the column schema used to map CSV headers to system properties. An import job is created once and referenced when uploading CSV files. |
+| Import job | A reusable definition that specifies the product type (for example, *products-csv-import*) and the column schema used to map CSV headers to system properties. An import job is created once and referenced when uploading CSV files. |
 | Import job run | A single execution of an import job. Each run is linked to an uploaded CSV file and tracks processing status, row counts, and errors. Runs are processed asynchronously by the `import:job:run` console command. |
 | Import step | A unit of work in the import pipeline. Each step handles a specific data domain (for example, abstract product, concrete product, prices, images). Steps validate, transform, and persist rows in batches. |
 | Export step | The export counterpart of an import step. Each export step fetches data from the database and populates the corresponding columns in the exported CSV. |
 | Schema | A JSON-encoded column mapping definition stored on the import job. It maps human-readable CSV header names (for example, `Name ({locale})`) to system property names (for example, `name.{locale}`). Placeholders like `{locale}`, `{store}`, and `{sort_order}` are expanded at export time based on actual system data. |
-| Schema plugin | A plugin that provides the schema definition, import steps, and export steps for a specific product type. The built-in `SimpleProductImportSchemaPlugin` handles the *simple-product* type. |
+| Schema plugin | A plugin that provides the schema definition, import steps, and export steps for a specific product type. The built-in `ProductCsvImportSchemaPlugin` handles the *products-csv-import* type. |
 
 ## Feature overview
 
@@ -44,7 +44,7 @@ Users can download an empty CSV template for any import job. The template contai
 
 ### Supported product data
 
-For the *simple-product* schema, the following data is imported and exported:
+For the *products-csv-import* schema, the following data is imported and exported:
 
 | DATA | IMPORT | EXPORT | SCOPE |
 | --- | --- | --- | --- |

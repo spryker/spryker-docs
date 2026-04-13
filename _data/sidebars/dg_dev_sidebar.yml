@@ -874,28 +874,86 @@ entries:
     - title: Migrate Glue REST API to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-glue-api-to-api-platform.html
       nested:
+      - title: Migrate AgentAuthRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-agentauthrestapi.html
+      - title: Migrate AlternativeProductsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-alternativeproductsrestapi.html
       - title: Migrate AuthRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-authrestapi.html
-      - title: Migrate CartsRestApi
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartsrestapi.html
       - title: Migrate CartCodesRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartcodesrestapi.html
+      - title: Migrate CartPermissionGroupsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartpermissiongroupsrestapi.html
+      - title: Migrate CartsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartsrestapi.html
+      - title: Migrate CatalogSearchRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-catalogsearchrestapi.html
       - title: Migrate CategoriesRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-categoriesrestapi.html
+      - title: Migrate CheckoutRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-checkoutrestapi.html
+      - title: Migrate CompaniesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-companiesrestapi.html
+      - title: Migrate CompanyUsersRestApi and CompanyUserAuthRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-companyusersrestapi.html
+      - title: Migrate ContentProductAbstractListsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-contentproductabstractlistsrestapi.html
       - title: Migrate CustomersRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html
+      - title: Migrate CustomerAccessRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customeraccessrestapi.html
+      - title: Migrate MerchantOpeningHoursRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantopeninghoursrestapi.html
+      - title: Migrate MerchantProductOffersRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantproductoffersrestapi.html
+      - title: Migrate MerchantsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantsrestapi.html
+      - title: Migrate NavigationsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-navigationsrestapi.html
+      - title: Migrate OauthApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-oauthapi.html
+      - title: Migrate OrderPaymentsRestApi and PaymentsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-orderpaymentsrestapi.html
       - title: Migrate OrdersRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-ordersrestapi.html
+      - title: Migrate ProductAttributesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productattributesrestapi.html
       - title: Migrate ProductAvailabilitiesRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productavailabilitiesrestapi.html
+      - title: Migrate ProductBundlesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productbundlesrestapi.html
       - title: Migrate ProductImageSetsRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productimagesetsrestapi.html
       - title: Migrate ProductLabelsRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productlabelsrestapi.html
+      - title: Migrate ProductMeasurementUnitsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productmeasurementunitsrestapi.html
+      - title: Migrate ProductOfferAvailabilitiesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferavailabilitiesrestapi.html
+      - title: Migrate ProductOfferPricesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferpricesrestapi.html
+      - title: Migrate ProductOfferServicePointAvailabilitiesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferservicepointavailabilitiesrestapi.html
+      - title: Migrate ProductOptionsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productoptionsrestapi.html
       - title: Migrate ProductPricesRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productpricesrestapi.html
+      - title: Migrate ProductReviewsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productreviewsrestapi.html
       - title: Migrate ProductsRestApi
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productsrestapi.html
+      - title: Migrate ProductTaxSetsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-producttaxsetsrestapi.html
+      - title: Migrate QuoteRequestsRestApi and QuoteRequestAgentsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-quoterequestsrestapi.html
+      - title: Migrate SharedCartsRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-sharedcartsrestapi.html
+      - title: Migrate ShipmentTypesRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-shipmenttypesrestapi.html
+      - title: Migrate StoresRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-storesrestapi.html
+      - title: Migrate TaxAppRestApi
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-taxapprestapi.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3

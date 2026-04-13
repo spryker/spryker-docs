@@ -43,46 +43,51 @@ You can migrate modules in any order. We recommend starting with simpler read-on
 
 | Module to migrate | Replaces legacy module | Guide |
 |---|---|---|
-| Customer | CustomersRestApi | [Migrate CustomersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html) |
+| Agent | AgentAuthRestApi | [Migrate AgentAuthRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-agentauthrestapi.html) |
+| Authentication | AuthRestApi | [Migrate AuthRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-authrestapi.html) |
+| Availability | ProductAvailabilitiesRestApi | [Migrate ProductAvailabilitiesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productavailabilitiesrestapi.html) |
 | Cart | CartsRestApi | [Migrate CartsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartsrestapi.html) |
 | CartCode | CartCodesRestApi | [Migrate CartCodesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartcodesrestapi.html) |
-| Checkout | CheckoutRestApi | Coming soon |
-| Sales | OrdersRestApi | [Migrate OrdersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-ordersrestapi.html) |
-| Product | ProductsRestApi | [Migrate ProductsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productsrestapi.html) |
-| PriceProduct | ProductPricesRestApi | [Migrate ProductPricesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productpricesrestapi.html) |
-| ProductImage | ProductImageSetsRestApi | [Migrate ProductImageSetsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productimagesetsrestapi.html) |
-| Availability | ProductAvailabilitiesRestApi | [Migrate ProductAvailabilitiesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productavailabilitiesrestapi.html) |
-| ProductLabel | ProductLabelsRestApi | [Migrate ProductLabelsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productlabelsrestapi.html) |
-| ProductReview | ProductReviewsRestApi | Coming soon |
-| ProductOption | ProductOptionsRestApi | Coming soon |
-| ProductBundle | ProductBundlesRestApi | Coming soon |
-| ProductAttribute | ProductAttributesRestApi | Coming soon |
-| ProductMeasurementUnit | ProductMeasurementUnitsRestApi | Coming soon |
-| Catalog | CatalogSearchRestApi | Coming soon |
+| Catalog | CatalogSearchRestApi | [Migrate CatalogSearchRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-catalogsearchrestapi.html) |
 | Category | CategoriesRestApi | [Migrate CategoriesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-categoriesrestapi.html) |
-| Navigation | NavigationsRestApi | Coming soon |
-| Merchant | MerchantsRestApi | Coming soon |
-| MerchantOpeningHours | MerchantOpeningHoursRestApi | Coming soon |
-| MerchantProductOffer | MerchantProductOffersRestApi | Coming soon |
-| Authentication | AuthRestApi | [Migrate AuthRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-authrestapi.html) |
-| Agent | AgentAuthRestApi | Coming soon |
-| Company | CompaniesRestApi | Coming soon |
-| CompanyUser | CompanyUsersRestApi, CompanyUserAuthRestApi | Coming soon |
+| Checkout | CheckoutRestApi | [Migrate CheckoutRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-checkoutrestapi.html) |
+| Company | CompaniesRestApi | [Migrate CompaniesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-companiesrestapi.html) |
+| CompanyUser | CompanyUsersRestApi, CompanyUserAuthRestApi | [Migrate CompanyUsersRestApi and CompanyUserAuthRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-companyusersrestapi.html) |
 | CompanyBusinessUnit | CompanyBusinessUnitsRestApi | Coming soon |
 | CompanyRole | CompanyRolesRestApi | Coming soon |
 | CompanyUnitAddress | CompanyBusinessUnitAddressesRestApi | Coming soon |
-| SharedCart | SharedCartsRestApi | Coming soon |
-| QuoteRequest | QuoteRequestsRestApi | Coming soon |
-| QuoteRequestAgent | QuoteRequestAgentsRestApi | Coming soon |
-| CustomerAccess | CustomerAccessRestApi | Coming soon |
-| Tax | ProductTaxSetsRestApi | Coming soon |
-| Store | StoresRestApi | Coming soon |
-| Payment | PaymentsRestApi, OrderPaymentsRestApi | Coming soon |
-| ContentProduct | ContentProductAbstractListsRestApi | Coming soon |
+| ContentProduct | ContentProductAbstractListsRestApi | [Migrate ContentProductAbstractListsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-contentproductabstractlistsrestapi.html) |
+| Customer | CustomersRestApi | [Migrate CustomersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.html) |
+| CustomerAccess | CustomerAccessRestApi | [Migrate CustomerAccessRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customeraccessrestapi.html) |
+| Merchant | MerchantsRestApi | [Migrate MerchantsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantsrestapi.html) |
+| MerchantOpeningHours | MerchantOpeningHoursRestApi | [Migrate MerchantOpeningHoursRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantopeninghoursrestapi.html) |
+| MerchantProductOffer | MerchantProductOffersRestApi | [Migrate MerchantProductOffersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-merchantproductoffersrestapi.html) |
+| Navigation | NavigationsRestApi | [Migrate NavigationsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-navigationsrestapi.html) |
+| Oauth | OauthApi | [Migrate OauthApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-oauthapi.html) |
+| Payment | PaymentsRestApi, OrderPaymentsRestApi | [Migrate OrderPaymentsRestApi and PaymentsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-orderpaymentsrestapi.html) |
+| PriceProduct | ProductPricesRestApi | [Migrate ProductPricesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productpricesrestapi.html) |
+| PriceProductOffer | ProductOfferPricesRestApi | [Migrate ProductOfferPricesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferpricesrestapi.html) |
+| Product | ProductsRestApi | [Migrate ProductsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productsrestapi.html) |
+| ProductAlternative | AlternativeProductsRestApi | [Migrate AlternativeProductsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-alternativeproductsrestapi.html) |
+| ProductAttribute | ProductAttributesRestApi | [Migrate ProductAttributesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productattributesrestapi.html) |
+| ProductBundle | ProductBundlesRestApi | [Migrate ProductBundlesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productbundlesrestapi.html) |
+| ProductImage | ProductImageSetsRestApi | [Migrate ProductImageSetsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productimagesetsrestapi.html) |
+| ProductLabel | ProductLabelsRestApi | [Migrate ProductLabelsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productlabelsrestapi.html) |
+| ProductMeasurementUnit | ProductMeasurementUnitsRestApi | [Migrate ProductMeasurementUnitsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productmeasurementunitsrestapi.html) |
+| ProductOfferAvailability | ProductOfferAvailabilitiesRestApi | [Migrate ProductOfferAvailabilitiesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferavailabilitiesrestapi.html) |
+| ProductOfferServicePointAvailability | ProductOfferServicePointAvailabilitiesRestApi | [Migrate ProductOfferServicePointAvailabilitiesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productofferservicepointavailabilitiesrestapi.html) |
+| ProductOption | ProductOptionsRestApi | [Migrate ProductOptionsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productoptionsrestapi.html) |
+| ProductReview | ProductReviewsRestApi | [Migrate ProductReviewsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-productreviewsrestapi.html) |
+| QuoteRequest | QuoteRequestsRestApi, QuoteRequestAgentsRestApi | [Migrate QuoteRequestsRestApi and QuoteRequestAgentsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-quoterequestsrestapi.html) |
+| Sales | OrdersRestApi | [Migrate OrdersRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-ordersrestapi.html) |
 | ServicePoint | ServicePointsRestApi | Coming soon |
+| SharedCart | SharedCartsRestApi | [Migrate SharedCartsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-sharedcartsrestapi.html) |
+| SharedCart | CartPermissionGroupsRestApi | [Migrate CartPermissionGroupsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-cartpermissiongroupsrestapi.html) |
+| ShipmentType | ShipmentTypesRestApi | [Migrate ShipmentTypesRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-shipmenttypesrestapi.html) |
+| Store | StoresRestApi, StoresApi | [Migrate StoresRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-storesrestapi.html) |
+| Tax | ProductTaxSetsRestApi | [Migrate ProductTaxSetsRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-producttaxsetsrestapi.html) |
+| TaxApp | TaxAppRestApi | [Migrate TaxAppRestApi](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-taxapprestapi.html) |
 | DiscountPromotion | DiscountPromotionsRestApi | Coming soon |
-| ProductOfferAvailability | ProductOfferAvailabilitiesRestApi | Coming soon |
-| PriceProductOffer | ProductOfferPricesRestApi | Coming soon |
 | SalesOrderAmendment | OrderAmendmentsRestApi | Coming soon |
 
 ## After each module migration

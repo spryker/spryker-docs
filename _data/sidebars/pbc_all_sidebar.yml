@@ -269,6 +269,8 @@ entries:
 
                   - title: Approval Process feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.html
+                  - title: Purchasing Control feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/purchasing-control-feature-overview.html
                   - title: Comments feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.html
                   - title: Non-splittable Products feature overview
@@ -282,6 +284,8 @@ entries:
                     nested:
                       - title: Approval Process
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+                      - title: Purchasing Control
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html
                       - title: Cart + Agent Assist
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                       - title: Cart

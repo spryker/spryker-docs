@@ -1,7 +1,7 @@
 ---
 title: Install Search by Image
 description: Learn how to install the Search by Image feature that lets customers upload a photo to search for products using AI-powered image analysis.
-last_updated: Apr 10, 2026
+last_updated: Apr 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -117,6 +117,12 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
+Warm up the router cache:
+
+```bash
+console router:cache:warm-up
+```
+
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
@@ -159,7 +165,13 @@ To use a dedicated AI model configuration for Search by Image instead of the def
 1. In `config/Shared/config_ai.php`, add a named configuration entry using `AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME` as the key:
 
 ```php
-$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\SprykerFeature\Shared\AiCommerce\AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME] = $openAiConfiguration;
+$config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS][\SprykerFeature\Shared\AiCommerce\AiCommerceConstants::SEARCH_BY_IMAGE_CONFIGURATION_NAME] = [
+    'provider_name' => \Spryker\Shared\AiFoundation\AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_config' => [
+        'key' => getenv('OPEN_AI_API_TOKEN') ?: '',
+        'model' => 'gpt-4o',
+    ],
+];
 ```
 
 2. Return the configuration name from `AiCommerceConfig`:
@@ -193,14 +205,15 @@ console configuration:sync
 
 ### 6) Enable the feature
 
-Enable the feature in the Back Office:
+Enable the feature in the Back Office Configuration:
 
-1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image**.
-2. Turn on **Enable Search by Image**.
-3. Set **Redirect type** to the desired behavior:
+1. In the Back Office, go to **Configuration**.
+2. Navigate to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image**.
+3. Turn on **Enable Search by Image**.
+4. Set **Redirect type** to the desired behavior:
    - **Search results** — redirects the customer to the catalog search results page for the identified search term.
    - **First result product detail page** — redirects the customer directly to the product detail page of the first matching result.
-4. Click **Save**.
+5. Click **Save**.
 
 ![Search by Image configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-config.png)
 

@@ -19,7 +19,7 @@ To start feature integration, review and install the necessary features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/purchasing-control:"{{page.release_tag}}" --update-with-dependencies
+composer require spryker-feature/purchasing-control:"^0.1.0" spryker-shop/checkout-page:"^3.40.0" --update-with-dependencies
 ```
 
 ### 2) Set up database schema and transfer objects

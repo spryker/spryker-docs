@@ -1,7 +1,7 @@
 ---
 title: Install Back Office Assistant
 description: Learn how to install the Back Office Assistant feature that provides an AI-powered chat widget in the Spryker Back Office.
-last_updated: Apr 3, 2026
+last_updated: Apr 13, 2026
 template: feature-integration-guide-template
 ---
 
@@ -296,7 +296,9 @@ In `src/Pyz/Zed/Gui/Presentation/Layout/layout.twig`, include the chat widget pa
 {% extends '@Spryker:Gui/Layout/layout.twig' %}
 
 {% block footer_js %}
-    {% include '@AiCommerce/Partials/chat-widget.twig' %}
+    {% if isBackofficeAssistantConnected is defined and isBackofficeAssistantConnected %}
+        {% include '@AiCommerce/Partials/chat-widget.twig' %}
+    {% endif %}
     {{ parent() }}
 {% endblock %}
 {% endraw %}

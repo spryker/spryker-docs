@@ -1,16 +1,16 @@
 ---
-title: Product Attribute Visibility overview
-description: Use Product Attribute Visibility to control where product attributes are displayed across storefront pages—PDP, PLP, Cart, or internal only.
+title: Product Attribute Display Types Overview
+description: Use Product Attribute Display Types to control where product attributes are displayed across storefront pages—PDP, PLP, Cart, or internal only.
 last_updated: Mar 31, 2026
 template: concept-topic-template
 ---
 
-The Product Attribute Visibility feature lets you control where product attributes are displayed across the Storefront. For each attribute, you can configure visibility for the following page types:
+The Product Attribute Display Types feature lets you control where product attributes are displayed across the Storefront. For each attribute, you can configure visibility for the following page types:
 
-- **PDP (Product Detail Page)**: full attribute display with structured data markup.
-- **PLP (Product Listing Page)**: abbreviated attribute display as badges.
-- **Cart**: attribute display in the shopping cart.
-- **None/Internal**: the attribute is not shown to customers and is used internally only.
+- **PDP (Product Detail Page)**: Displays the full attribute, including structured data markup.
+- **PLP (Product Listing Page)**: Shows a condensed version of the attribute as badges.
+- **Cart**: Displays the attribute within the shopping cart.
+- **None/Internal**: Keeps the attribute hidden from customers for internal use only.
 
 This feature is useful in B2B and B2C scenarios where different product attributes are relevant in different shopping contexts. For example, technical specifications are important on the PDP, while key differentiators like color and size are useful on the PLP and in the Cart.
 

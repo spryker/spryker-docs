@@ -48,7 +48,7 @@ In `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`, remove 
 
 Once all dependent modules have been migrated, delete the following file:
 
-```
+```text
 src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php
 ```
 

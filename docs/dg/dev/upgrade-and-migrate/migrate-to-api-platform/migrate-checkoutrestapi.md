@@ -68,7 +68,7 @@ In the `getResourceRelationshipPlugins()` method, remove the following relations
 
 The project-level `CheckoutRestApi` Glue and Zed Pyz override modules are no longer needed. Delete the entire directory:
 
-```
+```text
 src/Pyz/CheckoutRestApi/
 ```
 
@@ -319,7 +319,7 @@ Adjust these plugin lists to match your project's checkout requirements. The plu
 
 Once `CheckoutRestApi`, `CartsRestApi`, `ProductPricesRestApi`, and `WishlistsRestApi` have all been migrated, delete:
 
-```
+```text
 src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php
 ```
 

@@ -63,11 +63,13 @@ The suite diff contains the following cross-cutting changes that are **not docum
 **a. `config/Glue/ApplicationServices.php`, `config/GlueBackend/ApplicationServices.php`, `config/GlueStorefront/ApplicationServices.php` — Remove `ProxyFactory` registration**
 
 All three files had this removed:
+
 ```php
 use Spryker\Service\Container\ProxyFactory;
 // ...
 $services->set(ProxyFactory::class)->public();
 ```
+
 No guide documents this.
 
 **b. `config/GlueStorefront/ApplicationServices.php` — Remove `CustomerOwnershipVoter` and `CustomerReferenceResolver` registrations**
@@ -80,6 +82,7 @@ No guide documents this.
 -$services->alias(CustomerReferenceResolverInterface::class, CustomerReferenceResolver::class);
 -$services->set(CustomerOwnershipVoter::class);
 ```
+
 No guide documents this.
 
 **c. `config/Glue/bundles.php` and `config/GlueStorefront/bundles.php` — `ApiPlatformBundle` moved before `SprykerApiPlatformBundle`**
@@ -89,21 +92,26 @@ No guide documents this.
      ApiPlatformBundle::class => ['all' => true],
 +    SprykerApiPlatformBundle::class => ['all' => true],
 ```
+
 No guide documents this.
 
 **d. `config/Glue/packages/api_platform.php` and `config/GlueStorefront/packages/api_platform.php` — New normalization settings and MIME types**
 
 Added to Glue and GlueStorefront:
+
 ```php
 $apiPlatform->defaults()->normalizationContext(['skip_null_values' => false]);
 $apiPlatform->defaults()->denormalizationContext(['disable_type_enforcement' => true]);
 ```
+
 Added to all three contexts (Glue, GlueBackend, GlueStorefront):
+
 ```php
 $apiPlatform->formats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
 $apiPlatform->patchFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
 $apiPlatform->errorFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
 ```
+
 No guide documents this.
 
 **e. `config/install/docker.yml` — `provider-processor-glue` moved from `build-development` to `build` section**
@@ -206,11 +214,13 @@ A user copying old `use` statements will end up with wrong FQCNs silently.
 **File:** `docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-customersrestapi.md:104`
 
 **Offending text:**
+
 ```php
 use Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi\CustomerAddressCheckoutDataValidatorPlugin;
 ```
 
 **What the suite shows:**
+
 ```php
 use Spryker\Zed\Customer\Communication\Plugin\Checkout\CustomerAddressCheckoutDataValidatorPlugin;
 ```
@@ -353,6 +363,7 @@ Category mapping is **not inlined** — it is wired via a plugin in a new Pyz de
 - **Created:** `src/Pyz/Glue/Navigation/NavigationConfig.php` (namespace `Pyz\Glue\Navigation`, class `NavigationConfig extends SprykerNavigationConfig`)
 
 The new file overrides `getNavigationTypeToUrlResourceIdFieldMapping()`:
+
 ```php
 return [
     'category' => 'fkResourceCategorynode',

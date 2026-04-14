@@ -1,5 +1,5 @@
 ---
-title: Search by Image
+title: Visual Search
 description: Let customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or a matching product page.
 last_updated: Apr 10, 2026
 template: concept-topic-template
@@ -10,42 +10,47 @@ related:
     link: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
 ---
 
-Search by Image helps B2B buyers identify a product quickly by uploading a photo. It removes the need to search through long catalogs or remember specific product names. A single image is enough for the system to recognize what is shown and guide the buyer to the right product.
+Visual Search lets you identify products quickly by uploading a photo. It removes the need to search through long catalogs or to remember specific product names. A single image lets the system recognize the content and guide you to the right product.
 
-Search by Image supports teams who work with shelf layouts, packaging, spare parts, equipment, or product sets that are easier to photograph than describe. It is part of the wider Search by Image capabilities that allow ordering and discovery workflows to begin with a photo.
+Visual Search supports teams that work with shelf layouts, packaging, spare parts, equipment, or product sets that are easier to photograph than describe. It is part of the wider Search by Image capabilities that allow ordering and discovery workflows to begin with a photo.
 
-## Why Search by Image is useful
-Product names and SKUs can be difficult to recall in B2B environments where assortments are large or highly technical. Field staff, store teams, and buyers often rely on visual cues in their daily work. Search by Image makes use of these cues by letting users take a photo and move directly to the right item.
+## Why Visual Search is useful
 
-This improves product discovery, reduces errors, and speeds up workflows where time and accuracy are critical.
+Product names and SKUs can be difficult to recall in B2B environments where assortments are large or highly technical. Field staff, store teams, and buyers often rely on visual cues in their daily work. Visual Search uses these cues to let you take a photo and move directly to the right item.
+
+This approach improves product discovery, reduces errors, and speeds up workflows where time and accuracy are critical.
 
 ## How buyers use it
-1. The buyer clicks the camera icon next to the storefront search bar.
-2. They upload a photo or take a new one.
-3. The system analyzes the image and identifies what is shown.
-4. The buyer is directed to the most relevant product or product results.
 
-## Ideal use cases
-Search by Image is effective in environments where buyers interact with physical products or need quick identification. Common scenarios include:
-- Reordering products from shelves or storage areas
-- Identifying consumables or spare parts
-- Helping field teams find items during customer visits
-- Supporting buyers who manage large assortments or private labels
-- Enabling mobile-first workflows when exact naming is unknown
+1. Click the camera icon next to the storefront search bar.
+2. Upload a photo or take a new one.
+3. The system analyzes the image and identifies the content.
+4. You are redirected to the most relevant product or to a list of results.
+
+## Ideal B2B use cases
+
+Search by Image is effective in environments where you interact with physical products or require quick identification. Common scenarios include the following:
+- Reorder products from shelves or storage areas
+- Identify commonly used consumables when labels are missing or unclear
+- Help field teams find items during customer visits
+- Support buyers who manage large assortments or private labels
+- Enable mobile-first workflows when exact naming is unknown
 
 ## Benefits for your business
+
 - Improves product discovery in large catalogs
 - Reduces mistakes caused by manual search or inconsistent naming
 - Supports mobile buying and field sales workflows
-- Helps teams identify items with similar or technical naming
+- Helps teams identify items with similar or technical names
 - Enhances buyer satisfaction by reducing effort
 
 ## Supported file formats
-Search by Image accepts JPEG, PNG, WebP, and GIF files. These formats are widely supported by mobile devices and work well in B2B environments where users take photos on the go.
+
+Visual Search accepts JPEG, PNG, WebP, and GIF file formats. These formats are widely supported by mobile devices and work well in B2B environments where you take photos on the go.
 
 ## How buyers use Visual Search on the storefront
 
-1. Open any page that contains the search bar and tap the camera icon next to the search field.
+1. Open any page that contains the search bar, then tap the camera icon next to the search field.
 
    ![Search by Image button](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-button.png)
 
@@ -53,24 +58,24 @@ Search by Image accepts JPEG, PNG, WebP, and GIF files. These formats are widely
 
    ![Search by Image upload dialog](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-upload.png)
 
-3. Visual Search analyzes the image and identifies the product shown. Once the analysis is complete, you are redirected either to the most relevant product page or to a list of suitable results.
+3. Visual Search analyzes the image to identify the product. Once the analysis is complete, you are redirected either to the most relevant product page or to a list of suitable results.
 
    ![Search by Image results](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-results.png)
 
 ## Enable Search by Image
 
-To enable the feature, in the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image** and turn on **Enable Search by Image**.
+To enable the feature, go to **AI Commerce > Search by Image > Search by Image** in the Back Office, then turn on **Enable Search by Image**.
 
 ![Search by Image configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-config.png)
 
 ## Configure the redirect behavior
 
-After enabling Search by Image, you can control where customers land after a successful image search. In the same settings group, set **Redirect type** to one of the following options:
+After you enable Search by Image, you can control where users land after a successful image search. In the same settings group, set **Redirect type** to one of the following:
 
 | OPTION | DESCRIPTION |
 |--------|-------------|
 | Search results | Redirects the customer to the catalog search results page for the identified search term. This is the default. |
-| First result product detail page | Redirects the customer directly to the PDP of the first matching product. |
+| First result product detail page | Redirects the user directly to the product detail page (PDP) of the first matching product. |
 
 ## Developer resources
 

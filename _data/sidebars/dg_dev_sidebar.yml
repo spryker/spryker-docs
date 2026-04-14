@@ -76,6 +76,11 @@ entries:
             nested:
               - title: Install Back Office Assistant
                 url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
+          - title: Search by Image
+            url: /docs/dg/dev/ai/ai-commerce/search-by-image/search-by-image.html
+            nested:
+              - title: Install Search by Image
+                url: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

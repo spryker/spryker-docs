@@ -338,7 +338,7 @@ vendor/bin/console acl-entity:synchronize
 
 In your [Stripe Dashboard](https://dashboard.stripe.com/), register a webhook endpoint pointing to:
 
-```
+```text
 https://your-domain.com/stripe/notification
 ```
 

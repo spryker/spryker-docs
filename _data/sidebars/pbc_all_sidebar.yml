@@ -2584,25 +2584,17 @@ entries:
                     nested:
                       - title: Install the prerequisites
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
-                      - title: Connect and configure
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
-                      - title: Disconnect
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Migrate from the ACP Stripe app
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
                         nested:
-                          - title: Embed the Stripe payment page as an iframe
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
-                          - title: Implement Stripe checkout as a hosted payment page
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-prerequisites-for-implementing-Stripe-checkout-as-a-hosted-payment-page.html
                           - title: OMS configuration for Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
                           - title: Processing refunds with Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
                           - title: Sending additional data to Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
-                          - title: Stripe checkout with third-party frontends
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html

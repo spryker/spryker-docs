@@ -220,11 +220,13 @@ new StripeRouteProviderPlugin(),
 In `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig`, add the Stripe form to the `customForms` definition:
 
 ```twig
+{% raw %}
 {% define data = {
     customForms: {
         'Stripe/stripe': ['stripe'],
     },
 } %}
+{% endraw %}
 ```
 
 ## Step 11: Register the marketplace installer plugin (marketplace only)

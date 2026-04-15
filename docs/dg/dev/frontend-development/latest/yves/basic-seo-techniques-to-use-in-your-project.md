@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/basic-seo-technique
 originalArticleId: 56e34beb-79e3-44b0-a7b9-06489c78e9ac
 redirect_from:
   - /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
+  - /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
 ---
 
 Search Engine Optimization or SEO is the process of improving a site to increase its visibility for relevant searches. The better visibility a page has in search results, the more likely you are to garner attention and attract prospective and existing customers to your business.

@@ -1,9 +1,11 @@
 ---
 title: Migrate Glue REST API to API Platform
 description: Overview of migrating storefront Glue REST API modules to API Platform, with cross-cutting setup steps and links to per-module migration guides.
-last_updated: Mar 31, 2026
+last_updated: Apr 16, 2026
 template: howto-guide-template
 related:
+  - title: Migrate project-level customizations
+    link: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-project-level-customizations.html
   - title: How to integrate API Platform
     link: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html
   - title: How to integrate API Platform Security
@@ -29,7 +31,15 @@ Before starting, make sure you have completed:
 
 ## Cross-cutting changes
 
-There are no changes required before starting the module migration. Begin with any module from the per-module migration guides below.
+If your project has customized Glue REST API behavior at the project level (`src/Pyz/`), complete the project-level cleanup steps described in [Migrate project-level customizations](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-project-level-customizations.html). This guide covers:
+
+- Removing migrated route and relationship plugins from `GlueApplicationDependencyProvider`
+- Removing migrated resource plugins from `GlueStorefrontApiApplicationDependencyProvider` and `GlueBackendApiApplicationDependencyProvider`
+- Deleting obsolete Pyz `*RestApi` modules and creating their API Platform replacements
+- Migrating custom plugin implementations to new extension interfaces
+- Migrating custom REST API endpoints to the API Platform Provider/Processor pattern
+
+You can complete these steps before, during, or after the per-module migrations. Each section can be done independently as you migrate the corresponding module.
 
 ## Per-module migration guides
 
@@ -110,10 +120,6 @@ In `src/Pyz/Glue/Router/RouterDependencyProvider.php`, remove `new GlueRouterPlu
 
 ### Delete obsolete project-level overrides
 
-Delete the following file once the specified modules have been migrated:
-
-| File to delete | Required modules migrated first |
-|---|---|
-| `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php` | `CartsRestApi`, `ProductPricesRestApi`, `CheckoutRestApi`, `WishlistsRestApi` |
+For the full list of Pyz modules to delete and their replacements, see [Migrate project-level customizations: Delete obsolete Pyz RestApi modules](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform/migrate-project-level-customizations.html#4-delete-obsolete-pyz-restapi-modules-and-create-replacements).
 
 After the cleanup, you can also remove unused `*RestApi` composer dependencies and clean up empty Glue module directories.

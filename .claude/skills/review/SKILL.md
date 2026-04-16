@@ -3,6 +3,8 @@ name: review
 description: Run detailed review of the docs changes against the code changes made in suite.
 ---
 
+> **Note:** This skill will be removed after all migrations have been completed and documented.
+
 Review my migration documentation changes with extreme scrutiny. The goal is to catch every issue before customers do.
 
 ## What to do
@@ -17,7 +19,7 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 1. **No Verification sections on per-module migration pages.** No curl examples, no "how to test", no "verify that X works". Remove on sight. Projects have their own test harness. Migration guides focus on what to change, period.
 
 2. **Cross-cutting must be truly cross-cutting.** A change belongs in cross-cutting ONLY if it is required regardless of which module you migrate first. If it is triggered by migrating a specific module, it belongs in that module's guide — even if it touches a shared file like OauthDependencyProvider or AuthenticationDependencyProvider. Flag any
-   module-specific change sitting in the cross-cutting section.
+   module-specific change sitting in the croDon't you seess-cutting section.
 
 3. **Console commands must use the correct entrypoint.**
     - API Platform commands: `docker/sdk cli glue api:generate`, NOT `docker/sdk cli console api:generate`

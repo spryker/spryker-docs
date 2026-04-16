@@ -17,10 +17,10 @@ Install the following features:
 | SecurityGui                 | &#9989;  | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)              |
 | SecurityOauthUser           |          | {{page.release_tag}} | -                                                                                                                                                                       |
 
-Install or update the required modules using Composer:
+Install or **update** the required modules using Composer:
 
 ```bash
-composer require spryker/application:"^3.46.0" spryker/gui:"^4.12.0"
+composer require spryker/application:"^3.46.0" spryker/gui:"^4.12.0" spryker/security-oauth-user:"^1.0.0"
 ```
 
 {% info_block warningBox "Verification" %}
@@ -29,8 +29,9 @@ Make sure the following modules have been installed:
 
 | MODULE      | MINIMUM VERSION | EXPECTED DIRECTORY         |
 |-------------|-----------------|----------------------------|
-| Application | 3.46.0          | vendor/spryker/application |
-| Gui         | 4.12.0          | vendor/spryker/gui         |
+| Application       | 3.46.0 | vendor/spryker/application         |
+| Gui               | 4.12.0 | vendor/spryker/gui                 |
+| SecurityOauthUser | 1.0.0  | vendor/spryker/security-oauth-user |
 
 {% endinfo_block %}
 

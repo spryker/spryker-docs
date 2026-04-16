@@ -2,7 +2,7 @@
 title: Install Back Office dashboard home path
 description: Learn how to configure the Back Office to redirect users to the dashboard as the default landing page after login.
 template: howto-guide-template
-last_updated: Apr 14, 2026
+last_updated: Apr 16, 2026
 ---
 
 This document explains how to configure the Back Office to redirect users to `/dashboard` as the default landing page after login, replacing the default Spryker home path.
@@ -16,6 +16,23 @@ Install the following features:
 | Spryker Core Back Office    | &#9989;  | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/{{site.version}}/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | SecurityGui                 | &#9989;  | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)              |
 | SecurityOauthUser           |          | {{page.release_tag}} | -                                                                                                                                                                       |
+
+Install or update the required modules using Composer:
+
+```bash
+composer require spryker/application:"^3.46.0" spryker/gui:"^4.12.0"
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules have been installed:
+
+| MODULE      | MINIMUM VERSION | EXPECTED DIRECTORY         |
+|-------------|-----------------|----------------------------|
+| Application | 3.46.0          | vendor/spryker/application |
+| Gui         | 4.12.0          | vendor/spryker/gui         |
+
+{% endinfo_block %}
 
 ## 1) Set up configuration
 

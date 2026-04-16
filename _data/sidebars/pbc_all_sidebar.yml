@@ -51,6 +51,8 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
+                  - title: Install Back Office dashboard home path
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dashboard-home-path.html
                   - title: Enable Google Material Icons
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
                   - title: Update the INSPINIA theme in Back Office

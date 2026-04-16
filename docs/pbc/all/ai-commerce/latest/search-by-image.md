@@ -1,6 +1,6 @@
 ---
 title: Search by Image
-description: Let customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or a matching product page.
+description: Let buyers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or a matching product page.
 last_updated: Apr 10, 2026
 template: concept-topic-template
 related:
@@ -10,40 +10,71 @@ related:
     link: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
 ---
 
-Search by Image lets customers find products by uploading a photo. A camera icon next to the search input opens an image upload dialog. After the image is uploaded, AI analyzes it, identifies a relevant search term, and redirects the customer — either to the catalog search results page or directly to the first matching product detail page (PDP).
+Search by Image lets you identify products quickly by uploading a photo. It removes the need to search through long catalogs or to remember specific product names. A single image lets the system recognize the content and guide you to the right product.
 
-**Use case:** A customer sees a product they want to buy but does not know what it is called. They photograph the product and upload the image using the Search by Image button. The system identifies the product and takes the customer directly to the matching product or a list of similar results.
+Search by Image supports teams that work with shelf layouts, packaging, spare parts, equipment, or product sets that are easier to photograph than describe. It is part of the wider Search by Image capabilities that allow ordering and discovery workflows to begin with a photo.
 
-Accepted file formats: JPEG, PNG, WebP, and GIF.
+## Why Search by Image is useful
 
-## Use Search by Image on the Storefront
+Product names and SKUs can be difficult to recall in B2B environments where assortments are large or highly technical. Field staff, store teams, and buyers often rely on visual cues in their daily work. Search by Image uses these cues to let you take a photo and move directly to the right item.
 
-1. On any page with the search bar, click the camera icon next to the search input.
+This approach improves product discovery, reduces errors, and speeds up workflows where time and accuracy are critical.
+
+## How buyers use it
+
+1. Click the camera icon next to the storefront search bar.
+2. Upload a photo or take a new one.
+3. The system analyzes the image and identifies the content.
+4. You are redirected to the most relevant product or to a list of results.
+
+## Ideal use cases
+
+Search by Image is effective in environments where you interact with physical products or require quick identification. Common scenarios include the following:
+- Identifying a worn or defective part on machinery when working on site
+- Identifying items when labels, barcodes, or packaging are missing or unreadable
+- Supporting buyers who work with large assortments and rely on visual cues
+- Enabling mobile-first identification when buyers cannot describe the item by name
+
+## Benefits for your business
+
+- Improves product discovery in large catalogs
+- Reduces mistakes caused by manual search or inconsistent naming
+- Supports mobile buying and field sales workflows
+- Helps teams identify items with similar or technical names
+- Enhances buyer satisfaction by reducing effort
+
+## Supported file formats
+
+Search by Image accepts JPEG, PNG, WebP, and GIF file formats.
+
+## How buyers use Search by Image on the storefront
+
+1. Open any page that contains the search bar, then tap the camera icon next to the search field.
 
    ![Search by Image button](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-button.png)
 
-2. In the dialog that opens, click **Upload image** and select a photo from your device or take a new one using your smartphone camera.
+2. In the dialog that appears, select **Upload image**. You can choose a photo from your device or take a new one with your mobile camera.
 
    ![Search by Image upload dialog](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-upload.png)
 
-3. The system analyzes the image and redirects you to the search results or the matching product page.
+3. Search by Image analyzes the image to identify the product. Once the analysis is complete, you are redirected either to the most relevant product page or to a list of suitable results.
 
    ![Search by Image results](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-results.png)
 
 ## Enable Search by Image
 
-To enable the feature, in the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image&nbsp;<span aria-label="and then">></span>&nbsp;Search by Image** and turn on **Enable Search by Image**.
+To enable the feature, go to **AI Commerce > Search by Image > Search by Image** in the Back Office, then turn on **Enable Search by Image**.
 
 ![Search by Image configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/search-by-image-config.png)
 
 ## Configure the redirect behavior
 
-After enabling Search by Image, you can control where customers land after a successful image search. In the same settings group, set **Redirect type** to one of the following options:
+After you enable Search by Image, you can control where buyers land after a successful image search. In the same settings group, set **Redirect type** to one of the following:
 
 | OPTION | DESCRIPTION |
 |--------|-------------|
-| Search results | Redirects the customer to the catalog search results page for the identified search term. This is the default. |
-| First result product detail page | Redirects the customer directly to the PDP of the first matching product. |
+| Search results | Redirects the buyer to the catalog search results page for the identified search term. This is the default. |
+| First result product detail page | Redirects the user directly to the product detail page (PDP) of the first matching product. |
 
 ## Developer resources
 

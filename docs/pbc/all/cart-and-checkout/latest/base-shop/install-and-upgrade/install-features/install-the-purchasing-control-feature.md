@@ -3,6 +3,7 @@ title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
 last_updated: April 13, 2026
 template: feature-integration-guide-template
+label: early-access
 related:
   - title: Purchasing Control feature overview
     link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html

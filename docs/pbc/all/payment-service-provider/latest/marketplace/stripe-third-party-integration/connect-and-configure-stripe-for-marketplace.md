@@ -1,54 +1,52 @@
 ---
-title: Connect and configure Stripe for Marketplace
-description: Find out how you can connect and configure the Stripe app for your Spryker Marketplace project.
-last_updated: June 31, 2024
+title: Configure Stripe for Marketplace
+description: Find out how you can configure Stripe for your Spryker Marketplace project.
+last_updated: Apr 14, 2026
 template: howto-guide-template
 ---
 
-This document describes how to connect and configure the Stripe app in the Back Office.
+This document describes how to configure Stripe for a Marketplace project after the module has been installed.
 
 ## Prerequisites
 
-- [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+- [Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html) with the `StripeManualMarketplace01` OMS process active.
+- [Install and configure Stripe prerequisites for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html).
 - Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
   - Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
   - Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
 
+## Configure the Connect webhook secret
 
-## Connect and configure the Stripe app
+In your `config/Shared/config_local.php`, add the Stripe Connect webhook secret obtained from the Stripe Dashboard:
 
-1. In your store's Back Office, go to **Apps**.
-2. Click on **Stripe**.
-   This opens the Stripe app details page.
-3. Click **Connect app**.
-   This displays a success message with the app's status as **Connection pending**.
-4. Click **Configure**.
-  This opens the **Configure** pane.
-5. For **Business Model**, select **Marketplace**.  
-6. For **STRIPE ACCOUNT ID**, enter the account ID you've obtained in the [prerequisites](#prerequisites).
-7. For **STRIPE PUBLISHABLE KEY**, enter the key you've obtained in the [prerequisites](#prerequisites).
-8. For **STRIPE SECRET KEY**, enter the key you've obtained in the [prerequisites](#prerequisites).
-9. For **Environment**, select if you want to use the app in test or live mode. For details on the Stripe test mode, see [Test mode](https://stripe.com/docs/test-mode).
-10. Optional: For **PAYMENT PAGE TITLE**, enter your shop name. This name will be displayed on the **Payment** page as a merchant label for the payee.
-11. Optional: For **BRAND FAVICON**, enter a link to an image to be used as a favicon on the **Payment** page.
-12. Optional: For **PAY BUTTON COLOR**, enter a HEX code to customize the **PAY** button color.
-13. Click **Save**.
-  This displays a success message with the app's status as **Connected**.
+```php
+use SprykerEco\Shared\Stripe\StripeConstants;
 
+$config[StripeConstants::STRIPE_WEBHOOK_SECRET_CONNECT] = 'whsec_***'; // Replace with your Connect webhook signing secret
+```
 
-## Retain Stripe configuration after a destructive deployment
+## Enable Stripe Connect in the Stripe Dashboard
 
-{% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of the Stripe payment method.
+1. Log in to the [Stripe Dashboard](https://dashboard.stripe.com).
+2. Navigate to **Connect** and enable Stripe Connect for your platform account.
+3. For each merchant who will sell on your marketplace, create a connected account in the Stripe Dashboard, or let the onboarding flow create one automatically when a merchant completes onboarding.
 
-To run a destructive deployment, follow the steps:
-1. Disconnect Stripe.
-2. Run a destructive deployment.
-3. Reconnect Stripe.
+## Activate the Stripe payment method in Back Office
 
-{% endinfo_block %}
+1. In the Back Office, go to **Administration > Payment Methods**.
+2. Find **Stripe** in the list and click **Edit**.
+3. On the **Edit Payment Method** page, select the stores where Stripe should be active.
+4. Click **Save**.
+
+For detailed instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+
+## Inform merchants about Stripe onboarding
+
+After Stripe is activated, inform your merchants that Stripe is available as a payment method. Merchants must complete the Stripe onboarding process before they can receive payouts.
+
+For merchant onboarding instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
 
 ## Next steps
 
-1. Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
-2. Inform merchants about Stripe being available. To be able to use Stripe, merchants need to onboard. For instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
+1. Review the OMS configuration: [Stripe OMS configuration for marketplaces](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html).
+2. Configure merchant transfer schedules: [Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).

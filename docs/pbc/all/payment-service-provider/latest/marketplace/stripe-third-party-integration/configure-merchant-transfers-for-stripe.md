@@ -1,7 +1,7 @@
 ---
 title: Configure merchant transfers for Stripe
 description: Learn how to configure merchant transfers with Stripe for your Spryker Marketplace project
-last_updated: Aug 20, 2024
+last_updated: Apr 14, 2026
 template: howto-guide-template
 ---
 
@@ -21,4 +21,4 @@ For more details on merchant commissions, see [Marketplace Merchant Commission f
 
 ## Next step
 
-[Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)
+[Configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)

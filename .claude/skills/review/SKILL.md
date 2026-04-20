@@ -50,7 +50,7 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 ## How to report
 
 For every issue found, report:
-- File and line number
+- Filename from the project's root and line number, colon separator
 - What is wrong (quote the offending text)
 - What the code actually shows
 - Concrete fix

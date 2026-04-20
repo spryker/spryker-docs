@@ -20,8 +20,7 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 1. Migration guides focus on what to change.
 2. **No Verification sections on per-module migration pages.** Remove curl examples, "how to test", "verify that X works". Projects have their own test harness. 
 
-2. **Cross-cutting must be truly cross-cutting.** A change belongs in cross-cutting ONLY if it is required regardless of which module you migrate first. If it is triggered by migrating a specific module, it belongs in that module's guide — even if it touches a shared file like OauthDependencyProvider or AuthenticationDependencyProvider. Flag any
-   module-specific change sitting in the croDon't you seess-cutting section.
+2. **Cross-cutting must be truly cross-cutting.** A change belongs in cross-cutting ONLY if it is required regardless of which module you migrate first. If it is triggered by migrating a specific module, it belongs in that module's guide — even if it touches a shared file like OauthDependencyProvider or AuthenticationDependencyProvider. Flag any module-specific change sitting in the cross-cutting section.
 
 3. **Console commands must use the correct entrypoint.**
     - API Platform commands: `docker/sdk cli glue api:generate`, NOT `docker/sdk cli console api:generate`

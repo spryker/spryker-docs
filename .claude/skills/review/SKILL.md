@@ -11,8 +11,9 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 
 1. Get the changed files in this docs branch vs master (`git diff master..HEAD --name-only`).
 2. Get the changed files in the suite repo on the same-named branch vs master as the user for a path if not added as dir.
-3. For every doc change, validate it line-by-line against the actual suite code diff. Every plugin name, every FQCN, every namespace, every method name must match the code exactly.
-4. Console commands in the docs MUST be verified against the suite repo. Check `config/install/docker.yml`, `.github/workflows/ci.yml`, and the actual entrypoints (`vendor/bin/glue` vs `vendor/bin/console`). Do not trust the docs — trust the code.
+3. Do not trust the docs — trust the code.
+4. For every doc change, validate it line-by-line against the actual suite code diff. Every plugin name, every FQCN, every namespace, every method name must match the code exactly.
+5. Console commands in the docs MUST be verified against the suite repo. Check `config/install/docker.yml`, `.github/workflows/ci.yml`, and the actual entrypoints (`vendor/bin/glue` vs `vendor/bin/console`). ```
 
 ## Mandatory rules — flag violations as errors
 

@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Dec 9, 2025
+last_updated: Apr 20, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template
@@ -35,7 +35,7 @@ The module includes:
 
 ## Console commands
 
-The AiDev module provides two console commands:
+The AiDev module provides the following console commands:
 
 ### MCP Server Command
 
@@ -52,6 +52,46 @@ This command:
 - Listens for requests from AI assistants
 
 **Usage**: This command is typically configured in AI assistant tools (like Claude Desktop) to enable them to access Spryker-specific information.
+
+### Generate Agents File Command
+
+The `ai-dev:generate-agents-file` command generates an example AI context file (`AGENTS.md` or `CLAUDE.md`) for your Spryker project. This file provides AI agents with project-specific context, architectural rules, and coding conventions.
+
+```bash
+docker/sdk console ai-dev:generate-agents-file
+```
+
+When you run the command, you are prompted to select the output format:
+
+| Format | Supported tools |
+|--------|----------------|
+| `AGENTS.md` | Universal format. Supported by Codex, OpenCode, Cursor, GitHub Copilot, Windsurf, VS Code, and more. |
+| `CLAUDE.md` | Claude Code CLI (Anthropic). |
+
+The command generates a `<format>.example.md` file in your project root. Rename it to `AGENTS.md` or `CLAUDE.md` when ready to use.
+
+**Usage**: Run this command once when setting up AI tooling for a project to give your AI agent Spryker-specific context.
+
+### Generate Skills Command
+
+The `ai-dev:generate-skills` command generates example AI coding skill files for Spryker project development.
+
+```bash
+docker/sdk console ai-dev:generate-skills
+```
+
+When you run the command, you are prompted to select the target AI tool. The command copies example skills into the tool-specific directory:
+
+| AI tool | Output directory |
+|---------|-----------------|
+| Claude Code | `.claude/skills/` |
+| Windsurf | `.windsurf/skills/` |
+| GitHub Copilot | `.github/skills/` |
+| Cursor, OpenAI Codex, OpenCode, Agents Convention | `.agents/skills/` |
+
+Each skill is generated with a `-example` suffix in the directory name. Rename the directories by removing the `-example` suffix when ready to use.
+
+**Usage**: Run this command to scaffold reusable AI skills for common Spryker development tasks such as functional testing, data import, Propel schema changes, and frontend development.
 
 ### Generate Prompts Command
 

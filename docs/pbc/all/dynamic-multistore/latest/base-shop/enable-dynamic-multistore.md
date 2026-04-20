@@ -32,7 +32,7 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 - All store-aware commands implement `Spryker\Zed\Kernel\Communication\Console\StoreAwareConsole` and execute actions for a specific store if a store parameter is provided; if not provided, actions are executed for all the stores in the region.
 - Optional: We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
 
-3. After enabling DMS, the basic domain structure must change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects. If your target domain doesn't change, i.e. it doesn't contain a region name - yves.mysprykershop.com - you may skip this step.
+3. After enabling DMS, the basic domain structure must change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects. If your target domain doesn't change, for example it doesn't contain a region name - yves.mysprykershop.com - you may skip this step.
 4. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
 The downtime associated with the maintenance mode is limited to the deployment time, which usually takes up to an hour.
 

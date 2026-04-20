@@ -26,7 +26,7 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 3. **Console commands must use the correct entrypoint.**
     - API Platform commands: `docker/sdk cli glue api:generate`, NOT `docker/sdk cli console api:generate`
     - Glue cache: `docker/sdk cli glue cache:clear`, NOT `docker/sdk cli console cache:clear`
-    - Env var: `GLUE_APPLICATION=GLUE_STOREFRONT` (all caps), never `storefront`
+    - Env var: `GLUE_APPLICATION=GLUE_STOREFRONT` (all caps), never `storefront` (any case is wrong in this context)
     - The standard post-migration block is:
       ```
       docker/sdk cli console transfer:generate

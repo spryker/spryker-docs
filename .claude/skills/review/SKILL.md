@@ -41,7 +41,7 @@ Review my migration documentation changes with extreme scrutiny. The goal is to 
 
 7. **`last_updated` must be today's date** for every file touched in this PR.
 
-8. **Do not bleed scope.** If a shared dependency provider (e.g., Checkout) has plugins from 5 different modules, only document the plugins relevant to the module being migrated. The rest belong in their own guides.
+8. **Do not bleed scope.** If a shared dependency provider (e.g., Checkout) has plugins from 5 different modules, only document the plugins relevant to the module being migrated. The rest belongs in their own guides.
 
 9. **FQCNs must be verified against the suite code.** Do not assume the doc has the right namespace — grep the suite repo for every class name mentioned.
 

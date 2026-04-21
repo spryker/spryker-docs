@@ -1,7 +1,7 @@
 ---
 title: Operational and deployment guidelines
 description: Guidelines for defining and implementing Operational and Deployment Non-Functional Requirements (NFRs) to ensure the technical success of a project.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
 - title: Operatable feature guidelines

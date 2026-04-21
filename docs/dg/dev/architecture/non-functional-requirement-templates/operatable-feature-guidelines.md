@@ -1,7 +1,7 @@
 ---
 title: Operatable feature guidelines
 description: Learn Spryker's operatable feature guidelines to ensure features are scalable, reliable, and manageable. Optimize performance while maintaining operational efficiency.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines

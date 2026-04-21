@@ -78,6 +78,7 @@ jobs:
           commit_user_name: spryker-docs-bot
           commit_user_email: spryker-docs-bot@users.noreply.github.com
           file_pattern: '**/*.md'
+          disable_globbing: true
 
       # Confirm the bump resolved the drift in this run. Uses the post-commit local HEAD
       # (the event's head SHA predates the fix commit). The push above also fires a fresh

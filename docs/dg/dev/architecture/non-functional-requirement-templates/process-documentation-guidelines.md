@@ -1,7 +1,7 @@
 ---
 title: Process documentation guidelines
 description: Process documentation guidelines to improve communication and ensure smooth deployment of applications within cross-functional teams.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines

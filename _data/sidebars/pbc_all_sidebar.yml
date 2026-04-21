@@ -1353,6 +1353,18 @@ entries:
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
 
+      - title: Federated Authentication via OAuth2/OIDC
+        url: /docs/pbc/all/oauth/latest/federated-authentication.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install Federated Authentication
+                url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html
+              - title: Add an OAuth provider
+                url: /docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html
+              - title: Set up Keycloak for local development
+                url: /docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html
+
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html
         nested:

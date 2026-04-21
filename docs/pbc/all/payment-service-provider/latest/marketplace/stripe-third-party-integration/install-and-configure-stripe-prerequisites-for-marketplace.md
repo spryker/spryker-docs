@@ -20,7 +20,7 @@ In Step 3 of the base shop guide, use `StripeManualMarketplace01` instead of `St
 
 ## Add Merchant Portal navigation
 
-Update `config/Zed/navigation.xml` to add the Payment Settings entry for merchants:
+Update `config/Zed/navigation-main-merchant-portal.xml` to add the Payment Settings entry for merchants:
 
 ```xml
 <?xml version="1.0"?>

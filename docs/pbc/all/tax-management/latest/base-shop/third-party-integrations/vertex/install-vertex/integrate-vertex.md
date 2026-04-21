@@ -135,7 +135,29 @@ Generate transfer objects for the module:
 vendor/bin/console transfer:generate
 ```
 
-## 6. Register plugins
+## 6. Import glossary data
+
+The module provides translation data for tax validation messages.
+
+**Option 1: Import using the module's configuration file**
+
+```bash
+vendor/bin/console data:import --config=vendor/spryker-eco/vertex/data/import/vertex.yml
+```
+
+**Option 2: Copy file content and import individually**
+
+Copy content from `vendor/spryker-eco/vertex/data/import/*.csv` to the corresponding files in `data/import/common/common/`. Then run:
+
+```bash
+vendor/bin/console data:import glossary
+```
+
+**Option 3: Add to the project's main import configuration**
+
+Add the import actions to your project's main data import configuration file and include them in your regular import pipeline.
+
+## 7. Register plugins
 
 ### Register the tax calculation plugin
 
@@ -282,7 +304,7 @@ protected function getOrderVertexExpanderPlugins(): array
 }
 ```
 
-## 7. Configure the Shop Application dependency provider
+## 8. Configure the Shop Application dependency provider
 
 Add the following code to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
 
@@ -329,7 +351,7 @@ Here is an example with `CartSummaryHideTaxAmountWidget`:
 {% endraw %}
 ```
 
-## 8. Optional: Sending tax invoices to Vertex and handling refunds
+## 9. Optional: Sending tax invoices to Vertex and handling refunds
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 

@@ -19,7 +19,7 @@ You need the following from your Identity Provider before starting:
 | **Client secret** | Corresponding secret for the client ID |
 | **Authorization server URL** | Base URL of the IdP (e.g. `https://sso.example.com`) |
 | **Realm** *(Keycloak only)* | Realm name configured in Keycloak |
-| **Redirect URI(s)** | Callback URL(s) you will register in the IdP — one per surface (see step 2) |
+| **Redirect URI(s)** | Callback URL(s) you will register in the IdP — one per application (see step 2) |
 
 The redirect URIs follow this pattern:
 
@@ -45,10 +45,10 @@ composer require stevenmaguire/oauth2-keycloak
 
 ## Step 2 — Set environment variables
 
-Add to your deploy config or secrets manager. Replace `{CLIENT_NAME}` with your chosen YAML client key (uppercase, underscores). The further examples in this guide use `MY_SSO_YVES`, `MY_SSO_ZED`, and `MY_SSO_MP` as `{CLIENT_NAME}` for each surface respectively.
+Add to your deploy config or secrets manager. Replace `{CLIENT_NAME}` with your chosen YAML client key (uppercase, underscores). The further examples in this guide use `MY_SSO_YVES`, `MY_SSO_ZED`, and `MY_SSO_MP` as `{CLIENT_NAME}` for each application respectively.
 
 ```bash
-# Redirect URIs — one per surface, shared across all providers on that surface
+# Redirect URIs — one per application, shared across all providers in that application
 SPRYKER_OAUTH_REDIRECT_URI_YVES=https://yves.mystore.com/login/oauth-callback
 SPRYKER_OAUTH_REDIRECT_URI_ZED=https://zed.mystore.com/security-oauth-user/login
 SPRYKER_OAUTH_REDIRECT_URI_MERCHANT_PORTAL=https://mp.mystore.com/security-merchant-portal-gui/oauth-login
@@ -64,7 +64,7 @@ SPRYKER_OAUTH_{CLIENT_NAME}_CLIENT_SECRET=<secret>
 
 ## Step 3 — Register the KnpU client
 
-Add a client entry to the YAML for each surface you are enabling. The client key (e.g. `my_sso_yves`) is the identifier you will reference in the Spryker config in step 4.
+Add a client entry to the YAML for each application you are enabling. The client key (e.g. `my_sso_yves`) is the identifier you will reference in the Spryker config in step 4.
 
 **`config/Yves/packages/knpu_oauth2_client.yaml`**
 ```yaml
@@ -114,7 +114,7 @@ Each provider type has its own required fields. `auth_server_url` and `realm` ar
 
 ## Step 4 — Register the provider in Spryker config
 
-The `clientName` must match the YAML client key exactly. The `statePrefix` must be unique across all providers on the same surface — it is used to route the callback to the correct provider.
+The `clientName` must match the YAML client key exactly. The `statePrefix` must be unique across all providers in the same application — it is used to route the callback to the correct provider.
 
 **`src/Pyz/Yves/SecurityOauthKnpu/SecurityOauthKnpuConfig.php`**
 ```php
@@ -154,7 +154,7 @@ public function getMerchantUserProviderConfigs(): array
 
 ---
 
-## Step 5 — Add a second provider on the same surface (optional)
+## Step 5 — Add a second provider to the same application (optional)
 
 Storefront and Merchant Portal support multiple providers simultaneously — one login button per provider. Add additional YAML client entries and additional `OauthKnpuProviderConfigTransfer` entries to the collection:
 
@@ -200,7 +200,7 @@ public function getCustomerProviderConfigs(): array
 
 ## Verification
 
-1. Open the login page for the configured surface.
+1. Open the login page for the configured application.
 2. The configured `linkText` button(s) should appear.
 3. Clicking a button redirects to the IdP login page.
 4. After successful IdP login, you are redirected back and authenticated in Spryker.

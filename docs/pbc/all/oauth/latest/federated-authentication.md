@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Apr 21, 2026
 ---
 
-If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every surface, your users log in through the same IdP they already trust, and Spryker handles the rest.
+If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every application, your users log in through the same IdP they already trust, and Spryker handles the rest.
 
 This is built on [KnpU OAuth2 Client Bundle](https://github.com/knpuniversity/oauth2-client-bundle), which wraps [league/oauth2-client](https://oauth2-client.thephpleague.com/) and provides Symfony-integrated OAuth2 clients for a broad range of providers. Your project does not need to implement the OAuth protocol — you configure a provider, wire the plugins, and the flow is handled for you.
 
@@ -13,9 +13,9 @@ This is built on [KnpU OAuth2 Client Bundle](https://github.com/knpuniversity/oa
 
 ## What You Get
 
-Federated authentication works across all three Spryker surfaces out of the box:
+Federated authentication works across all three Spryker applications out of the box:
 
-| Surface | User Type | Multiple Providers |
+| Application | User Type | Multiple Providers |
 |---|---|---|
 | Storefront (Yves) | Customer | Yes — one login button per provider |
 | Back-office (Zed) | Back-office user | Single provider |
@@ -55,7 +55,7 @@ The Yves plugin handles the Storefront callback route. The Zed plugin handles bo
 
 ### Symfony Security Integration
 
-Once the bridge is in place, `SecurityOauthKnpu` plugs into Symfony Security the same way on every surface: a dedicated OAuth authenticator is added to the existing firewall, sitting alongside the standard form-login authenticator so that both login methods continue to work independently.
+Once the bridge is in place, `SecurityOauthKnpu` plugs into Symfony Security the same way in every application: a dedicated OAuth authenticator is added to the existing firewall, sitting alongside the standard form-login authenticator so that both login methods continue to work independently.
 
 [![](https://mermaid.ink/img/pako:eNqVlt1u4kYUx19lNHuzKxFq_IGNVVXy12SjLAsKEInWVTSxB2JhPGiw2zrZSL3aB1j1XXrfR9kn6RkbO7CQLTUX2MP5nfM_Z84Z_IQjHjNs46Wgmwc0dcMMwbUt7uuFK3_8S4ivYpblSV6iseC_JTET6O01K6OU0xX652_kPBaCIceX96NVTuV3t9t9F-Jfa3csi8PsG8_XH8czcD1yivxBlY5zHvEUfaAlEy0orw-BczkLwDRldFmwHziVxEWUJiDqwFK6vPNcML3ONjNUu_YqO7fI4pSFYVY_3rBlss1FeQpHFxc_7YIeqa-X0Y9g8inE76fT8QR9_fMvJCVxkTwymXrOVyyTN8WWiSRb8BB_koU8KoF7c-VfysxGkgfNhbPZpElE84Rn47RYJhl6ey-SeMneHSh1_WDiAXeYDPr6-QuabES5gg3yryDZiKbpPY1WSPAiZ9vaoFwveFaiG7kkTm3Rfh1qiUfKJ_MhGX2c300CKaNxOWFRIaBNDrS-ZDsC0xmUBC0SwX4HaVXpXNB3wReLJGIHnLyc2fT9XcVVFZLwVBZXbqzsSKgUF5AnjWMWo_sXBa35gcsqxyNdQ9nhQyaiB5rlx_qaX9CYi5ympzVWPqqgjXltfZ7aQ-aySM5QPb-FiFvpAHwdCJ5AFLYQ_JvhaLVWZKXVK7Y5X_9XTRurMV2y08L2eqful6p1dpt3en04Pr0-v217LS9TJscGsktT-w0hRAuUDjQ6qIVH1_IUpQNHBhf2G0VR9inZwQ2mBQYxWswKVN1xXsF2070DrcAj1nlgMzH_n9zlX4OBRlTit2AvsKzAeA2UR0DDucQg5Dxub3IbuQbZr5BpyM9rUUdNSIsYwaCFdM1RdPMVaNcITbgecYh6HjlsNj9QiEmcFlIUa2C63wv3QvoQ7kxyftto9AI98FrIt3puX_leuBcyIMpeMY9I3IF_2iTGdi4K1sEwVmsqH_GT9BlimME1TJkNtzEVqxCH2TMwG5r9zPm6weA4Xz5ge0HTLTwVm5jmzE8onAzrdlXAVDLh8SLLsW0qWuUE20_4D2yrptG1NL2va7qqaaZldXCJbUvv9nVLG6gDra-og37vuYMfq6hK1zR0VemrutIzzZ6hGx3M4gQOimH99lC9RDz_C8URmXU?type=png)](https://mermaid.live/edit#pako:eNqVlt1u4kYUx19lNHuzKxFq_IGNVVXy12SjLAsKEInWVTSxB2JhPGiw2zrZSL3aB1j1XXrfR9kn6RkbO7CQLTUX2MP5nfM_Z84Z_IQjHjNs46Wgmwc0dcMMwbUt7uuFK3_8S4ivYpblSV6iseC_JTET6O01K6OU0xX652_kPBaCIceX96NVTuV3t9t9F-Jfa3csi8PsG8_XH8czcD1yivxBlY5zHvEUfaAlEy0orw-BczkLwDRldFmwHziVxEWUJiDqwFK6vPNcML3ONjNUu_YqO7fI4pSFYVY_3rBlss1FeQpHFxc_7YIeqa-X0Y9g8inE76fT8QR9_fMvJCVxkTwymXrOVyyTN8WWiSRb8BB_koU8KoF7c-VfysxGkgfNhbPZpElE84Rn47RYJhl6ey-SeMneHSh1_WDiAXeYDPr6-QuabES5gg3yryDZiKbpPY1WSPAiZ9vaoFwveFaiG7kkTm3Rfh1qiUfKJ_MhGX2c300CKaNxOWFRIaBNDrS-ZDsC0xmUBC0SwX4HaVXpXNB3wReLJGIHnLyc2fT9XcVVFZLwVBZXbqzsSKgUF5AnjWMWo_sXBa35gcsqxyNdQ9nhQyaiB5rlx_qaX9CYi5ympzVWPqqgjXltfZ7aQ-aySM5QPb-FiFvpAHwdCJ5AFLYQ_JvhaLVWZKXVK7Y5X_9XTRurMV2y08L2eqful6p1dpt3en04Pr0-v217LS9TJscGsktT-w0hRAuUDjQ6qIVH1_IUpQNHBhf2G0VR9inZwQ2mBQYxWswKVN1xXsF2070DrcAj1nlgMzH_n9zlX4OBRlTit2AvsKzAeA2UR0DDucQg5Dxub3IbuQbZr5BpyM9rUUdNSIsYwaCFdM1RdPMVaNcITbgecYh6HjlsNj9QiEmcFlIUa2C63wv3QvoQ7kxyftto9AI98FrIt3puX_leuBcyIMpeMY9I3IF_2iTGdi4K1sEwVmsqH_GT9BlimME1TJkNtzEVqxCH2TMwG5r9zPm6weA4Xz5ge0HTLTwVm5jmzE8onAzrdlXAVDLh8SLLsW0qWuUE20_4D2yrptG1NL2va7qqaaZldXCJbUvv9nVLG6gDra-og37vuYMfq6hK1zR0VemrutIzzZ6hGx3M4gQOimH99lC9RDz_C8URmXU)
 
@@ -63,9 +63,9 @@ Once the bridge is in place, `SecurityOauthKnpu` plugs into Symfony Security the
 
 ### The Plugin Chain
 
-Each surface follows the same four-stage plugin chain. This is where you connect the OAuth flow to Spryker's user resolution and persistence logic.
+Each application follows the same four-stage plugin chain. This is where you connect the OAuth flow to Spryker's user resolution and persistence logic.
 
-`SecurityOauthKnpu` ships with a concrete implementation of each plugin for every surface. You register them in the respective dependency providers during integration — no custom plugin code required unless you want to override a step.
+`SecurityOauthKnpu` ships with a concrete implementation of each plugin for every application. You register them in the respective dependency providers during integration — no custom plugin code required unless you want to override a step.
 
 | Stage | Storefront | Back-office | Merchant Portal |
 |---|---|---|---|
@@ -88,7 +88,7 @@ The anchor for each record is the combination of `provider` and `external_id` �
 
 ## How Login Works
 
-The resolution logic is the same across all three surfaces. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
+The resolution logic is the same across all three applications. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
 
 [![](https://mermaid.ink/img/pako:eNrllltvmzAUx7-K5b5sGq28AOHysIkQaFN1F3V92SCaKJwkVgxGtsmaRfnuM5eibNrDXpfaQuLgc_n_OBKcA855AdjHK8Z_5JtMKPQwTyukV_Aq-RQ0aoPyjLHHLN8iATnQHRTL1-jy8h2aJXecb1FTI1pApajatx5cFGlaPe5RLfhOHwj0BsGTAlFl7Dstln3yWZchPNx3AWjFm6p4f-zPQn2GvoLsXK6Te1CNqBCj1RYK1Bdannh-5J3jfFQzaNESoMwo02pWgpdoUXxGOctoKYfoeRcXHaLe_zcN0amGOLnTxX2UC8gU_Em7PIkYtNwuHhJ99a9AUl7Raq1lSAD0CPpFDyFxT9gbrX9XrDevO-MmiZ4gb3TRmkt1KUByttMGa9a0kjplU0vQPfu7pJsuxyIJe91farHf6n5IkK0m7aTdpNozQAFaUcb8i3kYuXFsSCX4FvyLt5HrRraRc8aFf0EIQf_xGmFnLwk2HGBju90jrGO3-9xg58-wcWxGZISNZ25IyLnBRi-ps_EAG5HYiYMRlhDXc2bnBtv-CobemtFpb91oYgXBWeCOsNfPnXVjO_JGVMsMiOWcW2dvXhLs4h9hsYHXghbYV6IBA5cg9NimTXxox5gUqw2UkGJf3xaZ2KY4rY46ps6qb5yXz2GCN-sN9lcZk9pq6kKPPHOarUVWjk8FVHogDfWgp7A_nU67JNg_4CfsT1zzyjadqe3a-qNCHM828B77zuTKMi1r6jn2dGJZln008M-uLLlyTW8ysYhJTMfyPNsxMBRUcfGhH6m7yfr4C8XmTiw?type=png)](https://mermaid.live/edit#pako:eNrllltvmzAUx7-K5b5sGq28AOHysIkQaFN1F3V92SCaKJwkVgxGtsmaRfnuM5eibNrDXpfaQuLgc_n_OBKcA855AdjHK8Z_5JtMKPQwTyukV_Aq-RQ0aoPyjLHHLN8iATnQHRTL1-jy8h2aJXecb1FTI1pApajatx5cFGlaPe5RLfhOHwj0BsGTAlFl7Dstln3yWZchPNx3AWjFm6p4f-zPQn2GvoLsXK6Te1CNqBCj1RYK1Bdannh-5J3jfFQzaNESoMwo02pWgpdoUXxGOctoKYfoeRcXHaLe_zcN0amGOLnTxX2UC8gU_Em7PIkYtNwuHhJ99a9AUl7Raq1lSAD0CPpFDyFxT9gbrX9XrDevO-MmiZ4gb3TRmkt1KUByttMGa9a0kjplU0vQPfu7pJsuxyIJe91farHf6n5IkK0m7aTdpNozQAFaUcb8i3kYuXFsSCX4FvyLt5HrRraRc8aFf0EIQf_xGmFnLwk2HGBju90jrGO3-9xg58-wcWxGZISNZ25IyLnBRi-ps_EAG5HYiYMRlhDXc2bnBtv-CobemtFpb91oYgXBWeCOsNfPnXVjO_JGVMsMiOWcW2dvXhLs4h9hsYHXghbYV6IBA5cg9NimTXxox5gUqw2UkGJf3xaZ2KY4rY46ps6qb5yXz2GCN-sN9lcZk9pq6kKPPHOarUVWjk8FVHogDfWgp7A_nU67JNg_4CfsT1zzyjadqe3a-qNCHM828B77zuTKMi1r6jn2dGJZln008M-uLLlyTW8ysYhJTMfyPNsxMBRUcfGhH6m7yfr4C8XmTiw)
 
@@ -136,7 +136,7 @@ When a user initiates an OAuth login, Spryker generates a state value made up of
 
 When the IdP redirects back, KnpU compares the returned `state` parameter against the stored session value. The match must be exact — any deviation causes the request to be rejected before the authorization code is exchanged. This protects against CSRF attacks on the callback endpoint.
 
-The prefix part of the state is just a routing signal — Spryker uses it to identify which provider's KnpU client should handle the callback. It does not need to be secret, but it must be unique per provider on a given surface.
+The prefix part of the state is just a routing signal — Spryker uses it to identify which provider's KnpU client should handle the callback. It does not need to be secret, but it must be unique per provider in a given application.
 
 ### What Happens to the Access Token
 

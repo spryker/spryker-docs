@@ -85,9 +85,9 @@ Install the composer package for your provider. The examples in this guide use K
 composer require stevenmaguire/oauth2-keycloak
 ```
 
-For other providers, see [Add an OAuth provider](add-an-oauth-provider.md) for the correct package name.
+For other providers, see the [KnpU OAuth2 Client Bundle provider list](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers) for the correct package name.
 
-Register your OAuth providers in the KnpU bundle configuration for each surface. The `redirect_route` field must be the full callback URL — KnpU uses Symfony's router, and the OAuth callback routes are registered in the Symfony router rather than Spryker's own router. You can use any provider supported by `knpuniversity/oauth2-client-bundle`. For the full list of provider types and their specific fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers).
+Register your OAuth providers in the KnpU bundle configuration for each application. The `redirect_route` field must be the full callback URL — KnpU uses Symfony's router, and the OAuth callback routes are registered in the Symfony router rather than Spryker's own router. You can use any provider supported by `knpuniversity/oauth2-client-bundle`. For the full list of provider types and their specific fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers).
 
 ### Storefront
 
@@ -151,7 +151,7 @@ Set `SPRYKER_OAUTH_REDIRECT_URI_MERCHANT_PORTAL` to the full callback URL: `http
 
 ## 5) Configure providers
 
-Tell `SecurityOauthKnpu` which KnpU clients to use on each surface and how to label the login buttons. Each `clientName` must match a key defined in the corresponding `knpu_oauth2_client.yaml`. Each `statePrefix` must be unique per provider on a given surface.
+Tell `SecurityOauthKnpu` which KnpU clients to use in each application and how to label the login buttons. Each `clientName` must match a key defined in the corresponding `knpu_oauth2_client.yaml`. Each `statePrefix` must be unique per provider in a given application.
 
 ### Storefront
 
@@ -208,7 +208,7 @@ class SecurityOauthKnpuConfig extends SprykerSecurityOauthKnpuConfig
         return [
             (new OauthKnpuProviderConfigTransfer())
                 ->setClientName('sso_zed')
-                ->setStatePrefix('knpu_oauth')
+                ->setStatePrefix('sso_zed')
                 ->setLinkText('Login with SSO'),
         ];
     }
@@ -223,7 +223,7 @@ class SecurityOauthKnpuConfig extends SprykerSecurityOauthKnpuConfig
         return [
             (new OauthKnpuProviderConfigTransfer())
                 ->setClientName('sso_merchant_portal')
-                ->setStatePrefix('oauth_mp')
+                ->setStatePrefix('sso_merchant_portal')
                 ->setLinkText('Login with SSO'),
         ];
     }
@@ -245,37 +245,57 @@ class SecurityOauthKnpuConfig extends SprykerSecurityOauthKnpuConfig
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\ShopApplication;
+
 use Spryker\Yves\SecurityOauthKnpu\Plugin\Application\OauthKnpuApplicationPlugin;
 use SprykerShop\Yves\CustomerPage\Widget\OauthAuthenticationLinksWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
-protected function getApplicationPlugins(): array
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
-    return [
-        // ...
-        new OauthKnpuApplicationPlugin(),
-    ];
-}
+    protected function getApplicationPlugins(): array
+    {
+        return [
+            // ...
+            new OauthKnpuApplicationPlugin(),
+        ];
+    }
 
-protected function getGlobalWidgets(): array
-{
-    return [
-        // ...
-        OauthAuthenticationLinksWidget::class,
-    ];
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            // ...
+            OauthAuthenticationLinksWidget::class,
+        ];
+    }
 }
 ```
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use Spryker\Yves\SecurityOauthKnpu\Plugin\Router\SecurityOauthKnpuRouteProviderPlugin;
 
-protected function getRouteProvider(): array
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
-    return [
-        // ...
-        new SecurityOauthKnpuRouteProviderPlugin(),
-    ];
+    protected function getRouteProvider(): array
+    {
+        return [
+            // ...
+            new SecurityOauthKnpuRouteProviderPlugin(),
+        ];
+    }
 }
 ```
 
@@ -293,45 +313,65 @@ protected function getRouteProvider(): array
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Yves\CustomerPage;
+
 use Spryker\Yves\SecurityOauthKnpu\Plugin\CustomerPage\KnpuCustomerAuthenticationLinkPlugin;
 use Spryker\Yves\SecurityOauthKnpu\Plugin\CustomerPage\KnpuOauthCustomerClientStrategyPlugin;
+use SprykerShop\Yves\CustomerPage\CustomerPageDependencyProvider as SprykerShopCustomerPageDependencyProvider;
 
-protected function getCustomerAuthenticationLinkPlugins(): array
+class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
-    return [
-        new KnpuCustomerAuthenticationLinkPlugin(),
-    ];
-}
+    protected function getCustomerAuthenticationLinkPlugins(): array
+    {
+        return [
+            new KnpuCustomerAuthenticationLinkPlugin(),
+        ];
+    }
 
-protected function getOauthCustomerClientStrategyPlugins(): array
-{
-    return [
-        new KnpuOauthCustomerClientStrategyPlugin(),
-    ];
+    protected function getOauthCustomerClientStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthCustomerClientStrategyPlugin(),
+        ];
+    }
 }
 ```
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\Customer;
+
 use Spryker\Zed\Customer\Communication\Plugin\Customer\AcceptOnlyOauthCustomerAuthenticationStrategyPlugin;
 use Spryker\Zed\Customer\Communication\Plugin\Customer\CreateCustomerOauthCustomerAuthenticationStrategyPlugin;
+use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\Customer\KnpuOauthCustomerIdentityPersistencePlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\Customer\KnpuOauthCustomerIdentityStrategyPlugin;
 
-protected function getOauthCustomerAuthenticationStrategyPlugins(): array
+class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 {
-    return [
-        new KnpuOauthCustomerIdentityStrategyPlugin(),
-        new CreateCustomerOauthCustomerAuthenticationStrategyPlugin(), // or AcceptOnlyOauthCustomerAuthenticationStrategyPlugin
-    ];
-}
+    protected function getOauthCustomerAuthenticationStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthCustomerIdentityStrategyPlugin(),
+            new CreateCustomerOauthCustomerAuthenticationStrategyPlugin(), // or AcceptOnlyOauthCustomerAuthenticationStrategyPlugin
+        ];
+    }
 
-protected function getOauthCustomerPostResolvePlugins(): array
-{
-    return [
-        new KnpuOauthCustomerIdentityPersistencePlugin(),
-    ];
+    protected function getOauthCustomerPostResolvePlugins(): array
+    {
+        return [
+            new KnpuOauthCustomerIdentityPersistencePlugin(),
+        ];
+    }
 }
 ```
 
@@ -356,27 +396,47 @@ protected function getOauthCustomerPostResolvePlugins(): array
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\Application;
+
+use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\Application\OauthKnpuApplicationPlugin;
 
-protected function getBackofficeApplicationPlugins(): array
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
-    return [
-        // ...
-        new OauthKnpuApplicationPlugin(),
-    ];
+    protected function getBackofficeApplicationPlugins(): array
+    {
+        return [
+            // ...
+            new OauthKnpuApplicationPlugin(),
+        ];
+    }
 }
 ```
 
 **src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\SecurityGui;
+
+use Spryker\Zed\SecurityGui\SecurityGuiDependencyProvider as SprykerSecurityGuiDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityGui\KnpuOauthAuthenticationLinkPlugin;
 
-protected function getAuthenticationLinkPlugins(): array
+class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 {
-    return [
-        new KnpuOauthAuthenticationLinkPlugin(),
-    ];
+    protected function getAuthenticationLinkPlugins(): array
+    {
+        return [
+            new KnpuOauthAuthenticationLinkPlugin(),
+        ];
+    }
 }
 ```
 
@@ -391,29 +451,39 @@ protected function getAuthenticationLinkPlugins(): array
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\SecurityOauthUser;
+
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthUser\KnpuOauthUserClientStrategyPlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthUser\KnpuOauthUserIdentityPersistencePlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthUser\KnpuOauthUserIdentityStrategyPlugin;
+use Spryker\Zed\SecurityOauthUser\SecurityOauthUserDependencyProvider as SprykerSecurityOauthUserDependencyProvider;
 
-protected function getOauthUserClientStrategyPlugins(): array
+class SecurityOauthUserDependencyProvider extends SprykerSecurityOauthUserDependencyProvider
 {
-    return [
-        new KnpuOauthUserClientStrategyPlugin(),
-    ];
-}
+    protected function getOauthUserClientStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthUserClientStrategyPlugin(),
+        ];
+    }
 
-protected function getOauthUserAuthenticationStrategyPlugins(): array
-{
-    return [
-        new KnpuOauthUserIdentityStrategyPlugin(),
-    ];
-}
+    protected function getOauthUserAuthenticationStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthUserIdentityStrategyPlugin(),
+        ];
+    }
 
-protected function getOauthUserPostResolvePlugins(): array
-{
-    return [
-        new KnpuOauthUserIdentityPersistencePlugin(),
-    ];
+    protected function getOauthUserPostResolvePlugins(): array
+    {
+        return [
+            new KnpuOauthUserIdentityPersistencePlugin(),
+        ];
+    }
 }
 ```
 
@@ -438,27 +508,47 @@ protected function getOauthUserPostResolvePlugins(): array
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\MerchantPortalApplication;
+
+use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\Application\OauthKnpuApplicationPlugin;
 
-protected function getMerchantPortalApplicationPlugins(): array
+class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
-    return [
-        // ...
-        new OauthKnpuApplicationPlugin(),
-    ];
+    protected function getMerchantPortalApplicationPlugins(): array
+    {
+        return [
+            // ...
+            new OauthKnpuApplicationPlugin(),
+        ];
+    }
 }
 ```
 
 **src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\SecurityMerchantPortalGui;
+
+use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiDependencyProvider as SprykerSecurityMerchantPortalGuiDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityMerchantPortalGui\KnpuOauthMerchantUserAuthenticationLinkPlugin;
 
-protected function getMerchantPortalAuthenticationLinkPlugins(): array
+class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchantPortalGuiDependencyProvider
 {
-    return [
-        new KnpuOauthMerchantUserAuthenticationLinkPlugin(),
-    ];
+    protected function getMerchantPortalAuthenticationLinkPlugins(): array
+    {
+        return [
+            new KnpuOauthMerchantUserAuthenticationLinkPlugin(),
+        ];
+    }
 }
 ```
 
@@ -474,31 +564,41 @@ protected function getMerchantPortalAuthenticationLinkPlugins(): array
 **src/Pyz/Zed/SecurityOauthMerchantPortal/SecurityOauthMerchantPortalDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\SecurityOauthMerchantPortal;
+
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthMerchantPortal\KnpuOauthMerchantUserClientStrategyPlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthMerchantPortal\KnpuOauthMerchantUserIdentityPersistencePlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\SecurityOauthMerchantPortal\KnpuOauthMerchantUserIdentityStrategyPlugin;
 use Spryker\Zed\SecurityOauthMerchantPortal\Communication\Plugin\SecurityOauthMerchantPortal\ExistingMerchantUserAuthenticationStrategyPlugin;
+use Spryker\Zed\SecurityOauthMerchantPortal\SecurityOauthMerchantPortalDependencyProvider as SprykerSecurityOauthMerchantPortalDependencyProvider;
 
-protected function getOauthMerchantUserClientStrategyPlugins(): array
+class SecurityOauthMerchantPortalDependencyProvider extends SprykerSecurityOauthMerchantPortalDependencyProvider
 {
-    return [
-        new KnpuOauthMerchantUserClientStrategyPlugin(),
-    ];
-}
+    protected function getOauthMerchantUserClientStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthMerchantUserClientStrategyPlugin(),
+        ];
+    }
 
-protected function getOauthMerchantUserAuthenticationStrategyPlugins(): array
-{
-    return [
-        new KnpuOauthMerchantUserIdentityStrategyPlugin(),
-        new ExistingMerchantUserAuthenticationStrategyPlugin(),
-    ];
-}
+    protected function getOauthMerchantUserAuthenticationStrategyPlugins(): array
+    {
+        return [
+            new KnpuOauthMerchantUserIdentityStrategyPlugin(),
+            new ExistingMerchantUserAuthenticationStrategyPlugin(),
+        ];
+    }
 
-protected function getOauthMerchantUserPostResolvePlugins(): array
-{
-    return [
-        new KnpuOauthMerchantUserIdentityPersistencePlugin(),
-    ];
+    protected function getOauthMerchantUserPostResolvePlugins(): array
+    {
+        return [
+            new KnpuOauthMerchantUserIdentityPersistencePlugin(),
+        ];
+    }
 }
 ```
 
@@ -512,23 +612,33 @@ protected function getOauthMerchantUserPostResolvePlugins(): array
 **src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
 ```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\AclMerchantPortal\SecurityOauthKnpuMerchantUserAclEntityConfigurationExpanderPlugin;
 use Spryker\Zed\SecurityOauthKnpu\Communication\Plugin\AclMerchantPortal\SecurityOauthKnpuMerchantUserAclEntityRuleExpanderPlugin;
 
-protected function getMerchantAclEntityRuleExpanderPlugins(): array
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
 {
-    return [
-        // ...
-        new SecurityOauthKnpuMerchantUserAclEntityRuleExpanderPlugin(),
-    ];
-}
+    protected function getMerchantAclEntityRuleExpanderPlugins(): array
+    {
+        return [
+            // ...
+            new SecurityOauthKnpuMerchantUserAclEntityRuleExpanderPlugin(),
+        ];
+    }
 
-protected function getAclEntityConfigurationExpanderPlugins(): array
-{
-    return [
-        // ...
-        new SecurityOauthKnpuMerchantUserAclEntityConfigurationExpanderPlugin(),
-    ];
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            // ...
+            new SecurityOauthKnpuMerchantUserAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
 }
 ```
 
@@ -543,5 +653,5 @@ protected function getAclEntityConfigurationExpanderPlugins(): array
 
 ## Next steps
 
-- [Add an OAuth provider](add-an-oauth-provider.md) — wire additional IdP clients per surface.
+- [Add an OAuth provider](add-an-oauth-provider.md) — wire additional IdP clients per application.
 - [Set up Keycloak for local development](set-up-keycloak-for-local-development.md) — run a local Keycloak instance to test SSO without an external IdP.

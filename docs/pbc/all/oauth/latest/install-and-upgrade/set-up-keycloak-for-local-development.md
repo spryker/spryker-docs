@@ -104,7 +104,7 @@ Docker SDK merges this file with the generated one during `docker/sdk boot`, so 
 
 ## Step 3 — Configure the realm
 
-Create the realm configuration file that Keycloak imports on first boot. This file defines the realm settings, one OAuth2 client per Spryker surface, and test users.
+Create the realm configuration file that Keycloak imports on first boot. This file defines the realm settings, one OAuth2 client per Spryker application, and test users.
 
 **`data/keycloak/spryker-realm.json`**
 
@@ -224,7 +224,7 @@ Create the realm configuration file that Keycloak imports on first boot. This fi
 
 **Realm** — a `spryker` realm with brute-force protection enabled and self-registration disabled.
 
-**Clients** — one per surface, all using the Authorization Code flow (`standardFlowEnabled: true`) with a confidential client secret:
+**Clients** — one per application, all using the Authorization Code flow (`standardFlowEnabled: true`) with a confidential client secret:
 
 | Client ID | Surface | Secret |
 |---|---|---|
@@ -295,7 +295,7 @@ docker/sdk up
 
 2. Confirm Keycloak is running by opening `http://keycloak.spryker.local:28080`. Log in with `admin` / `admin` and verify the `spryker` realm and its three clients exist.
 
-3. Test each surface:
+3. Test each application:
 
 | Surface | URL | Test user |
 |---|---|---|

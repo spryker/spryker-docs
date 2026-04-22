@@ -5,11 +5,13 @@ description: Learn how design tokens work in Spryker, where they are configured,
 template: concept-topic-template
 ---
 
-Design tokens are the single source of truth for visual constants — colors, typography, spacing, radii, shadows, and strokes. You define them in a JSON file using the [Design Tokens Community Group (DTCG)](https://tr.designtokens.org/format/) format. The build compiles them into CSS custom properties (`--*`) available globally on `:root`.
+Design tokens are the single source of truth for visual constants — colors, typography, spacing, radii, shadows, and strokes. They are defined in a JSON file using the [Design Tokens Community Group (DTCG)](https://tr.designtokens.org/format/) format and compiled into CSS custom properties (`--*`) that are available globally on `:root`.
+
+For a visual overview of all available tokens and their values, see the [B2B Design Token Reference](https://design-system-xi-lac.vercel.app/).
 
 ## How it works
 
-```text
+```
 design-tokens.json  ──►  style-dictionary  ──►  design-tokens.css  ──►  webpack (critical CSS)
       (source)              (build step)            (generated)             (bundled)
 ```
@@ -153,7 +155,7 @@ This generates `--scale-10: 10px;`.
 
 The generated variable name follows this pattern:
 
-```text
+```
 --{path minus first segment, joined by hyphens}
 ```
 

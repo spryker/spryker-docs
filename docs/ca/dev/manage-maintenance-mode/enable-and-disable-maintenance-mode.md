@@ -31,7 +31,7 @@ By default, all endpoints of an application share the same maintenance page loca
 
 You can customize the maintenance page per store or per region by placing an `index.html` file in a subdirectory named after the store or region code:
 
-```
+```text
 public/Yves/maintenance/
 ├── index.html          # Default maintenance page (fallback)
 ├── EU/

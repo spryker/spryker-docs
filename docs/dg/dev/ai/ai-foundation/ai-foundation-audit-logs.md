@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature
-last_updated: Mar 11, 2026
+last_updated: Apr 22, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring
 template: howto-guide-template
 label: early-access

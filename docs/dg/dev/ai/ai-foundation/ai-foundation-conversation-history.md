@@ -1,7 +1,7 @@
 ---
 title: Conversation History
 description: Persist and manage multi-turn conversations with conversation history using database storage
-last_updated: Mar 2, 2026
+last_updated: Apr 22, 2026
 keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue, audit, logging, tracking
 template: howto-guide-template
 related:

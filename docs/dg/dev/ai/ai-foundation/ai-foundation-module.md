@@ -1,7 +1,7 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Mar 26, 2026
+last_updated: Apr 22, 2026
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access

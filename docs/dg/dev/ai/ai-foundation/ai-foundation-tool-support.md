@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Mar 2, 2026
+last_updated: Apr 22, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:

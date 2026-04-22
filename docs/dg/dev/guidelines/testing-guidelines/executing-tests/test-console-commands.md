@@ -1,7 +1,7 @@
 ---
 title: Test console commands
 description: Learn how to test console commands with test helpers using ConsoleHelper in your Spryker based projects.
-last_updated: Jan 12, 2022
+last_updated: Apr 22, 2026
 template: concept-topic-template
 related:
   - title: Available test helpers

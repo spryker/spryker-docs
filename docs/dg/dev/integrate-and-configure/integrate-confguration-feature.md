@@ -1,12 +1,12 @@
 ---
 title: Install the Configuration Management feature
 description: Learn how to integrate and configure Configuration Management feature in a Spryker project.
-last_updated: March 05, 2026
+last_updated: Apr 22, 2026
 template: howto-guide-template
 
 related:
   - title: Configuration Management feature
-    link: /docs/dg/dev/backend-development/configuration-management.html
+    link: docs/dg/dev/backend-development/configuration-management.html
 ---
 
 This document describes how to install the Configuration Management feature.
@@ -28,7 +28,7 @@ Update the required modules:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/configuration:"^0.1.0" --update-with-dependencies
+composer require spryker/configuration:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -97,6 +97,53 @@ Make sure that after reading a configuration value with `store` scope, the syste
 
 {% endinfo_block %}
 
+#### 2.1) Set up encryption for secret settings
+
+Add encryption key configuration for encrypting and decrypting secret configuration values:
+
+**config/Shared/config_default.php**
+
+Add the import statement:
+
+```php
+use Spryker\Shared\Configuration\ConfigurationConstants;
+```
+
+Add the encryption configuration:
+
+```php
+// Configuration system
+$config[ConfigurationConstants::ENCRYPTION_KEY] = hex2bin(getenv('SPRYKER_CONFIGURATION_ENCRYPTION_KEY') ?: '') ?: null;
+$config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR') ?: '') ?: null;
+```
+
+#### 2.2) Provide environment variables
+
+Add the following environment variables to your deploy file (`deploy.dev.yml` or equivalent):
+
+```yaml
+image:
+    environment:
+        SPRYKER_CONFIGURATION_ENCRYPTION_KEY: '<your-64-char-hex-key>'
+        SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR: '<your-32-char-hex-iv>'
+```
+
+To generate new keys, run:
+
+```bash
+openssl rand -hex 32  # generates SPRYKER_CONFIGURATION_ENCRYPTION_KEY
+openssl rand -hex 16  # generates SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Create a setting with `secret: true` in a YAML schema and run `configuration:sync`.
+2. Set a value for the secret setting in the Back Office.
+3. Check the `spy_configuration_value` table — the stored value must be encrypted (not plain text).
+4. Read the value back in the Back Office — it must be decrypted and displayed correctly.
+
+{% endinfo_block %}
+
 ### 3) Set up the database schema and transfer objects
 
 #### 3.1) Set up database schema extension
@@ -162,12 +209,31 @@ Make sure the following changes in transfer objects have been applied:
 | ConfigurationValueDeletion | class | created | src/Generated/Shared/Transfer/ConfigurationValueDeletionTransfer |
 | ConfigurationValueCollectionResponse | class | created | src/Generated/Shared/Transfer/ConfigurationValueCollectionResponseTransfer |
 | ConfigurationSettingValuesCriteria | class | created | src/Generated/Shared/Transfer/ConfigurationSettingValuesCriteriaTransfer |
-| ConfigurationSettingValues | class | created | src/Generated/Shared/Transfer/ConfigurationSettingValuesTransfer |
+| ConfigurationSettingValueCollection | class | created | src/Generated/Shared/Transfer/ConfigurationSettingValueCollectionTransfer |
 | ConfigurationStorage | class | created | src/Generated/Shared/Transfer/ConfigurationStorageTransfer |
+| ConfigurationFileUpload | class | created | src/Generated/Shared/Transfer/ConfigurationFileUploadTransfer |
+| ConfigurationFileUploadCollectionRequest | class | created | src/Generated/Shared/Transfer/ConfigurationFileUploadCollectionRequestTransfer |
+| ConfigurationFileUploadCollectionResponse | class | created | src/Generated/Shared/Transfer/ConfigurationFileUploadCollectionResponseTransfer |
 
 {% endinfo_block %}
 
-### 4) Configure navigation
+### 4) Add translations
+
+Regenerate the Zed translator cache to pick up the Configuration Management Back Office UI translations:
+
+```bash
+console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Navigate to the Configuration Management page in the Back Office.
+2. Verify that all UI labels, buttons, and messages are displayed in the correct locale.
+3. Switch to German locale and verify the German translations appear.
+
+{% endinfo_block %}
+
+### 5) Configure navigation
 
 Add the Configuration Management entry to `config/Zed/navigation.xml`:
 
@@ -195,23 +261,27 @@ Log in to the Back Office and verify that the **Configuration** menu item appear
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 6) Set up behavior
 
-#### 5.1) Register console commands
+#### 6.1) Register console commands and application plugin
 
-Register the configuration sync console command:
+Register the configuration sync console command and the application plugin that exposes the Configuration facade as an application service for direct Zed access from the Client layer:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ConfigurationSyncConsole | Synchronizes configuration schemas from YAML files and generates the merged schema and settings map. | None | Spryker\Zed\Configuration\Communication\Console |
+| ConfigurationApplicationPlugin | Registers the Configuration facade as an application service for direct access in Zed applications. | None | Spryker\Zed\Configuration\Communication\Plugin\Application |
 
-**src/Pyz/Console/src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
-Add the import statement and register the console command in `getConsoleCommands()`:
+Add the import statements:
 
 ```php
 use Spryker\Zed\Configuration\Communication\Console\ConfigurationSyncConsole;
+use Spryker\Zed\Configuration\Communication\Plugin\Application\ConfigurationApplicationPlugin;
 ```
+
+Register the console command in `getConsoleCommands()`:
 
 ```php
 protected function getConsoleCommands(Container $container): array
@@ -224,17 +294,67 @@ protected function getConsoleCommands(Container $container): array
 }
 ```
 
+Register the application plugin in `getApplicationPlugins()`:
+
+```php
+protected function getApplicationPlugins(Container $container): array
+{
+    $applicationPlugins = parent::getApplicationPlugins($container);
+    // ...
+    $applicationPlugins[] = new ConfigurationApplicationPlugin();
+
+    return $applicationPlugins;
+}
+```
+
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
+
+Add the import statement:
+
+```php
+use Spryker\Zed\Configuration\Communication\Plugin\Application\ConfigurationApplicationPlugin;
+```
+
+Register the application plugin in each Zed application context (`getBackofficeApplicationPlugins()`, `getBackendGatewayApplicationPlugins()`, `getBackendApiApplicationPlugins()`):
+
+```php
+protected function getBackofficeApplicationPlugins(): array
+{
+    return [
+        // ...
+        new ConfigurationApplicationPlugin(),
+    ];
+}
+
+protected function getBackendGatewayApplicationPlugins(): array
+{
+    return [
+        // ...
+        new ConfigurationApplicationPlugin(),
+    ];
+}
+
+protected function getBackendApiApplicationPlugins(): array
+{
+    return [
+        // ...
+        new ConfigurationApplicationPlugin(),
+    ];
+}
+```
+
 {% info_block warningBox "Verification" %}
 
-Run `console configuration:sync` and verify that it outputs the number of processed settings.
+1. Run `console configuration:sync` and verify that it outputs the number of processed settings.
+2. Verify that configuration values can be read in Zed context via the Client layer without going through storage.
 
 {% endinfo_block %}
 
-#### 5.2) Set up queue configuration
+#### 6.2) Set up queue configuration
 
 Register the Configuration storage synchronization queue in both message broker implementations.
 
-**src/Pyz/RabbitMq/src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 Add the import statement:
 
@@ -254,7 +374,7 @@ protected function getSynchronizationQueueConfiguration(): array
 }
 ```
 
-**src/Pyz/SymfonyMessenger/src/Pyz/Client/SymfonyMessenger/SymfonyMessengerConfig.php**
+**src/Pyz/Client/SymfonyMessenger/SymfonyMessengerConfig.php**
 
 Add the import statement:
 
@@ -280,11 +400,11 @@ Run `console queue:setup` and verify that the `sync.storage.configuration` queue
 
 {% endinfo_block %}
 
-#### 5.3) Register queue message processor
+#### 6.3) Register queue message processor
 
 Register the synchronization storage queue message processor for the Configuration sync queue:
 
-**src/Pyz/Queue/src/Pyz/Zed/Queue/QueueDependencyProvider.php**
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 Add the import statements:
 
@@ -312,7 +432,7 @@ protected function getProcessorMessagePlugins(Container $container): array
 
 {% endinfo_block %}
 
-#### 5.4) Register publisher plugins
+#### 6.4) Register publisher plugins
 
 Enable Publish & Synchronize for configuration values by registering the publisher plugin:
 
@@ -320,7 +440,7 @@ Enable Publish & Synchronize for configuration values by registering the publish
 | --- | --- | --- | --- |
 | ConfigurationValueWritePublisherPlugin | Publishes storefront-visible, non-secret configuration values to `spy_configuration_storage` when `spy_configuration_value` entities are created, updated, or deleted. | None | Spryker\Zed\Configuration\Communication\Plugin\Publisher |
 
-**src/Pyz/Publisher/src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 Add the import statement:
 
@@ -362,7 +482,7 @@ protected function getConfigurationStoragePlugins(): array
 
 {% endinfo_block %}
 
-#### 5.5) Register scope identifier provider plugins
+#### 6.5) Register scope identifier provider plugins
 
 Register the store scope identifier provider to resolve the current store name as the scope identifier:
 
@@ -409,7 +529,7 @@ class ConfigurationDependencyProvider extends SprykerConfigurationDependencyProv
 
 {% endinfo_block %}
 
-#### 5.6) Register Client-level request expander plugins
+#### 6.6) Register Client-level request expander plugins
 
 Register the store scope expander to attach the current store scope to configuration value requests:
 
@@ -417,7 +537,7 @@ Register the store scope expander to attach the current store scope to configura
 | --- | --- | --- | --- |
 | StoreScopeConfigurationValueRequestExpanderPlugin | Expands the configuration value request with the current store scope and store name as scope identifier. | Store module installed | Spryker\Client\Store\Plugin\Configuration |
 
-**src/Pyz/Configuration/src/Pyz/Client/Configuration/ConfigurationDependencyProvider.php**
+**src/Pyz/Client/Configuration/ConfigurationDependencyProvider.php**
 
 ```php
 <?php
@@ -452,7 +572,82 @@ class ConfigurationDependencyProvider extends SprykerConfigurationDependencyProv
 
 {% endinfo_block %}
 
-### 6) Add install recipe commands
+#### 6.7) Set up data import (optional)
+
+Enable CLI-based bulk import of configuration values from CSV files.
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| ConfigurationValueDataImportPlugin | Imports configuration values from CSV using the DataImport framework. Validates setting keys, scopes, and constraints. Skips secret settings with a warning. | `configuration:sync` must be run first | Spryker\Zed\Configuration\Communication\Plugin\DataImport |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+Add the import statement and register the plugin in `getDataImporterPlugins()`:
+
+```php
+use Spryker\Zed\Configuration\Communication\Plugin\DataImport\ConfigurationValueDataImportPlugin;
+```
+
+```php
+protected function getDataImporterPlugins(): array
+{
+    return [
+        // ...
+        new ConfigurationValueDataImportPlugin(),
+    ];
+}
+```
+
+**src/Pyz/Zed/DataImport/DataImportConfig.php**
+
+Add the import type to the full import types list:
+
+```php
+use Spryker\Zed\Configuration\ConfigurationConfig;
+```
+
+```php
+public function getFullImportTypes(): array
+{
+    return [
+        // ...
+        ConfigurationConfig::IMPORT_TYPE_CONFIGURATION_VALUE,
+    ];
+}
+```
+
+**data/import/common/common/configuration_value.csv**
+
+Create the CSV file with the required columns:
+
+```csv
+setting_key,scope,scope_identifier,value
+```
+
+**data/import/local/full_EU.yml** (or your region-specific import config)
+
+Add the `configuration-value` data entity:
+
+```yaml
+actions:
+    # ...
+    - data_entity: configuration-value
+      source: data/import/common/common/configuration_value.csv
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Add a row to `data/import/common/common/configuration_value.csv` with a valid setting key, for example:
+   ```csv
+   setting_key,scope,scope_identifier,value
+   system:general:basic:site_name,store,DE,My German Store
+   ```
+2. Run `console data:import configuration-value`.
+3. Verify the value is saved by checking the Back Office Configuration page.
+
+{% endinfo_block %}
+
+### 7) Add install recipe commands
 
 Add the `configuration:sync` command to the install recipe so that the merged schema and settings map are generated during deployment.
 
@@ -474,7 +669,7 @@ Run the install recipe and verify that the `configuration:sync` step executes wi
 
 {% endinfo_block %}
 
-### 7) Configure data directory
+### 8) Configure data directory
 
 Add the `data/configuration/` directory to `.gitignore` exceptions to ensure the generated schema files are tracked:
 

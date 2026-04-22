@@ -5,11 +5,11 @@ last_updated: March 02, 2026
 template: concept-topic-template
 related:
   - title: Running tests with Robot Framework
-    link: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
+    link: docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
   - title: Setting up tests
-    link: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
+    link: docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
   - title: Testing best practices
-    link: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+    link: docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
 ---
 
 Cypress is an end-to-end testing framework that provides a modern approach to testing web applications. Spryker provides a Cypress boilerplate project with pre-configured setup, best practices, and examples for testing Spryker-based applications.

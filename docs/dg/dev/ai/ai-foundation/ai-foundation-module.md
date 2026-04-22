@@ -7,15 +7,15 @@ template: howto-guide-template
 label: early-access
 related:
   - title: Use AI tools with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Use structured responses with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: Manage conversation history with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
   - title: AI workflow orchestration with state machines
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
   - title: AI Interaction Audit Logs
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.

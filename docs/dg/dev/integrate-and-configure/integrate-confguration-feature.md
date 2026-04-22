@@ -6,7 +6,7 @@ template: howto-guide-template
 
 related:
   - title: Configuration Management feature
-    link: /docs/dg/dev/backend-development/configuration-management.html
+    link: docs/dg/dev/backend-development/configuration-management.html
 ---
 
 This document describes how to install the Configuration Management feature.

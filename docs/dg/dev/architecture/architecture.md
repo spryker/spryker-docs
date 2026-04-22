@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/architecture/architecture.html
 related:
   - title: Architecture as Code
-    link: /docs/dg/dev/architecture/architecture-as-code.html
+    link: docs/dg/dev/architecture/architecture-as-code.html
   - title: Conceptual overview
     link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts

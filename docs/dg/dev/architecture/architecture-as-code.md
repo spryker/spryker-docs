@@ -2,13 +2,13 @@
 title: Architecture as Code
 description: Learn how to implement Architecture as Code in your Spryker project using industry standards like arc42, C4 Model, and diagrams-as-code to maintain living, version-controlled documentation.
 keywords: Architecture as Code,arc42,C4 Model,diagrams-as-code,diagram
-last_updated: Feb 20, 2026
+last_updated: Apr 22, 2026
 template: concept-topic-template
 related:
   - title: Architectural Convention
-    link: /docs/dg/dev/architecture/architectural-convention.html
+    link: docs/dg/dev/architecture/architectural-convention.html
   - title: Modules and Application Layers
-    link: /docs/dg/dev/architecture/modules-and-application-layers.html
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 Well-documented project architecture enables faster internal and external onboarding, passes audits cleanly and aligns teams on requirements. Without it, your system becomes a black box that only the original developers understand.

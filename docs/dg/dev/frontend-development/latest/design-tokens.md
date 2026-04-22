@@ -11,7 +11,7 @@ For a visual overview of all available tokens and their values, see the [B2B Des
 
 ## How it works
 
-```
+```text
 design-tokens.json  ──►  style-dictionary  ──►  design-tokens.css  ──►  webpack (critical CSS)
       (source)              (build step)            (generated)             (bundled)
 ```
@@ -155,7 +155,7 @@ This generates `--scale-10: 10px;`.
 
 The generated variable name follows this pattern:
 
-```
+```text
 --{path minus first segment, joined by hyphens}
 ```
 

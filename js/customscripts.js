@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
     let pageOffset = 0;
 
     initCopyText();
@@ -54,11 +54,11 @@ function initHubspotForm() {
         formId: formContainer.data('formId'),
         submitButtonClass: 'button button--red hubspot-form__submit',
         target: '#' + formContainer.attr('id'),
-        onFormReady: function() {},
-        onFormSubmitted: function(){
+        onFormReady: function () { },
+        onFormSubmitted: function () {
             hubspotPopup.open();
 
-            setTimeout(function(){
+            setTimeout(function () {
                 hubspotPopup.close();
             }, 5000);
         },
@@ -71,7 +71,7 @@ function initAnchors() {
     let anchorLinks = $('.anchorjs-link'),
         $window = $(window);
 
-    anchorLinks.on('click', function(e){
+    anchorLinks.on('click', function (e) {
         e.preventDefault();
         $window.scrollTop($(e.target).offset().top - pageOffset + 1);
     });
@@ -119,19 +119,19 @@ function initPageScrolling() {
 }
 
 function initLightbox() {
-    $('.post-content img').each(function(i, item){
+    $('.post-content img').each(function (i, item) {
         let image = $(this);
 
         if (image.is('.inline-img img')) {
-             return;
+            return;
         }
 
         image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
     });
 
     lightbox.option({
-      'resizeDuration': 300,
-      'wrapAround': false
+        'resizeDuration': 300,
+        'wrapAround': false
     });
 
     let closeButton = $('.lightbox .lb-close');
@@ -211,11 +211,11 @@ function initPopup() {
         close: '.toc__popup-close, .toc__popup-overlay',
         overlay: '.toc__popup-overlay',
         anchorLinks: 'nav-link',
-        showPopup: function() {
+        showPopup: function () {
             $('body').addClass('toc-active');
         },
-        hidePopup: function() {
-            setTimeout(function(){
+        hidePopup: function () {
+            setTimeout(function () {
                 $('body').removeClass('toc-active scroll-down');
             }, 100);
         },
@@ -313,9 +313,9 @@ $.fn.popup = function (options) {
     let popupFunc = function () {
         if (links) {
             popup.on('click', function (e) {
-                if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
+                if (e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
                     menuIsAnimated = !menuIsAnimated;
-                    setTimeout(function(){
+                    setTimeout(function () {
                         menuIsAnimated = !menuIsAnimated;
                         toggleMenu();
                     }, 500);
@@ -335,12 +335,12 @@ $.fn.popup = function (options) {
         });
     };
 
-    this.close = function() {
+    this.close = function () {
         menuIsOpened = true;
         toggleMenu();
     }
 
-    this.open = function() {
+    this.open = function () {
         toggleMenu();
     }
 
@@ -366,7 +366,7 @@ function initHomeSearchPosition() {
         if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');
             isScrolled = !isScrolled;
-        } else if (!isScrolled && pageOffsetTop > searchOffsetTop ) {
+        } else if (!isScrolled && pageOffsetTop > searchOffsetTop) {
             opener.addClass('under-search');
             isScrolled = !isScrolled;
         }
@@ -387,23 +387,23 @@ function initSearchPopup() {
 
     // mobile-overflow
 
-    opener.on('click', function(e){
+    opener.on('click', function (e) {
         e.preventDefault();
         body.addClass('tablet-overflow');
-        popup.fadeIn(300, function(){
+        popup.fadeIn(300, function () {
             input.focus();
         });
     });
 
-    close.on('click', function(e){
+    close.on('click', function (e) {
         e.preventDefault();
         body.removeClass('tablet-overflow');
 
         popup.fadeOut(300);
     });
 
-    input.on('blur', function(e){
-       drop.hide();
+    input.on('blur', function (e) {
+        drop.hide();
     });
 }
 
@@ -465,8 +465,8 @@ function initDropdown() {
         let $el = $(this);
         let $parent = $el.offsetParent('.dropdown-menu');
 
-        if ( !$el.next().hasClass('show') ) {
-          $el.parents('.dropdown-menu').first().find('.show').removeClass('show');
+        if (!$el.next().hasClass('show')) {
+            $el.parents('.dropdown-menu').first().find('.show').removeClass('show');
         }
 
         let $subMenu = $el.next('.dropdown-menu');
@@ -477,7 +477,7 @@ function initDropdown() {
         return false;
     });
 
-    mainNav.on('hide.bs.dropdown', function ( e ) {
+    mainNav.on('hide.bs.dropdown', function (e) {
         dropdown.removeClass('show');
         subMenu.removeClass('show');
     });
@@ -506,7 +506,7 @@ function initResponsiveTable() {
             });
         });
 
-        switcher.on('click', function(e) {
+        switcher.on('click', function (e) {
             wrapper.toggleClass('expanded');
 
             if (isExpanded) {
@@ -540,9 +540,9 @@ function initCopyText() {
             blockHeader = jQuery('<div class="code-header"></div>');
 
         copyButton.bind('click', {
-                container: codeContainer,
-                btn: copyButton,
-            }, copyText);
+            container: codeContainer,
+            btn: copyButton,
+        }, copyText);
 
         blockHeader.append(copyButton);
         blockHeader.insertBefore(block);
@@ -653,7 +653,7 @@ function initToc() {
 
                 // Regex for finding the non-safe URL characters (many need escaping): & +$,:;=?@"#{}|^~[`%!'<>]./()*\ (newlines, tabs, backspace, & vertical tabs)
                 var nonsafeChars =
-                        /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,
+                    /[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,
                     urlText;
 
                 // Note: we trim hyphens after truncating because truncating can cause dangling hyphens.
@@ -728,6 +728,7 @@ function initToc() {
             generateNavItem: function (headingEl, navLevel) {
                 var anchor = this.generateAnchor(headingEl);
                 var $heading = $(headingEl);
+                $heading = $heading.clone().children().remove().end();
                 var text = $heading.data('toc-text') || $heading.text();
                 return this.generateNavEl(anchor, text, navLevel);
             },

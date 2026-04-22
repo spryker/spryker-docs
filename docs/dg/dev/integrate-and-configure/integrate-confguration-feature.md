@@ -572,7 +572,7 @@ class ConfigurationDependencyProvider extends SprykerConfigurationDependencyProv
 
 {% endinfo_block %}
 
-#### 6.7) Set up data import (optional)
+#### 6.7) Optional: Set up data import
 
 Enable CLI-based bulk import of configuration values from CSV files.
 
@@ -638,10 +638,12 @@ actions:
 {% info_block warningBox "Verification" %}
 
 1. Add a row to `data/import/common/common/configuration_value.csv` with a valid setting key, for example:
+
    ```csv
    setting_key,scope,scope_identifier,value
    system:general:basic:site_name,store,DE,My German Store
    ```
+
 2. Run `console data:import configuration-value`.
 3. Verify the value is saved by checking the Back Office Configuration page.
 

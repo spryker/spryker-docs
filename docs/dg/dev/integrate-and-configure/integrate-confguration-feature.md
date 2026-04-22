@@ -119,7 +119,8 @@ $config[ConfigurationConstants::ENCRYPTION_INIT_VECTOR] = hex2bin(getenv('SPRYKE
 
 #### 2.2) Provide environment variables
 
-Add the following environment variables to your deploy file (`deploy.dev.yml` or equivalent):
+
+For local development, add the following environment variables to your deploy file (`deploy.dev.yml` or equivalent):
 
 ```yaml
 image:
@@ -127,6 +128,8 @@ image:
         SPRYKER_CONFIGURATION_ENCRYPTION_KEY: '<your-64-char-hex-key>'
         SPRYKER_CONFIGURATION_ENCRYPTION_INIT_VECTOR: '<your-32-char-hex-iv>'
 ```
+
+In Cloud, add environment variables using [Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store).
 
 To generate new keys, run:
 

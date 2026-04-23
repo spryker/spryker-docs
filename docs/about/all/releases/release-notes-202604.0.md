@@ -429,6 +429,8 @@ We improved the data import experience and robustness for large data volumes. Da
 - Improves operational efficiency for bulk data onboarding.
 
 **Documentation:**
+- [Data import (memory usage)](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#data-import-memory-usage)
+- [Data import Progress bar](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html#progress-bar)
 
 ### Back Office performance improvements {% include badge.html type="improvement" %}
 
@@ -446,6 +448,8 @@ We improved performance in several areas of the Back Office to reduce response t
 - Supports better scalability for large catalogs and complex order management scenarios.
 
 **Documentation:**
+- [Merchant Portal and Back Office performance with ACL rules](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#merchant-portal-and-back-office-performance-with-acl-rules)
+- [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html)
 
 ### Queue and worker performance optimization {% include badge.html type="improvement" %}
 
@@ -463,6 +467,7 @@ We optimized queue worker processing to improve throughput and system stability 
 - Gives teams more flexibility to tune performance based on project needs.
 
 **Documentation:**
+- [Split publish queues for performance](/docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html)
 
 ### Widget performance optimization {% include badge.html type="improvement" %}
 
@@ -477,6 +482,7 @@ We optimized widget execution to improve overall storefront and application perf
 - Improves scalability for projects with extensive widget usage.
 
 **Documentation:**
+- [Yves widget performance best practices](/docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html)
 
 ### Node.js 24 LTS upgrade {% include badge.html type="improvement" %}
 

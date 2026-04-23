@@ -29,37 +29,38 @@ We improved the login experience across the Back Office, Storefront, and Marketp
 
 **Documentation:**
 
-### Back Office support for merchant product ownership
+### Back Office Configuration Framework is now Generally Available
 
-Marketplace operators can now manage merchant-product ownership directly in the Back Office. This closes an important operational gap for marketplace business models where product management is handled centrally or outside the Merchant Portal.
+Spryker made the Back Office Configuration Framework generally available with important enterprise-readiness enhancements. The release improves governance, discoverability, operational efficiency, and usability for managing business-relevant configuration directly in the Back Office. It also makes configuration changes more transparent and easier to control.
 
 **Key capabilities:**
-- Supports assigning and changing the merchant linked to a product in the Back Office.
-- Adds visibility of merchant ownership in product management views.
-- Enables merchant-related product maintenance directly within PIM workflows.
+- Audit logging for configuration changes
+- Improved search and discoverability of configuration options
+- UX enhancements for a more reliable configuration experience
+- CLI-based import support for faster setup and operations
+- Better visibility into conflicts between code-based and Back Office configuration
 
 **Business benefits:**
-- Increases operational flexibility for marketplace operators.
-- Improves transparency and auditability of merchant-product assignments.
-- Reduces the need for custom implementations and workaround processes.
-- Supports a broader set of marketplace operating models.
+- Increases confidence and accountability when managing configuration
+- Reduces misconfiguration risk and operator effort
+- Makes the framework ready for broader enterprise adoption
 
 **Documentation:**
 
-### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
+### Back Office support for merchant product ownership
 
-Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
+Marketplace operators can now manage **merchant ownership of products directly in the Back Office**, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
 
 **Key capabilities:**
-- Extracts product names or SKUs and quantities from uploaded images.
-- Prefills the existing quick order form with recognized items.
-- Uses Spryker AI Foundation for AI-based processing.
+- **Assign or update merchant ownership** for any product directly in Back Office workflows.
+- **See merchant ownership instantly** within product management views.
+- **Maintain merchant‑related product data** as part of your standard PIM processes.
 
 **Business benefits:**
-- Speeds up bulk and repeat ordering workflows.
-- Reduces manual entry effort and ordering errors.
-- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
-- Improves demoability of AI-assisted procurement use cases.
+- **Strengthens support for centrally managed catalogs and hybrid marketplace models**, giving operators more flexibility in how they run their marketplace.
+- **Improves transparency and control**, making ownership clear, consistent, and auditable.
+- **Reduces reliance on workarounds and custom tooling**, lowering operational overhead.
+- **Supports more flexible marketplace operations**, enabling teams to scale product management with confidence.
 
 **Documentation:**
 
@@ -154,27 +155,6 @@ Spryker now provides native search statistics for business users working with El
 - Reduces duplicate custom analytics implementations.
 - Helps identify missed conversion opportunities caused by zero-result searches.
 - Gives catalog and merchandising teams actionable visibility into buyer behavior.
-
-**Documentation:**
-
-## Self-Service and Demo Experience
-
-### Self-Service Portal demo data improvements {% include badge.html type="improvement" %}
-
-We updated demo data for the B2B Marketplace demo shop to better reflect realistic Self-Service Portal use cases. The new setup improves the relevance and clarity of demos for industrial and service-driven scenarios.
-
-**Key capabilities:**
-- Adds more industry-aligned assets with matching services and spare parts.
-- Expands inquiry scenarios for general and asset-related use cases.
-- Populates services and files sections to avoid empty portal states.
-- Improves supporting models and CMS-related demo content.
-- Removes incorrect original prices for industrial goods products where no actual discount exists.
-
-**Business benefits:**
-- Makes Self-Service Portal demos more realistic and easier to understand.
-- Improves relevance for target industries and ICP scenarios.
-- Reduces demo friction for partners, internal teams, and prospects.
-- Increases perceived value and clarity of self-service capabilities.
 
 **Documentation:**
 
@@ -276,21 +256,20 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 
 **Documentation:**
 
-### Back Office Configuration Framework is now Generally Available
+### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
 
-Spryker made the Back Office Configuration Framework generally available with important enterprise-readiness enhancements. The release improves governance, discoverability, operational efficiency, and usability for managing business-relevant configuration directly in the Back Office. It also makes configuration changes more transparent and easier to control.
+Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
 
 **Key capabilities:**
-- Audit logging for configuration changes
-- Improved search and discoverability of configuration options
-- UX enhancements for a more reliable configuration experience
-- CLI-based import support for faster setup and operations
-- Better visibility into conflicts between code-based and Back Office configuration
+- Extracts product names or SKUs and quantities from uploaded images.
+- Prefills the existing quick order form with recognized items.
+- Uses Spryker AI Foundation for AI-based processing.
 
 **Business benefits:**
-- Increases confidence and accountability when managing configuration
-- Reduces misconfiguration risk and operator effort
-- Makes the framework ready for broader enterprise adoption
+- Speeds up bulk and repeat ordering workflows.
+- Reduces manual entry effort and ordering errors.
+- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
+- Improves demoability of AI-assisted procurement use cases.
 
 **Documentation:**
 
@@ -657,20 +636,6 @@ We added new AI Dev tooling to help development teams work more effectively with
 - Improves developer experience for teams using AI coding agents.
 - Helps teams start faster with Spryker-aware agent guidance.
 - Encourages consistent development patterns across projects.
-
-**Documentation:**
-
-### Amazon Quick Sight enablement for demo environments {% include badge.html type="improvement" %}
-
-Amazon Quick Sight has been enabled for the master-demo setup to improve demo readiness for analytics-related use cases. This ensures demo users can access and review analytics content in supported demo environments.
-
-**Key capabilities:**
-- Enabled Amazon Quick Sight integration in the master-demo environment.
-- Configured analytics asset bundles for Back Office visibility.
-
-**Business benefits:**
-- Improves product demo experience for analytics scenarios.
-- Makes demo environments more representative of supported business intelligence use cases.
 
 **Documentation:**
 

@@ -33,7 +33,7 @@ If your VPN configuration expired, you should click VPN Renew button next to you
 
 ## Credential delivery for new users
 
-When a new SSO user is created, credentials and access configuration are delivered securely across three separate emails:
+When a new SSO user is created, credentials and access configuration are delivered securely across two separate emails:
 
 1. **User update email:** You will get `Action needed: Verify your Spryker SSO account updates` email with the link for account update. Follow this link to setup the password for your new user.
 3. **VPN configuration email:** If you selected VPN checkbox on user creation, or checked it during user edit, the VPN configuration file (OVPN profile) required to connect to the protected network is sent in a separate email.

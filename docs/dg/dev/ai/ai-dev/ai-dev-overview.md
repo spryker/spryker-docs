@@ -91,7 +91,7 @@ Codex CLI does not have a native rules format. When you select it, the command o
 
 If you use Docker sync, the `/.git*` entry in `.dockersyncignore` also excludes the `.github` folder, which prevents Copilot-generated files from being available inside the container. To fix this, add the following line to `.dockersyncignore` after the `/.git*` entry:
 
-```
+```text
 !/.github
 ```
 

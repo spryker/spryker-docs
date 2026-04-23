@@ -256,6 +256,33 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 
 **Documentation:**
 
+### Back Office Assistant {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
+
+**Key capabilities:**
+
+**Business benefits:**
+
+**Documentation:**
+
+### AI Foundation Audit Logs {% include badge.html type="feature" %}
+
+Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
+
+**Key capabilities:**
+- **Persistent storage** of AI interactions
+- **Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
+- **Back Office UI** available under **Intelligence > Audit Logs**
+- **Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
+- **Inline inspection** of prompts, responses, and metadata for deeper investigation
+
+**Business benefits:**
+- **Enhances traceability and governance** across all AI-powered features
+- **Accelerates debugging and prompt optimization**, reducing operational friction
+- **Supports compliance and oversight needs** with a centralized and transparent audit trail
+
+**Documentation:**
+- [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
+
 ### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
 
 Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
@@ -322,24 +349,6 @@ Spryker introduced an Early Access Back Office view for AI workflow execution vi
 - Improves visibility into AI workflow execution
 - Helps operators monitor and troubleshoot AI-driven processes
 - Supports more controlled handling of AI workflow states
-
-**Documentation:**
-
-### AI Foundation Audit Log {% include badge.html type="feature" %}
-
-Spryker introduced persistent AI interaction logging and a dedicated Back Office audit log UI. Teams can now inspect prompts, responses, model details, token usage, execution timing, and metadata through a searchable interface. This provides a stronger foundation for AI governance, troubleshooting, and optimization.
-
-**Key capabilities:**
-- Persistent storage of AI interaction records in the database
-- Audit trail for prompts, responses, model information, token usage, timing, and metadata
-- Back Office UI under **Intelligence > Audit Logs**
-- Sorting, filtering, pagination, and aggregation statistics
-- Inline inspection of prompt, response, and metadata content
-
-**Business benefits:**
-- Improves traceability and governance for AI-powered features
-- Speeds up troubleshooting and prompt optimization
-- Supports compliance and oversight requirements with a centralized audit trail
 
 **Documentation:**
 

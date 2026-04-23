@@ -10,6 +10,7 @@ redirect_from:
 This section describes how to access AWS Management Console as an Identity and Access Management (IAM) user, locate the credentials for Spryker Cloud Commerce OS services, and connect to services:  
 
 - [SSO Access](/docs/ca/dev/access/access-the-aws-management-console.html)
+- [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)
 - [Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)
 - [Locating service credentials](/docs/ca/dev/access/locate-service-credentials.html)
 - [Connecting to services via SSH](/docs/ca/dev/access/connect-to-services-via-ssh.html)

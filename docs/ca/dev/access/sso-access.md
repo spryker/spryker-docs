@@ -5,14 +5,14 @@ template: howto-guide-template
 last_updated: Apr 23, 2026
 ---
 
-## What is the SSO?
-**Single Sign-On (SSO)** is an authentication mechanism that allows users to sign in once and access multiple applications without re-authenticating for each service (e.g., RMQ, Jenkins).
+## What is SSO
+**Single Sign-On (SSO)** is an authentication mechanism that allows users to sign in once and access multiple applications without re-authenticating for each service (RMQ, Jenkins).
 
 SSO can be integrated with an external organizational identity provider (IdP), such as a corporate directory service, enabling centralized user management and access control. 
 
 This approach improves security by reducing password reuse and enhances the user experience by minimizing repeated logins.
 
-## How does SSO improve the user experience?
+## How SSO improves the user experience
 SSO makes accessing services easier, faster, and more secure by providing:
 
 - **Centralized authentication** through your company’s identity provider, or via users managed in our identity system
@@ -41,7 +41,7 @@ For RabbitMQ user must have enabled VPN for the specific environment they want t
 - You will be redirected to the SSO login form 
 - Provide your SSO user credentials and login
 
-If you previously logged into VPN or any other application in the same browser e.g. Jenkins, login will happen automatically, because you are using the same SSO user.
+If you previously logged into VPN or any other application in the same browser, for example Jenkins, login will happen automatically, because you are using the same SSO user.
 
 ### Jenkins access
 For Jenkins user must have enabled VPN for the specific environment they want to access. Once the VPN is enabled:
@@ -50,7 +50,7 @@ For Jenkins user must have enabled VPN for the specific environment they want to
 - Provide your SSO user credentials and login
 - You will be redirected to Jenkins dashboard
 
-If you previously logged into VPN or any other application in the same browser e.g. RabbitMQ, login will happen automatically, because you are using the same SSO user.
+If you previously logged into VPN or any other application in the same browser, for example RabbitMQ, login will happen automatically, because you are using the same SSO user.
 
 ### Keycloak access
 Keycloak is the place where your SSO user can ve viewed and edited (editing options are limited).
@@ -59,7 +59,7 @@ Keycloak is the place where your SSO user can ve viewed and edited (editing opti
 - Provide your SSO user credentials and login
 - You will be redirected to Keycloak where you chan change user name and password
 
-If you previously logged into VPN or any other application in the same browser e.g. RabbitMQ, login will happen automatically, because you are using the same SSO user.
+If you previously logged into VPN or any other application in the same browser, for example RabbitMQ, login will happen automatically, because you are using the same SSO user.
 
 ## External IdP connection
 As an alternative / additional authentication method, we support connection to external Identity Providers (IdPs) that use SAML or OpenID Connect (OIDC).
@@ -78,7 +78,7 @@ Benefits of using an external IdP:
 
 {% info_block infoBox "Acquiring external IdP users limitation" %}
 
-Such users **cannot** be created or managed via CloudHub User Management (SSO) page. For configuration details, please contact our support team.
+Such users **cannot** be created or managed via CloudHub User Management (SSO) page. For configuration details, contact our support team.
 
 {% endinfo_block %}
 

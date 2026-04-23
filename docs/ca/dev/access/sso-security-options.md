@@ -29,18 +29,18 @@ How to setup Passkey for your SSO user:
 
 - Click on **Keycloak** service in CloudHub which will lead to the SSO login page
 - Log in to your Keycloak Account Console
-- Go to the “Account Security” section
-- Open “Signing In”
-- Find the “Passkey” section
-- Click “Setup passkey”
-- Follow the browser prompt to create a passkey using your device’s supported method (e.g., Windows Hello, Touch ID, Face ID, security key).
+- Go to the "Account Security" section
+- Open "Signing In"
+- Find the "Passkey" section
+- Click "Setup passkey"
+- Follow the browser prompt to create a passkey using your device’s supported method (for example, Windows Hello, Touch ID, Face ID, security key).
 - After successful registration, the passkey appears in your list of registered authenticators.
 
 ### Authenticate with WebAuthn authenticator
 After you register your authenticator, signing in is easy:
 
 - Open the login page and enter your username and password.
-- Your browser will prompt you to verify your identity using your authenticator (e.g., fingerprint, face recognition, or security key).
+- Your browser will prompt you to verify your identity using your authenticator (for example, fingerprint, face recognition, or security key).
 
 ## LoginLess (WebAuthn passwordless)
 
@@ -55,11 +55,11 @@ Users managed External IdP connections are not supported.
 
 - Click on **Keycloak** service in CloudHub which will lead to the SSO login page
 - Log in to your Keycloak Account Console
-- Go to the “Account Security” section
-- Open “Signing In”
-- Find the “Passwordless” section
-- Click “Setup passkey”
-- Follow the browser prompt to create a passkey using your device’s supported method (e.g., Windows Hello, Touch ID, Face ID, security key).
+- Go to the "Account Security" section
+- Open "Signing In"
+- Find the "Passwordless" section
+- Click "Setup passkey"
+- Follow the browser prompt to create a passkey using your device’s supported method (for example, Windows Hello, Touch ID, Face ID, security key).
 - After successful registration, the passkey appears in your list of registered authenticators.
 
 ### Authenticate with LoginLess (WebAuthn passwordless)
@@ -68,8 +68,8 @@ If you’ve set up passwordless WebAuthn, you can sign in to Keycloak without en
 You’ll simply confirm your identity using your device (such as fingerprint, face recognition, or a security key). WebAuthn can also be used as an extra security step (two-factor authentication) if enabled for your account:
 
 - Open the login page
-- Click on “Sign in with Passkey”
-- Your browser will prompt you to verify your identity using your authenticator (e.g., fingerprint, face recognition, or security key).
+- Click on "Sign in with Passkey"
+- Your browser will prompt you to verify your identity using your authenticator (for example, fingerprint, face recognition, or security key).
 
 ## Related topics
 

@@ -11,8 +11,8 @@ From a security perspective, enabling SSO strengthens the existing secure access
 - Secure VPN access
 - TLS communication
 - Authentication through 
- * Flexible Authentication - Authenticate user with various mechanisms, including passkey and your own identity provider
- * Two-factor Authentication - Support for passkey, recovery codes and TOTP/HOTP via Google Authenticator or FreeOTP.
+ - Flexible Authentication - Authenticate user with various mechanisms, including passkey and your own identity provider
+ - Two-factor Authentication - Support for passkey, recovery codes and TOTP/HOTP via Google Authenticator or FreeOTP.
 
 ## Passkey (WebAuthn authenticator)
 

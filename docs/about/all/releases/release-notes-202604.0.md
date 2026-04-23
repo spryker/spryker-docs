@@ -29,7 +29,7 @@ We improved the login experience across the Back Office, Storefront, and Marketp
 
 **Documentation:**
 
-### Back Office Configuration Framework is now Generally Available
+### Back Office Configuration Framework is now Generally Available {% include badge.html type="feature" %}
 
 Spryker made the Back Office Configuration Framework generally available with important enterprise-readiness enhancements. The release improves governance, discoverability, operational efficiency, and usability for managing business-relevant configuration directly in the Back Office. It also makes configuration changes more transparent and easier to control.
 
@@ -47,7 +47,7 @@ Spryker made the Back Office Configuration Framework generally available with im
 
 **Documentation:**
 
-### Back Office support for merchant product ownership
+### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
 
 Marketplace operators can now manage **merchant ownership of products directly in the Back Office**, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
 
@@ -64,7 +64,7 @@ Marketplace operators can now manage **merchant ownership of products directly i
 
 **Documentation:**
 
-### Budget & Cost Centers {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
+### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
 
 We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
 
@@ -101,24 +101,25 @@ Business users can now manage core branding settings directly in the Back Office
 
 **Documentation:**
 
-### Back Office product import and export {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
+### Back Office product import and export {% include badge.html type="feature,early-access" %}
 
-We introduced an Early Access Back Office experience for product import and export to reduce dependency on developer-driven CLI tooling. This helps business users prepare catalogs faster for demos, launches, and routine updates.
+Spryker now offers product import and export via the Back Office, reducing reliance on developer‑driven CLI tooling. Business users can prepare and update catalogs faster during onboarding, launches, and routine maintenance. This improves operational speed and gives teams more control over their product data processes.
 
 **Key capabilities:**
-- Enables product-related import and export from the Back Office UI.
-- Supports CSV-based jobs for creating or updating buyable product data.
-- Processes imports asynchronously in batches for larger files.
-- Introduces reusable job and run concepts for repeatable import and export operations.
-- Focuses on business-user-friendly file handling and actionable validation feedback.
+- Import and export product data directly from the Back Office UI
+- Single‑file product import, replacing the many separate files traditionally required by CLI imports
+- CSV‑based job support for creating or updating product records
+- Reusable job and run concepts for consistent, repeatable operations
+- Business‑friendly file handling and clear validation feedback for streamlined workflows
 
 **Business benefits:**
-- Removes a major bottleneck for catalog onboarding and updates.
-- Reduces preparation effort for demos and staging-to-production catalog migration.
-- Enables more self-service error resolution for business users.
-- Improves operational efficiency for merchants, partners, and internal teams.
+- Significantly simplifies adding products to the catalog, replacing multi‑file CLI imports with a single, business‑friendly file
+- Accelerates catalog preparation for new launches and environment migrations
+- Empowers business users with self‑service error resolution, minimizing developer involvement
 
 **Documentation:**
+- [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
+- [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
 
 ## Commerce Essentials
 
@@ -264,7 +265,7 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 
 **Documentation:**
 
-### AI Foundation Audit Logs {% include badge.html type="feature" %}
+### AI Foundation Audit Logs {% include badge.html type="feature,early-access" %}
 
 Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
 
@@ -275,16 +276,15 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 %}
 
 **Key capabilities:**
-- **Persistent storage** of AI interactions
-- **Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
-- **Back Office UI** available under **Intelligence > Audit Logs**
-- **Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
-- **Inline inspection** of prompts, responses, and metadata for deeper investigation
+- Persistent storage** of AI interactions
+- Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
+- Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
+- Inline inspection** of prompts, responses, and metadata for deeper investigation
 
 **Business benefits:**
-- **Enhances traceability and governance** across all AI-powered features
-- **Accelerates debugging and prompt optimization**, reducing operational friction
-- **Supports compliance and oversight needs** with a centralized and transparent audit trail
+- Enhances traceability and governance** across all AI-powered features
+- Accelerates debugging and prompt optimization**, reducing operational friction
+- Supports compliance and oversight needs with a centralized and transparent audit trail
 
 **Documentation:**
 - [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
@@ -660,34 +660,6 @@ We added new AI Dev tooling to help development teams work more effectively with
 
 **Documentation:**
 
-### Back Office Configuration Framework GA
-
-Introduced the Back Office Configuration Framework as generally available to standardize and simplify configuration management in the Back Office.
-
-**Key capabilities:**
-- Provides a structured framework for Back Office configuration
-- Supports more consistent configuration handling across Back Office features
-
-**Business benefits:**
-- Reduces complexity when managing Back Office configurations
-- Improves maintainability and consistency for project teams
-
-**Documentation:**
-
-### AI Foundation: Audit logs {% include badge.html type="feature" %}
-
-Added audit log capabilities to AI Foundation to improve traceability of AI-related actions and events.
-
-**Key capabilities:**
-- Captures audit-relevant events in AI Foundation
-- Supports tracking and review of AI-related activity
-
-**Business benefits:**
-- Increases transparency for AI operations
-- Helps support compliance and governance requirements
-
-**Documentation:**
-
 ### OCI Phase 1 — API Compatibility & Documentation Enablement {% include badge.html type="feature" %}
 
 Added initial OCI support to improve compatibility with SAP-centric procurement environments and reduce project-specific integration effort.
@@ -702,19 +674,5 @@ Added initial OCI support to improve compatibility with SAP-centric procurement 
 - Reduces implementation effort for OCI-based procurement integrations
 - Improves Spryker's fit for enterprise B2B procurement scenarios
 - Increases confidence in SAP-heavy customer environments
-
-**Documentation:**
-
-### AI Foundation: Audit logs in the Back Office {% include badge.html type="feature" %}
-
-Added a Back Office user interface for AI Foundation audit logs so users can review audit information directly in the Back Office.
-
-**Key capabilities:**
-- Displays AI Foundation audit logs in the Back Office
-- Improves access to recorded AI audit information for operational users
-
-**Business benefits:**
-- Simplifies audit log review for business and operations teams
-- Improves usability of AI governance capabilities
 
 **Documentation:**

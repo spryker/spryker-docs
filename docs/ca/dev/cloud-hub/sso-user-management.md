@@ -15,7 +15,8 @@ For more information on what is SSO and what benefits it provides see [SSO Acces
 - **Manage the users to match the changing needs:** users can be deleted, if the access needs to be revoked, the permission levels can be adjusted at any time.
 - **Create and manage users directly without support requests:** you can see the users and their access permissions at the moment and adjust them at any time via CloudHub without the need for contacting the support.
 
-## Available service permissions
+## Available service permissions 
+
 Users can be assigned very granular permissions for every available application per environment. This means one SSO user can have admin permissions for RabbitMQ on test environment and viewer permissions for RabbitMQ on production environment.
 
 | Service | Permission |
@@ -24,7 +25,8 @@ Users can be assigned very granular permissions for every available application 
 | RabbitMQ | * Admin — Full administrative access with the ability to create and remove queues <br> * Developer — Can build, view, and cancel jobs <br> * Viewer — Read-only access to jobs and builds |
 | AWS CLI | * BaseRole — allows access to the specific environment in the AWS Dashboard and AWS CLI <br> * Custom Role — can be absent, or can be one or more roles composed specifically for the customer that include all permissions of the Base role and additional permissions like DB access|
 
-### Requesting and Renewing VPN for your SSO user
+### Requesting and Renewing VPN for your SSO user 
+
 An SSO user needs VPN to access Jenkins and RabbitMQ in addition to the SSO user. No VPN is required to access AWS Console.
 
 To request the VPN for the specific environment, select VPN option in the SSO user creation or edition form on CloudHub. Depending on whether SSO is enabled for Bastion (which handles VPN connections), you may need to use your SSO user credentials to also login into the VPN when turning it on.

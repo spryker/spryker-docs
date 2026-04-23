@@ -5,24 +5,26 @@ template: howto-guide-template
 last_updated: Apr 23, 2026
 ---
 
-## What is SSO
+## What is SSO 
+
 **Single Sign-On (SSO)** is an authentication mechanism that allows users to sign in once and access multiple applications without re-authenticating for each service (RMQ, Jenkins).
 
 SSO can be integrated with an external organizational identity provider (IdP), such as a corporate directory service, enabling centralized user management and access control. 
 
 This approach improves security by reducing password reuse and enhances the user experience by minimizing repeated logins.
 
-## How SSO improves the user experience
+## How SSO improves the user experience 
+
 SSO makes accessing services easier, faster, and more secure by providing:
 
-- **Centralized authentication** through your company’s identity provider, or via users managed in our identity system
+- **Centralized authentication** through your company's identity provider, or via users managed in our identity system
 - **Fewer passwords to remember**, reducing friction and support overhead
 - **A faster and smoother login experience** across all connected services
 - **Simplified user lifecycle management** (onboarding, updates, and offboarding)
 - **Stronger security and compliance** through consistent authentication policies
 - **Easy integration for enterprise organizations** that use their own identity provider
 
-## How to Access applications with an SSO user
+## How to Access applications with an SSO user 
 
 You will need an SSO user, [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html) describes how to get one.
 
@@ -32,7 +34,7 @@ You will need an SSO user, [User Management SSO](/docs/ca/dev/cloud-hub/sso-user
 - Log in using your SSO user credentials
 - After successful authentication, you will be redirected to the AWS Console with access to your env services
 
-### RabbitMQ access
+### RabbitMQ access 
 
 For RabbitMQ user must have enabled VPN for the specific environment they want to access. Once the VPN is enabled:
 
@@ -43,7 +45,8 @@ For RabbitMQ user must have enabled VPN for the specific environment they want t
 
 If you previously logged into VPN or any other application in the same browser, for example Jenkins, login will happen automatically, because you are using the same SSO user.
 
-### Jenkins access
+### Jenkins access 
+
 For Jenkins user must have enabled VPN for the specific environment they want to access. Once the VPN is enabled:
 
 - Click on **Jenkins** service in CloudHub which will lead to the SSO login page
@@ -52,7 +55,8 @@ For Jenkins user must have enabled VPN for the specific environment they want to
 
 If you previously logged into VPN or any other application in the same browser, for example RabbitMQ, login will happen automatically, because you are using the same SSO user.
 
-### Keycloak access
+### Keycloak access 
+
 Keycloak is the place where your SSO user can ve viewed and edited (editing options are limited).
 
 - Click on **Keycloak** service in CloudHub which will lead to the SSO login page
@@ -61,7 +65,8 @@ Keycloak is the place where your SSO user can ve viewed and edited (editing opti
 
 If you previously logged into VPN or any other application in the same browser, for example RabbitMQ, login will happen automatically, because you are using the same SSO user.
 
-## External IdP connection
+## External IdP connection 
+
 As an alternative / additional authentication method, we support connection to external Identity Providers (IdPs) that use SAML or OpenID Connect (OIDC).
 
 Benefits of using an external IdP:
@@ -82,7 +87,7 @@ Such users **cannot** be created or managed via CloudHub User Management (SSO) p
 
 {% endinfo_block %}
 
-## Next steps
+## Next steps 
 
 - [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html)
 - [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)

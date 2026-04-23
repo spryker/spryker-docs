@@ -45,7 +45,7 @@ Spryker has made the Back Office Configuration Framework generally available, de
 - Reduces misconfiguration risk and operator effort through better clarity and validation
 - Supports broader enterprise adoption with stronger governance and operability
 
-### Documentation
+**Documentation:**
 - [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html)
 - [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
 - [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
@@ -206,7 +206,7 @@ We delivered the first phase of the Back Office theme modernization to improve c
 
 **Documentation:**
 
-### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement,early-access" %}
+### Add to Cart from image {% include badge.html type="improvement,early-access" %}
 
 Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
 
@@ -415,6 +415,8 @@ Spryker introduced a new Vertex integration to replace the legacy ACP-based appr
 
 Spryker made API Platform generally available as the foundation for modern API development and migration. Existing APIs have been migrated to API Platform internally while keeping external contracts backward-compatible. This enables faster API delivery, easier extensibility, and more standardized API development.
 
+![API Platform](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202512/api-platform-2.6-api.png)
+
 **Key capabilities:**
 - Declarative API development using YAML schemas
 - API generation with validation, pagination, serialization, and operation-specific rules
@@ -428,6 +430,7 @@ Spryker made API Platform generally available as the foundation for modern API d
 - Accelerates delivery of integrations and future API capabilities
 
 **Documentation:**
+- [API Platform](/docs/dg/dev/architecture/api-platform.html)
 
 ### Data import performance and stability enhancements {% include badge.html type="improvement" %}
 
@@ -447,122 +450,41 @@ We improved the data import experience and robustness for large data volumes. Da
 - [Data import (memory usage)](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#data-import-memory-usage)
 - [Data import Progress bar](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html#progress-bar)
 
-### Back Office performance improvements {% include badge.html type="improvement" %}
+### Performance and security improvements {% include badge.html type="improvement" %}
 
-We improved performance in several areas of the Back Office to reduce response times and system load in large-scale environments. The update addresses ACL-related delays, order page performance, and slow product list rendering for projects with large product catalogs.
+We made your Spryker Commerce OS faster, more secure, and more stable.
 
 **Key capabilities:**
-- Optimized ACL access checks to reduce unnecessary permission evaluations during Back Office requests.
-- Reduced overhead caused by navigation filtering, especially for requests where navigation is not needed.
-- Improved order page performance for orders with many items.
-- Improved product list performance in the Back Office for large assortments and complex filtering scenarios.
-
-**Business benefits:**
-- Speeds up daily work for Back Office users.
-- Improves usability in setups with many users, roles, and restricted permissions.
-- Supports better scalability for large catalogs and complex order management scenarios.
+- Non-buffered log streaming presents the logs immediately.
+- Lower latency and response times in storefront with optimized widgets.
+- Lower latency and response times in the Back Office and Merchant Portal.
+- Higher stability and throughput of Publish & Synchronize workers. The update introduces dynamic waiting behavior, better control over parallel job execution, and compatibility improvements for Symfony Messenger resource-aware workers.
+- Upgraded `symfony/http-foundation` to version `6.4.29` in affected app templates.
 
 **Documentation:**
+- [Non-buffered log streaming](https://api.release.spryker.com/release-group/6411)
+- [Yves widget performance best practices](/docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html)
+- [Split Publish & Synchronize queues for performance](/docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html)
 - [Merchant Portal and Back Office performance with ACL rules](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#merchant-portal-and-back-office-performance-with-acl-rules)
 - [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html)
 
-### Queue and worker performance optimization {% include badge.html type="improvement" %}
-
-We optimized queue worker processing to improve throughput and system stability under load. The update introduces dynamic waiting behavior, better control over parallel job execution, and compatibility improvements for Symfony Messenger resource-aware workers.
-
-**Key capabilities:**
-- Improved worker throughput with dynamic waiting time adjustments under load.
-- Added the ability to limit the number of parallel jobs processed at the same time.
-- Reduced the risk of out-of-memory issues through better workload control.
-- Added support for resource-aware queue workers when using Symfony Messenger.
-
-**Business benefits:**
-- Processes asynchronous workloads faster.
-- Improves stability of queue processing in high-load environments.
-- Gives teams more flexibility to tune performance based on project needs.
-
-**Documentation:**
-- [Split publish queues for performance](/docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html)
-
-### Widget performance optimization {% include badge.html type="improvement" %}
-
-We optimized widget execution to improve overall storefront and application performance. These changes reduce processing overhead in widget-heavy pages and improve responsiveness.
-
-**Key capabilities:**
-- Improved widget execution efficiency.
-- Reduced unnecessary overhead in widget rendering flows.
-
-**Business benefits:**
-- Enhances page responsiveness.
-- Improves scalability for projects with extensive widget usage.
-
-**Documentation:**
-- [Yves widget performance best practices](/docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html)
-
-### Node.js 24 LTS upgrade {% include badge.html type="improvement" %}
-
-We upgraded the main frontend tooling runtime to Node.js 24 LTS. This keeps the platform aligned with a supported long-term version and enables access to the latest reliability, security, and performance improvements.
-
-**Key capabilities:**
-- Updated frontend tooling runtime to Node.js 24 LTS.
-- Aligned the platform with a current long-term support release.
-
-**Business benefits:**
-- Improves security by using a supported runtime version.
-- Increases long-term stability for frontend tooling.
-- Provides access to performance improvements in the latest runtime.
-
-**Documentation:**
-
-### Security update for symfony/http-foundation in app templates {% include badge.html type="improvement" %}
-
-We updated `symfony/http-foundation` to address known vulnerabilities in affected application templates. This change improves the security posture of the related repositories.
-
-**Key capabilities:**
-- Upgraded `symfony/http-foundation` to version `6.4.29` in affected app templates.
-- Addressed high-severity vulnerabilities reported for the dependency.
-
-**Business benefits:**
-- Reduces exposure to known security issues.
-- Helps maintain compliance with secure dependency standards.
-
-**Documentation:**
-
-### Non-buffered log streaming support from community contribution {% include badge.html type="improvement" %}
-
-We added support for non-buffered log streaming based on a community contribution. This improves how logs can be streamed and consumed in real time.
-
-**Key capabilities:**
-- Added support for non-buffered log streaming.
-
-**Business benefits:**
-- Improves log visibility for running processes.
-- Enables more immediate access to log output.
-
-**Documentation:**
-
-
 ## Efficient and Flexible Cloud Foundation
 
-### Cloud observability: logs forwarding through SMI {% include badge.html type="improvement" %}
+### Spryker Monitoring Integration: logs forwarding {% include badge.html type="improvement" %}
 
-Spryker expanded cloud observability by enabling log forwarding through SMI to third-party monitoring platforms such as Dynatrace. This allows teams to correlate logs with traces, create alerts based on log data, and use their preferred monitoring tooling beyond CloudWatch.
+Spryker expanded cloud observability by enabling log forwarding through [SMI](/docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html) to third-party monitoring platforms of your choice. This allows teams to correlate logs with traces, create alerts based on log data, and use their preferred monitoring tooling beyond AWS CloudWatch.
 
 **Key capabilities:**
-- Forward application logs to external monitoring platforms through SMI
+- Inspect logs from Spryker Platform in your monitoring tool
 - Correlate logs with traces using trace and span identifiers
-- Export application container logs and Jenkins job logs
-- Support additional log types such as RDS slow query logs and application audit logs
 - Configure log verbosity to control emitted log volume
-- Monitor and meter log shipment for billing and operational visibility
 
 **Business benefits:**
 - Improved troubleshooting through unified logs and traces
 - Better alerting capabilities based on application and infrastructure log events
-- More flexibility to use customer-preferred monitoring solutions
-- Increased transparency for observability-related usage and costs
 
 **Documentation:**
+- [Spryker Monitoring Integration Logs](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation#smi-logs-integration)
 
 ### TLS, authentication, and SSO for Cloud services {% include badge.html type="feature" %}
 
@@ -572,15 +494,10 @@ Spryker introduced centralized access management for cloud services, including S
 - Connect your own identity provider for SSO access to cloud services
 - Centralize user access management for services such as Jenkins, RabbitMQ, and others
 - Reduce manual access management effort through self-service-oriented processes
-- Review and clean up IAM roles and policies for better standardization
-- Restrict overly broad IAM permissions in customer PaaS accounts
-- Prevent creation of unrestricted `*:*` administrative IAM policies outside approved flows
 
 **Business benefits:**
 - Faster and more secure user onboarding and offboarding
 - Reduced operational effort for access requests and changes
-- Lower security risk through tighter permission boundaries
-- Better compliance with least-privilege access principles
 
 **Documentation:**
 
@@ -591,39 +508,26 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 **Key capabilities:**
 - Upgrade Bastion hosts to a current LTS operating system
 - Separate workload from the host through containerization
-- Enforce SSO and MFA for human access
-- Deprecate direct SSH access for human users
-- Retain non-MFA access for SFTP-based integrations
-- Roll out changes with a targeted maintenance window and no customer configuration changes
+- Enforce SSO and MFA for human access, deprecate direct SSH access for human users
 
 **Business benefits:**
 - Improved security posture for administrative access
-- Easier future maintenance and operating system upgrades
-- Reduced platform risk through modernization of critical infrastructure
-- Minimal disruption during rollout
 
 **Documentation:**
 
 ### Maintenance and service updates {% include badge.html type="improvement" %}
 
-Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable. The release includes service upgrades, application dependency updates, and RabbitMQ upgrade preparations to reduce technical debt and improve operational stability.
+Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable.
 
 **Key capabilities:**
-- Upgrade Jenkins to a current LTS version
-- Upgrade Nginx to a current supported version
-- Replace Ubuntu-based service hosts with Amazon Linux where applicable
-- Upgrade PHPUnit to version 12
-- Upgrade PHPStan to version 2 for improved performance and PHP 8.4 support
-- Prepare and validate RabbitMQ upgrade paths, including support for newer versions
-- Implement near-zero-downtime RabbitMQ update strategy based on Blue/Green deployment concepts
+- RabbitMQ 4.2 is now supported.
+- Updated frontend tooling runtime to Node.js 24 LTS.
 
 **Business benefits:**
 - Reduced security and operational risk from outdated components
-- Better long-term maintainability of cloud infrastructure
-- Faster CI and developer feedback cycles through tooling improvements
-- Improved service continuity during infrastructure and messaging upgrades
 
 **Documentation:**
+- [RabbitMQ 4.2 in Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk)
 
 ## Other
 

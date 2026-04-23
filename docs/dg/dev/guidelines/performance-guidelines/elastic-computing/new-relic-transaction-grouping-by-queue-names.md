@@ -1,10 +1,8 @@
 ---
 title: New Relic transactions grouping by queue names
 description: Learn about Enhanced New Relic queue flow groups transactions by queue names for your Spryker based projects.
-last_updated: May 16, 2022
+last_updated: Apr 22, 2026
 template: concept-topic-template
-redirect_from:
-  - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
 related:
   - title: RAM-aware batch processing
     link: docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html

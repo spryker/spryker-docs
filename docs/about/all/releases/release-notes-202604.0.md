@@ -268,6 +268,12 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 
 Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
 
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_2.png||"
+%}
+
 **Key capabilities:**
 - **Persistent storage** of AI interactions
 - **Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata

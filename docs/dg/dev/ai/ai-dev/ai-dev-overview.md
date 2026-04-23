@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Apr 20, 2026
+last_updated: Apr 23, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template
@@ -53,45 +53,51 @@ This command:
 
 **Usage**: This command is typically configured in AI assistant tools (like Claude Desktop) to enable them to access Spryker-specific information.
 
-### Generate Agents File Command
+### Setup Command
 
-The `ai-dev:generate-agents-file` command generates an example AI context file (`AGENTS.md` or `CLAUDE.md`) for your Spryker project. This file provides AI agents with project-specific context, architectural rules, and coding conventions.
-
-```bash
-docker/sdk console ai-dev:generate-agents-file
-```
-
-When you run the command, you are prompted to select the output format:
-
-| Format | Supported tools |
-|--------|----------------|
-| `AGENTS.md` | Universal format. Supported by Codex, OpenCode, Cursor, GitHub Copilot, Windsurf, VS Code, and more. |
-| `CLAUDE.md` | Claude Code CLI (Anthropic). |
-
-The command generates a `<format>.example.md` file in your project root. Rename it to `AGENTS.md` or `CLAUDE.md` when ready to use.
-
-**Usage**: Run this command once when setting up AI tooling for a project to give your AI agent Spryker-specific context.
-
-### Generate Skills Command
-
-The `ai-dev:generate-skills` command generates example AI coding skill files for Spryker project development.
+The `ai-dev:setup` command sets up AI tooling for your Spryker project. It generates rules, an agents/context file, and skills — all tailored to the selected AI tool.
 
 ```bash
-docker/sdk console ai-dev:generate-skills
+docker/sdk console ai-dev:setup
 ```
 
-When you run the command, you are prompted to select the target AI tool. The command copies example skills into the tool-specific directory:
+The command automatically detects the AI tool installed in your project and prompts you to confirm or select a different one. It then generates the following for the selected tool:
 
-| AI tool | Output directory |
-|---------|-----------------|
-| Claude Code | `.claude/skills/` |
-| Windsurf | `.windsurf/skills/` |
-| GitHub Copilot | `.github/skills/` |
-| Cursor, OpenAI Codex, OpenCode, Agents Convention | `.agents/skills/` |
+- **Rules**: Coding conventions and architectural guidelines.
+- **Agents/context file**: Project-specific context for AI agents.
+- **Skills**: Reusable task-specific AI skill files.
 
-Each skill is generated with a `-example` suffix in the directory name. Rename the directories by removing the `-example` suffix when ready to use.
+**Output modes**
 
-**Usage**: Run this command to scaffold reusable AI skills for common Spryker development tasks such as functional testing, data import, Propel schema changes, and frontend development.
+The command supports two output modes:
+
+- **Ready to use**: Files are generated directly in the tool-specific directories listed in the table below.
+- **Example**: Files are generated in example directories — for example, `.claude/rules-example/` instead of `.claude/rules/`. Rename the directories when ready to use.
+
+**Output locations by AI tool**
+
+| AI tool | Rules directory | Agents/context file | Skills directory |
+|---------|----------------|---------------------|-----------------|
+| Claude Code | `.claude/rules/` | `CLAUDE.md` | `.claude/skills/` |
+| Windsurf | `.windsurf/rules/` | `.windsurfrules` | `.windsurf/skills/` |
+| GitHub Copilot | `.github/instructions/` | `.github/copilot-instructions.md` | `.github/skills/` |
+| Cursor | `.cursor/rules/` | `AGENTS.md` | `.cursor/skills/` |
+| OpenCode | `.opencode/rules/` | `AGENTS.md` | `.agents/skills/` |
+| Codex CLI | Not supported — see below | `AGENTS.md` | `.agents/skills/` |
+
+Codex CLI does not have a native rules format. When you select it, the command offers to generate rules in another tool's format instead and places them in that tool's rules directory.
+
+{% info_block infoBox "GitHub Copilot and Docker sync" %}
+
+If you use Docker sync, the `/.git*` entry in `.dockersyncignore` also excludes the `.github` folder, which prevents Copilot-generated files from being available inside the container. To fix this, add the following line to `.dockersyncignore` after the `/.git*` entry:
+
+```
+!/.github
+```
+
+{% endinfo_block %}
+
+**Usage**: Run this command once when setting up AI tooling for a project.
 
 ### Generate Prompts Command
 

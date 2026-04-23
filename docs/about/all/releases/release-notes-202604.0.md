@@ -124,8 +124,6 @@ Spryker now offers product import and export via the Back Office, reducing relia
 - [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
 - [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
 
-## Commerce Essentials
-
 ### Product attribute display types {% include badge.html type="feature" %}
 
 You can now control where product attributes are visible without project-specific customization. This helps keep internal operational data hidden while displaying only relevant information to buyers.
@@ -161,8 +159,6 @@ Spryker now provides native search statistics for business users working with El
 - Gives catalog and merchandising teams actionable visibility into buyer behavior.
 
 **Documentation:**
-
-## User Experience Foundation
 
 ### New Spryker Design System Storefront (1) {% include badge.html type="feature" %}
 
@@ -201,6 +197,108 @@ We delivered the first phase of the Back Office theme modernization to improve c
 **Documentation:**
 
 ## Connected, and AI-Enabled Platform
+
+### Back Office Assistant {% include badge.html type="feature,early-access" %}
+
+**Key capabilities:**
+
+**Business benefits:**
+
+**Documentation:**
+
+### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement,early-access" %}
+
+Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
+
+**Key capabilities:**
+- Extracts product names or SKUs and quantities from uploaded images.
+- Prefills the existing quick order form with recognized items.
+- Uses Spryker AI Foundation for AI-based processing.
+
+**Business benefits:**
+- Speeds up bulk and repeat ordering workflows.
+- Reduces manual entry effort and ordering errors.
+- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
+- Improves demoability of AI-assisted procurement use cases.
+
+**Documentation:**
+
+### AI Foundation Audit Logs {% include badge.html type="feature,early-access" %}
+
+Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_2.png||"
+%}
+
+**Key capabilities:**
+- Persistent storage** of AI interactions
+- Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
+- Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
+- Inline inspection** of prompts, responses, and metadata for deeper investigation
+
+**Business benefits:**
+- Enhances traceability and governance** across all AI-powered features
+- Accelerates debugging and prompt optimization**, reducing operational friction
+- Supports compliance and oversight needs with a centralized and transparent audit trail
+
+**Documentation:**
+- [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
+
+
+### Smart PIM in the public demo shop {% include badge.html type="improvement,early-access" %}
+
+Spryker added Smart PIM to the public demo shop as an Early Access capability. The feature showcases AI-assisted product enrichment directly in the Back Office, helping teams create richer and more complete product data with less manual work. It is designed to demonstrate how AI can accelerate catalog management and localization.
+
+**Key capabilities:**
+- AI-assisted translation of product names and descriptions into any locale
+- AI-powered improvement of product names and descriptions
+- Alt-text generation for product images
+- Suggested best-fit product categories
+- Human-friendly error handling when AI integration is not configured
+
+**Business benefits:**
+- Reduces manual effort in product data enrichment
+- Improves product content quality and consistency across locales
+- Helps merchants scale catalog updates and localization faster
+
+**Documentation:**
+
+### AI visual search in the demo shop {% include badge.html type="improvement,,early-access" %}
+
+Spryker enhanced its demo-shop AI visual search experience and migrated it to use Spryker AI Foundation. Customers can search for products by uploading or capturing an image, making product identification faster and easier in complex buying scenarios. The updated implementation also includes mobile support.
+
+**Key capabilities:**
+- Search for products using an uploaded image or photo
+- Mobile-supported visual search experience
+- Integration routed through Spryker AI Foundation instead of direct OpenAI connectivity
+- Improved demo implementation for AI-powered product discovery
+
+**Business benefits:**
+- Reduces friction in finding the correct product
+- Improves buying experiences for technical and spare-parts use cases
+- Demonstrates a more reusable and centralized AI integration approach
+
+**Documentation:**
+
+### AI Foundation Agentic Workflows {% include badge.html type="feature,early-access" %}
+
+Spryker introduced an Early Access Back Office view for AI workflow execution visibility. The feature provides a list and detail pages for AI workflows, helping teams inspect workflow states and manually trigger available actions when needed. This improves transparency for AI-driven processes.
+
+**Key capabilities:**
+- Back Office list page for AI workflows
+- Workflow detail view with state history
+- Visualized state machine with highlighted current state
+- Manual event trigger where supported
+
+**Business benefits:**
+- Improves visibility into AI workflow execution
+- Helps operators monitor and troubleshoot AI-driven processes
+- Supports more controlled handling of AI workflow states
+
+**Documentation:**
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 
@@ -257,107 +355,6 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 - Reduces time and cost for enterprise identity integrations
 - Improves implementation predictability across projects
 - Creates a reusable foundation for federated authentication across Spryker entry points
-
-**Documentation:**
-
-### Back Office Assistant {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
-
-**Key capabilities:**
-
-**Business benefits:**
-
-**Documentation:**
-
-### AI Foundation Audit Logs {% include badge.html type="feature,early-access" %}
-
-Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
-
-{% include carousel.html
-images="
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_1.png||::
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_2.png||"
-%}
-
-**Key capabilities:**
-- Persistent storage** of AI interactions
-- Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
-- Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
-- Inline inspection** of prompts, responses, and metadata for deeper investigation
-
-**Business benefits:**
-- Enhances traceability and governance** across all AI-powered features
-- Accelerates debugging and prompt optimization**, reducing operational friction
-- Supports compliance and oversight needs with a centralized and transparent audit trail
-
-**Documentation:**
-- [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
-
-### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
-
-Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
-
-**Key capabilities:**
-- Extracts product names or SKUs and quantities from uploaded images.
-- Prefills the existing quick order form with recognized items.
-- Uses Spryker AI Foundation for AI-based processing.
-
-**Business benefits:**
-- Speeds up bulk and repeat ordering workflows.
-- Reduces manual entry effort and ordering errors.
-- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
-- Improves demoability of AI-assisted procurement use cases.
-
-**Documentation:**
-
-### Smart PIM in the public demo shop {% include badge.html type="early-access" %}
-
-Spryker added Smart PIM to the public demo shop as an Early Access capability. The feature showcases AI-assisted product enrichment directly in the Back Office, helping teams create richer and more complete product data with less manual work. It is designed to demonstrate how AI can accelerate catalog management and localization.
-
-**Key capabilities:**
-- AI-assisted translation of product names and descriptions into any locale
-- AI-powered improvement of product names and descriptions
-- Alt-text generation for product images
-- Suggested best-fit product categories
-- Human-friendly error handling when AI integration is not configured
-
-**Business benefits:**
-- Reduces manual effort in product data enrichment
-- Improves product content quality and consistency across locales
-- Helps merchants scale catalog updates and localization faster
-
-**Documentation:**
-
-### AI visual search in the demo shop {% include badge.html type="early-access,improvement" %}
-
-Spryker enhanced its demo-shop AI visual search experience and migrated it to use Spryker AI Foundation. Customers can search for products by uploading or capturing an image, making product identification faster and easier in complex buying scenarios. The updated implementation also includes mobile support.
-
-**Key capabilities:**
-- Search for products using an uploaded image or photo
-- Mobile-supported visual search experience
-- Integration routed through Spryker AI Foundation instead of direct OpenAI connectivity
-- Improved demo implementation for AI-powered product discovery
-
-**Business benefits:**
-- Reduces friction in finding the correct product
-- Improves buying experiences for technical and spare-parts use cases
-- Demonstrates a more reusable and centralized AI integration approach
-
-**Documentation:**
-
-### AI workflow visualization in the Back Office {% include badge.html type="early-access,feature" %}
-
-Spryker introduced an Early Access Back Office view for AI workflow execution visibility. The feature provides a list and detail pages for AI workflows, helping teams inspect workflow states and manually trigger available actions when needed. This improves transparency for AI-driven processes.
-
-**Key capabilities:**
-- Back Office list page for AI workflows
-- Workflow detail view with state history
-- Visualized state machine with highlighted current state
-- Manual event trigger where supported
-
-**Business benefits:**
-- Improves visibility into AI workflow execution
-- Helps operators monitor and troubleshoot AI-driven processes
-- Supports more controlled handling of AI workflow states
 
 **Documentation:**
 

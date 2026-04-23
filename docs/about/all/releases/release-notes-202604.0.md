@@ -31,21 +31,24 @@ We improved the login experience across the Back Office, Storefront, and Marketp
 
 ### Back Office Configuration Framework is now Generally Available {% include badge.html type="feature" %}
 
-Spryker made the Back Office Configuration Framework generally available with important enterprise-readiness enhancements. The release improves governance, discoverability, operational efficiency, and usability for managing business-relevant configuration directly in the Back Office. It also makes configuration changes more transparent and easier to control.
+Spryker has made the Back Office Configuration Framework generally available, delivering key enterprise‑readiness improvements. The release enhances governance, discoverability, and usability for managing business‑relevant configuration directly in the Back Office. Configuration changes are now easier to understand, control, and audit.
 
 **Key capabilities:**
 - Audit logging for configuration changes
 - Improved search and discoverability of configuration options
 - UX enhancements for a more reliable configuration experience
-- CLI-based import support for faster setup and operations
-- Better visibility into conflicts between code-based and Back Office configuration
+- CLI-based import support for faster setup and operational workflows
+- Clear visibility into conflicts between code-based and Back Office configuration
 
 **Business benefits:**
-- Increases confidence and accountability when managing configuration
-- Reduces misconfiguration risk and operator effort
-- Makes the framework ready for broader enterprise adoption
+- Increases confidence and accountability when adjusting configuration
+- Reduces misconfiguration risk and operator effort through better clarity and validation
+- Supports broader enterprise adoption with stronger governance and operability
 
-**Documentation:**
+### Documentation
+- [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html)
+- [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
+- [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
 
 ### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
 

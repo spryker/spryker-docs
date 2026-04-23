@@ -157,7 +157,9 @@ final class CustomersBackendResource
 
 #### 3. State providers and processors
 
-Detailed information about the API-Platform Provider and Resources can be found on the public docs:
+Spryker ships abstract base classes (`AbstractBackendProvider`, `AbstractStorefrontProvider`, `AbstractBackendProcessor`, `AbstractStorefrontProcessor`) that dispatch operations automatically and expose request/context helpers. For details and examples, see [State providers and processors](/docs/dg/dev/architecture/api-platform/state-providers-and-processors.html).
+
+You can also implement `ProviderInterface` / `ProcessorInterface` directly — see the API Platform public docs:
 - [API Platform Providers](https://api-platform.com/docs/core/state-providers/)
 - [API Platform Processors](https://api-platform.com/docs/core/state-processors/)
 
@@ -489,6 +491,7 @@ For detailed implementation guides:
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
 - [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
+- [State providers and processors](/docs/dg/dev/architecture/api-platform/state-providers-and-processors.html) - Abstract base classes for providers and processors
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
 - [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html) - Request only needed attributes
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues

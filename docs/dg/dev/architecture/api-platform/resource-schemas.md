@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Mar 11, 2026
+last_updated: Apr 7, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -416,6 +416,27 @@ return new TraversablePaginator(
 ```
 
 If `paginationEnabled` is `true` but the Provider returns a plain array, API Platform wraps the result in a `PartialPaginatorInterface`, which may not include total count or page metadata.
+
+### Automatic pagination links
+
+Collection responses with pagination automatically include navigation links in the JSON:API response. No additional configuration is needed. The links are generated based on the current page, items per page, and total item count returned by the Provider.
+
+**Example response:**
+
+```json
+{
+  "data": [...],
+  "links": {
+    "self": "/products?page=2&itemsPerPage=10",
+    "first": "/products?page=1&itemsPerPage=10",
+    "last": "/products?page=5&itemsPerPage=10",
+    "prev": "/products?page=1&itemsPerPage=10",
+    "next": "/products?page=3&itemsPerPage=10"
+  }
+}
+```
+
+The `prev` link is omitted on the first page, and the `next` link is omitted on the last page.
 
 ### Global pagination defaults
 

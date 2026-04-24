@@ -1,7 +1,7 @@
 ---
 title: Relationships
 description: Configure and use relationships in API Platform to include related resources.
-last_updated: Feb 5, 2026
+last_updated: Apr 7, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -80,6 +80,8 @@ Declares what relationships this resource can include.
 
 **Optional properties:**
 - `uriVariableMappings`: Maps properties from parent to child provider URI variables
+- `resolverClass`: Fully qualified class name of a custom relationship resolver (see [Custom relationship resolvers](#custom-relationship-resolvers))
+- `autoInclude`: When `true`, this relationship is automatically included without requiring `?include=` (see [Auto-include](#auto-include))
 
 **Example:**
 
@@ -237,3 +239,171 @@ GET /customers/customer--35?include=addresses
 6. **JsonApiRelationshipNormalizer** builds JSON:API response with `relationships` and `included` sections
 
 Providers require no code changes - the system works automatically through decoration.
+
+## Custom relationship resolvers
+
+For relationships that require complex data fetching logic beyond simple URI variable mapping, use a custom resolver class.
+
+### When to use resolverClass
+
+Use `resolverClass` instead of `uriVariableMappings` when:
+- The relationship requires custom data extraction or aggregation
+- Related data cannot be fetched with a simple provider call
+- You need access to request context (locale, store, customer) for business logic
+- Data must be extracted from nested or computed properties on the parent resource
+
+### Configuration
+
+```yaml
+includes:
+  - relationshipName: merchants
+    resolverClass: Spryker\Glue\Merchant\Api\Storefront\Relationship\OrderMerchantsRelationshipResolver
+    targetResource: merchants
+```
+
+When `resolverClass` is specified, the system skips the standard URI variable mapping and delegates relationship resolution to the resolver class. The `targetResource` is optional and used for type discovery in the JSON:API response.
+
+### Implementation
+
+Extend `AbstractRelationshipResolver` and implement the `resolveRelationship()` method:
+
+```php
+<?php
+
+namespace Spryker\Glue\Merchant\Api\Storefront\Relationship;
+
+use Spryker\ApiPlatform\Relationship\AbstractRelationshipResolver;
+use Spryker\Zed\Merchant\Business\MerchantFacadeInterface;
+
+class OrderMerchantsRelationshipResolver extends AbstractRelationshipResolver
+{
+    public function __construct(
+        private MerchantFacadeInterface $merchantFacade,
+    ) {
+    }
+
+    /**
+     * @return array<object>
+     */
+    protected function resolveRelationship(): array
+    {
+        $merchantReferences = [];
+        foreach ($this->getParentResources() as $parentResource) {
+            $merchantReferences[] = $parentResource->getMerchantReference();
+        }
+
+        return $this->merchantFacade->getMerchantsByReferences(
+            array_unique(array_filter($merchantReferences)),
+        );
+    }
+}
+```
+
+`AbstractRelationshipResolver` provides the following helpers:
+
+| Method | Purpose |
+|--------|---------|
+| `getParentResources()` | Access the parent resource objects |
+| `getRequest()` | Access the Symfony Request |
+| `getLocale()` | Get the current locale |
+| `getStore()` | Get the current store |
+| `getCustomer()` | Get the authenticated customer |
+| `getCustomerReference()` | Get the authenticated customer reference |
+
+Resolver classes are automatically registered and autowired by the container.
+
+## Per-item relationship resolvers
+
+Standard resolvers return a flat list of related resources that applies to all parent resources. Per-item resolvers return related resources scoped to each individual parent, which is necessary for one-to-one or parent-scoped relationships in collection responses.
+
+### When to use per-item resolvers
+
+Use `PerItemRelationshipResolverInterface` when each parent resource has its own specific set of related resources. For example:
+- Each company user references a different customer
+- Each order has different order items
+- Each cart has different cart items
+
+### Implementation
+
+Implement `PerItemRelationshipResolverInterface` and return related resources keyed by parent identifier:
+
+```php
+<?php
+
+namespace Spryker\Glue\CompanyUser\Api\Storefront\Relationship;
+
+use Spryker\ApiPlatform\Relationship\AbstractRelationshipResolver;
+use Spryker\ApiPlatform\Relationship\PerItemRelationshipResolverInterface;
+
+class CompanyUserCustomersRelationshipResolver extends AbstractRelationshipResolver implements PerItemRelationshipResolverInterface
+{
+    /**
+     * @return array<object>
+     */
+    protected function resolveRelationship(): array
+    {
+        return array_merge(...array_values($this->resolvePerItem($this->getParentResources(), [])));
+    }
+
+    /**
+     * @return array<string, array<object>>
+     */
+    public function resolvePerItem(array $parentResources, array $context): array
+    {
+        $result = [];
+        foreach ($parentResources as $parentResource) {
+            $parentId = (string) $parentResource->getCompanyUserUuid();
+            $customer = $this->findCustomerForCompanyUser($parentResource);
+
+            if ($customer !== null) {
+                $result[$parentId] = [$customer];
+            }
+        }
+
+        return $result;
+    }
+}
+```
+
+The `resolvePerItem()` method returns an associative array where:
+- Keys are parent resource identifiers (as strings)
+- Values are arrays of related resource objects for that specific parent
+
+## Nested and flat includes
+
+The relationship system supports both nested and flat include syntax for backward compatibility with the legacy Glue REST API.
+
+### Nested includes
+
+Specify the full path through the relationship chain using dot notation:
+
+```text
+GET /orders?include=items.concrete-products
+```
+
+This resolves `items` as a relationship of `orders`, then `concrete-products` as a relationship of `items`.
+
+### Flat includes
+
+Flat includes list all desired relationships without specifying the nesting path:
+
+```text
+GET /orders?include=items,concrete-products
+```
+
+If `concrete-products` is not a direct relationship of `orders` but is a relationship of `items`, the system automatically discovers the correct resolution path. This ensures backward compatibility with the legacy Glue REST API.
+
+### Auto-include
+
+Relationships configured with `autoInclude: true` are automatically resolved without requiring a `?include=` parameter:
+
+```yaml
+includes:
+  - relationshipName: items
+    targetResource: OrderItems
+    autoInclude: true
+    uriVariableMappings:
+      orderReference: orderReference
+```
+
+When a resource with auto-include relationships is included in a response (either as a main resource or as an included resource), its auto-include relationships are transitively resolved.

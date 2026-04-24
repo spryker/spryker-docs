@@ -483,14 +483,14 @@ We made your Spryker Commerce OS faster, more secure, and more stable.
 
 This release upgrades to Node.js 24 to improve frontend build performance, optimize Docker image size, and simplify developer tooling.
 
-## Support for Node.js 24
+**Key capabilities:**
 - Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
-- Dependency installation is quicker thanks to npm’s reworked resolver, which produces a leaner `node_modules` tree and reduces Docker image size.
+- Dependency installation is quicker thanks to npm's reworked resolver, which produces a leaner `node_modules` tree and reduces Docker image size.
 - Built-in TypeScript type stripping allows you to run TypeScript `.ts` files directly in custom build scripts and CLI tooling without `ts-node`.
 - The native URLPattern API and expanded Intl support reduce the number of required polyfills in SSR and storefront code.
 
 **Related documentation:**
-- [Upgrade Node.js and npm](/dg/dev/upgrade-and-migrate/upgrade-nodejs)
+- [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs#prerequisites)
 
 ## Efficient and Flexible Cloud Foundation
 

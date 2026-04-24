@@ -862,6 +862,8 @@ entries:
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
       url: /docs/dg/dev/frontend-development/define-twig-tag.html
+    - title: Design tokens
+      url: /docs/dg/dev/frontend-development/design-tokens.html
     - title: Notifying about unsupported browsers
       url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 

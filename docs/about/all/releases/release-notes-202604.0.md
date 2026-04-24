@@ -479,19 +479,6 @@ We made your Spryker Commerce OS faster, more secure, and more stable.
 - [Merchant Portal and Back Office performance with ACL rules](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#merchant-portal-and-back-office-performance-with-acl-rules)
 - [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html)
 
-### Tooling Upgrades {% include badge.html type="improvement" %}
-
-This release upgrades to Node.js 24 to improve frontend build performance, optimize Docker image size, and simplify developer tooling.
-
-**Key capabilities:**
-- Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
-- Dependency installation is quicker thanks to npm's reworked resolver, which produces a leaner `node_modules` tree and reduces Docker image size.
-- Built-in TypeScript type stripping allows you to run TypeScript `.ts` files directly in custom build scripts and CLI tooling without `ts-node`.
-- The native URLPattern API and expanded Intl support reduce the number of required polyfills in SSR and storefront code.
-
-**Related documentation:**
-- [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs#prerequisites)
-
 ## Efficient and Flexible Cloud Foundation
 
 ### Spryker Monitoring Integration: logs forwarding {% include badge.html type="improvement" %}
@@ -545,13 +532,14 @@ Spryker delivered maintenance updates across cloud services and application tool
 
 **Key capabilities:**
 - RabbitMQ 4.2 is now supported.
-- Updated frontend tooling runtime to Node.js 24 LTS.
+- Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
 
 **Business benefits:**
 - Reduced security and operational risk from outdated components
 
 **Documentation:**
-- [RabbitMQ 4.2 in Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk)
+- [RabbitMQ 4.2 in Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html)
+- [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html#prerequisites)
 
 ## Other
 

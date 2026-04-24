@@ -218,20 +218,21 @@ Spryker introduces the Back Office Assistant, enabling operators to perform Back
 
 ### Add to Cart from image {% include badge.html type="improvement,early-access" %}
 
-Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
+B2B buyers can now upload photos, screenshots, or handwritten notes to instantly prefill their quick order form with recognized products and quantities. This enhancement makes bulk and repeat ordering faster and more intuitive by turning image-based lists into cart-ready entries. Behind the scenes, the feature now runs on the Spryker AI Foundation, enabling provider flexibility and simpler long-term maintenance.
 
 **Key capabilities:**
-- Extracts product names or SKUs and quantities from uploaded images.
-- Prefills the existing quick order form with recognized items.
-- Uses Spryker AI Foundation for AI-based processing.
+- Recognizes multiple products and quantities from images, including screenshots and handwritten notes
+- Prefills the quick order form with extracted items while allowing full manual editing before submission
+- Uses Spryker AI Foundation, enabling support for multiple AI providers such as OpenAI, Azure, or AWS Bedrock
 
 **Business benefits:**
-- Speeds up bulk and repeat ordering workflows.
-- Reduces manual entry effort and ordering errors.
-- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
-- Improves demoability of AI-assisted procurement use cases.
+- Speeds up bulk and repeat ordering by eliminating manual entry for long product lists
+- Reduces ordering errors by automatically extracting product identifiers and quantities
+- Aligns with typical B2B procurement inputs, including photos, handwritten notes, and shared screenshots
 
-**Documentation:**
+**Documentation**
+- [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
+- [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
 
 ### AI Foundation Audit Logs {% include badge.html type="feature,early-access" %}
 

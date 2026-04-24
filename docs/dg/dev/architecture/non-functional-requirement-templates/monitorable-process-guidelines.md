@@ -1,15 +1,17 @@
 ---
 title: Monitorable process guidelines
 description: Guidelines for log generation and metric generation to enable Operations Teams to track and correlate issues in operated and deployed applications.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/operational-and-deployment-guidelines.html
   - title: Operatable feature guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/operatable-feature-guidelines.html
   - title: Process documentation guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/process-documentation-guidelines.html
+redirect_from:
+  - /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
 ---
 
 This document provides guideline templates for development teams striving for high-quality software. These templates are flexible and serve as a starting point, so make sure to adjust them to your project's requirements. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
@@ -268,5 +270,5 @@ Each metric represents a condition of system attributes. There can be many of th
 - Every service or component can define and generate project-appropriate metrics for key processes to enable tracking of such events and reacting when they reach undesired scores. These metrics are generated with a basic dimension of the duration and outcome of the operation, such as success or failure.
   - The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
   - Instances of communication duration with remote services must be recorded to understand if a local process is delayed for a good reason.
-- Critical metrics, along with their threshold values, must be highlighted in the [Operational guidelines](/docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
+- Critical metrics, along with their threshold values, must be highlighted in the [Operational guidelines](/docs/dg/dev/architecture/non-functional-requirement-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
 - Deployment and rollback flows can generate metrics to enable tracking and interaction with these processes.

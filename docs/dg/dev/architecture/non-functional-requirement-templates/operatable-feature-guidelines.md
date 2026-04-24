@@ -1,15 +1,17 @@
 ---
 title: Operatable feature guidelines
 description: Learn Spryker's operatable feature guidelines to ensure features are scalable, reliable, and manageable. Optimize performance while maintaining operational efficiency.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/operational-and-deployment-guidelines.html
   - title: Process documentation guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/process-documentation-guidelines.html
   - title: Monitorable process guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/monitorable-process-guidelines.html
+redirect_from:
+  - /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
 ---
 
 

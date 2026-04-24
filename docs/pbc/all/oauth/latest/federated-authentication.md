@@ -33,7 +33,7 @@ Spryker uses the [OAuth 2.0 Authorization Code flow](https://datatracker.ietf.or
 
 The sequence below shows the full flow from the moment a user clicks a login button to the moment their session is created.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth2-authorization-code-flow-works.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth2-authorization-code-flow-works.svg)
 
 The only claim your IdP must return is **`email`**. If the IdP also returns `given_name`, `family_name`, `name`, or `preferred_username`, Spryker uses them to populate display fields where available. If you need additional claims for custom logic — roles, groups, department — you can request them by configuring the appropriate scopes on the provider.
 
@@ -47,7 +47,7 @@ Spryker runs as a Symfony application but maintains its own dependency injection
 
 `OauthKnpuApplicationPlugin` resolves this on application boot. It pulls `ClientRegistry` out of the Symfony container and re-exposes it in Spryker's DI, so that Spryker's plugin chain can reach it. It also registers the OAuth callback routes into Symfony's router — which is necessary because KnpU uses Symfony's router to build redirect URIs, while Spryker's own router is separate.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-in-spryker-architecture.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-in-spryker-architecture.svg)
 
 The Yves plugin handles the Storefront callback route. The Zed plugin handles both Back-office and Merchant Portal, since both run within the same Zed container.
 
@@ -57,7 +57,7 @@ The Yves plugin handles the Storefront callback route. The Zed plugin handles bo
 
 Once the bridge is in place, `SecurityOauthKnpu` plugs into Symfony Security the same way in every application: a dedicated OAuth authenticator is added to the existing firewall, sitting alongside the standard form-login authenticator so that both login methods continue to work independently.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-symfony-security-integration.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-symfony-security-integration.svg)
 
 ---
 
@@ -80,7 +80,7 @@ Each application follows the same four-stage plugin chain. This is where you con
 
 Spryker keeps a lightweight identity record for each user–provider pair. This is what makes the connection between a Spryker account and an external IdP identity persistent across sessions.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-identities-persistence.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-identities-persistence.svg)
 
 The anchor for each record is the combination of `provider` and `external_id` — the stable, IdP-assigned identifier for that user. This matters in practice: if your users change their email address in the IdP, their Spryker account remains correctly linked and login continues to work. The `email` column in the identity table is updated to the latest IdP value on every successful login, but the email stored on the Spryker entity itself (`spy_customer.email`, `spy_user.email`) is left untouched. Syncing that back is something you can implement at the project level if your use case requires it.
 
@@ -90,7 +90,7 @@ The anchor for each record is the combination of `provider` and `external_id` �
 
 The resolution logic is the same across all three applications. Spryker first looks for an existing identity record; if it finds one, the user is logged in immediately. If not — because this is the first time they are logging in via this provider — Spryker falls back to email matching.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/oauth-login-process.png)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/oauth/how-auth-works.svg)
 
 ### First Time a User Logs In via SSO
 

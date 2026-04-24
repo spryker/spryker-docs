@@ -653,5 +653,5 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 ## Next steps
 
-- [Add an OAuth provider](/docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.md) — wire additional IdP clients per application.
-- [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.md) — run a local Keycloak instance to test SSO without an external IdP.
+- [Add an OAuth provider](/docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html) — wire additional IdP clients per application.
+- [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html) — run a local Keycloak instance to test SSO without an external IdP.

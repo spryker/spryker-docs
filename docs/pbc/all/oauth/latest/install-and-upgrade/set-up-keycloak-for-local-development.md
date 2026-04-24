@@ -248,7 +248,7 @@ Make sure the email address of the Merchant Portal test user exists in Spryker's
 
 ## Step 4 — Set environment variables
 
-Add the following to the `image.environment` section of `deploy.dev.yml`. The client names (`SSO_YVES`, `SSO_ZED`, `SSO_MP`) follow the `SPRYKER_OAUTH_{CLIENT_NAME}_{FIELD}` convention described in [Add an OAuth provider](add-an-oauth-provider.md).
+Add the following to the `image.environment` section of `deploy.dev.yml`. The client names (`SSO_YVES`, `SSO_ZED`, `SSO_MP`) follow the `SPRYKER_OAUTH_{CLIENT_NAME}_{FIELD}` convention described in [Add an OAuth provider](/docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html).
 
 **`deploy.dev.yml`**
 

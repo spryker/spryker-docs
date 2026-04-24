@@ -5,9 +5,9 @@ last_updated: Apr 21, 2026
 template: feature-integration-guide-template
 ---
 
-This guide covers adding a new OAuth2/OIDC provider to an existing SSO installation. Module installation and initial plugin wiring are covered in the [integration guide](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.md).
+This guide covers adding a new OAuth2/OIDC provider to an existing SSO installation. Module installation and initial plugin wiring are covered in the [integration guide](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html).
 
-For a ready-made local IdP to test against, see [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.md).
+For a ready-made local IdP to test against, see [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html).
 
 ## Prerequisites
 

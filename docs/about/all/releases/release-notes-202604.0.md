@@ -50,21 +50,6 @@ Spryker has made the Back Office Configuration Framework generally available, de
 - [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
 - [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
 
-### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
-
-Marketplace operators can now manage merchant ownership of products directly in the Back Office, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
-
-**Key capabilities:**
-- Assign or update merchant ownership for any product directly in Back Office workflows.
-- See merchant ownership instantly within product management views.
-- Maintain merchant‑related product data as part of your standard PIM processes.
-
-**Business benefits:**
-- Strengthens support for centrally managed catalogs and hybrid marketplace models, giving operators more flexibility in how they run their marketplace.
-- Improves transparency and control, making ownership clear, consistent, and auditable.
-- Reduces reliance on workarounds and custom tooling, lowering operational overhead.
-- Supports more flexible marketplace operations, enabling teams to scale product management with confidence.
-
 ### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
 
 We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
@@ -81,24 +66,6 @@ We introduced an Early Access version of budgets and cost centers to support pol
 - Reduces overspending risk with enforceable budget rules.
 - Aligns procurement workflows with departmental or project-based spending structures.
 - Provides an early demoable foundation for customer and partner conversations.
-
-**Documentation:**
-
-### Basic Shop Theming {% include badge.html type="feature" %}
-
-Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
-
-**Key capabilities:**
-- Supports theme management with global and store-specific scope.
-- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
-- Provides configuration for core branding colors and button styles.
-- Uses a standardized Back Office configuration experience for theme administration.
-
-**Business benefits:**
-- Reduces dependency on developers for basic branding changes.
-- Speeds up demo preparation, POCs, and early customer activation.
-- Improves time to first transaction through self-service configuration.
-- Strengthens perception of Spryker as an out-of-the-box ready solution.
 
 **Documentation:**
 
@@ -121,6 +88,24 @@ Spryker now offers product import and export via the Back Office, reducing relia
 **Documentation:**
 - [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
 - [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
+
+### Basic Shop Theming {% include badge.html type="feature" %}
+
+Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
+
+**Key capabilities:**
+- Supports theme management with global and store-specific scope.
+- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
+- Provides configuration for core branding colors and button styles.
+- Uses a standardized Back Office configuration experience for theme administration.
+
+**Business benefits:**
+- Reduces dependency on developers for basic branding changes.
+- Speeds up demo preparation, POCs, and early customer activation.
+- Improves time to first transaction through self-service configuration.
+- Strengthens perception of Spryker as an out-of-the-box ready solution.
+
+**Documentation:**
 
 ### Product attribute display types {% include badge.html type="feature" %}
 
@@ -175,6 +160,21 @@ We introduced the first phase of a unified storefront design system to establish
 - Creates a stronger foundation for future storefront evolution.
 
 **Documentation:**
+
+### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
+
+Marketplace operators can now manage merchant ownership of products directly in the Back Office, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
+
+**Key capabilities:**
+- Assign or update merchant ownership for any product directly in Back Office workflows.
+- See merchant ownership instantly within product management views.
+- Maintain merchant‑related product data as part of your standard PIM processes.
+
+**Business benefits:**
+- Strengthens support for centrally managed catalogs and hybrid marketplace models, giving operators more flexibility in how they run their marketplace.
+- Improves transparency and control, making ownership clear, consistent, and auditable.
+- Reduces reliance on workarounds and custom tooling, lowering operational overhead.
+- Supports more flexible marketplace operations, enabling teams to scale product management with confidence.
 
 ### Back Office design theme update phase 1 {% include badge.html type="improvement" %}
 

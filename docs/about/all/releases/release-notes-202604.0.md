@@ -69,7 +69,7 @@ We introduced an Early Access version of budgets and cost centers to support pol
 
 **Documentation:**
 
-### Back Office product import and export {% include badge.html type="feature,early-access" %}
+### Back Office Product Import & Export {% include badge.html type="feature,early-access" %}
 
 Spryker now offers product import and export via the Back Office, reducing reliance on developer‑driven CLI tooling. Business users can prepare and update catalogs faster during onboarding, launches, and routine maintenance. This improves operational speed and gives teams more control over their product data processes.
 
@@ -81,7 +81,7 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 %}
 
 **Key capabilities:**
-- Import and export product data directly from the Back Office UI
+- Import and export product data directly from the Back Office
 - Single‑file product import, replacing the many separate files traditionally required by CLI imports
 - CSV‑based job support for creating or updating product records
 - Reusable job and run concepts for consistent, repeatable operations

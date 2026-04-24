@@ -16,6 +16,8 @@ related:
     link: docs/dg/dev/architecture/api-platform/validation-schemas.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
+  - title: API Platform Configuration
+    link: docs/dg/dev/architecture/api-platform/configuration.html
 ---
 
 This document provides solutions to common issues when working with API Platform in Spryker.
@@ -67,6 +69,24 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --validate-only
 # Force regeneration
 docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 ```
+
+### Wrong modules are being generated
+
+**Symptom:** The generator picks up schemas from modules you want routed to a different application, or misses modules you expect to see.
+
+**Possible causes:**
+
+1. **Two applications share the same source tree.** For example, a project runs the legacy Glue REST stack next to the new API Platform storefront, and both apps scan `src/Spryker/*`.
+2. **A module is half-migrated** and has schemas in `resources/api/{apiType}` that should not yet be exposed.
+
+**Solution:** Use the four filter options exposed by `SprykerApiPlatformConfig` in `config/{APPLICATION}/packages/spryker_api_platform.php`:
+
+- `includedModulePatterns(['*RestApi'])` — allowlist based on module name, `fnmatch` patterns.
+- `excludedModulePatterns(['*RestApi'])` — blocklist based on module name.
+- `includedPathFragments(['src/Pyz/'])` — allowlist based on literal substrings of the schema file's real path.
+- `excludedPathFragments(['src/Spryker/AuthRestApi/resources/api/'])` — blocklist based on literal substrings of the schema file's real path.
+
+Blocklists always win over allowlists. For the full list of options and evaluation order, see [API Platform Configuration — Spryker-specific bundle configuration](/docs/dg/dev/architecture/api-platform/configuration.html#spryker-specific-bundle-configuration).
 
 ### Schema validation errors
 

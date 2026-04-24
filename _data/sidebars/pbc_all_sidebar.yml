@@ -3559,6 +3559,14 @@ entries:
               - title: trbo
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
 
+      - title: PunchOut Gateway
+        url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
+        nested:
+          - title: Integrate PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
+          - title: Project configuration for PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
+
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:

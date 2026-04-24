@@ -205,7 +205,7 @@ Spryker introduces the Back Office Assistant, enabling operators to perform Back
 **Key capabilities**
 - Provides navigation and operational guidance to help users quickly find functions and understand Back Office workflows
 - Answers order‑related questions, including order status and operational details
-- Assists with form completion e.g. enabling discount creation directly through chat
+- Assists to complete forms, for example, by enabling discount creation directly through chat.
 
 **Business benefits**
 - Reduces time spent searching for pages and completing repetitive tasks
@@ -287,13 +287,13 @@ Buyers can now search for products by simply uploading or capturing an image, ma
 - Uses Spryker AI Foundation for provider flexibility across OpenAI, Azure, Bedrock, and others
 
 **Business benefits:**
-- Helps buyers and field technicians find the right product even when they don’t know the exact name or SKU
+- Helps buyers and field technicians find the right product even when they don't know the exact name or SKU
 - Speeds up ordering workflows for spare parts and technical items directly from on-site photos
 - Reduces operational effort by adopting a centrally maintained and reusable AI integration layer
 
 **Documentation:**
 - [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image)
-- [Install Search by Image](/docs.spryker.com/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
+- [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
 
 ### AI Foundation Agentic Workflows {% include badge.html type="feature,early-access" %}
 
@@ -489,7 +489,7 @@ This release upgrades to Node.js 24 to improve frontend build performance, optim
 - Built-in TypeScript type stripping allows you to run TypeScript `.ts` files directly in custom build scripts and CLI tooling without `ts-node`.
 - The native URLPattern API and expanded Intl support reduce the number of required polyfills in SSR and storefront code.
 
-**Related documentation:**
+**Documentation:**
 - [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs#prerequisites)
 
 ## Efficient and Flexible Cloud Foundation

@@ -143,3 +143,99 @@ Security is configured in a separate `security.php` file. For details, see [How 
 For all available configuration options and their details, refer to the [API Platform Symfony Configuration documentation](https://api-platform.com/docs/core/configuration/#symfony-configuration).
 
 The PHP method names in `ApiPlatformConfig` correspond directly to the YAML keys in the official documentation.
+
+## Spryker-specific bundle configuration
+
+In addition to the upstream `ApiPlatformConfig`, Spryker ships its own bundle configuration under the alias `spryker_api_platform`. It controls how YAML resource schemas are discovered across the `src/Spryker`, `src/SprykerFeature`, and `src/Pyz` trees before they are handed to API Platform for code generation.
+
+The PHP configurator lives in a separate file per application:
+
+- **Glue:** `config/Glue/packages/spryker_api_platform.php`
+- **GlueStorefront:** `config/GlueStorefront/packages/spryker_api_platform.php`
+- **GlueBackend:** `config/GlueBackend/packages/spryker_api_platform.php`
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Config\SprykerApiPlatformConfig;
+
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
+};
+```
+
+### Configuration options
+
+| Method | Matches against | Default | Purpose |
+|---|---|---|---|
+| `apiTypes(array $types)` | — | `[]` (all discovered) | The list of API types (e.g., `storefront`, `backend`) this application exposes. Used both for schema directory lookup (`resources/api/{apiType}`) and for filtering services annotated with `#[ApiType]`. |
+| `sourceDirectories(array $directories)` | — | `['vendor/spryker', 'src/Pyz']` | Root directories scanned for `{Module}/resources/api/{apiType}/*.resource.{yaml,yml}` schema files. Paths are resolved relative to the project root. |
+| `includedPathFragments(array $fragments)` | Full real file path, `str_contains` | `[]` | Allowlist. When non-empty, only schema files whose real path contains at least one of the fragments are kept. |
+| `excludedPathFragments(array $fragments)` | Full real file path, `str_contains` | `[]` | Blocklist. Any schema file whose real path contains at least one fragment is dropped. |
+| `includedModulePatterns(array $patterns)` | Module directory name, `fnmatch` | `[]` | Allowlist on the module name segment. When non-empty, only modules whose name matches at least one glob pattern contribute schemas. |
+| `excludedModulePatterns(array $patterns)` | Module directory name, `fnmatch` | `[]` | Blocklist on the module name segment. Modules whose name matches any pattern are skipped, even if included elsewhere. |
+| `debug(bool $enabled)` | — | `%kernel.debug%` | Disables caching and enables verbose output for the schema generator. |
+
+### Evaluation order
+
+Filters are applied in the following order during schema discovery:
+
+1. **Module-level allowlist** (`includedModulePatterns`). If set, a module must match at least one pattern or it is skipped entirely.
+2. **Module-level blocklist** (`excludedModulePatterns`). Matching modules are skipped.
+3. **File-level allowlist** (`includedPathFragments`). If set, a schema file must match at least one fragment or it is skipped.
+4. **File-level blocklist** (`excludedPathFragments`). Matching files are skipped.
+
+Blocklists always win over allowlists: a module or file that matches both the `included*` and the `excluded*` list is dropped.
+
+### Example: Split legacy Glue and API Platform storefront by module suffix
+
+Projects that run the legacy Glue REST stack and the new API Platform storefront side by side typically want to route `*RestApi` modules to the legacy app while the rest stays on API Platform. That split can be expressed declaratively:
+
+```php
+// config/Glue/packages/spryker_api_platform.php
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // Legacy Glue app: only *RestApi modules.
+    $sprykerApiPlatform->includedModulePatterns(['*RestApi']);
+};
+```
+
+```php
+// config/GlueStorefront/packages/spryker_api_platform.php
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // API Platform storefront: exclude every legacy *RestApi module.
+    $sprykerApiPlatform->excludedModulePatterns(['*RestApi']);
+};
+```
+
+### Example: Narrow discovery to explicit modules or paths
+
+When you want to opt in module-by-module, combine `includedPathFragments` with precise path prefixes:
+
+```php
+$sprykerApiPlatform->includedPathFragments([
+    'src/Pyz/',
+    'src/Spryker/Cart/resources/api/',
+    'src/Spryker/Customer/resources/api/',
+]);
+```
+
+This allowlist keeps only schemas from project-level overrides plus two explicitly enabled core modules. Any schema file whose real path does not contain one of these fragments is skipped.
+
+### Example: Per-resource exclusion on a module you otherwise keep
+
+`excludedPathFragments` remains useful for carve-outs that do not map to a whole module suffix — for example, when two applications each want to own a different `/token` endpoint:
+
+```php
+// config/GlueStorefront/packages/spryker_api_platform.php
+$sprykerApiPlatform->excludedPathFragments([
+    'src/Spryker/AuthRestApi/resources/api/',
+]);
+```
+
+This drops only the `AuthRestApi` schemas while leaving the rest of the allowlist/blocklist logic untouched.

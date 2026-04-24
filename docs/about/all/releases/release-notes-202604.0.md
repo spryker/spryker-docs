@@ -222,9 +222,9 @@ Spryker now includes the AI Foundation and Smart PIM out of the box, allowing me
 - [AI Commerce Overview](/docs/pbc/all/ai-commerce/latest/ai-commerce-overview.html)
 - [Smart PIM](/docs/pbc/all/ai-commerce/latest/smart-pim)
 
-### Back Office Assistant {% include badge.html type="feature,early-access" %}
+### Smart Back Office Assistant {% include badge.html type="feature,early-access" %}
 
-Spryker introduces the Back Office Assistant, enabling operators to perform Back Office tasks through natural language instead of relying solely on manual navigation. Operators can get guidance on where to find features, ask operational and order‑related questions, and create discounts directly through chat. This makes Back Office work faster, more intuitive, and easier for all user types.
+Spryker introduces the Smart Back Office Assistant, enabling operators to perform Back Office tasks through natural language instead of relying solely on manual navigation. Operators can get guidance on where to find features, ask operational and order‑related questions, and create discounts directly through chat. This makes Back Office work faster, more intuitive, and easier for all user types.
 
 **Key capabilities**
 - Provides navigation and operational guidance to help users quickly find functions and understand Back Office workflows
@@ -238,7 +238,7 @@ Spryker introduces the Back Office Assistant, enabling operators to perform Back
 
 **Documentation**
 - [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html)
-- [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)g
+- [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)
 
 ### Add to Cart from image {% include badge.html type="improvement,early-access" %}
 

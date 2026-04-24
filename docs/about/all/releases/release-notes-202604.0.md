@@ -52,20 +52,18 @@ Spryker has made the Back Office Configuration Framework generally available, de
 
 ### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
 
-Marketplace operators can now manage **merchant ownership of products directly in the Back Office**, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
+Marketplace operators can now manage merchant ownership of products directly in the Back Office, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
 
 **Key capabilities:**
-- **Assign or update merchant ownership** for any product directly in Back Office workflows.
-- **See merchant ownership instantly** within product management views.
-- **Maintain merchant‑related product data** as part of your standard PIM processes.
+- Assign or update merchant ownership for any product directly in Back Office workflows.
+- See merchant ownership instantly within product management views.
+- Maintain merchant‑related product data as part of your standard PIM processes.
 
 **Business benefits:**
-- **Strengthens support for centrally managed catalogs and hybrid marketplace models**, giving operators more flexibility in how they run their marketplace.
-- **Improves transparency and control**, making ownership clear, consistent, and auditable.
-- **Reduces reliance on workarounds and custom tooling**, lowering operational overhead.
-- **Supports more flexible marketplace operations**, enabling teams to scale product management with confidence.
-
-**Documentation:**
+- Strengthens support for centrally managed catalogs and hybrid marketplace models, giving operators more flexibility in how they run their marketplace.
+- Improves transparency and control, making ownership clear, consistent, and auditable.
+- Reduces reliance on workarounds and custom tooling, lowering operational overhead.
+- Supports more flexible marketplace operations, enabling teams to scale product management with confidence.
 
 ### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
 

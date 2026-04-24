@@ -469,7 +469,6 @@ We made your Spryker Commerce OS faster, more secure, and more stable.
 - Lower latency and response times in storefront with optimized widgets.
 - Lower latency and response times in the Back Office and Merchant Portal.
 - Higher stability and throughput of Publish & Synchronize workers. The update introduces dynamic waiting behavior, better control over parallel job execution, and compatibility improvements for Symfony Messenger resource-aware workers.
-- Upgraded `symfony/http-foundation` to version `6.4.29` in affected app templates.
 
 **Documentation:**
 - [Non-buffered log streaming](https://api.release.spryker.com/release-group/6411)

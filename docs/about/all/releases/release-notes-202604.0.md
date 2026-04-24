@@ -277,22 +277,23 @@ Spryker added Smart PIM to the public demo shop as an Early Access capability. T
 
 **Documentation:**
 
-### AI visual search in the demo shop {% include badge.html type="improvement,,early-access" %}
+### Search by image {% include badge.html type="improvement,early-access" %}
 
-Spryker enhanced its demo-shop AI visual search experience and migrated it to use Spryker AI Foundation. Customers can search for products by uploading or capturing an image, making product identification faster and easier in complex buying scenarios. The updated implementation also includes mobile support.
+Buyers can now search for products by simply uploading or capturing an image, making it easier to identify items when names or SKUs are unknown. This is especially valuable for field teams who can take photos of installed parts without needing to unmount or inspect them closely. The capability now runs on the Spryker AI Foundation, enabling greater flexibility in AI provider choice and reducing long-term maintenance effort.
 
 **Key capabilities:**
-- Search for products using an uploaded image or photo
-- Mobile-supported visual search experience
-- Integration routed through Spryker AI Foundation instead of direct OpenAI connectivity
-- Improved demo implementation for AI-powered product discovery
+- Identifies relevant or visually similar products from uploaded or captured images
+- Supports a mobile-enabled visual search experience for buyers working on-site or in the field
+- Uses Spryker AI Foundation for provider flexibility across OpenAI, Azure, Bedrock, and others
 
 **Business benefits:**
-- Reduces friction in finding the correct product
-- Improves buying experiences for technical and spare-parts use cases
-- Demonstrates a more reusable and centralized AI integration approach
+- Helps buyers and field technicians find the right product even when they don’t know the exact name or SKU
+- Speeds up ordering workflows for spare parts and technical items directly from on-site photos
+- Reduces operational effort by adopting a centrally maintained and reusable AI integration layer
 
 **Documentation:**
+- [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image)
+- [Install Search by Image](/docs.spryker.com/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
 
 ### AI Foundation Agentic Workflows {% include badge.html type="feature,early-access" %}
 

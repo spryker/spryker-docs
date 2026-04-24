@@ -198,6 +198,25 @@ We delivered the first phase of the Back Office theme modernization to improve c
 
 ## Connected, and AI-Enabled Platform
 
+### Spryker Now Ships with AI Foundation and Smart Product Enrichment {% include badge.html type="improvement,early-access" %}
+
+Spryker now includes the AI Foundation and Smart PIM out of the box, allowing merchants to adopt AI‑assisted catalog enrichment with minimal setup. Product content can be improved, translated, and enriched directly in the Back Office using AI, reducing manual work and improving content quality. Customers only need to connect their preferred AI provider to start benefiting from AI‑powered product enhancements, with governance automatically handled through AI Foundation.
+
+**Key capabilities**
+- Enhances and translates product names and descriptions using AI
+- Generates alt‑text for product images and suggests suitable product categories
+- Delivered by default in Spryker, requiring only AI provider configuration
+
+**Business benefits**
+- Reduces manual effort in creating and refining product content across the catalog
+- Makes AI adoption easier by providing a pre‑configured integration layer with built‑in governance and provider flexibility
+- Speeds up catalog enrichment and localization for merchants operating across multiple markets
+
+**Documentation**
+- [AI Foundation Overview](/docs/pbc/all/ai-commerce/latest/ai-foundation-overview.html)
+- [AI Commerce Overview](/docs/pbc/all/ai-commerce/latest/ai-commerce-overview.html)
+- [Smart PIM](/docs/pbc/all/ai-commerce/latest/smart-pim)
+
 ### Back Office Assistant {% include badge.html type="feature,early-access" %}
 
 Spryker introduces the Back Office Assistant, enabling operators to perform Back Office tasks through natural language instead of relying solely on manual navigation. Operators can get guidance on where to find features, ask operational and order‑related questions, and create discounts directly through chat. This makes Back Office work faster, more intuitive, and easier for all user types.
@@ -257,25 +276,6 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 **Documentation:**
 - [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
-
-
-### Smart PIM in the public demo shop {% include badge.html type="improvement,early-access" %}
-
-Spryker added Smart PIM to the public demo shop as an Early Access capability. The feature showcases AI-assisted product enrichment directly in the Back Office, helping teams create richer and more complete product data with less manual work. It is designed to demonstrate how AI can accelerate catalog management and localization.
-
-**Key capabilities:**
-- AI-assisted translation of product names and descriptions into any locale
-- AI-powered improvement of product names and descriptions
-- Alt-text generation for product images
-- Suggested best-fit product categories
-- Human-friendly error handling when AI integration is not configured
-
-**Business benefits:**
-- Reduces manual effort in product data enrichment
-- Improves product content quality and consistency across locales
-- Helps merchants scale catalog updates and localization faster
-
-**Documentation:**
 
 ### Search by image {% include badge.html type="improvement,early-access" %}
 

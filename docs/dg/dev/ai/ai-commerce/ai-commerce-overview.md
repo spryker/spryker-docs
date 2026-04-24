@@ -1,7 +1,7 @@
 ---
 title: AI Commerce overview
 description: Technical overview of the AI Commerce SprykerFeature package — architecture, AiFoundation integration, and available features.
-last_updated: Mar 31, 2026
+last_updated: Apr 22, 2026
 template: concept-topic-template
 ---
 
@@ -27,6 +27,7 @@ For the base `AiFoundation` setup, see [Install AI Commerce](/docs/dg/dev/ai/ai-
 |---------|-------------|
 | [Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html) | Lets buyers upload a product image on the Quick Order page. AI recognizes products and quantities in the image and pre-fills the quick order form with matching SKUs. |
 | [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions, navigate the Back Office, diagnose order issues, and create or update discounts. |
+| [Smart PIM](/docs/dg/dev/ai/ai-commerce/smart-pim/smart-pim.html) | An AI assistant embedded in the Back Office product creation and editing pages. Helps catalog managers fill in product attributes, descriptions, and metadata through a conversational interface. |
 
 ## Installation
 

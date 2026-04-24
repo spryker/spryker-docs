@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 26, 2026
+last_updated: Apr 24, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform

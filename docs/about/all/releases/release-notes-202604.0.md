@@ -82,10 +82,8 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 **Key capabilities:**
 - Import and export product data directly from the Back Office
-- Single‑file product import, replacing the many separate files traditionally required by CLI imports
-- CSV‑based job support for creating or updating product records
-- Reusable job and run concepts for consistent, repeatable operations
-- Business‑friendly file handling and clear validation feedback for streamlined workflows
+- Single‑file product import, replacing multiple CLI‑required files
+- CSV‑based jobs with reusable job/run concepts and clear validation feedback
 
 **Business benefits:**
 - Significantly simplifies adding products to the catalog, replacing multi‑file CLI imports with a single, business‑friendly file

@@ -200,11 +200,21 @@ We delivered the first phase of the Back Office theme modernization to improve c
 
 ### Back Office Assistant {% include badge.html type="feature,early-access" %}
 
-**Key capabilities:**
+Spryker introduces the Back Office Assistant, enabling operators to perform Back Office tasks through natural language instead of relying solely on manual navigation. Operators can get guidance on where to find features, ask operational and order‑related questions, and create discounts directly through chat. This makes Back Office work faster, more intuitive, and easier for all user types.
 
-**Business benefits:**
+**Key capabilities**
+- Provides navigation and operational guidance to help users quickly find functions and understand Back Office workflows
+- Answers order‑related questions, including order status and operational details
+- Assists with form completion e.g. enabling discount creation directly through chat
 
-**Documentation:**
+**Business benefits**
+- Reduces time spent searching for pages and completing repetitive tasks
+- Improves usability for operators who are less familiar with Back Office structure or workflows
+- Helps prevent errors by guiding operators through correctly structured inputs and actions
+
+**Documentation**
+- [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html)
+- [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)g
 
 ### Add to Cart from image {% include badge.html type="improvement,early-access" %}
 

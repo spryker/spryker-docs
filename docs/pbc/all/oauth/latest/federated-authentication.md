@@ -2,7 +2,7 @@
 title: Federated Authentication via OAuth2/OIDC
 description: Learn how Spryker Federated Authentication lets your customers, back-office users, and merchant users log in through an external Identity Provider using OAuth2 and OpenID Connect.
 template: concept-topic-template
-last_updated: Apr 21, 2026
+last_updated: Apr 24, 2026
 ---
 
 If your enterprise customers, back-office operators, or merchant users already authenticate through a corporate Identity Provider — Keycloak, Azure AD, Okta, or any other OAuth2/OIDC-compatible system — this feature lets them bring that identity to Spryker. Instead of maintaining a separate set of credentials for every application, your users log in through the same IdP they already trust, and Spryker handles the rest.
@@ -113,7 +113,13 @@ Once the identity record exists, Spryker goes straight to it using the provider 
 
 When a customer logs in via SSO for the first time and no Spryker account with their email exists, one is created automatically. The account is confirmed immediately — no email verification is sent. Name fields are populated from IdP claims where available.
 
-This default behaviour is intentionally minimal, and you are expected to extend it to fit your project. Two common starting points:
+{% info_block warningBox "Note" %}
+
+This default behaviour is intentionally minimal, and you are expected to extend it to fit your project.
+
+{% endinfo_block %}
+
+Two common starting points:
 
 - **Accept-only mode**: If you want only pre-existing customers to be able to log in via SSO — for example, because you import customers from a CRM — you can disable automatic creation by replacing `CreateCustomerOauthCustomerAuthenticationStrategyPlugin` with `AcceptOnlyOauthCustomerAuthenticationStrategyPlugin` in your `CustomerDependencyProvider`.
 - **B2B provisioning**: In a B2B context, a new customer often needs to be assigned to a company and given a company user record before they can do anything meaningful. You can extend the creation strategy to handle this automatically based on claims from your IdP.
@@ -149,6 +155,20 @@ The practical implication is that **your Spryker session is independent of the I
 ## Supported Providers
 
 You can use any OAuth2/OIDC provider that `knpuniversity/oauth2-client-bundle` supports. The reference configuration in this codebase uses Keycloak, but the architecture is provider-agnostic. For the full list of supported provider types and their specific configuration fields, see the [KnpU OAuth2 Client Bundle provider documentation](https://github.com/knpuniversity/oauth2-client-bundle#supported-grant-types--oauth2-providers).
+
+The following table lists the most common B2B identity providers used with Spryker:
+
+| Provider | Type | Notes |
+|---|---|---|
+| [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/) (formerly Azure Active Directory) | Cloud IdP | Widely used in enterprise environments; supports OIDC and SAML. Use the `azure` provider type in KnpU. |
+| [Okta](https://www.okta.com/) | Cloud IdP | Common in B2B SaaS setups; full OIDC support. Use the `okta` provider type in KnpU. |
+| [Keycloak](https://www.keycloak.org/) | Self-hosted IdP | Open-source; the reference implementation used in Spryker's example configuration. Use the `keycloak` provider type in KnpU. |
+| [Google Workspace](https://workspace.google.com/) | Cloud IdP | Suitable for organizations using Google as their identity backbone. Use the `google` provider type in KnpU. |
+| [Auth0](https://auth0.com/) | Cloud IdP | Flexible, developer-friendly IdP with strong B2B multi-tenant support. Use the `auth0` provider type in KnpU. |
+| [IBM App ID](https://www.ibm.com/products/app-id) | Cloud IdP | Used in IBM enterprise environments; supports OIDC. Use the `appid` provider type in KnpU. |
+| [Salesforce Identity](https://www.salesforce.com/products/platform/identity/) | Cloud IdP | Acts as an IdP for Salesforce-heavy B2B orgs; supports OIDC. Use the `salesforce` provider type in KnpU. |
+| [Amazon Cognito](https://aws.amazon.com/cognito/) | Cloud IdP | Common in AWS-native enterprise setups; supports OIDC. Install the dedicated [`league/oauth2-client` Cognito package](https://oauth2-client.thephpleague.com/providers/thirdparty/) and use the `generic` provider type in KnpU. |
+| [Nextcloud](https://nextcloud.com/) | Self-hosted IdP | Open-source, self-hosted option used in European B2B environments; supports OIDC. Install the dedicated [`league/oauth2-client` Nextcloud package](https://oauth2-client.thephpleague.com/providers/thirdparty/) and use the `generic` provider type in KnpU. |
 
 ---
 

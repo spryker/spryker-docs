@@ -5,21 +5,21 @@ last_updated: Apr 21, 2026
 template: feature-integration-guide-template
 ---
 
-This guide covers adding a new OAuth2/OIDC provider to an existing SSO installation. Module installation and initial plugin wiring are covered in the [integration guide](install-federated-authentication.md).
+This guide covers adding a new OAuth2/OIDC provider to an existing SSO installation. Module installation and initial plugin wiring are covered in the [integration guide](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.md).
 
-For a ready-made local IdP to test against, see [Set up Keycloak for local development](set-up-keycloak-for-local-development.md).
+For a ready-made local IdP to test against, see [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.md).
 
 ## Prerequisites
 
 You need the following from your Identity Provider before starting:
 
-| Value | Description |
-|---|---|
-| **Client ID** | Application identifier registered in the IdP |
-| **Client secret** | Corresponding secret for the client ID |
-| **Authorization server URL** | Base URL of the IdP (e.g. `https://sso.example.com`) |
-| **Realm** *(Keycloak only)* | Realm name configured in Keycloak |
-| **Redirect URI(s)** | Callback URL(s) you will register in the IdP — one per application (see step 2) |
+| Value | Description                                                                  |
+|---|------------------------------------------------------------------------------|
+| **Client ID** | Application identifier registered in the IdP                                 |
+| **Client secret** | Corresponding secret for the client ID                                       |
+| **Authorization server URL** | Base URL of the IdP (for example, `https://sso.example.com`)                 |
+| **Realm** *(Keycloak only)* | Realm name configured in Keycloak                                            |
+| **Redirect URI** | Callback URL you will register in the IdP — one per application (see step 2) |
 
 The redirect URIs follow this pattern:
 
@@ -64,9 +64,10 @@ SPRYKER_OAUTH_{CLIENT_NAME}_CLIENT_SECRET=<secret>
 
 ## Step 3 — Register the KnpU client
 
-Add a client entry to the YAML for each application you are enabling. The client key (e.g. `my_sso_yves`) is the identifier you will reference in the Spryker config in step 4.
+Add a client entry to the YAML for each application you are enabling. The client key (for example, `my_sso_yves`) is the identifier you will reference in the Spryker config in step 4.
 
 **`config/Yves/packages/knpu_oauth2_client.yaml`**
+
 ```yaml
 knpu_oauth2_client:
     clients:
@@ -81,6 +82,7 @@ knpu_oauth2_client:
 ```
 
 **`config/Zed/packages/knpu_oauth2_client.yaml`**
+
 ```yaml
 knpu_oauth2_client:
     clients:
@@ -95,6 +97,7 @@ knpu_oauth2_client:
 ```
 
 **`config/MerchantPortal/packages/knpu_oauth2_client.yaml`**
+
 ```yaml
 knpu_oauth2_client:
     clients:
@@ -117,6 +120,7 @@ Each provider type has its own required fields. `auth_server_url` and `realm` ar
 The `clientName` must match the YAML client key exactly. The `statePrefix` must be unique across all providers in the same application — it is used to route the callback to the correct provider.
 
 **`src/Pyz/Yves/SecurityOauthKnpu/SecurityOauthKnpuConfig.php`**
+
 ```php
 public function getCustomerProviderConfigs(): array
 {
@@ -130,6 +134,7 @@ public function getCustomerProviderConfigs(): array
 ```
 
 **`src/Pyz/Zed/SecurityOauthKnpu/SecurityOauthKnpuConfig.php`**
+
 ```php
 public function getZedUserProviderConfigs(): array
 {
@@ -154,7 +159,7 @@ public function getMerchantUserProviderConfigs(): array
 
 ---
 
-## Step 5 — Add a second provider to the same application (optional)
+## Optional: Step 5 — Add a second provider to the same application
 
 Storefront and Merchant Portal support multiple providers simultaneously — one login button per provider. Add additional YAML client entries and additional `OauthKnpuProviderConfigTransfer` entries to the collection:
 
@@ -201,7 +206,7 @@ public function getCustomerProviderConfigs(): array
 ## Verification
 
 1. Open the login page for the configured application.
-2. The configured `linkText` button(s) should appear.
+2. The configured `linkText` buttons should appear.
 3. Clicking a button redirects to the IdP login page.
 4. After successful IdP login, you are redirected back and authenticated in Spryker.
 

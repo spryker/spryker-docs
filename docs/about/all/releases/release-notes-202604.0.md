@@ -260,6 +260,7 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 **Documentation:**
 - [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
+- [AI Foundation Workflows](docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine)
 
 ### Smart Visual Product Search & Ordering {% include badge.html type="improvement,early-access" %}
 
@@ -280,6 +281,24 @@ Spryker now enables buyers to identify products and start orders simply by uploa
 - [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
 - [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
 - [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
+
+### AI Dev Tooling for Coding Agents {% include badge.html type="feature,early-access" %}
+
+Spryker now provides ready-to-use new AI Dev tooling to help development teams work more effectively with coding agents in Spryker projects. The update provides ready-to-use agent instruction files and reusable Spryker-specific skill examples.
+
+**Key capabilities:**
+- Generates a project‑ready agent configuration file (AGENTS.md)
+- Generates a set of rules for AI agent based on Spryker coding conventions and architectural guidelines
+- Provides reusable skill examples covering testing, data import, schema conventions, validation, and frontend development
+- Includes a setup command that generates agent configuration file, rules and skills for supported coding agents
+
+**Business benefits:**
+- Speeds up onboarding for developers who are new to Spryker by giving AI coding agents the right context from day one
+- Improves code quality and consistency through pre‑written, Spryker‑aligned development rules
+- Helps teams deliver features faster by reducing back‑and‑forth with AI tools and minimizing incorrect code generation
+
+**Documentation:**
+- [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 
@@ -511,22 +530,6 @@ Spryker delivered maintenance updates across cloud services and application tool
 - [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html#prerequisites)
 
 ## Other
-
-### AI Dev tooling for coding agents {% include badge.html type="feature" %}
-
-We added new AI Dev tooling to help development teams work more effectively with coding agents in Spryker projects. The update provides ready-to-use agent instruction files and reusable Spryker-specific skill examples.
-
-**Key capabilities:**
-- Added commands to generate an `AGENTS.md` context file in the project root.
-- Added commands to copy reusable skill examples into the project.
-- Bundled Spryker-specific guidance for testing, data import, Propel schema conventions, static validation, and Yves atomic frontend development.
-
-**Business benefits:**
-- Improves developer experience for teams using AI coding agents.
-- Helps teams start faster with Spryker-aware agent guidance.
-- Encourages consistent development patterns across projects.
-
-**Documentation:**
 
 ### OCI Phase 1 — API Compatibility & Documentation Enablement {% include badge.html type="feature" %}
 

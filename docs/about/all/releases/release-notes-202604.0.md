@@ -256,9 +256,9 @@ B2B buyers can now upload photos, screenshots, or handwritten notes to instantly
 - [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
 - [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
 
-### AI Foundation Audit Logs {% include badge.html type="feature,early-access" %}
+### AI Foundation Visibility & Governance Enhancements {% include badge.html type="feature,early-access" %}
 
-Spryker now provides AI interaction logging with a dedicated Back Office interface for reviewing all AI activity. Teams can access prompts, responses, model details, token usage, and metadata in a searchable view. This strengthens AI governance, accelerates troubleshooting, and supports continuous optimization.
+Spryker introduces comprehensive visibility into AI activity through new Back Office views for both AI interactions and AI workflow execution. Teams can now inspect prompts, responses, metadata, and workflow states in a single place, improving transparency and control over AI‑driven processes. These enhancements strengthen governance, streamline troubleshooting, and make AI operations easier to understand and monitor.
 
 {% include carousel.html
 images="
@@ -267,15 +267,14 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 %}
 
 **Key capabilities:**
-- Persistent storage** of AI interactions
-- Comprehensive audit trail** including prompts, responses, model info, token usage, timing, and metadata
-- Sorting, filtering, pagination, and aggregated statistics** for efficient analysis
-- Inline inspection** of prompts, responses, and metadata for deeper investigation
+- Back Office audit logs for reviewing prompts, responses, metadata, and model details
+- Workflow execution views with list, detail, state history, and visualized transitions
+- Filtering, sorting, and inline inspection tools for efficient debugging and analysis
 
 **Business benefits:**
-- Enhances traceability and governance** across all AI-powered features
-- Accelerates debugging and prompt optimization**, reducing operational friction
-- Supports compliance and oversight needs with a centralized and transparent audit trail
+- Improves governance and traceability across all AI‑powered processes
+- Simplifies troubleshooting by making AI interactions and workflow states fully transparent
+- Gives operators greater control over AI‑driven actions with clear visibility into execution paths
 
 **Documentation:**
 - [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
@@ -297,23 +296,6 @@ Buyers can now search for products by simply uploading or capturing an image, ma
 **Documentation:**
 - [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image)
 - [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
-
-### AI Foundation Agentic Workflows {% include badge.html type="feature,early-access" %}
-
-Spryker introduced an Early Access Back Office view for AI workflow execution visibility. The feature provides a list and detail pages for AI workflows, helping teams inspect workflow states and manually trigger available actions when needed. This improves transparency for AI-driven processes.
-
-**Key capabilities:**
-- Back Office list page for AI workflows
-- Workflow detail view with state history
-- Visualized state machine with highlighted current state
-- Manual event trigger where supported
-
-**Business benefits:**
-- Improves visibility into AI workflow execution
-- Helps operators monitor and troubleshoot AI-driven processes
-- Supports more controlled handling of AI workflow states
-
-**Documentation:**
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 

@@ -489,6 +489,12 @@ Spryker expanded cloud observability by enabling log forwarding through [SMI](/d
 
 Spryker introduced centralized access management for cloud services, including SSO support for customer identity providers such as Okta and OneLogin. This update reduces manual access handling, improves security, and simplifies onboarding and offboarding for users. It also includes rollout, production-readiness, and IAM cleanup measures to standardize and harden access controls.
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/2026-Cloud-Hub-SSO-Lofi.mp4" type="video/mp4">
+  </video>
+</figure>
+
 **Key capabilities:**
 - Connect your own identity provider for SSO access to cloud services
 - Centralize user access management for services such as Jenkins, RabbitMQ, and others

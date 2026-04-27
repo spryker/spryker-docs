@@ -1,15 +1,17 @@
 ---
 title:  PunchOut Gateway
-description: Find out how how Punchout Gateway works in the Spryker Shop
-last_updated: Apr 24, 2026
+description: Find out how PunchOut Gateway works in the Spryker Shop
+last_updated: Apr 27, 2026
 template: howto-guide-template
+redirect_from:
+  - /docs/integrations/custom-building-integrations/punchout-development-plan.html
 ---
 
-PunchOut Gateway module provides basic implementation 
+The PunchOut Gateway module provides a basic implementation of OCI and cXML PunchOut flows for Spryker shops.
 
-## Support Use Cases
+## Supported use cases
 
-Current implementation supports any number of simultaneously active OCI and cXML connections inn one Spryker shop.
+The current implementation supports any number of simultaneously active OCI and cXML connections in a single Spryker shop.
 
 Support for the shop integration to iFrame can only be enabled globally for the whole shop, following [this guideline](/docs/pbc/all/punchout-gateway/integrate-punchout-gateway#support-iframe-embedding).  
 
@@ -22,7 +24,7 @@ For cXML flow, a single cart is created or reused for each `BuyerCookie` value.
 
 ### Additional links
 
-Check [integration guide](/docs/pbc/all/punchout-gateway/integrate-punchout-gateway) to integrate PunchOut Gateway module into your Spryker shop.
+[Integration guide](/docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html) explains how to enable cXML and OCI PunchOut flows in your Spryker shop.
 
-Check [project configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway) documentation for details about fine-tuning the integration on the project level.
+[Project Configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html) documentation for details about fine-tuning the integration on the project level.
 

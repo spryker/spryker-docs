@@ -238,24 +238,6 @@ Spryker introduces the Smart Back Office Assistant, enabling operators to perfor
 - [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html)
 - [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)
 
-### Add to Cart from image {% include badge.html type="improvement,early-access" %}
-
-B2B buyers can now upload photos, screenshots, or handwritten notes to instantly prefill their quick order form with recognized products and quantities. This enhancement makes bulk and repeat ordering faster and more intuitive by turning image-based lists into cart-ready entries. Behind the scenes, the feature now runs on the Spryker AI Foundation, enabling provider flexibility and simpler long-term maintenance.
-
-**Key capabilities:**
-- Recognizes multiple products and quantities from images, including screenshots and handwritten notes
-- Prefills the quick order form with extracted items while allowing full manual editing before submission
-- Uses Spryker AI Foundation, enabling support for multiple AI providers such as OpenAI, Azure, or AWS Bedrock
-
-**Business benefits:**
-- Speeds up bulk and repeat ordering by eliminating manual entry for long product lists
-- Reduces ordering errors by automatically extracting product identifiers and quantities
-- Aligns with typical B2B procurement inputs, including photos, handwritten notes, and shared screenshots
-
-**Documentation**
-- [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
-- [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
-
 ### AI Foundation Visibility & Governance Enhancements {% include badge.html type="feature,early-access" %}
 
 Spryker introduces comprehensive visibility into AI activity through new Back Office views for both AI interactions and AI workflow execution. Teams can now inspect prompts, responses, metadata, and workflow states in a single place, improving transparency and control over AI‑driven processes. These enhancements strengthen governance, streamline troubleshooting, and make AI operations easier to understand and monitor.
@@ -279,23 +261,25 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 **Documentation:**
 - [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
 
-### Search by image {% include badge.html type="improvement,early-access" %}
+### Smart Visual Product Search & Ordering {% include badge.html type="improvement,early-access" %}
 
-Buyers can now search for products by simply uploading or capturing an image, making it easier to identify items when names or SKUs are unknown. This is especially valuable for field teams who can take photos of installed parts without needing to unmount or inspect them closely. The capability now runs on the Spryker AI Foundation, enabling greater flexibility in AI provider choice and reducing long-term maintenance effort.
+Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it’s a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
 
-**Key capabilities:**
-- Identifies relevant or visually similar products from uploaded or captured images
-- Supports a mobile-enabled visual search experience for buyers working on-site or in the field
-- Uses Spryker AI Foundation for provider flexibility across OpenAI, Azure, Bedrock, and others
+**Key capabilities**
+- Helps buyers identify relevant or visually similar products by uploading or capturing an image
+- Prefills the quick order form with products and quantities extracted from photos, screenshots, or handwritten notes
+- Uses Spryker AI Foundation for multi‑provider support (OpenAI, Azure, Bedrock) and centralized AI governance
 
-**Business benefits:**
-- Helps buyers and field technicians find the right product even when they don't know the exact name or SKU
-- Speeds up ordering workflows for spare parts and technical items directly from on-site photos
-- Reduces operational effort by adopting a centrally maintained and reusable AI integration layer
+**Business benefits**
+- Speeds up product identification and ordering, especially for technical and spare‑parts workflows
+- Reduces manual entry and ordering errors by interpreting product information directly from images
+- Supports mobile and field‑based buying scenarios where buyers capture photos instead of searching by name or SKU
 
-**Documentation:**
+**Documentation**
 - [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image)
+- [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
 - [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
+- [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 
@@ -527,23 +511,6 @@ Spryker delivered maintenance updates across cloud services and application tool
 - [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html#prerequisites)
 
 ## Other
-
-### AI configuration management for runtime-resolved provider settings {% include badge.html type="feature" %}
-
-AI provider configuration values can now be resolved at runtime from the Configuration Management module. This allows Back Office administrators to update settings such as model, API key, and system prompt without code changes or deployments.
-
-**Key capabilities:**
-- Supports resolving AI configuration values using the `configuration::` prefix.
-- Allows runtime lookup of nested AI provider settings from Configuration Management.
-- Keeps static configuration values unchanged where runtime resolution is not needed.
-- Throws a dedicated exception when a referenced configuration key cannot be resolved.
-
-**Business benefits:**
-- Lets business users adjust AI behavior without involving developers.
-- Reduces deployment effort for AI configuration changes.
-- Improves flexibility and governance for AI-enabled features.
-
-**Documentation:**
 
 ### AI Dev tooling for coding agents {% include badge.html type="feature" %}
 

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in *.md) bad=$(grep -nE '\\]\\((docs/|\\./docs/|https?://docs\\.spryker\\.com|/docs/[^)#]*\\.md[)#])' \"$f\" || true); if [ -n \"$bad\" ]; then printf 'Internal link format violation in %s:\\n%s\\nRule: links must start with /docs/ and end with .html \\u2014 no missing leading slash, no relative ./docs, no docs.spryker.com domain, no .md extension. Fix before continuing.\\n' \"$f\" \"$bad\" >&2; exit 2; fi ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}

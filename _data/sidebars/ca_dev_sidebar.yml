@@ -17,10 +17,16 @@ entries:
             url: /docs/ca/dev/access/locate-service-credentials.html
           - title: Connect to services via SSH
             url: /docs/ca/dev/access/connect-to-services-via-ssh.html
+          - title: SSO Access
+            url: /docs/ca/dev/access/access-the-aws-management-console.html
+          - title: SSO Security Options
+            url: /docs/ca/dev/access/sso-security-options.html
 
       - title: CloudHub
         url: /docs/ca/dev/cloud-hub/cloud-hub.html
         nested:
+          - title: User management (SSO)
+            url: /docs/ca/dev/cloud-hub/sso-user-management.html
           - title: User management (IAM)
             url: /docs/ca/dev/cloud-hub/user-management.html
           - title: Storage management (S3)

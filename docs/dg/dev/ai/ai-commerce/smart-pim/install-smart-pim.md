@@ -1,11 +1,11 @@
 ---
 title: Install Smart PIM
 description: Learn how to install the Smart PIM feature that provides AI-powered content improvement, image alt text generation, category suggestions, and translation on Back Office product pages.
-last_updated: Apr 23, 2026
+last_updated: Apr 27, 2026
 template: feature-integration-guide-template
 ---
 
-Smart PIM is an AI assistant embedded in the Back Office product creation and editing pages. It provides AI-powered capabilities for improving product content, generating image alt text, suggesting categories, and translating product data. This document describes how to install the Smart PIM feature.
+Smart PIM is an AI tool embedded in the Back Office product creation and editing pages. It provides AI-powered capabilities for improving product content, generating image alt text, suggesting categories, and translating product data. This document describes how to install the Smart PIM feature.
 
 ## Install the feature core
 
@@ -24,6 +24,7 @@ Make sure the following modules are installed at the required minimum versions:
 
 | MODULE | MINIMUM VERSION |
 |--------|----------------|
+| `spryker/ai-commerce` | `^0.4.2` |
 | `spryker/product-category` | `^4.33.1` |
 | `spryker/product-management` | `^0.20.9` |
 | `spryker/product-management-extension` | `^1.11.0` |
@@ -70,16 +71,15 @@ use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
 $openAiConfiguration = [
-    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
+    'provider_name' => AiFoundationConstants::PROVIDER_OPENAI, // or any other provider name
     'provider_config' => [
-        'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . AiCommerceConstants::CONFIGURATION_KEY_OPENAI_DEFAULT_MODEL,
+        'key' => 'open-ai-api-token', // or any other configuration key
+        'model' => 'gpt-4o',
     ],
 ];
 
 $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_PIM] = $openAiConfiguration;
 ```
-
 
 ### 4) Configure Smart PIM
 

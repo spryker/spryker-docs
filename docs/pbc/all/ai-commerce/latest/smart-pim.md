@@ -1,7 +1,7 @@
 ---
 title: Smart PIM
 description: An AI assistant embedded in the Back Office product pages that helps catalog managers improve content, generate image alt text, suggest categories, and translate product data using natural language.
-last_updated: Apr 23, 2026
+last_updated: Apr 27, 2026
 template: concept-topic-template
 ---
 

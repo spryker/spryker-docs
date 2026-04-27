@@ -1,7 +1,7 @@
 ---
 title: Smart PIM
 description: Technical overview of the Smart PIM feature — architecture, AiFoundation integration, plugin structure, and configuration options.
-last_updated: Apr 23, 2026
+last_updated: Apr 27, 2026
 template: concept-topic-template
 ---
 
@@ -25,16 +25,6 @@ Category suggestion requires the `ProductCategoryAbstractFormExpanderPlugin` to 
 | Image alt text | `getImageAltTextAiConfigurationName()` | Generates descriptive alt text for product images. |
 | Category suggestion | `getCategorySuggestionAiConfigurationName()` | Suggests relevant product categories based on product content. |
 | Translation | `getTranslationAiConfigurationName()` | Translates product content into configured store languages. |
-
-## AI configuration
-
-All four capabilities share the `AI_CONFIGURATION_SMART_PIM` named configuration entry in `AiFoundation`. This is set by overriding the corresponding methods in `AiCommerceConfig`. Using a dedicated named configuration isolates Smart PIM audit log entries from other AI features in the project.
-
-The following project-level constant is used to reference the Smart PIM model configuration managed through the Back Office Configuration UI:
-
-| CONSTANT | KEY | DESCRIPTION |
-|----------|-----|-------------|
-| `CONFIGURATION_KEY_OPENAI_SMART_MODEL` | `ai_commerce:open_ai:general:openai_smart_model` | Model used for Smart PIM agent operations (default: `gpt-4.1`). |
 
 ## Install
 

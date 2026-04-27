@@ -22,7 +22,7 @@ For cXML flow, a single cart is created or reused for each `BuyerCookie` value.
 
 ### Additional links
 
-Check [integration guide](docs/pbc/all/punchout-gateway/integrate-punchout-gateway) to integrate PunchOut Gateway module into your Spryker shop.
+Check [integration guide](/docs/pbc/all/punchout-gateway/integrate-punchout-gateway) to integrate PunchOut Gateway module into your Spryker shop.
 
-Check [project configuration](docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway) documentation for details about fine-tuning the integration on the project level.
+Check [project configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway) documentation for details about fine-tuning the integration on the project level.
 

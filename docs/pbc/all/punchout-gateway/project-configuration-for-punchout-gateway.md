@@ -2,7 +2,8 @@
 title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
-last_updated: Apr 24, 2026
+last_updated: Apr 28, 2026
+label: early-access
 ---
 
 This document describes the project configuration to enable eProcurement systems support via PunchOut flow.
@@ -25,14 +26,14 @@ Since the UI for connection setup is not yet ready, we provide these two console
 
 To configure a connection, create a row in the `spy_punchout_connection` table:
 
-| Column | Value                                    | Comments                                                                                                                                                 |
-|--------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `fk_store` | Store ID (for example, DE)               | ID of the store the customer must be logged in to.                                                                                                       |
-| `name` | Human-readable label                     | Used only for readability                                                                                                                                |
-| `is_active` | `true`                                   | Determines whether the connection can be used.                                                                                                           |
-| `allow_iframe` | `true` / `false`                         | Enforces iframe-specific headers when the PunchOut session is active. If **~TARGET** is sent during the request, the headers are sent regardless of this value. |
-| `protocol_type` | `'oci'` or `'xml'`                       | Flow type.                                                                                                                                               |
-| `processor_plugin_class` | Full class name of the processor plugin. | Processor to be used.                                                                                                                                    |
+| Column | Value                                    | Comments                                                                                                                                                                                                                   |
+|--------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `fk_store` | Store ID (for example, 1)                | ID of the store the customer must be logged in to.                                                                                                                                                                         |
+| `name` | Human-readable label                     | Used only for readability                                                                                                                                                                                                  |
+| `is_active` | `true`                                   | Determines whether the connection can be used.                                                                                                                                                                             |
+| `allow_iframe` | `true` / `false`                         | Enforces iframe-specific headers when the PunchOut session is active. If **~TARGET** is sent during the request, the headers are sent regardless of this value. Make sure to adjust [configuration for session cookies](/docs/pbc/all/punchout-gateway/integrate-punchout-gateway#support-iframe-embedding). |
+| `protocol_type` | `'oci'` or `'xml'`                       | Flow type.                                                                                                                                                                                                                 |
+| `processor_plugin_class` | Full class name of the processor plugin. | Processor to be used.                                                                                                                                                                                                      |
 
 ### OCI connection configuration
 
@@ -191,21 +192,22 @@ class PunchoutGatewayDependencyProvider extends SprykerEcoPunchoutGatewayDepende
 
 ## Punchout-specific security header expander plugin
 
-At PunchOut session start, Yves applies protocol-specific `Content-Security-Policy` directives to allow the Storefront to be embedded and to post back to the buyer's procurement system.
+At PunchOut session start, Yves applies protocol-specific `Content-Security-Policy` (CSP) directives to allow the Storefront to be embedded and to post back to the buyer's procurement system.
 
 Directive generation is delegated to plugins implementing `\SprykerEco\Yves\PunchoutGateway\Dependency\Plugin\PunchoutSecurityHeaderExpanderPluginInterface`.
 `PunchoutSecurityHeaderSessionWriter` walks the registered plugins and accumulates their directives for the active session once, persisting the value into the session.
 
+When `spy_punchout_connection.allow_iframe` is `true`, the correct CSP headers are included in each response.
+
 By default, we provide an OCI-specific plugin only:
 
-- `\SprykerEco\Yves\PunchoutGateway\Plugin\SecurityHeader\DefaultOciSecurityHeaderExpanderPlugin` — adds `frame-ancestors` to the CSP for OCI sessions when `spy_punchout_connection.allow_iframe` is `true` or the OCI login carries a `~TARGET` form field.
+- `\SprykerEco\Yves\PunchoutGateway\Plugin\SecurityHeader\DefaultOciSecurityHeaderExpanderPlugin` — adds `frame-ancestors` to the CSP for OCI sessions when the OCI login carries a `~TARGET` form field.
 
-### Plugin methods
+### Plugin method
 
-| Method | Called when                                      | Functionality                                                                                                                                        |
-|--------|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `isApplicable` | Before the directives are collected for a session | Returns `true` when this plugin handles the PunchOut session's protocol.                                                                              |
-| `expand` | After `isApplicable()` returned `true`           | Appends protocol-specific CSP directive strings to the given list. Implementations must not add duplicate directives.                                 |
+| Method | Functionality                                                                                                         |
+|--------|-----------------------------------------------------------------------------------------------------------------------|
+| `expand` | Appends protocol-specific CSP directive strings to the given list. Implementations must not add duplicate directives. |
 
 ### Register a custom expander
 

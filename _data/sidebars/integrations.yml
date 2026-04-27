@@ -7,7 +7,7 @@ entries:
   - title: About Eco modules
     url: /docs/integrations/eco-modules.html
   - title: Integrations catalog
-    url: /docs/integrations/third-party-integrations.html
+    url: /docs/integrations/integrations-catalog.html
   - title: Spryker APIs
     nested:
     - title: Getting started with APIs

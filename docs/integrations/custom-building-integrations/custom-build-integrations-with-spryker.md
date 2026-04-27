@@ -1,7 +1,7 @@
 ---
 title: Custom build integrations with Spryker
 description: Learn how to create custom integrations with Spryker to connect third-party systems, services, or tools seamlessly, leveraging modular architecture and API capabilities for tailored business solutions.
-last_updated: Apr 27, 2026
+last_updated: Apr 28, 2026
 template: default
 layout: custom_new
 ---
@@ -47,8 +47,8 @@ Custom integrations enable you to seamlessly connect third-party systems, servic
   </div>
 
   <div class="cst_card">
-    <div class="cst_card_title">Implement PunchOut on your project</div>
-    <div class="cst_card_desc">Learn how to integrate PunchOut flow support and enable serving procurement system requests.</div>
+    <div class="cst_card_title">Integrate PunchOut support on your project</div>
+    <div class="cst_card_desc">Learn how to integrate PunchOut Gateway module into your project to serve procurement system requests.</div>
     <a class="cst_card_button" href="/docs/pbc/all/punchout-gateway/punchout-gateway.html"> Find out more </a>
   </div>
 

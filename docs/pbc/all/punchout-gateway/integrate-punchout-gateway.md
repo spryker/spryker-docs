@@ -1,8 +1,9 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: Apr 24, 2026
+last_updated: Apr 28, 2026
 template: howto-guide-template
+label: early-access
 ---
 
 This document describes how to integrate the PunchOut Gateway module into a Spryker shop.
@@ -12,7 +13,7 @@ This document describes how to integrate the PunchOut Gateway module into a Spry
 Install the PunchOut Gateway module using Composer:
 
 ```bash
-composer require spryker-eco/punchout-gateway:^0.2.0
+composer require spryker-eco/punchout-gateway:^0.3.0
 ```
 
 ## 2. Configure the module

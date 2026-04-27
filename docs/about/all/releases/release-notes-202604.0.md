@@ -482,7 +482,7 @@ Spryker expanded cloud observability by enabling log forwarding through [SMI](/d
 **Documentation:**
 - [Spryker Monitoring Integration Logs](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation#smi-logs-integration)
 
-### TLS, authentication, and SSO for Cloud services {% include badge.html type="feature" %}
+### Single Sign-On (SSO) for Cloud services {% include badge.html type="feature" %}
 
 Spryker introduced centralized access management for cloud services, including SSO support for customer identity providers such as Okta and OneLogin. This update reduces manual access handling, improves security, and simplifies onboarding and offboarding for users. It also includes rollout, production-readiness, and IAM cleanup measures to standardize and harden access controls.
 

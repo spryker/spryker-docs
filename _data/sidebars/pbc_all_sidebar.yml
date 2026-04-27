@@ -6,6 +6,16 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: AI Commerce
+        url: /docs/pbc/all/ai-commerce/latest/ai-commerce.html
+        nested:
+          - title: Visual Add to Cart
+            url: /docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/pbc/all/ai-commerce/latest/backoffice-assistant.html
+          - title: Search by Image
+            url: /docs/pbc/all/ai-commerce/latest/search-by-image.html
+
       - title: Yves
         nested:
           - title: Install and upgrade
@@ -23,6 +33,8 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
               - title: Backoffice Configuration Framework
                 url: /docs/pbc/all/back-office/base-shop/backoffice-configuration-framework.html
+              - title: Basic Shop Theme feature overview
+                url: /docs/pbc/all/back-office/base-shop/basic-shop-theme-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install the Spryker Core Back Office feature
@@ -39,9 +51,12 @@ entries:
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-accessibility-improvements.html
                   - title: Install Back Office dropdown navigation
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
+                  - title: Install Back Office dashboard home path
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dashboard-home-path.html
                   - title: Enable Google Material Icons
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
-
+                  - title: Update the INSPINIA theme in Back Office
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/update-inpinia-theme-version-at-back-office.html
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
 
@@ -258,6 +273,8 @@ entries:
 
                   - title: Approval Process feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.html
+                  - title: Purchasing Control feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/purchasing-control-feature-overview.html
                   - title: Comments feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.html
                   - title: Non-splittable Products feature overview
@@ -271,6 +288,8 @@ entries:
                     nested:
                       - title: Approval Process
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+                      - title: Purchasing Control
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html
                       - title: Cart + Agent Assist
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                       - title: Cart
@@ -2571,25 +2590,17 @@ entries:
                     nested:
                       - title: Install the prerequisites
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
-                      - title: Connect and configure
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
-                      - title: Disconnect
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Migrate from the ACP Stripe app
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
                         nested:
-                          - title: Embed the Stripe payment page as an iframe
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
-                          - title: Implement Stripe checkout as a hosted payment page
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-prerequisites-for-implementing-Stripe-checkout-as-a-hosted-payment-page.html
                           - title: OMS configuration for Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
                           - title: Processing refunds with Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
                           - title: Sending additional data to Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
-                          - title: Stripe checkout with third-party frontends
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
@@ -2813,6 +2824,8 @@ entries:
                     nested:
                       - title: Product Attributes
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html
                       - title: Discontinued Products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
                       - title: Product Images
@@ -2908,6 +2921,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
                       - title: Product Attachments
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles
@@ -3544,6 +3559,14 @@ entries:
               - title: trbo
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
 
+      - title: PunchOut Gateway
+        url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
+        nested:
+          - title: Integrate PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
+          - title: Project configuration for PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
+
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
@@ -3825,6 +3848,7 @@ entries:
 
                 - title: Visual Search powered by OpenAI
                   url: /docs/pbc/all/search/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai.html
+
 
               - title: Best practices
                 url: /docs/pbc/all/search/base-shop/best-practices/search-best-practices.html

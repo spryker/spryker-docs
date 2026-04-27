@@ -439,7 +439,48 @@ new OpentelemetryLogProcessorPlugin(),
 
 ---
 
-#### Step 6 — Create a support ticket to enable SMI logs
+#### Step 6 — Update Jenkins PHP jobs to manage build symlinks
+
+Some Jenkins jobs produce a high volume of builds. Over time, the accumulation of build directories makes it increasingly difficult for the log exporter to scan them, eventually blocking log export entirely. To prevent this, every job must update the `lastBuild` symlink to point to the media-mounted build path immediately before executing its command.
+
+In `config/Zed/cronjobs/jenkins.php`, add the following `buildCommand()` helper and apply it to all job definitions using `array_map`:
+
+```php
+/**
+ * Prepends symlink maintenance commands to every Jenkins job command.
+ *
+ * Some jobs produce a large number of builds. Without this, the growing
+ * number of build directories makes log export increasingly slow and
+ * eventually blocks it entirely. Recreating the lastBuild symlink on each
+ * run keeps the directory structure clean and log export unaffected.
+ *
+ * @param string $jobCommand
+ *
+ * @return string
+ */
+ 
+function buildCommand(string $jobCommand): string
+{
+    return implode("\n", [
+        'rm -f "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/lastBuild"',
+        'ln -s "/media/jenkins/jobs/${JOB_NAME}/builds/${BUILD_NUMBER}" "${JENKINS_HOME}/jobs/${JOB_NAME}/builds/lastBuild"',
+        $jobCommand,
+    ]);
+}
+
+// Apply to all jobs
+$jobs = array_map(function (array $job): array {
+    $job['command'] = buildCommand($job['command']);
+
+    return $job;
+}, $jobs);
+```
+
+The `rm -f` removes any stale symlink without failing if it does not exist. The subsequent `ln -s` unconditionally creates a fresh symlink pointing to the media-mounted build directory. The actual job command runs last and is unaffected by the symlink operations.
+
+---
+
+#### Step 7 — Create a support ticket to enable SMI logs
 
 The OpenTelemetry log processor only enriches log records. For the enriched logs to be ingested and visible in SMI, the SMI log pipeline must be enabled for your environment by the Spryker Cloud team.
 
@@ -644,37 +685,4 @@ Tracing is resource-intensive and can slow down your application. Follow these r
 - Skip unnecessary traces:
   - You can control the probability of generating detailed traces using the `OTEL_TRACE_PROBABILITY` environment variable.  
   - Even if a detailed trace is skipped, a root span will still be created.  
-  - Requests that modify the application state (`POST`, `DELETE`, `PUT`, `PATCH`) are always considered critical and will be fully processed.  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  - Requests that modify the application state (`POST`, `DELETE`, `PUT`, `PATCH`) are always considered critical and will be fully processed.

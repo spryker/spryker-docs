@@ -1,6 +1,6 @@
 ---
 title: Create abstract products
-last_updated: Jul 27, 2021
+last_updated: April 15, 2026
 description: This guide explains how to create abstract products in your Spryker Marketplace based projects.
 template: back-office-user-guide-template
 related:
@@ -48,8 +48,9 @@ The **Create a Product** page opens.
 1. Select one or more **Store relations**.
 2. In **SKU Prefix**, enter an SKU prefix.
 3. In **Name** and **Description**, enter a name and description for all the locales.
-4. Optional: Select **New from** and **New to** dates.
-5. Click **Next >** and follow [Defining prices](#defining-prices).
+4. Optional: In **Merchant**, select the merchant you want to create the product for (for example, when creating a product on behalf of a merchant).
+5. Optional: Select **New from** and **New to** dates.
+6. Click **Next >** and follow [Defining prices](#defining-prices).
   This opens the **Prices & Tax** tab.
 
 ### Reference information: Defining general settings
@@ -62,6 +63,7 @@ The following table describes the attributes you enter and select when defining 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
+| Merchant | The merchant you create the product for. Use this field when you create a product on behalf of a merchant. |
 | New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 

@@ -1,7 +1,7 @@
 ---
 title: Release notes 202602.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: February 28, 2026
+last_updated: Apr 1, 2026
 template: concept-topic-template
 ---
 
@@ -260,7 +260,7 @@ Spryker transforms the community-driven OMS visualizer into a fully validated an
 
 **Documentation**
 - [Original Community Contribution](https://github.com/spryker-community/oms-visualizer)
-- Documentation for the productized version is coming soon.
+- [Oms Visualizer Release](https://api.release.spryker.com/release-group/6358)
 
 ### Messaging and scheduling modernization {% include badge.html type="improvement" %}
 

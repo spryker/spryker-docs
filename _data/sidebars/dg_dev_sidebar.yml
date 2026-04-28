@@ -81,6 +81,11 @@ entries:
             nested:
               - title: Install Search by Image
                 url: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
+          - title: Smart PIM
+            url: /docs/dg/dev/ai/ai-commerce/smart-pim/smart-pim.html
+            nested:
+              - title: Install Smart PIM
+                url: /docs/dg/dev/ai/ai-commerce/smart-pim/install-smart-pim.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

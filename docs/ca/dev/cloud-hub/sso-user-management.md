@@ -9,11 +9,11 @@ The **User management (SSO Users)** panel in [CloudHub](/docs/ca/dev/cloud-hub/c
 
 For more information on what is SSO and what benefits it provides see [SSO Access](/docs/ca/dev/access/sso-access.html).
 
-## What you can do via User Management (SSO) page
+## Capabilities of the User Management (SSO) page
 
-- **Create one user for all services and environments:** when creating a user one can select the available permission levels for all or some of the available applications (RMQ, Jenkins or AWS access) and request VPN access per environment. this provides fine-grained access to multiple environments with one SSO user.
-- **Manage the users to match the changing needs:** users can be deleted, if the access needs to be revoked, the permission levels can be adjusted at any time.
-- **Create and manage users directly without support requests:** you can see the users and their access permissions at the moment and adjust them at any time via CloudHub without the need for contacting the support.
+- **Identity provisioning:** Create SSO users for specific environments to ensure precise access control.
+- **Secure connectivity:** Enable or disable VPN access for individual users to secure communications with protected network resources. SSO users also offer a number of options for securing your access from MFA to passwordless.
+- **User lifecycle management:** Modify existing user configurations or remove user when it is no longer required.
 
 ## Available service permissions 
 
@@ -42,6 +42,6 @@ When a new SSO user is created, credentials and access configuration are deliver
 
 {% info_block infoBox "Security note" %}
 
-Keep all three emails secure. The link for account update expires in 3 hours. If you did not manage to setup the user password within 3 hours, contact support.
+Keep all the emails secure. The link for account update expires in 3 hours. If you did not manage to setup the user password within 3 hours, contact support.
 
 {% endinfo_block %}

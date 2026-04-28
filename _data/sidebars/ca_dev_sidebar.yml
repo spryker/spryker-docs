@@ -18,7 +18,7 @@ entries:
           - title: Connect to services via SSH
             url: /docs/ca/dev/access/connect-to-services-via-ssh.html
           - title: SSO Access
-            url: /docs/ca/dev/access/access-the-aws-management-console.html
+            url: /docs/ca/dev/access/sso-access.html
           - title: SSO Security Options
             url: /docs/ca/dev/access/sso-security-options.html
 

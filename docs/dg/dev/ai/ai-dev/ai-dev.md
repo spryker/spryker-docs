@@ -79,9 +79,8 @@ Ensure that you have a Spryker project with Composer installed.
 3. Register the console commands in your `ConsoleDependencyProvider`:
 
    ```php
-   use SprykerSdk\Zed\AiDev\Communication\Console\GenerateAgentsFileConsole;
+   use SprykerSdk\Zed\AiDev\Communication\Console\AiToolSetupConsole;
    use SprykerSdk\Zed\AiDev\Communication\Console\GeneratePromptsConsole;
-   use SprykerSdk\Zed\AiDev\Communication\Console\GenerateSkillsConsole;
    use SprykerSdk\Zed\AiDev\Communication\Console\McpServerConsole;
 
    protected function getConsoleCommands(Container $container): array
@@ -91,12 +90,8 @@ Ensure that you have a Spryker project with Composer installed.
            $commands[] = new McpServerConsole();
        }
 
-       if (class_exists(GenerateAgentsFileConsole::class)) {
-           $commands[] = new GenerateAgentsFileConsole();
-       }
-
        if (class_exists(GenerateSkillsConsole::class)) {
-           $commands[] = new GenerateSkillsConsole();
+           $commands[] = new AiToolSetupConsole();
        }
 
        if (class_exists(GeneratePromptsConsole::class)) {

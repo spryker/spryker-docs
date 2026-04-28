@@ -15,6 +15,8 @@ entries:
             url: /docs/pbc/all/ai-commerce/latest/backoffice-assistant.html
           - title: Search by Image
             url: /docs/pbc/all/ai-commerce/latest/search-by-image.html
+          - title: Smart PIM
+            url: /docs/pbc/all/ai-commerce/latest/smart-pim.html
 
       - title: Yves
         nested:
@@ -1352,6 +1354,20 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
+
+      - title: Federated Authentication via OAuth2/OIDC
+        url: /docs/pbc/all/oauth/latest/federated-authentication.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install Federated Authentication
+                url: /docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html
+          - title: Storefront account bootstrapping
+            url: /docs/pbc/all/oauth/latest/storefront-account-bootstrapping.html
+          - title: Add an OAuth provider
+            url: /docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html
+          - title: Set up Keycloak for local development
+            url: /docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html
 
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html
@@ -3558,6 +3574,14 @@ entries:
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/8select.html
               - title: trbo
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
+
+      - title: PunchOut Gateway
+        url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
+        nested:
+          - title: Integrate PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
+          - title: Project configuration for PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
 
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html

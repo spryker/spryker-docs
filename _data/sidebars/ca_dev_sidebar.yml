@@ -21,8 +21,8 @@ entries:
             url: /docs/ca/dev/access/sso-access.html
           - title: SSO Security Options
             url: /docs/ca/dev/access/sso-security-options.html
-          - title: Connect to AWS CLI with SAML2AWS
-            url: /docs/ca/dev/access/connect-to-aws-cli-with-saml2aws.html
+          - title: Connecting to AWS CLI with an SSO user
+            url: /docs/ca/dev/access/connecting-to-aws-cli-with-an-sso-user.html
 
       - title: CloudHub
         url: /docs/ca/dev/cloud-hub/cloud-hub.html

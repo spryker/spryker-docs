@@ -1,5 +1,5 @@
 ---
-title: Connect to AWS CLI with SAML2AWS
+title: Connecting to AWS CLI with an SSO user
 description: Learn how to configure and use SAML2AWS to authenticate and access the AWS CLI using your SSO credentials.
 template: howto-guide-template
 last_updated: Apr 28, 2026
@@ -14,7 +14,7 @@ SAML2AWS is a command-line tool that lets you authenticate against an identity p
 - [SAML2AWS installed](https://github.com/Versent/saml2aws#install) on your machine.
 - [AWS CLI installed](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) on your machine.
 - An SSO user. See [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html).
-- Your SSO login page URL.
+- Your SSO login page URL. To get it, see [SSO Access](/docs/ca/dev/access/sso-access.html).
 
 ## Step 1: Configure SAML2AWS
 

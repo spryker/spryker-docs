@@ -15,6 +15,11 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 Spryker has made the Back Office Configuration Framework generally available, delivering key enterprise‑readiness improvements. The release enhances governance, discoverability, and usability for managing business‑relevant configuration directly in the Back Office. Configuration changes are now easier to understand, control, and audit.
 
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/backoffice_framework||"
+%}
+
 **Key capabilities:**
 - Audit logging for configuration changes
 - Improved search and discoverability of configuration options
@@ -35,6 +40,12 @@ Spryker has made the Back Office Configuration Framework generally available, de
 ### Basic Shop Theming {% include badge.html type="feature" %}
 
 Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/theming_1||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/theming_2||::"
+%}
 
 **Key capabilities:**
 - Supports theme management with global and store-specific scope.
@@ -62,6 +73,8 @@ You can now control where product attributes are visible without project-specifi
 - Internal attributes can be managed separately to support operational or process-related needs without ever being exposed to buyers.
 
 **Documentation:**
+- [Product Attribute Display Types](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview)
+- [Install Product Attribute Visibility Feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature)
 
 ### New Spryker Design System Storefront (1) {% include badge.html type="feature" %}
 
@@ -124,6 +137,8 @@ We introduced an Early Access version of budgets and cost centers to support pol
 - Provides an early demoable foundation for customer and partner conversations.
 
 **Documentation:**
+- [Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview)
+- [Install Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature)
 
 ### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
 

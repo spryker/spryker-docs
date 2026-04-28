@@ -11,24 +11,6 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## B2B Business-Ready Commerce Experiences
 
-### Login UX improvements {% include badge.html type="improvement" %}
-
-We improved the login experience across the Back Office, Storefront, and Marketplace to help users resume work faster and with less confusion. Users now land on a meaningful Back Office dashboard after login, and after session timeout they are returned to their previous page or workflow where supported.
-
-**Key capabilities:**
-- Redirects Back Office users to the dashboard instead of a blank technical page after login.
-- Adds action-oriented quick actions to the Back Office dashboard for common tasks such as viewing orders, adding products, opening the catalog, and checking returns.
-- Restores the last visited page after session timeout across the Back Office, Storefront, and Marketplace.
-- Reopens create and edit pages after re-login, while unsaved data is not preserved.
-
-**Business benefits:**
-- Reduces onboarding friction for new users.
-- Helps operational users continue workflows faster after session expiration.
-- Improves usability and perceived product maturity across core daily journeys.
-- Makes demos and first-touch product experiences more intuitive.
-
-**Documentation:**
-
 ### Back Office Configuration Framework is now Generally Available {% include badge.html type="feature" %}
 
 Spryker has made the Back Office Configuration Framework generally available, delivering key enterprise‑readiness improvements. The release enhances governance, discoverability, and usability for managing business‑relevant configuration directly in the Back Office. Configuration changes are now easier to understand, control, and audit.
@@ -41,31 +23,61 @@ Spryker has made the Back Office Configuration Framework generally available, de
 - Clear visibility into conflicts between code-based and Back Office configuration
 
 **Business benefits:**
-- Increases confidence and accountability when adjusting configuration
-- Reduces misconfiguration risk and operator effort through better clarity and validation
-- Supports broader enterprise adoption with stronger governance and operability
+- Reduces time-to-change by enabling operations teams to adjust configuration without developer involvement, backed by a full audit trail.
+- Minimizes the risk of costly production disruptions through better validation and conflict visibility before changes go live.
+- Supports broader enterprise adoption with stronger governance and operability.
 
 **Documentation:**
 - [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html)
 - [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
 - [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
 
-### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
+### Basic Shop Theming {% include badge.html type="feature" %}
 
-We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
+Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
 
 **Key capabilities:**
-- Lets companies create and manage cost centers and assign buyers to them.
-- Supports budget creation with configurable enforcement rules such as block, warn, or require approval.
-- Adds cost center selection and budget validation during checkout.
-- Integrates budget-triggered approvals with Spryker's existing Approval Process.
-- Tracks budget consumption and restoration as orders progress.
+- Supports theme management with global and store-specific scope.
+- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
+- Provides configuration for core brand colors, button styles and text colors.
+- Uses a standardized Back Office configuration experience for theme administration.
 
 **Business benefits:**
-- Improves financial control and purchasing compliance.
-- Reduces overspending risk with enforceable budget rules.
-- Aligns procurement workflows with departmental or project-based spending structures.
-- Provides an early demoable foundation for customer and partner conversations.
+- Speeds up demo preparation, POCs, and early customer activation through instant, self-service branding configuration.
+- Shop operators can now apply and adjust their brand CI across all Spryker touchpoints at any time directly in the Back Office, without developer involvement or redeployment.
+
+**Documentation:**
+
+### Product attribute display types {% include badge.html type="feature" %}
+
+You can now control where product attributes are visible without project-specific customization. This helps keep internal operational data hidden while displaying only relevant information to buyers.
+
+**Key capabilities:**
+- Adds visibility types for product attributes.
+- Supports internal-only attributes as well as attributes shown on PDP, PLP, and cart-related experiences.
+- Provides native configuration for attribute visibility management.
+
+**Business benefits:**
+- Shop operators can now control which attributes are displayed where across the storefront, making it easier to surface the right product information at the right place to support buyer decision-making and product discovery.
+- Internal attributes can be managed separately to support operational or process-related needs without ever being exposed to buyers.
+
+**Documentation:**
+
+### New Spryker Design System Storefront (1) {% include badge.html type="feature" %}
+
+We introduced the first phase of a unified storefront design system to establish a scalable UI foundation. This release focuses on token-based design foundations and reusable composite components for more consistent storefront experiences.
+
+**Key capabilities:**
+- Defines the design system foundation with shared tokens and naming conventions.
+- Introduces token-driven implementation patterns for new storefront components.
+- Adds composite component patterns built from core UI elements.
+- Covers common structures such as cards, lists, tabs, menus, breadcrumbs, dialogs, tables, search, and filters.
+
+**Business benefits:**
+- Improves consistency across storefront experiences.
+- Reduces duplicate design and frontend implementation effort.
+- Accelerates feature delivery with reusable UI patterns.
+- Creates a stronger foundation for future storefront evolution.
 
 **Documentation:**
 
@@ -94,75 +106,22 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 - [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
 - [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
 
-### Basic Shop Theming {% include badge.html type="feature" %}
+### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
 
-Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
-
-**Key capabilities:**
-- Supports theme management with global and store-specific scope.
-- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
-- Provides configuration for core branding colors and button styles.
-- Uses a standardized Back Office configuration experience for theme administration.
-
-**Business benefits:**
-- Reduces dependency on developers for basic branding changes.
-- Speeds up demo preparation, POCs, and early customer activation.
-- Improves time to first transaction through self-service configuration.
-- Strengthens perception of Spryker as an out-of-the-box ready solution.
-
-**Documentation:**
-
-### Product attribute display types {% include badge.html type="feature" %}
-
-You can now control where product attributes are visible without project-specific customization. This helps keep internal operational data hidden while displaying only relevant information to buyers.
+We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
 
 **Key capabilities:**
-- Adds visibility types for product attributes.
-- Supports internal-only attributes as well as attributes shown on PDP, PLP, and cart-related experiences.
-- Provides native configuration for attribute visibility management.
+- Lets companies create and manage cost centers and assign buyers to them.
+- Supports budget creation with configurable enforcement rules such as block, warn, or require approval.
+- Adds cost center selection and budget validation during checkout.
+- Integrates budget-triggered approvals with Spryker's existing Approval Process.
+- Tracks budget consumption and restoration as orders progress.
 
 **Business benefits:**
-- Reduces repeated custom development across projects.
-- Keeps storefront product pages cleaner and more relevant for buyers.
-- Supports operational and AI-related attributes without exposing them publicly.
-- Improves time-to-market for B2B projects with standard attribute visibility needs.
-
-**Documentation:**
-
-### Search statistics and Google Analytics {% include badge.html type="feature" %}
-
-Spryker now provides native search statistics for business users working with ElasticSearch-based projects. Teams can analyze search behavior directly in the Back Office and use the data to optimize discoverability.
-
-**Key capabilities:**
-- Tracks and displays frequent search terms.
-- Highlights zero-result searches to uncover catalog and relevance gaps.
-- Offers time-based filtering for analysis.
-- Supports detailed list views and CSV export.
-- Integrates event tracking via Google Analytics 4 for search insights.
-
-**Business benefits:**
-- Enables data-driven search optimization and synonym management.
-- Reduces duplicate custom analytics implementations.
-- Helps identify missed conversion opportunities caused by zero-result searches.
-- Gives catalog and merchandising teams actionable visibility into buyer behavior.
-
-**Documentation:**
-
-### New Spryker Design System Storefront (1) {% include badge.html type="feature" %}
-
-We introduced the first phase of a unified storefront design system to establish a scalable UI foundation. This release focuses on token-based design foundations and reusable composite components for more consistent storefront experiences.
-
-**Key capabilities:**
-- Defines the design system foundation with shared tokens and naming conventions.
-- Introduces token-driven implementation patterns for new storefront components.
-- Adds composite component patterns built from core UI elements.
-- Covers common structures such as cards, lists, tabs, menus, breadcrumbs, dialogs, tables, search, and filters.
-
-**Business benefits:**
-- Improves consistency across storefront experiences.
-- Reduces duplicate design and frontend implementation effort.
-- Accelerates feature delivery with reusable UI patterns.
-- Creates a stronger foundation for future storefront evolution.
+- Improves financial control and purchasing compliance.
+- Reduces overspending risk with enforceable budget rules.
+- Aligns procurement workflows with departmental or project-based spending structures.
+- Provides an early demoable foundation for customer and partner conversations.
 
 **Documentation:**
 
@@ -196,6 +155,24 @@ We delivered the first phase of the Back Office theme modernization to improve c
 - Makes the Back Office more credible and demo-ready.
 - Reduces the need for one-off CSS customizations.
 - Establishes a better base for future product evolution.
+
+**Documentation:**
+
+### Login UX improvements {% include badge.html type="improvement" %}
+
+We improved the login experience across the Back Office, Storefront, and Marketplace to help users resume work faster and with less confusion. Users now land on a meaningful Back Office dashboard after login, and after session timeout they are returned to their previous page or workflow where supported.
+
+**Key capabilities:**
+- Redirects Back Office users to the dashboard instead of a blank technical page after login.
+- Adds action-oriented quick actions to the Back Office dashboard for common tasks such as viewing orders, adding products, opening the catalog, and checking returns.
+- Restores the last visited page after session timeout across the Back Office, Storefront, and Marketplace.
+- Reopens create and edit pages after re-login, while unsaved data is not preserved.
+
+**Business benefits:**
+- Reduces onboarding friction for new users.
+- Helps operational users continue workflows faster after session expiration.
+- Improves usability and perceived product maturity across core daily journeys.
+- Makes demos and first-touch product experiences more intuitive.
 
 **Documentation:**
 
@@ -264,7 +241,7 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 ### Smart Visual Product Search & Ordering {% include badge.html type="improvement,early-access" %}
 
-Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it's a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
+Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it’s a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
 
 **Key capabilities**
 - Helps buyers identify relevant or visually similar products by uploading or capturing an image
@@ -512,6 +489,7 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 
 **Key capabilities:**
 - Upgrade Bastion hosts to a current LTS operating system
+- Separate workload from the host through containerization
 - Enforce SSO and MFA for human access, deprecate direct SSH access for human users
 
 **Business benefits:**
@@ -524,7 +502,7 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable.
 
 **Key capabilities:**
-- RabbitMQ 4.2 is now supported in Docker SDK for local development environments.
+- RabbitMQ 4.2 is now supported.
 - Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
 
 **Business benefits:**

@@ -264,7 +264,7 @@ https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-
 
 ### Smart Visual Product Search & Ordering {% include badge.html type="improvement,early-access" %}
 
-Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it’s a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
+Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it's a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
 
 **Key capabilities**
 - Helps buyers identify relevant or visually similar products by uploading or capturing an image

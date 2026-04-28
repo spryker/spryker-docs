@@ -512,7 +512,6 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 
 **Key capabilities:**
 - Upgrade Bastion hosts to a current LTS operating system
-- Separate workload from the host through containerization
 - Enforce SSO and MFA for human access, deprecate direct SSH access for human users
 
 **Business benefits:**

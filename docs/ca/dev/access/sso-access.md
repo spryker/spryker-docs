@@ -2,7 +2,7 @@
 title: SSO Access
 description: Single sign on access to all Spryker Cloud services with a single SSO user
 template: howto-guide-template
-last_updated: Apr 23, 2026
+last_updated: Apr 28, 2026
 ---
 
 ## What is SSO 
@@ -33,6 +33,8 @@ You will need an SSO user, [User Management SSO](/docs/ca/dev/cloud-hub/sso-user
 - Click on **AWS Console** service in CloudHub which will lead to the SSO login page
 - Log in using your SSO user credentials
 - After successful authentication, you will be redirected to the AWS Console with access to your env services
+
+To access AWS services via the AWS CLI, use SAML2AWS with your SSO credentials. For instructions, see [Connect to AWS CLI with SAML2AWS](/docs/ca/dev/access/connect-to-aws-cli-with-saml2aws.html).
 
 ### RabbitMQ access 
 
@@ -91,3 +93,4 @@ Such users **cannot** be created or managed via CloudHub User Management (SSO) p
 
 - [User Management SSO](/docs/ca/dev/cloud-hub/sso-user-management.html)
 - [SSO Security Options](/docs/ca/dev/access/sso-security-options.html)
+- [Connect to AWS CLI with SAML2AWS](/docs/ca/dev/access/connect-to-aws-cli-with-saml2aws.html)

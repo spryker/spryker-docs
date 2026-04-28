@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Apr 23, 2026
+last_updated: Apr 27, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template

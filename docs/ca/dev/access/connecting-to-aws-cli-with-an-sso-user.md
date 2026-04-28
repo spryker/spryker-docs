@@ -139,17 +139,12 @@ Chrome on macOS may not work for all users. If you experience issues, use `webki
 
 ## Troubleshooting
 
-**The browser does not open during login.**
-Add `--download-browser-driver` to the login command to let SAML2AWS download the required browser driver automatically.
-
-**Authentication fails or credentials are not saved.**
-Verify that `--browser-type` matches a browser installed on your machine and that the `--url` value is correct.
-
-**The AWS CLI does not recognize the profile.**
-Ensure the `--profile` value in the login command matches the one used during configuration.
-
-**`Error authenticating to IDP.: please install the driver (vx.x.x) and browsers first: %!w(<nil>)`**
-Add `--download-browser-driver` to the login command to let SAML2AWS download the required browser driver automatically.
+| Issue | Solution |
+|---|---|
+| The browser does not open during login. | Add `--download-browser-driver` to the login command to let SAML2AWS download the required browser driver automatically. |
+| Authentication fails or credentials are not saved. | Verify that `--browser-type` matches a browser installed on your machine and that the `--url` value is correct. |
+| The AWS CLI does not recognize the profile. | Ensure the `--profile` value in the login command matches the one used during configuration. |
+| `Error authenticating to IDP.: please install the driver (vx.x.x) and browsers first: %!w(<nil>)` | Add `--download-browser-driver` to the login command to let SAML2AWS download the required browser driver automatically. |
 
 ## Next steps
 

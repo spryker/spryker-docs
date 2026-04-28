@@ -525,7 +525,7 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable.
 
 **Key capabilities:**
-- RabbitMQ 4.2 is now supported.
+- RabbitMQ 4.2 is now supported in Docker SDK for local development environments.
 - Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
 
 **Business benefits:**

@@ -1,9 +1,11 @@
 ---
-title: Third-party integrations
-description: Explore our comprehensive catalogue of third-party integrations, showcasing diverse methods and solutions tailored to your needs.
-last_updated: July 9, 2025
+title: Integrations Catalog
+description: Explore our comprehensive catalogue of integrations, showcasing diverse methods and solutions tailored to your needs.
+last_updated: Apr 28, 2026
 template: default
 layout: custom_new
+redirect_from:
+  - /docs/integrations/third-party-integrations.html
 ---
 
 {% raw %}

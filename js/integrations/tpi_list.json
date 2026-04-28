@@ -730,5 +730,19 @@
     "Eco_Doc": "",
     "Comm_Doc": "https://github.com/valantic-CEC-Deutschland-GmbH/sentry",
     "status": "active"
+  },
+  {
+    "Partner": "PunchOut Gateway",
+    "Description": "The PunchOut Gateway module provides a basic implementation of OCI and cXML PunchOut flows for Spryker shops.",
+    "shortDescription": "Enables connection to eProcurement system.",
+    "Logo": "/images/integrations/cat_logos/Punchout_icon.png",
+    "Author": "Spryker",
+    "category": "Procurement",
+    "cat_icon": "/images/integrations/cat_logos/Punchout_icon.png",
+    "method": ["Early Access", "Eco"],
+    "ACP_Doc": "",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/punchout-gateway/punchout-gateway",
+    "Comm_Doc": "",
+    "status": "active"
   }
 ]

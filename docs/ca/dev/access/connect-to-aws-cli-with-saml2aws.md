@@ -18,7 +18,7 @@ SAML2AWS is a command-line tool that lets you authenticate against an identity p
 
 ## Step 1: Configure SAML2AWS
 
-Run the following command to configure SAML2AWS. Replace the placeholders with your actual values:
+To configure SAML2AWS, replace the placeholders with your actual values and execute the following:
 
 ```bash
 saml2aws configure \

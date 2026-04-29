@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Apr 22, 2026
+last_updated: Apr 29, 2026
 template: concept-topic-template
 ---
 
@@ -11,59 +11,57 @@ For information about installing Spryker, see [Getting started guide](/docs/dg/d
 
 ## B2B Business-Ready Commerce Experiences
 
-### Login UX improvements {% include badge.html type="improvement" %}
+### Back Office Configuration Framework is now Generally Available {% include badge.html type="feature" %}
 
-We improved the login experience across the Back Office, Storefront, and Marketplace to help users resume work faster and with less confusion. Users now land on a meaningful Back Office dashboard after login, and after session timeout they are returned to their previous page or workflow where supported.
+Spryker has made the Back Office Configuration Framework generally available, delivering key enterprise‑readiness improvements. The release enhances governance, discoverability, and usability for managing business‑relevant configuration directly in the Back Office. Configuration changes are now easier to understand, control, and audit.
 
-**Key capabilities:**
-- Redirects Back Office users to the dashboard instead of a blank technical page after login.
-- Adds action-oriented quick actions to the Back Office dashboard for common tasks such as viewing orders, adding products, opening the catalog, and checking returns.
-- Restores the last visited page after session timeout across the Back Office, Storefront, and Marketplace.
-- Reopens create and edit pages after re-login, while unsaved data is not preserved.
-
-**Business benefits:**
-- Reduces onboarding friction for new users.
-- Helps operational users continue workflows faster after session expiration.
-- Improves usability and perceived product maturity across core daily journeys.
-- Makes demos and first-touch product experiences more intuitive.
-
-**Documentation:**
-
-### Back Office support for merchant product ownership
-
-Marketplace operators can now manage merchant-product ownership directly in the Back Office. This closes an important operational gap for marketplace business models where product management is handled centrally or outside the Merchant Portal.
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/backoffice_framework.png||"
+%}
 
 **Key capabilities:**
-- Supports assigning and changing the merchant linked to a product in the Back Office.
-- Adds visibility of merchant ownership in product management views.
-- Enables merchant-related product maintenance directly within PIM workflows.
+- Audit logging for configuration changes
+- Improved search and discoverability of configuration options
+- UX enhancements for a more reliable configuration experience
+- CLI-based import support for faster setup and operational workflows
+- Clear visibility into conflicts between code-based and Back Office configuration
 
 **Business benefits:**
-- Increases operational flexibility for marketplace operators.
-- Improves transparency and auditability of merchant-product assignments.
-- Reduces the need for custom implementations and workaround processes.
-- Supports a broader set of marketplace operating models.
+- Reduces time-to-change by enabling operations teams to adjust configuration without developer involvement, backed by a full audit trail.
+- Minimizes the risk of costly production disruptions through better validation and conflict visibility before changes go live.
+- Supports broader enterprise adoption with stronger governance and operability.
 
 **Documentation:**
+- [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html)
+- [Developer Guide Configuration Management](/docs/dg/dev/backend-development/configuration-management)
+- [Install the Back Office Configuration Framework feature](/docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html)
 
-### Add to Cart from image {% include badge.html type="early-access" %} {% include badge.html type="improvement" %}
+### Basic Shop Theming {% include badge.html type="feature" %}
 
-Buyers can turn image-based product lists into cart-ready entries with less manual effort. This capability has been packaged and integrated into the master demo to better support realistic B2B ordering scenarios.
+Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/theming_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/theming_2.png||"
+%}
 
 **Key capabilities:**
-- Extracts product names or SKUs and quantities from uploaded images.
-- Prefills the existing quick order form with recognized items.
-- Uses Spryker AI Foundation for AI-based processing.
+- Supports theme management with global and store-specific scope.
+- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
+- Provides configuration for core brand colors, button styles and text colors.
+- Uses a standardized Back Office configuration experience for theme administration.
 
 **Business benefits:**
-- Speeds up bulk and repeat ordering workflows.
-- Reduces manual entry effort and ordering errors.
-- Reflects real-world B2B buying behavior such as ordering from screenshots or product photos.
-- Improves demoability of AI-assisted procurement use cases.
+- Speeds up demo preparation, POCs, and early customer activation through instant, self-service branding configuration.
+- Shop operators can now apply and adjust their brand CI across all Spryker touchpoints at any time directly in the Back Office, without developer involvement or redeployment.
 
 **Documentation:**
+- [Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html)
+- [Installation Guide](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html)
 
-### Budget & Cost Centers {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
+### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
 
 We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
 
@@ -81,45 +79,33 @@ We introduced an Early Access version of budgets and cost centers to support pol
 - Provides an early demoable foundation for customer and partner conversations.
 
 **Documentation:**
+- [Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview)
+- [Install Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature)
 
-### Basic Shop Theming {% include badge.html type="feature" %}
+### Back Office Product Import & Export {% include badge.html type="feature,early-access" %}
 
-Business users can now manage core branding settings directly in the Back Office without code changes or deployments. This provides a standardized way to apply basic theming across Storefront, the Back Office, and Merchant Portal.
+Spryker now offers product import and export via the Back Office, reducing reliance on developer‑driven CLI tooling. Business users can prepare and update catalogs faster during onboarding, launches, and routine maintenance. This improves operational speed and gives teams more control over their product data processes.
 
-**Key capabilities:**
-- Supports theme management with global and store-specific scope.
-- Lets users upload and manage logos for Storefront, the Back Office, and Merchant Portal.
-- Provides configuration for core branding colors and button styles.
-- Uses a standardized Back Office configuration experience for theme administration.
-
-**Business benefits:**
-- Reduces dependency on developers for basic branding changes.
-- Speeds up demo preparation, POCs, and early customer activation.
-- Improves time to first transaction through self-service configuration.
-- Strengthens perception of Spryker as an out-of-the-box ready solution.
-
-**Documentation:**
-
-### Back Office product import and export {% include badge.html type="early-access" %} {% include badge.html type="feature" %}
-
-We introduced an Early Access Back Office experience for product import and export to reduce dependency on developer-driven CLI tooling. This helps business users prepare catalogs faster for demos, launches, and routine updates.
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_2.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_3.png||"
+%}
 
 **Key capabilities:**
-- Enables product-related import and export from the Back Office UI.
-- Supports CSV-based jobs for creating or updating buyable product data.
-- Processes imports asynchronously in batches for larger files.
-- Introduces reusable job and run concepts for repeatable import and export operations.
-- Focuses on business-user-friendly file handling and actionable validation feedback.
+- Import and export product data directly from the Back Office
+- Single‑file product import, replacing multiple CLI‑required files
+- CSV‑based jobs with reusable job/run concepts and clear validation feedback
 
 **Business benefits:**
-- Removes a major bottleneck for catalog onboarding and updates.
-- Reduces preparation effort for demos and staging-to-production catalog migration.
-- Enables more self-service error resolution for business users.
-- Improves operational efficiency for merchants, partners, and internal teams.
+- Significantly simplifies adding products to the catalog, replacing multi‑file CLI imports with a single, business‑friendly file
+- Accelerates catalog preparation for new launches and environment migrations
+- Empowers business users with self‑service error resolution, minimizing developer involvement
 
 **Documentation:**
-
-## Commerce Essentials
+- [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
+- [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
 
 ### Product attribute display types {% include badge.html type="feature" %}
 
@@ -131,64 +117,22 @@ You can now control where product attributes are visible without project-specifi
 - Provides native configuration for attribute visibility management.
 
 **Business benefits:**
-- Reduces repeated custom development across projects.
-- Keeps storefront product pages cleaner and more relevant for buyers.
-- Supports operational and AI-related attributes without exposing them publicly.
-- Improves time-to-market for B2B projects with standard attribute visibility needs.
+- Shop operators can now control which attributes are displayed where across the storefront, making it easier to surface the right product information at the right place to support buyer decision-making and product discovery.
+- Internal attributes can be managed separately to support operational or process-related needs without ever being exposed to buyers.
 
 **Documentation:**
+- [Product Attribute Display Types](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview)
+- [Install Product Attribute Visibility Feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature)
 
-### Search statistics and Google Analytics {% include badge.html type="feature" %}
+### Spryker Storefront Design System Foundation {% include badge.html type="feature" %}
 
-Spryker now provides native search statistics for business users working with ElasticSearch-based projects. Teams can analyze search behavior directly in the Back Office and use the data to optimize discoverability.
-
-**Key capabilities:**
-- Tracks and displays frequent search terms.
-- Highlights zero-result searches to uncover catalog and relevance gaps.
-- Offers time-based filtering for analysis.
-- Supports detailed list views and CSV export.
-- Integrates event tracking via Google Analytics 4 for search insights.
-
-**Business benefits:**
-- Enables data-driven search optimization and synonym management.
-- Reduces duplicate custom analytics implementations.
-- Helps identify missed conversion opportunities caused by zero-result searches.
-- Gives catalog and merchandising teams actionable visibility into buyer behavior.
-
-**Documentation:**
-
-## Self-Service and Demo Experience
-
-### Self-Service Portal demo data improvements {% include badge.html type="improvement" %}
-
-We updated demo data for the B2B Marketplace demo shop to better reflect realistic Self-Service Portal use cases. The new setup improves the relevance and clarity of demos for industrial and service-driven scenarios.
-
-**Key capabilities:**
-- Adds more industry-aligned assets with matching services and spare parts.
-- Expands inquiry scenarios for general and asset-related use cases.
-- Populates services and files sections to avoid empty portal states.
-- Improves supporting models and CMS-related demo content.
-- Removes incorrect original prices for industrial goods products where no actual discount exists.
-
-**Business benefits:**
-- Makes Self-Service Portal demos more realistic and easier to understand.
-- Improves relevance for target industries and ICP scenarios.
-- Reduces demo friction for partners, internal teams, and prospects.
-- Increases perceived value and clarity of self-service capabilities.
-
-**Documentation:**
-
-## User Experience Foundation
-
-### New Spryker Design System Storefront (1) {% include badge.html type="feature" %}
-
-We introduced the first phase of a unified storefront design system to establish a scalable UI foundation. This release focuses on token-based design foundations and reusable composite components for more consistent storefront experiences.
+Building storefronts without a common foundation meant repeated work, slower delivery, and experiences that looked and felt different every time. This release introduces a unified design system with shared foundations and reusable components, so teams work from common building blocks. The result is faster implementation, easier adoption, and the ability to scale storefront delivery without scaling complexity.
 
 **Key capabilities:**
 - Defines the design system foundation with shared tokens and naming conventions.
 - Introduces token-driven implementation patterns for new storefront components.
 - Adds composite component patterns built from core UI elements.
-- Covers common structures such as cards, lists, tabs, menus, breadcrumbs, dialogs, tables, search, and filters.
+- Covers common structures such as cards, buttons, input fields, headers, search and more.
 
 **Business benefits:**
 - Improves consistency across storefront experiences.
@@ -197,10 +141,75 @@ We introduced the first phase of a unified storefront design system to establish
 - Creates a stronger foundation for future storefront evolution.
 
 **Documentation:**
+- [How to use design system tokens](/docs/dg/dev/frontend-development/latest/design-tokens#how-it-works)
 
-### Back Office design theme update phase 1 {% include badge.html type="improvement" %}
+### Back Office Product Import & Export {% include badge.html type="feature,early-access" %}
 
-We delivered the first phase of the Back Office theme modernization to improve clarity, consistency, and responsiveness. This update creates a more usable and scalable visual foundation without changing the overall information architecture.
+Spryker now offers product import and export via the Back Office, reducing reliance on developer‑driven CLI tooling. Business users can prepare and update catalogs faster during onboarding, launches, and routine maintenance. This improves operational speed and gives teams more control over their product data processes.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_2.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_3.png||"
+%}
+
+**Key capabilities:**
+- Import and export product data directly from the Back Office
+- Single‑file product import, replacing multiple CLI‑required files
+- CSV‑based jobs with reusable job/run concepts and clear validation feedback
+
+**Business benefits:**
+- Significantly simplifies adding products to the catalog, replacing multi‑file CLI imports with a single, business‑friendly file
+- Accelerates catalog preparation for new launches and environment migrations
+- Empowers business users with self‑service error resolution, minimizing developer involvement
+
+**Documentation:**
+- [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
+- [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
+
+### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
+
+We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
+
+**Key capabilities:**
+- Lets companies create and manage cost centers and assign buyers to them.
+- Supports budget creation with configurable enforcement rules such as block, warn, or require approval.
+- Adds cost center selection and budget validation during checkout.
+- Integrates budget-triggered approvals with Spryker's existing Approval Process.
+- Tracks budget consumption and restoration as orders progress.
+
+**Business benefits:**
+- Improves financial control and purchasing compliance.
+- Reduces overspending risk with enforceable budget rules.
+- Aligns procurement workflows with departmental or project-based spending structures.
+- Provides an early demoable foundation for customer and partner conversations.
+
+**Documentation:**
+- [Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview)
+- [Install Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature)
+
+### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
+
+Marketplace operators can now manage merchant ownership of products directly in the Back Office, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.
+
+**Key capabilities:**
+- Assign or update merchant ownership for any product directly in Back Office workflows.
+- See merchant ownership instantly within product management views.
+- Maintain merchant‑related product data as part of your standard PIM processes.
+
+**Business benefits:**
+- Strengthens support for centrally managed catalogs and hybrid marketplace models, giving operators more flexibility in how they run their marketplace.
+- Improves transparency and control, making ownership clear, consistent, and auditable.
+- Reduces reliance on workarounds and custom tooling, lowering operational overhead.
+- Supports more flexible marketplace operations, enabling teams to scale product management with confidence.
+
+**Documentation:**
+- [Marketplace Create Abstract Products](//docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products#defining-general-settings)
+
+### Back Office Frontend Modernisation {% include badge.html type="improvement" %}
+
+We delivered the first phase of the Back Office theme modernisation to improve clarity, consistency, and responsiveness. This update creates a more usable and scalable visual foundation without changing the overall information architecture.
 
 **Key capabilities:**
 - Improves visual hierarchy and component consistency across the Back Office.
@@ -214,9 +223,148 @@ We delivered the first phase of the Back Office theme modernization to improve c
 - Reduces the need for one-off CSS customizations.
 - Establishes a better base for future product evolution.
 
-**Documentation:**
+### Streamlined Login and Session Recovery Experience {% include badge.html type="improvement" %}
+
+Logging in should feel like picking up where you left off, not starting over. With this release, users across the Back Office, Storefront, and Marketplace are presented with a meaningful dashboard featuring quick actions for common tasks, including viewing orders, adding products, and checking returns. After a session timeout, users are redirected back to the page they were on so they do not lose track of what they were doing.
+
+**Key capabilities:**
+- Redirects Back Office users to the dashboard instead of a blank technical page after login.
+- Adds action-oriented quick actions to the Back Office dashboard for common tasks such as viewing orders, adding products, opening the catalog, and checking returns.
+- Restores the last visited page after session timeout across the Back Office, Storefront, and Marketplace.
+- Reopens create and edit pages after re-login, while unsaved data is not preserved.
+
+**Business benefits:**
+- Reduces onboarding friction for new users.
+- Helps operational users continue workflows faster after session expiration.
+- Improves usability and perceived product maturity across core daily journeys.
+- Makes demos and first-touch product experiences more intuitive.
 
 ## Connected, and AI-Enabled Platform
+
+### Spryker Now Ships with AI Foundation and Smart Product Enrichment {% include badge.html type="improvement,early-access" %}
+
+Spryker now includes the AI Foundation and Smart PIM out of the box, allowing merchants to adopt AI‑assisted catalog enrichment with minimal setup. Product content can be improved, translated, and enriched directly in the Back Office using AI, reducing manual work and improving content quality. Customers only need to connect their preferred AI provider to start benefiting from AI‑powered product enhancements, with governance automatically handled through AI Foundation.
+
+**Key capabilities**
+- Enhances and translates product names and descriptions using AI
+- Generates alt‑text for product images and suggests suitable product categories
+- Delivered by default in Spryker, requiring only AI provider configuration
+
+**Business benefits**
+- Reduces manual effort in creating and refining product content across the catalog
+- Makes AI adoption easier by providing a pre‑configured integration layer with built‑in governance and provider flexibility
+- Speeds up catalog enrichment and localization for merchants operating across multiple markets
+
+**Documentation**
+- [AI Foundation Overview](/docs/dg/dev/ai/ai-foundation/ai-foundation-module)
+- [Smart PIM](/docs/pbc/all/ai-commerce/latest/smart-pim)
+
+### Smart Back Office Assistant {% include badge.html type="feature,early-access" %}
+
+Spryker introduces the Smart Back Office Assistant, enabling operators to perform Back Office tasks through natural language instead of relying solely on manual navigation. Operators can get guidance on where to find features, ask operational and order‑related questions, and create discounts directly through chat. This makes Back Office work faster, more intuitive, and easier for all user types.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_assistant.png||"
+%}
+
+**Key capabilities**
+- Provides navigation and operational guidance to help users quickly find functions and understand Back Office workflows
+- Answers order‑related questions, including order status and operational details
+- Assists to complete forms, for example, by enabling discount creation directly through chat.
+
+**Business benefits**
+- Reduces time spent searching for pages and completing repetitive tasks
+- Improves usability for operators who are less familiar with Back Office structure or workflows
+- Helps prevent errors by guiding operators through correctly structured inputs and actions
+
+**Documentation**
+- [Back Office Assistant](/docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html)
+- [Install Back Office Assistant](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html)
+
+### AI Foundation Visibility & Governance Enhancements {% include badge.html type="feature,early-access" %}
+
+Spryker introduces comprehensive visibility into AI activity through new Back Office views for both AI interactions and AI workflow execution. Teams can now inspect prompts, responses, metadata, and workflow states in a single place, improving transparency and control over AI‑driven processes. These enhancements strengthen governance, streamline troubleshooting, and make AI operations easier to understand and monitor.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_ai_auditlogs_2.png||"
+%}
+
+**Key capabilities:**
+- Back Office audit logs for reviewing prompts, responses, metadata, and model details
+- Workflow execution views with list, detail, state history, and visualized transitions
+- Filtering, sorting, and inline inspection tools for efficient debugging and analysis
+
+**Business benefits:**
+- Improves governance and traceability across all AI‑powered processes
+- Simplifies troubleshooting by making AI interactions and workflow states fully transparent
+- Gives operators greater control over AI‑driven actions with clear visibility into execution paths
+
+**Documentation:**
+- [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html)
+- [AI Foundation Workflows](/docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine)
+
+### Smart Visual Product Search & Ordering {% include badge.html type="improvement,early-access" %}
+
+Spryker now enables buyers to identify products and start orders simply by uploading or capturing an image. Whether it's a technical part, a field-site photo, or a handwritten note, the system can recognize products and quantities and help buyers move directly from identification to ordering. The entire capability now runs on the Spryker AI Foundation, offering provider flexibility, improved reliability, and easier long‑term adoption.
+
+**Key capabilities**
+- Helps buyers identify relevant or visually similar products by uploading or capturing an image
+- Prefills the quick order form with products and quantities extracted from photos, screenshots, or handwritten notes
+- Uses Spryker AI Foundation for multi‑provider support (OpenAI, Azure, Bedrock) and centralized AI governance
+
+**Business benefits**
+- Speeds up product identification and ordering, especially for technical and spare‑parts workflows
+- Reduces manual entry and ordering errors by interpreting product information directly from images
+- Supports mobile and field‑based buying scenarios where buyers capture photos instead of searching by name or SKU
+
+**Documentation**
+- [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image)
+- [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart)
+- [Install Search by Image](/docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image)
+- [Install Visual Add to Cart](/docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart)
+
+### AI Dev Tooling for Coding Agents {% include badge.html type="feature,early-access" %}
+
+Spryker now provides ready-to-use new AI Dev tooling to help development teams work more effectively with coding agents in Spryker projects. The update provides ready-to-use agent instruction files and reusable Spryker-specific skill examples.
+
+**Key capabilities:**
+- Generates a project‑ready agent configuration file (AGENTS.md)
+- Generates a set of rules for AI agent based on Spryker coding conventions and architectural guidelines
+- Provides reusable skill examples covering testing, data import, schema conventions, validation, and frontend development
+- Includes a setup command that generates agent configuration file, rules and skills for supported coding agents
+
+**Business benefits:**
+- Speeds up onboarding for developers who are new to Spryker by giving AI coding agents the right context from day one
+- Improves code quality and consistency through pre‑written, Spryker‑aligned development rules
+- Helps teams deliver features faster by reducing back‑and‑forth with AI tools and minimizing incorrect code generation
+
+**Documentation:**
+- [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
+
+### API Platform is now Generally Available {% include badge.html type="feature" %}
+
+Spryker made API Platform generally available as the foundation for modern API development and migration. Existing APIs have been migrated to API Platform internally while keeping external contracts backward-compatible. This enables faster API delivery, easier extensibility, and more standardized API development.
+
+![API Platform](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202512/api-platform-2.6-api.png)
+
+**Key capabilities:**
+- Declarative API development using YAML schemas
+- API generation with validation, pagination, serialization, and operation-specific rules
+- Interactive and always up-to-date OpenAPI documentation
+- Backward-compatible migration of existing APIs to API Platform infrastructure
+- Cleaner separation of read and write logic through providers and processors
+
+**Business benefits:**
+- Reduces development effort for new and existing APIs
+- Improves consistency and maintainability of API implementations
+- Accelerates delivery of integrations and future API capabilities
+
+**Documentation:**
+- [API Platform](/docs/dg/dev/architecture/api-platform.html)
+- [Migration Status of out-of-the-box API Endpoints](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html)
 
 ### Algolia configuration in the Back Office {% include badge.html type="improvement" %}
 
@@ -237,22 +385,24 @@ Spryker updated the Algolia integration settings in the Back Office to replace t
 - Replaces legacy ACP-era fields with a clearer configuration experience
 
 **Documentation:**
+- [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia)
 
 ### Mollie PSP Integration {% include badge.html type="feature" %}
 
-Spryker introduced a new Mollie payment service provider integration to support European B2B and B2C commerce scenarios. The integration helps customers implement a region-relevant PSP faster and with less custom development. It is delivered with support from Spryker Solution Partner KPS.
+Spryker introduces a new native integration with Mollie, a leading European payment service provider, enabling seamless B2B and B2C payment experiences across key European markets. The integration allows merchants to quickly enable a wide range of local and international payment methods with minimal development effort. It is delivered in collaboration with Spryker Solution Partner KPS.
 
 **Key capabilities:**
-- New integration for the Mollie payment service provider
-- Supports more localized payment setups for European markets
-- Provides a productized alternative to building a custom Mollie integration from scratch
+- Native integration with Mollie
+- Support for a wide range of local European and international payment methods
+- Plug-and-play setup with minimal custom development
 
 **Business benefits:**
-- Speeds up go-live for European payment implementations
-- Improves alignment with regional payment preferences and market expectations
-- Lowers delivery effort, project risk, and long-term maintenance overhead
+- Faster time-to-market for European commerce use cases
+- Improved conversion through localized payment experiences
+- Reduced implementation complexity and maintenance overhead
 
 **Documentation:**
+- [Mollie integration](https://github.com/mollie/spryker)
 
 ### OAuth SSO readiness for Spryker applications {% include badge.html type="feature" %}
 
@@ -275,96 +425,9 @@ Spryker introduced a standardized and reusable approach for OAuth 2.0 and OpenID
 - Creates a reusable foundation for federated authentication across Spryker entry points
 
 **Documentation:**
+- [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html)
 
-### Back Office Configuration Framework is now Generally Available
-
-Spryker made the Back Office Configuration Framework generally available with important enterprise-readiness enhancements. The release improves governance, discoverability, operational efficiency, and usability for managing business-relevant configuration directly in the Back Office. It also makes configuration changes more transparent and easier to control.
-
-**Key capabilities:**
-- Audit logging for configuration changes
-- Improved search and discoverability of configuration options
-- UX enhancements for a more reliable configuration experience
-- CLI-based import support for faster setup and operations
-- Better visibility into conflicts between code-based and Back Office configuration
-
-**Business benefits:**
-- Increases confidence and accountability when managing configuration
-- Reduces misconfiguration risk and operator effort
-- Makes the framework ready for broader enterprise adoption
-
-**Documentation:**
-
-### Smart PIM in the public demo shop {% include badge.html type="early-access" %}
-
-Spryker added Smart PIM to the public demo shop as an Early Access capability. The feature showcases AI-assisted product enrichment directly in the Back Office, helping teams create richer and more complete product data with less manual work. It is designed to demonstrate how AI can accelerate catalog management and localization.
-
-**Key capabilities:**
-- AI-assisted translation of product names and descriptions into any locale
-- AI-powered improvement of product names and descriptions
-- Alt-text generation for product images
-- Suggested best-fit product categories
-- Human-friendly error handling when AI integration is not configured
-
-**Business benefits:**
-- Reduces manual effort in product data enrichment
-- Improves product content quality and consistency across locales
-- Helps merchants scale catalog updates and localization faster
-
-**Documentation:**
-
-### AI visual search in the demo shop {% include badge.html type="early-access,improvement" %}
-
-Spryker enhanced its demo-shop AI visual search experience and migrated it to use Spryker AI Foundation. Customers can search for products by uploading or capturing an image, making product identification faster and easier in complex buying scenarios. The updated implementation also includes mobile support.
-
-**Key capabilities:**
-- Search for products using an uploaded image or photo
-- Mobile-supported visual search experience
-- Integration routed through Spryker AI Foundation instead of direct OpenAI connectivity
-- Improved demo implementation for AI-powered product discovery
-
-**Business benefits:**
-- Reduces friction in finding the correct product
-- Improves buying experiences for technical and spare-parts use cases
-- Demonstrates a more reusable and centralized AI integration approach
-
-**Documentation:**
-
-### AI workflow visualization in the Back Office {% include badge.html type="early-access,feature" %}
-
-Spryker introduced an Early Access Back Office view for AI workflow execution visibility. The feature provides a list and detail pages for AI workflows, helping teams inspect workflow states and manually trigger available actions when needed. This improves transparency for AI-driven processes.
-
-**Key capabilities:**
-- Back Office list page for AI workflows
-- Workflow detail view with state history
-- Visualized state machine with highlighted current state
-- Manual event trigger where supported
-
-**Business benefits:**
-- Improves visibility into AI workflow execution
-- Helps operators monitor and troubleshoot AI-driven processes
-- Supports more controlled handling of AI workflow states
-
-**Documentation:**
-
-### AI Foundation Audit Log {% include badge.html type="feature" %}
-
-Spryker introduced persistent AI interaction logging and a dedicated Back Office audit log UI. Teams can now inspect prompts, responses, model details, token usage, execution timing, and metadata through a searchable interface. This provides a stronger foundation for AI governance, troubleshooting, and optimization.
-
-**Key capabilities:**
-- Persistent storage of AI interaction records in the database
-- Audit trail for prompts, responses, model information, token usage, timing, and metadata
-- Back Office UI under **Intelligence > Audit Logs**
-- Sorting, filtering, pagination, and aggregation statistics
-- Inline inspection of prompt, response, and metadata content
-
-**Business benefits:**
-- Improves traceability and governance for AI-powered features
-- Speeds up troubleshooting and prompt optimization
-- Supports compliance and oversight requirements with a centralized audit trail
-
-**Documentation:**
-
-### Native PunchOut Gateway for cXML and OCI {% include badge.html type="feature" %}
+### Native PunchOut Gateway for cXML and OCI {% include badge.html type="feature,early-access" %}
 
 Spryker introduced native PunchOut Gateway capabilities for cXML and OCI to reduce bespoke integration work in procurement-driven B2B commerce. The release adds reusable building blocks for common PunchOut flows, including session start, shopping, cart updates, and cart return. This strengthens support for enterprise procurement environments, especially SAP-centric setups.
 
@@ -381,6 +444,7 @@ Spryker introduced native PunchOut Gateway capabilities for cXML and OCI to redu
 - Improves repeatability and maintainability across B2B integration projects
 
 **Documentation:**
+- [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway)
 
 ### New Stripe Integration {% include badge.html type="improvement" %}
 
@@ -400,6 +464,7 @@ Spryker introduced a new Stripe integration that replaces the legacy ACP-based a
 - Lowers long-term maintenance effort and supports faster payment innovation
 
 **Documentation:**
+- [New Stripe Integration](https://github.com/spryker-eco/stripe/releases/tag/1.0.0)
 
 ### New Vertex Integration {% include badge.html type="improvement" %}
 
@@ -416,24 +481,7 @@ Spryker introduced a new Vertex integration to replace the legacy ACP-based appr
 - Lowers total cost of ownership through improved maintainability
 
 **Documentation:**
-
-### API Platform is now Generally Available {% include badge.html type="feature" %}
-
-Spryker made API Platform generally available as the foundation for modern API development and migration. Existing APIs have been migrated to API Platform internally while keeping external contracts backward-compatible. This enables faster API delivery, easier extensibility, and more standardized API development.
-
-**Key capabilities:**
-- Declarative API development using YAML schemas
-- API generation with validation, pagination, serialization, and operation-specific rules
-- Interactive and always up-to-date OpenAPI documentation
-- Backward-compatible migration of existing APIs to API Platform infrastructure
-- Cleaner separation of read and write logic through providers and processors
-
-**Business benefits:**
-- Reduces development effort for new and existing APIs
-- Improves consistency and maintainability of API implementations
-- Accelerates delivery of integrations and future API capabilities
-
-**Documentation:**
+- [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex)
 
 ### Data import performance and stability enhancements {% include badge.html type="improvement" %}
 
@@ -450,139 +498,72 @@ We improved the data import experience and robustness for large data volumes. Da
 - Improves operational efficiency for bulk data onboarding.
 
 **Documentation:**
+- [Data import (memory usage)](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#data-import-memory-usage)
+- [Data import Progress bar](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html#progress-bar)
 
-### Back Office performance improvements {% include badge.html type="improvement" %}
+### Performance and security improvements {% include badge.html type="improvement" %}
 
-We improved performance in several areas of the Back Office to reduce response times and system load in large-scale environments. The update addresses ACL-related delays, order page performance, and slow product list rendering for projects with large product catalogs.
-
-**Key capabilities:**
-- Optimized ACL access checks to reduce unnecessary permission evaluations during Back Office requests.
-- Reduced overhead caused by navigation filtering, especially for requests where navigation is not needed.
-- Improved order page performance for orders with many items.
-- Improved product list performance in the Back Office for large assortments and complex filtering scenarios.
-
-**Business benefits:**
-- Speeds up daily work for Back Office users.
-- Improves usability in setups with many users, roles, and restricted permissions.
-- Supports better scalability for large catalogs and complex order management scenarios.
-
-**Documentation:**
-
-### Queue and worker performance optimization {% include badge.html type="improvement" %}
-
-We optimized queue worker processing to improve throughput and system stability under load. The update introduces dynamic waiting behavior, better control over parallel job execution, and compatibility improvements for Symfony Messenger resource-aware workers.
+We made your Spryker Commerce OS faster, more secure, and more stable.
 
 **Key capabilities:**
-- Improved worker throughput with dynamic waiting time adjustments under load.
-- Added the ability to limit the number of parallel jobs processed at the same time.
-- Reduced the risk of out-of-memory issues through better workload control.
-- Added support for resource-aware queue workers when using Symfony Messenger.
-
-**Business benefits:**
-- Processes asynchronous workloads faster.
-- Improves stability of queue processing in high-load environments.
-- Gives teams more flexibility to tune performance based on project needs.
+- Non-buffered log streaming presents the logs immediately.
+- Lower latency and response times in storefront with optimized widgets.
+- Lower latency and response times in the Back Office and Merchant Portal.
+- Higher stability and throughput of Publish & Synchronize workers. The update introduces dynamic waiting behavior, better control over parallel job execution, and compatibility improvements for Symfony Messenger resource-aware workers.
 
 **Documentation:**
-
-### Widget performance optimization {% include badge.html type="improvement" %}
-
-We optimized widget execution to improve overall storefront and application performance. These changes reduce processing overhead in widget-heavy pages and improve responsiveness.
-
-**Key capabilities:**
-- Improved widget execution efficiency.
-- Reduced unnecessary overhead in widget rendering flows.
-
-**Business benefits:**
-- Enhances page responsiveness.
-- Improves scalability for projects with extensive widget usage.
-
-**Documentation:**
-
-### Node.js 24 LTS upgrade {% include badge.html type="improvement" %}
-
-We upgraded the main frontend tooling runtime to Node.js 24 LTS. This keeps the platform aligned with a supported long-term version and enables access to the latest reliability, security, and performance improvements.
-
-**Key capabilities:**
-- Updated frontend tooling runtime to Node.js 24 LTS.
-- Aligned the platform with a current long-term support release.
-
-**Business benefits:**
-- Improves security by using a supported runtime version.
-- Increases long-term stability for frontend tooling.
-- Provides access to performance improvements in the latest runtime.
-
-**Documentation:**
-
-### Security update for symfony/http-foundation in app templates {% include badge.html type="improvement" %}
-
-We updated `symfony/http-foundation` to address known vulnerabilities in affected application templates. This change improves the security posture of the related repositories.
-
-**Key capabilities:**
-- Upgraded `symfony/http-foundation` to version `6.4.29` in affected app templates.
-- Addressed high-severity vulnerabilities reported for the dependency.
-
-**Business benefits:**
-- Reduces exposure to known security issues.
-- Helps maintain compliance with secure dependency standards.
-
-**Documentation:**
-
-### Non-buffered log streaming support from community contribution {% include badge.html type="improvement" %}
-
-We added support for non-buffered log streaming based on a community contribution. This improves how logs can be streamed and consumed in real time.
-
-**Key capabilities:**
-- Added support for non-buffered log streaming.
-
-**Business benefits:**
-- Improves log visibility for running processes.
-- Enables more immediate access to log output.
-
-**Documentation:**
-
+- [Non-buffered log streaming](https://api.release.spryker.com/release-group/6411)
+- [Yves widget performance best practices](/docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html)
+- [Split Publish & Synchronize queues for performance](/docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html)
+- [Merchant Portal and Back Office performance with ACL rules](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#merchant-portal-and-back-office-performance-with-acl-rules)
+- [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html)
 
 ## Efficient and Flexible Cloud Foundation
 
-### Cloud observability: logs forwarding through SMI {% include badge.html type="improvement" %}
+### Spryker Monitoring Integration: logs forwarding {% include badge.html type="improvement" %}
 
-Spryker expanded cloud observability by enabling log forwarding through SMI to third-party monitoring platforms such as Dynatrace. This allows teams to correlate logs with traces, create alerts based on log data, and use their preferred monitoring tooling beyond CloudWatch.
+Spryker expanded cloud observability by enabling log forwarding through [SMI](/docs/ca/dev/monitoring/spryker-monitoring-integration/spryker-monitoring-integration.html) to third-party monitoring platforms of your choice. This allows teams to correlate logs with traces, create alerts based on log data, and use their preferred monitoring tooling beyond AWS CloudWatch.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/SMI-dynatrace-logs.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/SMI-dynatrace-traces.png||"
+%}
 
 **Key capabilities:**
-- Forward application logs to external monitoring platforms through SMI
+- Inspect logs from Spryker Platform in your monitoring tool
 - Correlate logs with traces using trace and span identifiers
-- Export application container logs and Jenkins job logs
-- Support additional log types such as RDS slow query logs and application audit logs
 - Configure log verbosity to control emitted log volume
-- Monitor and meter log shipment for billing and operational visibility
 
 **Business benefits:**
 - Improved troubleshooting through unified logs and traces
 - Better alerting capabilities based on application and infrastructure log events
-- More flexibility to use customer-preferred monitoring solutions
-- Increased transparency for observability-related usage and costs
 
 **Documentation:**
+- [Spryker Monitoring Integration Logs](/docs/ca/dev/monitoring/spryker-monitoring-integration/opentelemetry-instrumentation#smi-logs-integration)
 
-### TLS, authentication, and SSO for Cloud services {% include badge.html type="feature" %}
+### Single Sign-On (SSO) for Cloud services {% include badge.html type="feature" %}
 
 Spryker introduced centralized access management for cloud services, including SSO support for customer identity providers such as Okta and OneLogin. This update reduces manual access handling, improves security, and simplifies onboarding and offboarding for users. It also includes rollout, production-readiness, and IAM cleanup measures to standardize and harden access controls.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/2026-Cloud-Hub-SSO-Lofi.mp4" type="video/mp4">
+  </video>
+</figure>
 
 **Key capabilities:**
 - Connect your own identity provider for SSO access to cloud services
 - Centralize user access management for services such as Jenkins, RabbitMQ, and others
 - Reduce manual access management effort through self-service-oriented processes
-- Review and clean up IAM roles and policies for better standardization
-- Restrict overly broad IAM permissions in customer PaaS accounts
-- Prevent creation of unrestricted `*:*` administrative IAM policies outside approved flows
 
 **Business benefits:**
 - Faster and more secure user onboarding and offboarding
 - Reduced operational effort for access requests and changes
-- Lower security risk through tighter permission boundaries
-- Better compliance with least-privilege access principles
+- TLS-encrypted communication to Jenkins and RabbitMQ over internal environment network
 
 **Documentation:**
+- [Spryker Cloud SSO Access](/docs/ca/dev/access/sso-access.html)
 
 ### Bastion security hardening {% include badge.html type="improvement" %}
 
@@ -590,145 +571,23 @@ Spryker improved Bastion host security and maintainability by upgrading the oper
 
 **Key capabilities:**
 - Upgrade Bastion hosts to a current LTS operating system
-- Separate workload from the host through containerization
-- Enforce SSO and MFA for human access
-- Deprecate direct SSH access for human users
-- Retain non-MFA access for SFTP-based integrations
-- Roll out changes with a targeted maintenance window and no customer configuration changes
+- Enforce SSO and MFA for human access, deprecate direct SSH access for human users
 
 **Business benefits:**
 - Improved security posture for administrative access
-- Easier future maintenance and operating system upgrades
-- Reduced platform risk through modernization of critical infrastructure
-- Minimal disruption during rollout
-
-**Documentation:**
 
 ### Maintenance and service updates {% include badge.html type="improvement" %}
 
-Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable. The release includes service upgrades, application dependency updates, and RabbitMQ upgrade preparations to reduce technical debt and improve operational stability.
+Spryker delivered maintenance updates across cloud services and application tooling to keep the platform secure, supported, and maintainable.
 
 **Key capabilities:**
-- Upgrade Jenkins to a current LTS version
-- Upgrade Nginx to a current supported version
-- Replace Ubuntu-based service hosts with Amazon Linux where applicable
-- Upgrade PHPUnit to version 12
-- Upgrade PHPStan to version 2 for improved performance and PHP 8.4 support
-- Prepare and validate RabbitMQ upgrade paths, including support for newer versions
-- Implement near-zero-downtime RabbitMQ update strategy based on Blue/Green deployment concepts
+- RabbitMQ 4.2 is now supported in Docker SDK for local development environments.
+- Node.js 24 introduces V8 v13.6 and npm 11, which results in noticeably faster `frontend:yves:build` and `frontend:zed:build` runs.
 
 **Business benefits:**
 - Reduced security and operational risk from outdated components
-- Better long-term maintainability of cloud infrastructure
-- Faster CI and developer feedback cycles through tooling improvements
-- Improved service continuity during infrastructure and messaging upgrades
 
 **Documentation:**
+- [RabbitMQ 4.2 in Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html)
+- [Upgrade Node.js and npm](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs.html#prerequisites)
 
-## Other
-
-### AI configuration management for runtime-resolved provider settings {% include badge.html type="feature" %}
-
-AI provider configuration values can now be resolved at runtime from the Configuration Management module. This allows Back Office administrators to update settings such as model, API key, and system prompt without code changes or deployments.
-
-**Key capabilities:**
-- Supports resolving AI configuration values using the `configuration::` prefix.
-- Allows runtime lookup of nested AI provider settings from Configuration Management.
-- Keeps static configuration values unchanged where runtime resolution is not needed.
-- Throws a dedicated exception when a referenced configuration key cannot be resolved.
-
-**Business benefits:**
-- Lets business users adjust AI behavior without involving developers.
-- Reduces deployment effort for AI configuration changes.
-- Improves flexibility and governance for AI-enabled features.
-
-**Documentation:**
-
-### AI Dev tooling for coding agents {% include badge.html type="feature" %}
-
-We added new AI Dev tooling to help development teams work more effectively with coding agents in Spryker projects. The update provides ready-to-use agent instruction files and reusable Spryker-specific skill examples.
-
-**Key capabilities:**
-- Added commands to generate an `AGENTS.md` context file in the project root.
-- Added commands to copy reusable skill examples into the project.
-- Bundled Spryker-specific guidance for testing, data import, Propel schema conventions, static validation, and Yves atomic frontend development.
-
-**Business benefits:**
-- Improves developer experience for teams using AI coding agents.
-- Helps teams start faster with Spryker-aware agent guidance.
-- Encourages consistent development patterns across projects.
-
-**Documentation:**
-
-### Amazon Quick Sight enablement for demo environments {% include badge.html type="improvement" %}
-
-Amazon Quick Sight has been enabled for the master-demo setup to improve demo readiness for analytics-related use cases. This ensures demo users can access and review analytics content in supported demo environments.
-
-**Key capabilities:**
-- Enabled Amazon Quick Sight integration in the master-demo environment.
-- Configured analytics asset bundles for Back Office visibility.
-
-**Business benefits:**
-- Improves product demo experience for analytics scenarios.
-- Makes demo environments more representative of supported business intelligence use cases.
-
-**Documentation:**
-
-### Back Office Configuration Framework GA
-
-Introduced the Back Office Configuration Framework as generally available to standardize and simplify configuration management in the Back Office.
-
-**Key capabilities:**
-- Provides a structured framework for Back Office configuration
-- Supports more consistent configuration handling across Back Office features
-
-**Business benefits:**
-- Reduces complexity when managing Back Office configurations
-- Improves maintainability and consistency for project teams
-
-**Documentation:**
-
-### AI Foundation: Audit logs {% include badge.html type="feature" %}
-
-Added audit log capabilities to AI Foundation to improve traceability of AI-related actions and events.
-
-**Key capabilities:**
-- Captures audit-relevant events in AI Foundation
-- Supports tracking and review of AI-related activity
-
-**Business benefits:**
-- Increases transparency for AI operations
-- Helps support compliance and governance requirements
-
-**Documentation:**
-
-### OCI Phase 1 — API Compatibility & Documentation Enablement {% include badge.html type="feature" %}
-
-Added initial OCI support to improve compatibility with SAP-centric procurement environments and reduce project-specific integration effort.
-
-**Key capabilities:**
-- Supports standard OCI parameters such as `HOOK_URL`, `OCI_VERSION`, and `USERNAME`
-- Handles OCI cart return flows with line items posted back to the procurement system
-- Provides documentation and integration guidance for SAP and Ariba use cases
-- Includes a reference implementation example
-
-**Business benefits:**
-- Reduces implementation effort for OCI-based procurement integrations
-- Improves Spryker's fit for enterprise B2B procurement scenarios
-- Increases confidence in SAP-heavy customer environments
-
-**Documentation:**
-
-### AI Foundation: Audit logs in the Back Office {% include badge.html type="feature" %}
-
-Added a Back Office user interface for AI Foundation audit logs so users can review audit information directly in the Back Office.
-
-**Key capabilities:**
-- Displays AI Foundation audit logs in the Back Office
-- Improves access to recorded AI audit information for operational users
-
-**Business benefits:**
-- Simplifies audit log review for business and operations teams
-- Improves usability of AI governance capabilities
-
-**Documentation:**

@@ -27,7 +27,7 @@ This page does **not** describe how to integrate API Platform into your project.
 - [Integrate API Platform security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html)
 - [API Platform architecture](/docs/dg/dev/architecture/api-platform.html)
 
-{% /info_block %}
+{% endinfo_block %}
 
 ## Why Spryker is moving to API Platform
 
@@ -79,7 +79,7 @@ For any module marked **Migrated**, projects upgrade in three high-level steps. 
 
 The previous API stack and API Platform run **side by side** during the transition. You can migrate modules incrementally; modules that have not been migrated continue to be served by the previous stack.
 
-{% /info_block %}
+{% endinfo_block %}
 
 ### Status legend
 

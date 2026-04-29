@@ -1,7 +1,7 @@
 ---
 title: Spryker API Strategy
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: January 9, 2026
+last_updated: Apr 29, 2026
 template: default
 layout: custom_new
 ---
@@ -36,7 +36,9 @@ Spryker is introducing **API Platform–based integration** as the strategic int
 - **Early access:** until end of Q1 2026
   - limited support scope
   - native Spryker features (authentication, codebuckets, full JSON:API support) not fully integrated
-- **General Availability:** Next Product Release
+- **General Availability:** Apr 30, 2026
+- **Migration of Glue Rest API modules to ApiPlatform:** end of Q2 2026
+  - Status can be checked here [Migration status - Glue API to API Platform](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html)
 
 ---
 

@@ -1313,6 +1313,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
         - title: Native API Platform Resources
           url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+        - title: Migration status - Glue API to API Platform
+          url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html

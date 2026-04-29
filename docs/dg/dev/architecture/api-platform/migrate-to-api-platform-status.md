@@ -54,12 +54,6 @@ For any module marked **Migrated**, projects upgrade in three high-level steps. 
     composer update spryker/<module-name>
     ```
 
-   Or update the full Spryker stack at once:
-
-    ```bash
-    composer update "spryker/*" "spryker-shop/*"
-    ```
-
 2. **Remove the previous resource plugins**
 
    In your project's `GlueApplicationDependencyProvider`, remove the previous plugin registrations for the migrated module - typically a `ResourceRoutePlugin` (and any related `ResourceRelationshipPlugin` / expander plugins) registered in `getResourceRoutePlugins()`.
@@ -70,7 +64,7 @@ For any module marked **Migrated**, projects upgrade in three high-level steps. 
 
     ```bash
     vendor/bin/glue cache:clear
-    docker/sdk testing codecept run -c src/Pyz
+    vendor/bin/glue api:generate
     ```
 
    Confirm the endpoint is served by API Platform by hitting it against your local Glue host - the response is now produced by the new Symfony-based stack.

@@ -1,7 +1,7 @@
 ---
 title: Conversation History
 description: Persist and manage multi-turn conversations with conversation history using database storage
-last_updated: Apr 22, 2026
+last_updated: Apr 29, 2026
 keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue, audit, logging, tracking
 template: howto-guide-template
 related:
@@ -176,6 +176,7 @@ class ConversationManager
             $formattedMessages[] = [
                 'type' => $message->getType(), // 'user', 'assistant', 'tool_call', 'tool_result'
                 'content' => $message->getContent(),
+                'reasoning' => $message->getReasoning(), // null when provider does not return reasoning
             ];
         }
 
@@ -256,7 +257,7 @@ public function getConversationHistoryCollection(
 - `conversationHistories` (ConversationHistoryTransfer[]): Array of conversation histories matching the criteria
   - Each ConversationHistoryTransfer contains:
     - `conversationReference` (string): The conversation reference
-    - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, and attachments
+    - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, reasoning, and attachments
 
 ## Message types
 

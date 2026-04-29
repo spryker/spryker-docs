@@ -143,52 +143,6 @@ Building storefronts without a common foundation meant repeated work, slower del
 **Documentation:**
 - [How to use design system tokens](/docs/dg/dev/frontend-development/latest/design-tokens#how-it-works)
 
-### Back Office Product Import & Export {% include badge.html type="feature,early-access" %}
-
-Spryker now offers product import and export via the Back Office, reducing reliance on developer‑driven CLI tooling. Business users can prepare and update catalogs faster during onboarding, launches, and routine maintenance. This improves operational speed and gives teams more control over their product data processes.
-
-{% include carousel.html
-images="
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_1.png||::
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_2.png||::
-https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202604/bo_import_export_3.png||"
-%}
-
-**Key capabilities:**
-- Import and export product data directly from the Back Office
-- Single‑file product import, replacing multiple CLI‑required files
-- CSV‑based jobs with reusable job/run concepts and clear validation feedback
-
-**Business benefits:**
-- Significantly simplifies adding products to the catalog, replacing multi‑file CLI imports with a single, business‑friendly file
-- Accelerates catalog preparation for new launches and environment migrations
-- Empowers business users with self‑service error resolution, minimizing developer involvement
-
-**Documentation:**
-- [Product Experience Management](/docs/pbc/all/product-experience-management/latest/product-experience-management.html)
-- [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html)
-
-### Budget & Cost Centers {% include badge.html type="feature,early-access" %}
-
-We introduced an Early Access version of budgets and cost centers to support policy-driven purchasing in B2B procurement. The release covers core budget enforcement and its integration with approval workflows.
-
-**Key capabilities:**
-- Lets companies create and manage cost centers and assign buyers to them.
-- Supports budget creation with configurable enforcement rules such as block, warn, or require approval.
-- Adds cost center selection and budget validation during checkout.
-- Integrates budget-triggered approvals with Spryker's existing Approval Process.
-- Tracks budget consumption and restoration as orders progress.
-
-**Business benefits:**
-- Improves financial control and purchasing compliance.
-- Reduces overspending risk with enforceable budget rules.
-- Aligns procurement workflows with departmental or project-based spending structures.
-- Provides an early demoable foundation for customer and partner conversations.
-
-**Documentation:**
-- [Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview)
-- [Install Purchasing Control Feature Overview](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature)
-
 ### Back Office support for merchant product ownership {% include badge.html type="improvement" %}
 
 Marketplace operators can now manage merchant ownership of products directly in the Back Office, without relying on the Merchant Portal. This makes it easier to maintain accurate product data in centrally managed or hybrid marketplace models. The result is smoother operations and clearer accountability across the catalog.

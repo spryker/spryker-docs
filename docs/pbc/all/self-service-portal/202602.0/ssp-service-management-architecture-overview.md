@@ -152,6 +152,6 @@ support for some B2B features on product offers, and no shipment type changes in
 
 | Feature overviews                                                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-service-management-feature-overview.html) |
-| [Service Points feature overview](/docs/pbc/all/service-point-management/latest/unified-commerce/service-points-feature-overview.html)           |
-| [Shipment feature overview](/docs/pbc/all/carrier-management/latest/base-shop/shipment-feature-overview.html)                                    |
+| [Self-Service Portal Service Management feature overview](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-service-management-feature-overview.html) |
+| [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html)           |
+| [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html)                                    |

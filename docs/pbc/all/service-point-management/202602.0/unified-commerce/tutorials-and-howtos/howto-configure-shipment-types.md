@@ -19,7 +19,7 @@ Shipment types are **data-driven**: you import them and then assign them to ship
 
 ## 1) Install / enable the Shipment Type feature
 
-If the feature is not installed yet, install it using [Shipment feature](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) .
+If the feature is not installed yet, install it using [Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) .
 After installation, ensure that data imports for shipment types and shipment-method relations are enabled.
 
 ---

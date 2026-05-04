@@ -22,7 +22,7 @@ You need to populate Algolia indices separately—for example, using the Algolia
 ## Prerequisites
 
 - You have access to the Algolia account in the Algolia Dashboard.
-- You have integrated Algolia search in your Spryker project. For details, see [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html).
+- You have integrated Algolia search in your Spryker project. For details, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - You have an Algolia index created for your custom entity—for example, Docs—and populated with relevant data, for example, using the Algolia Crawler.
 
 It also helps to have the following [knowledge](https://www.algolia.com/doc):

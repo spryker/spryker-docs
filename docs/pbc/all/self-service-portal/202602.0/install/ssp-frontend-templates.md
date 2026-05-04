@@ -5,5 +5,5 @@ last_updated: Jan 9, 2026
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/latest/ssp-frontend-templates.md %} <!-- To edit, see /_includes/pbc/all/install-features/latest/ssp-frontend-templates.md -->
+{% include pbc/all/install-features/{{page.version}}/ssp-frontend-templates.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/ssp-frontend-templates.md -->
 

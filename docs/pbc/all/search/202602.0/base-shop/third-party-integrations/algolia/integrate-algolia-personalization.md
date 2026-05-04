@@ -15,13 +15,13 @@ This document describes how to integrate Algolia Personalization. This integrati
 
 {% info_block infoBox "Third-party frontends" %}
 
-By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html).
+By default, Spryker supports Algolia Personalization only for Yves. To integrate Algolia Personalization with a third-party or mobile frontend, follow [Algolia Personalization for headless frontends](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-personalization-with-headless-frontends.html).
 
 {% endinfo_block %}
 
 ## Prerequisites
 
-1. [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
+1. [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 2. Add products to your Algolia search indexes
 
 ## Install and update Spryker packages
@@ -100,7 +100,7 @@ npm i search-insights
 
 ## Test and configure Yves customizations to work with Algolia Personalization
 
-If you customized Yves templates at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or may trigger with incorrect data.
+If you customized Yves templates at the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level) (`src/Pyz/Yves/`), some events may not trigger or may trigger with incorrect data.
 
 ### Run the project in a testing environment
 
@@ -165,7 +165,7 @@ For a full list of available events, see the [traceable-events-algolia readme fi
 
 ### Common issues and solutions
 
-This section covers common issues with events and their solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/latest/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
+This section covers common issues with events and their solutions. Most solutions involve adding, changing, and fixing events on the [project level](https://docs.spryker.com/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html#create-component-folder-on-project-level).
 
 #### Prerequisites
 

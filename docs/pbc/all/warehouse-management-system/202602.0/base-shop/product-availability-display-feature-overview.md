@@ -5,9 +5,9 @@ last_updated: February 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Product Availability Display feature
-    link: /docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
+    link: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
   - title: Buy Box feature overview
-    link: /docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview.html
+    link: /docs/pbc/all/offer-management/{{page.version}}/marketplace/buy-box-feature-overview.html
 ---
 
 The Product Availability Display feature shows stock quantities on product detail pages, in shopping carts, and in the Buy Box in marketplace scenarios. When you enable the feature, availability displays in three states: in stock with quantity, available (for never-out-of-stock products), or out of stock.
@@ -66,7 +66,7 @@ For example, "225.5 m in stock" instead of "225.5 in stock." The measurement uni
 
 In marketplace scenarios, when combined with the Buy Box feature, availability information appears per merchant offer. Customers can see stock availability for each merchant selling the product.
 
-For details about Buy Box integration, see [Buy Box feature overview](/docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview.html).
+For details about Buy Box integration, see [Buy Box feature overview](/docs/pbc/all/offer-management/{{page.version}}/marketplace/buy-box-feature-overview.html).
 
 ## Configuration
 
@@ -75,7 +75,7 @@ You configure the Product Availability Display feature at the code level. The fo
 - **Display mode**: Indicator only or indicator with quantity.
 - **Decimal precision**: Number of decimal places for quantities (default: 2).
 
-For configuration details, see [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html).
+For configuration details, see [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html).
 
 ## Use cases
 
@@ -95,4 +95,4 @@ Use this feature when:
 
 ## Related documents
 
-- [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html)
+- [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html)

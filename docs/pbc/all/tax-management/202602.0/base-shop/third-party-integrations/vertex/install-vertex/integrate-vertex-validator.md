@@ -4,7 +4,7 @@ description: Find out how you can integrate the Vertex Validator into your Spryk
 last_updated: Jun 4, 2025
 template: howto-guide-template
 redirect_from:
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-taxamo.html
 ---
 
 To integrate Vertex Validator, take the following steps.
@@ -104,4 +104,4 @@ To use translations, send requests with the `Accept-Language` header. For exampl
 
 ## Next step
 
-[Connect Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html)
+[Connect Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)

@@ -5,13 +5,13 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 related:
   - title: Creating returns
-    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/create-returns.html
+    link: docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/create-returns.html
   - title: Viewing returns of an order
-    link: docs/pbc/all/order-management-system/latest/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
+    link: docs/pbc/all/order-management-system/{{page.version}}/base-shop/manage-in-the-back-office/orders/view-returns-of-an-order.html
   - title: Managing returns
-    link: docs/pbc/all/return-management/latest/base-shop/manage-in-the-back-office/manage-returns.html
+    link: docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html
   - title: Return Management feature overview
-    link: docs/pbc/all/return-management/latest/return-management.html
+    link: docs/pbc/all/return-management/{{page.version}}/return-management.html
 redirect_from:
 - /docs/pbc/all/return-management/202204.0/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
@@ -68,4 +68,4 @@ States flow:
 
 ### State names
 
-The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/latest/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).
+The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/display-custom-names-for-order-item-states-on-the-storefront.html).

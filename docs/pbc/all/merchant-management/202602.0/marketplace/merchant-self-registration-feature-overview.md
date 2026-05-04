@@ -130,8 +130,8 @@ These comments are:
 
 ## Related Business User documents
 
-- [Manage merchant registration requests](/docs/pbc/all/merchant-management/latest/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html)
+- [Manage merchant registration requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-registration-requests.html)
 
 ## Related Developer documents
 
-- [Install the Merchant Self-Registration feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html)
+- [Install the Merchant Self-Registration feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-self-registration-feature.html)

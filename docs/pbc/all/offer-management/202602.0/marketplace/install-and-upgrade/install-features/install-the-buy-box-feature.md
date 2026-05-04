@@ -5,9 +5,9 @@ last_updated: February 13, 2026
 template: feature-integration-guide-template
 related:
   - title: Buy Box feature overview
-    link: /docs/pbc/all/offer-management/latest/marketplace/buy-box-feature-overview.html
+    link: /docs/pbc/all/offer-management/{{page.version}}/marketplace/buy-box-feature-overview.html
   - title: Product Availability Display feature overview
-    link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html
 ---
 
 Use this guide to install the Buy Box feature for marketplace scenarios.
@@ -243,7 +243,7 @@ To enable stock-based sorting and show availability per merchant offer, install 
 
 ### Install Product Availability Display feature
 
-Follow the [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html) guide to install the availability modules.
+Follow the [Install the Product Availability Display feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html) guide to install the availability modules.
 
 ### Add availability to product offers
 

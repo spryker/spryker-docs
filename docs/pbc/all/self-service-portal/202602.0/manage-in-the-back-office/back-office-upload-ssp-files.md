@@ -14,4 +14,4 @@ template: back-office-user-guide-template
   
 ## Next steps
 
-[Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html)
+[Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/{{page.version}}/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html)

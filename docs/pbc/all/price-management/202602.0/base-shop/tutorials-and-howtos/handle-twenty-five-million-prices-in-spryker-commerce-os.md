@@ -17,7 +17,7 @@ Imagine you have thousands of products and customers with unique pricing terms a
 
 Such a number of prices cannot be managed manually, but it's defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it's not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/latest/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in the key-value store (Redis or Valkey) price entries and abstract product search documents so that facet filters can be applied in search and categories.
+In Spryker, each price is imported as a [price dimension](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in the key-value store (Redis or Valkey) price entries and abstract product search documents so that facet filters can be applied in search and categories.
 
 Price import flow:
 
@@ -31,7 +31,7 @@ When enabling Spryker to handle such a number of prices, the following challenge
 1. 25,000,000 prices are imported in two separate price dimensions.
 2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `Elasticsearch(ES)` down.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
-4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
+4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/{{page.version}}/developerguide/aes-limits.html) does not allow changing this limit.
 
 5. Each price having unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
@@ -87,7 +87,7 @@ You could increase the limit, but it slows down the reindexing process.
 
 The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and you don't get any related errors.
 
-In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html).
+In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/{{page.version}}/developerguide/aes-limits.html).
 
 ## Evaluated solutions
 
@@ -178,7 +178,7 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 The side effects of this solution are the following:
 
-1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/latest/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
+1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
 3. Because of ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 
@@ -200,7 +200,7 @@ The following issues related to a slow publish process have been added:
 #### Evaluated solutions
 
 The following solutions were evaluated:
-1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/dg/dev/data-import/latest/data-import-optimization-guidelines.html).
+1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/dg/dev/data-import/{{page.version}}/data-import-optimization-guidelines.html).
 2. To fill the `search` table on the insert update operations in the `entity` table, see the [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

@@ -17,8 +17,8 @@ With more sophisticated requirements, like transferring money to merchants on th
 
 The amount to be paid out to the merchants is calculated based on the commission that is set up in the Back Office. The commission is calculated when the order is moved to the `payment captured` state. The commission calculation is based on your project settings.
 
-For more details on merchant commissions, see [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html).
+For more details on merchant commissions, see [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 ## Next step
 
-[Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)
+[Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html)

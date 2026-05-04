@@ -159,7 +159,7 @@ Marketplace operators can now manage merchant ownership of products directly in 
 - Supports more flexible marketplace operations, enabling teams to scale product management with confidence.
 
 **Documentation:**
-- [Marketplace Create Abstract Products](//docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products#defining-general-settings)
+- [Marketplace Create Abstract Products](/docs/pbc/all/product-information-management/latest/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products#defining-general-settings)
 
 ### Back Office Frontend Modernisation {% include badge.html type="improvement" %}
 

@@ -5,9 +5,9 @@ last_updated: February 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Product Availability Display feature
-    link: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
+    link: /docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-product-availability-display-feature.html
   - title: Buy Box feature overview
-    link: /docs/pbc/all/offer-management/{{page.version}}/marketplace/buy-box-feature-overview.html
+    link: /docs/pbc/all/offer-management/page.version/marketplace/buy-box-feature-overview.html
 ---
 
 The Product Availability Display feature shows stock quantities on product detail pages, in shopping carts, and in the Buy Box in marketplace scenarios. When you enable the feature, availability displays in three states: in stock with quantity, available (for never-out-of-stock products), or out of stock.

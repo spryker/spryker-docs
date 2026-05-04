@@ -37,6 +37,7 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 4. Create a support case and provide the deploy.yml file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our deploy.yml and would like it to be activated."
 
 5. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
+
 The downtime associated with the maintenance mode is limited to the deployment time, which usually takes up to an hour.
 
 6. Update AWS deployment files to DMS mode using the example:

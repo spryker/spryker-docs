@@ -2,7 +2,7 @@
 title: Install the Product Attribute Visibility feature
 description: Learn how to integrate the Product Attribute Visibility feature into a Spryker project.
 template: feature-integration-guide-template
-last_updated: Apr 7, 2026
+last_updated: May 4, 2026
 ---
 
 This document describes how to install the [Product Attribute Visibility feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html).
@@ -20,10 +20,10 @@ This document describes how to install the [Product Attribute Visibility feature
 
 | PACKAGE | VERSION |
 | --- | --- |
-| spryker-feature/product-experience-management | ^1.0.0 |
-| spryker/product-attribute | ^1.19.0 |
-| spryker/product-attribute-extension | ^1.1.0 |
-| spryker/product-attribute-gui | ^2.2.0 |
+| spryker-feature/product-experience-management | ^2.2.0 |
+| spryker/product-attribute | ^1.20.0 |
+| spryker/product-attribute-extension | ^1.2.0 |
+| spryker/product-attribute-gui | ^2.3.0 |
 | spryker/product-attribute-gui-extension | ^1.0.0 |
 | spryker/product-management | ^0.20.8 |
 | spryker-shop/cart-page | ^3.58.0 |
@@ -33,7 +33,7 @@ This document describes how to install the [Product Attribute Visibility feature
 | spryker-shop/shop-ui | ^1.106.0 |
 
 ```bash
-composer require spryker/product-attribute-gui-extension:"^1.0.0" spryker-feature/product-experience-management:"^1.0.0" spryker/product-attribute:"^1.19.0" spryker/product-attribute-extension:"^1.1.0" spryker/product-attribute-gui:"^2.2.0" spryker/product-management:"^0.20.8" spryker-shop/cart-page:"^3.58.0" spryker-shop/catalog-page:"^1.36.0" spryker-shop/product-detail-page:"^3.31.0" spryker-shop/product-widget:"^1.6.0" spryker-shop/shop-ui:"^1.106.0" --update-with-dependencies
+composer require spryker/product-attribute:"^1.20.0" spryker/product-attribute-extension:"^1.2.0" spryker/product-attribute-gui:"^2.3.0" spryker/product-attribute-gui-extension:"^1.0.0" spryker-feature/product-experience-management:"^2.2.0" spryker/product-management:"^0.20.8" spryker-shop/cart-page:"^3.58.0" spryker-shop/catalog-page:"^1.36.0" spryker-shop/product-detail-page:"^3.31.0" spryker-shop/product-widget:"^1.6.0" spryker-shop/shop-ui:"^1.106.0" --update-with-dependencies --ignore-platform-req=ext-grpc
 ```
 
 ## 1) Set up configuration
@@ -330,6 +330,8 @@ Register the query expander plugin:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | VisibilityProductAttributeQueryExpanderPlugin | Expands the product attribute query with the visibility column. | | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute |
+| VisibilitySuggestKeysQueryExpanderPlugin | Expands the suggest keys query with visibility filtering. | | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute |
+| VisibilitySuggestKeysExpanderPlugin | Expands the suggest keys result with visibility data. | | SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute |
 
 **src/Pyz/Zed/ProductAttribute/ProductAttributeDependencyProvider.php**
 
@@ -340,6 +342,8 @@ namespace Pyz\Zed\ProductAttribute;
 
 use Spryker\Zed\ProductAttribute\ProductAttributeDependencyProvider as SprykerProductAttributeDependencyProvider;
 use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute\VisibilityProductAttributeQueryExpanderPlugin;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute\VisibilitySuggestKeysExpanderPlugin;
+use SprykerFeature\Zed\ProductExperienceManagement\Communication\Plugin\ProductAttribute\VisibilitySuggestKeysQueryExpanderPlugin;
 
 class ProductAttributeDependencyProvider extends SprykerProductAttributeDependencyProvider
 {
@@ -350,6 +354,26 @@ class ProductAttributeDependencyProvider extends SprykerProductAttributeDependen
     {
         return [
             new VisibilityProductAttributeQueryExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductAttributeExtension\Dependency\Plugin\SuggestKeysQueryExpanderPluginInterface>
+     */
+    protected function getSuggestKeysQueryExpanderPlugins(): array
+    {
+        return [
+            new VisibilitySuggestKeysQueryExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\ProductAttributeExtension\Dependency\Plugin\SuggestKeysExpanderPluginInterface>
+     */
+    protected function getSuggestKeysExpanderPlugins(): array
+    {
+        return [
+            new VisibilitySuggestKeysExpanderPlugin(),
         ];
     }
 }

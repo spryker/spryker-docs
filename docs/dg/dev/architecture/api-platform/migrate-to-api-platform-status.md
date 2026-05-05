@@ -90,6 +90,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 |---|---|---|---|
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
+| PaymentsRestApi | StorefrontAPI | Migrated | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
 | ProductAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-availabilities<br>GET /concrete-products/{id}/concrete-product-availabilities |
 | ProductOfferAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /product-offers/{id}/product-offer-availabilities |
 | ProductOfferPricesRestApi | StorefrontAPI | Migrated | GET /product-offers/{id}/product-offer-prices |
@@ -142,7 +143,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Planned | OrdersRestApi, CartsRestApi, CartReorderRestApi |
 | OrderPaymentsRestApi | StorefrontAPI | Planned | POST /order-payments |
 | OrdersRestApi | StorefrontAPI | Planned | GET /orders<br>GET /orders/{id}<br>GET /customers/{id}/orders |
-| PaymentsRestApi | StorefrontAPI | Planned | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned | ProductOfferPricesRestApi |
 | PriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned | ProductPricesRestApi |
 | ProductAttributesRestApi | StorefrontAPI | Planned | GET /product-management-attributes<br>GET /product-management-attributes/{id} |

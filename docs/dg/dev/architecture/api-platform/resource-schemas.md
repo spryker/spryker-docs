@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Mar 11, 2026
+last_updated: May 5, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -240,8 +240,18 @@ resource:
 | `integer` | `int` | `42` | Whole numbers |
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
-| `array` | `array` | `["a", "b"]` | Arrays |
-| `object` | `object` | `{"key": "value"}` | Nested objects |
+| `array` | `array` | `["a", "b"]` | Lists of values |
+| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects |
+| `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
+| `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
+
+Use `map` when the payload is a structured JSON object whose schema you want to describe via
+`openapiContext` rather than a strongly typed PHP class. This is the recommended type whenever a
+request or response body is a JSON object with a known shape but no dedicated DTO class — it
+keeps the property typed as a simple `array` in PHP while still producing rich OpenAPI metadata
+and a working "Try Out" body in Swagger UI. See
+[Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui)
+for the full pattern.
 
 ### Property attributes
 
@@ -296,6 +306,143 @@ isActive:
   type: boolean
   default: true     # Defaults to true if not provided
 ```
+
+## Documenting nested properties for OpenAPI and Swagger UI
+
+Many endpoints accept or return structured JSON payloads — for example, a payment initialization
+request that takes `payment`, `quote`, and `customer` sub-objects. Without explicit metadata,
+those payloads appear as opaque `object` entries in the OpenAPI document, which means:
+
+- The generated OpenAPI specification does not describe the child fields, their types, or which
+  ones are required.
+- The Swagger UI "Try Out" button shows an empty request body, forcing consumers to read code or
+  external documentation to discover the expected shape.
+
+The `map` property type combined with nested `openapiContext` entries closes both gaps.
+
+### When to use this pattern
+
+Use this pattern when the request or response body is a structured JSON object whose schema you
+want to publish through OpenAPI, but you do not want to introduce a dedicated typed PHP class
+for it. Typical cases are:
+
+- Request payloads that aggregate fields from multiple transfer objects (for example, payment
+  selection plus quote context).
+- PSP- or provider-specific response payloads whose shape varies by configuration.
+
+For payloads with a stable, strongly typed shape, prefer `type: object` so the generated PHP
+class enforces the structure at the language level.
+
+### Pattern
+
+Combine `type: map` on the property with the following entries inside `openapiContext`:
+
+| Entry | Purpose |
+|-------|---------|
+| `properties` | Declares each child field with its own `type`, `description`, `format`, and `example`. Used by Swagger UI to render the field-by-field schema. |
+| `required` | Lists the child fields that must be present on a request. Drives the "required" markers in Swagger UI and the OpenAPI specification. |
+| `example` | A complete sample payload. This is the value Swagger UI prefills into the "Try Out" body, so consumers can execute the request immediately. |
+
+When the property is a `map`, the generator merges `'type' => 'object'` into the emitted
+`openapiContext`, so the property appears as an object — with the documented schema — in the
+OpenAPI document while staying as a plain PHP `array` in the generated resource class.
+
+### Worked example
+
+The following extract is taken from
+`src/Spryker/PaymentsRestApi/resources/api/storefront/payments.resource.yml`. It shows three
+common shapes: a flat request object (`payment`), a request object with nested object children
+(`quote`), and a response-only object whose contents vary at runtime (`preOrderPaymentData`).
+
+```yaml
+properties:
+    payment:
+        type: map
+        writable: true
+        readable: false
+        required: true
+        description: 'Payment selection for the pre-order initialization'
+        openapiContext:
+            required: ['paymentProviderName', 'paymentMethodName', 'amount']
+            properties:
+                paymentProviderName:
+                    type: string
+                    example: 'DummyPayment'
+                paymentMethodName:
+                    type: string
+                    example: 'Invoice'
+                amount:
+                    type: integer
+                    description: 'Amount in minor units (cents)'
+                    example: 9999
+            example:
+                paymentProviderName: 'DummyPayment'
+                paymentMethodName: 'Invoice'
+                amount: 9999
+
+    quote:
+        type: map
+        writable: true
+        readable: false
+        required: true
+        description: 'Quote context required to initialize the payment'
+        openapiContext:
+            required: ['customer', 'billingAddress', 'currency']
+            properties:
+                customer:
+                    type: object
+                    required: ['firstName', 'lastName', 'email']
+                    properties:
+                        firstName: { type: string, example: 'Sonia' }
+                        lastName: { type: string, example: 'Wagner' }
+                        email: { type: string, format: email, example: 'sonia@acme.com' }
+                billingAddress:
+                    type: object
+                    required: ['iso2Code']
+                    properties:
+                        iso2Code: { type: string, example: 'DE' }
+                currency:
+                    type: object
+                    required: ['code']
+                    properties:
+                        code: { type: string, example: 'EUR' }
+            example:
+                customer:
+                    firstName: 'Sonia'
+                    lastName: 'Wagner'
+                    email: 'sonia@acme.com'
+                billingAddress:
+                    iso2Code: 'DE'
+                currency:
+                    code: 'EUR'
+
+    preOrderPaymentData:
+        type: map
+        writable: false
+        readable: true
+        required: false
+        description: 'PSP-specific response payload returned by the payment provider'
+        openapiContext:
+            example:
+                transactionId: 'tx_abc123'
+                redirectUrl: 'https://psp.example.com/pay/tx_abc123'
+```
+
+### Read-only versus write-only payloads
+
+- **Write-only request payloads** (`writable: true`, `readable: false`) should declare
+  `properties`, `required`, and `example`. The first two drive request validation and the
+  generated OpenAPI schema; `example` makes the Swagger UI "Try Out" body usable without
+  edits.
+- **Read-only response payloads** (`writable: false`, `readable: true`) only need
+  `openapiContext.example` when the response shape is dynamic. If the response shape is fixed,
+  prefer declaring `properties` (and optionally `required`) so consumers see the full schema.
+
+### Validation note
+
+`openapiContext.required` controls only the OpenAPI documentation. If a request field must be
+enforced at runtime, add the matching constraint to the resource's validation schema — see
+[Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html).
 
 ## Operations
 
@@ -881,6 +1028,8 @@ Only these property types are allowed:
 - `boolean`
 - `array`
 - `object`
+- `map`
+- `mixed`
 
 ### Provider/Processor validation
 

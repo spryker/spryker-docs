@@ -1,7 +1,7 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Apr 29, 2026
+last_updated: May 5, 2026
 keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
@@ -463,6 +463,12 @@ This transfer represents a file or image attachment:
 - `contentType` (string): Content type format: `ATTACHMENT_CONTENT_TYPE_URL`, `ATTACHMENT_CONTENT_TYPE_BASE64`, or `ATTACHMENT_CONTENT_TYPE_ID` (for provider-hosted file references such as OpenAI or Anthropic Files API IDs)
 - `mediaType` (string): MIME type (for example, `image/png`, `application/pdf`)
 - `filename` (string, optional): Original filename for document attachments. Only set when the type is `document` and the caller provides it.
+
+{% info_block warningBox "AWS Bedrock limitation" %}
+
+AWS Bedrock does not support URL-based attachments. When using AWS Bedrock as the provider, use `ATTACHMENT_CONTENT_TYPE_BASE64` to pass image or document content as Base64-encoded data instead of a URL.
+
+{% endinfo_block %}
 
 ### ToolInvocation
 

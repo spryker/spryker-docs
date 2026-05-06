@@ -111,7 +111,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CategoriesRestApi | StorefrontAPI | Migrated | GET /category-trees<br>GET /category-nodes/{id} |
 | CheckoutRestApi | StorefrontAPI | Planned  | POST /checkout-data<br>POST /checkout |
 | CmsPagesRestApi | StorefrontAPI | Planned  | GET /cms-pages<br>GET /cms-pages/{id} |
-| CompaniesRestApi | StorefrontAPI | Planned  | GET /companies<br>GET /companies/{id} |
+| CompaniesRestApi | StorefrontAPI | Migrated | GET /companies<br>GET /companies/{id} |
 | CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Planned  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
 | CompanyBusinessUnitsRestApi | StorefrontAPI | Planned  | GET /company-business-units<br>GET /company-business-units/{id} |
 | CompanyRolesRestApi | StorefrontAPI | Planned  | GET /company-roles<br>GET /company-roles/{id} |

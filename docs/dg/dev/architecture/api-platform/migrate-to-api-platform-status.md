@@ -89,6 +89,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | Module | Category | Status   | Key endpoints |
 |---|---|----------|---|
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
+| MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
 | MerchantCategoriesRestApi | Extension-only StorefrontAPI | Migrated | MerchantsRestApi |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
 | MerchantsRestApi | StorefrontAPI | Migrated | GET /merchants<br>GET /merchants/{id}<br>GET /merchants/{id}/merchant-addresses |
@@ -101,19 +102,19 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductTaxSetsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/product-tax-sets |
 | ProductsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}<br>GET /concrete-products/{id} |
 | StoresApi | StorefrontAPI | Migrated | GET /stores |
-| AgentAuthRestApi | StorefrontAPI | Planned  | POST /agent-access-tokens<br>POST /agent-customer-impersonation-access-tokens<br>GET /agent-customer-search |
+| AgentAuthRestApi | StorefrontAPI | Migrated | POST /agent-access-tokens<br>POST /agent-customer-impersonation-access-tokens<br>GET /agent-customer-search |
 | AlternativeProductsRestApi | StorefrontAPI | Planned  | GET /abstract-products/{id}/related-products<br>GET /concrete-products/{id}/abstract-alternative-products<br>GET /concrete-products/{id}/concrete-alternative-products |
-| AuthRestApi | StorefrontAPI | Planned  | POST /token<br>POST /access-tokens<br>POST /refresh-tokens<br>DELETE /refresh-tokens/{id} |
+| AuthRestApi | StorefrontAPI | Migrated | POST /token<br>POST /access-tokens<br>POST /refresh-tokens<br>DELETE /refresh-tokens/{id} |
 | AvailabilityNotificationsRestApi | StorefrontAPI | Planned  | POST /availability-notifications<br>DELETE /availability-notifications/{id}<br>GET /my-availability-notifications<br>GET /customers/{id}/availability-notifications |
 | CartCodesRestApi | StorefrontAPI | Planned  | POST /carts/{id}/cart-codes<br>DELETE /carts/{id}/cart-codes/{id}<br>POST /guest-carts/{id}/cart-codes<br>DELETE /guest-carts/{id}/cart-codes/{id} |
 | CartPermissionGroupsRestApi | StorefrontAPI | Planned  | GET /cart-permission-groups<br>GET /cart-permission-groups/{id} |
 | CartReorderRestApi | StorefrontAPI | Planned  | POST /cart-reorder |
 | CartsRestApi | StorefrontAPI | Planned  | GET,POST /carts<br>GET,PATCH,DELETE /carts/{id}<br>POST /carts/{id}/items<br>PATCH,DELETE /carts/{id}/items/{id}<br>GET /guest-carts<br>GET,PATCH /guest-carts/{id}<br>POST /guest-carts/{id}/guest-cart-items<br>PATCH,DELETE /guest-carts/{id}/guest-cart-items/{id}<br>GET /customers/{id}/carts |
-| CatalogSearchRestApi | StorefrontAPI | Planned  | GET /catalog-search<br>GET /catalog-search-suggestions |
-| CategoriesRestApi | StorefrontAPI | Planned  | GET /category-trees<br>GET /category-nodes/{id} |
+| CatalogSearchRestApi | StorefrontAPI | Migrated | GET /catalog-search<br>GET /catalog-search-suggestions |
+| CategoriesRestApi | StorefrontAPI | Migrated | GET /category-trees<br>GET /category-nodes/{id} |
 | CheckoutRestApi | StorefrontAPI | Planned  | POST /checkout-data<br>POST /checkout |
 | CmsPagesRestApi | StorefrontAPI | Planned  | GET /cms-pages<br>GET /cms-pages/{id} |
-| CompaniesRestApi | StorefrontAPI | Planned  | GET /companies<br>GET /companies/{id} |
+| CompaniesRestApi | StorefrontAPI | Migrated | GET /companies<br>GET /companies/{id} |
 | CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Planned  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
 | CompanyBusinessUnitsRestApi | StorefrontAPI | Planned  | GET /company-business-units<br>GET /company-business-units/{id} |
 | CompanyRolesRestApi | StorefrontAPI | Planned  | GET /company-roles<br>GET /company-roles/{id} |
@@ -122,13 +123,12 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
 | ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
 | ContentBannersRestApi | StorefrontAPI | Planned  | GET /content-banners/{id} |
-| CustomerAccessRestApi | StorefrontAPI | Planned  | GET /customer-access |
-| CustomersRestApi | StorefrontAPI | Planned  | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
+| CustomerAccessRestApi | StorefrontAPI | Migrated | GET /customer-access |
+| CustomersRestApi | StorefrontAPI | Migrated | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Planned  | CartsRestApi, CartCodesRestApi |
 | DiscountsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
-| MerchantOpeningHoursRestApi | StorefrontAPI | Planned  | GET /merchants/{id}/merchant-opening-hours |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
@@ -138,14 +138,14 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
 | MultiCartsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi |
-| NavigationsRestApi | StorefrontAPI | Planned  | GET /navigations/{id} |
-| OauthApi | StorefrontAPI | Planned  | POST /token |
+| NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
+| OauthApi | StorefrontAPI | Migrated | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi, CartsRestApi, CartReorderRestApi |
 | OrdersRestApi | StorefrontAPI | Planned  | GET /orders<br>GET /orders/{id}<br>GET /customers/{id}/orders |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductOfferPricesRestApi |
 | PriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductPricesRestApi |
-| ProductAttributesRestApi | StorefrontAPI | Planned  | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
+| ProductAttributesRestApi | StorefrontAPI | Migrated | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
 | ProductBundleCartsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, ShipmentsRestApi |
 | ProductBundlesRestApi | StorefrontAPI | Planned  | GET /concrete-products/{id}/bundled-products |
 | ProductConfigurationShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | ShoppingListsRestApi |
@@ -153,7 +153,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductConfigurationsRestApi, ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi |
 | ProductConfigurationsRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi, CartsRestApi, OrdersRestApi |
 | ProductDiscontinuedRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi |
-| ProductImageSetsRestApi | StorefrontAPI | Planned  | GET /abstract-products/{id}/abstract-product-image-sets<br>GET /concrete-products/{id}/concrete-product-image-sets |
+| ProductImageSetsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-image-sets<br>GET /concrete-products/{id}/concrete-product-image-sets |
 | ProductLabelsRestApi | StorefrontAPI | Planned  | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Planned  | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
 | ProductOfferSalesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |

@@ -89,6 +89,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | Module | Category | Status   | Key endpoints |
 |---|---|----------|---|
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
+| MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
 | OrderPaymentsRestApi | StorefrontAPI | Migrated | POST /order-payments |
 | PaymentsRestApi | StorefrontAPI | Migrated | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
@@ -127,7 +128,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | MerchantCategoriesRestApi | Extension-only StorefrontAPI | Planned  | MerchantsRestApi |
-| MerchantOpeningHoursRestApi | StorefrontAPI | Planned  | GET /merchants/{id}/merchant-opening-hours |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |

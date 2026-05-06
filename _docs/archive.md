@@ -12,7 +12,26 @@
 
 5. Merge archive into branch.
 
-6. `./_scripts/deduplicate_mds.sh 202512.0`
+Resolve conflicts:
+
+```shell
+VERSION="202602.0"
+
+git diff --name-only --diff-filter=U --relative |
+    while IFS= read -r conflicted_file; do
+        if echo "$conflicted_file" | grep -q "/latest/" || echo "$conflicted_file" | grep -q "/$VERSION/" ; then
+            [ -f "$conflicted_file" ] && git checkout --ours "$conflicted_file" && git add "$conflicted_file"
+            [ ! -f "$conflicted_file" ] && git rm "$conflicted_file"
+        else
+            echo "$conflicted_file"
+            if echo "$conflicted_file" | grep -q "docs/" || echo "$conflicted_file" | grep -q "_includes/" ; then
+                git checkout --theirs "$conflicted_file" && git add "$conflicted_file"
+            fi
+        fi
+    done
+```
+
+6. Run `./_scripts/deduplicate_mds.sh 202512.0` a few times until no changes are made.
 
 7. Try to build and recover cleaned up files if they are referenced somewhere.
 

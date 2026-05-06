@@ -16,6 +16,27 @@ find docs/ -d -name "$1"  -print0 |
                     # delete only if there are not includes of other files.
                     if ! grep -q "{% include.*{{page.version}}.*%}" "$diff_to_delete" ; then
                         rm -v $diff_to_delete
+                    else
+                        includes_exist=0
+                        echo "Checking includes in $diff_to_delete..."
+                        grep -RiH "{% include.*{{page.version}}.*%}" $diff_to_delete |
+                            while IFS= read -r match; do
+                                file=$(echo $match | cut -d ':' -f 1)
+                                include=$(echo $match | cut -d ':' -f 2)
+
+                                version=$(echo "$file" | grep -ohE "20[0-9]{4}\.[0-9]")
+                                include_file=$(echo "$include" | sed -E "s/\{% include ([^%]+) %\}.*/\\1/" | sed "s/{{page.version}}/$version/")
+
+                                echo $include_file
+                                if [ -f "_includes/$include_file" ]; then
+                                    includes_exist=1
+                                fi
+                            done
+                        if [ "$includes_exist" -eq 0 ]; then
+                            rm -v $diff_to_delete
+                        else
+                            echo " has existing includes and cannot be deleted"
+                        fi
                     fi
                 done
             fi

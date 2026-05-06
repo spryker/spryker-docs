@@ -7,12 +7,31 @@
 4. Search for
 - `(link: .*)/202512.0/(.*)` and replace with `$1/page.version/$2`
 - `(link: .*)/\{\{page.version\}\}/(.*)` and replace with `$1/page.version/$2`
+- `(see .*)/202311.0/` in `./docs/**/202512.0/**` and replace with `$1/{{page.version}}/`
 
 **These are regex!** Ensure to use regex search and substitution.
 
-5. Merge archive into branch.
+5. `git merge -s resolve  archive`
 
-`git merge -s resolve  archive`
+
+Resolve conflicts if any:
+
+```shell
+VERSION="202602.0"
+
+git diff --name-only --diff-filter=U --relative |
+    while IFS= read -r conflicted_file; do
+        if echo "$conflicted_file" | grep -q "/latest/" || echo "$conflicted_file" | grep -q "/$VERSION/" ; then
+            [ -f "$conflicted_file" ] && git checkout --ours "$conflicted_file" && git add "$conflicted_file"
+            [ ! -f "$conflicted_file" ] && git rm "$conflicted_file"
+        else
+            echo "$conflicted_file"
+            if echo "$conflicted_file" | grep -q "docs/" || echo "$conflicted_file" | grep -q "_includes/" ; then
+                git checkout --theirs "$conflicted_file" && git add "$conflicted_file"
+            fi
+        fi
+    done
+```
 
 6. Run `./_scripts/deduplicate_mds.sh 202512.0` a few times until no changes are made.
 

@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: May 5, 2026
+last_updated: Apr 29, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -91,6 +91,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
 | MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
+| OrderPaymentsRestApi | StorefrontAPI | Migrated | POST /order-payments |
 | PaymentsRestApi | StorefrontAPI | Migrated | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
 | ProductAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-availabilities<br>GET /concrete-products/{id}/concrete-product-availabilities |
 | ProductOfferAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /product-offers/{id}/product-offer-availabilities |
@@ -141,7 +142,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | OauthApi | StorefrontAPI | Planned  | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi, CartsRestApi, CartReorderRestApi |
-| OrderPaymentsRestApi | StorefrontAPI | Planned  | POST /order-payments |
 | OrdersRestApi | StorefrontAPI | Planned  | GET /orders<br>GET /orders/{id}<br>GET /customers/{id}/orders |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductOfferPricesRestApi |
 | PriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductPricesRestApi |

@@ -14,12 +14,12 @@ Install the required features:
 | NAME | VERSION |
 | --- | --- |
 | Spryker Core | ^3.46.0 |
+| spryker-shop/shop-ui | 1.107.0 |
+| spryker-shop/traceable-event-widget | 1.2.0 |
 
 ## Install the feature core
 
-### 1) Install the required modules
-
-Install the required modules using Composer:
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencies
@@ -57,8 +57,6 @@ Verify that the following transfer objects have been generated:
 {% endinfo_block %}
 
 ### 3) Generate translations
-
-Regenerate the Zed translator cache to pick up the Search Statistics Back Office UI translations:
 
 ```bash
 console translator:generate-cache

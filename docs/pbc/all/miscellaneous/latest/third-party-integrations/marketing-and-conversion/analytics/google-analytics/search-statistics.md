@@ -18,12 +18,6 @@ Search Statistics is a Back Office feature that gives business operators visibil
 
 This section explains how to use Search Statistics in the Spryker Back Office. Search Statistics shows what customers are searching for and which searches return no results, so you can optimize your catalog, create synonyms, and improve product discoverability.
 
-{% info_block infoBox "Prerequisites" %}
-
-To use Search Statistics, the feature must be installed and configured. For setup instructions, see [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html).
-
-{% endinfo_block %}
-
 {% info_block infoBox "Data availability" %}
 
 Google Analytics 4 processes incoming events with a delay of up to 48 hours. Search data collected on the storefront may not appear in the Back Office immediately after installation.

@@ -15,7 +15,7 @@ Install the required features:
 | --- | --- |
 | Spryker Core | ^3.46.0 |
 
-## Install feature core
+## Install the feature core
 
 ### 1) Install the required modules
 
@@ -45,7 +45,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following changes have been applied in transfer objects:
+Verify that the following transfer objects have been generated:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Add translations
+### 3) Generate translations
 
 Regenerate the Zed translator cache to pick up the Search Statistics Back Office UI translations:
 
@@ -94,11 +94,11 @@ Update the `analytics` navigation entry in `config/Zed/navigation.xml` to add **
 </analytics>
 ```
 
-Generate routers and navigation cache:
+Generate the router and navigation caches:
 
 ```bash
 console router:cache:warm-up:backoffice
-console navigation:build-cache 
+console navigation:build-cache
 ```
 
 {% info_block warningBox "Verification" %}
@@ -109,7 +109,7 @@ Log in to the Back Office and verify that **Analytics > Search Statistics** appe
 
 ### 5) Set up behavior
 
-#### 5.1) Sync configuration definitions
+#### 5.1) Synchronize configuration definitions
 
 Import the Search Statistics configuration schema into the Configuration module:
 
@@ -125,9 +125,9 @@ console configuration:sync
 
 {% endinfo_block %}
 
-#### 5.2) Configure GA4 credentials
+#### 5.2) Configure Google Analytics 4 credentials
 
-Before configuring the Back Office, obtain the required parameters from Google:
+Before you configure the Back Office, obtain the following parameters from Google:
 
 - **Measurement ID** (format: `G-XXXXXXXXXX`): see [Find your Measurement ID](https://support.google.com/analytics/answer/9539598) in the Google Analytics Help Center.
 - **Property ID**: see [GA4 Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id) in the Google Analytics Data API documentation.
@@ -142,7 +142,7 @@ Configure the Google Analytics 4 connection in the Back Office:
 {% info_block warningBox "Verification" %}
 
 1. Open the storefront and perform a search.
-2. Verify that a `search_results` event appears in the GA4 DebugView for the configured property. To enable and use DebugView, see [Monitor events with DebugView](https://support.google.com/analytics/answer/7201382) in the Google Analytics Help Center.
+2. Verify that a `search_results` event appears in the Google Analytics 4 DebugView for the configured property. To enable and use DebugView, see [Monitor events with DebugView](https://support.google.com/analytics/answer/7201382) in the Google Analytics Help Center.
 3. Navigate to **Analytics > Search Statistics** in the Back Office and verify that search term data is returned after the GA4 processing delay (up to 48 hours).
 
 {% endinfo_block %}

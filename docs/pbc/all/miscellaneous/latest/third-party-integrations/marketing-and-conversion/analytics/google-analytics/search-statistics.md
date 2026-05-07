@@ -10,13 +10,13 @@ related:
 
 Search Statistics is a Back Office feature that gives business operators visibility into storefront search behavior. It uses Google Analytics 4 (GA4) as the underlying data collection and reporting layer, eliminating the need for custom per-project analytics implementations.
 
-## Related Developer guides
+## Related developer guides
 
 - [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html)
 
 ## Use Search Statistics
 
-This section describes how to use Search Statistics in the Spryker Back Office. Search Statistics shows what customers are searching for and which searches return no results, so you can optimize your catalog, create synonyms, and improve product discoverability.
+This section explains how to use Search Statistics in the Spryker Back Office. Search Statistics shows what customers are searching for and which searches return no results, so you can optimize your catalog, create synonyms, and improve product discoverability.
 
 {% info_block infoBox "Prerequisites" %}
 
@@ -43,7 +43,7 @@ The dashboard displays the following:
 
 The dashboard and all detail views filter data by a date range. The currently active range is shown at the top of the page.
 
-To change the date range, click the date range dropdown and select one of the following:
+To change the date range, select the date range dropdown and choose one of the following options:
 
 - **Last 24 hours**
 - **Last 7 days**
@@ -61,16 +61,15 @@ The **Top 10 Frequent Searches** widget shows the most popular search terms. Use
 To view all frequent searches beyond the top 10, click **View All**. The detail page shows a full list with the following columns:
 
 | COLUMN        | DESCRIPTION                                                       |
-|---------------|-------------------------------------------------------------------|
 | Search Term   | The query customers entered.                                      |
-| Store         | The store in which Search Term have been searched.                |
-| Locale        | The locale in which Search Term have been searched.               |
-| Search Count  | The number of times the term was searched in the selected period. |
-| Last Occurred | The date when the term was last occurred.                         |
+| Store         | The store in which the search term was searched.                  |
+| Locale        | The locale in which the search term was searched.                 |
+| Search Count  | The number of times the term was searched during the selected period. |
+| Last Occurred | The date when the term last occurred.                             |
 
 On the detail page, you can:
 
-- **Sort** by Count column.
+- **Sort** the list by the **Count** column.
 - **Filter** by date range using the date picker at the top of the page.
 - **Filter** by store using the store select at the top of the page.
 - **Filter** by locale using the locale select at the top of the page.
@@ -87,16 +86,15 @@ The **Top 10 Zero-Result Searches** widget shows the most frequently searched te
 To view all zero-result searches, click **View All**. The detail page shows a full list with the following columns:
 
 | COLUMN | DESCRIPTION |
-|---|---|
 | Search Term | The query that returned no results. |
-| Store         | The store in which Search Term have been searched.                |
-| Locale        | The locale in which Search Term have been searched.               |
+| Store | The store in which the search term was searched. |
+| Locale | The locale in which the search term was searched. |
 | Occurrence Count | The number of times customers searched for this term with zero results. |
-| Last Occurred | The date when the term was last occurred. |
+| Last Occurred | The date when the term last occurred. |
 
 On the detail page, you can:
 
-- **Sort** by Count column.
+- **Sort** the list by the **Count** column.
 - **Filter** by a minimum occurrence threshold to focus on high-impact terms.
 - **Filter** by date range using the date picker at the top of the page.
 - **Filter** by store using the store select at the top of the page.

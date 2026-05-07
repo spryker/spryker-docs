@@ -17,7 +17,6 @@ Install the required features:
 | spryker-shop/shop-ui | 1.107.0 |
 | spryker-shop/traceable-event-widget | 1.2.0 |
 
-## Install the feature core
 
 ### 1) Install the required modules using Composer
 
@@ -35,9 +34,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
-
-Generate transfer objects:
+### 2) Generate transfer objects
 
 ```bash
 console transfer:generate

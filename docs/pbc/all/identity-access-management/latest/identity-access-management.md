@@ -1,7 +1,7 @@
 ---
 title: Identity Access Management
 description: Learn all about the Spryker Identity Access Management capability and how to create and manage accounts within your Spryker project.
-last_updated: Mar 12, 2026
+last_updated: May 7, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html

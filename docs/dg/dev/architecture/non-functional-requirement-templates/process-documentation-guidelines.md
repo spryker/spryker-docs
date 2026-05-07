@@ -1,15 +1,17 @@
 ---
 title: Process documentation guidelines
 description: Process documentation guidelines to improve communication and ensure smooth deployment of applications within cross-functional teams.
-last_updated: April 23, 2024
+last_updated: Apr 21, 2026
 template: concept-topic-template
 related:
   - title: NFR guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/operational-and-deployment-guidelines.html
   - title: Operatable feature guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/operatable-feature-guidelines.html
   - title: Monitorable process guidelines
-    link: docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+    link: docs/dg/dev/architecture/non-functional-requirement-templates/monitorable-process-guidelines.html
+redirect_from:
+  - /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
 ---
 
 This document provides guideline templates for development teams striving for high-quality software. These templates are flexible and serve as a starting point, so make sure to adjust them to your project's requirements. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
@@ -93,7 +95,7 @@ This forms a general overview of the logic, components, and infrastructure. This
 
 ### Risks, early warnings, and counter actions
 
-Building a large application is usually coupled with massive application-level logging. In some cases, a critical system issue can be prevented or minimized with timely warning signals. By using regular signals, like logs and metrics, from identified business or technical bottlenecks or risks, the operations team can improve the application's stability. We recommend maintaining a list of such signals and risks in the operational guidelines. This includes recommended actions to take in order to deliver the best mitigation strategy. For more information on these guidelines, see [Operatable feature guidelines](/docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html).
+Building a large application is usually coupled with massive application-level logging. In some cases, a critical system issue can be prevented or minimized with timely warning signals. By using regular signals, like logs and metrics, from identified business or technical bottlenecks or risks, the operations team can improve the application's stability. We recommend maintaining a list of such signals and risks in the operational guidelines. This includes recommended actions to take in order to deliver the best mitigation strategy. For more information on these guidelines, see [Operatable feature guidelines](/docs/dg/dev/architecture/non-functional-requirement-templates/operatable-feature-guidelines.html).
 
 ### Silent undesired scenario
 

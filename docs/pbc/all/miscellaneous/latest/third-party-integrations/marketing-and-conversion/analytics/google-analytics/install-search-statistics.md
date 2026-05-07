@@ -1,11 +1,11 @@
 ---
-title: Install the Google Analytics feature
-description: Learn how to integrate and configure the Google Analytics feature in a Spryker project.
-last_updated: May 5, 2026
+title: Install Search Statistics
+description: Learn how to install and configure the Search Statistics feature in a Spryker project.
+last_updated: May 7, 2026
 template: howto-guide-template
 ---
 
-This document describes how to install the Google Analytics feature.
+This document describes how to install the Search Statistics feature.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 3) Add translations
 
-Regenerate the Zed translator cache to pick up the Google Analytics Back Office UI translations:
+Regenerate the Zed translator cache to pick up the Search Statistics Back Office UI translations:
 
 ```bash
 console translator:generate-cache
@@ -111,7 +111,7 @@ Log in to the Back Office and verify that **Analytics > Search Statistics** appe
 
 #### 5.1) Sync configuration definitions
 
-Import the Google Analytics configuration schema into the Configuration module:
+Import the Search Statistics configuration schema into the Configuration module:
 
 ```bash
 console configuration:sync

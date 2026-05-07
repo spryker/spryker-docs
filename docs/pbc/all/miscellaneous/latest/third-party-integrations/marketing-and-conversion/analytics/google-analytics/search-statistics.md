@@ -1,0 +1,109 @@
+---
+title: Search Statistics
+description: Use Search Statistics in the Spryker Back Office to analyze search behavior and identify zero-result searches powered by Google Analytics 4.
+last_updated: May 7, 2026
+template: concept-topic-template
+related:
+  - title: Install Search Statistics
+    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
+---
+
+Search Statistics is a Back Office feature that gives business operators visibility into storefront search behavior. It uses Google Analytics 4 (GA4) as the underlying data collection and reporting layer, eliminating the need for custom per-project analytics implementations.
+
+## Related Developer guides
+
+- [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html)
+
+## Use Search Statistics
+
+This section describes how to use Search Statistics in the Spryker Back Office. Search Statistics shows what customers are searching for and which searches return no results, so you can optimize your catalog, create synonyms, and improve product discoverability.
+
+{% info_block infoBox "Prerequisites" %}
+
+To use Search Statistics, the feature must be installed and configured. For setup instructions, see [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html).
+
+{% endinfo_block %}
+
+{% info_block infoBox "Data availability" %}
+
+Google Analytics 4 processes incoming events with a delay of up to 48 hours. Search data collected on the storefront may not appear in the Back Office immediately after installation.
+
+{% endinfo_block %}
+
+### Access Search Statistics
+
+To open the Search Statistics dashboard, in the Back Office, go to **Analytics > Search Statistics**.
+
+The dashboard displays the following:
+
+- **Top 10 Frequent Searches**: the ten most searched terms for the selected period, ranked by search count.
+- **Top 10 Zero-Result Searches**: the ten most frequently searched terms that returned no results, ranked by occurrence count.
+
+### Select a date range
+
+The dashboard and all detail views filter data by a date range. The currently active range is shown at the top of the page.
+
+To change the date range, click the date range dropdown and select one of the following:
+
+- **Last 24 hours**
+- **Last 7 days**
+- **Last 30 days**
+- **Custom range**: opens a date picker where you can set a start and end date.
+
+### Analyze frequent searches
+
+The **Top 10 Frequent Searches** widget shows the most popular search terms. Use this data to:
+
+- Understand buyer intent and prioritize catalog improvements.
+- Identify high-volume terms to optimize product titles and descriptions.
+- Discover seasonal or campaign-driven search trends.
+
+To view all frequent searches beyond the top 10, click **View All**. The detail page shows a full list with the following columns:
+
+| COLUMN        | DESCRIPTION                                                       |
+|---------------|-------------------------------------------------------------------|
+| Search Term   | The query customers entered.                                      |
+| Store         | The store in which Search Term have been searched.                |
+| Locale        | The locale in which Search Term have been searched.               |
+| Search Count  | The number of times the term was searched in the selected period. |
+| Last Occurred | The date when the term was last occurred.                         |
+
+On the detail page, you can:
+
+- **Sort** by Count column.
+- **Filter** by date range using the date picker at the top of the page.
+- **Filter** by store using the store select at the top of the page.
+- **Filter** by locale using the locale select at the top of the page.
+- **Paginate** through results using the controls at the bottom of the list.
+
+### Identify zero-result searches
+
+The **Top 10 Zero-Result Searches** widget shows the most frequently searched terms that returned no results. Use this data to:
+
+- Create synonyms for terms that do not match existing product data.
+- Identify gaps in the product catalog to fill with new products.
+- Improve search relevance by adjusting search configuration.
+
+To view all zero-result searches, click **View All**. The detail page shows a full list with the following columns:
+
+| COLUMN | DESCRIPTION |
+|---|---|
+| Search Term | The query that returned no results. |
+| Store         | The store in which Search Term have been searched.                |
+| Locale        | The locale in which Search Term have been searched.               |
+| Occurrence Count | The number of times customers searched for this term with zero results. |
+| Last Occurred | The date when the term was last occurred. |
+
+On the detail page, you can:
+
+- **Sort** by Count column.
+- **Filter** by a minimum occurrence threshold to focus on high-impact terms.
+- **Filter** by date range using the date picker at the top of the page.
+- **Filter** by store using the store select at the top of the page.
+- **Filter** by locale using the locale select at the top of the page.
+- **Paginate** through results using the controls at the bottom of the list.
+
+### Limitations
+
+- **Data delay**: Search events collected on the storefront appear in the dashboard after up to 48 hours of GA4 processing time.
+- **Ad blockers**: Customers with ad blockers installed may not send events to GA4. This can cause search data to be underreported by an estimated 10–25%.

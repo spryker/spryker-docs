@@ -1836,11 +1836,11 @@ entries:
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/haensel-ams.html
                   - title: Mindlab
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
-                  - title: Google Analytics
-                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/google-analytics.html
+                  - title: Search Statistics
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/search-statistics.html
                     nested:
-                      - title: Install and integrate Google Analytics
-                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-the-google-analytics-feature.html
+                      - title: Install Search Statistics
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
 
               - title: OpenAI
                 url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html

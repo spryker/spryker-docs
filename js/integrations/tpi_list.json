@@ -744,5 +744,19 @@
     "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/punchout-gateway/punchout-gateway",
     "Comm_Doc": "",
     "status": "active"
+  },
+  {
+    "Partner": "Federated Authentication",
+    "Description": "Federated Authentication enables Spryker-based shops to authenticate users through external identity providers using OAuth2 and OpenID Connect standards.",
+    "shortDescription": "Authenticate users via external identity providers.",
+    "Logo": "",
+    "Author": "Spryker",
+    "category": "Identity Management",
+    "cat_icon": "/images/integrations/cat_icon/icon_identity.png",
+    "method": ["Core"],
+    "ACP_Doc": "",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/oauth/latest/federated-authentication",
+    "Comm_Doc": "",
+    "status": "active"
   }
 ]

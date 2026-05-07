@@ -6,6 +6,9 @@ last_updated: Aug 22, 2025
 keywords: mfa
 redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
+related:
+  - title: Federated Authentication via OAuth2/OIDC
+    link: docs/pbc/all/oauth/latest/federated-authentication.html
 ---
 
 Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, agents, merchant, and merchant agent users by requiring multiple methods of authentication before allowing an action.
@@ -112,31 +115,3 @@ For instructions on configuring brute force protection, see [Install the Multi-F
 The feature is shipped with the email authentication method. For instructions on installing this method, see [Install email Multi-Factor Authentication method](/docs/pbc/all/multi-factor-authentication/latest/install-email-multi-factor-authentication-method.html).
 
 You can set up your own methods by implementing a custom MFA type plugin. For instructions, see [Create custom Multi-Factor Authentication methods](/docs/pbc/all/multi-factor-authentication/latest/create-multi-factor-authentication-methods.html).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

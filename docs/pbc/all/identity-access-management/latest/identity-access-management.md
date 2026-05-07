@@ -92,6 +92,7 @@ Each of the identity managers is an ECO module that must be developed separately
 | [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) | [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
 | [Integrate post-login redirect](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/integrate-post-login-redirect.html) | |
+| | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html) |
 | | [Authenticate as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) |

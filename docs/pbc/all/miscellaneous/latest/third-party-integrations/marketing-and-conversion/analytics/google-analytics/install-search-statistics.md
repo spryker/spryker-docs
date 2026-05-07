@@ -107,9 +107,27 @@ Log in to the Back Office and verify that **Analytics > Search Statistics** appe
 
 {% endinfo_block %}
 
-### 5) Set up behavior
+### 5) Configure TypeScript paths
 
-#### 5.1) Synchronize configuration definitions
+In `tsconfig.yves.json`, add the `TraceableEventWidget` path alias to `compilerOptions.paths`:
+
+**tsconfig.yves.json**
+
+```json
+{
+    "compilerOptions": {
+        "paths": {
+            "TraceableEventWidget/*": [
+                "./vendor/spryker-shop/traceable-event-widget/src/SprykerShop/Yves/TraceableEventWidget/Theme/default/*"
+            ]
+        }
+    }
+}
+```
+
+### 6) Set up behavior
+
+#### 6.1) Synchronize configuration definitions
 
 Import the Search Statistics configuration schema into the Configuration module:
 
@@ -125,7 +143,7 @@ console configuration:sync
 
 {% endinfo_block %}
 
-#### 5.2) Configure Google Analytics 4 credentials
+#### 6.2) Configure Google Analytics 4 credentials
 
 Before you configure the Back Office, obtain the following parameters from Google:
 

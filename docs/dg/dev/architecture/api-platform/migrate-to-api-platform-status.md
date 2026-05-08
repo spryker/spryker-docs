@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: Apr 29, 2026
+last_updated: May 6, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -90,8 +90,10 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 |---|---|----------|---|
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
 | MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
+| MerchantCategoriesRestApi | Extension-only StorefrontAPI | Migrated | MerchantsRestApi |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
+| MerchantsRestApi | StorefrontAPI | Migrated | GET /merchants<br>GET /merchants/{id}<br>GET /merchants/{id}/merchant-addresses |
 | OrderPaymentsRestApi | StorefrontAPI | Migrated | POST /order-payments |
 | PaymentsRestApi | StorefrontAPI | Migrated | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
 | ProductAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-availabilities<br>GET /concrete-products/{id}/concrete-product-availabilities |
@@ -130,7 +132,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | DiscountsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
-| MerchantCategoriesRestApi | Extension-only StorefrontAPI | Planned  | MerchantsRestApi |
+| MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
@@ -138,7 +140,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Planned  | CustomersRestApi |
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
-| MerchantsRestApi | StorefrontAPI | Planned  | GET /merchants<br>GET /merchants/{id}<br>GET /merchants/{id}/merchant-addresses |
 | MultiCartsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi |
 | NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | POST /token |

@@ -92,15 +92,18 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
 | MerchantCategoriesRestApi | Extension-only StorefrontAPI | Migrated | MerchantsRestApi |
 | MerchantProductOffersRestApi | StorefrontAPI | Migrated | GET /concrete-products/{id}/product-offers<br>GET /product-offers/{id} |
+| MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
 | MerchantsRestApi | StorefrontAPI | Migrated | GET /merchants<br>GET /merchants/{id}<br>GET /merchants/{id}/merchant-addresses |
 | OrderPaymentsRestApi | StorefrontAPI | Migrated | POST /order-payments |
 | PaymentsRestApi | StorefrontAPI | Migrated | POST /payments<br>POST /payment-cancellations<br>POST /payment-customers |
 | ProductAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-availabilities<br>GET /concrete-products/{id}/concrete-product-availabilities |
 | ProductOfferAvailabilitiesRestApi | StorefrontAPI | Migrated | GET /product-offers/{id}/product-offer-availabilities |
+| ProductOfferServicePointAvailabilitiesRestApi | StorefrontAPI | Migrated | POST /product-offer-service-point-availabilities |
 | ProductOfferPricesRestApi | StorefrontAPI | Migrated | GET /product-offers/{id}/product-offer-prices |
 | ProductPricesRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/abstract-product-prices<br>GET /concrete-products/{id}/concrete-product-prices |
 | ProductTaxSetsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/product-tax-sets |
 | ProductsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}<br>GET /concrete-products/{id} |
+| ShipmentTypeProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Migrated | ProductOfferServicePointAvailabilitiesRestApi |
 | StoresApi | StorefrontAPI | Migrated | GET /stores |
 | AgentAuthRestApi | StorefrontAPI | Migrated | POST /agent-access-tokens<br>POST /agent-customer-impersonation-access-tokens<br>GET /agent-customer-search |
 | AlternativeProductsRestApi | StorefrontAPI | Planned  | GET /abstract-products/{id}/related-products<br>GET /concrete-products/{id}/abstract-alternative-products<br>GET /concrete-products/{id}/concrete-alternative-products |
@@ -157,7 +160,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductLabelsRestApi | StorefrontAPI | Planned  | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Planned  | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
 | ProductOfferSalesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| ProductOfferServicePointAvailabilitiesRestApi | StorefrontAPI | Planned  | POST /product-offer-service-point-availabilities |
 | ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | ProductOffersRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi |
 | ProductOptionsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi |
@@ -171,7 +173,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi |
 | ServicePointsRestApi | StorefrontAPI | Planned  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
-| ShipmentTypeProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | ProductOfferServicePointAvailabilitiesRestApi |
 | ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
 | ShipmentTypesRestApi | StorefrontAPI | Planned  | GET /shipment-types<br>GET /shipment-types/{id} |
 | ShipmentsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |

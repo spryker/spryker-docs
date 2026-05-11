@@ -131,7 +131,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Planned  | CartsRestApi, CartCodesRestApi |
 | DiscountsRestApi | StorefrontAPI | Migrated  | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
-| GiftCardsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
+| GiftCardsRestApi | Extension-only StorefrontAPI | Migrated  | GlueApplication |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
@@ -140,7 +140,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Planned  | CustomersRestApi |
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
-| MultiCartsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi |
+| MultiCartsRestApi | Extension-only StorefrontAPI | Migrated  | CartsRestApi |
 | NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |

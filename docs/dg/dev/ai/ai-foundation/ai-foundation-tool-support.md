@@ -1,7 +1,7 @@
 ---
 title: Use AI tools with the AiFoundation module
 description: Extend AI capabilities by providing custom tools that AI models can invoke during conversations
-last_updated: Apr 22, 2026
+last_updated: Apr 29, 2026
 keywords: foundation, ai, tools, function calling, tool sets, plugins, openai, anthropic, prompt, agent, audit, logging
 template: howto-guide-template
 related:
@@ -449,6 +449,10 @@ if ($promptResponse->getIsSuccessful() === true) {
         $toolName = $toolInvocation->getName();
         $toolArguments = $toolInvocation->getArguments();
         $toolResult = $toolInvocation->getResult();
+
+        // content and reasoning are populated when the provider returns them alongside the tool call
+        $content = $toolInvocation->getContent();   // e.g. "I will search for that now."
+        $reasoning = $toolInvocation->getReasoning(); // chain-of-thought, when available
 
         // Log or process tool invocations
         $this->logger->info(sprintf(

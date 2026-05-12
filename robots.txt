@@ -1,11 +1,7 @@
 ---
 layout: null
 ---
-{% if site.noindex %}
 User-agent: *
 Disallow: /
-{% else %}
-User-agent: *
+User-agent: Algolia Crawler
 Allow: /
-Sitemap: https://docs.spryker.com/sitemap.xml
-{% endif %}

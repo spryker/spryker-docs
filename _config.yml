@@ -1,4 +1,4 @@
-version: "latest"
+version: "202602.0"
 release_version: "202602.0"
 
 repository: spryker/spryker-docs
@@ -18,7 +18,7 @@ company_name: Spryker
 github_editme_path: spryker/spryker-docs/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: "G-NEMRFN24T7"
+google_analytics: "G-M4RKNQ0L1M"
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
 feedback_disable: true
@@ -51,9 +51,9 @@ exclude:
   - gulpfile.js
   - redirect.html
   - rename_files.rb
+  - netlify.toml
   - README.md
-  - docs/scos/dev/drafts-dev/
-  - docs/scos/dev/developers-corner/
+  - _docs/
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -149,9 +149,10 @@ defaults:
       role: "all"
 
 versions:
+  '202404.0': '202404.0'
   '202410.0': '202410.0'
-  'latest': 'latest'
-
+  '202507.0': '202507.0'
+  '202512.0': '202512.0'
 
 
 # versioned categories - these must match corresponding directories
@@ -258,4 +259,4 @@ redirect_from:
 form_endpoints:
   feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSe7PX_n3IyJxq4nr-0pyt0nArWwQBwQ6CTqD04Try0vrMEEcQ/viewform?usp=pp_url&entry.1016977793=%URL%&entry.1645582234=%YES_NO%'
 
-noindex: false
+noindex: true

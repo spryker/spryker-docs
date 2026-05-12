@@ -13,9 +13,9 @@ The File Management feature enables company users to access files available with
 
 Back Office users can upload files to share with companies, business units, and company users.
 
-For instructions on uploading files in the Back Office, see [Upload SSP files](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-upload-ssp-files.html).
+For instructions on uploading files in the Back Office, see [Upload SSP files](/docs/pbc/all/self-service-portal/{{page.version}}/manage-in-the-back-office/back-office-upload-ssp-files.html).
 
-After uploading files, Back Office users can attach them to individual companies, units, users, and assets. For instructions, see [Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html).
+After uploading files, Back Office users can attach them to individual companies, units, users, and assets. For instructions, see [Attach SSP files to assets and company entities](/docs/pbc/all/self-service-portal/{{page.version}}/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html).
 
 
 ## Accessing SSP files
@@ -34,7 +34,7 @@ A company user can have the following permissions related to file management:
 - View Business Unit Files
 - View Company Files
 
-For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
+For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
 
 

@@ -7,18 +7,18 @@ redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/install-multi-factor-authentication-feature.html
 ---
 
-This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html).
+This document describes how to install the [Multi-Factor Authentication (MFA) feature](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html).
 
 ## Prerequisites
 
 | FEATURE                    | VERSION          | INSTALLATION  GUIDE                                                                                                                                                                                                                     |
 |----------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core               | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                             |
-| Spryker Core Back Office   | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                                                                      |
-| Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                  |
-| Agent assist               | {{page.release_tag}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/latest/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
-| Glue Rest API              | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
-| Back Office dropdown navigation | {{page.release_tag}} | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/latest/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
+| Spryker Core               | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                             |
+| Spryker Core Back Office   | {{page.release_tag}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/{{page.version}}/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)                                                                      |
+| Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                  |
+| Agent assist               | {{page.release_tag}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                                                                                          |
+| Glue Rest API              | {{page.release_tag}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)   |
+| Back Office dropdown navigation | {{page.release_tag}} | [Install Back Office dropdown navigation](/docs/pbc/all/back-office/{{page.version}}/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html) |
 | Backend API Application | {{page.release_tag}} | [Integrate Backend API Application](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html) |
 
 ## 1) Install the required modules
@@ -954,7 +954,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can authenticate with MFA using Storefront API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/latest/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
+Make sure you can authenticate with MFA using Storefront API. For instructions, see [Authenticate through MFA](/docs/pbc/all/multi-factor-authentication/{{page.version}}/manage-using-glue-api/glue-api-authenticate-through-mfa.html).
 
 {% endinfo_block %}
 
@@ -1035,7 +1035,7 @@ docker/sdk up --assets
 
 {% info_block warningBox "Verification" %}
 
-- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/latest/multi-factor-authentication.html#multi-factor-authentication-methods).
+- Integrate one of the supported MFA methods, see [Multi-Factor Authentication](/docs/pbc/all/multi-factor-authentication/{{page.version}}/multi-factor-authentication.html#multi-factor-authentication-methods).
 - Make sure the **Set up Multi-Factor Authentication** menu item is displayed in the navigation menu.
 - Clicking the menu should open one the following pages depending on your user:
   - Customers:`https://yves.mysprykershop.com/multi-factor-auth/set`

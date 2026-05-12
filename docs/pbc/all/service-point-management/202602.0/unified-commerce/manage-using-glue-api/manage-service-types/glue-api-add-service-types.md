@@ -9,7 +9,7 @@ This endpoint lets you add service types.
 
 ## Installation
 
-[Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)
+[Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
 
 ## Add a service type
 
@@ -21,7 +21,7 @@ This endpoint lets you add service types.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 Request sample: `POST https://glue-backend.mysprykershop.com/service-types`
 
@@ -64,7 +64,7 @@ Response sample:
 }
 ```
 
-{% include pbc/all/glue-api-guides/latest/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
 
 
 ## Possible errors

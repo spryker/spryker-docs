@@ -122,6 +122,6 @@ Customer support can create inquiries on behalf of customers using the [Agent As
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-inquiry-management-feature.html) |
+| [Install the SSP Inquiry Management feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-inquiry-management-feature.html) |
 
 

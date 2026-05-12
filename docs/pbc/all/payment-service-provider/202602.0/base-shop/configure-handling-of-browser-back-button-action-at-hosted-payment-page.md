@@ -58,7 +58,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 </state>
 ```
 
-The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history. For more information about the flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/latest/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
+The `exclude from customer` flag is used to prevent cancelled payment orders from appearing in registered customers' order history. For more information about the flag, see [Order Process Modelling via State Machines](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#state-machine-module).
 
 ## Testing
 

@@ -40,7 +40,7 @@ This opens the catalog search or the best ranking product details page.
 
 ## Install
 
-[Install Visual Search powered by OpenAI](/docs/pbc/all/search/latest/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai)
+[Install Visual Search powered by OpenAI](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/visual-search-powered-by-openai/install-visual-search-powered-by-openai)
 
 
 

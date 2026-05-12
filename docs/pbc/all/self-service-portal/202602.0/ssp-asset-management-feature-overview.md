@@ -11,8 +11,8 @@ The SSP Asset Management feature lets you manage assets in your organization and
 An asset is an item, piece of equipment, or resource that holds value and that a business tracks.
 You can group assets into models. Models define which spare parts and services are compatible with each asset. For more information, see:
 
-- [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/latest/ssp-model-management-feature-overview.html)
-- [Self-Service Portal asset-based catalog feature overview](/docs/pbc/all/self-service-portal/latest/ssp-asset-based-catalog-feature-overview.html)
+- [Self-Service Portal Models feature overview](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-model-management-feature-overview.html)
+- [Self-Service Portal asset-based catalog feature overview](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-asset-based-catalog-feature-overview.html)
 
 ![assets](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-assets-management-feature-overview.md/my-assets.png)
 
@@ -38,14 +38,14 @@ On the Storefront, company account users can add assets in the **Customer Accoun
 ![add-assets-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/self-service-portal/ssp-assets-management-feature-overview.md/add-assets-storefront.md.png)
 
 All added assets receive a pending status by default. A company user with approve permissions need to approve the added asset to make it available. Once an asset is approved, company users can create inquiries about the asset.
-For more information on inquiries, see [Inquiry Management feature overview](/docs/pbc/all/self-service-portal/latest/ssp-inquiry-management-feature-overview.html)
+For more information on inquiries, see [Inquiry Management feature overview](/docs/pbc/all/self-service-portal/{{page.version}}/ssp-inquiry-management-feature-overview.html)
 
 
 ## Adding assets in the Back Office
 
 If you need to add assets to multiple companies or business units simultaneously, it's more efficient to do it in the Back Office.
 
-For instructions, see [Add assets](/docs/pbc/all/self-service-portal/latest/manage-in-the-back-office/back-office-add-ssp-assets.html).
+For instructions, see [Add assets](/docs/pbc/all/self-service-portal/{{page.version}}/manage-in-the-back-office/back-office-add-ssp-assets.html).
 
 
 
@@ -59,13 +59,13 @@ A company user can have the following permissions related to asset management:
 - Unassign business unit assets
 - Create assets
 
-For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/latest/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
+For more information on company account permissions, see [Company user roles and permissions overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview).
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES                                                                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------|
-| [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/latest/install/install-the-ssp-asset-management-feature.html) |
+| [Install the SSP Asset Management feature](/docs/pbc/all/self-service-portal/{{page.version}}/install/install-the-ssp-asset-management-feature.html) |
 
 
 

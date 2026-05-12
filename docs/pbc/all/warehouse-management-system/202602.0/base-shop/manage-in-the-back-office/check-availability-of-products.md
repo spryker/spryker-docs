@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/check-availability-of-products.html
 related:
   - title: Timed Product Availability Feature Overview
-    link: docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
+    link: docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
 ---
 
 To check a product's availability in the Back Office, follow the steps:
@@ -36,4 +36,4 @@ To check a product's availability in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/latest/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
+[Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).

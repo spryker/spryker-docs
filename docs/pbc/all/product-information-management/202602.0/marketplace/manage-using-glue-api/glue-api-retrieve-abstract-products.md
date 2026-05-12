@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-abstract-products.html
 related:
   - title: Retrieving abstract products in abstract product lists
-    link: docs/pbc/all/content-management-system/{{page.version}}/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
+    link: docs/pbc/all/content-management-system/page.version/marketplace/glue-api-retrieve-abstract-products-in-abstract-product-lists.html
 ---
 
 This endpoint allows retrieving general information about abstract products.
@@ -1463,9 +1463,9 @@ To retrieve general information about an abstract product, send the request:
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md -->
 
 
 

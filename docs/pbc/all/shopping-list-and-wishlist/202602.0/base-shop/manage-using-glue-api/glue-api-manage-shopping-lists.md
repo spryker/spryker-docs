@@ -11,11 +11,11 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
 related:
     - title: Install the Shopping Lists Glue API
-      link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
+      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
     - title: Managing shopping list items
-      link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
+      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
     - title: Shopping Lists feature overview
-      link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 With the help of the [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
@@ -91,7 +91,7 @@ Request sample: create a shopping list
  <br>
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md -->
 
 
 ## Retrieve shopping lists
@@ -338,11 +338,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 ## Retrieve a shopping list
 
@@ -600,11 +600,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 
 ## Edit a shopping list
@@ -819,11 +819,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 
 ## Delete a shopping list

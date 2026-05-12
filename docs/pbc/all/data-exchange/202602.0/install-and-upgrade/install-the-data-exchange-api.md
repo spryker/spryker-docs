@@ -11,4 +11,4 @@ redirect_from:
     - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/data-exchange-api-integration.html
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/install-the-data-exchange-api.md -->

@@ -5,7 +5,7 @@ last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Managing shopping lists
-    link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html
 ---
 
 This endpoint allows managing marketplace shopping list items.
@@ -278,7 +278,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
 
 ## Change item quantity in a shopping list
@@ -521,9 +521,9 @@ To change the item quantity in a shopping list, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md -->
 
 
 ## Remove an item from a shopping list

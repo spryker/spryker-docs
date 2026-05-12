@@ -12,9 +12,9 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html
 related:
   - title: Manage carts of registered users
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
   - title: Manage items in carts of registered users
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html
 ---
 
 This endpoint allows managing discount vouchers in carts of registered users.
@@ -190,7 +190,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md -->
 
 
 ## Remove a discount voucher from a registered user's cart

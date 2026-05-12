@@ -11,13 +11,13 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
 related:
   - title: Retrieving abstract products
-    link: docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
-    link: docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 ---
 
 This endpoint allows retrieving information about availability of abstract products.
@@ -68,7 +68,7 @@ Response sample: retrieve availability of an abstract product
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-availabilities-response-attributes.md -->
 
 
 ## Possible errors

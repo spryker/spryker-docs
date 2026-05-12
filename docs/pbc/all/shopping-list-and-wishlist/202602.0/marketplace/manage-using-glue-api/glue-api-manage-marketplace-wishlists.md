@@ -10,7 +10,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
 The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
@@ -432,7 +432,7 @@ To retrieve all wishlists of a customer, send the request:
 | updatedAt     | String  | Date when the wishlist was updated.|
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
 For attributes of the included resources, see:
 
@@ -2237,7 +2237,7 @@ To retrieve a specific wishlist, send the request:
 | createdAt     | String  | Creation date of the wishlist. |
 | updatedAt     | String  | Date when the wishlist was updated. |
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
 For the attributes of the included resources, see
 

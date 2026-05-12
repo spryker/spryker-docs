@@ -14,31 +14,31 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
   - title: Login & Registration Forms
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-login-overview.html
   - title: Password Management
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/password-management-overview.html
   - title: Customer Accounts
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Searching by company users
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Managing customer authentication tokens
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
   - title: Managing customer authentication tokens via OAuth 2.0
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
   - title: Managing customers
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customers.html
   - title: Managing customer passwords
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
-    link: docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
 This endpoints allows retrieving and edit customer addresses.
@@ -145,7 +145,7 @@ Request sample: add an address
 
 <a name="add-an-address-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 
 ## Edit an address
@@ -225,7 +225,7 @@ Request sample: edit an address
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Retrieve customer's addresses
 
@@ -310,7 +310,7 @@ Request sample: retrieve customer's addresses
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Retrieve an address
 
@@ -339,7 +339,7 @@ Request sample: retrieve an address
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 ## Delete an address
 

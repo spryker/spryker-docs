@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: Feb 24, 2026
+last_updated: May 13, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -111,6 +111,23 @@ class QueueDependencyProvider extends SprykerQueueDependencyProvider
 }
 ```
 
+Also in `QueueDependencyProvider`, replace `EventRetryQueueMessageProcessorPlugin` with `EventQueueMessageProcessorPlugin` for the event retry queue. This is recommended since `spryker/event:^2.17.0`.
+
+Both plugins define how the event retry queue behaves when a message fails. `EventQueueMessageProcessorPlugin` processes failed messages directly in the retry queue, leaving the main queue unaffected. `EventRetryQueueMessageProcessorPlugin` routes failed messages back to the main queue (without the `.retry` postfix), which can slow down new message processing under high load:
+
+```php
+use Spryker\Zed\Event\Communication\Plugin\Queue\EventQueueMessageProcessorPlugin;
+use Spryker\Shared\Event\EventConstants;
+// ...
+
+protected function getProcessorMessagePlugins(Container $container): array
+{
+    return [
+        EventConstants::EVENT_QUEUE_RETRY => new EventQueueMessageProcessorPlugin(),
+    ];
+}
+```
+
 ### Step 2: Enable via configuration
 
 Add the following to `config/Shared/config_default.php`:
@@ -150,6 +167,7 @@ All configuration constants are defined in `Spryker\Shared\Queue\QueueConstants`
 | Constant                              | Environment variable                  | Type                   | Default | Description                                                                                                                       |
 |:--------------------------------------|:--------------------------------------|:-----------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------|
 | `RESOURCE_AWARE_QUEUE_WORKER_ENABLED` | `RESOURCE_AWARE_QUEUE_WORKER_ENABLED` | boolean                | `false` | Enables the resource-aware worker. When turned off, the default worker is used.                                                   |
+| `QUEUE_WORKER_WAIT_LIMIT_ENABLED`     | -                                     | boolean                | `false` | When enabled, stops the queue worker once execution time exceeds `QUEUE_WORKER_MAX_THRESHOLD_SECONDS`. Use `QUEUE_WORKER_MAX_WAITING_SECONDS` (default: 30 seconds) to control how long the system waits for running subprocesses to complete after the threshold is reached. Prevents a single stuck subprocess from blocking the entire worker. |
 | `QUEUE_WORKER_MAX_THRESHOLD_SECONDS`  | `QUEUE_WORKER_MAX_THRESHOLD_SECONDS`  | integer (seconds)      | `59`    | Maximum runtime per worker invocation. Set to slightly under one minute so Jenkins can restart the worker on the next cron cycle. |
 | `QUEUE_WORKER_INTERVAL_MILLISECONDS`  | `QUEUE_WORKER_INTERVAL_MILLISECONDS`  | integer (milliseconds) | `1000`  | Minimum delay between spawning consecutive child processes. Lower values (100-500) increase throughput at the cost of CPU.        |
 
@@ -187,6 +205,9 @@ use Spryker\Shared\Queue\QueueConstants;
 
 // Enable the resource-aware worker
 $config[QueueConstants::RESOURCE_AWARE_QUEUE_WORKER_ENABLED] = (bool)getenv('RESOURCE_AWARE_QUEUE_WORKER_ENABLED') ?: true;
+
+// Stop worker when execution time is exceeded; wait up to QUEUE_WORKER_MAX_WAITING_SECONDS for subprocesses
+$config[QueueConstants::QUEUE_WORKER_WAIT_LIMIT_ENABLED] = true;
 
 // Process pool
 $config[QueueConstants::QUEUE_WORKER_MAX_PROCESSES] = 10;

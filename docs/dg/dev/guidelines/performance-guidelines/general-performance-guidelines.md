@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: Oct 29, 2025
+last_updated: May 13, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -119,6 +119,31 @@ There are a few options to avoid this in production environments:
   - Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
 - Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
 - For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+
+## Enable queue worker wait limit
+
+To prevent a stuck subprocess from blocking the queue worker indefinitely, enable the wait limit in `config/Shared/config_default.php`:
+
+```php
+$config[QueueConstants::QUEUE_WORKER_WAIT_LIMIT_ENABLED] = true;
+```
+
+When enabled:
+- The queue worker stops when execution time exceeds `QueueConstants::QUEUE_WORKER_MAX_THRESHOLD_SECONDS` (default: 60 seconds).
+- `QueueConstants::QUEUE_WORKER_MAX_WAITING_SECONDS` (default: 30 seconds) controls how long the system waits for running subprocesses to complete before forcing a shutdown.
+
+This prevents situations where a single stuck subprocess causes the entire queue worker to hang indefinitely.
+
+## Use EventQueueMessageProcessorPlugin for event queues
+
+Available since `spryker/event:^2.17.0`, `EventQueueMessageProcessorPlugin` is the recommended plugin for the event retry queue in `src/Pyz/Zed/Queue/QueueDependencyProvider.php`.
+
+Both plugins define how the event retry queue behaves when a message fails. The difference is what happens to that failed message:
+
+- `EventQueueMessageProcessorPlugin` — processes messages directly in the retry queue. Failed messages remain in the retry queue and are handled independently, so the main event queue is not affected.
+- `EventRetryQueueMessageProcessorPlugin` — routes failed messages from the retry queue back to the main queue (the queue without the `.retry` postfix). Under high load, these messages re-entering the main queue can slow down the processing of new messages.
+
+For projects running `spryker/event:^2.17.0` or later, use `EventQueueMessageProcessorPlugin` for the retry queue to keep the main queue free from re-queued failures.
 
 ## Twig performance optimizations
 

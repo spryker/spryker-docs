@@ -256,31 +256,7 @@ The AI vendor credentials (API tokens, AWS region) are managed through the Back 
 console configuration:sync
 ```
 
-## 3) Set credentials using environment variables (recommended)
-
-The AI vendor configuration schema uses `default_value_env_var` for secret settings such as API tokens. When the corresponding environment variable is set in the process environment, it is used as the runtime default — without storing the value in the database.
-
-The following environment variables are supported out of the box:
-
-| ENVIRONMENT VARIABLE | CREDENTIAL |
-|----------------------|------------|
-| `OPEN_AI_API_TOKEN` | OpenAI API token |
-
-Set the variable in your deployment environment or `.env` file:
-
-```bash
-OPEN_AI_API_TOKEN=sk-...
-```
-
-When the variable is set, you do not need to enter the credential manually in the Back Office. If a value is saved via the Back Office, it takes precedence over the environment variable.
-
-{% info_block infoBox "Other providers" %}
-
-AWS Bedrock and Anthropic credentials are configured in the Back Office only. Environment variable defaults are not available for those providers in the default schema.
-
-{% endinfo_block %}
-
-## 4) Optional: Set credentials in the Back Office
+## 3) Set credentials in the Back Office
 
 1. In the Back Office, go to **AI Vendor**.
 2. For each provider you want to use, open its tab (OpenAI, Anthropic, or AWS Bedrock) and enter the credentials:
@@ -293,7 +269,13 @@ AWS Bedrock and Anthropic credentials are configured in the Back Office only. En
 
 3. Click **Save**.
 
-## 5) Select the active provider per feature
+{% info_block infoBox "Environment variable alternative" %}
+
+You can also supply the OpenAI API token via the `OPEN_AI_API_TOKEN` environment variable. When set, it is used as the runtime default without storing the value in the database. For details, see [Configuration Management: Environment Variable Defaults](/docs/dg/dev/backend-development/configuration-management.html#environment-variable-defaults).
+
+{% endinfo_block %}
+
+## 4) Select the active provider per feature
 
 Each AI Commerce feature has an **AI Configuration** radio selector in the Back Office that controls which provider it uses.
 

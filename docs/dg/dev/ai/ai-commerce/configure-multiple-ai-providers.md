@@ -1,7 +1,7 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: May 11, 2026
+last_updated: May 13, 2026
 template: howto-guide-template
 ---
 
@@ -268,6 +268,12 @@ console configuration:sync
 | AWS Bedrock | API token, AWS region |
 
 3. Click **Save**.
+
+{% info_block infoBox "Environment variable alternative" %}
+
+You can also supply the OpenAI API token via the `OPEN_AI_API_TOKEN` environment variable. When set, it is used as the runtime default without storing the value in the database. For details, see [Configuration Management: Environment Variable Defaults](/docs/dg/dev/backend-development/configuration-management.html#environment-variable-defaults).
+
+{% endinfo_block %}
 
 ## 4) Select the active provider per feature
 

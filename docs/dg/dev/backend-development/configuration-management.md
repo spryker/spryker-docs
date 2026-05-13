@@ -1,7 +1,7 @@
 ---
 title: Configuration Management feature
 description: Learn how to use the Configuration Management feature in a Spryker project.
-last_updated: Apr 27, 2026
+last_updated: May 13, 2026
 template: concept-topic-template
 related:
   - title: Install the Configuration Management feature
@@ -295,6 +295,7 @@ settings:
     template: '@MyModule/Configuration/custom-input.twig'  # Optional. Custom Twig template.
     type: string                         # Required. Data type.
     default_value: My Store              # Optional. Fallback value.
+    default_value_env_var: MY_ENV_VAR    # Optional. Env var override for default value.
     options:                             # Optional. For select/multiselect/radio types.
       - value: option_a
         label: Option A
@@ -321,6 +322,7 @@ settings:
 | `template`      | string    | No       | `null`       | max 255 chars        | Custom Twig template. Overrides type-based widget.   |
 | `type`          | string    | Yes      | --           | See types table      | Value data type. Determines backoffice input widget. |
 | `default_value` | mixed     | No       | `null`       | Must match `type`    | Fallback when no value is saved at any scope.        |
+| `default_value_env_var` | string | No | `null` | `^[A-Z][A-Z0-9_]*$` | Name of an environment variable. When set and the variable is defined in the process environment, its value is used as the effective default at runtime, taking precedence over `default_value`. Intended primarily for secrets — the resolved value is never persisted to the database. |
 | `options`       | option[]  | No       | `[]`         | For select/multi/radio | Available choices. See [Options](#options).        |
 | `scopes`        | string[]  | No       | `['global']` | min 1 item           | Scopes where this setting can be configured. Constrained to parent group scopes. |
 | `order`         | integer   | No       | `0`          | --                   | Sort order for rendering. Lower values first.        |
@@ -430,6 +432,29 @@ options:
 | `value`       | string | Yes      | min 1 char    | Internal value stored when selected.     |
 | `label`       | string | Yes      | 1-255 chars   | Display label shown in backoffice.       |
 | `description` | string | No       | max 500 chars | Additional explanation (for radio buttons). |
+
+#### Environment Variable Defaults
+
+Use `default_value_env_var` to source the effective default for a setting from a process environment variable at runtime. This is intended primarily for secrets such as API tokens, where you want the default resolved from a CI or deployment environment variable rather than hardcoded in the YAML file or stored in the database.
+
+```yaml
+settings:
+  - key: api_token
+    name: API Token
+    type: string
+    default_value: ''
+    default_value_env_var: OPEN_AI_API_TOKEN
+    secret: true
+    storefront: false
+```
+
+Behavior:
+
+- When the named environment variable is set in the process environment, its value is used as the runtime default instead of `default_value`.
+- When the variable is not set, `default_value` is used as normal.
+- `default_value_env_var` takes precedence over `default_value` but has lower precedence than a value explicitly saved in the database via the Back Office.
+- The resolved env var value is **never persisted** to the database.
+- The env var name must match the pattern `^[A-Z][A-Z0-9_]*$` (uppercase letters, digits, underscores; must start with a letter).
 
 #### Secret vs Storefront Behavior
 

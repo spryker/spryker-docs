@@ -109,7 +109,7 @@ To search by customers, send the request:
                     },
                     {
                         "customerReference": "DE--7",
-                        "email": "anne.boleyn@spryker.com",
+                        "email": "anne.boleyn@acme.com",
                         "firstName": "Anne",
                         "lastName": "Boleyn"
                     },
@@ -167,7 +167,7 @@ To search by customers, send the request:
                     },
                     {
                         "customerReference": "DE--7",
-                        "email": "anne.boleyn@spryker.com",
+                        "email": "anne.boleyn@acme.com",
                         "firstName": "Anne",
                         "lastName": "Boleyn"
                     },

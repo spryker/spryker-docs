@@ -55,7 +55,7 @@ To search by customers, send the request:
 | --- | --- |
 | `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the sixth entry. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com` | Search for the customer with the `sonia@acme.com` email address. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
 
@@ -220,21 +220,21 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--21",
-                        "email": "sonia@spryker.com",
+                        "email": "sonia@acme.com",
                         "firstName": "Sonia",
                         "lastName": "Wagner"
                     }
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com"
+                "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10"
+        "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com",
+        "last": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com&page[offset]=0&page[limit]=10",
+        "first": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com&page[offset]=0&page[limit]=10"
     }
 }    
 ```

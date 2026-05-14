@@ -47,7 +47,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
     "type": "availability-notifications",
     "attributes": {
       "sku": "130_24725761",
-      "email": "sonia@spryker.com"
+      "email": "sonia@acme.com"
     }
   }
 }
@@ -72,7 +72,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
         "id": "70b47ccf1e1a2262f83fddabd19d4828",
         "attributes": {
             "localeName": "en_US",
-            "email": "sonia@spryker.com",
+            "email": "sonia@acme.com",
             "sku": "130_24725761"
         },
         "links": {

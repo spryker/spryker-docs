@@ -63,7 +63,7 @@ Request sample: authenticate as a customer
   "data": {
     "type": "access-tokens",
     "attributes": {
-      "username": "sonia@spryker.com",
+      "username": "sonia@acme.com",
       "password": "change123"
     }
   }

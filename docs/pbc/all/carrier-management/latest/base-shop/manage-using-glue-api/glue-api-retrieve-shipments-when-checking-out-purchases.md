@@ -66,7 +66,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
         "attributes": {
             "customer": {
             "salutation": "Mr",
-            "email": "sonia@spryker.com",
+            "email": "sonia@acme.com",
             "firstName": "Sonia",
             "lastName": "Wagner"
             },

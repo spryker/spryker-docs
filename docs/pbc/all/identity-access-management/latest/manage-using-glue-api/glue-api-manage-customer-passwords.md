@@ -112,7 +112,7 @@ Request sample: request a password reset key
   "data": {
     "type": "customer-forgotten-password",
     "attributes": {
-        "email":"sonia@spryker.com"
+        "email":"sonia@acme.com"
     }
   }
 }

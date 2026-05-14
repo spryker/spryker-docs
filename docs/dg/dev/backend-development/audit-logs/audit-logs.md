@@ -202,11 +202,11 @@ This example of an audit log entry was recorded during a successful login attemp
             "type": "WEB",
             "request_params": {
                 "loginForm": {
-                    "email": "sonia@spryker.com",
+                    "email": "sonia@acme.com",
                     "password": "***",
                     "_token": "f4dd629da0074c0b.b3QpFehJ8cMYAlDmDTcqm-se4sxEdz_BvLQXXmzo2iw.Lj1mRYQRifJTYDW2emhI0qNflZkMNQ-U6_xiLCbYjH8NOWAnrC-_hXF3aA"
                 },
-                "username": "sonia@spryker.com",
+                "username": "sonia@acme.com",
                 "customer_reference": "DE--21"
             },
             "log_type": "audit_log"

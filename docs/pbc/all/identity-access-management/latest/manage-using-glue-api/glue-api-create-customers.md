@@ -51,7 +51,7 @@ Request sample: create a customer
         "salutation": "Mrs",
         "firstName":"Sonia",
         "lastName":"Wagner",
-        "email":"sonia@spryker.com",
+        "email":"sonia@acme.com",
 	"gender": "Female",
         "password":"change123",
         "confirmPassword":"change123",

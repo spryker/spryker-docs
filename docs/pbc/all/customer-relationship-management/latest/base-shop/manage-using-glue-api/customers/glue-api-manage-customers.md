@@ -76,7 +76,7 @@ Request sample: retrieve customers
             "attributes": {
                 "firstName": "Sonia",
                 "lastName": "Wagner",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "gender": "Female",
                 "dateOfBirth": null,
                 "salutation": "Ms",
@@ -182,7 +182,7 @@ Request sample: edit a customer
 			"type": "customers"
 			"attributes": {
 					"lastName": "Johnson",
-					"email": "sonia@spryker.com",
+					"email": "sonia@acme.com",
 				}
 		}
 	}
@@ -202,7 +202,7 @@ Request sample: edit a customer
 				"firstName": null,
 				"lastName": "Johnson",
 				"salutation": null,
-				"email": "sonia@spryker.com"
+				"email": "sonia@acme.com"
 			},
 			"links": {
 				"self": "http://mysprykershop.com/customers/DE--25"
@@ -279,7 +279,7 @@ Request sample: retrieve subscriptions to availability notifications
             "id": "d634981b8d1930f7db6e2780b7d5600a",
             "attributes": {
                 "localeName": "en_US",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "sku": "190_25111746"
             },
             "links": {

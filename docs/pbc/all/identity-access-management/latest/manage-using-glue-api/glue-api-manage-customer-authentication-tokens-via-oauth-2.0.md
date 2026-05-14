@@ -54,7 +54,7 @@ To authenticate as a customer, send the request:
 | REQUEST BODY KEY | VALUE |
 |-|-|
 | grant_type | password |
-| username | sonia@spryker.com |
+| username | sonia@acme.com |
 | password | change123 |
 
 </details>

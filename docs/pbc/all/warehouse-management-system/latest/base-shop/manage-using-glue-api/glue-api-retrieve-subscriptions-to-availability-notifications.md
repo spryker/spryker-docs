@@ -54,7 +54,7 @@ Request sample: retrieve subscriptions to availability notifications
             "id": "05f2004950e01a056537384a405ec9a0",
             "attributes": {
                 "localeName": "en_US",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "sku": "213_123"
             },
             "links": {
@@ -66,7 +66,7 @@ Request sample: retrieve subscriptions to availability notifications
             "id": "0fdc733c5d91ef9645e5a9b7114b37d8",
             "attributes": {
                 "localeName": "en_US",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "sku": "190_25111746"
             },
             "links": {

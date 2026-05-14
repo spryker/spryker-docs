@@ -26,11 +26,11 @@ For detailed information on the modules that provide the API functionality and r
 
 <details><summary>Request sample: authenticate as a Back Office user</summary>
 
-| REQUEST BODY KEY | VALUE |
-|-|-|
-| grant_type | password |
-| username | sonia@spryker.com |
-| password | change123 |
+| REQUEST BODY KEY | VALUE             |
+|-|-------------------|
+| grant_type | password          |
+| username | admin@spryker.com |
+| password | change123         |
 
 </details>
 

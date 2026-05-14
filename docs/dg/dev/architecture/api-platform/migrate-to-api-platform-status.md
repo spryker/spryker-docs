@@ -140,7 +140,8 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Planned  | CustomersRestApi |
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
-| MultiCartsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi |
+| MultiCartsRestApi | Extension-only StorefrontAPI | Migrated  | CartsRestApi |
+| MultiFactorAuth | StorefrontAPI | Migrated  | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate | 
 | NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |

@@ -121,7 +121,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Planned  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
 | CompanyBusinessUnitsRestApi | StorefrontAPI | Planned  | GET /company-business-units<br>GET /company-business-units/{id} |
 | CompanyRolesRestApi | StorefrontAPI | Planned  | GET /company-roles<br>GET /company-roles/{id} |
-| CompanyUserAuthRestApi | StorefrontAPI | Planned  | POST /company-user-access-tokens |
+| CompanyUserAuthRestApi | StorefrontAPI | Migrated  | POST /company-user-access-tokens |
 | CompanyUsersRestApi | StorefrontAPI | Planned  | GET /company-users<br>GET /company-users/{id} |
 | ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
 | ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
@@ -144,7 +144,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MultiFactorAuth | StorefrontAPI | Migrated  | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate | 
 | NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | POST /token |
-| OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |
+| OmsRestApi | Extension-only StorefrontAPI | Migrated  | OrdersRestApi |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Migrated | OrdersRestApi, CartsRestApi, CartReorderRestApi |
 | OrdersRestApi | StorefrontAPI | Migrated | GET /orders<br>GET /orders/{orderReference}<br>GET /orders/{orderReference}/order-items/{uuid}<br>GET /customers/{customerReference}/orders |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductOfferPricesRestApi |
@@ -176,7 +176,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
 | ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
 | ShipmentTypesRestApi | StorefrontAPI | Planned  | GET /shipment-types<br>GET /shipment-types/{id} |
-| ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
+| ShipmentsRestApi | Extension-only StorefrontAPI | Planned | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
 | ShoppingListsRestApi | StorefrontAPI | Planned  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |

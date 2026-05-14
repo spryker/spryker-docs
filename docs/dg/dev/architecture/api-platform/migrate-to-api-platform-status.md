@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: May 6, 2026
+last_updated: May 14, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -145,8 +145,8 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | NavigationsRestApi | StorefrontAPI | Migrated | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi |
-| OrderAmendmentsRestApi | Extension-only StorefrontAPI | Planned  | OrdersRestApi, CartsRestApi, CartReorderRestApi |
-| OrdersRestApi | StorefrontAPI | Planned  | GET /orders<br>GET /orders/{id}<br>GET /customers/{id}/orders |
+| OrderAmendmentsRestApi | Extension-only StorefrontAPI | Migrated | OrdersRestApi, CartsRestApi, CartReorderRestApi |
+| OrdersRestApi | StorefrontAPI | Migrated | GET /orders<br>GET /orders/{orderReference}<br>GET /orders/{orderReference}/order-items/{uuid}<br>GET /customers/{customerReference}/orders |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductOfferPricesRestApi |
 | PriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductPricesRestApi |
 | ProductAttributesRestApi | StorefrontAPI | Migrated | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
@@ -176,7 +176,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
 | ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
 | ShipmentTypesRestApi | StorefrontAPI | Planned  | GET /shipment-types<br>GET /shipment-types/{id} |
-| ShipmentsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
+| ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
 | ShoppingListsRestApi | StorefrontAPI | Planned  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |

@@ -97,7 +97,7 @@ To search by customers, send the request:
                     },
                     {
                         "customerReference": "DE--5",
-                        "email": "george.freeman@spryker.com",
+                        "email": "george.freeman@acme.com",
                         "firstName": "George",
                         "lastName": "Freeman"
                     },
@@ -286,7 +286,7 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--5",
-                        "email": "george.freeman@spryker.com",
+                        "email": "george.freeman@acme.com",
                         "firstName": "George",
                         "lastName": "Freeman"
                     }

@@ -79,7 +79,7 @@ To search by customers, send the request:
                     },
                     {
                         "customerReference": "DE--2",
-                        "email": "maria.williams@spryker.com",
+                        "email": "maria.williams@acme.com",
                         "firstName": "Maria",
                         "lastName": "Williams"
                     },

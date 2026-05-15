@@ -136,9 +136,9 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| MerchantProductsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi |
+| MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi |
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Planned  | CustomersRestApi |
-| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
 | MultiCartsRestApi | Extension-only StorefrontAPI | Migrated  | CartsRestApi |
 | MultiFactorAuth | StorefrontAPI | Migrated  | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate | 

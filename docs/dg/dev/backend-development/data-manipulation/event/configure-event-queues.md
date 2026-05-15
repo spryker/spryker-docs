@@ -1,7 +1,7 @@
 ---
 title: Configure event queues
 description: Configure event queues in Spryker to manage asynchronous tasks effectively. Optimize backend performance by organizing event-driven workflows with ease.
-last_updated: May 13, 2026
+last_updated: May 15, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
 originalArticleId: c4cf6639-48cd-4fb3-a595-09764433f7af
@@ -192,7 +192,7 @@ class QueueConfig extends SprykerQueueConfig
 
 {% info_block infoBox "Use EventQueueMessageProcessorPlugin" %}
 
-Since `spryker/event:^2.17.0`, use `EventQueueMessageProcessorPlugin` instead of `EventRetryQueueMessageProcessorPlugin` for the event retry queue. Both plugins define how the retry queue behaves when a message fails:
+Since `spryker/event:^2.17.1`, use `EventQueueMessageProcessorPlugin` instead of `EventRetryQueueMessageProcessorPlugin` for the event retry queue. Both plugins define how the retry queue behaves when a message fails:
 
 - `EventQueueMessageProcessorPlugin` — processes failed messages directly in the retry queue. They are handled independently and do not re-enter the main queue.
 - `EventRetryQueueMessageProcessorPlugin` — routes failed messages back to the main queue (the queue without the `.retry` postfix). Under high load, this can slow down the processing of new messages in the main queue.

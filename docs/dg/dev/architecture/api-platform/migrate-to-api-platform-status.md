@@ -118,11 +118,11 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CheckoutRestApi | StorefrontAPI | Migrated | POST /checkout-data<br>POST /checkout |
 | CmsPagesRestApi | StorefrontAPI | Planned  | GET /cms-pages<br>GET /cms-pages/{id} |
 | CompaniesRestApi | StorefrontAPI | Migrated | GET /companies<br>GET /companies/{id} |
-| CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Planned  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
-| CompanyBusinessUnitsRestApi | StorefrontAPI | Planned  | GET /company-business-units<br>GET /company-business-units/{id} |
-| CompanyRolesRestApi | StorefrontAPI | Planned  | GET /company-roles<br>GET /company-roles/{id} |
-| CompanyUserAuthRestApi | StorefrontAPI | Migrated | POST /company-user-access-tokens |
-| CompanyUsersRestApi | StorefrontAPI | Planned  | GET /company-users<br>GET /company-users/{id} |
+| CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Migrated  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
+| CompanyBusinessUnitsRestApi | StorefrontAPI | Migrated  | GET /company-business-units<br>GET /company-business-units/{id} |
+| CompanyRolesRestApi | StorefrontAPI | Migrated  | GET /company-roles<br>GET /company-roles/{id} |
+| CompanyUserAuthRestApi | StorefrontAPI | Migrated  | POST /company-user-access-tokens |
+| CompanyUsersRestApi | StorefrontAPI | Migrated  | GET /company-users<br>GET /company-users/{id} |
 | ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
 | ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
 | ContentBannersRestApi | StorefrontAPI | Planned  | GET /content-banners/{id} |
@@ -136,9 +136,9 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| MerchantProductsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi |
+| MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi |
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Planned  | CustomersRestApi |
-| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Planned  | ShipmentsRestApi |
 | MultiCartsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi |
 | MultiFactorAuth | StorefrontAPI | Migrated | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate | 

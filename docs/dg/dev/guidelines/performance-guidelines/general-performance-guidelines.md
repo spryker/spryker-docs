@@ -1,7 +1,7 @@
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time for your Spryker based projects.
-last_updated: May 13, 2026
+last_updated: May 15, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
@@ -136,7 +136,7 @@ This prevents situations where a single stuck subprocess causes the entire queue
 
 ## Use EventQueueMessageProcessorPlugin for event queues
 
-Available since `spryker/event:^2.17.0`, `EventQueueMessageProcessorPlugin` is the recommended plugin for the event retry queue in `src/Pyz/Zed/Queue/QueueDependencyProvider.php`.
+Available since `spryker/event:^2.17.1`, `EventQueueMessageProcessorPlugin` is the recommended plugin for the event retry queue in `src/Pyz/Zed/Queue/QueueDependencyProvider.php`.
 
 Both plugins define how the event retry queue behaves when a message fails. The difference is what happens to that failed message:
 

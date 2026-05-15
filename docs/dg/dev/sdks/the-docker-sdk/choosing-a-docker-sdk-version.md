@@ -189,7 +189,7 @@ Do the following to fetch the chosen version of the Docker SDK:
  An example of a pipeline to fetch the chosen version of the Docker SDK:
 
 ```bash
-git clone git@github.com:spryker/docker-sdk.git .docker
+git clone git@github.com:spryker/docker-sdk.git ./docker
 cd docker
 git checkout "$(cat ../.git.docker | tr -d '\n\r')"
 cd ..

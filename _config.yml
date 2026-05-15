@@ -153,6 +153,7 @@ versions:
   '202410.0': '202410.0'
   '202507.0': '202507.0'
   '202512.0': '202512.0'
+  '202602.0': '202602.0'
 
 
 # versioned categories - these must match corresponding directories

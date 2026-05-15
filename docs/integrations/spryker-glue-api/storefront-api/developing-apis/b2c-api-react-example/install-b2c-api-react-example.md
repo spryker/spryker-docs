@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
-  - /docs/dg/dev/glue-api/latest/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+  - /docs/dg/dev/glue-api/202602.0/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
 ---
 
 The B2C API React example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both installation scenarios, take the following steps.
@@ -30,7 +30,7 @@ The example application is provided only for display purposes and must under no 
 
 To install the app on a dedicated web server, follow these steps:
 
-1. Make sure that you have Spryker Storefront API [installed and working](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+1. Make sure that you have Spryker Storefront API [installed and working](/docs/pbc/all/miscellaneous/202602.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 2. Make sure that the following prerequisites are installed on the [Node 8.9.3](https://nodejs.org/en/) server or newer.
 

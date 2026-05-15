@@ -1,6 +1,6 @@
 ---
 title: CloudHub
-last_updated: Apr 02, 2026
+last_updated: May 15, 2026
 description: CloudHub is a centralized self-service portal for managing Spryker infrastructure, including user access, S3 storage, and maintenance notifications.
 template: concept-topic-template
 ---
@@ -14,6 +14,7 @@ CloudHub includes the following panels:
 - [User management (IAM)](/docs/ca/dev/cloud-hub/user-management.html): Provision and manage IAM users, configure VPN access, and manage SSH public keys.
 - [Storage management (S3)](/docs/ca/dev/cloud-hub/storage-management.html): Provision and manage S3 buckets across your environments.
 - [Maintenance](/docs/ca/dev/cloud-hub/maintenance.html): View upcoming maintenance windows and scheduled infrastructure updates.
+- [Service links](/docs/ca/dev/cloud-hub/service-links.html): Access environment services such as Jenkins, RabbitMQ, AWS Console, and KeyCloak via SSO.
 
 ## Resource status and validation
 

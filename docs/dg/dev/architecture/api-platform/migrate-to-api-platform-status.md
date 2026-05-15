@@ -118,11 +118,11 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CheckoutRestApi | StorefrontAPI | Planned  | POST /checkout-data<br>POST /checkout |
 | CmsPagesRestApi | StorefrontAPI | Planned  | GET /cms-pages<br>GET /cms-pages/{id} |
 | CompaniesRestApi | StorefrontAPI | Migrated | GET /companies<br>GET /companies/{id} |
-| CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Planned  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
-| CompanyBusinessUnitsRestApi | StorefrontAPI | Planned  | GET /company-business-units<br>GET /company-business-units/{id} |
-| CompanyRolesRestApi | StorefrontAPI | Planned  | GET /company-roles<br>GET /company-roles/{id} |
+| CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Migrated  | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
+| CompanyBusinessUnitsRestApi | StorefrontAPI | Migrated  | GET /company-business-units<br>GET /company-business-units/{id} |
+| CompanyRolesRestApi | StorefrontAPI | Migrated  | GET /company-roles<br>GET /company-roles/{id} |
 | CompanyUserAuthRestApi | StorefrontAPI | Migrated  | POST /company-user-access-tokens |
-| CompanyUsersRestApi | StorefrontAPI | Planned  | GET /company-users<br>GET /company-users/{id} |
+| CompanyUsersRestApi | StorefrontAPI | Migrated  | GET /company-users<br>GET /company-users/{id} |
 | ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
 | ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
 | ContentBannersRestApi | StorefrontAPI | Planned  | GET /content-banners/{id} |

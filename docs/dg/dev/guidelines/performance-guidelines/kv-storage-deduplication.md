@@ -131,7 +131,7 @@ After you enable this flag, the system attempts to read data from the new `kv:ur
 Generate the Propel ORM skeleton files for the new `spy_url_locale_map_storage` table:
 
 ```bash
-vendor/bin/console propel:model:build
+vendor/bin/console propel:install
 ```
 
 This generates the following two files.

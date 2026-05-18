@@ -134,10 +134,10 @@ Generate the Propel ORM skeleton files for the new `spy_url_locale_map_storage` 
 vendor/bin/console propel:install
 ```
 
-This generates the following two files.
+This generates the following two files:
 
-- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorage.php`:
-- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorageQuery.php`:
+- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorage.php`
+- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorageQuery.php`
 
 #### Step 3: Publish URL events
 

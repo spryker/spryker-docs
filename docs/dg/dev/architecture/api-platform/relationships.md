@@ -1,7 +1,7 @@
 ---
 title: Relationships
 description: Configure and use relationships in API Platform to include related resources.
-last_updated: Feb 5, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -237,3 +237,68 @@ GET /customers/customer--35?include=addresses
 6. **JsonApiRelationshipNormalizer** builds JSON:API response with `relationships` and `included` sections
 
 Providers require no code changes - the system works automatically through decoration.
+
+## Performance
+
+Relationships are resolved per parent resource. For a collection of N parent resources with an `?include=` request, the child provider is called N times — one call per parent — which can produce an N+1 query pattern if the child provider hits the database per call.
+
+When you expect collection endpoints to be requested with `?include=`, optimize the child provider:
+
+- **Batch internally**: have the child provider detect repeated single-key lookups and coalesce them into one underlying query. For example, accept a `customerReference` URI variable but maintain an in-request cache of previously fetched results.
+- **Paginate the parent**: keep parent collection page sizes small (`paginationItemsPerPage`) so the per-include cost stays bounded.
+- **Profile real traffic**: enable Doctrine query logging or use Blackfire/Xdebug to confirm the N+1 hypothesis before optimizing — sometimes the parent's own query dominates and the includes are negligible.
+
+## Troubleshooting
+
+### Relationships are not returned
+
+The `?include=` parameter is silently ignored or returns no `relationships` block.
+
+Run through the following checks in order:
+
+1. **Clear the cache.** Relationship configuration is built into the compiled container; YAML changes do not take effect until the container is rebuilt.
+
+    ```bash
+    docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:clear
+    ```
+
+2. **Confirm both sides of the relationship are declared.** The parent must have `includes`; the child must have a matching `includableIn`. Names and `uriVariableMappings` must match exactly on both sides — see the [Configuration reference](#configuration-reference).
+
+3. **Inspect the compiled relationship registry.** API Platform exposes the merged configuration as a container parameter:
+
+    ```bash
+    docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue debug:container --parameter=api_platform.relationships
+    ```
+
+    The output lists every registered relationship keyed by `{parentResource}.{relationshipName}` (for example, `customers.addresses`). If your relationship is missing, the YAML was not picked up — re-check file location and run `api:generate`.
+
+4. **Verify the child provider is registered.** The child resource needs a provider that API Platform can resolve:
+
+    ```bash
+    docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue debug:container | grep <ChildProviderClass>
+    ```
+
+### Validation error: bi-directional consistency
+
+Resource generation fails with an error like:
+
+```text
+Validation Error in customers.resource.yml:
+  - includes[0].targetResource: Resource "CustomersAddresses" declares includableIn
+    for "Customers" but uses different relationshipName "customerAddresses"
+    Expected: "addresses"
+```
+
+The parent's `includes[].relationshipName` and the child's `includableIn[].relationshipName` must be identical strings. The same applies to `uriVariableMappings` — every mapping declared on the parent must appear on the child with the same source/target names.
+
+### `relationships` block is present but `data` is empty
+
+The relationship is wired up but no related resources come back.
+
+1. **The child provider is returning `null` or `[]`.** Call the child provider directly (or hit its standalone collection endpoint with the same URI variable values) to confirm it returns data.
+2. **URI variable mapping does not produce a value.** A property on the parent that resolves to `null` is omitted from the URI variables passed to the child — verify the mapped property is populated on every parent resource in the response. Use `api:debug <resource> --show-merged` to confirm the property is declared.
+3. **The child filters too aggressively.** Inspect the child provider's filtering logic with the URI variable values produced by the mapping.
+
+### Invalid include names are ignored
+
+Unknown values in `?include=` (for example, a typo or a relationship the parent does not declare) are silently dropped — the response succeeds without that relationship and no error is raised. If a deployment appears to lose a relationship after a release, suspect a typo or a missing `includableIn` in the child before assuming a runtime failure.

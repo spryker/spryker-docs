@@ -1,7 +1,7 @@
 ---
 title: CodeBucket Support in API Platform
 description: Learn how to create and use CodeBucket-specific API resources in Spryker.
-last_updated: Jan 8, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -115,12 +115,20 @@ final class StoresBackendResource
 Resource schemas follow the pattern: `{resource-name}.resource.yml`
 Validation schemas follow the pattern: `{resource-name}.validation.yml`
 
-CodeBuckets are specified inside the schema files, not in the filename.
+Each YAML file contains exactly one resource definition. To create a CodeBucket variant, place its schema in a **separate module directory** named after the variant (for example, `StoreEU`, `StoreAT`) and set the `codeBucket:` property inside the file. The filename stays the same across all variants — only the parent module directory and the `codeBucket:` value differ.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/
-├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
-└── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
+src/Pyz/Glue/Store/resources/api/backend/           # Base variant module
+├── stores.resource.yml                              # No codeBucket property
+└── stores.validation.yml
+
+src/Pyz/Glue/StoreEU/resources/api/backend/         # EU variant module
+├── stores.resource.yml                              # codeBucket: EU
+└── stores.validation.yml                            # codeBucket: EU
+
+src/Pyz/Glue/StoreAT/resources/api/backend/         # AT variant module
+├── stores.resource.yml                              # codeBucket: AT
+└── stores.validation.yml                            # codeBucket: AT
 ```
 
 ### Generated class naming pattern
@@ -155,7 +163,7 @@ The URL path is identical (`/stores`), but the Code Bucket in the domain determi
 ```yaml
 resource:
   name: Stores
-  shortName: Store
+  shortName: stores
   description: "Store resource"
 
   provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
@@ -180,19 +188,20 @@ resource:
       description: "Store timezone"
 ```
 
-**Step 2: Define CodeBucket variant**
+**Step 2: Define the CodeBucket variant in a separate module**
 
-Within the same `stores.resource.yml` file, define the EU-specific variant by specifying the CodeBucket:
+Create a new module directory whose name carries the CodeBucket suffix (`StoreEU`) and place the variant's schema there. The filename stays `stores.resource.yml`; the `codeBucket:` property inside the file declares which variant it belongs to.
+
+`src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml`
 
 ```yaml
-# EU-specific store resource (defined in same file)
 resource:
   name: Stores
-  shortName: Store
+  shortName: stores
   description: "EU-specific store resource"
   codeBucket: EU
 
-  # Same provider and processor as base
+  # Same provider and processor as the base resource
   provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
   processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
 
@@ -232,11 +241,21 @@ resource:
       description: "VAT registration number"
 ```
 
-**Step 3: Create validation schemas**
+{% info_block infoBox "One resource per file" %}
 
-Within `src/Pyz/Glue/Store/resources/api/backend/stores.validation.yml`, define CodeBucket-specific validation:
+Each schema file must contain exactly one top-level `resource:` block. CodeBucket variants live in their own files in their own module directories — they cannot be stacked inside a single YAML document.
+
+{% endinfo_block %}
+
+**Step 3: Create the variant's validation schema**
+
+Place the matching validation file alongside the variant resource, in the same module directory. Set `codeBucket:` at the root so the parser pairs it with the EU resource variant.
+
+`src/Pyz/Glue/StoreEU/resources/api/backend/stores.validation.yml`
 
 ```yaml
+codeBucket: EU
+
 post:
   taxRate:
     - NotBlank
@@ -346,10 +365,12 @@ CodeBucket resources support multi-layer schema merging just like base resources
 
 ### Example: Multi-layer CodeBucket resource
 
+A CodeBucket variant can be extended across layers. Every layer that contributes to the same variant uses its own module directory named after the variant (`StoreEU`) and sets the same `codeBucket:` value inside its file.
+
 **Core layer** (vendor):
 
 ```yaml
-# vendor/spryker/store/resources/api/backend/stores.resource.yml
+# vendor/spryker/store-eu/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
@@ -361,7 +382,7 @@ resource:
 **Project layer**:
 
 ```yaml
-# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
+# src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
@@ -546,7 +567,7 @@ The base resource should contain all common properties that work across all Code
 
 ```yaml
 # ✅ Good - Base is complete
-# stores.resource.yml (base variant)
+# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   properties:
@@ -556,8 +577,11 @@ resource:
       type: string
     timezone:
       type: string
+```
 
-# stores.resource.yml (EU variant - defined in same file)
+```yaml
+# ✅ EU variant lives in its own module directory
+# src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU

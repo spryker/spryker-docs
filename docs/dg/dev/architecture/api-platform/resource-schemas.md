@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: May 5, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -120,7 +120,7 @@ For a comprehensive guide including implementation examples, see [CodeBucket Sup
 ```yaml
 resource:
   name: Products
-  shortName: Product
+  shortName: products
   description: "Product resource"
 
   operations:
@@ -137,15 +137,21 @@ resource:
       type: string
 ```
 
+{% info_block infoBox "shortName convention" %}
+
+`shortName` is the JSON:API `type` field for the resource and is used as the public URL segment. Use **lowercase kebab-case**, plural for noun-style resources (`products`, `addresses`, `abstract-product-prices`) and singular for action-style endpoints (`catalog-search`, `cart-reorder`). Multi-word names are always hyphenated. This matches every shipped resource in the platform.
+
+{% endinfo_block %}
+
 ### Complete example with all options
 
 ```yaml
-# yaml-language-server: $schema=../../../../SprykerSdk/Api/resources/schemas/api-resource-schema-v1.json
+# yaml-language-server: $schema=../../../../../vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
 
 resource:
   # Resource identification
   name: Customers                    # Internal name (used for schema merging)
-  shortName: Customer                # URL name (becomes /customers)
+  shortName: customers               # URL name (becomes /customers); JSON:API type field
   description: "Customer resource"   # OpenAPI description
 
   # State providers and processors
@@ -444,6 +450,58 @@ properties:
 enforced at runtime, add the matching constraint to the resource's validation schema — see
 [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html).
 
+## Automatic JSON:API request body examples
+
+For JSON:API endpoints (`application/vnd.api+json`), the generator automatically wraps property-level examples in the JSON:API envelope (`data.type` + `data.attributes`) when it builds the OpenAPI request body. You define examples once per property; the generator assembles the envelope for every write operation.
+
+Given:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers   # becomes the JSON:API "type" field
+
+  properties:
+    email:
+      type: string
+      writable: true
+      openapiContext:
+        example: "john@example.com"
+    firstName:
+      type: string
+      writable: true
+      openapiContext:
+        example: "John"
+    idCustomer:
+      type: integer
+      writable: false      # excluded from request body example
+      openapiContext:
+        example: 42
+```
+
+…the generated OpenAPI request body for `POST`, `PATCH`, and `PUT` operations is:
+
+```json
+{
+  "data": {
+    "type": "customers",
+    "attributes": {
+      "email": "john@example.com",
+      "firstName": "John"
+    }
+  }
+}
+```
+
+Rules the generator applies:
+
+- The `shortName` value becomes the `type` field.
+- Only **writable** properties are included — anything marked `writable: false` is filtered out (so identifiers and timestamps do not appear in the request example).
+- Properties without an `openapiContext.example` are omitted from the example body.
+- If no writable property has an example, no `requestBody` example is emitted at all — the operation appears without a prefilled "Try Out" body.
+
+If you need a custom request body example that does not match this shape, override it at the operation level — see [Operations](#operations).
+
 ## Operations
 
 Define which HTTP operations are available for the resource:
@@ -727,7 +785,7 @@ use ApiPlatform\Metadata\Delete;
 
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
-    shortName: 'Customer',
+    shortName: 'customers',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class,
     paginationItemsPerPage: 10,
@@ -1044,10 +1102,20 @@ Only these property types are allowed:
 ```yaml
 # ✅ Good
 resource:
-  name: Customers
-  shortName: Customer
+  name: Customers              # PascalCase plural — used for schema merging
+  shortName: customers         # lowercase kebab-case plural — JSON:API type + URL segment
 
-# ❌ Bad
+# ✅ Good — multi-word
+resource:
+  name: AbstractProductPrices
+  shortName: abstract-product-prices
+
+# ❌ Bad — wrong shortName casing/form
+resource:
+  name: Customers
+  shortName: Customer          # Should be lowercase plural
+
+# ❌ Bad — abbreviated, unclear
 resource:
   name: CustomerData
   shortName: cust

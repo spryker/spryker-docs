@@ -1,7 +1,7 @@
 ---
 title: KV storage deduplication
 description: Learn how to reduce Redis/ValKey memory usage by eliminating duplicated URL and product abstract data through storage structure optimization.
-last_updated: May 15, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 related:
   - title: Key-Value storage performance guidelines
@@ -126,13 +126,55 @@ class UrlStorageConfig extends SprykerUrlStorageConfig
 
 After you enable this flag, the system attempts to read data from the new `kv:url_locale_map` entity. If the URL data still exists at the original location, the system reads from there as a fallback. No downtime is expected during this step.
 
-#### Step 2: Publish URL events
+#### Step 2: Generate Propel entity classes
+
+Generate the Propel ORM skeleton files for the new `spy_url_locale_map_storage` table:
+
+```bash
+vendor/bin/console propel:model:build
+```
+
+This generates the following two files.
+
+`src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorage.php`:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Orm\Zed\UrlStorage\Persistence;
+
+use Spryker\Zed\UrlStorage\Persistence\Propel\AbstractSpyUrlLocaleMapStorage as BaseSpyUrlLocaleMapStorage;
+
+class SpyUrlLocaleMapStorage extends BaseSpyUrlLocaleMapStorage
+{
+}
+```
+
+`src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorageQuery.php`:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+namespace Orm\Zed\UrlStorage\Persistence;
+
+use Spryker\Zed\UrlStorage\Persistence\Propel\AbstractSpyUrlLocaleMapStorageQuery as BaseSpyUrlLocaleMapStorageQuery;
+
+class SpyUrlLocaleMapStorageQuery extends BaseSpyUrlLocaleMapStorageQuery
+{
+}
+```
+
+#### Step 3: Publish URL events
 
 ```bash
 vendor/bin/console publish:trigger-events -r url
 ```
 
-#### Step 3: Verify
+#### Step 4: Verify
 
 Open a product page, check the language switcher, and test a catalog search to confirm that all locales resolve correctly.
 

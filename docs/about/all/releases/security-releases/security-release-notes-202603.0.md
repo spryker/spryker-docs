@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202603.0
 description: Security updates released for version 202603.0
-last_updated: Mar 23, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 publish_date: "2026-03-23"
 ---
@@ -32,8 +32,8 @@ composer show spryker/setup # Verify the version
 Update the `spryker/maintenance` package to version 4.0.0 or higher:
 
 ```bash
-composer update spryker/setup:"^4.0.0"
-composer show spryker/setup # Verify the version
+composer update spryker/maintenance:"^4.0.0"
+composer show spryker/maintenance # Verify the version
 ```
 
 ## Data storage inconsistency

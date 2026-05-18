@@ -10,32 +10,6 @@ This document describes the security-related issues that have been recently reso
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
 
-
-## Information disclosure via phpinfo() method
-
-Instances of phpinfo() were identified in the codebase, which could potentially expose sensitive configuration details and environment variables to unauthorized parties. Such an instance was found to be part of the default Back Office setup.
-
-### Affected modules
-
-- `spryker/setup`: < 4.8.0
-- `spryker/maintenance`: < 3.6.0
-
-### Fix the vulnerability
-
-Update the `spryker/setup` package to version 4.8.0 or higher:
-
-```bash
-composer update spryker/setup:"^4.8.0"
-composer show spryker/setup # Verify the version
-```
-
-Update the `spryker/maintenance` package to version 4.0.0 or higher:
-
-```bash
-composer update spryker/maintenance:"^4.0.0"
-composer show spryker/maintenance # Verify the version
-```
-
 ## Data storage inconsistency
 
 A data storage inconsistency was identified where certain sensitive data was being written to an additional database table beyond its intended storage location. Although the data was properly encrypted at rest and no exposure occurred, retaining sensitive information in non-designated tables does not align with the principle of data minimization and security best practices.

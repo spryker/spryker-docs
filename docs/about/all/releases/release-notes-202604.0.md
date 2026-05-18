@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: Apr 29, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 ---
 
@@ -471,6 +471,32 @@ We made your Spryker Commerce OS faster, more secure, and more stable.
 - [Split Publish & Synchronize queues for performance](/docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html)
 - [Merchant Portal and Back Office performance with ACL rules](/docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html#merchant-portal-and-back-office-performance-with-acl-rules)
 - [Order details page performance guidance](/docs/pbc/all/order-management-system/latest/base-shop/order-management-feature-overview/order-details-page-performance-overview.html)
+
+## Information disclosure via phpinfo() method
+
+Instances of phpinfo() were identified in the codebase, which could potentially expose sensitive configuration details and environment variables to unauthorized parties. Such an instance was found to be part of the default Back Office setup.
+
+### Affected modules
+
+- `spryker/setup`: < 4.8.0
+- `spryker/maintenance`: < 3.6.0
+
+### Fix the vulnerability
+
+Update the `spryker/setup` package to version 4.8.0 or higher:
+
+```bash
+composer update spryker/setup:"^4.8.0"
+composer show spryker/setup # Verify the version
+```
+
+Update the `spryker/maintenance` package to version 4.0.0 or higher:
+
+```bash
+composer update spryker/maintenance:"^4.0.0"
+composer show spryker/maintenance # Verify the version
+```
+
 
 ## Efficient and Flexible Cloud Foundation
 

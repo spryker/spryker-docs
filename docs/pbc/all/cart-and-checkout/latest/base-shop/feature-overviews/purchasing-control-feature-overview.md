@@ -1,7 +1,7 @@
 ---
 title: Purchasing Control feature overview
 description: Learn how the Purchasing Control feature lets B2B companies control departmental spending, define budget enforcement rules, and integrate with the Approval Process.
-last_updated: April 13, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 label: early-access
 ---
@@ -66,14 +66,14 @@ The typical B2B procurement flow involving cost centers and budgets:
 4. **Budget is validated.** The system checks whether the order total fits within the remaining budget for the selected cost center.
 5. **Enforcement rules apply.** Based on the configured rule, the order is blocked, a warning is shown, or approval is required.
 6. **Budget is consumed.** Once the order is confirmed, the budget balance is reduced by the order amount.
-7. **Budget is restored.** If the order is cancelled, the consumed amount is returned to the budget balance.
+7. **Budget is restored.** If the order is cancelled or refunded, the budget balance is restored by the amount corresponding to the cancelled or refunded items. For partial cancellations or refunds, only the amounts of the affected items are restored.
 
 ## Checkout validation outcomes
 
 | SCENARIO | OUTCOME |
 | --- | --- |
 | Within budget and within permission limit | Buyer completes checkout without additional steps. |
-| Exceeds budget  -  Warn rule | A warning is displayed; the buyer proceeds but the order requires approval. |
+| Exceeds budget  -  Warn rule | A warning is displayed; the buyer can proceed to checkout. |
 | Exceeds budget  -  Require Approval rule | The order is sent for approval; the buyer cannot complete checkout until approved. |
 | Exceeds Buy up to grand total permission limit | The order is sent for approval, same as the standard Approval Process. |
 | Exceeds budget  -  Block rule | Checkout is blocked; no approval option is available. |
@@ -86,8 +86,9 @@ When an order is sent for approval - whether triggered by a budget rule or a per
 
 | ROLE | CAPABILITIES |
 | --- | --- |
-| Company Admin (Back Office) | Create, update, activate, and deactivate cost centers. Assign cost centers to business units. Create and manage budgets with amount, period, currency, and enforcement rule. View spend-vs-budget reports. Export reports to CSV. Review the audit log. |
-| Buyer (Storefront) | Select a cost center and budget at checkout. View remaining budget for the selected cost center. Submit orders for approval when required. |
+| Company Admin (Back Office) | Create, update, activate, and deactivate cost centers. Assign cost centers to business units. Create and manage budgets with amount, period, currency, and enforcement rule. View the **Cost Center** column in the orders table. Filter and search orders by cost center and budget. View spend-vs-budget reports. Export reports to CSV. Review the audit log. Import cost centers, budgets, and business unit assignments in bulk using data import. |
+| Cost Center Manager (Storefront) | Create, update, activate, and deactivate cost centers and budgets from the company area. Requires the **Manage Cost Centers** permission assigned to their company role. |
+| Buyer (Storefront) | Select a cost center and budget at checkout. View the remaining budget for the selected cost center. Submit orders for approval when required. Filter order history by cost center and budget. View the assigned cost center and budget on order detail pages. |
 | Approver (Storefront) | Review locked quotes pending approval. Approve or reject orders, including those triggered by budget rules. |
 
 ## Related Developer documents

@@ -416,8 +416,8 @@ console data:import glossary
 | ProductClassProductConcreteTransferMapperPlugin                              | Maps product class data from form to `ProductConcreteTransfer`.                                                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
 | ShipmentTypeProductConcreteFormExpanderPlugin                                | Expands the `ProductConcreteForm` with a choice field for shipment types.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
 | ShipmentTypeProductFormTransferMapperExpanderPlugin                          | Maps shipment type form data to `ProductConcreteTransfer`.                                                                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
-| ShipmentTypeProductConcreteEditFormExpanderPlugin                            | Adds validation that prevents removing a shipment type from a product concrete while product offers related to this concrete are still using that shipment type. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
-| ProductOfferConcreteShipmentTypeValidatorStepPlugin                          | Validates that the shipment type referenced by a row in the `product-offer-shipment-type` data import is assigned to the related product concrete; fails the row otherwise. |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferShipmentTypeDataImport        |
+| ShipmentTypeProductConcreteEditFormExpanderPlugin | Adds validation to prevent you from removing a shipment type from a product concrete when related product offers are still using that shipment type. |  | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement |
+| ProductOfferConcreteShipmentTypeValidatorStepPlugin | Validates that the shipment type referenced in a `product-offer-shipment-type` data import row is assigned to the related product concrete. If the shipment type is not assigned, the import row fails validation. |  | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferShipmentTypeDataImport |
 | ProductClassProductAbstractMapExpanderPlugin                                 | Adds product class names to product abstract search data.                                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
 | ProductClassProductPageDataExpanderPlugin                                    | Expands the provided ProductPageSearchTransfer transfer object's data with product classes.                                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
 | ProductClassProductPageDataLoaderPlugin                                      | Expands `ProductPageLoadTransfer` object with product class data.                                                                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
@@ -1416,7 +1416,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 **src/Pyz/Zed/ProductOfferShipmentTypeDataImport/ProductOfferShipmentTypeDataImportDependencyProvider.php**
 
-Register `ProductOfferConcreteShipmentTypeValidatorStepPlugin` so that every `product-offer-shipment-type` import row is validated against the product-to-shipment-type relations imported by `product-shipment-type`:
+Register `ProductOfferConcreteShipmentTypeValidatorStepPlugin` to validate each `product-offer-shipment-type` import row against the product-to-shipment-type relations imported by `product-shipment-type`:
 
 ```php
 <?php
@@ -1449,15 +1449,16 @@ class ProductOfferShipmentTypeDataImportDependencyProvider extends SprykerProduc
 
 {% info_block warningBox "Verification" %}
 
-1. Add a row to your `product_offer_shipment_type.csv` where the `concrete_sku` of the product offer does NOT have the given `shipment_type_key` assigned in `product_shipment_type.csv`.
+1. Add a row to `product_offer_shipment_type.csv` where the product offer's `concrete_sku` does not have the specified `shipment_type_key` assigned in `product_shipment_type.csv`.
 2. Run `console data:import product-offer-shipment-type`.
-3. Make sure the import fails with an error: `Shipment type "<key>" is not assigned to the product concrete for offer "<offer-reference>". Assign it to the product concrete first.`
+3. Verify that the import fails with the following error:
+   `Shipment type "<key>" is not assigned to the product concrete for offer "<offer-reference>". Assign it to the product concrete first.`
 
 {% endinfo_block %}
 
 {% info_block warningBox "Import order" %}
 
-The validator step requires the product-to-shipment-type relations to exist before the offer relations are imported. In every full-import descriptor that imports `product-offer-shipment-type` (for example `data/import/local/full_EU.yml`,  `data/import/production/full_EU.yml`, `data/import/production/full_US.yml`), make sure the `product-shipment-type` action runs before `product-offer-shipment-type`:
+The validator step requires product-to-shipment-type relations to exist before product-offer-shipment-type relations are imported. In every full-import descriptor that imports `product-offer-shipment-type` - for example, `data/import/local/full_EU.yml`, `data/import/production/full_EU.yml`, and `data/import/production/full_US.yml` - ensure that the `product-shipment-type` action runs before `product-offer-shipment-type`:
 
 ```yaml
 actions:

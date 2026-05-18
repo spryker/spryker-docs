@@ -1,7 +1,7 @@
 ---
 title: Release notes 202604.0
 description: Release notes for Spryker Cloud Commerce OS version 202602.0
-last_updated: May 18, 2026
+last_updated: Apr 29, 2026
 template: concept-topic-template
 ---
 

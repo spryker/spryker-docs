@@ -136,37 +136,8 @@ vendor/bin/console propel:install
 
 This generates the following two files.
 
-`src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorage.php`:
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Orm\Zed\UrlStorage\Persistence;
-
-use Spryker\Zed\UrlStorage\Persistence\Propel\AbstractSpyUrlLocaleMapStorage as BaseSpyUrlLocaleMapStorage;
-
-class SpyUrlLocaleMapStorage extends BaseSpyUrlLocaleMapStorage
-{
-}
-```
-
-`src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorageQuery.php`:
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Orm\Zed\UrlStorage\Persistence;
-
-use Spryker\Zed\UrlStorage\Persistence\Propel\AbstractSpyUrlLocaleMapStorageQuery as BaseSpyUrlLocaleMapStorageQuery;
-
-class SpyUrlLocaleMapStorageQuery extends BaseSpyUrlLocaleMapStorageQuery
-{
-}
-```
+- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorage.php`:
+- `src/Orm/Zed/UrlStorage/Persistence/SpyUrlLocaleMapStorageQuery.php`:
 
 #### Step 3: Publish URL events
 

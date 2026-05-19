@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: May 18, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -639,7 +639,7 @@ Define relationships between resources to enable including related resources via
 
 ### includes section
 
-Declares what relationships this resource can include:
+Declares what relationships this resource can include. Each entry describes one relationship that clients can request via the `?include=` query parameter on this resource.
 
 ```yaml
 includes:
@@ -649,10 +649,39 @@ includes:
       customerReference: customerReference
 ```
 
-**Properties:**
-- `relationshipName`: Name used in `?include=` parameter
-- `targetResource`: Name of the resource to include
-- `uriVariableMappings`: Maps properties from parent to child provider
+**Entry fields:**
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `relationshipName` | Yes | Name used in the `?include=` parameter and as the JSON:API relationship key. |
+| `targetResource` | Yes | The `name` of the included resource as declared in its `resource.yml` (for example, `CustomersAddresses`). |
+| `uriVariableMappings` | Conditional | Maps properties from the parent resource to the URI variables of the included resource. Required when the included resource is routed by URI variables. Format: `parentProperty: childUriVariable`. |
+| `uriTemplate` | Optional | Explicit URI template for the included resource when it has multiple operations and the relationship must target a specific path (for example, `/abstract-products/{abstractProductSku}/abstract-product-prices`). |
+| `resolverClass` | Optional | Fully qualified class name of a relationship resolver. Use when the relationship cannot be expressed via URI variables — the resolver receives the parent resources and the request context, and returns the related resources directly. When `resolverClass` is set, `uriVariableMappings` and `uriTemplate` are not used for routing. |
+
+#### URI-variable mapping example
+
+For relationships routed by sub-resource URLs, map parent properties to child URI variables:
+
+```yaml
+includes:
+  - relationshipName: abstract-product-prices
+    targetResource: AbstractProductPrices
+    uriTemplate: /abstract-products/{abstractProductSku}/abstract-product-prices
+    uriVariableMappings:
+      sku: abstractProductSku
+```
+
+#### Resolver-based example
+
+For relationships whose targets cannot be derived from URI variables (for example, derived from order state or aggregated across multiple sources), reference a resolver class:
+
+```yaml
+includes:
+  - relationshipName: order-shipments
+    targetResource: OrderShipments
+    resolverClass: Spryker\Glue\ShipmentsRestApi\Api\Storefront\Relationship\OrderShipmentsRelationshipResolver
+```
 
 ### includableIn section
 
@@ -668,7 +697,7 @@ includableIn:
 
 Both declarations must match for validation to pass.
 
-For detailed information about relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
+**Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources.
 
 ## Resource generation process
 

@@ -36,7 +36,47 @@ composer require spryker/zed-request:^3.24.0
 
 ## Integration
 
-To use Web Profiler for Backend Gateway, ensure that Web Profiler is enabled for Yves. For details on enabling Web Profiler Widget for Yves, see [Integrate Web Profiler Widget for Yves](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html).
+To use Web Profiler for Backend Gateway, you need to configure both Zed and Yves applications.
+
+### 1. Backend Gateway Application configuration (Zed)
+
+Add the Web Profiler Application Plugin to the Backend Gateway in `Pyz\Zed\Application\ApplicationDependencyProvider`:
+
+**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Application;
+
+use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
+use Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin;
+
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getBackendGatewayApplicationPlugins(): array
+    {
+        $plugins = [
+            // Other plugins...
+        ];
+
+        if (class_exists(WebProfilerApplicationPlugin::class)) {
+            $plugins[] = new WebProfilerApplicationPlugin();
+        }
+
+        return $plugins;
+    }
+}
+```
+
+### 2. Yves Web Profiler Widget configuration
+
+Ensure that Web Profiler is enabled for Yves. For details on enabling Web Profiler Widget for Yves, see [Integrate Web Profiler Widget for Yves](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html).
+
+Add the Zed Request Data Collector Plugin to `Pyz\Yves\WebProfilerWidget\WebProfilerWidgetDependencyProvider`:
 
 **src/Pyz/Yves/WebProfilerWidget/WebProfilerWidgetDependencyProvider.php**
 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on MacOS and Linux"
 description: A quickstart guide to get you up and running installing Spryker in a local environment on MacOS and Linux.
-last_updated: Feb 3, 2022
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
@@ -33,7 +33,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 {% endinfo_block %}
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml

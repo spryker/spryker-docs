@@ -23,3 +23,13 @@ Thank you to all our contributors!
 <a href="https://github.com/spryker/spryker-docs/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=spryker/spryker-docs" />
 </a>
+
+## Working with AI Agents
+
+This repository includes instructions for AI agents to help with documentation tasks. These instructions are maintained in three identical files:
+
+- `.github/instructions/copilot-instructions.md` - Instructions for GitHub Copilot
+- `AGENTS.md` - Instructions for general [AI agents](https://agents.md/)
+- `CLAUDE.md` - Instructions for Claude Code
+
+**Important:** All three files must contain identical content. When updating agent instructions, make sure to update all three files to maintain consistency.

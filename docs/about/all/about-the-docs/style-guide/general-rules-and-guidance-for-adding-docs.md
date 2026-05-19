@@ -1,7 +1,7 @@
 ---
 title: General rules and guidance for adding docs
 description: Understand the core fundamentals of contributing to the Spryker Documentation site and our general rules and guidance for adding articles.
-last_updated: Jul 18, 2022
+last_updated: Feb 19, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
@@ -169,10 +169,10 @@ To add a new version for the versioned categories:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)
 
-You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and links. For example, if you open a document in version `202108.0` in the editor and write there the following:
+You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.release_tag}}{% endraw %}` variable in text and links. For example, if you open a document in version `202108.0` in the editor and write there the following:
 
 ```md
-This feature requires version {{page.version}} of the Merchants feature.
+This feature requires version {{page.release_tag}} of the Merchants feature.
 For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 

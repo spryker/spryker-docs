@@ -210,7 +210,7 @@ In the development environment, Gateway (Nginx) does the following:
 - Serves all non-application services.
 - Proxies application calls to Frontend (Nginx).
 
-Frontend (Nginx) is an HTTP to FastCGI proxy for Glue, Yves, Zed, and serves assets.
+Frontend (Nginx) is an HTTP to FastCGI proxy that routes requests to all application containers (Glue, Yves, Zed, and others) and serves pre-built static assets. The frontend container also handles HTTP response compression for both static files and dynamic application responses. Compression is configured through the `assets:` section of the deploy file. For details, see [Deploy file reference - assets](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 ## Docker/sdk debug mode
 

@@ -47,7 +47,7 @@ Real-life problems sometimes prevent engineers from implementing data flows acco
 
 1. **Avoid unnecessary calls**: Read from Key-Value or Search storages instead of calling backend-gateway or APIs from Yves/Glue/Merchant Portal.
 2. **Combine multiple calls**: If external requests are required, avoid multiple sequential calls. Instead, combine them into one batch request.
-3. **Cache responses carefully**: Caching can help, but be aware of what to cache, where to store it, and how long to keep it. Key-Value storages are fast but limited in capacity and can be expensive at scale.
+3. **Cache responses carefully**: Caching can help, but be aware of what to cache, where to store it, and how long to keep it. Key-Value storages are fast but limited in capacity and can be expensive at scale. For detailed caching strategies, see [Cache heavy logic appropriately](/docs/dg/dev/guidelines/performance-guidelines/custom-code-performance-guidelines.html#cache-heavy-logic-appropriately).
 4. **Ensure external system capability**: If real-time data is a must-have requirement and background sync with a small delay is not viable, ensure that:
    - Remote APIs or dependencies can handle the same level of requests and data volume as the main Spryker application
    - Remote APIs or dependencies can scale at the same rate as the main Spryker application

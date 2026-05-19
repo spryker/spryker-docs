@@ -163,7 +163,6 @@ use Spryker\Zed\Queue\QueueDependencyProvider as SprykerQueueDependencyProvider;
 
 class QueueDependencyProvider extends SprykerQueueDependencyProvider
 {
-
     protected function getProcessorMessagePlugins(Container $container)
     {
         return [

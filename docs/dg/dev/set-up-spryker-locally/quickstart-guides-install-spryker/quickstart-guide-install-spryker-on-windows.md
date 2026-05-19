@@ -1,7 +1,7 @@
 ---
 title: "Quickstart guide: Install Spryker on Windows"
 description: A quickstart guide to get you up and running installing Spryker in a local environment on Windows.
-last_updated: Feb 03, 2023
+last_updated: Feb 19, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
@@ -30,7 +30,7 @@ Product images, product data, other images or fonts displaced in a demo shop are
 {% endinfo_block %}
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202507.0 --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b {{page.release_tag}} --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml

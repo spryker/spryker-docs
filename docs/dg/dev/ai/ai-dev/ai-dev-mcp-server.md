@@ -2,6 +2,7 @@
 title: AI Dev MCP Server
 description: Set up and configure the Model Context Protocol server for AI assistant integration
 last_updated: Dec 9, 2025
+label: early-access
 keywords: ai, mcp, model context protocol, claude, copilot, ai-dev, configuration
 template: howto-guide-template
 ---
@@ -117,6 +118,14 @@ The AiDev module provides the following built-in tools that AI assistants can us
 | `getInterfaceMethodsByNamespace` | Retrieves all method signatures, parameters, return types, and PHPDoc for a given interface FQN (Fully Qualified Name). |
 | `getOmsTransitionsByState` | Retrieves OMS state machine transitions for a specific state. Returns all transitions that start from the given state, optionally filtered by process name. |
 | `getOrderOmsTransitions` | Retrieves OMS state machine transitions for a specified order from the order's current state. Helps identify the current state and possible transitions. |
+| `executeQuery` | Executes read-only database queries (SELECT, SHOW, DESCRIBE, EXPLAIN) for accessing project data without modification capabilities. |
+| `getSprykerModules` | Lists all available Spryker modules from project and vendor directories. |
+| `getSprykerModuleMap` | Retrieves detailed module metadata including class paths, method signatures, and extension points. |
+| `searchAlgoliaDocumentation` | Enables keyword-based Spryker documentation search through Algolia integration. |
+| `analyzeCsvFile` | Analyzes CSV file structure without loading full content. Returns headers, row count, and sample rows. Supports optional column analysis with unique values and null counts. |
+| `transformCsv` | Transforms and modifies CSV files with three operation modes: APPEND (add new rows), REPLACE (overwrite target), and UPDATE (modify existing rows in-place). Supports column mappings, row filters, value transformations, default values, and automatic backup creation. |
+| `deleteCsvRows` | Deletes rows from CSV files based on filter criteria with multiple operators (equals, not_equals, in, not_in, contains, not_contains, starts_with, ends_with, empty, not_empty). Includes safety checks and automatic backup creation. |
+| `splitOdsToCsv` | Splits ODS (OpenDocument Spreadsheet) files into separate CSV files per sheet. Skips empty sheets and returns details about created files. Useful for converting Google Sheets exports to Spryker-compatible CSVs. |
 
 AI assistants can automatically discover and use these tools when connected to the MCP server.
 

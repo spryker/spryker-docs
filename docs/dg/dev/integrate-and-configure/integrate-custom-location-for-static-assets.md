@@ -1,7 +1,7 @@
 ---
 title: Integrate custom location for static assets
 description: Learn how you can enable and integrate custom location for static assets within your Spryker based project.
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-location-for-static-assets
 originalArticleId: d3bcba9d-bfc6-41e7-9440-b0909d7263ae
@@ -27,14 +27,14 @@ To start the integration, overview and install the necessary feature:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{page.release_tag}} |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^{{page.release_tag}}" --update-with-dependencies
 ```
 
 ### 2) Set up behavior

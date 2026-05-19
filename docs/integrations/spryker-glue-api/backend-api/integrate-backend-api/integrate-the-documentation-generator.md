@@ -2,7 +2,7 @@
 title: Integrate the documentation generator
 description: Learn how to integrate the Backend API documentation generation into your Spryker based project
 template: feature-integration-guide-template
-last_updated: Oct 30, 2023
+last_updated: Feb 19, 2026
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-documentation-generation.html
@@ -22,7 +22,7 @@ To start the integration of the feature, overview and install the necessary feat
 
 | NAME                                        | VERSION           | INSTALLATION GUIDE                                                                                                                                                                                           |
 |---------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Backend API Application | {{page.version}}  | [Backend API Application feature integration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html)  |
+| Backend API Application | {{page.release_tag}}  | [Backend API Application feature integration](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-backend-api.html)  |
 
 
 ### 1) Install the required modules

@@ -1,7 +1,7 @@
 ---
 title: Integrate environment configuration enhancement
 description: Learn how to replace the environment name settings with explicit configuration.
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/environment-configuration-enhancement
 originalArticleId: af8fcee2-4a53-4e77-9749-0e171bf899f3
@@ -29,7 +29,7 @@ Install the required features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules
 

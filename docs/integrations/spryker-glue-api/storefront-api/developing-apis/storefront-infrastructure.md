@@ -10,8 +10,8 @@ redirect_from:
   - /docs/scos/dev/concepts/glue-api/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-infrastructure.html
-  - /docs/dg/dev/glue-api/202410.0/old-glue-infrastructure/glue-infrastructure.html
-  - /docs/dg/dev/glue-api/latest/rest-api/glue-infrastructure.html
+  - /docs/dg/dev/glue-api/202602.0/old-glue-infrastructure/glue-infrastructure.html
+  - /docs/dg/dev/glue-api/202602.0/rest-api/glue-infrastructure.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -211,7 +211,7 @@ The interface provides only 1 method: `getParentResourceType`. The method must r
 
 ### Resource relationships
 
-Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/pbc/all/shopping-list-and-wishlist/latest/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/pbc/all/product-information-management/latest/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/pbc/all/product-information-management/202602.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
 
 Let us consider the following REST Response example. It contains information on a wishlist item without any resource relationships.
 

@@ -1,0 +1,67 @@
+{% comment %}
+Usage:
+{% include carousel.html
+   images="
+   url1|alt1|caption1::
+   url2|alt2|caption2::
+   url3|alt3|caption3::
+   "
+%}
+
+Format:
+- Use :: to separate images
+- Use | to separate url, alt, and caption within each image
+- Leave alt or caption empty: url1||::url2||::url3||
+- Each image URL can be on its own line for readability
+- ID is auto-generated, no need to specify it
+{% endcomment %}
+{% if include.id %}
+{% assign carousel_id = include.id %}
+{% else %}
+{% capture carousel_num %}{% increment carousel_counter %}{% endcapture %}
+{% assign carousel_id = "carousel-" | append: carousel_num %}
+{% endif %}
+{% assign carousel_js_id = carousel_id | replace: "-", "_" %}
+{% assign images_array = include.images | split: "::" %}
+<div class="docs-carousel" id="{{ carousel_id }}" style="position: relative; max-width: 800px; margin: 2rem auto;">
+<div class="carousel-container" style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 500px; display: flex; align-items: center; justify-content: center; background: #f9f9f9;">
+{% for image_data in images_array %}
+{% assign parts = image_data | split: "|" %}
+{% assign image_url = parts[0] | strip %}
+{% assign image_alt = parts[1] | strip %}
+{% assign image_caption = parts[2] | strip %}
+<div class="carousel-slide-{{ carousel_id }}" style="{% if forloop.first %}display: flex;{% else %}display: none;{% endif %} position: absolute; top: 0; left: 0; width: 100%; height: 100%; align-items: center; justify-content: center;">
+<img src="{{ image_url }}" alt="{{ image_alt }}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
+{% if image_caption != '' and image_caption != nil %}
+<p style="text-align: center; padding: 1rem; background: #f5f5f5; margin: 0; font-size: 0.9rem;">{{ image_caption }}</p>
+{% endif %}
+</div>
+{% endfor %}
+</div>
+<button onclick="moveSlide{{ carousel_js_id }}(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10;" aria-label="Previous image">‹</button>
+<button onclick="moveSlide{{ carousel_js_id }}(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10;" aria-label="Next image">›</button>
+<div class="carousel-dots" style="text-align: center; padding: 1rem 0;">
+{% for image_data in images_array %}<span class="dot-{{ carousel_id }}" onclick="currentSlide{{ carousel_js_id }}({{ forloop.index }})" style="display: inline-block; width: 12px; height: 12px; margin: 0 4px; {% if forloop.first %}background: #333;{% else %}background: #ccc;{% endif %} border-radius: 50%; cursor: pointer;" aria-label="Go to image {{ forloop.index }}"></span>{% endfor %}
+</div>
+</div>
+<script>
+(function() {
+let slideIndex{{ carousel_js_id }} = 1;
+window.moveSlide{{ carousel_js_id }} = function(n) {
+showSlide{{ carousel_js_id }}(slideIndex{{ carousel_js_id }} += n);
+}
+window.currentSlide{{ carousel_js_id }} = function(n) {
+showSlide{{ carousel_js_id }}(slideIndex{{ carousel_js_id }} = n);
+}
+function showSlide{{ carousel_js_id }}(n) {
+let slides = document.querySelectorAll('#{{ carousel_id }} .carousel-slide-{{ carousel_id }}');
+let dots = document.querySelectorAll('#{{ carousel_id }} .dot-{{ carousel_id }}');
+if (n > slides.length) { slideIndex{{ carousel_js_id }} = 1 }
+if (n < 1) { slideIndex{{ carousel_js_id }} = slides.length }
+slides.forEach(slide => slide.style.display = 'none');
+dots.forEach(dot => dot.style.background = '#ccc');
+slides[slideIndex{{ carousel_js_id }} - 1].style.display = 'flex';
+dots[slideIndex{{ carousel_js_id }} - 1].style.background = '#333';
+}
+})();
+</script>

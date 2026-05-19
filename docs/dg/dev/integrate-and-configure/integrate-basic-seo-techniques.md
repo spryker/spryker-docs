@@ -1,7 +1,7 @@
 ---
 title: Integrate basic SEO techniques
 description: Learn how you can apply the basic SEO techniques such as improved headings structure and use of microddata
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/basic-seo-techniques-integration-guide
 originalArticleId: 2b638a56-a0ee-4b48-9a0f-d7ae7d2bfd14
@@ -20,7 +20,7 @@ To start the integration, overview and install the necessary features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Update the required SprykerShop modules using Composer
 

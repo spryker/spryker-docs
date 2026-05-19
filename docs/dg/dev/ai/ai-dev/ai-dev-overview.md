@@ -1,7 +1,8 @@
 ---
-title: AI Dev Overview
+title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
 last_updated: Dec 9, 2025
+label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template
 ---
@@ -31,20 +32,6 @@ The module includes:
 - **Extension Points**: Plugin interfaces for adding custom MCP tools and prompts
 - **Built-in Tools**: Pre-configured tools for accessing Spryker transfers, interfaces, and OMS information
 - **Prompt Generation**: Automatic generation of context-aware prompts from documentation
-
-## Install the AiDev module
-
-1. Require the package:
-
-```bash
-composer require spryker-sdk/ai-dev --dev
-```
-
-2. Generate transfers:
-
-```bash
-console transfer:generate
-```
 
 ## Console commands
 

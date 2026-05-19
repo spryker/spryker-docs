@@ -24,6 +24,7 @@ Updating dependencies regularly provides several practical benefits:
 
 The following resources provide information about performance-related module releases:
 
+- [Security release notes 202512.0](https://docs.spryker.com/docs/about/all/releases/security-releases/security-release-notes-202512.0.html)
 - [Release notes 202410.0](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202410.0/release-notes-202410.0.html)
 - [Release notes 202507.0](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202507.0/release-notes-202507.0.html)
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html) - contains the list of recent module versions with known performance optimizations

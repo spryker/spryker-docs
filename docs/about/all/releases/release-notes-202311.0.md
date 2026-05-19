@@ -1,7 +1,7 @@
 ---
 title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
-last_updated: Nov 7, 2023
+last_updated: Feb 26, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
@@ -13,7 +13,7 @@ The Spryker Commerce OS is an end-to-end solution for digital commerce. This doc
 
 For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
-## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Fulfillment App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Fulfillment App {% include badge.html type="feature" %}
 
 As part of Spryker's Unified Commerce capability, the Fulfillment App provides an all-new user interface designed to streamline your order fulfillment process. Supporting new business models and with enhanced functionalities, the Fulfillment App simplifies tasks for warehouse and store staff, offering an efficient and effective fulfillment process.
 
@@ -34,7 +34,7 @@ The fulfillment App includes the following features:
 [Fulfillment App overview](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/fulfillment-app-overview.html)
 
 
-## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Click&Collect <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Click&Collect {% include badge.html type="feature" %}
 
 With Enhanced Click&Collect, your customers now have the flexibility to choose between delivery and pickup during checkout, enhancing their shopping experience. Store operators also benefit from advanced configuration capabilities for their in-store stock.
 
@@ -62,7 +62,7 @@ While pickup has its roots in B2C operations, its utility in B2B contexts is gro
 
 [Service point management](/docs/pbc/all/service-point-management/latest/service-point-management.html)
 
-## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API {% include badge.html type="feature" %}
 
 Traditionally, developing APIs required technical expertise and time-consuming coding processes. However, with the new Spryker dynamic Data Exchange API infrastructure, we have removed the complexities, making it seamless for you to create APIs effortlessly. With this tool, you can quickly build, customize, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.
 
@@ -90,7 +90,7 @@ The key features of the Data Exchange API include the following:
 - [Install the Data Exchange API](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html)
 [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html)
 
-## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio {% include badge.html type="feature" %}
 
 The Spryker Middleware powered by Alumio solves the main challenges of data integrations in a flexible and customizable way and, therefore, greatly reduces the efforts for Spryker's data exchange use cases. It is the foundation on which we build our Integration Apps. The Spryker Middleware powered by Alumio uses Alumio data integration technology.
 
@@ -110,7 +110,7 @@ Faster time-to-value shortening setup times for integrations
 To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/latest/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
 
 
-## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Akeneo PIM Integration App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Akeneo PIM Integration App {% include badge.html type="feature" %}
 
 Our Akeneo PIM Integration App simplifies the management of your product information by providing an out-of-the-box and highly flexible integration with the popular Akeneo PIM system. This saves you time and effort, allowing you to seamlessly manage your product information across all channels, resulting in a more efficient and effective sales process.
 
@@ -129,7 +129,7 @@ Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new pro
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.
 - The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models.
 
-## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and metric streaming to Dynatrace {% include badge.html type="feature" %}
 
 
 {% info_block warningBox "Improved version of Dynatrace" %}
@@ -161,7 +161,7 @@ Key features of this integration include the following:
 - Only available for Spryker Cloud customers.
 - You need a self-managed Dynatrace account, and you have to provide the necessary Endpoints to Spryker.
 
-## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Improved performance, stability, and scalability {% include badge.html type="improvement" %}
 
 Adding third-party integrations via apps to your existing SCCOS solution has become easier with the App Composition Platform (ACP). Get in touch with us to get ACP enabled faster and take advantage of ACP's steadily growing number of no and low-code apps.
 
@@ -176,7 +176,7 @@ Simplified and faster enablement of ACP for SCCOS, as well as improved scalabili
 
 [Install the ACP catalog](/docs/dg/dev/acp/app-composition-platform-installation.html)
 
-## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Vertex app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Vertex app {% include badge.html type="feature" %}
 
 Staying up-to-date with ever-changing tax rules and rates can require a lot of resources. Spryker, through the Vertex integration, offers a means for businesses to automate tax calculation and centralize sales taxes on their transactions.
 
@@ -194,7 +194,7 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 - [Install ACP](/docs/acp/user/app-composition-platform-installation.html)
 - [Install Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex)
 
-## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Algolia app {% include badge.html type="improvement" %}
 
 Build an efficient path to purchase for your buyers with Algolia search, an innovative search and navigation solution that empowers your customers to quickly find the products they want. With our powerful and flexible implementation, headless or with search components on your storefront, you can easily integrate search capabilities into your storefront, streamlining the customer journey and increasing conversions.
 
@@ -210,7 +210,7 @@ Build an efficient path to purchase for your buyers with Algolia search, an inno
 
 [Integrate Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/integrate-algolia.html)
 
-## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Autointegration of code releases <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Autointegration of code releases {% include badge.html type="improvement" %}
 
 In addition to updating Spryker packages in your repository, with this release, Spryker Code Upgrader starts integrating plugins, settinh configurations keys, and adding new translations and similar elements to your project code. Now engineers don't have to figure out and manually apply code changes to activate new features.
 
@@ -225,7 +225,7 @@ Reduce the engineering time needed to integrate a Spryker module release into yo
 
 Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
-## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Security upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Security upgrades {% include badge.html type="improvement" %}
 
 Receive security releases before any other releases offered by Spryker Code Upgrader. The Upgrader prioritizes security releases, ensuring a timely application of critical security fixes.
 
@@ -241,7 +241,7 @@ Reduce the security risks from running outdated software by taking security upda
 
 Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
-## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Upgradability Evaluator improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Upgradability Evaluator improvements {% include badge.html type="improvement" %}
 
 This update offers notifications about critical security issues and vulnerabilities in Spryker and third-party components based on known vulnerability databases from NPM and Composer ecosystems. These improvements enhance the security monitoring and upgrade process. This update is complementary to the [Security Upgrades] improvement for Spryker Code Upgrader, but addresses all Spryker users.
 
@@ -259,7 +259,7 @@ Better awareness of security issues and vulnerabilities.
 
 Install and run [Upgrader compliance Evaluator](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) to detect security issues.
 
-## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Oryx Framework <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Oryx Framework {% include badge.html type="improvement" %}
 
 Oryx Framework empowers developers to efficiently build composable frontends. Oryx provides a rich library of Oryx components, including a design system, allowing developers to rapidly create modern and visually appealing user interfaces. These components integrate with Spryker APIs by default, providing a seamless, decoupled experience for developers and end consumers.
 
@@ -278,7 +278,7 @@ Save time and effort with Oryx Framework. Spryker's purpose-built framework lets
 
 Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/dg/dev/frontend-development/latest/oryx/getting-started/set-up-oryx.html).
 
-## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) {% include badge.html type="improvement" %}
 
 Additional features are being released for Spryker's new upgradeable, decoupled frontend solution — Composable Storefront. This set of features provides essential components for commonplace purchase journeys. Spryker Composable Storefront is built using Spryker's Oryx framework, a reactive, fast, and lightweight framework.
 

@@ -1,7 +1,7 @@
 ---
 title: Feature or module updates
 description: Learn how to update modules or features and to choose at which level to take updates within your Spryker based projects.
-last_updated: Jun 16, 2021
+last_updated: Feb 19, 2026
 template: concept-topic-template
 redirect_from:
 - /docs/scos/dev/updating-spryker/feature-or-module-updates.html
@@ -35,11 +35,11 @@ If you started with Spryker features, your `composer.json` should look similar t
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
-"spryker-feature/agent-assist": "^{{page.version}}",
-"spryker-feature/alternative-products": "^{{page.version}}",
-"spryker-feature/approval-process": "^{{page.version}}",
-"spryker-feature/availability-notification": "^{{page.version}}",
-"spryker-feature/cart": "^{{page.version}}",
+"spryker-feature/agent-assist": "^{{page.release_tag}}",
+"spryker-feature/alternative-products": "^{{page.release_tag}}",
+"spryker-feature/approval-process": "^{{page.release_tag}}",
+"spryker-feature/availability-notification": "^{{page.release_tag}}",
+"spryker-feature/cart": "^{{page.release_tag}}",
 ....
 ```
 

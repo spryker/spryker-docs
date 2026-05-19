@@ -1,7 +1,7 @@
 ---
 title: Twig performance best practices
 description: This guideline explains how to optimize Twig templating engine performance for Spryker applications.
-last_updated: Nov 28, 2025
+last_updated: Jan 30, 2026
 template: concept-topic-template
 related:
   - title: Integrate automated SVG sprite extraction
@@ -16,10 +16,14 @@ It is important to follow best practices related to Twig performance optimisatio
 
 Twig files can be precompiled into PHP classes to speed the performance up. This behavior can be activated in the configuration. We highly recommend using the `FORCE_BYTECODE_INVALIDATION` option. Otherwise, Opcache may contain outdated content, as the files are modified during runtime.
 
+**config/Shared/config_default.php**
+
 ```php
----//---
+
+...
 use Twig\Cache\FilesystemCache;
----//---
+...
+
 $currentStore = Store::getInstance()->getStoreName();
 
 $config[TwigConstants::ZED_TWIG_OPTIONS] = [
@@ -43,18 +47,6 @@ $config[TwigConstants::YVES_TWIG_OPTIONS] = [
         FilesystemCache::FORCE_BYTECODE_INVALIDATION,
     ),
 ];
-
-$config[TwigConstants::YVES_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Yves/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
-
-$config[TwigConstants::ZED_PATH_CACHE_FILE] = sprintf(
-    '%s/src/Generated/Zed/Twig/codeBucket%s/.pathCache',
-    APPLICATION_ROOT_DIR,
-    $currentStore,
-);
 ```
 
 ## Activate Twig path cache
@@ -87,13 +79,14 @@ Make sure that the command is executed after the `vendor/bin/console twig:cache:
 
 2. Register the following classes for the Zed command:
 
-**\Spryker\Zed\Console\ConsoleDependencyProvider**
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 ...
 use Spryker\Zed\Form\Communication\Plugin\Application\FormApplicationPlugin;
 use Spryker\Zed\Security\Communication\Plugin\Application\ConsoleSecurityApplicationPlugin;
 use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
+use Spryker\Zed\Router\Communication\Plugin\Application\RouterApplicationPlugin;
 ...
 
     protected function getConsoleCommands(Container $container): array
@@ -111,6 +104,7 @@ use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
         $applicationPlugins[] = new ConsoleSecurityApplicationPlugin();
         $applicationPlugins[] = new TwigApplicationPlugin();
         $applicationPlugins[] = new FormApplicationPlugin();
+        $applicationPlugins[] = new RouterApplicationPlugin();
 
         return $applicationPlugins;
     }
@@ -118,7 +112,7 @@ use Spryker\Zed\Twig\Communication\Console\TwigTemplateWarmerConsole;
 
 3. Register the following classes for the Yves console context to allow Twig properly compile templates.
 
-**\Spryker\Yves\Console\ConsoleDependencyProvider**
+**src/Pyz/Yves/Console/ConsoleDependencyProvider.php**
 
 ```php
 ...

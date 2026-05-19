@@ -3,6 +3,8 @@ title: Global scope
 last_updated: Nov 05, 2021
 description: Global scope rules apply to an entire collection of entities (for example, Users, Orders).
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/global-scope.html 
 ---
 
 Global scope rules apply to an entire collection of entities (for example, Users, Orders).

@@ -4,6 +4,7 @@ description: Learn how to integrate the Product Approval Process feature into a 
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html 
   - /docs/scos/dev/feature-integration-guides/202311.0/product-approval-process-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
 ---

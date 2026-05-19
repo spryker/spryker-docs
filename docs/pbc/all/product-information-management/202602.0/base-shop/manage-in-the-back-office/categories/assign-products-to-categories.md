@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
 originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html 
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/category/assigning-products-to-categories.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/assigning-products-to-categories.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/category/assigning-products-to-categories.html

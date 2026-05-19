@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-concrete-pre-configurationcsv
 originalArticleId: 81e75f7f-b1bd-4707-870a-dbea4a001273
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html 
   - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html

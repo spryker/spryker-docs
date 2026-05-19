@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-back-office-feature-integration
 originalArticleId: 53f711aa-6007-4fe2-8baf-ad91c72f33f4
 redirect_from:
+  - /docs/pbc/all/identity-access-management/202512.0/install-and-upgrade/install-the-spryker-core-back-office-feature.html 
   - /docs/back-office-feature-integration
   - /docs/en/back-office-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-back-office-feature-integration.html

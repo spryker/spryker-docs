@@ -4,6 +4,7 @@ description: Learn how to set up Oryx using a boilerplate project
 last_updated: Apr 3, 2023
 template: howto-guide-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/oryx/getting-started/set-up-oryx.html 
   - /docs/scos/dev/front-end-development/202404.0/oryx/set-up-oryx.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/set-up-oryx.html
 

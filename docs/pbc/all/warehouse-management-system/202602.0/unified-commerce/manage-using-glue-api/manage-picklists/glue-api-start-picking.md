@@ -2,6 +2,8 @@
 title: "Glue API: Start picking"
 description: Learn how to start picking items using Spryker Glue API in your Spryker Unified Commerce Store.
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202507.0/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html 
 last_updated: Dec 7, 2023
 ---
 

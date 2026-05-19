@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/decimal-stock-concept
 originalArticleId: da336e52-e8e8-4849-9be3-e208cd42e273
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/decimal-stock-migration-concept.html 
   - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
 related:

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-options
 originalArticleId: 20dd9771-8cf2-4740-b74e-3326eceaf5c2
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/product-options/edit-product-options.html 
   - /2021080/docs/managing-product-options
   - /2021080/docs/en/managing-product-options
   - /docs/managing-product-options

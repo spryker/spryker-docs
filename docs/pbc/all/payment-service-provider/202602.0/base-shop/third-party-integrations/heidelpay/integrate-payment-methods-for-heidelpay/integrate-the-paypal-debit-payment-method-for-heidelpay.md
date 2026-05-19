@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-paypal-debit
 originalArticleId: c13ad379-3ad5-477f-bcec-8b0f00d3572a
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-debit-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-paypal-debit
   - /2021080/docs/en/heidelpay-paypal-debit
   - /docs/heidelpay-paypal-debit

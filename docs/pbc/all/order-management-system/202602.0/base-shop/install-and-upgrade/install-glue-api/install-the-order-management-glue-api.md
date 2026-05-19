@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-order-management-feature-integration
 originalArticleId: ad1c861b-392a-48e1-858e-f22b0adf7851
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html 
   - /2021080/docs/glue-api-order-management-feature-integration
   - /2021080/docs/en/glue-api-order-management-feature-integration
   - /docs/glue-api-order-management-feature-integration

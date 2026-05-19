@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management
 originalArticleId: 88f6dffa-517a-4a00-ac9f-4041ba9b9841
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html 
   - /2021080/docs/customer-account-management
   - /2021080/docs/en/customer-account-management
   - /docs/customer-account-management

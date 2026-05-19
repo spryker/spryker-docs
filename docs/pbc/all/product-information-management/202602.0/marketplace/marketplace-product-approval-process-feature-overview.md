@@ -4,6 +4,7 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 last_updated: Dec 11, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/marketplace-product-approval-process-feature-overview.html 
   - /docs/marketplace/user/features/202311.0/marketplace-product-approval-process-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-approval-process-feature-walkthrough.html
 related:

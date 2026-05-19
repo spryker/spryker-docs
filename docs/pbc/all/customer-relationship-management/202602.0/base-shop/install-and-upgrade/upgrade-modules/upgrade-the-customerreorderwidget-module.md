@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-customer-reorder-widget
 originalArticleId: 53190406-dcf2-4815-ac3f-5508d1b57497
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html 
   - /2021080/docs/mg-customer-reorder-widget
   - /2021080/docs/en/mg-customer-reorder-widget
   - /docs/mg-customer-reorder-widget

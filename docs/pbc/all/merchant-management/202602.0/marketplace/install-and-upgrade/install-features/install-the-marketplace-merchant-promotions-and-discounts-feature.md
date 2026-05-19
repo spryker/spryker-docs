@@ -4,6 +4,7 @@ description: Learn how to integrate the Marketplace Merchant + Promotions & Disc
 last_updated: Dec 19, 2024
 template: feature-integration-guide-template  
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature.html 
   - /docs/pbc/all/merchant-management/202505.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-promotions-and-discounts-feature
 ---
 

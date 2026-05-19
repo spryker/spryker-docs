@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-abstract-products
 originalArticleId: 7fe58b05-5718-4851-8f90-4167d1df999d
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html 
   - /2021080/docs/editing-abstract-products
   - /2021080/docs/en/editing-abstract-products
   - /docs/editing-abstract-products

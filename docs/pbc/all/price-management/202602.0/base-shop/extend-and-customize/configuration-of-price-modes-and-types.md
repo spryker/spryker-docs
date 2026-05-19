@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/net-gross-prices-management
 originalArticleId: 9240561a-379b-4a9e-a6c4-05bdf2dfa264
 redirect_from:
+  - /docs/pbc/all/price-management/202512.0/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html 
   - /2021080/docs/net-gross-prices-management
   - /2021080/docs/en/net-gross-prices-management
   - /docs/net-gross-prices-management

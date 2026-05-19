@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-category-feature-integration
 originalArticleId: 9362908d-1cd0-4db9-91c1-fe11df43060c
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html 
   - /2021080/docs/product-category-feature-integration
   - /2021080/docs/en/product-category-feature-integration
   - /docs/product-category-feature-integration

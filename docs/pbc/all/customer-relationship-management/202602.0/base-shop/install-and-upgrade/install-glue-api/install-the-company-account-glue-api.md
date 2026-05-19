@@ -5,6 +5,8 @@ last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-company-account-api-feature-integration
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html 
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html 
   - /2021080/docs/glue-api-company-account-api-feature-integration
   - /2021080/docs/en/glue-api-company-account-api-feature-integration
   - /docs/glue-api-company-account-api-feature-integration

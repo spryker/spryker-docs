@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/tax-api-feature-integration-201907
 originalArticleId: 48705764-af9f-4d16-be2f-6ba995e10ee1
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/install-and-upgrade/install-the-tax-glue-api.html 
   - /docs/pbc/all/tax-management/202311.0/install-and-upgrade/integrate-the-tax-glue-api.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/install-and-upgrade/install-the-tax-glue-api.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/install-and-upgrade/install-the-tax-glue-api.html

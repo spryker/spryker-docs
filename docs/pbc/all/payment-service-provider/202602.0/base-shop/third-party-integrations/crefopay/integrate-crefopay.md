@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-integration
 originalArticleId: ce1c7803-e0a5-493f-94a6-0f602616e987
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/crefopay/integrate-crefopay.html 
   - /2021080/docs/crefopay-integration
   - /2021080/docs/en/crefopay-integration
   - /docs/crefopay-integration

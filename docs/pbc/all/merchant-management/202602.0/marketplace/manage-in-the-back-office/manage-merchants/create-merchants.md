@@ -4,6 +4,7 @@ last_updated: Jan 24, 2024
 description: Learn how to create and configure merchants in the Spryker Back Office for you Spryker B2B Marketplace projects.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html 
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
 related:
   - title: Marketplace Merchant feature overview

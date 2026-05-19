@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-cms-page-versions
 originalArticleId: 0110b8f0-26d9-41b8-99f7-1fc55efba8be
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html 
   - /2021080/docs/managing-cms-page-versions
   - /2021080/docs/en/managing-cms-page-versions
   - /docs/managing-cms-page-versions

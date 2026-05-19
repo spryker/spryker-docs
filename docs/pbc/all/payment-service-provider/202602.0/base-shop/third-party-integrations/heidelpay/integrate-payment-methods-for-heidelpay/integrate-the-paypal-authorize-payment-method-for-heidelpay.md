@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-authorize
 originalArticleId: 0f062977-b318-41b1-bd9e-b14ffedf2bc6
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-paypal-authorize-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-authorize
   - /2021080/docs/en/heidelpay-authorize
   - /docs/heidelpay-authorize

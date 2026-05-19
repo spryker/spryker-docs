@@ -4,6 +4,7 @@ description: Learn how to edit product labels directly in the Spryker Cloud Comm
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html 
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/product-labels/edit-product-labels.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
 related:

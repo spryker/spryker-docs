@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-widget-for-concrete-products-integration
 originalArticleId: 61590531-ea10-4226-829a-ced36cee47c0
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-search-widget-for-concrete-products.html 
   - /2021080/docs/search-widget-for-concrete-products-integration
   - /2021080/docs/en/search-widget-for-concrete-products-integration
   - /docs/search-widget-for-concrete-products-integration

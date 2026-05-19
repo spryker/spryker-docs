@@ -4,6 +4,7 @@ description: Learn how to install the Shopping List + Agent assist feature in to
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202507.0/base-shop/install-and-upgrade/install-features/install-the-shopping-list-agent-assist-feature.html 
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/install-features/install-the-shopping-list-agent-assist-feature.html
 ---

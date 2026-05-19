@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-warehouses
 originalArticleId: 0158ceb8-801b-45ed-bfc1-b34dc098253e
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202512.0/base-shop/manage-in-the-back-office/edit-warehouses.html 
   - /2021080/docs/managing-warehouses
   - /2021080/docs/en/managing-warehouses
   - /docs/managing-warehouses

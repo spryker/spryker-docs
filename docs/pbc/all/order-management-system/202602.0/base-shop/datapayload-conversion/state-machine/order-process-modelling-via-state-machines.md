@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-process-modelling-state-machines
 originalArticleId: 6beb29fc-d94c-4c76-8ad0-e0d71bbb21ff
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html 
   - /2021080/docs/order-process-modelling-state-machines
   - /2021080/docs/en/order-process-modelling-state-machines
   - /docs/order-process-modelling-state-machines

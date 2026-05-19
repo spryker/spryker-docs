@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers
 originalArticleId: 32a86d51-5bdd-428b-8ae4-5929326f4a26
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/customers/create-customers.html 
   - /2021080/docs/managing-customers
   - /2021080/docs/en/managing-customers
   - /docs/managing-customers

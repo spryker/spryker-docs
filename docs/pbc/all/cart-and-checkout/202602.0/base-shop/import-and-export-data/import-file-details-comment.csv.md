@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-commentcsv
 originalArticleId: 2748359a-d71e-4878-a3d9-ae305f124192
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/import-and-export-data/import-file-details-comment.csv.html 
   - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/miscellaneous/file-details-comment.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/import-and-export-data/file-details-comment.csv.html

@@ -4,12 +4,12 @@ description: Find out how you can configure the Stripe app in your Spryker shop
 last_updated: Jan 31, 2024
 template: howto-guide-template
 redirect_from:
-- /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/disconnect-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
 ---
-
 This document outlines the steps to connect and configure the Stripe app in the Back Office.
 
 ## Prerequisites

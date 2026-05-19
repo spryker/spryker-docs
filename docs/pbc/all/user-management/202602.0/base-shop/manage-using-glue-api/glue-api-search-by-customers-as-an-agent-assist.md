@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
 redirect_from:
+  - /docs/pbc/all/user-management/202512.0/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html 
   - /docs/scos/dev/glue-api-guides/202311.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 related:

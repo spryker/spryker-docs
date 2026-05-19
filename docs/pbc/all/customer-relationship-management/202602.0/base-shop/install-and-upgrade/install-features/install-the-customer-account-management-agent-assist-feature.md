@@ -6,6 +6,8 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-agent-assist-feature-integration
 originalArticleId: ac6402fe-4140-479f-a08a-76c03b263afa
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html 
+  - /docs/pbc/all/customer-relationship-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html 
   - /2021080/docs/customer-account-management-agent-assist-feature-integration
   - /2021080/docs/en/customer-account-management-agent-assist-feature-integration
   - /docs/customer-account-management-agent-assist-feature-integration

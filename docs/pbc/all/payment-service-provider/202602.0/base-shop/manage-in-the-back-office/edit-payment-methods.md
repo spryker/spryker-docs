@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-payment-methods
 originalArticleId: d0dc8732-295d-4072-8dc2-63f439feb324
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/manage-in-the-back-office/edit-payment-methods.html 
   - /docs/scos/user/back-office-user-guides/201811.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/201903.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/payment-methods/managing-payment-methods.html

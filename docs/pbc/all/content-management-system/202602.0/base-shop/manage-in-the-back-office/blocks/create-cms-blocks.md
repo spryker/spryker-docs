@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-cms-block
 originalArticleId: 6ff82722-c1ed-4fd5-b57e-402c7af92a70
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/blocks/create-cms-blocks.html 
   - /2021080/docs/creating-cms-block
   - /2021080/docs/en/creating-cms-block
   - /docs/creating-cms-block

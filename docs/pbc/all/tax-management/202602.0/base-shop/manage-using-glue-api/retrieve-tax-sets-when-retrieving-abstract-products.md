@@ -4,6 +4,7 @@ description: Learn how to retrieve tax sets when retrieving abstract products us
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/tax-management/202507.0/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html 
   - /docs/pbc/all/tax-management/202311.0/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html

@@ -6,6 +6,8 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-b2b-contracts-feature-integration
 originalArticleId: 78cceb48-e5e8-45b6-b515-f6622788fd63
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html 
+  - /docs/pbc/all/merchant-management/202512.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html 
   - /2021080/docs/merchant-b2b-contracts-feature-integration
   - /2021080/docs/en/merchant-b2b-contracts-feature-integration
   - /docs/merchant-b2b-contracts-feature-integration

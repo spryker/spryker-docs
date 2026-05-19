@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-rendering-configurable-bundles-in-the-storefront
 originalArticleId: 76baed14-c6f4-49df-a4e9-3aadc13cc3a6
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html 
   - /2021080/docs/howto-rendering-configurable-bundles-in-the-storefront
   - /2021080/docs/en/howto-rendering-configurable-bundles-in-the-storefront
   - /docs/howto-rendering-configurable-bundles-in-the-storefront

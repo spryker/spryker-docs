@@ -4,6 +4,7 @@ last_updated: Jan 05, 2021
 description: With this integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker B2B project.
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-tax-feature.html 
   - /docs/marketplace/dev/feature-integration-guides/202311.0/merchant-portal-marketplace-product-tax-feature-integration.html
 ---
 

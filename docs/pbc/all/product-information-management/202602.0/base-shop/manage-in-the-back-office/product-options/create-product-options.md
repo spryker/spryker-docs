@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-option
 originalArticleId: 64e7486e-5904-4cc8-b336-c57dd13f9e14
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/product-options/create-product-options.html 
   - /2021080/docs/creating-a-product-option
   - /2021080/docs/en/creating-a-product-option
   - /docs/creating-a-product-option

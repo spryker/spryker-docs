@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview
 originalArticleId: 6683a968-b4de-4e2b-aefc-2ab70fabe3b4
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202512.0/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html 
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shopping-lists-feature-walkthrough.html

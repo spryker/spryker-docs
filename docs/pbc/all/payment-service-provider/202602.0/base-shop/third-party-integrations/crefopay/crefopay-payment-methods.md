@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-provided-payment-methods
 originalArticleId: a5a58535-f49a-42aa-8c26-e6987beb21bc
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/crefopay/crefopay-payment-methods.html 
   - /2021080/docs/crefopay-provided-payment-methods
   - /2021080/docs/en/crefopay-provided-payment-methods
   - /docs/crefopay-provided-payment-methods

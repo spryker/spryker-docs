@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/password-management-overview
 originalArticleId: 5319cfcb-db06-4238-9f68-c473289b1297
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/customer-account-management-feature-overview/password-management-overview.html 
   - /2021080/docs/password-management-overview
   - /2021080/docs/en/password-management-overview
   - /docs/password-management-overview

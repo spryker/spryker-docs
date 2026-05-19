@@ -4,14 +4,14 @@ description: Learn how to edit company units configured in the Spryker Cloud Com
 template: back-office-user-guide-template
 last_updated: Mar 20, 2024
 redirect_from:
-- /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
-- /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-units.html
-- /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/edit-company-units.html
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-units/edit-company-units.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
+  - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-units.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/edit-company-units.html
 related:
   - title: Business Units overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
 ---
-
 This document describes how to edit company units in the Back Office. You can add addresses to company units only when editing them.
 
 

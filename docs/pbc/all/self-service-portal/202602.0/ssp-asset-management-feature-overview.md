@@ -2,6 +2,8 @@
 title: SSP Assets Management feature overview
 description: The Asset Management feature allows customers abd Back Office users to manage assets within the organization.
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202512.0/ssp-asset-management-feature-overview.html 
 last_updated: Dec 18, 2025
 ---
 

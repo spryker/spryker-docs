@@ -4,8 +4,9 @@ description: Learn how to reorder product sets that you have configured within t
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
-- /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/product-sets/reorder-product-sets.html
-- /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
+  - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/product-sets/reorder-product-sets.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
 related:
   - title: Create product sets
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
@@ -18,7 +19,6 @@ related:
   - title: Product Sets feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
 ---
-
 This document describes how to reorder product sets in the Back Office by defining weight. A product set's weight, relatively to other the other product sets' weight on a page defines how high it's on a page.
 
 To reorder product sets by editing their weight, do the following:

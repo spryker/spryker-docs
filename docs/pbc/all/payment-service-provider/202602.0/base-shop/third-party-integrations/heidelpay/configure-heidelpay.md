@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-configuration-scos
 originalArticleId: f14d7560-eea6-4f96-8ced-cb8fcdda46c1
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/configure-heidelpay.html 
   - /2021080/docs/heidelpay-configuration-scos
   - /2021080/docs/en/heidelpay-configuration-scos
   - /docs/heidelpay-configuration-scos

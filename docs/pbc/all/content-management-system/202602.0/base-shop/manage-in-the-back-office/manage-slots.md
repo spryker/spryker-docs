@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
 originalArticleId: 06d8bf64-4aee-4959-abae-f3fb849ccaa0
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/manage-slots.html 
   - /docs/scos/user/back-office-user-guides/202001.0/content/slots/slots.html
   - /docs/scos/user/back-office-user-guides/202108.0/content/slots/managing-slots.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/manage-slots.html

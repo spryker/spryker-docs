@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-lists
 originalArticleId: 18628b05-d26f-469a-a201-d74c1a235cf8
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html 
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-lists/managing-product-lists.html 

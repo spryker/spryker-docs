@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-account-order-management-feature-integration
 originalArticleId: 459ba566-efc9-4a44-a990-65d13d137032
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html 
   - /2021080/docs/company-account-order-management-feature-integration
   - /2021080/docs/en/company-account-order-management-feature-integration
   - /docs/company-account-order-management-feature-integration

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-reclamations
 originalArticleId: 20fab61a-f966-4fe9-9702-c04e1f77ccb1
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/reclamations/view-reclamations.html 
   - /2021080/docs/managing-reclamations
   - /2021080/docs/en/managing-reclamations
   - /docs/managing-reclamations

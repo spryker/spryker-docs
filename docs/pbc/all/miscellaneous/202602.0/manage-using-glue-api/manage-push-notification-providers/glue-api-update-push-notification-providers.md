@@ -3,6 +3,8 @@ title: "Glue API: Update push notification providers"
 description: Learn how to update push notification providers using the Spryker Glue API for your Spryker projects.
 last_updated: Dec 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/miscellaneous/202512.0/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html 
 ---
 
 This endpoint lets you update push notification providers.

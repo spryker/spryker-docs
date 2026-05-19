@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-promotions-discounts-feature-integration
 originalArticleId: e39ff236-644f-41fe-9aee-796304a59df2
 redirect_from:
+  - /docs/pbc/all/discount-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html 
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html

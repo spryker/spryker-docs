@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-split-payment-marketplace
 originalArticleId: e418b364-ca18-4947-9dd0-a100378dd90a
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-split-payment-marketplace-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-split-payment-marketplace
   - /2021080/docs/en/heidelpay-split-payment-marketplace
   - /docs/heidelpay-split-payment-marketplace

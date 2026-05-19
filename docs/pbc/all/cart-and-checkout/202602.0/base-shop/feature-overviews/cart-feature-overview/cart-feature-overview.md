@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart
 originalArticleId: eb211809-3be4-4b8a-bf28-a2c79140b11c
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html 
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-functionality.html
   - /docs/scos/user/features/202009.0/cart-feature-overview/cart-feature-overview.html
   - /docs/scos/user/features/202311.0/cart-feature-overview/cart-feature-overview.html

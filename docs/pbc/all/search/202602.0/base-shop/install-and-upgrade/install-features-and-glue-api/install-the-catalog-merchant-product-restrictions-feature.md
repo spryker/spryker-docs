@@ -4,6 +4,8 @@ description: The guide walks you through the process of installing the Merchant 
 last_updated: Sep 11, 2023
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html 
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html 
     - /docs/pbc/all/merchant-management/202311.0/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 ---
 

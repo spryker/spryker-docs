@@ -4,6 +4,7 @@ description: Learn how to promote products using the discounts module in the bac
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/discount-management/202512.0/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html 
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/best-practices-promote-products-with-discounts.html
   - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/best-practices-promote-products-with-discounts.html 
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html 

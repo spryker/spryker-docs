@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-product-barcodes
 originalArticleId: e006621e-64fb-4d4d-8a33-c66c0afca275
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/view-product-barcodes.html 
   - /2021080/docs/viewing-product-barcodes
   - /2021080/docs/en/viewing-product-barcodes
   - /docs/viewing-product-barcodes

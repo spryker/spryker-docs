@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-register-provider-plugin
 originalArticleId: 423f4609-d088-428a-bbe9-6718a7e235ed
 redirect_from:
+  - /docs/pbc/all/emails/202512.0/howto-create-and-register-a-mail-provider.html 
   - /2021080/docs/ht-create-register-provider-plugin
   - /2021080/docs/en/ht-create-register-provider-plugin
   - /docs/ht-create-register-provider-plugin

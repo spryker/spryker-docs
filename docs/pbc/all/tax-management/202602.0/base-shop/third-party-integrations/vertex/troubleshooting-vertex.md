@@ -2,6 +2,8 @@
 title: Troubleshooting Vertex
 description: Some hints and tips on troubleshoot issues related to the Vertex app within your Spryker project.
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/pbc/all/tax-management/202512.0/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html 
 last_updated: Dec 4, 2023
 ---
 This document contains common issues related to the Vertex app.

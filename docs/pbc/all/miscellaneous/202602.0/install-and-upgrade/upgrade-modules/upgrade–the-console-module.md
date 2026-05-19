@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-console
 originalArticleId: 212964c4-49d0-49c3-9750-e5821f0ed974
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202512.0/install-and-upgrade/upgrade-modules/upgrade–the-console-module.html 
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-console.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-console.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-console.html

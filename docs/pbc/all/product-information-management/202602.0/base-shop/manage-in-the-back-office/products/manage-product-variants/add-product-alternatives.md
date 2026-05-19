@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-product-alternatives
 originalArticleId: 556eb518-e027-478e-a8cc-152d8e4b8dcb
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html 
   - /2021080/docs/adding-product-alternatives
   - /2021080/docs/en/adding-product-alternatives
   - /docs/adding-product-alternatives

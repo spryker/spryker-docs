@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/templates-and-slots-overview
 originalArticleId: d9a2e5ab-33c9-4d63-ac38-8b86c0a17f97
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/cms-feature-overview/templates-and-slots-overview.html 
   - /2021080/docs/templates-and-slots-overview
   - /2021080/docs/en/templates-and-slots-overview
   - /docs/templates-and-slots-overview

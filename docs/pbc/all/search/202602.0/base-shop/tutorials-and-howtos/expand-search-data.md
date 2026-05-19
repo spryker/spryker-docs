@@ -4,6 +4,7 @@ description: Learn how to expand entity data and create new data types in the se
 template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/search/202512.0/base-shop/tutorials-and-howtos/expand-search-data.html 
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/expand-search-data.html

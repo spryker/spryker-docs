@@ -4,6 +4,7 @@ last_updated: May 05, 2022
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html 
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/managing-marketplace-abstract-products.html
 related:
   - title: Marketplace Product feature overview

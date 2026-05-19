@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-order-shipments
 originalArticleId: 417c59db-8d1a-469b-bbef-858d312a1450
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/orders/create-shipments.html 
   - /2021080/docs/managing-order-shipments
   - /2021080/docs/en/managing-order-shipments
   - /docs/managing-order-shipments

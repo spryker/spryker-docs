@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-customer
 originalArticleId: a9b5453f-e5cc-4a5e-8b3b-b2037b9aeb77
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-customer-module.html 
   - /2021080/docs/mg-customer
   - /2021080/docs/en/mg-customer
   - /docs/mg-customer

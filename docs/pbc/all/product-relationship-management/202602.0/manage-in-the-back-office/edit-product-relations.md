@@ -11,9 +11,9 @@ related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 redirect_from:
-- /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/edit-product-relations.html
+  - /docs/pbc/all/product-relationship-management/202512.0/manage-in-the-back-office/edit-product-relations.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/edit-product-relations.html
 ---
-
 This document describes how to edit product relations in the Back Office.
 
 ## Prerequisites

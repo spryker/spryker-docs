@@ -4,6 +4,7 @@ description: Learn how to add the category parameter to calculation and conditio
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/discount-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-category-management-feature.html 
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html

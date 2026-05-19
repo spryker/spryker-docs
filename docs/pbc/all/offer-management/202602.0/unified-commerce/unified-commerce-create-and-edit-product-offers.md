@@ -2,6 +2,8 @@
 title: "Unified Commerce: Create and edit product offers"
 description: Learn how to create and edit product offers for your Spryker Unified Commerce Project.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/offer-management/202512.0/unified-commerce/unified-commerce-create-and-edit-product-offers.html 
 last_updated: Jan 19, 2024
 ---
 

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/vault-for-tokens-feature-overview
 originalArticleId: 74b81715-3f9b-4f34-af9d-30ca5f480597
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202512.0/spryker-core-feature-overview/vault-for-tokens-overview.html 
   - /2021080/docs/vault-for-tokens-feature-overview
   - /2021080/docs/en/vault-for-tokens-feature-overview
   - /docs/vault-for-tokens-feature-overview

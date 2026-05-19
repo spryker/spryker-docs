@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users
 originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2
 redirect_from:
+  - /docs/pbc/all/user-management/202512.0/base-shop/manage-in-the-back-office/manage-users/create-users.html 
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/activating-and-deactivating-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/creating-users.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/create-users.html

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/discontinuing-products
 originalArticleId: 9233e3f7-8568-4c3a-b8c2-3cd930ddb840
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html 
   - /2021080/docs/discontinuing-products
   - /2021080/docs/en/discontinuing-products
   - /docs/discontinuing-products

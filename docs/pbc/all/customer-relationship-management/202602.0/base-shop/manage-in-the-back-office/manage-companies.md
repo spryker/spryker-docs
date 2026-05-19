@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-companies
 originalArticleId: 5e075d70-a08b-4995-ad61-25bfc5a2e68b
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/manage-companies.html 
   - /2021080/docs/managing-companies
   - /2021080/docs/en/managing-companies
   - /docs/managing-companies

@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-configuration-file
 originalArticleId: 6b17897b-a145-443e-a0ff-162ad92138a9
 redirect_from:
+  - /docs/dg/dev/data-import/202512.0/importing-data-with-a-configuration-file.html 
   - /docs/scos/dev/data-import/202404.0/importing-data-with-a-configuration-file.html
   - /docs/scos/dev/data-import/202204.0/importing-data-with-a-configuration-file.html
 ---

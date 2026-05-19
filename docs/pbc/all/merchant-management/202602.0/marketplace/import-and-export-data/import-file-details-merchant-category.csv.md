@@ -4,6 +4,7 @@ last_updated: Jun 07, 2021
 description: learn about the merchant profile address csv file to configure merchant profile addresses in your Spryker B2B shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/import-and-export-data/import-file-details-merchant-category.csv.html 
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-category.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-category.csv.html
 related:

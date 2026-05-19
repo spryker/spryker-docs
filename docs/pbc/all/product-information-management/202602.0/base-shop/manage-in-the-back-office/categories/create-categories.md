@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-categories
 originalArticleId: b0f46c55-2786-4ab2-acee-594502fff3e1
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/categories/create-categories.html 
   - /2021080/docs/creating-categories
   - /2021080/docs/en/creating-categories
   - /docs/creating-categories

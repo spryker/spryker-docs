@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-cms-page
 originalArticleId: 5746d7b7-637d-4602-898d-a83ab9da0498
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/pages/create-cms-pages.html 
   - /2021080/docs/creating-a-cms-page
   - /2021080/docs/en/creating-a-cms-page
   - /docs/creating-a-cms-page

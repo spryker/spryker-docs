@@ -3,6 +3,8 @@ title: Execution flow
 last_updated: Nov 05, 2021
 description: Performing model actions and selecting and applying rules for a query share some similarities, but they have some differences as well. A user with insufficient permissions during query execution will be forced to run a query that results in an empty collection when the system executes the query.
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/execution-flow.html 
 ---
 
 ## Query processing flow

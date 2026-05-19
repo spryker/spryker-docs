@@ -4,6 +4,7 @@ last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace abstract product meta information in the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html 
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/manageing-marketplace-abstract-product-meta-information.html
 related:
   - title: Marketplace Product feature overview

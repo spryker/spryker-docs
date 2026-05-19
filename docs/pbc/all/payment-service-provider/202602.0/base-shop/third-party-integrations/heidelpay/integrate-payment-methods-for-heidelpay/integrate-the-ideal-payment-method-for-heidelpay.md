@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-ideal
 originalArticleId: 66b61a72-36ed-450c-9b80-4495efa619cc
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-ideal-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-ideal
   - /2021080/docs/en/heidelpay-ideal
   - /docs/heidelpay-ideal

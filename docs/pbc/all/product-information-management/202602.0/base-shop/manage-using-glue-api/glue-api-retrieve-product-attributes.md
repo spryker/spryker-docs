@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
 originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html 
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-product-attributes.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-attributes.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-inventory-management-feature-integration
 originalArticleId: 5bb30c5b-4912-4a16-be29-46f68ef0e0c7
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html 
   - /2021080/docs/alternative-products-inventory-management-feature-integration
   - /2021080/docs/en/alternative-products-inventory-management-feature-integration
   - /docs/alternative-products-inventory-management-feature-integration

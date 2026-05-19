@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-variant
 originalArticleId: cb558d64-c3df-4acf-a149-3eac51f413c2
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html 
   - /2021080/docs/creating-a-product-variant
   - /2021080/docs/en/creating-a-product-variant
   - /docs/creating-a-product-variant

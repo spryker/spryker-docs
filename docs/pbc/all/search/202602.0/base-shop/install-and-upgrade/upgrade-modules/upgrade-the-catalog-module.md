@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-catalog
 originalArticleId: 34b60455-3e4a-4310-917c-73b64be173a0
 redirect_from:
+  - /docs/pbc/all/search/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-catalog-module.html 
   - /2021080/docs/mg-catalog
   - /2021080/docs/en/mg-catalog
   - /docs/mg-catalog

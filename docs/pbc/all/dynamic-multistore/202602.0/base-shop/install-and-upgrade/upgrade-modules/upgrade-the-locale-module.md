@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-locale
 originalArticleId: 0566d4d5-bb4d-4079-a74f-f50e2f02ef32
 redirect_from:
+  - /docs/pbc/all/dynamic-multistore/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html 
   - /2021080/docs/migration-guide-locale
   - /2021080/docs/en/migration-guide-locale
   - /docs/migration-guide-locale

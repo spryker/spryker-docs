@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-configurablebundlestorage
 originalArticleId: f980caac-ab97-4ab8-b6d9-37ab6b5c8e37
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html 
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundlestorage.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundlestorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundlestorage.html

@@ -4,6 +4,7 @@ description: Learn how to integrate the Catalog + Order Management feature conne
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-order-management-feature.html 
   - /docs/scos/dev/feature-integration-guides/202108.0/catalog-order-management-feature-integration.html
   - /docs/pbc/all/search/202311.0/install-and-upgrade/install-features-and-glue-api/install-the-catalog-order-management-feature.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-catalog-order-management-feature.html

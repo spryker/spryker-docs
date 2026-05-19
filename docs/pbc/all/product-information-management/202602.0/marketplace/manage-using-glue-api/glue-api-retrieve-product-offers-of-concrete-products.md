@@ -4,6 +4,7 @@ description: Learn how to retrieve details about product offers of concrete prod
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html 
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-product-offers-of-concrete-products.html
 related:
   - title: "Glue API: Retrieve concrete products"

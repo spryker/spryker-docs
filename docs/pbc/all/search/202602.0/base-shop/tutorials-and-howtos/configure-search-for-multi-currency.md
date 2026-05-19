@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-multi-currency
 originalArticleId: bd8aa34b-bd53-4d64-8292-cfa026880e00
 redirect_from:
+  - /docs/pbc/all/search/202512.0/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html 
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-search-for-multi-currency.html

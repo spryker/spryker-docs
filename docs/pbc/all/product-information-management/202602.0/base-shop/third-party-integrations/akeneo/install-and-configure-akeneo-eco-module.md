@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo-installation-configuration
 originalArticleId: 6a718976-7056-4705-938d-8bb11243e918
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html 
   - /2021080/docs/akeneo-installation-configuration
   - /2021080/docs/en/akeneo-installation-configuration
   - /docs/akeneo-installation-configuration

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration
 originalArticleId: 37aaeca3-9205-4ca3-8332-6a1ab7b31c80
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/install-and-upgrade/install-the-payments-glue-api.html 
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-payments-feature-integration.html
   - /docs/pbc/all/payment-service-provider/202311.0/install-and-upgrade/install-the-payments-glue-api.html

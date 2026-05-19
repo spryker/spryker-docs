@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/refund-process-management
 originalArticleId: d86ae613-8789-4f31-badb-b758769de71e
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/datapayload-conversion/refund-process-management.html 
   - /2021080/docs/refund-process-management
   - /2021080/docs/en/refund-process-management
   - /docs/refund-process-management

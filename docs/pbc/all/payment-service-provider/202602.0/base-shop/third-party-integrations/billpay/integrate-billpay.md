@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration
 originalArticleId: 3d4bf922-652c-45c7-b130-951015ff3b65
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/billpay/integrate-billpay.html 
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/integrating-billpay.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/billpay/integrating-billpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billpay/billpay.html

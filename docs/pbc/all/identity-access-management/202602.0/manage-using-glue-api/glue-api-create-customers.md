@@ -5,7 +5,8 @@ last_updated: Nov 2, 2022
 template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
-- /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
+  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-create-customers.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
 related:
   - title: Searching by company users
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
@@ -20,9 +21,6 @@ related:
   - title: Managing customer passwords
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
 ---
-
-
-
 ## Installation
 
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).

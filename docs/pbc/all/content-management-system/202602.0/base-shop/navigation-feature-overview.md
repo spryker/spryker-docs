@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/navigation-feature-overview
 originalArticleId: 6d0a1210-9c3e-44b2-b6c9-aa0cf7780cba
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/navigation-feature-overview.html 
   - /docs/scos/user/features/202005.0/navigation-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/201907.0/navigation-feature-walkthrough/navigation-module.html
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html

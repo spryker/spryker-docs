@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-content-items
 originalArticleId: 3b56fb8f-8503-472a-8601-b69c876c04b1
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/content-items/edit-content-items.html 
   - /2021080/docs/editing-content-items
   - /2021080/docs/en/editing-content-items
   - /docs/editing-content-items

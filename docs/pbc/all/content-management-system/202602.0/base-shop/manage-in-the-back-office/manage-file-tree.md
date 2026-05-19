@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-file-tree
 originalArticleId: b9ec164d-4687-4d68-ab77-5e98b284dd1b
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/manage-file-tree.html 
   - /2021080/docs/managing-file-tree
   - /2021080/docs/en/managing-file-tree
   - /docs/managing-file-tree

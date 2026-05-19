@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-credit-card
 originalArticleId: bf62ed07-45dc-48b7-8a11-7cc6fdeb3e16
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-credit-card-secure-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-credit-card
   - /2021080/docs/en/heidelpay-credit-card
   - /docs/heidelpay-credit-card

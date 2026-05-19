@@ -11,9 +11,9 @@ related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 redirect_from:
-- /docs/scos/dev/glue-api-guides/202204.0/retrieve-related-products.html
+  - /docs/pbc/all/product-relationship-management/202512.0/glue-api-retrieve-related-products.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieve-related-products.html
 ---
-
 Using the [Product Relations](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
 Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).

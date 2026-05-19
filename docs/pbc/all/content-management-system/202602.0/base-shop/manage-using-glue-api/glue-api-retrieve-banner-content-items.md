@@ -5,6 +5,7 @@ last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-banner-content-items
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html 
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-content-items/retrieving-banner-content-items.html
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-banner-content-items.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-banner-content-items.html

@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens
 originalArticleId: a0374f0f-170f-446e-aadd-32dbe7c1526a
 redirect_from:
+  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html 
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens.html
   - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html

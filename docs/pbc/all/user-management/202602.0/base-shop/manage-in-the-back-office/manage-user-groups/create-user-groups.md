@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-groups
 originalArticleId: 0fd86087-7869-43f7-b15a-997daa5800ca
 redirect_from:
+  - /docs/pbc/all/user-management/202512.0/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html 
   - /2021080/docs/managing-groups
   - /2021080/docs/en/managing-groups
   - /docs/managing-groups

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-easy-credit
 originalArticleId: 83746ef1-fe16-4a17-bd70-98519e4418fa
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-easy-credit-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-easy-credit
   - /2021080/docs/en/heidelpay-easy-credit
   - /docs/heidelpay-easy-credit

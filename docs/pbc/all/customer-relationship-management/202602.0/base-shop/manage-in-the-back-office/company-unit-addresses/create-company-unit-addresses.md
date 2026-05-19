@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-unit-addresses
 originalArticleId: b3bbc8db-3448-4aa1-8d93-eb435113d36c
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html 
   - /2021080/docs/managing-company-unit-addresses
   - /2021080/docs/en/managing-company-unit-addresses
   - /docs/managing-company-unit-addresses

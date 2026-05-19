@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-invoice-secured-b2c
 originalArticleId: 6f9b4bee-2a0d-4611-b4a9-f61ca4f6c35f
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-invoice-secured-b2c-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-invoice-secured-b2c
   - /2021080/docs/en/heidelpay-invoice-secured-b2c
   - /docs/heidelpay-invoice-secured-b2c

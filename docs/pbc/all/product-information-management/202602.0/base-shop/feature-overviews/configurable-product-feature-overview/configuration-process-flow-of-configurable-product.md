@@ -4,6 +4,7 @@ last_updated: Jun 2, 2022
 description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html 
   - /docs/scos/dev/feature-walkthroughs/202311.0/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html

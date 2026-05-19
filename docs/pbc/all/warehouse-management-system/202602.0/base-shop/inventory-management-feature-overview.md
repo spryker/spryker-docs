@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: /docs/pbc/all/warehouse-management-system/page.version/base-shop/inventory-management-feature-overview.html-feature-overview
 originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202512.0/base-shop/inventory-management-feature-overview.html 
   - /2021080/docs/inventory-management-feature-overview
   - /2021080/docs/en/inventory-management-feature-overview
   - /docs/inventory-management-feature-overview

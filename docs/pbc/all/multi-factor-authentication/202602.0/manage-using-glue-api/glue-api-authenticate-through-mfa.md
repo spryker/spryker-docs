@@ -3,6 +3,8 @@ title: "Glue API: Authenticate through MFA"
 description: This article explains how to retrieve an MFA methods code and send requests to protected resources
 last_updated: Jun 16, 2025
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202512.0/manage-using-glue-api/glue-api-authenticate-through-mfa.html 
 ---
 
 This document describes how to authenticate through Multi-Factor Authentication (MFA) to send requests to protected resources.

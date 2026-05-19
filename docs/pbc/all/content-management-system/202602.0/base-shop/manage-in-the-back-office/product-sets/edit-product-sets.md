@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-sets
 originalArticleId: eaa91090-6e3e-4af1-bc98-f9bae069939a
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html 
   - /2021080/docs/managing-product-sets
   - /2021080/docs/en/managing-product-sets
   - /docs/managing-product-sets

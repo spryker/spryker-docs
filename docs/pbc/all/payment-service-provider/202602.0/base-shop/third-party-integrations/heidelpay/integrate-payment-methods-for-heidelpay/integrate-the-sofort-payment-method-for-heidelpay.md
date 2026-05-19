@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-sofort
 originalArticleId: ac896fad-2456-4d4e-a590-6d970b8a6e97
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-sofort-payment-method-for-heidelpay.html 
   - /2021080/docs/heidelpay-sofort
   - /2021080/docs/en/heidelpay-sofort
   - /docs/heidelpay-sofort

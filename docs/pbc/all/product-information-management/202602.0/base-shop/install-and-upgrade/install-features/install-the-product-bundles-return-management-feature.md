@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-return-management-feature-integration
 originalArticleId: 96f9c6c2-df79-4d9c-b057-e96077e78e77
 redirect_from:
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html 
   - /2021080/docs/product-bundles-return-management-feature-integration
   - /2021080/docs/en/product-bundles-return-management-feature-integration
   - /docs/product-bundles-return-management-feature-integration

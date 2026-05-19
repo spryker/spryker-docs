@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout
 originalArticleId: 7dcc5635-2a15-410c-9a0b-bc62a13dd3a1
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html 
   - /docs/scos/user/features/202311.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/checkout-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/checkout-feature-overview.html

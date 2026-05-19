@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-labels
 originalArticleId: fddd9b4b-1aec-473d-922d-e56f7040ee2e
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html 
   - /2021080/docs/creating-product-labels
   - /2021080/docs/en/creating-product-labels
   - /docs/creating-product-labels

@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-product-groups-by-color-on-the-storefront
 originalArticleId: e963b2f2-a4bf-4c04-8ffc-ecb3610032e0
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html 
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
 ---

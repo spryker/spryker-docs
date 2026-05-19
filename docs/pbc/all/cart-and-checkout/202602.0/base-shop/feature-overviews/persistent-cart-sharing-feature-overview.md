@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-overview
 originalArticleId: a80f4aab-aec5-4e7f-ad69-e5112178f27d
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html 
   - /docs/scos/dev/feature-walkthroughs/202311.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
   - /docs/scos/user/features/202311.0/persistent-cart-sharing-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html

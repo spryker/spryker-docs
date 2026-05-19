@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-easy-credit
 originalArticleId: cdbe2101-cd6a-4a31-bfec-4d922c5e221f
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-easy-credit-payment-method-for-computop.html 
   - /2021080/docs/computop-easy-credit
   - /2021080/docs/en/computop-easy-credit
   - /docs/computop-easy-credit

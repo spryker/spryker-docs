@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-configurable-bundle-templates
 originalArticleId: e3c4fbce-bd28-416d-9dd0-bca412689483
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html 
   - /2021080/docs/managing-configurable-bundle-templates
   - /2021080/docs/en/managing-configurable-bundle-templates
   - /docs/managing-configurable-bundle-templates

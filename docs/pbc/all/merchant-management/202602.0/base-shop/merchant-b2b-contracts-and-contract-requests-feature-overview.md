@@ -4,6 +4,7 @@ description: In the context of Spryker B2B eCommerce platform, there can be thre
 last_updated: Jul 22, 2021
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html 
   - /docs/scos/user/features/201811.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202311.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202204.0/merchant-b2b-contracts-feature-overview.html

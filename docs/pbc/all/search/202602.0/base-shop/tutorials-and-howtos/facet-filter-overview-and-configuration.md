@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-working-filter-facets
 originalArticleId: ec19f80a-9fad-4f44-8d60-8957e2665e0e
 redirect_from:
+  - /docs/pbc/all/search/202512.0/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html 
   - /2021080/docs/t-working-filter-facets
   - /2021080/docs/en/t-working-filter-facets
   - /docs/t-working-filter-facets

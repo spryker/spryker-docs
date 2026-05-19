@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-emailing-invoices-using-bcc
 originalArticleId: 5fdd0927-fb7a-43b7-9feb-caa171a3c51a
 redirect_from:
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/email-invoices-using-bcc.html 
   - /2021080/docs/howto-emailing-invoices-using-bcc
   - /2021080/docs/en/howto-emailing-invoices-using-bcc
   - /docs/howto-emailing-invoices-using-bcc

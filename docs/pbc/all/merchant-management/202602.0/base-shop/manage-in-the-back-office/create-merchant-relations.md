@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-relations
 originalArticleId: caba074b-6e6c-4db0-bf93-0ecec4e10ba7
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/base-shop/manage-in-the-back-office/create-merchant-relations.html 
   - /2021080/docs/managing-merchant-relations
   - /2021080/docs/en/managing-merchant-relations
   - /docs/managing-merchant-relations

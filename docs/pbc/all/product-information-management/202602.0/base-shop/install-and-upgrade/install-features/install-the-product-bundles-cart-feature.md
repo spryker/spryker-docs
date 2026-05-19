@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-cart-feature-integration
 originalArticleId: f069a875-5736-4134-a2c9-34a54b2dfdd0
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html 
   - /2021080/docs/product-bundles-cart-feature-integration
   - /2021080/docs/en/product-bundles-cart-feature-integration
   - /docs/product-bundles-cart-feature-integration

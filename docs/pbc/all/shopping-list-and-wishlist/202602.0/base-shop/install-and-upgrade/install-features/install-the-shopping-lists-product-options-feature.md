@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-product-options-feature-integration
 originalArticleId: 617431ef-6b41-41f7-8e31-e31c077a450c
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202507.0/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html 
   - /2021080/docs/shopping-lists-product-options-feature-integration
   - /2021080/docs/en/shopping-lists-product-options-feature-integration
   - /docs/shopping-lists-product-options-feature-integration

@@ -4,6 +4,7 @@ last_updated: Jul 05, 2021
 description: This document describes the process how to integrate the Marketplace Merchant into the Spryker  Merchant Portal.
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html 
   - /docs/marketplace/dev/feature-integration-guides/202311.0/merchant-portal-marketplace-merchant-feature-integration.html
 ---
 

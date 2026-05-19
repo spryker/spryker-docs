@@ -4,6 +4,8 @@ description: With Payone, your customers can pay with common payment methods, su
 template: howto-guide-template
 last_updated: Dec 18, 2024
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html 
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html
    - /docs/pbc/all/payment-service-providers/payone/payone.html

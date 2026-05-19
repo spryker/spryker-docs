@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-installation
 originalArticleId: b3bc4292-2daf-4054-b987-2adcf53414a8
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/install-heidelpay.html 
   - /2021080/docs/heidelpay-installation
   - /2021080/docs/en/heidelpay-installation
   - /docs/heidelpay-installation

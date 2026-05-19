@@ -1094,10 +1094,19 @@ entries:
 
           - title: Configure Data Exchange API endpoints
             url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
+            include_versions:
+                    - "202404.0"
+                    - "202410.0"
           - title: Sending requests with Data Exchange API
             url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
+            include_versions:
+                    - "202404.0"
+                    - "202410.0"
           - title: Create post plugins for Data Exchange API
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
+            include_versions:
+                    - "202404.0"
+                    - "202410.0"
 
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
@@ -3896,6 +3905,9 @@ entries:
                   nested:
                     - title: Integrate Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/integrate-algolia.html
+                      include_versions:
+                      - "202410.0"
+                      - "202507.0"
                     - title: Customize Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/customize-algolia.html
                       include_versions:
@@ -3903,6 +3915,9 @@ entries:
                       - "202507.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
+                      include_versions:
+                      - "202410.0"
+                      - "202512.0"
                     - title: Getting access to Algolia Dashboard
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/getting-access-to-algolia-dashboard.html
                     - title: Integrate Algolia Personalization

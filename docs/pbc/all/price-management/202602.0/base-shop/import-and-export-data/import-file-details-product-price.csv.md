@@ -5,6 +5,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-pricecsv
 originalArticleId: 8b15001c-2219-48ad-86cf-a60e6ad09d28
 redirect_from:
+  - /docs/pbc/all/price-management/202512.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/file-details-product-price.csv.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-product-price.csv.html

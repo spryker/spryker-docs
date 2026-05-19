@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-abstract-configurationcsv
 originalArticleId: c11ce919-bf0c-4dc1-bcd5-65f0c477a8de
 redirect_from:
+  - /docs/pbc/all/gift-cards/202512.0/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html

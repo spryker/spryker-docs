@@ -4,6 +4,7 @@ last_updated: Oct 21, 2022
 description: This document provides details about the Table Filter extension in the Сomponents Library.
 template: concept-topic-template
 redirect_from:
+    - /docs/dg/dev/frontend-development/202512.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
     - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/
     - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
     - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-filter-extension/table-filter-extension.html

@@ -4,6 +4,7 @@ description: Components are registered in an Oryx application by a definition fi
 last_updated: Sept 19, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/dg/dev/frontend-development/202512.0/oryx/building-components/oryx-providing-component-definitions.html
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-providing-component-definitions.html
 
 ---

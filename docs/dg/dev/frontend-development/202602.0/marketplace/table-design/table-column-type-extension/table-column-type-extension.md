@@ -4,6 +4,7 @@ description: This document provides details about the Table Column Type extensio
 template: concept-topic-template
 last_updated: Jan 11, 2024
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html

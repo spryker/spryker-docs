@@ -4,6 +4,7 @@ description: Oryx framework uses semantic versioning to ensure stability
 template: concept-topic-template
 last_updated: Mar 3, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/oryx/getting-started/oryx-versioning.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-versioning.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/oryx-versioning.html
 

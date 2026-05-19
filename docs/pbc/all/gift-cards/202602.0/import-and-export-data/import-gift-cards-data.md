@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-import
 originalArticleId: dcdc9aa2-7092-46aa-8821-e6853c9c8e54
 redirect_from:
+  - /docs/pbc/all/gift-cards/202512.0/import-and-export-data/import-gift-cards-data.html
   - /2021080/docs/gift-cards-import
   - /2021080/docs/en/gift-cards-import
   - /docs/gift-cards-import

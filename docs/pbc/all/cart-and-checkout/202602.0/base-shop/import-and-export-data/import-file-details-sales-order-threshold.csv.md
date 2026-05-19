@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-sales-order-thresholdcsv
 originalArticleId: 6a897bd7-2a39-4fb0-8eb3-9704e23cd423
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/import-and-export-data/file-details-sales-order-threshold.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/import-and-export-data/file-details-sales-order-threshold.csv.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html

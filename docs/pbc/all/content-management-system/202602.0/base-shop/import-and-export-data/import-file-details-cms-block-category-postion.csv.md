@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
 originalArticleId: 22c4245e-5056-4bb9-9d77-e932a74c63b9
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/import-and-export-data/import-file-details-cms-block-category-postion.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-block-category-postion.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-cms-block-category-postion.csv.html

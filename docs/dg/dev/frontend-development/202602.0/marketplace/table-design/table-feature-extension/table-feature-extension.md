@@ -4,6 +4,7 @@ last_updated: Jun 07, 2021
 description: This document provides details about the Table Feature extension in the Components Library.
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-feature-extension/table-feature-extension.html

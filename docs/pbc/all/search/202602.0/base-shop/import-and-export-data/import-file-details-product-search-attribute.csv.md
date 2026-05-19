@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attributecsv
 originalArticleId: 65570cb4-dec5-4f90-85f2-3d22493d874c
 redirect_from:
+  - /docs/pbc/all/search/202512.0/base-shop/import-and-export-data/import-file-details-product-search-attribute.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
   - /docs/pbc/all/search/202311.0/import-and-export-data/file-details-product-search-attribute.csv.html
   - /docs/pbc/all/search/202311.0/base-shop/import-data/file-details-product-search-attribute.csv.html

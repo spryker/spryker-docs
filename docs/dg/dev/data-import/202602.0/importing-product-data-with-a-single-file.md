@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-product-data-with-a-single-file
 originalArticleId: 589f1dde-2516-4dc9-af6a-a9b171b6442e
 redirect_from:
+- /docs/dg/dev/data-import/202512.0/importing-product-data-with-a-single-file.html
 - /docs/scos/dev/data-import/202404.0/importing-product-data-with-a-single-file.html
 ---
 

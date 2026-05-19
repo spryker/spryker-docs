@@ -5,6 +5,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-demo-shop-data
 originalArticleId: a1968540-004c-4768-ba59-aee8ff73e8a7
 redirect_from:
+  - /docs/dg/dev/data-import/202512.0/setting-up-shop-data.html
   - /docs/scos/dev/data-import/202404.0/demo-shop-data-import/importing-demo-shop-data.html
   - /docs/scos/dev/data-import/202204.0/demo-shop-data-import/importing-demo-shop-data.html
 ---

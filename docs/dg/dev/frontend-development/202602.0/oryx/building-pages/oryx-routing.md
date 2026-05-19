@@ -4,6 +4,7 @@ description:
 template: concept-topic-template
 last_updated: May 25, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/oryx/building-pages/oryx-routing.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-routing.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-pages/oryx-routing.html
 

@@ -4,6 +4,7 @@ description: Learn how to inject services and dependencies
 template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/dependency-injection/dependency-injection-using-services.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html
 

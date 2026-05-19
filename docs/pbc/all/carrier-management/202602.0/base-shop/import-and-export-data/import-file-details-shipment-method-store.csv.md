@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-shipment-method-storecsv
 originalArticleId: 0cfd5942-817e-4ad6-bb79-4d854ca9979b
 redirect_from:
+  - /docs/pbc/all/carrier-management/202512.0/base-shop/import-and-export-data/import-file-details-shipment-method-store.csv.html
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
   - /docs/pbc/all/carrier-management/202311.0/import-and-export-data/file-details-shipment-method-store.csv.html

@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-currencycsv
 originalArticleId: d4ee04b4-8159-4846-9c3a-d98c28423b5c
 redirect_from:
+  - /docs/pbc/all/price-management/202512.0/base-shop/import-and-export-data/import-file-details-currency.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-currency.csv.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/file-details-currency.csv.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-currency.csv.html

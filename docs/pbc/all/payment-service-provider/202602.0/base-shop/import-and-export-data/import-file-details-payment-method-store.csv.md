@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-payment-method-storecsv
 originalArticleId: c862d612-e933-43dd-afce-27dbc5a0ba37
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html
   - /2021080/docs/file-details-payment-method-storecsv
   - /2021080/docs/en/file-details-payment-method-storecsv
   - /docs/file-details-payment-method-storecsv

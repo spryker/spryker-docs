@@ -4,6 +4,7 @@ last_updated: Jun 07, 2021
 description: This document describes the merchant_open_hours_date_schedule.csv file to configure Merchant opening hours information in your Spryker shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/import-and-export-data/import-file-details-merchant-open-hours-date-schedule.csv.html
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-open-hours-date-schedule.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-open-hours-date-schedule.csv.html
 related:

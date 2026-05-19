@@ -11,6 +11,7 @@ related:
   - title: Datasource Inline
     link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 redirect_from:
+- /docs/dg/dev/frontend-development/202512.0/marketplace/ui-components-library/datasources/datasources.html
 - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasources.html
 - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/datasources/datasources.html
 

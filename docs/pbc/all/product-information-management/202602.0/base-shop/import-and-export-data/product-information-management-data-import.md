@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-setup
 originalArticleId: 16830216-0c33-4009-86e0-f9995eef7eed
 redirect_from:
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/product-information-management-data-import.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/catalog-setup.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/import-product-catalog-data.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-information-management-data-import.html

@@ -4,6 +4,7 @@ description: Reactivity enables real-time updates
 template: concept-topic-template
 last_updated: Apr 3, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202512.0/oryx/architecture/reactivity/reactivity.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/reactivity/reactivity.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/reactivity/reactivity.html
 

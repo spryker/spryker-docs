@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discountcsv
 originalArticleId: c8bfc425-7004-4064-8e37-ad8708f07183
 redirect_from:
+  - /docs/pbc/all/discount-management/202512.0/base-shop/import-and-export-data/import-file-details-discount.csv.html
   - /2021080/docs/file-details-discountcsv
   - /2021080/docs/en/file-details-discountcsv
   - /docs/file-details-discountcsv

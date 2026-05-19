@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigationcsv
 originalArticleId: eb25c5b9-7718-4328-b5a5-d93a6a0fb9b7
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/import-and-export-data/import-file-details-navigation.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/navigation-setup/file-details-navigation.csv.html

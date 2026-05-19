@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-price-schedulecsv
 originalArticleId: 0662559b-6487-4d88-855e-3b605fc326c1
 redirect_from:
+  - /docs/pbc/all/price-management/202512.0/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html
   - /tutorials/howtos/feature_howtos/ht-import-scheduled-prices-201907.htm

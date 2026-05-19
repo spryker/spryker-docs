@@ -4,6 +4,7 @@ description: Learn how Oryx supports both right-to-left (RTL) and left-to-right 
 last_updated: November 6, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/dg/dev/frontend-development/202512.0/oryx/internationalization/oryx-directionality.html
 - /docs/scos/dev/front-end-development/202404.0/oryx/internationalization/oryx-directionality.html
 
 ---

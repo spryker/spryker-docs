@@ -16,6 +16,11 @@ process_markdown_file() {
     local md_file="$1"
     local redirect_url="$2"
     if [[ "$md_file" == *.md ]]; then
+        # Skip if redirect already exists in the file
+        if grep -qF "$redirect_url" "$md_file"; then
+            return
+        fi
+
         # Check if "redirect_from:" exists in the file
         if ! grep -q "redirect_from:" "$md_file"; then
             # Add "redirect_from:" after "template:" if it's missing
@@ -24,17 +29,16 @@ process_markdown_file() {
         fi
 
         # Add redirect to the file.
-        awk '{print} $0=="redirect_from:"{print "  -'"$redirect_url"' "}' "$md_file" > temp && mv temp "$md_file"
+        awk '{print} $0=="redirect_from:"{print "  -'"$redirect_url"'"}' "$md_file" > temp && mv temp "$md_file"
     fi
-
-
 }
 
 while IFS= read relative_path; do
-    redirect_url="$relative_path"
     relative_path="${relative_path%.html}.md"
 
     relative_path=$(echo $relative_path | xargs echo -n)
+
+    redirect_url="${relative_path%.md}.html"
 
     relative_path=".${relative_path}"
 

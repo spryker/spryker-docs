@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-data-with-queue-data-importer
 originalArticleId: c20bef51-1460-4459-b45e-c13b92798a19
 redirect_from:
+  - /docs/dg/dev/data-import/202512.0/importing-data-with-the-queue-data-importer.html
   - /docs/scos/dev/data-import/202404.0/importing-data-with-the-queue-data-importer.html
   - /docs/scos/dev/data-import/202204.0/importing-data-with-the-queue-data-importer.html
 related:

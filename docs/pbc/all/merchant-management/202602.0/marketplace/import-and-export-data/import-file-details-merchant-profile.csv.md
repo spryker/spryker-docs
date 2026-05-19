@@ -4,6 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-profile.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-profile.csv.html
 related:

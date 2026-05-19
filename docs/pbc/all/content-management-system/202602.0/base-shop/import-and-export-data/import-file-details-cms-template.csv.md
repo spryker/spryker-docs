@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-templatecsv
 originalArticleId: 6221a424-5513-496b-bbc6-56a59471a264
 redirect_from:
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/import-and-export-data/import-file-details-cms-template.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-template.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-cms-template.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-cms-template.csv.html

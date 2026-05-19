@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-gift-card-concrete-configurationcsv
 originalArticleId: 6346beb6-6aec-440e-a458-dbf86e05e33d
 redirect_from:
+  - /docs/pbc/all/gift-cards/202512.0/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html

@@ -22,7 +22,7 @@ A data storage inconsistency was identified where certain sensitive data was bei
 
 Update the `spryker/quote-request` package to version 2.8.0 or higher
 
-Extend the `src/Pyz/QuoteRequest/src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php` file as described below:
+Extend the `src/Pyz/Zed/QuoteRequest/QuoteRequestConfig.php` file as described below:
 
 Remove the customer field from the `getQuoteFieldsAllowedForSaving` function
 
@@ -82,9 +82,9 @@ Update the `spryker-shop/product-comparison-page` package to version 1.0.1 or hi
 
 Update the `comparison-link` molecule if needed, based on the below:
 
-In case `src/SprykerShop/ProductComparisonPage/src/SprykerShop/Yves/ProductComparisonPage/Theme/default/components/molecules/comparison-link/comparison-link.ts` was not extended on the project level, no actions is required.
+In case `vendor/spryker-shop/product-comparison-page/src/SprykerShop/Yves/ProductComparisonPage/Theme/default/components/molecules/comparison-link/comparison-link.ts` was not extended on the project level, no actions is required.
 
-In case `src/SprykerShop/ProductComparisonPage/src/SprykerShop/Yves/ProductComparisonPage/Theme/default/components/molecules/comparison-link/comparison-link.ts` was extended on the project level, replace the `get url` method with the below:
+In case `vendor/spryker-shop/product-comparison-page/src/SprykerShop/Yves/ProductComparisonPage/Theme/default/components/molecules/comparison-link/comparison-link.ts` was extended on the project level, replace the `get url` method with the below:
 
 ```bash
 get url(): string {

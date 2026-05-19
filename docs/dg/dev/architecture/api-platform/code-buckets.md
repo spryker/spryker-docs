@@ -115,20 +115,20 @@ final class StoresBackendResource
 Resource schemas follow the pattern: `{resource-name}.resource.yml`
 Validation schemas follow the pattern: `{resource-name}.validation.yml`
 
-Each YAML file contains exactly one resource definition. To create a CodeBucket variant, place its schema in a **separate module directory** named after the variant (for example, `StoreEU`, `StoreAT`) and set the `codeBucket:` property inside the file. The filename stays the same across all variants — only the parent module directory and the `codeBucket:` value differ.
+Each YAML file contains exactly one resource definition. To create a CodeBucket variant, place its schema in a **separate module directory** named after the variant (for example, `StoresApiEU`, `StoresApiAT`) and set the `codeBucket:` property inside the file. The filename stays the same across all variants — only the parent module directory and the `codeBucket:` value differ.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/           # Base variant module
-├── stores.resource.yml                              # No codeBucket property
+src/Pyz/Glue/StoresApi/resources/api/backend/           # Base variant module
+├── stores.resource.yml                                  # No codeBucket property
 └── stores.validation.yml
 
-src/Pyz/Glue/StoreEU/resources/api/backend/         # EU variant module
-├── stores.resource.yml                              # codeBucket: EU
-└── stores.validation.yml                            # codeBucket: EU
+src/Pyz/Glue/StoresApiEU/resources/api/backend/         # EU variant module
+├── stores.resource.yml                                  # codeBucket: EU
+└── stores.validation.yml                                # codeBucket: EU
 
-src/Pyz/Glue/StoreAT/resources/api/backend/         # AT variant module
-├── stores.resource.yml                              # codeBucket: AT
-└── stores.validation.yml                            # codeBucket: AT
+src/Pyz/Glue/StoresApiAT/resources/api/backend/         # AT variant module
+├── stores.resource.yml                                  # codeBucket: AT
+└── stores.validation.yml                                # codeBucket: AT
 ```
 
 ### Generated class naming pattern
@@ -158,7 +158,7 @@ The URL path is identical (`/stores`), but the Code Bucket in the domain determi
 
 **Step 1: Create base resource**
 
-`src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml`
+`src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml`
 
 ```yaml
 resource:
@@ -166,8 +166,8 @@ resource:
   shortName: stores
   description: "Store resource"
 
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 
   operations:
     - type: Get
@@ -190,9 +190,9 @@ resource:
 
 **Step 2: Define the CodeBucket variant in a separate module**
 
-Create a new module directory whose name carries the CodeBucket suffix (`StoreEU`) and place the variant's schema there. The filename stays `stores.resource.yml`; the `codeBucket:` property inside the file declares which variant it belongs to.
+Create a new module directory whose name carries the CodeBucket suffix (`StoresApiEU`) and place the variant's schema there. The filename stays `stores.resource.yml`; the `codeBucket:` property inside the file declares which variant it belongs to.
 
-`src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml`
+`src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml`
 
 ```yaml
 resource:
@@ -202,8 +202,8 @@ resource:
   codeBucket: EU
 
   # Same provider and processor as the base resource
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 
   operations:
     - type: Get
@@ -251,7 +251,7 @@ Each schema file must contain exactly one top-level `resource:` block. CodeBucke
 
 Place the matching validation file alongside the variant resource, in the same module directory. Set `codeBucket:` at the root so the parser pairs it with the EU resource variant.
 
-`src/Pyz/Glue/StoreEU/resources/api/backend/stores.validation.yml`
+`src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.validation.yml`
 
 ```yaml
 codeBucket: EU
@@ -286,16 +286,16 @@ This generates:
 
 **Step 5: Implement Provider with CodeBucket awareness**
 
-`src/Pyz/Glue/Store/Api/Backend/Provider/StoreBackendProvider.php`
+`src/Pyz/Glue/StoresApi/Api/Backend/Provider/StoreBackendProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Glue\Store\Api\Backend\Provider;
+namespace Pyz\Glue\StoresApi\Api\Backend\Provider;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProviderInterface;
-use Pyz\Glue\Store\Business\StoreFacadeInterface;
+use Pyz\Glue\StoresApi\Business\StoreFacadeInterface;
 
 class StoreBackendProvider implements ProviderInterface
 {
@@ -401,7 +401,7 @@ resource:
 **Project base layer** — base only, no `codeBucket`:
 
 ```yaml
-# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
+# src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   properties:
@@ -412,7 +412,7 @@ resource:
 **Project CodeBucket variant** — only this file carries `codeBucket:`:
 
 ```yaml
-# src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml
+# src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
@@ -606,7 +606,7 @@ The base resource should contain all common properties that work across all Code
 
 ```yaml
 # ✅ Good - Base is complete
-# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
+# src/Pyz/Glue/StoresApi/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   properties:
@@ -620,7 +620,7 @@ resource:
 
 ```yaml
 # ✅ EU variant lives in its own module directory
-# src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml
+# src/Pyz/Glue/StoresApiEU/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
   codeBucket: EU
@@ -659,8 +659,8 @@ Use the same Provider and Processor classes for base and CodeBucket variants whe
 ```yaml
 # Both use same implementation
 resource:
-  provider: "Pyz\\Glue\\Store\\Api\\Backend\\Provider\\StoreBackendProvider"
-  processor: "Pyz\\Glue\\Store\\Api\\Backend\\Processor\\StoreBackendProcessor"
+  provider: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Provider\\StoreBackendProvider"
+  processor: "Pyz\\Glue\\StoresApi\\Api\\Backend\\Processor\\StoreBackendProcessor"
 ```
 
 Detect the resource type inside the Provider using the `CODE_BUCKET` constant:

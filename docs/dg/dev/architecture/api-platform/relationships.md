@@ -238,6 +238,75 @@ GET /customers/customer--35?include=addresses
 
 Providers require no code changes - the system works automatically through decoration.
 
+## Custom relationship resolvers
+
+The default provider-based resolution maps URI variables from the parent resource to the child provider. When that is not enough — for example, the related data lives on the parent's `context` payload, is aggregated from several sources, or needs custom denormalization — declare a resolver class instead.
+
+Reference the resolver in the parent's `includes` entry via `resolverClass`. When `resolverClass` is set, `uriVariableMappings` and `targetResource` are not used for routing; the resolver class is invoked directly with the parent resources and request context:
+
+```yaml
+# src/Spryker/OrdersRestApi/resources/api/storefront/orders.resource.yml
+resource:
+  name: Orders
+  shortName: orders
+
+  includes:
+    - relationshipName: order-amendments
+      targetResource: OrderAmendments
+      resolverClass: Spryker\Glue\OrderAmendmentsRestApi\Api\Storefront\Relationship\OrderAmendmentsRelationshipResolver
+```
+
+The resolver class must implement `Spryker\ApiPlatform\Relationship\RelationshipResolverInterface`. In practice, extend `Spryker\ApiPlatform\Relationship\AbstractRelationshipResolver`, which gives you helpers for accessing the request, locale, store, and customer transfers:
+
+```php
+namespace Spryker\Glue\OrderAmendmentsRestApi\Api\Storefront\Relationship;
+
+use Generated\Api\Storefront\OrderAmendmentsStorefrontResource;
+use Spryker\ApiPlatform\Relationship\AbstractRelationshipResolver;
+use Spryker\Service\Serializer\SerializerServiceInterface;
+
+class OrderAmendmentsRelationshipResolver extends AbstractRelationshipResolver
+{
+    public function __construct(protected SerializerServiceInterface $serializer)
+    {
+    }
+
+    /**
+     * @return array<\Generated\Api\Storefront\OrderAmendmentsStorefrontResource>
+     */
+    protected function resolveRelationship(): array
+    {
+        $resources = [];
+
+        foreach ($this->getParentResources() as $orderResource) {
+            $contextData = $orderResource->context ?? null;
+            $amendmentData = is_array($contextData) && isset($contextData['salesOrderAmendment'])
+                ? $contextData['salesOrderAmendment']
+                : null;
+
+            if (!is_array($amendmentData) || $amendmentData === []) {
+                continue;
+            }
+
+            $resources[] = $this->serializer->denormalize(
+                $amendmentData,
+                OrderAmendmentsStorefrontResource::class,
+            );
+        }
+
+        return $resources;
+    }
+}
+```
+
+The `RelationshipConfigurationPass` compiler pass registers the class as an autowired public service automatically — no manual service definition is required. If the referenced class does not exist when the container compiles, the relationship is silently skipped and a compiler log entry is emitted.
+
+Use a custom resolver when:
+
+- The related data is already attached to the parent (for example, embedded in a transfer's `context` array) and a separate child provider would re-fetch it unnecessarily.
+- The relationship aggregates data from several sources that no single provider exposes.
+- The link from parent to child cannot be expressed as a simple property-to-URI-variable mapping.
+
 ## Performance
 
 Relationships are resolved per parent resource. For a collection of N parent resources with an `?include=` request, the child provider is called N times — one call per parent — which can produce an N+1 query pattern if the child provider hits the database per call.
@@ -262,7 +331,7 @@ Run through the following checks in order:
     docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:clear
     ```
 
-2. **Confirm both sides of the relationship are declared.** The parent must have `includes`; the child must have a matching `includableIn`. Names and `uriVariableMappings` must match exactly on both sides — see the [Configuration reference](#configuration-reference).
+2. **Confirm the parent declares the relationship.** Runtime resolution only reads `includes` on the parent — that declaration must be present and the names/`uriVariableMappings` must match what the request uses. A matching `includableIn` on the child is optional but recommended for discoverability; it does not affect runtime behavior. See the [Configuration reference](#configuration-reference).
 
 3. **Inspect the compiled relationship registry.** API Platform exposes the merged configuration as a container parameter:
 

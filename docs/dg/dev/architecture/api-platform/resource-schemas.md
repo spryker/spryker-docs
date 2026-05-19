@@ -71,7 +71,7 @@ Validation schemas follow the pattern: `{resource-name}.validation.yml`
 CodeBuckets are specified inside the schema files, not in the filename.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/
+src/Pyz/Glue/StoresApi/resources/api/backend/
 ├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
 └── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
 ```
@@ -177,6 +177,13 @@ resource:
     - type: Put                      # Replace entire resource
     - type: Patch                    # Update partial resource
     - type: Delete                   # Delete resource
+
+  # Relationships — see Relationships article for full reference
+  includes:
+    - relationshipName: addresses
+      targetResource: CustomersAddresses
+      uriVariableMappings:
+        customerReference: customerReference
 
   # Properties
   properties:

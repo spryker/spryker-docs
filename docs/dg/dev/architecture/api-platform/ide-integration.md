@@ -1,7 +1,7 @@
 ---
 title: IDE integration for API Platform schemas
 description: Set up PHPStorm or VSCode for autocomplete, inline documentation, and real-time validation of API Platform resource and validation YAML files.
-last_updated: May 18, 2026
+last_updated: May 19, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -23,7 +23,7 @@ This guide shows how to enable IDE support for the YAML files that define API Pl
 
 The `ApiPlatform` module ships the canonical JSON Schema at:
 
-```
+```text
 vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
 ```
 

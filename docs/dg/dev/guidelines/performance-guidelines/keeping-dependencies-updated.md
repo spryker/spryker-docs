@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: May 13, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -169,6 +169,12 @@ composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.
 - [spryker/data-import:"^1.33.0"](https://github.com/spryker/data-import/releases/tag/1.33.0)
 - [spryker/merchant-relationship-product-list-data-import:"^0.1.3"](https://github.com/spryker/merchant-relationship-product-list-data-import/releases/tag/0.1.3)
 - [spryker/price-product-merchant-relationship-data-import:"^0.2.5"](https://github.com/spryker/price-product-merchant-relationship-data-import/releases/tag/0.2.5)
+
+### Dynamic entity performance improvements
+
+- [spryker/dynamic-entity:^1.21.0](https://github.com/spryker/dynamic-entity/releases/tag/1.21.0)
+- [spryker/dynamic-entity-backend-api:^1.15.0](https://github.com/spryker/dynamic-entity-backend-api/releases/tag/1.15.0)
+- [spryker/stock:^8.15.0](https://github.com/spryker/stock/releases/tag/8.15.0)
 
 ### Cart page and checkout for large carts (100+ items)
 

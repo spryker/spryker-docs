@@ -1,7 +1,7 @@
 ---
 title: CodeBucket Support in API Platform
 description: Learn how to create and use CodeBucket-specific API resources in Spryker.
-last_updated: May 18, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -361,25 +361,55 @@ class StoreBackendProvider implements ProviderInterface
 
 ## Schema layering with CodeBuckets
 
-CodeBucket resources support multi-layer schema merging just like base resources.
+CodeBucket variants are a **project-level concept only** — they never exist in the core (vendor) or feature layers. Core and feature layers contribute properties to the **base** resource. The project-level CodeBucket variant then inherits from that already-merged base and adds its own properties on top.
 
-### Example: Multi-layer CodeBucket resource
+{% info_block infoBox "Where CodeBucket files live" %}
 
-A CodeBucket variant can be extended across layers. Every layer that contributes to the same variant uses its own module directory named after the variant (`StoreEU`) and sets the same `codeBucket:` value inside its file.
+The `codeBucket:` property is only ever set in files under `src/Pyz/Glue/{Module}{CodeBucketName}/...`. A schema file in `vendor/spryker/...` or `src/SprykerFeature/...` must not declare a `codeBucket:` — those layers always describe the base resource.
 
-**Core layer** (vendor):
+{% endinfo_block %}
+
+### Example: base resource built across layers + project-level EU variant
+
+The base `Stores` resource is assembled from the core, feature, and project layers in that precedence order. The EU variant lives only in the project layer, in its own variant module.
+
+**Core layer** (vendor) — base only, no `codeBucket`:
 
 ```yaml
-# vendor/spryker/store-eu/resources/api/backend/stores.resource.yml
+# vendor/spryker/store/resources/api/backend/stores.resource.yml
 resource:
   name: Stores
-  codeBucket: EU
+  shortName: stores
   properties:
-    taxRate:
-      type: number
+    name:
+      type: string
+    timezone:
+      type: string
 ```
 
-**Project layer**:
+**Feature layer** — base only, no `codeBucket`:
+
+```yaml
+# src/SprykerFeature/CRM/resources/api/backend/stores.resource.yml
+resource:
+  name: Stores
+  properties:
+    countries:
+      type: array
+```
+
+**Project base layer** — base only, no `codeBucket`:
+
+```yaml
+# src/Pyz/Glue/Store/resources/api/backend/stores.resource.yml
+resource:
+  name: Stores
+  properties:
+    timezone:
+      required: true      # tighten the core definition
+```
+
+**Project CodeBucket variant** — only this file carries `codeBucket:`:
 
 ```yaml
 # src/Pyz/Glue/StoreEU/resources/api/backend/stores.resource.yml
@@ -388,22 +418,31 @@ resource:
   codeBucket: EU
   properties:
     taxRate:
-      required: true  # Override core
+      type: number
+      required: true      # EU-specific addition
     companyVatId:
-      type: string    # Project-specific
+      type: string        # EU-specific addition
 ```
 
-**Merged result** (StoresEUBackendResource):
+**Merged result** (`StoresEUBackendResource`) — base properties inherited from the core → feature → project merge, EU-specific properties added on top:
 
 ```yaml
 resource:
   name: Stores
+  codeBucket: EU
   properties:
-    taxRate:
+    name:                 # from core
+      type: string
+    timezone:             # from core, tightened by project base
+      type: string
+      required: true
+    countries:            # from feature
+      type: array
+    taxRate:              # from project EU variant
       type: number
-      required: true      # From project
-    companyVatId:
-      type: string        # From project
+      required: true
+    companyVatId:         # from project EU variant
+      type: string
 ```
 
 ## Fallback behavior

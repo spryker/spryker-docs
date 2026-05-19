@@ -66,9 +66,11 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_about
 
@@ -87,9 +89,11 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_ca
 
@@ -108,9 +112,11 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_pbc
 
@@ -129,9 +135,11 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_dg
 
@@ -150,9 +158,11 @@ jobs:
           bundler-cache: true
 
       - uses: actions/download-artifact@v6
+        with:
+          name: build-result
 
       - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
+        run: tar -xf result.tar.gz
 
       - run: bundle exec rake check_integrations
 

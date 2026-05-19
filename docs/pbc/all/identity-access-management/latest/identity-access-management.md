@@ -1,7 +1,7 @@
 ---
 title: Identity Access Management
 description: Learn all about the Spryker Identity Access Management capability and how to create and manage accounts within your Spryker project.
-last_updated: May 7, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
@@ -13,6 +13,18 @@ redirect_from:
 ---
 
 The Identity Access Management capability enables all types of users in a Spryker shop to create and manage accounts. Different levels of security let users manage the access of other users.
+
+{% info_block infoBox "Federated Authentication via OAuth2/OIDC" %}
+
+Spryker now supports [Federated Authentication](/docs/pbc/all/oauth/latest/federated-authentication.html) — a modern alternative to managing separate Spryker credentials. Instead of maintaining a standalone identity per application, your users log in through the Identity Provider your organization already uses.
+
+Key benefits:
+
+- **Works across all Spryker applications**: Storefront, Back Office, and Merchant Portal are all supported out of the box.
+- **Broad provider support**: Connect any OAuth2/OIDC-compatible IdP — Keycloak, Microsoft Entra ID, Okta, Auth0, Google Workspace, Salesforce, Amazon Cognito, and more.
+- **Multiple providers on Storefront and Merchant Portal**: You can connect as many IdPs as your users need, with a dedicated login button for each.
+
+{% endinfo_block %}
 
 ## Back Office authentication
 

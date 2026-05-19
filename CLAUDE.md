@@ -6,6 +6,7 @@ This file contains important instructions for working with the Spryker documenta
 
 - Documentation pages are in `docs` folder
 - Sidebar of documentation is in `_data/sidebars` folder
+- TEST DO NOT MERGE
 
 ## Documentation Standards
 

@@ -16,9 +16,9 @@ The API Platform relationship system enables resources to include related resour
 
 ## Quick start
 
-### 1. Define relationships in parent resource
+### 1. Define the relationship on the parent resource
 
-Add an `includes` section to your parent resource YAML:
+Add an `includes` section to the parent resource YAML — this is the single source of truth for the relationship. The child resource does not declare anything relationship-specific.
 
 ```yaml
 # src/Spryker/Customer/resources/api/storefront/customers.resource.yml
@@ -33,32 +33,15 @@ resource:
         customerReference: customerReference
 ```
 
-### 2. Define reverse relationship in child resource
+The child resource (`CustomersAddresses` in this example) only has to exist as a resource the generator can locate by `targetResource` name. No reverse declaration is required on the child YAML.
 
-Add an `includableIn` section to your child resource YAML:
-
-```yaml
-# src/Spryker/Customer/resources/api/storefront/customers-addresses.resource.yml
-resource:
-  name: CustomersAddresses
-  shortName: customers-addresses
-
-  includableIn:
-    - resource: Customers
-      relationshipName: addresses
-      uriVariableMappings:
-        customerReference: customerReference
-```
-
-Both declarations must match for validation to pass.
-
-### 3. Regenerate container
+### 2. Regenerate container
 
 ```bash
 docker/sdk testing -x GLUE_APPLICATION=GLUE_STOREFRONT glue cache:clear
 ```
 
-### 4. Use relationships
+### 3. Use relationships
 
 ```bash
 # Single include
@@ -72,7 +55,7 @@ GET /customers/customer--35?include=addresses,orders
 
 ### includes section
 
-Declares what relationships this resource can include.
+Declares what relationships this resource can include. `includes` lives only on the parent resource — there is no reverse declaration on the child.
 
 **Required properties:**
 - `relationshipName`: Name used in `?include=` parameter (for example, `addresses`)
@@ -87,27 +70,6 @@ Declares what relationships this resource can include.
 includes:
   - relationshipName: addresses
     targetResource: CustomersAddresses
-    uriVariableMappings:
-      customerReference: customerReference
-```
-
-### includableIn section
-
-Declares where this resource can be included.
-
-**Required properties:**
-- `resource`: Name of the parent resource
-- `relationshipName`: Must match parent's includes declaration
-
-**Optional properties:**
-- `uriVariableMappings`: Must match parent's includes declaration
-
-**Example:**
-
-```yaml
-includableIn:
-  - resource: Customers
-    relationshipName: addresses
     uriVariableMappings:
       customerReference: customerReference
 ```
@@ -160,11 +122,6 @@ properties:
 
 The system validates relationships during code generation:
 
-**Bi-directional consistency:**
-- Parent's `includes` must match child's `includableIn`
-- Relationship names must match
-- URI variable mappings must match
-
 **Resource existence:**
 - Target resource must exist
 - Referenced properties should exist
@@ -173,9 +130,8 @@ The system validates relationships during code generation:
 
 ```text
 Validation Error in customers.resource.yml:
-  - includes[0].targetResource: Resource "CustomersAddresses" declares
-    includableIn for "Customers" but uses different relationshipName
-    "customerAddresses". Expected: "addresses"
+  - includes[0].targetResource: Resource "CustomersAddresses" referenced
+    in includes does not exist.
 ```
 
 ## Response format
@@ -262,7 +218,7 @@ Run through the following checks in order:
     docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:clear
     ```
 
-2. **Confirm both sides of the relationship are declared.** The parent must have `includes`; the child must have a matching `includableIn`. Names and `uriVariableMappings` must match exactly on both sides — see the [Configuration reference](#configuration-reference).
+2. **Confirm the relationship is declared on the parent.** The parent resource YAML must carry an `includes` entry whose `targetResource` exactly matches the child resource `name`. The child resource needs no reverse declaration — see the [Configuration reference](#configuration-reference).
 
 3. **Inspect the compiled relationship registry.** API Platform exposes the merged configuration as a container parameter:
 
@@ -278,19 +234,6 @@ Run through the following checks in order:
     docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue debug:container | grep <ChildProviderClass>
     ```
 
-### Validation error: bi-directional consistency
-
-Resource generation fails with an error like:
-
-```text
-Validation Error in customers.resource.yml:
-  - includes[0].targetResource: Resource "CustomersAddresses" declares includableIn
-    for "Customers" but uses different relationshipName "customerAddresses"
-    Expected: "addresses"
-```
-
-The parent's `includes[].relationshipName` and the child's `includableIn[].relationshipName` must be identical strings. The same applies to `uriVariableMappings` — every mapping declared on the parent must appear on the child with the same source/target names.
-
 ### `relationships` block is present but `data` is empty
 
 The relationship is wired up but no related resources come back.
@@ -301,4 +244,4 @@ The relationship is wired up but no related resources come back.
 
 ### Invalid include names are ignored
 
-Unknown values in `?include=` (for example, a typo or a relationship the parent does not declare) are silently dropped — the response succeeds without that relationship and no error is raised. If a deployment appears to lose a relationship after a release, suspect a typo or a missing `includableIn` in the child before assuming a runtime failure.
+Unknown values in `?include=` (for example, a typo or a relationship the parent does not declare) are silently dropped — the response succeeds without that relationship and no error is raised. If a deployment appears to lose a relationship after a release, suspect a typo or a missing `includes:` entry on the parent resource before assuming a runtime failure.

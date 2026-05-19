@@ -632,7 +632,7 @@ Define relationships between resources to enable including related resources via
 
 ### includes section
 
-Declares what relationships this resource can include:
+Declares what relationships this resource can include. `includes` is declared once on the parent resource — the child resource does not need a reverse declaration.
 
 ```yaml
 includes:
@@ -646,20 +646,6 @@ includes:
 - `relationshipName`: Name used in `?include=` parameter
 - `targetResource`: Name of the resource to include
 - `uriVariableMappings`: Maps properties from parent to child provider
-
-### includableIn section
-
-Declares where this resource can be included:
-
-```yaml
-includableIn:
-  - resource: Customers
-    relationshipName: addresses
-    uriVariableMappings:
-      customerReference: customerReference
-```
-
-Both declarations must match for validation to pass.
 
 For detailed information about relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 

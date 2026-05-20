@@ -140,4 +140,10 @@ The Back Office Configuration Framework follows a developer-first definition app
 
 **Back Office Configuration Framework:** All configurable features share the same framework-generated UI infrastructure, reducing development effort and ensuring a consistent experience.
 
+---
 
+## Related features
+
+| Feature | Link |
+|---------|------|
+| Configuration Management Development Guide | [Developer guide](/docs/dg/dev/backend-development/configuration-management.html) |

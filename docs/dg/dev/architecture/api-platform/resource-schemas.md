@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: May 18, 2026
+last_updated: May 19, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -71,7 +71,7 @@ Validation schemas follow the pattern: `{resource-name}.validation.yml`
 CodeBuckets are specified inside the schema files, not in the filename.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/
+src/Pyz/Glue/StoresApi/resources/api/backend/
 ├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
 └── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
 ```
@@ -177,6 +177,13 @@ resource:
     - type: Put                      # Replace entire resource
     - type: Patch                    # Update partial resource
     - type: Delete                   # Delete resource
+
+  # Relationships — see Relationships article for full reference
+  includes:
+    - relationshipName: addresses
+      targetResource: CustomersAddresses
+      uriVariableMappings:
+        customerReference: customerReference
 
   # Properties
   properties:
@@ -642,17 +649,42 @@ includes:
       customerReference: customerReference
 ```
 
-**Required properties:**
-- `relationshipName`: Name used in `?include=` parameter.
-- `targetResource`: Name of the resource to include. Also determines the JSON:API `type` field of the related resources.
+**Entry fields:**
 
-**Optional properties:**
-- `uriVariableMappings`: Maps properties from parent to child provider URI variables (provider-based relationships).
-- `resolverClass`: Fully qualified class name of a custom relationship resolver. When set, `uriVariableMappings` is ignored — the resolver fully owns producing the related resources. See [Custom relationship resolvers](/docs/dg/dev/architecture/api-platform/relationships.html#custom-relationship-resolvers).
-- `autoInclude`: Resolve this relationship for every response of the parent type, even when the client did not request it. `autoIncludeMaxDepth` and `autoIncludeMinDepth` bound where in the response graph the auto-include applies.
-- `uriTemplate`: Explicit URI template for the relationship link in the JSON:API response. Auto-generated from `targetResource` if not set.
+| Field | Required | Description |
+|-------|----------|-------------|
+| `relationshipName` | Yes | Name used in the `?include=` parameter and as the JSON:API relationship key. |
+| `targetResource` | Yes | The `name` of the included resource as declared in its `resource.yml` (for example, `CustomersAddresses`). Also determines the JSON:API `type` field of the related resources. |
+| `uriVariableMappings` | Conditional | Maps properties from the parent resource to the URI variables of the included resource. Required when the included resource is routed by URI variables. Format: `parentProperty: childUriVariable`. Ignored when `resolverClass` is set. |
+| `uriTemplate` | Optional | Explicit URI template for the included resource when it has multiple operations and the relationship must target a specific path (for example, `/abstract-products/{abstractProductSku}/abstract-product-prices`). |
+| `resolverClass` | Optional | Fully qualified class name of a relationship resolver. Use when the relationship cannot be expressed via URI variables — the resolver receives the parent resources and the request context, and returns the related resources directly. When `resolverClass` is set, `uriVariableMappings` and `uriTemplate` are not used for routing. See [Custom relationship resolvers](/docs/dg/dev/architecture/api-platform/relationships.html#custom-relationship-resolvers). |
+| `autoInclude` | Optional | Resolve this relationship for every response of the parent type, even when the client did not request it via `?include=`. Use `autoIncludeMaxDepth` and `autoIncludeMinDepth` to bound where in the response graph the auto-include applies. |
 
-For provider-based and resolver-based dispatch, response shape, validation, troubleshooting, and worked examples, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
+#### URI-variable mapping example
+
+For relationships routed by sub-resource URLs, map parent properties to child URI variables:
+
+```yaml
+includes:
+  - relationshipName: abstract-product-prices
+    targetResource: AbstractProductPrices
+    uriTemplate: /abstract-products/{abstractProductSku}/abstract-product-prices
+    uriVariableMappings:
+      sku: abstractProductSku
+```
+
+#### Resolver-based example
+
+For relationships whose targets cannot be derived from URI variables (for example, derived from order state or aggregated across multiple sources), reference a resolver class:
+
+```yaml
+includes:
+  - relationshipName: order-shipments
+    targetResource: OrderShipments
+    resolverClass: Spryker\Glue\ShipmentsRestApi\Api\Storefront\Relationship\OrderShipmentsRelationshipResolver
+```
+
+**Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources, including provider-based and resolver-based dispatch, response shape, validation, and worked examples.
 
 ## Resource generation process
 

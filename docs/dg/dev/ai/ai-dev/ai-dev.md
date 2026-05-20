@@ -1,6 +1,7 @@
 ---
 title: AI Dev SDK
 description: Spryker AI Dev SDK
+last_updated: May 20, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
@@ -76,11 +77,10 @@ Ensure that you have a Spryker project with Composer installed.
    console transfer:generate
    ```
 
-3. Register the console commands in your `ConsoleDependencyProvider`:
+3. Register the console commands in your `ConsoleDependencyProvider`. The `class_exists()` guards keep the project bootable on environments where the dev dependency is absent (for example, production):
 
    ```php
    use SprykerSdk\Zed\AiDev\Communication\Console\AiToolSetupConsole;
-   use SprykerSdk\Zed\AiDev\Communication\Console\GeneratePromptsConsole;
    use SprykerSdk\Zed\AiDev\Communication\Console\McpServerConsole;
 
    protected function getConsoleCommands(Container $container): array
@@ -90,12 +90,8 @@ Ensure that you have a Spryker project with Composer installed.
            $commands[] = new McpServerConsole();
        }
 
-       if (class_exists(GenerateSkillsConsole::class)) {
+       if (class_exists(AiToolSetupConsole::class)) {
            $commands[] = new AiToolSetupConsole();
-       }
-
-       if (class_exists(GeneratePromptsConsole::class)) {
-           $commands[] = new GeneratePromptsConsole();
        }
        ...
    }
@@ -103,7 +99,38 @@ Ensure that you have a Spryker project with Composer installed.
 
 4. Connect the AI Dev SDK to your AI agent. For detailed configuration instructions, see [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html).
 
+## Claude Code plugin
+
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — that bundles Spryker-aware skills and the `spryker-code-reviewer` agent. The plugin is distributed through the `spryker-plugins-official` marketplace hosted in this repository.
+
+Bundled skills: `ai-dev-setup`, `code-review`, `propel-schema`, `data-import`, `codecept-functional`, `static-validation`, `yves-atomic-frontend`.
+
+### Install from the marketplace
+
+Inside Claude Code, run:
+
+```text
+/plugin marketplace add spryker-sdk/ai-dev
+/plugin install spryker-ai-dev-sdk@spryker-plugins-official
+```
+
+After installation, restart the Claude Code session for the new skills and agents to appear.
+
+### Test the plugin locally
+
+To use the plugin directly from your local checkout without publishing it first:
+
+1. Launch Claude Code with the plugin loaded from your local checkout:
+
+   ```bash
+   claude --plugin-dir /absolute/path/to/vendor/spryker-sdk/ai-dev/plugins/spryker-ai-dev-sdk
+   ```
+
+   The path must point at the plugin directory — the one containing `.claude-plugin/plugin.json` — not the repository root.
+
+2. After editing a `SKILL.md` or an agent definition, restart the session — skill frontmatter is parsed at load time and is not hot-reloaded.
+
 ## Next steps
 
-- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) - Set up the connection to your AI tool
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) - Learn more about the AI Dev SDK features and capabilities
+- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — Set up the connection to your AI tool
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — Learn more about the AI Dev SDK features and capabilities

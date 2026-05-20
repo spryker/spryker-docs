@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Apr 27, 2026
+last_updated: May 20, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template
@@ -113,6 +113,10 @@ This command:
 - Stores generated prompts in the configured directory
 
 **Usage**: Use this command when you need to regenerate prompts from updated documentation or when initializing the module for the first time.
+
+## Claude Code plugin
+
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — through the `spryker-plugins-official` marketplace. The plugin bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. See [AI Dev SDK](/docs/dg/dev/ai/ai-dev/ai-dev.html#claude-code-plugin) for installation instructions.
 
 ## Extension points
 

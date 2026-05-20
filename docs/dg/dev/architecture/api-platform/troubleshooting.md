@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Mar 9, 2026
+last_updated: May 18, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -88,11 +88,11 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 
 # Error: Missing resource name
 ❌ resource:
-    shortName: Customer
+    shortName: customers
 
 ✅ resource:
     name: Customers
-    shortName: Customer
+    shortName: customers
 ```
 
 **Solution:**

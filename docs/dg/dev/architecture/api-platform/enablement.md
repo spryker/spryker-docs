@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Mar 9, 2026
+last_updated: May 18, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -45,7 +45,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 
 resource:
     name: Customers
-    shortName: Customer
+    shortName: customers
     description: "Customer resource for backend API"
 
     provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
@@ -378,7 +378,7 @@ Create CodeBucket variants when you need:
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
 
   operations:
     - type: Get
@@ -401,7 +401,7 @@ resource:
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
   codeBucket: EU
   
   operations:

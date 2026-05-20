@@ -642,12 +642,17 @@ includes:
       customerReference: customerReference
 ```
 
-**Properties:**
-- `relationshipName`: Name used in `?include=` parameter
-- `targetResource`: Name of the resource to include
-- `uriVariableMappings`: Maps properties from parent to child provider
+**Required properties:**
+- `relationshipName`: Name used in `?include=` parameter.
+- `targetResource`: Name of the resource to include. Also determines the JSON:API `type` field of the related resources.
 
-For detailed information about relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
+**Optional properties:**
+- `uriVariableMappings`: Maps properties from parent to child provider URI variables (provider-based relationships).
+- `resolverClass`: Fully qualified class name of a custom relationship resolver. When set, `uriVariableMappings` is ignored — the resolver fully owns producing the related resources. See [Custom relationship resolvers](/docs/dg/dev/architecture/api-platform/relationships.html#custom-relationship-resolvers).
+- `autoInclude`: Resolve this relationship for every response of the parent type, even when the client did not request it. `autoIncludeMaxDepth` and `autoIncludeMinDepth` bound where in the response graph the auto-include applies.
+- `uriTemplate`: Explicit URI template for the relationship link in the JSON:API response. Auto-generated from `targetResource` if not set.
+
+For provider-based and resolver-based dispatch, response shape, validation, troubleshooting, and worked examples, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
 ## Resource generation process
 

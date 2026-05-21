@@ -1,7 +1,7 @@
 ---
 title: Optimizing Jenkins execution with the resource-aware queue worker
 description: Learn how to enable and configure the resource-aware queue worker for optimized, stable background job processing in Spryker.
-last_updated: May 13, 2026
+last_updated: May 15, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
@@ -111,7 +111,7 @@ class QueueDependencyProvider extends SprykerQueueDependencyProvider
 }
 ```
 
-Also in `QueueDependencyProvider`, replace `EventRetryQueueMessageProcessorPlugin` with `EventQueueMessageProcessorPlugin` for the event retry queue. This is recommended since `spryker/event:^2.17.0`.
+Also in `QueueDependencyProvider`, replace `EventRetryQueueMessageProcessorPlugin` with `EventQueueMessageProcessorPlugin` for the event retry queue. This is recommended since `spryker/event:^2.17.1`.
 
 Both plugins define how the event retry queue behaves when a message fails. `EventQueueMessageProcessorPlugin` processes failed messages directly in the retry queue, leaving the main queue unaffected. `EventRetryQueueMessageProcessorPlugin` routes failed messages back to the main queue (without the `.retry` postfix), which can slow down new message processing under high load:
 

@@ -12,7 +12,7 @@ Search Statistics is a Back Office feature that gives business operators visibil
 
 {% info_block warningBox "Legal compliance" %}
 
-Search Statistics collects storefront search queries through Google Analytics 4. To comply with privacy regulations such as GDPR and ePrivacy, you must disclose this data collection to storefront customers. Update your cookie consent banner and privacy policy to inform customers that search terms they enter are collected and processed for analytics purposes, and obtain consent before tracking is enabled.
+Search Statistics collects storefront search queries by using Google Analytics 4. To comply with privacy regulations such as the GDPR and ePrivacy Directive, inform storefront customers about this data collection. Update your cookie consent banner and privacy policy to explain that the search terms customers enter are collected and processed for analytics purposes. Obtain customer consent before you enable tracking.
 
 {% endinfo_block %}
 

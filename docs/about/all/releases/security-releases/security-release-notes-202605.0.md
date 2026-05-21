@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202605.0
 description: Security updates released for version 202605.0
-last_updated: May 18, 2026
+last_updated: May 21, 2026
 template: concept-topic-template
 publish_date: "2026-05-18"
 ---
@@ -40,3 +40,58 @@ Update the `spryker/maintenance` package to version 4.0.0 or higher:
 composer update spryker/maintenance:"^4.0.0"
 composer show spryker/maintenance # Verify the version
 ```
+
+
+## Possible brute force attack in adding discount voucher / gift card codes
+
+An automated attack could attempt to guess valid strings by using every possible combination and/or pre-defined dictionaries.
+In the site frontend, there is the possibility to use a discount code (voucher) or a gift card code, which is a predefined or randomized string.
+
+### Affected modules
+
+- `spryker-shop/cart-code-widget`: < 1.6.0
+
+### Fix the vulnerability
+
+Update the `spryker-shop/cart-code-widget` package to version 1.7.0 or higher:
+
+```bash
+composer update spryker-shop/cart-code-widget:"^1.7.0"
+composer show spryker-shop/cart-code-widget # Verify the version
+```
+
+
+Enable `SecurityBlockerCartCodeEventDispatcherPlugin` plugin:
+
+**src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\EventDispatcher;
+
+use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+use SprykerShop\Yves\CartCodeWidget\Plugin\EventDispatcher\SecurityBlockerCartCodeEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     */
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            new SecurityBlockerCartCodeEventDispatcherPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. From the cart page, submit an invalid voucher or gift card code multiple times.
+2. After exceeding the configured number of attempts, make sure the request is blocked and the `cart_code_widget.error.too_many_requests` error message is displayed.
+
+{% endinfo_block %}
+
+Add glossary translations for the message `cart_code_widget.error.too_many_requests`.

@@ -1,7 +1,7 @@
 ---
 title: Search Statistics
 description: Use Search Statistics in the Spryker Back Office to analyze search behavior and identify zero-result searches powered by Google Analytics 4.
-last_updated: May 7, 2026
+last_updated: May 21, 2026
 template: concept-topic-template
 related:
   - title: Install Search Statistics
@@ -9,6 +9,12 @@ related:
 ---
 
 Search Statistics is a Back Office feature that gives business operators visibility into storefront search behavior. It uses Google Analytics 4 (GA4) as the underlying data collection and reporting layer, eliminating the need for custom per-project analytics implementations.
+
+{% info_block warningBox "Legal compliance" %}
+
+Search Statistics collects storefront search queries by using Google Analytics 4. To comply with privacy regulations such as the GDPR and ePrivacy Directive, inform storefront customers about this data collection. Update your cookie consent banner and privacy policy to explain that the search terms customers enter are collected and processed for analytics purposes. Obtain customer consent before you enable tracking.
+
+{% endinfo_block %}
 
 ## Related developer guides
 

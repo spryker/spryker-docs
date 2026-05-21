@@ -320,19 +320,17 @@ properties:
 
 ## Validation
 
-The system validates relationships during code generation:
+Relationship configuration is checked in two places, with different behaviour.
 
-**Resource existence:**
-- Target resource must exist
-- Referenced properties should exist
-
-**Example error:**
+**Structural validation (`RelationshipValidationRule`, during code generation).** Checks that each `includes` entry is an array, that `relationshipName` and `targetResource` are present and string-typed, and that `uriVariableMappings` (if set) is an array. Failures surface as warnings on the generator output.
 
 ```text
-Validation Error in customers.resource.yml:
-  - includes[0].targetResource: Resource "CustomersAddresses" referenced
-    in includes does not exist.
+Warning: includes[0] is missing required field "targetResource" in src/Spryker/Customer/resources/api/storefront/customers.resource.yml
 ```
+
+**Resource resolution (`RelationshipConfigurationPass`, during container compile).** Resolves each include to a target resource provider — or to a `resolverClass` when one is set. There is no resource-existence error here: an unknown `targetResource`, or a `resolverClass` that is not autoloadable, causes the relationship to be **silently dropped** from the registry. The resolver-class case writes a container log entry; the missing-target case does not.
+
+If a relationship returns nothing at runtime and no warning was emitted by the generator, suspect a silent drop: confirm `targetResource` matches the target resource's `name` or `shortName`, and that the target's schema file lives in a scanned source directory.
 
 ## Response format
 

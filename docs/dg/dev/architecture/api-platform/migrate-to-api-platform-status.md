@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: May 14, 2026
+last_updated: May 21, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -174,8 +174,8 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi |
 | ServicePointsRestApi | StorefrontAPI | Planned  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
-| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
-| ShipmentTypesRestApi | StorefrontAPI | Planned  | GET /shipment-types<br>GET /shipment-types/{id} |
+| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated  | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
+| ShipmentTypesRestApi | StorefrontAPI | Migrated  | GET /shipment-types<br>GET /shipment-types/{id} |
 | ShipmentsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
 | ShoppingListsRestApi | StorefrontAPI | Planned  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |

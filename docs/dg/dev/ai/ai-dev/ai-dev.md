@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Spryker AI Dev SDK
-last_updated: May 20, 2026
+last_updated: May 21, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
@@ -101,36 +101,12 @@ Ensure that you have a Spryker project with Composer installed.
 
 ## Claude Code plugin
 
-The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — that bundles Spryker-aware skills and the `spryker-code-reviewer` agent. The plugin is distributed through the `spryker-plugins-official` marketplace hosted in this repository.
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — that bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. The plugin is distributed through the `spryker-plugins-official` marketplace.
 
-Bundled skills: `ai-dev-setup`, `code-review`, `propel-schema`, `data-import`, `codecept-functional`, `static-validation`, `yves-atomic-frontend`.
-
-### Install from the marketplace
-
-Inside Claude Code, run:
-
-```text
-/plugin marketplace add spryker-sdk/ai-dev
-/plugin install spryker-ai-dev-sdk@spryker-plugins-official
-```
-
-After installation, restart the Claude Code session for the new skills and agents to appear.
-
-### Test the plugin locally
-
-To use the plugin directly from your local checkout without publishing it first:
-
-1. Launch Claude Code with the plugin loaded from your local checkout:
-
-   ```bash
-   claude --plugin-dir /absolute/path/to/vendor/spryker-sdk/ai-dev/plugins/spryker-ai-dev-sdk
-   ```
-
-   The path must point at the plugin directory — the one containing `.claude-plugin/plugin.json` — not the repository root.
-
-2. After editing a `SKILL.md` or an agent definition, restart the session — skill frontmatter is parsed at load time and is not hot-reloaded.
+For detailed installation instructions and a full description of bundled skills and capabilities, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
 
 ## Next steps
 
 - [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — Set up the connection to your AI tool
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — Learn more about the AI Dev SDK features and capabilities
+- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) — Install the plugin and explore bundled skills

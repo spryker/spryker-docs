@@ -639,7 +639,7 @@ Define relationships between resources to enable including related resources via
 
 ### includes section
 
-Declares what relationships this resource can include. Each entry describes one relationship that clients can request via the `?include=` query parameter on this resource.
+Declares what relationships this resource can include. `includes` is declared once on the parent resource — the child resource does not need a reverse declaration.
 
 ```yaml
 includes:
@@ -654,10 +654,11 @@ includes:
 | Field | Required | Description |
 |-------|----------|-------------|
 | `relationshipName` | Yes | Name used in the `?include=` parameter and as the JSON:API relationship key. |
-| `targetResource` | Yes | The `name` of the included resource as declared in its `resource.yml` (for example, `CustomersAddresses`). |
-| `uriVariableMappings` | Conditional | Maps properties from the parent resource to the URI variables of the included resource. Required when the included resource is routed by URI variables. Format: `parentProperty: childUriVariable`. |
+| `targetResource` | Yes | The `name` of the included resource as declared in its `resource.yml` (for example, `CustomersAddresses`). Also determines the JSON:API `type` field of the related resources. |
+| `uriVariableMappings` | Conditional | Maps properties from the parent resource to the URI variables of the included resource. Required when the included resource is routed by URI variables. Format: `parentProperty: childUriVariable`. Ignored when `resolverClass` is set. |
 | `uriTemplate` | Optional | Explicit URI template for the included resource when it has multiple operations and the relationship must target a specific path (for example, `/abstract-products/{abstractProductSku}/abstract-product-prices`). |
-| `resolverClass` | Optional | Fully qualified class name of a relationship resolver. Use when the relationship cannot be expressed via URI variables — the resolver receives the parent resources and the request context, and returns the related resources directly. When `resolverClass` is set, `uriVariableMappings` and `uriTemplate` are not used for routing. |
+| `resolverClass` | Optional | Fully qualified class name of a relationship resolver. Use when the relationship cannot be expressed via URI variables — the resolver receives the parent resources and the request context, and returns the related resources directly. When `resolverClass` is set, `uriVariableMappings` and `uriTemplate` are not used for routing. See [Custom relationship resolvers](/docs/dg/dev/architecture/api-platform/relationships.html#custom-relationship-resolvers). |
+| `autoInclude` | Optional | Resolve this relationship for every response of the parent type, even when the client did not request it via `?include=`. Use `autoIncludeMaxDepth` and `autoIncludeMinDepth` to bound where in the response graph the auto-include applies. |
 
 #### URI-variable mapping example
 
@@ -683,21 +684,7 @@ includes:
     resolverClass: Spryker\Glue\ShipmentsRestApi\Api\Storefront\Relationship\OrderShipmentsRelationshipResolver
 ```
 
-### includableIn section
-
-Declares where this resource can be included:
-
-```yaml
-includableIn:
-  - resource: Customers
-    relationshipName: addresses
-    uriVariableMappings:
-      customerReference: customerReference
-```
-
-Both declarations must match for validation to pass.
-
-**Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources.
+**Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources, including provider-based and resolver-based dispatch, response shape, validation, and worked examples.
 
 ## Resource generation process
 

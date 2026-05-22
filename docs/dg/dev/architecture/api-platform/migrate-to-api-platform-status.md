@@ -123,7 +123,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CompanyRolesRestApi | StorefrontAPI | Migrated | GET /company-roles<br>GET /company-roles/{id} |
 | CompanyUserAuthRestApi | StorefrontAPI | Migrated | POST /company-user-access-tokens |
 | CompanyUsersRestApi | StorefrontAPI | Migrated | GET /company-users<br>GET /company-users/{id} |
-| ConfigurableBundleCartsRestApi | StorefrontAPI | Migrated | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
+| ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
 | ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
 | ContentBannersRestApi | StorefrontAPI | Migrated | GET /content-banners/{id} |
 | CustomerAccessRestApi | StorefrontAPI | Migrated | GET /customer-access |
@@ -181,7 +181,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
 | UrlsRestApi | StorefrontAPI | Planned  | GET /url-resolver |
-| WishlistsRestApi | StorefrontAPI | Planned  | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
+| WishlistsRestApi | StorefrontAPI | Migrated | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
 
 ## Backend API modules
 

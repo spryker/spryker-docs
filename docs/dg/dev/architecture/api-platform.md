@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 26, 2026
+last_updated: May 18, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -70,7 +70,7 @@ Example resource schema `src/Spryker/{Module}/resources/api/{api-type}/{resource
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
   description: "Customer resource for backend API"
 
   provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
@@ -137,7 +137,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
-    shortName: 'Customer',
+    shortName: 'customers',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class
 )]

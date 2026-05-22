@@ -95,6 +95,8 @@ entries:
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+          - title: Claude Code Plugin
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:
@@ -1315,6 +1317,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
         - title: Native API Platform Resources
           url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+        - title: IDE integration
+          url: /docs/dg/dev/architecture/api-platform/ide-integration.html
         - title: Migration status - Glue API to API Platform
           url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
 

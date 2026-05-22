@@ -110,7 +110,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | AuthRestApi | StorefrontAPI | Migrated | POST /token<br>POST /access-tokens<br>POST /refresh-tokens<br>DELETE /refresh-tokens/{id} |
 | AvailabilityNotificationsRestApi | StorefrontAPI | Migrated | POST /availability-notifications<br>DELETE /availability-notifications/{id}<br>GET /my-availability-notifications<br>GET /customers/{id}/availability-notifications |
 | CartCodesRestApi | StorefrontAPI | Migrated | POST /carts/{id}/cart-codes<br>DELETE /carts/{id}/cart-codes/{id}<br>POST /guest-carts/{id}/cart-codes<br>DELETE /guest-carts/{id}/cart-codes/{id} |
-| CartPermissionGroupsRestApi | StorefrontAPI | Planned  | GET /cart-permission-groups<br>GET /cart-permission-groups/{id} |
+| CartPermissionGroupsRestApi | StorefrontAPI | Migrated  | GET /cart-permission-groups<br>GET /cart-permission-groups/{id} |
 | CartReorderRestApi | StorefrontAPI | Migrated | POST /cart-reorder |
 | CartsRestApi | StorefrontAPI | Migrated | GET,POST /carts<br>GET,PATCH,DELETE /carts/{id}<br>POST /carts/{id}/items<br>PATCH,DELETE /carts/{id}/items/{id}<br>GET /guest-carts<br>GET,PATCH /guest-carts/{id}<br>POST /guest-carts/{id}/guest-cart-items<br>PATCH,DELETE /guest-carts/{id}/guest-cart-items/{id}<br>GET /customers/{id}/carts |
 | CatalogSearchRestApi | StorefrontAPI | Migrated | GET /catalog-search<br>GET /catalog-search-suggestions |

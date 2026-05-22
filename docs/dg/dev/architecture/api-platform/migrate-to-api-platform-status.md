@@ -116,7 +116,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CatalogSearchRestApi | StorefrontAPI | Migrated | GET /catalog-search<br>GET /catalog-search-suggestions |
 | CategoriesRestApi | StorefrontAPI | Migrated | GET /category-trees<br>GET /category-nodes/{id} |
 | CheckoutRestApi | StorefrontAPI | Migrated | POST /checkout-data<br>POST /checkout |
-| CmsPagesRestApi | StorefrontAPI | Migrated  | GET /cms-pages<br>GET /cms-pages/{id} |
+| CmsPagesRestApi | StorefrontAPI | Migrated | GET /cms-pages<br>GET /cms-pages/{id} |
 | CompaniesRestApi | StorefrontAPI | Migrated | GET /companies<br>GET /companies/{id} |
 | CompanyBusinessUnitAddressesRestApi | StorefrontAPI | Migrated | GET /company-business-unit-addresses<br>GET /company-business-unit-addresses/{id} |
 | CompanyBusinessUnitsRestApi | StorefrontAPI | Migrated | GET /company-business-units<br>GET /company-business-units/{id} |
@@ -174,9 +174,9 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi |
 | ServicePointsRestApi | StorefrontAPI | Planned  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
-| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated  | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
-| ShipmentTypesRestApi | StorefrontAPI | Migrated  | GET /shipment-types<br>GET /shipment-types/{id} |
-| ShipmentsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
+| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
+| ShipmentTypesRestApi | StorefrontAPI | Migrated | GET /shipment-types<br>GET /shipment-types/{id} |
+| ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
 | ShoppingListsRestApi | StorefrontAPI | Planned  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |

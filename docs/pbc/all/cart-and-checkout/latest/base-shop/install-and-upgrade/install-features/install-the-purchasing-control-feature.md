@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: May 18, 2026
+last_updated: May 22, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -267,6 +267,20 @@ console sync:data permission
 {% info_block warningBox "Verification" %}
 
 In the Back Office, under **Customers > Company Roles**, assign the **ManageCostCentersPermissionPlugin** permission to a company role. Make sure company users with that role can access the cost center management pages on the Storefront.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Require Approval enforcement rule" %}
+
+If you configure budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) permissions must be registered and assigned to company roles for the approval workflow to function:
+
+| PERMISSION | REQUIRES |
+| --- | --- |
+| Buy up to grand total (`PlaceOrderPermissionPlugin`) | Send cart for approval |
+| Send cart for approval (`RequestQuoteApprovalPermissionPlugin`) | Buy up to grand total |
+| Approve up to grand total (`ApproveQuotePermissionPlugin`) | None |
+
+For plugin registration details, see [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
 
 {% endinfo_block %}
 

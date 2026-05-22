@@ -1,7 +1,7 @@
 ---
 title: Purchasing Control feature overview
 description: Learn how the Purchasing Control feature lets B2B companies control departmental spending, define budget enforcement rules, and integrate with the Approval Process.
-last_updated: May 18, 2026
+last_updated: May 22, 2026
 template: concept-topic-template
 label: early-access
 ---
@@ -47,6 +47,18 @@ Each budget is configured with one of three enforcement rules:
 Spryker's existing Approval Process triggers a workflow when a buyer's order exceeds their *Buy up to grand total* permission. The Purchasing Control feature adds a parallel check: an order might be within a buyer's personal permission limit but still exceed the cost center's remaining budget.
 
 Both checks run independently at checkout. If either the permission limit or the budget rule is triggered, the configured action - block, warn, or require approval - is applied. This gives companies layered spending governance: per-person limits *and* per-department or per-project limits.
+
+{% info_block infoBox "Permissions required for the Require Approval enforcement rule" %}
+
+To use budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) permissions must be assigned to the relevant company roles:
+
+| PERMISSION | REQUIRES |
+| --- | --- |
+| Buy up to grand total | Send cart for approval |
+| Send cart for approval | Buy up to grand total |
+| Approve up to grand total | None |
+
+{% endinfo_block %}
 
 {% info_block warningBox "Approvals within a business unit" %}
 

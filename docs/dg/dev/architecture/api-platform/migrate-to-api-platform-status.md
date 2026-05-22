@@ -164,7 +164,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
 | ProductOffersRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi |
 | ProductOptionsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi |
-| ProductReviewsRestApi | StorefrontAPI | Planned  | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |
+| ProductReviewsRestApi | StorefrontAPI | Migrated  | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |
 | QuoteRequestAgentsRestApi | StorefrontAPI | Migrated | GET,POST /agent-quote-requests<br>GET,PATCH /agent-quote-requests/{id}<br>POST /agent-quote-requests/{id}/agent-quote-request-cancel<br>POST /agent-quote-requests/{id}/agent-quote-request-revise<br>POST /agent-quote-requests/{id}/agent-quote-request-send-to-customer |
 | QuoteRequestsRestApi | StorefrontAPI | Migrated | GET,POST /quote-requests<br>GET,PATCH /quote-requests/{id}<br>POST /quote-requests/{id}/quote-request-cancel<br>POST /quote-requests/{id}/quote-request-revise<br>POST /quote-requests/{id}/quote-request-send-to-user<br>POST /quote-requests/{id}/quote-request-convert-to-quote |
 | RelatedProductsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/related-products |

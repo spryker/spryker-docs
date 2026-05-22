@@ -144,7 +144,11 @@ For example, if an order gets stuck in the `payment capture pending` state, a Ba
 
 ### Payment operation commands
 
+<<<<<<< Updated upstream
 The following default commands are triggered from OMS to instruct the Payment App on the next steps:
+=======
+The following commands have to be triggered from your OMS to tell the Payment App what to do next. 
+>>>>>>> Stashed changes
 
 - `Payment/Capture`
 - `Payment/Cancel`

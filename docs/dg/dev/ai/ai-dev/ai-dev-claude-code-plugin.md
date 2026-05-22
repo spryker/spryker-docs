@@ -38,7 +38,7 @@ The plugin is distributed through the `spryker-plugins-official` marketplace and
 ## Prerequisites
 
 - [Claude Code](https://claude.ai/code) installed
-- Your Spryker project is running: `docker/sdk up`
+- Your Spryker project is running: `docker/sdk run`
 
 
 ## Install the plugin from the marketplace

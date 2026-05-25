@@ -98,7 +98,7 @@ When an order is sent for approval - whether triggered by a budget rule or a per
 
 | ROLE | CAPABILITIES |
 | --- | --- |
-| Company Admin (Back Office) | Create, update, activate, and deactivate cost centers. Assign cost centers to business units. Create and manage budgets with amount, period, currency, and enforcement rule. View the **Cost Center** column in the orders table. Filter and search orders by cost center and budget. View spend-vs-budget reports. Export reports to CSV. Review the audit log. Import cost centers, budgets, and business unit assignments in bulk using data import. |
+| Site Operator (Back Office) | Create, update, activate, and deactivate cost centers. Assign cost centers to business units. Create and manage budgets with amount, period, currency, and enforcement rule. View the **Cost Center** column in the orders table. Filter and search orders by cost center and budget. View spend-vs-budget reports. Export reports to CSV. Review the audit log. Import cost centers, budgets, and business unit assignments in bulk using data import. |
 | Cost Center Manager (Storefront) | Create, update, activate, and deactivate cost centers and budgets from the company area. Requires the **Manage Cost Centers** permission assigned to their company role. |
 | Buyer (Storefront) | Select a cost center and budget at checkout. View the remaining budget for the selected cost center. Submit orders for approval when required. Filter order history by cost center and budget. View the assigned cost center and budget on order detail pages. |
 | Approver (Storefront) | Review locked quotes pending approval. Approve or reject orders, including those triggered by budget rules. |

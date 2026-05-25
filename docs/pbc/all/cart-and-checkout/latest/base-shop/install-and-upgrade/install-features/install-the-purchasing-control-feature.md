@@ -177,7 +177,7 @@ console data:import purchasing-control-cost-center-to-company-business-unit
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, under **Customers > Purchasing Control**, make sure the imported cost centers and budgets are displayed. Make sure the cost centers are assigned to the expected business units.
+In the Back Office, under **Customers > Cost Centers**, make sure the imported cost centers and budgets are displayed. Make sure the cost centers are assigned to the expected business units.
 
 {% endinfo_block %}
 

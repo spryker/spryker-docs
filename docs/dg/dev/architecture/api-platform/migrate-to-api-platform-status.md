@@ -169,7 +169,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | QuoteRequestsRestApi | StorefrontAPI | Migrated | GET,POST /quote-requests<br>GET,PATCH /quote-requests/{id}<br>POST /quote-requests/{id}/quote-request-cancel<br>POST /quote-requests/{id}/quote-request-revise<br>POST /quote-requests/{id}/quote-request-send-to-user<br>POST /quote-requests/{id}/quote-request-convert-to-quote |
 | RelatedProductsRestApi | StorefrontAPI | Migrated | GET /abstract-products/{id}/related-products |
 | SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, CheckoutRestApi |
-| SalesReturnsRestApi | StorefrontAPI | Planned  | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
+| SalesReturnsRestApi | StorefrontAPI | Migrated  | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
 | SecurityBlockerRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi |
 | ServicePointsRestApi | StorefrontAPI | Planned  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |

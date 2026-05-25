@@ -171,8 +171,8 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, CheckoutRestApi |
 | SalesReturnsRestApi | StorefrontAPI | Migrated  | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
 | SecurityBlockerRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
-| ServicePointCartsRestApi | Extension-only StorefrontAPI | Planned  | CheckoutRestApi |
-| ServicePointsRestApi | StorefrontAPI | Planned  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
+| ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated  | CheckoutRestApi |
+| ServicePointsRestApi | StorefrontAPI | Migrated  | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
 | ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
 | ShipmentTypesRestApi | StorefrontAPI | Migrated | GET /shipment-types<br>GET /shipment-types/{id} |

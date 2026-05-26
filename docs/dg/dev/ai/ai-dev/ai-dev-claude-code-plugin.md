@@ -15,7 +15,7 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% info_block warningBox "Project must be running" %}
 
-The MCP server runs inside your Spryker Docker container. Start your project with `docker/sdk up` before using any skills that rely on MCP tools.
+The MCP server runs inside your Spryker Docker container. Start your project with `docker/sdk run` before using any skills that rely on MCP tools.
 
 {% endinfo_block %}
 
@@ -38,7 +38,7 @@ The plugin is distributed through the `spryker-plugins-official` marketplace and
 ## Prerequisites
 
 - [Claude Code](https://claude.ai/code) installed
-- Your Spryker project is running: `docker/sdk up`
+- Your Spryker project is running: `docker/sdk run`
 
 
 ## Install the plugin from the marketplace

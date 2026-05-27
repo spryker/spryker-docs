@@ -133,9 +133,9 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned  | GlueApplication |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | GlueApplication |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Migrated | WishlistsRestApi |
-| MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
 | MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi |
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Migrated | CustomersRestApi |
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | (transfer-only) |
@@ -152,7 +152,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductAttributesRestApi | StorefrontAPI | Migrated | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
 | ProductBundleCartsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, ShipmentsRestApi |
 | ProductBundlesRestApi | StorefrontAPI | Planned  | GET /concrete-products/{id}/bundled-products |
-| ProductConfigurationShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | ShoppingListsRestApi |
+| ProductConfigurationShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | ShoppingListsRestApi |
 | ProductConfigurationWishlistsRestApi | Extension-only StorefrontAPI | Planned  | WishlistsRestApi |
 | ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned  | ProductConfigurationsRestApi, ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi |
 | ProductConfigurationsRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi, CartsRestApi, OrdersRestApi |
@@ -161,7 +161,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductLabelsRestApi | StorefrontAPI | Migrated | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Migrated | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
 | ProductOfferSalesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated  | (transfer-only) |
 | ProductOffersRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi |
 | ProductOptionsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi |
 | ProductReviewsRestApi | StorefrontAPI | Migrated | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |
@@ -177,7 +177,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, ShipmentsRestApi, ShipmentTypesRestApi |
 | ShipmentTypesRestApi | StorefrontAPI | Migrated | GET /shipment-types<br>GET /shipment-types/{id} |
 | ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi |
-| ShoppingListsRestApi | StorefrontAPI | Planned  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
+| ShoppingListsRestApi | StorefrontAPI | Migrated  | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
 | UrlsRestApi | StorefrontAPI | Planned  | GET /url-resolver |

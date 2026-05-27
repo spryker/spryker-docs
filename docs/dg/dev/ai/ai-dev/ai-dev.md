@@ -1,6 +1,7 @@
 ---
 title: AI Dev SDK
 description: Spryker AI Dev SDK
+last_updated: May 21, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
@@ -76,11 +77,10 @@ Ensure that you have a Spryker project with Composer installed.
    console transfer:generate
    ```
 
-3. Register the console commands in your `ConsoleDependencyProvider`:
+3. Register the console commands in your `ConsoleDependencyProvider`. The `class_exists()` guards keep the project bootable on environments where the dev dependency is absent (for example, production):
 
    ```php
    use SprykerSdk\Zed\AiDev\Communication\Console\AiToolSetupConsole;
-   use SprykerSdk\Zed\AiDev\Communication\Console\GeneratePromptsConsole;
    use SprykerSdk\Zed\AiDev\Communication\Console\McpServerConsole;
 
    protected function getConsoleCommands(Container $container): array
@@ -90,12 +90,8 @@ Ensure that you have a Spryker project with Composer installed.
            $commands[] = new McpServerConsole();
        }
 
-       if (class_exists(GenerateSkillsConsole::class)) {
+       if (class_exists(AiToolSetupConsole::class)) {
            $commands[] = new AiToolSetupConsole();
-       }
-
-       if (class_exists(GeneratePromptsConsole::class)) {
-           $commands[] = new GeneratePromptsConsole();
        }
        ...
    }
@@ -103,7 +99,14 @@ Ensure that you have a Spryker project with Composer installed.
 
 4. Connect the AI Dev SDK to your AI agent. For detailed configuration instructions, see [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html).
 
+## Claude Code plugin
+
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — that bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. The plugin is distributed through the `spryker-plugins-official` marketplace.
+
+For detailed installation instructions and a full description of bundled skills and capabilities, see [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html).
+
 ## Next steps
 
-- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) - Set up the connection to your AI tool
-- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) - Learn more about the AI Dev SDK features and capabilities
+- [Configure the AiDev MCP server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) — Set up the connection to your AI tool
+- [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html) — Learn more about the AI Dev SDK features and capabilities
+- [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) — Install the plugin and explore bundled skills

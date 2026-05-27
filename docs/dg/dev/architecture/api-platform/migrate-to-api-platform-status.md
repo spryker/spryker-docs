@@ -161,7 +161,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ProductLabelsRestApi | StorefrontAPI | Migrated | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Migrated | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
 | ProductOfferSalesRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
-| ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Planned  | (transfer-only) |
+| ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated  | (transfer-only) |
 | ProductOffersRestApi | Extension-only StorefrontAPI | Planned  | ProductsRestApi |
 | ProductOptionsRestApi | Extension-only StorefrontAPI | Planned  | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi |
 | ProductReviewsRestApi | StorefrontAPI | Migrated | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |

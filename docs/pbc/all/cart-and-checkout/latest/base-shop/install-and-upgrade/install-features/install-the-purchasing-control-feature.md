@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: May 22, 2026
+last_updated: May 27, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -37,7 +37,7 @@ To start feature integration, review and install the necessary features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/purchasing-control:"^0.1.0" spryker-shop/checkout-page:"^3.40.0" --update-with-dependencies
+composer require spryker-feature/purchasing-control:"^1.0.0" spryker-feature/self-service-portal:"^20.0.0" spryker/sales:"^11.83.0" spryker/sales-extension:"^1.15.0" spryker-shop/checkout-page:"^3.40.0" spryker-shop/company-page:"^2.36.0" spryker-shop/customer-page:"^2.77.0" spryker-shop/shop-ui:"^1.108.0" --update-with-dependencies --ignore-platform-req=ext-grpc
 ```
 
 ### 2) Set up database schema and transfer objects
@@ -742,7 +742,29 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% endinfo_block %}
 
-### 3) Extend the checkout summary template
+### 3) Extend the ShopUi select component
+
+Extend the ShopUi `select` atom to render HTML attributes for the cost center and budget selectors:
+
+**src/Pyz/Yves/ShopUi/Theme/default/components/atoms/select/select.twig**
+
+```twig
+{% raw %}{% block attributes %}
+    {%- for attrname, attrvalue in attr | default({}) -%}
+        {%- if attrvalue is same as(true) -%} {{ attrname }}="{{ attrname }}"
+        {%- elseif attrvalue is not same as(false) -%} {{ attrname }}="{{ attrvalue }}"
+        {%- endif -%}
+    {%- endfor -%}
+{% endblock %}{% endraw %}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the cost center and budget dropdowns correctly disable unavailable options.
+
+{% endinfo_block %}
+
+### 4) Extend the checkout summary template
 
 Add the `CostCenterSelectorWidget` to the checkout summary page, placing it directly above the `QuoteApprovalWidget` call:
 
@@ -761,7 +783,7 @@ On the checkout summary page, make sure the cost center and budget selector is d
 
 {% endinfo_block %}
 
-### 4) Set up routes
+### 5) Set up routes
 
 Register the following route provider plugins:
 
@@ -805,7 +827,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% endinfo_block %}
 
-### 5) Extend the order search form
+### 6) Extend the order search form
 
 Register the following plugins to add cost center and budget filter fields to the storefront order history search form:
 

@@ -124,7 +124,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CompanyUserAuthRestApi | StorefrontAPI | Migrated | POST /company-user-access-tokens |
 | CompanyUsersRestApi | StorefrontAPI | Migrated | GET /company-users<br>GET /company-users/{id} |
 | ConfigurableBundleCartsRestApi | StorefrontAPI | Planned  | POST /carts/{id}/configured-bundles<br>PATCH,DELETE /carts/{id}/configured-bundles/{id}<br>POST,PATCH,DELETE /guest-carts/{id}/guest-configured-bundles/{id} |
-| ConfigurableBundlesRestApi | StorefrontAPI | Planned  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
+| ConfigurableBundlesRestApi | StorefrontAPI | Migrated  | GET /configurable-bundle-templates<br>GET /configurable-bundle-templates/{id} |
 | ContentBannersRestApi | StorefrontAPI | Migrated | GET /content-banners/{id} |
 | CustomerAccessRestApi | StorefrontAPI | Migrated | GET /customer-access |
 | CustomersRestApi | StorefrontAPI | Migrated | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |

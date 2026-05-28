@@ -737,3 +737,39 @@ Some modules cannot be migrated before their dependencies. To derive the safe or
 3. If module A's `require` lists module B's `spryker/*-rest-api` package, migrate B first (or in the same batch). Modules with no incoming `*-rest-api` dependencies migrate first.
 
 **Worked example:** `ProductPricesRestApi` (migrated in PR #1065) depends on `ProductsRestApi` via its `composer.json` `require` block (`"spryker/products-rest-api": "^2.0.0"`), so `ProductsRestApi`'s `*ResourceRoutePlugin` must be removed in the same batch (or earlier) for `ProductPricesRestApi` to migrate cleanly.
+
+## Step 4 — Verify
+
+After the plugins are removed and the project configs are in place, verify each migrated endpoint end-to-end. **Now** all migrated endpoints should work via API Platform.
+
+1. **List API Platform resources** per stack:
+
+   ```bash
+   docker/sdk cli glue api:debug --list
+   docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue api:debug --list
+   docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:debug --list
+   ```
+
+   Expected: every module you removed a `*ResourceRoutePlugin` for appears here under its corresponding stack.
+
+2. **Smoke-test the migrated endpoints** with curl. The exact URLs depend on your domain configuration — replace the host accordingly:
+
+   ```bash
+   curl -i https://glue.<your-domain>/<resource>
+   curl -i https://glue-storefront.<your-domain>/<resource>
+   curl -i https://glue-backend.<your-domain>/<resource>
+   ```
+
+3. **Run the existing Glue API test suite**. All tests should still pass — both the migrated endpoints (now served via API Platform) and any modules still on legacy Glue:
+
+   ```bash
+   docker/sdk testing codecept run
+   ```
+
+4. **Confirm OpenAPI is generated** at the root URL of each stack:
+
+   - `https://glue.<your-domain>/`
+   - `https://glue-storefront.<your-domain>/`
+   - `https://glue-backend.<your-domain>/`
+
+   Each should render the interactive OpenAPI documentation, including the migrated resources.

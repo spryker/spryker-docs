@@ -37,7 +37,7 @@ To start feature integration, review and install the necessary features:
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/purchasing-control:"^1.0.0" spryker-feature/self-service-portal:"^20.0.0" spryker/sales:"^11.83.0" spryker/sales-extension:"^1.15.0" spryker-shop/checkout-page:"^3.40.0" spryker-shop/company-page:"^2.36.0" spryker-shop/customer-page:"^2.77.0" spryker-shop/shop-ui:"^1.108.0" --update-with-dependencies --ignore-platform-req=ext-grpc
+composer require spryker-feature/purchasing-control:"^1.0.0" spryker/sales:"^11.83.0" spryker/sales-extension:"^1.15.0" spryker-shop/checkout-page:"^3.40.0" spryker-shop/company-page:"^2.36.0" spryker-shop/customer-page:"^2.77.0" spryker-shop/shop-ui:"^1.108.0" --update-with-dependencies --ignore-platform-req=ext-grpc
 ```
 
 ### 2) Set up database schema and transfer objects

@@ -2,7 +2,10 @@
 title: Redis session lock
 description: Handling sessions locks
 template: troubleshooting-guide-template
-last_updated: Sep 28, 2024
+last_updated: May 28, 2026
+redirect_from:
+  - /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
+  - /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 ---
 
 A session lock is used to prevent multiple processes belonging to a single user's session from accessing or modifying session data at the same time. This ensures data integrity and consistency, helps avoid race conditions and data corruption in high-concurrency environments.

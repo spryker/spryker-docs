@@ -38,3 +38,20 @@ Before starting the migration, confirm:
 - **PHP 8.1+ and Symfony 6.4+.**
 - **A target shop baseline version is picked.** See the [Migration scoreboard](#migration-scoreboard) below for the recommended baseline.
 - **Existing Glue API tests pass** on your current shop before you start changing anything. The cleanest signal that the migration is working is that those tests keep passing through every step.
+
+## Step 1 — Upgrade shop baseline
+
+Upgrade your shop to a single baseline version that ships all currently migrated endpoints. This is the default — pinning each module individually is supported but rarely worth the extra coordination.
+
+```bash
+# Recommended: shop baseline (see Migration scoreboard for current target)
+composer require spryker-shop/b2b-demo-marketplace:"^X.Y.Z" --update-with-dependencies
+```
+
+Refer to the [Migration scoreboard](#migration-scoreboard) for the current recommended baseline version and the pinned-module alternative.
+
+{% info_block warningBox "Endpoints are NOT yet routed after Step 1" %}
+
+Upgrading the shop baseline ships the API Platform resource schemas and the new Providers/Processors, but **all traffic still goes through the legacy Glue plugins**. You will not see new behavior at this point — that's expected. Routing flips in Step 3, after the project configuration is in place and the legacy plugins are removed.
+
+{% endinfo_block %}

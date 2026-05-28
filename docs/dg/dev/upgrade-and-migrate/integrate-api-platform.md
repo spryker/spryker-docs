@@ -7,6 +7,8 @@ template: howto-guide-template
 
 This document describes how to integrate API Platform into your Spryker application to enable schema-based API resource generation.
 
+If you're migrating an existing Spryker shop from the legacy Glue REST stack, read the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) first. This integration guide is one step inside that larger flow.
+
 ## Prerequisites
 
 Before integrating API Platform, ensure you have:
@@ -369,6 +371,7 @@ To verify your integration:
 
 ## Next steps
 
+- [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) - End-to-end migration walk-through
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) - Authentication and authorization setup
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource

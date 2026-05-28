@@ -87,7 +87,7 @@ The previous API stack and API Platform run **side by side** during the transiti
 All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are listed first.
 
 | Module | Category | Status   | Key endpoints |
-|---|---|----------|---|
+|--|---|----------|---|
 | ContentProductAbstractListsRestApi | StorefrontAPI | Migrated | GET /content-product-abstract-lists/{id}<br>GET /content-product-abstract-lists/{id}/abstract-products |
 | MerchantOpeningHoursRestApi | StorefrontAPI | Migrated | GET /merchants/{id}/merchant-opening-hours |
 | MerchantCategoriesRestApi | Extension-only StorefrontAPI | Migrated | MerchantsRestApi |
@@ -181,6 +181,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | TaxAppRestApi | StorefrontAPI | Planned  | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Planned  | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
 | UrlsRestApi | StorefrontAPI | Planned  | GET /url-resolver |
+| Vertex | StorefrontAPI | Migrated  | POST /tax-id-validate  |
 | WishlistsRestApi | StorefrontAPI | Migrated | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
 
 ## Backend API modules

@@ -811,3 +811,19 @@ Once **all** modules in a stack are migrated and Step 4 is green, clean up the l
    ```
 
 5. **Update internal API documentation and Postman collections** to point at the new endpoint URLs (the routes themselves don't change for backward compatibility, but the OpenAPI spec at `/docs.json` does — partners may want to refresh from it).
+
+## Migration scoreboard
+
+Track which modules have been migrated in each phase, and which shop baseline version delivers them. Use this table to pick your target baseline.
+
+*Phase 1 is merged but not yet in a tagged shop release. Use the pinned-module alternative until the next release.*
+
+*Phase 2 is merged but not yet in a tagged shop release. Use the pinned-module alternative until the next release.*
+
+| Phase | Modules migrated | Demo shop PR | Earliest shop release containing it | Status |
+|---|---|---|---|---|
+| Phase 1 | AgentAuthRestApi, AuthRestApi, CartCodesRestApi, CartReorderRestApi, CartsRestApi, CatalogSearchRestApi, CategoriesRestApi, CompanyUserAuthRestApi, ContentProductAbstractListsRestApi, CustomerAccessRestApi, CustomersRestApi, MerchantOpeningHoursRestApi, MerchantProductOffersRestApi, MerchantsRestApi, NavigationsRestApi, OrderPaymentsRestApi, OrdersRestApi, PaymentsRestApi, ProductAttributesRestApi, ProductOfferAvailabilitiesRestApi, ProductOfferPricesRestApi, ProductsRestApi, ProductTaxSetsRestApi, StoresRestApi | [#1065](https://github.com/spryker-shop/b2b-demo-marketplace/pull/1065) | _pending release_ | ✅ Merged |
+| Phase 2 | CompanyUsersRestApi, ProductLabelsRestApi, ProductMeasurementUnitsRestApi | [#1084](https://github.com/spryker-shop/b2b-demo-marketplace/pull/1084) | _pending release_ | ✅ Merged |
+| Phase 3 | [In progress — see CC-37558](https://spryker.atlassian.net/browse/CC-37558) | — | — | 🚧 In progress |
+
+If a phase you need is still in progress, you can pin its individual `spryker/*-rest-api` modules in your `composer.json` instead of waiting for a shop baseline release. The recommended approach is to wait for the baseline release — pinning individual modules requires manual coordination of inter-module dependencies (see [Module dependency order](#module-dependency-order)).

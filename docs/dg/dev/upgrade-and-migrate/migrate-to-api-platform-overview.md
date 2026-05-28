@@ -773,3 +773,41 @@ After the plugins are removed and the project configs are in place, verify each 
    - `https://glue-backend.<your-domain>/`
 
    Each should render the interactive OpenAPI documentation, including the migrated resources.
+
+## Step 5 — Cleanup
+
+Once **all** modules in a stack are migrated and Step 4 is green, clean up the legacy artifacts.
+
+1. **Remove empty Pyz Glue `*RestApi` directories** for migrated modules:
+
+   ```bash
+   rm -rf src/Pyz/Glue/<Module>RestApi/
+   ```
+
+2. **Remove legacy composer packages** that are no longer used:
+
+   ```bash
+   composer remove spryker/<module>-rest-api
+   ```
+
+3. **Drop `GlueRouterPlugin`** from the router dependency provider — only when **every** module in the stack is migrated:
+
+   `src/Pyz/Glue/Router/RouterDependencyProvider.php`
+
+   ```php
+   protected function getRouterPlugins(): array
+   {
+       return [
+           // new GlueRouterPlugin(), // ← Remove once no modules remain on legacy Glue
+           new SymfonyFrameworkRouterPlugin(),
+       ];
+   }
+   ```
+
+4. **Remove Glue-specific tests** that are no longer relevant. Replace with API Platform tests if coverage gaps remain:
+
+   ```bash
+   rm -rf tests/PyzTest/Glue/<Module>RestApi/
+   ```
+
+5. **Update internal API documentation and Postman collections** to point at the new endpoint URLs (the routes themselves don't change for backward compatibility, but the OpenAPI spec at `/docs.json` does — partners may want to refresh from it).

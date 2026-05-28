@@ -697,3 +697,43 @@ return static function (ContainerConfigurator $configurator): void {
 ### Router dependency provider
 
 The router dependency provider (`src/Pyz/Glue/Router/RouterDependencyProvider.php`) registers both routers in the correct order — `GlueRouterPlugin` first (legacy, checked first), `SymfonyFrameworkRouterPlugin` second (API Platform, checked second). The full snippet and the explanation of why order matters live in the [integration guide → step 4](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html#4-update-router-configuration).
+
+## Step 3 — Batch migration (default)
+
+The actual switch from legacy Glue REST to API Platform for a given module is **removing that module's `*ResourceRoutePlugin` from the project-level dependency provider**. This is the single edit that flips routing.
+
+Edit the dependency provider for the stack the module belongs to:
+
+- Storefront API: `src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider::getResourcePlugins()`
+- Backend API: `src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider::getResourcePlugins()`
+- Legacy combined Glue: `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider::getResourceRoutePlugins()`
+
+Remove the line that registers the migrated module's `*ResourceRoutePlugin`. Once removed, `GlueRouterPlugin` no longer finds a match for that resource and the request falls through to `SymfonyFrameworkRouterPlugin`, which serves it via API Platform.
+
+{% info_block warningBox "Plugin removal is the switch — not excludedPathFragments" %}
+
+`excludedPathFragments` in `spryker_api_platform.php` controls what the schema generator emits. It does **not** flip routing. A module stays on legacy Glue as long as its `*ResourceRoutePlugin` is still registered in the project dependency provider, regardless of what `excludedPathFragments` says.
+
+The legacy `spryker/<module>-rest-api` composer package may stay installed after you remove the plugin — it just no longer serves routes. Cleanup of the composer package is a separate step (see Step 5).
+
+{% endinfo_block %}
+
+### Module dependency order
+
+Some modules cannot be migrated before their dependencies. To derive the safe order for your project:
+
+1. List the `spryker/*-rest-api` packages currently installed:
+
+   ```bash
+   composer show "spryker/*-rest-api"
+   ```
+
+2. For each migrated `*RestApi` module, inspect its `composer.json` `require` block:
+
+   ```bash
+   jq '.require' vendor/spryker/<module>-rest-api/composer.json
+   ```
+
+3. If module A's `require` lists module B's `spryker/*-rest-api` package, migrate B first (or in the same batch). Modules with no incoming `*-rest-api` dependencies migrate first.
+
+**Worked example:** `ProductPricesRestApi` (migrated in PR #1065) depends on `ProductsRestApi` via its `composer.json` `require` block (`"spryker/products-rest-api": "^2.0.0"`), so `ProductsRestApi`'s `*ResourceRoutePlugin` must be removed in the same batch (or earlier) for `ProductPricesRestApi` to migrate cleanly.

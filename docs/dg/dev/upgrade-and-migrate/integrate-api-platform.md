@@ -115,6 +115,11 @@ The `SecurityBundle` enables authentication and authorization for API Platform r
 
 Create configuration files for the API Platform in each application layer where you want to enable the API-Platform.
 
+Two settings in this file deserve attention:
+
+- `sourceDirectories()` — where the generator scans for API Platform schemas. Defaults to `src/Spryker`, `src/SprykerFeature`, `src/Pyz` if not set.
+- `excludedPathFragments()` — schema paths the generator should skip. Use this when you want to keep a module's API Platform schemas hidden from the generator (e.g. a module the project still serves via legacy Glue). This does NOT switch routing — see [Step 3 — Batch migration in the overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html#step-3--batch-migration-default) for how routing actually flips.
+
 ### Configure for Glue
 
 `config/Glue/packages/spryker_api_platform.php`
@@ -122,12 +127,34 @@ Create configuration files for the API Platform in each application layer where 
 ```php
 <?php
 
-declare(strict_types=1);
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
 
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
 use Symfony\Config\SprykerApiPlatformConfig;
 
 return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
     $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // The following configuration is optional. By default, the source directories are set to 'src/Spryker', 'src/SprykerFeature', and 'src/Pyz'.
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    // Keep these modules on the legacy Glue REST stack by hiding their API Platform schemas from the generator.
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Customer/resources/api/',
+        'src/Spryker/Store/resources/api/',
+        'src/Spryker/Authentication/resources/api/',
+    ]);
 };
 ```
 
@@ -138,12 +165,33 @@ return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
 ```php
 <?php
 
-declare(strict_types=1);
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
 
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
 use Symfony\Config\SprykerApiPlatformConfig;
 
 return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
     $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // The following configuration is optional. By default, the source directories are set to 'src/Spryker', 'src/SprykerFeature', and 'src/Pyz'.
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Authentication/resources/api/',
+        'src/Spryker/Customer/resources/api/',
+        'src/Spryker/Store/resources/api/',
+    ]);
 };
 ```
 
@@ -154,12 +202,34 @@ return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
 ```php
 <?php
 
-declare(strict_types=1);
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
 
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
 use Symfony\Config\SprykerApiPlatformConfig;
 
 return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
     $sprykerApiPlatform->apiTypes(['backend']);
+
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    // Keep these modules on the legacy Glue REST stack by hiding their API Platform schemas from the generator.
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Store/resources/api/',
+        'src/Spryker/Currency/resources/api/',
+        'src/Spryker/Locale/resources/api/',
+        'src/Spryker/StoreContext/resources/api/',
+    ]);
 };
 ```
 

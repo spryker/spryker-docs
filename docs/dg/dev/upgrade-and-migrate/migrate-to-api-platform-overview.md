@@ -28,3 +28,13 @@ API Platform replaces the internal infrastructure that Glue REST uses to serve A
 Once a module is migrated, its endpoint wiring is the API Platform resource schema and the Provider/Processor pair — not a `*ResourceRoutePlugin` plus a `*Reader`. If you find both, you're mid-migration; finish the switch (Step 3) before considering that module done.
 
 {% endinfo_block %}
+
+## Prerequisites
+
+Before starting the migration, confirm:
+
+- **Symfony Dependency Injection is in place.** See [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html).
+- **API Platform is integrated** at the project level (bundles registered, Symfony container compiled). See [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html).
+- **PHP 8.1+ and Symfony 6.4+.**
+- **A target shop baseline version is picked.** See the [Migration scoreboard](#migration-scoreboard) below for the recommended baseline.
+- **Existing Glue API tests pass** on your current shop before you start changing anything. The cleanest signal that the migration is working is that those tests keep passing through every step.

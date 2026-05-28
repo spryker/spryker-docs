@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202605.0
 description: Security updates released for version 202605.0
-last_updated: May 21, 2026
+last_updated: May 28, 2026
 template: concept-topic-template
 publish_date: "2026-05-18"
 ---
@@ -95,3 +95,58 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 {% endinfo_block %}
 
 Add glossary translations for the message `cart_code_widget.error.too_many_requests`.
+
+
+## File enumeration via predictable file IDs in File Manager
+
+Files stored through the File Manager module were referenced using sequential numeric IDs, making it possible to enumerate and access files by guessing IDs. Introducing UUID-based identifiers for file entities prevents unauthorized enumeration of file resources.
+
+### Affected modules
+
+- `spryker/file-manager`: < 2.9.0
+- `spryker/file-manager-storage`: < 2.7.0
+- `spryker-shop/content-file-widget`: < 2.1.0
+- `spryker-shop/file-manager-widget`: < 2.1.0
+- `spryker/synchronization-behavior`: < 1.15.0
+- `spryker/propel`: < 3.50.1
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/file-manager:"^2.9.0" spryker/file-manager-storage:"^2.7.0" spryker-shop/content-file-widget:"^2.1.0" spryker-shop/file-manager-widget:"^2.1.0" spryker/synchronization-behavior:"^1.15.0" spryker/propel:"^3.50.1" --update-with-dependencies
+```
+
+### Activate UUID for file entities
+
+1. Enable UUID generation by overriding `FileManagerConfig::isUuidEnabled()` in your project configuration. By default, UUID generation is disabled.
+
+**src/Pyz/Zed/FileManager/FileManagerConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\FileManager;
+
+use Spryker\Zed\FileManager\FileManagerConfig as SprykerFileManagerConfig;
+
+class FileManagerConfig extends SprykerFileManagerConfig
+{
+    /**
+     * @return bool
+     */
+    public function isUuidEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+2. Re-save all existing file entities to generate UUIDs for them. Make sure that the UUID field is populated for each file entity.
+
+3. Rebuild the storage data:
+
+```bash
+console publish:trigger-events -r file
+```

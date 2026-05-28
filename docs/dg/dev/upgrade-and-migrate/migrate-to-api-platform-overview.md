@@ -55,3 +55,645 @@ Refer to the [Migration scoreboard](#migration-scoreboard) for the current recom
 Upgrading the shop baseline ships the API Platform resource schemas and the new Providers/Processors, but **all traffic still goes through the legacy Glue plugins**. You will not see new behavior at this point — that's expected. Routing flips in Step 3, after the project configuration is in place and the legacy plugins are removed.
 
 {% endinfo_block %}
+
+## Step 2 — Project configuration checklist
+
+Apply the following project-level configuration across all three Glue stacks (`Glue`, `GlueStorefront`, `GlueBackend`). Snippets are pulled verbatim from the demo shop suite — copy them as a starting point, then adjust the secret, included modules, and excluded paths to match your project. For per-setting explanations see the [integration guide](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html).
+
+### Bundles — Glue + GlueStorefront
+
+`config/Glue/bundles.php` and `config/GlueStorefront/bundles.php` (identical):
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
+use Spryker\ApiPlatform\SprykerApiPlatformBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+
+return [
+    FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
+    ApiPlatformBundle::class => ['all' => true],
+    SprykerApiPlatformBundle::class => ['all' => true],
+];
+```
+
+### Bundles — GlueBackend
+
+`config/GlueBackend/bundles.php` registers three additional bundles for the back-office UI on top of the base set:
+
+```php
+<?php
+
+declare(strict_types = 1);
+
+use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
+use Spryker\ApiPlatform\SprykerApiPlatformBundle;
+use Spryker\ComposableBackofficeUi\SprykerComposableBackofficeUiBundle;
+use Spryker\FalconUi\SprykerFalconUiBundle;
+use Spryker\KernelFeature\SprykerKernelFeatureBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+
+return [
+    FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
+    ApiPlatformBundle::class => ['all' => true],
+    SprykerApiPlatformBundle::class => ['all' => true],
+    SprykerFalconUiBundle::class => ['all' => true],
+    SprykerComposableBackofficeUiBundle::class => ['all' => true],
+    SprykerKernelFeatureBundle::class => ['all' => true],
+];
+```
+
+### API Platform config — Glue
+
+`config/Glue/packages/api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use ApiPlatform\Metadata\UrlGeneratorInterface;
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\ApiPlatformConfig;
+
+return static function (ApiPlatformConfig $apiPlatform, string $env): void {
+    $apiPlatform->title('Spryker Glue API');
+
+    $apiPlatform->defaults()->urlGenerationStrategy(UrlGeneratorInterface::ABS_URL);
+
+    $apiPlatform->doctrine()->enabled(false);
+    $apiPlatform->doctrineMongodbOdm()->enabled(false);
+
+    $apiPlatform->mapping()->paths(['%kernel.project_dir%/src/Generated/Api/Storefront']);
+
+    if ($env === 'dockerdev') {
+        $apiPlatform->enableSwagger(true);
+        $apiPlatform->enableSwaggerUi(true);
+        $apiPlatform->enableReDoc(true);
+        $apiPlatform->enableEntrypoint(true);
+        $apiPlatform->enableDocs(true);
+        $apiPlatform->enableProfiler(true);
+    }
+
+    $apiPlatform->swagger()
+        ->swaggerUiExtraConfiguration([
+            'filter' => true,
+            'docExpansion' => 'none',
+        ])
+        ->httpAuth('JWT', ['scheme' => 'bearer', 'bearerFormat' => 'JWT']);
+
+    $apiPlatform->defaults()->paginationItemsPerPage(10);
+    $apiPlatform->defaults()->filters(['spryker.api_platform.filter.property']);
+    $apiPlatform->defaults()->normalizationContext(['skip_null_values' => false]);
+    $apiPlatform->defaults()->denormalizationContext(['disable_type_enforcement' => true]);
+    $apiPlatform->collection()
+        ->existsParameterName('exists')
+        ->order('ASC')
+        ->orderParameterName('order')
+        ->pagination()
+        ->pageParameterName('page')
+        ->enabledParameterName('pagination')
+        ->itemsPerPageParameterName('itemsPerPage')
+        ->partialParameterName('partial');
+
+    $apiPlatform->formats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+    $apiPlatform->formats('jsonld', ['mime_types' => ['application/ld+json']]);
+    $apiPlatform->formats('xml', ['mime_types' => ['application/xml', 'text/xml']]);
+    $apiPlatform->formats('csv', ['mime_types' => ['text/csv']]);
+
+    $apiPlatform->patchFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+
+    $apiPlatform->errorFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+};
+```
+
+### API Platform config — GlueStorefront
+
+`config/GlueStorefront/packages/api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use ApiPlatform\Metadata\UrlGeneratorInterface;
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\ApiPlatformConfig;
+
+return static function (ApiPlatformConfig $apiPlatform, string $env): void {
+    $apiPlatform->title('Spryker Storefront API');
+
+    $apiPlatform->defaults()->urlGenerationStrategy(UrlGeneratorInterface::ABS_URL);
+
+    $apiPlatform->doctrine()->enabled(false);
+    $apiPlatform->doctrineMongodbOdm()->enabled(false);
+
+    $apiPlatform->mapping()->paths(['%kernel.project_dir%/src/Generated/Api/Storefront']);
+
+    if ($env === 'dockerdev') {
+        $apiPlatform->enableSwagger(true);
+        $apiPlatform->enableSwaggerUi(true);
+        $apiPlatform->enableReDoc(true);
+        $apiPlatform->enableEntrypoint(true);
+        $apiPlatform->enableDocs(true);
+        $apiPlatform->enableProfiler(true);
+    }
+
+    $apiPlatform->swagger()
+        ->swaggerUiExtraConfiguration([
+            'filter' => true,
+            'docExpansion' => 'none',
+        ])
+        ->httpAuth('JWT', ['scheme' => 'bearer', 'bearerFormat' => 'JWT']);
+
+    $apiPlatform->defaults()->paginationItemsPerPage(10);
+    $apiPlatform->defaults()->filters(['spryker.api_platform.filter.property']);
+    $apiPlatform->defaults()->normalizationContext(['skip_null_values' => false]);
+    $apiPlatform->defaults()->denormalizationContext(['disable_type_enforcement' => true]);
+    $apiPlatform->collection()
+        ->existsParameterName('exists')
+        ->order('ASC')
+        ->orderParameterName('order')
+        ->pagination()
+            ->pageParameterName('page')
+            ->enabledParameterName('pagination')
+            ->itemsPerPageParameterName('itemsPerPage')
+            ->partialParameterName('partial');
+
+    $apiPlatform->formats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+    $apiPlatform->formats('jsonld', ['mime_types' => ['application/ld+json']]);
+    $apiPlatform->formats('xml', ['mime_types' => ['application/xml', 'text/xml']]);
+    $apiPlatform->formats('csv', ['mime_types' => ['text/csv']]);
+
+    $apiPlatform->patchFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+
+    $apiPlatform->errorFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+};
+```
+
+### API Platform config — GlueBackend
+
+`config/GlueBackend/packages/api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\ApiPlatformConfig;
+
+return static function (ApiPlatformConfig $apiPlatform, string $env): void {
+    $apiPlatform->title('Spryker Backend API');
+
+    $apiPlatform->doctrine()->enabled(false);
+    $apiPlatform->doctrineMongodbOdm()->enabled(false);
+    $apiPlatform->mapping()->paths(['%kernel.project_dir%/src/Generated/Api/Backend']);
+
+    if ($env === 'dockerdev') {
+        $apiPlatform->enableSwagger(true);
+        $apiPlatform->enableSwaggerUi(true);
+        $apiPlatform->enableReDoc(true);
+        $apiPlatform->enableEntrypoint(true);
+        $apiPlatform->enableDocs(true);
+        $apiPlatform->enableProfiler(true);
+    }
+
+    $apiPlatform->swagger()
+        ->swaggerUiExtraConfiguration([
+            'filter' => true,
+            'docExpansion' => 'none',
+        ])
+        ->httpAuth('JWT', ['scheme' => 'bearer', 'bearerFormat' => 'JWT']);
+
+    $apiPlatform->defaults()->paginationItemsPerPage(10);
+    $apiPlatform->defaults()->filters(['spryker.api_platform.filter.property']);
+    // Allow string "true"/"false" to be coerced to bool — the old Glue backend accepted
+    // stringified booleans in request bodies (e.g. "isActive": "true").
+    $apiPlatform->defaults()->denormalizationContext(['disable_type_enforcement' => true]);
+    $apiPlatform->collection()
+        ->existsParameterName('exists')
+        ->order('ASC')
+        ->orderParameterName('order')
+        ->pagination()
+            ->pageParameterName('page')
+            ->enabledParameterName('pagination')
+            ->itemsPerPageParameterName('itemsPerPage')
+            ->partialParameterName('partial');
+
+    $apiPlatform->formats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+    $apiPlatform->formats('jsonld', ['mime_types' => ['application/ld+json']]);
+    $apiPlatform->formats('xml', ['mime_types' => ['application/xml', 'text/xml']]);
+    $apiPlatform->formats('csv', ['mime_types' => ['text/csv']]);
+
+    $apiPlatform->patchFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+
+    $apiPlatform->errorFormats('jsonapi', ['mime_types' => ['application/vnd.api+json', 'application/json']]);
+};
+```
+
+The `excludedPathFragments` list controls which modules' API Platform schemas the generator skips. Adjust this list to match the modules that your project still serves via legacy Glue. See [Step 3 — Batch migration (default)](#step-3--batch-migration-default) for how routing actually flips (this is not the routing switch).
+
+### Spryker API Platform config — Glue
+
+`config/Glue/packages/spryker_api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\SprykerApiPlatformConfig;
+
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // The following configuration is optional. By default, the source directories are set to 'src/Spryker', 'src/SprykerFeature', and 'src/Pyz'.
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    // Keep these modules on the legacy Glue REST stack by hiding their API Platform schemas from the generator.
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Customer/resources/api/',
+        'src/Spryker/Store/resources/api/',
+        'src/Spryker/Authentication/resources/api/',
+    ]);
+};
+```
+
+### Spryker API Platform config — GlueStorefront
+
+`config/GlueStorefront/packages/spryker_api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\SprykerApiPlatformConfig;
+
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // The following configuration is optional. By default, the source directories are set to 'src/Spryker', 'src/SprykerFeature', and 'src/Pyz'.
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Authentication/resources/api/',
+        'src/Spryker/Customer/resources/api/',
+        'src/Spryker/Store/resources/api/',
+    ]);
+};
+```
+
+### Spryker API Platform config — GlueBackend
+
+`config/GlueBackend/packages/spryker_api_platform.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\SprykerApiPlatformConfig;
+
+return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
+    $sprykerApiPlatform->apiTypes(['backend']);
+
+    $sprykerApiPlatform->sourceDirectories([
+        'src/Spryker',
+        'src/SprykerFeature',
+        'src/Pyz',
+    ]);
+
+    // Keep these modules on the legacy Glue REST stack by hiding their API Platform schemas from the generator.
+    $sprykerApiPlatform->excludedPathFragments([
+        'src/Spryker/Store/resources/api/',
+        'src/Spryker/Currency/resources/api/',
+        'src/Spryker/Locale/resources/api/',
+        'src/Spryker/StoreContext/resources/api/',
+    ]);
+};
+```
+
+### Security config — Glue
+
+`config/Glue/packages/security.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use Spryker\ApiPlatform\Security\ApiUserProvider;
+use Spryker\ApiPlatform\Security\GlueAuthenticationEntryPoint;
+use Spryker\ApiPlatform\Security\OauthAuthenticator;
+use Symfony\Config\SecurityConfig;
+
+return static function (SecurityConfig $security): void {
+    $security->provider('api_oauth_provider')
+        ->id(ApiUserProvider::class);
+
+    $security->firewall('main')
+        ->lazy(true)
+        ->stateless(true)
+        ->provider('api_oauth_provider')
+        ->customAuthenticators([OauthAuthenticator::class])
+        ->entryPoint(GlueAuthenticationEntryPoint::class);
+
+    // Public by default - individual resources use security expressions for authorization
+    $security->accessControl()
+        ->path('^/')
+        ->roles(['PUBLIC_ACCESS']);
+};
+```
+
+### Security config — GlueStorefront
+
+`config/GlueStorefront/packages/security.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use Spryker\ApiPlatform\Security\ApiUserProvider;
+use Spryker\ApiPlatform\Security\GlueAuthenticationEntryPoint;
+use Spryker\ApiPlatform\Security\OauthAuthenticator;
+use Symfony\Config\SecurityConfig;
+
+return static function (SecurityConfig $security): void {
+    $security->provider('api_oauth_provider')
+        ->id(ApiUserProvider::class);
+
+    $security->firewall('main')
+        ->lazy(true)
+        ->stateless(true)
+        ->provider('api_oauth_provider')
+        ->customAuthenticators([OauthAuthenticator::class])
+        ->entryPoint(GlueAuthenticationEntryPoint::class);
+
+    // Public by default - individual resources use security expressions for authorization
+    $security->accessControl()
+        ->path('^/')
+        ->roles(['PUBLIC_ACCESS']);
+};
+```
+
+### Security config — GlueBackend
+
+`config/GlueBackend/packages/security.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use Spryker\ApiPlatform\Security\ApiUserProvider;
+use Spryker\ApiPlatform\Security\OauthAuthenticator;
+use Symfony\Config\SecurityConfig;
+
+return static function (SecurityConfig $security): void {
+    $security->provider('api_oauth_provider')
+        ->id(ApiUserProvider::class);
+
+    $security->firewall('main')
+        ->lazy(true)
+        ->stateless(true)
+        ->provider('api_oauth_provider')
+        ->customAuthenticators([OauthAuthenticator::class]);
+
+    // Public by default - individual resources use security expressions for authorization
+    $security->accessControl()
+        ->path('^/')
+        ->roles(['PUBLIC_ACCESS']);
+};
+```
+
+### Framework config — Glue
+
+`config/Glue/packages/framework.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $framework, string $env): void {
+    $framework->secret('spryker-glue-secret');
+
+    $framework->assets([
+            'base_path' => '/assets',
+        ]);
+
+    $framework->test(in_array($env, ['dockerdev', 'dockerci'], true));
+};
+```
+
+### Framework config — GlueStorefront
+
+`config/GlueStorefront/packages/framework.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $framework, string $env): void {
+    $framework->secret('spryker-glue-storefront-secret');
+
+    $framework->assets([
+            'base_path' => '/assets',
+        ]);
+
+    $framework->test(in_array($env, ['dockerdev', 'dockerci'], true));
+};
+```
+
+### Framework config — GlueBackend
+
+`config/GlueBackend/packages/framework.php`:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @see config/README.md for more information about this configuration.
+ */
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $framework, string $env): void {
+    $framework->secret('spryker-glue-backend-secret');
+
+    $framework->assets([
+            'base_path' => '/assets',
+        ]);
+
+    $framework->test(in_array($env, ['dockerdev', 'dockerci'], true));
+};
+```
+
+{% info_block infoBox "Pick your own secret" %}
+
+The `framework->secret(...)` values shown above are demo-shop defaults. Replace them with project-specific secrets in production.
+
+{% endinfo_block %}
+
+### Routes — all three stacks
+
+`config/Glue/routes/api_platform.php`, `config/GlueStorefront/routes/api_platform.php`, and `config/GlueBackend/routes/api_platform.php` are identical:
+
+```php
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+declare(strict_types = 1);
+
+use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
+
+return static function (RoutingConfigurator $routingConfigurator): void {
+    $routingConfigurator->import('.', 'api_platform')
+        ->prefix('/');
+};
+```
+
+### Application services — all three stacks
+
+`config/Glue/ApplicationServices.php`, `config/GlueStorefront/ApplicationServices.php`, and `config/GlueBackend/ApplicationServices.php` are identical:
+
+```php
+<?php
+
+/**
+ * This is an example configuration that can be used inside a project to tell Symfony which services it has to make
+ * available through the Dependency Injection Container. It automatically loads all services from all project modules,
+ * except for the ones that are explicitly excluded in the $excludedModuleConfiguration array.
+ *
+ * You can also write your custom solution as it is explained in the Symfony documentation.
+ */
+
+declare(strict_types = 1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $configurator): void {
+    $configurator->services()
+        ->defaults()
+        ->autowire()
+        ->public()
+        ->autoconfigure();
+};
+```
+
+### Router dependency provider
+
+The router dependency provider (`src/Pyz/Glue/Router/RouterDependencyProvider.php`) registers both routers in the correct order — `GlueRouterPlugin` first (legacy, checked first), `SymfonyFrameworkRouterPlugin` second (API Platform, checked second). The full snippet and the explanation of why order matters live in the [integration guide → step 4](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html#4-update-router-configuration).

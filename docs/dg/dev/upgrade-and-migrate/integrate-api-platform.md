@@ -23,9 +23,9 @@ To integrate API Platform, install the following modules:
 composer require spryker/api-platform:"^0.5.0" --update-with-dependencies
 ```
 
-{% info_block infoBox "Module placeholder" %}
+{% info_block infoBox "Target versions" %}
 
-The exact module versions will be provided in the final documentation. The above serves as a placeholder for the module list.
+For the recommended shop baseline version (or the pinned module set) that ships all currently migrated endpoints, see the [Migration scoreboard in the overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html#migration-scoreboard). Always upgrade to a known baseline before migrating modules — that's how the core team ships it.
 
 {% endinfo_block %}
 

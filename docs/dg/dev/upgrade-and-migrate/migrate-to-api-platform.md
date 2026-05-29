@@ -464,7 +464,7 @@ All existing tests should still pass because:
 
 {% info_block warningBox "Plugin removal is the migration switch" %}
 
-The actual switch from legacy Glue REST to API Platform for this module is removing its `*ResourceRoutePlugin` from the project-level dependency provider (shown below). The optional `excludedPathFragments` setting in `spryker_api_platform.php` controls schema generation only — it does not flip routing. The legacy `spryker/<module>-rest-api` composer package may stay installed; it simply no longer serves routes once the plugin is unregistered.
+The actual switch from Glue REST to API Platform for this module is removing its `*ResourceRoutePlugin` from the project-level dependency provider (shown below). The optional `excludedPathFragments` setting in `spryker_api_platform.php` controls schema generation only — it does not flip routing. The `spryker/<module>-rest-api` composer package may stay installed; it simply no longer serves routes once the plugin is unregistered.
 
 {% endinfo_block %}
 

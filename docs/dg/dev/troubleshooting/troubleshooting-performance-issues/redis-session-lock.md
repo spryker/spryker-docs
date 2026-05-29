@@ -132,11 +132,15 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 Spryker provides three session handler options:
 
+<div class="width-100">
+
 | Handler                                        | Behavior                                                                                    |
 |------------------------------------------------|---------------------------------------------------------------------------------------------|
 | `SESSION_HANDLER_REDIS`                        | Does not lock sessions.                                                                     |
 | `SESSION_HANDLER_REDIS_LOCKING`                | Locks all sessions for all requests.                                                        |
 | `SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`   | Selectively bypasses locking based on plugins. The first plugin that returns `true` wins.   |
+
+</div>
 
 #### Configurable session handler (recommended)
 

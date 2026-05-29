@@ -1,7 +1,7 @@
 ---
 title: Keeping dependencies updated for performance
 description: Guidelines for keeping Spryker module dependencies up to date to maintain optimal performance and security.
-last_updated: May 19, 2026
+last_updated: May 29, 2026
 template: concept-topic-template
 related:
   - title: General performance guidelines
@@ -125,7 +125,7 @@ The following sections list important module updates that include performance im
 To update all required modules at once:
 
 ```bash
-composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.0" spryker/event:"^2.17.1" spryker/glossary-storage:"^1.14.0" spryker/merchant-product:"^1.12.0" spryker/merchant-product-offer:"^1.12.0" spryker/merchant-product-offer-search:"^1.9.0" spryker/merchant-product-search:"^1.6.0" spryker/merchant-product-storage:"^1.7.0" spryker/price-product:"^4.51.0" spryker/price-product-merchant-relationship-storage:"^1.21.0" spryker/price-product-offer-storage:"^1.8.0" spryker/price-product-storage:"^4.16.0" spryker/product:"^6.54.0" spryker/product-category-search:"^1.3.0" spryker/product-category-storage:"^2.13.0" spryker/product-group-storage:"^1.9.0" spryker/product-image:"^3.21.0" spryker/product-image-storage:"^1.21.0" spryker/product-list:"^1.10.0" spryker/product-list-search:"^2.11.0" spryker/product-list-storage:"^1.21.0" spryker/product-offer:"^1.17.0" spryker/product-offer-availability-storage:"^1.6.0" spryker/product-offer-stock:"^1.7.0" spryker/product-page-search:"^3.47.0" spryker/product-page-search-extension:"^1.7.0" spryker/propel:"^3.50.0" spryker/queue:"^1.27.0" spryker/symfony-messenger:"^1.6.0" spryker/tax-product-storage:"^1.8.0" spryker/url-storage:"^1.23.0" spryker/synchronization-behavior:"^1.14.0"
+composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.0" spryker/event:"^2.17.1" spryker/glossary-storage:"^1.14.0" spryker/merchant-product:"^1.12.0" spryker/merchant-product-offer:"^1.12.0" spryker/merchant-product-offer-search:"^1.9.0" spryker/merchant-product-search:"^1.6.0" spryker/merchant-product-storage:"^1.7.0" spryker/price-product:"^4.51.0" spryker/price-product-merchant-relationship-storage:"^1.21.0" spryker/price-product-offer-storage:"^1.8.0" spryker/price-product-storage:"^4.16.0" spryker/product:"^6.54.0" spryker/product-category-search:"^1.3.0" spryker/product-category-storage:"^2.13.0" spryker/product-group-storage:"^1.9.0" spryker/product-image:"^3.21.0" spryker/product-image-storage:"^1.21.0" spryker/product-list:"^1.10.0" spryker/product-list-search:"^2.11.0" spryker/product-list-storage:"^1.21.0" spryker/product-offer:"^1.17.0" spryker/product-offer-availability-storage:"^1.6.0" spryker/product-offer-stock:"^1.7.0" spryker/product-page-search:"^3.47.0" spryker/product-page-search-extension:"^1.7.0" spryker/propel:"^3.50.0" spryker/queue:"^1.28.0" spryker/symfony-messenger:"^1.6.0" spryker/tax-product-storage:"^1.8.0" spryker/url-storage:"^1.23.0" spryker/synchronization-behavior:"^1.14.0"
 ```
 
 - [spryker/rabbit-mq:^2.25.0](https://github.com/spryker/rabbit-mq/releases/tag/2.25.0)
@@ -157,7 +157,7 @@ composer update spryker/rabbit-mq:"^2.25.0" spryker/availability-storage:"^2.11.
 - [spryker/product-page-search:^3.47.0](https://github.com/spryker/product-page-search/releases/tag/3.47.0)
 - [spryker/product-page-search-extension:^1.7.0](https://github.com/spryker/product-page-search-extension/releases/tag/1.7.0)
 - [spryker/propel:^3.50.0](https://github.com/spryker/propel/releases/tag/3.50.0)
-- [spryker/queue:^1.27.0](https://github.com/spryker/queue/releases/tag/1.27.0)
+- [spryker/queue:^1.28.0](https://github.com/spryker/queue/releases/tag/1.28.0)
 - [spryker/symfony-messenger:^1.6.0](https://github.com/spryker/symfony-messenger/releases/tag/1.6.0)
 - [spryker/tax-product-storage:^1.8.0](https://github.com/spryker/tax-product-storage/releases/tag/1.8.0)
 - [spryker/url-storage:^1.23.0](https://github.com/spryker/url-storage/releases/tag/1.23.0)

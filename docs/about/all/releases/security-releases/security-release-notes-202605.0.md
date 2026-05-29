@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202605.0
 description: Security updates released for version 202605.0
-last_updated: May 28, 2026
+last_updated: May 29, 2026
 template: concept-topic-template
 publish_date: "2026-05-18"
 ---
@@ -149,4 +149,23 @@ class FileManagerConfig extends SprykerFileManagerConfig
 
 ```bash
 console publish:trigger-events -r file
+```
+
+
+## PHP code injection via Twig template name
+
+The `Compiler::string()` method in Twig failed to escape single quotes when generating PHP double-quoted string literals. An attacker could craft a template name containing a single quote to terminate the surrounding PHP string early, injecting arbitrary PHP expressions into the compiled Twig cache file. The injected code executes when the cache file is loaded, bypassing the Twig sandbox and enabling remote code execution. Because `SecurityPolicy` permits `{% raw %}{% use %}{% endraw %}` tags in sandboxed templates, this vulnerability is exploitable even in restricted environments.
+
+### Affected modules
+
+- `twig/twig`: < 3.26.0
+- `spryker/twig`: < 3.31.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update twig/twig:"^3.26.0" spryker/twig:"^3.31.0"
+composer show twig/twig spryker/twig # Verify the versions
 ```

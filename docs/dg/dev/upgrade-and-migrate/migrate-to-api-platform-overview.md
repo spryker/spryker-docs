@@ -35,7 +35,7 @@ Before starting the migration, confirm:
 
 - **Symfony Dependency Injection is in place.** See [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html).
 - **API Platform is integrated** at the project level (bundles registered, project configuration applied, Symfony container compiled). See [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html).
-- **PHP 8.1+ and Symfony 6.4+.**
+- **PHP 8.3+ and Symfony 6.4+.**
 - **You know which modules you're migrating.** The [Glue API to API Platform migration status page](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html) lists every module, its migration status, and its prerequisites.
 - **Existing Glue API tests pass** on your current shop before you start changing anything. The cleanest signal that the migration is working is that those tests keep passing through every step.
 

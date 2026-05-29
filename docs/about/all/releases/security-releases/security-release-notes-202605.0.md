@@ -152,11 +152,9 @@ console publish:trigger-events -r file
 ```
 
 
-## PHP code injection via Twig template name (CVE-2026-46633)
+## PHP code injection via Twig template name
 
 The `Compiler::string()` method in Twig failed to escape single quotes when generating PHP double-quoted string literals. An attacker could craft a template name containing a single quote to terminate the surrounding PHP string early, injecting arbitrary PHP expressions into the compiled Twig cache file. The injected code executes when the cache file is loaded, bypassing the Twig sandbox and enabling remote code execution. Because `SecurityPolicy` permits `{% raw %}{% use %}{% endraw %}` tags in sandboxed templates, this vulnerability is exploitable even in restricted environments.
-
-For more information, see [GHSA-7p85-w9px-jpjp](https://github.com/advisories/GHSA-7p85-w9px-jpjp).
 
 ### Affected modules
 

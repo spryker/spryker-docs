@@ -1,7 +1,7 @@
 ---
 title: How to migrate to API Platform
 description: This document describes how to migrate existing Glue API resources to API Platform.
-last_updated: Feb 16, 2026
+last_updated: May 29, 2026
 template: howto-guide-template
 related:
   - title: How to integrate API Platform
@@ -11,6 +11,12 @@ related:
   - title: API Platform Enablement
     link: docs/dg/dev/architecture/api-platform/enablement.html
 ---
+
+{% info_block infoBox "Start here for batch migration" %}
+
+If you're migrating multiple modules in one go (the default), follow the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) first — it covers the shop-baseline upgrade, project-config checklist, and batch cleanup. This document is the per-module deep dive referenced from that overview.
+
+{% endinfo_block %}
 
 This document describes how to migrate existing Glue API resources to the API-Platform while maintaining backward compatibility.
 
@@ -456,6 +462,12 @@ All existing tests should still pass because:
 
 ### Step 9: Remove Glue resource files
 
+{% info_block warningBox "Plugin removal is the migration switch" %}
+
+The actual switch from Glue REST to API Platform for this module is removing its `*ResourceRoutePlugin` from the project-level dependency provider (shown below). The optional `excludedPathFragments` setting in `spryker_api_platform.php` controls schema generation only — it does not flip routing. The `spryker/<module>-rest-api` composer package may stay installed; it simply no longer serves routes once the plugin is unregistered.
+
+{% endinfo_block %}
+
 Once the API Platform endpoint is working and tested, remove the old Glue files:
 
 ```bash
@@ -514,62 +526,6 @@ Repeat steps 2-10 for each resource in your migration checklist:
 [ ] Wishlist resource
 ...
 ```
-
-## Final cleanup
-
-Once **all** Glue resources are migrated to API-Platform:
-
-### 1. Remove GlueRouterPlugin
-
-`src/Pyz/Glue/Router/RouterDependencyProvider.php`
-
-```php
-protected function getRouterPlugins(): array
-{
-    return [
-        // new GlueRouterPlugin(), // ← Remove - no longer needed
-        new SymfonyFrameworkRouterPlugin(),
-    ];
-}
-```
-
-### 2. Remove empty Glue modules
-
-```bash
-# Remove modules that no longer have resources
-rm -rf src/Pyz/Glue/CustomersRestApi/
-rm -rf src/Pyz/Glue/ProductsRestApi/
-# ... etc
-```
-
-### 3. Update composer dependencies
-
-If you're no longer using Glue-specific packages:
-
-```bash
-# Review and remove unused Glue packages
-composer remove spryker/customers-rest-api
-composer remove spryker/products-rest-api
-# etc...
-```
-
-### 4. Clean-up tests
-
-Update or remove Glue-specific test files:
-
-```bash
-# Convert tests to API Platform format or remove
-rm -rf tests/PyzTest/Glue/CustomersRestApi/
-```
-
-### 5. Update documentation
-
-Update internal API documentation to reference new endpoints:
-
-- OpenAPI documentation: `http://backoffice.eu.spryker.local/` (root URL)
-- OpenAPI JSON spec: `http://backoffice.eu.spryker.local/docs.json`
-- Update Postman collections
-- Update integration documentation for partners
 
 ## Migration comparison
 

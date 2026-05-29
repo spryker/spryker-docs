@@ -22,7 +22,7 @@ Before integrating API Platform, ensure you have:
 To integrate API Platform, install the following modules:
 
 ```bash
-composer require spryker/api-platform:"^0.5.0" --update-with-dependencies
+composer require spryker/api-platform:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block infoBox "Target versions" %}

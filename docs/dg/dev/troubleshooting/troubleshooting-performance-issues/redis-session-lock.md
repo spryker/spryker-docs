@@ -2,13 +2,15 @@
 title: Redis session lock
 description: Understand and resolve Redis session lock issues in Spryker applications.
 template: troubleshooting-guide-template
-last_updated: May 28, 2026
+last_updated: May 29, 2026
 redirect_from:
   - /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
   - /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 ---
 
 A session lock prevents multiple processes of a single user's session from accessing or modifying session data at the same time. This ensures data integrity and consistency and helps avoid race conditions and data corruption in high-concurrency environments.
+
+Under normal browsing conditions, a single user does not generate concurrent requests, so session locks are rarely an issue. However, when the frontend is built with many asynchronous or parallel requests—such as widgets loading simultaneously—multiple requests from the same user can race to lock the same session, causing delays.
 
 While a user's session is being accessed by a process, other processes of the same user's session cannot access it—the session is *locked*.
 
@@ -21,14 +23,14 @@ By default, Spryker uses a locking session handler:
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
 ```
 
-If a process cannot lock the session, it uses a *spinlock* strategy: it waits and retries acquiring the lock. The default retry delay is 0.01 seconds:
+If a process cannot lock the session, it uses a *spinlock* strategy: it waits and retries acquiring the lock. The default retry delay is 0.05 seconds (50 milliseconds):
 
 ```php
 // config/Shared/config_default.php
 $config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 50000; // only values greater than zero will be applied
 ```
 
-Retry attempts continue until the timeout, which is 10 seconds by default, or 80% of `max_execution_time` if it is set:
+Retry attempts continue until the timeout, which defaults to 10 seconds. If this value is not configured (set to 0), the timeout falls back to 80% of `max_execution_time`—48 seconds with PHP's default `max_execution_time` of 60 seconds:
 
 ```php
 // config/Shared/config_default.php
@@ -40,8 +42,8 @@ The lock has a Time-To-Live (TTL) parameter that instructs Redis to remove the l
 The lock lifecycle is as follows:
 - The application locks the session at the beginning of a request.
 - The application unlocks the session at the end of a request:
-  - In a TERMINATE event after sending content, all versions.
-  - In a RESPONSE event before sending content, newer versions.
+  - In a TERMINATE event after sending content, in versions before `spryker/session 4.17.0`.
+  - In a RESPONSE event before sending content, in `spryker/session 4.17.0` and later.
 - If a request fails with a fatal error or an exception that prevents those events from triggering, Redis removes the lock based on the TTL.
 - If TTL is smaller than the execution time of a long-running request, Redis removes the lock before the application does.
 
@@ -62,7 +64,6 @@ Reducing the lock TTL too much can result in side effects similar to having no l
 - Interrupted requests without the lock being released—caused by the connection being aborted manually or by network issues.
 - Long-running or slow-performing concurrent requests that access the session.
 - Bots running many parallel requests.
-- DDoS or DoS attacks.
 
 ## Symptoms
 
@@ -131,11 +132,11 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 Spryker provides three session handler options:
 
-| Handler | Behavior |
-|---|---|
-| `SESSION_HANDLER_REDIS` | Does not lock sessions. |
-| `SESSION_HANDLER_REDIS_LOCKING` | Locks all sessions for all requests. |
-| `SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING` | Selectively bypasses locking based on plugins. The first plugin that returns `true` wins. |
+| Handler                                        | Behavior                                                                                    |
+|------------------------------------------------|---------------------------------------------------------------------------------------------|
+| `SESSION_HANDLER_REDIS`                        | Does not lock sessions.                                                                     |
+| `SESSION_HANDLER_REDIS_LOCKING`                | Locks all sessions for all requests.                                                        |
+| `SESSION_HANDLER_CONFIGURABLE_REDIS_LOCKING`   | Selectively bypasses locking based on plugins. The first plugin that returns `true` wins.   |
 
 #### Configurable session handler (recommended)
 
@@ -214,7 +215,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
 }
 ```
 
-5. Configure the URL patterns and bot user-agent names to exclude from locking:
+5. Configure the URL patterns and bot user-agent names to exclude from locking. The `spryker/session-redis` module provides default values for both lists in `Spryker\Yves\SessionRedis\SessionRedisConfig`. Override them at the project level only if you need to adjust the defaults:
 
 ```php
 namespace Pyz\Yves\SessionRedis;
@@ -247,17 +248,20 @@ class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
 
 #### Disable session locking
 
-You can disable session locking, but only after thoroughly assessing the risks and implementing necessary safeguards. This approach assumes there will be no concurrent requests from the same client, which could cause session data inconsistencies—for example, if products are simultaneously added to the cart from multiple browser tabs. For optimal performance, data integrity, and customer experience, we strongly recommend keeping session locks enabled and focusing on lock management and application performance instead.
+To disable session locking entirely, use the non-locking handler:
 
 ```php
 // config/Shared/config_default.php
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
 
+Only do this after thoroughly assessing the risks and implementing necessary safeguards. This approach assumes there will be no concurrent requests from the same client. Concurrent requests without locking can cause session data inconsistencies—for example, if products are simultaneously added to the cart from multiple browser tabs.
+
 ### Optimize application performance
 
 - **PHP-FPM worker pool size**: Ensure you have a sufficient pool of PHP-FPM workers. You can configure the `max_children` count for each application part in your [deploy.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications) file.
-- **External calls**: Combine Redis operations where possible—for example, using MGET. Reduce Redis calls in sessions as much as possible. Use asynchronous calls to external systems and handle failures gracefully. See [Performance guidelines: External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html).
+- **Redis operations**: Combine Redis calls where possible—for example, using MGET instead of multiple GET calls. Reduce the number of Redis operations performed within a session as much as possible.
+- **External calls**: Use asynchronous calls to external systems and handle failures gracefully. See [Performance guidelines: External HTTP requests](/docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html).
 - **Timeouts**: Use short timeouts and avoid increasing them above industry standards or defaults. A long `max_execution_time` can worsen the issue if a process cannot finish successfully because of outages or errors, and can introduce a single point of failure.
 - **Architecture**: See [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#general-performance-challenges-in-architecture-design) to improve the performance and responsiveness of your application. Fulfilling requests as quickly as possible significantly improves scalability.
 - **APIs**: Headless scenarios are typically not affected by session locking challenges. Evaluate whether calls that would normally target Yves can target APIs instead.

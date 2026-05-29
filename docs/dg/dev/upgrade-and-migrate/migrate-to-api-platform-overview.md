@@ -1,7 +1,7 @@
 ---
 title: API Platform migration overview
 description: End-to-end walk-through for migrating an existing Spryker shop from Glue REST to API Platform.
-last_updated: 2026-05-29
+last_updated: May 29, 2026
 template: howto-guide-template
 related:
   - title: How to integrate API Platform

@@ -1,7 +1,7 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: May 04, 2026
+last_updated: May 29, 2026
 template: howto-guide-template
 label: early-access
 ---
@@ -13,7 +13,7 @@ This document describes how to integrate the PunchOut Gateway module into a Spry
 Install the PunchOut Gateway module using Composer:
 
 ```bash
-composer require spryker-eco/punchout-gateway:^0.3.2
+composer require spryker-eco/punchout-gateway:^0.4.0
 ```
 
 ## 2. Configure the module
@@ -32,7 +32,11 @@ $config[PunchoutGatewayConstants::ENABLE_LOGGING] = getenv('PUNCHOUT_GATEWAY_ENA
 
 | Constant | Description                                                                                                                                     | Default  |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| `ENABLE_LOGGING` | Enables or disables logging for PunchOut Gateway. Check `\SprykerEco\Shared\PunchoutGateway\Logger\PunchoutLogger` to see what is logged. | `false` |
+| `ENABLE_LOGGING` | Enables or disables logging for PunchOut Gateway. | `false` |
+
+### Logging
+
+When logging is enabled, the module emits structured entries through `\SprykerEco\Shared\PunchoutGateway\Logger\PunchoutLoggerInterface`. The shipped implementation `PunchoutLogger` writes to the standard Spryker log channels and covers, among others, request reception and parsing, authentication attempts and outcomes, response generation, quote and session creation, and uncaught throwables. When logging is disabled, the resolver returns `NullPunchoutLogger` and all calls become no-ops.
 
 ## 3. Additional module configuration
 
@@ -40,10 +44,12 @@ $config[PunchoutGatewayConstants::ENABLE_LOGGING] = getenv('PUNCHOUT_GATEWAY_ENA
 
 | Method | Default | Description |
 |--------|---------|-------------|
-| `isLoggingEnabled()` | `true` | Enables or disables PunchOut Gateway logging. |
+| `isLoggingEnabled()` | `false` | Enables or disables PunchOut Gateway logging. |
 | `getCxmlSessionStartUrlValidityInSeconds()` | `600` | Validity period of the cXML session start URL in seconds. |
 | `getOciDefaultStartUrl()` | `'/'` | Default redirect URL after OCI session start. |
 | `getCxmlSessionTokenLength()` | `32` | Length of the generated cXML session token. |
+
+The same values can be changed at runtime through the Back Office under *Configuration > Punchout Gateway*.
 
 ## 4. Update Quote configuration
 
@@ -172,7 +178,7 @@ protected function getGlobalWidgets(): array
 }
 ```
 
-If you have custom Yves templates or your own frontend, add `PunchoutCartWidget` to your cart template. The core template is located at `SprykerShop/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`.
+The widget is rendered wherever it is embedded by the cart template. If your project uses the stock `spryker-shop/cart-page` template, embed it inside `SprykerShop/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig` (or your override) so that the "Transfer Cart" button is shown on the cart page.
 
 The following example shows `PunchoutCartWidget` usage:
 
@@ -200,6 +206,20 @@ Copy content from `vendor/spryker-eco/punchout-gateway/data/import/*.csv` to the
 vendor/bin/console data:import glossary
 ```
 
+## 10. Translations for the Back Office
+
+The module ships Zed translations for the Back Office UI in `vendor/spryker-eco/punchout-gateway/data/translation/Zed/en_US.csv` and `de_DE.csv`. They are picked up by the standard Zed translator on the next request—no separate import step is required. To override a label, add an entry with the same key to your project's Zed translation file.
+
+## Verify the integration
+
+After completing the steps above:
+
+- Open *Punchout Connections* in the Back Office. The grid should render empty until you create your first connection.
+- Run `vendor/bin/console punchout-gateway:cxml:demo-connection:create` to insert a demo cXML connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
+- Run `vendor/bin/console punchout-gateway:oci:demo-connection:create` to insert a demo OCI connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
+
 ## Additional links
 
-For details about fine-tuning the integration on the project level, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+- [Manage PunchOut connections](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html) — Back Office workflow for connections and credentials.
+- [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html) — connection columns, processor and form-handler plugins, endpoints.
+- [PunchOut Protocols Coverage](/docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html) — cXML and OCI field-by-field mapping.

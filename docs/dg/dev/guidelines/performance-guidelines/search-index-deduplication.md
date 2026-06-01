@@ -1,6 +1,6 @@
 ---
 title: Search index deduplication
-description: Learn how to reduce search index size and improve Publish and Sync performance by removing product concrete documents from OpenSearch and Elasticsearch.
+description: Learn how to reduce search index size and improve Publish and Sync performance by removing product concrete documents from OpenSearch or Elasticsearch.
 last_updated: Jun 1, 2026
 template: concept-topic-template
 related:
@@ -82,7 +82,9 @@ protected function getProductConcreteStorageSearchPlugins(): array
 }
 ```
 
-### Step 6: Enable the cleanup console command
+### Step 6: Enable the cleanup console command (optional)
+
+This command is needed if your project already has some data in the product concrete search index, and you want to clean it up.
 
 In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add `ProductConcretePageSearchCleanupConsole` to the `getConsoleCommands()` method:
 
@@ -100,7 +102,7 @@ protected function getConsoleCommands(Container $container): array
 
 At this point, the project is fully compatible with the previous behavior. Data still exists in the search index. After verifying that the behavior is correct, clean up the search index data.
 
-### Step 7: Clean up search index data
+### Step 7: Clean up search index data (optional)
 
 ```bash
 vendor/bin/console product-concrete-page-search:cleanup [options]

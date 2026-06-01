@@ -128,7 +128,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ContentBannersRestApi | StorefrontAPI | Migrated | — | GET /content-banners/{id} |
 | CustomerAccessRestApi | StorefrontAPI | Migrated | — | GET /customer-access |
 | CustomersRestApi | StorefrontAPI | Migrated | — | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
-| DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Planned | CartCodesRestApi, CartsRestApi | (extension-only) |
+| DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Migrated | CartCodesRestApi, CartsRestApi | (extension-only) |
 | DiscountsRestApi | StorefrontAPI | Migrated | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
@@ -147,30 +147,30 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | OmsRestApi | Extension-only StorefrontAPI | Migrated | OrdersRestApi | (extension-only) |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Migrated | CartReorderRestApi, CartsRestApi, OrdersRestApi | (extension-only) |
 | OrdersRestApi | StorefrontAPI | Migrated | — | GET /orders<br>GET /orders/{orderReference}<br>GET /orders/{orderReference}/order-items/{uuid}<br>GET /customers/{customerReference}/orders |
-| PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Planned | ProductOfferPricesRestApi | (extension-only) |
-| PriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned | ProductPricesRestApi | (extension-only) |
+| PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Migrated | ProductOfferPricesRestApi | (extension-only) |
+| PriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | ProductPricesRestApi | (extension-only) |
 | ProductAttributesRestApi | StorefrontAPI | Migrated | — | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
-| ProductBundleCartsRestApi | Extension-only StorefrontAPI | Planned | CartsRestApi, ShipmentsRestApi | (extension-only) |
-| ProductBundlesRestApi | StorefrontAPI | Planned | OrdersRestApi | GET /concrete-products/{id}/bundled-products |
+| ProductBundleCartsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi, ShipmentsRestApi | (extension-only) |
+| ProductBundlesRestApi | StorefrontAPI | Migrated | OrdersRestApi | GET /concrete-products/{id}/bundled-products |
 | ProductConfigurationShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | ShoppingListsRestApi | (extension-only) |
-| ProductConfigurationWishlistsRestApi | Extension-only StorefrontAPI | Planned | WishlistsRestApi | (extension-only) |
-| ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Planned | ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi, ProductConfigurationsRestApi | (extension-only) |
-| ProductConfigurationsRestApi | Extension-only StorefrontAPI | Planned | CartsRestApi, OrdersRestApi, ProductsRestApi | (extension-only) |
-| ProductDiscontinuedRestApi | Extension-only StorefrontAPI | Planned | ProductsRestApi | (extension-only) |
+| ProductConfigurationWishlistsRestApi | Extension-only StorefrontAPI | Migrated | WishlistsRestApi | (extension-only) |
+| ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi, ProductConfigurationsRestApi | (extension-only) |
+| ProductConfigurationsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi, OrdersRestApi, ProductsRestApi | (extension-only) |
+| ProductDiscontinuedRestApi | Extension-only StorefrontAPI | Migrated | ProductsRestApi | (extension-only) |
 | ProductImageSetsRestApi | StorefrontAPI | Migrated | ProductsRestApi | GET /abstract-products/{id}/abstract-product-image-sets<br>GET /concrete-products/{id}/concrete-product-image-sets |
 | ProductLabelsRestApi | StorefrontAPI | Migrated | — | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Migrated | — | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
-| ProductOfferSalesRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
+| ProductOfferSalesRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
-| ProductOffersRestApi | Extension-only StorefrontAPI | Planned | ProductsRestApi | (extension-only) |
-| ProductOptionsRestApi | Extension-only StorefrontAPI | Planned | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi | (extension-only) |
+| ProductOffersRestApi | Extension-only StorefrontAPI | Migrated | ProductsRestApi | (extension-only) |
+| ProductOptionsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi | (extension-only) |
 | ProductReviewsRestApi | StorefrontAPI | Migrated | — | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |
 | QuoteRequestAgentsRestApi | StorefrontAPI | Migrated | QuoteRequestsRestApi | GET,POST /agent-quote-requests<br>GET,PATCH /agent-quote-requests/{id}<br>POST /agent-quote-requests/{id}/agent-quote-request-cancel<br>POST /agent-quote-requests/{id}/agent-quote-request-revise<br>POST /agent-quote-requests/{id}/agent-quote-request-send-to-customer |
 | QuoteRequestsRestApi | StorefrontAPI | Migrated | CartsRestApi | GET,POST /quote-requests<br>GET,PATCH /quote-requests/{id}<br>POST /quote-requests/{id}/quote-request-cancel<br>POST /quote-requests/{id}/quote-request-revise<br>POST /quote-requests/{id}/quote-request-send-to-user<br>POST /quote-requests/{id}/quote-request-convert-to-quote |
 | RelatedProductsRestApi | StorefrontAPI | Migrated | ProductsRestApi | GET /abstract-products/{id}/related-products |
-| SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Planned | CartsRestApi, CheckoutRestApi | (extension-only) |
+| SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi, CheckoutRestApi | (extension-only) |
 | SalesReturnsRestApi | StorefrontAPI | Migrated | — | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
-| SecurityBlockerRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
+| SecurityBlockerRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi | (extension-only) |
 | ServicePointsRestApi | StorefrontAPI | Migrated | — | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Migrated | — | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |

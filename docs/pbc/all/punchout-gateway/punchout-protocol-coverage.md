@@ -1,7 +1,7 @@
 ---
 title:  PunchOut Protocols Coverage
 description: Find out which parts of supported PunchOut protocols are covered in Spryker implementation
-last_updated: May 04, 2026
+last_updated: May 29, 2026
 template: howto-guide-template
 label: early-access
 ---
@@ -120,14 +120,20 @@ Message payload:
 | `PunchOutOrderMessageHeader/ShipTo/Address/Name` | `QuoteTransfer.shippingAddress.firstName + lastName`               | Falls back to `Ship To` when both are empty.                                                                          |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/Street` | `address1`, `address2`, `address3`                                 | Empty lines are skipped.                                                                                              |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/City` | `QuoteTransfer.shippingAddress.city`                               |                                                                                                                       |
-| `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/State` | Region or state name, taken from `region`, fallback to `state` |                                                                                                                       |
+| `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/State` | `QuoteTransfer.shippingAddress.region`, with fallback to `QuoteTransfer.shippingAddress.state` |                                                                                                                       |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/PostalCode` | `QuoteTransfer.shippingAddress.zipCode`                            |                                                                                                                       |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/Country/@isoCountryCode` | `QuoteTransfer.shippingAddress.iso2Code`                           |                                                                                                                       |
 | `PunchOutOrderMessageHeader/Shipping/Money` + `Description` | `QuoteTransfer.totals.expenseTotal`                                | Description fixed to `Shipping`. Omitted when no expense total is set.                                                |
 | `PunchOutOrderMessageHeader/Tax/Money` + `Description` | `QuoteTransfer.totals.taxTotal.amount`                             | Description fixed to `Tax`. Omitted when no tax total is set.                                                         |
-| `PunchOutOrderMessageHeader/Extrinsic` (per field) | `extrinsicFields` from the original `PunchOutSetupRequest`         | All `Extrinsic` children received on the setup request are echoed back unchanged inside `PunchOutOrderMessageHeader`. |
+| `PunchOutOrderMessageHeader/Extrinsic` (per field) | `extrinsicFields` from the original `PunchOutSetupRequest`         | Echoed back inside `PunchOutOrderMessageHeader`, with the keys in `PunchoutGatewayConfig::EXTRINSIC_BLACKLIST` removed. See [Extrinsic blacklist](#extrinsic-blacklist) below. |
 
-To extend or override the field set, replace the parser or message-mapper services, or register a custom cXML processor plugin in `PunchoutGatewayDependencyProvider`. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+To extend or override the field set, replace the parser or message-mapper services, or set a custom cXML processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+
+### Extrinsic blacklist
+
+`CxmlPunchoutOrderMessageMapper::filterExtrinsics()` removes any extrinsic whose key matches `PunchoutGatewayConfig::EXTRINSIC_BLACKLIST` before echoing the remaining values back inside each `PunchOutOrderMessageHeader`. The blacklist guards against leaking personally identifiable information that the buyer's procurement system sent for customer resolution. The default list is:
+
+`User`, `UniqueUsername`, `UniqueName`, `UserId`, `UserEmail`, `UserFullName`, `UserPrintableName`, `FirstName`, `LastName`, `PhoneNumber`, `UserPhoneNumber`.
 
 ## OCI Flow fields mapping
 
@@ -140,7 +146,7 @@ The buyer's eProcurement system posts an HTML form to the connection's `request_
 
 | Field | Required | Purpose |
 | --- | --- | --- |
-| `USERNAME` | Yes | Identifies the buyer user. The field name is configurable per connection through `usernameField`; `USERNAME` is the default. Matched against `spy_punchout_connection_credential.username`. |
+| `USERNAME` | Yes | Identifies the buyer user. The field name is configurable per connection through `usernameField`; `USERNAME` is the default. Matched against `spy_punchout_credential.username`. |
 | `PASSWORD` | Yes | Authenticates the buyer user. The field name is configurable per connection through `passwordField`; `PASSWORD` is the default. Verified against the stored password hash. |
 | `HOOK_URL` | Yes | Target URL the cart return form is posted to at checkout. Must start with `https://`. Stored on the session as `browserFormPostUrl`. |
 | `~TARGET` | No | Frame target echoed back to the buyer. |
@@ -165,4 +171,4 @@ The form contains following fields:
 | `~OkCode` | Echoed from login | Echoed only when present in the original login.                                                                |
 | `~CALLER` | Echoed from login | Echoed only when present in the original login.                                                                |
 
-To extend or override the field set, replace the form-builder service or register a custom OCI processor plugin in `YvesPunchoutGatewayDependencyProvider`. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+To extend or override the field set, replace the form-builder service or set a custom OCI processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).

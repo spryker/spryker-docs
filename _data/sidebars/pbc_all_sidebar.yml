@@ -3593,6 +3593,8 @@ entries:
             url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
           - title: Project configuration for PunchOut Gateway
             url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
+          - title: Manage PunchOut connections
+            url: /docs/pbc/all/punchout-gateway/manage-punchout-connections.html
           - title: PunchOut Protocols Coverage
             url: /docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html
 

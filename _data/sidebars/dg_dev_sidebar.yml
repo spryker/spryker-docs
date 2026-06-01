@@ -1462,6 +1462,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
       - title: KV storage deduplication
         url: /docs/dg/dev/guidelines/performance-guidelines/kv-storage-deduplication.html
+      - title: Search index deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-index-deduplication.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Search performance guidelines

@@ -82,7 +82,7 @@ protected function getProductConcreteStorageSearchPlugins(): array
 }
 ```
 
-### Step 6: Enable the cleanup console command (optional)
+### Step 6: Optional: Enable the cleanup console command
 
 This command is needed if your project already has some data in the product concrete search index, and you want to clean it up.
 
@@ -102,7 +102,7 @@ protected function getConsoleCommands(Container $container): array
 
 At this point, the project is fully compatible with the previous behavior. Data still exists in the search index. After verifying that the behavior is correct, clean up the search index data.
 
-### Step 7: Clean up search index data (optional)
+### Step 7: Optional: Clean up search index data
 
 ```bash
 vendor/bin/console product-concrete-page-search:cleanup [options]

@@ -195,8 +195,6 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
-      - title: Session locking issues
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
@@ -887,6 +885,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
+    - title: API Platform migration overview
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1452,8 +1452,6 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
       - title: Twig performance best practices
         url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
-      - title: Session locks
-        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
       - title: Bot control
         url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
       - title: Batch processing of Propel entities
@@ -1464,6 +1462,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
       - title: KV storage deduplication
         url: /docs/dg/dev/guidelines/performance-guidelines/kv-storage-deduplication.html
+      - title: Search index deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-index-deduplication.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Search performance guidelines

@@ -40,6 +40,7 @@ For more information about Xdebug profiling configuration, see [Xdebug Profiler]
 If you need to profile Back Office gateway requests, enable profiler forwarding in your configuration.
 
 **config_default-docker.dev.php**
+
 ```php
 $config[ZedRequestConstants::XDEBUG_PROFILER_FORWARD_ENABLED] = true;
 ```

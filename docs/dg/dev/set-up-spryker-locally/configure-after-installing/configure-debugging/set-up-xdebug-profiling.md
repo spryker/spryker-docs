@@ -35,9 +35,9 @@ image:
 
 ```
 
-For more details on Xdebug profiling configuration see [Xdebug Profiler](https://xdebug.org/docs/profiler)
+For more information about Xdebug profiling configuration, see [Xdebug Profiler](https://xdebug.org/docs/profiler).
 
-If you need to profile backoffice gateway requests, enable profiler forwarding in your configuration. 
+If you need to profile Back Office gateway requests, enable profiler forwarding in your configuration.
 
 **config_default-docker.dev.php**
 ```php

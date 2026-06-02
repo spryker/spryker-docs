@@ -180,7 +180,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ShoppingListsRestApi | StorefrontAPI | Migrated | — | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned | — | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Migrated | CartsRestApi, ProductsRestApi | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
-| UrlsRestApi | StorefrontAPI | Planned | — | GET /url-resolver |
+| UrlsRestApi | StorefrontAPI | Migrated | — | GET /url-resolver |
 | Vertex | StorefrontAPI | Migrated | — | POST /tax-id-validate |
 | WishlistsRestApi | StorefrontAPI | Migrated | — | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
 

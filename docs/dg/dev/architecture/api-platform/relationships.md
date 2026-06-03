@@ -1,7 +1,7 @@
 ---
 title: Relationships
 description: Configure and use relationships in API Platform to include related resources.
-last_updated: May 18, 2026
+last_updated: Jun 3, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -380,6 +380,10 @@ GET /customers/customer--35?include=addresses
   ]
 }
 ```
+
+### Ordering of the `included` array
+
+Entries in `included` are sorted by the `includedSortPriority` of each resource type — higher priority appears later, and entries with the same priority are sorted alphabetically by `type`. The default priority is `0`. To override it for a project resource, see [Sort priority for included resources](/docs/dg/dev/architecture/api-platform/resource-schemas.html#sort-priority-for-included-resources).
 
 ## How it works
 

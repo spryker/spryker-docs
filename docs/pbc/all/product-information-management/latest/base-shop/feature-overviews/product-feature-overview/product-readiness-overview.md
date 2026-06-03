@@ -95,6 +95,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+
 ### Install Product Readiness improvement
 
 Install the required packages:

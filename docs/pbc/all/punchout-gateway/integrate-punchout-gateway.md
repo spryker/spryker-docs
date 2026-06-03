@@ -1,7 +1,7 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: May 29, 2026
+last_updated: Jun 03, 2026
 template: howto-guide-template
 label: early-access
 ---
@@ -13,7 +13,7 @@ This document describes how to integrate the PunchOut Gateway module into a Spry
 Install the PunchOut Gateway module using Composer:
 
 ```bash
-composer require spryker-eco/punchout-gateway:^0.4.0
+composer require spryker-eco/punchout-gateway:^1.0.0
 ```
 
 ## 2. Configure the module
@@ -215,8 +215,7 @@ The module ships Zed translations for the Back Office UI in `vendor/spryker-eco/
 After completing the steps above:
 
 - Open *Punchout Connections* in the Back Office. The grid should render empty until you create your first connection.
-- Run `vendor/bin/console punchout-gateway:cxml:demo-connection:create` to insert a demo cXML connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
-- Run `vendor/bin/console punchout-gateway:oci:demo-connection:create` to insert a demo OCI connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
+- Run `vendor/bin/console punchout-gateway:demo-connection:create` to insert demo cXML and OCI connections for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect them.
 
 ## Additional links
 

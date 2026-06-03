@@ -130,7 +130,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CustomersRestApi | StorefrontAPI | Migrated | — | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Migrated | CartCodesRestApi, CartsRestApi | (extension-only) |
 | DiscountsRestApi | StorefrontAPI | Migrated | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
-| EntityTagsRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
+| EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | HealthCheck | StorefrontAPI | Migrated | — | GET /health-check |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned | ProductOfferServicePointAvailabilitiesRestApi | (extension-only) |

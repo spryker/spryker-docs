@@ -2,7 +2,7 @@
 title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
-last_updated: May 29, 2026
+last_updated: June 3, 2026
 label: early-access
 ---
 
@@ -59,6 +59,7 @@ Column `configuration` contains JSON with the following optional keys. Override 
 | `usernameField` | `USERNAME` | Form field name carrying the username during login request. |
 | `passwordField` | `PASSWORD` | Form field name carrying the password during login request. |
 | `formMethod`    | `POST`     | HTTP method the buyer uses to post the OCI login form (`POST` or `GET`). |
+| `mapping`       | `{}`       | Maps OCI form fields to source expressions. Configured in the Back Office. See [Map connection fields](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html#map-connection-fields). |
 
 Additionally, configure credentials for customers who will access the shop.
 To do this, create rows in the `spy_punchout_credential` table:
@@ -91,6 +92,7 @@ Column `configuration` contains JSON with the following keys:
 | Key | Required | Purpose                                          |
 |-----|----------|--------------------------------------------------|
 | `senderSharedSecret` | yes | Shared secret used to authenticate the request. The stored value is the hash, generated with `password_hash()`. The incoming `SharedSecret` is checked against this hash with [password_verify](https://www.php.net/manual/en/function.password-verify.php). |
+| `mapping` | no | Maps cXML element paths and extrinsics to source expressions. Configured in the Back Office. See [Map connection fields](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html#map-connection-fields). |
 
 For a cXML connection, no additional PunchOut-related configuration is required.
 The logged-in customer is identified by the `UserEmail` extrinsic field.
@@ -251,6 +253,124 @@ Use this extension point to enrich or override PunchOut session fields based on 
 |--------|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | `isApplicable` | For each plugin, before `expand()` runs                   | Returns `true` when the plugin should run for the given session/quote combination.                      |
 | `expand` | After `isApplicable()` returned `true`                    | Expands the `PunchoutSessionTransfer` before it is assigned to the `QuoteTransfer`.                     |
+
+## Field mapper plugin
+
+Source expressions configured in the Back Office (see [Map connection fields](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html#map-connection-fields)) are resolved through field mapper plugins. Each plugin contributes one source key—the part before the first dot in an expression such as `item.sku` or `quote.customer.email`—and knows how to read the corresponding value from the cart at cart-transfer time.
+
+The plugins are registered in the Service-layer dependency provider, keyed by source key:
+
+**src/SprykerEco/Service/PunchoutGateway/PunchoutGatewayDependencyProvider.php**
+
+```php
+protected function getFieldMapperPlugins(): array
+{
+    return [
+        'item' => new ItemTransferFieldMapperPlugin(),
+        'quote' => new QuoteTransferFieldMapperPlugin(),
+    ];
+}
+```
+
+By default, the module ships two plugins:
+
+- `\SprykerEco\Service\PunchoutGateway\Plugin\FieldMapper\ItemTransferFieldMapperPlugin` — exposes the `item` key, reading from the current cart item.
+- `\SprykerEco\Service\PunchoutGateway\Plugin\FieldMapper\QuoteTransferFieldMapperPlugin` — exposes the `quote` key, reading from the current quote.
+
+At cart-transfer time, `FieldValueResolver` splits each source expression on the first dot, looks up the plugin registered under the resulting key, and calls `getValue()` with the remaining field path. Literal constants (`"EA"`) and concatenation (`item.sku&"_suffix"`) are handled by the resolver itself, so a plugin only needs to resolve a single field path. In the Back Office, the autocomplete suggestions are the union of every plugin's `getPossibleValues()` output.
+
+Both source data objects—the current cart item and the quote—are carried on the `MappingSourceTransfer` that is passed to `getValue()`. A custom plugin can therefore expose a shorter or project-specific key for any data reachable from these objects.
+
+### Plugin methods
+
+Each plugin implements `\SprykerEco\Service\PunchoutGateway\Dependency\Plugin\PunchoutFieldMapperPluginInterface`:
+
+| Method | Called when | Functionality |
+|--------|-------------|----------------|
+| `getPossibleValues` | When the Back Office builds source autocomplete suggestions | Returns the list of source expressions this plugin supports, each prefixed with its source key (for example, `customer.email`). |
+| `getValue` | When a source expression is resolved at cart-transfer time | Receives the `MappingSourceTransfer` and the field path after the source key, and returns the resolved value, or `null` when the path does not resolve. |
+
+### Register a custom data source
+
+To add a new source key, implement `PunchoutFieldMapperPluginInterface` in your project's Service layer:
+
+**src/Pyz/Service/PunchoutGateway/Plugin/FieldMapper/CustomerFieldMapperPlugin.php**
+
+```php
+namespace Pyz\Service\PunchoutGateway\Plugin\FieldMapper;
+
+use Generated\Shared\Transfer\MappingSourceTransfer;
+use Spryker\Service\Kernel\AbstractPlugin;
+use SprykerEco\Service\PunchoutGateway\Dependency\Plugin\PunchoutFieldMapperPluginInterface;
+
+class CustomerFieldMapperPlugin extends AbstractPlugin implements PunchoutFieldMapperPluginInterface
+{
+    /**
+     * @return array<string>
+     */
+    public function getPossibleValues(): array
+    {
+        return [
+            'customer.email',
+            'customer.firstName',
+            'customer.lastName',
+        ];
+    }
+
+    public function getValue(MappingSourceTransfer $mappingSourceTransfer, string $fieldName): mixed
+    {
+        $customerTransfer = $mappingSourceTransfer->getQuote()?->getCustomer();
+
+        if ($customerTransfer === null) {
+            return null;
+        }
+
+        return match ($fieldName) {
+            'email' => $customerTransfer->getEmail(),
+            'firstName' => $customerTransfer->getFirstName(),
+            'lastName' => $customerTransfer->getLastName(),
+            default => null,
+        };
+    }
+}
+```
+
+Then register it under its source key in the project dependency provider:
+
+**src/Pyz/Service/PunchoutGateway/PunchoutGatewayDependencyProvider.php**
+
+```php
+namespace Pyz\Service\PunchoutGateway;
+
+use Pyz\Service\PunchoutGateway\Plugin\FieldMapper\CustomerFieldMapperPlugin;
+use SprykerEco\Service\PunchoutGateway\PunchoutGatewayDependencyProvider as SprykerEcoPunchoutGatewayDependencyProvider;
+
+class PunchoutGatewayDependencyProvider extends SprykerEcoPunchoutGatewayDependencyProvider
+{
+    protected function getFieldMapperPlugins(): array
+    {
+        return [
+            ...parent::getFieldMapperPlugins(),
+            'customer' => new CustomerFieldMapperPlugin(),
+        ];
+    }
+}
+```
+
+After registration, `customer.email`, `customer.firstName`, and `customer.lastName` become available in the Back Office source autocomplete and resolve at cart-transfer time.
+
+{% info_block infoBox "Auto-collecting suggestions" %}
+
+Instead of listing suggestions by hand, you can reuse the `\SprykerEco\Service\PunchoutGateway\Plugin\FieldMapper\TransferPathTraversalTrait`, which the default plugins use to collect field paths from a transfer class by reflection and to traverse a path when resolving a value.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Source data scope" %}
+
+`getValue()` can only read data carried on the `MappingSourceTransfer`, which holds the current cart item and the quote. To expose a source that is not reachable from these objects, extend the `MappingSource` transfer with the additional property and populate it before mapping runs.
+
+{% endinfo_block %}
+
 
 ## Default implementations
 

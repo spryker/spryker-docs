@@ -1,7 +1,7 @@
 ---
 title: Manage PunchOut connections
 description: Use the Back Office UI to create, configure, and maintain PunchOut connections and their customer credentials.
-last_updated: May 29, 2026
+last_updated: June 19, 2026
 template: howto-guide-template
 label: early-access
 ---
@@ -66,6 +66,59 @@ On the grid row, select *Edit*. The form opens with the same fields as the creat
 
 To toggle a connection on or off without opening the form, use the *Activate* / *Deactivate* action in the grid row.
 
+## Map connection fields
+
+When connection is created, you can provide a custom mapping.
+
+Field mapping controls which fields of the outgoing protocol payload receive values and where those values come from. 
+
+Default mapping is explained in the [Protocol Coverage](/docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html#returned-elements-spryker-to-buyer) documentation.
+
+The edit form exposes two grids:
+
+- **Field mapping** (cXML and OCI). Each row maps one target field to a source expression. For cXML connections, the target is a cXML element path, such as `ItemID.SupplierPartID`. For OCI connections, the target is an OCI form field, such as `NEW_ITEM-DESCRIPTION`. Select the target from the dropdown, then enter a source expression.
+- **Extrinsic mapping** (cXML only). Each row maps a custom extrinsic name to a source expression. The shop stores the value as the `ItemDetail.Extrinsic.<name>` element in the cart message.
+
+To add a row, click one of the *Add Field Mapping* or *Add Extrinsic Field Mapping* button. To remove a row, select the row's *Delete* action. Save the form to persist the mapping.
+
+![Field mapping and extrinsic mapping grids on the PunchOut connection edit form](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/punchout-gateway/punchout-field-mapping-grids.png)
+
+### Source expression syntax
+
+The **Source** field accepts the following values:
+
+| Source value | Meaning |
+|--------------|---------|
+| *(empty)* | The target field is skipped, and the built-in default applies. |
+| `item.sku`, `quote.customer.email` | A plugin expression in the form `key.field`. The shop reads the value from the cart item or the quote at cart-transfer time. |
+| `"EA"` or `'EA'` | A literal constant. The quoted text is used as is. |
+| `item.sku&"_suffix"` | A concatenation. Segments joined with `&` are resolved individually and joined into a single string. |
+
+The **Source** field is an autocomplete combobox that suggests the available source paths as you type.
+
+![Source field autocomplete suggesting item and quote field paths](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/punchout-gateway/punchout-source-expression-autocomplete.png)
+
+The following source keys are available by default:
+
+| Key | Source |
+|-----|--------|
+| `item` | Fields of the current cart item. |
+| `quote` | Fields of the current quote. |
+
+### Extrinsic name rules
+
+An extrinsic name may contain only letters, digits, and underscores. Names reserved for buyer identity are rejected.
+
+{% info_block warningBox "Reserved extrinsic names" %}
+
+The following extrinsic names are reserved and cannot be used in a custom mapping: `User`, `UniqueUsername`, `UniqueName`, `UserId`, `UserEmail`, `UserFullName`, `UserPrintableName`, `FirstName`, `LastName`, `PhoneNumber`, `UserPhoneNumber`.
+
+{% endinfo_block %}
+
+### Defaults when no mapping is set
+
+When a target field has no mapping, the shop applies its built-in default. For example, the OCI unit of measure defaults to `EA`, the cXML language defaults to `en-US`, and the cXML credential domain defaults to `DUNS`.
+
 ## View a connection
 
 The *View* action opens a read-only summary of the connection plus the credentials grid (`PunchoutCredentialViewTable`) for that connection. Use this view to inspect existing credentials and to add new ones.
@@ -100,7 +153,3 @@ Open the credential row and select *Edit*. To rotate the password, type a new va
 ### Toggle and delete
 
 The credentials grid exposes *Activate* / *Deactivate* and *Delete* actions. Deleting a credential leaves the associated customer untouched.
-
-## Console fallback
-
-If the Back Office is not available (for example, in a fresh local environment), use the demo console commands described in [PunchOut connection configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html#punchout-connection-configuration) to seed one cXML and one OCI connection for store `DE`.

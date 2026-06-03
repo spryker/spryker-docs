@@ -730,5 +730,33 @@
     "Eco_Doc": "",
     "Comm_Doc": "https://github.com/valantic-CEC-Deutschland-GmbH/sentry",
     "status": "active"
+  },
+  {
+    "Partner": "PunchOut Gateway",
+    "Description": "The PunchOut Gateway module provides a basic implementation of OCI and cXML PunchOut flows for Spryker shops.",
+    "shortDescription": "Enables connection to eProcurement system.",
+    "Logo": "/images/integrations/cat_logos/Punchout_icon.png",
+    "Author": "Spryker",
+    "category": "Procurement",
+    "cat_icon": "/images/integrations/cat_logos/Punchout_icon.png",
+    "method": ["Early Access", "Eco"],
+    "ACP_Doc": "",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/punchout-gateway/punchout-gateway",
+    "Comm_Doc": "",
+    "status": "active"
+  },
+  {
+    "Partner": "Federated Authentication",
+    "Description": "Federated Authentication enables Spryker-based shops to authenticate users through external identity providers (IdP) using OAuth2 and OpenID Connect (OIDC) standards. Supports Single Sign-On (SSO) with Okta, Azure Active Directory (Azure AD / Microsoft Entra ID), Keycloak, Auth0, Google, AWS Cognito, and other OIDC-compliant providers. Enables just-in-time (JIT) user provisioning and JWT-based authentication for Storefront, Back Office, and Merchant Portal.",
+    "shortDescription": "Authenticate users via external identity providers.",
+    "Logo": "/images/integrations/cat_logos/oauth_logo.png",
+    "Author": "Spryker",
+    "category": "Identity Management",
+    "cat_icon": "/images/integrations/cat_icon/icon_identity.png",
+    "method": ["Core"],
+    "ACP_Doc": "",
+    "Eco_Doc": "https://docs.spryker.com/docs/pbc/all/oauth/latest/federated-authentication",
+    "Comm_Doc": "",
+    "status": "active"
   }
 ]

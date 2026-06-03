@@ -1,7 +1,7 @@
 ---
 title: Getting started with APIs
 description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: July 9, 2025
+last_updated: Apr 29, 2026
 template: default
 layout: custom_new
 ---
@@ -28,7 +28,7 @@ Spryker's API is a dedicated application layer within the Spryker Cloud Commerce
     <br>
     <div class="cst_card">
       <div class="cst_card_title">Spryker API Strategy for 2026</div>
-      <div class="cst_card_desc">Spryker is evolving its API strategy by introducing **API Platform–based integration** as a **new, strategic integration layer**, while continuing to **fully support existing Glue APIs**.</div>
+      <div class="cst_card_desc">Spryker is evolving its API strategy by introducing **API Platform–based integration** as a <b>new, strategic integration layer</b>, while continuing to <b>fully support existing Glue APIs</b>.</div>
       <a class="cst_card_button" href="/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html">Learn more</a>
     </div>
   </div>

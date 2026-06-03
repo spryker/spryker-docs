@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: Apr 23, 2026
+last_updated: May 21, 2026
 label: early-access
 keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
 template: howto-guide-template
@@ -15,7 +15,7 @@ The AiDev module is experimental and not stable. There is no backward compatibil
 
 {% info_block warningBox "Prerequisites" %}
 
-This module requires `^1.71.0` version of `docker/sdk` for proper usage. 
+This module requires `^1.71.0` version of `docker/sdk` for proper usage.
 Make sure your development environment is up to date before installing the AiDev module.
 
 {% endinfo_block %}
@@ -48,7 +48,7 @@ docker/sdk console ai-dev:mcp-server -q
 This command:
 - Starts an MCP server using stdio transport
 - Registers all configured MCP tool and prompt plugins
-- Automatically generates prompts if they don't exist
+- Automatically generates prompts if they do not exist
 - Listens for requests from AI assistants
 
 **Usage**: This command is typically configured in AI assistant tools (like Claude Desktop) to enable them to access Spryker-specific information.
@@ -113,6 +113,10 @@ This command:
 - Stores generated prompts in the configured directory
 
 **Usage**: Use this command when you need to regenerate prompts from updated documentation or when initializing the module for the first time.
+
+## Claude Code plugin
+
+The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — through the `spryker-plugins-official` marketplace. The plugin bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. See [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) for installation instructions and a full list of capabilities.
 
 ## Extension points
 
@@ -198,13 +202,13 @@ Navigate to your Spryker project directory and run:
 npx @modelcontextprotocol/inspector docker/sdk console ai-dev:mcp-server -q
 ```
 
-This command will:
-- Start the MCP Inspector in your browser
-- Connect to your local MCP server
-- Display all available tools and prompts
-- Allow you to test tool calls interactively
+This command:
+- Starts the MCP Inspector in your browser
+- Connects to your local MCP server
+- Displays all available tools and prompts
+- Lets you test tool calls interactively
 
-With Xdebug
+**With Xdebug:**
 
 ```bash
 npx @modelcontextprotocol/inspector docker/sdk cli -x console ai-dev:mcp-server

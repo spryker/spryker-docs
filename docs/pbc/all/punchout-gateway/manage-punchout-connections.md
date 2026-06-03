@@ -3,7 +3,6 @@ title: Manage PunchOut connections
 description: Use the Back Office UI to create, configure, and maintain PunchOut connections and their customer credentials.
 last_updated: June 19, 2026
 template: howto-guide-template
-label: early-access
 ---
 
 This document describes how to manage PunchOut connections through the Back Office. The same data is stored in the `spy_punchout_connection`, `spy_punchout_credential`, and `spy_punchout_session` tables described in [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
@@ -121,7 +120,7 @@ When a target field has no mapping, the shop applies its built-in default. For e
 
 ## View a connection
 
-The *View* action opens a read-only summary of the connection plus the credentials grid (`PunchoutCredentialViewTable`) for that connection. Use this view to inspect existing credentials and to add new ones.
+The *View* action opens a read-only summary of the connection plus the credentials grid (`PunchoutCredentialTable`) for that connection. Use this view to inspect existing credentials and to add new ones.
 
 ## Delete a connection
 

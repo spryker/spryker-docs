@@ -2,8 +2,7 @@
 title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
-last_updated: June 19, 2026
-label: early-access
+last_updated: June 22, 2026
 ---
 
 This document describes the project configuration to enable eProcurement systems support via PunchOut flow.
@@ -12,9 +11,9 @@ This document describes the project configuration to enable eProcurement systems
 
 Configure connections through the Back Office UI. For details, see [Manage PunchOut connections](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html).
 
-Demo connections for store `DE` are shipped as part of the demo shop data and are created during the destructive deployment. Do not use the demo data in production.
+Demo connections for store `DE` are shipped as part of the demo shop data only, and are created during the destructive deployment. Do not use the demo data in production.
 
-Execute the following command, if you need to recreate those:
+If you need to recreate them, run the demo-data command provided in the [demo shop project](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/src/Pyz/Zed/PunchoutGateway/Communication/Console/PunchoutDemoConnectionCreateConsole.php):
 
 ```bash
 vendor/bin/console punchout-gateway:demo-connection:create
@@ -44,7 +43,7 @@ OCI-specific configuration
 | `protocol_type` | `'oci'`                       | Flow type.                                                                                                                                               |
 | `processor_plugin_class` | Full class name of the processor plugin. | `\SprykerEco\Zed\PunchoutGateway\Communication\Plugin\PunchoutGateway\DefaultOciProcessorPlugin` or a project's implementation.                                                                                   |
 
-The triplet `protocol_type`, `fk_store` and `request_url` must be unique.
+The pair `protocol_type` and `request_url` must be unique, so the same `request_url` cannot be reused across stores.
 
 Column `configuration` contains JSON with the following optional keys. Override only when the value differs from the default.
 
@@ -440,7 +439,7 @@ Two settings control this handshake:
 | Setting | Default | Bounds | Purpose |
 |---------|---------|--------|---------|
 | `getCxmlSessionTokenLength()` | `32`  | 16–128 | Length of the generated session token. |
-| `getCxmlSessionStartUrlValidityInSeconds()` | `600` | 0–3600 | How long the start URL remains valid after the synchronous response is sent. |
+| `getCxmlSessionStartUrlValidityInSeconds()` | `600` | 1–3600 | How long the start URL remains valid after the synchronous response is sent. |
 
 Both are exposed in the Back Office settings panel under *Configuration > Punchout Gateway*.
 

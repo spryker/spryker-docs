@@ -1,7 +1,7 @@
 ---
 title: Product Readiness overview
 description: Understand how Product Readiness checks help you identify missing or incorrect product data and configuration issues before products go live.
-last_updated: Nov 13, 2025
+last_updated: Jun 3, 2026
 template: concept-topic-template
 ---
 
@@ -39,6 +39,14 @@ Product Readiness identifies missing data and configuration inconsistencies, but
 
 The Back Office readiness view is powered by plugins that aggregate diagnostics from approval, activation, storage, and price modules. Implement the following steps in your project layer.
 
+### Install Product Readiness
+
+Install the required packages:
+
+```bash
+composer update spryker/price-product-offer-storage:"^1.6.0" spryker/price-product-storage:"^4.14.0" spryker/price-product-storage-extension:"^1.4.0" spryker/price-product-volume:"^3.6.0" spryker/product:"^6.52.0" spryker/product-approval:"^1.4.0" spryker/product-management:"^0.20.1" spryker/product-management-extension:"^1.9.0" spryker/product-page-search:"^3.43.0" spryker/product-search:"^5.26.0" spryker/product-storage:"^1.48.0"
+```
+
 ### 1. Register readiness provider plugins
 
 Extend **\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider** with the readiness providers that match your catalog requirements.
@@ -68,9 +76,10 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new ApprovalStatusAbstractProductReadinessProviderPlugin(),
             new IsActiveAbstractProductReadinessProviderPlugin(),
             new IsSearchableForLocaleAbstractProductReadinessProviderPlugin(),
-            new PageSearchProductAbstractReadinessProviderPlugin(),
+            new StoreRelationAbstractProductReadinessProviderPlugin(),
             new StorageTableProductAbstractReadinessProviderPlugin(),
-            new StorageTableProductConcreteReadinessProviderPlugin(),
+            new PageSearchProductAbstractReadinessProviderPlugin(),
+            new StorageTablePriceProductAbstractReadinessProviderPlugin(),
         ];
     }
 
@@ -86,6 +95,24 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
+### Install Product Readiness improvement
+
+Install the required packages:
+
+```bash
+composer update spryker/price-product-storage:"^4.17.0" spryker/product-management:"^0.20.11" spryker/product-page-search:"^3.49.0" spryker/product-storage:"^1.53.0"
+```
+
+After this update, the Product Readiness page displays the following additional information for each storage entity:
+
+- Store, locale, and currency
+- Date when the entity was saved in the database
+- Date when the entity was synced to storage
+- Status indicating whether the data in the database matches the data in the storage
+- Status indicating whether the data in the database matches the data in Elasticsearch or OpenSearch
+- Link to the storage or search data
+
+![Product Readiness example](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-attribute-visibility-overview.md/product_readiness.png)
 
 ## Extend readiness conditions on project level
 

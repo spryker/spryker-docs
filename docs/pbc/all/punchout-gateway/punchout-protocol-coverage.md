@@ -1,9 +1,8 @@
 ---
 title:  PunchOut Protocols Coverage
 description: Find out which parts of supported PunchOut protocols are covered in Spryker implementation
-last_updated: June 19, 2026
+last_updated: June 22, 2026
 template: howto-guide-template
-label: early-access
 ---
 
 PunchOut flow protocols cXML and OCI contain a big range of features, which also consist of different functional elements, XML and form fields.
@@ -16,7 +15,7 @@ This section lists the cXML elements that the PunchOut Gateway interprets on the
 
 ### Received elements (buyer to Spryker)
 
-The buyer's eProcurement system posts a `PunchOutSetupRequest` cXML document to the connection's `request_url`. The raw XML body is parsed by `DefaultCxmlContentParser` into `PunchoutCxmlSetupRequestTransfer`.
+The buyer's eProcurement system posts a `PunchOutSetupRequest` cXML document to the fixed cXML setup endpoint `/punchout-cxml-setup`. The connection is identified by the `Header/Sender/Credential/Identity` matched against `sender_identity`. The raw XML body is parsed by `DefaultCxmlContentParser` into `PunchoutCxmlSetupRequestTransfer`.
 
 #### cXML Header
 
@@ -45,7 +44,7 @@ When `PunchOutSetupRequest/ShipTo/Address` is present, the following are mapped 
 | Element | Maps to |
 | --- | --- |
 | `Address/Name` | `addressName` |
-| `Address/PostalAddress/Street` | `streetLines[]` (multiple lines supported) |
+| `Address/PostalAddress/Street` | `street[]` (multiple lines supported via `addStreetLine`) |
 | `Address/PostalAddress/City` | `city` |
 | `Address/PostalAddress/State` | `state` |
 | `Address/PostalAddress/PostalCode` | `postalCode` |
@@ -133,7 +132,6 @@ Message payload:
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/Country/@isoCountryCode` | `QuoteTransfer.shippingAddress.iso2Code`                           |                                                                                                                       |
 | `PunchOutOrderMessageHeader/Shipping/Money` + `Description` | `sumGrossPrice` of the first expense of type `SHIPMENT_EXPENSE_TYPE`                                | Description fixed to `Shipping`. Omitted when no expense total is set.                                                |
 | `PunchOutOrderMessageHeader/Tax/Money` + `Description` | `QuoteTransfer.totals.taxTotal.amount`                             | Description fixed to `Tax`. Omitted when no tax total is set.                                                         |
-| `PunchOutOrderMessageHeader/Extrinsic` (per field) | `extrinsicFields` from the original `PunchOutSetupRequest`         | Echoed back inside `PunchOutOrderMessageHeader`, with the keys in `PunchoutGatewayConfig::EXTRINSIC_DENY_LIST` removed. See [Extrinsic deny list](#extrinsic-deny-list) below. |
 
 For field-level changes, use the per-connection mapping described in [Per-connection field mapping](#per-connection-field-mapping). For deeper changes, replace the parser or message-mapper services, 
 or set a custom cXML processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).

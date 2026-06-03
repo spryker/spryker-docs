@@ -132,6 +132,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | DiscountsRestApi | StorefrontAPI | Migrated | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
+| HealthCheck | StorefrontAPI | Migrated | — | GET /health-check |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned | ProductOfferServicePointAvailabilitiesRestApi | (extension-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Migrated | WishlistsRestApi | (extension-only) |

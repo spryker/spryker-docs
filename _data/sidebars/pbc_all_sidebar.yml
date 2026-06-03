@@ -1724,7 +1724,7 @@ entries:
               - title: "Import file details: glossary.csv"
                 url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
 
-          - title: Manage in the Back Office
+          - title: Manage translations in the Back Office
             url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/manage-translations-in-the-back-office.html
             nested:
               - title: Add translations

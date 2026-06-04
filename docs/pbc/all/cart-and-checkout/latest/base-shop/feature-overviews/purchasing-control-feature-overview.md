@@ -3,7 +3,6 @@ title: Purchasing Control feature overview
 description: Learn how the Purchasing Control feature lets B2B companies control departmental spending, define budget enforcement rules, and integrate with the Approval Process.
 last_updated: May 22, 2026
 template: concept-topic-template
-label: early-access
 ---
 
 The *Purchasing Control* feature lets B2B companies track and control procurement spending by assigning orders to cost centers and enforcing configurable budget rules. It extends the existing [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) with a second dimension of spending governance: per-department or per-project budget limits that work alongside the existing per-person permission limits.

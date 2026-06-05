@@ -19,7 +19,7 @@ Spryker ships the architecture/ folder with a complete Architecture as Code stru
 
 {% info_block infoBox "Existing projects" %}
 
-If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
+If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
 
 {% endinfo_block %}
 

@@ -1,7 +1,7 @@
 ---
 title: Content Assistant
 description: An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors that generates and refines placeholder content per locale through a conversational interface.
-last_updated: Jun 04, 2026
+last_updated: Jun 08, 2026
 template: concept-topic-template
 ---
 
@@ -25,7 +25,7 @@ Content Assistant is an AI-powered panel embedded in the Back Office CMS Page an
 
 ## Enable Content Assistant
 
-To enable the feature, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;CMS AI Editing&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor** in the Back Office and select an AI configuration.
+To enable the feature, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor** in the Back Office and select an AI configuration.
 
 ## Developer resources
 

@@ -1,7 +1,7 @@
 ---
 title: Install Content Assistant
 description: Learn how to install the Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
-last_updated: Jun 04, 2026
+last_updated: Jun 08, 2026
 template: feature-integration-guide-template
 ---
 
@@ -44,9 +44,9 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 
 interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 {
-    public const string AI_CONFIGURATION_CMS_AI_EDITING_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_CMS_AI_EDITING_OPENAI';
-    public const string AI_CONFIGURATION_CMS_AI_EDITING_AWS = 'AI_COMMERCE:AI_CONFIGURATION_CMS_AI_EDITING_AWS';
-    public const string AI_CONFIGURATION_CMS_AI_EDITING_ANTHROPIC = 'AI_COMMERCE:AI_CONFIGURATION_CMS_AI_EDITING_ANTHROPIC';
+    public const string AI_CONFIGURATION_SMART_CMS_OPENAI = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_OPENAI';
+    public const string AI_CONFIGURATION_SMART_CMS_AWS = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_AWS';
+    public const string AI_CONFIGURATION_SMART_CMS_ANTHROPIC = 'AI_COMMERCE:AI_CONFIGURATION_SMART_CMS_ANTHROPIC';
 }
 ```
 
@@ -62,34 +62,34 @@ Add the Content Assistant named AI configuration entries to `config/Shared/confi
 use Pyz\Shared\AiCommerce\AiCommerceConstants;
 use Spryker\Shared\AiFoundation\AiFoundationConstants;
 
-$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_OPENAI] = [
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI] = [
     'provider_name' => AiFoundationConstants::PROVIDER_OPENAI,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_OPENAI_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_OPENAI_MODEL,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_OPENAI_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
-$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_AWS] = [
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS] = [
     'provider_name' => AiFoundationConstants::PROVIDER_BEDROCK,
     'provider_config' => [
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_AWS_MODEL,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AWS_MODEL,
         'bedrockRuntimeClient' => [
             'region' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_REGION,
             'token' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_AWS_API_TOKEN,
         ],
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 
-$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_ANTHROPIC] = [
+$config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC] = [
     'provider_name' => AiFoundationConstants::PROVIDER_ANTHROPIC,
     'provider_config' => [
         'key' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_ANTHROPIC_API_TOKEN,
-        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_ANTHROPIC_MODEL,
+        'model' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_ANTHROPIC_MODEL,
     ],
-    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_SYSTEM_PROMPT,
+    'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . \SprykerFeature\Shared\AiCommerce\AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_SYSTEM_PROMPT,
 ];
 ```
 
@@ -104,7 +104,7 @@ Default model values:
 
 {% endinfo_block %}
 
-### 4) Configure the CMS AI editing configuration name
+### 4) Configure the Smart CMS configuration name
 
 Override `AiCommerceConfig` in the Zed layer to route Content Assistant to the correct named configuration based on the Back Office setting:
 
@@ -123,11 +123,11 @@ use SprykerFeature\Shared\AiCommerce\AiCommerceConstants as SprykerFeatureAiComm
 
 class AiCommerceConfig extends SprykerAiCommerceConfig
 {
-    public function getCmsAiEditingAiConfigurationName(): ?string
+    public function getSmartCmsAiConfigurationName(): string
     {
         return (string)$this->getModuleConfig(
-            SprykerFeatureAiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_AI_CONFIGURATION,
-            AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_OPENAI,
+            SprykerFeatureAiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION,
+            AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI,
         );
     }
 }
@@ -139,7 +139,7 @@ Register the following plugins to wire Content Assistant into `AiFoundationDepen
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
-| `CmsAiContentToolSetPlugin` | Registers the CMS AI content toolset, including the `get_content_items` tool for fetching existing content items. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
+| `SmartCmsContentToolSetPlugin` | Registers the Smart CMS content toolset, including the `get_content_items` tool for fetching existing content items. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation` |
 
 **src/Pyz/Zed/AiFoundation/AiFoundationDependencyProvider.php**
 
@@ -149,7 +149,7 @@ Register the following plugins to wire Content Assistant into `AiFoundationDepen
 namespace Pyz\Zed\AiFoundation;
 
 use Spryker\Zed\AiFoundation\AiFoundationDependencyProvider as SprykerAiFoundationDependencyProvider;
-use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\CmsAiContentToolSetPlugin;
+use SprykerFeature\Zed\AiCommerce\Communication\Plugin\AiFoundation\SmartCmsContentToolSetPlugin;
 // ... other existing imports
 
 class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvider
@@ -161,7 +161,7 @@ class AiFoundationDependencyProvider extends SprykerAiFoundationDependencyProvid
     {
         return [
             // ... other existing plugins
-            new CmsAiContentToolSetPlugin(),
+            new SmartCmsContentToolSetPlugin(),
         ];
     }
 }
@@ -210,11 +210,11 @@ class AiCommerceDependencyProvider extends SprykerFeatureAiCommerceDependencyPro
 }
 ```
 
-Make sure `AiCommerceTwigPlugin` is registered in `TwigDependencyProvider` to provide the `isCmsAiEditingEnabled()` Twig function used in the glossary editor overrides:
+Make sure `AiCommerceTwigPlugin` is registered in `TwigDependencyProvider` to provide the `isSmartCmsEnabled()` Twig function used in the glossary editor overrides:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
-| `AiCommerceTwigPlugin` | Registers Twig functions and variables required by the CMS AI panel in glossary editors. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig` |
+| `AiCommerceTwigPlugin` | Registers Twig functions and variables required by the Smart CMS panel in glossary editors. | | `SprykerFeature\Zed\AiCommerce\Communication\Plugin\Twig` |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -252,31 +252,31 @@ Override the CMS Page and CMS Block glossary editor templates to inject the AI p
 {% extends '@Spryker:CmsGui/CreateGlossary/index.twig' %}
 
 {% block content %}
-    {% if isCmsAiEditingEnabled() %}
-        {% set cmsAiPageMeta = [] %}
+    {% if isSmartCmsEnabled() %}
+        {% set smartCmsPageMeta = [] %}
         {% for pageAttribute in cmsPage.pageAttributes %}
-            {% set cmsAiLocaleMetaAttribute = null %}
+            {% set smartCmsLocaleMetaAttribute = null %}
             {% for metaAttribute in cmsPage.metaAttributes %}
                 {% if metaAttribute.localeName == pageAttribute.localeName %}
-                    {% set cmsAiLocaleMetaAttribute = metaAttribute %}
+                    {% set smartCmsLocaleMetaAttribute = metaAttribute %}
                 {% endif %}
             {% endfor %}
-            {% set cmsAiPageMeta = cmsAiPageMeta|merge([{
+            {% set smartCmsPageMeta = smartCmsPageMeta|merge([{
                 'localeName': pageAttribute.localeName,
                 'name': pageAttribute.name,
                 'url': pageAttribute.url,
-                'metaTitle': cmsAiLocaleMetaAttribute ? cmsAiLocaleMetaAttribute.metaTitle : null,
-                'metaKeywords': cmsAiLocaleMetaAttribute ? cmsAiLocaleMetaAttribute.metaKeywords : null,
-                'metaDescription': cmsAiLocaleMetaAttribute ? cmsAiLocaleMetaAttribute.metaDescription : null,
+                'metaTitle': smartCmsLocaleMetaAttribute ? smartCmsLocaleMetaAttribute.metaTitle : null,
+                'metaKeywords': smartCmsLocaleMetaAttribute ? smartCmsLocaleMetaAttribute.metaKeywords : null,
+                'metaDescription': smartCmsLocaleMetaAttribute ? smartCmsLocaleMetaAttribute.metaDescription : null,
             }]) %}
         {% endfor %}
-        {% set cmsAiStores = [] %}
+        {% set smartCmsStores = [] %}
         {% if cmsPage.storeRelation is not null %}
             {% for store in cmsPage.storeRelation.stores %}
-                {% set cmsAiStores = cmsAiStores|merge([store.name]) %}
+                {% set smartCmsStores = smartCmsStores|merge([store.name]) %}
             {% endfor %}
         {% endif %}
-        {% set cmsAiEntityContext = {
+        {% set smartCmsEntityContext = {
             'name': cmsPage.pageAttributes is not empty ? cmsPage.pageAttributes|first.name : null,
             'templateName': cmsPage.templateName,
             'urlSlug': cmsPage.pageAttributes is not empty ? cmsPage.pageAttributes|first.url : null,
@@ -286,14 +286,14 @@ Override the CMS Page and CMS Block glossary editor templates to inject the AI p
                 'isSearchable': cmsPage.isSearchable,
                 'validFrom': cmsPage.validFrom,
                 'validTo': cmsPage.validTo,
-                'stores': cmsAiStores,
-                'localizedAttributes': cmsAiPageMeta,
+                'stores': smartCmsStores,
+                'localizedAttributes': smartCmsPageMeta,
             }|json_encode,
         } %}
-        {% include '@AiCommerce/Partials/cms-glossary-ai-panel.twig' ignore missing with {
-            'cmsAiEntityType': 'cms_page',
-            'cmsAiIdEntity': idCmsPage,
-            'cmsAiEntityContext': cmsAiEntityContext,
+        {% include '@AiCommerce/Partials/smart-cms-glossary-panel.twig' ignore missing with {
+            'smartCmsEntityType': 'cms_page',
+            'smartCmsIdEntity': idCmsPage,
+            'smartCmsEntityContext': smartCmsEntityContext,
         } %}
     {% endif %}
     {{ parent() }}
@@ -308,14 +308,14 @@ Override the CMS Page and CMS Block glossary editor templates to inject the AI p
 {% extends '@Spryker:CmsBlockGui/EditGlossary/index.twig' %}
 
 {% block content %}
-    {% if isCmsAiEditingEnabled() %}
-        {% set cmsAiStores = [] %}
+    {% if isSmartCmsEnabled() %}
+        {% set smartCmsStores = [] %}
         {% if cmsBlock.storeRelation is not null %}
             {% for store in cmsBlock.storeRelation.stores %}
-                {% set cmsAiStores = cmsAiStores|merge([store.name]) %}
+                {% set smartCmsStores = smartCmsStores|merge([store.name]) %}
             {% endfor %}
         {% endif %}
-        {% set cmsAiEntityContext = {
+        {% set smartCmsEntityContext = {
             'name': cmsBlock.name,
             'templateName': cmsBlock.templateName,
             'urlSlug': null,
@@ -324,13 +324,13 @@ Override the CMS Page and CMS Block glossary editor templates to inject the AI p
                 'isActive': cmsBlock.isActive,
                 'validFrom': cmsBlock.validFrom,
                 'validTo': cmsBlock.validTo,
-                'stores': cmsAiStores,
+                'stores': smartCmsStores,
             }|json_encode,
         } %}
-        {% include '@AiCommerce/Partials/cms-glossary-ai-panel.twig' ignore missing with {
-            'cmsAiEntityType': 'cms_block',
-            'cmsAiIdEntity': idCmsBlock,
-            'cmsAiEntityContext': cmsAiEntityContext,
+        {% include '@AiCommerce/Partials/smart-cms-glossary-panel.twig' ignore missing with {
+            'smartCmsEntityType': 'cms_block',
+            'smartCmsIdEntity': idCmsBlock,
+            'smartCmsEntityContext': smartCmsEntityContext,
         } %}
     {% endif %}
     {{ parent() }}
@@ -340,7 +340,7 @@ Override the CMS Page and CMS Block glossary editor templates to inject the AI p
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, open a CMS Page or CMS Block glossary editor. Make sure the AI panel is visible next to the editor when the feature is enabled.
+In the Back Office, open a CMS Page or CMS Block glossary editor. Make sure the Smart CMS panel is visible next to the editor when the feature is enabled.
 
 {% endinfo_block %}
 
@@ -357,13 +357,13 @@ console twig:cache:warmer
 
 Enable Content Assistant in the Back Office:
 
-1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;CMS AI Editing&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**.
+1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**.
 2. Select the desired **AI Configuration** (OpenAI, AWS Bedrock, or Anthropic).
 3. Set the model for the selected provider.
 4. Click **Save**.
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, open a CMS Page or CMS Block glossary editor. Type a prompt in the AI panel and make sure the AI generates content for the placeholder.
+In the Back Office, open a CMS Page or CMS Block glossary editor. Type a prompt in the Smart CMS panel and make sure the AI generates content for the placeholder.
 
 {% endinfo_block %}

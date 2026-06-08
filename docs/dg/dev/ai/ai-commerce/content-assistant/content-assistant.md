@@ -1,7 +1,7 @@
 ---
 title: Content Assistant
 description: Technical overview of the Content Assistant feature — architecture, AiFoundation integration, plugin structure, and configuration options.
-last_updated: Jun 04, 2026
+last_updated: Jun 08, 2026
 template: concept-topic-template
 ---
 
@@ -18,9 +18,9 @@ The AI panel is injected into both glossary editors through Twig overrides at th
 - **CMS Page glossary** — `src/Pyz/Zed/CmsGui/Presentation/CreateGlossary/index.twig`
 - **CMS Block glossary** — `src/Pyz/Zed/CmsBlockGui/Presentation/EditGlossary/index.twig`
 
-Both overrides use the `isCmsAiEditingEnabled()` Twig function (provided by `AiCommerceTwigPlugin`) to conditionally render the AI panel partial `@AiCommerce/Partials/cms-glossary-ai-panel.twig`. The panel is only rendered when the feature is enabled in the Back Office configuration.
+Both overrides use the `isSmartCmsEnabled()` Twig function (provided by `AiCommerceTwigPlugin`) to conditionally render the AI panel partial `@AiCommerce/Partials/smart-cms-glossary-panel.twig`. The panel is only rendered when the feature is enabled in the Back Office configuration.
 
-The panel collects entity context (name, template, URL slug, key, SEO meta, stores) and current placeholder/locale state client-side. The JavaScript component (`CmsAiContentPanel`) sends requests to `CmsAiContentController`, which delegates to `CmsAiContentGenerator` through the `AiCommerceFacade`.
+The panel collects entity context (name, template, URL slug, key, SEO meta, stores) and current placeholder/locale state client-side. The JavaScript component (`SmartCmsContentPanel`) sends requests to `SmartCmsContentController`, which delegates to `SmartCmsContentGenerator` through the `AiCommerceFacade`.
 
 ## Capabilities
 
@@ -35,7 +35,7 @@ The panel collects entity context (name, template, URL slug, key, SEO meta, stor
 
 | PLUGIN | LOCATION | DESCRIPTION |
 |--------|----------|-------------|
-| `CmsAiContentToolSetPlugin` | `AiFoundationDependencyProvider::getAiToolSetPlugins()` | Registers the Content Assistant toolset, including the `get_content_items` tool. |
+| `SmartCmsContentToolSetPlugin` | `AiFoundationDependencyProvider::getAiToolSetPlugins()` | Registers the Content Assistant toolset, including the `get_content_items` tool. |
 
 Content widget plugins are registered in `AiCommerceDependencyProvider::getContentGuiEditorPlugins()` and are used to resolve available CMS widgets that the AI can reference in generated content:
 
@@ -53,15 +53,15 @@ Content Assistant uses a dedicated named AI configuration entry in `AiFoundation
 
 | CONSTANT | DESCRIPTION |
 |----------|-------------|
-| `AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_OPENAI` | Configuration for the OpenAI-backed Content Assistant agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_AWS` | Configuration for the AWS Bedrock-backed Content Assistant agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_CMS_AI_EDITING_ANTHROPIC` | Configuration for the Anthropic-backed Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI` | Configuration for the OpenAI-backed Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS` | Configuration for the AWS Bedrock-backed Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC` | Configuration for the Anthropic-backed Content Assistant agent. |
 
-The active configuration is selected by `AiCommerceConfig::getCmsAiEditingAiConfigurationName()`, which reads `AiCommerceConstants::CONFIGURATION_KEY_CMS_AI_EDITING_AI_CONFIGURATION` from the Back Office configuration UI. The default is `AI_CONFIGURATION_CMS_AI_EDITING_OPENAI`.
+The active configuration is selected by `AiCommerceConfig::getSmartCmsAiConfigurationName()`, which reads `AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION` from the Back Office configuration UI. The default is `AI_CONFIGURATION_SMART_CMS_OPENAI`.
 
 ## Feature flag
 
-The feature can be enabled or disabled from the Back Office under **AI Commerce > CMS AI Editing > AI Vendor**. The `isCmsAiEditingEnabled()` Twig function reads this flag and controls panel visibility in both glossary editors.
+The feature can be enabled or disabled from the Back Office under **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**. The `isSmartCmsEnabled()` Twig function reads this flag and controls panel visibility in both glossary editors.
 
 ## Install
 

@@ -1,7 +1,7 @@
 ---
 title: AI Commerce overview
 description: Technical overview of the AI Commerce SprykerFeature package — architecture, AiFoundation integration, and available features.
-last_updated: Jun 04, 2026
+last_updated: Jun 08, 2026
 template: concept-topic-template
 ---
 

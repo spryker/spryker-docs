@@ -1,15 +1,15 @@
 ---
-title: Install Content Assistant
-description: Learn how to install the Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
+title: Install Smart CMS Content Assistant
+description: Learn how to install the Smart CMS Content Assistant feature that provides an AI-powered panel in the Back Office CMS Page and CMS Block glossary editors.
 last_updated: Jun 08, 2026
 template: feature-integration-guide-template
 ---
 
-Content Assistant is an AI-powered panel embedded in the Back Office CMS Page and CMS Block glossary editors. It lets Back Office users generate and refine placeholder content per locale through a conversational AI interface. This document describes how to install the Content Assistant feature.
+Smart CMS Content Assistant is an AI-powered panel embedded in the Back Office CMS Page and CMS Block glossary editors. It lets Back Office users generate and refine placeholder content per locale through a conversational AI interface. This document describes how to install Smart CMS Content Assistant.
 
 ## Install the feature core
 
-Follow the steps in the following sections to install the Content Assistant feature core.
+Follow the steps in the following sections to install the Smart CMS Content Assistant feature core.
 
 ### Prerequisites
 
@@ -50,9 +50,9 @@ interface AiCommerceConstants extends SprykerFeatureAiCommerceConstants
 }
 ```
 
-### 3) Configure AI models for Content Assistant
+### 3) Configure AI models for Smart CMS Content Assistant
 
-Add the Content Assistant named AI configuration entries to `config/Shared/config_ai.php`. The feature supports OpenAI, AWS Bedrock, and Anthropic. Only the configuration matching the vendor selected in the Back Office Configuration UI is used at runtime.
+Add the Smart CMS Content Assistant named AI configuration entries to `config/Shared/config_ai.php`. The feature supports OpenAI, AWS Bedrock, and Anthropic. Only the configuration matching the vendor selected in the Back Office Configuration UI is used at runtime.
 
 `config/Shared/config_ai.php`
 
@@ -95,7 +95,7 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS][AiCommerceConstants::AI_CONFIG
 
 {% info_block infoBox "Model requirements" %}
 
-The model configured for Content Assistant must support both image input and structured output.
+The model configured for Smart CMS Content Assistant must support both image input and structured output.
 
 Default model values:
 - OpenAI: `gpt-4.1`
@@ -106,7 +106,7 @@ Default model values:
 
 ### 4) Configure the Smart CMS configuration name
 
-Override `AiCommerceConfig` in the Zed layer to route Content Assistant to the correct named configuration based on the Back Office setting:
+Override `AiCommerceConfig` in the Zed layer to route Smart CMS Content Assistant to the correct named configuration based on the Back Office setting:
 
 **src/Pyz/Zed/AiCommerce/AiCommerceConfig.php**
 
@@ -135,7 +135,7 @@ class AiCommerceConfig extends SprykerAiCommerceConfig
 
 ### 5) Set up behavior
 
-Register the following plugins to wire Content Assistant into `AiFoundationDependencyProvider`:
+Register the following plugins to wire Smart CMS Content Assistant into `AiFoundationDependencyProvider`:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |--------|---------------|---------------|-----------|
@@ -355,7 +355,7 @@ console twig:cache:warmer
 
 ### 8) Enable the feature
 
-Enable Content Assistant in the Back Office:
+Enable Smart CMS Content Assistant in the Back Office:
 
 1. In the Back Office, go to **AI Commerce&nbsp;<span aria-label="and then">></span>&nbsp;Smart CMS&nbsp;<span aria-label="and then">></span>&nbsp;AI Vendor**.
 2. Select the desired **AI Configuration** (OpenAI, AWS Bedrock, or Anthropic).

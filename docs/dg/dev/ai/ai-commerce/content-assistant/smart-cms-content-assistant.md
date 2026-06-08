@@ -1,17 +1,17 @@
 ---
-title: Content Assistant
-description: Technical overview of the Content Assistant feature — architecture, AiFoundation integration, plugin structure, and configuration options.
+title: Smart CMS Content Assistant
+description: Technical overview of the Smart CMS Content Assistant feature — architecture, AiFoundation integration, plugin structure, and configuration options.
 last_updated: Jun 08, 2026
 template: concept-topic-template
 ---
 
-Content Assistant is an AI-powered panel embedded in the Back Office CMS Page and CMS Block glossary editors. It lets Back Office users generate and refine placeholder content per locale using a conversational AI interface, with full access to the entity context, SEO metadata, available CMS content widgets, and existing content items.
+Smart CMS Content Assistant is an AI-powered panel embedded in the Back Office CMS Page and CMS Block glossary editors. It lets Back Office users generate and refine placeholder content per locale using a conversational AI interface, with full access to the entity context, SEO metadata, available CMS content widgets, and existing content items.
 
-For the business overview and Back Office usage, see [Content Assistant](/docs/pbc/all/ai-commerce/latest/content-assistant.html).
+For the business overview and Back Office usage, see [Smart CMS Content Assistant](/docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html).
 
 ## Architecture
 
-Content Assistant is built on the `AiFoundation` abstraction layer and runs entirely in the Zed (Back Office) application.
+Smart CMS Content Assistant is built on the `AiFoundation` abstraction layer and runs entirely in the Zed (Back Office) application.
 
 The AI panel is injected into both glossary editors through Twig overrides at the project level:
 
@@ -35,7 +35,7 @@ The panel collects entity context (name, template, URL slug, key, SEO meta, stor
 
 | PLUGIN | LOCATION | DESCRIPTION |
 |--------|----------|-------------|
-| `SmartCmsContentToolSetPlugin` | `AiFoundationDependencyProvider::getAiToolSetPlugins()` | Registers the Content Assistant toolset, including the `get_content_items` tool. |
+| `SmartCmsContentToolSetPlugin` | `AiFoundationDependencyProvider::getAiToolSetPlugins()` | Registers the Smart CMS Content Assistant toolset, including the `get_content_items` tool. |
 
 Content widget plugins are registered in `AiCommerceDependencyProvider::getContentGuiEditorPlugins()` and are used to resolve available CMS widgets that the AI can reference in generated content:
 
@@ -49,13 +49,13 @@ Content widget plugins are registered in `AiCommerceDependencyProvider::getConte
 
 ## AI configuration
 
-Content Assistant uses a dedicated named AI configuration entry in `AiFoundation`. The active configuration is resolved at runtime based on the AI vendor selected in the Back Office configuration UI.
+Smart CMS Content Assistant uses a dedicated named AI configuration entry in `AiFoundation`. The active configuration is resolved at runtime based on the AI vendor selected in the Back Office configuration UI.
 
 | CONSTANT | DESCRIPTION |
 |----------|-------------|
-| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI` | Configuration for the OpenAI-backed Content Assistant agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS` | Configuration for the AWS Bedrock-backed Content Assistant agent. |
-| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC` | Configuration for the Anthropic-backed Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_OPENAI` | Configuration for the OpenAI-backed Smart CMS Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_AWS` | Configuration for the AWS Bedrock-backed Smart CMS Content Assistant agent. |
+| `AiCommerceConstants::AI_CONFIGURATION_SMART_CMS_ANTHROPIC` | Configuration for the Anthropic-backed Smart CMS Content Assistant agent. |
 
 The active configuration is selected by `AiCommerceConfig::getSmartCmsAiConfigurationName()`, which reads `AiCommerceConstants::CONFIGURATION_KEY_SMART_CMS_AI_CONFIGURATION` from the Back Office configuration UI. The default is `AI_CONFIGURATION_SMART_CMS_OPENAI`.
 
@@ -65,4 +65,4 @@ The feature can be enabled or disabled from the Back Office under **AI Commerce&
 
 ## Install
 
-[Install Content Assistant](/docs/dg/dev/ai/ai-commerce/content-assistant/install-content-assistant.html)
+[Install Smart CMS Content Assistant](/docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html)

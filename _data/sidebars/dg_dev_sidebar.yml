@@ -88,11 +88,11 @@ entries:
             nested:
               - title: Install Smart PIM
                 url: /docs/dg/dev/ai/ai-commerce/smart-pim/install-smart-pim.html
-          - title: Content Assistant
-            url: /docs/dg/dev/ai/ai-commerce/content-assistant/content-assistant.html
+          - title: Smart CMS Content Assistant
+            url: /docs/dg/dev/ai/ai-commerce/content-assistant/smart-cms-content-assistant.html
             nested:
-              - title: Install Content Assistant
-                url: /docs/dg/dev/ai/ai-commerce/content-assistant/install-content-assistant.html
+              - title: Install Smart CMS Content Assistant
+                url: /docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:

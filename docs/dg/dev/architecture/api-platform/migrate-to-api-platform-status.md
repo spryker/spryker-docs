@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: May 29, 2026
+last_updated: Jun 5, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -130,7 +130,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CustomersRestApi | StorefrontAPI | Migrated | — | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Migrated | CartCodesRestApi, CartsRestApi | (extension-only) |
 | DiscountsRestApi | StorefrontAPI | Migrated | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
-| EntityTagsRestApi | Extension-only StorefrontAPI | Planned | — | (extension-only) |
+| EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | HealthCheck | StorefrontAPI | Migrated | — | GET /health-check |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned | ProductOfferServicePointAvailabilitiesRestApi | (extension-only) |
@@ -171,6 +171,7 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | RelatedProductsRestApi | StorefrontAPI | Migrated | ProductsRestApi | GET /abstract-products/{id}/related-products |
 | SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Migrated | CartsRestApi, CheckoutRestApi | (extension-only) |
 | SalesReturnsRestApi | StorefrontAPI | Migrated | — | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
+| SelfServicePortal | StorefrontAPI | Migrated | — | GET /booked-services<br>GET,POST /ssp-assets<br>GET /ssp-assets/{reference}<br>GET,POST /ssp-inquiries<br>GET /ssp-inquiries/{reference} |
 | SecurityBlockerRestApi | Extension-only StorefrontAPI | Migrated | — | (extension-only) |
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated | CheckoutRestApi | (extension-only) |
 | ServicePointsRestApi | StorefrontAPI | Migrated | — | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |

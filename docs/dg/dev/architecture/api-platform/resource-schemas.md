@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: May 19, 2026
+last_updated: Jun 3, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -164,6 +164,9 @@ resource:
   paginationMaximumItemsPerPage: 100
   paginationClientEnabled: true
   paginationClientItemsPerPage: true
+
+  # JSON:API `included` array ordering — see "Sort priority for included resources"
+  includedSortPriority: 0
 
   # Security
   security: "is_granted('ROLE_ADMIN')"
@@ -685,6 +688,59 @@ includes:
 ```
 
 **Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources, including provider-based and resolver-based dispatch, response shape, validation, and worked examples.
+
+## Sort priority for included resources
+
+The JSON:API response wraps related resources in an `included` array. By default, API Platform sorts that array alphabetically by resource `type`. Use `includedSortPriority` on a resource to override where its entries appear relative to other types.
+
+### How it works
+
+| Rule | Behavior |
+|------|----------|
+| Default | Every resource has an implicit priority of `0`. |
+| Higher priority | Entries appear **later** in the `included` array. |
+| Equal priority | Entries are sorted alphabetically by `type`. |
+
+The priority is read from the resource's own `.resource.yml` and applied globally to every response that surfaces that type in `included`.
+
+### Syntax
+
+```yaml
+resource:
+  name: CartItems
+  shortName: items
+
+  includedSortPriority: 100
+```
+
+The generator passes the value through to the generated `#[ApiResource]` attribute via `extraProperties`:
+
+```php
+#[ApiResource(
+    shortName: 'items',
+    extraProperties: ['includedSortPriority' => 100],
+    // ...
+)]
+```
+
+### When to set a custom priority
+
+Set `includedSortPriority` higher than `0` when a resource must appear after its nested children in the `included` array. The typical case is cart-item-like resources whose `?include=` chain resolves to abstract or concrete products: keeping the parent items last preserves the ordering of the legacy REST API and matches the order most clients expect when iterating the `included` array.
+
+The following resources ship with `includedSortPriority: 100`:
+
+- `items`
+- `guest-cart-items`
+- `bundle-items`
+- `configurable-bundle-template-image-sets`
+
+All other shipped resources rely on the default of `0`. Override the priority on project-level resources only when you need to enforce a specific ordering in `included`.
+
+{% info_block infoBox "Sort priority is not a guarantee of stable ordering across versions" %}
+
+`includedSortPriority` is a hint for the sort algorithm, not a JSON:API contract. Clients should still address resources by `type` and `id` rather than by index in the `included` array.
+
+{% endinfo_block %}
 
 ## Resource generation process
 

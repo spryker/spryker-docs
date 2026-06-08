@@ -1,6 +1,6 @@
 ---
-title: Security release notes 202605.0
-description: Security updates released for version 202605.0
+title: Security release notes 202606.0
+description: Security updates released for version 202606.0
 last_updated: Jun 8, 2026
 template: concept-topic-template
 publish_date: "2026-05-18"

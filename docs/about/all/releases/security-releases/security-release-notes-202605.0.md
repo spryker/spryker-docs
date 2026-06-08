@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202605.0
 description: Security updates released for version 202605.0
-last_updated: May 29, 2026
+last_updated: Jun 8, 2026
 template: concept-topic-template
 publish_date: "2026-05-18"
 ---
@@ -168,4 +168,47 @@ Update the affected packages:
 ```bash
 composer update twig/twig:"^3.26.0" spryker/twig:"^3.31.0"
 composer show twig/twig spryker/twig # Verify the versions
+```
+
+
+## DOM-based cross-site scripting (XSS) in Back Office JavaScript modules
+
+Several Back Office JavaScript modules passed untrusted, unsanitized data directly into jQuery execution sinks, such as the `$()` constructor, `.append()`, `.html()`, or sensitive attributes like `href`. If the data contained malicious HTML or JavaScript, jQuery's internal engine evaluated and executed it, leading to DOM-based cross-site scripting (XSS).
+
+### Affected modules
+
+- `spryker/cms`: < 7.20.2
+- `spryker/cms-slot-block-gui`: < 1.6.2
+- `spryker/company-role-gui`: < 1.11.2
+- `spryker/content-gui`: < 3.1.2
+- `spryker/file-manager-gui`: < 3.1.2
+- `spryker/gui`: < 5.3.2
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/cms:"^7.20.2" spryker/cms-slot-block-gui:"^1.6.2" spryker/company-role-gui:"^1.11.2" spryker/content-gui:"^3.1.2" spryker/file-manager-gui:"^3.1.2" spryker/gui:"^5.3.2"
+composer show spryker/cms spryker/cms-slot-block-gui spryker/company-role-gui spryker/content-gui spryker/file-manager-gui spryker/gui # Verify the versions
+```
+
+If you extended any of the affected JavaScript modules on the project level, never pass untrusted user input directly into the jQuery `$()` constructor or DOM manipulation methods. Use secure alternatives such as `.text()` or the native `textContent` property to render text. If you must render dynamic HTML, sanitize the input first with [DOMPurify](https://www.npmjs.com/package/dompurify).
+
+1. Install the `dompurify` package:
+
+```bash
+npm install dompurify
+```
+
+2. Import `DOMPurify` and sanitize the untrusted data before passing it into a jQuery sink:
+
+```js
+import DOMPurify from 'dompurify';
+
+// Before
+$(container).html(untrustedData);
+
+// After
+$(container).html(DOMPurify.sanitize(untrustedData));
 ```

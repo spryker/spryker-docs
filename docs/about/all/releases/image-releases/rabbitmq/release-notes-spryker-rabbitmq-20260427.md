@@ -18,15 +18,6 @@ If you found a new security vulnerability, contact us at **security@spryker.com*
 
 Adjusted migration to check if rabbit settings already exist. 
 
-### Security Fixes
-
-
-### Official RabbitMQ release notes page
-
-https://www.rabbitmq.com/release-information
-
-!!! PLEASE INCLUDE RELEASE NOTES OF THE SPECIFIC VERSION FROM THE OFFICIAL SOURCE !!!
-
 ### Version release notes
 
-
+RMQ 4.1 -- [https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5](https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.1.5)

@@ -1,7 +1,7 @@
 ---
 title: Spryker Core Back Office feature overview
 description: The document provides general information about the actions you can perform in Spryker Back Office.
-last_updated: Jun 16, 2021
+last_updated: May 7, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/the-back-office-overview
 originalArticleId: 33ffb1b7-d9b5-457a-90a1-170e36479d5b
@@ -70,3 +70,4 @@ You can always define what exactly is going to be needed for your specific proje
 |---------|---------|
 | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Back Office Translations overview](/docs/pbc/all/back-office/latest/base-shop/back-office-translations-overview.html) |
 | [Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Users and rights overview](/docs/pbc/all/user-management/latest/base-shop/user-and-rights-overview.html)  |
+| [Install Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html) | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |

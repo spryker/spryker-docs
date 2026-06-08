@@ -1,7 +1,7 @@
 ---
 title: Install AI Commerce
 description: Learn how to install the AI Commerce package, which is the base for AI-powered storefront features like Visual Add to Cart.
-last_updated: Mar 31, 2026
+last_updated: Apr 25, 2026
 template: feature-integration-guide-template
 ---
 
@@ -47,3 +47,37 @@ $config[\Spryker\Shared\AiFoundation\AiFoundationConstants::AI_CONFIGURATIONS] =
 ```php
 require 'config_ai.php';
 ```
+
+## 3) Enable AI Commerce features at the project level
+
+AI Commerce features are disabled by default in the module-level configuration. To enable individual features, create a project-level configuration file that overrides the default settings.
+
+Create the following file:
+
+**data/configuration/ai_commerce.configuration.yml**
+
+```yaml
+features:
+    - key: ai_commerce
+      tabs:
+          - key: backoffice_assistant
+            enabled: true
+          - key: quick_order
+            enabled: true
+          - key: search_by_image
+            enabled: true
+```
+
+Set `enabled: true` only for the features you want to activate. You can omit tabs you do not want to enable.
+
+After creating the file, sync the configuration to the database:
+
+```bash
+console configuration:sync
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, go to **AI Commerce** and make sure the enabled features are visible in the navigation.
+
+{% endinfo_block %}

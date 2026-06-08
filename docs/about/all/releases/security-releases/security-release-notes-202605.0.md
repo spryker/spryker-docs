@@ -1,0 +1,171 @@
+---
+title: Security release notes 202605.0
+description: Security updates released for version 202605.0
+last_updated: May 29, 2026
+template: concept-topic-template
+publish_date: "2026-05-18"
+---
+
+This document describes the security-related issues that have been recently resolved.
+
+For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
+
+## Information disclosure via phpinfo() method
+
+{% info_block warningBox "Prerequisite" %}
+
+This security update requires [Spryker 202604.0](/docs/about/all/releases/release-notes-202604.0.html) or later. Ensure your project is upgraded to this version before applying the fix.
+
+{% endinfo_block %}
+
+Instances of phpinfo() were identified in the codebase, which could potentially expose sensitive configuration details and environment variables to unauthorized parties. Such an instance was found to be part of the default Back Office setup.
+
+### Affected modules
+
+- `spryker/setup`: < 4.8.0
+- `spryker/maintenance`: < 3.6.0
+
+### Fix the vulnerability
+
+Update the `spryker/setup` package to version 4.8.0 or higher:
+
+```bash
+composer update spryker/setup:"^4.8.0"
+composer show spryker/setup # Verify the version
+```
+
+Update the `spryker/maintenance` package to version 4.0.0 or higher:
+
+```bash
+composer update spryker/maintenance:"^4.0.0"
+composer show spryker/maintenance # Verify the version
+```
+
+
+## Possible brute force attack in adding discount voucher / gift card codes
+
+An automated attack could attempt to guess valid strings by using every possible combination and/or pre-defined dictionaries.
+In the site frontend, there is the possibility to use a discount code (voucher) or a gift card code, which is a predefined or randomized string.
+
+### Affected modules
+
+- `spryker-shop/cart-code-widget`: < 1.6.0
+
+### Fix the vulnerability
+
+Update the `spryker-shop/cart-code-widget` package to version 1.7.0 or higher:
+
+```bash
+composer update spryker-shop/cart-code-widget:"^1.7.0"
+composer show spryker-shop/cart-code-widget # Verify the version
+```
+
+
+Enable `SecurityBlockerCartCodeEventDispatcherPlugin` plugin:
+
+**src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\EventDispatcher;
+
+use Spryker\Yves\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+use SprykerShop\Yves\CartCodeWidget\Plugin\EventDispatcher\SecurityBlockerCartCodeEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     */
+    protected function getEventDispatcherPlugins(): array
+    {
+        return [
+            new SecurityBlockerCartCodeEventDispatcherPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. From the cart page, submit an invalid voucher or gift card code multiple times.
+2. After exceeding the configured number of attempts, make sure the request is blocked and the `cart_code_widget.error.too_many_requests` error message is displayed.
+
+{% endinfo_block %}
+
+Add glossary translations for the message `cart_code_widget.error.too_many_requests`.
+
+
+## File enumeration via predictable file IDs in File Manager
+
+Files stored through the File Manager module were referenced using sequential numeric IDs, making it possible to enumerate and access files by guessing IDs. Introducing UUID-based identifiers for file entities prevents unauthorized enumeration of file resources.
+
+### Affected modules
+
+- `spryker/file-manager`: < 2.9.0
+- `spryker/file-manager-storage`: < 2.7.0
+- `spryker-shop/content-file-widget`: < 2.1.0
+- `spryker-shop/file-manager-widget`: < 2.1.0
+- `spryker/synchronization-behavior`: < 1.15.0
+- `spryker/propel`: < 3.50.1
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update spryker/file-manager:"^2.9.0" spryker/file-manager-storage:"^2.7.0" spryker-shop/content-file-widget:"^2.1.0" spryker-shop/file-manager-widget:"^2.1.0" spryker/synchronization-behavior:"^1.15.0" spryker/propel:"^3.50.1" --update-with-dependencies
+```
+
+### Activate UUID for file entities
+
+1. Enable UUID generation by overriding `FileManagerConfig::isUuidEnabled()` in your project configuration. By default, UUID generation is disabled.
+
+**src/Pyz/Zed/FileManager/FileManagerConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\FileManager;
+
+use Spryker\Zed\FileManager\FileManagerConfig as SprykerFileManagerConfig;
+
+class FileManagerConfig extends SprykerFileManagerConfig
+{
+    /**
+     * @return bool
+     */
+    public function isUuidEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+2. Re-save all existing file entities to generate UUIDs for them. Make sure that the UUID field is populated for each file entity.
+
+3. Rebuild the storage data:
+
+```bash
+console publish:trigger-events -r file
+```
+
+
+## PHP code injection via Twig template name
+
+The `Compiler::string()` method in Twig failed to escape single quotes when generating PHP double-quoted string literals. An attacker could craft a template name containing a single quote to terminate the surrounding PHP string early, injecting arbitrary PHP expressions into the compiled Twig cache file. The injected code executes when the cache file is loaded, bypassing the Twig sandbox and enabling remote code execution. Because `SecurityPolicy` permits `{% raw %}{% use %}{% endraw %}` tags in sandboxed templates, this vulnerability is exploitable even in restricted environments.
+
+### Affected modules
+
+- `twig/twig`: < 3.26.0
+- `spryker/twig`: < 3.31.0
+
+### Fix the vulnerability
+
+Update the affected packages:
+
+```bash
+composer update twig/twig:"^3.26.0" spryker/twig:"^3.31.0"
+composer show twig/twig spryker/twig # Verify the versions
+```

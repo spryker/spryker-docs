@@ -7,7 +7,7 @@ entries:
   - title: About Eco modules
     url: /docs/integrations/eco-modules.html
   - title: Integrations catalog
-    url: /docs/integrations/third-party-integrations.html
+    url: /docs/integrations/integrations-catalog.html
   - title: Spryker APIs
     nested:
     - title: Getting started with APIs
@@ -189,8 +189,8 @@ entries:
       url: /docs/integrations/custom-building-integrations/using-jenkins-for-third-party-integrations.html
     - title: Implementing ERP Integration
       url: /docs/integrations/custom-building-integrations/erp-integration-template.html
-    - title: Implement PunchOut on your project
-      url: /docs/integrations/custom-building-integrations/punchout-development-plan.html
+    - title: Integrate PunchOut support on your project
+      url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
     - title: Using PSP Integration Template
       url: /docs/integrations/custom-building-integrations/psp-integration-template.html
   - title: Community contributions

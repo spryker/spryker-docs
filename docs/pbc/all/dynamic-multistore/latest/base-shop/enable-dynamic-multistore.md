@@ -33,10 +33,14 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 - Optional: We recommend using the `--store` parameter instead of `APPLICATION_STORE` env variable; both methods are supported.
 
 3. After enabling DMS, the basic domain structure must change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects. If your target domain doesn't change, for example it doesn't contain a region name - yves.mysprykershop.com - you may skip this step.
-4. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
+
+4. Create a support case and provide the deploy.yml file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our deploy.yml and would like it to be activated."
+
+5. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
+
 The downtime associated with the maintenance mode is limited to the deployment time, which usually takes up to an hour.
 
-5. Update AWS deployment files to DMS mode using the example:
+6. Update AWS deployment files to DMS mode using the example:
 
 Original environment variables section:
 
@@ -99,7 +103,7 @@ regions:
     namespace: eu_search
 ```
 
-6. Run a normal deploy for your server pipeline.
+7. Run a normal deploy for your server pipeline.
 
 
 {% info_block warningBox "Verification" %}

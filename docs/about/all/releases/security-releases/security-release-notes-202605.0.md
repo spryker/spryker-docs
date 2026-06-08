@@ -3,7 +3,9 @@ title: Security release notes 202605.0
 description: Security updates released for version 202605.0
 last_updated: Jun 8, 2026
 template: concept-topic-template
-publish_date: "2026-05-18"
+publish_date: "2026-06-08"
+redirect_from:
+- /docs/about/all/releases/security-releases/security-release-notes-202605.0.html
 ---
 
 This document describes the security-related issues that have been recently resolved.

@@ -66,7 +66,7 @@ function initHubspotForm() {
 }
 
 function initAnchors() {
-    let headingSelector = '.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])';
+    let headingSelector = '.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip],.post-content h6:not([data-toc-skip])';
 
     if (window.Toc && window.Toc.helpers) {
         $(headingSelector).each(function (i, el) {
@@ -81,7 +81,15 @@ function initAnchors() {
 
     anchorLinks.on('click', function (e) {
         e.preventDefault();
-        $window.scrollTop($(e.target).offset().top - pageOffset + 1);
+
+        let link = $(e.currentTarget),
+            href = link.attr('href');
+
+        $window.scrollTop(link.offset().top - pageOffset + 1);
+
+        if (href) {
+            window.history.replaceState('', '', href);
+        }
     });
 }
 
@@ -869,8 +877,18 @@ function initToc() {
         if (location.hash) {
             let target = $(location.hash);
 
+            if (!target.length) return;
+
             $window.scrollTop(target.offset().top - pageOffset + 1);
         }
+    }
+
+    // Generate anchor ids for all heading levels before resolving the hash,
+    // so deep-level (h4/h5) permalinks scroll correctly on initial page load.
+    if (Toc.helpers) {
+        $('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])').each(function (i, el) {
+            Toc.helpers.generateAnchor(el);
+        });
     }
 
     checkHash();

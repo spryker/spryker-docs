@@ -1,7 +1,7 @@
 ---
 title: AI Dev SDK
 description: Spryker AI Dev SDK
-last_updated: May 21, 2026
+last_updated: Jun 9, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/dg/dev/ai-dev/ai-dev
@@ -21,7 +21,7 @@ The AI Dev SDK provides an MCP server, which is a console command that your AI t
 
 ## How it works
 
-After you install the SDK, [add a simple configuration](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) to your AI tool. When your Spryker project is running, your AI tool can access Spryker-specific information and prompts through the MCP server.
+After you install the SDK, [add a simple configuration](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html) to your AI tool. When your Spryker project is running, your AI tool can access Spryker-specific information through the MCP server.
 
 ## Result
 
@@ -45,17 +45,13 @@ AI can analyze your OMS flows to find possible next states, transitions, conditi
 
 AI can analyze, modify, and transform multi-column CSV files correctly. This task normally requires significant manual effort.
 
-### Sharing prompts across your team
-
-The SDK includes access to the Spryker prompt library, and you can add your own project-specific prompts. This means your team can reuse effective prompts instead of everyone writing their own.
-
 ### Database queries
 
 AI can execute read-only database queries to inspect data when debugging issues.
 
 ### Extensible for your project
 
-You can extend the MCP server by creating custom plugins (to add new tools) and custom prompts.
+You can extend the MCP server by creating custom plugins to add new tools.
 
 ## Install the AI Dev SDK
 

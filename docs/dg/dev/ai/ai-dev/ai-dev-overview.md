@@ -1,9 +1,9 @@
 ---
 title: AI Dev SDK Overview
 description: Integrate AI development tools and MCP server into your Spryker application
-last_updated: May 21, 2026
+last_updated: Jun 9, 2026
 label: early-access
-keywords: ai, development, mcp, model context protocol, ai-dev, tools, prompts, extension
+keywords: ai, development, mcp, model context protocol, ai-dev, tools, extension
 template: howto-guide-template
 ---
 
@@ -24,14 +24,13 @@ This document describes how to integrate and use the AiDev module to connect you
 
 ## Overview
 
-The AiDev module provides an MCP server that enables AI assistants to interact with your Spryker application. 
-It exposes Spryker-specific information through MCP tools and prompts, allowing AI assistants to better understand and work with your codebase.
+The AiDev module provides an MCP server that enables AI assistants to interact with your Spryker application.
+It exposes Spryker-specific information through MCP tools, allowing AI assistants to better understand and work with your codebase.
 
 The module includes:
 - **MCP Server**: A console command that runs an MCP server to communicate with AI assistants
-- **Extension Points**: Plugin interfaces for adding custom MCP tools and prompts
+- **Extension Points**: Plugin interfaces for adding custom MCP tools
 - **Built-in Tools**: Pre-configured tools for accessing Spryker transfers, interfaces, and OMS information
-- **Prompt Generation**: Automatic generation of context-aware prompts from documentation
 
 ## Console commands
 
@@ -47,8 +46,7 @@ docker/sdk console ai-dev:mcp-server -q
 
 This command:
 - Starts an MCP server using stdio transport
-- Registers all configured MCP tool and prompt plugins
-- Automatically generates prompts if they do not exist
+- Registers all configured MCP tool plugins
 - Listens for requests from AI assistants
 
 **Usage**: This command is typically configured in AI assistant tools (like Claude Desktop) to enable them to access Spryker-specific information.
@@ -99,21 +97,6 @@ If you use Docker sync, the `/.git*` entry in `.dockersyncignore` also excludes 
 
 **Usage**: Run this command once when setting up AI tooling for a project.
 
-### Generate Prompts Command
-
-The `ai-dev:generate-prompts` command generates MCP prompts from a configured [Prompt Library](https://github.com/spryker-dev/prompt-library).
-
-```bash
-docker/sdk console ai-dev:generate-prompts
-```
-
-This command:
-- Fetches prompts
-- Generates PHP-based prompt classes
-- Stores generated prompts in the configured directory
-
-**Usage**: Use this command when you need to regenerate prompts from updated documentation or when initializing the module for the first time.
-
 ## Claude Code plugin
 
 The AI Dev SDK ships a Claude Code plugin — `spryker-ai-dev-sdk` — through the `spryker-plugins-official` marketplace. The plugin bundles Spryker-aware skills and the `spryker-code-reviewer` subagent. See [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html) for installation instructions and a full list of capabilities.
@@ -152,43 +135,9 @@ class AiDevDependencyProvider extends SprykerAiDevDependencyProvider
 }
 ```
 
-### AiDevMcpPromptPluginInterface
-
-Implement this interface to add custom MCP prompts that provide context or instructions to AI assistants.
-
-**Interface location**: `SprykerSdk\Zed\AiDev\Dependency\AiDevMcpPromptPluginInterface`
-
-**Integration**: Register your prompt plugins in `AiDevDependencyProvider::getMcpPromptPlugins()`:
-
-```php
-<?php
-
-namespace Pyz\Zed\AiDev;
-
-use SprykerSdk\Zed\AiDev\AiDevDependencyProvider as SprykerAiDevDependencyProvider;
-use Pyz\Zed\AiDev\Communication\Plugins\CustomAiDevMcpPromptPlugin;
-
-class AiDevDependencyProvider extends SprykerAiDevDependencyProvider
-{
-    /**
-     * @return array<\SprykerSdk\Zed\AiDev\Dependency\AiDevMcpPromptPluginInterface>
-     */
-    protected function getMcpPromptPlugins(): array
-    {
-        return [
-            new CustomAiDevMcpPromptPlugin(),
-        ];
-    }
-}
-```
-
 ## Configuration
 
-The AiDev module can be configured through the `AiDevConfig` class. Key configuration options include:
-
-- **Prompt Directory**: Set the directory where generated prompts are stored
-
-Refer to the module's configuration class for available options and their default values.
+The AiDev module can be configured through the `AiDevConfig` class. Refer to the module's configuration class for available options and their default values.
 
 ## Debugging the MCP server
 
@@ -205,7 +154,7 @@ npx @modelcontextprotocol/inspector docker/sdk console ai-dev:mcp-server -q
 This command:
 - Starts the MCP Inspector in your browser
 - Connects to your local MCP server
-- Displays all available tools and prompts
+- Displays all available tools
 - Lets you test tool calls interactively
 
 **With Xdebug:**

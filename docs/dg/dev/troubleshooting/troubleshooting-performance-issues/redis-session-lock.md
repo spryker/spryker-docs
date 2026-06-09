@@ -267,13 +267,13 @@ To set up inclusion-based session locking:
 composer require spryker/session-redis:"^1.13.0" --update-with-dependencies
 ```
 
-2. Register the exclusion condition plugins in `src/Pyz/Yves/SessionRedis/SessionRedisDependencyProvider.php`:
+2. Register the inclusion condition plugins in `src/Pyz/Yves/SessionRedis/SessionRedisDependencyProvider.php`:
 
 ```php
 namespace Pyz\Yves\SessionRedis;
 
 use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\BotSessionRedisLockingExclusionConditionPlugin;
-use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingExclusionConditionPlugin;
+use Spryker\Yves\SessionRedis\Plugin\SessionRedisLockingExclusion\UrlSessionRedisLockingInclusionConditionPlugin;
 
 class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvider
 {
@@ -283,7 +283,7 @@ class SessionRedisDependencyProvider extends SprykerSessionRedisDependencyProvid
     protected function getSessionRedisLockingExclusionConditionPlugins(): array
     {
         return [
-            new UrlSessionRedisLockingExclusionConditionPlugin(),
+            new UrlSessionRedisLockingInclusionConditionPlugin(),
             new BotSessionRedisLockingExclusionConditionPlugin(),
         ];
     }

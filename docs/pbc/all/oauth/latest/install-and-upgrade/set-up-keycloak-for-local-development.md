@@ -300,7 +300,7 @@ docker/sdk up
 | Surface | URL | Test user |
 |---|---|---|
 | Storefront | `http://yves.eu.spryker.local/login` | Sonia Wagner — `sonia@acme.com` |
-| Back-office | `http://backoffice.eu.spryker.local/security-gui/login` | Admin Spryker — `admin@spryker.local` |
+| Back-office | `http://backoffice.eu.spryker.local/security-gui/login` | Admin Spryker — `admin@spryker.com` |
 | Merchant Portal | `http://mp.eu.spryker.local/security-merchant-portal-gui/login` | Harald Schmidt — `herald@spryker.com` |
 
 On each login page, click the SSO button, authenticate with the test user credentials (`change123`), and confirm you are redirected back and logged in.

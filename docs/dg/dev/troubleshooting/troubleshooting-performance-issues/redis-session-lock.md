@@ -321,6 +321,8 @@ class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
             '/^.*\/checkout/',
             // Customer authentication — creates or destroys the session
             '/^.*\/(login|logout|register)($|\/)/',
+            // Multi-factor authentication
+            '/^.*\/multi-factor-auth\//',
             // Customer account writes — profile, addresses, newsletter preference, account deletion
             '/^.*\/customer\/(profile|address|newsletter|delete)/',
         ];

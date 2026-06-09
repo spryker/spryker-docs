@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Check out purchases"
 description: Learn how to check out a purchase using the Spryker Glue API with a list of attributes and their values.
-last_updated: Jul 13, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
@@ -229,7 +229,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
         "attributes": {
             "customer": {
             "salutation": "Mr",
-            "email": "sonia@spryker.com",
+            "email": "sonia@acme.com",
             "firstName": "Sonia",
             "lastName": "Wagner"
             },
@@ -298,7 +298,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
         "attributes": {
             "customer": {
             "salutation": "Mr",
-            "email": "sonia@spryker.com",
+            "email": "sonia@acme.com",
             "firstName": "Sonia",
             "lastName": "Wagner"
             },

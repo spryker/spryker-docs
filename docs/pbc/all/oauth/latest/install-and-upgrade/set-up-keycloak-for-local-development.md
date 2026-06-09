@@ -2,7 +2,7 @@
 title: Set up Keycloak for local development
 description: How to add a Keycloak Identity Provider to your local Spryker Docker environment for testing Federated Authentication on Storefront, Back-office, and Merchant Portal.
 template: feature-integration-guide-template
-last_updated: Apr 21, 2026
+last_updated: June 9, 2026
 ---
 
 This guide sets up a local Keycloak instance alongside your Spryker Docker environment. Keycloak runs as an additional Docker service, is backed by the existing MariaDB instance, and is automatically provisioned with a realm, three OAuth2 clients, and test users on first boot — no manual UI configuration required.
@@ -138,8 +138,8 @@ Create the realm configuration file that Keycloak imports on first boot. This fi
       "realmRoles": ["user"]
     },
     {
-      "username": "sonia@spryker.com",
-      "email": "sonia@spryker.com",
+      "username": "sonia@acme.com",
+      "email": "sonia@acme.com",
       "firstName": "Sonia",
       "lastName": "Wagner",
       "enabled": true,
@@ -238,8 +238,8 @@ The `defaultClientScopes: ["openid", "profile", "email"]` ensures Keycloak retur
 
 | Name | Email | Use for |
 |---|---|---|
-| Admin Spryker | `admin@spryker.local` | Storefront login |
-| Sonia Wagner | `sonia@spryker.com` | Back-office login |
+| Sonia Wagner | `sonia@acme.com` | Storefront login |
+| Admin Spryker | `admin@spryker.local` | Back-office login |
 | Harald Schmidt | `herald@spryker.com` | Merchant Portal login |
 
 Make sure the email address of the Merchant Portal test user exists in Spryker's database before testing. Storefront and Back-office users are created automatically on first SSO login.
@@ -299,8 +299,8 @@ docker/sdk up
 
 | Surface | URL | Test user |
 |---|---|---|
-| Storefront | `http://yves.eu.spryker.local/login` | Admin Spryker — `admin@spryker.local` |
-| Back-office | `http://backoffice.eu.spryker.local/security-gui/login` | Sonia Wagner — `sonia@spryker.com` |
+| Storefront | `http://yves.eu.spryker.local/login` | Sonia Wagner — `sonia@acme.com` |
+| Back-office | `http://backoffice.eu.spryker.local/security-gui/login` | Admin Spryker — `admin@spryker.com` |
 | Merchant Portal | `http://mp.eu.spryker.local/security-merchant-portal-gui/login` | Harald Schmidt — `herald@spryker.com` |
 
 On each login page, click the SSO button, authenticate with the test user credentials (`change123`), and confirm you are redirected back and logged in.

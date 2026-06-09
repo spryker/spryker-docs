@@ -2,7 +2,7 @@
 title: Set up Keycloak for local development
 description: How to add a Keycloak Identity Provider to your local Spryker Docker environment for testing Federated Authentication on Storefront, Back-office, and Merchant Portal.
 template: feature-integration-guide-template
-last_updated: Apr 21, 2026
+last_updated: June 9, 2026
 ---
 
 This guide sets up a local Keycloak instance alongside your Spryker Docker environment. Keycloak runs as an additional Docker service, is backed by the existing MariaDB instance, and is automatically provisioned with a realm, three OAuth2 clients, and test users on first boot — no manual UI configuration required.

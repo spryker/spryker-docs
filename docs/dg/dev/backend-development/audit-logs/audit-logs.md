@@ -2,7 +2,7 @@
 title: Audit logs
 description: Track and manage backend operations in Spryker with audit logs, enhancing transparency and security by logging critical system activities for monitoring and review.
 template: howto-guide-template
-last_updated: Jun 16, 2024
+last_updated: Jun 9, 2026
 related:
   - title: Install the Spryker Core feature
     link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html

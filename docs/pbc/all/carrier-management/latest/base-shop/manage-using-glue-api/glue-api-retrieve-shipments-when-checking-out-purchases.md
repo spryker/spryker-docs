@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Retrieve shipments when checking out purchases"
 description: Learn how to use Glue API to retrieve shipment details during checkout in Spryker Cloud Commerce OS
-last_updated: July 28, 2022
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html

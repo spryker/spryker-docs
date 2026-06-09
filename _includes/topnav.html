@@ -7,7 +7,7 @@
                     <div class="main-header__left-inner">
                         <div class="main-header__meta">
                             <strong class="main-header__meta-title">{{ page.title }}</strong>
-                            <div class="main-header__meta-subtitle">Last updated: <time datetime="{% if page.last_updated %}{{ page.last_updated | date_to_xmlschema }}{% else %}{{ page.last_modified_at | date_to_xmlschema }}{% endif %}">{% if page.last_updated %} {{ page.last_updated | date: "%B %-d, %Y" }} {% else %} {{ page.last_modified_at | date: "%B %-d, %Y" }} {% endif %}</time></div>
+                            <div class="main-header__meta-subtitle">Last updated: <time datetime="">{% if page.last_updated %} {{ page.last_updated | date: "%B %-d, %Y" }} {% else %} {{ page.last_modified_at | date: "%B %-d, %Y" }} {% endif %}</time></div>
                         </div>
 
                         <strong class="main-header__logo">
@@ -117,9 +117,8 @@
 
                 </div>
                 <div class="main-header__right">
-                    <div class="header-switcher">
                     {% if page.url != "/index.html" and page.url != "/search/" %}
-
+                        <div class="header-switcher">
                             {% if site.github_editme_path %}
                                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button main-header__button button--small header-switcher__sticky" role="button"><i class="icon-github"></i> Edit on GitHub</a>
                             {% endif %}
@@ -133,6 +132,7 @@
                                 <i class="icon-article"></i>
                                 Release History
                             </a>
+                        </div>
                         {% else %}
                         <a href="/feed.xml" class="button main-header__button button--small">
                             <i class="icon-rss"></i>
@@ -144,8 +144,8 @@
                             <i class="icon-article"></i>
                             Release History
                         </a>
+                        </div>
                     {% endif %}
-                    </div>
 
                     <a href="#" class="nav-opener" aria-label="navigation popup opener">
                         <span class="nav-opener__top"></span>

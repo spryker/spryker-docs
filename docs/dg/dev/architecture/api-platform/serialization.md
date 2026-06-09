@@ -1,7 +1,7 @@
 ---
 title: Serialization
 description: How API Platform uses the Spryker Serializer module for request and response serialization.
-last_updated: Mar 29, 2026
+last_updated: Jun 9, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -14,7 +14,7 @@ related:
     link: docs/dg/dev/guidelines/serializer-guidelines.html
 ---
 
-API Platform uses the [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) for converting between PHP objects back and forth. The Serializer is registered as a Symfony service and integrates directly with API Platform's serialization pipeline.
+API Platform uses the [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) to convert between PHP objects and their serialized representations in both directions. The Serializer is registered as a Symfony service and integrates directly with API Platform's serialization pipeline.
 
 ## How it works
 

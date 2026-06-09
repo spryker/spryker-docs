@@ -1326,6 +1326,8 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/troubleshooting.html
         - title: Sparse fieldsets
           url: /docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+        - title: Serialization
+          url: /docs/dg/dev/architecture/api-platform/serialization.html
         - title: Native API Platform Resources
           url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 
@@ -1555,6 +1557,8 @@ entries:
       url: /docs/dg/dev/guidelines/module-configuration-convention.html
     - title: Security guidelines
       url: /docs/dg/dev/guidelines/security-guidelines.html
+    - title: Serializer guidelines
+      url: /docs/dg/dev/guidelines/serializer-guidelines.html
 
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html

@@ -1,7 +1,7 @@
 ---
 title: Integrate Stripe
 description: Learn how to install and configure the spryker-eco/stripe module in your Spryker project.
-last_updated: June 09, 2026
+last_updated: Jun 09, 2026
 template: howto-guide-template
 redirect_from:
 - docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe

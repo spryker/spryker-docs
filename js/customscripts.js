@@ -7,6 +7,8 @@ $(document).ready(function () {
 
     initResponsiveTable();
 
+    initToc();
+
     initAnchors();
 
     initSidebarToggle();
@@ -22,8 +24,6 @@ $(document).ready(function () {
     initHomeSearchPosition();
 
     initPopup();
-
-    initToc();
 
     initVertionDropdown();
 
@@ -66,7 +66,15 @@ function initHubspotForm() {
 }
 
 function initAnchors() {
-    anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
+    let headingSelector = '.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])';
+
+    if (window.Toc && window.Toc.helpers) {
+        $(headingSelector).each(function (i, el) {
+            window.Toc.helpers.generateAnchor(el);
+        });
+    }
+
+    anchors.add(headingSelector);
 
     let anchorLinks = $('.anchorjs-link'),
         $window = $(window);
@@ -662,23 +670,33 @@ function initToc() {
                     .trim() // "⚡⚡ Don't forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
                     .replace(/\'/gi, '') // "⚡⚡ Dont forget: URL fragments should be i18n-friendly, hyphenated, short, and clean."
                     .replace(nonsafeChars, '-') // "⚡⚡-Dont-forget--URL-fragments-should-be-i18n-friendly--hyphenated--short--and-clean-"
-                    .replace(/-{2,}/g, '-') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-short-and-clean-"
-                    .substring(0, 64) // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated-"
-                    .replace(/^-+|-+$/gm, '') // "⚡⚡-Dont-forget-URL-fragments-should-be-i18n-friendly-hyphenated"
-                    .toLowerCase(); // "⚡⚡-dont-forget-url-fragments-should-be-i18n-friendly-hyphenated"
+                    .replace(/-{2,}/g, '-')
+                    .substring(0, 40)
+                    .replace(/^-+|-+$/gm, '')
+                    .toLowerCase();
+
+                while (urlText.length > 20) {
+                    var lastDash = urlText.lastIndexOf('-');
+                    if (lastDash < 20) {
+                        break;
+                    }
+                    urlText = urlText.substring(0, lastDash);
+                }
 
                 return urlText || el.tagName.toLowerCase();
             },
 
             generateUniqueId: function (el) {
+                var maxLength = 40;
                 var anchorBase = this.generateUniqueIdBase(el);
                 for (var i = 0; ; i++) {
-                    var anchor = anchorBase;
-                    if (i > 0) {
-                        // add suffix
-                        anchor += '-' + i;
+                    var anchor;
+                    if (i === 0) {
+                        anchor = anchorBase;
+                    } else {
+                        var suffix = '-' + i;
+                        anchor = anchorBase.substring(0, maxLength - suffix.length).replace(/-+$/, '') + suffix;
                     }
-                    // check if ID already exists
                     if (!document.getElementById(anchor)) {
                         return anchor;
                     }
@@ -686,13 +704,20 @@ function initToc() {
             },
 
             generateAnchor: function (el) {
-                if (el.id) {
+                if (el.id && el.id.length <= 40) {
                     return el.id;
-                } else {
-                    var anchor = this.generateUniqueId(el);
-                    el.id = anchor;
-                    return anchor;
                 }
+                if (el.id) {
+                    var oldId = el.id;
+                    el.removeAttribute('id');
+                    var fallback = document.createElement('span');
+                    fallback.id = oldId;
+                    fallback.className = 'anchor-fallback';
+                    el.insertBefore(fallback, el.firstChild);
+                }
+                var anchor = this.generateUniqueId(el);
+                el.id = anchor;
+                return anchor;
             },
 
             createNavList: function () {

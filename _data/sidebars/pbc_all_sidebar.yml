@@ -1724,7 +1724,7 @@ entries:
               - title: "Import file details: glossary.csv"
                 url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
 
-          - title: Manage in the Back Office
+          - title: Manage translations in the Back Office
             url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/manage-translations-in-the-back-office.html
             nested:
               - title: Add translations
@@ -2833,6 +2833,12 @@ entries:
                   - title: "Marketplace Product Offer Prices feature: Domain model and relationships"
                     url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-product-offer-prices-feature-domain-model-and-relationships.html
 
+      - title: Product Experience Management
+        url: /docs/pbc/all/product-experience-management/latest/product-experience-management.html
+        nested:
+          - title: Install the Product Experience Management feature
+            url: /docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html
+
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
@@ -3587,6 +3593,8 @@ entries:
             url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
           - title: Project configuration for PunchOut Gateway
             url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
+          - title: Manage PunchOut connections
+            url: /docs/pbc/all/punchout-gateway/manage-punchout-connections.html
           - title: PunchOut Protocols Coverage
             url: /docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html
 

@@ -3,7 +3,7 @@ title: PayOne Credit Card payment flow
 description: Payone offers your customers to pay with Credit Card.
 template: howto-guide-template
 redirect_from:
-last_updated: Now 8, 2024
+last_updated: Nov 8, 2024
 related:
   - title: PayOne PayPal Express payment flow in headless applications
     url: docs/pbc/all/payment-service-provider/202507.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/payment-method-flows/payone-paypal-express-payment-flow-in-headless-applications.html

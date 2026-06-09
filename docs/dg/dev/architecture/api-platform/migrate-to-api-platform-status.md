@@ -130,60 +130,60 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CustomersRestApi | StorefrontAPI | Migrated | 1.28.0 | — | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Migrated | 1.6.0 | CartCodesRestApi, CartsRestApi | (extension-only) |
 | DiscountsRestApi | StorefrontAPI | Migrated | TODO | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
-| EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | TODO | — | (extension-only) |
+| EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | HealthCheck | StorefrontAPI | Migrated | 1.1.0 | — | GET /health-check |
 | MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned | — | ProductOfferServicePointAvailabilitiesRestApi | (extension-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Migrated | 1.3.0 | WishlistsRestApi | (extension-only) |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
-| MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CartsRestApi | (extension-only) |
+| MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi | (extension-only) |
 | MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CustomersRestApi | (extension-only) |
-| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | TODO | — | (extension-only) |
-| MerchantShipmentsRestApi | Extension-only StorefrontAPI | Migrated | TODO | ShipmentsRestApi | (extension-only) |
-| MultiCartsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CartsRestApi | (extension-only) |
+| MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
+| MerchantShipmentsRestApi | Extension-only StorefrontAPI | Migrated | 0.1.1 | ShipmentsRestApi | (extension-only) |
+| MultiCartsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi | (extension-only) |
 | MultiFactorAuth | StorefrontAPI | Migrated | 2.5.0 | — | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate |
 | NavigationsRestApi | StorefrontAPI | Migrated | 2.3.0 | — | GET /navigations/{id} |
-| OauthApi | StorefrontAPI | Migrated | TODO | — | POST /token |
+| OauthApi | StorefrontAPI | Migrated | 1.4.1 | — | POST /token |
 | OmsRestApi | Extension-only StorefrontAPI | Migrated | TODO | OrdersRestApi | (extension-only) |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | CartReorderRestApi, CartsRestApi, OrdersRestApi | (extension-only) |
 | OrdersRestApi | StorefrontAPI | Migrated | 4.14.0 | — | GET /orders<br>GET /orders/{orderReference}<br>GET /orders/{orderReference}/order-items/{uuid}<br>GET /customers/{customerReference}/orders |
-| PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Migrated | TODO | ProductOfferPricesRestApi | (extension-only) |
-| PriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | TODO | ProductPricesRestApi | (extension-only) |
+| PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Migrated | 1.1.1 | ProductOfferPricesRestApi | (extension-only) |
+| PriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | ProductPricesRestApi | (extension-only) |
 | ProductAttributesRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET /product-management-attributes<br>GET /product-management-attributes/{id} |
 | ProductBundleCartsRestApi | Extension-only StorefrontAPI | Migrated | 1.4.0 | CartsRestApi, ShipmentsRestApi | (extension-only) |
 | ProductBundlesRestApi | StorefrontAPI | Migrated | 1.2.0 | OrdersRestApi | GET /concrete-products/{id}/bundled-products |
 | ProductConfigurationShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | ShoppingListsRestApi | (extension-only) |
 | ProductConfigurationWishlistsRestApi | Extension-only StorefrontAPI | Migrated | 1.3.0 | WishlistsRestApi | (extension-only) |
-| ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | TODO | ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi, ProductConfigurationsRestApi | (extension-only) |
+| ProductConfigurationsPriceProductVolumesRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | ProductConfigurationShoppingListsRestApi, ProductConfigurationWishlistsRestApi, ProductConfigurationsRestApi | (extension-only) |
 | ProductConfigurationsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | CartsRestApi, OrdersRestApi, ProductsRestApi | (extension-only) |
-| ProductDiscontinuedRestApi | Extension-only StorefrontAPI | Migrated | TODO | ProductsRestApi | (extension-only) |
+| ProductDiscontinuedRestApi | Extension-only StorefrontAPI | Migrated | 1.1.1 | ProductsRestApi | (extension-only) |
 | ProductImageSetsRestApi | StorefrontAPI | Migrated | 1.3.0 | ProductsRestApi | GET /abstract-products/{id}/abstract-product-image-sets<br>GET /concrete-products/{id}/concrete-product-image-sets |
 | ProductLabelsRestApi | StorefrontAPI | Migrated | 1.5.0 | — | GET /product-labels/{id} |
 | ProductMeasurementUnitsRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET /product-measurement-units/{id}<br>GET /concrete-products/{id}/sales-units |
 | ProductOfferSalesRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | ProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
-| ProductOffersRestApi | Extension-only StorefrontAPI | Migrated | TODO | ProductsRestApi | (extension-only) |
+| ProductOffersRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | ProductsRestApi | (extension-only) |
 | ProductOptionsRestApi | Extension-only StorefrontAPI | Migrated | 1.5.0 | CartsRestApi, OrdersRestApi, ProductsRestApi, QuoteRequestsRestApi | (extension-only) |
 | ProductReviewsRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET,POST /abstract-products/{id}/product-reviews<br>GET /abstract-products/{id}/product-reviews/{id} |
 | QuoteRequestAgentsRestApi | StorefrontAPI | Migrated | 0.4.2 | QuoteRequestsRestApi | GET,POST /agent-quote-requests<br>GET,PATCH /agent-quote-requests/{id}<br>POST /agent-quote-requests/{id}/agent-quote-request-cancel<br>POST /agent-quote-requests/{id}/agent-quote-request-revise<br>POST /agent-quote-requests/{id}/agent-quote-request-send-to-customer |
 | QuoteRequestsRestApi | StorefrontAPI | Migrated | 0.2.2 | CartsRestApi | GET,POST /quote-requests<br>GET,PATCH /quote-requests/{id}<br>POST /quote-requests/{id}/quote-request-cancel<br>POST /quote-requests/{id}/quote-request-revise<br>POST /quote-requests/{id}/quote-request-send-to-user<br>POST /quote-requests/{id}/quote-request-convert-to-quote |
 | RelatedProductsRestApi | StorefrontAPI | Migrated | 1.5.0 | ProductsRestApi | GET /abstract-products/{id}/related-products |
-| SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CartsRestApi, CheckoutRestApi | (extension-only) |
+| SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi, CheckoutRestApi | (extension-only) |
 | SalesReturnsRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
 | SelfServicePortal | StorefrontAPI | Migrated | TODO | — | GET /booked-services<br>GET,POST /ssp-assets<br>GET /ssp-assets/{reference}<br>GET,POST /ssp-inquiries<br>GET /ssp-inquiries/{reference} |
-| SecurityBlockerRestApi | Extension-only StorefrontAPI | Migrated | TODO | — | (extension-only) |
-| ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CheckoutRestApi | (extension-only) |
+| SecurityBlockerRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
+| ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CheckoutRestApi | (extension-only) |
 | ServicePointsRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
 | SharedCartsRestApi | StorefrontAPI | Migrated | 1.4.0 | — | POST /carts/{id}/shared-carts<br>PATCH,DELETE /shared-carts/{id} |
-| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CheckoutRestApi, ServicePointsRestApi, ShipmentTypesRestApi, ShipmentsRestApi | (extension-only) |
+| ShipmentTypeServicePointsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CheckoutRestApi, ServicePointsRestApi, ShipmentTypesRestApi, ShipmentsRestApi | (extension-only) |
 | ShipmentTypesRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /shipment-types<br>GET /shipment-types/{id} |
 | ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | 1.16.0 | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi | (extension-only) |
 | ShoppingListsRestApi | StorefrontAPI | Migrated | 1.5.0 | — | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
 | TaxAppRestApi | StorefrontAPI | Planned | — | — | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Migrated | 1.4.0 | CartsRestApi, ProductsRestApi | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
 | UrlsRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /url-resolver |
-| Vertex | StorefrontAPI | Migrated | TODO | — | POST /tax-id-validate |
+| Vertex | StorefrontAPI | Migrated | 1.2.0 | — | POST /tax-id-validate |
 | WishlistsRestApi | StorefrontAPI | Migrated | 1.8.0 | — | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
 
 ## Backend API modules

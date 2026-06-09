@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% include gtm1.html %}
+
     {% include head.html %}
     <meta name="robots" content="noindex, nofollow">
     <script>
@@ -30,20 +32,15 @@
     {% endif %}
 </head>
 <body class="{{page.layout}}-layout">
-  <div style="border-bottom: 1px solid #ccc; padding: 5px 0; text-align: center; font-size: 14px; background: #CDFEE1;">
-    You're browsing Spryker Docs archive. For the latest version, see the
-    <a href="https://docs.spryker.com/" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;">main docs website</a>
-  </div>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLNNSNV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    {% include gtm2.html %}
+
 <div class="page-wrapper">
     {% include topnav.html %}
     <!-- Page Content -->
     {{content}}
         <!-- id="tg-sb-content" -->
     {% include footer.html %}
-    {% if site.google_analytics %}
+
     {% include google_analytics.html %}
     {% endif %}
 </div>

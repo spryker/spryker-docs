@@ -1,6 +1,6 @@
 ---
 title: Service links
-last_updated: May 15, 2026
+last_updated: Jun 10, 2026
 description: Use Service Links in CloudHub to quickly access environment services such as Jenkins, RabbitMQ, AWS Console, and KeyCloak via SSO.
 template: concept-topic-template
 ---

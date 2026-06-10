@@ -416,6 +416,8 @@ console data:import glossary
 | ProductClassProductConcreteTransferMapperPlugin                              | Maps product class data from form to `ProductConcreteTransfer`.                                                                            |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
 | ShipmentTypeProductConcreteFormExpanderPlugin                                | Expands the `ProductConcreteForm` with a choice field for shipment types.                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
 | ShipmentTypeProductFormTransferMapperExpanderPlugin                          | Maps shipment type form data to `ProductConcreteTransfer`.                                                                                 |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement                         |
+| ShipmentTypeProductConcreteEditFormExpanderPlugin | Adds validation to prevent you from removing a shipment type from a product concrete when related product offers are still using that shipment type. |  | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement |
+| ProductOfferConcreteShipmentTypeValidatorStepPlugin | Validates that the shipment type referenced in a `product-offer-shipment-type` data import row is assigned to the related product concrete. If the shipment type is not assigned, the import row fails validation. |  | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferShipmentTypeDataImport |
 | ProductClassProductAbstractMapExpanderPlugin                                 | Adds product class names to product abstract search data.                                                                                  |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
 | ProductClassProductPageDataExpanderPlugin                                    | Expands the provided ProductPageSearchTransfer transfer object's data with product classes.                                                |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
 | ProductClassProductPageDataLoaderPlugin                                      | Expands `ProductPageLoadTransfer` object with product class data.                                                                          |               | SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductPageSearch                         |
@@ -665,12 +667,23 @@ use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as Spryker
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassProductConcreteFormEditDataProviderExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteFormEditDataProviderExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassProductConcreteTransferMapperPlugin;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteEditFormExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductConcreteFormExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ShipmentTypeProductFormTransferMapperExpanderPlugin;
 use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductManagement\ProductClassFormExpanderPlugin;
 
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteEditFormExpanderPluginInterface>
+     */
+    protected function getProductConcreteEditFormExpanderPlugins(): array
+    {
+        return [
+            new ShipmentTypeProductConcreteEditFormExpanderPlugin(),
+        ];
+    }
+
     /**
      * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductConcreteFormEditDataProviderExpanderPluginInterface>
      */
@@ -1400,6 +1413,64 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 }
 ```
+
+**src/Pyz/Zed/ProductOfferShipmentTypeDataImport/ProductOfferShipmentTypeDataImportDependencyProvider.php**
+
+Register `ProductOfferConcreteShipmentTypeValidatorStepPlugin` to validate each `product-offer-shipment-type` import row against the product-to-shipment-type relations imported by `product-shipment-type`:
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+declare(strict_types = 1);
+
+namespace Pyz\Zed\ProductOfferShipmentTypeDataImport;
+
+use Spryker\Zed\ProductOfferShipmentTypeDataImport\ProductOfferShipmentTypeDataImportDependencyProvider as SprykerProductOfferShipmentTypeDataImportDependencyProvider;
+use SprykerFeature\Zed\SelfServicePortal\Communication\Plugin\ProductOfferShipmentTypeDataImport\ProductOfferConcreteShipmentTypeValidatorStepPlugin;
+
+class ProductOfferShipmentTypeDataImportDependencyProvider extends SprykerProductOfferShipmentTypeDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\ProductOfferShipmentTypeDataImport\Dependency\Plugin\ProductOfferShipmentTypeValidatorStepPluginInterface>
+     */
+    protected function getProductOfferShipmentTypeValidatorStepPlugins(): array
+    {
+        return [
+            new ProductOfferConcreteShipmentTypeValidatorStepPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Add a row to `product_offer_shipment_type.csv` where the product offer's `concrete_sku` does not have the specified `shipment_type_key` assigned in `product_shipment_type.csv`.
+2. Run `console data:import product-offer-shipment-type`.
+3. Verify that the import fails with the following error:
+   `Shipment type "<key>" is not assigned to the product concrete for offer "<offer-reference>". Assign it to the product concrete first.`
+
+{% endinfo_block %}
+
+{% info_block warningBox "Import order" %}
+
+The validator step requires product-to-shipment-type relations to exist before product-offer-shipment-type relations are imported. In every full-import descriptor that imports `product-offer-shipment-type` - for example, `data/import/local/full_EU.yml`, `data/import/production/full_EU.yml`, and `data/import/production/full_US.yml` - ensure that the `product-shipment-type` action runs before `product-offer-shipment-type`:
+
+```yaml
+actions:
+    # ...
+    - data_entity: product-shipment-type
+      source: data/import/common/common/product_shipment_type.csv
+    - data_entity: product-offer-shipment-type
+      source: data/import/common/common/product_offer_shipment_type.csv
+    # ...
+```
+
+{% endinfo_block %}
 
 <details>
   <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>

@@ -222,7 +222,7 @@ Expands MCP tooling to make Spryker context retrieval, module discovery, documen
 - [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview)
 - [AI Dev MCP Server](/docs/dg/dev/ai/ai-dev/ai-dev-mcp-server)
 
-### API Platform improvements {% include badge.html type="improvement" %}
+### API Platform improvements {% include badge.html type="early-access,improvement" %}
 
 This release enhances API Platform capabilities to improve your developer experience and reduce manual configuration overhead.
 
@@ -475,7 +475,7 @@ The Cloud Self-Service Portal is now available on a new platform that improves u
 **Business benefits**
 - Provides a structured migration path to Single Sign-On (SSO) to help you simplify access management.
 
-**Portal access** 
+**Portal access**
 - [Customer Portal](https://portal.spryker.com/)
 
 ### RabbitMQ 4.1 rollout {% include badge.html type="improvement" %}

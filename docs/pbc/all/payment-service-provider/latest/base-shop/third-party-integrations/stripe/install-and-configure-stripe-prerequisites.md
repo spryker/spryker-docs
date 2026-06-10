@@ -1,7 +1,7 @@
 ---
 title: Integrate Stripe
 description: Learn how to install and configure the spryker-eco/stripe module in your Spryker project.
-last_updated: Apr 14, 2026
+last_updated: Jun 09, 2026
 template: howto-guide-template
 redirect_from:
 - docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
@@ -338,8 +338,9 @@ vendor/bin/console acl-entity:synchronize
 
 ## Step 16: Register the Stripe webhook in the Stripe Dashboard
 
-In your [Stripe Dashboard](https://dashboard.stripe.com/), register a webhook endpoint pointing to:
-
+In your [Stripe Dashboard](https://dashboard.stripe.com/), in the search field input **Webhooks** and open Webhooks list page. Register a webhook endpoint pointing to:
+1. Create the webhook for changing payment statuses by adding the next information:
+   
 ```text
 https://your-domain.com/stripe/notification
 ```
@@ -356,7 +357,14 @@ Configure it to listen to the following events:
 | `charge.refunded` | Refunded or partially refunded |
 | `charge.refund.updated` | Refund failed |
 
-For **marketplace only**, register a second **Connect endpoint** pointing to the same URL and enable **Listen to events on connected accounts**. Configure it to listen to:
+2. Create the webhook for the merchant accounts onboarding:
+For **marketplace only**, register a second **Connect endpoint** pointing to the same URL and enable **Listen to events on connected accounts**. 
+
+```text
+https://your-domain.com/stripe/notification
+```
+
+Configure it to listen to the following events:
 
 | Event |
 | - |

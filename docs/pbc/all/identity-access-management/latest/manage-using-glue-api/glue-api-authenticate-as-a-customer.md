@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Authenticate as a customer"
 description: Retrieve customer authentication tokens to send requests to protected resources.
-last_updated: Jun 21, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-customer
 originalArticleId: 4d61554f-dce0-40a2-9091-2db810bcf9a2
@@ -63,7 +63,7 @@ Request sample: authenticate as a customer
   "data": {
     "type": "access-tokens",
     "attributes": {
-      "username": "sonia@spryker.com",
+      "username": "sonia@acme.com",
       "password": "change123"
     }
   }

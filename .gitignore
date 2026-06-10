@@ -11,3 +11,4 @@ vendor/
 _scripts/sidebar_checker/missing-documents.yml
 .vscode/
 _scripts/redirects_generator
+.claude/worktrees/

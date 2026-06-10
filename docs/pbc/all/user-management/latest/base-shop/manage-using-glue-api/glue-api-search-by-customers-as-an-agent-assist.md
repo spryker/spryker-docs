@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Search by customers as an agent assist"
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
-last_updated: Jun 16, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
@@ -55,7 +55,7 @@ To search by customers, send the request:
 | --- | --- |
 | `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the sixth entry. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com` | Search for the customer with the `sonia@acme.com` email address. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
 | `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
 
@@ -79,37 +79,37 @@ To search by customers, send the request:
                     },
                     {
                         "customerReference": "DE--2",
-                        "email": "maria.williams@spryker.com",
+                        "email": "maria.williams@acme.com",
                         "firstName": "Maria",
                         "lastName": "Williams"
                     },
                     {
                         "customerReference": "DE--3",
-                        "email": "maggie.may@spryker.com",
+                        "email": "maggie.may@acme.com",
                         "firstName": "Maggie",
                         "lastName": "May"
                     },
                     {
                         "customerReference": "DE--4",
-                        "email": "bill.martin@spryker.com",
+                        "email": "bill.martin@acme.com",
                         "firstName": "Bill",
                         "lastName": "Martin"
                     },
                     {
                         "customerReference": "DE--5",
-                        "email": "george.freeman@spryker.com",
+                        "email": "george.freeman@acme.com",
                         "firstName": "George",
                         "lastName": "Freeman"
                     },
                     {
                         "customerReference": "DE--6",
-                        "email": "henry.tudor@spryker.com",
+                        "email": "henry.tudor@acme.com",
                         "firstName": "Henry",
                         "lastName": "Tudor"
                     },
                     {
                         "customerReference": "DE--7",
-                        "email": "anne.boleyn@spryker.com",
+                        "email": "anne.boleyn@acme.com",
                         "firstName": "Anne",
                         "lastName": "Boleyn"
                     },
@@ -161,13 +161,13 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--6",
-                        "email": "henry.tudor@spryker.com",
+                        "email": "henry.tudor@acme.com",
                         "firstName": "Henry",
                         "lastName": "Tudor"
                     },
                     {
                         "customerReference": "DE--7",
-                        "email": "anne.boleyn@spryker.com",
+                        "email": "anne.boleyn@acme.com",
                         "firstName": "Anne",
                         "lastName": "Boleyn"
                     },
@@ -220,21 +220,21 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--21",
-                        "email": "sonia@spryker.com",
+                        "email": "sonia@acme.com",
                         "firstName": "Sonia",
                         "lastName": "Wagner"
                     }
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com"
+                "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10"
+        "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com",
+        "last": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com&page[offset]=0&page[limit]=10",
+        "first": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@acme.com&page[offset]=0&page[limit]=10"
     }
 }    
 ```
@@ -286,7 +286,7 @@ To search by customers, send the request:
                 "customers": [
                     {
                         "customerReference": "DE--5",
-                        "email": "george.freeman@spryker.com",
+                        "email": "george.freeman@acme.com",
                         "firstName": "George",
                         "lastName": "Freeman"
                     }

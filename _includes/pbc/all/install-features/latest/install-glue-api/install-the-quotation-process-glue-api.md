@@ -620,7 +620,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
         "id": "62de4ab6-b768-5c21-8835-455d9f341625",
         "attributes": {
           "isActive": true,
-          "name": "Spryker Systems GmbH",
+          "name": "Acme Corporation",
           "status": "approved"
         },
         "links": {
@@ -632,7 +632,7 @@ class QuoteRequestsRestApiDependencyProvider extends SprykerQuoteRequestsRestApi
         "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2",
         "attributes": {
           "defaultBillingAddress": null,
-          "name": "Spryker Systems HR department",
+          "name": "Acme Corporation HR department",
           "email": "HR@spryker.com",
           "phone": "4902890031",
           "externalUrl": "",

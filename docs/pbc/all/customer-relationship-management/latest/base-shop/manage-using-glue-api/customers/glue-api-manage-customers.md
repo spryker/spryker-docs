@@ -1,7 +1,7 @@
 ---
 title: "Glue API: Manage customers"
 description: Learn how by using the Spryker Glue API you can manage customers within your Spryker Project.
-last_updated: Jun 18, 2021
+last_updated: June 9, 2026
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
@@ -76,7 +76,7 @@ Request sample: retrieve customers
             "attributes": {
                 "firstName": "Sonia",
                 "lastName": "Wagner",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "gender": "Female",
                 "dateOfBirth": null,
                 "salutation": "Ms",
@@ -182,7 +182,7 @@ Request sample: edit a customer
 			"type": "customers"
 			"attributes": {
 					"lastName": "Johnson",
-					"email": "sonia@spryker.com",
+					"email": "sonia@acme.com",
 				}
 		}
 	}
@@ -202,7 +202,7 @@ Request sample: edit a customer
 				"firstName": null,
 				"lastName": "Johnson",
 				"salutation": null,
-				"email": "sonia@spryker.com"
+				"email": "sonia@acme.com"
 			},
 			"links": {
 				"self": "http://mysprykershop.com/customers/DE--25"
@@ -279,7 +279,7 @@ Request sample: retrieve subscriptions to availability notifications
             "id": "d634981b8d1930f7db6e2780b7d5600a",
             "attributes": {
                 "localeName": "en_US",
-                "email": "sonia@spryker.com",
+                "email": "sonia@acme.com",
                 "sku": "190_25111746"
             },
             "links": {

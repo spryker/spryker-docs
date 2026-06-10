@@ -1,7 +1,7 @@
 ---
 title: AI Commerce
 description: AI Commerce brings AI-powered capabilities to your Spryker storefront, helping buyers find and order products faster with less manual effort.
-last_updated: Apr 10, 2026
+last_updated: Jun 08, 2026
 template: concept-topic-template
 ---
 
@@ -15,6 +15,7 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront and back o
 | [Visual Add to Cart](/docs/pbc/all/ai-commerce/latest/visual-add-to-cart.html)      | Lets buyers upload a product image on the Quick Order page. AI recognizes the products in the image and pre-fills the order form with matching SKUs and quantities — enabling rapid bulk ordering without manual entry.                                        |
 | [Back Office Assistant](/docs/pbc/all/ai-commerce/latest/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions to navigate the Back Office, diagnose order issues, and create or update discounts.                                                                      |
 | [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image.html)            | Lets customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or the first matching product page.                                                                                     |
+| [Smart CMS Content Assistant](/docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html) | An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors. Back Office users can generate and refine placeholder content per locale through a conversational AI interface. |
 
 ## Who benefits
 

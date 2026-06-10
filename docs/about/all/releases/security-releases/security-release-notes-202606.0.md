@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202606.0
 description: Security updates released for version 202606.0
-last_updated: Jun 8, 2026
+last_updated: Jun 10, 2026
 template: concept-topic-template
 publish_date: "2026-06-08"
 redirect_from:
@@ -213,4 +213,27 @@ $(container).html(untrustedData);
 
 // After
 $(container).html(DOMPurify.sanitize(untrustedData));
+```
+
+## Vulnerability in symfony third-party dependency
+
+Multiple security vulnerabilities were identified in several Symfony third-party packages, potentially affecting application security, routing, email handling, and string processing.
+
+### Affected modules
+
+- `symfony/security-http`: < 6.4.41
+- `symfony/monolog-bridge`: 6.0.0 - 6.4.39
+- `symfony/mailer`: 6.0.0 - 6.4.39
+- `symfony/runtime`: 6.4.14 - 6.4.39
+- `symfony/string`: 7.4.0 - 7.4.11
+- `symfony/routing`: < 6.4.41
+- `symfony/mime`: 6.4.0 - 6.4.40
+
+### Fix the vulnerability
+
+Update the affected Symfony packages:
+
+```bash
+composer update symfony/security-http:"^6.4.41" symfony/monolog-bridge:"^6.4.40" symfony/mailer:"^6.4.40" symfony/runtime:"^6.4.40" symfony/routing:"^6.4.41" symfony/mime:"^6.4.41" symfony/string:"^7.4.13"
+composer show symfony/security-http symfony/monolog-bridge symfony/mailer symfony/runtime symfony/routing symfony/mime symfony/string # Verify the versions
 ```

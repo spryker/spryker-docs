@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature, including estimated cost per interaction.
-last_updated: Jun 8, 2026
+last_updated: Jun 10, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring, cost estimation, ai pricing
 template: howto-guide-template
 label: early-access
@@ -166,9 +166,9 @@ console propel:install
 
 ## Configure AI token pricing
 
-To display estimated costs in the Audit Logs, configure token prices per provider and model in the Back Office under **Configuration > Manage > AI Pricing**.
+To display estimated costs in the Audit Logs, configure token prices per provider and model.
 
-AI Pricing configuration uses the AI Vendor configuration feature (`ai_vendor.configuration.yml`). Token prices are expressed in USD per 1,000,000 tokens and are configured separately for input and output tokens for each model.
+AI Vendor model token pricing uses the AI Vendor configuration feature (`ai_vendor.configuration.yml`). Token prices are expressed in USD per 1,000,000 tokens and are configured separately for input and output tokens for each model.
 
 ### Sync the AI Pricing configuration
 
@@ -199,14 +199,6 @@ The module ships with default prices for common models. Verify these against cur
 | OpenAI | `gpt-4.1`, `gpt-4.1-mini`, `gpt-4o`, `gpt-4o-mini` |
 | Anthropic | `claude-opus-4`, `claude-sonnet-4-5`, `claude-haiku-4-5` |
 | AWS Bedrock | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0`, `eu.anthropic.claude-haiku-4-5-20251001-v1:0` |
-
-Price key format per provider:
-
-| Provider | Example model key |
-|----------|------------------|
-| OpenAI | `gpt-4.1`, `gpt-4o-mini` |
-| Anthropic | `claude-sonnet-4-5`, `claude-haiku-4-5` |
-| AWS Bedrock | `eu.anthropic.claude-sonnet-4-5-20250929-v1:0` |
 
 Models not listed in the configuration are shown as **N/A** in the Audit Logs and are excluded from cost totals.
 

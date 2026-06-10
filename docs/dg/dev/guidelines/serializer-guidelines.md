@@ -39,7 +39,7 @@ The `SerializerContextTransfer` maps Spryker transfer conventions to Symfony Ser
 - **defaultConstructorArguments** — default constructor arguments for denormalization
 - **symfonyContext** — raw Symfony context array for advanced use cases (overrides explicit properties)
 
-For the full list of Symfony context options, see the [Symfony Serializer documentation](https://symfony.com/doc/current/serializer.html#context).
+For the full list of Symfony context options, see the [Symfony Serializer documentation](https://symfony.com/doc/current/serializer.html#serializer-context).
 
 ## Extension via plugins
 

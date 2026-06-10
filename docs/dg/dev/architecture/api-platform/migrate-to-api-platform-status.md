@@ -1,7 +1,7 @@
 ---
 title: Migration status - Glue API to API Platform
 description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
-last_updated: Jun 9, 2026
+last_updated: Jun 10, 2026
 template: howto-guide-template
 redirect_from:
   - /docs/dg/dev/upgrade-and-migrate/glue-api-migration-status.html
@@ -129,7 +129,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | CustomerAccessRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET /customer-access |
 | CustomersRestApi | StorefrontAPI | Migrated | 1.28.0 | — | GET,POST /customers<br>GET,PATCH,DELETE /customers/{id}<br>GET,POST /customers/{id}/addresses<br>GET,PATCH,DELETE /customers/{id}/addresses/{id}<br>POST /customer-forgotten-password<br>PATCH /customer-restore-password/{id}<br>PATCH /customer-password/{id}<br>POST /customer-confirmation |
 | DiscountPromotionsRestApi | Extension-Only-StorefrontAPI | Migrated | 1.6.0 | CartCodesRestApi, CartsRestApi | (extension-only) |
-| DiscountsRestApi | StorefrontAPI | Migrated | TODO | — | POST /carts/{id}/vouchers<br>DELETE /carts/{id}/vouchers/{id}<br>POST /guest-carts/{id}/vouchers<br>DELETE /guest-carts/{id}/vouchers/{id} |
 | EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | HealthCheck | StorefrontAPI | Migrated | 1.1.0 | — | GET /health-check |
@@ -138,14 +137,12 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Migrated | 1.3.0 | WishlistsRestApi | (extension-only) |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | MerchantProductsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi | (extension-only) |
-| MerchantRelationshipProductListsRestApi | Extension-only StorefrontAPI | Migrated | TODO | CustomersRestApi | (extension-only) |
 | MerchantSalesReturnsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
 | MerchantShipmentsRestApi | Extension-only StorefrontAPI | Migrated | 0.1.1 | ShipmentsRestApi | (extension-only) |
 | MultiCartsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi | (extension-only) |
 | MultiFactorAuth | StorefrontAPI | Migrated | 2.5.0 | — | GET /multi-factor-auth-types, POST /multi-factor-auth-trigger, POST /multi-factor-auth-type-activate, POST /multi-factor-auth-type-verify, POST /multi-factor-auth-type-deactivate |
 | NavigationsRestApi | StorefrontAPI | Migrated | 2.3.0 | — | GET /navigations/{id} |
 | OauthApi | StorefrontAPI | Migrated | 1.4.1 | — | POST /token |
-| OmsRestApi | Extension-only StorefrontAPI | Migrated | TODO | OrdersRestApi | (extension-only) |
 | OrderAmendmentsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | CartReorderRestApi, CartsRestApi, OrdersRestApi | (extension-only) |
 | OrdersRestApi | StorefrontAPI | Migrated | 4.14.0 | — | GET /orders<br>GET /orders/{orderReference}<br>GET /orders/{orderReference}/order-items/{uuid}<br>GET /customers/{customerReference}/orders |
 | PriceProductOfferVolumesRestApi | Extension-only StorefrontAPI | Migrated | 1.1.1 | ProductOfferPricesRestApi | (extension-only) |
@@ -171,7 +168,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | RelatedProductsRestApi | StorefrontAPI | Migrated | 1.5.0 | ProductsRestApi | GET /abstract-products/{id}/related-products |
 | SalesOrderThresholdsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CartsRestApi, CheckoutRestApi | (extension-only) |
 | SalesReturnsRestApi | StorefrontAPI | Migrated | 1.3.0 | — | GET /return-reasons<br>GET,POST /returns<br>GET /returns/{id} |
-| SelfServicePortal | StorefrontAPI | Migrated | TODO | — | GET /booked-services<br>GET,POST /ssp-assets<br>GET /ssp-assets/{reference}<br>GET,POST /ssp-inquiries<br>GET /ssp-inquiries/{reference} |
 | SecurityBlockerRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
 | ServicePointCartsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | CheckoutRestApi | (extension-only) |
 | ServicePointsRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /service-points<br>GET /service-points/{id}<br>GET /service-points/{id}/service-point-addresses/{id} |
@@ -185,6 +181,16 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | UrlsRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /url-resolver |
 | Vertex | StorefrontAPI | Migrated | 1.2.0 | — | POST /tax-id-validate |
 | WishlistsRestApi | StorefrontAPI | Migrated | 1.8.0 | — | GET,POST /wishlists<br>GET,PATCH,DELETE /wishlists/{id}<br>POST /wishlists/{id}/wishlist-items<br>PATCH,DELETE /wishlists/{id}/wishlist-items/{id} |
+
+### Backward-compatible extension modules (no migration required)
+
+The following modules are not migrated to API Platform and do not need to be. They expose no API resource of their own — they only contribute plugins (mappers and expanders) that are consumed in a backward-compatible way by both the legacy Glue REST API and the API Platform resources of the host module they extend. Because they carry no standalone resource, they have no "Released In" version.
+
+| Module | Plugin provided | Consumed by |
+|---|---|---|
+| DiscountsRestApi | DiscountsRestQuoteRequestAttributesExpanderPlugin | QuoteRequestsRestApi |
+| MerchantRelationshipProductListsRestApi | CustomerProductListCustomerExpanderPlugin | CustomersRestApi |
+| OmsRestApi | OmsRestOrderItemsAttributesMapperPlugin | OrdersRestApi |
 
 ## Backend API modules
 

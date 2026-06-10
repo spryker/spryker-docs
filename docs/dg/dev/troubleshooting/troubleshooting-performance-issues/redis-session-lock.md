@@ -323,8 +323,16 @@ class SessionRedisConfig extends \Spryker\Yves\SessionRedis\SessionRedisConfig
             '/^.*\/(login|logout|register)($|\/)/',
             // Multi-factor authentication
             '/^.*\/multi-factor-auth\//',
-            // Customer account writes — profile, addresses, newsletter preference, account deletion
-            '/^.*\/customer\/(profile|address|newsletter|delete)/',
+            // Store switch — triggered via ?_store= query parameter on any URL
+            '/[?&]_store=/',
+            // Currency switch — writes selected currency to the session
+            '/^.*\/currency\/switch/',
+            // Price mode switch — writes selected price mode to the session
+            '/^.*\/price\/mode-switch/',
+            // Customer account — all routes under /customer/
+            '/^.*\/customer\//',
+            // Company account — all routes under /company/
+            '/^.*\/company\//',
         ];
     }
 }

@@ -132,7 +132,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | EntityTagsRestApi | Extension-only StorefrontAPI | Migrated | 1.1.0 | — | (extension-only) |
 | GiftCardsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | HealthCheck | StorefrontAPI | Migrated | 1.1.0 | — | GET /health-check |
-| MerchantProductOfferServicePointAvailabilitiesRestApi | Extension-only StorefrontAPI | Planned | — | ProductOfferServicePointAvailabilitiesRestApi | (extension-only) |
 | MerchantProductOfferShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
 | MerchantProductOfferWishlistRestApi | Extension-only StorefrontAPI | Migrated | 1.3.0 | WishlistsRestApi | (extension-only) |
 | MerchantProductShoppingListsRestApi | Extension-only StorefrontAPI | Migrated | 1.2.0 | — | (extension-only) |
@@ -176,7 +175,6 @@ All StorefrontAPI and Extension-only StorefrontAPI modules. Migrated modules are
 | ShipmentTypesRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /shipment-types<br>GET /shipment-types/{id} |
 | ShipmentsRestApi | Extension-only StorefrontAPI | Migrated | 1.16.0 | CheckoutRestApi, OrdersRestApi, QuoteRequestsRestApi | (extension-only) |
 | ShoppingListsRestApi | StorefrontAPI | Migrated | 1.5.0 | — | GET,POST /shopping-lists<br>GET,PATCH,DELETE /shopping-lists/{id}<br>POST /shopping-lists/{id}/shopping-list-items<br>PATCH,DELETE /shopping-lists/{id}/shopping-list-items/{id} |
-| TaxAppRestApi | StorefrontAPI | Planned | — | — | POST /tax-id-validate |
 | UpSellingProductsRestApi | StorefrontAPI | Migrated | 1.4.0 | CartsRestApi, ProductsRestApi | GET /carts/{id}/up-selling-products<br>GET /guest-carts/{id}/up-selling-products |
 | UrlsRestApi | StorefrontAPI | Migrated | 1.2.0 | — | GET /url-resolver |
 | Vertex | StorefrontAPI | Migrated | 1.2.0 | — | POST /tax-id-validate |

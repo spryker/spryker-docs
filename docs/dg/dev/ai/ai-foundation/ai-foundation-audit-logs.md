@@ -170,7 +170,7 @@ To display estimated costs in the Audit Logs, configure token prices per provide
 
 AI Vendor model token pricing uses the AI Vendor configuration feature (`ai_vendor.configuration.yml`). Token prices are expressed in USD per 1,000,000 tokens and are configured separately for input and output tokens for each model.
 
-### Sync the AI Pricing configuration
+### Sync the AI Vendor configuration
 
 Before pricing settings appear in the Back Office, run:
 
@@ -180,7 +180,7 @@ console configuration:sync
 
 ### Configure prices per provider
 
-In the Back Office, go to **Configuration > Manage > AI Pricing** and select a provider tab (OpenAI, Anthropic, or AWS Bedrock). Enter the input and output token prices for each model as a JSON object:
+In the Back Office, go to **Configuration > Manage > AI Vendor** and select a provider tab (OpenAI, Anthropic, or AWS Bedrock). Enter the input and output token prices for each model as a JSON object:
 
 ```json
 {"gpt-4.1": {"input": 2.50, "output": 10.00}, "gpt-4o-mini": {"input": 0.15, "output": 0.60}}

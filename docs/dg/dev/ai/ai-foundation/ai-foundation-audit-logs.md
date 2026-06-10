@@ -1,19 +1,19 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature
-last_updated: Mar 11, 2026
+last_updated: Apr 22, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring
 template: howto-guide-template
 label: early-access
 related:
   - title: AiFoundation module Overview
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
   - title: Use AI tools with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Manage conversation history with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
   - title: AI workflow orchestration with state machines
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
 ---
 
 This document describes how to use audit logging with the AiFoundation module to track and audit AI interactions in your Spryker application.

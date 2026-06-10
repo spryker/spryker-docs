@@ -1,7 +1,7 @@
 ---
 title: Customer Login overview
 description: Learn more about the Spryker Customer Login with this overview guide and learn how creating a strong password policy can enhance your security.
-last_updated: Jan 27, 2026
+last_updated: May 7, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
 originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030
@@ -32,3 +32,9 @@ When registering an account or changing an old password in the Demo Shop, the pa
 ## Security concerns
 
 In order to enable brute-force protection, follow [this security release](/docs/about/all/releases/security-releases/security-release-notes-202306.0#introduced-changes-3).
+
+## Related Developer documents
+
+| INSTALLATION GUIDES | REFERENCES |
+|---|---|
+| [Install Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/install-and-upgrade/install-federated-authentication.html) | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |

@@ -1,11 +1,13 @@
 ---
 title: How to integrate API Platform
 description: This document describes how to integrate API Platform into your Spryker application.
-last_updated: Feb 26, 2026
+last_updated: May 29, 2026
 template: howto-guide-template
 ---
 
 This document describes how to integrate API Platform into your Spryker application to enable schema-based API resource generation.
+
+If you're migrating an existing Spryker shop from the Glue REST stack, read the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) first. This integration guide is one step inside that larger flow.
 
 ## Prerequisites
 
@@ -20,70 +22,18 @@ Before integrating API Platform, ensure you have:
 To integrate API Platform, install the following modules:
 
 ```bash
-composer require spryker/api-platform:"^0.5.0" --update-with-dependencies
+composer require spryker/api-platform:"^1.0.0" --update-with-dependencies
 ```
 
-{% info_block infoBox "Module placeholder" %}
+{% info_block infoBox "Target versions" %}
 
-The exact module versions will be provided in the final documentation. The above serves as a placeholder for the module list.
+For the list of currently migrated modules and their status, see the [Glue API to API Platform migration status page](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html). Update your `spryker/*-rest-api` modules to a version that ships the endpoints you migrate.
 
 {% endinfo_block %}
 
 ## 2. Register bundles
 
-Register the required bundles in your application's bundle configuration files for each application layer where you want to enable API Platform.
-
-### For Glue application
-
-`config/Glue/bundles.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Spryker\ApiPlatform\SprykerApiPlatformBundle;
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-use Symfony\Bundle\SecurityBundle\SecurityBundle;
-use Symfony\Bundle\TwigBundle\TwigBundle;
-
-return [
-    FrameworkBundle::class => ['all' => true],
-    SecurityBundle::class => ['all' => true],
-    TwigBundle::class => ['all' => true],
-    ApiPlatformBundle::class => ['all' => true],
-    SprykerApiPlatformBundle::class => ['all' => true],
-];
-```
-
-### For GlueStorefront application
-
-`config/GlueStorefront/bundles.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-use ApiPlatform\Symfony\Bundle\ApiPlatformBundle;
-use Spryker\ApiPlatform\SprykerApiPlatformBundle;
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
-use Symfony\Bundle\SecurityBundle\SecurityBundle;
-use Symfony\Bundle\TwigBundle\TwigBundle;
-
-return [
-    FrameworkBundle::class => ['all' => true],
-    SecurityBundle::class => ['all' => true],
-    TwigBundle::class => ['all' => true],
-    ApiPlatformBundle::class => ['all' => true],
-    SprykerApiPlatformBundle::class => ['all' => true],
-];
-```
-
-### For GlueBackend application
-
-`config/GlueBackend/bundles.php`
+Register the required bundles in each application's bundle file — `config/Glue/bundles.php`, `config/GlueStorefront/bundles.php`, and `config/GlueBackend/bundles.php` are identical:
 
 ```php
 <?php
@@ -113,55 +63,35 @@ The `SecurityBundle` enables authentication and authorization for API Platform r
 
 ## 3. Configure API Platform
 
-Create configuration files for the API Platform in each application layer where you want to enable the API-Platform.
+Create a `spryker_api_platform.php` config file in each application layer where you want to enable API Platform — `config/Glue/packages/`, `config/GlueStorefront/packages/`, and `config/GlueBackend/packages/`. The files share the same shape; they differ only in `apiTypes()` (`['storefront']` for the Glue and GlueStorefront applications, `['backend']` for the GlueBackend application) and in the modules each application still serves via Glue.
 
-### Configure for Glue
+Two settings deserve attention:
 
-`config/Glue/packages/spryker_api_platform.php`
+- `sourceDirectories()` — where the generator scans for API Platform schemas. Optional; it defaults to `src/Spryker`, `src/SprykerFeature`, and `src/Pyz`. Set it only if your schemas live somewhere else.
+- `excludedPathFragments()` — schema paths the generator skips. Use it to keep a module's API Platform schemas hidden from the generator (for example, a module the project still serves via Glue). Each entry is matched as a substring of the full schema path. This does NOT switch routing — see [Step 3 — Batch migration in the overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html#step-3--batch-migration-default) for how routing actually flips.
+
+`config/Glue/packages/spryker_api_platform.php` (storefront example):
 
 ```php
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 use Symfony\Config\SprykerApiPlatformConfig;
 
 return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
     $sprykerApiPlatform->apiTypes(['storefront']);
+
+    // Keep these modules on the Glue REST stack by hiding their API Platform schemas from the generator.
+    $sprykerApiPlatform->excludedPathFragments([
+        'vendor/spryker/customer/src/Spryker/Customer/resources/api/',
+        'vendor/spryker/store/src/Spryker/Store/resources/api/',
+        'vendor/spryker/authentication/src/Spryker/Authentication/resources/api/',
+    ]);
 };
 ```
 
-### Configure for GlueStorefront
-
-`config/GlueStorefront/packages/spryker_api_platform.php`
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use Symfony\Config\SprykerApiPlatformConfig;
-
-return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
-    $sprykerApiPlatform->apiTypes(['storefront']);
-};
-```
-
-### Configure for GlueBackend
-
-`config/GlueBackend/packages/spryker_api_platform.php`
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use Symfony\Config\SprykerApiPlatformConfig;
-
-return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
-    $sprykerApiPlatform->apiTypes(['backend']);
-};
-```
+For the GlueBackend application, set `apiTypes(['backend'])` and list the modules that application still serves via Glue in `excludedPathFragments()` (for example `vendor/spryker/store/src/Spryker/Store/resources/api/`, `vendor/spryker/currency/src/Spryker/Currency/resources/api/`, `vendor/spryker/locale/src/Spryker/Locale/resources/api/`, `vendor/spryker/store-context/src/Spryker/StoreContext/resources/api/`).
 
 ## 4. Update Router Configuration
 
@@ -301,6 +231,7 @@ To verify your integration:
 
 - [API Platform](/docs/dg/dev/architecture/api-platform.html) - Overview and concepts
 - [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) - Authentication and authorization setup
+- [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) - End-to-end migration walk-through
 - [Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Create your first API resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas

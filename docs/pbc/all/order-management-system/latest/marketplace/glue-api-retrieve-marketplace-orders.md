@@ -2,7 +2,7 @@
 title: "Glue API: Retrieve Marketplace orders"
 description: Retrieve information about Marketplace orders via Glue API for your Spryker Marketplace project.
 template: glue-api-storefront-guide-template
-last_updated: Nov 21, 2023
+last_updated: June 9, 2026
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/latest/marketplace/glue-api-manage-marketplace-returns.html
@@ -803,7 +803,7 @@ To retrieve detailed information about an order, send the request:
                 "address1": "Kirncher Str.",
                 "address2": "7",
                 "address3": "",
-                "company": "Spryker Systems GmbH",
+                "company": "Acme Corporation",
                 "city": "Berlin",
                 "zipCode": "10247",
                 "poBox": null,
@@ -823,7 +823,7 @@ To retrieve detailed information about an order, send the request:
                 "address1": "Kirncher Str.",
                 "address2": "7",
                 "address3": "",
-                "company": "Spryker Systems GmbH",
+                "company": "Acme Corporation",
                 "city": "Berlin",
                 "zipCode": "10247",
                 "poBox": null,
@@ -1040,7 +1040,7 @@ To retrieve detailed information about an order, send the request:
                 "address1": "Kirncher Str.",
                 "address2": "7",
                 "address3": "",
-                "company": "Spryker Systems GmbH",
+                "company": "Acme Corporation",
                 "city": "Berlin",
                 "zipCode": "10247",
                 "poBox": null,

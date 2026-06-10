@@ -1,13 +1,13 @@
 ---
 title: Onboard to Stripe in the Merchant Portal
 description: Learn how to onboard to Stripe in the Merchant Portal for your Spryker Marketplace projects.
-last_updated: June 28, 2024
+last_updated: Apr 14, 2026
 template: back-office-user-guide-template
 ---
 
-{% info_block warningBox "" %}
+{% info_block infoBox %}
 
-For merchants to to be redirected to the Merchant Portal portal from third-party websites, make sure that, in the web server public folder of your Merchant Portal, there is a `redirect.php` file: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
+For merchants to be redirected to the Merchant Portal from third-party websites, make sure that, in the web server public folder of your Merchant Portal, there is a `redirect.php` file: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
 
 {% endinfo_block %}
 
@@ -27,5 +27,4 @@ To onboard to Stripe as a merchant, follow the steps:
 - **Enabled**: The Merchant completed the onboarding process and is ready to receive payments.
 - **Restricted**: Additional data from the Merchant are required. When not updated the payouts will be paused after some period of time.
 - **Restricted Soon**: Additional data from the Merchant are required. When not updated the payouts will be paused in the near future.
-- **Pending**: The Merchant onboarding is not completed and must be finalized.
 - **Rejected**: The Merchant onboarding was rejected and need to contact you to clarify the issue.

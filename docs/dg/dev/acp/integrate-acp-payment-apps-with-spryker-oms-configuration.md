@@ -2,12 +2,18 @@
 title: Integrate ACP payment apps with Spryker OMS configuration
 description: Learn how to seamlessly integrate ACP payment apps with your Spryker Order Management System (OMS).
 template: howto-guide-template
-last_updated: Feb 10, 2024
+last_updated: Mar 20, 2026
 redirect_from:
 - /docs/acp/user/acp-payment-oms-guides.html
 ---
 
 This document describes how to set up your project with the ACP payment app, ensuring seamless integration with your customized Order Management System (OMS) configuration.
+
+{% info_block infoBox "Custom PSP integrations" %}
+
+If you need to integrate a payment provider that is not available in the ACP App Catalog, you can use the [PSP Integration Template](/docs/integrations/custom-building-integrations/psp-integration-template.html) to build a custom integration.
+
+{% endinfo_block %}
 
 ## Prerequisites
 

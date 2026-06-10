@@ -60,6 +60,34 @@ entries:
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
           - title: AI Interaction Audit Logs
             url: /docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
+      - title: AI Commerce
+        nested:
+          - title: AI Commerce overview
+            url: /docs/dg/dev/ai/ai-commerce/ai-commerce-overview.html
+          - title: Install AI Commerce
+            url: /docs/dg/dev/ai/ai-commerce/install-ai-commerce.html
+          - title: Configure multiple AI providers
+            url: /docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html
+          - title: Visual Add to Cart
+            url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/visual-add-to-cart.html
+            nested:
+              - title: Install Visual Add to Cart
+                url: /docs/dg/dev/ai/ai-commerce/visual-add-to-cart/install-visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/backoffice-assistant.html
+            nested:
+              - title: Install Back Office Assistant
+                url: /docs/dg/dev/ai/ai-commerce/backoffice-assistant/install-backoffice-assistant.html
+          - title: Search by Image
+            url: /docs/dg/dev/ai/ai-commerce/search-by-image/search-by-image.html
+            nested:
+              - title: Install Search by Image
+                url: /docs/dg/dev/ai/ai-commerce/search-by-image/install-search-by-image.html
+          - title: Smart PIM
+            url: /docs/dg/dev/ai/ai-commerce/smart-pim/smart-pim.html
+            nested:
+              - title: Install Smart PIM
+                url: /docs/dg/dev/ai/ai-commerce/smart-pim/install-smart-pim.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -67,6 +95,8 @@ entries:
             url: /docs/dg/dev/ai/ai-dev/ai-dev-overview.html
           - title: AI Dev MCP Server
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
+          - title: Claude Code Plugin
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:
@@ -165,8 +195,6 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/unable-to-bring-up-mutagen-compose-sidecar-service.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
-      - title: Session locking issues
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/session-locking-issues.html
 
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
@@ -377,51 +405,6 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
         - title: Integrate RabbitMQ Headers in Queue Messages
           url: /docs/dg/dev/backend-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
-
-      - title: Payment methods
-        url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/payment-methods.html
-        nested:
-        - title: Direct Debit payment
-          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
-          nested:
-          - title: Implement Direct Debit in Yves
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
-          - title: Integrate Direct Debit into checkout
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
-          - title: Implement Direct Debit in Zed
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
-          - title: Implement Direct Debit in the Shared layer
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
-          - title: Test Your Direct Debit Implementation
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
-        - title: Prepayment
-
-          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
-          nested:
-          - title: Implement prepayment in frontend
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
-          - title: Integrate Prepayment into checkout
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
-          - title: Implement prepayment in backend
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
-          - title: Implement prepayment in Shared layer
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
-          - title: Test the prepayment implementation
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
-
-        - title: Invoice
-          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
-          nested:
-          - title: Implement invoice payment in frontend
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
-          - title: Integrate invoice payment into checkout
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
-          - title: Implement invoice payment in backend
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
-          - title: Implement invoice payment in Shared layer
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
-          - title: Test the invoice payment implementation
-            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 
       - title: Data ingestion
         url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/data-ingestion.html
@@ -886,6 +869,8 @@ entries:
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
       url: /docs/dg/dev/frontend-development/define-twig-tag.html
+    - title: Design tokens
+      url: /docs/dg/dev/frontend-development/design-tokens.html
     - title: Notifying about unsupported browsers
       url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 
@@ -900,6 +885,8 @@ entries:
       url: /docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
     - title: How to migrate to API Platform
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html
+    - title: API Platform migration overview
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -1144,6 +1131,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-symfony-scheduler.html
     - title: Configuration Management feature
       url: /docs/dg/dev/integrate-and-configure/integrate-confguration-feature.html
+    - title: Basic Shop Theme feature
+      url: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
 
 
   - title: SDKs
@@ -1330,6 +1319,10 @@ entries:
           url: /docs/dg/dev/architecture/api-platform/serialization.html
         - title: Native API Platform Resources
           url: /docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+        - title: IDE integration
+          url: /docs/dg/dev/architecture/api-platform/ide-integration.html
+        - title: Migration status - Glue API to API Platform
+          url: /docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html
 
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
@@ -1461,8 +1454,6 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
       - title: Twig performance best practices
         url: /docs/dg/dev/guidelines/performance-guidelines/twig-performance-best-practices.html
-      - title: Session locks
-        url: /docs/dg/dev/guidelines/performance-guidelines/session-locks.html
       - title: Bot control
         url: /docs/dg/dev/guidelines/performance-guidelines/bot-control.html
       - title: Batch processing of Propel entities
@@ -1471,6 +1462,10 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/database-performance-guidelines.html
       - title: Key-Value storage performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/key-value-storage-performance-guidelines.html
+      - title: KV storage deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/kv-storage-deduplication.html
+      - title: Search index deduplication
+        url: /docs/dg/dev/guidelines/performance-guidelines/search-index-deduplication.html
       - title: External HTTP requests
         url: /docs/dg/dev/guidelines/performance-guidelines/external-http-requests.html
       - title: Search performance guidelines
@@ -1491,6 +1486,8 @@ entries:
         url: /docs/dg/dev/guidelines/performance-guidelines/cdn-and-traffic-management-integration.html
       - title: Yves widget performance best practices
         url: /docs/dg/dev/guidelines/performance-guidelines/yves-performance-best-practice.html
+      - title: Split publish queues for performance
+        url: /docs/dg/dev/guidelines/performance-guidelines/split-queues-performance.html
       - title: Keeping dependencies updated
         url: /docs/dg/dev/guidelines/performance-guidelines/keeping-dependencies-updated.html
 
@@ -1630,6 +1627,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: Database tables take up too much space or have ID overflow
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/database-tables-take-up-too-much-space-or-have-id-overflow.html
+      - title: Missing Frontend Dependencies When Building Back Office Assets
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/missing-frontend-dependencies-at-the-backoffice.html
 
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html

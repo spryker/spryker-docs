@@ -2,7 +2,7 @@
 title: Install the Product Attachments feature
 description: Learn how to integrate the Product Attachments feature into a Spryker project.
 template: feature-integration-guide-template
-last_updated: Feb 20, 2026
+last_updated: Mar 30, 2026
 ---
 
 This document describes how to install the [Product Attachments feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html).
@@ -116,7 +116,7 @@ Register the following Back Office plugins:
 | ProductAttachmentProductAbstractFormExpanderPlugin | Expands the abstract product form with the Attachments tab. | | Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement |
 | ProductAttachmentProductAbstractTransferMapperPlugin | Maps attachment form data to the abstract product transfer. | | Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement |
 | ProductAttachmentProductAbstractFormDataProviderExpanderPlugin | Populates the attachment form with existing attachment data. | | Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement |
-| ProductAttachmentImageTabContentProviderPlugin | Provides attachment content for the Media tab. | | Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement |
+| ProductAttachmentImageTabContentProviderWithPriorityPlugin | Provides attachment content for the Media tab. | | Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement |
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -125,7 +125,8 @@ Register the following Back Office plugins:
 
 namespace Pyz\Zed\ProductManagement;
 
-use Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement\ProductAttachmentImageTabContentProviderPlugin;
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductAbstractGeneralTabContentProviderPlugin;
+use Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement\ProductAttachmentImageTabContentProviderWithPriorityPlugin;
 use Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement\ProductAttachmentProductAbstractFormDataProviderExpanderPlugin;
 use Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement\ProductAttachmentProductAbstractFormExpanderPlugin;
 use Spryker\Zed\ProductAttachment\Communication\Plugin\ProductManagement\ProductAttachmentProductAbstractTransferMapperPlugin;
@@ -164,13 +165,21 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
+     * @return list<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormTabContentProviderWithPriorityPluginInterface>
+     */
+    protected function getProductAbstractFormTabContentProviderWithPriorityPlugins(): array
+    {
+        return [
+            new ProductAttachmentImageTabContentProviderWithPriorityPlugin(),
+        ];
+    }
+    
+    /**
      * @return list<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractFormTabContentProviderPluginInterface>
      */
     protected function getProductAbstractFormTabContentProviderPlugins(): array
     {
-        return [
-            new ProductAttachmentImageTabContentProviderPlugin(),
-        ];
+        return [];
     }
 }
 ```

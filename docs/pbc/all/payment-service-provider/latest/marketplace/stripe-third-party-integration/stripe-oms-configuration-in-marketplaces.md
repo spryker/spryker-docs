@@ -1,7 +1,7 @@
 ---
-title: "Stripe: OMS configuration for marketplaces"
-description: Guidelines on the Spryker Ordermanagement system and Stripe integration for Marketplace based stores.
-last_updated: Aug 20, 2024
+title: Stripe OMS configuration for marketplaces
+description: Guidelines on the Spryker Order Management system and Stripe integration for Marketplace based stores.
+last_updated: Apr 14, 2026
 template: howto-guide-template
 ---
 
@@ -9,13 +9,13 @@ This document provides guidelines for projects using Stripe in marketplaces.
 
 ## OMS configuration
 
-The complete default payment OMS configuration is available in `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+The complete default payment OMS configuration for marketplaces is available in `vendor/spryker-eco/stripe/config/Zed/oms/StripeManualMarketplace01.xml`.
 
-The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is emporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
+The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-For more information about the ForeignPayment OMS configuration, see [Project guidelines for Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html)
+For more information about the base shop OMS configuration, see [OMS configuration for Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html).
 
-In addition to the base shop implementation, the Stripe App in Marketplaces requires the following OMS configuration:
+In addition to the base shop implementation, the Stripe module in Marketplaces requires the following OMS configuration:
 
 - The `MerchantCommission/Calculate` command triggers the calculation of the commission for the merchant. By default, this command is initiated when an order is moved to the `payment captured` state. This command calculates the commission based on your projects settings. For more details on configuration, see  [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/latest/marketplace/marketplace-merchant-commission-feature-overview.html).
 
@@ -27,9 +27,9 @@ In addition to the base shop implementation, the Stripe App in Marketplaces requ
 
 - The `SalesPaymentMerchant/IsMerchantPayoutReversed` condition validates the reverse payout status. By default, this condition is triggered after the reverse payout is done. When a reverse payout is successful, the OMS moves to the `canceled` state. If a reverse payout fails, the OMS moves to the `reverse payout failed` state.
 
-You can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package. For more information about the OMS feature and its configuration, see [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
+You can change and configure your own payment OMS based on `StripeManualMarketplace01.xml` from the Stripe eco package. For more information about the OMS feature and its configuration, see [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
 
-To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with the `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
+To configure your payment OMS based on `StripeManualMarketplace01.xml`, copy `StripeManualMarketplace01.xml` with the `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
 
 <details>
   <summary>Payout subprocess example</summary>
@@ -139,7 +139,7 @@ To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy 
 
 ## Processing payouts
 
-In the default OMS configuration, a payout to merchants is initiated after the OMS is in `delivered` state and the commission was calculated. This command sends an API call to the StripeApp to initiate the payout to the merchant. The payout status is tracked in the Back Office, and the OMS can either move to `payout failed` or `closed` state. The `payout failed` state is used to track the payout status and inform the Back Office user about the failure. The `closed` state is used to track the successful payout.
+In the default OMS configuration, a payout to merchants is initiated after the OMS is in `delivered` state and the commission was calculated. This command sends a direct API call to Stripe to initiate the payout to the merchant. The payout status is tracked in the Back Office, and the OMS can either move to `payout failed` or `closed` state. The `payout failed` state is used to track the payout status and inform the Back Office user about the failure. The `closed` state is used to track the successful payout.
 
 ### Payout process
 
@@ -160,7 +160,7 @@ You can identify the cause of a failure in the Stripe Dashboard. After resolving
 
 ## Processing refunds as reverse payout
 
-In the default OMS configuration, a reverse payout can be done for an order or an individual item. The reverse payout action is initiated by a Back Office user triggering the `SalesPaymentMerchant/ReversePayout` command. The selected item or items are used to find the previously made payout in the database and the amount that was payed out to the merchant and make a call to the StripeApp which does the reverse payout. Based on the response the items go either into `canceled` or `reverse payout failed` state.
+In the default OMS configuration, a reverse payout can be done for an order or an individual item. The reverse payout action is initiated by a Back Office user triggering the `SalesPaymentMerchant/ReversePayout` command. The selected item or items are used to find the previously made payout in the database and the amount that was paid out to the merchant and make a direct API call to Stripe which does the reverse payout. Based on the response the items go either into `canceled` or `reverse payout failed` state.
 
 ### Reverse Payout process
 
@@ -172,4 +172,4 @@ In the default OMS configuration, a reverse payout can be done for an order or a
 
 ### Reverse payout failures
 
-A reverse payout can fail for many reasons, for example-the merchant's Stripe account doesn't have the funds to cover a reverse payout. You can identify the cause of a failure in the Stripe Dashboard. After resolving the issue, the reverse payout can be reinitiated again.
+A reverse payout can fail for many reasons, for example — the merchant's Stripe account doesn't have the funds to cover a reverse payout. You can identify the cause of a failure in the Stripe Dashboard. After resolving the issue, the reverse payout can be reinitiated again.

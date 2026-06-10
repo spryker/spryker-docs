@@ -1,13 +1,13 @@
 ---
 title: Stripe for Marketplace
 description: Learn about Stripe technology partner for running in a Spryker Marketplace store.
-last_updated: August 8, 2024
+last_updated: Apr 14, 2026
 template: concept-topic-template
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.
 
-The Stripe integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
+The Stripe integration in Spryker is part of the Spryker ecosystem and supports both the default Storefront Yves and Spryker GLUE APIs.
 
 This section contains the guides related to running Stripe with Marketplace projects. For more information about Stripe, see [Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html).
 
@@ -25,7 +25,7 @@ The payment flow is built using [separate charges and transfers](https://docs.st
 
 ## User journey
 
-The image below outlines the user journey for how the Stripe App functions in marketplaces built with Spryker.
+The image below outlines the user journey for how the Stripe module functions in marketplaces built with Spryker.
 ![user-journey](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/marketplace/stripe-third-party-integration/stripe-for-marketplace.md/marketplace-payment-user-journey.png)
 
-Before using the Stripe App in your marketplace, make sure the [prerequisites are met](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html).
+Before using the Stripe module in your marketplace, make sure the [prerequisites are met](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html).

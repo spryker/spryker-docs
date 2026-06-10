@@ -9,7 +9,7 @@ The **Service Links** panel in [CloudHub](/docs/ca/dev/cloud-hub/cloud-hub.html)
 
 {% info_block infoBox "SSO access only" %}
 
-Service Links are only available to users who authenticate via Single Sign-On (SSO). Direct or non-SSO access is not supported.
+Service links are only available for SSO-enabled environments. For non-SSO environments, links are not working as the URLs differ.
 
 {% endinfo_block %}
 
@@ -28,10 +28,10 @@ The following services may be available depending on your environment configurat
 
 | Service | Description | VPN required |
 | :--- | :--- | :--- |
-| **Jenkins** | CI/CD pipeline automation. Provides access to the Jenkins dashboard for managing build and deployment pipelines. | Yes |
-| **RabbitMQ** | Message broker management console. Lets you monitor queues, exchanges, and message activity. | Yes |
-| **AWS Console** | Cloud infrastructure management. Provides access to the AWS Management Console for your environment. | No |
-| **KeyCloak** | Identity and access management. Lets you manage users, roles, and authentication settings. | No |
+| **Jenkins** | Provides access to the Jenkins dashboard for managing build and deployment pipelines. | Yes |
+| **RabbitMQ** | Lets you monitor queues, exchanges, and message activity. | Yes |
+| **AWS Console** | Provides access to the AWS Management Console for your environment. | No |
+| **KeyCloak** | Lets you manage users, roles, and authentication settings. | No |
 
 {% info_block warningBox "VPN requirement" %}
 
@@ -41,6 +41,6 @@ Jenkins and RabbitMQ are only accessible when your VPN connection is active. Mak
 
 {% info_block infoBox "Environment availability" %}
 
-The services displayed depend on the selected environment. Not all services may be available in every environment.
+The services shown depend on the selected environment and may vary. Note that this page displays all services available in that environment — it does not reflect the access granted to individual users.
 
 {% endinfo_block %}

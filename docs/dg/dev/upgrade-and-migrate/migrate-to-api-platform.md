@@ -636,7 +636,7 @@ ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php
 This is expected. You have three options:
 
 1. **Accept the difference** (recommended): Update API consumers to handle both formats during migration
-2. **Configure API Platform format**: Customize serialization to match the Glue format. See [Serialization](/docs/dg/dev/architecture/api-platform/serialization.html) and the [Serializer guidelines](/docs/dg/dev/guidelines/serializer-guidelines.html) for how to adjust serialization context and register custom normalizers.
+2. **Configure API Platform format**: Customize serialization to match the Glue format. See [Serialization](/docs/dg/dev/architecture/api-platform/serialization.html) for how API Platform serialization works and how to register custom normalizers.
 3. **Use content negotiation**: Support both formats based on `Accept` header
 
 ### Business logic differs between implementations

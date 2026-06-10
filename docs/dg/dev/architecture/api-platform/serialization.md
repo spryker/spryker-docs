@@ -1,7 +1,7 @@
 ---
 title: Serialization
-description: How API Platform uses the Spryker Serializer module for request and response serialization.
-last_updated: Jun 9, 2026
+description: How API Platform serializes requests and responses, and how the Spryker Serializer module fits in.
+last_updated: Jun 10, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -14,30 +14,40 @@ related:
     link: docs/dg/dev/guidelines/serializer-guidelines.html
 ---
 
-API Platform uses the [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) to convert between PHP objects and their serialized representations in both directions. The Serializer is registered as a Symfony service and integrates directly with API Platform's serialization pipeline.
+API Platform serializes requests and responses with the [Symfony Serializer component](https://symfony.com/doc/current/serializer.html) through its own serialization pipeline. The [Spryker Serializer module](/docs/dg/dev/guidelines/serializer-guidelines.html) complements this pipeline: it is registered as a Symfony service, and providers and processors use it to denormalize data into resource objects.
 
 ## How it works
 
 When a request hits an API Platform endpoint:
 
-1. **Request deserialization** — the incoming payload is deserialized into the resource object using the Serializer. (API Platform)
-2. **Provider/Processor** — your provider or processor works with the resource object, converts to array and or Transfer objects, and vice versa.
-3. **Response serialization** — the resource object is serialized back into the expected response format. (API Platform)
+1. **Request deserialization** — API Platform deserializes the incoming payload into the resource object.
+2. **Provider/Processor** — your provider or processor converts the resource object to arrays or transfer objects via `toArray()` and mappers, calls the business layer, and converts the result back into a resource object.
+3. **Response serialization** — API Platform serializes the resource object into the expected response format.
 
-API Platform handles this automatically. You interact with the Serializer only when you need to customize serialization behavior.
+The serialization context for steps 1 and 3 is built by API Platform's `SerializerContextBuilder` from the resource and operation configuration. Providers and processors don't interact with this context directly.
 
-## Customizing serialization context
+## Using the Serializer service in providers and processors
 
-Use `SerializerContextTransfer` to control how data is serialized in your providers or processors. Common use cases:
+Providers and processors inject `SerializerServiceInterface` and use its `denormalize()` method to convert mapped transfer data into the generated resource class:
 
-- **Serialization groups** — control which properties are included in the response
-- **Skip null values** — omit null properties from the output
-- **DateTime formatting** — set a custom date/time format
+```php
+return $this->serializer->denormalize(
+    $this->customersResourceMapper->mapCustomerTransferToResourceData($customerTransfer),
+    CustomersStorefrontResource::class,
+);
+```
 
-For the full list of available context options, see the [Serializer guidelines](/docs/dg/dev/guidelines/serializer-guidelines.html).
+For the full Serializer service API, see the [Serializer guidelines](/docs/dg/dev/guidelines/serializer-guidelines.html).
 
 ## Custom normalizers
 
-To add a custom normalizer that applies to API Platform resources, implement `SerializerNormalizerPluginInterface` and register it in `SerializerDependencyProvider`. Custom normalizers take priority over built-in normalizers.
+To add a custom normalizer that applies to API Platform resources, register it as a Symfony service tagged with `serializer.normalizer`. Use the `priority` attribute to control execution order. For example, the ApiPlatform module registers its JSON:API response normalizers this way:
+
+```php
+$services->set(SelfLinkNormalizer::class)
+    ->tag('serializer.normalizer', ['priority' => 63]);
+```
+
+Normalizer plugins registered in the Serializer module's `SerializerDependencyProvider` affect only the Serializer service itself; they have no effect on API Platform's request and response serialization.
 
 For details on the Symfony Serializer component, see the [Symfony documentation](https://symfony.com/doc/current/serializer.html).

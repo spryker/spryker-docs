@@ -1,7 +1,7 @@
 ---
 title: Serializer guidelines
 description: Guidelines for using the Spryker Serializer module to serialize, deserialize, normalize, and denormalize data.
-last_updated: Jun 9, 2026
+last_updated: Jun 10, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -27,13 +27,18 @@ All operations accept an optional `SerializerContextTransfer` to configure behav
 
 ## SerializerContextTransfer
 
-The `SerializerContextTransfer` maps Spryker transfer conventions to Symfony Serializer context options. Supported options include:
+The `SerializerContextTransfer` maps Spryker transfer conventions to Symfony Serializer context options. Supported options:
 
 - **groups** — serialization groups for attribute filtering
 - **isSkipNullValues** — omit null properties from output
 - **isSkipUninitializedValues** — omit uninitialized properties
 - **isPreserveEmptyObjects** — keep empty objects as `{}` instead of `[]`
 - **isEnableMaxDepth** — enable max depth handling
+- **maxDepth** — setting a value also enables max depth handling; the depth limits themselves come from `#[MaxDepth]` attributes on properties
+- **isAllowExtraAttributes** — allow attributes in the input that don't exist on the target object
+- **isCollectDenormalizationErrors** — collect all denormalization errors instead of failing on the first one
+- **isRequireAllProperties** — require all properties to be present during denormalization
+- **isDisableTypeEnforcement** — disable type enforcement during denormalization
 - **datetimeFormat** — custom date/time format string
 - **datetimeTimezone** — timezone for date/time normalization
 - **defaultConstructorArguments** — default constructor arguments for denormalization
@@ -61,10 +66,12 @@ protected function getSerializerNormalizerPlugins(): array
 
 Custom normalizers are prepended before built-in normalizers, giving them higher priority.
 
+These plugins affect only the Serializer module's own serializer instance. They have no effect on API Platform's request and response serialization—for that, see [API Platform serialization](/docs/dg/dev/architecture/api-platform/serialization.html).
+
 ## Built-in support
 
 The module includes the following Symfony normalizers and encoders out of the box:
 
-**Normalizers:** ObjectNormalizer, ArrayDenormalizer, DateTimeNormalizer, DateTimeZoneNormalizer, DateIntervalNormalizer, BackedEnumNormalizer, DataUriNormalizer, JsonSerializableNormalizer, UidNormalizer, UnwrappingDenormalizer
+**Normalizers (in registration order):** UnwrappingDenormalizer, UidNormalizer, DateTimeNormalizer, DateTimeZoneNormalizer, DateIntervalNormalizer, BackedEnumNormalizer, DataUriNormalizer, JsonSerializableNormalizer, ArrayDenormalizer, ObjectNormalizer
 
 **Encoders:** JsonEncoder, XmlEncoder, CsvEncoder

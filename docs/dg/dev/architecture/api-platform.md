@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: May 18, 2026
+last_updated: Jun 10, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -18,9 +18,11 @@ related:
     link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
   - title: Sparse Fieldsets
     link: docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+  - title: Serialization
+    link: docs/dg/dev/architecture/api-platform/serialization.html
 ---
 
-Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
+Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and [serialization](/docs/dg/dev/architecture/api-platform/serialization.html).
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
@@ -491,6 +493,7 @@ For detailed implementation guides:
 - [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
 - [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html) - Request only needed attributes
+- [Serialization](/docs/dg/dev/architecture/api-platform/serialization.html) - How requests and responses are serialized
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 
 ## Next steps

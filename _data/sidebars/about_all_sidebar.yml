@@ -57,6 +57,8 @@ entries:
         nested:
         - title: RabbitMQ
           nested:
+          - title: Release notes for spryker-rabbitmq 20260427
+            url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-spryker-rabbitmq-20260427.html
           - title: Release notes for spryker-rabbitmq 20260113
             url: /docs/about/all/releases/image-releases/rabbitmq/release-notes-spryker-rabbitmq-20260113.html
           - title: Release notes for RabbitMQ 4.1 Update
@@ -71,6 +73,8 @@ entries:
             url: /docs/about/all/releases/image-releases/jenkins/release-notes-spryker-jenkins-20260113.html
         - title: Spryker-PHP
           nested:
+          - title: Release notes for spryker-php 20260608
+            url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260608.html
           - title: Release notes for spryker-php 20260206
             url: /docs/about/all/releases/image-releases/spryker-php/release-notes-spryker-php-20260206.html
           - title: Release notes for spryker-php 20260113

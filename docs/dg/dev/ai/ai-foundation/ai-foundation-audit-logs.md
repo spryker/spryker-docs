@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature, including estimated cost per interaction.
-last_updated: Jun 10, 2026
+last_updated: Jun 12, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring, cost estimation, ai pricing
 template: howto-guide-template
 label: early-access
@@ -164,7 +164,7 @@ Run the database migrations to create the `spy_ai_interaction_log` table:
 console propel:install
 ```
 
-## Configure AI token pricing
+## Configure AI Vendor model token pricing
 
 To display estimated costs in the Audit Logs, configure token prices per provider and model.
 
@@ -180,7 +180,7 @@ console configuration:sync
 
 ### Configure prices per provider
 
-In the Back Office, go to **Configuration > Manage > AI Vendor** and select a provider tab (OpenAI, Anthropic, or AWS Bedrock). Enter the input and output token prices for each model as a JSON object:
+In the Back Office, go to **Configuration > Manage** and select the **AI Vendor** tab for the provider (OpenAI, Anthropic, or AWS Bedrock). Enter the input and output token prices for each model as a JSON object:
 
 ```json
 {"gpt-4.1": {"input": 2.50, "output": 10.00}, "gpt-4o-mini": {"input": 0.15, "output": 0.60}}

@@ -1,6 +1,6 @@
 ---
 title: Configuration process flow of configurable products
-last_updated: Jun 2, 2022
+last_updated: Jun 15, 2026
 description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
 redirect_from:
@@ -31,9 +31,9 @@ The following table shows the configuration data that is stored in the Session a
 | PARAMETER | VALUE | COMMENTS  |
 |---|---|---|
 | `ProductConfigurationInstance.isComplete` | `true` or `false` | Sensitive data. |
-| `ProductConfigurationInstance.displayData` | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
-| `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
-| `ProductConfigurationInstance.configuration` |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"Flow Rate":"10 m³/h","Filtration Type":"Reverse Osmosis","Tank Material":"SS316L"}` |   |
+| `ProductConfigurationInstance.configuratorKey` | `WATER_TREATMENT_CONFIGURATOR` |   |
+| `ProductConfigurationInstance.configuration` |  `{"flowRate":"10","filtration":"reverse_osmosis","tank":"ss316l"}` | Sensitive data. |
 
 The framework generates a back URL that points to the gateway page with the following parameters:
 
@@ -87,8 +87,8 @@ The customer clicks the configuration button, and the request is redirected to t
 | `ProductConfigurationInstance.prices` | `{% raw %}{{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}{% endraw %}`                                                                                                        | Sensitive data. |
 | `ProductConfigurationInstance.isComplete` | `true`                                                                                                                                       | Sensitive data. |
 | `ProductConfigurationInstance.availableQuantity` | `2`                                                                                                                                          |   |
-| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"color"=>"red", "weight"=> 100}`                                                                       |   |
-| `ProductConfigurationInstance.configuration` | `{"color"=>"red", "weight"=> 100}`                                                                                                           | Sensitive data. |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"Flow Rate":"10 m³/h","Filtration Type":"Reverse Osmosis","Tank Material":"SS316L"}`                                                                       |   |
+| `ProductConfigurationInstance.configuration` | `{"flowRate":"10","filtration":"reverse_osmosis","tank":"ss316l"}`                                                                                                           | Sensitive data. |
 | `idCustomer` | `DE-1`                                                                                                                                       |   |
 | sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                                                            |   |
 | `SKU`  | `some_sku`                                                                                                                                   |   |
@@ -129,9 +129,9 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 | PARAMETER                                      | VALUE | COMMENT |
 |------------------------------------------------|---|---|
-| `ProductConfigurationInstance.displayData`     | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
-| `ProductConfigurationInstance.configuration`   |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
-| `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
+| `ProductConfigurationInstance.displayData`     | Some text of JSON blob—for example, `{"Flow Rate":"10 m³/h","Filtration Type":"Reverse Osmosis","Tank Material":"SS316L"}` |   |
+| `ProductConfigurationInstance.configuration`   |  `{"flowRate":"10","filtration":"reverse_osmosis","tank":"ss316l"}` | Sensitive data. |
+| `ProductConfigurationInstance.configuratorKey` | `WATER_TREATMENT_CONFIGURATOR` |   |
 | `ProductConfigurationInstance.isComplete`      | `true` or `false` | Sensitive data. |
 | `backUrl`                                      | `https://some.url` | Sensitive data. |
 | `SubmitUrl`                                    | `https://some.url` | Sensitive data. |
@@ -172,8 +172,8 @@ Redirects the customer to the configurator page using the GET request.
 | `ProductConfigurationInstance.prices` | `{% raw %}{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}{% endraw %}`                                                              | Sensitive data. |
 | `ProductConfigurationInstance.isComplete` | `1`                                                                    | Sensitive data. |
 | `ProductConfigurationInstance.availableQuantity` | `2`                                                                    |   |
-| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
-| `ProductConfigurationInstance.configuration` | `"date"=>"23.07.2020", "time"=>"18:45" 4]`                             | Sensitive data. |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"Flow Rate":"10 m³/h","Filtration Type":"Reverse Osmosis","Tank Material":"SS316L"}` |   |
+| `ProductConfigurationInstance.configuration` | `{"flowRate":"10","filtration":"reverse_osmosis","tank":"ss316l"}`     | Sensitive data. |
 | `ProductConfigurationInstance.timestamp` | `10312313135234`                                                       | Sensitive data, a certain configuration must be valid only a certain amount of the time given. |
 | `sourceType` | `SOURCE_TYPE_PDP`, `SOURCE_TYPE_CART`, `SOURCE_TYPE_WISHLIST_DETAIL`, …                                        |   |
 | `SKU`  | `some_sku`                                                             |   |

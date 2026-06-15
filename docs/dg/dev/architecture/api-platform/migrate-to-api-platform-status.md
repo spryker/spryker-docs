@@ -1,6 +1,6 @@
 ---
 title: Migration status - Glue API to API Platform
-description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage and a high-level migration workflow.
+description: Tracks the migration status of API modules to the Spryker API Platform across StorefrontAPI and BackendAPI, with endpoint coverage.
 last_updated: Jun 10, 2026
 template: howto-guide-template
 redirect_from:

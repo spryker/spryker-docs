@@ -21,7 +21,7 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront and back o
 
 ## Configure AI providers
 
-All AI Commerce features are provider-agnostic. You can configure OpenAI, AWS Bedrock, or Anthropic independently per feature — swapping the underlying model without changing application code. For instructions, see [Configure multiple AI providers for AI Commerce](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+All AI Commerce features are provider-agnostic. You can configure OpenAI, AWS Bedrock, Anthropic, or any other supported provider independently per feature — swapping the underlying model without changing application code. For instructions, see [Configure multiple AI providers for AI Commerce](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
 
 ![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
 

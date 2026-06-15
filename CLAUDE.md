@@ -76,6 +76,14 @@ Analyze the overall tone to align with technical documentation styles (Google De
 - Apply other Spryker Liquid tags as needed:
     - `{% include %}`
     - `{% info_block warningBox "Warning" %}`
+- **info_block formatting:** Always surround the content inside `{% info_block %}` tags with blank lines. This is required for CommonMark to process Markdown (links, bold, etc.) inside the block. Without blank lines, CommonMark treats the entire block as raw HTML and markdown is not rendered.
+  ```markdown
+  {% info_block warningBox %}
+
+  Content with [links](/docs/example.html) renders correctly.
+
+  {% endinfo_block %}
+  ```
 - Ensure output renders correctly in Jekyll but remains readable in raw Markdown
 
 ### Presenting Suggestions

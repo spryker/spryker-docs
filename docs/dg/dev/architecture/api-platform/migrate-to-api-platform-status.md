@@ -29,53 +29,11 @@ This page does **not** describe how to integrate API Platform into your project.
 
 {% endinfo_block %}
 
-## Why Spryker is moving to API Platform
+## How to migrate a module
 
-API Platform replaces Spryker-specific patterns for routing, authentication, and resource definition with industry-standard Symfony conventions, automatic OpenAPI schema generation, and a clean separation between resource schema, provider, and validation.
+The end-to-end migration steps — upgrade the module, confirm configuration, flip routing, verify, and clean up — are owned by the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html). This page only tracks **which** modules are available on API Platform and their status.
 
-| Aspect | Previous infrastructure | API Platform |
-|---|---|---|
-| Bootstrap | Spryker-specific application bootstrap | Symfony Kernel-based routing |
-| Resource registration | Manual plugin registration in `GlueApplicationDependencyProvider` | Declarative YAML resource definitions (`*.resource.yml`) |
-| Authentication | Custom flows per module | Standard OAuth2 / Symfony Security |
-| Coupling | Tight coupling between resource and routing logic | Clean separation: provider + resource schema + validation |
-| Testability | Complex to test and extend | Symfony-native, testable with standard PHPUnit patterns |
-| OpenAPI | Manual / partial | Automatic OpenAPI schema generation |
-
-## General migration workflow
-
-For any module marked **Migrated**, projects upgrade in three high-level steps. Detailed instructions are in the linked integration guides above.
-
-1. **Update the module to the API Platform-enabled version**
-
-   Pull the new module version that ships the `*.resource.yml` schema and Provider class:
-
-    ```bash
-    composer update spryker/<module-name>
-    ```
-
-2. **Remove the previous resource plugins**
-
-   In your project's `GlueApplicationDependencyProvider`, remove the previous plugin registrations for the migrated module - typically a `ResourceRoutePlugin` (and any related `ResourceRelationshipPlugin` / expander plugins) registered in `getResourceRoutePlugins()`.
-
-   For **extension-only** modules, remove or replace the corresponding plugin wiring in the parent module's dependency provider as indicated in the module's release notes.
-
-3. **Clear caches and verify**
-
-    ```bash
-    docker/sdk cli glue cache:clear
-    docker/sdk cli glue api:generate
-    ```
-
-   Confirm the endpoint is served by API Platform by hitting it against your local Glue host - the response is now produced by the new Symfony-based stack.
-
-{% info_block infoBox "Parallel operation" %}
-
-The previous API stack and API Platform run **side by side** during the transition. You can migrate modules incrementally; modules that have not been migrated continue to be served by the previous stack.
-
-{% endinfo_block %}
-
-### Status legend
+## Status legend
 
 | Status | Meaning |
 |---|---|

@@ -41,59 +41,9 @@ Before migrating resources, ensure you have:
 - Configured router plugins in correct order (see below)
 - Tested that API Platform is working with at least one test resource
 
-## Migration strategy
+## Migration strategy and router setup
 
-Whether you migrate a single module or a batch, the same safety properties hold:
-
-1. **Coexistence**: Both Glue API and API Platform run side by side
-2. **Router priority**: Existing Glue endpoints are matched first, API Platform endpoints second
-3. **Resource-by-resource mechanics**: Within a batch, apply the steps below to each resource, then verify before moving to the next
-4. **No breaking changes**: Existing API consumers continue to work during migration
-5. **Final cleanup**: Remove Glue router only after all resources are migrated
-
-### Router configuration order
-
-The key to gradual migration is router plugin order. The `SymfonyFrameworkRouterPlugin` must be placed **after** existing Glue router plugins:
-
-`src/Pyz/Glue/Router/RouterDependencyProvider.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Glue\Router;
-
-use Spryker\Glue\GlueApplication\Plugin\Rest\GlueRouterPlugin;
-use Spryker\Glue\Router\Plugin\Router\SymfonyFrameworkRouterPlugin;
-use Spryker\Glue\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-
-class RouterDependencyProvider extends SprykerRouterDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Glue\RouterExtension\Dependency\Plugin\RouterPluginInterface>
-     */
-    protected function getRouterPlugins(): array
-    {
-        return [
-            new GlueRouterPlugin(),        // ← Existing Glue endpoints (checked first)
-            new SymfonyFrameworkRouterPlugin(),     // ← API Platform endpoints (checked second)
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Router order is critical" %}
-
-If `SymfonyFrameworkRouterPlugin` is placed before `GlueRouterPlugin`, API Platform routes may shadow existing Glue routes and break backward compatibility. Always place it **after** existing routers.
-
-{% endinfo_block %}
-
-With this configuration:
-- Request comes in: `GET /customers`
-- `GlueRouterPlugin` checks first: If Glue resource exists → use it
-- `SymfonyFrameworkRouterPlugin` checks second: If no Glue match → try API Platform
-- Result: Existing endpoints continue working, new API Platform endpoints are available
+This guide covers the mechanics of migrating a single resource. The overall strategy (batch migration is the default), the router-plugin ordering, and how routing flips between Glue and API Platform are owned by the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) — read it first. The steps below are what you apply to each resource within a batch.
 
 ## Migration process
 

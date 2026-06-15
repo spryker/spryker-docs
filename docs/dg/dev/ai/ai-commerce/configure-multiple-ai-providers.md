@@ -1,11 +1,13 @@
 ---
 title: Configure multiple AI providers for AI Commerce
 description: Learn how to configure OpenAI, AWS Bedrock, and Anthropic providers independently for each AI Commerce feature.
-last_updated: May 11, 2026
+last_updated: Jun 15, 2026
 template: howto-guide-template
 ---
 
 AI Commerce supports three AI providers: OpenAI, AWS Bedrock, and Anthropic. Each feature — Back Office Assistant, Visual Add to Cart (Quick Order), Search by Image, and Smart PIM — can use a different provider independently. This lets you optimize cost, latency, or capability per feature without changing any application code.
+
+![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
 
 ## How it works
 

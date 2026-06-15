@@ -1,7 +1,7 @@
 ---
 title: AI Commerce
 description: AI Commerce brings AI-powered capabilities to your Spryker storefront, helping buyers find and order products faster with less manual effort.
-last_updated: Jun 08, 2026
+last_updated: Jun 15, 2026
 template: concept-topic-template
 ---
 
@@ -16,6 +16,14 @@ AI Commerce brings AI-powered capabilities to your Spryker storefront and back o
 | [Back Office Assistant](/docs/pbc/all/ai-commerce/latest/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions to navigate the Back Office, diagnose order issues, and create or update discounts.                                                                      |
 | [Search by Image](/docs/pbc/all/ai-commerce/latest/search-by-image.html)            | Lets customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or the first matching product page.                                                                                     |
 | [Smart CMS Content Assistant](/docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html) | An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors. Back Office users can generate and refine placeholder content per locale through a conversational AI interface. |
+
+![Smart CMS Content Assistant](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/smart-cms.png)
+
+## Configure AI providers
+
+All AI Commerce features are provider-agnostic. You can configure OpenAI, AWS Bedrock, or Anthropic independently per feature — swapping the underlying model without changing application code. For instructions, see [Configure multiple AI providers for AI Commerce](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
+![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
 
 ## Who benefits
 

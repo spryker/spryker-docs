@@ -63,35 +63,9 @@ The `SecurityBundle` enables authentication and authorization for API Platform r
 
 ## 3. Configure API Platform
 
-Create a `spryker_api_platform.php` config file in each application layer where you want to enable API Platform — `config/Glue/packages/`, `config/GlueStorefront/packages/`, and `config/GlueBackend/packages/`. The files share the same shape; they differ only in `apiTypes()` (`['storefront']` for the Glue and GlueStorefront applications, `['backend']` for the GlueBackend application) and in the modules each application still serves via Glue.
+Create a `spryker_api_platform.php` and an `api_platform.php` file in each application layer where you enable API Platform — `config/Glue/packages/`, `config/GlueStorefront/packages/`, and `config/GlueBackend/packages/`. At minimum, `spryker_api_platform.php` must set the application's `apiTypes()` — `['storefront']` for the Glue and GlueStorefront applications, `['backend']` for the GlueBackend application.
 
-Two settings deserve attention:
-
-- `sourceDirectories()` — where the generator scans for API Platform schemas. Optional; it defaults to `src/Spryker`, `src/SprykerFeature`, and `src/Pyz`. Set it only if your schemas live somewhere else.
-- `excludedPathFragments()` — schema paths the generator skips. Use it to keep a module's API Platform schemas hidden from the generator (for example, a module the project still serves via Glue). Each entry is matched as a substring of the full schema path. This does NOT switch routing — see [Step 3 — Batch migration in the overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html#step-3--batch-migration-default) for how routing actually flips.
-
-`config/Glue/packages/spryker_api_platform.php` (storefront example):
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-use Symfony\Config\SprykerApiPlatformConfig;
-
-return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
-    $sprykerApiPlatform->apiTypes(['storefront']);
-
-    // Keep these modules on the Glue REST stack by hiding their API Platform schemas from the generator.
-    $sprykerApiPlatform->excludedPathFragments([
-        'vendor/spryker/customer/src/Spryker/Customer/resources/api/',
-        'vendor/spryker/store/src/Spryker/Store/resources/api/',
-        'vendor/spryker/authentication/src/Spryker/Authentication/resources/api/',
-    ]);
-};
-```
-
-For the GlueBackend application, set `apiTypes(['backend'])` and list the modules that application still serves via Glue in `excludedPathFragments()` (for example `vendor/spryker/store/src/Spryker/Store/resources/api/`, `vendor/spryker/currency/src/Spryker/Currency/resources/api/`, `vendor/spryker/locale/src/Spryker/Locale/resources/api/`, `vendor/spryker/store-context/src/Spryker/StoreContext/resources/api/`).
+For the full reference of both configuration files, every available setting, and links to the released demo-shop configurations, see [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html).
 
 ## 4. Update Router Configuration
 
@@ -137,30 +111,16 @@ When migrating existing Glue API endpoints to API Platform, you need to remove e
 
 ## 5. Generate API resources
 
-After configuration, generate your API resources from schema files:
+After configuration, generate your API resources from the schema files:
 
 ```bash
-# Generate resources for all configured API types in Glue
+# Generate resources for all configured API types
 docker/sdk cli glue api:generate
-
-# Generate resources for all configured API types in GlueStorefront
-docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue api:generate
-
-# Generate resources for all configured API types in GlueBackend
-docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
-
-# Generate resources for a specific API type in Glue (others can follow the env var examples above)
-docker/sdk cli glue api:generate storefront
-docker/sdk cli glue api:generate backend
-
-# Dry run (see what would be generated)
-docker/sdk cli glue api:generate --dry-run
-
-# Validate schemas only
-docker/sdk cli glue api:generate --validate-only
 ```
 
-The generated resources will be created in `src/Generated/Api/{ApiType}/` directory.
+Target a specific application by prefixing with `GLUE_APPLICATION=GLUE_STOREFRONT` or `GLUE_APPLICATION=GLUE_BACKEND`. For the full set of generation and debug commands (single API type, `--dry-run`, `--validate-only`, schema inspection), see [Resource generation](/docs/dg/dev/architecture/api-platform.html#resource-generation) in the architecture guide.
+
+The generated resources are created in `src/Generated/Api/{ApiType}/`.
 
 ## 6. Install assets for the API Platform documentation interface
 

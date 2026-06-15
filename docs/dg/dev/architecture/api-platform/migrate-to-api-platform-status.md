@@ -63,8 +63,8 @@ For any module marked **Migrated**, projects upgrade in three high-level steps. 
 3. **Clear caches and verify**
 
     ```bash
-    vendor/bin/glue cache:clear
-    vendor/bin/glue api:generate
+    docker/sdk cli glue cache:clear
+    docker/sdk cli glue api:generate
     ```
 
    Confirm the endpoint is served by API Platform by hitting it against your local Glue host - the response is now produced by the new Symfony-based stack.

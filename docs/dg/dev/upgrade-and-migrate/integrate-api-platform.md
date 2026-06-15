@@ -14,7 +14,7 @@ If you're migrating an existing Spryker shop from the Glue REST stack, read the 
 Before integrating API Platform, ensure you have:
 
 - Upgraded to Symfony Dependency Injection as described in [How to upgrade to Symfony Dependency Injection](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html)
-- PHP 8.1 or higher
+- PHP 8.3 or higher
 - Symfony 6.4 or higher components
 
 ## 1. Install the required modules

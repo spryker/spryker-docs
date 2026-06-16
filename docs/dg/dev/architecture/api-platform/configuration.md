@@ -1,7 +1,7 @@
 ---
 title: API Platform Configuration
 description: Configure API Platform in Spryker using PHP-based configuration files with environment-specific settings.
-last_updated: Mar 9, 2026
+last_updated: Jun 16, 2026
 template: howto-guide-template
 related:
   - title: API Platform

@@ -19,4 +19,4 @@ jobs:
       - name: Check last_updated is not older than 30 days for files with 1 changed line
         env:
           GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: /bin/bash ./_scripts/last_updated_checker.sh 1 30
+        run: /bin/bash ./_scripts/last_updated_checker.sh 2 30

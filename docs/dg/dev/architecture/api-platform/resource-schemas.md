@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jun 3, 2026
+last_updated: Jun 16, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -257,17 +257,21 @@ resource:
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
 | `array` | `array` | `["a", "b"]` | Lists of values |
-| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects |
+| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects — generates a typed companion class. See [Typed nested objects](#typed-nested-objects). |
 | `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
 | `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
 
 Use `map` when the payload is a structured JSON object whose schema you want to describe via
 `openapiContext` rather than a strongly typed PHP class. This is the recommended type whenever a
-request or response body is a JSON object with a known shape but no dedicated DTO class — it
+request or response body is a JSON object with a known shape but no dedicated class — it
 keeps the property typed as a simple `array` in PHP while still producing rich OpenAPI metadata
 and a working "Try Out" body in Swagger UI. See
 [Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui)
 for the full pattern.
+
+When you do want a strongly typed class for the payload — so PHP enforces the field set and the
+OpenAPI document publishes a named component schema — use `type: object` with nested
+`properties:` instead. See [Typed nested objects](#typed-nested-objects).
 
 ### Property attributes
 
@@ -322,6 +326,132 @@ isActive:
   type: boolean
   default: true     # Defaults to true if not provided
 ```
+
+## Typed nested objects
+
+A property declared as `type: object` with its own nested `properties:` block generates a
+dedicated, strongly typed companion class — not an untyped array. The generator emits one PHP
+class per nested object, types the parent property to that class, and publishes a full
+field-by-field schema in the OpenAPI document. The serializer hydrates the nested object from the
+same JSON payload, so the response on the wire is identical to the array-based form it replaces.
+
+This is the strongly typed counterpart to the `map` pattern described in
+[Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui):
+`map` documents a nested object while keeping it a plain PHP `array`; `type: object` promotes it
+to a real class whose shape is enforced by PHP's type system.
+
+### Why use it
+
+- **Type safety in PHP.** The parent property is typed to the generated class (for example,
+  `?CartsTotals`) instead of `array`, so providers and processors get IDE autocompletion and the
+  language enforces the field set.
+- **Precise OpenAPI schema.** Each sub-field carries its own `type`, `description`, and `example`,
+  so the OpenAPI document and Swagger UI render the object as a named component schema instead of
+  an opaque `object`.
+- **No runtime contract change.** Because the serializer denormalizes the typed object from the
+  same keys, migrating a property from `array`/`map` to `type: object` leaves the JSON response
+  unchanged — only the generated PHP and the published schema improve.
+
+### When to use which type
+
+| Use | When |
+|-----|------|
+| `type: object` (with `properties`) | The payload has a **stable, known shape** you want enforced as a PHP class — for example, cart and order `totals`, or a quote-request `customer`. |
+| `type: map` (with `openapiContext`) | The shape is known and worth documenting, but you do **not** want a dedicated PHP class — for example, payloads aggregated from several transfer objects, or PSP-specific responses. See [Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui). |
+| `type: mixed` | The payload genuinely has **no fixed shape** and cannot be described via `openapiContext`. |
+
+### How to declare it
+
+Give the property `type: object` and nest its fields under `properties:`. Sub-fields accept the
+same attributes as top-level properties (`type`, `description`, `openapiContext`, `nullable`,
+`serializedName`, `serializedPath`):
+
+```yaml
+totals:
+    type: object
+    readable: true
+    writable: false
+    required: false
+    description: 'Calculated cart totals in cents.'
+    properties:
+        subtotal:
+            type: integer
+            description: 'Items × prices before any discount/tax.'
+            openapiContext: { example: 16058 }
+        grandTotal:
+            type: integer
+            description: 'What the customer pays.'
+            openapiContext: { example: 14601 }
+        priceToPay:
+            type: integer
+            description: 'Grand total adjusted for any pre-paid amount (e.g. gift cards).'
+            openapiContext: { example: 14601 }
+```
+
+### Generated output
+
+For a `Carts` resource with the `totals` property above, the generator:
+
+1. Types the property on the resource class:
+
+   ```php
+   public ?CartsTotals $totals = null;
+   ```
+
+2. Writes a companion class next to the resource in the `Generated\Api\{ApiType}\` namespace. The
+   class is `final`, carries **no** `#[ApiResource]` attribute — it is an embedded value object,
+   not a routed resource — and exposes the typed sub-fields plus their accessors:
+
+   ```php
+   namespace Generated\Api\Storefront;
+
+   use ApiPlatform\Metadata\ApiProperty;
+
+   final class CartsTotals
+   {
+       #[ApiProperty(description: 'Items × prices before any discount/tax.', openapiContext: ['example' => 16058])]
+       public ?int $subtotal = null;
+
+       #[ApiProperty(description: 'What the customer pays.', openapiContext: ['example' => 14601])]
+       public ?int $grandTotal = null;
+
+       #[ApiProperty(description: 'Grand total adjusted for any pre-paid amount (e.g. gift cards).', openapiContext: ['example' => 14601])]
+       public ?int $priceToPay = null;
+
+       // Getters, setters, toArray(), fromArray() …
+   }
+   ```
+
+The companion class name is `{ResourceName}{PropertyName}` in PascalCase — so `Carts` + `totals`
+becomes `CartsTotals`.
+
+{% info_block infoBox "Imports in companion classes" %}
+
+Companion classes import only the attributes they actually use (`ApiProperty`, `SerializedName`,
+`SerializedPath`). An attribute referenced without its `use` statement would resolve to a
+non-existent class in the `Generated` namespace and break attribute reflection at runtime, so the
+generator never emits an unused import.
+
+{% endinfo_block %}
+
+### Nested objects within objects
+
+Objects can nest to any depth. Each level generates its own class, named by appending the child
+property to its parent's class name. For example:
+
+```yaml
+totals:
+    type: object
+    properties:
+        tax:
+            type: object
+            properties:
+                amount:
+                    type: integer
+```
+
+generates a `CartsTotals` class with `public ?CartsTotalsTax $tax = null;`, plus a separate
+`CartsTotalsTax` class with `public ?int $amount = null;`.
 
 ## Documenting nested properties for OpenAPI and Swagger UI
 

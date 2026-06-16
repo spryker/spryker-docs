@@ -28,8 +28,8 @@ Each application layer carries two configuration files:
 | GlueStorefront | `config/GlueStorefront/packages/api_platform.php` | `config/GlueStorefront/packages/spryker_api_platform.php` |
 | GlueBackend | `config/GlueBackend/packages/api_platform.php` | `config/GlueBackend/packages/spryker_api_platform.php` |
 
-- **`api_platform.php`** configures API Platform itself (Swagger, formats, pagination defaults, resource mapping paths). Documented under [Native API Platform configuration](#native-api-platform-configuration-api_platformphp) below.
-- **`spryker_api_platform.php`** configures Spryker's schema generator (which API types an application serves, where schemas are scanned, which modules stay on Glue). Documented under [Resource generation configuration](#resource-generation-configuration-spryker_api_platformphp) below.
+- **`api_platform.php`** configures API Platform itself (Swagger, formats, pagination defaults, resource mapping paths). Documented under [Native API Platform configuration](#native-api-platform-configuration-apiplatformphp) below.
+- **`spryker_api_platform.php`** configures Spryker's schema generator (which API types an application serves, where schemas are scanned, which modules stay on Glue). Documented under [Resource generation configuration](#resource-generation-configuration-sprykerapiplatformphp) below.
 
 ## Released configuration reference
 
@@ -41,7 +41,7 @@ The simplest starting point is a real, released configuration. The links below p
 | GlueStorefront | [api_platform.php](https://github.com/spryker-shop/b2b-demo-marketplace/blob/release-202604.0/config/GlueStorefront/packages/api_platform.php) | [spryker_api_platform.php](https://github.com/spryker-shop/b2b-demo-marketplace/blob/release-202604.0/config/GlueStorefront/packages/spryker_api_platform.php) |
 | GlueBackend | [api_platform.php](https://github.com/spryker-shop/b2b-demo-marketplace/blob/release-202604.0/config/GlueBackend/packages/api_platform.php) | [spryker_api_platform.php](https://github.com/spryker-shop/b2b-demo-marketplace/blob/release-202604.0/config/GlueBackend/packages/spryker_api_platform.php) |
 
-## Resource generation configuration (`spryker_api_platform.php`)
+## Resource generation configuration (spryker_api_platform.php)
 
 `spryker_api_platform.php` controls Spryker's API Platform schema generator — it is separate from the native `api_platform.php`. Create one in each application layer where you enable API Platform. The files share the same shape; they differ only in `apiTypes()` and in the modules each application still serves via Glue.
 
@@ -80,9 +80,9 @@ return static function (SprykerApiPlatformConfig $sprykerApiPlatform): void {
 
 For the GlueBackend application, set `apiTypes(['backend'])` and list the modules that application still serves via Glue in `excludedPathFragments()`.
 
-## Native API Platform configuration (`api_platform.php`)
+## Native API Platform configuration (api_platform.php)
 
-The remainder of this page documents `api_platform.php`.
+`api_platform.php` configures API Platform itself. Spryker ships working defaults, so most projects only adjust a few options. The sections below cover the Spryker-specific adaptations and the settings you are most likely to change.
 
 ## Spryker-specific differences
 

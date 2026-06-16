@@ -1,7 +1,7 @@
 ---
 title: Create a product configurator
 description: Learn how to build a custom product configurator and integrate it with a Spryker shop, based on the Water Treatment configurator example.
-last_updated: Jun 15, 2026
+last_updated: Jun 16, 2026
 template: howto-guide-template
 ---
 
@@ -25,9 +25,9 @@ The example module spans the following layers:
 ```text
 src/Pyz/Shared/WaterTreatmentConfiguratorPageExample/      # configurator key constant
 src/Pyz/Client/WaterTreatmentConfiguratorPageExample/      # request expander (access token URL)
-src/Pyz/Yves/WaterTreatmentConfiguratorPageExample/        # ConfiguratorPage, Theme (Angular app), render-strategy + security plugins
-src/Pyz/Zed/WaterTreatmentConfiguratorPageExample/         # frontend build config/console, sales render-strategy plugin
-public/WaterTreatmentConfigurator/                         # standalone app entry point + built assets (dist)
+src/Pyz/Yves/WaterTreatmentConfiguratorPageExample/        # ConfiguratorPage, Theme (HTML shell + render views), render-strategy + security plugins
+src/Pyz/Zed/WaterTreatmentConfiguratorPageExample/         # frontend mirror config/console, sales render-strategy plugin
+public/WaterTreatmentConfigurator/                         # PHP entry point, configurator.json data, i18n, and the mirrored app assets (dist)
 ```
 
 ## 1. Define the configurator key
@@ -163,21 +163,23 @@ $checkSum = (new CrcOpenSslChecksumGenerator(getenv('SPRYKER_PRODUCT_CONFIGURATO
 
 ### Frontend application
 
-The configurator UI is a self-contained frontend application (in the example, an Angular app) located in the module's `Theme/ConfiguratorApplication` folder. It is built into the `public/` folder of the configurator host.
+The configurator UI is a self-contained frontend application (in the example, an Angular app). The example does not build it at the project level. Instead, it reuses the pre-built, data-driven app shipped in the `spryker-shop/date-time-configurator-page-example` package and feeds it the project's own data, so no project-level frontend build or tooling is required.
 
-The default `GET` request to the configurator host serves a static shell, `Theme/index.html`, which loads the built application:
+The app is generic: at runtime, it loads its options from `./configurator.json`, served from `public/WaterTreatmentConfigurator/`. To turn it into a water treatment configurator, the example provides its own `public/WaterTreatmentConfigurator/configurator.json` and translations under `public/WaterTreatmentConfigurator/i18n/`.
+
+The default `GET` request to the configurator host serves a static shell, `Theme/index.html`, which loads the app assets from `./dist/`:
 
 ```php
 // ConfiguratorPage::renderHtmlPageAction()
 return file_get_contents(__DIR__ . '/Theme/index.html');
 ```
 
-Point the build to your app in the Zed module config. `getFrontendOriginPath()` resolves the built app inside the module, and `getFrontendTargetPath()` resolves the public folder of the configurator host:
+The build step copies the pre-built app into the public folder of the configurator host. In the Zed module config, `getFrontendOriginPath()` resolves the built `dist` inside the vendor package, and `getFrontendTargetPath()` resolves the public folder of the configurator host:
 
 ```php
 // src/Pyz/Zed/WaterTreatmentConfiguratorPageExample/WaterTreatmentConfiguratorPageExampleConfig.php
 protected const FRONTEND_TARGET_PATH = '/public/WaterTreatmentConfigurator/dist';
-protected const FRONTEND_ORIGIN_PATH = '../../Yves/WaterTreatmentConfiguratorPageExample/Theme/ConfiguratorApplication/dist';
+protected const FRONTEND_ORIGIN_PATH = '../../../../vendor/spryker-shop/date-time-configurator-page-example/src/SprykerShop/Configurator/DateTimeConfiguratorPageExample/Theme/ConfiguratorApplication/dist';
 
 public function getFrontendOriginPath(): string
 {
@@ -190,7 +192,7 @@ public function getFrontendTargetPath(): string
 }
 ```
 
-The build is handled by the module's Zed business layer (`Business/Builder/FrontendBuilder`, exposed through `WaterTreatmentConfiguratorPageExampleFacade::buildProductConfigurationFrontend()`) and triggered by a console command:
+The copy is handled by the module's Zed business layer (`Business/Builder/FrontendBuilder`, which mirrors the origin `dist` into the target with `Filesystem::mirror()`), exposed through `WaterTreatmentConfiguratorPageExampleFacade::buildProductConfigurationFrontend()` and triggered by a console command:
 
 ```php
 // src/Pyz/Zed/WaterTreatmentConfiguratorPageExample/Communication/Console/WaterTreatmentProductConfiguratorBuildFrontendConsole.php
@@ -203,11 +205,64 @@ Register the console in `Pyz\Zed\Console\ConsoleDependencyProvider` and run it d
 console frontend:water-treatment-product-configurator:build
 ```
 
-{% info_block infoBox "Standalone tooling" %}
+Running this command copies the configurator app's built `dist` folder (from `FRONTEND_ORIGIN_PATH`) into the configurator host's public folder (`FRONTEND_TARGET_PATH`, `public/WaterTreatmentConfigurator/dist`). The configurator host serves the app from there, so the configurator only works after this copy step. Run the command on every build or install, and whenever the app assets or `configurator.json` change.
 
-The configurator frontend app has its own tooling and formatting. Exclude it from the project linters and formatters—for example, add its `Theme/ConfiguratorApplication` path to `.stylelintignore` and `.prettierignore`.
+{% info_block infoBox "Shipping your own frontend app" %}
+
+The example reuses the pre-built app from the `spryker-shop/date-time-configurator-page-example` package, so it needs no frontend tooling at the project level. If you ship your own configurator app instead, point `FRONTEND_ORIGIN_PATH` to its built output and exclude the app sources from the project linters and formatters—for example, add their path to `.stylelintignore` and `.prettierignore`.
 
 {% endinfo_block %}
+
+### Configurator data and translations
+
+The reused app is data-driven: the product, its options, prices, and compatibility rules all come from the project-level `configurator.json`, and the wording comes from the project-level glossary files. Both are served from `public/WaterTreatmentConfigurator/` and are what make this instance a *water treatment* configurator.
+
+`public/WaterTreatmentConfigurator/configurator.json` holds the full product data — the sample product and all possible options:
+
+- `data` — the product shown in the configurator: `name`, `image`, `logo`, and `defaultPrice` per currency.
+- `configuration` — the list of parameter groups. Each group has an `id`, a `label`, an optional `tooltip`, and a `data` array of selectable options. Each option carries a `value`, a `title`, a `price` per currency, and optional `disabled` rules that switch off incompatible options in other groups.
+
+```json
+{
+    "data": {
+        "name": "Industrial Water Treatment System",
+        "image": "https://spryker.s3.eu-central-1.amazonaws.com/image/industrial-water-treatment-system.webp",
+        "logo": "./logo.svg",
+        "defaultPrice": { "EUR": 1245000, "CHF": 1189000, "USD": 1350000 }
+    },
+    "configuration": [
+        {
+            "id": "flowRate",
+            "label": "Flow Rate (m³/h)",
+            "tooltip": "Select the required flow rate",
+            "data": [
+                {
+                    "value": "5",
+                    "title": "5 m³/h",
+                    "price": { "EUR": 0, "CHF": 0, "USD": 0 },
+                    "disabled": {
+                        "tank": {
+                            "condition": ["duplex", "titanium"],
+                            "tooltip": "Not available with Duplex Steel or Titanium tank"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+The `i18n/` folder localizes the configurator. Each `i18n/<locale>.json` file (for example, `i18n/de_DE.json`) is a flat glossary that maps the English source strings used in `configurator.json`—group labels, tooltips, and option titles—to their translations. These keys extend the app's default glossary at the project level, so you add only the strings your own data introduces:
+
+```json
+{
+    "Flow Rate (m³/h)": "Durchflussrate (m³/h)",
+    "Filtration Type": "Filtrationstyp",
+    "Reverse Osmosis": "Umkehrosmose",
+    "Select the required flow rate": "Benötigte Durchflussrate auswählen"
+}
+```
 
 ## 4. Route the shop to the configurator
 

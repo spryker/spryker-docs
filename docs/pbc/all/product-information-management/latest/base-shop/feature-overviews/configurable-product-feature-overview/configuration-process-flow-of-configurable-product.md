@@ -1,6 +1,6 @@
 ---
 title: Configuration process flow of configurable products
-last_updated: Jun 15, 2026
+last_updated: Jun 16, 2026
 description: This document shows the configuration process of the configurable product.
 template: concept-topic-template
 redirect_from:

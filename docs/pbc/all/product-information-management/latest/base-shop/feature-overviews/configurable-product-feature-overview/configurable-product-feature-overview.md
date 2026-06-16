@@ -1,7 +1,7 @@
 ---
 title: Configurable Product feature overview
 description: Learn about selling complex products with modular designs or services using the Spryker Configurable product feature.
-last_updated: Jun 15, 2026
+last_updated: Jun 16, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html

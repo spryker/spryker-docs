@@ -3355,6 +3355,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
                   - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Create a product configurator
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-create-a-product-configurator.html
                   - title: Split products by stores
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
                   - title: "Product data: From import to frontend views"

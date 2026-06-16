@@ -38,6 +38,19 @@ API Platform is a framework for building modern APIs based on web standards and 
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
 
+### Why Spryker is moving to API Platform
+
+API Platform replaces Spryker-specific patterns for routing, authentication, and resource definition with industry-standard Symfony conventions, automatic OpenAPI schema generation, and a clean separation between resource schema, provider, and validation.
+
+| Aspect | Previous infrastructure | API Platform |
+|---|---|---|
+| Bootstrap | Spryker-specific application bootstrap | Symfony Kernel-based routing |
+| Resource registration | Manual plugin registration in `GlueApplicationDependencyProvider` | Declarative YAML resource definitions (`*.resource.yml`) |
+| Authentication | Custom flows per module | Standard OAuth2 / Symfony Security |
+| Coupling | Tight coupling between resource and routing logic | Clean separation: provider + resource schema + validation |
+| Testability | Complex to test and extend | Symfony-native, testable with standard PHPUnit patterns |
+| OpenAPI | Manual / partial | Automatic OpenAPI schema generation |
+
 ## Architecture overview
 
 ### Resource generation workflow
@@ -280,7 +293,7 @@ $services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
 Providers and Processors are automatically discovered and can use constructor injection:
 
 ```php
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider implements ProviderInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,

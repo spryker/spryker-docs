@@ -31,7 +31,7 @@ Migrating from Glue API to API Platform provides several benefits:
 - **Standardized pagination**: Consistent pagination across all resources
 - **Better maintainability**: Clearer separation of concerns with providers and processors
 
-The migration can be done gradually, resource by resource, without breaking existing API consumers.
+The recommended default is **batch migration** — migrating a group of related modules together, as described in the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html). The per-resource steps below are the mechanics you apply to each resource *within* a batch; none of it breaks existing API consumers.
 
 ## Prerequisites
 
@@ -41,59 +41,9 @@ Before migrating resources, ensure you have:
 - Configured router plugins in correct order (see below)
 - Tested that API Platform is working with at least one test resource
 
-## Migration strategy
+## Migration strategy and router setup
 
-The migration follows a **gradual replacement** approach:
-
-1. **Coexistence**: Both Glue API and API Platform run side by side
-2. **Router priority**: Existing Glue endpoints are matched first, API Platform endpoints second
-3. **Resource-by-resource**: Migrate one resource at a time, verify, then move to the next
-4. **No breaking changes**: Existing API consumers continue to work during migration
-5. **Final cleanup**: Remove Glue router only after all resources are migrated
-
-### Router configuration order
-
-The key to gradual migration is router plugin order. The `SymfonyFrameworkRouterPlugin` must be placed **after** existing Glue router plugins:
-
-`src/Pyz/Glue/Router/RouterDependencyProvider.php`
-
-```php
-<?php
-
-declare(strict_types = 1);
-
-namespace Pyz\Glue\Router;
-
-use Spryker\Glue\GlueApplication\Plugin\Rest\GlueRouterPlugin;
-use Spryker\Glue\Router\Plugin\Router\SymfonyFrameworkRouterPlugin;
-use Spryker\Glue\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-
-class RouterDependencyProvider extends SprykerRouterDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Glue\RouterExtension\Dependency\Plugin\RouterPluginInterface>
-     */
-    protected function getRouterPlugins(): array
-    {
-        return [
-            new GlueRouterPlugin(),        // ← Existing Glue endpoints (checked first)
-            new SymfonyFrameworkRouterPlugin(),     // ← API Platform endpoints (checked second)
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Router order is critical" %}
-
-If `SymfonyFrameworkRouterPlugin` is placed before `GlueRouterPlugin`, API Platform routes may shadow existing Glue routes and break backward compatibility. Always place it **after** existing routers.
-
-{% endinfo_block %}
-
-With this configuration:
-- Request comes in: `GET /customers`
-- `GlueRouterPlugin` checks first: If Glue resource exists → use it
-- `SymfonyFrameworkRouterPlugin` checks second: If no Glue match → try API Platform
-- Result: Existing endpoints continue working, new API Platform endpoints are available
+This guide covers the mechanics of migrating a single resource. The overall strategy (batch migration is the default), the router-plugin ordering, and how routing flips between Glue and API Platform are owned by the [API Platform migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html) — read it first. The steps below are what you apply to each resource within a batch.
 
 ## Migration process
 
@@ -165,16 +115,16 @@ Create the equivalent API Platform schema for the resource.
 
 **Create schema file:**
 
-`src/Pyz/Zed/Customer/resources/api/backoffice/customers.yml`
+`src/Pyz/Zed/Customer/resources/api/backend/customers.yml`
 
 ```yaml
 resource:
     name: Customers
     shortName: Customer
-    description: "Customer resource for backoffice API"
+    description: "Customer resource for backend API"
 
-    provider: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Provider\\CustomerBackofficeProvider"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backoffice\\Processor\\CustomerBackofficeProcessor"
+    provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
+    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerBackendProcessor"
 
     paginationEnabled: true
     paginationItemsPerPage: 10
@@ -215,7 +165,7 @@ resource:
 
 **Create validation schema:**
 
-`src/Pyz/Zed/Customer/resources/api/backoffice/customers.validation.yml`
+`src/Pyz/Zed/Customer/resources/api/backend/customers.validation.yml`
 
 ```yaml
 post:
@@ -250,20 +200,20 @@ The Provider should primarily call existing Facade methods. This ensures consist
 
 {% endinfo_block %}
 
-`src/Pyz/Zed/Customer/Api/Backoffice/Provider/CustomerBackofficeProvider.php`
+`src/Pyz/Zed/Customer/Api/Backend/Provider/CustomerBackendProvider.php`
 
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Api\Backoffice\Provider;
+namespace Pyz\Zed\Customer\Api\Backend\Provider;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\Pagination\TraversablePaginator;
 use ApiPlatform\State\ProviderInterface;
-use Generated\Api\Backoffice\CustomersBackofficeResource;
+use Generated\Api\Backend\CustomersBackendResource;
 use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider implements ProviderInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -279,7 +229,7 @@ class CustomerBackofficeProvider implements ProviderInterface
         return $this->getCustomers($context);
     }
 
-    private function getCustomer(string $customerReference): ?CustomersBackofficeResource
+    private function getCustomer(string $customerReference): ?CustomersBackendResource
     {
         // Reuse existing Glue logic
         $customerTransfer = $this->customerFacade->findCustomerByReference($customerReference);
@@ -289,7 +239,7 @@ class CustomerBackofficeProvider implements ProviderInterface
         }
 
         // Map transfer to API Platform resource
-        $resource = new CustomersBackofficeResource();
+        $resource = new CustomersBackendResource();
         $resource->fromArray($customerTransfer->toArray());
 
         return $resource;
@@ -306,7 +256,7 @@ class CustomerBackofficeProvider implements ProviderInterface
 
         $resources = [];
         foreach ($customerCollection->getCustomers() as $customerTransfer) {
-            $resource = new CustomersBackofficeResource();
+            $resource = new CustomersBackendResource();
             $resource->fromArray($customerTransfer->toArray());
             $resources[] = $resource;
         }
@@ -331,22 +281,22 @@ The Processor should primarily call existing Facade methods. This ensures consis
 
 {% endinfo_block %}
 
-`src/Pyz/Zed/Customer/Api/Backoffice/Processor/CustomerBackofficeProcessor.php`
+`src/Pyz/Zed/Customer/Api/Backend/Processor/CustomerBackendProcessor.php`
 
 ```php
 <?php
 
-namespace Pyz\Zed\Customer\Api\Backoffice\Processor;
+namespace Pyz\Zed\Customer\Api\Backend\Processor;
 
 use ApiPlatform\Metadata\Operation;
 use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\State\ProcessorInterface;
-use Generated\Api\Backoffice\CustomersBackofficeResource;
+use Generated\Api\Backend\CustomersBackendResource;
 use Generated\Shared\Transfer\CustomerTransfer;
 use Spryker\Zed\Customer\Business\CustomerFacadeInterface;
 
-class CustomerBackofficeProcessor implements ProcessorInterface
+class CustomerBackendProcessor implements ProcessorInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -366,7 +316,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
         return null;
     }
 
-    private function createCustomer(CustomersBackofficeResource $resource): CustomersBackofficeResource
+    private function createCustomer(CustomersBackendResource $resource): CustomersBackendResource
     {
         $customerTransfer = new CustomerTransfer();
         $customerTransfer->fromArray($resource->toArray(), true);
@@ -374,13 +324,13 @@ class CustomerBackofficeProcessor implements ProcessorInterface
         // Reuse existing facade method
         $customerResponseTransfer = $this->customerFacade->addCustomer($customerTransfer);
 
-        $result = new CustomersBackofficeResource();
+        $result = new CustomersBackendResource();
         $result->fromArray($customerResponseTransfer->getCustomerTransfer()->toArray());
 
         return $result;
     }
 
-    private function updateCustomer(CustomersBackofficeResource $resource, string $customerReference): CustomersBackofficeResource
+    private function updateCustomer(CustomersBackendResource $resource, string $customerReference): CustomersBackendResource
     {
         $customerTransfer = new CustomerTransfer();
         $customerTransfer->fromArray($resource->toArray(), true);
@@ -389,7 +339,7 @@ class CustomerBackofficeProcessor implements ProcessorInterface
         // Reuse existing facade method
         $customerResponseTransfer = $this->customerFacade->updateCustomer($customerTransfer);
 
-        $result = new CustomersBackofficeResource();
+        $result = new CustomersBackendResource();
         $result->fromArray($customerResponseTransfer->getCustomerTransfer()->toArray());
 
         return $result;
@@ -399,19 +349,13 @@ class CustomerBackofficeProcessor implements ProcessorInterface
 
 ### Step 6: Generate API Platform resource
 
-Generate the Back Office resource class from the schema:
+Generate the backend resource class from the schema:
 
 ```bash
-console api:generate
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
 # Verify generation
-ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php
-```
-
-Generate the storefront resource class from the schema:
-
-```bash
-glue api:generate storefront
+ls -la src/Generated/Api/Backend/CustomersBackendResource.php
 ```
 
 ### Step 7: Test the API Platform endpoint
@@ -420,18 +364,18 @@ Test that the new endpoint works correctly:
 
 ```bash
 # Test single resource
-curl -X GET http://backoffice.eu.spryker.local/customers/DE--1
+curl -X GET http://glue-backend.eu.spryker.local/customers/DE--1
 
 # Test collection
-curl -X GET http://backoffice.eu.spryker.local/customers?page=1&itemsPerPage=10
+curl -X GET http://glue-backend.eu.spryker.local/customers?page=1&itemsPerPage=10
 
 # Test create
-curl -X POST http://backoffice.eu.spryker.local/customers \
+curl -X POST http://glue-backend.eu.spryker.local/customers \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","firstName":"John","lastName":"Doe"}'
 
 # Test update
-curl -X PATCH http://backoffice.eu.spryker.local/customers/DE--1 \
+curl -X PATCH http://glue-backend.eu.spryker.local/customers/DE--1 \
   -H "Content-Type: application/json" \
   -d '{"firstName":"Jane"}'
 ```
@@ -505,13 +449,13 @@ After removing Glue resource files:
 console cache:clear
 
 # Test that API Platform endpoint still works
-curl -X GET http://backoffice.eu.spryker.local/customers/DE--1
+curl -X GET http://glue-backend.eu.spryker.local/customers/DE--1
 
 # Verify OpenAPI docs include the resource
-curl http://backoffice.eu.spryker.local/docs.json | jq '.paths'
+curl http://glue-backend.eu.spryker.local/docs.json | jq '.paths'
 
 # Check the interactive documentation at root URL
-# Visit: http://backoffice.eu.spryker.local/
+# Visit: http://glue-backend.eu.spryker.local/
 ```
 
 ### Step 11: Repeat for remaining resources
@@ -556,11 +500,11 @@ SymfonyFrameworkRouterPlugin
     ↓
 API Platform Router
     ↓
-CustomerBackofficeProvider
+CustomerBackendProvider
     ↓
 CustomerFacade (same!)
     ↓
-CustomersBackofficeResource
+CustomersBackendResource
     ↓
 Response: JSON (auto-serialized)
 ```
@@ -619,10 +563,10 @@ GET /customers/DE--1
 console cache:clear
 
 # Regenerate resources
-console|glue api:generate backoffice
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate
 
 # Verify generated file exists
-ls -la src/Generated/Api/Backoffice/CustomersBackofficeResource.php
+ls -la src/Generated/Api/Backend/CustomersBackendResource.php
 ```
 
 ### Different response format between Glue and API Platform
@@ -661,9 +605,9 @@ $this->customerFacade->findCustomerByReference($customerReference); // ← Same 
 
 ## Best practices
 
-### 1. Migrate in small batches
+### 1. Keep batches small
 
-Don't try to migrate all resources at once. Migrate in small batches for example:
+Batch migration is the default (see the [migration overview](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform-overview.html)), but keep each batch small and ship it before starting the next — don't try to migrate every resource in one go. For example:
 
 ```bash
 Sprint 1: Customers, Products (read-only)
@@ -677,14 +621,14 @@ Don't duplicate business logic in Providers/Processors:
 
 ```php
 // ❌ Bad: Logic in Provider
-private function getCustomer(string $reference): ?CustomersBackofficeResource
+private function getCustomer(string $reference): ?CustomersBackendResource
 {
     $customer = $this->repository->findByReference($reference);
     // ... business logic here
 }
 
 // ✅ Good: Delegate to Facade
-private function getCustomer(string $reference): ?CustomersBackofficeResource
+private function getCustomer(string $reference): ?CustomersBackendResource
 {
     $customerTransfer = $this->customerFacade->findCustomerByReference($reference);
     return $this->mapToResource($customerTransfer);
@@ -697,7 +641,7 @@ Leverage generated `toArray()` and `fromArray()` methods:
 
 ```php
 // Easy mapping between Transfer and Resource
-$resource = new CustomersBackofficeResource();
+$resource = new CustomersBackendResource();
 $resource->fromArray($customerTransfer->toArray());
 ```
 

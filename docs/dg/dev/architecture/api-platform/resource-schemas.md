@@ -453,6 +453,67 @@ totals:
 generates a `CartsTotals` class with `public ?CartsTotalsTax $tax = null;`, plus a separate
 `CartsTotalsTax` class with `public ?int $amount = null;`.
 
+### Shared canonical objects
+
+By default a typed nested object generates a **per-resource** class (`CartsTotals`,
+`OrdersTotals`, …). Many resources carry the same conceptual object — pagination metadata, money
+totals, addresses, customer summaries — and generating a separate class for each is wasteful.
+
+Add `objectName` to a `type: object` property to share **one canonical class** across resources:
+
+```yaml
+# carts.resource.yml
+totals:
+    type: object
+    objectName: Totals
+    properties:
+        subtotal:   { type: integer, openapiContext: { example: 16058 } }
+        grandTotal: { type: integer, openapiContext: { example: 14601 } }
+        priceToPay: { type: integer, openapiContext: { example: 14601 } }
+
+# orders.resource.yml
+totals:
+    type: object
+    objectName: Totals
+    properties:
+        subtotal:          { type: integer, openapiContext: { example: 9902 } }
+        grandTotal:        { type: integer, openapiContext: { example: 10392 } }
+        canceledTotal:     { type: integer, openapiContext: { example: 0 } }
+        remunerationTotal: { type: integer, openapiContext: { example: 0 } }
+```
+
+Both properties are typed `?Totals`, and a single `Generated\Api\{ApiType}\Totals` class is
+generated whose fields are the **union** of every contribution (the *canonical superset* — here
+`subtotal`, `grandTotal`, `priceToPay`, `canceledTotal`, `remunerationTotal`, …). A resource
+references the canonical class even if it never populates some of the fields.
+
+`objectName` supports three forms:
+
+| Declaration | Effect |
+|-------------|--------|
+| `type: object` + `objectName: X` + `properties:` | Contributes its fields to canonical object `X`; property typed `?X`. |
+| `type: object` + `objectName: X` (no `properties:`) | Pure reference — typed `?X`, contributes nothing. |
+| `type: object` + `properties:` (no `objectName`) | Per-resource class `{Resource}{Property}` (the default described above). |
+
+#### Conflict policy
+
+Because a canonical object's fields arrive from many files, the generator applies a deterministic
+merge:
+
+- A field declared by multiple contributions **must have the same `type`** — a mismatch is a
+  hard generation error naming the contributing files.
+- For `description`, `openapiContext`, and `nullable`, the **first contribution wins** (resources
+  are processed in a stable, path-sorted order), so the generated schema is reproducible.
+- An `objectName` that is referenced but never receives a `properties` contribution is a hard
+  error, as is a canonical name that collides with a generated resource class.
+
+#### When to use `objectName`
+
+Use it for any object shape that recurs across resources — `Pagination`, `Totals`, `Address`,
+`Customer`, money `Calculations`, and similar. Omit it for a one-off object that only one resource
+uses, unless you want the cleaner canonical class name. `objectName` applies to **top-level**
+resource properties; an object nested inside another object stays a per-parent class.
+
 ## Documenting nested properties for OpenAPI and Swagger UI
 
 Many endpoints accept or return structured JSON payloads — for example, a payment initialization

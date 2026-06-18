@@ -624,3 +624,25 @@ console data:import:glossary
 Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
+
+### 4) Configure the Back Office settings
+
+Sync the recurring orders configuration settings to the database to make them editable in the Back Office:
+
+```bash
+console configuration:sync
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Back Office, go to **Configuration > Recurring Orders > General > Schedule**. Make sure the **Schedule Grace Period** field is displayed with a default value of `48`.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Configurable settings" %}
+
+| SETTING | DEFAULT | DESCRIPTION |
+| --- | --- | --- |
+| Schedule Grace Period | `48` | Number of hours before the trigger date when the pre-trigger notification email is sent to the buyer. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence over this global value. |
+
+{% endinfo_block %}

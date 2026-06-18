@@ -2310,6 +2310,8 @@ entries:
         nested:
           - title: Base shop
             nested:
+              - title: Recurring Orders feature overview
+                url: /docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features

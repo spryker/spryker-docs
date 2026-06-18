@@ -4,6 +4,9 @@ description: Learn how to install the Recurring Orders feature into your Spryker
 last_updated: Jun 18, 2026
 template: feature-integration-guide-template
 label: early-access
+related:
+  - title: Recurring Orders feature overview
+    link: docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
 ---
 
 {% info_block warningBox "Experimental feature" %}

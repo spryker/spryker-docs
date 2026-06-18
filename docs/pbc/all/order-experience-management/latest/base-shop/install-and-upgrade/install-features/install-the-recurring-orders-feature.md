@@ -87,7 +87,7 @@ Make sure the following changes have been applied in transfer objects:
 
 Import the CMS blocks that provide the HTML and text templates for recurring order notification emails.
 
-The CMS block definitions are provided in the module at `/SprykerFeature/Subscription/data/import/cms_block.csv`. Copy the contents of that file and add them to your project's CMS block import file:
+The CMS block definitions are provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/cms_block.csv`. Copy the contents of that file and add them to your project's CMS block import file:
 
 **data/import/common/common/cms_block.csv**
 
@@ -132,8 +132,8 @@ Enable the following behaviors by registering the plugins.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderCheckoutPreConditionPlugin | Validates the quote is eligible for a recurring order before checkout proceeds. Checks that the quote is not locked, not from an RFQ, not a guest session, the payment method is invoice-based, and the cadence type is registered and valid. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Checkout |
-| RecurringOrdersCheckoutPostSavePlugin | Creates a recurring schedule and registers it with the state machine after the order is successfully saved. Does nothing when `recurringOrderSettings` is not set on the quote. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Checkout |
+| RecurringOrderCheckoutPreConditionPlugin | Validates the quote is eligible for a recurring order before checkout proceeds. Checks that the quote is not locked, not from an RFQ, not a guest session, the payment method is invoice-based, and the cadence type is registered and valid. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout |
+| RecurringOrdersCheckoutPostSavePlugin | Creates a recurring schedule and registers it with the state machine after the order is successfully saved. Does nothing when `recurringOrderSettings` is not set on the quote. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout |
 
 **src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
@@ -144,8 +144,8 @@ namespace Pyz\Zed\Checkout;
 
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\Kernel\Container;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Checkout\RecurringOrderCheckoutPreConditionPlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Checkout\RecurringOrdersCheckoutPostSavePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout\RecurringOrderCheckoutPreConditionPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Checkout\RecurringOrdersCheckoutPostSavePlugin;
 
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
@@ -191,32 +191,32 @@ Register the built-in cadence type and schedule validator plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| WeeklyCadenceTypePlugin | Calculates the next trigger date 7 days after the current trigger date. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence |
-| BiWeeklyCadenceTypePlugin | Calculates the next trigger date 14 days after the current trigger date. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence |
-| MonthlyCadenceTypePlugin | Calculates the next trigger date on the same day of the following month. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence |
-| EveryNWeeksCadenceTypePlugin | Calculates the next trigger date every N weeks. Requires `cadenceValue` to be set on the schedule. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence |
-| PriceScheduleValidatorPlugin | Detects price increases on recurring schedule items compared to their stored reference prices before order placement. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\ScheduleValidator |
-| CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\ScheduleValidator |
+| WeeklyCadenceTypePlugin | Calculates the next trigger date 7 days after the current trigger date. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| BiWeeklyCadenceTypePlugin | Calculates the next trigger date 14 days after the current trigger date. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| MonthlyCadenceTypePlugin | Calculates the next trigger date on the same day of the following month. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| EveryNWeeksCadenceTypePlugin | Calculates the next trigger date every N weeks. Requires `cadenceValue` to be set on the schedule. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence |
+| PriceScheduleValidatorPlugin | Detects price increases on recurring schedule items compared to their stored reference prices before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
+| CheckoutPlaceabilityScheduleValidatorPlugin | Simulates a checkout to detect availability or product approval issues on recurring schedule items before order placement. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator |
 
-**src/Pyz/Zed/Subscription/SubscriptionDependencyProvider.php**
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Subscription;
+namespace Pyz\Zed\OrderExperienceManagement;
 
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence\BiWeeklyCadenceTypePlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence\EveryNWeeksCadenceTypePlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence\MonthlyCadenceTypePlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Cadence\WeeklyCadenceTypePlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\ScheduleValidator\CheckoutPlaceabilityScheduleValidatorPlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\ScheduleValidator\PriceScheduleValidatorPlugin;
-use SprykerFeature\Zed\Subscription\SubscriptionDependencyProvider as SprykerSubscriptionDependencyProvider;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\BiWeeklyCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\EveryNWeeksCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\MonthlyCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Cadence\WeeklyCadenceTypePlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator\CheckoutPlaceabilityScheduleValidatorPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\ScheduleValidator\PriceScheduleValidatorPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementDependencyProvider as SprykerOrderExperienceManagementDependencyProvider;
 
-class SubscriptionDependencyProvider extends SprykerSubscriptionDependencyProvider
+class OrderExperienceManagementDependencyProvider extends SprykerOrderExperienceManagementDependencyProvider
 {
     /**
-     * @return array<\SprykerFeature\Zed\Subscription\Dependency\Plugin\CadenceTypePluginInterface>
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\CadenceTypePluginInterface>
      */
     protected function getCadenceTypePlugins(): array
     {
@@ -229,7 +229,7 @@ class SubscriptionDependencyProvider extends SprykerSubscriptionDependencyProvid
     }
 
     /**
-     * @return array<\SprykerFeature\Zed\Subscription\Dependency\Plugin\ScheduleValidatorPluginInterface>
+     * @return array<\SprykerFeature\Zed\OrderExperienceManagement\Dependency\Plugin\ScheduleValidatorPluginInterface>
      */
     protected function getScheduleValidatorPlugins(): array
     {
@@ -253,7 +253,7 @@ Register the recurring orders state machine handler:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrdersStateMachineHandlerPlugin | Registers the `RecurringOrder` state machine process, maps commands and conditions to plugins, updates the state machine item state on each transition, and returns schedule items by state IDs. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\StateMachine |
+| RecurringOrdersStateMachineHandlerPlugin | Registers the `RecurringOrder` state machine process, maps commands and conditions to plugins, updates the state machine item state on each transition, and returns schedule items by state IDs. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\StateMachine |
 
 **src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php**
 
@@ -263,7 +263,7 @@ Register the recurring orders state machine handler:
 namespace Pyz\Zed\StateMachine;
 
 use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachineDependencyProvider;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\StateMachine\RecurringOrdersStateMachineHandlerPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\StateMachine\RecurringOrdersStateMachineHandlerPlugin;
 
 class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
 {
@@ -280,7 +280,7 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
 }
 ```
 
-Copy the state machine process XML from the module into your project. The example file is located at `/SprykerFeature/Subscription/config/Zed/StateMachine/RecurringOrder/RecurringOrderStateMachine.xml` in the module. Add it to your project at the following path:
+Copy the state machine process XML from the module into your project. The example file is located at `src/SprykerFeature/OrderExperienceManagement/config/Zed/StateMachine/RecurringOrder/RecurringOrderStateMachine.xml` in the module. Add it to your project at the following path:
 
 **config/Zed/StateMachine/RecurringOrder/RecurringOrderStateMachine.xml**
 
@@ -296,9 +296,9 @@ Register the following mail type builder plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderUpcomingNotificationMailTypeBuilderPlugin | Builds the pre-trigger notification email sent to the buyer a configurable number of hours before the scheduled order is placed. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Mail |
-| RecurringOrderValidationFailedMailTypeBuilderPlugin | Builds the review-required notification email sent to the buyer when a price increase or product availability issue is detected. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Mail |
-| RecurringOrderFailureMailTypeBuilderPlugin | Builds the order placement failure notification email sent to the buyer when order placement fails. | None | SprykerFeature\Zed\Subscription\Communication\Plugin\Mail |
+| RecurringOrderUpcomingNotificationMailTypeBuilderPlugin | Builds the pre-trigger notification email sent to the buyer a configurable number of hours before the scheduled order is placed. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail |
+| RecurringOrderValidationFailedMailTypeBuilderPlugin | Builds the review-required notification email sent to the buyer when a price increase or product availability issue is detected. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail |
+| RecurringOrderFailureMailTypeBuilderPlugin | Builds the order placement failure notification email sent to the buyer when order placement fails. | None | SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail |
 
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
 
@@ -308,9 +308,9 @@ Register the following mail type builder plugins:
 namespace Pyz\Zed\Mail;
 
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Mail\RecurringOrderFailureMailTypeBuilderPlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Mail\RecurringOrderUpcomingNotificationMailTypeBuilderPlugin;
-use SprykerFeature\Zed\Subscription\Communication\Plugin\Mail\RecurringOrderValidationFailedMailTypeBuilderPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail\RecurringOrderFailureMailTypeBuilderPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail\RecurringOrderUpcomingNotificationMailTypeBuilderPlugin;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Plugin\Mail\RecurringOrderValidationFailedMailTypeBuilderPlugin;
 
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
@@ -462,17 +462,17 @@ Activate a recurring schedule. Make sure the state machine condition check job r
 
 Override the following configuration methods in your project (if needed) to adjust the default behavior:
 
-**src/Pyz/Zed/Subscription/SubscriptionConfig.php**
+**src/Pyz/Zed/OrderExperienceManagement/OrderExperienceManagementConfig.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Subscription;
+namespace Pyz\Zed\OrderExperienceManagement;
 
-use SprykerFeature\Shared\Subscription\SubscriptionConfig as SharedSubscriptionConfig;
-use SprykerFeature\Zed\Subscription\SubscriptionConfig as SprykerSubscriptionConfig;
+use SprykerFeature\Shared\OrderExperienceManagement\OrderExperienceManagementConfig as SharedOrderExperienceManagementConfig;
+use SprykerFeature\Zed\OrderExperienceManagement\OrderExperienceManagementConfig as SprykerOrderExperienceManagementConfig;
 
-class SubscriptionConfig extends SprykerSubscriptionConfig
+class OrderExperienceManagementConfig extends SprykerOrderExperienceManagementConfig
 {
     /**
      * Specification:
@@ -491,7 +491,7 @@ class SubscriptionConfig extends SprykerSubscriptionConfig
      * Specification:
      * - Returns a map of review reason groups to the checkout error types that resolve to them.
      * - Override to add custom checkout error types to existing groups or to introduce new groups.
-     * - The key is a SharedSubscriptionConfig::REVIEW_REASON_GROUP_* constant.
+     * - The key is a SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_* constant.
      * - The value is a list of raw checkout error type strings reported by the checkout facade.
      *
      * @api
@@ -501,7 +501,7 @@ class SubscriptionConfig extends SprykerSubscriptionConfig
     public function getReviewReasonGroupMap(): array
     {
         return array_merge_recursive(parent::getReviewReasonGroupMap(), [
-            SharedSubscriptionConfig::REVIEW_REASON_GROUP_UNAVAILABLE => [
+            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_UNAVAILABLE => [
                 // Add project-specific checkout error types here.
             ],
         ]);
@@ -521,8 +521,8 @@ class SubscriptionConfig extends SprykerSubscriptionConfig
     public function getNonPurchasableReviewReasonGroups(): array
     {
         return [
-            SharedSubscriptionConfig::REVIEW_REASON_GROUP_UNAVAILABLE,
-            SharedSubscriptionConfig::REVIEW_REASON_GROUP_DISCONTINUED,
+            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_UNAVAILABLE,
+            SharedOrderExperienceManagementConfig::REVIEW_REASON_GROUP_DISCONTINUED,
         ];
     }
 }
@@ -531,7 +531,7 @@ class SubscriptionConfig extends SprykerSubscriptionConfig
 | CONFIGURATION METHOD | DEFAULT | DESCRIPTION |
 | --- | --- | --- |
 | `getDefaultNotificationWindowHours()` | `48` | Number of hours before the trigger date when the pre-trigger notification is sent. Per-schedule overrides stored in `spy_recurring_schedule.notification_window_hours` take precedence. |
-| `getReviewReasonGroupMap()` | See `SubscriptionConfig` | Maps review reason groups to checkout error types. Extend to map project-specific error types to the appropriate review group. |
+| `getReviewReasonGroupMap()` | See `OrderExperienceManagementConfig` | Maps review reason groups to checkout error types. Extend to map project-specific error types to the appropriate review group. |
 | `getNonPurchasableReviewReasonGroups()` | `[REVIEW_REASON_GROUP_UNAVAILABLE]` | Review reason groups whose items block order placement and must be removed before the order can proceed. Override to also block on `REVIEW_REASON_GROUP_DISCONTINUED`. |
 
 ## Install feature frontend
@@ -544,7 +544,7 @@ Register the following route provider plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| RecurringOrderRouteProviderPlugin | Adds storefront routes for the recurring order list, detail, create, clear, pause, resume, skip, cancel, confirm, review, and approve-review actions. | None | SprykerFeature\Yves\Subscription\Plugin\Router |
+| RecurringOrderRouteProviderPlugin | Adds storefront routes for the recurring order list, detail, create, clear, pause, resume, skip, cancel, confirm, review, and approve-review actions. | None | SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -554,7 +554,7 @@ Register the following route provider plugin:
 namespace Pyz\Yves\Router;
 
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
-use SprykerFeature\Yves\Subscription\Plugin\Router\RecurringOrderRouteProviderPlugin;
+use SprykerFeature\Yves\OrderExperienceManagement\Plugin\Router\RecurringOrderRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -588,8 +588,8 @@ Register the following global widgets:
 
 | WIDGET | DESCRIPTION | NAMESPACE |
 | --- | --- | --- |
-| RecurringOrderSelectorWidget | Renders the recurring order setup form at checkout. Visible only when the quote is eligible for a recurring order (invoice payment, not locked, not from RFQ, not guest). | SprykerFeature\Yves\Subscription\Widget |
-| RecurringOrderMenuItemWidget | Renders the Recurring Orders navigation menu item in the storefront company menu. | SprykerFeature\Yves\Subscription\Widget |
+| RecurringOrderSelectorWidget | Renders the recurring order setup form at checkout. Visible only when the quote is eligible for a recurring order (invoice payment, not locked, not from RFQ, not guest). | SprykerFeature\Yves\OrderExperienceManagement\Widget |
+| RecurringOrderMenuItemWidget | Renders the Recurring Orders navigation menu item in the storefront company menu. | SprykerFeature\Yves\OrderExperienceManagement\Widget |
 | CostCenterDetailWidget | Displays the selected cost center and budget on the cart page. Takes a `QuoteTransfer` as input. Requires the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html). | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -600,8 +600,8 @@ Register the following global widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterDetailWidget;
-use SprykerFeature\Yves\Subscription\Widget\RecurringOrderMenuItemWidget;
-use SprykerFeature\Yves\Subscription\Widget\RecurringOrderSelectorWidget;
+use SprykerFeature\Yves\OrderExperienceManagement\Widget\RecurringOrderMenuItemWidget;
+use SprykerFeature\Yves\OrderExperienceManagement\Widget\RecurringOrderSelectorWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -631,7 +631,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ### 3) Import glossary data
 
-The full list of glossary keys is provided in the module at `src/SprykerFeature/Subscription/data/import/glossary.csv`. Copy the contents of that file and add them to **data/import/common/common/glossary.csv**.
+The full list of glossary keys is provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/glossary.csv`. Copy the contents of that file and add them to **data/import/common/common/glossary.csv**.
 
 Import data:
 

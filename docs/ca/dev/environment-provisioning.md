@@ -9,8 +9,19 @@ redirect_from:
 
 This document describes the information you need to provide for an environment to be provisioned.
 
-To initiate the environment provisioning, you need to create a case for each environment you are entitled to at the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the Spryker Support Portal yet, request it through your Spryker Customer Success Manager.
-Once you are logged in to the Spryker Support Portal, you can submit an [Infrastructure Change Request/Access Management Case](https://support.spryker.com/s/case-funnel-problem) selecting that you want to "Create a new Environment".
+To initiate the environment provisioning, you need to create a case for each environment you are entitled to at the [Spryker Support Portal](https://portal.spryker.com). If you do not yet have access to the Spryker Portal, you can [request it here](https://portal.spryker.com/request-access).
+
+Once you are logged in to the Spryker Support Portal, follow the steps below to request an environment:
+
+1. Select **Support Hub** from the menu in the top-right corner.
+2. Select **Create a Ticket**.
+3. Fill in the **Name**, **Priority**, and **Description** fields. Be sure to include the required data points from the Environment Provisioning document. Attachments can be added in the next step of the form.
+4. Under **Category**, select **Cloud Environment Request**.
+5. Under **Subcategory**, select **New Environment**.
+6. Under **Environment**, select the entitlement to be used.
+7. Add attachments and any additional email addresses to be included in communications.
+8. Review the submission and submit the request.
+
 
 The following sections outline the information you need to provide to initiate provisioning of your environment.
 

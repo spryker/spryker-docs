@@ -2306,6 +2306,17 @@ entries:
                       - title: Install the Order Management + Service Points feature
                         url: /docs/pbc/all/order-management-system/unified-commerce/install-and-upgrade/install-the-order-management-service-points-feature.html
 
+      - title: Order Experience Management
+        nested:
+          - title: Base shop
+            nested:
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Recurring Orders
+                        url: /docs/pbc/all/order-experience-management/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
+
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         nested:

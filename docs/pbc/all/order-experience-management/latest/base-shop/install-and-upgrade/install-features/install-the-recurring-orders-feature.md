@@ -87,23 +87,9 @@ Make sure the following changes have been applied in transfer objects:
 
 Import the CMS blocks that provide the HTML and text templates for recurring order notification emails.
 
-The CMS block definitions are provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/cms_block.csv`. Copy the contents of that file and add them to your project's CMS block import file:
+The CMS block definitions are provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/cms_block.csv`. Copy the contents of that file and add them to **data/import/common/common/cms_block.csv**.
 
-**data/import/common/common/cms_block.csv**
-
-For each store you want to enable the email notifications in, add the following block keys to the corresponding `cms_block_store.csv` file. The example uses the `AT` store:
-
-**data/import/common/AT/cms_block_store.csv**
-
-```csv
-block_key,store_name
-cms-block-email--subscription-notify-buyer-upcoming-order--html,AT
-cms-block-email--subscription-notify-buyer-upcoming-order--text,AT
-cms-block-email--subscription-notify-buyer-placement-failure--html,AT
-cms-block-email--subscription-notify-buyer-placement-failure--text,AT
-cms-block-email--subscription-notify-buyer-validation-failed--html,AT
-cms-block-email--subscription-notify-buyer-validation-failed--text,AT
-```
+For each store you want to enable the email notifications in, add the corresponding block keys to **data/import/common/{store}/cms_block_store.csv**.
 
 Import the data:
 
@@ -114,13 +100,7 @@ console data:import:cms-block-store
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, under **Content > Blocks**, make sure the following CMS blocks are present and active:
-- `subscription-notify-buyer-upcoming-order--html`
-- `subscription-notify-buyer-upcoming-order--text`
-- `subscription-notify-buyer-placement-failure--html`
-- `subscription-notify-buyer-placement-failure--text`
-- `subscription-notify-buyer-validation-failed--html`
-- `subscription-notify-buyer-validation-failed--text`
+In the Back Office, under **Content > Blocks**, make sure the CMS blocks from the module file are present and active.
 
 {% endinfo_block %}
 

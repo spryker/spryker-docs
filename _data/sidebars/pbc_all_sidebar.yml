@@ -2315,7 +2315,7 @@ entries:
                   - title: Install features
                     nested:
                       - title: Recurring Orders
-                        url: /docs/pbc/all/order-experience-management/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
+                        url: /docs/pbc/all/order-experience-management/latest/base-shop/install-and-upgrade/install-features/install-the-recurring-orders-feature.html
 
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html

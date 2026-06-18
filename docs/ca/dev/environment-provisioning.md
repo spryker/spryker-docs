@@ -1,7 +1,7 @@
 ---
 title: Environment provisioning
 description: This document explains core concepts that are important to understand before filing an environment provisioning request.
-last_updated: Apr 08, 2026
+last_updated: Jun 18, 2026
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html

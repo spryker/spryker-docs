@@ -2,7 +2,7 @@
 title: Architecture as Code
 description: Learn how to implement Architecture as Code in your Spryker project using industry standards like arc42, C4 Model, and diagrams-as-code to maintain living, version-controlled documentation.
 keywords: Architecture as Code,arc42,C4 Model,diagrams-as-code,diagram
-last_updated: Apr 22, 2026
+last_updated: Jun 5, 2026
 template: concept-topic-template
 related:
   - title: Architectural Convention
@@ -19,7 +19,7 @@ Spryker ships the architecture/ folder with a complete Architecture as Code stru
 
 {% info_block infoBox "Existing projects" %}
 
-If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
+If your project is based on a Spryker release before 202602.0, refer to the [Spryker B2B Demo Marketplace](https://github.com/spryker-shop/b2b-demo-marketplace) master branch source code to see how the Architecture as Code structure is implemented and to copy the "architecture/" folder into your project.
 
 {% endinfo_block %}
 

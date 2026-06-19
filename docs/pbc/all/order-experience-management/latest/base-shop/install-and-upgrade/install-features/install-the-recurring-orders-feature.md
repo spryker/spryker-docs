@@ -570,6 +570,14 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
+After registering the plugin, warm up the router caches:
+
+```bash
+vendor/bin/yves router:cache:warm-up
+vendor/bin/console router:cache:warm-up
+vendor/bin/console router:cache:warm-up:backend-gateway
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following storefront routes are accessible:
@@ -620,15 +628,96 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+### 3) Add the recurring order selector to the checkout summary page
+
+The `RecurringOrderSelectorWidget` is not rendered automatically — it must be explicitly called from the checkout summary template. Add it after any cost center or voucher sections, before the order form.
+
+**src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig**
+
+```twig
+{% set recurringOrderSelectorWidget = findWidget('RecurringOrderSelectorWidget', [data.cart]) %}
+{% if recurringOrderSelectorWidget and recurringOrderSelectorWidget.isVisible %}
+    <div class="spacing-top--biggest">
+        {% widget 'RecurringOrderSelectorWidget' args [data.cart] only %}{% endwidget %}
+    </div>
+{% endif %}
+```
+
 {% info_block warningBox "Verification" %}
 
-- On the checkout summary page, make sure the recurring order setup widget is displayed for eligible quotes.
-- In the storefront company menu, make sure the **Recurring Orders** menu item is displayed.
+On the checkout summary page with an invoice-based payment method, make sure the **Set up as recurring order** checkbox and description are displayed.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
 - On the cart page, make sure the selected cost center and budget names are displayed.
 
 {% endinfo_block %}
 
-### 3) Import glossary data
+### 4) Add the menu item to the customer navigation sidebar
+
+To make the **Recurring Orders** menu item appear in the customer account sidebar, add a plain data entry to the `data.items` array in your project's customer navigation sidebar template. Place it after the Order History item.
+
+**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/navigation-sidebar/navigation-sidebar.twig**
+
+```twig
+{% define data = {
+    items: [
+        {# ... existing items ... #}
+        {
+            name: 'order',
+            url: path('customer/order'),
+            label: 'customer.account.order_history' | trans,
+            icon: 'history',
+        },
+        {
+            name: 'recurring-orders',
+            url: path('recurring-orders'),
+            label: 'recurring_orders.menu_item' | trans,
+            icon: 'calendar',
+        },
+        {# ... remaining items ... #}
+    ]
+} %}
+```
+
+{% info_block warningBox "Verification" %}
+
+In the storefront customer account, make sure the **Recurring Orders** menu item appears directly below **Order History** in the left sidebar navigation and links to `/recurring-orders`.
+
+{% endinfo_block %}
+
+{% info_block infoBox "Alternative: widget-based menu item" %}
+
+If your project's navigation sidebar template doesn't use a plain `data.items` array — for example, it's built from a custom navigation plugin or uses a different template structure — you can render the menu item via `RecurringOrderMenuItemWidget` instead. Make sure the widget is registered in `ShopApplicationDependencyProvider` (see [Set up widgets](#2-set-up-widgets)), then call it from the `postContent` block of your sidebar template:
+
+```twig
+{% block postContent %}
+    {# ... existing widget calls ... #}
+    {% widget 'RecurringOrderMenuItemWidget' args [data.activePage] only %}{% endwidget %}
+{% endblock %}
+```
+
+The widget renders an `<li>` element and must be placed inside a `<ul>` context.
+
+{% endinfo_block %}
+
+### 5) Build the frontend
+
+After making changes to Twig templates and registering new widgets, rebuild the Yves frontend assets:
+
+```bash
+npm run yves
+```
+
+{% info_block warningBox "Verification" %}
+
+Reload the checkout summary page and make sure the recurring order selector renders without console errors.
+
+{% endinfo_block %}
+
+### 7) Import glossary data
 
 The full list of glossary keys is provided in the module at `src/SprykerFeature/OrderExperienceManagement/data/import/glossary.csv`. Copy the contents of that file and add them to **data/import/common/common/glossary.csv**.
 
@@ -644,7 +733,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Configure the Back Office settings
+### 8) Configure the Back Office settings
 
 Sync the recurring orders configuration settings to the database to make them editable in the Back Office:
 

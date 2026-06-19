@@ -36,8 +36,8 @@ To start feature integration, review and install the necessary features:
 {% info_block infoBox "Required modules" %}
 
 ```bash
-composer require \
-  spryker-feature/order-experience-management:"^0.1.0" \
+composer require spryker-feature/order-experience-management:"^0.1.0" --update-with-dependencies
+composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
   spryker/merchant-product-option:"^1.4.0" \
@@ -53,7 +53,7 @@ composer require \
   spryker-feature/purchasing-control:"^1.1.0" \
   spryker-shop/checkout-page:"^3.42.0" \
   spryker-shop/customer-page:"^2.80.0"
-  --update-with-dependencies
+  --with-dependencies
 ```
 
 {% endinfo_block %}

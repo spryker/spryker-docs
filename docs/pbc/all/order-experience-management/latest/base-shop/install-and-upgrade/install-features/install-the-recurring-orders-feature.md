@@ -35,7 +35,26 @@ To start feature integration, review and install the necessary features:
 
 {% info_block infoBox "Required modules" %}
 
-// TODO
+```bash
+composer require \
+  spryker-feature/order-experience-management:"^0.1.0" \
+  spryker/availability:"^9.32.0" \
+  spryker/merchant:"^3.20.0" \
+  spryker/merchant-product-option:"^1.4.0" \
+  spryker/merchant-switcher:"^0.6.8" \
+  spryker/product-approval:"^1.5.0" \
+  spryker/product-bundle:"^7.28.0" \
+  spryker/product-cart-connector:"^4.15.0" \
+  spryker/product-configuration-cart:"^1.1.0" \
+  spryker/product-discontinued:"^1.15.0" \
+  spryker/product-offer:"^1.18.0" \
+  spryker/product-packaging-unit:"^4.14.0" \
+  spryker/product-quantity:"^3.8.0" \
+  spryker-feature/purchasing-control:"^1.1.0" \
+  spryker-shop/checkout-page:"^3.42.0" \
+  spryker-shop/customer-page:"^2.80.0"
+  --update-with-dependencies
+```
 
 {% endinfo_block %}
 

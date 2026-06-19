@@ -52,7 +52,7 @@ composer update \
   spryker/product-quantity:"^3.8.0" \
   spryker-feature/purchasing-control:"^1.1.0" \
   spryker-shop/checkout-page:"^3.42.0" \
-  spryker-shop/customer-page:"^2.80.0"
+  spryker-shop/customer-page:"^2.80.0" \
   --with-dependencies
 ```
 

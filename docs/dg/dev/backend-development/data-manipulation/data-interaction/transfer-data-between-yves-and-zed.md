@@ -399,11 +399,9 @@ After adding this plugin to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvider
 
 ## Enable Base64 encoding for ZedRequest transfers
 
-By default, ZedRequest transfers data as plain JSON. To encode the transfer payload with Base64, enable the `TRANSFER_BASE64_ENCODING_ENABLED` configuration option.
+Some infrastructure configurations, such as AWS WAF rules, reject requests that contain certain character sequences—for example, `../`—causing Yves-to-Zed communication to fail. Enabling Base64 encoding for ZedRequest transfers ensures that the payload does not contain such sequences, preventing these rejections.
 
-This is useful when the data being transferred contains characters that could be mishandled by intermediate proxies or load balancers.
-
-In `config/Shared/config_default.php`, add the following:
+To enable Base64 encoding, in `config/Shared/config_default.php`, add the following:
 
 ```php
 use Spryker\Shared\ZedRequest\ZedRequestConstants;
@@ -411,4 +409,4 @@ use Spryker\Shared\ZedRequest\ZedRequestConstants;
 $config[ZedRequestConstants::TRANSFER_BASE64_ENCODING_ENABLED] = true;
 ```
 
-When enabled, the transfer object payload is Base64-encoded before being sent from Yves to Zed and decoded on the Zed side automatically.
+When enabled, Spryker Base64-encodes the transfer object payload before sending it from Yves to Zed and automatically decodes it on the Zed side.

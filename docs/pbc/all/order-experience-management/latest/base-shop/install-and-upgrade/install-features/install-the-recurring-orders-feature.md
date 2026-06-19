@@ -635,12 +635,7 @@ The `RecurringOrderSelectorWidget` is not rendered automatically — it must be 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig**
 
 ```twig
-{% set recurringOrderSelectorWidget = findWidget('RecurringOrderSelectorWidget', [data.cart]) %}
-{% if recurringOrderSelectorWidget and recurringOrderSelectorWidget.isVisible %}
-    <div class="spacing-top--biggest">
-        {% widget 'RecurringOrderSelectorWidget' args [data.cart] only %}{% endwidget %}
-    </div>
-{% endif %}
+{% raw %}{% widget 'RecurringOrderSelectorWidget' args [data.cart] only %}{% endwidget %}{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -662,6 +657,7 @@ To make the **Recurring Orders** menu item appear in the customer account sideba
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/navigation-sidebar/navigation-sidebar.twig**
 
 ```twig
+{% raw %}
 {% define data = {
     items: [
         {# ... existing items ... #}
@@ -680,6 +676,7 @@ To make the **Recurring Orders** menu item appear in the customer account sideba
         {# ... remaining items ... #}
     ]
 } %}
+{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}
@@ -693,10 +690,12 @@ In the storefront customer account, make sure the **Recurring Orders** menu item
 If your project's navigation sidebar template doesn't use a plain `data.items` array — for example, it's built from a custom navigation plugin or uses a different template structure — you can render the menu item via `RecurringOrderMenuItemWidget` instead. Make sure the widget is registered in `ShopApplicationDependencyProvider` (see [Set up widgets](#2-set-up-widgets)), then call it from the `postContent` block of your sidebar template:
 
 ```twig
+{% raw %}
 {% block postContent %}
     {# ... existing widget calls ... #}
     {% widget 'RecurringOrderMenuItemWidget' args [data.activePage] only %}{% endwidget %}
 {% endblock %}
+{% endraw %}
 ```
 
 The widget renders an `<li>` element and must be placed inside a `<ul>` context.

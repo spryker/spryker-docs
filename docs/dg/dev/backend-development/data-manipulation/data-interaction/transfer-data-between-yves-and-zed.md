@@ -1,7 +1,7 @@
 ---
 title: Transfer data between Yves and Zed
 description: This document shows how to set up communication between Yves and Zed.
-last_updated: Jun 16, 2021
+last_updated: Jun 19, 2026
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
 originalArticleId: 92fb4df1-548a-44eb-aa4a-8ee1d8e70376
@@ -396,3 +396,19 @@ class ProjectNameHeaderExpanderPlugin extends AbstractPlugin implements HeaderEx
 ```
 
 After adding this plugin to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvider::getHeaderExpanderPlugins()`, your new header is used with every `ZedRequest`.
+
+## Enable Base64 encoding for ZedRequest transfers
+
+By default, ZedRequest transfers data as plain JSON. To encode the transfer payload with Base64, enable the `TRANSFER_BASE64_ENCODING_ENABLED` configuration option.
+
+This is useful when the data being transferred contains characters that could be mishandled by intermediate proxies or load balancers.
+
+In `config/Shared/config_default.php`, add the following:
+
+```php
+use Spryker\Shared\ZedRequest\ZedRequestConstants;
+
+$config[ZedRequestConstants::TRANSFER_BASE64_ENCODING_ENABLED] = true;
+```
+
+When enabled, the transfer object payload is Base64-encoded before being sent from Yves to Zed and decoded on the Zed side automatically.

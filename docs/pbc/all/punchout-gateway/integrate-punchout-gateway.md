@@ -1,7 +1,7 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: Jun 03, 2026
+last_updated: Jun 19, 2026
 template: howto-guide-template
 label: early-access
 ---

@@ -5,6 +5,13 @@ on:
     types:
       - opened
       - synchronize
+      - labeled
+    # Archived docs are intentionally frozen with old dates, so never run this
+    # check (or its auto-bump push) against any archive branch (archive,
+    # archive-doc-*, manual_archive_*, product-release-archive-*, …).
+    branches-ignore:
+      - '*archive*'
+      - '**/*archive*'
 
 permissions:
   contents: write
@@ -37,8 +44,18 @@ jobs:
           echo "last_updated is stale, but this is a fork PR and can't be auto-fixed. Please bump last_updated to the current date."
           exit 1
 
+      # Auto-bumping pushes a bot commit to the PR branch, so it is opt-in: it only runs
+      # when the maintainer adds the "Allow autofix" label. Without it, stale dates are a
+      # hard failure (next step) and the author bumps them by hand. Adding the label fires
+      # a `labeled` event, so the fix runs without needing a fresh push.
+      - name: Fail when stale and autofix not allowed
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.labels.*.name, 'Allow autofix')
+        run: |
+          echo "last_updated is stale. Bump it to the current date, or add the 'Allow autofix' label to let the bot bump it for you."
+          exit 1
+
       - name: Bump stale last_updated dates to today
-        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
         env:
           STALE_LIST_FILE: ${{ runner.temp }}/stale_last_updated.txt
         run: |
@@ -54,7 +71,7 @@ jobs:
           done < <(sort -u "$STALE_LIST_FILE")
 
       - name: Commit and push date bumps
-        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: auto-bump stale last_updated to current date"
@@ -67,7 +84,7 @@ jobs:
       # pull_request run that re-validates and converges — the second run finds the dates
       # current, records nothing, and pushes nothing, so there is no commit loop.
       - name: Re-verify after auto-fix
-        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
         env:
           GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |

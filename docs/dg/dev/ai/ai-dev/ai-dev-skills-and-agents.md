@@ -24,10 +24,20 @@ Both delivery paths read from the same source files — the plugin just packages
 
 **What's the difference between a skill and an agent?**
 
-- **Skills** load into the active chat on demand. Use them when you want the assistant to follow a specific workflow (write a PRD, refresh caches, run QA).
+- **Skills** load into the active chat on demand. Use them when you want the assistant to follow a specific workflow (write a product requirement document, refresh caches, run QA).
 - **Agents** are isolated sub-conversations the assistant delegates to. Use them when you want focused, single-purpose work done in its own context window (verify a behavior, diagnose a failure).
 
 You do not need to remember the names — the assistant picks the right skill or agent from your prompt. The tables below explain what each one does so you know what to expect.
+
+## How to invoke
+
+In most cases you do not need to call a skill or agent by name. Describe what you want — *"build this feature"*, *"verify the new fee shows on the cart"*, *"write a product requirement document for..."* — and the assistant matches your wording to the right skill or agent from the set installed in your project.
+
+If you want to invoke one explicitly:
+
+- **Claude Code plugin** — every skill is also available as a slash command. Type `/<skill-name>` (for example `/spryker-customization`) and the skill loads into the current chat. The full list of commands is on the [Claude Code Plugin](/docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html#skills) page.
+- **Other AI tools** — invocation follows the tool's own convention for skills and agents. In Cursor, Windsurf, Copilot, OpenCode, and Codex CLI, the skills and agents land in the tool-specific directories (`.cursor/`, `.windsurf/`, etc.) and are picked up automatically by your assistant. The [AI Dev SDK Overview](/docs/dg/dev/ai/ai-dev/ai-dev-overview.html#setup-command) lists the output paths per tool.
+- **Agents (subagents)** are not invoked by the user directly — they are spawned by the assistant or by a parent skill when the work calls for an isolated context. You can suggest one by name in your prompt (*"use the spryker-verifier to..."*), but the assistant decides when to spawn.
 
 ## Skills
 
@@ -43,8 +53,8 @@ Skills are delivered through `ai-dev:setup` (all supported AI tools) or the Clau
 | `static-validation` | Run and interpret static analysis tools (PHPStan, PHP CS Fixer) | Quick diagnosis of style and type issues without context-switching |
 | `payment-template` | Scaffold payment method integration | Follows Spryker payment module patterns end-to-end |
 | `yves-atomic-frontend` | Create atomic design components for the Yves storefront | Components match the project's atomic conventions |
-| `product-requirement-document` | Turn a feature idea into a research-grounded PRD before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation |
-| [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | Walk a PRD or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; delegates focused work to the agents below; never auto-commits |
+| `product-requirement-document` | Turn a feature idea into a research-grounded product requirement document before any code is written | Spec-before-code; assigns a real Spryker actor to every story; cuts ambiguity before implementation |
+| [`spryker-customization`](/docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html) | Walk a product requirement document or set of acceptance criteria through to a committed branch | One workflow drives the full build; quality bar (PoC or MVP) chosen up-front; delegates focused work to the agents below; never auto-commits |
 | `spryker-refresher` | Run the right post-change console and composer commands after edits | Owns the file-to-command mapping (codegen, caches, frontend builds, class-resolver); no missed cache rebuilds |
 | `spryker-qa-coverage` | Turn acceptance criteria into a four-bucket test plan executed against the live app | Coverage goes beyond literal ACs — happy / negative / authorization / corner cases; reports pass/fail with real evidence |
 | `spryker-docs-research` | Look up the right answer in official Spryker documentation | Grounds AI work in documented behavior rather than the model's memory; falls back gracefully when MCP tools are unavailable |

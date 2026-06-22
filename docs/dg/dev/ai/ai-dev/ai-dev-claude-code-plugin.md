@@ -103,8 +103,8 @@ The plugin bundles the following Spryker-aware skills. Invoke them in Claude Cod
 | Static Validation | `/spryker-ai-dev-sdk:static-validation` | Runs and interprets static analysis tools (PHPStan, PHP CS Fixer) |
 | Payment Template | `/spryker-ai-dev-sdk:payment-template` | Scaffolds payment method integration following Spryker payment module patterns |
 | Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend |
-| Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded PRD for a Spryker feature before implementation |
-| Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from PRD to committed branch |
+| Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded product requirement document for a Spryker feature before implementation |
+| Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from product requirement document to committed branch |
 | Spryker Refresher | `/spryker-ai-dev-sdk:spryker-refresher` | Runs the right post-change console and composer commands after edits |
 | Spryker QA Coverage | `/spryker-ai-dev-sdk:spryker-qa-coverage` | Turns acceptance criteria into a four-bucket test plan and executes it against the running app |
 | Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation |

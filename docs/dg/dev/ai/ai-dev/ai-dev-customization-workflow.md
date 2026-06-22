@@ -23,7 +23,7 @@ You do not write code during the run. You make three decisions: what quality bar
 
 ## Workflow at a glance
 
-{% include diagrams/ai-dev/customization-workflow.svg %}
+![AI Dev SDK customization workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/customization-workflow.png)
 
 Each phase delegates to specific skills (pale yellow) and agents (deep amber) — for example, the `spryker-feature-expert` agent researches the relevant Spryker domain during planning, and the `spryker-verifier` agent drives the running storefront and back office to confirm the feature actually works.
 
@@ -37,7 +37,7 @@ Each phase delegates to specific skills (pale yellow) and agents (deep amber) �
 - Tests (when you pick the MVP bar)
 - The commit waits for your approval; nothing is pushed
 
-If you wanted a PRD too, the skill can produce one — by delegating to `product-requirement-document` — as a reusable document under `resources/plan/PRD/` before the build starts.
+If you wanted a product requirement document too, the skill can produce one — by delegating to `product-requirement-document` — as a reusable document under `resources/plan/PRD/` before the build starts.
 
 ## Choose your output: PoC or production
 

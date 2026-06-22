@@ -547,12 +547,12 @@ The merge rules across contributors:
 
 ##### `allowMissingFields`
 
-A `Collection` with `allowMissingFields: true` (e.g. a checkout `billingAddress` referenced only by
-id) tolerates absent keys. On a value object an absent field denormalizes to `null`, so the
+A `Collection` with `allowMissingFields: true` (for example, a checkout `billingAddress` referenced
+only by id) tolerates absent keys. On a value object an absent field denormalizes to `null`, so the
 generator relaxes presence constraints when lifting: each `NotBlank` gains `allowNull: true` and
 each `NotNull` is dropped — an absent field passes, a present-but-empty one still fails. When two
 contributors disagree for the same field and group, the **relaxed** `NotBlank` supersedes the strict
-one, so the lenient (e.g. address-by-id) context is not rejected.
+one, so the lenient (for example, address-by-id) context is not rejected.
 
 #### When to use `objectName`
 

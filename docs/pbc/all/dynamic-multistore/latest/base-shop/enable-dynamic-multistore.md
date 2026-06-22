@@ -1,7 +1,7 @@
 ---
 title: Enable Dynamic Multistore
 description: Learn how to enable the Dynamic Store feature on the latest codebase
-last_updated: Apr 20, 2026
+last_updated: May 06, 2026
 template: howto-guide-template
 ---
 
@@ -34,13 +34,7 @@ To avoid unexpected downtime and data loss, perform and test *all* of the follow
 
 3. After enabling DMS, the basic domain structure must change from store to region for all the applications. For example, `https://yves.de.mysprykershop.com` will change to `https://yves.eu.mysprykershop.com`. To prevent negative SEO effects, set up the needed redirects. If your target domain doesn't change, for example it doesn't contain a region name - yves.mysprykershop.com - you may skip this step.
 
-4. Create a support case and provide the deploy.yml file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our deploy.yml and would like it to be activated."
-
-5. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
-
-The downtime associated with the maintenance mode is limited to the deployment time, which usually takes up to an hour.
-
-6. Update AWS deployment files to DMS mode using the example:
+4. Update AWS deployment files to DMS mode using the example:
 
 Original environment variables section:
 
@@ -103,8 +97,13 @@ regions:
     namespace: eu_search
 ```
 
-7. Run a normal deploy for your server pipeline.
+5. **Before first deployment**, create a support case and provide the deploy.ABC.yml file that contains the dynamic multistore setup. For example: "We have added the dynamic multistore setup to our deploy.ABC.yml and would like it to be activated."
 
+6. DMS changes the structure of RabbitMQ messages. When you're ready for the migration, wait for all the remaining messages in the queue to be processed. When the queue is empty, enable the maintenance mode.
+
+The downtime associated with the maintenance mode is limited to the deployment time, which usually takes up to an hour.
+
+7. Run a normal deploy for your server pipeline.
 
 {% info_block warningBox "Verification" %}
 - Make sure your store is available at `https://yves.eu.mysprykershop.com` or `https://backoffice.eu.mysprykershop.com`.

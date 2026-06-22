@@ -504,8 +504,55 @@ merge:
   hard generation error naming the contributing files.
 - For `description`, `openapiContext`, and `nullable`, the **first contribution wins** (resources
   are processed in a stable, path-sorted order), so the generated schema is reproducible.
+- Validation constraints are the exception to first-wins: they are **unioned** across all
+  contributors (see [Validation on canonical objects](#validation-on-canonical-objects) below).
 - An `objectName` that is referenced but never receives a `properties` contribution is a hard
   error, as is a canonical name that collides with a generated resource class.
+
+#### Validation on canonical objects
+
+A canonical object property denormalizes the incoming JSON into a typed value object, not an array.
+A field validation written the array-shaped way — an `Assert\Collection` on the property in the
+resource's `{resource-name}.validation.yml` — would therefore reject the object value with a 422
+(`This value should be of type array`). The generator resolves this automatically: it **lifts** the
+`Collection.fields` constraints off the property and onto the matching fields of the canonical value
+object, and emits a plain `#[Assert\Valid]` cascade on the property instead of the `Collection`.
+
+You keep authoring validation exactly as before — write the `Collection` against the object property:
+
+```yaml
+# checkout-data.validation.yml
+post:
+    customer:
+        - Optional:
+              constraints:
+                  - Collection:
+                        allowExtraFields: true
+                        fields:
+                            email:
+                                - NotBlank: { message: 'Email is invalid.' }
+                                - Email:    { message: 'Email is invalid.' }
+```
+
+The merge rules across contributors:
+
+- **Per-resource grouping.** Each lifted constraint is re-grouped through the contributing
+  resource's operation groups, so a `customer.email` rule from checkout stays in the
+  `checkout:create` group and does not leak onto other resources sharing the `Customer` object.
+- **Union + dedup.** A field's constraints are unioned across every contributing resource and
+  deduplicated, so the canonical value object carries the superset of all contributors' rules.
+- **Array properties keep `Collection`.** A property with `type: object` *without* `objectName`
+  (or a list property like `payments` / `shipments`) is still validated by its array-shaped
+  `Collection` — only canonical-object properties are lifted.
+
+##### `allowMissingFields`
+
+A `Collection` with `allowMissingFields: true` (e.g. a checkout `billingAddress` referenced only by
+id) tolerates absent keys. On a value object an absent field denormalizes to `null`, so the
+generator relaxes presence constraints when lifting: each `NotBlank` gains `allowNull: true` and
+each `NotNull` is dropped — an absent field passes, a present-but-empty one still fails. When two
+contributors disagree for the same field and group, the **relaxed** `NotBlank` supersedes the strict
+one, so the lenient (e.g. address-by-id) context is not rejected.
 
 #### When to use `objectName`
 

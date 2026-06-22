@@ -1,7 +1,7 @@
 ---
 title: Claude Code Plugin
 description: Install and use the Spryker AI Dev SDK plugin for Claude Code to get Spryker-aware skills, code review, and project setup directly in your AI coding assistant.
-last_updated: May 21, 2026
+last_updated: Jun 22, 2026
 label: early-access
 keywords: ai, claude, claude code, plugin, marketplace, skills, spryker, ai-dev, code review
 template: howto-guide-template
@@ -87,6 +87,8 @@ The skill:
 
 ## Capabilities
 
+For a one-page reference of every skill and agent — what each does, when to use it, and the value it adds — see [AI Dev SDK Skills and Agents](/docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html).
+
 ### Skills
 
 The plugin bundles the following Spryker-aware skills. Invoke them in Claude Code with the `/` prefix.
@@ -101,10 +103,26 @@ The plugin bundles the following Spryker-aware skills. Invoke them in Claude Cod
 | Static Validation | `/spryker-ai-dev-sdk:static-validation` | Runs and interprets static analysis tools (PHPStan, PHP CS Fixer) |
 | Payment Template | `/spryker-ai-dev-sdk:payment-template` | Scaffolds payment method integration following Spryker payment module patterns |
 | Yves Atomic Frontend | `/spryker-ai-dev-sdk:yves-atomic-frontend` | Helps create atomic design components for the Yves frontend |
+| Product Requirement Document | `/spryker-ai-dev-sdk:product-requirement-document` | Drafts a research-grounded PRD for a Spryker feature before implementation |
+| Spryker Customization | `/spryker-ai-dev-sdk:spryker-customization` | Orchestrates the end-to-end build of a customization from PRD to committed branch |
+| Spryker Refresher | `/spryker-ai-dev-sdk:spryker-refresher` | Runs the right post-change console and composer commands after edits |
+| Spryker QA Coverage | `/spryker-ai-dev-sdk:spryker-qa-coverage` | Turns acceptance criteria into a four-bucket test plan and executes it against the running app |
+| Spryker Docs Research | `/spryker-ai-dev-sdk:spryker-docs-research` | Looks up grounded answers in the official Spryker documentation |
+| Spryker Runtime | `/spryker-ai-dev-sdk:spryker-runtime` | Drives the running Spryker application — storefront, back office, console, HTTP |
+| AI Runtime Debugging | `/spryker-ai-dev-sdk:ai-runtime-debugging` | Adds tagged debug logs (and optional XDebug) for inspecting Spryker runtime state |
 
-### Subagent
+### Subagents
 
-The plugin includes the `spryker-code-reviewer` subagent. The subagent performs deep code reviews of your changes against Spryker architectural patterns, coding standards, and best practices.
+The plugin includes the following subagents. They are isolated sub-conversations that the assistant delegates to for focused, single-purpose work:
+
+| Subagent | Description |
+|----------|-------------|
+| `spryker-code-reviewer` | Performs deep code reviews of your changes against Spryker architectural patterns, coding standards, and best practices |
+| `spryker-feature-expert` | Answers questions about how a Spryker feature, module, or capability works, grounded in docs and the project's actual code |
+| `spryker-verifier` | Verifies a specific behavior in the running Spryker environment and returns PASS, FAIL, or BLOCKED per acceptance criterion with raw evidence |
+| `spryker-issue-diagnoser` | Investigates a failure across logs, database, queue, search, and browser state and returns a root cause |
+| `spryker-data-seeder` | Creates small additive test data through Spryker's existing data import path |
+| `spryker-screenshot-collector` | Captures screenshots and short GIFs of pages and flows for demos and documentation |
 
 ### Rules
 

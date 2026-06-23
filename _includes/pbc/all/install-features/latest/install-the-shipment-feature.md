@@ -972,7 +972,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block infoBox "Info" %}
 
-Starting from `spryker/shipment-type-storage:1.2.0`, `ShipmentTypeListSynchronizationDataBulkRepositoryPlugin` is required. After wiring in the plugin, run the following command to populate the storage:
+Starting from `spryker/shipment-type-storage:1.2.0`, `ShipmentTypeListSynchronizationDataBulkRepositoryPlugin` is required. After wiring in the plugin, trigger the publish events to populate the storage:
 
 ```bash
 console publish:trigger-events -r shipment_type

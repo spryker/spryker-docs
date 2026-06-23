@@ -56,9 +56,9 @@ for file in $changed_md_files; do
     fi
   fi
 
-  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | sed '1,/@@/d' | grep -v "^-\s*$" | grep -v "^\s*$" | wc -l)
+  lines_changed=$(git diff "$BASE_SHA"..."$HEAD_SHA" -- "$file" | sed '1,/@@/d' | grep -v "^-\s*$" | grep "^\+" | wc -l)
 
-  if [ "$lines_changed" -gt "$lines_changed_limit" ]; then
+  if [ "$lines_changed" -ge "$lines_changed_limit" ]; then
     echo "Modified file $file has $lines_changed changed lines, old and not updated last_updated: $date_string."
     files_needing_update=1
   fi

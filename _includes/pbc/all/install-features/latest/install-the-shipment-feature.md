@@ -968,6 +968,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
+<a id="shipment-type-storage-performance-fix"></a>
+
 {% info_block infoBox "Info" %}
 
 Starting from `spryker/shipment-type-storage:1.2.0`, `ShipmentTypeListSynchronizationDataBulkRepositoryPlugin` is required. After wiring in the plugin, run the following command to populate the storage:

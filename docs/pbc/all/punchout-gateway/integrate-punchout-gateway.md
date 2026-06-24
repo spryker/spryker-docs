@@ -1,7 +1,7 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: Jun 22, 2026
+last_updated: Jun 24, 2026
 template: howto-guide-template
 ---
 
@@ -12,7 +12,7 @@ This document describes how to integrate the PunchOut Gateway module into a Spry
 Install the PunchOut Gateway module using Composer:
 
 ```bash
-composer require spryker-eco/punchout-gateway:^1.0.0
+composer require spryker-eco/punchout-gateway:^1.1.0
 ```
 
 ## 2. Configure the module
@@ -48,7 +48,13 @@ When logging is enabled, the module emits structured entries through `\SprykerEc
 | `getOciDefaultStartUrl()` | `'/'` | Default redirect URL after OCI session start. |
 | `getCxmlSessionTokenLength()` | `32` | Length of the generated cXML session token. |
 
-The same values can be changed at runtime through the Back Office under *Configuration > Punchout Gateway*.
+Some values can be changed at runtime in the Back Office under *Configuration > Integrations > Punchout Gateway*, both globally and per store. For a description of each setting, see [Back Office configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html#back-office-configuration).
+
+These settings are defined in [punchout_gateway.configuration.yml](https://github.com/spryker-eco/punchout-gateway/blob/main/resources/configuration/punchout_gateway.configuration.yml) and appear in the Back Office after you synchronize the configuration. Run to register them:
+
+```bash
+vendor/bin/console configuration:sync
+```
 
 ## 4. Update Quote configuration
 

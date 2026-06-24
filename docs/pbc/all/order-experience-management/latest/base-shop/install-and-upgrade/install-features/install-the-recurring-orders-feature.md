@@ -457,6 +457,50 @@ Activate a recurring schedule. Make sure the state machine condition check job r
 
 {% endinfo_block %}
 
+#### Configure product bundle field copying
+
+{% info_block infoBox "Product Bundles feature" %}
+
+This step is only required if your project uses the [Product Bundles feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-bundles-feature-overview.html).
+
+{% endinfo_block %}
+
+Override the allowed fields to copy so that shipment information is preserved when recurring orders re-create bundle items:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| `getAllowedBundleItemFieldsToCopy()` | Returns the list of `ItemTransfer` fields copied from bundle items when they are duplicated during order re-creation. Adding `ItemTransfer::SHIPMENT` ensures the shipment is preserved on each recurring order placement. | None | Pyz\Zed\ProductBundle |
+
+**src/Pyz/Zed/ProductBundle/ProductBundleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductBundle;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use Spryker\Zed\ProductBundle\ProductBundleConfig as SprykerProductBundleConfig;
+
+class ProductBundleConfig extends SprykerProductBundleConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getAllowedBundleItemFieldsToCopy(): array
+    {
+        return [
+            ItemTransfer::SHIPMENT,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Add a product bundle to the cart, set up a recurring order, and complete checkout. On the next scheduled order placement, make sure the bundle items are re-created with the correct shipment assignment.
+
+{% endinfo_block %}
+
 ### 5) Configure module behavior
 
 Override the following configuration methods in your project (if needed) to adjust the default behavior:

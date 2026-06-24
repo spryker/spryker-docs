@@ -2,10 +2,31 @@
 title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
-last_updated: June 22, 2026
+last_updated: June 24, 2026
 ---
 
 This document describes the project configuration to enable eProcurement systems support via PunchOut flow.
+
+## Back Office configuration
+
+PunchOut Gateway runtime settings are managed in the Back Office under *Configuration > Integrations > Punchout Gateway*. Each setting can be set **globally** and **overridden per store**, so a store can use a value that differs from the global default.
+
+These settings are defined in [punchout_gateway.configuration.yml](https://github.com/spryker-eco/punchout-gateway/blob/main/resources/configuration/punchout_gateway.configuration.yml) and appear in the Back Office  after the configuration is synchronized using command `vendor/bin/console configuration:sync`.
+
+The settings are grouped as follows.
+
+### Logging
+
+| Setting (key) | Type | Default | Purpose |
+|---------------|------|---------|---------|
+| Enable Logging (`enable_logging`) | boolean | `false` | When enabled, the PunchOut Gateway logs incoming and outgoing PunchOut requests and responses. |
+
+### cXML Session
+
+| Setting (key) | Type | Default | Bounds | Purpose |
+|---------------|------|---------|--------|---------|
+| Session Start URL Validity (seconds) (`start_url_validity_in_seconds`) | integer | `600` | 1–3600 | How long, in seconds, a cXML session start URL remains valid after generation. |
+| Session Token Length (`token_length`) | integer | `32` | 16–128 | Length, in characters, of the randomly generated cXML session token. |
 
 ## PunchOut connection configuration
 
@@ -441,7 +462,7 @@ Two settings control this handshake:
 | `getCxmlSessionTokenLength()` | `32`  | 16–128 | Length of the generated session token. |
 | `getCxmlSessionStartUrlValidityInSeconds()` | `600` | 1–3600 | How long the start URL remains valid after the synchronous response is sent. |
 
-Both are exposed in the Back Office settings panel under *Configuration > Punchout Gateway*.
+Both are exposed in the Back Office settings panel under *Configuration > Integrations > Punchout Gateway*. See [Back Office configuration](#back-office-configuration).
 
 ## spy_punchout_session table
 

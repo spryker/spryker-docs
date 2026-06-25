@@ -59,3 +59,30 @@ These are callable now:
 | **Back Office API** | Backend | Back Office administrator or trusted internal service | You're automating or replacing Back Office administration |
 
 For the API types on the roadmap, guidance on choosing between them, why API Platform integration, your migration decision, and the rollout timeline, see [Spryker API roadmap and adoption](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-roadmap-and-adoption.html).
+
+---
+
+## FAQ
+
+These cover the edge cases the tables above don't.
+
+**Is API Platform integration something I call, or something underneath what I call?**
+Underneath. You call an API type (Storefront, Back Office, and so on). API Platform integration is the foundation it's built on, replacing Glue for new work.
+
+**How is the Backend API application different from the Back Office API type?**
+The Backend API is the application that hosts several types. Back Office is one of those types, for administrator-level operations. Same word root, different axis.
+
+**How is the Merchant API different from the Back Office API?**
+Back Office serves Spryker administrators with platform-wide scope. Merchant serves a single marketplace merchant — every call is restricted to that merchant's own data.
+
+**How is the Merchant API different from the Merchant Data Exchange API?**
+Both are merchant-scoped. Merchant API is for record-by-record operations through interfaces and tools. Merchant Data Exchange API is for bulk, file-based, or queue-based flows between a merchant's systems and the marketplace.
+
+**How is the Data Exchange API different from the Merchant Data Exchange API?**
+Same capabilities, different scope. Data Exchange operates at platform level with operator credentials. Merchant Data Exchange is restricted to one merchant's data with per-merchant credentials.
+
+**How is the Data Exchange API different from the Async Event API?**
+Data Exchange is request-driven — your system calls Spryker to import, export, or read. Async Event is event-driven — Spryker notifies your system when something happens. Choose by whether you poll or react.
+
+**Do I have to migrate my existing Glue APIs?**
+No. Migration is optional and there is no End-of-Life.

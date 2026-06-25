@@ -457,7 +457,7 @@ Activate a recurring schedule. Make sure the state machine condition check job r
 
 {% endinfo_block %}
 
-#### Register the trigger console command (optional)
+#### Optional: Register the trigger console command
 
 `RecurringOrderTriggerConsole` lets you manually trigger order placement for a specific recurring schedule from the CLI. It runs the same placement logic as the state machine `PlaceOrderCommand`, which makes it useful for development, debugging, and one-off operational tasks.
 

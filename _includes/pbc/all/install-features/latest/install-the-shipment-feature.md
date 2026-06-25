@@ -937,9 +937,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 5. Set up synchronization plugins:
 
-| PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
-|-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type storage table's content into the key-value store (Redis or Valkey). |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| PLUGIN                                                  | SPECIFICATION                                                                                                                                                          | PREREQUISITES | NAMESPACE                                                            |
+|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin     | Enables synchronizing the shipment type storage table's content into the key-value store (Redis or Valkey).                                                            |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ShipmentTypeListSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type list storage table's content into the key-value store (Redis or Valkey). Fixes a performance issue on the checkout page. Required by `spryker/shipment-type-storage:1.2.0`. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -948,6 +949,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 namespace Pyz\Zed\Synchronization;
 
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeListSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization\ShipmentTypeSynchronizationDataBulkRepositoryPlugin;
 use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
 
@@ -960,10 +962,23 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     {
         return [
             new ShipmentTypeSynchronizationDataBulkRepositoryPlugin(),
+            new ShipmentTypeListSynchronizationDataBulkRepositoryPlugin(),
         ];
     }
 }
 ```
+
+<a id="shipment-type-storage-performance-fix"></a>
+
+{% info_block infoBox "Info" %}
+
+Starting from `spryker/shipment-type-storage:1.2.0`, `ShipmentTypeListSynchronizationDataBulkRepositoryPlugin` is required. After wiring in the plugin, trigger the publish events to populate the storage:
+
+```bash
+console publish:trigger-events -r shipment_type
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

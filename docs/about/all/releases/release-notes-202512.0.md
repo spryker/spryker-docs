@@ -1,7 +1,7 @@
 ---
 title: Release notes 202512.0
 description: Release notes for Spryker Cloud Commerce OS version 202512.0
-last_updated: Feb 26, 2026
+last_updated: Jun 23, 2026
 template: concept-topic-template
 ---
 
@@ -301,7 +301,7 @@ If you are using older versions, we recommend that you update to the referenced 
 
 ### Performance improvements {% include badge.html type="improvement" %}
 
-Rendering of product items, cart pages, and URL resolution database queries has been optimized.
+Rendering of product items, cart pages, URL resolution database queries, and checkout shipment type loading has been optimized.
 
 **Key capabilities:**
 - Reduced repeated per-item loading patterns that previously caused multiple separate search calls for the cart, catalog listings, and PDP carousels.
@@ -309,9 +309,10 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 - Targeted cart performance improvements for large baskets.
 - Eliminated unnecessary case-insensitive comparisons using `UPPER()` where the database collation is already case-insensitive.
 - Improved performance for URL lookups in large datasets (reduces long-running queries and CPU pressure).
+- Improved checkout performance by introducing a bulk shipment type list storage plugin (`spryker/shipment-type-storage:1.2.0`).
 
 **Business benefits:**
-- Faster page loads on high-traffic pages such as the cart, catalog, and PDP.
+- Faster page loads on high-traffic pages such as the cart, catalog, PDP, and checkout.
 - Lower search infrastructure cost by cutting unnecessary requests.
 - More predictable performance for customers with large carts and catalogs.
 - Lower database CPU utilization.
@@ -320,10 +321,12 @@ Rendering of product items, cart pages, and URL resolution database queries has 
 **Documentation:**
 - [Product review performance](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#product-review-performance)
 - [Cart performance configuration](/docs/pbc/all/cart-and-checkout/latest/cart-page-performance-configuration.html#cart-page-performance-configuration)
+- [Shipment type performance configuration](/docs/pbc/all/carrier-management/latest/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html#shipment-type-storage-performance-fix)
 
 **Module Important technical releases:**
 - [Cart page performance optimization](https://api.release.spryker.com/release-group/6107)
 - [UPPER() function optimization for URL lookups](https://api.release.spryker.com/release-group/6124)
+- [Checkout shipment type loading optimization](https://api.release.spryker.com/release-group/5736)
 
 ### Reliability improvements {% include badge.html type="improvement" %}
 

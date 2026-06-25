@@ -2,28 +2,42 @@
 title: Project configuration for PunchOut Gateway
 description: Project guidelines for running a shop that handles eProcurement systems via PunchOut flow.
 template: concept-topic-template
-last_updated: May 29, 2026
-label: early-access
+last_updated: June 24, 2026
 ---
 
 This document describes the project configuration to enable eProcurement systems support via PunchOut flow.
+
+## Back Office configuration
+
+PunchOut Gateway runtime settings are managed in the Back Office under *Configuration > Integrations > Punchout Gateway*. Each setting can be set **globally** and **overridden per store**, so a store can use a value that differs from the global default.
+
+These settings are defined in [punchout_gateway.configuration.yml](https://github.com/spryker-eco/punchout-gateway/blob/main/resources/configuration/punchout_gateway.configuration.yml) and appear in the Back Office  after the configuration is synchronized using command `vendor/bin/console configuration:sync`.
+
+The settings are grouped as follows.
+
+### Logging
+
+| Setting (key) | Type | Default | Purpose |
+|---------------|------|---------|---------|
+| Enable Logging (`enable_logging`) | boolean | `false` | When enabled, the PunchOut Gateway logs incoming and outgoing PunchOut requests and responses. |
+
+### cXML Session
+
+| Setting (key) | Type | Default | Bounds | Purpose |
+|---------------|------|---------|--------|---------|
+| Session Start URL Validity (seconds) (`start_url_validity_in_seconds`) | integer | `600` | 1–3600 | How long, in seconds, a cXML session start URL remains valid after generation. |
+| Session Token Length (`token_length`) | integer | `32` | 16–128 | Length, in characters, of the randomly generated cXML session token. |
 
 ## PunchOut connection configuration
 
 Configure connections through the Back Office UI. For details, see [Manage PunchOut connections](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html).
 
-To bootstrap a working configuration for local development, the module also provides two demo console commands. Each command creates a single, hardcoded connection for store `DE`. Do not use the demo data in production.
+Demo connections for store `DE` are shipped as part of the demo shop data only, and are created during the destructive deployment. Do not use the demo data in production.
 
-- OCI flow:
-
-```bash
-vendor/bin/console punchout-gateway:oci:demo-connection:create
-```
-
-- cXML flow:
+If you need to recreate them, run the demo-data command provided in the [demo shop project](https://github.com/spryker-shop/b2b-demo-marketplace/blob/master/src/Pyz/Zed/PunchoutGateway/Communication/Console/PunchoutDemoConnectionCreateConsole.php):
 
 ```bash
-vendor/bin/console punchout-gateway:cxml:demo-connection:create
+vendor/bin/console punchout-gateway:demo-connection:create
 ```
 
 The rest of this section describes the persisted shape of a connection. The same fields are exposed in the Back Office form.
@@ -50,7 +64,7 @@ OCI-specific configuration
 | `protocol_type` | `'oci'`                       | Flow type.                                                                                                                                               |
 | `processor_plugin_class` | Full class name of the processor plugin. | `\SprykerEco\Zed\PunchoutGateway\Communication\Plugin\PunchoutGateway\DefaultOciProcessorPlugin` or a project's implementation.                                                                                   |
 
-The triplet `protocol_type`, `fk_store` and `request_url` must be unique.
+The pair `protocol_type` and `request_url` must be unique, so the same `request_url` cannot be reused across stores.
 
 Column `configuration` contains JSON with the following optional keys. Override only when the value differs from the default.
 
@@ -59,6 +73,7 @@ Column `configuration` contains JSON with the following optional keys. Override 
 | `usernameField` | `USERNAME` | Form field name carrying the username during login request. |
 | `passwordField` | `PASSWORD` | Form field name carrying the password during login request. |
 | `formMethod`    | `POST`     | HTTP method the buyer uses to post the OCI login form (`POST` or `GET`). |
+| `mapping`       | none       | Optional per-field source overrides for the outbound cart form. See [Field mapping](#field-mapping). |
 
 Additionally, configure credentials for customers who will access the shop.
 To do this, create rows in the `spy_punchout_credential` table:
@@ -91,10 +106,100 @@ Column `configuration` contains JSON with the following keys:
 | Key | Required | Purpose                                          |
 |-----|----------|--------------------------------------------------|
 | `senderSharedSecret` | yes | Shared secret used to authenticate the request. The stored value is the hash, generated with `password_hash()`. The incoming `SharedSecret` is checked against this hash with [password_verify](https://www.php.net/manual/en/function.password-verify.php). |
+| `mapping` | no | Optional per-field source overrides for the outbound `PunchOutOrderMessage` and custom extrinsics. See [Field mapping](#field-mapping). |
 
 For a cXML connection, no additional PunchOut-related configuration is required.
 The logged-in customer is identified by the `UserEmail` extrinsic field.
 Customers used for a cXML connection are expected to be fully configured in the shop so that only permitted products and prices are accessible.
+
+
+## Field mapping
+
+Each connection can override how individual outbound protocol fields are populated, without writing a custom processor plugin. Mappings are stored in the connection's `configuration` JSON under the `mapping` key and are edited in the Back Office connection form (see [Map connection fields](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html#map-connection-fields)). The mapping section is available only when editing an existing connection, not when creating one.
+
+`mapping` is an object of `targetField: sourceExpression` pairs, for example for OCI:
+
+```json
+{
+  "mapping": {
+    "NEW_ITEM-DESCRIPTION": "item.name",
+    "NEW_ITEM-VENDORMAT": "item.sku&\"_DE\"",
+    "NEW_ITEM-LONGTEXT": "item.description"
+  }
+}
+```
+
+- **Target field** is a protocol field identifier. For OCI, it is one of the supported `NEW_ITEM-*` fields. For cXML, it is a full cXML path, for example, `cXML.Message.PunchOutOrderMessage.ItemIn.ItemDetail.Description`, or a custom extrinsic.
+- **Source expression** defines where the value comes from when the cart is returned to the buyer.
+
+When a target field has no mapping, the default source documented in [PunchOut Protocols Coverage](/docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html) applies. A mapping entry overrides that default. Required OCI item fields fall back to their default when not mapped; optional fields are emitted only when mapped.
+
+### Source expression syntax
+
+The source expression is required and must match one of the following forms:
+
+| Form | Example | Result |
+|------|---------|--------|
+| Plugin expression | `item.sku` | Value read from the registered field-mapper plugin keyed `item`, traversing the `sku` path. |
+| Quoted constant | `"EA"` or `'EA'` | The literal text between the quotes. |
+| Concatenation | `item.sku&"_suffix"` | Segments joined by `&`, each a plugin expression or quoted constant, concatenated in order. |
+| Forced empty | `""` | An explicit empty value. |
+
+A plugin expression takes the form `pluginKey.fieldPath`, where `pluginKey` selects a registered field-mapper plugin and `fieldPath` is a dot path traversed on that plugin's transfer. Expressions are evaluated at cart-return time by `\SprykerEco\Service\PunchoutGateway\Mapper\Resolver\FieldValueResolver`.
+
+### Field-mapper plugins
+
+Source values are resolved by plugins implementing `\SprykerEco\Service\PunchoutGateway\Dependency\Plugin\PunchoutFieldMapperPluginInterface`, registered keyed by `pluginKey` in `\SprykerEco\Service\PunchoutGateway\PunchoutGatewayDependencyProvider::getFieldMapperPlugins()`.
+
+The module ships two:
+
+| Key | Plugin | Source transfer |
+|-----|--------|-----------------|
+| `item` | `ItemTransferFieldMapperPlugin` | `ItemTransfer` of the current cart item. |
+| `quote` | `QuoteTransferFieldMapperPlugin` | `QuoteTransfer` of the cart. |
+
+The interface has two methods:
+
+| Method | Functionality |
+|--------|---------------|
+| `getValue` | Returns the value at `fieldName` for the given `MappingSourceTransfer`. Backs the runtime resolution of a plugin expression. |
+| `getPossibleValues` | Returns the list of supported dot paths, for example, `item.sku` or `quote.customer.email`. Feeds the source autosuggest in the Back Office form. |
+
+The Back Office source input is an autosuggest field served by `/punchout-gateway/source-field-suggestions/index`, which returns the union of every plugin's `getPossibleValues()`, filtered by the typed term.
+
+### Register a custom field-mapper plugin
+
+To expose a new source root, for example, `company`, implement `PunchoutFieldMapperPluginInterface` and register it under a new key in your project's Service dependency provider:
+
+**src/Pyz/Service/PunchoutGateway/PunchoutGatewayDependencyProvider.php**
+
+```php
+namespace Pyz\Service\PunchoutGateway;
+
+use Pyz\Service\PunchoutGateway\Plugin\FieldMapper\CompanyTransferFieldMapperPlugin;
+use SprykerEco\Service\PunchoutGateway\PunchoutGatewayDependencyProvider as SprykerEcoPunchoutGatewayDependencyProvider;
+
+class PunchoutGatewayDependencyProvider extends SprykerEcoPunchoutGatewayDependencyProvider
+{
+    protected function getFieldMapperPlugins(): array
+    {
+        return [
+            ...parent::getFieldMapperPlugins(),
+            'company' => new CompanyTransferFieldMapperPlugin(),
+        ];
+    }
+}
+```
+
+Source expressions can then use `company.<field>`.
+
+### Custom extrinsics (cXML)
+
+For cXML connections, you can map values to custom `Extrinsic` elements emitted in each `ItemIn` of the `PunchOutOrderMessage`. Each extrinsic mapping has a name and a source expression. The name must match `^[A-Za-z0-9_]+$` and must not be one of the reserved user-identity names in `\SprykerEco\Shared\PunchoutGateway\PunchoutGatewayConfig::EXTRINSIC_DENY_LIST`:
+
+`User`, `UniqueUsername`, `UniqueName`, `UserId`, `UserEmail`, `UserFullName`, `UserPrintableName`, `FirstName`, `LastName`, `PhoneNumber`, `UserPhoneNumber`.
+
+An extrinsic named `ImageURL` mapped to `item.name` is stored under the target `cXML.Message.PunchOutOrderMessage.ItemIn.ItemDetail.Extrinsic.ImageURL`.
 
 
 ## PunchOut flow processor plugin
@@ -355,9 +460,9 @@ Two settings control this handshake:
 | Setting | Default | Bounds | Purpose |
 |---------|---------|--------|---------|
 | `getCxmlSessionTokenLength()` | `32`  | 16–128 | Length of the generated session token. |
-| `getCxmlSessionStartUrlValidityInSeconds()` | `600` | 0–3600 | How long the start URL remains valid after the synchronous response is sent. |
+| `getCxmlSessionStartUrlValidityInSeconds()` | `600` | 1–3600 | How long the start URL remains valid after the synchronous response is sent. |
 
-Both are exposed in the Back Office settings panel under *Configuration > Punchout Gateway*.
+Both are exposed in the Back Office settings panel under *Configuration > Integrations > Punchout Gateway*. See [Back Office configuration](#back-office-configuration).
 
 ## spy_punchout_session table
 

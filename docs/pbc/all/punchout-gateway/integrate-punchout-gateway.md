@@ -1,9 +1,8 @@
 ---
 title: Integrate PunchOut Gateway
 description: Integrate PunchOut Gateway into a Spryker shop.
-last_updated: May 29, 2026
+last_updated: Jun 24, 2026
 template: howto-guide-template
-label: early-access
 ---
 
 This document describes how to integrate the PunchOut Gateway module into a Spryker shop.
@@ -13,7 +12,7 @@ This document describes how to integrate the PunchOut Gateway module into a Spry
 Install the PunchOut Gateway module using Composer:
 
 ```bash
-composer require spryker-eco/punchout-gateway:^0.4.0
+composer require spryker-eco/punchout-gateway:^1.1.0
 ```
 
 ## 2. Configure the module
@@ -49,7 +48,13 @@ When logging is enabled, the module emits structured entries through `\SprykerEc
 | `getOciDefaultStartUrl()` | `'/'` | Default redirect URL after OCI session start. |
 | `getCxmlSessionTokenLength()` | `32` | Length of the generated cXML session token. |
 
-The same values can be changed at runtime through the Back Office under *Configuration > Punchout Gateway*.
+Some values can be changed at runtime in the Back Office under *Configuration > Integrations > Punchout Gateway*, both globally and per store. For a description of each setting, see [Back Office configuration](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html#back-office-configuration).
+
+These settings are defined in [punchout_gateway.configuration.yml](https://github.com/spryker-eco/punchout-gateway/blob/main/resources/configuration/punchout_gateway.configuration.yml) and appear in the Back Office after you synchronize the configuration. Run to register them:
+
+```bash
+vendor/bin/console configuration:sync
+```
 
 ## 4. Update Quote configuration
 
@@ -208,15 +213,16 @@ vendor/bin/console data:import glossary
 
 ## 10. Translations for the Back Office
 
-The module ships Zed translations for the Back Office UI in `vendor/spryker-eco/punchout-gateway/data/translation/Zed/en_US.csv` and `de_DE.csv`. They are picked up by the standard Zed translator on the next request—no separate import step is required. To override a label, add an entry with the same key to your project's Zed translation file.
+The module ships Zed translations for the Back Office UI in `vendor/spryker-eco/punchout-gateway/data/translation/Zed/en_US.csv` and `de_DE.csv`. They are picked up by the standard Zed translator on the next request, so no separate import step is required. To override a label, add an entry with the same key to your project's Zed translation file.
 
 ## Verify the integration
 
 After completing the steps above:
 
 - Open *Punchout Connections* in the Back Office. The grid should render empty until you create your first connection.
-- Run `vendor/bin/console punchout-gateway:cxml:demo-connection:create` to insert a demo cXML connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
-- Run `vendor/bin/console punchout-gateway:oci:demo-connection:create` to insert a demo OCI connection for store `DE` and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
+- Create your first connection, following [Manage PunchOut connections](/docs/pbc/all/punchout-gateway/manage-punchout-connections.html), and confirm that DB table `spy_punchout_connection` and the grid both reflect it.
+- as a part of our Demoshop, we provide the following command `vendor/bin/console punchout-gateway:demo-connection:create`, which inserts demo cXML and OCI connections for `DE` store.
+
 
 ## Additional links
 

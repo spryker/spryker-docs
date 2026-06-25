@@ -6,8 +6,6 @@ template: default
 layout: custom_new
 ---
 
-# Spryker API Strategy
-
 ## What this means for you
 
 - **On Glue today?** Nothing breaks. Glue is fully supported, there is no End-of-Life, and you don't have to migrate.
@@ -35,7 +33,7 @@ Spryker's APIs are described by three **independent** axes. They are easy to con
 | API type | Application (where) | Foundation (how it's built) |
 | --- | --- | --- |
 | Storefront API | Storefront API | Glue **or** API Platform integration |
-| Backoffice API | Backend API | Glue **or** API Platform integration |
+| Back Office API | Backend API | Glue **or** API Platform integration |
 | Merchant API | Backend API | API Platform integration |
 | Merchant Data Exchange API | Backend API | API Platform integration |
 | Data Exchange API | Backend API | API Platform integration |
@@ -45,7 +43,7 @@ Read the table across, not down: each API type belongs to one application and is
 
 {% info_block infoBox "Naming watch-out" %}
 
-The **Backend API** *application* is not the same as the **Backoffice API** *type*. The Backend API application hosts several types, of which Backoffice is one.
+The **Backend API** *application* is not the same as the **Back Office API** *type*. The Backend API application hosts several types, of which Back Office is one.
 
 {% endinfo_block %}
 
@@ -58,7 +56,7 @@ These are callable now:
 | API type | Application | Caller (actor) | Use it when |
 | --- | --- | --- | --- |
 | **Storefront API** | Storefront | Customer (authenticated or guest) | You're building any customer-facing shopping experience |
-| **Backoffice API** | Backend | Back Office administrator or trusted internal service | You're automating or replacing Back Office administration |
+| **Back Office API** | Backend | Back Office administrator or trusted internal service | You're automating or replacing Back Office administration |
 
 Everything in the next section is on the roadmap and not yet callable — don't design against it yet.
 
@@ -84,13 +82,13 @@ Pick by **who is calling** and **the shape of the data flow** (one record at a t
 | Your situation | Use |
 | --- | --- |
 | A customer browses, shops, and checks out | Storefront API |
-| An administrator manages catalog, orders, or customers | Backoffice API |
+| An administrator manages catalog, orders, or customers | Back Office API |
 | A merchant manages their own data through a UI, record by record | Merchant API |
 | A merchant bulk-imports or bulk-exports their own data | Merchant Data Exchange API |
 | The platform operator moves large datasets (PIM, ERP, OMS) | Data Exchange API |
 | An external system reacts to events (order placed, stock changed) | Async Event API |
 
-**Each API type has its own actor and authentication**, so a token for one type does not grant access to another. Storefront uses customer authentication; Backoffice uses administrator authentication; Merchant uses merchant-scoped authentication that restricts every call to a single merchant's data; the data and event types use system credentials issued by the platform operator.
+**Each API type has its own actor and authentication**, so a token for one type does not grant access to another. Storefront uses customer authentication; Back Office uses administrator authentication; Merchant uses merchant-scoped authentication that restricts every call to a single merchant's data; the data and event types use system credentials issued by the platform operator.
 
 ---
 
@@ -145,13 +143,13 @@ The Q1 feature freeze and the April GA work together: from Q1, new features were
 These cover the edge cases the tables above don't.
 
 **Is API Platform integration something I call, or something underneath what I call?**
-Underneath. You call an API type (Storefront, Backoffice, and so on). API Platform integration is the foundation it's built on, replacing Glue for new work.
+Underneath. You call an API type (Storefront, Back Office, and so on). API Platform integration is the foundation it's built on, replacing Glue for new work.
 
-**How is the Backend API application different from the Backoffice API type?**
-The Backend API is the application that hosts several types. Backoffice is one of those types, for administrator-level operations. Same word root, different axis.
+**How is the Backend API application different from the Back Office API type?**
+The Backend API is the application that hosts several types. Back Office is one of those types, for administrator-level operations. Same word root, different axis.
 
-**How is the Merchant API different from the Backoffice API?**
-Backoffice serves Spryker administrators with platform-wide scope. Merchant serves a single marketplace merchant — every call is restricted to that merchant's own data.
+**How is the Merchant API different from the Back Office API?**
+Back Office serves Spryker administrators with platform-wide scope. Merchant serves a single marketplace merchant — every call is restricted to that merchant's own data.
 
 **How is the Merchant API different from the Merchant Data Exchange API?**
 Both are merchant-scoped. Merchant API is for record-by-record operations through interfaces and tools. Merchant Data Exchange API is for bulk, file-based, or queue-based flows between a merchant's systems and the marketplace.

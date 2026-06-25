@@ -8,15 +8,15 @@ layout: custom_new
 
 ## What this means for you
 
-- **On Glue today?** Nothing breaks. Glue is fully supported, there is no End-of-Life, and you don't have to migrate.
-- **Building something new?** Build on **API Platform integration**. It is generally available and is where all new Spryker features ship.
-- **Need a Spryker core feature released after Q1 2026?** It will be available through API Platform integration, not Glue.
+- **On Glue today?** Nothing breaks. Glue is fully supported, there is no End-of-Life, and you don't have to migrate existing features.
+- **Building something new?** Build it on **API Platform integration**. It is generally available and is where all new Spryker features ship.
+- **Need a Spryker Core feature released after Q1 2026?** It will be available through API Platform integration only.
 
 Everything below is supporting detail.
 
-{% info_block warningBox "The one-line version" %}
+{% info_block warningBox %}
 
-Glue keeps working and isn't going away. New work goes on API Platform integration. Migration is optional.
+Glue keeps working and isn't going away. New features are built on API Platform integration. Migration is optional.
 
 {% endinfo_block %}
 
@@ -43,7 +43,7 @@ Read the table across, not down: each API type belongs to one application and is
 
 {% info_block infoBox "Naming watch-out" %}
 
-The **Backend API** *application* is not the same as the **Back Office API** *type*. The Backend API application hosts several types, of which Back Office is one.
+The **Backend API** *application* is not the same as the **Back Office API** *type*. The Backend API application hosts several types of API, one of which is Back Office API.
 
 {% endinfo_block %}
 

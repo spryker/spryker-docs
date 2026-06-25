@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jun 16, 2026
+last_updated: Jun 25, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -343,8 +343,8 @@ to a real class whose shape is enforced by PHP's type system.
 ### Why use it
 
 - **Type safety in PHP.** The parent property is typed to the generated class (for example,
-  `?CartsTotals`) instead of `array`, so providers and processors get IDE autocompletion and the
-  language enforces the field set.
+  `?CartsTotalsStorefrontResource`) instead of `array`, so providers and processors get IDE
+  autocompletion and the language enforces the field set.
 - **Precise OpenAPI schema.** Each sub-field carries its own `type`, `description`, and `example`,
   so the OpenAPI document and Swagger UI render the object as a named component schema instead of
   an opaque `object`.
@@ -395,7 +395,7 @@ For a `Carts` resource with the `totals` property above, the generator:
 1. Types the property on the resource class:
 
    ```php
-   public ?CartsTotals $totals = null;
+   public ?CartsTotalsStorefrontResource $totals = null;
    ```
 
 2. Writes a companion class next to the resource in the `Generated\Api\{ApiType}\` namespace. The
@@ -407,7 +407,7 @@ For a `Carts` resource with the `totals` property above, the generator:
 
    use ApiPlatform\Metadata\ApiProperty;
 
-   final class CartsTotals
+   final class CartsTotalsStorefrontResource
    {
        #[ApiProperty(description: 'Items × prices before any discount/tax.', openapiContext: ['example' => 16058])]
        public ?int $subtotal = null;
@@ -422,8 +422,10 @@ For a `Carts` resource with the `totals` property above, the generator:
    }
    ```
 
-The companion class name is `{ResourceName}{PropertyName}` in PascalCase — so `Carts` + `totals`
-becomes `CartsTotals`.
+The companion class name is `{ResourceName}{PropertyPath}{ApiType}Resource` — the resource's
+normalized name, the capitalized property path, the API type, and the `Resource` suffix. So
+`Carts` + `totals` on the storefront API becomes `CartsTotalsStorefrontResource`; a checkout
+`billingAddress` becomes `CheckoutBillingAddressStorefrontResource`.
 
 {% info_block infoBox "Imports in companion classes" %}
 
@@ -436,8 +438,8 @@ generator never emits an unused import.
 
 ### Nested objects within objects
 
-Objects can nest to any depth. Each level generates its own class, named by appending the child
-property to its parent's class name. For example:
+Objects can nest to any depth. Each level generates its own class, named by concatenating the
+property path onto the resource name. For example:
 
 ```yaml
 totals:
@@ -450,75 +452,47 @@ totals:
                     type: integer
 ```
 
-generates a `CartsTotals` class with `public ?CartsTotalsTax $tax = null;`, plus a separate
-`CartsTotalsTax` class with `public ?int $amount = null;`.
+on the storefront `Carts` resource generates a `CartsTotalsStorefrontResource` class with
+`public ?CartsTotalsTaxStorefrontResource $tax = null;`, plus a separate
+`CartsTotalsTaxStorefrontResource` class with `public ?int $amount = null;`. A deeper path simply
+keeps concatenating — an agent quote-request resource's `shownVersion.cartTotals` object becomes
+`AgentQuoteRequestsShownVersionCartTotalsStorefrontResource`.
 
-### Shared canonical objects
+### Object collections
 
-By default a typed nested object generates a **per-resource** class (`CartsTotals`,
-`OrdersTotals`, …). Many resources carry the same conceptual object — pagination metadata, money
-totals, addresses, customer summaries — and generating a separate class for each is wasteful.
-
-Add `objectName` to a `type: object` property to share **one canonical class** across resources:
+A `type: array` property whose `items:` are themselves a typed object (`type: object` with nested
+`properties:`) generates a value-object class for the element type. The class is named after the
+**pluralized** field segment — `{ResourceName}{PluralField}{ApiType}Resource` — and the parent
+property stays a PHP `array` carrying a `@var array<…>` docblock so the serializer denormalizes
+each element into the generated class:
 
 ```yaml
-# carts.resource.yml
-totals:
-    type: object
-    objectName: Totals
-    properties:
-        subtotal:   { type: integer, openapiContext: { example: 16058 } }
-        grandTotal: { type: integer, openapiContext: { example: 14601 } }
-        priceToPay: { type: integer, openapiContext: { example: 14601 } }
-
-# orders.resource.yml
-totals:
-    type: object
-    objectName: Totals
-    properties:
-        subtotal:          { type: integer, openapiContext: { example: 9902 } }
-        grandTotal:        { type: integer, openapiContext: { example: 10392 } }
-        canceledTotal:     { type: integer, openapiContext: { example: 0 } }
-        remunerationTotal: { type: integer, openapiContext: { example: 0 } }
+# carts.resource.yml — a list of typed customer objects
+customer:
+    type: array
+    items:
+        type: object
+        properties:
+            firstName: { type: string }
+            email:     { type: string }
 ```
 
-Both properties are typed `?Totals`, and a single `Generated\Api\{ApiType}\Totals` class is
-generated whose fields are the **union** of every contribution (the *canonical superset* — here
-`subtotal`, `grandTotal`, `priceToPay`, `canceledTotal`, `remunerationTotal`, …). A resource
-references the canonical class even if it never populates some of the fields.
+On the storefront `Carts` resource this generates `CartsCustomersStorefrontResource` (the field
+`customer` pluralized to `Customers`) as the element type, and types the property as
+`array<\Generated\Api\Storefront\CartsCustomersStorefrontResource>`.
 
-`objectName` supports three forms:
+### Per-resource validation lifting
 
-| Declaration | Effect |
-|-------------|--------|
-| `type: object` + `objectName: X` + `properties:` | Contributes its fields to canonical object `X`; property typed `?X`. |
-| `type: object` + `objectName: X` (no `properties:`) | Pure reference — typed `?X`, contributes nothing. |
-| `type: object` + `properties:` (no `objectName`) | Per-resource class `{Resource}{Property}` (the default described above). |
+Each typed nested object gets its **own** value-object class, so validation you authored the
+array-shaped way — an `Assert\Collection` on the object property in the resource's
+`{resource-name}.validation.yml` — would reject the denormalized object value with a 422
+(`This value should be of type array`). The generator resolves this automatically: for a writable
+object property it **lifts** the `Collection.fields` constraints off the property and onto the
+matching fields of that resource's value object, and emits a plain `#[Assert\Valid]` cascade
+(carrying the operation groups) on the property instead of the `Collection`.
 
-#### Conflict policy
-
-Because a canonical object's fields arrive from many files, the generator applies a deterministic
-merge:
-
-- A field declared by multiple contributions **must have the same `type`** — a mismatch is a
-  hard generation error naming the contributing files.
-- For `description`, `openapiContext`, and `nullable`, the **first contribution wins** (resources
-  are processed in a stable, path-sorted order), so the generated schema is reproducible.
-- Validation constraints are the exception to first-wins: they are **unioned** across all
-  contributors (see [Validation on canonical objects](#validation-on-canonical-objects) below).
-- An `objectName` that is referenced but never receives a `properties` contribution is a hard
-  error, as is a canonical name that collides with a generated resource class.
-
-#### Validation on canonical objects
-
-A canonical object property denormalizes the incoming JSON into a typed value object, not an array.
-A field validation written the array-shaped way — an `Assert\Collection` on the property in the
-resource's `{resource-name}.validation.yml` — would therefore reject the object value with a 422
-(`This value should be of type array`). The generator resolves this automatically: it **lifts** the
-`Collection.fields` constraints off the property and onto the matching fields of the canonical value
-object, and emits a plain `#[Assert\Valid]` cascade on the property instead of the `Collection`.
-
-You keep authoring validation exactly as before — write the `Collection` against the object property:
+You keep authoring validation exactly as before — write the `Collection` against the object
+property:
 
 ```yaml
 # checkout-data.validation.yml
@@ -534,32 +508,57 @@ post:
                                 - Email:    { message: 'Email is invalid.' }
 ```
 
-The merge rules across contributors:
+The lifted constraints are re-grouped through the resource's own operation groups (so this
+`checkout-data` `customer.email` rule stays in the `checkout-data:create` group) and attached to
+the value object's `email` field; the `customer` property itself carries only `#[Assert\Valid]`.
+Each resource's value object is validated independently — there is **no** cross-resource union,
+because every resource has its own value-object class. A property whose object is not writable, or
+a plain list property that is not a typed object collection, keeps its array-shaped `Collection` —
+only writable typed-object properties are lifted.
 
-- **Per-resource grouping.** Each lifted constraint is re-grouped through the contributing
-  resource's operation groups, so a `customer.email` rule from checkout stays in the
-  `checkout:create` group and does not leak onto other resources sharing the `Customer` object.
-- **Union + dedup.** A field's constraints are unioned across every contributing resource and
-  deduplicated, so the canonical value object carries the superset of all contributors' rules.
-- **Array properties keep `Collection`.** A property with `type: object` *without* `objectName`
-  (or a list property like `payments` / `shipments`) is still validated by its array-shaped
-  `Collection` — only canonical-object properties are lifted.
-
-##### `allowMissingFields`
+#### `allowMissingFields`
 
 A `Collection` with `allowMissingFields: true` (for example, a checkout `billingAddress` referenced
 only by id) tolerates absent keys. On a value object an absent field denormalizes to `null`, so the
 generator relaxes presence constraints when lifting: each `NotBlank` gains `allowNull: true` and
-each `NotNull` is dropped — an absent field passes, a present-but-empty one still fails. When two
-contributors disagree for the same field and group, the **relaxed** `NotBlank` supersedes the strict
-one, so the lenient (for example, address-by-id) context is not rejected.
+each `NotNull` is dropped — an absent field passes, a present-but-empty one still fails.
 
-#### When to use `objectName`
+### Cross-module field contribution
 
-Use it for any object shape that recurs across resources — `Pagination`, `Totals`, `Address`,
-`Customer`, money `Calculations`, and similar. Omit it for a one-off object that only one resource
-uses, unless you want the cleaner canonical class name. `objectName` applies to **top-level**
-resource properties; an object nested inside another object stays a per-parent class.
+Because each resource owns its value-object class, a nested object's fields can still be
+contributed from several modules — this is how you keep the dependency direction correct, with
+each field declared in its owning module. Multiple modules ship a same-named `*.resource.yml`
+fragment for the same resource, and the schema merger **deep-merges nested object `properties`**
+(and `items.properties` for collections) rather than letting a later fragment's nested block
+replace an earlier one.
+
+For example, both `DiscountsRestApi` and `ProductOptionsRestApi` add fields to the cart-items
+`calculations` object:
+
+```yaml
+# DiscountsRestApi — cart-items.resource.yml
+resource:
+    name: CartItems
+    properties:
+        calculations:
+            type: object
+            properties:
+                discountTotal: { type: integer }
+
+# ProductOptionsRestApi — cart-items.resource.yml
+resource:
+    name: CartItems
+    properties:
+        calculations:
+            type: object
+            properties:
+                productOptionTotal: { type: integer }
+```
+
+The merged `calculations` object carries **both** `discountTotal` and `productOptionTotal`, and a
+single `CartItemsCalculationsStorefrontResource` value object is generated for it. This deep merge —
+not a shared class — is how identically-named objects accumulate fields across modules while each
+resource keeps its own independent request/response shape.
 
 ## Documenting nested properties for OpenAPI and Swagger UI
 

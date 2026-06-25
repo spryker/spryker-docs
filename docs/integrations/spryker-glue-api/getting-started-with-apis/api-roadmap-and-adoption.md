@@ -3,7 +3,6 @@ title: Spryker API roadmap and adoption
 description: Planned Spryker API types, how to choose one, why API Platform integration, migration guidance, and the rollout timeline.
 last_updated: Jun 25, 2026
 template: default
-layout: custom_new
 ---
 
 This page continues the [Spryker API Strategy](/docs/integrations/spryker-glue-api/getting-started-with-apis/api-strategy.html). It covers the API types on the roadmap, how to choose one, why API Platform integration, your migration decision, and the rollout timeline.

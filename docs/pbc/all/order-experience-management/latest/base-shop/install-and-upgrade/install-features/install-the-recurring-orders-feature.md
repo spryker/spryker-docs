@@ -457,6 +457,60 @@ Activate a recurring schedule. Make sure the state machine condition check job r
 
 {% endinfo_block %}
 
+#### Register the trigger console command (optional)
+
+`RecurringOrderTriggerConsole` lets you manually trigger order placement for a specific recurring schedule from the CLI. It runs the same placement logic as the state machine `PlaceOrderCommand`, which makes it useful for development, debugging, and one-off operational tasks.
+
+To enable it, register the command in your console dependency provider:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use SprykerFeature\Zed\OrderExperienceManagement\Communication\Console\RecurringOrderTriggerConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            // ...
+            new RecurringOrderTriggerConsole(), #RecurringOrdersFeature
+        ];
+    }
+}
+```
+
+Usage:
+
+```bash
+# Trigger placement by numeric ID
+console recurring-orders:trigger-placement 42
+
+# Trigger placement by UUID
+console recurring-orders:trigger-placement 550e8400-e29b-41d4-a716-446655440000
+
+# Run pre-placement validation first; aborts if validation fails
+console recurring-orders:trigger-placement 42 --validate
+```
+
+The `--validate` flag runs all registered `ScheduleValidatorPlugin` implementations (for example, `PriceScheduleValidatorPlugin` and `CheckoutPlaceabilityScheduleValidatorPlugin`) before attempting placement. If any validator reports a failure, the command exits with an error and does not place the order.
+
+{% info_block warningBox "Development use only" %}
+
+This command is intended for development and debugging. Do not use it in production automated pipelines — the state machine cron job is the intended trigger for production order placement.
+
+{% endinfo_block %}
+
 #### Configure product bundle field copying
 
 {% info_block infoBox "Product Bundles feature" %}

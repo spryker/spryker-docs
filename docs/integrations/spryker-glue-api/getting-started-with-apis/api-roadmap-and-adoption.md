@@ -77,7 +77,7 @@ API Platform integration is generally available. The rollout ran as follows:
 | Early access | Through Q1 2026 | Available for new features ahead of GA, with a limited support scope; native features (authentication, codebuckets, full JSON:API) not yet fully integrated |
 | Glue feature freeze | From Q1 2026 | New Spryker features target API Platform integration only. Glue gets bugfixes, security, and compatibility — no new endpoints |
 | General availability | Apr 30, 2026 | Full support; recommended for all new integrations |
-| Glue REST module migration | Through Q2 2026 | Spryker-provided modules move to API Platform. Check the [migration status page](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html) |
+| Glue REST module migration | In progress | Spryker-provided modules move to API Platform. Check the [migration status page](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html) |
 
 The Q1 feature freeze and the April GA work together: from Q1, new features were built on API Platform integration and shipped through the **early-access** window, reaching full support at GA. Feature freeze means no new Glue functionality — it is not deprecation, and there is no End-of-Life.
 

@@ -1,130 +1,166 @@
 ---
 title: Spryker API Strategy
-description: API documentation for dynamic-entity-availability-abstracts.
-last_updated: Apr 29, 2026
+description: What to build on, what changes, and how to choose the right Spryker API.
+last_updated: Jun 25, 2026
 template: default
 layout: custom_new
 ---
 
-## Overview
+# Spryker API Strategy
 
-Spryker is introducing **API Platform–based integration** as the strategic integration layer for new features while maintaining full support for existing Glue APIs. This additive approach protects existing implementations, avoids forced migrations, and enables a modern integration foundation for future development.
+## What this means for you
 
-{% info_block warningBox "Important" %}
+- **On Glue today?** Nothing breaks. Glue is fully supported, there is no End-of-Life, and you don't have to migrate.
+- **Building something new?** Build on **API Platform integration**. It is generally available and is where all new Spryker features ship.
+- **Need a Spryker core feature released after Q1 2026?** It will be available through API Platform integration, not Glue.
 
-- Existing Glue API implementations remain supported with no End-of-Life planned
-- Migration is optional—customers decide if and when to adopt API Platform integration
-- All existing endpoints and integrations continue to work unchanged
+Everything below is supporting detail.
 
-{% endinfo_block %}
+{% info_block warningBox "The one-line version" %}
 
----
-
-## API Platform Integration
-
-[API Platform–based integration](/docs/dg/dev/architecture/api-platform.html) provides:
-
-- contract-first APIs
-- standardized integration patterns
-- enhanced support for large data exchange
-- improved developer experience
-- parallel use with Glue APIs for Storefront and Backend integrations
-- additional media types: application/xml, application/csv, application/json+ld
-
-### Availability Timeline
-
-- **Early access:** until end of Q1 2026
-  - limited support scope
-  - native Spryker features (authentication, codebuckets, full JSON:API support) not fully integrated
-- **General Availability:** Apr 30, 2026
-- **Migration of Glue Rest API modules to ApiPlatform:** end of Q2 2026
-  - Status can be checked here [Migration status - Glue API to API Platform](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html)
-
----
-
-## Glue APIs: Continued Support
-
-Glue Storefront API and Glue Backend API remain supported, maintained, and secured with:
-
-- All existing endpoints preserved
-- Continued bugfixes and security updates
-- Compatibility maintenance
-- No removal of functionality
-
-### Feature Freeze (Q1 2026 onward)
-
-From Q1 2026, Glue APIs enter feature freeze:
-- New Spryker features use API Platform integration exclusively
-- No new Glue endpoints for new features
-- Existing endpoints receive bugfixes, security updates, and compatibility fixes
-
-{% info_block infoBox %}
-
-Feature freeze means no new functionality—not deprecation or End-of-Life.
+Glue keeps working and isn't going away. New work goes on API Platform integration. Migration is optional.
 
 {% endinfo_block %}
 
 ---
 
-## Comparison
+## How the pieces fit
 
-| Topic                | Glue APIs          | API Platform Integration |
-| -------------------- | ------------------ | ------------------------ |
-| Existing features    | Supported          | Supported                |
-| New Spryker features | ❌ No new endpoints | ✅ Default integration    |
-| Forced migration     | ❌ No               | ❌ No                     |
-| End-of-Life planned  | ❌ No               | ❌ No                     |
-| Bugfixes & security  | ✅ Yes              | ✅ Yes                    |
-| Strategic investment | Limited            | Primary focus            |
+Spryker's APIs are described by three **independent** axes. They are easy to confuse because some names repeat across axes, so read them as orthogonal:
+
+1. **Application** — *where* the API lives. Two of them: **Storefront API** and **Backend API**.
+2. **API type** — *what* you call and *who* the caller is (a customer, an administrator, a merchant, a system). Several types live under each application.
+3. **Foundation** — *how* it's built underneath: **Glue** or **API Platform integration**. This is a foundation beneath the API, not something you call directly.
+
+| API type | Application (where) | Foundation (how it's built) |
+| --- | --- | --- |
+| Storefront API | Storefront API | Glue **or** API Platform integration |
+| Backoffice API | Backend API | Glue **or** API Platform integration |
+| Merchant API | Backend API | API Platform integration |
+| Merchant Data Exchange API | Backend API | API Platform integration |
+| Data Exchange API | Backend API | API Platform integration |
+| Async Event API | Backend API | API Platform integration |
+
+Read the table across, not down: each API type belongs to one application and is built on one foundation, and those two facts are independent of each other. "Storefront API" names both an application and the type it hosts; "API Platform integration" is a foundation, not an endpoint you target. During the transition, an existing type can be served by either foundation.
+
+{% info_block infoBox "Naming watch-out" %}
+
+The **Backend API** *application* is not the same as the **Backoffice API** *type*. The Backend API application hosts several types, of which Backoffice is one.
+
+{% endinfo_block %}
 
 ---
 
-## Choosing the Right Integration
+## What you can build on today
 
-### Use Glue APIs for
+These are callable now:
 
-- extending existing projects
-- maintaining current integrations
-- storefront interactions
+| API type | Application | Caller (actor) | Use it when |
+| --- | --- | --- | --- |
+| **Storefront API** | Storefront | Customer (authenticated or guest) | You're building any customer-facing shopping experience |
+| **Backoffice API** | Backend | Back Office administrator or trusted internal service | You're automating or replacing Back Office administration |
 
-### Use API Platform Integration for
+Everything in the next section is on the roadmap and not yet callable — don't design against it yet.
 
-- new integrations (recommended starting 2026)
-- backend system-to-system communication (ERP, PIM, OMS)
-- large dataset exchanges
-- new Spryker features
-- long-term scalability requirements
-- projects requiring specific formats, versioning, or API Platform features
+---
 
-### Migration Path
+## What's on the roadmap
 
-Migration from Glue APIs is optional. Consider migrating when:
-- building new integrations
-- exchanging large datasets
-- integrating external systems (ERP, PIM, OMS)
-- planning long-term platform evolution
-- project requirements align with API Platform features (supported formats, versioning, etc.)
+Planned API types, listed so you can plan ahead. Availability is announced per type; treat these as direction, not a build target.
 
-Spryker provides:
-- documentation of behavioral differences
-- incremental migration support (endpoint-by-endpoint)
-- conversion tools and reference implementations
+| API type | Application | Caller (actor) | Use it when |
+| --- | --- | --- | --- |
+| **Merchant API** | Backend | Marketplace merchant (single-merchant scope) | A merchant manages their own catalog, offers, orders, or payouts record-by-record through a UI or tool |
+| **Merchant Data Exchange API** | Backend | Merchant-side integration system | A merchant bulk-imports or bulk-exports their own data between their systems and the marketplace |
+| **Data Exchange API** | Backend | Platform-operator integration system | The operator moves large datasets in or out at platform level (PIM, ERP, OMS, BI) |
+| **Async Event API** | Backend | Event subscriber (broker or webhook) | An external system needs to react to Spryker events instead of polling |
+
+---
+
+## Choosing an API type
+
+Pick by **who is calling** and **the shape of the data flow** (one record at a time, bulk, or event-driven).
+
+| Your situation | Use |
+| --- | --- |
+| A customer browses, shops, and checks out | Storefront API |
+| An administrator manages catalog, orders, or customers | Backoffice API |
+| A merchant manages their own data through a UI, record by record | Merchant API |
+| A merchant bulk-imports or bulk-exports their own data | Merchant Data Exchange API |
+| The platform operator moves large datasets (PIM, ERP, OMS) | Data Exchange API |
+| An external system reacts to events (order placed, stock changed) | Async Event API |
+
+**Each API type has its own actor and authentication**, so a token for one type does not grant access to another. Storefront uses customer authentication; Backoffice uses administrator authentication; Merchant uses merchant-scoped authentication that restricts every call to a single merchant's data; the data and event types use system credentials issued by the platform operator.
+
+---
+
+## Why API Platform integration
+
+What you get, in developer terms:
+
+- **Contract-first APIs** → the contract is the source of truth, so you can generate typed clients and catch breaking changes before they ship.
+- **Versioning and content negotiation** → platform upgrades stop silently breaking your integration; you opt into changes.
+- **`application/csv`, `application/xml`, `application/ld+json`** → your ERP or PIM integration can drop its custom transformation layer and exchange the format it already speaks.
+- **Built for large data exchange** → bulk import/export is a first-class path, not a workaround.
+- **Standardized integration patterns** → the same conventions across every API type, so a second integration is faster than the first.
+- **Runs alongside Glue** → adopt it per endpoint, with no flag day and nothing to switch off.
+
+---
+
+## Before and after: your migration decision
+
+You only have a decision to make if you're on Glue and weighing a move. Here's the whole picture:
+
+| | On Glue today | After moving to API Platform integration |
+| --- | --- | --- |
+| Existing endpoints | Keep working, supported, no EOL | Unchanged — migrate only what you choose |
+| New endpoints you build | Possible, but no new Spryker features land here | Recommended path; new features available |
+| Breaking changes on upgrade | Possible | Controlled through versioning |
+| Data format handling | Custom transformation in your code | Native CSV / XML / JSON-LD |
+| Effort to adopt | — | Incremental, endpoint by endpoint |
+
+**You should consider moving when** you're building a new integration, exchanging large datasets, connecting an external system (ERP, PIM, OMS), or you want upgrade-safe versioning. **You can stay on Glue** indefinitely for everything that already works.
+
+Spryker supports the move with documentation of behavioral differences, endpoint-by-endpoint migration, and conversion tools and reference implementations.
+
+---
+
+## Timeline
+
+API Platform integration is generally available. The rollout ran as follows:
+
+| Milestone | When | What it means |
+| --- | --- | --- |
+| Early access | Through Q1 2026 | Available for new features ahead of GA, with a limited support scope; native features (authentication, codebuckets, full JSON:API) not yet fully integrated |
+| Glue feature freeze | From Q1 2026 | New Spryker features target API Platform integration only. Glue gets bugfixes, security, and compatibility — no new endpoints |
+| General availability | Apr 30, 2026 | Full support; recommended for all new integrations |
+| Glue REST module migration | Through Q2 2026 | Spryker-provided modules move to API Platform. Check the [migration status page](/docs/dg/dev/architecture/api-platform/migrate-to-api-platform-status.html) |
+
+The Q1 feature freeze and the April GA work together: from Q1, new features were built on API Platform integration and shipped through the **early-access** window, reaching full support at GA. Feature freeze means no new Glue functionality — it is not deprecation, and there is no End-of-Life.
 
 ---
 
 ## FAQ
 
-**Do I have to migrate my existing Glue APIs?**<br>
-No. Migration is optional. Existing Glue APIs remain supported.
+These cover the edge cases the tables above don't.
 
-**Will Glue APIs be removed?**<br>
-No. There is no End-of-Life planned.
+**Is API Platform integration something I call, or something underneath what I call?**
+Underneath. You call an API type (Storefront, Backoffice, and so on). API Platform integration is the foundation it's built on, replacing Glue for new work.
 
-**Can I still build custom features using Glue in my project?**<br>
-Yes. You can continue using Glue APIs in your projects. However, new Spryker core features after Q1 2026 will not introduce new Glue endpoints.
+**How is the Backend API application different from the Backoffice API type?**
+The Backend API is the application that hosts several types. Backoffice is one of those types, for administrator-level operations. Same word root, different axis.
 
-**Is API Platform integration mandatory?**<br>
-No. It is recommended for new integrations, but existing Glue usage remains valid.
+**How is the Merchant API different from the Backoffice API?**
+Backoffice serves Spryker administrators with platform-wide scope. Merchant serves a single marketplace merchant — every call is restricted to that merchant's own data.
 
-**When should I start using API Platform integration?**<br>
-Early adoption is available during Q1 2026. For new integrations, use API Platform integration from General Availability (Next Product Release) onward.
+**How is the Merchant API different from the Merchant Data Exchange API?**
+Both are merchant-scoped. Merchant API is for record-by-record operations through interfaces and tools. Merchant Data Exchange API is for bulk, file-based, or queue-based flows between a merchant's systems and the marketplace.
+
+**How is the Data Exchange API different from the Merchant Data Exchange API?**
+Same capabilities, different scope. Data Exchange operates at platform level with operator credentials. Merchant Data Exchange is restricted to one merchant's data with per-merchant credentials.
+
+**How is the Data Exchange API different from the Async Event API?**
+Data Exchange is request-driven — your system calls Spryker to import, export, or read. Async Event is event-driven — Spryker notifies your system when something happens. Choose by whether you poll or react.
+
+**Do I have to migrate my existing Glue APIs?**
+No. Migration is optional and there is no End-of-Life.

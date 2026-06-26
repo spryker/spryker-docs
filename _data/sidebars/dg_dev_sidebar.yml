@@ -93,6 +93,8 @@ entries:
             nested:
               - title: Install Smart CMS Content Assistant
                 url: /docs/dg/dev/ai/ai-commerce/content-assistant/install-smart-cms-content-assistant.html
+          - title: Commerce MCP Server
+            url: /docs/dg/dev/ai/ai-commerce/commerce-mcp-server/commerce-mcp-server.html
       - title: AI Dev SDK
         url: /docs/dg/dev/ai/ai-dev/ai-dev.html
         nested:
@@ -102,6 +104,10 @@ entries:
             url: /docs/dg/dev/ai/ai-dev/ai-dev-mcp-server.html
           - title: Claude Code Plugin
             url: /docs/dg/dev/ai/ai-dev/ai-dev-claude-code-plugin.html
+          - title: AI Dev SDK Skills and Agents
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-skills-and-agents.html
+          - title: AI Dev SDK Customization Workflow
+            url: /docs/dg/dev/ai/ai-dev/ai-dev-customization-workflow.html
       - title: AI Assistants
         url: /docs/dg/dev/ai/ai-assistants/ai-assistants.html
         nested:

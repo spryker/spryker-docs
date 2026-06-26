@@ -19,6 +19,8 @@ entries:
             url: /docs/pbc/all/ai-commerce/latest/smart-pim.html
           - title: Smart CMS Content Assistant
             url: /docs/pbc/all/ai-commerce/latest/smart-cms-content-assistant.html
+          - title: Commerce MCP Server
+            url: /docs/pbc/all/ai-commerce/latest/commerce-mcp-server.html
 
       - title: Yves
         nested:

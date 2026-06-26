@@ -68,9 +68,15 @@ Analyze the overall tone to align with technical documentation styles (Google De
 **Spelling:**
 - Use American spelling consistently
 
+**Terminology (Vale `terms` style):**
+- Use the exact terms enforced by the Vale rules in `vale/styles/terms/`. These are `error`-level and will fail the `vale-lint` CI check.
+- Most common: use **Back Office** (two words), never "Backoffice" or "backoffice". This applies even to API/type names — write **Back Office API**, not "Backoffice API".
+- When introducing a product, feature, or component name, check `vale/styles/terms/` for the canonical spelling before using it.
+
 **Markdown Formatting:**
 - Use standard Markdown for headings, lists, links, code blocks, and inline formatting
 - Verify proper use of headings, lists, code blocks, links, bolding, italics, etc.
+- **Do not add a top-level `#` (H1) heading in the page body.** Jekyll renders the H1 from the `title` front-matter field, so an H1 in the body produces a duplicate and fails the `markdownlint` MD025 check (`single-title/single-h1`). Start the body at `##` (H2).
 - Use Jekyll-compatible syntax for Spryker-specific components:
     - `{% info_block infoBox "Info" %}...{% endinfo_block %}` instead of `> [!NOTE]`
 - Apply other Spryker Liquid tags as needed:

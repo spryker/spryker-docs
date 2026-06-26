@@ -1,9 +1,8 @@
 ---
 title:  PunchOut Protocols Coverage
 description: Find out which parts of supported PunchOut protocols are covered in Spryker implementation
-last_updated: May 29, 2026
+last_updated: June 22, 2026
 template: howto-guide-template
-label: early-access
 ---
 
 PunchOut flow protocols cXML and OCI contain a big range of features, which also consist of different functional elements, XML and form fields.
@@ -16,7 +15,7 @@ This section lists the cXML elements that the PunchOut Gateway interprets on the
 
 ### Received elements (buyer to Spryker)
 
-The buyer's eProcurement system posts a `PunchOutSetupRequest` cXML document to the connection's `request_url`. The raw XML body is parsed by `DefaultCxmlContentParser` into `PunchoutCxmlSetupRequestTransfer`.
+The buyer's eProcurement system posts a `PunchOutSetupRequest` cXML document to the fixed cXML setup endpoint `/punchout-cxml-setup`. The connection is identified by the `Header/Sender/Credential/Identity` matched against `sender_identity`. The raw XML body is parsed by `DefaultCxmlContentParser` into `PunchoutCxmlSetupRequestTransfer`.
 
 #### cXML Header
 
@@ -45,7 +44,7 @@ When `PunchOutSetupRequest/ShipTo/Address` is present, the following are mapped 
 | Element | Maps to |
 | --- | --- |
 | `Address/Name` | `addressName` |
-| `Address/PostalAddress/Street` | `streetLines[]` (multiple lines supported) |
+| `Address/PostalAddress/Street` | `street[]` (multiple lines supported via `addStreetLine`) |
 | `Address/PostalAddress/City` | `city` |
 | `Address/PostalAddress/State` | `state` |
 | `Address/PostalAddress/PostalCode` | `postalCode` |
@@ -98,40 +97,73 @@ Header:
 
 | Element | Source | Notes |
 | --- | --- | --- |
-| `cXML/@xml:lang` | Constant `en-US` | `PunchoutGatewayConfig::DEFAULT_CXML_LANGUAGE`. |
-| `Header/From/Credential` | `toIdentity` from setup request | Domain fixed to `DUNS`. |
-| `Header/To/Credential` | `fromIdentity` from setup request | Domain fixed to `DUNS`. |
-| `Header/Sender/Credential` | `toIdentity` + stored `senderSharedSecret` | Domain fixed to `DUNS`. |
+| `cXML/@xml:lang` | Default `en-US` | `SharedPunchoutGatewayConfig::DEFAULT_CXML_LANGUAGE`. |
+| `Header/From/Credential` | `toIdentity` from setup request | Domain defaults to `DUNS` (`SharedPunchoutGatewayConfig::DEFAULT_CXML_CREDENTIAL_DOMAIN`). |
+| `Header/To/Credential` | `fromIdentity` from setup request | Domain defaults to `DUNS`. |
+| `Header/Sender/Credential` | `toIdentity` + stored `senderSharedSecret` | Domain defaults to `DUNS`. |
+| `Header/Sender/UserAgent` | Default `Spryker cXML` | `SharedPunchoutGatewayConfig::DEFAULT_CXML_SENDER_USER_AGENT`. |
 | `cXML/@payloadID`, `cXML/@timestamp` | Generated | Set by the `cxml-lib` builder. |
 
 Message payload:
 
-| Element | Source                                                             | Notes                                                                                                                 |
-| --- |--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| Element | Source | Notes |
+| --- | --- | --- |
 | `PunchOutOrderMessage/BuyerCookie` | `PunchoutSessionTransfer.buyerCookie`                              | Echoed from the setup request.                                                                                        |
-| `PunchOutOrderMessageHeader/@operationAllowed` | `PunchoutSessionTransfer.operation`                                | Either `create` or `edit`, the value is taken form the Setup request.                                                 |
-| `PunchOutOrderMessageHeader/Total/Money/@currency` | Currency of the cart, taken from `QuoteTransfer.currency.code`     |                                                                                                                       |
+| `PunchOutOrderMessageHeader/@operationAllowed` | `PunchoutSessionTransfer.operation`                                | Either `create` or `edit`, the value is taken from the setup request.                                                 |
+| `PunchOutOrderMessageHeader/Total/Money/@currency` | Currency of the cart, taken from the quote currency code | The builder propagates it to every monetary element. |
 | `ItemIn/ItemID/SupplierPartID` (per item) | Product concrete SKU, taken from `ItemTransfer.sku`                |                                                                                                                       |
-| `ItemIn/@quantity` (per item) | Quantity of this item, taken from`ItemTransfer.quantity`           |                                                                                                                       |
-| `ItemIn/ItemDetail/Description` (per item) | Product name, taken from`ItemTransfer.name`                        |                                                                                                                       |
-| `ItemIn/ItemDetail/UnitOfMeasure` (per item) | Constant `EA`                                                      | `PunchoutGatewayConfig::DEFAULT_UNIT_OF_MEASURE`.                                                                     |
+| `ItemIn/@quantity` (per item) | Quantity of this item, taken from `ItemTransfer.quantity`           |                                                                                                                       |
+| `ItemIn/ItemDetail/Description` (per item) | Product name, taken from `ItemTransfer.name`                        |                                                                                                                       |
+| `ItemIn/ItemDetail/UnitOfMeasure` (per item) | Constant `EA` | `SharedPunchoutGatewayConfig::DEFAULT_UNIT_OF_MEASURE`. |
 | `ItemIn/ItemDetail/UnitPrice/Money` (per item) | Product price, taken from `ItemTransfer.unitPrice`                 |                                                                                                                       |
 | `ItemIn/ItemDetail/Classification@domain` (per item) | Constant `UNSPSC`                                                  |                                                                                                                       |
+| `ItemIn/ItemID/SupplierPartAuxiliaryID` (per item) | — | Optional; emitted only when mapped. |
+| `ItemIn/ItemID/BuyerPartID` (per item) | `ItemTransfer.groupKey` | Falls back to the item group key. |
+| `ItemIn/ItemDetail/Classification` (per item) | — | Optional; empty unless mapped. |
+| `ItemIn/ItemDetail/ManufacturerPartID` (per item) | — | Optional; emitted only when mapped. |
+| `ItemIn/ItemDetail/ManufacturerName` (per item) | — | Optional; emitted only when mapped. |
+| `ItemIn/ItemDetail/LeadTime` (per item) | — | Optional; emitted only when mapped. |
+| `ItemIn/ItemDetail/Extrinsic` (per item) | `extrinsicFields` from the setup request | Per-item extrinsics with the blacklist applied. |
 | `PunchOutOrderMessageHeader/ShipTo/Address/Name` | `QuoteTransfer.shippingAddress.firstName + lastName`               | Falls back to `Ship To` when both are empty.                                                                          |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/Street` | `address1`, `address2`, `address3`                                 | Empty lines are skipped.                                                                                              |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/City` | `QuoteTransfer.shippingAddress.city`                               |                                                                                                                       |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/State` | `QuoteTransfer.shippingAddress.region`, with fallback to `QuoteTransfer.shippingAddress.state` |                                                                                                                       |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/PostalCode` | `QuoteTransfer.shippingAddress.zipCode`                            |                                                                                                                       |
 | `PunchOutOrderMessageHeader/ShipTo/Address/PostalAddress/Country/@isoCountryCode` | `QuoteTransfer.shippingAddress.iso2Code`                           |                                                                                                                       |
-| `PunchOutOrderMessageHeader/Shipping/Money` + `Description` | `QuoteTransfer.totals.expenseTotal`                                | Description fixed to `Shipping`. Omitted when no expense total is set.                                                |
+| `PunchOutOrderMessageHeader/Shipping/Money` + `Description` | `sumGrossPrice` of the first expense of type `SHIPMENT_EXPENSE_TYPE`                                | Description fixed to `Shipping`. Omitted when no expense total is set.                                                |
 | `PunchOutOrderMessageHeader/Tax/Money` + `Description` | `QuoteTransfer.totals.taxTotal.amount`                             | Description fixed to `Tax`. Omitted when no tax total is set.                                                         |
-| `PunchOutOrderMessageHeader/Extrinsic` (per field) | `extrinsicFields` from the original `PunchOutSetupRequest`         | Echoed back inside `PunchOutOrderMessageHeader`, with the keys in `PunchoutGatewayConfig::EXTRINSIC_BLACKLIST` removed. See [Extrinsic blacklist](#extrinsic-blacklist) below. |
 
-To extend or override the field set, replace the parser or message-mapper services, or set a custom cXML processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+For field-level changes, use the per-connection mapping described in [Per-connection field mapping](#per-connection-field-mapping). For deeper changes, replace the parser or message-mapper services, 
+or set a custom cXML processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
 
-### Extrinsic blacklist
+### Per-connection field mapping
 
-`CxmlPunchoutOrderMessageMapper::filterExtrinsics()` removes any extrinsic whose key matches `PunchoutGatewayConfig::EXTRINSIC_BLACKLIST` before echoing the remaining values back inside each `PunchOutOrderMessageHeader`. The blacklist guards against leaking personally identifiable information that the buyer's procurement system sent for customer resolution. The default list is:
+Beyond the defaults above, you can remap any emitted field or property per connection without custom code. Each connection stores a `mappings` map of *key* to *source expression*, 
+edited in the Back Office connection configuration (the cXML and OCI configuration forms). At cart-return time, `FieldValueResolver` evaluates each expression against the current quote and item.
+
+The **key** identifies the target field by its full location in the outbound document, written as a dot-separated path (for cXML) or as the form field name (for OCI). You do not need to memorize these keys:
+the complete catalog of mappable keys is defined in code by `PunchoutGatewayConfig::getSupportedCxmlFields()` for cXML and `PunchoutGatewayConfig::getSupportedOciFields()` for OCI, 
+and the same lists populate the field drop-downs in the Back Office configuration forms.
+
+Resolution follows two rules:
+
+- **Required fields** (those with a default in the tables above) fall back to the default when the field is unmapped, or the expression resolves to `null`.
+- **Optional fields** are omitted entirely when unmapped or unresolved.
+
+A source expression is one of the following:
+
+- A **property path** in the form `pluginKey.field`. The `item` plugin reads from the current `ItemTransfer` and the `quote` plugin reads from the `QuoteTransfer`. For example, `item.sku` or `quote.currency.code`.
+- A **quoted literal**, single- or double-quoted, emitted verbatim. For example, `"EA"`.
+- A **concatenation** of the above, joined with `&`. For example, `item.sku & "-" & item.groupKey`.
+- An empty literal `""`, which forces an empty value.
+
+The tables on this page list the fields that the default flow emits; any other key from the supported catalog is emitted only when you map it.
+
+To extend or override the field set in code, replace the parser or message-mapper services, or set a custom cXML processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+
+### Extrinsic deny list
+
+`CxmlPunchoutOrderMessageMapper::filterExtrinsics()` removes any extrinsic whose key matches `PunchoutGatewayConfig::EXTRINSIC_DENY_LIST` before echoing the remaining values back inside each `PunchOutOrderMessageHeader`. The deny list guards against leaking personally identifiable information that the buyer's procurement system sent for customer resolution. The default list is:
 
 `User`, `UniqueUsername`, `UniqueName`, `UserId`, `UserEmail`, `UserFullName`, `UserPrintableName`, `FirstName`, `LastName`, `PhoneNumber`, `UserPhoneNumber`.
 
@@ -171,4 +203,4 @@ The form contains following fields:
 | `~OkCode` | Echoed from login | Echoed only when present in the original login.                                                                |
 | `~CALLER` | Echoed from login | Echoed only when present in the original login.                                                                |
 
-To extend or override the field set, replace the form-builder service or set a custom OCI processor plugin FQCN on the connection's `processor_plugin_class` column. Processor plugins are loaded at runtime by class name; no dependency-provider registration is required. For details, see [Project configuration for PunchOut Gateway](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html).
+The sources in the table above are defaults. You can override the source of any listed `NEW_ITEM-*` field, or emit optional ones, per connection through [Field mapping](/docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html#field-mapping), without writing code.

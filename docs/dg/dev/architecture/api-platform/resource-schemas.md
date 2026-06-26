@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Jun 25, 2026
+last_updated: Jun 26, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -257,7 +257,7 @@ resource:
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
 | `array` | `array` | `["a", "b"]` | Lists of values |
-| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects — generates a typed companion class. See [Typed nested objects](#typed-nested-objects). |
+| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects — generates a typed companion class. See [Typed nested objects](#typed-nested-objects). A project can also share one shape across resources with a [canonical nested object](#project-defined-canonical-nested-objects). |
 | `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
 | `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
 
@@ -559,6 +559,169 @@ The merged `calculations` object carries **both** `discountTotal` and `productOp
 single `CartItemsCalculationsStorefrontResource` value object is generated for it. This deep merge —
 not a shared class — is how identically-named objects accumulate fields across modules while each
 resource keeps its own independent request/response shape.
+
+## Project-defined canonical nested objects
+
+[Typed nested objects](#typed-nested-objects) generate one value-object class **per resource
+property**: a `billingAddress` on the checkout resource and a `shippingAddress` on the order
+resource each get their own independent class, even when both describe the same real-world shape.
+That keeps each resource self-contained, but it also means the same address shape is authored and
+maintained in several places.
+
+A **canonical nested object** lets a project define that shared shape **once** and have it flow
+into every resource property that opts in. All the opting-in properties then collapse onto a single
+generated class — `Generated\Api\{ApiType}\{Object}` (for example, `Generated\Api\Storefront\Address`) —
+instead of a per-resource companion class.
+
+This is a pure project opt-in. With no canonical object files present, generation is byte-for-byte
+identical to the default per-resource behavior described above — nothing changes until a project
+adds its first `*.object.yml`.
+
+### File location and naming
+
+Canonical objects live in an `objects/` directory next to the per-`apiType` resource schemas, one
+file per object:
+
+```text
+resources/api/<apiType>/objects/<dashed-name>.object.yml
+resources/api/<apiType>/objects/<dashed-name>.object.validation.yml   # optional, see Validation
+```
+
+For example, on the storefront API:
+
+```text
+src/Pyz/resources/api/storefront/objects/address.object.yml
+src/Pyz/resources/api/storefront/objects/address.object.validation.yml
+```
+
+The file name uses a dashed (kebab-case) object name, while `object.name` **inside** the file is
+CamelCase. The CamelCase `object.name` is the contract: it must exactly match the `objectName:`
+join tag declared on the resource properties that want this shape (see [The `objectName` join
+tag](#the-objectname-join-tag)).
+
+### File format
+
+The file contains a single top-level `object:` key:
+
+```yaml
+# address.object.yml
+object:
+    name: Address                                   # CamelCase; matches `objectName: Address` on resource properties
+    properties:
+        salutation: { type: string, description: 'Address salutation.', example: 'Mr' }
+        firstName:  { type: string, description: 'First name.', example: 'Jane' }
+        lastName:   { type: string, description: 'Last name.', example: 'Doe' }
+        address1:   { type: string, description: 'Street name.', example: 'Julie-Wolfthorn-Straße' }
+        zipCode:    { type: string, description: 'ZIP / postal code.', example: '10115' }
+        city:       { type: string, description: 'City.', example: 'Berlin' }
+```
+
+| Key | Type | Required | Description |
+|-----|------|----------|-------------|
+| `object.name` | string | Yes | CamelCase object name. Must match the `objectName:` join tag on every resource property that references this object. |
+| `object.properties` | map | Yes | Field definitions. Each field uses the **same syntax as a resource property** — `type`, `description`, `validation`, `example`, and so on. |
+| `object.extends` | string | No | CamelCase name of another canonical object whose resolved fields are inherited first. See [Composition](#composition-with-extends-and-omit). |
+| `object.omit` | string[] | No | Names of inherited fields to drop from the `extends` base before this object's own properties are applied. |
+
+### Composition with `extends` and `omit`
+
+An object can inherit another canonical object's fields with `extends`, then trim and extend them.
+This avoids re-declaring a shared shape when one variant is a near-copy of another — for example, a
+read-only address snapshot derived from a writable address:
+
+```yaml
+# address-snapshot.object.yml
+object:
+    name: AddressSnapshot
+    extends: Address                                # inherit all Address fields first
+    omit: [id, idCompanyBusinessUnitAddress]        # drop the write-only identifiers
+    properties:
+        country: { type: string, description: 'Country name.', example: 'Germany' }   # add a read-only field
+```
+
+Fields resolve in this order, with later steps winning:
+
+1. The fields inherited from `extends`.
+2. Any field named in `omit` is removed.
+3. This object's own `properties` are applied — a field redeclared here overrides the inherited one.
+
+An `extends` cycle (for example, two objects that extend each other) is rejected at generation time
+with an `ApiSchemaGenerationException`.
+
+### The `objectName` join tag
+
+A resource property opts into a canonical object by declaring `type: object` together with an
+`objectName:` tag whose value equals the canonical `object.name`:
+
+```yaml
+# checkout.resource.yml
+properties:
+    billingAddress:
+        type: object
+        objectName: Address       # joins this property to the canonical Address object
+        readable: false
+        writable: true
+        properties:
+            zipCode: { type: string }
+```
+
+The `objectName` tag is dormant on its own: if no `address.object.yml` exists, the property's
+inline `properties:` block is generated exactly as a normal [typed nested
+object](#typed-nested-objects). When a canonical file for `Address` **is** present, the tag
+activates and:
+
+- The property's inline `properties:` are **replaced** by the canonical object's resolved shape.
+- The mount attributes — `readable`, `writable`, `required`, `nullable` — stay on the referencing
+  property. They describe how this property is mounted on this resource and are **not** owned by
+  the canonical object, so the same canonical shape can be writable on one resource and read-only
+  on another.
+- A single shared `Generated\Api\{ApiType}\{Object}` class is emitted for the canonical object. No
+  per-property companion class is generated for that property; every property tagged with the same
+  `objectName` is typed to the one shared class.
+
+{% info_block infoBox "Shared class versus per-resource class" %}
+
+Without `objectName`, each `type: object` property generates its own per-resource value-object
+class (for example, `CheckoutBillingAddressStorefrontResource`). With `objectName: Address`, all
+matching properties across all resources instead share the single `Generated\Api\Storefront\Address`
+class. Use a canonical object when several resources genuinely share one shape and you want them to
+stay in lockstep; keep the inline form when each resource's shape is independent.
+
+{% endinfo_block %}
+
+### Validation
+
+Field-level validation for a canonical object is authored in a parallel
+`<dashed-name>.object.validation.yml` file, using the same format as a resource
+[validation schema](/docs/dg/dev/architecture/api-platform/validation-schemas.html):
+
+```yaml
+# address.object.validation.yml
+zipCode:
+    - NotBlank: { message: 'ZIP code is required.' }
+firstName:
+    - NotBlank: { message: 'First name is required.' }
+```
+
+These constraints are lifted onto the generated canonical class. Every resource property that
+references the object through `objectName` then carries an `Assert\Valid` cascade to that class, so
+the canonical field rules are enforced wherever the object is used — you author the object's
+validation once, in one place.
+
+### Layer precedence
+
+Canonical objects follow the same layer rules as resource schemas. The layer is detected from the
+file path — a `/Pyz/` path is a project file, a `/SprykerFeature/` path is a feature file, and
+anything else is core. Same-named objects merge by `object.name` with the precedence:
+
+```text
+project > feature > core
+```
+
+Because the merge is by `objectName`, a project can add a single field to a feature-layer canonical
+object without redefining the whole object. Core ships no canonical object files today; the
+mechanism is available to the project, feature, and core layers, and in practice projects are the
+primary users.
 
 ## Documenting nested properties for OpenAPI and Swagger UI
 

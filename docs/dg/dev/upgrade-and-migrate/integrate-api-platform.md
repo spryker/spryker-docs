@@ -1,7 +1,7 @@
 ---
 title: How to integrate API Platform
 description: This document describes how to integrate API Platform into your Spryker application.
-last_updated: May 29, 2026
+last_updated: Jun 29, 2026
 template: howto-guide-template
 ---
 
@@ -161,6 +161,25 @@ console cache:clear
 # Build Symfony container cache
 console container:build
 ```
+
+## 8. Warm the API Platform router cache
+
+API Platform registers its operations as routes in the standard Symfony router. With debug disabled (production), the compiled router dump is written once and then frozen for the life of the container, so it **must** be built against the fully generated resource collection. After generating resources (step 5), warm the cache for each Glue application:
+
+```bash
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:warmup
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue cache:warmup
+```
+
+{% info_block warningBox "Required on AWS and any multi-container deployment" %}
+
+This step is mandatory in cloud (AWS ECS) and any split build/runtime topology. If the router dump is built before resources are generated—or never warmed in the runtime container—every API request returns HTTP 404 and the empty dump stays frozen for the life of the container.
+
+Use `cache:warmup` (or `cache:clear`), **not** `api:router:cache:warm-up`, which warms only the legacy Glue router and does not build the API Platform router dump.
+
+For the full explanation, multi-container guidance, and recovery steps, see [Cache warming](/docs/dg/dev/architecture/api-platform.html#cache-warming) and [Multi-container and cloud deployments](/docs/dg/dev/architecture/api-platform.html#multi-container-and-cloud-deployments) in the architecture guide.
+
+{% endinfo_block %}
 
 ## Verification
 

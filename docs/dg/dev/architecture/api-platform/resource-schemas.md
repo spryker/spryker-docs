@@ -579,8 +579,20 @@ adds its first `*.object.yml`.
 
 ### File location and naming
 
-Canonical objects live in an `objects/` directory next to the per-`apiType` resource schemas, one
-file per object:
+Canonical objects live in a **dedicated, reserved subdirectory literally named `objects/`** inside the per-`apiType` resource directory. The directory name is always `objects` — it is never named after a resource or module. This is distinct from resource definition files, which live directly in the `apiType` directory:
+
+```text
+resources/api/storefront/
+├── checkout.resource.yml          # a resource definition
+├── checkout.validation.yml        # its validation
+└── objects/                       # reserved dir — canonical objects only
+    ├── address.object.yml
+    └── address.object.validation.yml
+```
+
+Only `*.object.yml` and `*.object.validation.yml` files belong in `objects/`. Resource files (`*.resource.yml`) are placed directly in the per-`apiType` directory, never inside `objects/`.
+
+Full path patterns:
 
 ```text
 resources/api/<apiType>/objects/<dashed-name>.object.yml
@@ -598,6 +610,24 @@ The file name uses a dashed (kebab-case) object name, while `object.name` **insi
 CamelCase. The CamelCase `object.name` is the contract: it must exactly match the `objectName:`
 join tag declared on the resource properties that want this shape (see [The `objectName` join
 tag](#the-objectname-join-tag)).
+
+### Central directory
+
+A project may keep canonical object files in one central location instead of (or in addition to) the per-module `objects/` directories. Both locations are scanned simultaneously.
+
+Configure the central directory via the Symfony bundle config node `spryker_api_platform.canonical_object_search_directories`, keyed by API type. Relative paths resolve against the project root; `%kernel.project_dir%` is also supported:
+
+```yaml
+# config/packages/spryker_api_platform.yaml
+spryker_api_platform:
+    canonical_object_search_directories:
+        storefront:
+            - '%kernel.project_dir%/config/api/objects/storefront'
+```
+
+The same `*.object.yml` / `*.object.validation.yml` naming rules apply. Files in a central directory are always treated as the **project** layer, so they participate in the standard `project > feature > core` merge precedence.
+
+Defining the same `objectName` more than once within the same layer — for example, one module file and one central-directory file both at project layer — is a fail-loud error: generation aborts with an `ApiSchemaGenerationException` naming both source files. The same name across different layers is fine — that is the normal override.
 
 ### File format
 

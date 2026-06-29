@@ -592,6 +592,8 @@ resources/api/storefront/
 
 Only `*.object.yml` and `*.object.validation.yml` files belong in `objects/`. Resource files (`*.resource.yml`) are placed directly in the per-`apiType` directory, never inside `objects/`.
 
+The `<dashed-name>.<kind>.yml` naming pattern is the same for both file types — only the kind word differs. `address.object.yml` is the canonical-object analog of `checkout.resource.yml`, and `address.object.validation.yml` is the analog of `checkout.validation.yml`. The `object` versus `resource` word identifies the artifact kind, not a different naming scheme.
+
 Full path patterns:
 
 ```text

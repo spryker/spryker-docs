@@ -45,8 +45,6 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 - The customer is not a guest.
 - The payment method is invoice-based (`invoice`, `purchaseOnAccount`, or a configured equivalent).
 
-![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)
-
 ## Cadence types
 
 | CADENCE | DESCRIPTION |
@@ -55,6 +53,8 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 | Bi-weekly | Places an order every 14 days. |
 | Monthly | Places an order on the same calendar day each month. |
 | Every N weeks | Places an order every N weeks. Requires a positive integer value for N. |
+
+![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)
 
 ## Schedule lifecycle
 

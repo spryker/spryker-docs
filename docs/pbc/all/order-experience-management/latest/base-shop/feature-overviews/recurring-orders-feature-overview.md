@@ -98,7 +98,7 @@ Before each order placement, the system sends an email to the buyer within the c
 - The schedule name and the upcoming execution date.
 - A link to the schedule detail page where the buyer can skip, pause, or cancel before the order is placed.
 
-The Schedule Grace Period is configured globally in the Back Office under **Configuration > Recurring Orders > General > Schedule**. Individual schedules can override the global value via `getDefaultNotificationWindowHours()` in `OrderExperienceManagementConfig`.
+The Schedule Grace Period is configured globally in the Back Office under **Configuration > Recurring Orders > General > Schedule**.
 
 ## Review Required flow
 

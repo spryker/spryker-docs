@@ -5,9 +5,9 @@ last_updated: Mar 25, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
+    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
   - title: Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html
 ---
 
 This document describes how to migrate from the MessageBroker-based [ACP Vertex](https://docs-archive.spryker.com/docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/vertex) integration to the direct `spryker-eco/vertex` module.
@@ -20,7 +20,7 @@ The tax calculation logic remains the same. The ECO module communicates directly
 
 ## 1. Install and integrate the module
 
-Follow the [Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) guide to install and set up the module.
+Follow the [Integrate Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) guide to install and set up the module.
 
 ## 2. Remove old ACP plugins and configuration
 
@@ -346,7 +346,7 @@ Add the import actions to your project's main data import configuration file and
 3. If invoicing is enabled, verify that the `Vertex/SubmitPaymentTaxInvoice` OMS command triggers correctly.
 4. If tax ID validation is enabled, test the `POST /tax-id-validate` Glue Storefront API endpoint.
 
-For detailed verification steps, see [Verify Vertex connection](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html).
+For detailed verification steps, see [Verify Vertex connection](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/verify-vertex-connection.html).
 
 ## Summary of changes
 

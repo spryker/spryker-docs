@@ -5,7 +5,7 @@ last_updated: Mar 6, 2026
 template: howto-guide-template
 ---
 
-The **ContentProductWidget** module renders [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content items as product lists or sliders on the Storefront.
+The **ContentProductWidget** module renders [Abstract Product List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content items as product lists or sliders on the Storefront.
 
 To integrate the ContentProductWidget module, follow these steps:
 
@@ -63,11 +63,11 @@ After you register the plugin, you can render Abstract Product List content item
 
 | FUNCTION | DESCRIPTION |
 | --- | --- |
-| `content_product_abstract_list(contentKey, templateIdentifier)` | Renders an [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content item by its content key and the specified template. |
+| `content_product_abstract_list(contentKey, templateIdentifier)` | Renders an [Abstract Product List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content item by its content key and the specified template. |
 
 **Parameters:**
 
-- **contentKey** (string): The unique key of the Abstract Product List content item (for example, the NAME used when [creating the content item](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html)).
+- **contentKey** (string): The unique key of the Abstract Product List content item (for example, the NAME used when [creating the content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html)).
 - **templateIdentifier** (string): The identifier of the template to use. See [Default templates](#4-optional-configure-templates).
 
 **Example (CMS block or CMS page template):**
@@ -78,7 +78,7 @@ After you register the plugin, you can render Abstract Product List content item
 
 {% info_block warningBox "Verification" %}
 
-1. In the Back Office, create an [Abstract Product List](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content item.
+1. In the Back Office, create an [Abstract Product List](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html) content item.
 2. Add the content item to a CMS block or CMS page.
 3. Publish the block or page and open it on the Storefront.
 4. Check that the product list is rendered without errors.
@@ -96,7 +96,7 @@ By default, the ContentProductWidget module ships with two templates:
 
 To use a default template, pass its identifier as the second argument of the Twig function.
 
-To add custom templates, extend the project-level Twig function provider for `ContentProductWidget`, and add your own identifiers and paths. For details, see [Create CMS templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
+To add custom templates, extend the project-level Twig function provider for `ContentProductWidget`, and add your own identifiers and paths. For details, see [Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#content-item-widget-template).
 
 ## 5) Optional: Extend product data with categories
 
@@ -136,7 +136,7 @@ These plugins extend the abstract product collection with category and review in
 
 After you install and integrate the ContentProductWidget module, you can:
 
-- [Create abstract product list content items](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html).
-- [Add content items to CMS blocks](/docs/pbc/all/content-management-system/latest/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
-- [Create CMS templates](/docs/pbc/all/content-management-system/latest/base-shop/tutorials-and-howtos/create-cms-templates.html) to customize how Abstract Product List content items are displayed.
+- [Create abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html).
+- [Add content items to CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html).
+- [Create CMS templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html) to customize how Abstract Product List content items are displayed.
 

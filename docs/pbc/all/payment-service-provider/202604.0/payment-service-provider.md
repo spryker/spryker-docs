@@ -17,16 +17,16 @@ Spryker offers the following Payment Service Providers (PSP) integrations:
 | NAME                                                                                                                                                       | MARKETPLACE COMPATIBLE |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |
 | Spryker Pay                                                                                                                                                | Yes |
-| [Adyen](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/adyen/adyen.html)                                                 | No |
-| [After Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/afterpay/afterpay.html)                                       | No |
-| [Braintree](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/braintree/braintree.html)                                     | No |
-| [Crefo Pay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/crefopay/crefopay.html)                                       | No |
-| [Computop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/computop/computop.html)                                        | No |
-| [Easycredit](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)        | No |
+| [Adyen](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/adyen/adyen.html)                                                 | No |
+| [After Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/afterpay/afterpay.html)                                       | No |
+| [Braintree](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/braintree/braintree.html)                                     | No |
+| [Crefo Pay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/crefopay/crefopay.html)                                       | No |
+| [Computop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/computop/computop.html)                                        | No |
+| [Easycredit](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)        | No |
 | Optile                                                                                                                                                     | No |
-| [Payone](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html) | No |
-| [Ratepay](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/ratepay/ratepay.html)                                           | No |
-| [Unzer](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/unzer/unzer.html)                                                 | Yes |
+| [Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html) | No |
+| [Ratepay](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/ratepay/ratepay.html)                                           | No |
+| [Unzer](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/unzer.html)                                                 | Yes |
 
 ## Custom PSP integrations
 

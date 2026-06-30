@@ -5,7 +5,7 @@ template: feature-integration-guide-template
 last_updated: May 4, 2026
 ---
 
-This document describes how to install the [Product Attribute Visibility feature](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html).
+This document describes how to install the [Product Attribute Visibility feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html).
 
 ## Prerequisites
 
@@ -13,8 +13,8 @@ This document describes how to install the [Product Attribute Visibility feature
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### Install the required packages
 

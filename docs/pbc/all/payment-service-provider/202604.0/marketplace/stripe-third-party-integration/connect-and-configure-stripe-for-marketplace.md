@@ -9,8 +9,8 @@ This document describes how to configure Stripe for a Marketplace project after 
 
 ## Prerequisites
 
-- [Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html) with the `StripeManualMarketplace01` OMS process active.
-- [Install and configure Stripe prerequisites for Marketplace](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html).
+- [Install and configure Stripe prerequisites for base shop](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html) with the `StripeManualMarketplace01` OMS process active.
+- [Install and configure Stripe prerequisites for Marketplace](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html).
 - Obtain Stripe account details in [Stripe Dashboard](https://dashboard.stripe.com):
   - Stripe account ID. For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
   - Stripe publishable and secret keys. For more details, see [Secret and publishable keys](https://docs.stripe.com/keys#obtain-api-keys).
@@ -38,15 +38,15 @@ $config[StripeConstants::STRIPE_WEBHOOK_SECRET_CONNECT] = 'whsec_***'; // Replac
 3. On the **Edit Payment Method** page, select the stores where Stripe should be active.
 4. Click **Save**.
 
-For detailed instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/latest/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+For detailed instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
 
 ## Inform merchants about Stripe onboarding
 
 After Stripe is activated, inform your merchants that Stripe is available as a payment method. Merchants must complete the Stripe onboarding process before they can receive payouts.
 
-For merchant onboarding instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
+For merchant onboarding instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).
 
 ## Next steps
 
-1. Review the OMS configuration: [Stripe OMS configuration for marketplaces](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html).
-2. Configure merchant transfer schedules: [Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
+1. Review the OMS configuration: [Stripe OMS configuration for marketplaces](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html).
+2. Configure merchant transfer schedules: [Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).

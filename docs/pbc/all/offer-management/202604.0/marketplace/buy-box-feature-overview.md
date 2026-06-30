@@ -5,9 +5,9 @@ last_updated: February 12, 2026
 template: concept-topic-template
 related:
   - title: Install the Buy Box feature
-    link: /docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
+    link: /docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
   - title: Product Availability Display feature overview
-    link: /docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html
 ---
 
 The Buy Box feature displays multiple merchant offers for the same product on the product detail page in a marketplace environment. When multiple merchants sell the same product, the Buy Box shows all available offers. This lets you compare prices and availability and select the merchant you want to purchase from.
@@ -25,7 +25,7 @@ Each offer in the Buy Box displays the following information:
 - Merchant name with a link to the merchant profile page
 - Product price offered by the merchant
 - Radio button for merchant selection
-- Availability status (when the [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html) is installed)
+- Availability status (when the [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html) is installed)
 
 ### Merchant selection
 
@@ -44,7 +44,7 @@ The Buy Box supports URL parameters that let you preselect a specific merchant o
 You can sort offers in the Buy Box by the following criteria:
 
 - **Price**: Lowest to highest (default)
-- **Stock availability**: Highest to lowest stock quantity (requires the [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html))
+- **Stock availability**: Highest to lowest stock quantity (requires the [Product Availability Display feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html))
 
 When you sort by stock availability, merchants marked as never out of stock appear first, followed by merchants with the highest stock quantities.
 
@@ -56,7 +56,7 @@ When the Product Availability Display feature is installed, the Buy Box shows av
 
 <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/buy-box/buy-box-out-of-stock.png" alt="Buy Box with availability per merchant" width="600">
 
-For details about availability display, see [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/latest/base-shop/product-availability-display-feature-overview.html).
+For details about availability display, see [Product Availability Display feature overview](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html).
 
 ## Configuration
 
@@ -64,7 +64,7 @@ You can configure the Buy Box feature at the code level. The following configura
 
 - Sorting strategy: by price or by stock availability
 
-For configuration details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
+For configuration details, see [Install the Buy Box feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html).
 
 ## Use cases
 
@@ -82,4 +82,4 @@ Use the Buy Box feature in the following scenarios:
 
 ## Related documents
 
-- [Install the Buy Box feature](/docs/pbc/all/offer-management/latest/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html)
+- [Install the Buy Box feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html)

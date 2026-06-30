@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
 
-[Gift Card](/docs/pbc/all/gift-cards/latest/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
+[Gift Card](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards in Spryker Commerce OS via Glue API.
 
@@ -23,7 +23,7 @@ This article includes a list of endpoints to manage Gift Cards for registered us
 
 {% info_block infoBox "Info" %}
 
-To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/latest/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html).
+To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html).
 
 {% endinfo_block %}
 
@@ -35,9 +35,9 @@ For detailed information on the modules that provide the API functionality and r
 
 Gift Card is available in the Spryker shop as an abstract product with its variants (concrete products). To purchase the gift card:
 
-1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart) for more details.
-2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).
-3. [Complete the checkout](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html#place-an-order).
+1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart) for more details.
+2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html).
+3. [Complete the checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html#place-an-order).
 
 {% info_block warningBox "Note" %}
 
@@ -57,7 +57,7 @@ To redeem the gift card code, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [retrieving all carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [retrieving all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts). |
 
 {% info_block infoBox "Authentication" %}
 
@@ -152,9 +152,9 @@ Response sample: redeem the gift card code
 }
 ```
 
-{% include pbc/all/glue-api-guides/latest/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/latest/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 
 ## Remove a gift card
@@ -167,7 +167,7 @@ To remove the gift card code from the cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [retrieving all carts](/docs/pbc/all/cart-and-checkout/latest/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts). |
+| cart_uuid | Unique identifier of a cart to remove products from. You can get this in the response when [creating carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#create-a-cart) or [retrieving all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts). |
 | gift_card_code | Code that you have received after purchasing the gift card. |
 
 {% info_block infoBox "Authentication" %}

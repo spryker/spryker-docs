@@ -5,14 +5,14 @@ last_updated: Mar 5, 2026
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html
 redirect_from:
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html
 
 ---
 
-After you have [integrated Vertex module](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) for tax calculation, you can Configure Vertex-specific metadata.
+After you have [integrated Vertex module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html) for tax calculation, you can Configure Vertex-specific metadata.
 
 Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
 
@@ -414,7 +414,7 @@ The following table reflects the mapping of the Spryker Quote and Order transfer
 
 ## Next step
 
-[Verify Vertex connection](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/verify-vertex-connection.html)
+[Verify Vertex connection](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/verify-vertex-connection.html)
 
 
 

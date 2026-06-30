@@ -4,14 +4,14 @@ description: Learn how to install and configure the spryker-eco/stripe module in
 last_updated: Jun 09, 2026
 template: howto-guide-template
 redirect_from:
-- docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
+- docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
 related:
   - title: Stripe
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
   - title: OMS configuration for Stripe
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
   - title: Migrate from the ACP Stripe app
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
 ---
 
 This document describes how to integrate the `spryker-eco/stripe` module into your Spryker project. The module communicates directly with the Stripe API from your application and embeds Stripe Elements into the checkout payment step.
@@ -43,7 +43,7 @@ use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\SalesPayme
 use Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin;
 ```
 
-For a full migration guide, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html).
+For a full migration guide, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html).
 
 ## Step 3: Update OMS configuration
 
@@ -397,4 +397,4 @@ Google Pay and Apple Pay require domain registration. In your Stripe Dashboard, 
 
 ## Migrating from the ACP Stripe app
 
-If you are migrating from the previous ACP-based Stripe integration, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html).
+If you are migrating from the previous ACP-based Stripe integration, see [Migrate from the ACP Stripe app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html).

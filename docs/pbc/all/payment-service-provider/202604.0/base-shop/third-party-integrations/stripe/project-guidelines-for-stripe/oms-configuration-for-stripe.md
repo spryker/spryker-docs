@@ -5,11 +5,11 @@ last_updated: Apr 14, 2026
 template: howto-guide-template
 related:
    - title: Stripe
-     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html
+     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
    - title: Processing refunds with Stripe
-     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
+     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
    - title: Sending additional data to Stripe
-     link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
+     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
 ---
 
 
@@ -25,7 +25,7 @@ The `Stripe/Capture` command initiates the capture action. By default, this comm
 
 {% endinfo_block %}
 
-Optionally, you can change and configure your own payment OMS based on `StripeManual01.xml` from the eco package and change this behavior according to your business flow. For more information about OMS configuration, see [Install the Order Management feature](/docs/pbc/all/order-management-system/latest/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
+Optionally, you can change and configure your own payment OMS based on `StripeManual01.xml` from the eco package and change this behavior according to your business flow. For more information about OMS configuration, see [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
 
 To configure your payment OMS based on `StripeManual01.xml`, copy `StripeManual01.xml` with the `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
 

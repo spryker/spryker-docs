@@ -4,8 +4,8 @@ description: Learn all about Sprykers Technology partner, Stripe. Enabling and E
 last_updated: Apr 14, 2026
 template: concept-topic-template
 redirect_from:
-- docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
-- docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+- docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
+- docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/disconnect-stripe.html
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.
@@ -52,9 +52,9 @@ However, our team only tested the following payment methods:
 
 ## Browser back button handling
 
-Using the browser back button at the Stripe payment form may lead to issues with order persistence and stock management. For instructions on configuring your application to handle this scenario and prevent duplicate orders, see [Configure handling of browser back button action at payment page](/docs/pbc/all/payment-service-provider/latest/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html).
+Using the browser back button at the Stripe payment form may lead to issues with order persistence and stock management. For instructions on configuring your application to handle this scenario and prevent duplicate orders, see [Configure handling of browser back button action at payment page](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/configure-handling-of-browser-back-button-action-at-hosted-payment-page.html).
 
 
 ## Next step
 
-[Integrate Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+[Integrate Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)

@@ -98,7 +98,7 @@ The initial release ships with a configuration UI for B2B Product Availability D
 
 **Basic Shop Theme**
 
-The second out of the box implementation provides a configuration UI for shop branding. Business Admins can set theme colors, logo URLs, and custom CSS for the Storefront, Back Office, and Merchant Portal without code changes or redeployment. For details, see [Basic Shop Theme feature overview](/docs/pbc/all/back-office/latest/base-shop/basic-shop-theme-feature-overview.html).
+The second out of the box implementation provides a configuration UI for shop branding. Business Admins can set theme colors, logo URLs, and custom CSS for the Storefront, Back Office, and Merchant Portal without code changes or redeployment. For details, see [Basic Shop Theme feature overview](/docs/pbc/all/back-office/{{page.version}}/base-shop/basic-shop-theme-feature-overview.html).
 
 ---
 

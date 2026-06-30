@@ -16,7 +16,7 @@ The Identity Access Management capability enables all types of users in a Spryke
 
 {% info_block infoBox "Federated Authentication via OAuth2/OIDC" %}
 
-Spryker now supports [Federated Authentication](/docs/pbc/all/oauth/latest/federated-authentication.html) — a modern alternative to managing separate Spryker credentials. Instead of maintaining a standalone identity per application, your users log in through the Identity Provider your organization already uses.
+Spryker now supports [Federated Authentication](/docs/pbc/all/oauth/{{page.version}}/federated-authentication.html) — a modern alternative to managing separate Spryker credentials. Instead of maintaining a standalone identity per application, your users log in through the Identity Provider your organization already uses.
 
 Key benefits:
 
@@ -35,7 +35,7 @@ Back Office supports login via two types of accounts:
 
 ### Login with a Back Office account
 
-Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/latest/base-shop/manage-in-the-back-office/manage-users/create-users.html).
+Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
 
 To log in, on the Back Office login page, a user enters the email address and password of their account. If the credentials are correct and their account is active at that time, they are logged in.
@@ -100,19 +100,19 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
-| [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-customer-access-glue-api.html) | [Create customers](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-create-customers.html) |
-| [Integrate post-login redirect](/docs/pbc/all/identity-access-management/latest/install-and-upgrade/integrate-post-login-redirect.html) | |
-| | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/latest/federated-authentication.html) |
-| | [Confirm customer registration](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
-| | [Manage customer passwords](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-passwords.html) |
-| | [Authenticate as a customer](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) |
-| | [Manage customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |
-| | [Manage customer authentication tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html) |
-| | [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) |
-| | [Authenticating as a company user](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) |
-| | [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) |
-| | [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html) |
-| | [Managing agent assist authentication tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html) |
-| | [Delete expired refresh tokens](/docs/pbc/all/identity-access-management/latest/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Authentication and authorization](/docs/integrations/spryker-glue-api/authenticating-and-authorization/authenticating-and-authorization.html) |
+| [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) | [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
+| [Integrate post-login redirect](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/integrate-post-login-redirect.html) | |
+| | [Federated Authentication via OAuth2/OIDC](/docs/pbc/all/oauth/{{page.version}}/federated-authentication.html) |
+| | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
+| | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |
+| | [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) |
+| | [Manage customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |
+| | [Manage customer authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html) |
+| | [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) |
+| | [Authenticating as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) |
+| | [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) |
+| | [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html) |
+| | [Managing agent assist authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html) |
+| | [Delete expired refresh tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html) |

@@ -5,14 +5,14 @@ last_updated: Mar 5, 2026
 template: concept-topic-template
 related:
   - title: Integrate Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
+    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
   - /docs/pbc/all/tax-management/202400.0/base-shop/third-party-integrations/vertex/vertex.html
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex-faq.html
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-  - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex-faq.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+  - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)
@@ -25,7 +25,7 @@ The Spryker Vertex module, based on the *Vertex O Series*, performs automatic, n
 
 For more information about how Vertex calculates taxes, see the [Vertex O Series website](https://www.vertexinc.com/solutions/products/vertex-indirect-tax-o-series).
 
-The Spryker Vertex module offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/latest/tax-management.html):
+The Spryker Vertex module offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html):
 
 - *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in `config/Shared/config_default.php` to connect your Spryker project to Vertex.
 - *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
@@ -80,4 +80,4 @@ The Spryker OMS transition command is used as an execution point to send a full 
 
 ## Next steps
 
-[Integrate Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html)
+[Integrate Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html)

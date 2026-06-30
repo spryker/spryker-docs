@@ -6,9 +6,9 @@ template: feature-integration-guide-template
 label: early-access
 related:
   - title: Purchasing Control feature overview
-    link: docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/purchasing-control-feature-overview.html
   - title: Install the Approval Process feature
-    link: docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
 ---
 
 {% info_block warningBox "Experimental feature" %}
@@ -17,7 +17,7 @@ Experimental feature - not recommended for production use.
 
 {% endinfo_block %}
 
-This document describes how to install the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/purchasing-control-feature-overview.html).
+This document describes how to install the [Purchasing Control feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/purchasing-control-feature-overview.html).
 
 ## Install feature core
 
@@ -29,10 +29,10 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Approval Process | {{page.release_tag}} | [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Company Account | {{page.release_tag}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Checkout | {{page.release_tag}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Approval Process | {{page.release_tag}} | [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) |
 
 ### 1) Install the required modules
 
@@ -272,7 +272,7 @@ In the Back Office, under **Customers > Company Roles**, assign the **ManageCost
 
 {% info_block infoBox "Require Approval enforcement rule" %}
 
-If you configure budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) permissions must be registered and assigned to company roles for the approval workflow to function:
+If you configure budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html) permissions must be registered and assigned to company roles for the approval workflow to function:
 
 | PERMISSION | REQUIRES |
 | --- | --- |
@@ -280,7 +280,7 @@ If you configure budgets with the **Require Approval** enforcement rule, the fol
 | Send cart for approval (`RequestQuoteApprovalPermissionPlugin`) | Buy up to grand total |
 | Approve up to grand total (`ApproveQuotePermissionPlugin`) | None |
 
-For plugin registration details, see [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
+For plugin registration details, see [Install the Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
 
 {% endinfo_block %}
 

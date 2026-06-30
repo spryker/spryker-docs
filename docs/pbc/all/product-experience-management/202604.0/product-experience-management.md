@@ -75,4 +75,4 @@ The error display threshold is configurable in the module's `ProductExperienceMa
 
 | INSTALLATION GUIDES |
 | --- |
-| [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/latest/install-the-product-experience-management-feature.html) |
+| [Install the Product Experience Management feature](/docs/pbc/all/product-experience-management/{{page.version}}/install-the-product-experience-management-feature.html) |

@@ -5,9 +5,9 @@ last_updated: Apr 14, 2026
 template: howto-guide-template
 related:
   - title: Integrate Stripe
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
   - title: Stripe
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/stripe.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
 ---
 
 This document describes how to migrate from the MessageBroker-based ACP Stripe integration to the direct `spryker-eco/stripe` module.
@@ -20,7 +20,7 @@ The core payment flow remains the same. Stripe Elements is still embedded in the
 
 ## 1. Install and integrate the module
 
-Follow the [Integrate Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html) guide to install and set up the module.
+Follow the [Integrate Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html) guide to install and set up the module.
 
 ## 2. Remove old ACP plugins and configuration
 
@@ -68,7 +68,7 @@ $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Re
 $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
 ```
 
-Add the direct Stripe command plugins as described in [Step 4 of the integration guide](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#step-4-register-stripe-oms-command-and-condition-plugins).
+Add the direct Stripe command plugins as described in [Step 4 of the integration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#step-4-register-stripe-oms-command-and-condition-plugins).
 
 ### 2c. Remove ACP checkout plugins
 
@@ -84,7 +84,7 @@ new PaymentAuthorizationCheckoutPostSavePlugin(),
 new PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin(),
 ```
 
-Replace with the new Stripe plugin as described in [Step 6 of the integration guide](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#step-6-register-the-stripe-checkout-post-save-plugin).
+Replace with the new Stripe plugin as described in [Step 6 of the integration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html#step-6-register-the-stripe-checkout-post-save-plugin).
 
 ### 2d. Remove ACP Yves plugins
 
@@ -108,7 +108,7 @@ use SprykerShop\Yves\PaymentPage\Plugin\Router\PaymentPageRouteProviderPlugin;
 new PaymentPageRouteProviderPlugin(),
 ```
 
-Replace both with the new Stripe plugins as described in [Steps 7 and 9 of the integration guide](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+Replace both with the new Stripe plugins as described in [Steps 7 and 9 of the integration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 
 ### 2e. Remove KernelApp OAuth plugin
 
@@ -198,7 +198,7 @@ use Spryker\Zed\Payment\PaymentConfig;
 
 ## 3. Add new Stripe configuration
 
-Add the OMS and credentials configuration as described in [Steps 3 and 13 of the integration guide](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+Add the OMS and credentials configuration as described in [Steps 3 and 13 of the integration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
 
 ## 4. Run code generation
 

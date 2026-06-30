@@ -5,12 +5,12 @@ last_updated: Apr 14, 2026
 template: howto-guide-template
 related:
   - title: Integrate Stripe
-    link: docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
   - title: Stripe for Marketplace
-    link: docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
+    link: docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
 ---
 
-This document covers marketplace-specific additions to the base shop Stripe integration. Before following the steps below, complete [Integrate Stripe](/docs/pbc/all/payment-service-provider/latest/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html), making sure to apply all steps marked as **marketplace only**.
+This document covers marketplace-specific additions to the base shop Stripe integration. Before following the steps below, complete [Integrate Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html), making sure to apply all steps marked as **marketplace only**.
 
 {% info_block infoBox "OMS process" %}
 
@@ -123,8 +123,8 @@ To enable merchants to be redirected to the Merchant Portal from third-party web
 
 ## Enable merchant commissions
 
-To enable merchant commissions for payout calculation, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/latest/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions for payout calculation, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 
-[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/latest/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)
+[Configure merchant transfers for Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html)

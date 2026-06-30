@@ -11,5 +11,5 @@ From here you can view and search for existing translations.
 
 ## Next steps
 
-- [Add translations](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/add-translations.html)
-- [Edit translations](/docs/pbc/all/miscellaneous/latest/manage-in-the-back-office/edit-translations.html)
+- [Add translations](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html)
+- [Edit translations](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/edit-translations.html)

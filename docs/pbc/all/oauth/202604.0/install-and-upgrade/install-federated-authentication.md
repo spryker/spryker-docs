@@ -11,9 +11,9 @@ Install the following required features:
 
 | NAME | VERSION | INSTALLATION GUIDE | NOTE |
 |---|---|---|---|
-| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | |
-| Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/latest/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) | |
-| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](https://docs.spryker.com/docs/pbc/all/identity-access-management/latest/install-and-upgrade/install-the-spryker-core-back-office-feature) | Required for Back-office SSO only. Follow the *OAuth 2.0/Open ID Connect Support for Zed login* section. |
+| Spryker Core | {{page.release_tag}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | |
+| Customer Account Management | {{page.release_tag}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) | |
+| Spryker Core Back Office | {{page.release_tag}} | [Install the Spryker Core Back Office feature](https://docs.spryker.com/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature) | Required for Back-office SSO only. Follow the *OAuth 2.0/Open ID Connect Support for Zed login* section. |
 
 ## 1) Install the required modules
 
@@ -653,5 +653,5 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 ## Next steps
 
-- [Add an OAuth provider](/docs/pbc/all/oauth/latest/install-and-upgrade/add-an-oauth-provider.html) — wire additional IdP clients per application.
-- [Set up Keycloak for local development](/docs/pbc/all/oauth/latest/install-and-upgrade/set-up-keycloak-for-local-development.html) — run a local Keycloak instance to test SSO without an external IdP.
+- [Add an OAuth provider](/docs/pbc/all/oauth/{{page.version}}/install-and-upgrade/add-an-oauth-provider.html) — wire additional IdP clients per application.
+- [Set up Keycloak for local development](/docs/pbc/all/oauth/{{page.version}}/install-and-upgrade/set-up-keycloak-for-local-development.html) — run a local Keycloak instance to test SSO without an external IdP.

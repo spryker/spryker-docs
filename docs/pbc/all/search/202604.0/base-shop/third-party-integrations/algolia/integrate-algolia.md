@@ -4,11 +4,11 @@ description: Learn how to integrate Algolia Search into your Spryker-based proje
 template: howto-guide-template
 last_updated: Apr 13, 2026
 redirect_from:
-  - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/configure-algolia.html
-  - /docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/disconnect-algolia.html
+  - /docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html
+  - /docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/disconnect-algolia.html
 ---
 
-This document explains how to integrate [Algolia](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
+This document explains how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html) with your Spryker shop.
 
 ## Prerequisites
 
@@ -570,7 +570,7 @@ The Algolia module supports searching custom entities that are already indexed i
 
 Use entity-to-index mapping when you want to search custom entities—like documents, manufacturers, or locations—that are already indexed in Algolia, without creating custom publisher plugins for read-only search.
 
-See details in the ["Using Algolia search with custom indexes"](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html) guide.
+See details in the ["Using Algolia search with custom indexes"](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html) guide.
 
 
 ## Integrate frontend
@@ -600,7 +600,7 @@ Verify the following:
 
 ## Migrate from the ACP Algolia app
 
-If you are migrating from the MessageBroker-based [Algolia ACP App](/docs/pbc/all/search/latest/base-shop/third-party-integrations/algolia/algolia.html):
+If you are migrating from the MessageBroker-based [Algolia ACP App](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html):
 
 {% info_block infoBox "" %}
 

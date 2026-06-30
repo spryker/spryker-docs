@@ -8,13 +8,13 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
 ---
 
-In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/latest/base-shop/inventory-management-feature-overview.html) feature.
+In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature.
 
 ## Scenario 1: Separate warehouses and databases
 
 {% info_block warningBox %}
 
-- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
 - To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
@@ -31,7 +31,7 @@ This scenario is appropriate for big businesses managed from various locations, 
 
 {% info_block warningBox %}
 
-- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
+- With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/dynamic-multistore-feature-overview.html), this setup is only possible when stores belong to the different regions.
 - To enable this scenario for your project, a developer should configure it. For configuration details, see [implementation reference](#implementation-reference).
 
 {% endinfo_block %}

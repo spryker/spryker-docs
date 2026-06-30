@@ -9,7 +9,7 @@ This endpoint lets you retrieve services.
 
 ## Installation
 
-[Install the Service Points feature](/docs/pbc/all/service-point-management/latest/unified-commerce/install-features/install-the-service-points-feature.html)
+[Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)
 
 ## Retrieve services
 
@@ -21,7 +21,7 @@ This endpoint lets you retrieve services.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
@@ -266,11 +266,11 @@ This endpoint lets you retrieve services.
 </details>
 
 
-{% include pbc/all/glue-api-guides/latest/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/latest/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/latest/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
 
 
 
@@ -283,14 +283,14 @@ This endpoint lets you retrieve services.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/latest/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
+| {% raw %}***{{service_id}}***{% endraw %} | ID of a service to retrieve. To get it, [add a service](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html) or [retrieve services](#retrieve-services). |
 
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/latest/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|
@@ -424,11 +424,11 @@ This endpoint lets you retrieve services.
 </details>
 
 
-{% include pbc/all/glue-api-guides/latest/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/latest/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/latest/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-types-response-attributes.md -->
 
 
 ## Possible errors

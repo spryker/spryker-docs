@@ -7,7 +7,7 @@ related:
   - title: Install the Basic Shop Theme feature
     link: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
   - title: Back Office Configuration Framework
-    link: /docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html
+    link: /docs/pbc/all/back-office/{{page.version}}/base-shop/backoffice-configuration-framework.html
   - title: Configuration Management feature
     link: /docs/dg/dev/backend-development/configuration-management.html
 ---
@@ -61,7 +61,7 @@ All theme settings are managed under **Back Office > Configuration > Theme**.
 
 ## How it works
 
-The Basic Shop Theme feature is built on top of the [Back Office Configuration Framework](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html). All settings are declared in a YAML schema file bundled with the Spryker core modules. The Configuration module reads this file and renders the corresponding UI in the Back Office.
+The Basic Shop Theme feature is built on top of the [Back Office Configuration Framework](/docs/pbc/all/back-office/{{page.version}}/base-shop/backoffice-configuration-framework.html). All settings are declared in a YAML schema file bundled with the Spryker core modules. The Configuration module reads this file and renders the corresponding UI in the Back Office.
 
 ### Storefront theming flow
 
@@ -134,6 +134,6 @@ To switch scope, use the scope selector at the top of the Configuration Manageme
 
 | Feature | Link |
 |---------|------|
-| Back Office Configuration Framework | [Overview](/docs/pbc/all/back-office/latest/base-shop/backoffice-configuration-framework.html) |
+| Back Office Configuration Framework | [Overview](/docs/pbc/all/back-office/{{page.version}}/base-shop/backoffice-configuration-framework.html) |
 | Configuration Management | [Developer guide](/docs/dg/dev/backend-development/configuration-management.html) |
 | Install the Basic Shop Theme | [Integration guide](/docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html) |

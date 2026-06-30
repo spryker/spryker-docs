@@ -5,7 +5,7 @@ last_updated: May 22, 2026
 template: concept-topic-template
 ---
 
-The *Purchasing Control* feature lets B2B companies track and control procurement spending by assigning orders to cost centers and enforcing configurable budget rules. It extends the existing [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) with a second dimension of spending governance: per-department or per-project budget limits that work alongside the existing per-person permission limits.
+The *Purchasing Control* feature lets B2B companies track and control procurement spending by assigning orders to cost centers and enforcing configurable budget rules. It extends the existing [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) with a second dimension of spending governance: per-department or per-project budget limits that work alongside the existing per-person permission limits.
 
 {% info_block infoBox "Info" %}
 
@@ -49,7 +49,7 @@ Both checks run independently at checkout. If either the permission limit or the
 
 {% info_block infoBox "Permissions required for the Require Approval enforcement rule" %}
 
-To use budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html) permissions must be assigned to the relevant company roles:
+To use budgets with the **Require Approval** enforcement rule, the following [Approval Process](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) permissions must be assigned to the relevant company roles:
 
 | PERMISSION | REQUIRES |
 | --- | --- |
@@ -91,7 +91,7 @@ The typical B2B procurement flow involving cost centers and budgets:
 
 ## Quote lock
 
-When an order is sent for approval - whether triggered by a budget rule or a permission limit - the quote is locked to preserve the order state during the approval review. Neither the buyer nor the approver can modify the quote while it is pending approval. For details, see [Quote lock functionality](/docs/pbc/all/cart-and-checkout/latest/base-shop/feature-overviews/approval-process-feature-overview.html#quote-lock-functionality).
+When an order is sent for approval - whether triggered by a budget rule or a permission limit - the quote is locked to preserve the order state during the approval review. Neither the buyer nor the approver can modify the quote while it is pending approval. For details, see [Quote lock functionality](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html#quote-lock-functionality).
 
 ## Roles and capabilities
 
@@ -106,4 +106,4 @@ When an order is sent for approval - whether triggered by a budget rule or a per
 
 | INSTALLATION GUIDES |
 | --- |
-| [Install the Purchasing Control feature](/docs/pbc/all/cart-and-checkout/latest/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html) |
+| [Install the Purchasing Control feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html) |

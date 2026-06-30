@@ -5,7 +5,7 @@ last_updated: May 21, 2026
 template: concept-topic-template
 related:
   - title: Install Search Statistics
-    link: docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
+    link: docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
 ---
 
 Search Statistics is a Back Office feature that gives business operators visibility into storefront search behavior. It uses Google Analytics 4 (GA4) as the underlying data collection and reporting layer, eliminating the need for custom per-project analytics implementations.
@@ -18,7 +18,7 @@ Search Statistics collects storefront search queries by using Google Analytics 4
 
 ## Related developer guides
 
-- [Install Search Statistics](/docs/pbc/all/miscellaneous/latest/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html)
+- [Install Search Statistics](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html)
 
 ## Use Search Statistics
 

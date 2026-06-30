@@ -5,7 +5,7 @@ last_updated: Mar 25, 2026
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html
 redirect_from:
     - /docs/pbc/all/tax-management/202311.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
@@ -16,15 +16,15 @@ redirect_from:
     - /docs/pbc/all/tax-management/202404.0/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202404.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
-    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
-    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
-    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/connect-vertex.html
-    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-    - /docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+    - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+    - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html
+    - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+    - /docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
 
 
 ---
-This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
+This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -462,5 +462,5 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 ## Next steps
 
-- [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
-- [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/latest/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)
+- [Configure Vertex-specific metadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html)
+- [Migrate from the ACP Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/migrate-from-acp-to-vertex.html)

@@ -400,12 +400,6 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-Sync the permission plugins to the database:
-
-```bash
-console sync:data permission
-```
-
 {% info_block warningBox "Verification" %}
 
 In the Back Office, under **Customers > Company Roles**, assign `SeeCompanyOrdersPermissionPlugin` to a company role. Make sure company users with that role can see all recurring orders within their company on the storefront.

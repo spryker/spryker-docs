@@ -99,6 +99,7 @@ Before each order placement, the system sends an email to the buyer within the c
 - A link to the schedule detail page where the buyer can skip, pause, or cancel before the order is placed.
 
 The Schedule Grace Period is configured globally in the Back Office under **Configuration > Recurring Orders > General > Schedule**. Individual schedules can override the global value via `getDefaultNotificationWindowHours()` in `OrderExperienceManagementConfig`.
+
 ## Review Required flow
 
 Before placing each order, the system validates the stored quote snapshot against current product and pricing data. If issues are detected, the schedule moves to the `review_required` state and the buyer receives a review notification email.

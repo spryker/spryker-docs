@@ -1796,7 +1796,7 @@ The following rules only apply to the API transfer schema definitions following 
 - Should use the `restRequestParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the request and if it is required or not.
 - Should use the `restResponseParameter` attribute when applicable with either of: `required`, `yes`, or `no`; This is used by the OpenAPI schema generator to show if a field is used in the response and if it is required or not.
 
-Further reading [Document Glue API resources](/docs/dg/dev/glue-api/latest/glue-api-tutorials/document-glue-api-resources.html)
+Further reading [Document Glue API resources](/docs/dg/dev/glue-api/202410.0/glue-api-tutorials/document-glue-api-resources.html)
 
 </details>
 

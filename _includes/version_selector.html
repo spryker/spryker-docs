@@ -16,11 +16,24 @@
 </div>
 <div class="alt-nav__overlay"></div>
 
-<script>
-    function redirectToArchive(e) {
-        e.preventDefault();
-        const path = window.location.pathname;
-        const archiveUrl = 'https://docs-archive.spryker.com' + path;
-        window.open(archiveUrl, '_blank');
-    }
-</script>
+{% if page.all_versions.size > 1 %}
+    <div class="alt-nav dropdown">
+        <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="alt-nav__opener-text">{{ current_version_label }}</span>
+            <i class="alt-nav__opener-icon icon-arrow-down"></i>
+        </span>
+        <span class="alt-nav__opener-label">Versions</span>
+        <ul class="alt-nav__drop dropdown-menu" aria-labelledby="versionDropdownMenuLink">
+            {% for version in page.all_versions %}
+                {% if site.versions[version.version] %}
+                <li><a href="{{ site.baseurl }}{{ version.url }}">{{ site.versions[version.version] }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="alt-nav__overlay"></div>
+{% else %}
+    <div class="alt-nav">
+        <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
+    </div>
+{% endif %}

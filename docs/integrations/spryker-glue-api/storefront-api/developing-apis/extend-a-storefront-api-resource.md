@@ -9,10 +9,10 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202404.0/glue-api-tutorials/extend-a-rest-api-resource.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/extend-a-rest-api-resource.html
-  - /docs/dg/dev/glue-api/latest/glue-api-tutorials/extend-a-rest-api-resource.html
+  - /docs/dg/dev/glue-api/202602.0/glue-api-tutorials/extend-a-rest-api-resource.html
 related:
   - title: Glue API installation and configuration
-    link: docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
+    link: docs/pbc/all/miscellaneous/202602.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
 
 Spryker Storefront API comes with a set of predefined APIs out of the box. You can extend and customize them to your own project needs by extending the Storefront API modules that provide the relevant functionality on your project level.
@@ -20,8 +20,8 @@ Spryker Storefront API comes with a set of predefined APIs out of the box. You c
 ## Prerequisites
 
 - [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
-- [Enable Storefront API](/docs/pbc/all/miscellaneous/latest/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
-- [Integrate Products API](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+- [Enable Storefront API](/docs/pbc/all/miscellaneous/202602.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+- [Integrate Products API](/docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 {% info_block infoBox %}
 
@@ -29,7 +29,7 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/about/a
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 
-For more details, see [Database schema for product attributes](/docs/pbc/all/product-information-management/latest/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/pbc/all/product-information-management/202602.0/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% endinfo_block %}
 
@@ -153,4 +153,4 @@ Like the mapper, `ProductsRestApiFactory` extends the core factory and only over
 
 ## 4. Verify implementation
 
-You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html) and [Storefront API: Retrieving concrete products](/docs/pbc/all/product-information-management/latest/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).
+You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/pbc/all/product-information-management/202602.0/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html) and [Storefront API: Retrieving concrete products](/docs/pbc/all/product-information-management/202602.0/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).

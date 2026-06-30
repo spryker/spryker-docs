@@ -188,7 +188,7 @@ See example implementation here: `\Pyz\Zed\ErpIntegration\Communication\Plugin\C
 
 ### Live shipment method data
 
-General documentation can be found here - [Shipment method plugins](/docs/pbc/all/carrier-management/latest/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
+General documentation can be found here - [Shipment method plugins](/docs/pbc/all/carrier-management/202602.0/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html).
 
 For price, implement a plugin interface `\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentMethodPricePluginInterface` and add your plugin into `\Pyz\Zed\Shipment\ShipmentDependencyProvider::getPricePlugins`.
 

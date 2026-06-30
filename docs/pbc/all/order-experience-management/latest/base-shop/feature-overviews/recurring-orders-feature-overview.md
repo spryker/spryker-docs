@@ -1,18 +1,22 @@
 ---
 title: Recurring Orders feature overview
 description: Learn how the Recurring Orders feature lets B2B buyers automate repeat purchases on a configurable schedule.
-last_updated: Jun 18, 2026
+last_updated: Jun 30, 2026
 template: concept-topic-template
 label: early-access
 ---
 
 {% info_block warningBox "Early Access" %}
 
-This feature is in Early Access and is not recommended for production use.
+This feature is in Early Access. We'd love for you to try it out and share feedback as we work toward general availability.
 
 {% endinfo_block %}
 
 The *Recurring Orders* feature lets B2B buyers set up automated repeat purchases directly from the checkout. Once configured, the system places orders automatically at the chosen interval, sends notifications before each execution, and pauses for buyer review when prices change or products become unavailable.
+
+![Recurring order list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_1.png)
+
+![Recurring order detail](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_2.png)
 
 ## Concepts
 
@@ -40,6 +44,8 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 - The quote does not originate from a Request for Quote (RFQ).
 - The customer is not a guest.
 - The payment method is invoice-based (`invoice`, `purchaseOnAccount`, or a configured equivalent).
+
+![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)
 
 ## Cadence types
 
@@ -83,6 +89,8 @@ Buyers can perform the following manual actions from the recurring order detail 
 | Review | `review_required` | Opens the Review Required page where the buyer can accept price changes, remove unavailable items, and place the order. |
 | Retry | `failed` | Moves the schedule to `review_required` so the buyer can review and re-attempt placement. |
 
+![Recurring order list with attention banner](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_4.png)
+
 ## Pre-trigger notification
 
 Before each order placement, the system sends an email to the buyer within a configurable notification window (default: 48 hours before the trigger date). The notification includes:
@@ -90,7 +98,7 @@ Before each order placement, the system sends an email to the buyer within a con
 - The schedule name and the upcoming execution date.
 - A link to the schedule detail page where the buyer can skip, pause, or cancel before the order is placed.
 
-The notification window can be configured globally via `DEFAULT_NOTIFICATION_WINDOW_HOURS` in `SubscriptionConfig` or overridden per schedule in the `spy_recurring_schedule.notification_window_hours` column.
+The notification window can be configured in the feature configuration in the Back Office or in the module class code.
 
 ## Review Required flow
 
@@ -110,6 +118,8 @@ The buyer reviews the flagged items on the **Review Required** page. The followi
 | Configurable bundle unavailable | A member of a configurable bundle is unpurchasable, so the entire bundle is dropped. |
 
 Items flagged as **unavailable** or **not approved** are non-purchasable and must be removed before the order can proceed. Items with a price increase can be accepted or removed. The buyer confirms the changes, which updates the stored quote snapshot and places the order.
+
+![Review Required page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_5.png)
 
 ## Execution history
 

@@ -1,7 +1,7 @@
 ---
 title: Install the Recurring Orders feature
 description: Learn how to install the Recurring Orders feature into your Spryker project.
-last_updated: Jun 18, 2026
+last_updated: Jun 30, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -9,9 +9,9 @@ related:
     link: docs/pbc/all/order-experience-management/latest/base-shop/feature-overviews/recurring-orders-feature-overview.html
 ---
 
-{% info_block warningBox "Experimental feature" %}
+{% info_block warningBox "Early Access" %}
 
-Experimental feature — not recommended for production use.
+This feature is in Early Access. We'd love for you to try it out and share feedback as we work toward general availability.
 
 {% endinfo_block %}
 
@@ -36,7 +36,7 @@ To start feature integration, review and install the necessary features:
 {% info_block infoBox "Required modules" %}
 
 ```bash
-composer require spryker-feature/order-experience-management:"^0.1.0" --update-with-dependencies
+composer require spryker-feature/order-experience-management:"^0.1.4" --update-with-dependencies
 composer update \
   spryker/availability:"^9.32.0" \
   spryker/merchant:"^3.20.0" \
@@ -50,7 +50,7 @@ composer update \
   spryker/product-offer:"^1.18.0" \
   spryker/product-packaging-unit:"^4.14.0" \
   spryker/product-quantity:"^3.8.0" \
-  spryker-feature/purchasing-control:"^1.1.0" \
+  spryker-feature/purchasing-control:"^1.1.1" \
   spryker-shop/checkout-page:"^3.42.0" \
   spryker-shop/customer-page:"^2.80.0" \
   --with-dependencies

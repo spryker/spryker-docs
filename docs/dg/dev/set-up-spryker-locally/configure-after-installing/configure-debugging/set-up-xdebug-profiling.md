@@ -5,7 +5,7 @@ template: howto-guide-templatel
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html
 
-last_updated: Jun 19, 2023
+last_updated: Jun 2, 2026
 ---
 
 This document explains how to set up *XDebug profiling* in a local development environment to understand in detail the cost of functions and transactions in terms of time and memory demand. XDebug profiling lets you analyze your applications, find out the reason for performance and stability issues, and start profiling your Spryker project.
@@ -30,7 +30,19 @@ image:
             "xdebug.mode": profile
             # Define a folder to route the output to. Please create this folder in your project as it will not be created automatically.
             "xdebug.output_dir": "/data/src/Generated/Xdebug"
+            # Format the cachegrind file name with timestamp and hostname. Example: "cachegrind.out.1780417711-yves_eu_spryker_local-12.gz"
+            "xdebug.profiler_output_name": "cachegrind.out.%u-%H"
 
+```
+
+For more information about Xdebug profiling configuration, see [Xdebug Profiler](https://xdebug.org/docs/profiler).
+
+If you need to profile Back Office gateway requests, enable profiler forwarding in your configuration.
+
+**config_default-docker.dev.php**
+
+```php
+$config[ZedRequestConstants::XDEBUG_PROFILER_FORWARD_ENABLED] = true;
 ```
 
 ## 2. Set up XDebug configuration

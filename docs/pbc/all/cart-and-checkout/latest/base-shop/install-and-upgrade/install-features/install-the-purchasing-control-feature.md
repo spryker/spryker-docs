@@ -1,7 +1,7 @@
 ---
 title: Install the Purchasing Control feature
 description: Learn how to install the Purchasing Control feature into your Spryker project.
-last_updated: May 27, 2026
+last_updated: Jun 18, 2026
 template: feature-integration-guide-template
 label: early-access
 related:
@@ -697,7 +697,8 @@ Register the following global widgets:
 | CostCenterSelectorWidget | Renders the cost center and budget selection UI at checkout. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterMenuItemWidget | Renders the Purchasing Control navigation menu item in the storefront company menu. | SprykerFeature\Yves\PurchasingControl\Widget |
 | CostCenterBudgetFilterWidget | Renders the cost center and budget filter controls on the order history page. | SprykerFeature\Yves\PurchasingControl\Widget |
-| CostCenterOrderDetailWidget | Displays the assigned cost center and budget on the order detail page. | SprykerFeature\Yves\PurchasingControl\Widget |
+| CostCenterOrderDetailWidget | Displays the assigned cost center and budget on the order detail page, taking an `OrderTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
+| CostCenterDetailWidget | Displays the assigned cost center and budget on the cart or quote detail page, taking a `QuoteTransfer` as input. | SprykerFeature\Yves\PurchasingControl\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -707,6 +708,7 @@ Register the following global widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterBudgetFilterWidget;
+use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterDetailWidget;
 use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterMenuItemWidget;
 use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterOrderDetailWidget;
 use SprykerFeature\Yves\PurchasingControl\Widget\CostCenterSelectorWidget;
@@ -725,6 +727,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             CostCenterMenuItemWidget::class, #PurchasingControlFeature
             PurchasingControlSummaryWidget::class, #PurchasingControlFeature
             CostCenterSelectorWidget::class, #PurchasingControlFeature
+            CostCenterDetailWidget::class, #PurchasingControlFeature
             CostCenterOrderDetailWidget::class, #PurchasingControlFeature
             CostCenterBudgetFilterWidget::class, #PurchasingControlFeature
         ];
@@ -734,7 +737,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-- Make sure all five widgets are available in Twig templates.
+- Make sure all six widgets are available in Twig templates.
 - On the storefront company dashboard, make sure the **Purchasing Control** summary widget displays cost center and budget data.
 - On the checkout summary page, make sure the cost center and budget selector is displayed.
 - On the order detail page, make sure the assigned cost center and budget names are displayed.

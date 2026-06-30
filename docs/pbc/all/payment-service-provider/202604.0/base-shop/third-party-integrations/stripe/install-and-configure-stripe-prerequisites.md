@@ -7,11 +7,11 @@ redirect_from:
 - docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe
 related:
   - title: Stripe
-    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
   - title: OMS configuration for Stripe
-    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
   - title: Migrate from the ACP Stripe app
-    link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
 ---
 
 This document describes how to integrate the `spryker-eco/stripe` module into your Spryker project. The module communicates directly with the Stripe API from your application and embeds Stripe Elements into the checkout payment step.

@@ -5,9 +5,9 @@ last_updated: February 12, 2026
 template: concept-topic-template
 related:
   - title: Install the Buy Box feature
-    link: /docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
+    link: /docs/pbc/all/offer-management/page.version/marketplace/install-and-upgrade/install-features/install-the-buy-box-feature.html
   - title: Product Availability Display feature overview
-    link: /docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/product-availability-display-feature-overview.html
+    link: /docs/pbc/all/warehouse-management-system/page.version/base-shop/product-availability-display-feature-overview.html
 ---
 
 The Buy Box feature displays multiple merchant offers for the same product on the product detail page in a marketplace environment. When multiple merchants sell the same product, the Buy Box shows all available offers. This lets you compare prices and availability and select the merchant you want to purchase from.

@@ -6,9 +6,9 @@ template: feature-integration-guide-template
 label: early-access
 related:
   - title: Purchasing Control feature overview
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/purchasing-control-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/purchasing-control-feature-overview.html
   - title: Install the Approval Process feature
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
 ---
 
 {% info_block warningBox "Experimental feature" %}

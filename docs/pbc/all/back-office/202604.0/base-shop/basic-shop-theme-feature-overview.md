@@ -7,7 +7,7 @@ related:
   - title: Install the Basic Shop Theme feature
     link: /docs/dg/dev/integrate-and-configure/integrate-basic-shop-theme.html
   - title: Back Office Configuration Framework
-    link: /docs/pbc/all/back-office/{{page.version}}/base-shop/backoffice-configuration-framework.html
+    link: /docs/pbc/all/back-office/page.version/base-shop/backoffice-configuration-framework.html
   - title: Configuration Management feature
     link: /docs/dg/dev/backend-development/configuration-management.html
 ---

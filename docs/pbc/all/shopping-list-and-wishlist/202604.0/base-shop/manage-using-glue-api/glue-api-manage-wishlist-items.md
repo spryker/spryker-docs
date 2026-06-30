@@ -9,11 +9,11 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 related:
   - title: Managing wishlists
-    link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
   - title: Authenticating as a customer
-    link: docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
+    link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Wishlist feature overview
-    link: docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/wishlist-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/wishlist-feature-overview.html
 ---
 
 This endpoint allows you to add and remove items from wishlists.
@@ -112,10 +112,10 @@ Request sample: add an item to a wishlist
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
 ### Response
 
@@ -202,11 +202,11 @@ Response sample: add an item to a wishlist
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md -->
 
 ## Update a wishlist item
 
@@ -289,10 +289,10 @@ To update a wishlist item, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/wishlist-items-request-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
 ### Response
 
@@ -362,11 +362,11 @@ To update a wishlist item, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/wishlist-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/wishlist-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-availabilities-response-attributes.md -->
 
 
 ## Delete a wishlist item

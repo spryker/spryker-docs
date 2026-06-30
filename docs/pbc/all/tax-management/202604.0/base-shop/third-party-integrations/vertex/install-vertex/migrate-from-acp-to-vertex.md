@@ -5,9 +5,9 @@ last_updated: Mar 25, 2026
 template: howto-guide-template
 related:
   - title: Integrate Vertex
-    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
   - title: Vertex
-    link: docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html
 ---
 
 This document describes how to migrate from the MessageBroker-based [ACP Vertex](https://docs-archive.spryker.com/docs/pbc/all/tax-management/202507.0/base-shop/third-party-integrations/vertex/vertex) integration to the direct `spryker-eco/vertex` module.

@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/multi-factor-authentication/202505.0/multi-factor-authentication.html
 related:
   - title: Federated Authentication via OAuth2/OIDC
-    link: docs/pbc/all/oauth/{{page.version}}/federated-authentication.html
+    link: docs/pbc/all/oauth/page.version/federated-authentication.html
 ---
 
 Multi-Factor Authentication (MFA) adds an extra layer of security for customers, Back Office users, agents, merchant, and merchant agent users by requiring multiple methods of authentication before allowing an action.

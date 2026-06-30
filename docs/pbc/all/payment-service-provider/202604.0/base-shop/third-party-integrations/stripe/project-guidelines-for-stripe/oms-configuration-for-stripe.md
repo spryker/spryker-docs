@@ -5,11 +5,11 @@ last_updated: Apr 14, 2026
 template: howto-guide-template
 related:
    - title: Stripe
-     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
+     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
    - title: Processing refunds with Stripe
-     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
+     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
    - title: Sending additional data to Stripe
-     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
+     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
 ---
 
 

@@ -14,9 +14,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
 related:
   - title: CMS Pages overview
-    link: docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: Install the CMS Glue API
-    link: docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
 ---
 
 [CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-pages-overview.html) are meant for creating customized content for your online shop. The CMS Pages API allows you to retrieve details on CMS pages, including information on Abstract Product List and Banner content items available for each of them.
@@ -587,10 +587,10 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 
 ## Retrieve a CMS page
@@ -882,10 +882,10 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md -->
 
 ## Possible errors
 

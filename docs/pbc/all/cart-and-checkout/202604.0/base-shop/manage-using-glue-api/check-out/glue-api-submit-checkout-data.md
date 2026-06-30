@@ -12,9 +12,9 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
 related:
   - title: Check out purchases
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Update payment data
-    link: docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---
 
 This endpoint allows submitting checkout data as many times as required. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps, and execute other operations that require multiple calls to complete. This endpoint does not allow placing an order.
@@ -301,7 +301,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md -->
 
 
 ### Response
@@ -1155,13 +1155,13 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-methods-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

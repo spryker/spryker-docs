@@ -5,7 +5,7 @@ last_updated: Apr 14, 2026
 template: howto-guide-template
 related:
    - title: Stripe
-     link: docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html
+     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 
 ---
 

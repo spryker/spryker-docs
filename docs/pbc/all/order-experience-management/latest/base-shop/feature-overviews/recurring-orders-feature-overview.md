@@ -51,7 +51,7 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 | --- | --- |
 | Weekly | Places an order every 7 days. |
 | Bi-weekly | Places an order every 14 days. |
-| Monthly | Places an order on the same calendar day each month. If the day does not exist in the target month (for example, day 31 when the next month has fewer days), the date overflows into the following month. |
+| Monthly | Places an order on the same calendar day each month. If the scheduled day does not exist in the target month, the date overflows: for example, a schedule anchored to January 31 next fires on March 3 (not February 28), and all subsequent executions are anchored to the 3rd of each month. To avoid drift, use a start date on the 28th or earlier. |
 | Every N weeks | Places an order every N weeks. Requires a positive integer value for N. |
 
 ![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)

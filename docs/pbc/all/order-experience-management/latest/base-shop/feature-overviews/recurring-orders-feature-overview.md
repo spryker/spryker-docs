@@ -51,14 +51,14 @@ A recurring schedule is **only available** for quotes that meet all of the follo
 | --- | --- |
 | Weekly | Places an order every 7 days. |
 | Bi-weekly | Places an order every 14 days. |
-| Monthly | Places an order on the same calendar day each month. |
+| Monthly | Places an order on the same calendar day each month. If the scheduled day does not exist in the target month, the date overflows: for example, a schedule anchored to January 31 next fires on March 3 (not February 28), and all subsequent executions are anchored to the 3rd of each month. To avoid drift, use a start date on the 28th or earlier. |
 | Every N weeks | Places an order every N weeks. Requires a positive integer value for N. |
 
 ![Recurring order setup at checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Recurring+Orders/RecurringOrders_3.png)
 
 ## Schedule lifecycle
 
-The recurring schedule moves through states managed by the `RecurringOrderStateMachine` state machine. The following diagram describes the full lifecycle:
+The recurring schedule moves through states managed by the `RecurringOrder` state machine. The following diagram describes the full lifecycle:
 
 | STATE | DESCRIPTION |
 | --- | --- |
@@ -84,8 +84,8 @@ Buyers can perform the following manual actions from the recurring order detail 
 | --- | --- | --- |
 | Pause | `active` | Temporarily stops order placement. The schedule can be resumed at any time with an optional custom resume date. |
 | Resume | `paused` | Reactivates the schedule. The buyer can set a new next trigger date or keep the existing one. |
-| Skip | `active`, `pre_trigger_notified`, `review_required` | Skips the next scheduled execution. The trigger date advances by one cadence interval. |
-| Cancel | `draft`, `active`, `paused`, `pre_trigger_notified`, `review_required`, `failed` | Permanently cancels the schedule. This action cannot be undone. |
+| Skip | `active`, `pre_trigger_notified`, `review_required` | Skips the next scheduled execution. The new trigger date is calculated by advancing the current trigger date by one cadence interval. If the current trigger date is already in the past due to processing lag, the recalculated date may also fall in the past and the schedule will process on the next cron run. |
+| Cancel | `active`, `paused`, `pre_trigger_notified`, `review_required`, `failed`, `draft` | Permanently cancels the schedule. This action cannot be undone. The `draft` state is transient and is normally activated synchronously at checkout; cancellation from `draft` is a safety fallback. |
 | Review | `review_required` | Opens the Review Required page where the buyer can accept price changes, remove unavailable items, and place the order. |
 | Retry | `failed` | Moves the schedule to `review_required` so the buyer can review and re-attempt placement. |
 
@@ -93,18 +93,18 @@ Buyers can perform the following manual actions from the recurring order detail 
 
 ## Pre-trigger notification
 
-Before each order placement, the system sends an email to the buyer within a configurable notification window (default: 48 hours before the trigger date). The notification includes:
+Before each order placement, the system sends an email to the buyer within the configured **Schedule Grace Period** (default: 48 hours before the trigger date). The notification includes:
 
 - The schedule name and the upcoming execution date.
 - A link to the schedule detail page where the buyer can skip, pause, or cancel before the order is placed.
 
-The notification window can be configured in the feature configuration in the Back Office or in the module class code.
+The Schedule Grace Period is configured globally in the Back Office under **Configuration > Recurring Orders > General > Schedule**.
 
 ## Review Required flow
 
 Before placing each order, the system validates the stored quote snapshot against current product and pricing data. If issues are detected, the schedule moves to the `review_required` state and the buyer receives a review notification email.
 
-The buyer reviews the flagged items on the **Review Required** page. The following table lists common issue types. The full set of checkout error types that map to each group is configurable via `getReviewReasonGroupMap()` in `SubscriptionConfig`.
+The buyer reviews the flagged items on the **Review Required** page. The following table lists common issue types. The full set of checkout error types that map to each group is configurable via `getReviewReasonGroupMap()` in `OrderExperienceManagementConfig`.
 
 | ISSUE | DESCRIPTION |
 | --- | --- |
@@ -138,7 +138,7 @@ Each recurring schedule maintains a full execution history. Every significant ev
 
 | PAGE | PATH | DESCRIPTION |
 | --- | --- | --- |
-| Recurring order list | `/recurring-orders` | Lists all recurring schedules for the current buyer, with status, frequency, and next order date. Company users with the appropriate permission can filter by scope (own, company, or business unit). |
+| Recurring order list | `/recurring-orders` | Lists all recurring schedules for the current buyer, with status, cadence, and trigger date. Company users with the appropriate permission can filter by scope (own, company, or business unit). |
 | Recurring order detail | `/recurring-orders/{uuid}` | Shows the full schedule configuration, the items and quantities, the next execution date, and the full execution history. |
 | Review Required | `/recurring-orders/{uuid}/review-required` | Shows flagged items with issue reasons and price comparisons. The buyer accepts changes and places the order from this page. |
 

@@ -16,6 +16,7 @@ related:
   - title: Submit checkout data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
 redirect_from:
+- /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 ---
 

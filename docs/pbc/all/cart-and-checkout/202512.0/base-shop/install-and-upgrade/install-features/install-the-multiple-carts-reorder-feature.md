@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-reorder-feature-integration
 originalArticleId: d5e4f165-d6b1-47fc-a008-ee010307c447
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
   - /docs/scos/dev/feature-integration-guides/202311.0/multiple-carts-reorder-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
 ---

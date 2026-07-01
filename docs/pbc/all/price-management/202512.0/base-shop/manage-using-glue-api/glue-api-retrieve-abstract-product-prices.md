@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-prices
 originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html

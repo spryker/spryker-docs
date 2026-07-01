@@ -4,6 +4,7 @@ description: Learn how to extend existing Gui tables in the merchant portal with
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/tutorials-and-howtos/extend-gui-tables.html
   - /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 related:
   - title: How to add a new Gui table

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-cms-redirects
 originalArticleId: 296658bd-56e5-4408-b66b-ffaa2298ce9e
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html
   - /docs/scos/user/back-office-user-guides/202200.0/content/redirects/creating-cms-redirects.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/redirects/create-cms-redirects.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html

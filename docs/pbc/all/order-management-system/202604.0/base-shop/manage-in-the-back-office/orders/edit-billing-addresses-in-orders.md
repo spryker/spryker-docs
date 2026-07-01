@@ -4,6 +4,7 @@ description: Learn how to edit order billing addresses in the Spryker Cloud Comm
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/manage-in-the-back-office/orders/edit-billing-addresses-in-orders.html
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/editing-billing-addresses-in-orders.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/editing-billing-addresses-in-orders.html
 related:

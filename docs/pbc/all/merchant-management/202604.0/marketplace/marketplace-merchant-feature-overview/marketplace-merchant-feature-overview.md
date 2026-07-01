@@ -4,6 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 last_updated: Jan 15, 2024
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
   - title: Managing merchants

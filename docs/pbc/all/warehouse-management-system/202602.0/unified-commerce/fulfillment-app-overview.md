@@ -4,7 +4,7 @@ description: Fulfillment App streamlines the process of fulfilling orders, learn
 last_updated: Oct 3, 2023
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/warehouse-management-system/202512.0/unified-commerce/fulfillment-app-overview.html 
+  - /docs/pbc/all/warehouse-management-system/202512.0/unified-commerce/fulfillment-app-overview.html
 ---
 
 *Fulfillment App* streamlines the process of fulfilling orders.

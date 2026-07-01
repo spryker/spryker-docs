@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/simple-spelling-suggestions
 originalArticleId: 336cc842-ecf5-4403-8979-21a973ce0e70
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/simple-spelling-suggestions.html
   - /2021080/docs/simple-spelling-suggestions
   - /2021080/docs/en/simple-spelling-suggestions
   - /docs/simple-spelling-suggestions

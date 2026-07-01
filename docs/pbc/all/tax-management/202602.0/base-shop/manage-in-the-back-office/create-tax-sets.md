@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-tax-sets
 originalArticleId: b8a16bed-2e8b-4a25-b092-d41004fe0119
 redirect_from:
-  - /docs/pbc/all/tax-management/202512.0/base-shop/manage-in-the-back-office/create-tax-sets.html 
+  - /docs/pbc/all/tax-management/202512.0/base-shop/manage-in-the-back-office/create-tax-sets.html
   - /2021080/docs/managing-tax-sets
   - /2021080/docs/en/managing-tax-sets
   - /docs/managing-tax-sets

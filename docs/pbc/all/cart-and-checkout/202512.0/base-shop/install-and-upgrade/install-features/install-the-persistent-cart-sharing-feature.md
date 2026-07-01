@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/persistent-cart-sharing-feature-integration
 originalArticleId: c6f09590-e6e7-45e4-a25b-8612a8c3c5e4
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
   - /2021080/docs/persistent-cart-sharing-feature-integration
   - /2021080/docs/en/persistent-cart-sharing-feature-integration
   - /docs/persistent-cart-sharing-feature-integration

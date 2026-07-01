@@ -4,6 +4,7 @@ description: Learn how to view your product sets that you have configured in the
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+- /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
 - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/product-sets/view-product-sets.html
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
 related:

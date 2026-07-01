@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-checkout
 originalArticleId: 1b63d6ca-1a92-4a54-998f-4230719c8dd0
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
   - /2021080/docs/mg-checkout
   - /2021080/docs/en/mg-checkout
   - /docs/mg-checkout

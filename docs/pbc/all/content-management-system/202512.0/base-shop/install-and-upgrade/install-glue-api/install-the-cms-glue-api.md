@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide
 originalArticleId: e3dfeabf-efbe-407f-b1d7-5bcf31a423f8
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
   - /2021080/docs/glue-api-cms-feature-integration-guide
   - /2021080/docs/en/glue-api-cms-feature-integration-guide
   - /docs/glue-api-cms-feature-integration-guide

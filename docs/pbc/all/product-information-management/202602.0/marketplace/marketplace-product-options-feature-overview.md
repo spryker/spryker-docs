@@ -4,7 +4,7 @@ description: The Marketplace Product Options feature lets merchants and Marketpl
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/marketplace/marketplace-product-options-feature-overview.html 
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/marketplace-product-options-feature-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-product-options-feature-overview.html
 related:
   - title: Creating product options

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-plugins
 originalArticleId: c164d2cc-dc77-415c-a1a7-8a2071f19492
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
   - 2021080/docs/reference-information-shipment-method-plugins
   - 2021080/docs/en/reference-information-shipment-method-plugins
   - /docs/reference-information-shipment-method-plugins

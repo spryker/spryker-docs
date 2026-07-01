@@ -4,7 +4,7 @@ description: Learn how to enable the Spryker Click&Collect feature in to your Sp
 last_updated: Nov 23, 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/pbc/all/service-point-management/202512.0/unified-commerce/enable-click-collect.html 
+  - /docs/pbc/all/service-point-management/202512.0/unified-commerce/enable-click-collect.html
 ---
 
 To enable the default implementation of Click & Collect, follow the steps.

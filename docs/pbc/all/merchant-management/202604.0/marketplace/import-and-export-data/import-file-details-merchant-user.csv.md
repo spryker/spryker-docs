@@ -4,6 +4,7 @@ last_updated: Mar 01, 2021
 description: This document describes the merchant_user.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html
   - /docs/marketplace/dev/data-import/202311.0/file-details-merchant-user.csv.html
   - /docs/pbc/all/merchant-management/202311.0/marketplace/import-and-export-data/file-details-merchant-user.csv.html
 related:

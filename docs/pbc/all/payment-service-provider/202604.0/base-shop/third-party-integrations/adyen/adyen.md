@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/adyen
 originalArticleId: 0d0cbb43-1cdd-47b8-86a1-a963cef8a788
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/adyen/adyen.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/adyen.html
 related:

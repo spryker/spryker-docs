@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
 originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-roles.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-roles.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-company-roles.html

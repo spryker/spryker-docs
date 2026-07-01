@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
 originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html
   - /2021080/docs/glue-api-customer-account-management-feature-integration
   - /2021080/docs/en/glue-api-customer-account-management-feature-integration
   - /docs/glue-api-customer-account-management-feature-integration

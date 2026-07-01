@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-abstract-products
 originalArticleId: 823ef04b-e614-4022-a30f-6e2130d280d8
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html

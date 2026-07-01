@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/naive-product-centric-approach
 originalArticleId: 6deab3d9-ab71-44b4-a5cb-04759206e12b
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/naive-product-centric-approach.html
   - /2021080/docs/naive-product-centric-approach
   - /2021080/docs/en/naive-product-centric-approach
   - /docs/naive-product-centric-approach

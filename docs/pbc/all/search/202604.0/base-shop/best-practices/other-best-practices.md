@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/other-best-practices
 originalArticleId: 964c3ef2-57fe-4b57-a0bb-45a5cf6527fd
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/other-best-practices.html
   - /2021080/docs/other-best-practices
   - /2021080/docs/en/other-best-practices
   - /docs/other-best-practices

@@ -4,6 +4,7 @@ last_updated: Apr 29, 2022
 description: This document describes the process how to integrate the Marketplace Merchant Custom Prices into the Spryker Merchant Portal.
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-custom-prices-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-merchant-custom-prices-feature-integration.html
 related:
   - title: Marketplace Merchant Custom Prices feature walkthrough

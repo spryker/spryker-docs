@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-management
 originalArticleId: 764db2b0-1a89-4080-8b14-913a04083766
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmanagement.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productmanagement.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productmanagement.html

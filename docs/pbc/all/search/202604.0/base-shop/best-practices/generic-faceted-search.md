@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/generic-faceted-search
 originalArticleId: d83f0692-7e96-413a-8da3-2ddb2a59a21c
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/generic-faceted-search.html
   - /2021080/docs/generic-faceted-search
   - /2021080/docs/en/generic-faceted-search
   - /docs/generic-faceted-search

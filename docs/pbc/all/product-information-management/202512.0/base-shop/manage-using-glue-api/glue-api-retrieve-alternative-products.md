@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
 originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-alternative-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html

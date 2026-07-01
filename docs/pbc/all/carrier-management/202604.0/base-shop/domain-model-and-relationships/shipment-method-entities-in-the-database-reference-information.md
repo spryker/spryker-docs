@@ -6,6 +6,7 @@ template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/docs/reference-information-shipment-method-entities-in-the-database
 originalArticleId: 727c3313-3581-40a6-a567-1ea1f7bda3cc
 redirect_from:
+- /docs/pbc/all/carrier-management/202602.0/base-shop/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
 - /2021080/docs/reference-information-shipment-method-entities-in-the-database
 - /2021080/docs/en/reference-information-shipment-method-entities-in-the-database
 - /docs/reference-information-shipment-method-entities-in-the-database

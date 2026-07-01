@@ -4,7 +4,7 @@ last_updated: Aug 7, 2024
 description: Learn how you can install the Marketplace Merchant feature in to your Spryker B2B Marketplace project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html 
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md -->

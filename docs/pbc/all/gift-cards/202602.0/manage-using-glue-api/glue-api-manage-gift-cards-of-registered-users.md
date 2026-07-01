@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-registered-users
 originalArticleId: 8f557adb-ea3b-498c-872e-b2177d6202ed
 redirect_from:
-  - /docs/pbc/all/gift-cards/202507.0/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html 
+  - /docs/pbc/all/gift-cards/202507.0/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html

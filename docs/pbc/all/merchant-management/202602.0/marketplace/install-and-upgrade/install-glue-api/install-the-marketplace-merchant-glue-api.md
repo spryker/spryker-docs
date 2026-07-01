@@ -4,7 +4,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
-  - /docs/pbc/all/merchant-management/202507.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html 
+  - /docs/pbc/all/merchant-management/202507.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-merchant-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/marketplace-merchant-feature-integration.html
 ---

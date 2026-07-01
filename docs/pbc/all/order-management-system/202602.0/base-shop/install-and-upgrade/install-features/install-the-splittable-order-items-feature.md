@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items-integration
 originalArticleId: ea499c83-900d-4788-bcaf-c7981220b441
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/install-features/install-the-splittable-order-items-feature.html
   - /v3/docs/splittable-order-items-integration
   - /v3/docs/en/splittable-order-items-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/splittable-order-items-feature-integration.html

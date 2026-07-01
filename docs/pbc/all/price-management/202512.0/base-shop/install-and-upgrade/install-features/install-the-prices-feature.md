@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/prices-feature-integration
 originalArticleId: df5285b4-dd81-4f58-bc71-e2734c59892c
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - /2021080/docs/prices-feature-integration
   - /2021080/docs/en/prices-feature-integration
   - /docs/prices-feature-integration

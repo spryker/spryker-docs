@@ -4,6 +4,7 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant_product.csv file to configure marketplace products in your Spryker shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/marketplace/import-and-export-data/import-file-details-merchant-product.csv.html
   - /docs/pbc/all/product-information-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product.csv.html
 related:
   - title: Marketplace Product feature walkthrough

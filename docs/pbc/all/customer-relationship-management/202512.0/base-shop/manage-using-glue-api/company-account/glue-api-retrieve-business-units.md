@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-units
 originalArticleId: 4926546b-9757-4f24-91b1-05202d352c73
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-business-units.html

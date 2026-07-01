@@ -4,6 +4,7 @@ last_updated: Jul 15, 2021
 description: This document describes how to manage marketplace orders in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/marketplace/manage-in-the-back-office/manage-marketplace-orders.html
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/orders/managing-marketplace-orders.html
 related:
   - title: Marketplace Order Management feature overview

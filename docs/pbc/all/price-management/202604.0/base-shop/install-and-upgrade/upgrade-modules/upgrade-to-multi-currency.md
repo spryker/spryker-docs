@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency
 originalArticleId: 95dd322c-44ae-476b-8587-7773565cafc2
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
   - /2021080/docs/mg-multi-currency
   - /2021080/docs/en/mg-multi-currency
   - /docs/mg-multi-currency

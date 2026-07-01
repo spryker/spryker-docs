@@ -4,7 +4,7 @@ last_updated: Jan 05, 2021
 description: This integration guide provides steps on how to integrate the Merchant Portal - Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html 
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/merchant-portal-marketplace-product-feature-integration.html
 related:
   - title: Marketplace Product feature walkthrough

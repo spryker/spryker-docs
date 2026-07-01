@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-integration
 originalArticleId: 517fc527-ef1f-4d52-91b8-23976ed8d283
 redirect_from:
-  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/install-features/install-the-cms-catalog-feature.html 
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/install-and-upgrade/install-features/install-the-cms-catalog-feature.html
   - /2021080/docs/cms-pages-in-search-results-integration
   - /2021080/docs/en/cms-pages-in-search-results-integration
   - /docs/cms-pages-in-search-results-integration

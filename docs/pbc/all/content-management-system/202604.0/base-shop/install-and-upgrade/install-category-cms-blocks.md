@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-category-cms-block
 originalArticleId: ee92c90c-e72e-415e-ab58-19089024d1b5
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/install-category-cms-blocks.html
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-block.html
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-category-cms-blocks.html

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/t-content-search-attribute-cart-based-catalog-personalization
 originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
   - /2021080/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /2021080/docs/en/t-content-search-attribute-cart-based-catalog-personalization
   - /docs/t-content-search-attribute-cart-based-catalog-personalization

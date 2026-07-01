@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/braintree
 originalArticleId: 940c4c06-b484-4eba-b262-14c9c8ba1a58
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/braintree/braintree.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/braintree.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/braintree/braintree.html
 related:

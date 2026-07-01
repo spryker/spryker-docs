@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-configurable-bundle-feature-integration
 originalArticleId: f4ee682d-f18e-43a3-b945-6a287cb62c3e
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - /2021080/docs/glue-api-configurable-bundle-feature-integration
   - /2021080/docs/en/glue-api-configurable-bundle-feature-integration
   - /docs/glue-api-configurable-bundle-feature-integration

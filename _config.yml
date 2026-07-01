@@ -44,6 +44,7 @@ exclude:
   - Rakefile
   - static.json
   - node_modules/
+  - needed_redirects.txt
   - vendor
   - node_modules
   - package.json
@@ -154,6 +155,7 @@ versions:
   '202507.0': '202507.0'
   '202512.0': '202512.0'
   '202602.0': '202602.0'
+  '202604.0': '202604.0'
 
 
 # versioned categories - these must match corresponding directories
@@ -182,6 +184,7 @@ versioned_categories:
       - miscellaneous
       - multi-factor-authentication
       - offer-management
+      - oauth
       - order-management-system
       - price-management
       - payment-service-provider
@@ -195,6 +198,8 @@ versioned_categories:
       - self-service-portal
       - service-point-management
       - shopping-list-and-wishlist
+      - ai-commerce
+      - product-experience-management
       - tax-management
       - user-management
       - warehouse-management-system

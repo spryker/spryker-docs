@@ -1,7 +1,7 @@
 ---
 title: Configure and disconnect flows for payment service providers
 description: Overview of configuration and disconnect flow
-last_updated: Now 08, 2024
+last_updated: Nov 08, 2024
 template: concept-topic-template
 related:
   - title: Asynchronous API for payment service providers

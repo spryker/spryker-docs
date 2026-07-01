@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
 originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

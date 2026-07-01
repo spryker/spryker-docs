@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/agent-assist-feature-integration
 originalArticleId: 7d476b07-db05-404a-b612-0e52ce701b5d
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html
   - /2021080/docs/agent-assist-feature-integration
   - /2021080/docs/en/agent-assist-feature-integration
   - /docs/agent-assist-feature-integration

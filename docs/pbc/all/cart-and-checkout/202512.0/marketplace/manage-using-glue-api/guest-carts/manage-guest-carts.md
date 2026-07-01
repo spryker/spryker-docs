@@ -4,6 +4,7 @@ description: Retrieve details about guest carts and learn what else you can do w
 template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201811.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201903.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html

@@ -2,6 +2,8 @@
 title: Self-Service Portal Models feature overview
 description: Learn how Models group assets into logical families and define spare-part and service compatibility at scale in the Self-Service Portal.
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202602.0/ssp-model-management-feature-overview.html
 last_updated: Dec 18, 2025
 ---
 

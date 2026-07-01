@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-access
 originalArticleId: c74c94ad-1095-4299-8675-7128bf96d855
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-in-the-back-office/manage-customer-access.html
   - /2021080/docs/managing-customer-access
   - /2021080/docs/en/managing-customer-access
   - /docs/managing-customer-access

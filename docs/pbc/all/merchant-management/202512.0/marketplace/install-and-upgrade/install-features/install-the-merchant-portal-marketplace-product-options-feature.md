@@ -4,6 +4,7 @@ description: This document describes the process how to integrate the Merchant P
 template: feature-integration-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/merchant-portal-marketplace-product-options-management-feature-integration.html
 related:
   - title: Marketplace Product Options feature walkthrough

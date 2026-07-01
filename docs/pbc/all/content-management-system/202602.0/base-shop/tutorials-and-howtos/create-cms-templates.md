@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-cms-templates
 originalArticleId: 6f52ee42-6c1a-4d0b-865b-3512b7f4b9aa
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/tutorials-and-howtos/create-cms-templates.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/tutorials-and-howtos/create-cms-templates.html
   - /docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html

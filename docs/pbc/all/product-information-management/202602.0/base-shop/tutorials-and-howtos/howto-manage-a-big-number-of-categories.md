@@ -5,7 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-manage-a-big-number-of-categories
 originalArticleId: 54f92b50-1aa0-44db-8a7c-b3eb4dbaa99c
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
   - /2021080/docs/ht-manage-a-big-number-of-categories
   - /2021080/docs/en/ht-manage-a-big-number-of-categories
   - /docs/ht-manage-a-big-number-of-categories

@@ -4,6 +4,7 @@ description: Learn how to create a new Gui table filter type within your Spryker
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/tutorials-and-howtos/create-gui-table-filter-types.html
   - /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 related:
   - title: How to create a new Gui table

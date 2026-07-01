@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-driven-ranking
 originalArticleId: e0923c0d-7905-4117-aa51-ed4b33d97723
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/data-driven-ranking.html
   - /2021080/docs/data-driven-ranking
   - /2021080/docs/en/data-driven-ranking
   - /docs/data-driven-ranking

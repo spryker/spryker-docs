@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-guest-users
 originalArticleId: 59818732-fa5a-43df-acd9-3d4ea91ee1ac
 redirect_from:
-  - /docs/pbc/all/gift-cards/202507.0/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html 
+  - /docs/pbc/all/gift-cards/202507.0/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html

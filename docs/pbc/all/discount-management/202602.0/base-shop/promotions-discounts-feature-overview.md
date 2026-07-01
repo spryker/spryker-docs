@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
 originalArticleId: bdb56333-569c-42ac-9a12-2f8ecc84c6b5
 redirect_from:
-  - /docs/pbc/all/discount-management/202512.0/base-shop/promotions-discounts-feature-overview.html 
+  - /docs/pbc/all/discount-management/202512.0/base-shop/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/201903.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-term-auto-completion
 originalArticleId: 3856974a-ffa5-411d-ae2d-328dcfe5b405
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/multi-term-auto-completion.html
   - /2021080/docs/multi-term-auto-completion
   - /2021080/docs/en/multi-term-auto-completion
   - /docs/multi-term-auto-completion

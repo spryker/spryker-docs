@@ -4,6 +4,7 @@ last_updated: Aug 12, 2021
 description: The extensive Cart module lets your customers add products to their cart by simply selecting the desired quantity.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/extend-and-customize/cart-module-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-module-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/cart-feature-walkthrough/cart-module-reference-information.html
   - /docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html

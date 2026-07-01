@@ -4,6 +4,7 @@ description: Learn how you can integrate the Payone app into your Spryker shop u
 template: howto-guide-template
 last_updated: Sep 22, 2025
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html

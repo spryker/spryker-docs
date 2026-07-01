@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-based-project
 originalArticleId: 864ebca6-3170-4057-9a6b-df4affad73a7
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - /2021080/docs/updating-a-spryker-based-project
   - /2021080/docs/en/updating-a-spryker-based-project
   - /docs/updating-a-spryker-based-project

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-callback
 originalArticleId: 620ac3f8-81fc-4aa3-b8a4-cc489dad20b5
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/crefopay/crefopay-callbacks.html
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay-callbacks.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/crefopay/crefopay-callbacks.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/crefopay/crefopay-callbacks.html

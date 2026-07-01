@@ -4,6 +4,7 @@ description: Learn how you can create a new Gui tables within your Spryker B2B M
 template: howto-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/tutorials-and-howtos/create-gui-tables.html
   - /docs/marketplace/dev/howtos/how-to-create-gui-table.html
 related:
   - title: How to extend an existing Gui table

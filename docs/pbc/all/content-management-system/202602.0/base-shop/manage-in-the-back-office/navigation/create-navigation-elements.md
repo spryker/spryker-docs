@@ -4,7 +4,7 @@ description: Learn how to create and manage navigation elements in the Spryker B
 last_updated: Nov 22, 2022
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html
   - /2021080/docs/managing-navigation-elements
   - /2021080/docs/en/managing-navigation-elements
   - /docs/managing-navigation-elements

@@ -3,6 +3,8 @@ title: Product Attachments overview
 description: Use Product Attachments to manage product-related downloadable resources in the Back Office and display them in the Downloads section on the product details page.
 last_updated: Feb 20, 2026
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/feature-overviews/product-feature-overview/product-attachments-overview.html
 ---
 
 The Product Attachments feature lets you add external links to product-related resources—such as PDFs, manuals, or datasheets—directly to abstract products in the Back Office. Customers can access these resources in the **Downloads** section on the product details page (PDP). This feature is useful in B2B scenarios where technical documentation or compliance certificates support purchasing decisions.

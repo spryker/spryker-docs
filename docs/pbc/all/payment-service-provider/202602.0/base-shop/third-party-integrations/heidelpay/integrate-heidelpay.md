@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-integration-scos
 originalArticleId: 05ad4c88-a849-4d74-bdb3-898ab0b4e74a
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-heidelpay.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-heidelpay.html
   - /2021080/docs/heidelpay-integration-scos
   - /2021080/docs/en/heidelpay-integration-scos
   - /docs/heidelpay-integration-scos

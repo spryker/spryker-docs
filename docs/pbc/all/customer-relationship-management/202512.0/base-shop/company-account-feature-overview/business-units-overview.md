@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-units-overview
 originalArticleId: 7b1313e3-9240-4a26-a9ef-b00a8eb20fad
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/company-account-feature-overview/business-units-overview.html
   - /2021080/docs/business-units-overview
   - /2021080/docs/en/business-units-overview
   - /docs/business-units-overview

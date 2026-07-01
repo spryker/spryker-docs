@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-management-system-multi-thread
 originalArticleId: 9472c755-7a40-4f86-b20f-1586c16385fb
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html
   - /2021080/docs/order-management-system-multi-thread
   - /2021080/docs/en/order-management-system-multi-thread
   - /docs/order-management-system-multi-thread

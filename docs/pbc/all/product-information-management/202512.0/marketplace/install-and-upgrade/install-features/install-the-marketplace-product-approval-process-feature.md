@@ -4,6 +4,7 @@ description: Learn how to integrate the Marketplace Product Approval Process fea
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-product-approval-process-feature-integration.html
 related:
   - title: Marketplace Product Approval Process feature walkthrough

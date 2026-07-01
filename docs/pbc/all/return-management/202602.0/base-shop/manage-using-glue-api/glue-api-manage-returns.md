@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-the-returns
 originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531
 redirect_from:
-  - /docs/pbc/all/return-management/202512.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html 
+  - /docs/pbc/all/return-management/202512.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html
   - /docs/pbc/all/return-management/202311.0/manage-using-glue-api/glue-api-manage-returns.html
   - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-returns.html
 related:

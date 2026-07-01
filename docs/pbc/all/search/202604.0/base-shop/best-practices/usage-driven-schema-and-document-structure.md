@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/usage-driven-schema-structure
 originalArticleId: 1931ede8-c28d-4c12-b196-7990d672920f
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/usage-driven-schema-and-document-structure.html
   - /2021080/docs/usage-driven-schema-structure
   - /2021080/docs/en/usage-driven-schema-structure
   - /docs/usage-driven-schema-structure

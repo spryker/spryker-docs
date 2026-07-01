@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-capture-refund-processes
 originalArticleId: b57a3941-69d9-4057-a0b7-c17964e161bf
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/crefopay/crefopay-capture-and-refund-processes.html
   - /2021080/docs/crefopay-capture-refund-processes
   - /2021080/docs/en/crefopay-capture-refund-processes
   - /docs/crefopay-capture-refund-processes

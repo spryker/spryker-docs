@@ -3,7 +3,7 @@ title: "File details: product_packaging_unit.csv"
 description: Use the product_packaging_unit.csv file to configure information about product packaging units in your Spryker shop.
 template: data-import-template
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
 last_updated: Jun 1, 2023
 related:
   - title: Execution order of data importers in Demo Shop

@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-relations
 originalArticleId: 3e17c514-3483-4419-8e1d-d9ae1ecbd97c
 redirect_from:
+  - /docs/pbc/all/product-relationship-management/202602.0/manage-in-the-back-office/create-product-relations.html
   - /2021080/docs/creating-product-relations
   - /2021080/docs/en/creating-product-relations
   - /docs/creating-product-relations

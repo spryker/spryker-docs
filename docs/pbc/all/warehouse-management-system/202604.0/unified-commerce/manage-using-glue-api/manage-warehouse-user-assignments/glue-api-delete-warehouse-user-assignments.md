@@ -2,6 +2,8 @@
 title: "Glue API: Delete warehouse user assignments"
 description: Learn how to activate and deactivate warehouse assignments using Glue API
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html
 last_updated: Dec 18, 2023
 ---
 

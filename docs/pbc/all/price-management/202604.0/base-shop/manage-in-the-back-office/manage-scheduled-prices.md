@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-scheduled-prices
 originalArticleId: 27e7b867-18f5-4872-9e28-a6da730af458
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
   - /2021080/docs/managing-scheduled-prices
   - /2021080/docs/en/managing-scheduled-prices
   - /docs/managing-scheduled-prices

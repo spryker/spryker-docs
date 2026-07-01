@@ -3,6 +3,8 @@ title: "Back Office: Add SSP assets"
 description: Learn how to add assets in the Back Office
 last_updated: May 23, 2025
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202602.0/manage-in-the-back-office/back-office-add-ssp-assets.html
 ---
 
 This document describes how to add assets managed by companies.

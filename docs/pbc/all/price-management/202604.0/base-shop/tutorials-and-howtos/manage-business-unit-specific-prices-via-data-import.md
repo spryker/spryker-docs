@@ -4,6 +4,7 @@ description: Manage business unit prices for your Spyker based store using data 
 last_updated: Feb 04, 2022
 template: howto-guide-template
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/tutorials-and-howtos/manage-business-unit-specific-prices-via-data-import.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
   - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html

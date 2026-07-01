@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billie
 originalArticleId: 5274b1b6-4f70-425b-99a9-d8a266193110
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/billie.html
   - /2021080/docs/billie
   - /2021080/docs/en/billie
   - /docs/billie

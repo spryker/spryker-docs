@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-refunds
 originalArticleId: 36f1525b-6f90-41be-b0bf-75d368e91b8c
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/view-refunds.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/view-refunds.html
   - /2021080/docs/viewing-refunds
   - /2021080/docs/en/viewing-refunds
   - /docs/viewing-refunds

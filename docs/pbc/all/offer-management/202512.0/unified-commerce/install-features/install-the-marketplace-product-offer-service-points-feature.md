@@ -4,6 +4,7 @@ description: Learn how you can install and implement  the Marketplace Product Of
 last_updated: July 05, 2023
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/offer-management/202602.0/unified-commerce/install-features/install-the-marketplace-product-offer-service-points-feature.html
   - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-product-offer-service-points-feature.html
 ---
 

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/klarna
 originalArticleId: 19d4dba2-c122-4a37-8170-e8ad49b71821
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/klarna/klarna.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/klarna.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna.html
 related:

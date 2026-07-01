@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/pricing
 originalArticleId: c6b46b26-89ca-4a40-b927-e36fc14266e9
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/import-and-export-data/import-and-export-price-management-data.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/pricing/pricing.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/import-of-prices.html
   - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-and-export-price-management-data.html

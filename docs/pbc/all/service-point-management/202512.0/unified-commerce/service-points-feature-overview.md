@@ -4,6 +4,7 @@ description: General overview of the Spryker Service Points feature enhancing yo
 template: concept-topic-template
 last_updated: Jan 19, 2024
 redirect_from:
+  - /docs/pbc/all/service-point-management/202602.0/unified-commerce/service-points-feature-overview.html
   - /docs/pbc/all/service-point-management/202507.0/unified-commerce/service-points-feature-overview.html
 ---
 

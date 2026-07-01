@@ -4,7 +4,7 @@ description: Learn about the Spryker Marketplace product feature for your Spryke
 template: concept-topic-template
 last_updated: Jan 12, 2024
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/marketplace/marketplace-product-feature-overview.html 
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/marketplace-product-feature-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-product-feature-overview.html
   - /docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html
 related:

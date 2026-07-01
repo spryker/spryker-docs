@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-merchantrelationshipproductlistgui
 originalArticleId: 4aa4e522-7751-4929-9565-39208907e75c
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-merchantrelationshipproductlistgui.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-merchantrelationshipproductlistgui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchantrelationshipproductlistgui.html

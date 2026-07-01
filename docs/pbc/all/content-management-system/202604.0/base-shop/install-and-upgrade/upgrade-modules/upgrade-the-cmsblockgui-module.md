@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-gui
 originalArticleId: dd872c42-639a-4362-96bc-8b921a2b6ad6
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
   - /2021080/docs/mg-cms-block-gui
   - /2021080/docs/en/mg-cms-block-gui
   - /docs/mg-cms-block-gui

@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-review-feature-configuration
 originalArticleId: ea370505-baab-48a6-8dc1-879739dd816a
 redirect_from:
+  - /docs/pbc/all/ratings-reviews/202602.0/tutorials-and-howtos/howto-configure-product-reviews.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
   - /docs/pbc/all/ratings-reviews/202204.0/tutorials-and-howtos/howto-configure-product-reviews.html
 related:

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/akeneo
 originalArticleId: 830eeacd-b5db-4591-b554-4fff82b82566
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/third-party-integrations/akeneo/akeneo.html
   - /2021080/docs/akeneo
   - /2021080/docs/en/akeneo
   - /docs/akeneo

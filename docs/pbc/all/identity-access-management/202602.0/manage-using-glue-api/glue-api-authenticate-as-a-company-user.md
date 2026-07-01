@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-company-user
 originalArticleId: 90ca8812-0b3c-473d-bcd7-b12805da2070
 redirect_from:
-  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html 
+  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/authenticating-as-a-company-user.html

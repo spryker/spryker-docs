@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-manual-order-entry-gui
 originalArticleId: b1063ac2-eb74-45b3-8af5-f2f35d9325ce
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html
   - /2021080/docs/mg-manual-order-entry-gui
   - /2021080/docs/en/mg-manual-order-entry-gui
   - /docs/mg-manual-order-entry-gui

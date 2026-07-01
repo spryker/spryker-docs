@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-integrate-and-use-precise-decimal-numbers
 originalArticleId: 05e89c8e-a944-46ff-b202-760c7c4d5f87
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
   - /2021080/docs/ht-integrate-and-use-precise-decimal-numbers
   - /2021080/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /docs/ht-integrate-and-use-precise-decimal-numbers

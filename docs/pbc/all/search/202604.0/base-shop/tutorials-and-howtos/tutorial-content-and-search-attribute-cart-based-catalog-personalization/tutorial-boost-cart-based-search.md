@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/boosting-cart-based-search
 originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-boost-cart-based-search.html
   - /2021080/docs/boosting-cart-based-search
   - /2021080/docs/en/boosting-cart-based-search
   - /docs/boosting-cart-based-search

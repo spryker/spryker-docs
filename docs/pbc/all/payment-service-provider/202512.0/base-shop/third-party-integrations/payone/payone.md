@@ -4,6 +4,7 @@ description: Learn all about Spryker partner PayOne and how to integrate PayOne 
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/payone/payone.html
   - /docs/pbc/all/payment-service-provider/202507.0/base-shop/third-party-integrations/payone/payone.html
 ---
 

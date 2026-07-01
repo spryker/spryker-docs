@@ -4,7 +4,7 @@ description: Learn how to retrieve cart rules, vouchers, and promotional items i
 last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/discount-management/202507.0/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html 
+  - /docs/pbc/all/discount-management/202507.0/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html

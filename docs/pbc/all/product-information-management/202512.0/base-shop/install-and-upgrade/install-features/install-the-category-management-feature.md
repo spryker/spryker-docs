@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-integration
 originalArticleId: fc4add5d-25e3-4c5c-b171-98726a915e66
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
   - /2021080/docs/category-management-feature-integration
   - /2021080/docs/en/category-management-feature-integration
   - /docs/category-management-feature-integration

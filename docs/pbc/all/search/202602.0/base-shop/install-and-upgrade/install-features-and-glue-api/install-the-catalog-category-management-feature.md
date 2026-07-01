@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-category-management-feature-integration
 originalArticleId: c0523c5a-4440-4d20-9a92-6d446b613a37
 redirect_from:
-  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html 
+  - /docs/pbc/all/search/202507.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html
   - /2021080/docs/catalog-category-management-feature-integration
   - /2021080/docs/en/catalog-category-management-feature-integration
   - /docs/catalog-category-management-feature-integration

@@ -3,6 +3,8 @@ title: "Back Office: Upload SSP files"
 description: Learn how to add assets in the Back Office
 last_updated: May 23, 2025
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202602.0/manage-in-the-back-office/back-office-upload-ssp-files.html
 ---
 
 1. In the Back Office, go to **Customer Portal** > **File Attachments**.

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-gift-cards
 originalArticleId: 825ee2b5-083e-42e3-ae76-738ecb396112
 redirect_from:
+  - /docs/pbc/all/gift-cards/202602.0/install-and-upgrade/enable-gift-cards.html
   - /2021080/docs/enabling-gift-cards
   - /2021080/docs/en/enabling-gift-cards
   - /docs/enabling-gift-cards

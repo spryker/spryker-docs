@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-items-feature-integration
 originalArticleId: d3a7785f-f4f7-4d9e-8b8c-b44ae4dd278a
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
   - /2021080/docs/content-items-feature-integration
   - /2021080/docs/en/content-items-feature-integration
   - /docs/content-items-feature-integration

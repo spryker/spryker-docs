@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-agent-assist-feature-integration
 originalArticleId: 3edbb45b-83fc-4123-ac09-3c80a98ab670
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
   - /2021080/docs/glue-api-agent-assist-feature-integration
   - /2021080/docs/en/glue-api-agent-assist-feature-integration
   - /docs/glue-api-agent-assist-feature-integration

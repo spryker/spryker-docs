@@ -3,6 +3,8 @@ title: "Back Office: Attach SSP files to assets and company entities"
 description: Learn how to add assets in the Back Office
 last_updated: May 23, 2025
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202602.0/manage-in-the-back-office/back-office-attach-ssp-files-to-assets-and-entities.html
 ---
 
 This document describes how to add assets managed by companies.

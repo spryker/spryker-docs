@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlists
 originalArticleId: b4729aa0-f527-4fd0-bf46-6d8e62b3013e
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-wishlists/managing-wishlists.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-via-glue-api/manage-wishlists-via-glue-api.html

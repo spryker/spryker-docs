@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-ordersrestapi
 originalArticleId: 03c5442b-1b7e-4ae7-93cc-09424333732c
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /2021080/docs/mg-ordersrestapi
   - /2021080/docs/en/mg-ordersrestapi
   - /docs/mg-ordersrestapi

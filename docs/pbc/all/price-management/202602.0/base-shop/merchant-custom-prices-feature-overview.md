@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-custom-prices-feature-overview
 originalArticleId: 903b5851-5d21-4823-9ca4-695a55355b02
 redirect_from:
-  - /docs/pbc/all/price-management/202512.0/base-shop/merchant-custom-prices-feature-overview.html 
+  - /docs/pbc/all/price-management/202512.0/base-shop/merchant-custom-prices-feature-overview.html
   - /2021080/docs/merchant-custom-prices-feature-overview
   - /2021080/docs/en/merchant-custom-prices-feature-overview
   - /docs/merchant-custom-prices-feature-overview

@@ -3,6 +3,8 @@ title: "Glue API: Activate and deactivate MFA"
 description: This article explains how to activate and decativate MFA methods using Glue API
 last_updated: Aug 22, 2025
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/multi-factor-authentication/202602.0/manage-using-glue-api/glue-api-activate-and-deactivate-mfa.html
 ---
 
 This document describes how to activate Multi-Factor Authentication (MFA) methods to send requests to protected resources. To check if MFA is activated for your user, see [Retrieve MFA methods](/docs/pbc/all/multi-factor-authentication/{{page.version}}/manage-using-glue-api/glue-api-retrieve-mfa-methods.html).

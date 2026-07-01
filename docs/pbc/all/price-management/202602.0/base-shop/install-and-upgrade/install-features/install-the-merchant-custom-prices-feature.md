@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-custom-prices-feature-integration
 originalArticleId: 7b16873a-0326-4f7c-ae97-62bd7e0c3b81
 redirect_from:
-  - /docs/pbc/all/price-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html 
+  - /docs/pbc/all/price-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
   - /2021080/docs/merchant-custom-prices-feature-integration
   - /2021080/docs/en/merchant-custom-prices-feature-integration
   - /docs/merchant-custom-prices-feature-integration

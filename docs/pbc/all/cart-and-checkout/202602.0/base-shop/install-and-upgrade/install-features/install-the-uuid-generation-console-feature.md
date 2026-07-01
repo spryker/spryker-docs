@@ -4,7 +4,7 @@ description: Learn to install Spryker Uuid Generation Console feature in to your
 last_updated: Jul 4, 2022
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html
   - /docs/scos/dev/feature-integration-guides/202005.0/uuid-generation-console-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202009.0/uuid-generation-console-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/uuid-generation-console-feature-integration.html

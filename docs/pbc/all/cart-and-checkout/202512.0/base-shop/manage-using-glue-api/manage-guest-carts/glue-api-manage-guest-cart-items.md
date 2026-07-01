@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
 originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/guest-carts/managing-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html

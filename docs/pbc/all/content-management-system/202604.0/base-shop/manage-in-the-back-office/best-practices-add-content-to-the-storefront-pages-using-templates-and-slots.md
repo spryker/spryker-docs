@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
 originalArticleId: 48b5c164-eb28-4c1a-b33c-66d613203bfa
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
   - /2021080/docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/adding-content-to-storefront-pages-using-templates-slots-best-practices

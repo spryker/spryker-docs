@@ -7,6 +7,7 @@ related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
 redirect_from:
+- /docs/pbc/all/product-relationship-management/202602.0/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html
 - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
 ---
 

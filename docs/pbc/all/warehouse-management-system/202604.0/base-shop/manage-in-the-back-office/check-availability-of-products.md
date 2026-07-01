@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-products-availability
 originalArticleId: a694b2d4-3f66-40fd-8539-d8b455c2da8f
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/manage-in-the-back-office/check-availability-of-products.html
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/availability/managing-products-availability.html  

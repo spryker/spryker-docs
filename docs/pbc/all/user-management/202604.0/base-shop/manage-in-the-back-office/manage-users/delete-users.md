@@ -4,6 +4,7 @@ description: Learn how you can delete users directly in the back office of your 
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/manage-in-the-back-office/manage-users/delete-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/deleting-users.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/delete-users.html
 related:

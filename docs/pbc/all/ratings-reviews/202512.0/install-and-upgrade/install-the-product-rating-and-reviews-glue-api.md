@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-rating-reviews-feature-integration
 originalArticleId: 6634ada1-2f5a-454b-a5b3-9319b7e90cbf
 redirect_from:
+  - /docs/pbc/all/ratings-reviews/202602.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
   - /2021080/docs/glue-api-product-rating-reviews-feature-integration
   - /2021080/docs/en/glue-api-product-rating-reviews-feature-integration
   - /docs/glue-api-product-rating-reviews-feature-integration

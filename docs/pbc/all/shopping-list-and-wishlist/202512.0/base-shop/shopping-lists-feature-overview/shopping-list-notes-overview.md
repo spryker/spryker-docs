@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-list-notes-overview
 originalArticleId: f3bbe202-94da-4e64-9480-d57af69fb057
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/shopping-lists-feature-overview/shopping-list-notes-overview.html
   - /2021080/docs/shopping-list-notes-overview
   - /2021080/docs/en/shopping-list-notes-overview
   - /docs/shopping-list-notes-overview

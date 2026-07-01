@@ -4,6 +4,7 @@ description: learn how to create new product offers in the Spryker Marketplace M
 template: back-office-user-guide-template
 last_updated: Jan 9, 2024
 redirect_from:
+  - /docs/pbc/all/offer-management/202602.0/marketplace/manage-in-the-merchant-portal/create-product-offers.html
   - /docs/pbc/all/offer-management/202311.0/marketplace/manage-product-offers.html
 related:
   - title: Marketplace Product Offer feature overview

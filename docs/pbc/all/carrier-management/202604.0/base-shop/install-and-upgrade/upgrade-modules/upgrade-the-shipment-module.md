@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment
 originalArticleId: 4c1484d3-4e38-4cc1-b03f-82ef2136ec43
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shipment.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 related:

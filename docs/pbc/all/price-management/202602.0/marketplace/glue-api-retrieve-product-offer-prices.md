@@ -4,7 +4,7 @@ description: Retrieve Marketplace product offer prices via Spryker Glue API for 
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/price-management/202512.0/marketplace/glue-api-retrieve-product-offer-prices.html 
+  - /docs/pbc/all/price-management/202512.0/marketplace/glue-api-retrieve-product-offer-prices.html
   - /docs/marketplace/dev/glue-api-guides/202311.0/product-offers/retrieving-product-offer-prices.html
 related:
   - title: Retrieving product offers

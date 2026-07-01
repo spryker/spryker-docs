@@ -4,7 +4,7 @@ description: Retrieve product review information about concrete products using t
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/ratings-reviews/202507.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html 
+  - /docs/pbc/all/ratings-reviews/202507.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
 ---

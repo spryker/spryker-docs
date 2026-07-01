@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-attributes
 originalArticleId: 98bec018-82ee-4960-aed5-fc13ad8429d5
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
   - /2021080/docs/managing-attributes
   - /2021080/docs/en/managing-attributes
   - /docs/managing-attributes

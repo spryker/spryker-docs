@@ -4,6 +4,7 @@ description: Learn how to retrieve merchant opening hours in your Spryker market
 template: glue-api-storefront-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchant-opening-hours.html
 related:
   - title: Retrieving merchants

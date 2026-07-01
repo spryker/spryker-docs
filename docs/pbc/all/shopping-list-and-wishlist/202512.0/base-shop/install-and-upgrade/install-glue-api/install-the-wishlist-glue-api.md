@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-wishlist-feature-integration
 originalArticleId: 7bd16038-1571-479b-b746-ee61f76b8c48
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html
   - /2021080/docs/glue-api-wishlist-feature-integration
   - /2021080/docs/en/glue-api-wishlist-feature-integration
   - /docs/glue-api-wishlist-feature-integration

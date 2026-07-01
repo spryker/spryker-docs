@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-discontinuedcsv
 originalArticleId: 3b2c40f5-ad6d-4ff5-9b65-b058e1ff9419
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-discontinued.csv.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html

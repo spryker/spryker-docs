@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses
 originalArticleId: f4e8cd51-98cc-44d9-83aa-293f510d75a5
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html
   - /2021080/docs/managing-customer-addresses
   - /2021080/docs/en/managing-customer-addresses
   - /docs/managing-customer-addresses

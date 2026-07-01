@@ -4,7 +4,7 @@ description: Learn how to integrate the Spryker Warehouse picking feature into y
 last_updated: Feb 10, 2023
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/warehouse-management-system/202507.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html 
+  - /docs/pbc/all/warehouse-management-system/202507.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-warehouse-picking-feature.html
 ---
 

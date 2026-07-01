@@ -3,6 +3,8 @@ title: "Best practices: working with analytics"
 description: Learn how to analyze and present shop data.
 last_updated: Oct 24, 2024
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/business-intelligence/202602.0/amazon-quicksight-third-party-integration/best-practices-working-with-analytics.html
 related:
 ---
 

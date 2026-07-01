@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/state-machine-cronjob
 originalArticleId: 0a565727-43ef-4484-ae01-a0384a70e4d6
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/datapayload-conversion/state-machine/state-machine-console-commands.html
   - /2021080/docs/state-machine-cronjob
   - /2021080/docs/en/state-machine-cronjob
   - /docs/state-machine-cronjob

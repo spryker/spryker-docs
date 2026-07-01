@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-approval-process-feature-integration
 originalArticleId: ac858362-21ea-4a7a-8369-b82cee1cc226
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
   - /2021080/docs/shipment-approval-process-feature-integration
   - /2021080/docs/en/shipment-approval-process-feature-integration
   - /docs/shipment-approval-process-feature-integration

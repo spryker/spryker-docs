@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestwidget
 originalArticleId: ce9c0b14-5b78-455d-99a6-8b239aca416b
 redirect_from:
-  - /docs/pbc/all/request-for-quote/202512.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html 
+  - /docs/pbc/all/request-for-quote/202512.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
   - /2021080/docs/mg-quoterequestwidget
   - /2021080/docs/en/mg-quoterequestwidget
   - /docs/mg-quoterequestwidget

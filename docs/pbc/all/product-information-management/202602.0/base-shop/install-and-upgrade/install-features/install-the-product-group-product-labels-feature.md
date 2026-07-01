@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-group-product-labels-feature-integration
 originalArticleId: d4867491-433c-4986-98a8-679d70abb507
 redirect_from:
-  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html 
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
   - /2021080/docs/product-group-product-labels-feature-integration
   - /2021080/docs/en/product-group-product-labels-feature-integration
   - /docs/product-group-product-labels-feature-integration

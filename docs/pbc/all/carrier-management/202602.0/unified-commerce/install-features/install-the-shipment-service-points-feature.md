@@ -4,7 +4,7 @@ description: Learn how to integrate the Shipment + Service Points feature into y
 last_updated: Aug 28, 2023
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/carrier-management/202507.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html 
+  - /docs/pbc/all/carrier-management/202507.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-shipment-service-points-feature.html
 ---
 

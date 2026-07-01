@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-by-easycredit
 originalArticleId: 86cf0b54-43b8-4585-adef-0245c01e702a
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratenkauf-by-easycredit.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 related:

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-overview
 originalArticleId: d12e5fdb-b74a-4d9b-91d9-866f330b46df
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
   - /docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions

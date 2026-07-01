@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-currencies-per-store-configuration
 originalArticleId: cc037cf2-9504-4eac-a288-0a73691d0f2f
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
   - /2021080/docs/multiple-currencies-per-store-configuration
   - /2021080/docs/en/multiple-currencies-per-store-configuration
   - /docs/multiple-currencies-per-store-configuration

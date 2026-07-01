@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quick-add-to-cart-discontinued-products-feature-integration
 originalArticleId: 9a383479-cd7b-4b57-993c-e0f707cdb015
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html 
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html
   - /2021080/docs/quick-add-to-cart-discontinued-products-feature-integration
   - /2021080/docs/en/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/quick-add-to-cart-discontinued-products-feature-integration

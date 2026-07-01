@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option-cart-connector
 originalArticleId: 4a06f2aa-ca8c-4266-a8c0-b3ad6ff0a094
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoptioncartconnector.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productoptioncartconnector.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productoptioncartconnector.html

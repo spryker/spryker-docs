@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-access-feature-integration
 originalArticleId: ec9bfc81-8019-4d55-b885-d63c9cc6a961
 redirect_from:
+  - /docs/pbc/all/identity-access-management/202602.0/install-and-upgrade/install-the-customer-access-glue-api.html
   - /2021080/docs/glue-api-customer-access-feature-integration
   - /2021080/docs/en/glue-api-customer-access-feature-integration
   - /docs/glue-api-customer-access-feature-integration

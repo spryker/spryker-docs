@@ -4,6 +4,7 @@ description: Learn how to edit translations in the Spryker Cloud Commerce OS Bac
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:
+- /docs/pbc/all/miscellaneous/202602.0/manage-in-the-back-office/edit-translations.html
 - /docs/scos/user/back-office-user-guides/202204.0/administration/glossary/edit-translations.html
 ---
 

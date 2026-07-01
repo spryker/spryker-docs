@@ -4,7 +4,7 @@ description: Learn how to integrate the Marketplace Product Offer + Promotions &
 last_updated: Dec 17, 2024
 template: feature-integration-guide-template  
 redirect_from:
-  - /docs/pbc/all/offer-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html 
+  - /docs/pbc/all/offer-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html
   - /docs/pbc/all/offer-management/202505.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-promotions-and-discounts-feature.html
 ---
 

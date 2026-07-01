@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-spryker-core-feature-integration
 originalArticleId: e7a1a56e-b305-4a95-87b4-7cf7d6868603
 redirect_from:
-  - /docs/pbc/all/miscellaneous/202512.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html 
+  - /docs/pbc/all/miscellaneous/202512.0/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
   - /2021080/docs/glue-api-spryker-core-feature-integration
   - /2021080/docs/en/glue-api-spryker-core-feature-integration
   - /docs/glue-api-spryker-core-feature-integration

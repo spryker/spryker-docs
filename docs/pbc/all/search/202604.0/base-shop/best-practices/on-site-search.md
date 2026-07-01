@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-design-patterns
 originalArticleId: a6003c30-f01e-4baa-a0f1-64fb55ce5217
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/on-site-search.html
   - /2021080/docs/search-design-patterns
   - /2021080/docs/en/search-design-patterns
   - /docs/search-design-patterns

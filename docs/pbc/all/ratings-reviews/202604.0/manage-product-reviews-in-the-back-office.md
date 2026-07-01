@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-reviews
 originalArticleId: e3dff161-c044-4811-8c15-e9513d64ff9a
 redirect_from:
+  - /docs/pbc/all/ratings-reviews/202602.0/manage-product-reviews-in-the-back-office.html
   - /2021080/docs/managing-product-reviews
   - /2021080/docs/en/managing-product-reviews
   - /docs/managing-product-reviews

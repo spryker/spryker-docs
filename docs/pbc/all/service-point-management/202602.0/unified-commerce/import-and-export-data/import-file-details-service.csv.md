@@ -4,7 +4,7 @@ description: Learn how to configure service information via importing data throu
 last_updated: Nov 23, 2023
 template: data-import-template
 redirect_from:
-  - /docs/pbc/all/service-point-management/202512.0/unified-commerce/import-and-export-data/import-file-details-service.csv.html 
+  - /docs/pbc/all/service-point-management/202512.0/unified-commerce/import-and-export-data/import-file-details-service.csv.html
 ---
 
 This document describes the `service.csv` file to configure [services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).

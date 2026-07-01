@@ -2,6 +2,8 @@
 title: Self-Service Portal asset-based catalog feature overview
 description: Learn how the asset-based catalog uses models, assets, and product lists to show only compatible spare parts and services to customers.
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/self-service-portal/202602.0/ssp-asset-based-catalog-feature-overview.html
 last_updated: Dec 18, 2025
 ---
 

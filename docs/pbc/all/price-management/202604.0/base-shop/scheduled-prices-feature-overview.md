@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/scheduled-prices-feature-overview
 originalArticleId: 8a5fc988-3b43-4467-9cd6-97d54a039d1d
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/scheduled-prices-feature-overview.html
   - /docs/scos/user/features/202108.0/scheduled-prices-feature-overview.html
   - /docs/scos/user/features/202311.0/scheduled-prices-feature-overview.html
   - /docs/pbc/all/price-management/202204.0/base-shop/scheduled-prices-feature-overview.html

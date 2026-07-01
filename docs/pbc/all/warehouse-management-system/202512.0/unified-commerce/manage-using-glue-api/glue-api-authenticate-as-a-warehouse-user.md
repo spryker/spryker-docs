@@ -4,6 +4,7 @@ description: Learn how to authenticate as a warehouse user using Glue API in you
 last_updated: Nov 13, 2023
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html
   - /docs/pbc/all/warehouse-management-system/202507.0/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html
 ---
 

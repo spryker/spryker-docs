@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/afterpay
 originalArticleId: 3ed914a1-aa6a-472e-b213-f5e60058cbb1
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/afterpay/afterpay.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/afterpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/afterpay/afterpay.html
 related:

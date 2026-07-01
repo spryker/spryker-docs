@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-business-to-business-model
 originalArticleId: 14cda40b-6339-44f2-971c-b4282dcf02c8
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/crefopay/crefopay-enable-b2b-payments.html
   - /2021080/docs/crefopay-business-to-business-model
   - /2021080/docs/en/crefopay-business-to-business-model
   - /docs/crefopay-business-to-business-model

@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-users
 originalArticleId: ff15efb5-30c1-4b0e-b56d-596d90d40123
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-users/create-company-users.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-users/create-company-users.html
   - /2021080/docs/managing-company-users
   - /2021080/docs/en/managing-company-users
   - /docs/managing-company-users

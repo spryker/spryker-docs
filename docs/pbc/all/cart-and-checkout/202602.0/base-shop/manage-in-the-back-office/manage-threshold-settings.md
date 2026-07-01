@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-threshold-settings
 originalArticleId: bd5d48d1-0890-442b-8441-01a9a1967a37
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/manage-threshold-settings.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/manage-threshold-settings.html
   - /2021080/docs/managing-threshold-settings
   - /2021080/docs/en/managing-threshold-settings
   - /docs/managing-threshold-settings

@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-quantitycsv
 originalArticleId: 9959fdc1-deed-48a2-9cea-46c272cb247f
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/import-and-export-data/import-file-details-product-quantity.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
   - /docs/pbc/all/cart-and-checkout/202311.0/import-and-export-data/file-details-product-quantity.csv.html

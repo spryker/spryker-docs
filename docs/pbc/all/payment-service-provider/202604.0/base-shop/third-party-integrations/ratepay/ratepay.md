@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ratepay
 originalArticleId: 76f600d9-1b7f-4a0a-81e6-4c2dc466063c
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/ratepay/ratepay.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay.html
 related:

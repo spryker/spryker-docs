@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-wishlist-feature-integration
 originalArticleId: 753cb57b-3b63-4fa1-b40c-a1950802ca9c
 redirect_from:
-  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html 
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
   - /2021080/docs/alternative-products-wishlist-feature-integration
   - /2021080/docs/en/alternative-products-wishlist-feature-integration
   - /docs/alternative-products-wishlist-feature-integration

@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-file-list
 originalArticleId: b5a71151-eac1-4dd9-84e5-28ce7beb346a
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/manage-file-list.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/manage-file-list.html
   - /2021080/docs/managing-file-list
   - /2021080/docs/en/managing-file-list
   - /docs/managing-file-list

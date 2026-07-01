@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay
 originalArticleId: 0636967e-995e-4f57-b980-eac1b4bcda3e
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/amazon-pay/amazon-pay.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/amazon-pay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/amazon-pay/amazon-pay.html
 related:

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/personalization-dymanic-pricing
 originalArticleId: 9c018e4a-9a82-49fd-9e46-d6d02332185b
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/personalization-dynamic-pricing.html
   - /2021080/docs/personalization-dymanic-pricing
   - /2021080/docs/en/personalization-dymanic-pricing
   - /docs/personalization-dymanic-pricing

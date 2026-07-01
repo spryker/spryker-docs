@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-implement-customer-approval-process-on-state-machine
 originalArticleId: 8c73b907-4006-4e26-8583-d4cb21fd5de3
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
 ---

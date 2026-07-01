@@ -4,7 +4,7 @@ description: This document contains concept information for The Merchant users f
 template: concept-topic-template
 last_updated: Jan 12, 2024
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html 
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 related:
   - title: Managing merchant users

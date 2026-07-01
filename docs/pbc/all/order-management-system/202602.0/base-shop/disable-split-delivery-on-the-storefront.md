@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-disable-split-delivery-in-yves-interface
 originalArticleId: 1e1999de-4213-4495-9ac8-da9a49eb04df
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/disable-split-delivery-on-the-storefront.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/disable-split-delivery-on-the-storefront.html
   - /2021080/docs/ht-disable-split-delivery-in-yves-interface
   - /2021080/docs/en/ht-disable-split-delivery-in-yves-interface
   - /docs/ht-disable-split-delivery-in-yves-interface

@@ -4,6 +4,7 @@ description: Learn how to order products in categories directly in the Spryker C
 last_updated: June 15, 2021
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
   - /docs/pbc/all/product-information-management/202507.0/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
 ---

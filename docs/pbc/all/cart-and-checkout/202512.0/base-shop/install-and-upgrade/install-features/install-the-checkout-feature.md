@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-feature-integration
 originalArticleId: f18436a4-91c4-41a4-9bf2-65d858764ab6
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - /2021080/docs/checkout-feature-integration
   - /2021080/docs/en/checkout-feature-integration
   - /docs/checkout-feature-integration

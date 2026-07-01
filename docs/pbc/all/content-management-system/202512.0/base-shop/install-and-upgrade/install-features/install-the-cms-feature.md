@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-feature-integration-guide
 originalArticleId: ead31fac-6aa6-47f5-9d81-ff891219cf53
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html
   - /2021080/docs/cms-feature-integration-guide
   - /2021080/docs/en/cms-feature-integration-guide
   - /docs/cms-feature-integration-guide

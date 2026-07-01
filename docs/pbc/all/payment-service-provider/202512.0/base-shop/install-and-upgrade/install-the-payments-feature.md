@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/payments-feature-integration
 originalArticleId: 31957fa5-b32a-4227-b6d5-42b89c6e1855
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/install-and-upgrade/install-the-payments-feature.html
   - /docs/scos/dev/feature-integration-guides/201811.0/payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/payments-feature-integration.html

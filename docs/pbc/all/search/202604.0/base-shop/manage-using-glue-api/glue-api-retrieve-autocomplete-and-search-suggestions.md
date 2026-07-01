@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-autocomplete-and-search-suggestions
 originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-autocomplete-and-search-suggestions.html

@@ -4,6 +4,7 @@ description: Learn how to install the Spryker Checkout Glue API for Spryker Clou
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Install the Checkout feature

@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-notifications
 originalArticleId: 16d24825-5c36-4fa7-94d3-2c55711881ba
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/crefopay/crefopay-notifications.html
   - /2021080/docs/crefopay-notifications
   - /2021080/docs/en/crefopay-notifications
   - /docs/crefopay-notifications

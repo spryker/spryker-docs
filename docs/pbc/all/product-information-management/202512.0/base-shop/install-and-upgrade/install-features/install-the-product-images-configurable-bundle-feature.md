@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-images-configurable-bundle-feature-integration
 originalArticleId: 9a304208-8d29-4a63-9b72-3b6ced637048
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
   - /2021080/docs/product-images-configurable-bundle-feature-integration
   - /2021080/docs/en/product-images-configurable-bundle-feature-integration
   - /docs/product-images-configurable-bundle-feature-integration

@@ -4,6 +4,7 @@ last_updated: Sep 7, 2021
 description: This document describes the product_price.csv file to configure  product prices in your Spryker shop.
 template: import-file-template
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/marketplace/import-and-export-data/import-file-details-product-price.csv.html
   - /docs/marketplace/dev/data-import/202311.0/file-details-product-price.csv.html
 related:
   - title: Marketplace Product feature walkthrough

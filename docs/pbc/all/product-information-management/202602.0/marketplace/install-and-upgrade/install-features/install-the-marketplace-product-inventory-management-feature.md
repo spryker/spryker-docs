@@ -4,7 +4,7 @@ last_updated: Dec 07, 2020
 description: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/product-information-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html 
+  - /docs/pbc/all/product-information-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-inventory-management-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-product-inventory-management-feature-integration.html
 ---

@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-discontinued-products-feature-integration
 originalArticleId: eb447174-6a43-4adb-8914-747a9771c4a9
 redirect_from:
-  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html 
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
   - /2021080/docs/alternative-products-discontinued-products-feature-integration
   - /2021080/docs/en/alternative-products-discontinued-products-feature-integration
   - /docs/alternative-products-discontinued-products-feature-integration

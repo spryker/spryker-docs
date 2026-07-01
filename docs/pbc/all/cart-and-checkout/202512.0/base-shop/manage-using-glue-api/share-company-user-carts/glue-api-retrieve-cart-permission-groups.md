@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-cart-permission-groups
 originalArticleId: 0cb5d28a-634a-425a-916e-5f1a18885f98
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html

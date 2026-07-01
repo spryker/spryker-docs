@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login
 originalArticleId: d8eb9816-18d8-4da0-b856-1d3989a07932
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/generate-login-tokens.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/generate-login-tokens.html
   - /2021080/docs/howto-generate-a-token-for-login
   - /2021080/docs/en/howto-generate-a-token-for-login
   - /docs/howto-generate-a-token-for-login

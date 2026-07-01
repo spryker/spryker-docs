@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cart-feature-integration
 originalArticleId: a46d4b97-ad7c-45bd-aef7-23dbfac109c1
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html 
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-cart-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html

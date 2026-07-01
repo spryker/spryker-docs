@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/full-text-search
 originalArticleId: 3ce85307-d667-4326-817e-6caf21925d53
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/full-text-search.html
   - /2021080/docs/full-text-search
   - /2021080/docs/en/full-text-search
   - /docs/full-text-search

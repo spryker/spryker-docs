@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-create-a-visibility-condition-for-cms-blocks
 originalArticleId: 0e3aef82-ebd1-4c7a-bb05-d0bf5cd54bd7
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html

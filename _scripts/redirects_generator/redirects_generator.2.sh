@@ -29,7 +29,7 @@ process_markdown_file() {
         fi
 
         # Add redirect to the file.
-        awk '{print} $0=="redirect_from:"{print "  -'"$redirect_url"'"}' "$md_file" > temp && mv temp "$md_file"
+        awk '{print} $0=="redirect_from:"{print "  - '"$redirect_url"'"}' "$md_file" > temp && mv temp "$md_file"
     fi
 }
 
@@ -43,6 +43,10 @@ while IFS= read relative_path; do
     relative_path=".${relative_path}"
 
     version=$(echo "$relative_path" | grep -ohE "20[0-9]{4}\.[0-9]")
+
+    if [ -z "$version" ]; then
+        continue
+    fi
 
     new_path=$(echo "$relative_path" | sed "s/$version/$last_version/")
 

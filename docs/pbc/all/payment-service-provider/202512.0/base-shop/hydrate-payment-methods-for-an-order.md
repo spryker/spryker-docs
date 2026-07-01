@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-hydrate-payment-methods-for-order
 originalArticleId: 4e35e87f-d4a5-4a06-8cf5-d830eec89b5d
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/hydrate-payment-methods-for-an-order.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html
   - /docs/pbc/all/payment-service-provider/202311.0/hydrate-payment-methods-for-an-order.html

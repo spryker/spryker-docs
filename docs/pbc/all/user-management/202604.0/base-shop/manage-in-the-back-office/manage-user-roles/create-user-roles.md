@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-roles
 originalArticleId: 646ae8f6-32b9-440d-8cdf-c720d046de25
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html
   - /2021080/docs/managing-roles
   - /2021080/docs/en/managing-roles
   - /docs/managing-roles

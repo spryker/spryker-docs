@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-concept
 originalArticleId: 6b5f2740-8a4a-405b-bf72-2849ce60c2a8
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/split-delivery-migration-concept.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/split-delivery-migration-concept.html
   - /2021080/docs/split-delivery-concept
   - /2021080/docs/en/split-delivery-concept
   - /docs/split-delivery-concept

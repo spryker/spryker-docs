@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Prom
 template: concept-topic-template
 last_updated: Jul 17, 2023
 redirect_from:
-  - /docs/pbc/all/discount-management/202512.0/marketplace/marketplace-promotions-discounts-feature-overview.html 
+  - /docs/pbc/all/discount-management/202512.0/marketplace/marketplace-promotions-discounts-feature-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-promotions-and-discounts-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-promotions-and-discounts-feature-walkthrough.html
   - /docs/pbc/all/discount-management/202505.0/marketplace/marketplace-promotions-discounts-feature-overview.html

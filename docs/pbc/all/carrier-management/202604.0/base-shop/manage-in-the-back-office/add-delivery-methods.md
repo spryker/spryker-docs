@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-managing-shipment-methods
 originalArticleId: 66d6acae-6c36-404a-b6fb-0dbd9d71d193
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/manage-in-the-back-office/add-delivery-methods.html
   - /2021080/docs/creating-and-managing-shipment-methods
   - /2021080/docs/en/creating-and-managing-shipment-methods
   - /docs/creating-and-managing-shipment-methods

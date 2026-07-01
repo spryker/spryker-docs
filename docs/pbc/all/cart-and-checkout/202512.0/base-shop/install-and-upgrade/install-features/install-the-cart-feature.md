@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-feature-integration
 originalArticleId: 77563ea2-8a5a-46c2-97e5-5e1f20267689
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
   - /2021080/docs/cart-feature-integration
   - /2021080/docs/en/cart-feature-integration
   - /docs/cart-feature-integration

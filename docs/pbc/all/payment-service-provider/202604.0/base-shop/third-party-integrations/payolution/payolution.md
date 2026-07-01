@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payolution
 originalArticleId: 4d4f59ce-7e96-42af-a61d-c23df33d1205
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/payolution/payolution.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution.html
 related:
   - title: Installing and configuring Payolution

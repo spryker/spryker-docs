@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-process-review-and-implementation
 originalArticleId: 884e9981-3300-483c-b178-ff0370d89179
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/extend-and-customize/checkout-process-review-and-implementation.html
   - /2021080/docs/checkout-process-review-and-implementation
   - /2021080/docs/en/checkout-process-review-and-implementation
   - /docs/checkout-process-review-and-implementation

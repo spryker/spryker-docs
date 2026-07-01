@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-error-workflow
 originalArticleId: 0330a859-8c49-422b-8ad6-700adf488be6
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/heidelpay-workflow-for-errors.html
   - /2021080/docs/heidelpay-error-workflow
   - /2021080/docs/en/heidelpay-error-workflow
   - /docs/heidelpay-error-workflow

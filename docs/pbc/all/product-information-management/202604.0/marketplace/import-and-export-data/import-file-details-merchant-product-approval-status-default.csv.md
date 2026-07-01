@@ -4,6 +4,7 @@ description: This document describes the merchant_product_approval_status_defaul
 template: import-file-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html
   - /docs/pbc/all/product-information-management/202311.0/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html
 related:
   - title: Marketplace Product Approval Process feature walkthrough

@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-collector
 originalArticleId: 689695b4-3029-404c-b75d-bff5f6661fa0
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html
   - /2021080/docs/mg-cms-collector
   - /2021080/docs/en/mg-cms-collector
   - /docs/mg-cms-collector

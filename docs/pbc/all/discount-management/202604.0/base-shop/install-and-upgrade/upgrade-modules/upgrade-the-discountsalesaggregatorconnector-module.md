@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-sales-aggregator-connector
 originalArticleId: 8ef66591-61d1-4f81-a6de-96b53b89c2e1
 redirect_from:
+  - /docs/pbc/all/discount-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.html
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discountsalesaggregatorconnector.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discountsalesaggregatorconnector.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discountsalesaggregatorconnector.html

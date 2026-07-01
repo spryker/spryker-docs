@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-bundle
 originalArticleId: a54d33c4-7fdf-4687-85b3-ae4378e5a76a
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productbundle.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productbundle.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productbundle.html

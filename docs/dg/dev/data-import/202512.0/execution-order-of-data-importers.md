@@ -5,6 +5,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/execution-order-of-data-importers-in-demo-shop
 originalArticleId: 976a9f67-fc56-4fb7-811e-f30a2842e5d0
 redirect_from:
+  - /docs/dg/dev/data-import/202602.0/execution-order-of-data-importers.html
   - /docs/scos/dev/data-import/202404.0/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
   - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/howto-import-merchants-and-merchant-relations.html
   - /docs/scos/dev/data-import/202204.0/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

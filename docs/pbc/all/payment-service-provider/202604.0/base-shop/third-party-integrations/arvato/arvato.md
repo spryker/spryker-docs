@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/arvato
 originalArticleId: baf8a048-9b5c-4c45-aaab-c3093f42bc36
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/arvato/arvato.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/arvato.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/arvato.html
 related:

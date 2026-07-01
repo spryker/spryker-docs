@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-search-preferences
 originalArticleId: 921675b3-7c4c-4791-ada6-637004a78c59
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/manage-in-the-back-office/define-search-preferences.html
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/search-preferences/define-search-preferences.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-search-preferences.html
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/search-preferences/define-search-preferences.html

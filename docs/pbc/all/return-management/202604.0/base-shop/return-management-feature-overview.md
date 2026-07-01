@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
 redirect_from:
+  - /docs/pbc/all/return-management/202602.0/base-shop/return-management-feature-overview.html
   - /docs/scos/user/features/202108.0/return-management-feature-overview/return-management-feature-overview.html
   - /docs/pbc/all/return-management/202204.0/base-shop/return-management-feature-overview.html
 ---

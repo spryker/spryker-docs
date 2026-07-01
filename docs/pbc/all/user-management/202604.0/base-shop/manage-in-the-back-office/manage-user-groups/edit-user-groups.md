@@ -4,6 +4,7 @@ description: Learn how you can edit user groups directly in the back office of S
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-user-groups/editing-user-groups.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
 related:

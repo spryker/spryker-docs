@@ -7,9 +7,10 @@ related:
   - title: Tax feature overview
     link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 redirect_from:
-    - /docs/scos/user/back-office-user-guides/201903.0/administration/tax-sets/managing-tax-sets.html
-    - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-sets.html
-    - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
+  - /docs/pbc/all/tax-management/202602.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
+  - /docs/scos/user/back-office-user-guides/201903.0/administration/tax-sets/managing-tax-sets.html
+  - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-sets.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
 ---
 
 To edit a [tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/approval-process-feature-integration
 originalArticleId: 1ba2c034-6c2d-4036-87b8-d2c6bbf5243d
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
   - /2021080/docs/approval-process-feature-integration
   - /2021080/docs/en/approval-process-feature-integration
   - /docs/approval-process-feature-integration

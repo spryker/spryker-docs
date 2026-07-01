@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/precise-search-by-super-attributes
 originalArticleId: 0af5d38e-725f-44a1-9bfd-dd9f85cdf29b
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/best-practices/precise-search-by-super-attributes.html
   - /2021080/docs/precise-search-by-super-attributes
   - /2021080/docs/en/precise-search-by-super-attributes
   - /docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html

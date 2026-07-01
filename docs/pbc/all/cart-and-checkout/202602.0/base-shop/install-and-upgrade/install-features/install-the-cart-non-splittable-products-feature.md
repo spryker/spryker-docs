@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-non-splittable-products-feature-integration
 originalArticleId: 13a5637e-1c2a-44d7-96fe-a05aeb187872
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html 
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/install-and-upgrade/install-features/install-the-cart-non-splittable-products-feature.html
   - /2021080/docs/cart-non-splittable-products-feature-integration
   - /2021080/docs/en/cart-non-splittable-products-feature-integration
   - /docs/cart-non-splittable-products-feature-integration

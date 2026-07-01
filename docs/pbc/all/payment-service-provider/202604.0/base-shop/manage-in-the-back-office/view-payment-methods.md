@@ -4,6 +4,7 @@ description: Learn how to view payment methods that are in the Back Office that 
 last_updated: June 2, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/manage-in-the-back-office/view-payment-methods.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/payment-methods/view-payment-methods.html
   - /docs/pbc/all/payment-service-provider/202311.0/manage-in-the-back-office/view-payment-methods.html  
   - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/view-payment-methods.html

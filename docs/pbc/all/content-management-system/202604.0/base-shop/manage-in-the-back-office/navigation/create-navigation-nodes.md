@@ -4,6 +4,7 @@ description: Learn the different types of navigation nodes and how to create nav
 last_updated: Nov 22, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/navigation/create-navigation-nodes.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html
 related:

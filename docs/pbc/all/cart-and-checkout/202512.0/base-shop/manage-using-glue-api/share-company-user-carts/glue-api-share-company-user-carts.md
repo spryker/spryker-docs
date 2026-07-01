@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sharing-company-user-carts
 originalArticleId: a200e568-906d-4ae4-b50a-8ad5433d4399
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html

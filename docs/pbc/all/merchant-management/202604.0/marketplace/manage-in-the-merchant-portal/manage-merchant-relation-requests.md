@@ -3,6 +3,8 @@ title: Manage merchant relation requests
 description: Learn how to approve, deny, and process merchant relation requests in the Spryker Merchant Portal
 last_updated: Mar 19, 2024
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/marketplace/manage-in-the-merchant-portal/manage-merchant-relation-requests.html
 ---
 This document describes how to process the [merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html) created by a company user.
 

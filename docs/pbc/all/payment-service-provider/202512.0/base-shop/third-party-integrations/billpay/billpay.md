@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/billpay
 originalArticleId: 1aba685d-52bb-4060-bed0-62178fa04d71
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/billpay/billpay.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/billpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billpay/billpay.html
   - /docs/pbc/all/payment-service-provider/202507.0/base-shop/third-party-integrations/billpay/billpay.html

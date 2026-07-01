@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/company-account
 originalArticleId: 8009f001-a9dd-426b-916a-b3b8a5e4acc7
 video: true
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/company-account-feature-overview/company-account-feature-overview.html
   - /2021080/docs/company-account
   - /2021080/docs/en/company-account
   - /docs/company-account

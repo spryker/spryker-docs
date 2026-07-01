@@ -6,6 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-returns
 originalArticleId: 52e17a39-524b-49a9-8add-40103a721653
 redirect_from:
+  - /docs/pbc/all/return-management/202602.0/base-shop/manage-in-the-back-office/manage-returns.html
   - /2021080/docs/managing-returns
   - /2021080/docs/en/managing-returns
   - /docs/managing-returns

@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-product-list-gui
 originalArticleId: 5cc810fe-c85d-40f2-984e-497580f71557
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productlistgui.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlistgui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlistgui.html

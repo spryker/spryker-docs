@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-price
 originalArticleId: 4eac80da-4f57-47ff-97bc-5cf79ce5f087
 redirect_from:
+  - /docs/pbc/all/price-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - /2021080/docs/mg-price
   - /2021080/docs/en/mg-price
   - /docs/mg-price

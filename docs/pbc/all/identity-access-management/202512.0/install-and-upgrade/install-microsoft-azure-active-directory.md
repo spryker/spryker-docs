@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/microsoft-azure-active-directory
 originalArticleId: 11224ada-6cfc-4217-94e9-085e64755ad6
 redirect_from:
+  - /docs/pbc/all/identity-access-management/202602.0/install-and-upgrade/install-microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/202108.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/201811.0/microsoft-azure-active-directory.html
   - /docs/scos/dev/feature-integration-guides/201903.0/microsoft-azure-active-directory.html

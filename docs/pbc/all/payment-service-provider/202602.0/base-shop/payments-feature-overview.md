@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payments-feature-overview
 originalArticleId: db728134-17d6-4023-8d7a-55177ee5af44
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/payments-feature-overview.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/payments-feature-overview.html
   - /docs/scos/user/features/202108.0/payments-feature-overview.html
   - /docs/scos/user/features/202200.0/payments-feature-overview.html
   - /docs/scos/user/features/202311.0/payments-feature-overview.html

@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
 originalArticleId: 6aa9f4ab-25de-46bc-b734-54bccb25cf0b
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/tutorials-and-howtos/configure-elasticsearch.html
   - /2021080/docs/search-configure-elasticsearch
   - /2021080/docs/en/search-configure-elasticsearch
   - /docs/search-configure-elasticsearch

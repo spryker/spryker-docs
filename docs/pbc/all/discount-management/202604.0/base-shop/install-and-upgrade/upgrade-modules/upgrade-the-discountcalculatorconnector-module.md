@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-calculator-connector
 originalArticleId: 10be2d18-ad61-401e-870a-66d03e85e636
 redirect_from:
+  - /docs/pbc/all/discount-management/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountcalculatorconnector-module.html
   - /dev/module-migration-guides/201811.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/201903.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/201907.0/migration-guide-discountcalculatorconnector.html

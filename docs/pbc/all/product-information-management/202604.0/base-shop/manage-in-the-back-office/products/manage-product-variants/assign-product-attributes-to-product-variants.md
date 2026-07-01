@@ -4,6 +4,7 @@ description: Learn how to assign product attributes to product variants in the B
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
 related:

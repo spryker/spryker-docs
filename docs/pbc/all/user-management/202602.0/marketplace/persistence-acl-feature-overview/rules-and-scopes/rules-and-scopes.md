@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: The rule, in contrast to the configuration, is tied to the user (and his role) and determines the user's rights towards the entity.
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html 
+  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html
 ---
 
 The functionality of this feature is based on such fundamental concepts as Rule and Configuration.

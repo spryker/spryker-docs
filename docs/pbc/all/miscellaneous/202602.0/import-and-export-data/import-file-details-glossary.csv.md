@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv
 originalArticleId: 8933e30e-35fd-4c8b-be0c-78c4b38054f8
 redirect_from:
-  - /docs/pbc/all/miscellaneous/202512.0/import-and-export-data/import-file-details-glossary.csv.html 
+  - /docs/pbc/all/miscellaneous/202512.0/import-and-export-data/import-file-details-glossary.csv.html
   - /2021080/docs/file-details-glossarycsv
   - /2021080/docs/en/file-details-glossarycsv
   - /docs/file-details-glossarycsv

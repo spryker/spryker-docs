@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-warehousecsv
 originalArticleId: 143a064c-e725-4451-b6a5-2324feaf163f
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/import-and-export-data/import-file-details-warehouse.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-data/file-details-warehouse.csv.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/import-and-export-data/file-details-warehouse.csv.html

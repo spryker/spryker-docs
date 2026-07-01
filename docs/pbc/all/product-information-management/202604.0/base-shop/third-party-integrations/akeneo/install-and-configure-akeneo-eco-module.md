@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
   - /docs/scos/dev/technology-partner-guides/202204.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
   - /docs/scos/dev/technology-partner-guides/202311.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
-  - /docs/pbc/all/product-information-management/202311.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html 
+  - /docs/pbc/all/product-information-management/202311.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 related:
   - title: Akeneo

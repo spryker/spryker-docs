@@ -3,7 +3,7 @@ title: Actions Confirmation
 description: This document provides details about the Actions Confirmation service in the Components Library.
 template: concept-topic-template
 redirect_from:
-  - /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/actions-confirmation.html
+- /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/actions-confirmation.html
 - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/actions/actions-confirmation.html
 
 last_updated: Jan 17, 2024

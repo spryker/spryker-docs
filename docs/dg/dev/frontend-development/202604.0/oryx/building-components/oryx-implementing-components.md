@@ -4,7 +4,7 @@ description: Learn how to create an Oryx component
 last_updated: Sept 20, 2023
 template: concept-topic-template
 redirect_from:
-  - /docs/dg/dev/frontend-development/202602.0/oryx/building-components/oryx-implementing-components.html
+- /docs/dg/dev/frontend-development/202602.0/oryx/building-components/oryx-implementing-components.html
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-components/oryx-implementing-components.html
 
 ---

@@ -4,6 +4,7 @@ description: This document provides details about the Cache service in the Compo
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/cache/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/cache/cache.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/cache/ui-components-library-cache-service.html

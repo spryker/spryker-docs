@@ -4,6 +4,7 @@ description: This document provides details about the Table Feature Editable com
 template: concept-topic-template
 last_updated: Dec 27, 2022
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-editable.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-feature-extension/table-feature-editable.html

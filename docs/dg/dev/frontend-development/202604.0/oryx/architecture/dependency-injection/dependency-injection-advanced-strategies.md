@@ -4,6 +4,7 @@ description: Strategies for using DI that cover advanced use cases
 template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/dependency-injection/dependency-injection-advanced-strategies.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
 

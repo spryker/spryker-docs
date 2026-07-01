@@ -4,6 +4,7 @@ description: Learn how to leverage Oryx's Responsive Design system to create stu
 last_updated: October 3, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/building-applications/styling/oryx-responsive-design.html
 - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/styling/oryx-responsive-design.html
 
 ---

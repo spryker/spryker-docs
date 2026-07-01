@@ -4,6 +4,7 @@ description: Compositions are used to organize components and provide layout in 
 last_updated: June 8, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/building-pages/oryx-compositions.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-compositions.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-pages/oryx-compositions.html
 

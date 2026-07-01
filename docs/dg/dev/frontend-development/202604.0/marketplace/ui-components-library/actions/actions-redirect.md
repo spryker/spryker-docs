@@ -4,6 +4,7 @@ description: This document provides details about the Actions Redirect service i
 template: concept-topic-template
 last_updated: Jan 11, 2024
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/actions-redirect.html
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-redirect.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions-redirect.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/actions/actions-redirect.html

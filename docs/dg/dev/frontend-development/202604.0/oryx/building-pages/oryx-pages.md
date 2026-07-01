@@ -4,6 +4,7 @@ description: Pages can be created from a data set or custom components
 last_updated: Aug 1, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/building-pages/oryx-pages.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-pages.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-pages/oryx-pages.html
 

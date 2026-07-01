@@ -1,0 +1,21 @@
+🔍 Scanning for HTML files in ./_site...
+📝 Found 1078 HTML files
+🏗️  Building valid files index...
+✅ Indexed 27456 valid paths
+🔗 Processing redirects from markdown files...
+✅ Added 30298 redirect paths
+🔗 Checking internal links...
+
+❌ Found 4 broken internal links:
+
+📄 docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/ui-components-library-actions.html
+   Line 2389: /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/actions-confirmation.html -> /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/actions/actions-confirmation.html
+
+📄 docs/dg/dev/frontend-development/202602.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
+   Line 2446: /docs/dg/dev/frontend-development/202602.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html -> /docs/dg/dev/frontend-development/202602.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
+
+📄 docs/dg/dev/frontend-development/202602.0/oryx/building-components/oryx-providing-component-definitions.html
+   Line 2301: /docs/dg/dev/frontend-development/202602.0/oryx/building-components/oryx-implementing-components.html -> /docs/dg/dev/frontend-development/202602.0/oryx/building-components/oryx-implementing-components.html
+   Line 2319: /docs/dg/dev/frontend-development/202602.0/oryx/building-applications/styling/oryx-responsive-design.html -> /docs/dg/dev/frontend-development/202602.0/oryx/building-applications/styling/oryx-responsive-design.html
+
+Total: 4 broken links in 3 files

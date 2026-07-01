@@ -4,6 +4,7 @@ description: Create maintainable and upgradeable applications using the Oryx boi
 last_updated: Apr 3, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/getting-started/oryx-boilerplate.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-boilerplate.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/oryx-boilerplate.html
 

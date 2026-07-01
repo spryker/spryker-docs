@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-data-import
 originalArticleId: e149b582-49ef-4816-beb7-c29fa41581cf
 redirect_from:
+  - /docs/dg/dev/data-import/202602.0/creating-data-importers.html
   - /docs/scos/dev/data-import/202404.0/creating-a-data-importer.html
   - /docs/scos/dev/data-import/202204.0/creating-a-data-importer.html
 ---

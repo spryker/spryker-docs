@@ -4,6 +4,7 @@ description: Understanding Reactivity concepts will help you understand how Oryx
 template: concept-topic-template
 last_updated: Apr 3, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/reactivity/key-concepts-of-reactivity.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
 

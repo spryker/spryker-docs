@@ -4,6 +4,7 @@ description: Presets are used to install predefined applications
 template: concept-topic-template
 last_updated: Apr 4, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/building-applications/oryx-presets.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-presets.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/oryx-presets.html
 

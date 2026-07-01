@@ -4,6 +4,7 @@ description: Environment of the Oryx Application
 template: concept-topic-template
 last_updated: June 24, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-application-orchestration/oryx-application-environment.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
 

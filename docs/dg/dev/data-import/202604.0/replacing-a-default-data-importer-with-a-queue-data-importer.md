@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
 originalArticleId: fab80f36-95c1-480d-a5c2-1ad5488587e8
 redirect_from:
+  - /docs/dg/dev/data-import/202602.0/replacing-a-default-data-importer-with-a-queue-data-importer.html
   - /docs/scos/dev/data-import/202404.0/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
 related:

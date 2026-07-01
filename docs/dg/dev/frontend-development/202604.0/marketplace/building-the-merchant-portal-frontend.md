@@ -4,6 +4,7 @@ description: This document provides details how to build the frontend part of th
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/building-the-merchant-portal-frontend.html
   - /docs/marketplace/dev/front-end/202212.0/building-the-project.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/building-the-project.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/building-the-merchant-portal-frontend.html

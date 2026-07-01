@@ -4,6 +4,7 @@ description: Use Oryx packages from npm to ensure you can easily upgrade to newe
 last_updated: Apr 19, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/getting-started/oryx-packages.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/oryx-packages.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/getting-started/oryx-packages.html
 

@@ -4,6 +4,7 @@ description: This document provides details about the Table Filter Tree Select c
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/table-filter-tree-select.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 

@@ -4,6 +4,7 @@ description: Oryx service layer abstracts system functionality using DI
 template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/oryx/architecture/dependency-injection/oryx-service-layer.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/dependency-injection/oryx-service-layer.html
   - /docs/scos/dev/front-end-development/202404.0/oryx/architecture/dependency-injection/oryx-service-layer.html
 

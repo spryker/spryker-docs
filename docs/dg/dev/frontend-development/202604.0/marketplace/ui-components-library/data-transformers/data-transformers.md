@@ -4,6 +4,7 @@ last_updated: Jun 07, 2021
 description: This document provides details about the Data Transformers service in the Components Library.
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/frontend-development/202602.0/marketplace/ui-components-library/data-transformers/data-transformers.html
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/data-transformers.html
   - /docs/scos/dev/front-end-development/202404.0/marketplace/ui-components-library/data-transformers/data-transformers.html

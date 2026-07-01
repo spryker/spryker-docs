@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-store-configuration
 originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
 redirect_from:
+  - /docs/pbc/all/miscellaneous/202602.0/manage-using-glue-api/glue-api-retrieve-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html

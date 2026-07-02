@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-overview
 originalArticleId: e3195022-f1fb-492c-9b99-3da32dab77c3
 redirect_from:
+  - /docs/pbc/all/product-relationship-management/202602.0/product-relationship-management.html
   - /2021080/docs/product-relations-feature-overview
   - /2021080/docs/en/product-relations-feature-overview
   - /docs/product-relations-feature-overview

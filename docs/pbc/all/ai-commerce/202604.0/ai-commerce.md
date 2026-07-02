@@ -1,0 +1,34 @@
+---
+title: AI Commerce
+description: AI Commerce brings AI-powered capabilities to your Spryker storefront, helping buyers find and order products faster with less manual effort.
+last_updated: Jun 15, 2026
+template: concept-topic-template
+---
+
+AI Commerce brings AI-powered capabilities to your Spryker storefront and back office, reducing manual effort for buyers and shop operators, accelerating commerce workflows. Features are built on the `AiFoundation` abstraction layer, so the underlying AI model can be swapped or configured per feature without changing application code.
+
+## Features
+
+| FEATURE                                                                             | DESCRIPTION                                                                                                                                                                                                                                                    |
+|---------|-------------|
+| [Smart PIM](/docs/pbc/all/ai-commerce/{{page.version}}/smart-pim.html)                        | Help catalog managers enrich product information directly in the Backoffice PIM. Get guided suggestions to speed up day-to-day catalog work, improve consistency across markets and languages, and keep full control through human review and auditability.    |
+| [Visual Add to Cart](/docs/pbc/all/ai-commerce/{{page.version}}/visual-add-to-cart.html)      | Lets buyers upload a product image on the Quick Order page. AI recognizes the products in the image and pre-fills the order form with matching SKUs and quantities — enabling rapid bulk ordering without manual entry.                                        |
+| [Back Office Assistant](/docs/pbc/all/ai-commerce/{{page.version}}/backoffice-assistant.html) | An AI-powered chat widget embedded in the Back Office. Admin users can ask natural language questions to navigate the Back Office, diagnose order issues, and create or update discounts.                                                                      |
+| [Search by Image](/docs/pbc/all/ai-commerce/{{page.version}}/search-by-image.html)            | Lets customers upload a photo to search for products. AI analyzes the image, identifies a search term, and redirects to search results or the first matching product page.                                                                                     |
+| [Smart CMS Content Assistant](/docs/pbc/all/ai-commerce/{{page.version}}/smart-cms-content-assistant.html) | An AI-powered panel in the Back Office CMS Page and CMS Block glossary editors. Back Office users can generate and refine placeholder content per locale through a conversational AI interface. |
+
+![Smart CMS Content Assistant](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/smart-cms.png)
+
+## Configure AI providers
+
+All AI Commerce features are provider-agnostic. You can configure OpenAI, AWS Bedrock, Anthropic, or any other supported provider independently per feature — swapping the underlying model without changing application code. For instructions, see [Configure multiple AI providers for AI Commerce](/docs/dg/dev/ai/ai-commerce/configure-multiple-ai-providers.html).
+
+![Configure multiple AI providers](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/multiple-provider.png)
+
+## Who benefits
+
+| ROLE | BENEFIT |
+|------|---------|
+| B2B buyers | Faster reordering from photos of shelves, product lists, or packaging. Find products by uploading a photo instead of searching by name. |
+| Store operators | Reduced support requests caused by manual order entry errors. Faster Back Office workflows through conversational AI assistance. |
+| Developers | AI provider-agnostic integration — swap or configure models per feature via configuration. |

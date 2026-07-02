@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/prices-overview
 originalArticleId: 003e8985-3230-4498-838b-234a10f1a810
 redirect_from:
-  - /docs/pbc/all/price-management/202512.0/base-shop/prices-feature-overview/prices-feature-overview.html 
+  - /docs/pbc/all/price-management/202512.0/base-shop/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202200.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202311.0/prices-feature-overview/prices-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/prices-feature-walkthrough/prices-feature-walkthrough.html

@@ -1,7 +1,7 @@
 ---
 title: Resource Schemas
 description: Understanding API Platform resource schema definitions in Spryker.
-last_updated: Feb 5, 2026
+last_updated: Jun 3, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -18,6 +18,10 @@ related:
     link: docs/dg/dev/architecture/api-platform/enablement.html
   - title: API Platform Testing
     link: docs/dg/dev/architecture/api-platform/testing.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
 ---
 
 This document explains how to define API Platform resource schemas in Spryker.
@@ -37,22 +41,22 @@ src/
 │       └── resources/
 │           └── api/
 │               ├── storefront/
-│               │   └── resource-name.yml
+│               │   └── resource-name.resource.yml
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 ├── SprykerFeature/
 │   └── {Feature}/
 │       └── resources/
 │           └── api/
 │               └── backend/
-│                   └── resource-name.yml
+│                   └── resource-name.resource.yml
 └── Pyz/
     └── Glue/
         └── {Module}/
             └── resources/
                 └── api/
                     └── backend/
-                        └── resource-name.yml
+                        └── resource-name.resource.yml
 ```
 
 ## CodeBucket resources
@@ -67,7 +71,7 @@ Validation schemas follow the pattern: `{resource-name}.validation.yml`
 CodeBuckets are specified inside the schema files, not in the filename.
 
 ```MARKDOWN
-src/Pyz/Glue/Store/resources/api/backend/
+src/Pyz/Glue/StoresApi/resources/api/backend/
 ├── stores.resource.yml              # Resource schema (CodeBucket variants defined inside)
 └── stores.validation.yml            # Validation schema (CodeBucket variants defined inside)
 ```
@@ -116,7 +120,7 @@ For a comprehensive guide including implementation examples, see [CodeBucket Sup
 ```yaml
 resource:
   name: Products
-  shortName: Product
+  shortName: products
   description: "Product resource"
 
   operations:
@@ -133,15 +137,21 @@ resource:
       type: string
 ```
 
+{% info_block infoBox "shortName convention" %}
+
+`shortName` is the JSON:API `type` field for the resource and is used as the public URL segment. Use **lowercase kebab-case**, plural for noun-style resources (`products`, `addresses`, `abstract-product-prices`) and singular for action-style endpoints (`catalog-search`, `cart-reorder`). Multi-word names are always hyphenated. This matches every shipped resource in the platform.
+
+{% endinfo_block %}
+
 ### Complete example with all options
 
 ```yaml
-# yaml-language-server: $schema=../../../../SprykerSdk/Api/resources/schemas/api-resource-schema-v1.json
+# yaml-language-server: $schema=../../../../../vendor/spryker/api-platform/resources/schemas/api-resource-schema-v1.json
 
 resource:
   # Resource identification
   name: Customers                    # Internal name (used for schema merging)
-  shortName: Customer                # URL name (becomes /customers)
+  shortName: customers               # URL name (becomes /customers); JSON:API type field
   description: "Customer resource"   # OpenAPI description
 
   # State providers and processors
@@ -155,6 +165,9 @@ resource:
   paginationClientEnabled: true
   paginationClientItemsPerPage: true
 
+  # JSON:API `included` array ordering — see "Sort priority for included resources"
+  includedSortPriority: 0
+
   # Security
   security: "is_granted('ROLE_ADMIN')"
   securityPostDenormalize: "is_granted('EDIT', object)"
@@ -167,6 +180,13 @@ resource:
     - type: Put                      # Replace entire resource
     - type: Patch                    # Update partial resource
     - type: Delete                   # Delete resource
+
+  # Relationships — see Relationships article for full reference
+  includes:
+    - relationshipName: addresses
+      targetResource: CustomersAddresses
+      uriVariableMappings:
+        customerReference: customerReference
 
   # Properties
   properties:
@@ -236,8 +256,18 @@ resource:
 | `integer` | `int` | `42` | Whole numbers |
 | `number` | `float` | `3.14` | Decimal numbers |
 | `boolean` | `bool` | `true` | True/false values |
-| `array` | `array` | `["a", "b"]` | Arrays |
-| `object` | `object` | `{"key": "value"}` | Nested objects |
+| `array` | `array` | `["a", "b"]` | Lists of values |
+| `object` | `object` | `{"key": "value"}` | Strictly typed nested objects |
+| `map` | `array` | `{"key": "value"}` | Free-shape associative payloads documented via `openapiContext`. Stored as PHP `array` and rendered as `type: object` in the OpenAPI specification. |
+| `mixed` | `mixed` | any | Use only when the payload genuinely has no fixed shape and cannot be described via `openapiContext`. |
+
+Use `map` when the payload is a structured JSON object whose schema you want to describe via
+`openapiContext` rather than a strongly typed PHP class. This is the recommended type whenever a
+request or response body is a JSON object with a known shape but no dedicated DTO class — it
+keeps the property typed as a simple `array` in PHP while still producing rich OpenAPI metadata
+and a working "Try Out" body in Swagger UI. See
+[Documenting nested properties for OpenAPI and Swagger UI](#documenting-nested-properties-for-openapi-and-swagger-ui)
+for the full pattern.
 
 ### Property attributes
 
@@ -293,6 +323,195 @@ isActive:
   default: true     # Defaults to true if not provided
 ```
 
+## Documenting nested properties for OpenAPI and Swagger UI
+
+Many endpoints accept or return structured JSON payloads — for example, a payment initialization
+request that takes `payment`, `quote`, and `customer` sub-objects. Without explicit metadata,
+those payloads appear as opaque `object` entries in the OpenAPI document, which means:
+
+- The generated OpenAPI specification does not describe the child fields, their types, or which
+  ones are required.
+- The Swagger UI "Try Out" button shows an empty request body, forcing consumers to read code or
+  external documentation to discover the expected shape.
+
+The `map` property type combined with nested `openapiContext` entries closes both gaps.
+
+### When to use this pattern
+
+Use this pattern when the request or response body is a structured JSON object whose schema you
+want to publish through OpenAPI, but you do not want to introduce a dedicated typed PHP class
+for it. Typical cases are:
+
+- Request payloads that aggregate fields from multiple transfer objects (for example, payment
+  selection plus quote context).
+- PSP- or provider-specific response payloads whose shape varies by configuration.
+
+For payloads with a stable, strongly typed shape, prefer `type: object` so the generated PHP
+class enforces the structure at the language level.
+
+### Pattern
+
+Combine `type: map` on the property with the following entries inside `openapiContext`:
+
+| Entry | Purpose |
+|-------|---------|
+| `properties` | Declares each child field with its own `type`, `description`, `format`, and `example`. Used by Swagger UI to render the field-by-field schema. |
+| `required` | Lists the child fields that must be present on a request. Drives the "required" markers in Swagger UI and the OpenAPI specification. |
+| `example` | A complete sample payload. This is the value Swagger UI prefills into the "Try Out" body, so consumers can execute the request immediately. |
+
+When the property is a `map`, the generator merges `'type' => 'object'` into the emitted
+`openapiContext`, so the property appears as an object — with the documented schema — in the
+OpenAPI document while staying as a plain PHP `array` in the generated resource class.
+
+### Worked example
+
+The following extract is taken from
+`src/Spryker/PaymentsRestApi/resources/api/storefront/payments.resource.yml`. It shows three
+common shapes: a flat request object (`payment`), a request object with nested object children
+(`quote`), and a response-only object whose contents vary at runtime (`preOrderPaymentData`).
+
+```yaml
+properties:
+    payment:
+        type: map
+        writable: true
+        readable: false
+        required: true
+        description: 'Payment selection for the pre-order initialization'
+        openapiContext:
+            required: ['paymentProviderName', 'paymentMethodName', 'amount']
+            properties:
+                paymentProviderName:
+                    type: string
+                    example: 'DummyPayment'
+                paymentMethodName:
+                    type: string
+                    example: 'Invoice'
+                amount:
+                    type: integer
+                    description: 'Amount in minor units (cents)'
+                    example: 9999
+            example:
+                paymentProviderName: 'DummyPayment'
+                paymentMethodName: 'Invoice'
+                amount: 9999
+
+    quote:
+        type: map
+        writable: true
+        readable: false
+        required: true
+        description: 'Quote context required to initialize the payment'
+        openapiContext:
+            required: ['customer', 'billingAddress', 'currency']
+            properties:
+                customer:
+                    type: object
+                    required: ['firstName', 'lastName', 'email']
+                    properties:
+                        firstName: { type: string, example: 'Sonia' }
+                        lastName: { type: string, example: 'Wagner' }
+                        email: { type: string, format: email, example: 'sonia@acme.com' }
+                billingAddress:
+                    type: object
+                    required: ['iso2Code']
+                    properties:
+                        iso2Code: { type: string, example: 'DE' }
+                currency:
+                    type: object
+                    required: ['code']
+                    properties:
+                        code: { type: string, example: 'EUR' }
+            example:
+                customer:
+                    firstName: 'Sonia'
+                    lastName: 'Wagner'
+                    email: 'sonia@acme.com'
+                billingAddress:
+                    iso2Code: 'DE'
+                currency:
+                    code: 'EUR'
+
+    preOrderPaymentData:
+        type: map
+        writable: false
+        readable: true
+        required: false
+        description: 'PSP-specific response payload returned by the payment provider'
+        openapiContext:
+            example:
+                transactionId: 'tx_abc123'
+                redirectUrl: 'https://psp.example.com/pay/tx_abc123'
+```
+
+### Read-only versus write-only payloads
+
+- **Write-only request payloads** (`writable: true`, `readable: false`) should declare
+  `properties`, `required`, and `example`. The first two drive request validation and the
+  generated OpenAPI schema; `example` makes the Swagger UI "Try Out" body usable without
+  edits.
+- **Read-only response payloads** (`writable: false`, `readable: true`) only need
+  `openapiContext.example` when the response shape is dynamic. If the response shape is fixed,
+  prefer declaring `properties` (and optionally `required`) so consumers see the full schema.
+
+### Validation note
+
+`openapiContext.required` controls only the OpenAPI documentation. If a request field must be
+enforced at runtime, add the matching constraint to the resource's validation schema — see
+[Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html).
+
+## Automatic JSON:API request body examples
+
+For JSON:API endpoints (`application/vnd.api+json`), the generator automatically wraps property-level examples in the JSON:API envelope (`data.type` + `data.attributes`) when it builds the OpenAPI request body. You define examples once per property; the generator assembles the envelope for every write operation.
+
+Given:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers   # becomes the JSON:API "type" field
+
+  properties:
+    email:
+      type: string
+      writable: true
+      openapiContext:
+        example: "john@example.com"
+    firstName:
+      type: string
+      writable: true
+      openapiContext:
+        example: "John"
+    idCustomer:
+      type: integer
+      writable: false      # excluded from request body example
+      openapiContext:
+        example: 42
+```
+
+…the generated OpenAPI request body for `POST`, `PATCH`, and `PUT` operations is:
+
+```json
+{
+  "data": {
+    "type": "customers",
+    "attributes": {
+      "email": "john@example.com",
+      "firstName": "John"
+    }
+  }
+}
+```
+
+Rules the generator applies:
+
+- The `shortName` value becomes the `type` field.
+- Only **writable** properties are included — anything marked `writable: false` is filtered out (so identifiers and timestamps do not appear in the request example).
+- Properties without an `openapiContext.example` are omitted from the example body.
+- If no writable property has an example, no `requestBody` example is emitted at all — the operation appears without a prefilled "Try Out" body.
+
+If you need a custom request body example that does not match this shape, override it at the operation level — see [Operations](#operations).
+
 ## Operations
 
 Define which HTTP operations are available for the resource:
@@ -315,13 +534,115 @@ The operation names map to HTTP methods:
 - `patch` → PATCH (update)
 - `delete` → DELETE (remove)
 
+## Pagination
+
+API Platform provides built-in pagination for collection endpoints (`GetCollection`). You can configure pagination behavior per resource using YAML schema options.
+
+### Pagination options
+
+| Option | Type | Description |
+|--------|------|-------------|
+| `paginationEnabled` | `boolean` | Enables or disables pagination for this resource. When `false`, `GetCollection` returns all results without pagination. Default: inherits from global configuration. |
+| `paginationItemsPerPage` | `integer` | Number of items returned per page. Overrides the global default. |
+| `paginationMaximumItemsPerPage` | `integer` | Maximum number of items a client can request per page via `itemsPerPage` query parameter. Prevents clients from requesting excessively large pages. |
+| `paginationClientEnabled` | `boolean` | Allows clients to enable or disable pagination via the `pagination` query parameter (for example, `?pagination=false`). |
+| `paginationClientItemsPerPage` | `boolean` | Allows clients to set the number of items per page via the `itemsPerPage` query parameter (for example, `?itemsPerPage=50`). |
+
+The global default for `paginationItemsPerPage` is defined in the project's `api_platform.php` configuration file. To override it for a specific resource, set `paginationItemsPerPage` in the resource schema.
+
+### Minimal pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+
+  operations:
+    - type: GetCollection
+```
+
+### Full pagination example
+
+```yaml
+resource:
+  name: Products
+  shortName: products
+
+  paginationEnabled: true
+  paginationItemsPerPage: 20
+  paginationMaximumItemsPerPage: 100
+  paginationClientEnabled: true
+  paginationClientItemsPerPage: true
+
+  operations:
+    - type: GetCollection
+    - type: Get
+```
+
+With this configuration, clients can use the following query parameters:
+
+```bash
+# Default pagination (20 items per page)
+GET /products
+
+# Navigate to page 3
+GET /products?page=3
+
+# Request 50 items per page (up to maximum of 100)
+GET /products?itemsPerPage=50
+
+# Disable pagination to get all results
+GET /products?pagination=false
+```
+
+### Generated output
+
+The pagination options are rendered as named parameters in the `#[ApiResource]` attribute:
+
+```php
+#[ApiResource(
+    operations: [new GetCollection(), new Get()],
+    shortName: 'products',
+    provider: ProductsBackendProvider::class,
+    paginationItemsPerPage: 20,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
+)]
+```
+
+### Provider requirements
+
+For pagination to work, your Provider must return a `TraversablePaginator` instance for collection operations:
+
+```php
+use ApiPlatform\State\Pagination\TraversablePaginator;
+
+return new TraversablePaginator(
+    new \ArrayObject($resources),
+    $currentPage,
+    $itemsPerPage,
+    $totalItems
+);
+```
+
+If `paginationEnabled` is `true` but the Provider returns a plain array, API Platform wraps the result in a `PartialPaginatorInterface`, which may not include total count or page metadata.
+
+### Global pagination defaults
+
+Global pagination defaults can be configured in the application configuration file. Per-resource settings override the global defaults. See [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) for details.
+
 ## Relationships
 
 Define relationships between resources to enable including related resources via the `?include=` query parameter.
 
 ### includes section
 
-Declares what relationships this resource can include:
+Declares what relationships this resource can include. `includes` is declared once on the parent resource — the child resource does not need a reverse declaration.
 
 ```yaml
 includes:
@@ -331,26 +652,95 @@ includes:
       customerReference: customerReference
 ```
 
-**Properties:**
-- `relationshipName`: Name used in `?include=` parameter
-- `targetResource`: Name of the resource to include
-- `uriVariableMappings`: Maps properties from parent to child provider
+**Entry fields:**
 
-### includableIn section
+| Field | Required | Description |
+|-------|----------|-------------|
+| `relationshipName` | Yes | Name used in the `?include=` parameter and as the JSON:API relationship key. |
+| `targetResource` | Yes | The `name` of the included resource as declared in its `resource.yml` (for example, `CustomersAddresses`). Also determines the JSON:API `type` field of the related resources. |
+| `uriVariableMappings` | Conditional | Maps properties from the parent resource to the URI variables of the included resource. Required when the included resource is routed by URI variables. Format: `parentProperty: childUriVariable`. Ignored when `resolverClass` is set. |
+| `uriTemplate` | Optional | Explicit URI template for the included resource when it has multiple operations and the relationship must target a specific path (for example, `/abstract-products/{abstractProductSku}/abstract-product-prices`). |
+| `resolverClass` | Optional | Fully qualified class name of a relationship resolver. Use when the relationship cannot be expressed via URI variables — the resolver receives the parent resources and the request context, and returns the related resources directly. When `resolverClass` is set, `uriVariableMappings` and `uriTemplate` are not used for routing. See [Custom relationship resolvers](/docs/dg/dev/architecture/api-platform/relationships.html#custom-relationship-resolvers). |
+| `autoInclude` | Optional | Resolve this relationship for every response of the parent type, even when the client did not request it via `?include=`. Use `autoIncludeMaxDepth` and `autoIncludeMinDepth` to bound where in the response graph the auto-include applies. |
 
-Declares where this resource can be included:
+#### URI-variable mapping example
+
+For relationships routed by sub-resource URLs, map parent properties to child URI variables:
 
 ```yaml
-includableIn:
-  - resource: Customers
-    relationshipName: addresses
+includes:
+  - relationshipName: abstract-product-prices
+    targetResource: AbstractProductPrices
+    uriTemplate: /abstract-products/{abstractProductSku}/abstract-product-prices
     uriVariableMappings:
-      customerReference: customerReference
+      sku: abstractProductSku
 ```
 
-Both declarations must match for validation to pass.
+#### Resolver-based example
 
-For detailed information about relationships, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
+For relationships whose targets cannot be derived from URI variables (for example, derived from order state or aggregated across multiple sources), reference a resolver class:
+
+```yaml
+includes:
+  - relationshipName: order-shipments
+    targetResource: OrderShipments
+    resolverClass: Spryker\Glue\ShipmentsRestApi\Api\Storefront\Relationship\OrderShipmentsRelationshipResolver
+```
+
+**Further reading:** [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html) — full reference for declaring, resolving, and troubleshooting relationships between API Platform resources, including provider-based and resolver-based dispatch, response shape, validation, and worked examples.
+
+## Sort priority for included resources
+
+The JSON:API response wraps related resources in an `included` array. By default, API Platform sorts that array alphabetically by resource `type`. Use `includedSortPriority` on a resource to override where its entries appear relative to other types.
+
+### How it works
+
+| Rule | Behavior |
+|------|----------|
+| Default | Every resource has an implicit priority of `0`. |
+| Higher priority | Entries appear **later** in the `included` array. |
+| Equal priority | Entries are sorted alphabetically by `type`. |
+
+The priority is read from the resource's own `.resource.yml` and applied globally to every response that surfaces that type in `included`.
+
+### Syntax
+
+```yaml
+resource:
+  name: CartItems
+  shortName: items
+
+  includedSortPriority: 100
+```
+
+The generator passes the value through to the generated `#[ApiResource]` attribute via `extraProperties`:
+
+```php
+#[ApiResource(
+    shortName: 'items',
+    extraProperties: ['includedSortPriority' => 100],
+    // ...
+)]
+```
+
+### When to set a custom priority
+
+Set `includedSortPriority` higher than `0` when a resource must appear after its nested children in the `included` array. The typical case is cart-item-like resources whose `?include=` chain resolves to abstract or concrete products: keeping the parent items last preserves the ordering of the legacy REST API and matches the order most clients expect when iterating the `included` array.
+
+The following resources ship with `includedSortPriority: 100`:
+
+- `items`
+- `guest-cart-items`
+- `bundle-items`
+- `configurable-bundle-template-image-sets`
+
+All other shipped resources rely on the default of `0`. Override the priority on project-level resources only when you need to enforce a specific ordering in `included`.
+
+{% info_block infoBox "Sort priority is not a guarantee of stable ordering across versions" %}
+
+`includedSortPriority` is a hint for the sort algorithm, not a JSON:API contract. Clients should still address resources by `type` and `id` rather than by index in the `included` array.
+
+{% endinfo_block %}
 
 ## Resource generation process
 
@@ -398,8 +788,9 @@ Spryker automatically merges schemas from multiple layers:
 
 **Core layer** (lowest priority):
 
+**vendor/spryker/customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# vendor/spryker/customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -411,8 +802,9 @@ resource:
 
 **Feature layer** (medium priority):
 
+**src/SprykerFeature/CRM/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# src/SprykerFeature/CRM/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -422,8 +814,9 @@ resource:
 
 **Project layer** (highest priority):
 
+**src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# src/Pyz/GLue/Customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
@@ -471,10 +864,14 @@ use ApiPlatform\Metadata\Delete;
 
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
-    shortName: 'Customer',
+    shortName: 'customers',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class,
-    paginationItemsPerPage: 10
+    paginationItemsPerPage: 10,
+    paginationEnabled: true,
+    paginationMaximumItemsPerPage: 100,
+    paginationClientEnabled: true,
+    paginationClientItemsPerPage: true
 )]
 final class CustomersBackendResource
 {
@@ -488,6 +885,8 @@ final class CustomersBackendResource
 
     #[ApiProperty(identifier: true, writable: false)]
     public ?string $customerReference = null;
+
+    public ?bool $isActive = true;
 
     // Getters, setters, toArray(), fromArray() methods...
 }
@@ -534,45 +933,170 @@ Error: Provider class "Pyz\Glue\Customer\Api\Backend\Provider\MissingProvider" d
 
 ## Advanced schema features
 
-### Custom operations
+### Custom URL paths
 
-Define custom operations beyond standard CRUD:
+Operations support `uriTemplate` and `uriVariables` to define custom URL paths, including sub-resource URLs like `/customers/{customerReference}/addresses`.
 
-```yaml
-operations:
-  - type: Post
-    uriTemplate: "/customers/{id}/activate"
-    method: "POST"
-    processor: "Pyz\\Glue\\Customer\\Api\\Backend\\Processor\\CustomerActivationProcessor"
-```
+#### Sub-resource with full CRUD
 
-### Nested resources
+Define a child resource with nested URLs by adding `uriTemplate` and `uriVariables` to each operation:
 
-Define relationships between resources:
-
-```yaml
-properties:
-  addresses:
-    type: array
-    description: "Customer addresses"
-    items:
-      type: object
-      properties:
-        street:
-          type: string
-        city:
-          type: string
-```
-
-### Security expressions
-
-Add fine-grained security:
+**customers-addresses.resource.yml**
 
 ```yaml
 resource:
-  security: "is_granted('ROLE_ADMIN')"
+  name: CustomersAddresses
+  shortName: customers-addresses
+
+  operations:
+    - type: GetCollection
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+
+    - type: Get
+      uriTemplate: '/customers/{customerReference}/addresses/{uuid}'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+        uuid:
+          fromClass: CustomersAddressesStorefrontResource
+
+    - type: Post
+      uriTemplate: '/customers/{customerReference}/addresses'
+      uriVariables:
+        customerReference:
+          toProperty: 'customer'
+          fromClass: CustomersStorefrontResource
+```
+
+**`uriVariables` properties:**
+- `fromClass`: The generated resource class the variable originates from
+- `toProperty`: The property on the current resource that links to the parent resource
+
+#### Action-style sub-resource
+
+For single-action endpoints nested under a parent resource:
+
+**customers-confirm-registration.resource.yml**
+
+```yaml
+resource:
+  name: CustomersConfirmRegistration
+  shortName: customers-confirm-registration
+
+  operations:
+    - type: Post
+      uriTemplate: /customers/{customerReference}/confirm-registration
+```
+
+For more details on `uriTemplate`, `uriVariables`, and sub-resource patterns, see the [API Platform sub-resources documentation](https://api-platform.com/docs/core/subresources/).
+
+### Security expressions
+
+Security expressions protect resources and operations using [Symfony's ExpressionLanguage](https://symfony.com/doc/current/security/expressions.html). They require the SecurityBundle to be configured. See [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) for setup instructions.
+
+{% info_block infoBox "Where roles come from" %}
+
+Roles like `ROLE_CUSTOMER` in security expressions come from OAuth scopes that are automatically mapped to Symfony roles. The mapping convention is as follows: a scope name is uppercased and prefixed with `ROLE_`. For example, the `customer` scope becomes `ROLE_CUSTOMER`.
+
+Scopes are provided by scope provider plugins registered in `OauthDependencyProvider::getScopeProviderPlugins()`. The following table lists the out-of-the-box scope provider plugins and the scopes they provide:
+
+| Plugin | Scopes |
+|--------|--------|
+| `CustomerOauthScopeProviderPlugin` | `customer` |
+| `CompanyUserOauthScopeProviderPlugin` | `company_user` |
+| `AgentOauthScopeProviderPlugin` | `agent` |
+| `CustomerImpersonationOauthScopeProviderPlugin` | `customer_impersonation`, `customer` |
+| `UserOauthScopeProviderPlugin` | `user`, plus UserType sub-plugins |
+| `WarehouseOauthScopeProviderPlugin` | `warehouse` |
+
+For details on how the mapping works, see [Security — Roles and OAuth scope mapping](/docs/dg/dev/architecture/api-platform/security.html). For instructions on setting up scopes, see [Integrate the authorization scopes](/docs/integrations/spryker-glue-api/backend-api/integrate-backend-api/integrate-the-authorization-scopes.html).
+
+{% endinfo_block %}
+
+Three types of security expressions are supported:
+
+| Expression | Evaluated | Use case | When to use |
+|-----------|-----------|----------|-------------|
+| `security` | Before the request is processed | Check user roles or authentication status | For role or authentication checks that do not depend on the request body. |
+| `securityPostDenormalize` | After the request body is deserialized | Check authorization based on submitted data | When authorization depends on the deserialized resource `object`, for example, to verify the user owns the resource being modified. |
+| `securityPostValidation` | After validation passes | Check authorization based on validated data | When authorization depends on validated data, for example, to verify a value is within the user's authorized limit after validation confirms the data is structurally correct. |
+
+#### Resource-level security
+
+Applies to all operations on the resource:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers
+  security: "is_granted('ROLE_USER')"
+```
+
+#### Operation-level security
+
+Applies to a specific operation, overriding resource-level security:
+
+```yaml
+resource:
+  name: Customers
+  shortName: customers
+
+  operations:
+    - type: Post
+      # No security — public registration
+
+    - type: Get
+      security: "is_granted('ROLE_USER')"
+
+    - type: Patch
+      security: "is_granted('ROLE_USER')"
+```
+
+#### Post-denormalize security
+
+Evaluated after the request body has been deserialized. The `object` variable contains the resource instance:
+
+```yaml
+resource:
+  name: Orders
+  shortName: orders
+  security: "is_granted('ROLE_USER')"
   securityPostDenormalize: "is_granted('EDIT', object)"
 ```
+
+{% info_block infoBox "Custom voter attributes" %}
+
+`EDIT` in the example is a **custom voter attribute** — it is an application-defined string, not a built-in Symfony or Spryker constant. For `is_granted('EDIT', object)` to work, you must register a custom Symfony [Voter](https://symfony.com/doc/current/security/voters.html) that supports the `EDIT` attribute and implements the authorization logic, for example, checking that the authenticated user owns the resource.
+
+Use `securityPostDenormalize` when the authorization decision depends on the **submitted request data** (the deserialized `object`), such as verifying resource ownership.
+
+{% endinfo_block %}
+
+#### Post-validation security
+
+Evaluated after validation has passed:
+
+```yaml
+resource:
+  name: Payments
+  shortName: payments
+  securityPostValidation: "is_granted('PROCESS', object)"
+```
+
+{% info_block infoBox "Custom voter attributes" %}
+
+`PROCESS` in the example is a **custom voter attribute** — it is an application-defined string, not a built-in Symfony or Spryker constant. For `is_granted('PROCESS', object)` to work, you must register a custom Symfony [Voter](https://symfony.com/doc/current/security/voters.html) that supports the `PROCESS` attribute.
+
+Use `securityPostValidation` when the authorization decision depends on **validated data**, for example, to verify a payment amount is within the user's authorized limit after validation confirms the data is structurally correct.
+
+{% endinfo_block %}
+
+For detailed information about the authentication flow, role mapping, and accessing the authenticated user in providers, see [Security](/docs/dg/dev/architecture/api-platform/security.html).
 
 ## Generation commands
 
@@ -641,6 +1165,8 @@ Only these property types are allowed:
 - `boolean`
 - `array`
 - `object`
+- `map`
+- `mixed`
 
 ### Provider/Processor validation
 
@@ -655,10 +1181,20 @@ Only these property types are allowed:
 ```yaml
 # ✅ Good
 resource:
-  name: Customers
-  shortName: Customer
+  name: Customers              # PascalCase plural — used for schema merging
+  shortName: customers         # lowercase kebab-case plural — JSON:API type + URL segment
 
-# ❌ Bad
+# ✅ Good — multi-word
+resource:
+  name: AbstractProductPrices
+  shortName: abstract-product-prices
+
+# ❌ Bad — wrong shortName casing/form
+resource:
+  name: Customers
+  shortName: Customer          # Should be lowercase plural
+
+# ❌ Bad — abbreviated, unclear
 resource:
   name: CustomerData
   shortName: cust
@@ -679,17 +1215,23 @@ email:
 
 ### 3. Leverage schema merging
 
+Core — define base properties:
+
+**src/Spryker/Customer/resources/api/backend/customer.resource.yml**
+
 ```yaml
-# Core: Define base properties
-# src/Spryker/Customer/resources/api/backend/customer.yml
 resource:
   name: Customers
   properties:
     email:
       type: string
+```
 
-# Project: Only override what's needed
-# src/Pyz/Glue/Customer/resources/api/backend/customer.yml
+Project — only override what is needed:
+
+**src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml**
+
+```yaml
 resource:
   name: Customers
   properties:

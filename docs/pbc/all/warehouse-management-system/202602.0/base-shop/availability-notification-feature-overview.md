@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/availability-notification-feature-overview
 originalArticleId: 12e075cf-e5a0-4281-bef7-73f3b724bf35
 redirect_from:
-  - /docs/pbc/all/warehouse-management-system/202512.0/base-shop/availability-notification-feature-overview.html 
+  - /docs/pbc/all/warehouse-management-system/202512.0/base-shop/availability-notification-feature-overview.html
   - /2021080/docs/availability-notification-feature-overview
   - /2021080/docs/en/availability-notification-feature-overview
   - /docs/availability-notification-feature-overview

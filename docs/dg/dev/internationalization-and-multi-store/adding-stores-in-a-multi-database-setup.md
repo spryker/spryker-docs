@@ -1,14 +1,16 @@
 ---
 title: "Adding stores in a multi-datatabse setup"
 description: Adding and deploying a new store in multi-db store setup requires additional steps and preparation. This guideline contains all the best practices you need to know.
-last_updated: Dec 02, 2024
+last_updated: Jun 15, 2026
 template: howto-guide-template
 ---
 
 Setting up a new store in an existing multi-database environment requires a detailed plan to make sure that the data and operations of existing stores remain unaffected. This document describes how to seamlessly launch a new store within a region that already hosts other stores.
 
 {% info_block warningBox %}
+
 This guide can be used for projects that are managing stores programmatically through code. If you're using the Dynamic Multistore feature to manage stores in the Back Office, refer to [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/latest/dynamic-multistore.html).
+
 {% endinfo_block %}
 
 ## Planning and best practices
@@ -222,7 +224,7 @@ Prepare the production environment's configuration similarly to the staging setu
 
 ## Releasing multiple stores in a row
 
-This section describes the changes you need to make to the procedure in [Releasing a store] to release multiple stores in a row.
+This section describes the changes you need to make to the procedure in [Releasing a store](#releasing-a-store) to release multiple stores in a row.
 
 When releasing multiple stores, you need to prepare configuration for all the stores, but release one store at a time.
 

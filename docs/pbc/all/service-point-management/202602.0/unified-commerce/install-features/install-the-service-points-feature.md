@@ -4,7 +4,7 @@ description: Learn how to integrate the Service Points feature into your Spryker
 last_updated: Aug 28, 2023
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/service-point-management/202507.0/unified-commerce/install-features/install-the-service-points-feature.html 
+  - /docs/pbc/all/service-point-management/202507.0/unified-commerce/install-features/install-the-service-points-feature.html
   - /docs/scos/dev/feature-integration-guides/202304.0/install-the-service-points-feature.html
   - /docs/uc/all/enhanced-click-collect/202307.0/install-and-upgrade/install-features/install-the-service-points-feature.html
   - /docs/pbc/all/service-points/202400.0/install-and-upgrade/install-the-service-points-feature.html

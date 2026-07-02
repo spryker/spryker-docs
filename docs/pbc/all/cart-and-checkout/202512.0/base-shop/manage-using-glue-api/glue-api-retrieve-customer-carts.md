@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-customer-carts
 originalArticleId: a09a087b-5fca-483c-a2c2-f8441681b43e
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html

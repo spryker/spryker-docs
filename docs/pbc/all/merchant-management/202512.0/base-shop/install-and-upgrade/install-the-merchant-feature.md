@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-feature-integration
 originalArticleId: 7b98e6df-b4e5-4aa7-9471-9bbed2344433
 redirect_from:
+  - /docs/pbc/all/merchant-management/202602.0/base-shop/install-and-upgrade/install-the-merchant-feature.html
   - /2021080/docs/merchant-feature-integration
   - /2021080/docs/en/merchant-feature-integration
   - /docs/merchant-feature-integration

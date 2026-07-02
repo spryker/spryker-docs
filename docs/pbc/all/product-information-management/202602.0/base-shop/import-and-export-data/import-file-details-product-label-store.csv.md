@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-label-storecsv
 originalArticleId: 6d00793f-81ee-4e04-894f-5650a9e26d17
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html

@@ -4,7 +4,7 @@ description: Learn how you can create new reclamations in the Spryker Cloud Comm
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/manage-in-the-back-office/reclamations/create-reclamations.html
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/creating-reclamations.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html
 related:

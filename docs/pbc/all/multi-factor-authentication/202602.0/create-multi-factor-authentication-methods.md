@@ -12,7 +12,7 @@ related:
     link: docs/pbc/all/multi-factor-authentication/page.version/install-email-multi-factor-authentication-method.html
 
 redirect_from:
-  - /docs/pbc/all/multi-factor-authentication/202512.0/create-multi-factor-authentication-methods.html 
+  - /docs/pbc/all/multi-factor-authentication/202512.0/create-multi-factor-authentication-methods.html
   - /docs/pbc/all/multi-factor-authentication/202505.0/create-multi-factor-authentication-methods.html
 ---
 

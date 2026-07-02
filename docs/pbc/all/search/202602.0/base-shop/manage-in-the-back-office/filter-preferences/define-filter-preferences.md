@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-filter-preferences
 originalArticleId: a12072b2-b53e-4cf6-8ef1-f94c08cdc6ef
 redirect_from:
-  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html 
+  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
   - /2021080/docs/managing-filter-preferences
   - /2021080/docs/en/managing-filter-preferences
   - /docs/managing-filter-preferences

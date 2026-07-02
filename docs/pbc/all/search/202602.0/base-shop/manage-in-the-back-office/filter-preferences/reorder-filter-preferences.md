@@ -4,7 +4,7 @@ description: Learn how to reorder category filters directly in the Back Office o
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html 
+  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/reorder-filter-preferences.html
 related:

@@ -19,14 +19,30 @@ permalink: /search.html
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
 
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const initialQuery = urlParams.get('q') || '';
     let debounceTimer;
 
     const search = instantsearch({
         indexName: 'spryker_full_content',
         searchClient: algoliasearch('SF7W0R2XNG', '8f2c94685deea955c12e82e73f333f4a'),
-        routing: true,
+        routing: {
+            stateMapping: {
+                stateToRoute(uiState) {
+                    const indexUiState = uiState['spryker_full_content'] || {};
+                    return {
+                        q: indexUiState.query,
+                        page: indexUiState.page,
+                    };
+                },
+                routeToState(routeState) {
+                    return {
+                        spryker_full_content: {
+                            query: routeState.q,
+                            page: routeState.page,
+                        },
+                    };
+                },
+            },
+        },
         searchFunction(helper) {
             const query = helper.state.query.trim();
             if (query.length < 3) {
@@ -124,11 +140,4 @@ permalink: /search.html
     }
 
 
-    if (initialQuery) {
-        search.setUiState({
-            [search.indexName]: {
-                query: initialQuery
-            }
-        });
-    }
 </script>

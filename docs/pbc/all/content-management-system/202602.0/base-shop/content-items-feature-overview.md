@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-items-feature-overview
 originalArticleId: beb3bad2-d08d-42b7-9474-9dedfecae781
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/content-items-feature-overview.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/content-items-feature-overview.html
   - /2021080/docs/content-items-feature-overview
   - /2021080/docs/en/content-items-feature-overview
   - /docs/content-items-feature-overview

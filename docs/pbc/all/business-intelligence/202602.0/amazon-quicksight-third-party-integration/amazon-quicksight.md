@@ -3,7 +3,7 @@ title: Amazon QuickSight
 description: Amazon QuickSight overview
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/business-intelligence/202512.0/amazon-quicksight-third-party-integration/amazon-quicksight.html 
+  - /docs/pbc/all/business-intelligence/202512.0/amazon-quicksight-third-party-integration/amazon-quicksight.html
 last_updated: Oct 24, 2024
 ---
 

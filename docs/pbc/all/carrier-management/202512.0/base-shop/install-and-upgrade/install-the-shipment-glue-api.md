@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration
 originalArticleId: a324452c-5bf0-49f9-a6d8-fd59abf3b414
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
   - /2021080/docs/glue-api-shipment-feature-integration
   - /2021080/docs/en/glue-api-shipment-feature-integration
   - /docs/glue-api-shipment-feature-integration

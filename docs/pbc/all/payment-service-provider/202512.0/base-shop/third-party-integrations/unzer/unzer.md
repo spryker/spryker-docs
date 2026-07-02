@@ -4,6 +4,7 @@ last_updated: Jun 9, 2022
 description: This document desribes the Unzer payment method and how it can enhance your Spryker Marketplace projects.
 template: concept-topic-template
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/unzer/unzer.html
   - /docs/pbc/all/payment/unzer/unzer.html
   - /docs/pbc/all/payment-service-providers/unzer/unzer.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/unzer/whats-changed-in-unzer.html

@@ -4,6 +4,7 @@ description: Retrieve details about wishlists and learn what else you can do wit
 template: glue-api-storefront-guide-template
 last_updated: Jan 2, 2024
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/201811.0/wishlists/managing-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/201903.0/wishlists/managing-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/201907.0/wishlists/managing-wishlists.html

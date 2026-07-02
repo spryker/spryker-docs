@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-users
 originalArticleId: 4c9db88b-8496-4989-aff3-d0a676bf1a94
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-company-users.html

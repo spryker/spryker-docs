@@ -39,6 +39,10 @@ git diff --name-only --diff-filter=U --relative |
 
 8. Fix CI by adding redirects or removing the pages from the sidebar.
 
+8.1 removed pages should be added as a include_versions(where they exists) to the sidebar 
+
+8.2 update _config.yml with new version and expand versioned_categories with new pages
+
 - `bundle exec rake check_pbc > needed_redirects.txt`
 - `cat needed_redirects.txt | grep  ' -> ' | cut -d '>' -f 2 | _scripts/redirects_generator/redirects_generator.2.sh 202512.0`
 

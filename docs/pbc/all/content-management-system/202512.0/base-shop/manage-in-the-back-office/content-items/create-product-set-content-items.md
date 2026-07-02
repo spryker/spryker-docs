@@ -4,6 +4,7 @@ description: Learn how to create and manage product set content items in the Spr
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html
   - /docs/pbc/all/content-management-system/202507.0/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-product-set-content-items.html
 ---

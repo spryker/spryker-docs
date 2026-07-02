@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog-api-feature-integration
 originalArticleId: 8e4c8246-966e-4f6f-b8e8-6e76cc2af23f
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - /2021080/docs/catalog-api-feature-integration
   - /2021080/docs/en/catalog-api-feature-integration
   - /docs/catalog-api-feature-integration

@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-management-attributecsv
 originalArticleId: f812b029-e27e-43e7-a6a0-a6db56be3a30
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html

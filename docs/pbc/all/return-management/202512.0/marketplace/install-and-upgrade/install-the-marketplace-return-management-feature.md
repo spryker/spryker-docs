@@ -4,6 +4,7 @@ last_updated: Apr 17, 2023
 description: This document describes the process how to integrate the Marketplace Return Management feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/pbc/all/return-management/202602.0/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-return-management-feature-integration.html
 related:
   - title: Marketplace Return Management feature walkthrough

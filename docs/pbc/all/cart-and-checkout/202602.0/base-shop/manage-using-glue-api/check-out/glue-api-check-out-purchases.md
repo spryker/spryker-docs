@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html 
+  - /docs/pbc/all/cart-and-checkout/202507.0/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - /docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/checking-out-purchases.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/check-out-purchases.html

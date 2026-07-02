@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-carrier-company
 originalArticleId: 7335402c-f389-47c0-952c-59d19580cf37
 redirect_from:
-  - /docs/pbc/all/carrier-management/202512.0/base-shop/manage-in-the-back-office/add-carrier-companies.html 
+  - /docs/pbc/all/carrier-management/202512.0/base-shop/manage-in-the-back-office/add-carrier-companies.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/add-carrier-companies.html
   - /docs/scos/user/back-office-user-guides/202311.0/administration/delivery-methods/creating-carrier-companies.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/add-carrier-companies.html

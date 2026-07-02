@@ -3,6 +3,8 @@ title: "Install the Marketplace Shopping Lists Glue API"
 last_updated: May 5, 2022
 description: This document describes how to integrate the Shopping Lists feature API into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
 related:
   - title: Marketplace Shopping Lists feature walkthrough
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-shopping-lists-feature-overview.html

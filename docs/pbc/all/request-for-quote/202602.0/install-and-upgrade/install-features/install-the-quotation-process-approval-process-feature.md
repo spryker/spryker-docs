@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-approval-process-feature-integration
 originalArticleId: 127edbbd-6c59-4aed-826f-66b7b41022c5
 redirect_from:
-  - /docs/pbc/all/request-for-quote/202507.0/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html 
+  - /docs/pbc/all/request-for-quote/202507.0/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
   - /2021080/docs/quotation-process-approval-process-feature-integration
   - /2021080/docs/en/quotation-process-approval-process-feature-integration
   - /docs/quotation-process-approval-process-feature-integration

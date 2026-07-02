@@ -6,6 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shopping-list
 originalArticleId: f172344d-4048-4ed1-b041-6bb68889ffcc
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglist-module.html
   - /2021080/docs/mg-shopping-list
   - /2021080/docs/en/mg-shopping-list
   - /docs/mg-shopping-list

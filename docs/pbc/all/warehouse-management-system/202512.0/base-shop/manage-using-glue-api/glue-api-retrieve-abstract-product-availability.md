@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-product-availability
 originalArticleId: c712b4c5-0418-48a7-bb0a-bafd208dcf17
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-availability.html
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html

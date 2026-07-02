@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchants
 originalArticleId: e35ca668-b297-45bb-86ab-2fb4e519abfe
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/base-shop/manage-in-the-back-office/create-merchants.html 
+  - /docs/pbc/all/merchant-management/202512.0/base-shop/manage-in-the-back-office/create-merchants.html
   - /2021080/docs/managing-merchants
   - /2021080/docs/en/managing-merchants
   - /docs/managing-merchants

@@ -6,6 +6,22 @@ entries:
       - title: AI Foundation
         url: /docs/pbc/all/ai-foundation/latest/ai-foundation.html
 
+      - title: AI Commerce
+        url: /docs/pbc/all/ai-commerce/ai-commerce.html
+        nested:
+          - title: Visual Add to Cart
+            url: /docs/pbc/all/ai-commerce/visual-add-to-cart.html
+          - title: Back Office Assistant
+            url: /docs/pbc/all/ai-commerce/backoffice-assistant.html
+          - title: Search by Image
+            url: /docs/pbc/all/ai-commerce/search-by-image.html
+          - title: Smart PIM
+            url: /docs/pbc/all/ai-commerce/smart-pim.html
+          - title: Smart CMS Content Assistant
+            url: /docs/pbc/all/ai-commerce/smart-cms-content-assistant.html
+          - title: Commerce MCP Server
+            url: /docs/pbc/all/ai-commerce/commerce-mcp-server.html
+
       - title: Yves
         nested:
           - title: Install and upgrade
@@ -23,6 +39,8 @@ entries:
                 url: /docs/pbc/all/back-office/base-shop/back-office-translations-overview.html
               - title: Backoffice Configuration Framework
                 url: /docs/pbc/all/back-office/base-shop/backoffice-configuration-framework.html
+              - title: Basic Shop Theme feature overview
+                url: /docs/pbc/all/back-office/base-shop/basic-shop-theme-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install the Spryker Core Back Office feature
@@ -42,9 +60,12 @@ entries:
                     - "202507.0"
                   - title: Install Back Office dropdown navigation
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dropdown-navigation.html
+                  - title: Install Back Office dashboard home path
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/install-back-office-dashboard-home-path.html
                   - title: Enable Google Material Icons
                     url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/enable-google-material-icons.html
-
+                  - title: Update the INSPINIA theme in Back Office
+                    url: /docs/pbc/all/back-office/base-shop/install-and-upgrade/update-inpinia-theme-version-at-back-office.html
               - title: Configure the timezone in the Back Office
                 url: /docs/pbc/all/back-office/base-shop/configure-the-timezone-in-the-back-office.html
 
@@ -267,6 +288,8 @@ entries:
 
                   - title: Approval Process feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/approval-process-feature-overview.html
+                  - title: Purchasing Control feature overview
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/purchasing-control-feature-overview.html
                   - title: Comments feature overview
                     url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/comments-feature-overview.html
                   - title: Non-splittable Products feature overview
@@ -280,6 +303,8 @@ entries:
                     nested:
                       - title: Approval Process
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html
+                      - title: Purchasing Control
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-purchasing-control-feature.html
                       - title: Cart + Agent Assist
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
                       - title: Cart
@@ -681,6 +706,8 @@ entries:
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
                   - title: Navigation module
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-navigation-module.html
+                  - title: ContentProductWidget module
+                    url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-the-content-product-widget.html
 
               - title: Import and export data
                 url: /docs/pbc/all/content-management-system/base-shop/import-and-export-data/import-content-management-system-data.html
@@ -1331,6 +1358,8 @@ entries:
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauth-module.html
               - title: Upgrade the OauthCompanyUser module
                 url: /docs/pbc/all/identity-access-management/install-and-upgrade/upgrade-the-oauthcompanyuser-module.html
+              - title: Integrate post-login redirect
+                url: /docs/pbc/all/identity-access-management/install-and-upgrade/integrate-post-login-redirect.html
 
           - title: Manage using Glue API
             nested:
@@ -1362,6 +1391,20 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
+
+      - title: Federated Authentication via OAuth2/OIDC
+        url: /docs/pbc/all/oauth/federated-authentication.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install Federated Authentication
+                url: /docs/pbc/all/oauth/install-and-upgrade/install-federated-authentication.html
+          - title: Storefront account bootstrapping
+            url: /docs/pbc/all/oauth/storefront-account-bootstrapping.html
+          - title: Add an OAuth provider
+            url: /docs/pbc/all/oauth/install-and-upgrade/add-an-oauth-provider.html
+          - title: Set up Keycloak for local development
+            url: /docs/pbc/all/oauth/install-and-upgrade/set-up-keycloak-for-local-development.html
 
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html
@@ -1762,7 +1805,7 @@ entries:
               - title: "Import file details: glossary.csv"
                 url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
 
-          - title: Manage in the Back Office
+          - title: Manage translations in the Back Office
             url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/manage-translations-in-the-back-office.html
             nested:
               - title: Add translations
@@ -1874,6 +1917,11 @@ entries:
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/haensel-ams.html
                   - title: Mindlab
                     url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/mindlab.html
+                  - title: Search Statistics
+                    url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/search-statistics.html
+                    nested:
+                      - title: Install Search Statistics
+                        url: /docs/pbc/all/miscellaneous/third-party-integrations/marketing-and-conversion/analytics/google-analytics/install-search-statistics.html
 
               - title: OpenAI
                 url: /docs/pbc/all/miscellaneous/third-party-integrations/open-ai/integrate-openai.html
@@ -2087,6 +2135,8 @@ entries:
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
                   - title: Custom order reference
                     url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/custom-order-reference-overview.html
+                  - title: Order details page performance
+                    url: /docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-details-page-performance-overview.html
 
 
               - title: Order Amendment feature overview
@@ -2641,25 +2691,17 @@ entries:
                     nested:
                       - title: Install the prerequisites
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html
-                      - title: Connect and configure
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html
-                      - title: Disconnect
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Migrate from the ACP Stripe app
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/migrate-from-acp-to-stripe.html
                       - title: Project guidelines
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-guidelines-for-stripe.html
                         nested:
-                          - title: Embed the Stripe payment page as an iframe
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/embed-the-stripe-payment-page-as-an-iframe.html
-                          - title: Implement Stripe checkout as a hosted payment page
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/project-prerequisites-for-implementing-Stripe-checkout-as-a-hosted-payment-page.html
                           - title: OMS configuration for Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/oms-configuration-for-stripe.html
                           - title: Processing refunds with Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/processing-refunds-with-stripe.html
                           - title: Sending additional data to Stripe
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/sending-additional-data-to-stripe.html
-                          - title: Stripe checkout with third-party frontends
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe/stripe-checkout-with-third-party-frontends.html
 
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
@@ -2873,6 +2915,12 @@ entries:
                   - title: "Marketplace Product Offer Prices feature: Domain model and relationships"
                     url: /docs/pbc/all/price-management/marketplace/domain-model-and-relationships/marketplace-product-offer-prices-feature-domain-model-and-relationships.html
 
+      - title: Product Experience Management
+        url: /docs/pbc/all/product-experience-management/product-experience-management.html
+        nested:
+          - title: Install the Product Experience Management feature
+            url: /docs/pbc/all/product-experience-management/install-the-product-experience-management-feature.html
+
       - title: Product Information Management
         url: /docs/pbc/all/product-information-management/product-information-management.html
         nested:
@@ -2885,6 +2933,8 @@ entries:
                     nested:
                       - title: Product Attributes
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/product-attribute-visibility-overview.html
                       - title: Discontinued Products
                         url: /docs/pbc/all/product-information-management/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html
                       - title: Product Images
@@ -2983,6 +3033,8 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
                       - title: Product Attachments
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attachments-feature.html
+                      - title: Product Attribute Visibility
+                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-attribute-visibility-feature.html
                       - title: Product Bundles + Cart
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
                       - title: Product Bundles
@@ -3388,6 +3440,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
                   - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Create a product configurator
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-create-a-product-configurator.html
                   - title: Split products by stores
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
                   - title: "Product data: From import to frontend views"
@@ -3628,6 +3682,18 @@ entries:
               - title: trbo
                 url: /docs/pbc/all/product-relationship-management/third-party-integrations/trbo.html
 
+      - title: PunchOut Gateway
+        url: /docs/pbc/all/punchout-gateway/punchout-gateway.html
+        nested:
+          - title: Integrate PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/integrate-punchout-gateway.html
+          - title: Project configuration for PunchOut Gateway
+            url: /docs/pbc/all/punchout-gateway/project-configuration-for-punchout-gateway.html
+          - title: Manage PunchOut connections
+            url: /docs/pbc/all/punchout-gateway/manage-punchout-connections.html
+          - title: PunchOut Protocols Coverage
+            url: /docs/pbc/all/punchout-gateway/punchout-protocol-coverage.html
+
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
@@ -3662,17 +3728,6 @@ entries:
             nested:
               - title: "HowTo: Configure product reviews"
                 url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
-
-          - title: Third-party integrations
-            nested:
-              - title: Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
-              - title: Integrate Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
-              - title: Configure Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
-              - title: Disconnect Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
 
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
@@ -4331,13 +4386,11 @@ entries:
                   - title: Vertex
                     url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex.html
                     nested:
-                      - title: Install
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html
+                      - title: Integrate Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex.html
                         nested:
-                          - title: Integrate the connector module
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
-                          - title: Integrate Vertex
-                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                          - title: Configure Vertex-specific metadata
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/configure-vertex-specific-metadata.html
                           - title: Integrate Vertex Validator
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-vertex-validator.html
                             include_versions:
@@ -4348,14 +4401,27 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
                       - title: Connect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
+                        include_versions:
+                        - "202404.0"
+                        - "202410.0"
+                        - "202512.0"
+                        - "202602.0"
                       - title: Troubleshooting
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
+                        include_versions:
+                        - "202404.0"
+                        - "202410.0"
+                        - "202602.0"
                       - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                         include_versions:
                         - "202404.0"
                       - title: Disconnect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+                        include_versions:
+                        - "202404.0"
+                        - "202507.0"
+                        - "202602.0"
 
           - title: Marketplace
             nested:

@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay-oms-workflow
 originalArticleId: 604f600e-3f95-4194-90ed-4b2f7e9fac26
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/heidelpay-oms-workflow.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/heidelpay-oms-workflow.html
   - /2021080/docs/heidelpay-oms-workflow
   - /2021080/docs/en/heidelpay-oms-workflow
   - /docs/heidelpay-oms-workflow

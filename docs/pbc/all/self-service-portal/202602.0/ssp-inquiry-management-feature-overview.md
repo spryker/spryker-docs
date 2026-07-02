@@ -3,7 +3,7 @@ title: Self-Service Portal Inquiry Management feature overview
 description: Allow customers to submit and track inquiries in a structured way while enabling Back Office users to manage, resolve, and collaborate on customer requests.
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/self-service-portal/202512.0/ssp-inquiry-management-feature-overview.html 
+  - /docs/pbc/all/self-service-portal/202512.0/ssp-inquiry-management-feature-overview.html
 last_updated: Dec 15, 2025
 ---
 

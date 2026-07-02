@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/reclamations-feature-integration
 originalArticleId: a4e601de-2e86-44a0-8806-d3ba35776f6b
 redirect_from:
-  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html 
+  - /docs/pbc/all/order-management-system/202512.0/base-shop/install-and-upgrade/install-features/install-the-reclamations-feature.html
   - /2021080/docs/reclamations-feature-integration
   - /2021080/docs/en/reclamations-feature-integration
   - /docs/reclamations-feature-integration

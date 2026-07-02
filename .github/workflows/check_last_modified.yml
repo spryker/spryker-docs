@@ -1,0 +1,92 @@
+name: Check last_updated is not older than 30 days
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - labeled
+    # Archived docs are intentionally frozen with old dates, so never run this
+    # check (or its auto-bump push) against any archive branch (archive,
+    # archive-doc-*, manual_archive_*, product-release-archive-*, …).
+    branches-ignore:
+      - '*archive*'
+      - '**/*archive*'
+
+permissions:
+  contents: write
+
+jobs:
+  check-sidebar-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Check last_updated is not older than 30 days for files with 1 changed line
+        id: detect
+        continue-on-error: true
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          STALE_LIST_FILE: ${{ runner.temp }}/stale_last_updated.txt
+        run: /bin/bash ./_scripts/last_updated_checker.sh 1 30
+
+      # Fork PRs run with a read-only token, so the bot can't push a fix. Surface the
+      # drift as a hard failure instead of silently passing the continue-on-error step.
+      - name: Fail on fork PRs that can't be auto-fixed
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          echo "last_updated is stale, but this is a fork PR and can't be auto-fixed. Please bump last_updated to the current date."
+          exit 1
+
+      # Auto-bumping pushes a bot commit to the PR branch, so it is opt-in: it only runs
+      # when the maintainer adds the "Allow autofix" label. Without it, stale dates are a
+      # hard failure (next step) and the author bumps them by hand. Adding the label fires
+      # a `labeled` event, so the fix runs without needing a fresh push.
+      - name: Fail when stale and autofix not allowed
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && !contains(github.event.pull_request.labels.*.name, 'Allow autofix')
+        run: |
+          echo "last_updated is stale. Bump it to the current date, or add the 'Allow autofix' label to let the bot bump it for you."
+          exit 1
+
+      - name: Bump stale last_updated dates to today
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
+        env:
+          STALE_LIST_FILE: ${{ runner.temp }}/stale_last_updated.txt
+        run: |
+          if [ ! -s "$STALE_LIST_FILE" ]; then
+            echo "Checker failed but no auto-fixable file was recorded (e.g. a missing last_updated field). Failing."
+            exit 1
+          fi
+          TODAY=$(LC_ALL=C date '+%b %-d, %Y')
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            echo "Bumping last_updated -> $TODAY in $file"
+            sed -i -E "s/^last_updated:.*/last_updated: ${TODAY}/" "$file"
+          done < <(sort -u "$STALE_LIST_FILE")
+
+      - name: Commit and push date bumps
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-bump stale last_updated to current date"
+          commit_user_name: spryker-docs-bot
+          commit_user_email: spryker-docs-bot@users.noreply.github.com
+          file_pattern: '**/*.md'
+
+      # Confirm the bump resolved the drift in this run. Uses the post-commit local HEAD
+      # (the event's head SHA predates the fix commit). The push above also fires a fresh
+      # pull_request run that re-validates and converges — the second run finds the dates
+      # current, records nothing, and pushes nothing, so there is no commit loop.
+      - name: Re-verify after auto-fix
+        if: steps.detect.outcome == 'failure' && github.event.pull_request.head.repo.full_name == github.repository && contains(github.event.pull_request.labels.*.name, 'Allow autofix')
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          export GITHUB_HEAD_SHA="$(git rev-parse HEAD)"
+          /bin/bash ./_scripts/last_updated_checker.sh 1 30

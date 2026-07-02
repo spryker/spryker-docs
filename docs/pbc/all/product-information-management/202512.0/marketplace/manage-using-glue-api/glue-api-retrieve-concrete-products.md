@@ -4,6 +4,7 @@ description: Retrieve Concrete product data in your Spryker Marketplace project 
 template: glue-api-storefront-guide-template
 last_updated: Dec 18, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-concrete-products.html
 related:
   - title: Retrieving product offers of concrete products

@@ -19,7 +19,7 @@ related:
 
 {% info_block warningBox "Warning" %}
 
-Spryker App Composition Platform has been discontinued.
+The Spryker App Composition Platform is being sunset. No additional activations or changes are allowed. Contact your Spryker representative if you require additional information.
 
 {% endinfo_block %}
 

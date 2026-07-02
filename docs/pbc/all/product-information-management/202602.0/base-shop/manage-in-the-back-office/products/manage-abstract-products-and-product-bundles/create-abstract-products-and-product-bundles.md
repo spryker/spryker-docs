@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-abstract-products-and-product-bundles
 originalArticleId: 41920cd2-8fea-4194-9ed3-bf19c1791649
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
   - /2021080/docs/creating-abstract-products-and-product-bundles
   - /2021080/docs/en/creating-abstract-products-and-product-bundles
   - /docs/creating-abstract-products-and-product-bundles

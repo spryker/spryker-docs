@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-order-management-feature-integration
 originalArticleId: 23a61e2c-92d9-45a5-89e3-2c05ea71e5ea
 redirect_from:
-  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html 
+  - /docs/pbc/all/product-information-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html
   - /2021080/docs/product-bundles-order-management-feature-integration
   - /2021080/docs/en/product-bundles-order-management-feature-integration
   - /docs/product-bundles-order-management-feature-integration

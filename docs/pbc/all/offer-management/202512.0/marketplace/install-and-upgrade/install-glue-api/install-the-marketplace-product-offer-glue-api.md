@@ -4,6 +4,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/offer-management/202602.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-offer-feature-integration.html
 related:
   - title: Marketplace Product Offer feature walkthrough

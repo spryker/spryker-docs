@@ -1,7 +1,7 @@
 ---
 title: API Platform Enablement
 description: Learn how to create and enable API Platform resources in your Spryker project.
-last_updated: Jan 22, 2026
+last_updated: May 20, 2026
 template: howto-guide-template
 related:
   - title: API Platform
@@ -45,7 +45,7 @@ Create a schema file that defines your API resource structure. Schemas should be
 
 resource:
     name: Customers
-    shortName: Customer
+    shortName: customers
     description: "Customer resource for backend API"
 
     provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
@@ -309,7 +309,7 @@ The generated class includes:
 ### 6. Register services in the Dependency Injection container
 
 Make your Provider and Processor available through dependency injection:
-`config/Glue/ApplicationServices.php`
+**config/Glue/ApplicationServices.php**
 
 ```php
 <?php
@@ -378,7 +378,7 @@ Create CodeBucket variants when you need:
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
 
   operations:
     - type: Get
@@ -401,7 +401,7 @@ resource:
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
   codeBucket: EU
   
   operations:
@@ -475,17 +475,85 @@ API Platform supports multi-layer schema definitions with automatic merging:
 
 ### Core layer
 
-`vendor/spryker/customer/resources/api/backend/customer.yml` - Base definition
+`vendor/spryker/customer/resources/api/backend/customer.resource.yml` - Base definition
 
 ### Feature layer
 
-`src/SprykerFeature/CustomerRelationManagement/resources/api/backend/customer.yml` - Feature enhancements
+`src/SprykerFeature/CustomerRelationManagement/resources/api/backend/customer.resource.yml` - Feature enhancements
 
 ### Project layer
 
-`src/Pyz/Glue/Customer/resources/api/backend/customer.yml` - Project customizations
+`src/Pyz/Glue/Customer/resources/api/backend/customer.resource.yml` - Project customizations
 
 The generator automatically merges these schemas with project layer taking precedence.
+
+## Delegating to another module's provider
+
+When a module needs to expose an operation that returns resources owned by a different module, inject the host module's provider and delegate to it rather than duplicating resource-building logic.
+
+### When to use
+
+Use this pattern when:
+- Your module resolves a list of IDs (for example, from a storage client) and needs to return fully-built resources of a type defined in another module.
+- The host module already owns the reader, mapper, and serializer logic for that resource type.
+
+### How it works
+
+The host provider exposes a public context key constant. The consuming provider resolves its IDs, then calls `provide()` on the injected host provider, passing those IDs in the context:
+
+```php
+// Host provider — exposes a context key so callers can pass pre-resolved IDs
+class AbstractProductsStorefrontProvider extends AbstractStorefrontProvider
+{
+    public const string CONTEXT_KEY_ABSTRACT_PRODUCT_IDS = 'abstractProductIds';
+
+    protected function provideCollection(): array
+    {
+        $abstractProductIds = $this->context[static::CONTEXT_KEY_ABSTRACT_PRODUCT_IDS] ?? null;
+
+        if (is_array($abstractProductIds) && $abstractProductIds !== []) {
+            return $this->buildResourcesByAbstractProductIds($abstractProductIds);
+        }
+
+        // Normal collection handling (e.g. throw if no identifier provided)
+    }
+}
+```
+
+```php
+// Consuming provider — resolves IDs from its own storage, then delegates
+class RelatedProductsStorefrontProvider extends AbstractStorefrontProvider
+{
+    public function __construct(
+        protected ProductStorageClientInterface $productStorageClient,
+        protected ProductRelationStorageClientInterface $productRelationStorageClient,
+        protected AbstractProductsStorefrontProvider $abstractProductsProvider,
+        protected RelatedProductsExceptionFactory $exceptionFactory,
+    ) {
+    }
+
+    protected function provideCollection(): array
+    {
+        // ... resolve $relatedProductIds from storage ...
+
+        return (array)$this->abstractProductsProvider->provide(
+            new GetCollection(),
+            $this->uriVariables,
+            array_merge($this->context, [
+                AbstractProductsStorefrontProvider::CONTEXT_KEY_ABSTRACT_PRODUCT_IDS => $relatedProductIds,
+            ]),
+        );
+    }
+}
+```
+
+The host provider receives the current request context (locale, store, request object) alongside the pre-resolved IDs, so all its internal helpers (`getLocale()`, `getStore()`) continue to work correctly.
+
+### Key rules
+
+- The host provider MUST declare the context key as a `public const` so consuming providers can reference it without hardcoding strings.
+- The consuming provider passes `$this->uriVariables` and `$this->context` unchanged, adding only the IDs key — never replacing the full context.
+- The consuming module must declare the host module as a `composer.json` dependency and pin the minor version that introduced the context key.
 
 ## Debugging resources
 

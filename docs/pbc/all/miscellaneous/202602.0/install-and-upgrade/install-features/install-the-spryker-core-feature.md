@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-core-feature-integration
 originalArticleId: f99d3cf9-e933-4a3b-888e-72cf8f4ea31b
 redirect_from:
-  - /docs/pbc/all/miscellaneous/202512.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html 
+  - /docs/pbc/all/miscellaneous/202512.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html
   - /2021080/docs/spryker-core-feature-integration
   - /2021080/docs/en/spryker-core-feature-integration
   - /docs/spryker-core-feature-integration

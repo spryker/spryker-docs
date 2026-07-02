@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
 redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202311.0/searching-the-product-catalog.html
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
 related:

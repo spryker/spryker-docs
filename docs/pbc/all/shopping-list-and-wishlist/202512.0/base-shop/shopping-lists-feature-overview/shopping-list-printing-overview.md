@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/printing-shopping-list-overview
 originalArticleId: 4545f8d7-3fbd-4aaf-9238-1eec836e630c
 redirect_from:
+  - /docs/pbc/all/shopping-list-and-wishlist/202602.0/base-shop/shopping-lists-feature-overview/shopping-list-printing-overview.html
   - /2021080/docs/printing-shopping-list-overview
   - /2021080/docs/en/printing-shopping-list-overview
   - /docs/printing-shopping-list-overview

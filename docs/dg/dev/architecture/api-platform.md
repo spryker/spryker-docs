@@ -1,7 +1,7 @@
 ---
 title: API Platform
 description: Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation and the integration of the API Platform Bundle.
-last_updated: Feb 25, 2026
+last_updated: Jun 29, 2026
 template: concept-topic-template
 related:
   - title: How to integrate API Platform
@@ -12,9 +12,17 @@ related:
     link: docs/dg/dev/architecture/api-platform/relationships.html
   - title: Dependency Injection
     link: docs/dg/dev/architecture/dependency-injection.html
+  - title: Security
+    link: docs/dg/dev/architecture/api-platform/security.html
+  - title: Native API Platform Resources
+    link: docs/dg/dev/architecture/api-platform/native-api-platform-resources.html
+  - title: Sparse Fieldsets
+    link: docs/dg/dev/architecture/api-platform/sparse-fieldsets.html
+  - title: Serialization
+    link: docs/dg/dev/architecture/api-platform/serialization.html
 ---
 
-Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and serialization.
+Spryker's API Platform integration provides schema-based API resource generation with automatic OpenAPI documentation. This allows you to define your API resources using YAML schemas and automatically generate fully functional API endpoints with validation, pagination, and [serialization](/docs/dg/dev/architecture/api-platform/serialization.html).
 
 This document describes the API Platform architecture and how it integrates with Spryker.
 
@@ -29,6 +37,19 @@ API Platform is a framework for building modern APIs based on web standards and 
 - **State management**: Separate providers (read) and processors (write) for clean architecture
 
 Read more about the API Platform project at [api-platform.com](https://api-platform.com/).
+
+### Why Spryker is moving to API Platform
+
+API Platform replaces Spryker-specific patterns for routing, authentication, and resource definition with industry-standard Symfony conventions, automatic OpenAPI schema generation, and a clean separation between resource schema, provider, and validation.
+
+| Aspect | Previous infrastructure | API Platform |
+|---|---|---|
+| Bootstrap | Spryker-specific application bootstrap | Symfony Kernel-based routing |
+| Resource registration | Manual plugin registration in `GlueApplicationDependencyProvider` | Declarative YAML resource definitions (`*.resource.yml`) |
+| Authentication | Custom flows per module | Standard OAuth2 / Symfony Security |
+| Coupling | Tight coupling between resource and routing logic | Clean separation: provider + resource schema + validation |
+| Testability | Complex to test and extend | Symfony-native, testable with standard PHPUnit patterns |
+| OpenAPI | Manual / partial | Automatic OpenAPI schema generation |
 
 ## Architecture overview
 
@@ -64,7 +85,7 @@ Example resource schema `src/Spryker/{Module}/resources/api/{api-type}/{resource
 ```yaml
 resource:
   name: Customers
-  shortName: Customer
+  shortName: customers
   description: "Customer resource for backend API"
 
   provider: "Pyz\\Glue\\Customer\\Api\\Backend\\Provider\\CustomerBackendProvider"
@@ -131,7 +152,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource(
     operations: [new Post(), new Get(), new GetCollection(), new Patch(), new Delete()],
-    shortName: 'Customer',
+    shortName: 'customers',
     provider: CustomerBackendProvider::class,
     processor: CustomerBackendProcessor::class
 )]
@@ -272,7 +293,7 @@ $services->load('Pyz\\Zed\\', '../../../src/Pyz/Zed/');
 Providers and Processors are automatically discovered and can use constructor injection:
 
 ```php
-class CustomerBackofficeProvider implements ProviderInterface
+class CustomerBackendProvider implements ProviderInterface
 {
     public function __construct(
         private CustomerFacadeInterface $customerFacade,
@@ -419,21 +440,58 @@ Response includes both the customer and related addresses in JSON:API format. No
 
 For detailed information, see [Relationships](/docs/dg/dev/architecture/api-platform/relationships.html).
 
+### Sparse fieldsets
+
+Request only the attributes you need using the `fields` query parameter:
+
+```markdown
+GET /stores?fields[stores]=name,locale
+```
+
+This returns only `name` and `locale` in the response attributes, reducing payload size. Sparse fieldsets work with relationships too — filter attributes on both the main resource and included resources.
+
+For detailed information, see [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html).
+
 ## Performance
 
 ### Cache warming
 
-Pre-generate resources during deployment:
+API Platform deployment requires two sequential steps, not alternatives:
+
+1. Generate the API resource classes from the schema files:
 
 ```bash
-docker/sdk cli glue  api:generate
+docker/sdk cli glue api:generate
 ```
 
-or
+2. Warm the application cache—including the **router cache**—once the resources from step 1 exist. Run it per Glue application:
 
 ```bash
-docker/sdk cli glue  cache:warmup
+docker/sdk cli GLUE_APPLICATION=GLUE_STOREFRONT glue cache:warmup
+docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue cache:warmup
 ```
+
+API Platform registers its operations as routes in the standard Symfony router, whose compiled matcher and generator are dumped to `data/cache/Glue<Storefront|Backend>/<environment>/url_matching_routes.php` and `url_generating_routes.php`. `cache:warmup` builds these dumps from the resource collection produced in step 1. Add both steps to your deployment and installation recipes for every API Platform application.
+
+{% info_block warningBox "Use cache:warmup, not api:router:cache:warm-up" %}
+
+`api:router:cache:warm-up` warms only the legacy Glue (`GlueApplication`) custom-route router—it does **not** build the API Platform router dump. Use `cache:warmup` (or `cache:clear`) to warm the API Platform router.
+
+{% endinfo_block %}
+
+#### Multi-container and cloud deployments
+
+In production, applications run with debug disabled. The router dump is then written once and never revalidated—whatever route set it was first built from is frozen for the life of the container.
+
+In a single-container setup this is harmless: the cache is warmed in the same place that serves requests, with the full route set. In a multi-container topology where resource generation runs in a build container and requests are served by a separate runtime container (for example, AWS ECS), you must guarantee the router dump is built against the complete resource collection **for the runtime container**—either warmed in the runtime container after deployment, or baked at build time only if `data/cache` is shipped to every runtime replica with the full route set.
+
+If the dump is built before resources are generated (an empty or incomplete collection), the runtime container freezes that empty dump and:
+
+- every API request returns HTTP 404 (Glue code `007`, legacy fallthrough) because the route is absent from the matcher;
+- once the matcher is partially rebuilt, data endpoints return HTTP 500 from IRI generation (`RouteNotFoundException`), because the URL generator dump is also empty;
+- `/docs.json` returns 0 paths, even though `api:debug --list` shows the resources resolving correctly.
+
+To recover a frozen container, clear and re-warm the cache (`cache:clear`) with the full resource collection present.
 
 ### Property-level access control
 
@@ -463,16 +521,23 @@ Both can coexist in the same application. For further migration guidance, see [H
 For detailed implementation guides:
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html) - Setup and configuration
+- [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html) - Authentication and authorization setup
 - [How to migrate to API Platform](/docs/dg/dev/upgrade-and-migrate/migrate-to-api-platform.html) - Migrate endpoints from Glue API
 - [API Platform Configuration](/docs/dg/dev/architecture/api-platform/configuration.html) - Configure API Platform settings
+- [Security](/docs/dg/dev/architecture/api-platform/security.html) - Authentication and authorization
 - [API Platform Enablement](/docs/dg/dev/architecture/api-platform/enablement.html) - Creating your first resource
 - [Resource Schemas](/docs/dg/dev/architecture/api-platform/resource-schemas.html) - Resource Schemas
 - [Validation Schemas](/docs/dg/dev/architecture/api-platform/validation-schemas.html) - Validation Schemas
+- [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html) - Using native PHP attributes
 - [CodeBucket Support](/docs/dg/dev/architecture/api-platform/code-buckets.html) - Region-specific resources
+- [Sparse Fieldsets](/docs/dg/dev/architecture/api-platform/sparse-fieldsets.html) - Request only needed attributes
+- [Serialization](/docs/dg/dev/architecture/api-platform/serialization.html) - How requests and responses are serialized
 - [Troubleshooting API Platform](/docs/dg/dev/architecture/api-platform/troubleshooting.html) - Common issues
 
 ## Next steps
 
 - [How to integrate API Platform](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform.html)
+- [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html)
+- [Native API Platform Resources](/docs/dg/dev/architecture/api-platform/native-api-platform-resources.html)
 - [CodeBucket Support in API Platform](/docs/dg/dev/architecture/api-platform/code-buckets.html)
 - [API Platform official documentation](https://api-platform.com/docs/)

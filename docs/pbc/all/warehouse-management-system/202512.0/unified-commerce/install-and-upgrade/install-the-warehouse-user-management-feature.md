@@ -4,6 +4,7 @@ description: Learn how to install the Spryker Warehouse User Management feature 
 template: feature-integration-guide-template
 last_updated: Jan 10, 2024
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
   - /docs/scos/dev/feature-integration-guides/202507.0/install-the-warehouse-user-management-feature.html
   - /docs/pbc/all/warehouse-management-system/202507.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
 ---

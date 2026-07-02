@@ -4,7 +4,7 @@ description: Learn how to edit customer addresses that are configured in the Spr
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/customers/edit-customer-addresses.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/customers/edit-customer-addresses.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customers/edit-customer-addresses.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customers/edit-customer-addresses.html
 related:

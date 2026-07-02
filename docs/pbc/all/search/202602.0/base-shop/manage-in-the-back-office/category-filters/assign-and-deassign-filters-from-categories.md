@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-category-filters
 originalArticleId: abf8a3db-7cb2-4220-8d26-995c270b0ff9
 redirect_from:
-  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html 
+  - /docs/pbc/all/search/202512.0/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-category-filters.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/category-filters/assign-and-deassign-filters-from-categories.html

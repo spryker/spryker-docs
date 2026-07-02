@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting API Platform
 description: Common issues and solutions when working with API Platform in Spryker.
-last_updated: Dec 21, 2025
+last_updated: May 18, 2026
 template: troubleshooting-guide-template
 related:
   - title: API Platform
@@ -31,8 +31,8 @@ This document provides solutions to common issues when working with API Platform
 1. **Schema file location is incorrect**
 
    ```bash
-   ❌ src/Pyz/Glue/Customer/api/customers.yml
-   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.yml
+   ❌ src/Pyz/Glue/Customer/api/customers.resource.yml
+   ✅ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml
    ```
 
 2. **API type not configured**
@@ -88,11 +88,11 @@ docker/sdk cli GLUE_APPLICATION=GLUE_BACKEND glue api:generate --force
 
 # Error: Missing resource name
 ❌ resource:
-    shortName: Customer
+    shortName: customers
 
 ✅ resource:
     name: Customers
-    shortName: Customer
+    shortName: customers
 ```
 
 **Solution:**
@@ -271,6 +271,26 @@ The `assets:install` command must be run after integrating API Platform and when
    ✅ /customers
    ```
 
+### Requests without an `Accept` header are rejected or return the wrong format
+
+**Symptom:** A client request that omits the `Accept` header — or sends only `Accept: */*` — returns `406 Not Acceptable`, or a response in a format other than the legacy `application/vnd.api+json`. The legacy Glue REST API silently accepted the same request and answered with `application/vnd.api+json`.
+
+**Cause:** API Platform runs content negotiation that requires a satisfiable `Accept` header and does not assume the legacy Glue default. This is a behavioral difference from the legacy Glue REST stack.
+
+**Solution:**
+
+1. Upgrade `spryker/api-platform` to **1.15.0 or higher**. Its `AcceptHeaderFallbackSubscriber` restores the legacy behavior — a missing or `*/*` `Accept` header defaults to `application/vnd.api+json`:
+
+   ```bash
+   composer update spryker/api-platform --with-dependencies
+   ```
+
+2. If you cannot upgrade, send an explicit `Accept` header from the client:
+
+   ```bash
+   curl -H "Accept: application/vnd.api+json" https://glue-backend.mysprykershop.com/customers
+   ```
+
 ### Pagination not working
 
 **Symptom:** All results returned instead of paginated response.
@@ -303,6 +323,41 @@ The `assets:install` command must be run after integrating API Platform and when
    ```bash
    GET /customers?page=2&itemsPerPage=20
    ```
+
+### Client cannot change items per page
+
+**Symptom:** The `itemsPerPage` query parameter is ignored.
+
+**Solution:**
+
+Enable client-side items-per-page control and set a maximum limit in the resource schema:
+
+```yaml
+resource:
+  paginationEnabled: true
+  paginationItemsPerPage: 10
+  paginationClientItemsPerPage: true
+  paginationMaximumItemsPerPage: 100
+```
+
+Without `paginationClientItemsPerPage: true`, the `itemsPerPage` query parameter has no effect. The `paginationMaximumItemsPerPage` option prevents clients from requesting excessively large pages.
+
+### Client cannot disable pagination
+
+**Symptom:** The `pagination=false` query parameter is ignored and results are still paginated.
+
+**Solution:**
+
+Enable client-side pagination control in the resource schema:
+
+```yaml
+resource:
+  paginationClientEnabled: true
+```
+
+Without `paginationClientEnabled: true`, the `pagination` query parameter has no effect.
+
+For a full reference of all pagination options, see [Resource Schemas — Pagination](/docs/dg/dev/architecture/api-platform/resource-schemas.html#pagination).
 
 ## Dependency Injection issues
 
@@ -366,9 +421,9 @@ Output:
 
 ```bash
 Source Files (priority order):
-  ✓ vendor/spryker/customer/resources/api/backend/customers.yml (CORE)
-  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.yml (FEATURE)
-  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.yml (PROJECT)
+  ✓ vendor/spryker/customer/resources/api/backend/customers.resource.yml (CORE)
+  ✓ src/SprykerFeature/CRM/resources/api/backend/customers.resource.yml (FEATURE)
+  ✓ src/Pyz/Glue/Customer/resources/api/backend/customers.resource.yml (PROJECT)
 ```
 
 ### Inspecting generated code
@@ -415,7 +470,7 @@ If you encounter issues not covered here:
 3. **Validate environment:**
 
    ```bash
-   php -v  # Check PHP version (8.1+)
+   php -v  # Check PHP version (8.3+)
    composer show | grep api-platform
    docker/sdk cli glue  debug:container | grep -i api
    ```

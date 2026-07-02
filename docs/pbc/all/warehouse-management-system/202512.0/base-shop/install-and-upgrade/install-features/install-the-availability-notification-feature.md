@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/availability-notification-feature-integration
 originalArticleId: 86a00594-c9ee-42c8-bd9d-622866fd826c
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
   - /2021080/docs/availability-notification-feature-integration
   - /2021080/docs/en/availability-notification-feature-integration
   - /docs/availability-notification-feature-integration

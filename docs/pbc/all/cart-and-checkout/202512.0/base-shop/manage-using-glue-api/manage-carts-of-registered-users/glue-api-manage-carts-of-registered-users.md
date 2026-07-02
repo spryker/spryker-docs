@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-carts-of-registered-users
 originalArticleId: ac357bc6-db9b-43a5-a65a-ef55259cd379
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html

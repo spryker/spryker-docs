@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
 originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c
 redirect_from:
-  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-confirm-customer-registration.html 
+  - /docs/pbc/all/identity-access-management/202512.0/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/confirming-customer-registration.html

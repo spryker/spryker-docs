@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-cms-pages
 originalArticleId: 3a2b07b3-3c56-421d-8bba-8ff7ed07ff62
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html
   - /2021080/docs/managing-cms-pages
   - /2021080/docs/en/managing-cms-pages
   - /docs/managing-cms-pages

@@ -4,6 +4,7 @@ description:  Learn how to import data from other systems into your Spryker Clou
 last_updated: Sep 7, 2022
 template: concept-topic-template
 redirect_from:
+  - /docs/dg/dev/data-import/202602.0/data-import.html
   - /docs/dg/dev/data-import/202507.0/data-import.html
   - /docs/scos/dev/data-import/202404.0/data-import.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/products/products.html

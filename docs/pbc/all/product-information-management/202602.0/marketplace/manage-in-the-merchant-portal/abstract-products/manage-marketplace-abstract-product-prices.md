@@ -4,7 +4,7 @@ description: This document describes how to manage marketplace abstract product 
 template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html 
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-prices.html
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
 related:
   - title: Marketplace Product feature overview

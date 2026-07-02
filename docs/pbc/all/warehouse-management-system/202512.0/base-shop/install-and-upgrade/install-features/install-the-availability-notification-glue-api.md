@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-availability-notification-feature-integration
 originalArticleId: d9bc0dfd-658f-412c-a127-d967b568de67
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
   - /2021080/docs/glue-api-availability-notification-feature-integration
   - /2021080/docs/en/glue-api-availability-notification-feature-integration
   - /docs/glue-api-availability-notification-feature-integration

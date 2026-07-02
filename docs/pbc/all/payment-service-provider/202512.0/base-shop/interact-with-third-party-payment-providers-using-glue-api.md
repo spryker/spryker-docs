@@ -6,6 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
 originalArticleId: c9d486b4-ac75-46f5-917e-f3935043f018
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
   - /docs/pbc/all/payment-service-provider/202311.0/interact-with-third-party-payment-providers-using-glue-api.html

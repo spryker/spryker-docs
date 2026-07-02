@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/sales-data-export-feature-integration
 originalArticleId: a32fcb26-bdba-4f01-a494-6c7939236e9b
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
   - /2021080/docs/sales-data-export-feature-integration
   - /2021080/docs/en/sales-data-export-feature-integration
   - /docs/sales-data-export-feature-integration

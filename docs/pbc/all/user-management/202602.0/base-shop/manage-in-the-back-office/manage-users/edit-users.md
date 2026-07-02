@@ -4,7 +4,7 @@ description: Learn how you can edit users directly in the back office of your Sp
 template: back-office-user-guide-template
 last_updated: Jan 4, 2024
 redirect_from:
-  - /docs/pbc/all/user-management/202512.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html 
+  - /docs/pbc/all/user-management/202512.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/editing-users.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html
 related:

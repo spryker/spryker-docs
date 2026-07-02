@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-options-feature-integration
 originalArticleId: 6cf952d4-7195-40ec-8366-3f1d3153b34e
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
   - /2021080/docs/glue-api-product-options-feature-integration
   - /2021080/docs/en/glue-api-product-options-feature-integration
   - /docs/glue-api-product-options-feature-integration

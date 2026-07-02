@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/updating-payment-data
 originalArticleId: d2870fab-7811-4b18-9bfa-dafd43791d00
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
   - /docs/scos/dev/glue-api-guides/201811.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/201903.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/201907.0/checking-out/updating-payment-data.html

@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-global-thresholds
 originalArticleId: 99d7ee06-12fa-479a-a148-7728467fb950
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/define-global-thresholds.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/define-global-thresholds.html
   - /2021080/docs/managing-global-thresholds
   - /2021080/docs/en/managing-global-thresholds
   - /docs/managing-global-thresholds

@@ -4,6 +4,7 @@ description: This document describes how to integrate the Marketplace Product Gl
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-glue-api.html
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/glue/marketplace-product-feature-integration.html
 related:

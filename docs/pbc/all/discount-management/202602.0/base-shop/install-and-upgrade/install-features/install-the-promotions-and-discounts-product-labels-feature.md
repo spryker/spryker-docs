@@ -4,7 +4,7 @@ description: Learn how to integrate the Product Labels + Promotions & Discounts 
 last_updated: Feb 20, 2023
 template: feature-integration-guide-template  
 redirect_from:
-  - /docs/pbc/all/discount-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-product-labels-feature.html 
+  - /docs/pbc/all/discount-management/202507.0/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-product-labels-feature.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
 ---

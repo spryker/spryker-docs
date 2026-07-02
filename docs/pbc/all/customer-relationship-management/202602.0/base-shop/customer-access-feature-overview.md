@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-overview
 originalArticleId: 06776bb5-8993-4d13-af9b-d1a1e9d317fe
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/customer-access-feature-overview.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/customer-access-feature-overview.html
   - /2021080/docs/customer-access-feature-overview
   - /2021080/docs/en/customer-access-feature-overview
   - /docs/customer-access-feature-overview

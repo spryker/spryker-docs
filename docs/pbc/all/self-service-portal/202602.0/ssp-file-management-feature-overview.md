@@ -3,7 +3,7 @@ title: Self-Service Portal Files Management feature overview
 description: The Files Management feature allows Back Office users to manage files within the company.
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/self-service-portal/202512.0/ssp-file-management-feature-overview.html 
+  - /docs/pbc/all/self-service-portal/202512.0/ssp-file-management-feature-overview.html
 last_updated: Dec 18, 2025
 ---
 

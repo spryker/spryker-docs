@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/submitting-checkout-data
 originalArticleId: 86d07f3a-6ef0-4dfe-87e0-322cc4cf42a7
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
   - /docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/submitting-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html

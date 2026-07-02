@@ -3,7 +3,7 @@ title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/shopping-list-and-wishlist/202512.0/marketplace/marketplace-shopping-lists-feature-overview.html 
+  - /docs/pbc/all/shopping-list-and-wishlist/202512.0/marketplace/marketplace-shopping-lists-feature-overview.html
 last_updated: Nov 21, 2023
 ---
 

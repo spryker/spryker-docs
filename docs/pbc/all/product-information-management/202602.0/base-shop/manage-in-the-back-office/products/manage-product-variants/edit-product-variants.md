@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/editing-a-product-variant
 originalArticleId: b9119173-d733-4ffa-b93d-1f19d88a364c
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
   - /2021080/docs/editing-a-product-variant
   - /2021080/docs/en/editing-a-product-variant
   - /docs/editing-a-product-variant

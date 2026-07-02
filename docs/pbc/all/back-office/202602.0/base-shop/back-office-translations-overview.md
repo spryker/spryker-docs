@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Nov 23, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/back-office-translations-overview
 redirect_from:
-  - /docs/pbc/all/back-office/202512.0/base-shop/back-office-translations-overview.html 
+  - /docs/pbc/all/back-office/202512.0/base-shop/back-office-translations-overview.html
   - /2021080/docs/back-office-translations-overview
   - /2021080/docs/en/back-office-translations-overview
   - /docs/back-office-translations-overview

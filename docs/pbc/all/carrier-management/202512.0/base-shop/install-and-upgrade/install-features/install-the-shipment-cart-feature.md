@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-cart-feature-integration
 originalArticleId: a5618db0-4ee1-462e-8165-aedc13881e07
 redirect_from:
+  - /docs/pbc/all/carrier-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-shipment-cart-feature.html
   - /2021080/docs/shipment-cart-feature-integration
   - /2021080/docs/en/shipment-cart-feature-integration
   - /docs/shipment-cart-feature-integration

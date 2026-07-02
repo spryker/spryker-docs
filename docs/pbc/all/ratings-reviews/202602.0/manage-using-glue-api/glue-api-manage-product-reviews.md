@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ratings-and-reviews
 originalArticleId: e712d25f-b084-4fac-ac5f-cbb46e0947cb
 redirect_from:
-  - /docs/pbc/all/ratings-reviews/202512.0/manage-using-glue-api/glue-api-manage-product-reviews.html 
+  - /docs/pbc/all/ratings-reviews/202512.0/manage-using-glue-api/glue-api-manage-product-reviews.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/managing-product-ratings-and-reviews.html  
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/manage-product-reviews-using-glue-api.html
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html

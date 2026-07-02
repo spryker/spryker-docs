@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/heidelpay
 originalArticleId: 92607b28-3e51-4b0a-a41f-12bc9852b1cb
 redirect_from:
+  - /docs/pbc/all/payment-service-provider/202602.0/base-shop/third-party-integrations/heidelpay/heidelpay.html
   - /docs/scos/user/technology-partners/202311.0/payment-partners/heidelpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/heidelpay/heidelpay.html
   - /docs/pbc/all/payment-service-provider/202507.0/base-shop/third-party-integrations/heidelpay/heidelpay.html

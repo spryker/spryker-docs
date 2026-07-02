@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
+  - /docs/pbc/all/order-management-system/202602.0/base-shop/glue-api-retrieve-orders.html
   - /docs/scos/dev/glue-api-guides/202507.0/retrieving-orders.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:

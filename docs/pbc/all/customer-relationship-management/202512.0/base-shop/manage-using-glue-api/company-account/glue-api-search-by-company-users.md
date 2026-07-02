@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/searching-by-company-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
 related:

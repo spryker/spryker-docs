@@ -6,6 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
 originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
+  - /docs/pbc/all/user-management/202602.0/base-shop/user-and-rights-overview.html
   - /docs/pbc/all/user-management/202507.0/base-shop/user-and-rights-overview.html
   - /2021080/docs/user-and-rights-overview
   - /2021080/docs/en/user-and-rights-overview

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-inventory-management-feature-integration
 originalArticleId: e7896d23-ba99-4d95-a3cc-654fbfaae463
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-inventory-management-feature-integration.html

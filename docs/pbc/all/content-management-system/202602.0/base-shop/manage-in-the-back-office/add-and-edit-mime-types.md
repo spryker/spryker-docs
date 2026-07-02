@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-mime-type-settings
 originalArticleId: 21caa74e-d4c1-4ba6-9cf7-1cd60f7368e8
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
   - /2021080/docs/managing-mime-type-settings
   - /2021080/docs/en/managing-mime-type-settings
   - /docs/managing-mime-type-settings

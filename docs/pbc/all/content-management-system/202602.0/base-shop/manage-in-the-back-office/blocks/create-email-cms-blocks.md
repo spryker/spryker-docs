@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-content-of-emails-via-cms-blocks
 originalArticleId: 082e03b7-4dce-4b06-b839-06e2e26a557b
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
   - /2021080/docs/managing-content-of-emails-via-cms-blocks
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/managing-content-of-emails-via-cms-blocks

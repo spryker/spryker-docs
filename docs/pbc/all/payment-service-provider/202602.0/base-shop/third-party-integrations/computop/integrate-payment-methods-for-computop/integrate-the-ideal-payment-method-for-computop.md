@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-ideal
 originalArticleId: f5f1e562-7dc9-4b19-a7a4-471f1822c869
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/computop/integrate-payment-methods-for-computop/integrate-the-ideal-payment-method-for-computop.html
   - /2021080/docs/computop-ideal
   - /2021080/docs/en/computop-ideal
   - /docs/computop-ideal

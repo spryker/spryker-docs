@@ -1,7 +1,7 @@
 ---
 title: Validation Schemas
 description: Understanding API Platform validation schema definitions in Spryker.
-last_updated: Dec 21, 2025
+last_updated: Mar 5, 2026
 template: concept-topic-template
 related:
   - title: API Platform
@@ -34,7 +34,7 @@ src/
             └── resources/
                 └── api/
                     └── backend/
-                        ├── customers.yml            # Resource schema
+                        ├── customers.resource.yml            # Resource schema
                         └── customers.validation.yml # Validation schema
 ```
 

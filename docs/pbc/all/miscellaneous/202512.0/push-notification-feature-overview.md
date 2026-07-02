@@ -4,7 +4,8 @@ description: The Push Notifications feature lets you receive push notifications
 last_updated: Feb 2, 2023
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/miscellaneous/202507.0/push-notification-feature-overview.html 
+  - /docs/pbc/all/miscellaneous/202602.0/push-notification-feature-overview.html
+  - /docs/pbc/all/miscellaneous/202507.0/push-notification-feature-overview.html
   - /docs/scos/user/features/202311.0/push-notification-feature-overview.html
   - /docs/pbc/all/push-notification/202311.0/unified-commerce/push-notification-feature-overview.html
 ---

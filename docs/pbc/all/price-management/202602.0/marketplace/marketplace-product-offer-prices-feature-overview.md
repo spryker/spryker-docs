@@ -4,7 +4,7 @@ description: The Marketplace Product Offer Prices feature lets Marketplace merch
 template: feature-overview-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/price-management/202512.0/marketplace/marketplace-product-offer-prices-feature-overview.html 
+  - /docs/pbc/all/price-management/202512.0/marketplace/marketplace-product-offer-prices-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 

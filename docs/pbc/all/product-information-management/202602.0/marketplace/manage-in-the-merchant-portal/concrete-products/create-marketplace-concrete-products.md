@@ -4,7 +4,7 @@ last_updated: Aug 11, 2021
 description: This document describes how to create a marketplace concrete product in the Merchant Portal.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html 
+  - /docs/pbc/all/product-information-management/202512.0/marketplace/manage-in-the-merchant-portal/concrete-products/create-marketplace-concrete-products.html
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html

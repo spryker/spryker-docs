@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-guest-carts
 originalArticleId: ba8ecd12-244b-4dc4-bf64-b52977347916
 redirect_from:
+  - /docs/pbc/all/discount-management/202602.0/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-guest-carts.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html

@@ -6,7 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-the-search-features
 originalArticleId: 82a42db7-678d-405c-bc14-44685b7a8099
 redirect_from:
-  - /docs/pbc/all/search/202512.0/base-shop/tutorials-and-howtos/configure-search-features.html 
+  - /docs/pbc/all/search/202512.0/base-shop/tutorials-and-howtos/configure-search-features.html
   - /2021080/docs/configuring-the-search-features
   - /2021080/docs/en/configuring-the-search-features
   - /docs/configuring-the-search-features

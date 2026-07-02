@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-products
 originalArticleId: 9b2e066a-b1db-4a74-93ba-82d399ee18f8
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-products.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/products/manage-products.html
   - /2021080/docs/managing-products
   - /2021080/docs/en/managing-products
   - /docs/managing-products

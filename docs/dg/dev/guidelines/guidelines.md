@@ -16,3 +16,4 @@ This section contains a collection of useful guidelines for developing on the Sp
 - [Data processing guidelines](/docs/dg/dev/guidelines/data-processing-guidelines.html)
 - [Module configuration convention](/docs/dg/dev/guidelines/module-configuration-convention.html)
 - [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html)
+- [Serializer guidelines](/docs/dg/dev/guidelines/serializer-guidelines.html)

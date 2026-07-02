@@ -4,6 +4,7 @@ description: Learn how to implement and install the Customer Account Management 
 last_updated: Jul 13, 2021
 template: feature-integration-guide-template
 redirect_from:
+- /docs/pbc/all/identity-access-management/202602.0/install-and-upgrade/install-the-customer-account-management-glue-api.html
 - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-customer-account-management-glue-api.html
 related:
   - title: Customer Account Management feature integration

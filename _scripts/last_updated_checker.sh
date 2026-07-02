@@ -3,10 +3,24 @@
 set -e
 
 BASE_SHA="${GITHUB_BASE_SHA:-HEAD^}"
-HEAD_SHA="${GITHUB_SHA:-HEAD}"
+# Prefer the real PR head over GITHUB_SHA: on pull_request events GITHUB_SHA is the
+# merge commit (PR merged into the current base), so a "$BASE_SHA"..."$HEAD_SHA" diff
+# sweeps in unrelated base-branch changes and blames this PR for them. The PR head SHA
+# scopes the diff to what this PR actually changed.
+HEAD_SHA="${GITHUB_HEAD_SHA:-${GITHUB_SHA:-HEAD}}"
 lines_changed_limit="${1:-1}"
 lines_changed_day_limit="${2:-30}"
 files_needing_update=0
+
+# When set, append each file with an auto-fixable stale last_updated date here so a
+# follow-up CI step can bump it. Missing-field cases are intentionally not recorded:
+# they can't be fixed by bumping a date and must stay a hard failure.
+STALE_LIST_FILE="${STALE_LIST_FILE:-}"
+record_stale() {
+  if [ -n "$STALE_LIST_FILE" ]; then
+    echo "$1" >> "$STALE_LIST_FILE"
+  fi
+}
 
 echo "Lookging for files with at least $lines_changed_limit line(s) changed and last_updated older than $lines_changed_day_limit days "
 echo ""
@@ -40,6 +54,7 @@ for file in $changed_md_files; do
     fi
     echo "Modified file $file contains too old modified last_updated: $date_string."
     files_needing_update=1
+    record_stale "$file"
     continue
   else
     if echo "$front_matter" | grep -q "^last_updated:"; then
@@ -61,6 +76,7 @@ for file in $changed_md_files; do
   if [ "$lines_changed" -gt "$lines_changed_limit" ]; then
     echo "Modified file $file has $lines_changed changed lines, old and not updated last_updated: $date_string."
     files_needing_update=1
+    record_stale "$file"
   fi
 done
 

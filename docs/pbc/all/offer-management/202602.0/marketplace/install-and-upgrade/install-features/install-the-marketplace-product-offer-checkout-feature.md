@@ -4,7 +4,7 @@ last_updated: May 3, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer + Checkout feature into a Spryker Marketplace project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/pbc/all/offer-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html 
+  - /docs/pbc/all/offer-management/202507.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-checkout-feature.html
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-offer-checkout-feature-integration.html
 ---
 

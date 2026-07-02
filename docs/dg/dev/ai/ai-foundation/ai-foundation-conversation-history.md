@@ -1,18 +1,20 @@
 ---
 title: Conversation History
 description: Persist and manage multi-turn conversations with conversation history using database storage
-last_updated: Feb 19, 2026
-keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue
+last_updated: Apr 29, 2026
+keywords: foundation, ai, conversation history, conversation, context, database, multi-turn, dialogue, audit, logging, tracking
 template: howto-guide-template
 related:
   - title: AiFoundation module Overview
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-module.html
   - title: Use structured responses with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: Use AI tools with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: AI workflow orchestration with state machines
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+  - title: AI Interaction Audit Logs
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to use conversation history with the AiFoundation module to maintain conversation context across multiple interactions, enabling multi-turn conversations where the AI can reference previous messages and provide contextually relevant responses.
@@ -174,6 +176,7 @@ class ConversationManager
             $formattedMessages[] = [
                 'type' => $message->getType(), // 'user', 'assistant', 'tool_call', 'tool_result'
                 'content' => $message->getContent(),
+                'reasoning' => $message->getReasoning(), // null when provider does not return reasoning
             ];
         }
 
@@ -254,7 +257,7 @@ public function getConversationHistoryCollection(
 - `conversationHistories` (ConversationHistoryTransfer[]): Array of conversation histories matching the criteria
   - Each ConversationHistoryTransfer contains:
     - `conversationReference` (string): The conversation reference
-    - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, and attachments
+    - `messages` (PromptMessageTransfer[]): Array of all messages in the conversation with types (user, assistant, tool_call, tool_result), content, reasoning, and attachments
 
 ## Message types
 

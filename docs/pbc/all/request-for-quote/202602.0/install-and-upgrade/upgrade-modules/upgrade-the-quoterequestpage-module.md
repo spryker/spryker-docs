@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestpage
 originalArticleId: 49398eed-5f0b-48db-a915-14f70ee81a82
 redirect_from:
-  - /docs/pbc/all/request-for-quote/202512.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html 
+  - /docs/pbc/all/request-for-quote/202512.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
   - /2021080/docs/mg-quoterequestpage
   - /2021080/docs/en/mg-quoterequestpage
   - /docs/mg-quoterequestpage

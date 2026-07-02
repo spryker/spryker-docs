@@ -4,7 +4,7 @@ description: Learn how to manage Seven Senders API requests in Spryker Cloud Com
 template: concept-topic-template
 last_updated: Nov 17, 2023
 redirect_from:
-  - /docs/pbc/all/carrier-management/202512.0/base-shop/third-party-integrations/seven-senders/seven-senders-api-requests.html 
+  - /docs/pbc/all/carrier-management/202512.0/base-shop/third-party-integrations/seven-senders/seven-senders-api-requests.html
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-api-requests.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/seven-senders-api-requests.html
   - /docs/scos/dev/technology-partner-guides/202311.0/shipment/seven-senders/seven-senders-api-requests.html

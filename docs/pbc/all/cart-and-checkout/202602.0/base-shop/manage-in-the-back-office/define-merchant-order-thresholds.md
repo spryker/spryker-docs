@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-merchant-order-thresholds
 originalArticleId: ae8c2d52-29d3-4315-b8c7-0cdffdb7ba2a
 redirect_from:
-  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html 
+  - /docs/pbc/all/cart-and-checkout/202512.0/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html
   - /2021080/docs/managing-merchant-order-thresholds
   - /2021080/docs/en/managing-merchant-order-thresholds
   - /docs/managing-merchant-order-thresholds

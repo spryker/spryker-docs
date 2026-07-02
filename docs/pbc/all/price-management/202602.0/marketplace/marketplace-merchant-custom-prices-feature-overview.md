@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Merc
 template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/pbc/all/price-management/202512.0/marketplace/marketplace-merchant-custom-prices-feature-overview.html 
+  - /docs/pbc/all/price-management/202512.0/marketplace/marketplace-merchant-custom-prices-feature-overview.html
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-custom-prices-feature-overview.html
 related:
   - title: Managing marketplace abstract product prices

@@ -4,7 +4,7 @@ description: Learn how to onboard to Stripe in the Merchant Portal for your Spry
 last_updated: June 28, 2024
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html
 ---
 
 {% info_block warningBox "" %}

@@ -68,14 +68,28 @@ Analyze the overall tone to align with technical documentation styles (Google De
 **Spelling:**
 - Use American spelling consistently
 
+**Terminology (Vale `terms` style):**
+- Use the exact terms enforced by the Vale rules in `vale/styles/terms/`. These are `error`-level and will fail the `vale-lint` CI check.
+- Most common: use **Back Office** (two words), never "Backoffice" or "backoffice". This applies even to API/type names — write **Back Office API**, not "Backoffice API".
+- When introducing a product, feature, or component name, check `vale/styles/terms/` for the canonical spelling before using it.
+
 **Markdown Formatting:**
 - Use standard Markdown for headings, lists, links, code blocks, and inline formatting
 - Verify proper use of headings, lists, code blocks, links, bolding, italics, etc.
+- **Do not add a top-level `#` (H1) heading in the page body.** Jekyll renders the H1 from the `title` front-matter field, so an H1 in the body produces a duplicate and fails the `markdownlint` MD025 check (`single-title/single-h1`). Start the body at `##` (H2).
 - Use Jekyll-compatible syntax for Spryker-specific components:
     - `{% info_block infoBox "Info" %}...{% endinfo_block %}` instead of `> [!NOTE]`
 - Apply other Spryker Liquid tags as needed:
     - `{% include %}`
     - `{% info_block warningBox "Warning" %}`
+- **info_block formatting:** Always surround the content inside `{% info_block %}` tags with blank lines. This is required for CommonMark to process Markdown (links, bold, etc.) inside the block. Without blank lines, CommonMark treats the entire block as raw HTML and markdown is not rendered.
+  ```markdown
+  {% info_block warningBox %}
+
+  Content with [links](/docs/example.html) renders correctly.
+
+  {% endinfo_block %}
+  ```
 - Ensure output renders correctly in Jekyll but remains readable in raw Markdown
 
 ### Presenting Suggestions
@@ -104,6 +118,18 @@ After removing a file, the sidebar link must be removed.
 After renaming a file, the sidebar link must be renamed to reflect the new file location.
 After moving a file, the sidebar link must be updated to reflect the new file location.
 
+### Twig examples
+Always wrap Twig code in `{% raw %}` and `{% endraw %}` tags.
+Examples:
+```twig
+{% raw %}
+{% if condition %}
+    <p>This is a Twig block.</p>
+{% endif %}
+{% endraw %}
+```
+
+`{% raw %}{% if condition %}{% endraw %}`
 ## Validation Workflow
 
 Use the following workflow to validate documentation changes.

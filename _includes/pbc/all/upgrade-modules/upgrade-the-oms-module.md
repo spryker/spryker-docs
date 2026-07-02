@@ -35,6 +35,46 @@ console propel:install
 console transfer:generate
 ```
 
+### Optional: Install the State Machine Visualizer
+
+Starting from OMS version 11.52.0, you can optionally install the State Machine Visualizer — a modern, interactive replacement for the legacy static process graph view in the Back Office. It is built on javascript and provides zoom, pan, state search, and state highlighting. Installing it does not affect existing OMS functionality.
+To to install the StateMachineVisualizer, do the following:
+
+1. Install the **StateMachineVisualizer** module and update existing to the new version:
+
+```bash
+composer require spryker/state-machine-visualizer --update-with-dependencies
+```
+
+2. To make order item state history links in the Back Office resolve to the new visualizer, update the following GUI modules to the minimum required versions:
+
+```bash
+composer update \
+    spryker/sales \
+    spryker/sales-reclamation-gui \
+    spryker/sales-return-gui \
+    spryker/shipment-gui \
+    --with spryker/sales:^11.82.0 \
+    --with spryker/sales-reclamation-gui:^2.2.0 \
+    --with spryker/sales-return-gui:^2.3.0 \
+    --with spryker/shipment-gui:^3.3.0
+```
+
+If your project uses the Marketplace, also update the following modules:
+
+```bash
+composer update \
+    spryker/merchant-sales-order-merchant-user-gui \
+    spryker/merchant-sales-return-merchant-user-gui \
+    --with spryker/merchant-sales-order-merchant-user-gui:^2.2.0 \
+    --with spryker/merchant-sales-return-merchant-user-gui:^2.2.0
+```
+
+{% info_block warningBox "Verification" %}
+
+Open an order detail page in the Back Office. Click a state link in the **State** column of any order item. Make sure the State Machine Visualizer opens with the current state highlighted.
+
+{% endinfo_block %}
 
 ## Upgrading from version 8.* to version 10.0.0
 

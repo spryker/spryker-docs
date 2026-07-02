@@ -4,6 +4,7 @@ description: Learn how to retrieve Marketplace product offer availabilities via 
 template: glue-api-storefront-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/warehouse-management-system/202602.0/marketplace/glue-api-retrieve-product-offer-availability.html
   - /docs/marketplace/dev/glue-api-guides/202311.0/product-offers/retrieving-product-offer-availability.html
 related:
   - title: Retrieving product offer prices

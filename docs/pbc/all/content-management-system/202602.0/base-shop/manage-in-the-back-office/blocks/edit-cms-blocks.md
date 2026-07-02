@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-cms-blocks
 originalArticleId: 797e2d78-86eb-454d-afa1-481ee80ae7af
 redirect_from:
-  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html 
+  - /docs/pbc/all/content-management-system/202512.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
   - /2021080/docs/managing-cms-blocks
   - /2021080/docs/en/managing-cms-blocks
   - /docs/managing-cms-blocks

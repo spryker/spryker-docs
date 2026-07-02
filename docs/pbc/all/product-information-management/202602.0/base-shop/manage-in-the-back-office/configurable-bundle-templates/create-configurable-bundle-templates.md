@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-configurable-bundle-templates
 originalArticleId: f37b931d-e630-4db3-9ffb-b5e3fb100cad
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
   - /2021080/docs/creating-configurable-bundle-templates
   - /2021080/docs/en/creating-configurable-bundle-templates
   - /docs/creating-configurable-bundle-templates

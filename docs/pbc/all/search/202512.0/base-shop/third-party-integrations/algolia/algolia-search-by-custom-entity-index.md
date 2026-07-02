@@ -2,6 +2,8 @@
 title: Using Algolia search with custom indexes
 description: Learn how to enable Algolia search for custom entities, such as Docs, in your Spryker-based project.
 template: howto-guide-template
+redirect_from:
+  - /docs/pbc/all/search/202602.0/base-shop/third-party-integrations/algolia/algolia-search-by-custom-entity-index.html
 related:
   - title: "Additional configuration: Use Algolia for other entities"
     link: docs/pbc/all/search/page.version/base-shop/third-party-integrations/algolia/configure-algolia.html#additional-configuration-use-algolia-for-other-entities

@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/dataimporter-speed-optimization
 originalArticleId: a2e441c4-b1e9-43d4-8641-b4d2ff1e26f9
 redirect_from:
-  - /docs/dg/dev/data-import/202512.0/data-import-optimization-guidelines.html 
+  - /docs/dg/dev/data-import/202512.0/data-import-optimization-guidelines.html
   - /docs/scos/dev/data-import/202404.0/data-importer-speed-optimization.html
   - /docs/scos/dev/data-import/202204.0/data-importer-speed-optimization.html
 ---

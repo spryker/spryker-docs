@@ -3,6 +3,8 @@ title: "Glue API: Add services"
 description: Learn how to add new services to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/service-point-management/202602.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html
 ---
 
 This endpoint lets you add services.

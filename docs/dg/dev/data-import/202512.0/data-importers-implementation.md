@@ -6,6 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-importers-review-implementation
 originalArticleId: de408e22-7a9b-40ee-a4db-449a86b48f83
 redirect_from:
+  - /docs/dg/dev/data-import/202602.0/data-importers-implementation.html
   - /docs/scos/dev/data-import/202404.0/data-importers-overview-and-implementation.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
   - /docs/scos/dev/data-import/202204.0/data-importers-overview-and-implementation.html

@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent).
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html 
+  - /docs/pbc/all/user-management/202512.0/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html
 ---
 
 Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent). Here are a few examples of inheritance:

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-rating-reviews-feature-integration
 originalArticleId: a5fd5363-2839-406e-a29e-ba175b46592a
 redirect_from:
+  - /docs/pbc/all/ratings-reviews/202602.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
   - /2021080/docs/product-rating-reviews-feature-integration
   - /2021080/docs/en/product-rating-reviews-feature-integration
   - /docs/product-rating-reviews-feature-integration

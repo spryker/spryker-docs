@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-measurement-units-feature-integration
 originalArticleId: 565ef2a7-0f29-47fb-8438-8e6c6a96bf31
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
   - /2021080/docs/glue-api-measurement-units-feature-integration
   - /2021080/docs/en/glue-api-measurement-units-feature-integration
   - /docs/glue-api-measurement-units-feature-integration

@@ -4,7 +4,7 @@ last_updated: Oct 11, 2024
 description: This guide explains how to view merchant records on the Merchants page.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html 
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/manage-in-the-back-office/manage-merchants/view-merchants.html
   - /docs/marketplace/user/back-office-user-guides/202311.0/marketplace/merchants/managing-merchants.html
 related:
   - title: Managing merchant users

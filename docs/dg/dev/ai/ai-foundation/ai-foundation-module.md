@@ -1,19 +1,21 @@
 ---
 title: AiFoundation module Overview
 description: Integrate AI foundation providers into the Spryker application
-last_updated: Feb 19, 2026
-keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation
+last_updated: May 5, 2026
+keywords: foundation, ai, neuron, prompt, aiconfiguration, openai, anthropic, bedrock, aws, ollama, gemini, deepseek, huggingface, mistral, grok, azure-openai, agent, chat history, conversation, audit, logging, tracking
 template: howto-guide-template
 label: early-access
 related:
   - title: Use AI tools with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-tool-support.html
   - title: Use structured responses with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-transfer-response.html
   - title: Manage conversation history with the AiFoundation module
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-conversation-history.html
   - title: AI workflow orchestration with state machines
-    link: /docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-workflow-state-machine.html
+  - title: AI Interaction Audit Logs
+    link: docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html
 ---
 
 This document describes how to integrate and use the AiFoundation module to interact with various AI providers in your Spryker application. The AiFoundation module provides a unified interface for working with multiple AI providers, such as OpenAI, Anthropic Claude, AWS Bedrock, and others.
@@ -110,10 +112,14 @@ $config[AiFoundationConstants::AI_CONFIGURATIONS] = [
             'key' => getenv('OPENAI_API_KEY'),
             'model' => 'gpt-4o',
         ],
-        'system_prompt' => 'You are a helpful assistant.',
+        // Resolved at runtime from Configuration Management
+        'system_prompt' => AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX . 'ai_commerce:backoffice_assistant:general:system_prompt',
     ],
 ];
 ```
+
+Any string value prefixed with `configuration::` (`AiFoundationConstants::CONFIGURATION_REFERENCE_PREFIX`) is resolved at runtime via the [Configuration Management](/docs/dg/dev/backend-development/configuration-management.html) module. 
+This lets admin users update AI settings—model, API key, system prompt—from the Back Office without a code deployment.
 
 ## Provider configuration examples
 
@@ -437,6 +443,7 @@ This transfer represents a message in the conversation:
 - `content` (string): The text content of the message
 - `contentData` (array, optional): Additional structured data
 - `attachments` (Attachment[], optional): File or image attachments
+- `reasoning` (string, optional): Model chain-of-thought reasoning returned alongside the response. Only populated when the provider returns reasoning blocks (for example, Anthropic extended thinking). `null` when the provider does not return reasoning.
 
 ### PromptResponse
 
@@ -452,9 +459,16 @@ This transfer contains the AI response:
 This transfer represents a file or image attachment:
 
 - `type` (string): Type of attachment (use `AiFoundationConstants::ATTACHMENT_TYPE_IMAGE` or `ATTACHMENT_TYPE_DOCUMENT`)
-- `content` (string): The content (URL or Base64-encoded data)
-- `contentType` (string): Content type format (use `AiFoundationConstants::ATTACHMENT_CONTENT_TYPE_URL` or `ATTACHMENT_CONTENT_TYPE_BASE64`)
+- `content` (string): The content—URL, Base64-encoded data, or a provider-hosted file ID
+- `contentType` (string): Content type format: `ATTACHMENT_CONTENT_TYPE_URL`, `ATTACHMENT_CONTENT_TYPE_BASE64`, or `ATTACHMENT_CONTENT_TYPE_ID` (for provider-hosted file references such as OpenAI or Anthropic Files API IDs)
 - `mediaType` (string): MIME type (for example, `image/png`, `application/pdf`)
+- `filename` (string, optional): Original filename for document attachments. Only set when the type is `document` and the caller provides it.
+
+{% info_block warningBox "AWS Bedrock limitation" %}
+
+AWS Bedrock does not support URL-based attachments. When using AWS Bedrock as the provider, use `ATTACHMENT_CONTENT_TYPE_BASE64` to pass image or document content as Base64-encoded data instead of a URL.
+
+{% endinfo_block %}
 
 ### ToolInvocation
 
@@ -463,6 +477,8 @@ This transfer contains information about a tool invocation made by the AI:
 - `name` (string): The name of the tool that was invoked
 - `arguments` (array): The arguments passed to the tool
 - `result` (string): The result returned by the tool execution
+- `content` (string, optional): Assistant text emitted alongside the tool call (for example, "I will use the calculator now."). `null` when the model did not produce accompanying text.
+- `reasoning` (string, optional): Model chain-of-thought reasoning emitted alongside the tool call. `null` when the provider does not return reasoning blocks.
 
 ### StructuredMessage
 

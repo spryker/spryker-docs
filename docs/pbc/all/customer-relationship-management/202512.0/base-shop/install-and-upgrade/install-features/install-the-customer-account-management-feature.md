@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-account-management-feature-integration
 originalArticleId: 859d5c6d-7ca6-4cca-ae87-66f2951c2e96
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html
   - /2021080/docs/customer-account-management-feature-integration
   - /2021080/docs/en/customer-account-management-feature-integration
   - /docs/customer-account-management-feature-integration

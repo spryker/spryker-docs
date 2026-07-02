@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-integration
 originalArticleId: 1f7146bf-124f-435a-85aa-632c2c2738ca
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
   - /2021080/docs/shared-carts-feature-integration
   - /2021080/docs/en/shared-carts-feature-integration
   - /docs/shared-carts-feature-integration

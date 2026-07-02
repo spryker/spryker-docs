@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-configurable-bundle-templates
 originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-configurable-bundle-templates.html  
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html

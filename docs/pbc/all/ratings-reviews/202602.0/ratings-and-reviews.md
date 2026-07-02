@@ -4,7 +4,7 @@ last_updated: Jul 29, 2022
 description: Everything you need to know about the Ratings and Reviews feature within Spryker Cloud Commerce OS.
 template: concept-topic-template
 redirect_from:
-  - /docs/pbc/all/ratings-reviews/202512.0/ratings-and-reviews.html 
+  - /docs/pbc/all/ratings-reviews/202512.0/ratings-and-reviews.html
   - /2021080/docs/product-rating-reviews-feature-overview
   - /2021080/docs/en/product-rating-reviews-feature-overview
   - /docs/product-rating-reviews-feature-overview

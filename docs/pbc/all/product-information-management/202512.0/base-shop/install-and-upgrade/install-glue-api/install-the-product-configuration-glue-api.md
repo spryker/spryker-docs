@@ -4,6 +4,7 @@ description: Learn how to integrate the Product Configurator feature API into a 
 template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-configuration-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
 related:

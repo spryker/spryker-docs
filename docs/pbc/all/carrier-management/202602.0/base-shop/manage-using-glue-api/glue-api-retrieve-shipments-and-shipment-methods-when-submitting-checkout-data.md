@@ -4,7 +4,7 @@ description: Discover how to use Glue API to retrieve shipments and shipment met
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/carrier-management/202507.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html 
+  - /docs/pbc/all/carrier-management/202507.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
   - /docs/pbc/all/carrier-management/202311.0/base-shop/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
   - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
 ---

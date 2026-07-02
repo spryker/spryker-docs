@@ -1,13 +1,15 @@
 ---
 title: Symfony Bundles in Spryker
 description: This document describes how to use Symfony Bundles in your Spryker project.
-last_updated: Nov 5, 2025
+last_updated: Feb 26, 2026
 template: concept-topic-template
 related:
   - title: How to upgrade to Symfony Dependency Injection
     link: docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-dependency-injection.html
   - title: Dependency injection
     link: docs/dg/dev/architecture/dependency-injection.html
+  - title: How to integrate API Platform Security
+    link: docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html
 ---
 
 {% info_block warningBox "On your own risk" %}
@@ -34,6 +36,27 @@ return [
     FrameworkBundle::class => ['all' => true],
 ];
 ```
+
+### SecurityBundle
+
+The Symfony [SecurityBundle](https://symfony.com/doc/current/security.html) provides authentication and authorization for Spryker's API Platform integration. It enables Bearer token (JWT) authentication and security expressions on API resources.
+
+To register the SecurityBundle for a Glue application, add it to `config/{APPLICATION}/bundles.php`:
+
+```php
+<?php
+
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\SecurityBundle\SecurityBundle;
+
+return [
+    FrameworkBundle::class => ['all' => true],
+    SecurityBundle::class => ['all' => true],
+    // ... other bundles
+];
+```
+
+For the complete setup including firewall configuration and security expressions, see [How to integrate API Platform Security](/docs/dg/dev/upgrade-and-migrate/integrate-api-platform-security.html).
 
 ## Configuring bundles and services
 

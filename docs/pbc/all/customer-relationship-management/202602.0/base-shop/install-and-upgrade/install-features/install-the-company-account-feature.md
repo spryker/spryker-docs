@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-account-feature-integration
 originalArticleId: f29e0e4a-c1f6-4812-ae43-a771909cb715
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html
   - /2021080/docs/company-account-feature-integration
   - /2021080/docs/en/company-account-feature-integration
   - /docs/company-account-feature-integration

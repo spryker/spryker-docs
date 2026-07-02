@@ -6,8 +6,8 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-relations-feature-integration
 originalArticleId: 90f7f8ad-55be-4090-8a98-b8530a1d8eb9
 redirect_from:
-  - /docs/pbc/all/product-relationship-management/202507.0/install-and-upgrade/install-the-product-relations-glue-api.html 
-  - /docs/pbc/all/product-relationship-management/202512.0/install-and-upgrade/install-the-product-relations-glue-api.html 
+  - /docs/pbc/all/product-relationship-management/202507.0/install-and-upgrade/install-the-product-relations-glue-api.html
+  - /docs/pbc/all/product-relationship-management/202512.0/install-and-upgrade/install-the-product-relations-glue-api.html
   - /2021080/docs/glue-api-product-relations-feature-integration
   - /2021080/docs/en/glue-api-product-relations-feature-integration
   - /docs/glue-api-product-relations-feature-integration

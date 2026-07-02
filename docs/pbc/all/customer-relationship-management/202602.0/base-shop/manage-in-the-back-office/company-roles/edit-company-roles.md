@@ -4,7 +4,7 @@ description: Learn how to edit a company roles in the Spryker Cloud Commerce OS 
 template: back-office-user-guide-template
 last_updated: Nov 17, 2023
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-roles/edit-company-roles.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-roles/edit-company-roles.html

@@ -3,6 +3,8 @@ title: "Glue API: Add service point addresses"
 description: Learn how to add service point addresses to your Unified Commerce shop using Spryker Glue API
 last_updated: Nov 23, 2023
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/service-point-management/202602.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html
 ---
 
 This endpoint lets you add service point addresses.

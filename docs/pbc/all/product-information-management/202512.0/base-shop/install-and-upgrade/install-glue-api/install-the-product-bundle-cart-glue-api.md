@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-product-bundle-cart-feature-integration
 originalArticleId: 3ac37722-6b75-479a-a986-1531ab77fbc6
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
   - /2021080/docs/glue-api-product-bundle-cart-feature-integration
   - /2021080/docs/en/glue-api-product-bundle-cart-feature-integration
   - /docs/glue-api-product-bundle-cart-feature-integration

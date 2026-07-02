@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-companies
 originalArticleId: 238c375f-b541-445c-ad9c-ab1b4afb036f
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-companies.html

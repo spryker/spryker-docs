@@ -4,7 +4,7 @@ description: Learn how to add items with discounts to carts of registered users 
 last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/pbc/all/discount-management/202507.0/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html 
+  - /docs/pbc/all/discount-management/202507.0/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html

@@ -4,7 +4,7 @@ description: Learn how to retrieve merchants in your Spryker marketplace project
 template: glue-api-storefront-guide-template
 last_updated: Jan 12, 2024
 redirect_from:
-  - /docs/pbc/all/merchant-management/202512.0/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html 
+  - /docs/pbc/all/merchant-management/202512.0/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchants.html
 related:
   - title: Retrieving merchant opening hours

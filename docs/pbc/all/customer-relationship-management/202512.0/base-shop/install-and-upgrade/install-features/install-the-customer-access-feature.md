@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-access-feature-integration
 originalArticleId: d0b476f0-c6dd-4126-812e-bb37f259cd03
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html
   - /2021080/docs/customer-access-feature-integration
   - /2021080/docs/en/customer-access-feature-integration
   - /docs/customer-access-feature-integration

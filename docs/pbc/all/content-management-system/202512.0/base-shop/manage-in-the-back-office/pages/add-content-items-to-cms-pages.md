@@ -4,6 +4,7 @@ description: Learn how enrich your CMS pages and add content items to CMS pages 
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
   - /docs/pbc/all/content-management-system/202507.0/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
   - docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html

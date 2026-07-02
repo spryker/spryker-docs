@@ -6,7 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/coremedia
 originalArticleId: 40e49203-d3e1-4589-b7d8-29325af22520
 redirect_from:
-  - /docs/pbc/all/content-management-system/202507.0/base-shop/third-party-integrations/coremedia.html 
+  - /docs/pbc/all/content-management-system/202602.0/base-shop/third-party-integrations/coremedia.html
+  - /docs/pbc/all/content-management-system/202507.0/base-shop/third-party-integrations/coremedia.html
   - /2021080/docs/coremedia
   - /2021080/docs/en/coremedia
   - /docs/coremedia

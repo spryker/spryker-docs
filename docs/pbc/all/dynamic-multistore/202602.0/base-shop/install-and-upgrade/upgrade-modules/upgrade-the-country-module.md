@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-country
 originalArticleId: 9f4fb3f2-3ab9-42fd-9fd0-dda4131e8555
 redirect_from:
-  - /docs/pbc/all/dynamic-multistore/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html 
+  - /docs/pbc/all/dynamic-multistore/202512.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html
   - /2021080/docs/mg-country
   - /2021080/docs/en/mg-country
   - /docs/mg-country

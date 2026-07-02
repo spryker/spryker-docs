@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/integrating-the-direct-debit-payment-method-for-heidelpay.html
 originalArticleId: eeaea912-0d03-499d-acdd-ad7c448c4cb0
 redirect_from:
-  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html 
+  - /docs/pbc/all/payment-service-provider/202512.0/base-shop/third-party-integrations/heidelpay/integrate-payment-methods-for-heidelpay/integrate-the-direct-debit-payment-method-for-heidelpay.html
   - /2021080/docs/integrating-the-direct-debit-payment-method-for-heidelpay.html
   - /2021080/docs/en/integrating-the-direct-debit-payment-method-for-heidelpay.html
   - /docs/integrating-the-direct-debit-payment-method-for-heidelpay.html

@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-feature-integration
 originalArticleId: a351c7ab-e1cc-4764-bd7f-3ac60695dac4
 redirect_from:
+  - /docs/pbc/all/product-information-management/202602.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - /2021080/docs/product-lists-feature-integration
   - /2021080/docs/en/product-lists-feature-integration
   - /docs/product-lists-feature-integration

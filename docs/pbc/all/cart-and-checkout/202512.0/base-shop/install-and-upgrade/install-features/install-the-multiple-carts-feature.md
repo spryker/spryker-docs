@@ -6,6 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-feature-integration
 originalArticleId: bf00a6ba-8484-43af-bfce-e24895c051b7
 redirect_from:
+  - /docs/pbc/all/cart-and-checkout/202602.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html
   - /2021080/docs/multiple-carts-feature-integration
   - /2021080/docs/en/multiple-carts-feature-integration
   - /docs/multiple-carts-feature-integration

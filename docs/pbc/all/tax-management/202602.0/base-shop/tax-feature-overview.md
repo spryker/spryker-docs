@@ -6,7 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
 originalArticleId: 2ca980d2-d08b-4511-b26c-4cafa8624283
 redirect_from:
-  - /docs/pbc/all/tax-management/202512.0/base-shop/tax-feature-overview.html 
+  - /docs/pbc/all/tax-management/202512.0/base-shop/tax-feature-overview.html
   - /2021080/docs/tax-feature-overview
   - /2021080/docs/en/tax-feature-overview
   - /docs/tax-feature-overview

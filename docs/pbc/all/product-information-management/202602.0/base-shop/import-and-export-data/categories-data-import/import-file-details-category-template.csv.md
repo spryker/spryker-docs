@@ -6,7 +6,7 @@ template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-templatecsv
 originalArticleId: fac13464-5ddc-4b2a-8dff-f257e196e222
 redirect_from:
-  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html 
+  - /docs/pbc/all/product-information-management/202512.0/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html

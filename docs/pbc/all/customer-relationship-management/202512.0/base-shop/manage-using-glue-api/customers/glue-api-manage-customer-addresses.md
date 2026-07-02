@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
 redirect_from:
+  - /docs/pbc/all/customer-relationship-management/202602.0/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html

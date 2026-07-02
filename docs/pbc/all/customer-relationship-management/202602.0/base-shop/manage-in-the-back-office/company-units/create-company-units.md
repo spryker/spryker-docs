@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-units
 originalArticleId: 6a9bb3d9-ef8f-444e-b5f7-7d6f964792c5
 redirect_from:
-  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-units/create-company-units.html 
+  - /docs/pbc/all/customer-relationship-management/202512.0/base-shop/manage-in-the-back-office/company-units/create-company-units.html
   - /2021080/docs/managing-company-units
   - /2021080/docs/en/managing-company-units
   - /docs/managing-company-units

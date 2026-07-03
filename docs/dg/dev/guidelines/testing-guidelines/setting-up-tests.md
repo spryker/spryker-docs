@@ -57,7 +57,7 @@ tests/
                 codeception.yml
 ```
 
-Check out the organization within the [tests/PyzTest/](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest) directory in Spryker Master Suite for example.
+For example, check out the organization within the [tests/PyzTest/](https://github.com/spryker-shop/b2b-demo-marketplace/tree/master/tests/PyzTest) directory.
 
 Together with the [root configuration](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
 

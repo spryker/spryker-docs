@@ -1,7 +1,7 @@
 ---
 title: Test framework
 description: Spryker uses Codeception framework for running tests. Learn how to configure and use it in your project.
-last_updated: Jun 16, 2021
+last_updated: Jul 3, 2026
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/test-framework
 originalArticleId: e48e759c-0e27-4cfa-82f7-e34f82b2b6ad
@@ -78,8 +78,6 @@ include:
     - tests/PyzTest/*/*
 ...
 ```
-
-For an example, refer to [codeception.yml in Spryker Master Suite](https://github.com/spryker-shop/suite/blob/master/codeception.yml).
 
 For more information, see [Codeception configuration documentation](https://codeception.com/docs/reference/Configuration).
 
@@ -166,8 +164,6 @@ The **Presentation** suite contains functional tests that can be used to interac
 All test classes follow the exact same path as the class under test, except that tests live in the `tests` directory, and the organization part of the namespace is suffixed with `Test`. For example, `tests/PyzTest/*`. For details on the `tests` directory structure, see [Directory Structure](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html#directory-structure).
 
 Each test suite contains a `codeception.yml`configuration file. This file includes, for example, [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html) that are enabled for the current suite.
-
-For example, check the organization in the [Application](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest/Yves/Application) module of Spryker Master Suite.
 
 ## Next step
 

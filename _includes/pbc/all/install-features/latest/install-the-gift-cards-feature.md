@@ -230,7 +230,7 @@ Make sure that propel entities have been generated successfully by checking thei
 
 {% info_block infoBox "" %}
 
-The following step imports abstract and concrete gift card configurations. Implementation for the data importer isn't provided by Spryker Core, so you need to implement it on the project level. You can find an example implementation in the [`suit` repository](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a); only `Console` and `DataImport` module changes are relevant. The following data import examples are based on this implementation.
+The following step imports abstract and concrete gift card configurations. Implementation for the data importer isn't provided by Spryker Core, so you need to implement it on the project level. The following data import examples are based on such an implementation.
 
  {% endinfo_block %}
 

@@ -7,10 +7,9 @@ redirect_from:
   - /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
   - /docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html
   - /docs/scos/user/intro-to-spryker/spryker-marketplace/spryker-marketplace.html
-
+  - /docs/scos/user/intro-to-spryker/master-suite.html
+  - /docs/about/all/master-suite.html
 ---
-
-
 
 In this section, you will find all the information about Spryker Marketplace and how to start developing one.
 

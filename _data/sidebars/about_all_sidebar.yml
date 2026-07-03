@@ -131,35 +131,31 @@ entries:
 
     - title: Supported browsers
       url: /docs/about/all/supported-browsers.html
-    - title: Master Suite
-      url: /docs/about/all/master-suite.html
-    - title: B2C Suite
-      url: /docs/about/all/b2c-suite.html
-    - title: B2B Suite
-      url: /docs/about/all/b2b-suite.html
-    - title: Self-Service Portal
-      url: /docs/about/all/self-service-portal.html
-    - title: Spryker Marketplace
+    - title: Spryker B2B Marketplace
       url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:
-      - title: Marketplace concept
-        url: /docs/about/all/spryker-marketplace/marketplace-concept.html
-      - title: Marketplace personas
-        url: /docs/about/all/spryker-marketplace/marketplace-personas.html
-      - title: Back Office for Marketplace Operator
-        url: /docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html
-      - title: Merchant onboarding
-        url: /docs/about/all/spryker-marketplace/merchant-onboarding.html
-      - title: Marketplace Storefront
-        url: /docs/about/all/spryker-marketplace/marketplace-storefront.html
-      - title: Merchant Portal
-        url: /docs/about/all/spryker-marketplace/merchant-portal.html
-      - title: Marketplace B2C Suite
-        url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
-      - title: Marketplace B2B Suite
-        url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
-      - title: Uninstall Marketplace from B2B Demo Marketplace
-        url: /docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace.html
+        - title: Marketplace concept
+          url: /docs/about/all/spryker-marketplace/marketplace-concept.html
+        - title: Marketplace personas
+          url: /docs/about/all/spryker-marketplace/marketplace-personas.html
+        - title: Back Office for Marketplace Operator
+          url: /docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html
+        - title: Merchant onboarding
+          url: /docs/about/all/spryker-marketplace/merchant-onboarding.html
+        - title: Marketplace Storefront
+          url: /docs/about/all/spryker-marketplace/marketplace-storefront.html
+        - title: Merchant Portal
+          url: /docs/about/all/spryker-marketplace/merchant-portal.html
+        - title: Marketplace B2C Suite
+          url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
+        - title: Marketplace B2B Suite
+          url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
+        - title: Uninstall Marketplace from B2B Demo Marketplace
+          url: /docs/about/all/uninstall-marketplace-from-b2b-demo-marketplace.html
+    - title: B2C Demo Shop
+      url: /docs/about/all/b2c-demoshop.html
+    - title: Self-Service Portal
+      url: /docs/about/all/self-service-portal.html
 
     - title: About the docs
       url: /docs/about/all/about-the-docs/about-spryker-docs.html

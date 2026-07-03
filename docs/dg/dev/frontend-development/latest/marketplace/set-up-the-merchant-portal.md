@@ -19,7 +19,7 @@ This document provides details about how to set up the Spryker Merchant Portal.
 
 To start using Merchant Portal, install Spryker Demo Shop:
 
-1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).  
+1. For the Marketplace project installation, use the [B2B Demo Marketplace repository](https://github.com/spryker-shop/b2b-demo-marketplace).  
 2. [Install the project](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 

@@ -1,7 +1,7 @@
 ---
 title: AI Foundation Audit Logs
 description: Track and audit AI interactions with the AiFoundation module audit logging feature, including estimated cost per interaction.
-last_updated: Jun 12, 2026
+last_updated: Jun 15, 2026
 keywords: audit, logging, ai, foundation, tracking, compliance, ai interactions, monitoring, cost estimation, ai pricing
 template: howto-guide-template
 label: early-access
@@ -19,6 +19,8 @@ related:
 This document describes how to use audit logging with the AiFoundation module to track and audit AI interactions in your Spryker application.
 
 The audit logging feature provides comprehensive tracking of all AI interactions, including prompts, responses, token usage, inference time, and metadata. This enables monitoring, compliance, cost tracking, and debugging of AI operations.
+
+![AI Audit Logs cost estimator](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/cost-estimator.png)
 
 ## Back Office: Audit Logs page
 

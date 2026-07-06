@@ -2,7 +2,7 @@
 title: AI Foundation
 description: Provider-agnostic AI connectivity layer for commerce
 template: concept-topic-template
-last_updated: Dec 12, 2025
+last_updated: Jun 15, 2026
 label: early-access
 related:
   - title: Install the AI Foundation module
@@ -19,6 +19,7 @@ You get a standardized, provider-agnostic way to build AI-powered commerce exper
 - Global cloud AI platforms such as **Azure OpenAI**, **AWS Bedrock**, and **Google Vertex AI / Gemini**
 - Frontier model providers such as **OpenAI** and **Anthropic Claude**
 - European sovereign AI providers such as **Mistral AI**
+- Any other provider, configurable per feature independently
 
 The goal is simple: make AI a first-class capability of your commerce platform, not a collection of isolated experiments.
 
@@ -114,6 +115,23 @@ AI Foundation is not a single feature. It is the base for many AI-enabled scenar
   Context-aware suggestions for catalog management, pricing, or data imports that make business users more productive, while keeping data in EU-based providers where required.
 
 Each of these use cases can evolve independently while still relying on the same AI Foundation underneath.
+
+---
+
+## Audit Logs and cost estimator
+
+AI Foundation includes built-in audit logging for every AI interaction. All prompts, responses, token usage, inference times, and statuses are captured automatically and are available in the Back Office at **Intelligence > Audit Logs**.
+
+The Audit Logs page provides:
+
+- **Summary statistics**: Total requests, tokens consumed, success rate, average inference time, and total estimated cost.
+- **Cost estimator**: Per-provider and per-model cost breakdown based on token prices you configure. Prices are entered in the Back Office per model and applied at display time, so changing a price immediately revalues all historical interactions.
+- **Filterable log table**: Filter by configuration name, status, conversation reference, and date range.
+- **Detail drawer**: View the full prompt, response, token breakdown, metadata, and error details for any interaction.
+
+![AI Audit Logs cost estimator](https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-commerce/cost-estimator.png)
+
+For setup instructions, see [AI Foundation Audit Logs](/docs/dg/dev/ai/ai-foundation/ai-foundation-audit-logs.html).
 
 ---
 

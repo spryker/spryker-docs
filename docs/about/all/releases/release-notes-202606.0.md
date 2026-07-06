@@ -156,6 +156,13 @@ The AI Dev SDK helps teams customize Spryker projects faster and with less manua
 
 Smart CMS brings AI assistance directly into the CMS page and block creation in the Back Office. Content editors and business users can generate structured text content in-flow instead of writing or copying content manually. This reduces the effort required to create and update commerce content experiences at scale.
 
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_smart_cms_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_smart_cms_2.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_smart_cms_3.png||"
+%}
+
 **Key capabilities:**
 - Generates CMS page and block content directly in the Back Office authoring flow
 - Accepts source attachments, such as documents with customer questions, to generate structured content like FAQ pages
@@ -174,6 +181,12 @@ Smart CMS brings AI assistance directly into the CMS page and block creation in 
 
 AI Foundation now includes a unified configuration experience in the Back Office for managing AI providers, models, prompts, and feature-specific behavior. This gives business and operational users a clearer, more consistent way to activate and control AI-powered capabilities, including switching AI vendors or models on the fly, without developer involvement or redeployment.
 
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_ai_configuration_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_ai_configuration_2.png||"
+%}
+
 **Key capabilities:**
 - Centralizes AI provider and credential management in one configuration area
 - Supports feature-level enablement and control of AI behavior, including AI vendor, model, and prompt configuration, with no code changes or deployments required
@@ -190,6 +203,12 @@ AI Foundation now includes a unified configuration experience in the Back Office
 ### AI Foundation: Back Office AI Cost Estimator {% include badge.html type="early-access" %}
 
 The AI Cost Estimator adds estimated AI cost visibility to the AI Audit Logs in the Back Office. Admins can configure model pricing once and then see estimated costs per interaction, total estimated spend, and breakdowns by provider and model. This makes it easier to understand the cost of individual AI-powered commerce features and make informed decisions about their value and continued use.
+
+{% include carousel.html
+images="
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_ai_cost_estimator_1.png||::
+https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/bo_ai_cost_estimator_2.png||"
+%}
 
 **Key capabilities:**
 - Shows estimated cost per AI interaction in the Audit Logs page

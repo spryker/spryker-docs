@@ -338,8 +338,6 @@ We have updated our cloud automation storage model to significantly improve plat
 - Eliminates the risk of losing bespoke operational settings, removing the need for costly and repetitive manual reconfiguration work
 - Enhances your overall security posture by allowing the seamless deployment of critical patches without disrupting business continuity
 
-**Documentation:**
-
 ### Customer authentication and session handling {% include badge.html type="improvement" %}
 
 We fixed issues affecting customer authentication and session behavior in edge cases. These changes improve reliability for API authentication and login flows.

@@ -755,7 +755,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 {% info_block infoBox "Deprecated plugin" %}
 
-`ProductPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin`. Keeping it registered causes the legacy flow to short-circuit the composed aggregation query.
+`ProductPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin`. Keeping it registered causes the legacy aggregation flow to be used instead of the composed reservation aggregation query.
 
 {% endinfo_block %}
 
@@ -775,7 +775,7 @@ If you are migrating an existing project, deintegrate the deprecated plugin: rem
 
 {% info_block infoBox "Combine plugins across features" %}
 
-`getOmsReservationAggregationQueryCriteriaExpanderPlugins()` takes a single stack for the whole project. If you install other features that also contribute to reservation aggregation—for example, product offers—return all of their query-criteria expander plugins from this one method rather than overriding it separately per feature. The plugins are additive and their criteria compose into a single aggregation query.
+`getOmsReservationAggregationQueryCriteriaExpanderPlugins()` takes a single stack for the whole project. If you install other features that also contribute to reservation aggregation—for example, product offers—return all of their query-criteria expander plugins from this one method rather than overriding it separately per feature. The plugins are additive, and their criteria are composed into a single reservation aggregation query.
 
 {% endinfo_block %}
 

@@ -25,7 +25,7 @@ Activate the following plugins:
 
 {% info_block infoBox "Deprecated plugin" %}
 
-`ProductOfferPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated. Its behavior is now covered by combining the product offer and packaging unit query criteria expander plugins — their criteria compose into a single aggregation query, so no dedicated offer-plus-packaging-unit plugin is needed. Keeping it registered causes the legacy flow to short-circuit the composed aggregation query.
+`ProductOfferPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated. Its behavior is now covered by combining the product offer and packaging unit query criteria expander plugins — their criteria are composed into a single reservation aggregation query, so no dedicated offer-plus-packaging-unit plugin is needed. Keeping it registered causes the legacy aggregation flow to be used instead of the composed reservation aggregation query.
 
 {% endinfo_block %}
 

@@ -7,7 +7,7 @@ template: concept-topic-template
 
 Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.
 
-For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide). 
+For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide).
 
 ## B2B Business-Ready Commerce Experiences
 
@@ -59,7 +59,7 @@ We extended the Spryker design system across key storefront pages, including pro
 **Business benefits:**
 - Improves buyer trust with a more polished storefront experience
 - Reduces future implementation and QA effort through reusable patterns
-- Strengthens Spryker’s out-of-the-box storefront for demos and evaluations
+- Strengthens Spryker's out-of-the-box storefront for demos and evaluations
 
 **Documentation:**
 
@@ -99,7 +99,7 @@ We improved several Back Office interactions to make administration tasks cleare
 
 ### PunchOut support in the Back Office {% include badge.html type="improvement" %}
 
-PunchOut support in the Back Office makes PunchOut integrations easier to configure and manage with a more low-code approach. Building on Spryker’s native support for common PunchOut flows and cXML/OCI compatibility, this update adds a dedicated PunchOut section with relevant fields and configuration support. This helps solution teams deliver integrations with less custom development effort.
+PunchOut support in the Back Office makes PunchOut integrations easier to configure and manage with a more low-code approach. Building on Spryker's native support for common PunchOut flows and cXML/OCI compatibility, this update adds a dedicated PunchOut section with relevant fields and configuration support. This helps solution teams deliver integrations with less custom development effort.
 
 **Key capabilities:**
 - Adds a dedicated PunchOut section in the Back Office
@@ -112,11 +112,11 @@ PunchOut support in the Back Office makes PunchOut integrations easier to config
 - Simplifies setup and maintenance for customers and implementation partners
 
 **Documentation:**
-- [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway.html) 
- 
+- [PunchOut Gateway](/docs/pbc/all/punchout-gateway/punchout-gateway.html)
+
 ### PunchCommerce Punchout Connector {% include badge.html type="feature" %}
 
-The PunchCommerce Punchout Connector extends Spryker’s support for complex PunchOut scenarios through a partner integration. It is designed for use cases that require multiple eProcurement connectors and document handling beyond Spryker’s native capabilities. This helps customers address more advanced procurement integration requirements.
+The PunchCommerce Punchout Connector extends Spryker's support for complex PunchOut scenarios through a partner integration. It is designed for use cases that require multiple eProcurement connectors and document handling beyond Spryker's native capabilities. This helps customers address more advanced procurement integration requirements.
 
 **Key capabilities:**
 - Connects Spryker with PunchCommerce for advanced PunchOut scenarios
@@ -129,7 +129,7 @@ The PunchCommerce Punchout Connector extends Spryker’s support for complex Pun
 - Expands ecosystem support through a specialized partner solution
 
 **Documentation:**
-- https://gitlab.netzdirektion.de/packages/punchcommerce-spryker-module 
+- [https://gitlab.netzdirektion.de/packages/punchcommerce-spryker-module](https://gitlab.netzdirektion.de/packages/punchcommerce-spryker-module)
 
 ## Connected, and AI-Enabled Platform
 
@@ -356,7 +356,7 @@ We fixed issues affecting customer authentication and session behavior in edge c
 - Helps secure customer access scenarios more consistently
 
 **Documentation:**
-- [spy_customer.registered=NULL allows API auth ](https://api.release.spryker.com/release-group/6618)
+- [spy_customer.registered=NULL allows API auth](https://api.release.spryker.com/release-group/6618)
 - [Adjusted Quote data and UI fixes](https://api.release.spryker.com/release-group/6621)
 - [Added optional base64 encoding for gateway](https://api.release.spryker.com/release-group/6633)
 

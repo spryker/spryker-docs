@@ -34,7 +34,7 @@ jobs:
           GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           STALE_LIST_FILE: ${{ runner.temp }}/stale_last_updated.txt
-        run: /bin/bash ./_scripts/last_updated_checker.sh 1 30
+        run: /bin/bash ./_scripts/last_updated_checker.sh 2 30
 
       # Fork PRs run with a read-only token, so the bot can't push a fix. Surface the
       # drift as a hard failure instead of silently passing the continue-on-error step.

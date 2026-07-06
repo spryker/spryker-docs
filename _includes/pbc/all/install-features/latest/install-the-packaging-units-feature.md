@@ -755,9 +755,23 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 {% info_block infoBox "Deprecated plugin" %}
 
-`ProductPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin`. If you are migrating an existing project, remove the deprecated plugin from `getOmsReservationAggregationPlugins()` — keeping it registered causes the legacy flow to short-circuit the composed aggregation query.
+`ProductPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin`. Keeping it registered causes the legacy flow to short-circuit the composed aggregation query.
 
 {% endinfo_block %}
+
+If you are migrating an existing project, deintegrate the deprecated plugin: remove `ProductPackagingUnitOmsReservationAggregationPlugin` from the `getOmsReservationAggregationPlugins()` stack and delete its `use` statement. If the stack becomes empty, return an empty array:
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+    /**
+     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     */
+    protected function getOmsReservationAggregationPlugins(): array
+    {
+        return [];
+    }
+```
 
 {% info_block infoBox "Combine plugins across features" %}
 

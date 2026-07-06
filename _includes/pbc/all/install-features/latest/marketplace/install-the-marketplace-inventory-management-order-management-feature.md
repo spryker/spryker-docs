@@ -28,9 +28,23 @@ Enable the following behaviors by registering the plugins:
 
 {% info_block infoBox "Deprecated plugins" %}
 
-`ProductOfferOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated. Use `ProductOfferReservationAggregationQueryCriteriaExpanderPlugin` registered via `getOmsReservationAggregationQueryCriteriaExpanderPlugins()` instead, and remove the deprecated plugin from `getOmsReservationAggregationPlugins()` — keeping both registered causes the legacy flow to short-circuit the composed aggregation query.
+`ProductOfferOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductOfferReservationAggregationQueryCriteriaExpanderPlugin`. Keeping it registered causes the legacy flow to short-circuit the composed aggregation query.
 
 {% endinfo_block %}
+
+If you are migrating an existing project, deintegrate the deprecated plugin: remove `ProductOfferOmsReservationAggregationPlugin` from the `getOmsReservationAggregationPlugins()` stack in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` and delete its `use` statement. If the stack becomes empty, return an empty array:
+
+```php
+    /**
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     */
+    protected function getOmsReservationAggregationPlugins(): array
+    {
+        return [];
+    }
+```
+
+Then register the new plugins:
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 

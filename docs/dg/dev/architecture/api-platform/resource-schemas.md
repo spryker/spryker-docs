@@ -650,7 +650,7 @@ object:
 
 | Key | Type | Required | Description |
 |-----|------|----------|-------------|
-| `object.name` | string | Yes | CamelCase object name. Must match the `objectName:` join tag on every resource property that references this object. |
+| `object.name` | string | Yes | CamelCase object name. Matched against `objectName:` join tag on every resource property that references this object. |
 | `object.properties` | map | Yes | Field definitions. Each field uses the **same syntax as a resource property** — `type`, `description`, `validation`, `example`, and so on. |
 | `object.extends` | string | No | CamelCase name of another canonical object whose resolved fields are inherited first. See [Composition](#composition-with-extends-and-omit). |
 | `object.omit` | string[] | No | Names of inherited fields to drop from the `extends` base before this object's own properties are applied. |

@@ -19,11 +19,18 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferOmsReservationAggregationPlugin | Aggregates reservations for product offers. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferReservationAggregationQueryCriteriaExpanderPlugin | Scopes the OMS reservation aggregation query to the product offer carried by the reservation request. No-op when `productOfferReference` is empty. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferStockReservationRequestExpanderPlugin | Expands the reservation request with every store that carries product-offer stock for the requested offer. Applicable when `productOfferReference` is set; priority `200`. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\Oms |
 | ProductOfferOmsReservationReaderStrategyPlugin | Provides the ability to read product offer reservation data from alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferOmsReservationWriterStrategyPlugin | Provides the ability to write product offer reservation to alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+| ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. Registered on the store-aware post-save stack. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferReservationProductOfferStockTableExpanderPlugin | Expands product offer stock table with reservations column. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
+
+{% info_block infoBox "Deprecated plugins" %}
+
+`ProductOfferOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated. Use `ProductOfferReservationAggregationQueryCriteriaExpanderPlugin` registered via `getOmsReservationAggregationQueryCriteriaExpanderPlugins()` instead, and remove the deprecated plugin from `getOmsReservationAggregationPlugins()` — keeping both registered causes the legacy flow to short-circuit the composed aggregation query.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
 
@@ -31,20 +38,31 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Zed\Oms;
 
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationAggregationPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationReaderStrategyPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferOmsReservationWriterStrategyPlugin;
+use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferReservationAggregationQueryCriteriaExpanderPlugin;
 use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOfferReservationPostSaveTerminationAwareStrategyPlugin;
+use Spryker\Zed\ProductOfferStock\Communication\Plugin\Oms\ProductOfferStockReservationRequestExpanderPlugin;
 
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationQueryCriteriaExpanderPluginInterface>
      */
-    protected function getOmsReservationAggregationPlugins(): array
+    protected function getOmsReservationAggregationQueryCriteriaExpanderPlugins(): array
     {
         return [
-            new ProductOfferOmsReservationAggregationPlugin(),
+            new ProductOfferReservationAggregationQueryCriteriaExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationRequestExpanderPluginInterface>
+     */
+    protected function getReservationRequestExpanderPlugins(): array
+    {
+        return [
+            new ProductOfferStockReservationRequestExpanderPlugin(),
         ];
     }
 
@@ -61,7 +79,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     /**
      * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationPostSaveTerminationAwareStrategyPluginInterface>
      */
-    protected function getReservationPostSaveTerminationAwareStrategyPlugins(): array
+    protected function getStoreAwareReservationPostSaveTerminationAwareStrategyPlugins(): array
     {
         return [
             new ProductOfferReservationPostSaveTerminationAwareStrategyPlugin(),
@@ -79,6 +97,25 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
+
+{% info_block infoBox "Combine plugins across features" %}
+
+`getOmsReservationAggregationQueryCriteriaExpanderPlugins()` and `getReservationRequestExpanderPlugins()` each take a single stack for the whole project. If you install more than one feature that contributes to reservation aggregation—for example, product offers and packaging units—return all of their plugins from one method rather than overriding it separately per feature. The plugins are additive and their criteria compose into a single aggregation query.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Configure the OMS process before adding the warehouse allocation aggregation expander" %}
+
+`WarehouseAllocationReservationAggregationQueryCriteriaExpanderPlugin` counts only items that are already warehouse-allocated, so its result depends on the OMS process. A reservation is recalculated when the reserved set of a SKU changes—for example, when items enter or leave a `reserved` state—so an item must already be warehouse-allocated by the time it first becomes reserved.
+
+Before adding this plugin to `getOmsReservationAggregationQueryCriteriaExpanderPlugins()`, configure your OMS process so that:
+
+- The `WarehouseAllocation/WarehouseAllocate` command runs on a transition the item passes through **before** its first `reserved` state.
+- That transition is triggered automatically (for example, `onEnter` or a zero/short timeout), not by a manual or long-delayed event.
+
+With this setup, every reservation recalculation sees the final allocation state and stays correct. If allocation happens after items are already reserved, or is gated behind a manual event, the reservation is calculated while items are still unallocated and is not refreshed when they are allocated later—leaving availability incorrect.
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

@@ -1,7 +1,7 @@
 ---
 title: Install Search Statistics
 description: Learn how to install and configure the Search Statistics feature in a Spryker project.
-last_updated: May 7, 2026
+last_updated: Jul 7, 2026
 template: howto-guide-template
 ---
 

@@ -137,10 +137,11 @@ The PunchCommerce Punchout Connector extends Spryker's support for complex Punch
 
 The AI Dev SDK helps teams customize Spryker projects faster and with less manual effort. It supports developers in generating quick proofs of concept and MVP customizations that follow Spryker's patterns and project conventions, with developers staying in control at each approval point. This helps teams validate ideas faster, keep customization quality more consistent, and lower the manual effort each one takes.
 
-{% include carousel.html
-images="
-https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/ai-dev-sdk-workflow.mp4||"
-%}
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/ai-dev-sdk-workflow.mp4" type="video/mp4">
+  </video>
+</figure>
 
 **Key capabilities:**
 - Orchestrates the full Spryker customization workflow, from research and planning through code generation, testing, and verification, with self-correction when issues are detected and developer approval at key checkpoints

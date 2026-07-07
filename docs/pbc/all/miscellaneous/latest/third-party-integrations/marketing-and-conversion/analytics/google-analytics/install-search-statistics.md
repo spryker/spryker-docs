@@ -24,6 +24,19 @@ Install the required features:
 composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencies
 ```
 
+{% info_block infoBox "Info" %}
+
+If your project uses [spryker/php`](https://hub.docker.com/r/spryker/php) Docker image before Sep 2025, you may need to update it.
+Check if you have the needed PHP module:
+
+```bash
+docker/sdk cli php -m | grep protobuf`
+```
+
+If not, run `docker/sdk boot your_deploy_file.yml && docker/sdk up`
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:

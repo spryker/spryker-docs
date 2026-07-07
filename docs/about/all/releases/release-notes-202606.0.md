@@ -61,6 +61,12 @@ We extended the Spryker design system across key storefront pages, including pro
 - Reduces future implementation and QA effort through reusable patterns
 - Strengthens Spryker's out-of-the-box storefront for demos and evaluations
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202606/spryker+b2b+design+system-no+voice.mp4" type="video/mp4">
+  </video>
+</figure>
+
 **Documentation:**
 
 ### Search Statistics & Google Analytics {% include badge.html type="feature" %}

@@ -17,7 +17,7 @@ Recurring Orders let buyers create cadence-based repeat purchases during checkou
 
 **Key capabilities:**
 - Create recurring order schedules such as weekly, bi-weekly, or monthly
-- Support buyer-controlled confirmations, skips, modifications, and approvals before execution
+- Support buyer-controlled confirmations, skips, modifications
 - Detect basket drift, price drift, and ERP errors with clear recovery flows
 
 **Business benefits:**
@@ -376,7 +376,6 @@ We fixed issues affecting customer authentication and session behavior in edge c
 **Key capabilities:**
 - Prevents unintended API authentication behavior related to `spy_customer.registered = NULL`
 - Improves error handling for invalid JWT tokens in warehouse token requests
-- Prevents password hashes from being unnecessarily exposed in transferred customer data.
 - Avoids false-positive WAF blocking caused by `../` sequences in password hashes.
 
 **Business benefits:**

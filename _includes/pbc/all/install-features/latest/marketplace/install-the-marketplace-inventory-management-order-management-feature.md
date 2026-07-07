@@ -20,7 +20,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferReservationAggregationQueryCriteriaExpanderPlugin | Scopes the OMS reservation aggregation query to the product offer carried by the reservation request. No-op when `productOfferReference` is empty. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
-| ProductOfferStockReservationRequestExpanderPlugin | Expands the reservation request with every store that carries product-offer stock for the requested offer. Applicable when `productOfferReference` is set; priority `200`. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\Oms |
+| ProductOfferStockReservationRequestExpanderPlugin | Expands the reservation request with every store that carries product-offer stock for the requested offer. Applicable when `productOfferReference` is set, priority `200`. |  | Spryker\Zed\ProductOfferStock\Communication\Plugin\Oms |
 | ProductOfferOmsReservationReaderStrategyPlugin | Provides the ability to read product offer reservation data from alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferOmsReservationWriterStrategyPlugin | Provides the ability to write product offer reservation to alternative table. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |
 | ProductOfferReservationPostSaveTerminationAwareStrategyPlugin | Prevents generic product availability update for product offers. Registered on the store-aware post-save stack. |  | Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms |

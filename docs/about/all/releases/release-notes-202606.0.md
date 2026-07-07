@@ -1,7 +1,7 @@
 ---
 title: Release notes 202606.0
 description: Release notes for Spryker Cloud Commerce OS version 202606.0
-last_updated: June 29, 2026
+last_updated: July 7, 2026
 template: concept-topic-template
 ---
 
@@ -136,6 +136,12 @@ The PunchCommerce Punchout Connector extends Spryker's support for complex Punch
 ### AI Dev SDK: AI-Assisted Customization for Spryker Projects {% include badge.html type="early-access" %}
 
 The AI Dev SDK helps teams customize Spryker projects faster and with less manual effort. It supports developers in generating quick proofs of concept and MVP customizations that follow Spryker's patterns and project conventions, with developers staying in control at each approval point. This helps teams validate ideas faster, keep customization quality more consistent, and lower the manual effort each one takes.
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+      <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/dg/dev/ai-dev/ai-dev-sdk-workflow.mp4" type="video/mp4">
+  </video>
+</figure>
 
 **Key capabilities:**
 - Orchestrates the full Spryker customization workflow, from research and planning through code generation, testing, and verification, with self-correction when issues are detected and developer approval at key checkpoints

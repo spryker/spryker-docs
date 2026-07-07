@@ -67,7 +67,6 @@ We extended the Spryker design system across key storefront pages, including pro
   </video>
 </figure>
 
-**Documentation:**
 
 ### Search Statistics & Google Analytics {% include badge.html type="feature" %}
 

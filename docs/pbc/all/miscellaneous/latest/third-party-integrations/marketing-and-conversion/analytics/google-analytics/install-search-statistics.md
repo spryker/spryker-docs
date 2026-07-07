@@ -33,7 +33,7 @@ Check if you have the needed PHP module:
 docker/sdk cli php -m | grep protobuf`
 ```
 
-If not, run `docker/sdk boot your_deploy_file.yml && docker/sdk up`
+If the output is empty, refresh the image by running `docker/sdk boot your_deploy_file.yml && docker/sdk up`
 
 {% endinfo_block %}
 

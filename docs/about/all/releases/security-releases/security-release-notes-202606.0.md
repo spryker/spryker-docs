@@ -179,19 +179,19 @@ Several Back Office JavaScript modules passed untrusted, unsanitized data direct
 
 ### Affected modules
 
-- `spryker/cms`: < 7.20.2
-- `spryker/cms-slot-block-gui`: < 1.6.2
-- `spryker/company-role-gui`: < 1.11.2
-- `spryker/content-gui`: < 3.1.2
-- `spryker/file-manager-gui`: < 3.1.2
-- `spryker/gui`: < 5.3.2
+- `spryker/cms`: < 7.20.1
+- `spryker/cms-slot-block-gui`: < 1.6.1
+- `spryker/company-role-gui`: < 1.11.1
+- `spryker/content-gui`: < 3.1.1
+- `spryker/file-manager-gui`: < 3.1.1
+- `spryker/gui`: < 5.3.1
 
 ### Fix the vulnerability
 
 Update the affected packages:
 
 ```bash
-composer update spryker/cms:"^7.20.2" spryker/cms-slot-block-gui:"^1.6.2" spryker/company-role-gui:"^1.11.2" spryker/content-gui:"^3.1.2" spryker/file-manager-gui:"^3.1.2" spryker/gui:"^5.3.2"
+composer update spryker/cms:"^7.20.1" spryker/cms-slot-block-gui:"^1.6.1" spryker/company-role-gui:"^1.11.1" spryker/content-gui:"^3.1.1" spryker/file-manager-gui:"^3.1.1" spryker/gui:"^5.3.1"
 composer show spryker/cms spryker/cms-slot-block-gui spryker/company-role-gui spryker/content-gui spryker/file-manager-gui spryker/gui # Verify the versions
 ```
 

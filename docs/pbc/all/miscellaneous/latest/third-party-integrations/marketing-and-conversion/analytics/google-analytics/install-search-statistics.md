@@ -26,14 +26,19 @@ composer require spryker-eco/google-analytics:"^1.0.0" --update-with-dependencie
 
 {% info_block infoBox "Info" %}
 
-If your project uses [spryker/php`](https://hub.docker.com/r/spryker/php) Docker image before Sep 2025, you may need to update it.
-Check if you have the needed PHP module:
+If your project uses [spryker/php](https://hub.docker.com/r/spryker/php) Docker image from before September 2025, you may need to update it.
+
+Check whether the required PHP module is installed:
 
 ```bash
-docker/sdk cli php -m | grep protobuf`
+docker/sdk cli php -m | grep protobuf
 ```
 
-If the output is empty, refresh the image by running `docker/sdk boot your_deploy_file.yml && docker/sdk up`
+If the command returns no output, refresh the image by running:
+
+```bash
+docker/sdk boot your_deploy_file.yml && docker/sdk up
+```
 
 {% endinfo_block %}
 

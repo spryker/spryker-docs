@@ -19,6 +19,14 @@ Install the required features:
 | Product              | {{page.release_tag}} | [Install the Product feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                       |
 | Measurement Units    | {{page.release_tag}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/latest/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
+To use multistore reservation aggregation, the following minimum module versions are required:
+
+| NAME | VERSION |
+| --- | --- |
+| `spryker/product-packaging-unit` | 4.15.0 |
+| `spryker/oms` | 11.54.0 |
+| `spryker/oms-extension` | 1.7.0 |
+
 ### 1) Install the required modules
 
 ```bash

@@ -450,6 +450,8 @@ totals:
             properties:
                 amount:
                     type: integer
+                    description: 'Tax amount in cents.'
+                    openapiContext: { example: 1457 }
 ```
 
 on the storefront `Carts` resource generates a `CartsTotalsStorefrontResource` class with

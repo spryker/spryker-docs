@@ -94,9 +94,9 @@ Spell names exactly as listed (for example `Spencor`, `Hopkins`).
 
 ### Email
 
-- Format: `first.last@example.com` — the local part is the lowercased first and last name joined by a dot.
-- Always use the `@example.com` domain.
-- The email must match the customer's name on the same page — for example John Doe → `john.doe@example.com`.
+- Format: `first.last@acme.com` — the local part is the lowercased first and last name joined by a dot.
+- Always use the `@acme.com` domain.
+- The email must match the customer's name on the same page — for example John Doe → `john.doe@acme.com`.
 
 ### Address
 

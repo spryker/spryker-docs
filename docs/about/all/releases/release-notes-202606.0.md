@@ -49,7 +49,7 @@ Budget & Cost Centers introduces native purchasing controls for departmental or 
 
 ### New Spryker Design System Storefront
 
-We extended the Spryker design system across key storefront pages, including product listing, product detail, and cart pages. This creates a more consistent and modern buyer experience while giving teams reusable components for faster delivery.
+We extended the Spryker design system across key storefront pages, including product details and cart pages. This creates a more consistent and modern buyer experience while giving teams reusable components for faster delivery.
 
 **Key capabilities:**
 - Design system applied across the product details page

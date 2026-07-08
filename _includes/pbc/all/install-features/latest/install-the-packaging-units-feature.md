@@ -566,7 +566,7 @@ Enable the following behaviors by registering the plugins:
 | LeadProductStockUpdateHandlerPlugin                                  | Updates availability and reservation of a lead product for a given product packaging unit for stock update handler.                                                     |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Stock                |
 | ProductPackagingUnitAmountCartChangeRequestExpanderPlugin            | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for cart change.                                   | Expects a request to contain the to-be-used information.                                                                                                                                                        | Spryker\Client\ProductPackagingUnit\Plugin\CartExtension                   |
 | ProductPackagingUnitAmountPersistentCartChangeExpanderPlugin         | Sets the `amount` and `amountSalesUnit.IdProductMeasurementSalesUnit` fields in `ItemTransfers` with packaging units for persistent cart change.                        | Expects a request to contain the to-be-used information.                                                                                                                                                        | Spryker\Client\ProductPackagingUnit\Plugin\PersistentCartExtension         |
-| ProductPackagingUnitOmsReservationAggregationPlugin                  | Aggregates reservations for provided SKU both with or without packaging unit.                                                                                           |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms                  |
+| ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin | Makes the OMS reservation aggregation packaging-unit-aware: for items sold as a packaging unit, the underlying product `amount` is aggregated instead of the wrapping `quantity`.  |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms                  |
 | ProductPackagingUnitProductAbstractAddToCartPlugin                   | Filters out products which have packaging unit available.                                                                                                               |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\ProductPageSearch    |
 | AmountLeadProductOrderItemExpanderPlugin                             | Expands order items with additional packaging unit amount lead product.                                                                                                 |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
 | AmountSalesUnitOrderItemExpanderPlugin                               | Expands order items with additional packaging unit sales unit.                                                                                                          |                                                                                                                                                                                                                 | Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Sales                |
@@ -726,7 +726,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 namespace Pyz\Zed\Oms;
 
 use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitOmsReservationAggregationPlugin;
+use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Oms\ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin;
 use Spryker\Zed\ProductPackagingUnit\Communication\Plugin\Reservation\LeadProductReservationPostSaveTerminationAwareStrategyPlugin;
 
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
@@ -742,16 +742,42 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 
     /**
-     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationQueryCriteriaExpanderPluginInterface>
      */
-    protected function getOmsReservationAggregationPlugins(): array
+    protected function getOmsReservationAggregationQueryCriteriaExpanderPlugins(): array
     {
         return [
-            new ProductPackagingUnitOmsReservationAggregationPlugin(),
+            new ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin(),
         ];
     }
 }
 ```
+
+{% info_block infoBox "Deprecated plugin" %}
+
+`ProductPackagingUnitOmsReservationAggregationPlugin` (registered via `getOmsReservationAggregationPlugins()`) is deprecated in favor of `ProductPackagingUnitReservationAggregationQueryCriteriaExpanderPlugin`. Keeping it registered causes the legacy aggregation flow to be used instead of the composed reservation aggregation query.
+
+{% endinfo_block %}
+
+If you are migrating an existing project, deintegrate the deprecated plugin: remove `ProductPackagingUnitOmsReservationAggregationPlugin` from the `getOmsReservationAggregationPlugins()` stack and delete its `use` statement. If the stack becomes empty, return an empty array:
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+    /**
+     * @return list<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
+     */
+    protected function getOmsReservationAggregationPlugins(): array
+    {
+        return [];
+    }
+```
+
+{% info_block infoBox "Combine plugins across features" %}
+
+`getOmsReservationAggregationQueryCriteriaExpanderPlugins()` takes a single stack for the whole project. If you install other features that also contribute to reservation aggregation—for example, product offers—return all of their query-criteria expander plugins from this one method rather than overriding it separately per feature. The plugins are additive, and their criteria are composed into a single reservation aggregation query.
+
+{% endinfo_block %}
 
 <details>
 <summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>

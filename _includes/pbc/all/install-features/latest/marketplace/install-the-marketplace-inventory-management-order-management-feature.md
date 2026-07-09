@@ -13,6 +13,17 @@ Install the required features:
 | Marketplace Inventory Management | {{page.release_tag}} |  [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/latest/marketplace/install-features/install-the-marketplace-inventory-management-feature.html)  |
 | Marketplace Order Management | {{page.release_tag}} |  [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/latest/marketplace/install-features/install-the-marketplace-order-management-feature.html)  |
 
+To use multistore reservation aggregation, the following minimum module versions are required:
+
+| NAME | VERSION |
+| --- | --- |
+| `spryker/oms` | 11.54.0 |
+| `spryker/oms-product-offer-reservation` | 1.3.0 |
+| `spryker/product-offer-stock` | 1.8.1 |
+| `spryker/stock` | 8.16.0 |
+| `spryker/oms-extension` | 1.7.0 |
+| `spryker/warehouse-allocation` | 1.3.0 |
+
 ### 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:

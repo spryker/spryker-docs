@@ -5,6 +5,12 @@ template: howto-guide-template
 last_updated: Apr 28, 2026
 ---
 
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
+
 ## Security benefits of the SSO access
 
 From a security perspective, enabling SSO strengthens the existing secure access flow by adding additional protection layers:

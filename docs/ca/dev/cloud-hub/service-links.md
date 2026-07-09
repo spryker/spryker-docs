@@ -7,6 +7,12 @@ template: concept-topic-template
 
 The **Service Links** panel in [CloudHub](/docs/ca/dev/cloud-hub/cloud-hub.html) provides quick access to the services available in each of your target environments. Each service is displayed as a card with a direct link to open it.
 
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
+
 {% info_block infoBox "SSO access only" %}
 
 Service links are only available for SSO-enabled environments. For non-SSO environments, links are not working as the URLs differ.

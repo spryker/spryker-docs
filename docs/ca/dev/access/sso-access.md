@@ -5,6 +5,12 @@ template: howto-guide-template
 last_updated: Apr 28, 2026
 ---
 
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
+
 ## What is SSO
 
 **Single Sign-On (SSO)** is an authentication mechanism that allows users to sign in once and access multiple applications without re-authenticating for each service (RMQ, Jenkins).

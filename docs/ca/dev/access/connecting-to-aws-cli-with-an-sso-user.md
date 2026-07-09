@@ -5,6 +5,12 @@ template: howto-guide-template
 last_updated: Apr 28, 2026
 ---
 
+{% info_block infoBox %}
+
+This feature is part of a gradual rollout and will be available to everyone eventually. We will notify your team once your project is onboarded.
+
+{% endinfo_block %}
+
 This document describes how to configure and use [SAML2AWS](https://github.com/Versent/saml2aws) to authenticate with the AWS CLI using your SSO credentials.
 
 SAML2AWS is a command-line tool that lets you authenticate against an identity provider (IdP) using SAML and obtain temporary AWS credentials. This gives you AWS CLI access to your cloud environment without managing long-lived AWS access keys.

@@ -1,7 +1,7 @@
 ---
 title: Back Office Assistant
 description: Technical overview of the Back Office Assistant feature — architecture, agents, AiFoundation integration, and configuration options.
-last_updated: Mar 31, 2026
+last_updated: Jul 09, 2026
 template: concept-topic-template
 ---
 
@@ -28,7 +28,7 @@ Back Office Assistant ships with four built-in agents:
 | Discount Management | `DiscountManagementAgentPlugin` | Creates and updates discounts through the Back Office API. |
 | Form Fill | `FormFillAgentPlugin` | Fills Back Office forms using natural language instructions. |
 
-Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`.
+Agents are registered in `AiCommerceDependencyProvider::getBackofficeAssistantAgentPlugins()`. To implement and register a custom agent, see [Add a custom Back Office Assistant agent](/docs/dg/dev/ai/ai-commerce/backoffice-assistant/add-custom-backoffice-assistant-agent.html).
 
 ## Toolsets
 
